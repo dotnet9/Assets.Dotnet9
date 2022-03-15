@@ -4,7 +4,7 @@
 
 介绍本人及本站之前，我们看看 Python 之禅，在 Python Shell 中输入 import this 命令，显示内容就是 Python 之禅，见下文：
 
-```
+```shell
 The Zen of Python, by Tim Peters
 Beautiful is better than ugly.
 Explicit is better than implicit.
@@ -27,7 +27,7 @@ If the implementation is easy to explain, it may be a good idea.
 Namespaces are one honking great idea — let’s do more of those!
 ```
 
-```
+```shell
 Python 之禅 by Tim Peters
 优美胜于丑陋。
 明了胜于晦涩。
