@@ -1,11 +1,11 @@
 {
-  "Title": "B站视频：Qt 5.9 C++开发指南",
-  "Slug": "BiliBili-Video-QT-5-9-Cpp-Development-Guide",
-  "Cover": "https://img1.d9tools.com/2022/03/cover_22.png",
+  "Title": "CTK完整教程(OSGI for C++ 实现 C++ Qt 模块化)",
+  "Slug": "CTK-complete-tutorial-OSGi-for-Cpp-realizes-Cpp-QT-modularization",
+  "Cover": "https://img1.d9tools.com/2022/03/cover_23.png",
   "Categories": ["Qt"],
-  "Tags": ["视频教程"],
+  "Tags": ["CTK", "OSGI", "模块化", "插件化"],
   "CopyrightType": "Reprint",
-  "Original": "阿西拜-南昌",
-  "OriginalLink": "https://www.bilibili.com/video/BV1AX4y1w7Nt?spm_id_from=333.999.0.0",
-  "CreateDate": "2022-03-24 00:12:23"
+  "Original": "来唧唧歪歪",
+  "OriginalLink": "https://www.ljjyy.com/archives/2021/03/100645.html",
+  "CreateDate": "2022-03-24 00:32:33"
 }
