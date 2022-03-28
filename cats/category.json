@@ -121,6 +121,11 @@
             "Name": "OpenXML",
             "slug": "openxml",
             "Cover": "cats/cat_openxml.jfif"
+          },
+          {
+            "Name": "更多.NET",
+            "slug": "more-dotnet-other",
+            "Cover": "cats/cat_dotnetabout.jfif"
           }
         ]
       }
