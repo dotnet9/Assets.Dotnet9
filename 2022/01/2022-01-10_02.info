@@ -1,7 +1,7 @@
 {
   "Title": "Dapper in .NET Core",
   "Slug": "Dapper-in-dotNET-Core",
-  "Cover": "https://img1.d9tools.com/2022/01/cover_08.jpg",
+  "Cover": "https://img1.dotnet9.com/2022/01/cover_08.jpg",
   "Categories": ["Dapper"],
   "Tags": ["C#", ".NET", "Dapper", "ORM"],
   "CopyrightType": "Reprint",

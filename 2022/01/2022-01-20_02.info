@@ -1,7 +1,7 @@
 {
   "Title": ".NET下如何拦截鼠标、键盘消息？Win32NET来帮你",
   "Slug": "How-to-intercept-mouse-and-keyboard-messages-under-Net-Win32net-to-help-you",
-  "Cover": "https://img1.d9tools.com/2022/01/cover_04.jpeg",
+  "Cover": "https://img1.dotnet9.com/2022/01/cover_04.jpeg",
   "Categories": [".NET"],
   "Tags": ["拦截鼠标", "拦截键盘"],
   "CopyrightType": "Reprint",
