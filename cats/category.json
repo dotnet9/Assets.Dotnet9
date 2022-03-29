@@ -30,7 +30,7 @@
             "Cover": "cats/cat_blazor.jpg"
           },
           {
-            "Name": "更多.NET",
+            "Name": "More Web",
             "Slug": "dotnet-web-more",
             "Cover": "cats/cat_dotnetwebmore.jpg"
           }
@@ -123,7 +123,7 @@
             "Cover": "cats/cat_openxml.jfif"
           },
           {
-            "Name": "更多.NET",
+            "Name": "More Other",
             "slug": "more-dotnet-other",
             "Cover": "cats/cat_dotnetabout.jfif"
           }
