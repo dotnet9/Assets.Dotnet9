@@ -124,5 +124,12 @@
         "Name": "Code Life",
         "Description": "英文技术网站",
         "Url": "https://znlive.com/"
+    },
+    {
+        "Index": 19,
+        "Kind": "Friend",
+        "Name": "网上冲浪博客",
+        "Description": "有技术的网站",
+        "Url": "https://iwscl.com/"
     }
 ]
