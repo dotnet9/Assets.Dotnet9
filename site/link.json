@@ -1,0 +1,128 @@
+[
+    {
+        "Index": 1,
+        "Kind": "Owner",
+        "Name": "Github",
+        "Description": "本站Github源码",
+        "Url": "https://github.com/dotnet9/Dotnet9"
+    },
+    {
+        "Index": 2,
+        "Kind": "Owner",
+        "Name": "Gitee",
+        "Description": "本站Gitee源码",
+        "Url": "https://gitee.com/dotnet9/Dotnet9"
+    },
+    {
+        "Index": 3,
+        "Kind": "Friend",
+        "Name": "Murat Yücedağ",
+        "Description": "油管一位大神，专注分享.NET Core技术，有条件可翻过去看看",
+        "Url": "https://www.youtube.com/channel/UCbkbOlw8snP93RJ2BhH44Qw"
+    },
+    {
+        "Index": 4,
+        "Kind": "Friend",
+        "Name": "老张的哲学",
+        "Description": "博客园大佬，学习Vue + .NET CORE Web API的好地方",
+        "Url": "https://www.cnblogs.com/laozhang-is-phi/"
+    },
+    {
+        "Index": 5,
+        "Kind": "Friend",
+        "Name": "林德熙",
+        "Description": "WPF大佬",
+        "Url": "https://blog.lindexi.com/"
+    },
+    {
+        "Index": 6,
+        "Kind": "Friend",
+        "Name": "WTM",
+        "Description": "WTM框架把常规编码结构化，重复编码自动化，它不仅是一个框架，它是强有力的生产力工具！",
+        "Url": "https://wtmdoc.walkingtec.cn/"
+    },
+    {
+        "Index": 7,
+        "Kind": "Friend",
+        "Name": "加菲的博客",
+        "Description": "专注于IT互联网，只有原创，没有转载，只有实践，才会成文。",
+        "Url": "http://randyfield.cn/"
+    },
+    {
+        "Index": 8,
+        "Kind": "Friend",
+        "Name": "非羽的个人空间",
+        "Description": "坚硬的代替了那些柔软的，清晰的取代了那些模糊的。",
+        "Url": "http://feiyu.vin/"
+    },
+    {
+        "Index": 9,
+        "Kind": "Friend",
+        "Name": "Ant Design of Blazor",
+        "Description": "一套基于 Ant Design 和 Blazor 的企业级组件库",
+        "Url": "https://ant-design-blazor.gitee.io/zh-CN/"
+    },
+    {
+        "Index": 10,
+        "Kind": "Friend",
+        "Name": "MASA Blazor",
+        "Description": "基于Material Design和BlazorComponent的交互能力提供标准的基础组件库。",
+        "Url": "https://masa-blazor-docs-dev.lonsid.cn/"
+    },
+    {
+        "Index": 11,
+        "Kind": "Friend",
+        "Name": "Bootstrap Blazor",
+        "Description": "Bootstrap 风格的 Blazor UI 组件库",
+        "Url": "https://www.blazor.zone/"
+    },
+    {
+        "Index": 12,
+        "Kind": "Friend",
+        "Name": "Furion",
+        "Description": "让 .NET 开发更简单，更通用，更流行。",
+        "Url": "https://dotnetchina.gitee.io/furion/"
+    },
+    {
+        "Index": 13,
+        "Kind": "Friend",
+        "Name": "懒得勤快",
+        "Description": "一个即有稀缺资源，又有.NET技术博文的网站",
+        "Url": "https://ldqk.xyz/"
+    },
+    {
+        "Index": 14,
+        "Kind": "Friend",
+        "Name": "52ABP",
+        "Description": "52ABP框架官网",
+        "Url": "https://www.52abp.com/"
+    },
+    {
+        "Index": 15,
+        "Kind": "Friend",
+        "Name": "dotnet全栈开发",
+        "Description": "一个分享.NET技术的博主",
+        "Url": "https://blog.csdn.net/kebi007"
+    },
+    {
+        "Index": 16,
+        "Kind": "Friend",
+        "Name": "HZHControls",
+        "Description": "一个基于.Net Framework4.0,扁平化的、漂亮的、开源的Winform控件库",
+        "Url": "http://www.hzhcontrols.com/"
+    },
+    {
+        "Index": 17,
+        "Kind": "Friend",
+        "Name": "OneByOneDotNet",
+        "Description": "一个有技术博文的网站",
+        "Url": "https://onebyone.icu/"
+    },
+    {
+        "Index": 18,
+        "Kind": "Friend",
+        "Name": "Code Life",
+        "Description": "英文技术网站",
+        "Url": "https://znlive.com/"
+    }
+]
