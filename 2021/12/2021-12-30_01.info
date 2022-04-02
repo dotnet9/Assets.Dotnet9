@@ -2,6 +2,7 @@
   "Title": "Blazor系列终结！",
   "Slug": "end-of-blazor-series",
   "Cover": "https://img1.dotnet9.com/2021/12/cover_45.jpeg",
+  "BriefDescription":"Blazor系列转载`终结啦`，其实站长在25号时就已`完成转载`，并同步在`Dotnet9`网站（`https://dotnet9.com`）发布，并创建了一个专辑`《大家一起学Blazor》`，大家可随时在网站浏览。",
   "Categories": ["Blazor"],
   "Tags": ["C#", "前端", "Blazor"],
   "CopyrightType": "Default",

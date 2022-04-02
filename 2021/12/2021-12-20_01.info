@@ -2,6 +2,7 @@
   "Title": "WPF使用ttf图标字体",
   "Slug": "wpf-use-ttf-icon-font",
   "Cover": "https://img1.dotnet9.com/2021/12/cover_27.jpeg",
+  "BriefDescription":"将矢量图形打包成字体的形式，使用方式也和我们使用字体一样，能够自由设置图标的大小，图标的颜色。相对于传统图片来说，优点还是很明显的：",
   "Categories": ["WPF"],
   "Tags": ["WPF"],
   "CopyrightType": "Reprint",

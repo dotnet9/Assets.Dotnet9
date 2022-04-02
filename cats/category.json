@@ -172,7 +172,8 @@
         "Cover": "cats/category.jpg"
       }
     ]
-  }, {
+  },
+  {
     "Name": "数据库",
     "Slug": "database",
     "Cover": "cats/category.jpg",
@@ -202,7 +203,19 @@
       {
         "Name": "C++",
         "Slug": "cpp",
-        "Cover": "cats/category.jpg"
+        "Cover": "cats/category.jpg",
+        "Children": [
+          {
+            "Name": "Qt",
+            "Slug": "qt",
+            "Cover": "cats/category.jpg"
+          },
+          {
+            "Name": "更多CPP",
+            "Slug": "more-cpp",
+            "Cover": "cats/category.jpg"
+          }
+        ]
       }
     ]
   },
@@ -236,7 +249,7 @@
       {
         "Name": ".NET课程",
         "Slug": "dotnet-course",
-        "Cover": "cats/category.jpg"
+        "Cover": "cats/cat_dotnet_course.png"
       }
     ]
   },
@@ -273,6 +286,11 @@
       {
         "Name": "单元测试",
         "Slug": "unit-test",
+        "Cover": "cats/category.jpg"
+      },
+      {
+        "Name": "技巧分享",
+        "Slug": "Skill-sharing",
         "Cover": "cats/category.jpg"
       }
     ]

@@ -2,6 +2,7 @@
   "Title": "(14/30)大家一起学Blazor：JavaScript interop(互操作)",
   "Slug": "14-of-30-let-us-learn-blazor-together-javascript-interop",
   "Cover": "https://img1.dotnet9.com/2021/12/cover_05.png",
+  "BriefDescription":"虽然Blazor 不需要用到JavaScript，但某些已有的js库 还是很方便，不能因为不想用JavaScript 就全部舍弃，Blazor 就提供了调用JavaScript 的方法，这种情况称为JavaScript interoperability(简称JavaScript interop)。这篇就来实现Delete 按钮的提醒窗口，因为删除是很重要的功能，不能让使用者轻轻一按就轻易删除。",
   "Categories": ["Blazor"],
   "Tags": ["Blazor Server"],
   "Albums": ["大家一起学Blazor"],

@@ -2,6 +2,7 @@
   "Title": "开源WPF自定义控件库：WPFDevelopers",
   "Slug": "Custom-WPF-Control-Library-WPFDevelopers",
   "Cover": "https://img1.dotnet9.com/2022/02/cover_04.gif",
+  "BriefDescription":"这是一个WPF自定义控件开源项目，里面的一些控件很有意思",
   "Categories": ["WPF"],
   "Albums": ["WPF开发者"],
   "CopyrightType": "Reprint",

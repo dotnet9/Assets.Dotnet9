@@ -2,6 +2,7 @@
   "Title": "(2/30)大家一起学Blazor：网页和Blazor介绍",
   "Slug": "2-of-30-let-us-learn-blazor-together-web-and-blazor-introduction",
   "Cover": "https://img1.dotnet9.com/2021/12/cover_05.png",
+  "BriefDescription":"笔者对网站的认知为前端、后端及数据库，使用者在浏览器页面按下按钮或是表单请求，触发前端事件，将收集起来的条件打包送往后端",
   "Categories": ["Blazor"],
   "Tags": ["Blazor", "ASP.NET Core"],
   "Albums": ["大家一起学Blazor"],

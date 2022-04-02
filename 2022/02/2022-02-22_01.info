@@ -2,6 +2,7 @@
   "Title": "免费开源Blazor在线Ico转换工具",
   "Slug": "Free-Open-Source-Blazor-Online-Ico-Conversion-Tool",
   "Cover": "https://img1.dotnet9.com/2022/02/cover_13.jpg",
+  "BriefDescription":"免费开源Blazor在线Ico转换工具，不保存源文件及转换后文件，下载完成即删除，请放心使用。",
   "Categories": ["Blazor"],
   "Tags": [".NET 7", "Blazor", "Ico图标转换", "在线工具", "免费", "开源"],
   "CopyrightType": "Default",
