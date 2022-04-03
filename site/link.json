@@ -114,19 +114,26 @@
     {
         "Index": 17,
         "Kind": "Friend",
+        "Name": "江湖人士",
+        "Description": "一个分享建站技术的网站，还有技术哦",
+        "Url": "https://jhrs.com/"
+    },
+    {
+        "Index": 18,
+        "Kind": "Friend",
         "Name": "OneByOneDotNet",
         "Description": "一个有技术博文的网站",
         "Url": "https://onebyone.icu/"
     },
     {
-        "Index": 18,
+        "Index": 19,
         "Kind": "Friend",
         "Name": "Code Life",
         "Description": "英文技术网站",
         "Url": "https://znlive.com/"
     },
     {
-        "Index": 19,
+        "Index": 20,
         "Kind": "Friend",
         "Name": "网上冲浪博客",
         "Description": "有技术的网站",
