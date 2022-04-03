@@ -63,12 +63,12 @@ Python 之禅 by Tim Peters
 
 ## 4. 站长技术栈
 
-1. 开发语言：C/S（C# + WPF\Winform，C++ + Qt Widgets, SwiftUI)、B/S(ASP.NET Core MVC，React + ASP.NET Core Web API)。
-2. 开发框架：C/S(Prism 4.0\5.0\8、Qt Plugin System、CTK Plugin)、B/S(前端 Ant Design Pro 3.x|4.x，后端 ASP.NET Core Web API)等。
-3. C/S 控 件 库：Dev Express、Telerik、部分开源控件库等。
-4. B/S控件库：Ant Design、Bootstrap等。
-5. 通信协议：Remoting、WebService、TCP/IP、UDP、HTTP、FTP、ICE、DDS、KNET、ENET、软件总线、事件总线等。
-6. 开发工具：Visual Studio、Qt Creator、Visual Studio Code等。
+1. 开发语言：C/S（C# + WPF\Winform，C++ + Qt Widgets, SwiftUI)、B/S(ASP.NET Core MVC，ASP.NET Core Blazor，React + ASP.NET Core Web API)。
+2. 开发框架：C/S(Prism、Qt Plugin System)、B/S(前端 Ant Design Pro，后端 ASP.NET Core Web API)等。
+3. C/S 控 件 库：Dev Express、Telerik、部分开源控件库(MaterialDesignInXamlToolkit、MahApps.Metro、HandyControl)等。
+4. B/S控件库：Ant Design、Bootstrap、Masa Blazor等。
+5. 通信协议：SignalR、Remoting、WebService、TCP/IP、UDP、HTTP、FTP、ICE、DDS、KNET、ENET、软件总线、事件总线等。
+6. 开发工具：Visual Studio、Qt Creator、Visual Studio Code、xCode等。
 7. 数 据 库：MySQL、Oracle、SQLServer、SQLite、Access、Redis等。
 8. 影音办公类：Adobe（Photoshop 、Axure）、OFFICE（Visio、Word、PPT、Excel）等应用软件。
 
