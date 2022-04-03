@@ -8,4 +8,5 @@ Site resource folder
 <h1 align="center">Dotnet9 site resource repository</h1>
 
 - Site：https://dotnet9.com
-- Site repository：https://github.com/dotnet9/Dotnet9
+- Site github repository：https://github.com/dotnet9/Dotnet9
+- Site gitee repository：https://gitee.com/dotnet9/Dotnet9
