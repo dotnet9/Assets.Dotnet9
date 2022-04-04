@@ -96,9 +96,9 @@
         "Cover": "cats/cat_orm.jpeg",
         "Children": [
           {
-            "Name": "EF Core",
-            "Slug": "dotnet-orm-ef-core",
-            "Cover": "cats/cat_efcore.png"
+            "Name": "控制台",
+            "Slug": "dotnet-console",
+            "Cover": "cats/cat_console.gif"
           },
           {
             "Name": "Dapper",
@@ -116,7 +116,11 @@
         "Name": ".NET相关",
         "Slug": "about-dotnet",
         "Cover": "cats/cat_dotnetabout.png",
-        "Children": [
+        "Children": [{
+          "Name": "OpenXML",
+          "slug": "openxml",
+          "Cover": "cats/cat_openxml.jfif"
+        },
           {
             "Name": "OpenXML",
             "slug": "openxml",
