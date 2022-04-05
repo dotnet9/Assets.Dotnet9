@@ -114,21 +114,17 @@
       },
       {
         "Name": ".NET相关",
-        "Slug": "about-dotnet",
+        "Slug": "dotnet-other",
         "Cover": "cats/cat_dotnetabout.png",
-        "Children": [{
-          "Name": "OpenXML",
-          "slug": "openxml",
-          "Cover": "cats/cat_openxml.jfif"
-        },
+        "Children": [
           {
             "Name": "OpenXML",
-            "slug": "openxml",
+            "slug": "dotnet-openxml",
             "Cover": "cats/cat_openxml.jfif"
           },
           {
             "Name": "More Other",
-            "slug": "more-dotnet-other",
+            "slug": "dotnet-more-dotnet-other",
             "Cover": "cats/cat_dotnetabout.jfif"
           }
         ]
@@ -142,37 +138,37 @@
     "Children": [
       {
         "Name": "Flutter",
-        "Slug": "flutter",
+        "Slug": "Large-front-end-flutter",
         "Cover": "cats/category.jpg"
       },
       {
         "Name": "React",
-        "Slug": "react",
+        "Slug": "Large-front-end-react",
         "Cover": "cats/category.jpg"
       },
       {
         "Name": "Vue",
-        "Slug": "vue",
+        "Slug": "Large-front-end-vue",
         "Cover": "cats/category.jpg"
       },
       {
         "Name": "TypeScript",
-        "Slug": "TypeScript",
+        "Slug": "Large-front-end-TypeScript",
         "Cover": "cats/category.jpg"
       },
       {
         "Name": "HTML",
-        "Slug": "html",
+        "Slug": "Large-front-end-html",
         "Cover": "cats/category.jpg"
       },
       {
         "Name": "Bootstrap",
-        "Slug": "Bootstrap",
+        "Slug": "Large-front-end-Bootstrap",
         "Cover": "cats/category.jpg"
       },
       {
         "Name": "SwiftUI",
-        "Slug": "swiftui",
+        "Slug": "Large-front-end-swiftui",
         "Cover": "cats/category.jpg"
       }
     ]
@@ -184,12 +180,12 @@
     "Children": [
       {
         "Name": "MySQL",
-        "Slug": "mysql",
+        "Slug": "database-mysql",
         "Cover": "cats/category.jpg"
       },
       {
         "Name": "Sqlite",
-        "Slug": "sqlite",
+        "Slug": "database-sqlite",
         "Cover": "cats/category.jpg"
       }
     ]
@@ -201,22 +197,22 @@
     "Children": [
       {
         "Name": "Java",
-        "Slug": "java",
+        "Slug": "more-language-java",
         "Cover": "cats/category.jpg"
       },
       {
         "Name": "C++",
-        "Slug": "cpp",
+        "Slug": "more-language-cpp",
         "Cover": "cats/category.jpg",
         "Children": [
           {
             "Name": "Qt",
-            "Slug": "qt",
+            "Slug": "more-language-qt",
             "Cover": "cats/category.jpg"
           },
           {
             "Name": "更多CPP",
-            "Slug": "more-cpp",
+            "Slug": "more-language-more-cpp",
             "Cover": "cats/category.jpg"
           }
         ]
@@ -252,7 +248,7 @@
     "Children": [
       {
         "Name": ".NET课程",
-        "Slug": "dotnet-course",
+        "Slug": "course-dotnet-course",
         "Cover": "cats/cat_dotnet_course.png"
       }
     ]
@@ -264,37 +260,37 @@
     "Children": [
       {
         "Name": "IDE",
-        "Slug": "share-ide",
+        "Slug": "other-share-ide",
         "Cover": "cats/category.jpg"
       },
       {
         "Name": "软件分享",
-        "Slug": "share-software",
+        "Slug": "other-share-software",
         "Cover": "cats/category.jpg"
       },
       {
         "Name": "架构设计",
-        "Slug": "architecture-design",
+        "Slug": "other-architecture-design",
         "Cover": "cats/category.jpg"
       },
       {
         "Name": "职场生活",
-        "Slug": "workplace-statement",
+        "Slug": "other-workplace-statement",
         "Cover": "cats/category.jpg"
       },
       {
         "Name": "开源项目",
-        "Slug": "Open-source-project",
+        "Slug": "other-Open-source-project",
         "Cover": "cats/category.jpg"
       },
       {
         "Name": "单元测试",
-        "Slug": "unit-test",
+        "Slug": "other-unit-test",
         "Cover": "cats/category.jpg"
       },
       {
         "Name": "技巧分享",
-        "Slug": "Skill-sharing",
+        "Slug": "other-Skill-sharing",
         "Cover": "cats/category.jpg"
       }
     ]

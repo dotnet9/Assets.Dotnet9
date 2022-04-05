@@ -3,6 +3,7 @@
   "Slug": "Open-source-csharp-WinForm-control-library-sunny-UI",
   "Cover": "https://img1.dotnet9.com/2020/12/0407.png",
   "BriefDescription":"基于.Net Framework 4.0+、.Net 5、.Net 6 框架的 C# WinForm 开源控件库、工具类库、扩展类库、多页面开发框架。",
+  "InBanner": true,
   "Categories": ["Winform"],
   "Tags": ["Winform", "SunnyUI", "开源Winform"],
   "Albums": ["开源Winform"],
