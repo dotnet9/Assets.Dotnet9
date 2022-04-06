@@ -292,6 +292,11 @@
         "Name": "技巧分享",
         "Slug": "other-Skill-sharing",
         "Cover": "cats/category.jpg"
+      },
+      {
+        "Name": "科技生活",
+        "Slug": "other-science-and-technology-life",
+        "Cover": "cats/category.jpg"
       }
     ]
   }
