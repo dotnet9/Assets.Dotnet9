@@ -49,6 +49,13 @@
         "Url": "https://wtmdoc.walkingtec.cn/"
     },
     {
+        "Index": 7,
+        "Kind": "Friend",
+        "Name": "Vol开发框架",
+        "Description": ".Net Core+Vue2/Vue3+Element plus+uniapp前后端分离，全自动生成PC与移动端代码；支持移动端(uniapp)ios/android/h5/微信小程序。http://www.volcore.xyz/",
+        "Url": "http://www.volcore.xyz/"
+    },
+    {
         "Index": 8,
         "Kind": "Friend",
         "Name": "加菲的博客",
