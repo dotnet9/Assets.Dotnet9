@@ -5,6 +5,11 @@
     "Cover": "albums/album_csharp.jpg"
   },
   {
+    "Name": "开源Web",
+    "Slug": "open-source-csharp-bs",
+    "Cover": "albums/album_csharp.jpg"
+  },
+  {
     "Name": "开源Blazor",
     "Slug": "open-source-blazor",
     "Cover": "albums/album_blazor.jpg"
