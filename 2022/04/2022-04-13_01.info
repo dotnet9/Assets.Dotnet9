@@ -4,7 +4,7 @@
   "Cover": "https://img1.dotnet9.com/2022/04/images/fishing.webp",
   "BriefDescription":"使用`Xamarin.Forms`开发的开源移动App介绍，感兴趣的可以访问[Github](https://github.com/jsuarezruiz/xamarin-forms-goodlooking-UI)和[Gitee](https://gitee.com/dotnet9/xamarin-forms-goodlooking-UI)仓库看看，下载对应的App项目研究。",
   "Categories": ["Xamarin"],
-  "Tags": [".NET", "Xamarin Forms],
+  "Tags": [".NET", "Xamarin Forms"],
   "Albums": ["开源MAUI"],
   "CopyrightType": "Reprint",
   "Original": "jsuarezruiz",
