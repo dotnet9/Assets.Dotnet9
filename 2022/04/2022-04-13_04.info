@@ -1,7 +1,7 @@
 {
   "Title": "WPF：数据虚拟化",
   "Slug": "WPF-Data-Virtualization",
-  "Cover": "https://img1.dotnet9.com/2022/04/1305.png",
+  "Cover": "https://img1.dotnet9.com/2022/04/cover_14.png",
   "BriefDescription":"这篇文章不错，本来借助谷歌翻译，站长想再人工检查一遍，发现里面专业术语挺多的，个人英语也太渣，直接原文照搬了，希望你的英文可以的。",
   "Categories": ["WPF"],
   "Tags": ["UI虚拟化", "数据虚拟化"],
