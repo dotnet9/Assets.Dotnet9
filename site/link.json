@@ -35,6 +35,13 @@
         "Url": "https://blog.lindexi.com/"
     },
     {
+        "Index": 5,
+        "Kind": "Friend",
+        "Name": "KnowledgeBase",
+        "Description": "知识字典",
+        "Url": "https://azrng.gitee.io/kbms"
+    },
+    {
         "Index": 6,
         "Kind": "Friend",
         "Name": "YouZack",
