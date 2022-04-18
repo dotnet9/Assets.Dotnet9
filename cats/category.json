@@ -96,8 +96,8 @@
         "Cover": "cats/cat_orm.jpeg",
         "Children": [
           {
-            "Name": "控制台",
-            "Slug": "dotnet-console",
+            "Name": "EF Core",
+            "Slug": "dotnet-ef-core",
             "Cover": "cats/cat_console.gif"
           },
           {
