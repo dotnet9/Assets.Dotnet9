@@ -5,129 +5,74 @@
     "Cover": "cats/cat_dotnet.jpg",
     "Children": [
       {
-        "Name": "Web",
-        "Slug": "dotnet-web",
-        "Cover": "cats/cat_dotnetweb.png",
-        "Children": [
-          {
-            "Name": "Web API",
-            "Slug": "dotnet-web-api",
-            "Cover": "cats/cat_dotnetwebapi.jpg"
-          },
-          {
-            "Name": "Razor Pages",
-            "Slug": "dotnet-web-razor-pages",
-            "Cover": "cats/cat_razorpages.jpeg"
-          },
-          {
-            "Name": "MVC",
-            "Slug": "dotnet-web-mvc",
-            "Cover": "cats/cat_aspnetcoremvc.jpg"
-          },
-          {
-            "Name": "Blazor",
-            "Slug": "dotnet-web-blazor",
-            "Cover": "cats/cat_blazor.jpg"
-          },
-          {
-            "Name": "More Web",
-            "Slug": "dotnet-web-more",
-            "Cover": "cats/cat_dotnetwebmore.jpg"
-          }
-        ]
+        "Name": "Web API",
+        "Slug": "dotnet-web-api",
+        "Cover": "cats/cat_dotnetwebapi.jpg"
       },
       {
-        "Name": "Mobile",
-        "Slug": "dotnet-mobile",
-        "Cover": "cats/cat_dotnetmobile.png",
-        "Children": [
-          {
-            "Name": "MAUI",
-            "Slug": "dotnet-mobile-maui",
-            "Cover": "cats/cat_maui.png"
-          },
-          {
-            "Name": "Xamarin",
-            "Slug": "dotnet-mobile-xamarin",
-            "Cover": "cats/cat_xamarin.png"
-          },
-          {
-            "Name": "More Mobile",
-            "Slug": "dotnet-mobile-more",
-            "Cover": "cats/cat_marinmore.png"
-          }
-        ]
+        "Name": "Razor Pages",
+        "Slug": "dotnet-web-razor-pages",
+        "Cover": "cats/cat_razorpages.jpeg"
       },
       {
-        "Name": "Desktop",
-        "Slug": "dotnet-desktop",
-        "Cover": "cats/cat_desktop.png",
-        "Children": [
-          {
-            "Name": "WPF",
-            "Slug": "dotnet-desktop-wpf",
-            "Cover": "cats/cat_wpf.gif"
-          },
-          {
-            "Name": "Winform",
-            "Slug": "dotnet-desktop-winform",
-            "Cover": "cats/cat_winform.png"
-          },
-          {
-            "Name": "WinUI",
-            "Slug": "dotnet-desktop-winui",
-            "Cover": "cats/cat_winui.jfif"
-          },
-          {
-            "Name": "UWP",
-            "Slug": "dotnet-desktop-uwp",
-            "Cover": "cats/cat_uwp.png"
-          },
-          {
-            "Name": "More Desktop",
-            "Slug": "dotnet-desktop-more",
-            "Cover": "cats/cat_desktopmore.jfif"
-          }
-        ]
+        "Name": "MVC",
+        "Slug": "dotnet-web-mvc",
+        "Cover": "cats/cat_aspnetcoremvc.jpg"
       },
       {
-        "Name": "ORM",
-        "Slug": "dotnet-orm",
-        "Cover": "cats/cat_orm.jpeg",
-        "Children": [
-          {
-            "Name": "EF Core",
-            "Slug": "dotnet-ef-core",
-            "Cover": "cats/cat_console.gif"
-          },
-          {
-            "Name": "Dapper",
-            "Slug": "dotnet-orm-dapper",
-            "Cover": "cats/cat_dapper.png"
-          },
-          {
-            "Name": "More ORM",
-            "Slug": "dotnet-orm-more",
-            "Cover": "cats/cat_ormmore.jfif"
-          }
-        ]
+        "Name": "Blazor",
+        "Slug": "dotnet-web-blazor",
+        "Cover": "cats/cat_blazor.jpg"
+      },
+      {
+        "Name": "MAUI",
+        "Slug": "dotnet-mobile-maui",
+        "Cover": "cats/cat_maui.png"
+      },
+      {
+        "Name": "Xamarin",
+        "Slug": "dotnet-mobile-xamarin",
+        "Cover": "cats/cat_xamarin.png"
+      },
+      {
+        "Name": "WPF",
+        "Slug": "dotnet-desktop-wpf",
+        "Cover": "cats/cat_wpf.gif"
+      },
+      {
+        "Name": "Winform",
+        "Slug": "dotnet-desktop-winform",
+        "Cover": "cats/cat_winform.png"
+      },
+      {
+        "Name": "WinUI",
+        "Slug": "dotnet-desktop-winui",
+        "Cover": "cats/cat_winui.jfif"
+      },
+      {
+        "Name": "UWP",
+        "Slug": "dotnet-desktop-uwp",
+        "Cover": "cats/cat_uwp.png"
+      },
+      {
+        "Name": "EF Core",
+        "Slug": "dotnet-ef-core",
+        "Cover": "cats/cat_console.gif"
+      },
+      {
+        "Name": "Dapper",
+        "Slug": "dotnet-orm-dapper",
+        "Cover": "cats/cat_dapper.png"
+      },
+      {
+        "Name": "OpenXML",
+        "slug": "dotnet-openxml",
+        "Cover": "cats/cat_openxml.jfif"
       },
       {
         "Name": ".NET相关",
-        "Slug": "dotnet-other",
-        "Cover": "cats/cat_dotnetabout.png",
-        "Children": [
-          {
-            "Name": "OpenXML",
-            "slug": "dotnet-openxml",
-            "Cover": "cats/cat_openxml.jfif"
-          },
-          {
-            "Name": "More Other",
-            "slug": "dotnet-more-dotnet-other",
-            "Cover": "cats/cat_dotnetabout.jfif"
-          }
-        ]
+        "slug": "dotnet-more-dotnet-other",
+        "Cover": "cats/cat_dotnetabout.jfif"
       }
     ]
   },
@@ -170,6 +115,11 @@
         "Name": "SwiftUI",
         "Slug": "Large-front-end-swiftui",
         "Cover": "cats/category.jpg"
+      },
+      {
+        "Name": "Qt",
+        "Slug": "more-language-qt",
+        "Cover": "cats/category.jpg"
       }
     ]
   },
@@ -203,19 +153,7 @@
       {
         "Name": "C++",
         "Slug": "more-language-cpp",
-        "Cover": "cats/category.jpg",
-        "Children": [
-          {
-            "Name": "Qt",
-            "Slug": "more-language-qt",
-            "Cover": "cats/category.jpg"
-          },
-          {
-            "Name": "更多CPP",
-            "Slug": "more-language-more-cpp",
-            "Cover": "cats/category.jpg"
-          }
-        ]
+        "Cover": "cats/category.jpg"
       }
     ]
   },
@@ -254,7 +192,7 @@
     ]
   },
   {
-    "Name": "Other",
+    "Name": "更多分享",
     "Slug": "other",
     "Cover": "cats/category.jpg",
     "Children": [
