@@ -158,28 +158,6 @@
     ]
   },
   {
-    "Name": "运维",
-    "Slug": "Operation-and-maintenance",
-    "Cover": "cats/category.jpg",
-    "Children": [
-      {
-        "Name": "Redis",
-        "Slug": "redis",
-        "Cover": "cats/category.jpg"
-      },
-      {
-        "Name": "Linux",
-        "Slug": "linux",
-        "Cover": "cats/category.jpg"
-      },
-      {
-        "Name": "Docker",
-        "Slug": "docker",
-        "Cover": "cats/category.jpg"
-      }
-    ]
-  },
-  {
     "Name": "课程分享",
     "Slug": "course",
     "Cover": "cats/category.jpg",
@@ -196,6 +174,21 @@
     "Slug": "other",
     "Cover": "cats/category.jpg",
     "Children": [
+      {
+        "Name": "Redis",
+        "Slug": "redis",
+        "Cover": "cats/category.jpg"
+      },
+      {
+        "Name": "Linux",
+        "Slug": "linux",
+        "Cover": "cats/category.jpg"
+      },
+      {
+        "Name": "Docker",
+        "Slug": "docker",
+        "Cover": "cats/category.jpg"
+      },
       {
         "Name": "IDE",
         "Slug": "other-share-ide",
