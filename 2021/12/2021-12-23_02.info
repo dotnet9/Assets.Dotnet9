@@ -5,7 +5,7 @@
   "BriefDescription":"前面有说到`UserAuthentication()`跟`UserAuthorization()`，这两个的差别在于：前者用于验证登录者是谁，后者则决定登录者可以做什么。",
   "Categories": ["Blazor"],
   "Tags": ["Blazor Server"],
-  "Albums": ["大家一起学Blazor"],
+  "Albums": ["学Blazor"],
   "CopyrightType": "Reprint",
   "Original": "StrayaWorker",
   "OriginalLink": "https://ithelp.ithome.com.tw/articles/10270593",

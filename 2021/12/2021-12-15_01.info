@@ -5,7 +5,7 @@
   "BriefDescription":"目前`MyButton`有3个`[Parameter]`，如果再增加的话，又要再定义新的`[Parameter]`，为了避免不断更新这个Component，我们来用Blazor提供的`@attribute`。",
   "Categories": ["Blazor"],
   "Tags": ["Blazor Server"],
-  "Albums": ["大家一起学Blazor"],
+  "Albums": ["学Blazor"],
   "CopyrightType": "Reprint",
   "Original": "StrayaWorker",
   "OriginalLink": "https://ithelp.ithome.com.tw/articles/10262490",

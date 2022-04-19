@@ -5,7 +5,7 @@
   "BriefDescription":"现在每次启动项目，预设路径都会是`/`，但我们目前没有Component套用这个路由，要自己切换到`Post`实在有些麻烦，另外Menu的图案也跟名称不符，我们来调整一下。",
   "Categories": ["Blazor"],
   "Tags": ["Blazor Server"],
-  "Albums": ["大家一起学Blazor"],
+  "Albums": ["学Blazor"],
   "CopyrightType": "Reprint",
   "Original": "StrayaWorker",
   "OriginalLink": "https://ithelp.ithome.com.tw/articles/10261579",

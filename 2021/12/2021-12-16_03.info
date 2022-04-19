@@ -5,7 +5,7 @@
   "BriefDescription":"目前的4篇日志是来自我们写好的假数据，但正常来说不会这样做，而是有个按钮让用户点击了之后，增加或减少日志的数量。",
   "Categories": ["Blazor"],
   "Tags": ["Blazor Server"],
-  "Albums": ["大家一起学Blazor"],
+  "Albums": ["学Blazor"],
   "CopyrightType": "Reprint",
   "Original": "StrayaWorker",
   "OriginalLink": "https://ithelp.ithome.com.tw/articles/10262982",

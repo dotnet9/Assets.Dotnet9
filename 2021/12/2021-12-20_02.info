@@ -5,7 +5,7 @@
   "BriefDescription":"假设今天有个状况是这样：有一条日志，新增第二条但还没提交前，想将第一条删除，这时会发生什么事呢？",
   "Categories": ["Blazor"],
   "Tags": ["Blazor Server"],
-  "Albums": ["大家一起学Blazor"],
+  "Albums": ["学Blazor"],
   "CopyrightType": "Reprint",
   "Original": "StrayaWorker",
   "OriginalLink": "https://ithelp.ithome.com.tw/articles/10267015",

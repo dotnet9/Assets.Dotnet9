@@ -5,7 +5,7 @@
   "BriefDescription":"开发一个系统最无聊的过程大概就是解决BUG了，尤其是那种尝试对null 对象取值的错误(`Object reference not set to an instance of an object.`)，这应该是大部分人刚踏入编程领域最常碰到的问题，为了从枯燥的解决BUG过程解脱，这篇就来介绍`单元测试`。",
   "Categories": ["Blazor"],
   "Tags": ["Blazor Server"],
-  "Albums": ["大家一起学Blazor"],
+  "Albums": ["学Blazor"],
   "CopyrightType": "Reprint",
   "Original": "StrayaWorker",
   "OriginalLink": "https://ithelp.ithome.com.tw/articles/10274629",

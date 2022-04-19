@@ -5,7 +5,7 @@
   "BriefDescription": "自己建立的Service都必须在Startup.cs(Blazor Server)或Program.cs(Blazor WebAssemlby)注册，但有些基本Service就不用自己做了。",
   "Categories": ["Blazor"],
   "Tags": ["Blazor Server"],
-  "Albums": ["大家一起学Blazor"],
+  "Albums": ["学Blazor"],
   "CopyrightType": "Reprint",
   "Original": "StrayaWorker",
   "OriginalLink": "https://ithelp.ithome.com.tw/articles/10261219",

@@ -5,7 +5,7 @@
   "BriefDescription":"昨天做的验证只针对`Identity` 系统，没有包含到我们的日志",
   "Categories": ["Blazor"],
   "Tags": ["Blazor Server"],
-  "Albums": ["大家一起学Blazor"],
+  "Albums": ["学Blazor"],
   "CopyrightType": "Reprint",
   "Original": "StrayaWorker",
   "OriginalLink": "https://ithelp.ithome.com.tw/articles/10269706",

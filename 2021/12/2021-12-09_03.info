@@ -5,7 +5,7 @@
   "BriefDescription":"笔者对网站的认知为前端、后端及数据库，使用者在浏览器页面按下按钮或是表单请求，触发前端事件，将收集起来的条件打包送往后端",
   "Categories": ["Blazor"],
   "Tags": ["Blazor", "ASP.NET Core"],
-  "Albums": ["大家一起学Blazor"],
+  "Albums": ["学Blazor"],
   "CopyrightType": "Reprint",
   "Original": "StrayaWorker",
   "OriginalLink": "https://ithelp.ithome.com.tw/articles/10258950",
