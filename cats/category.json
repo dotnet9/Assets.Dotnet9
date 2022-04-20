@@ -32,7 +32,7 @@
       {
         "Name": "Xamarin",
         "Slug": "dotnet-mobile-xamarin",
-        "Cover": "cats/cat_xamarin.png"
+        "Cover": "cats/cat_xamarin.jpg"
       },
       {
         "Name": "WPF",
@@ -72,7 +72,7 @@
       {
         "Name": ".NET相关",
         "slug": "dotnet-more-dotnet-other",
-        "Cover": "cats/cat_dotnetabout.jfif"
+        "Cover": "cats/cat_dotnetabout.png"
       }
     ]
   },
@@ -84,42 +84,42 @@
       {
         "Name": "Flutter",
         "Slug": "Large-front-end-flutter",
-        "Cover": "cats/category.jpg"
+        "Cover": "cats/cat_flutter.jpeg"
       },
       {
         "Name": "React",
         "Slug": "Large-front-end-react",
-        "Cover": "cats/category.jpg"
+        "Cover": "cats/cat_react.jpeg"
       },
       {
         "Name": "Vue",
         "Slug": "Large-front-end-vue",
-        "Cover": "cats/category.jpg"
+        "Cover": "cats/cat_vue.jpeg"
       },
       {
         "Name": "TypeScript",
         "Slug": "Large-front-end-TypeScript",
-        "Cover": "cats/category.jpg"
+        "Cover": "cats/cat_typescript.jpeg"
       },
       {
         "Name": "HTML",
         "Slug": "Large-front-end-html",
-        "Cover": "cats/category.jpg"
+        "Cover": "cats/cat_html.jpeg"
       },
       {
         "Name": "Bootstrap",
         "Slug": "Large-front-end-Bootstrap",
-        "Cover": "cats/category.jpg"
+        "Cover": "cats/cat_bootstrap.jpeg"
       },
       {
         "Name": "SwiftUI",
         "Slug": "Large-front-end-swiftui",
-        "Cover": "cats/category.jpg"
+        "Cover": "cats/cat_swiftui.jpeg"
       },
       {
         "Name": "Qt",
         "Slug": "more-language-qt",
-        "Cover": "cats/category.jpg"
+        "Cover": "cats/cat_qt.png"
       }
     ]
   },
@@ -131,12 +131,12 @@
       {
         "Name": "MySQL",
         "Slug": "database-mysql",
-        "Cover": "cats/category.jpg"
+        "Cover": "cats/cat_mysql.jpeg"
       },
       {
         "Name": "Sqlite",
         "Slug": "database-sqlite",
-        "Cover": "cats/category.jpg"
+        "Cover": "cats/cat_sqlite.jpeg"
       }
     ]
   },
@@ -148,12 +148,12 @@
       {
         "Name": "Java",
         "Slug": "more-language-java",
-        "Cover": "cats/category.jpg"
+        "Cover": "cats/cat_java.jpeg"
       },
       {
         "Name": "C++",
         "Slug": "more-language-cpp",
-        "Cover": "cats/category.jpg"
+        "Cover": "cats/cat_cpp.jpeg"
       }
     ]
   },
@@ -177,57 +177,57 @@
       {
         "Name": "Redis",
         "Slug": "redis",
-        "Cover": "cats/category.jpg"
+        "Cover": "cats/cat_redis.jpeg"
       },
       {
         "Name": "Linux",
         "Slug": "linux",
-        "Cover": "cats/category.jpg"
+        "Cover": "cats/cat_linux.jpeg"
       },
       {
         "Name": "Docker",
         "Slug": "docker",
-        "Cover": "cats/category.jpg"
+        "Cover": "cats/cat_docker.jpeg"
       },
       {
         "Name": "IDE",
         "Slug": "other-share-ide",
-        "Cover": "cats/category.jpg"
+        "Cover": "cats/cat_ide.jpeg"
       },
       {
         "Name": "软件分享",
         "Slug": "other-share-software",
-        "Cover": "cats/category.jpg"
+        "Cover": "cats/cat_software.jpeg"
       },
       {
         "Name": "架构设计",
         "Slug": "other-architecture-design",
-        "Cover": "cats/category.jpg"
+        "Cover": "cats/cat_architecturedesign.jpeg"
       },
       {
         "Name": "职场生活",
         "Slug": "other-workplace-statement",
-        "Cover": "cats/category.jpg"
+        "Cover": "cats/cat_workplace_statement.jpeg"
       },
       {
         "Name": "开源项目",
         "Slug": "other-Open-source-project",
-        "Cover": "cats/category.jpg"
+        "Cover": "cats/cat_opensource.jpeg"
       },
       {
         "Name": "单元测试",
         "Slug": "other-unit-test",
-        "Cover": "cats/category.jpg"
+        "Cover": "cats/cat_unittest.jpeg"
       },
       {
         "Name": "技巧分享",
         "Slug": "other-Skill-sharing",
-        "Cover": "cats/category.jpg"
+        "Cover": "cats/cat_Skill.jpeg"
       },
       {
         "Name": "科技生活",
         "Slug": "other-science-and-technology-life",
-        "Cover": "cats/category.jpg"
+        "Cover": "cats/cat_science.jpeg"
       }
     ]
   }
