@@ -120,6 +120,11 @@
         "Name": "Qt",
         "Slug": "more-language-qt",
         "Cover": "cats/cat_qt.png"
+      },
+      {
+        "Name": "更多前端",
+        "Slug": "Large-front-end-more",
+        "Cover": "cats/cat_typescript.jpeg"
       }
     ]
   },
