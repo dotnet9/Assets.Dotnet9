@@ -107,6 +107,11 @@
         "Cover": "cats/cat_html.jpeg"
       },
       {
+        "Name": "CSS",
+        "Slug": "Large-front-end-html",
+        "Cover": "cats/cat_html.jpeg"
+      },
+      {
         "Name": "Bootstrap",
         "Slug": "Large-front-end-Bootstrap",
         "Cover": "cats/cat_bootstrap.jpeg"
