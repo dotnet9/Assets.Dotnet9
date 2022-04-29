@@ -4,6 +4,8 @@
   "Cover": "https://img1.dotnet9.com/2022/04/cover_42.png",
   "BriefDescription":"技巧",
   "Categories": ["CSS"],
-  "CopyrightType": "Default",
+  "CopyrightType": "Reprint",
+  "Original": "knaagar",
+  "OriginalLink": "https://dev.to/devsyedmohsin/css-tips-and-tricks-you-will-add-to-cart-163p",
   "CreateDate": "2022-04-28 07:12:32"
 }
