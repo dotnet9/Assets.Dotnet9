@@ -1,11 +1,10 @@
 {
-  "Title": "我这样做网站：工具+博客",
-  "Slug": "I-do-this-website-Tools-and-Blog",
-  "Cover": "https://img1.dotnet9.com/2022/02/cover_17.jpeg",
-  "BriefDescription":"做了几版个人博客网站，虽然基本都只做了几个页面展示，自足感确是好多好多，下面是几版使用的技术",
-  "Categories": ["Blazor"],
-  "Tags": [".NET 7", "Blazor", "在线工具", "博客"],
-  "Albums": ["Dotnet9工具箱"],
+  "Title": "分享我做博客网站时积累的一些资料",
+  "Slug": "Share-some-learning-materials-I-accumulated-when-I-was-a-blog-website",
+  "Cover": "https://img1.dotnet9.com/2022/03/cover_01.png",
+  "BriefDescription":"Dotnet9网站用WordPress搭建了两年，去年开始自学ASP.NET Core MVC，开始了独立开发网站之路，现在网站前台算是有模有样了，后台正在开发中",
+  "Categories": ["Web API", "MVC", "Blazor", "Vue"],
+  "Tags": ["Dotnet9", "开源博客"],
   "CopyrightType": "Default",
   "CreateDate": "2022-03-02 07:57:36"
 }
