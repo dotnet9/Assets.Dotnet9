@@ -147,6 +147,11 @@
         "Name": "Sqlite",
         "Slug": "database-sqlite",
         "Cover": "cats/cat_sqlite.jpeg"
+      },
+      {
+        "Name": "数据库相关",
+        "Slug": "database-about",
+        "Cover": "cats/cat_mysql.jpeg"
       }
     ]
   },
