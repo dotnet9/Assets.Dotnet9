@@ -1,0 +1,11 @@
+{
+  "Title": "EF Core实现dynamic动态查询和EF Core注入多个上下文实例池",
+  "Slug": "EF-core-implements-dynamic-dynamic-query-and-EF-core-injects-multiple-context-instance-pools",
+  "Cover": "https://img1.dotnet9.com/2022/05/cover_11.jpg",
+  "BriefDescription":"无论是在EF 6.x还是EF Core中对于原始查询的APi都比较鸡肋",
+  "Categories": ["EF Core"],
+  "CopyrightType": "Reprint",
+  "Original": "Jeffcky",
+  "OriginalLink": "https://www.cnblogs.com/CreateMyself/p/8921881.html",
+  "CreateDate": "2020-05-04 16:43:26"
+}
