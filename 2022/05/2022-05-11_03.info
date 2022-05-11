@@ -1,0 +1,11 @@
+{
+  "Title": ".NET性能优化-使用ValueStringBuilder拼接字符串",
+  "Slug": "Dotnet-Perf-Opt-Use-ValueStringBuilder",
+  "Cover": "https://img1.dotnet9.com/2022/05/cover_32.jpg",
+  "BriefDescription":"这一次要和大家分享的一个Tips是在字符串拼接场景使用的",
+  "Categories": [".NET相关"],
+  "CopyrightType": "Reprint",
+  "Original": "InCerry",
+  "OriginalLink": "https://www.cnblogs.com/InCerry/p/Dotnet-Perf-Opt-Use-ValueStringBuilder.html",
+  "CreateDate": "2022-05-11 07:13:26"
+}
