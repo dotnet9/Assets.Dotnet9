@@ -1,0 +1,11 @@
+{
+  "Title": "在 .NET 应用程序中运行 JavaScript",
+  "Slug": "running-javascript-in-a-dotnet-app-with-javascriptengineswitcher",
+  "Cover": "https://img1.dotnet9.com/2022/05/cover_31.png",
+  "BriefDescription":"前几天我在做一个副业，意识到我需要使用一些 JavaScript 功能。",
+  "Categories": [".NET相关", "更多前端"],
+  "CopyrightType": "Reprint",
+  "Original": "liamwang 精致码农",
+  "OriginalLink": "https://mp.weixin.qq.com/s/nBO53jDbvmi7tL-js0tz6w",
+  "CreateDate": "2022-05-11 06:51:42"
+}
