@@ -109,3 +109,5 @@ Python 之禅 by Tim Peters
 12. Github：[https://www.github.com/dotnet9](https://www.github.com/dotnet9)
 13. Gitee：[https://gitee.com/dotnet9](https://gitee.com/dotnet9)
 14. 51CTO博客：[https://blog.51cto.com/u_15469207](https://blog.51cto.com/u_15469207)
+15. 51Aspx：[https://club.51aspx.com/users/czwzxCmkj/post](https://club.51aspx.com/users/czwzxCmkj/post)
+16. InfoQ：[https://www.infoq.cn/profile/A417E2BA797068/publish](https://www.infoq.cn/profile/A417E2BA797068/publish)
