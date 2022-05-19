@@ -1,0 +1,11 @@
+{
+  "Title": "Vue3.2 setup语法糖总结",
+  "Slug": "Vue3-to-2-Summary-of-setup-syntax",
+  "Cover": "https://img1.dotnet9.com/2022/05/cover_48.jpg",
+  "BriefDescription":"在 Vue3.2 中只需要在 script 标签上加上 setup 属性，无需 return，template 便可直接使用，非常的香啊！",
+  "Categories": ["Vue"],
+  "CopyrightType": "Reprint",
+  "Original": "玲小叮当",
+  "OriginalLink": "https://segmentfault.com/a/1190000041849882",
+  "CreateDate": "2022-05-19 06:47:26"
+}
