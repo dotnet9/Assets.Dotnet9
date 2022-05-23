@@ -48,5 +48,10 @@
     "Name": "开源Flutter",
     "Slug": "open-source-flutter",
     "Cover": "albums/album_flutter.png"
+  },
+  {
+    "Name": "Dotnet9WPFControls",
+    "Slug": "wpf-Dotnet9WPFControls",
+    "Cover": "albums/album_wpf.png"
   }
 ]
