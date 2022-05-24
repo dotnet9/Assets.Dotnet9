@@ -2,7 +2,7 @@
   "Title": "RPA之基于FlaUI的微信发送消息给某人",
   "Slug": "RPA-flaui-based-wechat-sends-a-message-to-someone",
   "Cover": "https://img1.dotnet9.com/2022/05/cover_54.png",
-  "BriefDescription":"树形表设计讨论",
+  "BriefDescription":"实现微信的群发功能",
   "Categories": [".NET相关"],
   "CopyrightType": "Reprint",
   "Original": "蓝创精英团队",
