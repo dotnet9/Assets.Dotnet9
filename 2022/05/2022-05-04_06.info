@@ -1,7 +1,7 @@
 {
   "Title": "如何在生产环境下用好EFCore",
   "Slug": "How-to-make-good-use-of-efcore-in-production-environment",
-  "Cover": "https://img1.dotnet9.com/2022/05/cover_10.png",
+  "Cover": "https://lequ.co/2022/05/cover_10.png",
   "BriefDescription":"这是使用EF Core迁移数据库的系列文章中的第二篇。",
   "Categories": ["EF Core"],
   "CopyrightType": "Reprint",

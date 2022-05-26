@@ -1,7 +1,7 @@
 {
   "Title": "Blazor创建TabControl组件",
   "Slug": "blazor-creates-tabcontrol-component",
-  "Cover": "https://img1.dotnet9.com/2021/12/cover_03.jpeg",
+  "Cover": "https://lequ.co/2021/12/cover_03.jpeg",
   "BriefDescription":"创建一个Blazor TabControl组件，有两个目标知识点",
   "Categories": ["Blazor"],
   "Tags": ["前端", "Blazor"],

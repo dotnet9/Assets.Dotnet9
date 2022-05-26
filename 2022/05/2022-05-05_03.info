@@ -1,7 +1,7 @@
 {
   "Title": ".NET性能优化-使用结构体替代类",
   "Slug": "Dotnet-performance-optimization-using-structs-instead-of-classes",
-  "Cover": "https://img1.dotnet9.com/2022/05/cover_16.jpg",
+  "Cover": "https://lequ.co/2022/05/cover_16.jpg",
   "BriefDescription":"我们知道在C#和Java明显的一个区别就是C#可以自定义值类型，也就是今天的主角struct，我们有了更加方便的class为什么微软还加入了struct呢？",
   "Categories": [".NET相关"],
   "CopyrightType": "Reprint",

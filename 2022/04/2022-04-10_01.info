@@ -1,7 +1,7 @@
 {
   "Title": "dotnet 为大型应用接入 ApplicationStartupManager 启动流程框架",
   "Slug": "Dotnet-starts-the-process-framework-for-large-application-access-to-ApplicationStartupManager",
-  "Cover": "https://img1.dotnet9.com/2022/04/0704.jpg",
+  "Cover": "https://lequ.co/2022/04/0704.jpg",
   "BriefDescription":"设想，用户双击了桌面图标，然而等待几分钟，应用才启动完毕，那用户下一步会不会就是点击卸载了。为了权衡大型应用软件在启动过程，既需要执行复杂的启动逻辑，又需要关注启动性能，为此过程造一个框架是一个完全合理的事情。",
   "Categories": [".NET相关", "WPF"],
   "CopyrightType": "Reprint",

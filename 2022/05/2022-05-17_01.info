@@ -1,7 +1,7 @@
 {
   "Title": ".Net WebView2 项目，实现 嵌入 WEB 页面 Chromium内核",
   "Slug": "Dotnet-webview2-project-to-embed-the-chromium-kernel-of-web-pages",
-  "Cover": "https://img1.dotnet9.com/2022/05/cover_45.png",
+  "Cover": "https://lequ.co/2022/05/cover_45.png",
   "BriefDescription":"WebView2 项目得天独厚，有微软操作系统win10以及win11的加持",
   "Categories": [".NET相关"],
   "CopyrightType": "Reprint",

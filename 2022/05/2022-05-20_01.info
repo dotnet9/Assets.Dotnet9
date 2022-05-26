@@ -1,7 +1,7 @@
 {
   "Title": "WPF怎么做新手引导界面？",
   "Slug": "How-does-WPF-do-novice-boot-interface",
-  "Cover": "https://img1.dotnet9.com/2022/05/cover_50.png",
+  "Cover": "https://lequ.co/2022/05/cover_50.png",
   "BriefDescription":"新手引导功能的话，就是告诉用户，页面上操作的顺序，第一步要做什么，第二步要做什么，以此类推，然后，最终关闭新手引导页面。",
   "Categories": ["WPF"],
   "CopyrightType": "Reprint",

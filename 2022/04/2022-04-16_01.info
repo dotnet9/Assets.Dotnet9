@@ -1,7 +1,7 @@
 {
   "Title": "MAUI初体验：爽",
   "Slug": "Maui-initial-experience-Cool",
-  "Cover": "https://img1.dotnet9.com/2022/04/cover_18.png",
+  "Cover": "https://lequ.co/2022/04/cover_18.png",
   "BriefDescription":"几个小时折腾，Windows上、Mac上成功运行Hello World，后面开发桌面和移动端就选MAUI了",
   "Categories": ["MAUI", "WinUI"],
   "Tags": ["C#开发移动端", "多端开发", "极致开发体验"],

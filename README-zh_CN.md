@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://dotnet9.com">
-    <img src="https://img1.dotnet9.com/site/logo.png" width="128" height="128" alt="Dotnet9">
+    <img src="https://lequ.co/site/logo.png" width="128" height="128" alt="Dotnet9">
   </a>
 </p>
 

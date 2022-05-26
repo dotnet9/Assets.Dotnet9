@@ -1,7 +1,7 @@
 {
   "Title": "记将一个大型客户端应用项目迁移到 dotnet 6 的经验和决策",
   "Slug": "Remember-the-experience-and-decision-of-migrating-a-large-client-application-project-to-dotnet-6",
-  "Cover": "https://img1.dotnet9.com/2022/05/cover_17.jpg",
+  "Cover": "https://lequ.co/2022/05/cover_17.jpg",
   "BriefDescription":"在经过了两年的准备，以及迁移了几个应用项目积累了让我有信心的经验之后，我最近在开始将团队里面最大的一个项目，从 .NET Framework 4.5 迁移到 .NET 6 上。",
   "Categories": ["WPF"],
   "CopyrightType": "Reprint",

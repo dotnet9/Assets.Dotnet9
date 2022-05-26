@@ -1,7 +1,7 @@
 {
   "Title": "(24/30)大家一起学Blazor：<AuthorizeRouteView>运用",
   "Slug": "24-of-30-let-us-learn-blazor-together-authorizetouteview",
-  "Cover": "https://img1.dotnet9.com/2021/12/cover_05.png",
+  "Cover": "https://lequ.co/2021/12/cover_05.png",
   "BriefDescription":"前天有在`Blog.razor`加入通过验证及未通过的显示内容，但如果系统要呈现的未通过验证内容都一样，在每个Component 都这样写就太浪费时间了，可以利用`App.razor`帮我们做统一呈现的事。",
   "Categories": ["Blazor"],
   "Tags": ["Blazor Server"],

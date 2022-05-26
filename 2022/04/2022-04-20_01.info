@@ -1,7 +1,7 @@
 {
   "Title": "C# Aggregate 累加器",
   "Slug": "Csharp-aggregate-accumulator",
-  "Cover": "https://img1.dotnet9.com/2022/04/cover_23.jpg",
+  "Cover": "https://lequ.co/2022/04/cover_23.jpg",
   "BriefDescription":"累加器是什么？累加器怎么用？别急，一项新技术的诞生，基本都是为了满足某种需求，从需求出发，更容易理解这个函数的特点。",
   "Categories": [".NET相关"],
   "Tags": ["C#", "Aggregate"],

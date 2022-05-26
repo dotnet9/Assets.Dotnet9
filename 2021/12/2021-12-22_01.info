@@ -1,7 +1,7 @@
 {
   "Title": "你在 Docker 中跑 MySQL？恭喜你，好下岗了！",
   "Slug": "are-you-running-mysql-in-docker-congratulations-you-are-well-laid-off",
-  "Cover": "https://img1.dotnet9.com/2021/12/cover_31.png",
+  "Cover": "https://lequ.co/2021/12/cover_31.png",
   "BriefDescription":"目前，容器和 Docker 依旧是技术领域最热门的词语，无状态的服务容器化已经是大势所趋，同时也带来了一个热点问题被大家所争论不以：`数据库 MySQL 是否需要容器化？`",
   "Categories": ["Docker", "MySQL"],
   "Tags": ["Docker", "MySQL"],

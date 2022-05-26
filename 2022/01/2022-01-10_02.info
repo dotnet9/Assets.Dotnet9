@@ -1,7 +1,7 @@
 {
   "Title": "Dapper in .NET Core",
   "Slug": "Dapper-in-dotNET-Core",
-  "Cover": "https://img1.dotnet9.com/2022/01/cover_08.jpg",
+  "Cover": "https://lequ.co/2022/01/cover_08.jpg",
   "BriefDescription":"关于什么是Dapper（详细入口），在此不做赘述；本文仅对Dapper在.Net Core中的使用作扼要说明，所陈代码以示例讲解为主，乃抛砖引玉，开发者可根据自身需要进行扩展和调整",
   "Categories": ["Dapper"],
   "Tags": ["C#", ".NET", "Dapper", "ORM"],

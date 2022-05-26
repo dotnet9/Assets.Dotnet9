@@ -1,7 +1,7 @@
 {
   "Title": ".NET Core使用FluentEmail发送邮件",
   "Slug": "Uses-fluent-email-to-send-mail-in-dotnet-core",
-  "Cover": "https://img1.dotnet9.com/2020/11/cover_03.jpeg",
+  "Cover": "https://lequ.co/2020/11/cover_03.jpeg",
   "BriefDescription": "在实际的项目开发中，我们会遇到许多需要通过程序发送邮件的场景，比如异常报警、消息、进度通知等等。",
   "Categories": [".NET相关"],
   "CopyrightType": "Reprint",
