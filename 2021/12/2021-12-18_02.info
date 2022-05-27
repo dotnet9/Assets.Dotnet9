@@ -1,7 +1,7 @@
 {
   "Title": "(15/30)大家一起学Blazor：CSS isolation（隔离）",
   "Slug": "15-of-30-let-us-learn-blazor-together-css-isolation",
-  "Cover": "https://lequ.co/2021/12/cover_05.png",
+  "Cover": "https://img1.dotnet9.com/2021/12/cover_05.png",
   "BriefDescription":"有时候会想对不同Component 做个别样式设置，但如果把class 都写在`wwwroot/css/site.css`，或是针对某个元素改动样式，可能导致改一个就影响全部Component，这种全域冲突是必须避免的，但应该怎么做？",
   "Categories": ["Blazor"],
   "Tags": ["Blazor Server"],

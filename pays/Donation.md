@@ -10,7 +10,7 @@
 欢迎赞助站长买光头护发液：
 
 <div align="center">
-<img src="https://lequ.co/pays/WeChatPay.jpg" width="256" alt="Wechat"><img src="https://lequ.co/pays/AliPay.jpg" style="margin-left: 5px; margin-right: 5px;" width="256" alt="Alipay"><img src="https://lequ.co/pays/QQPay.jpg" width="256" alt="QQpay">
+<img src="https://img1.dotnet9.com/pays/WeChatPay.jpg" width="256" alt="Wechat"><img src="https://img1.Dotnet9.com/pays/AliPay.jpg" style="margin-left: 5px; margin-right: 5px;" width="256" alt="Alipay"><img src="https://img1.dotnet9.com/pays/QQPay.jpg" width="256" alt="QQpay">
 </div>
 
 ## 3. 赞助历史清单

@@ -1,7 +1,7 @@
 {
   "Title": "(12/30)大家一起学Blazor：Cascading values and parameters",
   "Slug": "12-of-30-let-us-learn-blazor-together-cascading-values-and-parameters",
-  "Cover": "https://lequ.co/2021/12/cover_05.png",
+  "Cover": "https://img1.dotnet9.com/2021/12/cover_05.png",
   "BriefDescription":"昨天不小心把Reset按钮的type改成button，今天改回reset。",
   "Categories": ["Blazor"],
   "Tags": ["Blazor Server"],

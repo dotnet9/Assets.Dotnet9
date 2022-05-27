@@ -1,7 +1,7 @@
 {
   "Title": "开源C# WPF控件库《MaterialDesignInXAML》",
   "Slug": "Material-designinxaml-an-open-source-csharp-WPF-Control-Library",
-  "Cover": "https://lequ.co/2020/12/0502.jpg",
+  "Cover": "https://img1.dotnet9.com/2020/12/0502.jpg",
   "BriefDescription":"今天介绍一个开源的C# WPF开源控件库，非常漂亮，重点是开源哦",
   "InBanner": true,
   "Categories": ["WPF"],

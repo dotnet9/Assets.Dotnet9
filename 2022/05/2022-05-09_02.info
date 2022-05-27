@@ -1,7 +1,7 @@
 {
   "Title": "交互式 .Net",
   "Slug": "Interactive-Net",
-  "Cover": "https://lequ.co/2022/05/cover_27.png",
+  "Cover": "https://img1.dotnet9.com/2022/05/cover_27.png",
   "BriefDescription":"交互式是指输入代码后可直接运行该代码，然后持续输入运行代码。",
   "Categories": [".NET相关"],
   "CopyrightType": "Reprint",

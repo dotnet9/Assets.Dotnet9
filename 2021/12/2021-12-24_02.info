@@ -1,7 +1,7 @@
 {
   "Title": "(26/30)大家一起学Blazor：给用户分配角色",
   "Slug": "26-of-30-let-us-learn-blazor-together-assign-roles-to-users",
-  "Cover": "https://lequ.co/2021/12/cover_05.png",
+  "Cover": "https://img1.dotnet9.com/2021/12/cover_05.png",
   "BriefDescription":"昨天角色的`CRUD` 功能都完成了，接着就是要把角色分配给用户了",
   "Categories": ["Blazor"],
   "Tags": ["Blazor Server"],

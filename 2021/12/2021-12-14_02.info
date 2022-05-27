@@ -1,7 +1,7 @@
 {
   "Title": "(10/30)大家一起学Blazor：Blog and Posts",
   "Slug": "10-of-30-let-us-learn-blazor-together-blog-and-posts",
-  "Cover": "https://lequ.co/2021/12/cover_05.png",
+  "Cover": "https://img1.dotnet9.com/2021/12/cover_05.png",
   "BriefDescription":"现在我们有一个可以输入日志的界面了，但日志就是每天都要写的意思，只有一篇怎么够呢？我们来加上blog。",
   "Categories": ["Blazor"],
   "Tags": ["Blazor Server"],

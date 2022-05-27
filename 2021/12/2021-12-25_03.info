@@ -1,7 +1,7 @@
 {
   "Title": "(28/30)大家一起学Blazor：Policy-based authorization",
   "Slug": "28-of-30-let-us-learn-blazor-together-policy-based-authorization",
-  "Cover": "https://lequ.co/2021/12/cover_05.png",
+  "Cover": "https://img1.dotnet9.com/2021/12/cover_05.png",
   "BriefDescription":"之前有说到`ASP.NET Core Identity` 使用的是基于`Claim` 的验证，其实`ASP.NET Core Identity` 有不同类型的授权方式，最简单的`登录授权`、`角色授权`、`Claim 授权`，但上述几种都是以一种方式实现：原则授权(`Policy-based authorization`)。",
   "Categories": ["Blazor"],
   "Tags": ["Blazor Server"],

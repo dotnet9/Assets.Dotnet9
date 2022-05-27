@@ -1,7 +1,7 @@
 {
   "Title": "(20/30)大家一起学Blazor：日志记录",
   "Slug": "20-of-30-let-us-learn-blazor-together-log-record",
-  "Cover": "https://lequ.co/2021/12/cover_05.png",
+  "Cover": "https://img1.dotnet9.com/2021/12/cover_05.png",
   "BriefDescription":"在开发系统时，记录是一件很重要的事，前面都没有提到，笔者在最近才想到这点，所以就来实现吧！",
   "Categories": ["Blazor"],
   "Tags": ["Blazor Server"],

@@ -1,7 +1,7 @@
 {
   "Title": "C# 编写简单易用的 Windows 截屏增强工具",
   "Slug": "Write-a-simple-and-easy-to-use-Windows-screenshot-enhancement-tool-in-Csharp",
-  "Cover": "https://lequ.co/2022/05/3701.gif",
+  "Cover": "https://img1.dotnet9.com/2022/05/3701.gif",
   "BriefDescription":"一个简单易用的 Windows 截屏增强工具",
   "Categories": ["MySQL"],
   "Albums": ["开源C#"],

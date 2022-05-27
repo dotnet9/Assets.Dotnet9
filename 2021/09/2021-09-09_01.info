@@ -1,7 +1,7 @@
 {
   "Title": "WPF：使用AdornerDecorator装饰器实现水印",
   "Slug": "wpf-watermark-using-adornerdecorator-decorator",
-  "Cover": "https://lequ.co/2021/09/cover_04.jpg",
+  "Cover": "https://img1.dotnet9.com/2021/09/cover_04.jpg",
   "BriefDescription":"基本全是代码",
   "Categories": ["WPF"],
   "Tags": ["WPF", "水印"],

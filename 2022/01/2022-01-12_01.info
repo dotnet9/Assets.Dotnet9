@@ -1,7 +1,7 @@
 {
   "Title": "初识MASA Blazor",
   "Slug": "First-met-Masa-blazor",
-  "Cover": "https://lequ.co/2022/01/0711.png",
+  "Cover": "https://img1.dotnet9.com/2022/01/0711.png",
   "BriefDescription":"一个Mateial风格的开源Blazor组件库",
   "Categories": ["Blazor"],
   "Tags": ["C#", "Blazor"],

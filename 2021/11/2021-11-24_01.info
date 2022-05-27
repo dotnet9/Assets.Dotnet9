@@ -1,7 +1,7 @@
 {
   "Title": "“老坛泡新菜”:SOD MVVM框架，让WinForms焕发新春",
   "Slug": "the-old-altar-makes-new-dishes-sod-mvvm-framework-making-winforms-a-new-year",
-  "Cover": "https://lequ.co/2021/11/cover_08.png",
+  "Cover": "https://img1.dotnet9.com/2021/11/cover_08.png",
   "BriefDescription":"WinForms上MVVM技术的必要性，发现要实现MVVM框架其实并不难，关键在于模型（Model）和视图（View）的双向绑定，即模型的改变引起视图内容的改变，而视图的改变也能够引起模型的改变。",
   "InBanner": true,
   "Categories": ["Winform"],

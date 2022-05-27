@@ -1,7 +1,7 @@
 {
   "Title": "项目中常用的19条MySQL优化",
   "Slug": "19-MySQL-optimizations-commonly-used-in-projects",
-  "Cover": "https://lequ.co/2022/05/cover_02.png",
+  "Cover": "https://img1.dotnet9.com/2022/05/cover_02.png",
   "BriefDescription":"声明一下优化方案都是基于 Mysql-索引-BTree类型 的",
   "Categories": ["MySQL"],
   "CopyrightType": "Reprint",

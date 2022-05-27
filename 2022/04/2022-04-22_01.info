@@ -1,7 +1,7 @@
 {
   "Title": "来，WinForm使用依赖注入！",
   "Slug": "Common-on-WinForm-uses-dependency-injection",
-  "Cover": "https://lequ.co/2022/04/cover_29.jpg",
+  "Cover": "https://img1.dotnet9.com/2022/04/cover_29.jpg",
   "BriefDescription":"关于依赖注入是什么？依赖注入是一种具体的编码技巧，对我来说最明显的就是解决代码的耦合性。",
   "Categories": ["Winform"],
   "Tags": ["Winform", "依赖注入", "IOC"],

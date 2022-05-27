@@ -1,7 +1,7 @@
 {
   "Title": "SwiftUI图片处理(缩放、拼图)",
   "Slug": "swiftui-image-processing-zoom-jigsaw-puzzle",
-  "Cover": "https://lequ.co/2021/08/cover_01.jpeg",
+  "Cover": "https://img1.dotnet9.com/2021/08/cover_01.jpeg",
   "BriefDescription":"采用SwiftUI Core Graphics技术，与C#的GDI+绘图类似",
   "Categories": ["SwiftUI"],
   "Tags": ["SwiftUI", "缩放", "拼图"],

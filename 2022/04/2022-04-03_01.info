@@ -1,7 +1,7 @@
 {
   "Title": "基于 .NET 6 开发的在线音视频聊天项目",
   "Slug": "An-online-audio-and-video-chat-project-based-on-dotNET-6",
-  "Cover": "https://lequ.co/2022/04/0108.png",
+  "Cover": "https://img1.dotnet9.com/2022/04/0108.png",
   "BriefDescription":"基于.NET 6开发的在线音视频聊天项目，客户端WPF，后端.NET API。",
   "Categories": ["WPF", "Web API"],
   "Tags": [".NET 6", "WPF", ".NET Core Web API", "音视频", "聊天"],

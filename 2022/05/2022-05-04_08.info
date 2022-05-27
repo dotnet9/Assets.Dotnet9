@@ -1,7 +1,7 @@
 {
   "Title": "如何分析EFCore引发的内存泄漏",
   "Slug": "How-to-analyze-memory-leaks-caused-by-efcore",
-  "Cover": "https://lequ.co/2022/05/cover_12.jpg",
+  "Cover": "https://img1.dotnet9.com/2022/05/cover_12.jpg",
   "BriefDescription":"术语“内存泄漏”和“ .NET应用程序”不是经常一起使用。",
   "Categories": ["EF Core"],
   "CopyrightType": "Reprint",

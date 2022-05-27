@@ -1,7 +1,7 @@
 {
   "Title": "数据埋点是什么？设置埋点的意义是什么？",
   "Slug": "What-is-the-data-buried-point-What-is-the-meaning-of-setting-the-buried-point",
-  "Cover": "https://lequ.co/2022/04/cover_33.jpg",
+  "Cover": "https://img1.dotnet9.com/2022/04/cover_33.jpg",
   "BriefDescription":"所谓埋点就是在应用中特定的流程收集一些信息，用来跟踪应用使用的状况，后续用来进一步优化产品或是提供运营的数据支撑",
   "Categories": ["架构设计"],
   "CopyrightType": "Reprint",

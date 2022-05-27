@@ -1,7 +1,7 @@
 {
   "Title": "(11/30)大家一起学Blazor：Arbitrary属性",
   "Slug": "11-of-30-let-us-learn-blazor-together-arbitrary-property",
-  "Cover": "https://lequ.co/2021/12/cover_05.png",
+  "Cover": "https://img1.dotnet9.com/2021/12/cover_05.png",
   "BriefDescription":"目前`MyButton`有3个`[Parameter]`，如果再增加的话，又要再定义新的`[Parameter]`，为了避免不断更新这个Component，我们来用Blazor提供的`@attribute`。",
   "Categories": ["Blazor"],
   "Tags": ["Blazor Server"],

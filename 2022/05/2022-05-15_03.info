@@ -1,7 +1,7 @@
 {
   "Title": "基于.NET动态编译技术实现任意代码执行",
   "Slug": "be-based-on-dotNet-dynamic-compilation-technology-to-realize-arbitrary-code-execution",
-  "Cover": "https://lequ.co/2022/05/cover44.gif",
+  "Cover": "https://img1.dotnet9.com/2022/05/cover44.gif",
   "BriefDescription":".Net可通过编译技术将外部输入的字符串作为代码执行，动态编译技术提供了最核心的两个类",
   "Categories": [".NET相关"],
   "CopyrightType": "Reprint",

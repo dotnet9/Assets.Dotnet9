@@ -1,7 +1,7 @@
 {
   "Title": "走进WPF之开发类似Visio流程图软件",
   "Slug": "Into-the-development-of-WPF-similar-to-Visio-flowchart-software",
-  "Cover": "https://lequ.co/2022/02/cover_15.jpeg",
+  "Cover": "https://img1.dotnet9.com/2022/02/cover_15.jpeg",
   "BriefDescription":"当你想画一个流程图的时候，你会发现，很多软件要么需要秘钥，要么需要会员，这时我就在想，可不可自己制作一款流程图软件呢？",
   "Categories": ["WPF"],
   "CopyrightType": "Reprint",

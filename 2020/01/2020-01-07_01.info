@@ -1,7 +1,7 @@
 {
   "Title": "C# WPF 普通登录界面",
   "Slug": "csharp-ordinary-login-ui",
-  "Cover": "https://lequ.co/2020/01/cover_01.png",
+  "Cover": "https://img1.dotnet9.com/2020/01/cover_01.png",
   "BriefDescription":"只是简单的登录界面布局，没有太重要的功能效果。",
   "Categories": ["WPF"],
   "Tags": ["Login Window"],

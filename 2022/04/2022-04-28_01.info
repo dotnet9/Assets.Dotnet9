@@ -1,7 +1,7 @@
 {
   "Title": "使用IdentityServer出现过SameSite Cookie这个问题吗？",
   "Slug": "How-To-Prepare-Your-IdentityServer-For-Chromes-SameSite-Cookie-Changes-And-How-To-Deal-With-Safari-Nevertheless",
-  "Cover": "https://lequ.co/2022/04/cover_41.jpg",
+  "Cover": "https://img1.dotnet9.com/2022/04/cover_41.jpg",
   "BriefDescription":"如果您为 Web 应用程序和身份验证服务器使用单独的域，那么 Chrome 中的这种更改很可能会破坏部分用户的会话体验",
   "Categories": [".NET相关"],
   "CopyrightType": "Reprint",

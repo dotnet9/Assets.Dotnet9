@@ -1,7 +1,7 @@
 {
   "Title": "WPF Prism框架Region失效了？",
   "Slug": "wpf-prism-framework-region-failed",
-  "Cover": "https://lequ.co/2021/01/cover_02.jpeg",
+  "Cover": "https://img1.dotnet9.com/2021/01/cover_02.jpeg",
   "BriefDescription":"一般客户端项目常规操作流程是：弹出登录窗口=》账号验证成功=》关闭登录窗口=》弹出主窗口=》在主窗口作业。",
   "Categories": ["WPF"],
   "Tags": ["WPF", "Prism", "Region"],
