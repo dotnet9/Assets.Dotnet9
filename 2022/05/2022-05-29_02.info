@@ -1,0 +1,11 @@
+{
+  "Title": "WPF 通用权限开发框架 (ABP)",
+  "Slug": "WPF-general-permission-development-framework-ABP",
+  "Cover": "https://img1.dotnet9.com/2022/05/6001.png",
+  "BriefDescription":"对于大部分.NET 后端开发者来说, 都比较熟悉目前流行的ABP框架, 基于开源的ABP框架, 可以自己进行二次开发, 无需重新开发一些基础功能",
+  "Categories": ["WPF", ".NET课程"],
+  "CopyrightType": "Reprint",
+  "Original": "痕迹g",
+  "OriginalLink": "https://www.cnblogs.com/zh7791/p/16321843.html",
+  "CreateDate": "2022-05-29 10:16:27"
+}
