@@ -1,0 +1,11 @@
+{
+  "Title": "EF Core 6 新功能汇总（三）",
+  "Slug": "entity-framework-core-6-features-part-3",
+  "Cover": "https://img1.dotnet9.com/2022/06/cover_04.jpg",
+  "BriefDescription":"在这篇文章中，我将重点介绍 EF Core 6 中 LINQ 查询功能的增强。",
+  "Categories": ["EF Core"],
+  "CopyrightType": "Reprint",
+  "Original": "liamwang 精致码农",
+  "OriginalLink": "https://mp.weixin.qq.com/s/ZRNu1Lvx6ZYr0kStMjc_Ug",
+  "CreateDate": "2022-06-02 22:02:35"
+}
