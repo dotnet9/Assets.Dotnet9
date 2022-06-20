@@ -121,6 +121,13 @@
     {
         "Index": 15,
         "Kind": "Friend",
+        "Name": "DotNetJob",
+        "Description": "一个有技术博文的网站",
+        "Url": "https://dotnetjob.cn/"
+    },
+    {
+        "Index": 15,
+        "Kind": "Friend",
         "Name": "52ABP",
         "Description": "52ABP框架官网",
         "Url": "https://www.52abp.com/"
