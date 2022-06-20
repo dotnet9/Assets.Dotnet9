@@ -1,0 +1,9 @@
+{
+  "Title": "MAUI与Blazor共享一套UI，媲美Flutter",
+  "Slug": "Share-razor-library-between-maui-and-blazor-server-or-client",
+  "Cover": "https://img1.dotnet9.com/2022/06/1309.png",
+  "BriefDescription":"在MAUI Blazor和Blazor Server(或者Client)项目之间，通过Razor类库共用一套UI，统一Web、客户端、App界面",
+  "Categories": ["MAUI", "Blazor"],
+  "CopyrightType": "Default",
+  "CreateDate": "2022-06-19 23:35:14"
+}
