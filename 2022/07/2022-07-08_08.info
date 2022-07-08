@@ -3,8 +3,8 @@
   "Slug": "How-to-limit-the-number-of-interface-requests-in-dotNET-Core",
   "Cover": "https://img1.dotnet9.com/2022/07/cover_08.png",
   "BriefDescription":"像AspNetCoreRateLimit这种轮子我前面有给大家介绍过，今天就不说了，我们来聊聊背后的原理。",
-  "Categories": [".NET相关"],
-  "CopyrightType": "Web API",
+  "Categories": ["Web API"],
+  "CopyrightType": "Reprint",
   "Original": "黑哥聊dotNet",
   "OriginalLink": "https://mp.weixin.qq.com/s/bNbdqfP4W8Xx7PfWaeNTpA",
   "CreateDate": "2022-07-08 06:54:14"
