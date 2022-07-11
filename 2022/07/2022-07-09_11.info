@@ -1,7 +1,7 @@
 {
   "Title": ".NET Core手撸一个基于Token的权限认证",
   "Slug": "Dotnet-Core-hands-on-a-Token-based-authorization",
-  "Cover": "https://img1.dotnet9.com/2022/07/cover_07.jpeg",
+  "Cover": "https://img1.dotnet9.com/2022/07/cover_11.jpeg",
   "BriefDescription":"权限认证是确定用户身份的过程, 可确定用户是否有访问资源的权力。",
   "Categories": ["Web API"],
   "CopyrightType": "Reprint",
