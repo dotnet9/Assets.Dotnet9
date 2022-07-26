@@ -195,6 +195,11 @@
         "Cover": "cats/cat_redis.jpeg"
       },
       {
+        "Name": "RabbitMQ",
+        "Slug": "RabbitMQ",
+        "Cover": "cats/cat_RabbitMQ.jpeg"
+      },
+      {
         "Name": "Linux",
         "Slug": "linux",
         "Cover": "cats/cat_linux.jpeg"
