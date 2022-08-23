@@ -1,3 +1,15 @@
+---
+title: FluentValidation在C# WPF中的应用
+slug: Uses-fluent-validation-in-WPF
+description: 介绍FluentValidation的文章不少，其实它也可以用于WPF属性验证，本文主要也是讲解该组件在WPF中的使用
+date: 2019-11-19 03:43:13
+author: 沙漠尽头的狼
+draft: false
+cover: https://img1.dotnet9.com/2019/11/cover_01.png
+categories: WPF
+copyright: Default
+---
+
 ## 1. 简介
 
 介绍FluentValidation的文章不少，[零度编程](https://www.xcode.me/post/5849)的介绍我引用下：
