@@ -1,4 +1,4 @@
-Site resource folder
+Dotnet9网站的资源库
 <p align="center">
   <a href="https://dotnet9.com">
     <img src="https://img1.dotnet9.com/site/logo.png" width="128" height="128" alt="Dotnet9">
@@ -7,6 +7,5 @@ Site resource folder
 
 <h1 align="center">Dotnet9 site resource repository</h1>
 
-- Site：https://dotnet9.com
-- Site github repository：https://github.com/dotnet9/Dotnet9
-- Site gitee repository：https://gitee.com/dotnet9/Dotnet9
+- 网站：https://dotnet9.com
+- Github：https://github.com/dotnet9/Dotnet9
