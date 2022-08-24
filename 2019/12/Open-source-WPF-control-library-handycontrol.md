@@ -1,3 +1,17 @@
+---
+title: 开源C# WPF控件库《HandyControl》
+slug: Open-source-WPF-control-library-handycontrol
+description: 一个很多人参与贡献的WPF开源控件项目
+banner: true
+date: 2019-12-09 13:45:56
+author: 沙漠尽头的狼
+draft: false
+cover: https://img1.dotnet9.com/2019/12/0206.png
+albums: 开源WPF
+categories: WPF
+copyright: Default
+---
+
 ## 前言
 
 历经3个白天2个黑夜（至凌晨2点），Dotnet9小编经过反复修改、润色，终于完成此文编写（本文略长，手机党请考虑流量），只能说小编我不容易呀不容易。

@@ -1,3 +1,16 @@
+---
+title: 一个值得学习的WPF开源项目：Accelerider.Windows
+slug: Accelerider-Windows
+description: 此项目应用了Prism MVVM框架，项目展示数据来源于其他服务程序，使用的WebAPI通信，如果要正常运行此程序，需要您自己做一个WebAPI程序，由API接口提供数据驱动，其实直接查看代码最直接，有需要的自己是很方便提取的，即使项目无法运行。
+date: 2019-12-05 13:45:56
+author: 沙漠尽头的狼
+draft: false
+cover: https://img1.dotnet9.com/2019/12/0304.png
+albums: 开源WPF
+categories: WPF
+copyright: Default
+---
+
 ## 项目介绍
 
 此项目应用了Prism MVVM框架，项目展示数据来源于其他服务程序，使用的WebAPI通信，如果要正常运行此程序，需要您自己做一个WebAPI程序，由API接口提供数据驱动，其实直接查看代码最直接，有需要的自己是很方便提取的，即使项目无法运行。
