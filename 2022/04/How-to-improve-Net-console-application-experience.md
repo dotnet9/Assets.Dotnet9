@@ -10,7 +10,7 @@ originallink: https://www.cnblogs.com/88223100/p/upgraded-dotnet-console-experie
 draft: False
 cover: https://img1.dotnet9.com/2022/04/0201.png
 albums: 开源C#
-categories: 控制台
+categories: .NET相关
 tags: C#,控制台,酷炫的控制台
 ---
 
