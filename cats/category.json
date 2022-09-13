@@ -66,12 +66,12 @@
       },
       {
         "Name": "OpenXML",
-        "slug": "dotnet-openxml",
+        "Slug": "dotnet-openxml",
         "Cover": "cats/cat_openxml.jfif"
       },
       {
         "Name": ".NET相关",
-        "slug": "dotnet-more-dotnet-other",
+        "Slug": "dotnet-more-dotnet-other",
         "Cover": "cats/cat_dotnetabout.png"
       }
     ]
