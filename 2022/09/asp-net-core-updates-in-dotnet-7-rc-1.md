@@ -277,7 +277,7 @@ Blazor 提供了自己的基于IJSRuntime接口的 JavaScript 互操作机制，
 
 ## 更快的 HTTP/2 上传
 
-我们已将 Kestrel 的默认 HTTP/2 上传连接窗口大小从 128 KB 增加到 1 MB，这显着提高了使用 Kestrel 的默认配置的高延迟连接的 HTTP/2 上传速度。
+我们已将 Kestrel 的默认 HTTP/2 上传连接窗口大小从 128 KB 增加到 1 MB，这显著提高了使用 Kestrel 的默认配置的高延迟连接的 HTTP/2 上传速度。
 
 在仅引入 10 毫秒的人工延迟后，我们通过在 localhost 上使用单个流上传 108 MB 文件上传来测试增加此限制的影响，并看到上传速度提高了大约 6 倍。
 
