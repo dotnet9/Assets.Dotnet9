@@ -19,6 +19,8 @@
 
 | 日期        | 金额  | 赞助者                       | 来源                                                                    |
 | ---------- | ----: | --------------------------- | ----------------------------------------------------------------------- |
+| 2022-09-27 | 5￥   | 故里 | 公众号文章赞赏[《告诫之心-翻译转载Dotnet文章注意事项》](https://mp.weixin.qq.com/s/iVXVwtBlIygSRpp7kdSJ1A) |
+| 2022-09-26 | 1￥   | 木磊 | 公众号文章赞赏[《告诫之心-翻译转载Dotnet文章注意事项》](https://mp.weixin.qq.com/s/iVXVwtBlIygSRpp7kdSJ1A) |
 | 2022-09-26 | 5￥   | 今晚打老虎 | 公众号文章赞赏[《告诫之心-翻译转载Dotnet文章注意事项》](https://mp.weixin.qq.com/s/iVXVwtBlIygSRpp7kdSJ1A) |
 | 2022-07-05 | 88.88￥   | 习惯受伤([https://github.com/mrhuo](https://github.com/mrhuo)) | 微信付款码 |
 | 2022-06-20 | 3000￥   | 匿名 | 微信转账 |
