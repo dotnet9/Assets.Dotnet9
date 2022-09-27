@@ -15,7 +15,9 @@ categories: 技巧分享
 9月15日`Dotnet9网站`站长（沙漠尽头的狼）翻译了 .NET 7 RC1的三篇文章《.NET 7 RC1 发布》、《
 ASP.NET Core在.NET 7 RC1中的更新》、《EF CORE 7 RC1 发布》，来源 [微软开发者博客](https://devblogs.microsoft.com/)：
 
-![](https://img1.dotnet9.com/2022/09/delete-three-dotnet-article.png)
+![微信公众号发布文章列表](https://img1.dotnet9.com/2022/09/delete-three-dotnet-article.png)
+
+![.NET 7 RC1 markdown格式](https://img1.dotnet9.com/2022/09/0508.png)
 
 今天收到微信公众号【微软开发者MSDN】运营美女和其他工作人员通知后，已对上面三篇文章进行了删除：
 
