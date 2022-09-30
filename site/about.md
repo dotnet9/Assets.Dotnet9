@@ -1,5 +1,26 @@
 # 关于本站及站长
 
+<p align="center">
+  <a href="https://dotnet9.com">
+    <img src="https://img1.dotnet9.com/site/logo.png" width="128" height="128" alt="Dotnet9">
+  </a>
+</p>
+
+<h1 align="center">Dotnet9</h1>
+
+<div align="center">
+
+一个使用`ASP.NET Core MVC 7.0`开发的`博客`系统，集成了在线免费`工具`，目前正在新一轮的重构中...
+
+ ![dotnet-version](https://img.shields.io/badge/.NET%207.0-blue)  ![Visual Studio 2022](https://img.shields.io/badge/Visual%20Studio%20-2022-blueviolet)  <a target="_blank" href="https://qm.qq.com/cgi-bin/qm/qr?k=iL6egdGSGCMPezcUyzMPEcs9qsllgwr-&jump_from=webapi"><img border="0" src="https://pub.idqqimg.com/wpa/images/group.png" alt="Dotnet9软件技术交流" title="Dotnet9软件技术交流"></a> [![码云](https://img.shields.io/badge/Gitee-%E7%A0%81%E4%BA%91-orange)](https://gitee.com/dotnet9/Dotnet9)   [![Github](https://img.shields.io/badge/%20-github-%2324292e)](https://github.com/dotnet9/Dotnet9) [![Github stars](https://img.shields.io/github/stars/dotnet9/Dotnet9)](https://github.com/dotnet9/Dotnet9)
+
+ </div>
+
+- [ ] 前台(暂未进行重构，线上版本为MVC，计划使用Razor Pages重构)
+- [ ] 后台前端(正在开发中，采用Ant Design Pro v6搭建)
+- [x] 后端(已基本开发完成，.NET 7 WEB API，后端会配合后台前端、前台等开发做相应的接口完善)
+
+
 ## 1. Python之禅
 
 介绍本人及本站之前，我们看看 Python 之禅，在 Python Shell 中输入 import this 命令，显示内容就是 Python 之禅，见下文：

@@ -1,5 +1,20 @@
 [
   {
+    "Time": "2022-09-29",
+    "Title": "后台前端开发部分",
+    "Content": "基础表的CRUD算是开发完了，博客文章的管理还差些工作，此时加入一个前端网友一起开发后台前端，非常开心，我去学习go web了，准备重构前台。"
+  },
+  {
+    "Time": "2022-09-15",
+    "Title": "后台后端开发完成，开始后台前端开发",
+    "Content": "基本Web API开发完成，并使用Apifox测试了每个接口，开始后台前端开发：Ant Design Pro"
+  },
+  {
+    "Time": "2022-08-31",
+    "Title": "开发新一轮网站重构操作",
+    "Content": "买了杨老师的《ASP.NET Core技术内幕与项目实战》一书，并参考杨老师随书匹配的源码：[github.com/yangzhongke/NETBookMaterials/tree/main/最后大项目代码]，开始了Web API重构工作。"
+  },
+  {
     "Time": "2022-04-02",
     "Title": "上线Dotnet9网站",
     "Content": "专辑和博文展示开发完成，先上线再说：https://dotnet9.com"
