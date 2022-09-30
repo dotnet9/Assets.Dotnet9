@@ -84,7 +84,7 @@ git clone https://github.com/Layui-WPF-Team/Layui-WPF.git
 
 支持网络gif文件和本地gif文件
 
-![Fif动画](https://img1.dotnet9.com/2022/09/gif-animation-of-layui-wpf.gif)
+![gif动画](https://img1.dotnet9.com/2022/09/gif-animation-of-layui-wpf.gif)
 
 - 时间线
 
