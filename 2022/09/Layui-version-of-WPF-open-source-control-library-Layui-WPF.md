@@ -66,7 +66,7 @@ git clone https://github.com/Layui-WPF-Team/Layui-WPF.git
 
 - 面板
 
-![面板](https://img1.dotnet9.com/2022/09/progress-of-layui-wpf.gif)
+![面板](https://img1.dotnet9.com/2022/09/card-of-layui-wpf.gif)
 
 - 折叠面板
 
