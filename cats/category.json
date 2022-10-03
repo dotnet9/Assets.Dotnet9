@@ -161,6 +161,11 @@
     "Cover": "cats/category.jpg",
     "Children": [
       {
+        "Name": "Go",
+        "Slug": "more-language-go",
+        "Cover": "cats/cat_go.jpeg"
+      },
+      {
         "Name": "Java",
         "Slug": "more-language-java",
         "Cover": "cats/cat_java.jpeg"

@@ -98,6 +98,9 @@ Python 之禅 by Tim Peters
 技术交流群
 
 1. 添加站长个人微信(dotnet9)加入微信群。
+2. QQ群：771992300
+
+![Dotnet9技术交流QQ群](https://img1.dotnet9.com/site/qqgoup1.png)
 
 群规：
 
