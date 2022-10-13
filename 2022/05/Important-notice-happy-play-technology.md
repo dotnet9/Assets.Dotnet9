@@ -6,7 +6,7 @@ date: 2022-05-10 21:27:17
 copyright: Reprint
 author: 快乐玩转技术
 originaltitle: 重要通知：快乐玩转技术
-originallink: https://lequ.co/2022/05/%e9%87%8d%e8%a6%81%e9%80%9a%e7%9f%a5%ef%bc%9a%e5%bf%ab%e4%b9%90%e7%8e%a9%e8%bd%ac%e6%8a%80%e6%9c%af/
+originallink: https://dotnet9.com/2022/05/%e9%87%8d%e8%a6%81%e9%80%9a%e7%9f%a5%ef%bc%9a%e5%bf%ab%e4%b9%90%e7%8e%a9%e8%bd%ac%e6%8a%80%e6%9c%af/
 draft: False
 cover: https://img1.dotnet9.com/2022/05/cover_29.jpg
 categories: 软件分享
@@ -38,7 +38,7 @@ categories: 软件分享
 
 同时站长也部署了一个配套的网站用于文章同步：
 
-- 快乐玩转技术博客网站：[https://lequ.co/](https://lequ.co/)
+- 快乐玩转技术博客网站：[https://dotnet9.com/](https://dotnet9.com/)
 
 ![](https://img1.dotnet9.com/2022/05/2902.png)
 
