@@ -253,6 +253,11 @@
         "Name": "科技生活",
         "Slug": "other-science-and-technology-life",
         "Cover": "cats/cat_science.jpeg"
+      },
+      {
+        "Name": "硬件相关",
+        "Slug": "other-hardware",
+        "Cover": "cats/cat_hardware.jpg"
       }
     ]
   }
