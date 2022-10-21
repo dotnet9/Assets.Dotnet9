@@ -8,7 +8,7 @@ author: 陈显达
 originaltitle: 单片机入门第二课----点灯大师
 originallink: https://www.cnblogs.com/1996-Chinese-Chen/p/16814553.html
 draft: false
-cover: https://img1.dotnet9.com/cats/cat_hardware.jpg
+cover: https://img1.dotnet9.com/2022/10/0601.jpg
 categories: 硬件相关
 ---
 
@@ -52,6 +52,16 @@ void loop() {
 下面的gif展示了我们这次的一个运行结果，可以看到蓝色灯在不停的进行闪烁。
 
 ![](https://img1.dotnet9.com/2022/10/0602.gif)
+
+## 代码编译和烧录
+
+在我们代码写完成之后，我们需要编译，然后在烧写到单片机里面去，那每次写完之后呢，在编辑器左上角有一个对号的按钮，我们点击这个按钮之后，ide会开始编译我们的代码，在编译之后，我们需要将代码烧录到单片机内部，点击对号旁边的右箭头按钮，代码开始烧录，等待下方出现Connecting的时候，我们要让单片机进入下载模式，单片机上面有两个按钮，电源灯上面有一个按钮，同横着水平旁边还有一个按钮，当出现了Connecting的时候需要去按住下方箭头所指的那个按钮不松手，则会写入程序。
+
+![](https://img1.dotnet9.com/2022/10/0608.png)
+
+![](https://img1.dotnet9.com/2022/10/0609.png)
+
+![](https://img1.dotnet9.com/2022/10/0610.png)
 
 ## Arduino
 
