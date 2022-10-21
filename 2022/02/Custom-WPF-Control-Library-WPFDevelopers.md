@@ -3,6 +3,7 @@ title: 开源WPF自定义控件库：WPFDevelopers
 slug: Custom-WPF-Control-Library-WPFDevelopers
 description: 这是一个WPF自定义控件开源项目，里面的一些控件很有意思
 date: 2022-02-09 10:23:14
+banner: true
 copyright: Reprint
 author: WPFDevelopers
 originaltitle: 开源WPF自定义控件库：WPFDevelopers

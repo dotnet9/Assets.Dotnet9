@@ -3,6 +3,7 @@ title: WPF开源控件库：MahApps.Metro
 slug: wpf-open-source-control-library-mahapps-metro
 description: 其实站长很久之前就知道这个开源WPF控件库了，只是一直欣赏不了这种风格，但也star了该项目。每次浏览该仓库时，发现star越来越多，也看到很多网友对它的褒奖，所以今天就向大家推荐这款WPF控件库。
 date: 2020-12-12 12:11:02
+banner: true
 copyright: Default
 originaltitle: WPF开源控件库：MahApps.Metro
 draft: False

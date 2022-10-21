@@ -3,6 +3,7 @@ title: WPF开源项目：WPF-ControlBase
 slug: wpf-open-source-project-wpf-controlbase
 description: 仓库README很素，但看作者README贴的几篇博文介绍，你会喜欢上它的
 date: 2021-11-30 16:57:37
+banner: true
 copyright: Reprint
 author: He BianGu
 originaltitle: WPF开源项目：WPF-ControlBase
