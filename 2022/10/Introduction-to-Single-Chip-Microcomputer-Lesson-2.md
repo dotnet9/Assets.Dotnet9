@@ -6,7 +6,7 @@ date: 2022-10-21 18:53:47
 copyright: Contribution
 author: 陈显达
 originaltitle: 单片机入门第二课----点灯大师
-originallink: https://www.cnblogs.com/1996-Chinese-Chen/p/16786374.html
+originallink: https://www.cnblogs.com/1996-Chinese-Chen/p/16814553.html
 draft: false
 cover: https://img1.dotnet9.com/cats/cat_hardware.jpg
 categories: 硬件相关
@@ -18,7 +18,7 @@ categories: 硬件相关
 >
 > 原文标题：单片机入门第二课----点灯大师
 >
-> 原文链接：https://www.cnblogs.com/1996-Chinese-Chen/p/16786374.html
+> 原文链接：https://www.cnblogs.com/1996-Chinese-Chen/p/16814553.html
 
 ## 引言
 
@@ -28,7 +28,7 @@ categories: 硬件相关
 
 ![](https://img1.dotnet9.com/2022/10/0601.jpg)
 
-# 点灯
+## 点灯
 
 ```arduino
 void setup() {
@@ -53,7 +53,7 @@ void loop() {
 
 ![](https://img1.dotnet9.com/2022/10/0602.gif)
 
-# Arduino
+## Arduino
 
 我们的开发IDE为Arduino，我之前配过vsc使用纯c语言去进行开发ESP32单片机，后面使用了Arduino，因为这个相比于纯c来说更简单一些，更适合入门，但是对于C开发，原理也是一样的，无非就是写法上纯在差异。
 
@@ -63,7 +63,7 @@ void loop() {
 
 ![](https://img1.dotnet9.com/2022/10/0604.png)
 
-# C语言
+## C语言
 
 而对于c语言来说，有的基础不好，或者没有深入使用过c语言的来讲是有一些难度的，我在这里贴一下我之前写的一个红外线控制智能小车的代码，此处使用的是esp32原生的c文件来进行开发，其复杂程度和Arduino相比还是略现复杂。
 
@@ -375,7 +375,7 @@ void app_main(void)
 
 ![](https://img1.dotnet9.com/2022/10/0606.png)
 
-# 结语
+## 结语
 
 好啦，今天的点灯第一课就到这里啦，如果又不懂的可以随时问我，可以加这个群一起来学习单片机，后面还会开stm32系列的课程，IDE的话可以看上一篇博客中的下载地址是有百度网盘的地址，同时群文件也有，有需要的可以下载啦，我们系列教程会出到可以自己做一个智能小车为止。
 
