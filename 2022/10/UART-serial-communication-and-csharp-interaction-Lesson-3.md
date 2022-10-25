@@ -6,19 +6,19 @@ date: 2022-10-25 21:58:32
 copyright: Contribution
 author: 陈显达
 originaltitle: 【单片机入门】(三)应用层软件开发的单片机学习之路-----UART串口通讯和c#交互
-originallink: https://www.cnblogs.com/1996-Chinese-Chen/p/16814553.html
+originallink: https://www.cnblogs.com/1996-Chinese-Chen/p/16826558.html
 draft: false
 cover: https://img1.dotnet9.com/2022/10/0801.png
 categories: 硬件相关
 ---
 
-> 本文由网友投稿，站长是一点都不懂硬件。
+> 本文由网友投稿。
 >
 > 作者：陈显达
 >
 > 原文标题：【单片机入门】(三)应用层软件开发的单片机学习之路-----UART串口通讯和c#交互
 >
-> 原文链接：https://www.cnblogs.com/1996-Chinese-Chen/p/16814553.html
+> 原文链接：https://www.cnblogs.com/1996-Chinese-Chen/p/16826558.html
 
 
 ## 引言
