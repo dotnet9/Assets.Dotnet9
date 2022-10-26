@@ -19,6 +19,7 @@
 
 | 日期        | 金额  | 赞助者                       | 来源                                                                    |
 | ---------- | ----: | --------------------------- | ----------------------------------------------------------------------- |
+| 2022-10-25 | 5￥   | 习惯受伤([https://github.com/mrhuo](https://github.com/mrhuo)) | 公众号文章赞赏[《Uno开发的小游戏》](https://mp.weixin.qq.com/s/H-Vl2k3f3MkqVBn5tZZauQ) |
 | 2022-10-07 | 5￥   | iLiYan | 公众号文章赞赏[《国庆学go，完成了博客基本功能，迫不及待的发布上线了》](https://mp.weixin.qq.com/s/sJyb3rEIXsgrlsNDnDx2rQ) |
 | 2022-09-27 | 5￥   | 故里 | 公众号文章赞赏[《告诫之心-翻译转载Dotnet文章注意事项》](https://mp.weixin.qq.com/s/iVXVwtBlIygSRpp7kdSJ1A) |
 | 2022-09-26 | 1￥   | 木磊 | 公众号文章赞赏[《告诫之心-翻译转载Dotnet文章注意事项》](https://mp.weixin.qq.com/s/iVXVwtBlIygSRpp7kdSJ1A) |
