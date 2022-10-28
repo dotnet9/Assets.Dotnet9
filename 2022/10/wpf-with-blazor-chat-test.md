@@ -7,12 +7,12 @@ copyright: Default
 author: 沙漠尽头的狼
 draft: false
 cover: https://img1.dotnet9.com/2022/10/2-chat-window.png
-categories: Go
+categories: WPF,Blazor
 ---
 
 大家好，我是沙漠尽头的狼。
 
-今天尝试了下WPF混合Blazor开发，感觉不错，顺便把测试的程序简单分享下：一个简易对话小程序。
+今天尝试了下WPF混合Blazor开发，感觉不错，顺便把测试的程序简单分享下：WPF混合Blazor开发的一个简易对话程序。
 
 使用技术栈：
 
@@ -20,59 +20,23 @@ categories: Go
 - [Prism 8](https://github.com/PrismLibrary/Prism)
 - [Masa Blazor](https://blazor.masastack.com/)
 
-## 1. 搭建WPF+Blazor程序
+## 搭建WPF+Blazor程序
 
 学习WPF + Blazor混合开发的`Hello World`最好的地方是微软文档：
 
 https://learn.microsoft.com/zh-cn/aspnet/core/blazor/hybrid/tutorials/wpf?view=aspnetcore-7.0
 
-本文档带着你从创建一个WPF程序开始，逐步引入Blazor成功跑起Count.razor(一个razor测试页面)。
+## 效果
 
-## 2. 简单讲解测试程序
+UI使用了[Masa Blazor](https://blazor.masastack.com/)，效果个人感觉不错，如果用WPF实现，要麻烦不少，以下是几个效果截图：
 
-UI使用了[Masa Blazor](https://blazor.masastack.com/)，效果个人感觉不错，如果用WPF实现，要麻烦不少，以下配上适当的代码和截图讲讲开发要点。
-
-先给出整个解决方案代码结构：
-
-![代码结构](https://img1.dotnet9.com/2022/10/5-code-structure.png)
-
-### 2.1 引入[Masa Blazor](https://blazor.masastack.com/)
-
-搭建WPF+Blazor程序看上面的微软文档链接，这里说说第三方Blazor组件[Masa Blazor](https://blazor.masastack.com/)引入。
-
-引入Masa Blazor的资源文件，参考文档[Blazor WebAssembly](https://blazor.masastack.com/getting-started/installation)的方式，打开`wwwroot/index.html`，引用资源如下：
-
-![代码结构](https://img1.dotnet9.com/2022/10/6-add-masa-resource.png)
-
-**2.2 用户列表窗口**
-
-先丢出效果图：
-
-![用户列表](https://img1.dotnet9.com/2022/10/1-main-window.png)
-
-这是一个WPF窗体+Razor组件组合，标题栏和状态栏是WPF实现的，中间的列表是Razor组件，下面简说。
-
-**WPF窗体**
-
-![主窗体xaml代码结构](https://img1.dotnet9.com/2022/10/7-mainwindow-code.png)
-
-xaml.cs中实现razor ioc的注入和窗体移动、关闭等事件处理：
-
-![主窗体xaml.cs代码结构](https://img1.dotnet9.com/2022/10/8-mainwindow-code.png)
-
-上面窗体构造函数中的`ServiceCollection`是核心代码，WPF与Razor组件之间的通信桥梁`BlazorWebView`非常需要它，就像我们需要水和空气，这里注入了`IUserService`(用户服务，提供用户列表)、`IEventAggregator`(多窗体之间的事件发射与接收)。
-
-**承载业务的Razor组件**
-
-#### WPF窗体
-
-因为做了自定义的窗体，如果
+**用户列表窗口**
 
 使用了[Masa Blazor](https://blazor.masastack.com/)的列表组件，代码几乎是直接Copy过来的，参考链接[Masa Blazor列表](https://blazor.masastack.com/components/lists)：
 
 
 
-
+![用户列表](https://img1.dotnet9.com/2022/10/1-main-window.png)
 
 **聊天窗口**
 
