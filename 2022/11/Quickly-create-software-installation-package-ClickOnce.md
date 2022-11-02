@@ -142,7 +142,7 @@ Windows Installer 部署要求管理员权限并且只允许受限制的用户�
 
 ![](https://img1.dotnet9.com/2022/11/0224.gif)
 
-下图时安装过程截图：
+下图是安装过程截图：
 
 ![](https://img1.dotnet9.com/2022/11/0219.gif)
 
@@ -158,4 +158,4 @@ Windows Installer 部署要求管理员权限并且只允许受限制的用户�
 
 更多请访问微软文档：https://learn.microsoft.com/zh-cn/visualstudio/deployment/clickonce-security-and-deployment?view=vs-2022
 
-本文完，下篇介绍WPF中如果使用Blazor开发应用。
+本文完，下篇介绍WPF中如何使用Blazor开发应用。
