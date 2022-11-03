@@ -36,19 +36,25 @@ categories: WPF,Blazor
 
 ## 6. 实现本文示例
 
-## 7. Q&A
+## 7. Click Once发布尝试
 
-- 7.1 BlazorWebView的竖直滚动条怎么回事？
+参考：[《快速创建软件安装包-ClickOnce》](https://mp.weixin.qq.com/s/zcO1J-AqiK7LkU52MRwmqw)
+
+## 8. Q&A
+
+- 8.1 BlazorWebView的竖直滚动条怎么回事？
 
 隐藏BlazorWebView滚动条
 
 - 窗体拖动：https://github.com/James231/BlazorDesktopWPF-CustomTitleBar
 
-- 7.2 WPF + Blazor支持哪些操作系统
+- 8.2 WPF + Blazor支持哪些操作系统
 
-- 7.3 为啥要在WPF里使用Blazor？吃饱了撑的？
+支持Windows 7，这是本文示例Click Once安装页面：https://dotnet9.com/WPFBlazorChat
 
-- 7.4 Blazor还有哪些框架可以使用？
+- 8.3 为啥要在WPF里使用Blazor？吃饱了撑的？
 
-- 7.5 本文示例代码能给我不？
+- 8.4 Blazor还有哪些框架可以使用？
+
+- 8.5 本文示例代码能给我不？
 
