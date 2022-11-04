@@ -14,9 +14,32 @@ categories: WPF,Blazor
 
 >.NET是免费，跨平台，开源，用于构建所有应用的开发人员平台。
 
+本文演示如何在WPF中使用Blazor为客户端开发注入新活力。
+
+**注**
+
+要使WPF支持Blazor，.NET版本必须是 .NET 6.0 或更高版本，本示例使用的.NET 7.0，版本要求见[链接](https://learn.microsoft.com/zh-cn/aspnet/core/blazor/hybrid/tutorials/wpf?view=aspnetcore-7.0)：
+
+![.NET版本要求](https://img1.dotnet9.com/2022/10/1003.png)
+
 ## 1. WPF默认程序
 
+使用WPF模板创建一个默认程序，取名【WPFBlazorChat】，项目组织结构如下：
+
+![空白WPF项目](https://img1.dotnet9.com/2022/10/1001.png)
+
+运行项目，一个空白窗口：
+
+![WPF项目空白窗口](https://img1.dotnet9.com/2022/10/1002.png)
+
+接着我们添加Blazor支持。
+
 ## 2. 添加Blazor支持
+
+依然使用上面的工程，添加Blazor支持，此部分参考微软文档[生成 Windows Presentation Foundation (WPF) Blazor 应用](https://learn.microsoft.com/zh-cn/aspnet/core/blazor/hybrid/tutorials/wpf?view=aspnetcore-7.0)，本小节快速略过。
+
+
+
 
 ## 3. 自定义窗体
 
