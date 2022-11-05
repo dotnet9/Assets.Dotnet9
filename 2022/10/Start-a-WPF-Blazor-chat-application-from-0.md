@@ -192,17 +192,190 @@ a, .btn-link {
 
 上面步骤做完后，运行程序：
 
-![WPF集成Blazor的默认程序在](https://img1.dotnet9.com/2022/10/1007.gif)
+![WPF集成Blazor的默认程序](https://img1.dotnet9.com/2022/10/1007.gif)
 
-OK，WPF与Blazor集成成功，打完收工！
+OK，WPF与Blazor集成成功，打完收工？
 
 等等，还没完呢，接着往下看。
 
 ## 3. 自定义窗体
 
-### 3.1 WPF原生实现
+![WPF默认窗体](https://img1.dotnet9.com/2022/10/1009.png)
 
-### 3.2 Blazor实现标题栏
+看上图，窗体边框是WPF默认的样式，有时会感觉比较丑，或者不丑，设计师有其他的窗体风格设计，往往我们要自定义窗体，本节分享部分WPF与Blazor的自定义窗体实现，更多定制化功能可能需要您自行研究。
+
+### 3.1 WPF自定义窗体
+
+一般实现是设置窗体的三个属性`WindowStyle="None" AllowsTransparency="True" Background="Transparent"`，即可隐藏默认窗体的边框，然后在内容区自己画标题栏、最小化、最大化、关闭按钮、客户区等。
+
+**隐藏WPF默认窗体边框**
+
+```html
+<Window
+    x:Class="WPFBlazorChat.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:blazor="clr-namespace:Microsoft.AspNetCore.Components.WebView.Wpf;assembly=Microsoft.AspNetCore.Components.WebView.Wpf"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:razorViews="clr-namespace:WPFBlazorChat.RazorViews"
+    Title="MainWindow"
+    Width="800"
+    Height="450"
+    AllowsTransparency="True"
+    Background="Transparent"
+    WindowStyle="None"
+    mc:Ignorable="d">
+    <Border CornerRadius="3">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="35" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <blazor:BlazorWebView
+                Grid.Row="1"
+                HostPage="wwwroot\index.html"
+                Services="{DynamicResource services}">
+                <blazor:BlazorWebView.RootComponents>
+                    <blazor:RootComponent ComponentType="{x:Type razorViews:Counter}" Selector="#app" />
+                </blazor:BlazorWebView.RootComponents>
+            </blazor:BlazorWebView>
+        </Grid>
+    </Border>
+</Window>
+```
+
+上面的代码只是隐藏了WPF默认窗体的边框，运行程序如下：
+
+![隐藏WPF默认窗体边框](https://img1.dotnet9.com/2022/10/1010.gif)
+
+我有点击窗体中的按钮（其实是Razor组件中的按钮），但未执行按钮点击事件，且窗体消失了，这是怎么回事？您可以尝试研究下为什么，我没有研究个所以然来。
+
+**简单的WPF自定义窗体样式**
+
+我们加上自定义窗体的基本样式看看：
+
+![带基本样式的WPF自定义窗体](https://img1.dotnet9.com/2022/10/1011.gif)
+
+`MainWindow.xaml`代码如下：
+
+```html
+<Window
+    x:Class="WPFBlazorChat.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:blazor="clr-namespace:Microsoft.AspNetCore.Components.WebView.Wpf;assembly=Microsoft.AspNetCore.Components.WebView.Wpf"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:razorViews="clr-namespace:WPFBlazorChat.RazorViews"
+    Title="MainWindow"
+    Width="800"
+    Height="450"
+    AllowsTransparency="True" Background="Transparent" WindowStyle="None"
+    mc:Ignorable="d">
+    <Window.Resources>
+        <Style TargetType="{x:Type Button}">
+            <Setter Property="Width" Value="35" />
+            <Setter Property="Height" Value="25" />
+            <Setter Property="Margin" Value="2" />
+            <Setter Property="Background" Value="Transparent" />
+            <Setter Property="BorderThickness" Value="0" />
+            <Setter Property="Foreground" Value="White" />
+        </Style>
+    </Window.Resources>
+    <Border Background="#7160E8" CornerRadius="5">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="35" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Border
+                Background="#7160E8" CornerRadius="5 5 0 0" MouseLeftButtonDown="MoveWindow_MouseLeftButtonDown">
+                <Grid>
+                    <TextBlock
+                        Margin="10,10,5,5"
+                        Foreground="White"
+                        Text="这里是窗体标题栏，左侧可放Logo、标题，右侧放窗体操作按钮：最小化、最大化、关闭等" />
+                    <StackPanel HorizontalAlignment="Right" Orientation="Horizontal">
+                        <Button Click="MinimizeWindow_Click" Content="―" />
+                        <Button Click="MaximizeWindow_Click" Content="口" />
+                        <Button Click="CloseWindow_Click" Content="X" />
+                    </StackPanel>
+                </Grid>
+            </Border>
+            <blazor:BlazorWebView Grid.Row="1" HostPage="wwwroot\index.html" Services="{DynamicResource services}">
+                <blazor:BlazorWebView.RootComponents>
+                    <blazor:RootComponent ComponentType="{x:Type razorViews:Counter}" Selector="#app" />
+                </blazor:BlazorWebView.RootComponents>
+            </blazor:BlazorWebView>
+        </Grid>
+    </Border>
+</Window>
+```
+
+我们给整个窗体客户端区域加了一个背景`Border`(您可以去掉Border背景色，点击界面按钮试试)，然后又套了一个Grid，用于放置自定义的标题栏（标题和窗体控制按钮）和BlazorWebView(用于渲染Razor组件的)，下面是窗体控制按钮的响应事件：
+
+```C#
+using Microsoft.Extensions.DependencyInjection;
+using System.Windows;
+
+namespace WPFBlazorChat;
+
+public partial class MainWindow : Window
+{
+    public MainWindow()
+    {
+        InitializeComponent();
+        var serviceCollection = new ServiceCollection();
+        serviceCollection.AddWpfBlazorWebView();
+        Resources.Add("services", serviceCollection.BuildServiceProvider());
+    }
+
+    private void MoveWindow_MouseLeftButtonDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
+    {
+        if (e.ClickCount == 1)
+        {
+            this.DragMove();
+        }
+        else
+        {
+            MaximizeWindow_Click(null, null);
+        }
+    }
+
+    private void CloseWindow_Click(object sender, RoutedEventArgs e)
+    {
+        this.Close();
+    }
+
+    private void MinimizeWindow_Click(object sender, RoutedEventArgs e)
+    {
+        this.WindowState = WindowState.Minimized;
+    }
+
+    private void MaximizeWindow_Click(object sender, RoutedEventArgs e)
+    {
+        this.WindowState = this.WindowState == WindowState.Maximized ? WindowState.Normal : WindowState.Maximized;
+    }
+}
+```
+
+代码简单，处理了窗体最小化、窗体最大化（还原）、关闭、标题栏双击窗体最大化（还原），上面的实现不是一个完美的自定义窗体实现，比如最大化后，窗体铺满了整个操作系统桌面（也霸占了任务栏区域），但用于介绍WPF自定义窗体实现的原理应该够了。
+
+更多比较好的WPF自定义窗体实现可看这篇文章：[WPF三种自定义窗体的实现](https://www.cnblogs.com/pumbaa/p/13306486.html)。
+
+### 3.2 WPF异形窗体
+
+异形窗体的需求，使用WPF实现是比较方便的，本来打算写写的，感觉偏离主题太远了，给篇文章看看吧：[WPF异形窗体演示](https://baijiahao.baidu.com/s?id=1666945620509938748)。
+
+### 3.2 Blazor实现自定义窗体效果
+
+上面使用了WPF制作自定义窗体，有没有这种需求，把菜单放置到标题栏？这个简单，WPF能很好实现，如果放Tab类控件呢？Tab Header是在标题栏显示，TabItem是在客户端区域，在WPF+Blazor混合开发的情景怎么实现呢？本小节简单尝试实现下。
+
+### 3.3 Blazor与WPF比较完美的实现效果
+
+添加圆角
 
 ## 4. 添加第三方Blazor组件
 
