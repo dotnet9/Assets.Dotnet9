@@ -1073,11 +1073,220 @@ Demo的代码我几乎不变的引入，打开`RazorViews\Counter.razor`文件�
 
 ## 5. 多窗体消息通知
 
-### 5.1 单例实现通知
+一般`C/S`窗体之间通信使用委托、事件，而在`WPF`开发中，可以使用一些框架提供的抽象事件`订阅\发布`组件，比如`Prism`的事件聚集器`IEventAggregator`，或`MvvmLight`的`Messager`。在`B/S`开发中，进程内事件通知可能就使用`MediatR`组件居多了，不论是在`C/S`还是`B/S`开发，这些组件在一定程度上，各大程序模板可以通用的，更不用说分布式的消息队列`RabbitMQ` 和 `Kafka`是万能的进程间通信标准选择了。
 
-#### 5.1.1 属性、方法、委托
+上面是一些套话，站长根据`Prism`的事件聚集器和`MvvmLight`的Messager源码阅读，简单封装了一个`Messager`，可以适用于一般的业务需求。
 
-### 5.2 定义一个Messager
+### 5.1 Messager封装
+
+本能不想贴代码直接给源码链接的，想想代码也不多，直接上吧。
+
+**Message**
+
+消息抽象类，用于定义消息类型，具体的消息需要继承该类，比如后面的打开子窗体消息`OpenSecondViewMessage`。
+
+```C#
+using System;
+
+namespace WPFBlazorChat.Messages;
+
+public abstract class Message
+{
+    protected Message(object sender)
+    {
+        this.Sender = sender ?? throw new ArgumentNullException(nameof(sender));
+    }
+
+    public object Sender { get; }
+}
+```
+
+**IMessenger**
+
+消息接口，只定义了三个接口：
+
+1. Subscribe：消息订阅
+2. Unsubscribe：取消消息订阅
+3. Publish：消息发送
+
+```C#
+using System;
+
+namespace WPFBlazorChat.Messages;
+
+public interface IMessenger
+{
+    void Subscribe<TMessage>(object recipient, Action<TMessage> action,
+        ThreadOption threadOption = ThreadOption.PublisherThread) where TMessage : Message;
+
+    void Unsubscribe<TMessage>(object recipient, Action<TMessage>? action = null) where TMessage : Message;
+
+    void Publish<TMessage>(object sender, TMessage message) where TMessage : Message;
+}
+
+public enum ThreadOption
+{
+    PublisherThread,
+    BackgroundThread,
+    UiThread
+}
+```
+
+**Messenger**
+
+消息的管理，消息中转等实现：
+
+```C#
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading;
+using System.Threading.Tasks;
+
+namespace WPFBlazorChat.Messages;
+
+public class Messenger : IMessenger
+{
+    public static readonly Messenger Default = new Messenger();
+    private readonly object registerLock = new object();
+
+    private Dictionary<Type, List<WeakActionAndToken>>? recipientsOfSubclassesAction;
+
+    public void Subscribe<TMessage>(object recipient, Action<TMessage> action, ThreadOption threadOption)
+        where TMessage : Message
+    {
+        lock (this.registerLock)
+        {
+            var messageType = typeof(TMessage);
+
+            this.recipientsOfSubclassesAction ??= new Dictionary<Type, List<WeakActionAndToken>>();
+
+            List<WeakActionAndToken> list;
+
+            if (!this.recipientsOfSubclassesAction.ContainsKey(messageType))
+            {
+                list = new List<WeakActionAndToken>();
+                this.recipientsOfSubclassesAction.Add(messageType, list);
+            }
+            else
+            {
+                list = this.recipientsOfSubclassesAction[messageType];
+            }
+
+            var item = new WeakActionAndToken
+            { Recipient = recipient, ThreadOption = threadOption, Action = action };
+
+            list.Add(item);
+        }
+    }
+
+    public void Unsubscribe<TMessage>(object? recipient, Action<TMessage>? action) where TMessage : Message
+    {
+        var messageType = typeof(TMessage);
+
+        if (recipient == null || this.recipientsOfSubclassesAction == null ||
+            this.recipientsOfSubclassesAction.Count == 0 || !this.recipientsOfSubclassesAction.ContainsKey(messageType))
+        {
+            return;
+        }
+
+        var lstActions = this.recipientsOfSubclassesAction[messageType];
+        for (var i = lstActions.Count - 1; i >= 0; i--)
+        {
+            var item = lstActions[i];
+            var pastAction = item.Action;
+
+            if (pastAction != null
+                && recipient == pastAction.Target
+                && (action == null || action.Method.Name == pastAction.Method.Name))
+            {
+                lstActions.Remove(item);
+            }
+        }
+    }
+
+    public void Publish<TMessage>(object sender, TMessage message) where TMessage : Message
+    {
+        var messageType = typeof(TMessage);
+
+        if (this.recipientsOfSubclassesAction != null)
+        {
+            var listClone = this.recipientsOfSubclassesAction.Keys.Take(this.recipientsOfSubclassesAction.Count)
+                .ToList();
+
+            foreach (var type in listClone)
+            {
+                List<WeakActionAndToken>? list = null;
+
+                if (messageType == type || messageType.IsSubclassOf(type) || type.IsAssignableFrom(messageType))
+                {
+                    list = this.recipientsOfSubclassesAction[type]
+                        .Take(this.recipientsOfSubclassesAction[type].Count)
+                        .ToList();
+                }
+
+                if (list is { Count: > 0 })
+                {
+                    this.SendToList(message, list);
+                }
+            }
+        }
+    }
+
+    private void SendToList<TMessage>(TMessage message, IEnumerable<WeakActionAndToken> weakActionsAndTokens)
+        where TMessage : Message
+    {
+        var list = weakActionsAndTokens.ToList();
+        var listClone = list.Take(list.Count()).ToList();
+
+        foreach (var item in listClone)
+        {
+            if (item.Action is { Target: { } })
+            {
+                switch (item.ThreadOption)
+                {
+                    case ThreadOption.BackgroundThread:
+                        Task.Run(() => { item.ExecuteWithObject(message); });
+                        break;
+                    case ThreadOption.UiThread:
+                        SynchronizationContext.Current!.Post(_ => { item.ExecuteWithObject(message); }, null);
+                        break;
+                    default:
+                        item.ExecuteWithObject(message);
+                        break;
+                }
+            }
+        }
+    }
+}
+
+public class WeakActionAndToken
+{
+    public object? Recipient { get; set; }
+
+    public ThreadOption ThreadOption { get; set; }
+
+    public Delegate? Action { get; set; }
+
+    public string? Tag { get; set; }
+
+    public void ExecuteWithObject<TMessage>(TMessage message) where TMessage : Message
+    {
+        if (this.Action is Action<TMessage> factAction)
+        {
+            factAction.Invoke(message);
+        }
+    }
+}
+```
+
+有兴趣的看上面的代码，封装代码上面简单全部给上。
+
+### 5.2 代码整理
+
+第 5 节涉及到多窗体及多`Razor`组件了，需要创建一些目录存放这些文件，方便分类管理。
+
+
 
 ## 6. 实现本文示例
 
