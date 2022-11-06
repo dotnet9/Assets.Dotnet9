@@ -777,6 +777,10 @@ public class WindowService
 
 最终还是WPF解决了所有问题【哈哈】，具体怎么实现的窗体最大化未占操作系统的任务栏，以及窗体圆角问题的解决（竟然能让`BlazorWebView`部分透明了）可以查看该组件相关代码，本文不过多深究。
 
+另外，WPF熟手可能比较清楚，前面的代码不能正常的拖动改变窗体大小（不知道你发现没，我当你没发现。），使用该库后也解决了：
+
+![窗体手动改变大小](https://img1.dotnet9.com/2022/10/1027.gif)
+
 本小节源码在这[解决圆角和最大化问题](https://github.com/dotnet9/WPFBlazorChat/tree/main/3WPF%E4%B8%8EBlazor%E7%9A%84%E8%87%AA%E5%AE%9A%E4%B9%89%E7%AA%97%E4%BD%93/WPFBlazorChat_4Blazor%E4%B8%8EWPF%E6%AF%94%E8%BE%83%E5%AE%8C%E7%BE%8E%E7%9A%84%E5%AE%9E%E7%8E%B0%E6%95%88%E6%9E%9C)，下面开始本文的下半部分了，好累，终于到这了。
 
 ## 4. 添加第三方Blazor组件
@@ -1049,7 +1053,7 @@ Demo的代码我几乎不变的引入，打开`RazorViews\Counter.razor`文件�
 
 ![样式部分修改](https://img1.dotnet9.com/2022/10/1024.png)
 
-其实上面的窗体效果还是有点瑕疵，注意到窗体右侧的竖直滚动条了吗？在没用引入`Masa.Blazor`之前都是没有的：
+其实上面的窗体效果还是有点瑕疵，注意到窗体右侧的竖直滚动条了吗？在没引入`Masa.Blazor`之前都是没有的：
 
 ![引入Masa.Blazor后多了竖直滚动条](https://img1.dotnet9.com/2022/10/1025.png)
 
@@ -1064,6 +1068,8 @@ Demo的代码我几乎不变的引入，打开`RazorViews\Counter.razor`文件�
 因为`Razor`组件是在`BlazorWebView`里渲染的，即`BlazorWebView`就是个小型的浏览器呀，上面的样式即把浏览器的滚动条宽度设置为0，它不就没有了吗？现在效果如下，是不是舒服了？
 
 ![根据后界面](https://img1.dotnet9.com/2022/10/1026.png)
+
+添加Masa.Blazor就介绍到这里，本小节示例代码在这里[WPF中使用Masa.Blazor](https://github.com/dotnet9/WPFBlazorChat/tree/main/4%E4%BD%BF%E7%94%A8MasaBlazor),下面讲解WPF与Blazor混合开发后多窗体消息通知问题。
 
 ## 5. 多窗体消息通知
 
