@@ -49,9 +49,9 @@ categories: WPF,Blazor
 
 ### 2.2 添加`_Imports.razor`文件
 
-`_Imports.razor`文件类似一个`Global` using文件，放置一些全局的命名空间，精简代码。
+`_Imports.razor`文件类似一个`Global` using文件，专门给`Razor`组件使用，放置一些用的比较多的全局的命名空间，精简代码。
 
-内容如下，引入了一个命名空间`Microsoft.AspNetCore.Components.Web`，这是Razor常用命名空间：
+内容如下，引入了一个命名空间`Microsoft.AspNetCore.Components.Web`，这是`Razor`常用命名空间，包含用于向 `Blazor` 框架提供有关浏览器事件的信息的类型。：
 
 ```html
 @using Microsoft.AspNetCore.Components.Web
@@ -59,7 +59,7 @@ categories: WPF,Blazor
 
 ### 2.3 添加`wwwroot\index.html`文件
 
-和Vue\React一样，需要一个`html`文件承载`Razor`组件，页面内容类似：
+和`Vue`、`React`一样，需要一个`html`文件承载`Razor`组件，页面内容类似：
 
 ```html
 <!DOCTYPE html>
@@ -88,7 +88,7 @@ categories: WPF,Blazor
 </html>
 ```
 
-1. `app.css`下面给出了定义。
+1. `app.css`文件在下面给出定义。
 2. 看`<div id="app">Loading...</div>`，这里是承载`Razor`组件的地方，后面所有加载的`Razor`组件都是在这里渲染出来的。
 3. 其他暂时不管。
 
@@ -179,14 +179,14 @@ a, .btn-link {
 如上代码，要点如下：
 
 1. 添加上面引入的`Nuget`包`Microsoft.AspNetCore.Components.WebView.Wpf`的命名空间，命名为`blazor`，主要是要使用`BlazorWebView`组件;
-2. `BlazorWebView`组件属性`HostPage`指定承载的html文件，`Services`指定razor组件的Ioc容器，看下面的代码;
+2. `BlazorWebView`组件属性`HostPage`指定承载的html文件，`Services`指定razor组件的`Ioc`容器，看下面`MainWindow()`里标红的代码;
 3. `RootComponent`的`Selector="#app"`属性指示`Razor`组件渲染的位置，看`index.html`中id为`app`的html元素，`ComponentType`指示需要在`#app`中渲染的`Razor`组件类型。
 
 打开`MainWindow.xaml.cs`，修改如下：
 
 ![注入Ioc容器](https://img1.dotnet9.com/2022/10/1006.png)
 
-在WPF里可以使用Prism等框架提供的`Unity`、`DryIoc`等`Ioc`容器实现视图与服务的注入；`Razor`组件这里，默认使用`ASP.NET Core`的`IServiceCollection`容器；如果WPF窗体与Razor组件需要共享数据，可以通过后面要说的`Messager`发送消息，也可以通过`Ioc`容器注入的方式实现，比如从WPF窗体中注入的数据（通过MainWindow构造函数注入），通过`IServiceCollection`容器再注入`Razor`组件使用，这里后面也有提到。
+在WPF里可以使用[Prism](https://prismlibrary.com/)等框架提供的`Unity`、`DryIoc`等`Ioc`容器实现视图与服务的注入；`Razor`组件这里，默认使用`ASP.NET Core`的`IServiceCollection`容器；如果WPF窗体与Razor组件需要共享数据，可以通过后面要说的`Messager`发送消息，也可以通过`Ioc`容器注入的方式实现，比如从WPF窗体中注入的数据（通过`MainWindow`构造函数注入），通过`IServiceCollection`容器再注入`Razor`组件使用，这里后面也有提到。
 
 ![WPF与Razor组件之间通过Ioc数据传输](https://img1.dotnet9.com/2022/10/1008.png)
 
@@ -194,7 +194,7 @@ a, .btn-link {
 
 ![WPF集成Blazor的默认程序](https://img1.dotnet9.com/2022/10/1007.gif)
 
-OK，WPF与Blazor集成成功，打完收工？
+OK，`WPF`与`Blazor`集成成功，打完收工？
 
 等等，还没完呢，接着往下看。
 
@@ -208,7 +208,7 @@ OK，WPF与Blazor集成成功，打完收工？
 
 一般实现是设置窗体的三个属性`WindowStyle="None" AllowsTransparency="True" Background="Transparent"`，即可隐藏默认窗体的边框，然后在内容区自己画标题栏、最小化、最大化、关闭按钮、客户区等。
 
-**隐藏WPF默认窗体边框**
+**MainWindow.xaml：隐藏WPF默认窗体边框**
 
 ```html
 <Window
@@ -250,7 +250,7 @@ OK，WPF与Blazor集成成功，打完收工？
 
 ![隐藏WPF默认窗体边框](https://img1.dotnet9.com/2022/10/1010.gif)
 
-我有点击窗体中的按钮（其实是Razor组件中的按钮），但未执行按钮点击事件，且窗体消失了，这是怎么回事？您可以尝试研究下为什么，我没有研究个所以然来。
+看上图，点击窗体中的按钮（其实是Razor组件的按钮），但未执行按钮点击事件，且窗体消失了，这是怎么回事？您可以尝试研究下为什么，我没有研究个所以然来，暂时加个背景处理`BlazorWebView`穿透的问题。
 
 **简单的WPF自定义窗体样式**
 
@@ -314,7 +314,7 @@ OK，WPF与Blazor集成成功，打完收工？
 </Window>
 ```
 
-我们给整个窗体客户端区域加了一个背景`Border`(您可以去掉Border背景色，点击界面按钮试试)，然后又套了一个Grid，用于放置自定义的标题栏（标题和窗体控制按钮）和BlazorWebView(用于渲染Razor组件的)，下面是窗体控制按钮的响应事件：
+我们给整个窗体客户端区域加了一个背景`Border`(您可以去掉Border背景色，点击界面按钮试试)，然后又套了一个Grid，用于放置自定义的标题栏（标题和窗体控制按钮）和`BlazorWebView`(用于渲染Razor组件的浏览器组件)，下面是窗体控制按钮的响应事件：
 
 ```C#
 using Microsoft.Extensions.DependencyInjection;
@@ -364,23 +364,346 @@ public partial class MainWindow : Window
 代码简单，处理了窗体最小化、窗体最大化（还原）、关闭、标题栏双击窗体最大化（还原），上面的实现不是一个完美的自定义窗体实现，至少有这两个问题：
 
 - 当您尝试最大化后，窗体铺满了整个操作系统桌面（也霸占了任务栏区域）；
-- 窗体任务栏两个圆角未生效（标题栏区域是WPF控件，所以正常），即窗体下面的两个圆角，站长未找到让BlazorWebView出现圆角的属性或其他方法
+- 窗体任务栏两个圆角未生效（标题栏区域是WPF控件，所以正常），即窗体下面的两个圆角，站长未找到让`BlazorWebView`出现圆角的属性或其他方法。
 
 ![窗体圆角](https://img1.dotnet9.com/2022/10/1012.png)
 
-`3.4` 使用一个第三库实现窗体圆角问题，更多比较好的WPF自定义窗体实现可看这篇文章：[WPF三种自定义窗体的实现](https://www.cnblogs.com/pumbaa/p/13306486.html)。
+在后面的`3.4`小节，站长使用一个第三库实现了窗体圆角问题，更多比较好的WPF自定义窗体实现可看这篇文章：[WPF三种自定义窗体的实现](https://www.cnblogs.com/pumbaa/p/13306486.html)。
 
 ### 3.2 WPF异形窗体
 
-异形窗体的需求，使用WPF实现是比较方便的，本来打算写写的，感觉偏离主题太远了，给篇文章看看吧：[WPF异形窗体演示](https://baijiahao.baidu.com/s?id=1666945620509938748)。
+异形窗体的需求，使用WPF实现是比较方便的，本来打算写写的，感觉偏离主题太远了，给篇文章自行看看吧：[WPF异形窗体演示](https://baijiahao.baidu.com/s?id=1666945620509938748)，文中异形窗体效果如下：
 
 ![WPF异形窗体](https://img1.dotnet9.com/2022/10/1013.jpeg)
 
-下面介绍将窗体的标题栏也放[Razor]组件中实现。
+下面介绍将窗体的标题栏也放`Razor`组件中实现的方式。
 
 ### 3.3 Blazor实现自定义窗体效果
 
-上面使用了WPF制作自定义窗体，有没有这种需求，把菜单放置到标题栏？这个简单，WPF能很好实现，如果放Tab类控件呢？Tab Header是在标题栏显示，TabItem是在客户端区域，在WPF+Blazor混合开发的情景怎么实现呢？本小节简单尝试实现下。
+上面使用了`WPF`制作自定义窗体，有没有这种需求，把菜单放置到标题栏？这个简单，WPF能很好实现。
+
+如果放Tab类控件呢？Tab Header是在标题栏显示，TabItem是在客户端区域，Tab Header与TabItem风格统一，在一套代码里面实现和维护也方便，那么在WPF+Blazor混合开发的情景怎么实现呢？相信通过本节`Razor`实现标题栏的介绍，你能做出来。
+
+`MainWindow.xaml`恢复代码，只设置隐藏WPF默认窗体边框，并给BlazorWebView套一层背景：
+
+![WPF透明窗体](https://img1.dotnet9.com/2022/10/1014.png)
+
+后面的代码有参考[[BlazorDesktopWPF-CustomTitleBar](https://github.com/James231/BlazorDesktopWPF-CustomTitleBar)](https://github.com/James231/BlazorDesktopWPF-CustomTitleBar)实现。
+
+我们把标题栏做到`Counter.razor`组件，即标题栏、客户区放一个组件里，当然你也可以分离，这里我们方便演示：
+
+**Counter.razor**
+
+```html
+@using WPFBlazorChat.Services
+
+<div class="titlebar" @ondblclick="WindowService.Maximize" @onmouseup="WindowService.StopMove" @onmousedown="WindowService.StartMove">
+    <button class="titlebar-btn" onclick="alert('js alert: navigation pressed');">
+        <img src="svg/navigation.svg" />
+    </button>
+    <div class="window-title">
+        测试窗体标题
+    </div>
+    <div style="flex-grow:1"></div>
+    <button class="titlebar-btn" onclick="alert('js alert: settings pressed');">
+        <img src="svg/settings.svg" />
+    </button>
+    <button class="titlebar-btn" @onclick="WindowService.Minimize">
+        <img src="svg/minimize.svg" />
+    </button>
+    <button class="titlebar-btn" @onclick="WindowService.Maximize">
+        @if (WindowService.IsMaximized())
+        {
+            <img src="svg/restore.svg" />
+        }
+        else
+        {
+            <img src="svg/maximize.svg" />
+        }
+    </button>
+    <button class="titlebar-cbtn" @onclick="()=>WindowService.Close(false)">
+        <img src="svg/dismiss.svg" />
+    </button>
+</div>
+
+<p>好开心，你点我了，现在是:<span style="color: red;">@currentCount</span></p>
+
+<button class="btn btn-primary" @onclick="IncrementCount">快快点我</button>
+
+@code {
+    private int currentCount = 0;
+
+    protected override void OnInitialized()
+    {
+
+        WindowService.Init();
+        base.OnInitialized();
+    }
+
+    private void IncrementCount()
+    {
+        currentCount++;
+    }
+}
+```
+
+下面给出代码简单说明：
+
+1. 第一个`div`充做窗体的标题栏区域，注册了双击事件调用窗体最大化（还原）方法、鼠标按下与释放调用窗体的移动开始与结束方法；
+2. 在第一个`div`里，其中有3个按钮，即窗体的控制按钮，调用窗体最小化、最大化（还原）、关闭方法调用；
+3. 另有两个按钮，演示单击调用`JavaScript`的`alert`方法弹出消息。
+
+![WPF透明窗体](https://img1.dotnet9.com/2022/10/1014.png)
+
+运行效果如下：
+
+![WPF透明窗体](https://img1.dotnet9.com/2022/10/1016.png)
+
+实现这个效果，还有一些代码，因为是`Razor`组件，即`html`实现的界面，上面的代码调用了一些方法实现窗体操作(最小化、关闭等，代码如下），界面的`html`元素也定义了一些`css`样式，代码也一并给出。
+
+**窗体拖动**
+
+首先添加`Nuget`包`Simplify.Windows.Forms`，用于获取鼠标光标的位置：
+
+```xml
+<PackageReference Include="Simplify.Windows.Forms" Version="1.1.2" />
+```
+
+添加窗体帮助类：`Services\WindowService.cs`
+
+```C#
+using System;
+using System.Linq;
+using System.Windows;
+using System.Windows.Forms;
+using System.Windows.Threading;
+using Application = System.Windows.Application;
+
+namespace WPFBlazorChat.Services;
+
+public class WindowService
+{
+    private static bool _isMoving;
+    private static double _startMouseX;
+    private static double _startMouseY;
+    private static double _startWindLeft;
+    private static double _startWindTop;
+
+    public static void Init()
+    {
+        DispatcherTimer dispatcherTimer = new();
+        dispatcherTimer.Tick += UpdateWindowPos;
+        dispatcherTimer.Interval = TimeSpan.FromMilliseconds(17);
+        dispatcherTimer.Start();
+    }
+
+    public static void StartMove()
+    {
+        _isMoving = true;
+        _startMouseX = GetX();
+        _startMouseY = GetY();
+        var window = GetActiveWindow();
+        if (window == null)
+        {
+            return;
+        }
+
+        _startWindLeft = window.Left;
+        _startWindTop = window.Top;
+    }
+
+    public static void StopMove()
+    {
+        _isMoving = false;
+    }
+
+    public static void Minimize()
+    {
+        var window = GetActiveWindow();
+        if (window != null)
+        {
+            window.WindowState = WindowState.Minimized;
+        }
+    }
+
+    public static void Maximize()
+    {
+        var window = GetActiveWindow();
+        if (window != null)
+        {
+            window.WindowState =
+                window.WindowState == WindowState.Maximized ? WindowState.Normal : WindowState.Maximized;
+        }
+    }
+
+
+    public static bool IsMaximized()
+    {
+        var window = GetActiveWindow();
+        if (window != null)
+        {
+            return window.WindowState == WindowState.Maximized;
+        }
+
+        return false;
+    }
+
+    public static void Close(bool allWindow = false)
+    {
+        if (allWindow)
+        {
+            Application.Current?.Shutdown();
+            return;
+        }
+
+        var window = GetActiveWindow();
+        if (window != null)
+        {
+            window.Close();
+        }
+    }
+
+
+    private static void UpdateWindowPos(object? sender, EventArgs e)
+    {
+        if (!_isMoving)
+        {
+            return;
+        }
+
+        double moveX = GetX() - _startMouseX;
+        double moveY = GetY() - _startMouseY;
+        Window? window = GetActiveWindow();
+        if (window == null)
+        {
+            return;
+        }
+
+        window.Left = _startWindLeft + moveX;
+        window.Top = _startWindTop + moveY;
+    }
+
+    private static int GetX()
+    {
+        return Control.MousePosition.X;
+    }
+
+    private static int GetY()
+    {
+        return Control.MousePosition.Y;
+    }
+
+    private static Window? GetActiveWindow()
+    {
+        return Application.Current.Windows.Cast<Window>().FirstOrDefault(currentWindow => currentWindow.IsActive);
+    }
+}
+```
+
+上面的代码用于窗体的最小化、最大化（还原）、关闭等实现，需要在`Razor`组件里正确的调用这些方法：
+
+1. `Counter.razor`组件的`OnInitialized`初始化生命周期方法里调用`WindowService.Init();`，如上代码，这个方法开启定时器，定时调用`UpdateWindowPos`方法检查鼠标是否按下，如果按下，检查间隔内窗体的位置变化，然后修改窗体位置，从而实现窗体位置移动。
+
+2. `Razor`组件里窗体控制按钮的使用看上面的代码不难理解，不过多解释。
+
+上面效果的样式文件修改如下，`wwwroot\css\app.css`：
+
+   ```css
+   /*
+   BlazorDesktopWPF-CustomTitleBar - © Copyright 2021 - Jam-Es.com
+   Licensed under the MIT License (MIT). See LICENSE in the repo root for license information.
+   */
+   
+   html, body {
+       font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+       padding: 0;
+       margin: 0;
+   }
+   
+   .valid.modified:not([type=checkbox]) {
+       outline: 1px solid #26b050;
+   }
+   
+   .invalid {
+       outline: 1px solid red;
+   }
+   
+   .validation-message {
+       color: red;
+   }
+   
+   #blazor-error-ui {
+       background: lightyellow;
+       bottom: 0;
+       box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.2);
+       display: none;
+       left: 0;
+       padding: 0.6rem 1.25rem 0.7rem 1.25rem;
+       position: fixed;
+       width: 100%;
+       z-index: 1000;
+   }
+   
+   #blazor-error-ui .dismiss {
+       cursor: pointer;
+       position: absolute;
+       right: 0.75rem;
+       top: 0.5rem;
+   }
+   
+   .page-container {
+       display: flex;
+       flex-direction: column;
+       height: 100vh;
+   }
+   
+   .content-container {
+       padding: 0px 20px 20px 20px;
+       flex-grow: 1;
+       overflow-y: scroll;
+   }
+   
+   .titlebar {
+       width: 100%;
+       height: 32px;
+       min-height: 32px;
+       background-color: #7160E8;
+       display: flex;
+       flex-direction: row;
+   }
+   
+   .titlebar-btn, .titlebar-cbtn {
+       width: 46px;
+       background-color: #7160E8;
+       color: white;
+       border: none;
+       border-radius: 0;
+   }
+   
+   .titlebar-btn:hover {
+       background-color: #5A5A5A;
+   }
+   
+   .titlebar-btn:focus, .titlebar-cbtn:focus {
+       outline: 0;
+   }
+   
+   .titlebar-cbtn:hover {
+       background-color: #E81123;
+   }
+   
+   .window-title {
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       margin-left: 5px;
+       color: white;
+   }
+   ```
+
+上面的代码即实现了由`Razor`组件实现窗体的标题显示、窗体的最小化、最大化（还原）、关闭等操作，然而还是会有`3.1`结尾出现的问题，即窗体圆角和窗体最大化铺满操作系统桌面任务栏的问题，下面一小节我们尝试解决他。
+
+小节总结：通过上面的代码，如果放Tab控件铺满整个窗体，是不是有思路了？
 
 ### 3.4 Blazor与WPF比较完美的实现效果
 
