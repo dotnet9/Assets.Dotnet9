@@ -777,7 +777,293 @@ public class WindowService
 
 最终还是WPF解决了所有问题【哈哈】，具体怎么实现的窗体最大化未占操作系统的任务栏，以及窗体圆角问题的解决（竟然能让`BlazorWebView`部分透明了）可以查看该组件相关代码，本文不过多深究。
 
+本小节源码在这[解决圆角和最大化问题](https://github.com/dotnet9/WPFBlazorChat/tree/main/3WPF%E4%B8%8EBlazor%E7%9A%84%E8%87%AA%E5%AE%9A%E4%B9%89%E7%AA%97%E4%BD%93/WPFBlazorChat_4Blazor%E4%B8%8EWPF%E6%AF%94%E8%BE%83%E5%AE%8C%E7%BE%8E%E7%9A%84%E5%AE%9E%E7%8E%B0%E6%95%88%E6%9E%9C)，下面开始本文的下半部分了，好累，终于到这了。
+
 ## 4. 添加第三方Blazor组件
+
+工欲善其事，必先利其器！
+
+鉴于大部分同学前端基础可能不是太好，即使使用[Blazor](https://learn.microsoft.com/zh-cn/aspnet/core/blazor/?view=aspnetcore-7.0)可以少用或者不用[JavaScript](https://baike.baidu.com/item/JavaScript/321142?fr=aladdin)，那么有那么一款漂亮、便捷的`Blazor`组件库，这不是如虎添翼吗？本文使用[Masa Blazor](https://www.masastack.com/blazor)做示例显示，如今Blazor组件库众多，选择自己喜欢的、顺手的就成：
+
+![Masa Blazor](https://img1.dotnet9.com/2022/10/1019.png)
+
+站长前些日子介绍过[MAUI使用Masa blazor组件库](https://dotnet9.com/2022/06/Use-masa-blazor-in-maui-blazor)，本小节思路也是类似，且看我表演。
+
+打开Masa Blazor文档站点：https://blazor.masastack.com/getting-started/installation，一起来往WPF中引入这款Blazor组件库吧。
+
+### 4.1 引入Masa.Blazor包
+
+打开工程文件`WPFBlazorChat.csproj`直接复制下面的包版本，或通过`NuGet`包管理器搜索`Masa.Blazor安装`：
+
+```xml
+<PackageReference Include="Masa.Blazor" Version="0.6.0" />
+```
+
+### 4.2 添加Masa.Blazor带来的资源
+
+打开`wwwroot\index.html`，在`<head></head>`节点添加如下资源：
+
+```html
+<link href="_content/Masa.Blazor/css/masa-blazor.min.css" rel="stylesheet" />
+
+<link href="https://cdn.masastack.com/npm/@mdi/font@5.x/css/materialdesignicons.min.css" rel="stylesheet">
+<link href="https://cdn.masastack.com/npm/materialicons/materialicons.css" rel="stylesheet">
+<link href="https://cdn.masastack.com/npm/fontawesome/v5.0.13/css/all.css" rel="stylesheet">
+
+<script src="_content/BlazorComponent/js/blazor-component.js"></script>
+```
+
+完整代码如下：
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WPFBlazorChat</title>
+    <base href="/" />
+    <link href="css/app.css" rel="stylesheet" />
+    <link href="WpfBlazor.styles.css" rel="stylesheet" />
+
+    <link href="_content/Masa.Blazor/css/masa-blazor.min.css" rel="stylesheet" />
+
+    <link href="https://cdn.masastack.com/npm/@mdi/font@5.x/css/materialdesignicons.min.css" rel="stylesheet">
+    <link href="https://cdn.masastack.com/npm/materialicons/materialicons.css" rel="stylesheet">
+    <link href="https://cdn.masastack.com/npm/fontawesome/v5.0.13/css/all.css" rel="stylesheet">
+
+    <script src="_content/BlazorComponent/js/blazor-component.js"></script>
+</head>
+
+<body>
+<div id="app">Loading...</div>
+
+<div id="blazor-error-ui">
+    An unhandled error has occurred.
+    <a href="" class="reload">Reload</a>
+    <a class="dismiss">🗙</a>
+</div>
+<script src="_framework/blazor.webview.js"></script>
+</body>
+
+</html>
+```
+
+### 4.3 引入Masa.Blazor命名空间
+
+打开`_Imports.razor`文件，修改如下：
+
+```xml
+@using Microsoft.AspNetCore.Components.Web
+@using Masa.Blazor
+@using BlazorComponent
+```
+
+### 4.4 Razor组件添加Masa.Blazor
+
+打开`MainWindow.xaml.cs`，添加一行代码 `serviceCollection.AddMasaBlazor();`
+
+![Ioc中添加Masa Blazor](https://img1.dotnet9.com/2022/10/1020.png)
+
+### 4.5 尝试Masa.Blazor案例
+
+上面4步的准备工作做好后，我们简单来使用下`Masa.Blazor`组件。
+
+打开Tab组件链接：https://blazor.masastack.com/components/tabs，尝试这个Demo：
+
+![Masa Blazor的Tab组件案例](https://img1.dotnet9.com/2022/10/1021.gif)
+
+Demo的代码我几乎不变的引入，打开`RazorViews\Counter.razor`文件，保留3.4节的标题栏，替换了客户区域内容，代码如下：
+
+```html
+@using WPFBlazorChat.Services
+
+<MApp>
+    <!--上一小节的标题栏开始-->
+    <div class="titlebar" @ondblclick="WindowService.Maximize" @onmouseup="WindowService.StopMove" @onmousedown="WindowService.StartMove">
+        <button class="titlebar-btn" onclick="alert('js alert: navigation pressed');">
+            <img src="svg/navigation.svg"/>
+        </button>
+        <div class="window-title">
+            测试窗体标题
+        </div>
+        <div style="flex-grow: 1"></div>
+        <button class="titlebar-btn" onclick="alert('js alert: settings pressed');">
+            <img src="svg/settings.svg"/>
+        </button>
+        <button class="titlebar-btn" @onclick="WindowService.Minimize">
+            <img src="svg/minimize.svg"/>
+        </button>
+        <button class="titlebar-btn" @onclick="WindowService.Maximize">
+            @if (WindowService.IsMaximized())
+            {
+                <img src="svg/restore.svg"/>
+            }
+            else
+            {
+                <img src="svg/maximize.svg"/>
+            }
+        </button>
+        <button class="titlebar-cbtn" @onclick="() => WindowService.Close(false)">
+            <img src="svg/dismiss.svg"/>
+        </button>
+    </div>
+    <!--上一小节的标题栏结束-->
+    
+    <!--新增的Masa.Blazor Tab案例代码开始-->
+    <MCard>
+        <MToolbar Color="cyan" Dark Flat>
+            <ChildContent>
+                <MAppBarNavIcon></MAppBarNavIcon>
+
+                <MToolbarTitle>Your Dashboard</MToolbarTitle>
+
+                <MSpacer></MSpacer>
+
+                <MButton Icon>
+                    <MIcon>mdi-magnify</MIcon>
+                </MButton>
+
+                <MButton Icon>
+                    <MIcon>mdi-dots-vertical</MIcon>
+                </MButton>
+            </ChildContent>
+
+            <ExtensionContent>
+                <MTabs @bind-Value="tab"
+                       AlignWithTitle
+                       SliderColor="yellow">
+                    @foreach (var item in items)
+                    {
+                        <MTab Value="item">
+                            @item
+                        </MTab>
+                    }
+                </MTabs>
+            </ExtensionContent>
+        </MToolbar>
+
+        <MTabsItems @bind-Value="tab">
+            @foreach (var item in items)
+            {
+                <MTabItem Value="item">
+                    <MCard Flat>
+                        <MCardText>@text</MCardText>
+                    </MCard>
+                </MTabItem>
+            }
+        </MTabsItems>
+    </MCard>
+    <!--新增的Masa.Blazor Tab案例代码结束-->
+</MApp>
+
+@code {
+
+    #region Masa.Blazor Tab案例C#代码
+    StringNumber tab;
+
+    List<string> items = new()
+    {
+        "web", "shopping", "videos", "images", "news",
+    };
+
+    string text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.";
+
+    #endregion
+    
+    
+    protected override void OnInitialized()
+    {
+        WindowService.Init();
+        base.OnInitialized();
+    }
+}
+```
+
+运行效果如下：
+
+![Masa Blazor的Tab组件案例集成](https://img1.dotnet9.com/2022/10/1022.gif)
+
+是不是有那味儿了？再尝试把Tab移到标题栏，前面有提过的效果：
+
+![Tab放标题栏](https://img1.dotnet9.com/2022/10/1023.gif)
+
+上面的效果，代码修改如下，删除了原标题栏代码，将窗体操作按钮放到了`MToolbar`里面，并使用`MToolbar`添加了双击事件、鼠标按下、释放事件实现窗体拖动：
+
+```html
+<MApp>
+
+    <!--新增的Masa.Blazor Tab案例代码开始-->
+    <MCard>
+        <MToolbar Color="cyan" Dark Flat @ondblclick="WindowService.Maximize" @onmouseup="WindowService.StopMove" @onmousedown="WindowService.StartMove">
+            <MTabs @bind-Value="tab"
+                   AlignWithTitle
+                   SliderColor="yellow">
+                @foreach (var item in items)
+                {
+                    <MTab Value="item">
+                        @item
+                    </MTab>
+                }
+            </MTabs>
+            
+            <div style="flex-grow: 1"></div>
+            <button class="titlebar-btn" onclick="alert('js alert: settings pressed');">
+                <img src="svg/settings.svg"/>
+            </button>
+            <button class="titlebar-btn" @onclick="WindowService.Minimize">
+                <img src="svg/minimize.svg"/>
+            </button>
+            <button class="titlebar-btn" @onclick="WindowService.Maximize">
+                @if (WindowService.IsMaximized())
+                {
+                    <img src="svg/restore.svg"/>
+                }
+                else
+                {
+                    <img src="svg/maximize.svg"/>
+                }
+            </button>
+            <button class="titlebar-cbtn" @onclick="() => WindowService.Close(false)">
+                <img src="svg/dismiss.svg"/>
+            </button>
+        </MToolbar>
+
+        <MTabsItems @bind-Value="tab">
+            @foreach (var item in items)
+            {
+                <MTabItem Value="item">
+                    <MCard Flat>
+                        <MCardText>@text</MCardText>
+                    </MCard>
+                </MTabItem>
+            }
+        </MTabsItems>
+    </MCard>
+    <!--新增的Masa.Blazor Tab案例代码结束-->
+</MApp>
+```
+
+窗体操作按钮的背景色也做部分修改：
+
+![样式部分修改](https://img1.dotnet9.com/2022/10/1024.png)
+
+其实上面的窗体效果还是有点瑕疵，注意到窗体右侧的竖直滚动条了吗？在没用引入`Masa.Blazor`之前都是没有的：
+
+![引入Masa.Blazor后多了竖直滚动条](https://img1.dotnet9.com/2022/10/1025.png)
+
+这个想去掉也简单，在`wwwroot\css\app.css`追加样式：
+
+```css
+::-webkit-scrollbar {
+    width: 0px;
+}
+```
+
+因为`Razor`组件是在`BlazorWebView`里渲染的，即`BlazorWebView`就是个小型的浏览器呀，上面的样式即把浏览器的滚动条宽度设置为0，它不就没有了吗？现在效果如下，是不是舒服了？
+
+![根据后界面](https://img1.dotnet9.com/2022/10/1026.png)
 
 ## 5. 多窗体消息通知
 
