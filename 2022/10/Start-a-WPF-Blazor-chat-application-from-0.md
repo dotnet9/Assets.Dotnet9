@@ -33,7 +33,7 @@ categories: WPF,Blazor
 
 ![WPF项目空白窗口](https://img1.dotnet9.com/2022/10/1002.png)
 
-接着往下看，我们添加Blazor支持。
+接着往下看，我们添加Blazor支持，本小节代码在这[WPF默认程序源码](https://github.com/dotnet9/WPFBlazorChat/tree/main/1WPF%E9%BB%98%E8%AE%A4%E7%A8%8B%E5%BA%8F/WPFBlazorChat)。
 
 ## 2. 添加Blazor支持
 
@@ -196,7 +196,7 @@ a, .btn-link {
 
 OK，`WPF`与`Blazor`集成成功，打完收工？
 
-等等，还没完呢，接着往下看。
+等等，还没完呢，本小节源码在这[WPF中添加Blazor](https://github.com/dotnet9/WPFBlazorChat/tree/main/2WPF%E4%B8%AD%E5%BC%95%E5%85%A5Blazor/WPFBlazorChat)，接着往下看。
 
 ## 3. 自定义窗体
 
@@ -368,7 +368,7 @@ public partial class MainWindow : Window
 
 ![窗体圆角](https://img1.dotnet9.com/2022/10/1012.png)
 
-在后面的`3.4`小节，站长使用一个第三库实现了窗体圆角问题，更多比较好的WPF自定义窗体实现可看这篇文章：[WPF三种自定义窗体的实现](https://www.cnblogs.com/pumbaa/p/13306486.html)。
+在后面的`3.4`小节，站长使用一个第三库实现了窗体圆角问题，更多比较好的WPF自定义窗体实现可看这篇文章：[WPF三种自定义窗体的实现](https://www.cnblogs.com/pumbaa/p/13306486.html),本小节中示例源码在这[WPF自定义窗体](https://github.com/dotnet9/WPFBlazorChat/tree/main/3WPF%E4%B8%8EBlazor%E7%9A%84%E8%87%AA%E5%AE%9A%E4%B9%89%E7%AA%97%E4%BD%93/WPFBlazorChat_1WPF%E8%87%AA%E5%AE%9A%E4%B9%89%E7%AA%97%E4%BD%93)。
 
 ### 3.2 WPF异形窗体
 
@@ -453,13 +453,17 @@ public partial class MainWindow : Window
 2. 在第一个`div`里，其中有3个按钮，即窗体的控制按钮，调用窗体最小化、最大化（还原）、关闭方法调用；
 3. 另有两个按钮，演示单击调用`JavaScript`的`alert`方法弹出消息。
 
-![WPF透明窗体](https://img1.dotnet9.com/2022/10/1014.png)
+![WPF透明窗体](https://img1.dotnet9.com/2022/10/1015.png)
 
 运行效果如下：
 
-![WPF透明窗体](https://img1.dotnet9.com/2022/10/1016.png)
+![WPF透明窗体](https://img1.dotnet9.com/2022/10/1016.gif)
 
-实现这个效果，还有一些代码，因为是`Razor`组件，即`html`实现的界面，上面的代码调用了一些方法实现窗体操作(最小化、关闭等，代码如下），界面的`html`元素也定义了一些`css`样式，代码也一并给出。
+实现这个效果，还有一些代码：
+
+1. 上面的代码调用了一些方法实现窗体操作最小化、关闭等，代码如下;
+2. 因为是`Razor`组件，即`html`实现的界面，界面的`html`元素也定义了一些`css`样式，代码也一并给出。
+3. 标题栏的按钮使用了一些`svg`图片，在仓库里，可自行获取。
 
 **窗体拖动**
 
@@ -602,7 +606,7 @@ public class WindowService
 
 上面的代码用于窗体的最小化、最大化（还原）、关闭等实现，需要在`Razor`组件里正确的调用这些方法：
 
-1. `Counter.razor`组件的`OnInitialized`初始化生命周期方法里调用`WindowService.Init();`，如上代码，这个方法开启定时器，定时调用`UpdateWindowPos`方法检查鼠标是否按下，如果按下，检查间隔内窗体的位置变化，然后修改窗体位置，从而实现窗体位置移动。
+1. `Counter.razor`组件的`OnInitialized`初始化生命周期方法里调用`WindowService.Init();`，如上代码，这个方法开启定时器，定时调用`UpdateWindowPos`方法检查鼠标是否按下，如果按下，检查间隔内窗体的位置变化，然后修改窗体位置，从而实现窗体位置移动（移动窗体无法使用WPF的`DragMove`方法，您可以尝试使用看看它报什么错）。
 
 2. `Razor`组件里窗体控制按钮的使用看上面的代码不难理解，不过多解释。
 
@@ -701,13 +705,77 @@ public class WindowService
    }
    ```
 
-上面的代码即实现了由`Razor`组件实现窗体的标题显示、窗体的最小化、最大化（还原）、关闭等操作，然而还是会有`3.1`结尾出现的问题，即窗体圆角和窗体最大化铺满操作系统桌面任务栏的问题，下面一小节我们尝试解决他。
+上面的一些代码即实现了由`Razor`组件实现窗体的标题显示、窗体的最小化、最大化（还原）、关闭、移动等操作，然而还是会有`3.1`结尾出现的问题，即窗体圆角和窗体最大化铺满操作系统桌面任务栏的问题，下面一小节我们尝试解决他。
 
 小节总结：通过上面的代码，如果放Tab控件铺满整个窗体，是不是有思路了？
 
+本小节源码在这[Razor组件实现窗体标题栏功能](https://github.com/dotnet9/WPFBlazorChat/tree/main/3WPF%E4%B8%8EBlazor%E7%9A%84%E8%87%AA%E5%AE%9A%E4%B9%89%E7%AA%97%E4%BD%93/WPFBlazorChat_3Blazor%E5%AE%9E%E7%8E%B0%E8%87%AA%E5%AE%9A%E4%B9%89%E7%AA%97%E4%BD%93%E6%95%88%E6%9E%9C)
+
 ### 3.4 Blazor与WPF比较完美的实现效果
 
-添加圆角
+其实上面的代码可以当做学习，即使有不小瑕疵（哈哈），本小节我们还是使用第三包解决窗体圆角和最大化问题。
+
+首先添加`Nuget`包`ModernWpfUI`，该WPF控件库本站介绍链接[开源WPF控件库：ModernWpf](https://dotnet9.com/2020/09/Open-source-WPF-control-library-recommendation-modernwpf)：
+
+```xml
+<PackageReference Include="ModernWpfUI" Version="0.9.7-preview.2" />
+```
+
+然后打开`App.xaml`，引用上面开源WPF控件的样式：
+
+```xml
+<Application x:Class="WPFBlazorChat.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:ui="http://schemas.modernwpf.com/2019"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ui:ThemeResources />
+                <ui:XamlControlsResources />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
+```
+
+最后打开`MainWindow.xaml`，修改如下：
+
+```xml
+<Window x:Class="WPFBlazorChat.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:ui="http://schemas.modernwpf.com/2019"
+        xmlns:blazor="clr-namespace:Microsoft.AspNetCore.Components.WebView.Wpf;assembly=Microsoft.AspNetCore.Components.WebView.Wpf"
+        xmlns:razorViews="clr-namespace:WPFBlazorChat.RazorViews"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800"
+        ui:TitleBar.ExtendViewIntoTitleBar="True"
+        ui:TitleBar.IsBackButtonVisible="False"
+        ui:TitleBar.Style="{DynamicResource AppTitleBarStyle}"
+        ui:WindowHelper.UseModernWindowStyle="True">
+    <Border Background="#7160E8" CornerRadius="5">
+        <blazor:BlazorWebView HostPage="wwwroot\index.html" Services="{DynamicResource services}">
+            <blazor:BlazorWebView.RootComponents>
+                <blazor:RootComponent Selector="#app" ComponentType="{x:Type razorViews:Counter}" />
+            </blazor:BlazorWebView.RootComponents>
+        </blazor:BlazorWebView>
+    </Border>
+</Window>
+```
+
+就上面三处修改，我们运行看看：
+
+![WPF与Blazor自定义窗体比较完美的解决](https://img1.dotnet9.com/2022/10/1017.gif)
+
+是不是和`3.3`效果一样？其实仔细看，窗体下面的圆角也有了：
+
+![窗体圆角](https://img1.dotnet9.com/2022/10/1018.png)
+
+最终还是WPF解决了所有问题【哈哈】，具体怎么实现的窗体最大化未占操作系统的任务栏，以及窗体圆角问题的解决（竟然能让`BlazorWebView`部分透明了）可以查看该组件相关代码，本文不过多深究。
 
 ## 4. 添加第三方Blazor组件
 
