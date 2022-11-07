@@ -1505,31 +1505,60 @@ Messenger.Default.Publish(this, new SendRandomDataMessage(this, DateTime.Now.Mil
 
 在`OnInitialized()`方法里订阅消息`ReceivedResponseMessage`，收到后将变化`_showComfirmDialog`置为`true`，即上面对话框的属性`Visible`绑定的值，同理需要在`InvokeAsync()`中处理数据接收，也需要调用`StateHasChanged`通知UI数据变化。
 
-上面说了部分代码，可能讲的不太清楚，可以看示例源码：[戳这里](https://github.com/dotnet9/WPFBlazorChat/tree/main/5WPFBlazor%E6%B6%88%E6%81%AF%E9%80%9A%E7%9F%A5/WPFBlazorChat)。
+上面说了部分代码，可能讲的不太清楚，可以看示例源码：[多窗体消息通知](https://github.com/dotnet9/WPFBlazorChat/tree/main/5WPFBlazor%E6%B6%88%E6%81%AF%E9%80%9A%E7%9F%A5/WPFBlazorChat)。
 
-## 6. 实现本文示例
+## 6. 本文示例
 
+本来想写完整Demo的，发现上面把基本要点都拉了一遍，再粘贴一些重复代码有点没完没了了，有兴趣的拉源码[WPF与Blazor混合开发Demo](https://github.com/dotnet9/WPFBlazorChat/tree/main/src)，下面是项目代码结构大概：
 
+![Demo代码结构](https://img1.dotnet9.com/2022/10/1030.png)
+
+下面是最后的示例效果图，前面部分文章已经发过，再发一次，哈哈：
+
+**用户列表窗口**
+
+![用户列表](https://img1.dotnet9.com/2022/10/1-main-window.gif)
+
+**打开子窗口**
+
+![打开窗口](https://img1.dotnet9.com/2022/10/3-open-child-window.gif)
+
+**聊天窗口**
+
+![聊天窗口](https://img1.dotnet9.com/2022/10/2-chat-window.gif)
+
+**演示发送消息**
+
+<video id="video" controls="" preload="none" poster="https://img1.dotnet9.com/2022/10//4-send-message.png">
+  <source id="mp4" src="https://img1.dotnet9.com/2022/10//4-send-message.mp4" type="video/mp4">
+</video>
 
 ## 7. Click Once发布尝试
 
-参考：[《快速创建软件安装包-ClickOnce》](https://mp.weixin.qq.com/s/zcO1J-AqiK7LkU52MRwmqw)
+上一篇文章链接：[快速创建软件安装包-ClickOnce](https://mp.weixin.qq.com/s/zcO1J-AqiK7LkU52MRwmqw)
 
 ## 8. Q&A
 
-- 8.1 BlazorWebView的竖直滚动条怎么回事？
+### 8.1 为啥要在WPF里使用Blazor？吃饱了撑的？
 
-隐藏BlazorWebView滚动条
+WPF虽然相较Winform做出比较好看的UI相对容易一些，但比起Blazor，或者直接说html开发界面，还是差了一点点，更何况html的资源更多一点，尝试一下为何不可？
 
-- 窗体拖动：https://github.com/James231/BlazorDesktopWPF-CustomTitleBar
+### 8.2 WPF + Blazor支持哪些操作系统
 
-- 8.2 WPF + Blazor支持哪些操作系统
+最低支持Windows 7 SP1吧，有群友已经尝试正常运行成功，这是本文示例Click Once安装页面：https://dotnet9.com/WPFBlazorChat
 
-支持Windows 7，这是本文示例Click Once安装页面：https://dotnet9.com/WPFBlazorChat
+### 8.3 Blazor 混合开发还支持哪些已有框架？
 
-- 8.3 为啥要在WPF里使用Blazor？吃饱了撑的？
+Blazor混合开发的话，除了WPF，还有MAUI（跨平台框架，支持平台包括Windows\Mac\Linux\Android\iOS等）、Winform（同WPF，只能在Windows平台运行）等，建议阅读[微软文档](https://learn.microsoft.com/zh-cn/aspnet/core/blazor/hybrid/?view=aspnetcore-7.0)学习：
 
-- 8.4 Blazor还有哪些框架可以使用？
+![微软文档学习Blazor](https://img1.dotnet9.com/2022/10/1031.png)
 
-- 8.5 本文示例代码能给我不？
+### 8.4 Blazor组件除了Masa.Blazor还有哪些？
 
+- 开源的Blazor组件：[Ant Design Blazor](https://antblazor.com/zh-CN/)、[Bootstrap Blazor](https://www.blazor.zone/)、[MudBlazor](https://mudblazor.com/)、[Blazorise](https://blazorise.com/)，以及微软自家的[FAST Blazor](https://www.fast.design/)等，当然还有不少开源的Blazor组件。
+
+- 收费的Blazor组件：[DevExpress](https://www.devexpress.com/blazor/)、[Telerik](https://www.telerik.com/support/blazor-ui)、[Syncfusion](https://www.syncfusion.com/blazor-components)等
+
+### 8.5 本文示例代码？
+
+文中各小节代码、最后的示例代码都给出了相应链接。
