@@ -1079,7 +1079,7 @@ Demo的代码我几乎不变的引入，打开`RazorViews\Counter.razor`文件�
 
 ### 5.1 Messager封装
 
-本能不想贴代码直接给源码链接的，想想代码也不多，直接上吧。
+本来不想贴代码直接给源码链接的，想想代码也不多，直接上吧。
 
 **Message**
 
@@ -1286,9 +1286,230 @@ public class WeakActionAndToken
 
 第 5 节涉及到多窗体及多`Razor`组件了，需要创建一些目录存放这些文件，方便分类管理。
 
+![整理后代码](https://img1.dotnet9.com/2022/10/1028.png)
 
+1. A：放Message，即一些消息通知类；
+
+2. B：放Razor组件，如果需要与Maui\Blazor Server(Wasm)等共享Razor组件，可以创建Razor类库存储；
+
+3. C：放通用服务，这里只放了一个窗体管理静态类，实际情况可以放Redis服务、RabbitMQ消息服务等；
+
+4. D：放WPF视图，本示例WPF窗体只是一个壳，承载BlazorWebView使用；
+
+### 5.3 示例及代码说明
+
+先看本示例效果，再给出相关代码说明：
+
+![消息通知示例](https://img1.dotnet9.com/2022/10/1029.gif)
+
+图中有三个操作：
+
+1. 点击主窗体A的【+】按钮，发送了`OpenSecondViewMessage`消息，打开子窗体B；
+2. 打开子窗体B后，再点击主窗体A的【桃心】按钮，发送了`SendRandomDataMessage`消息，子窗体B的第二个TabItem Header显示了消息传来的数字；
+3. 点击子窗体B的【安卓】图标按钮，给主窗体A响应了消息`ReceivedResponseMessage`,主窗体收到后弹出一个对话框。
+
+三个消息类定义如下：
+
+```C#
+public class OpenSecondViewMessage : Message
+{
+    public OpenSecondViewMessage(object sender) : base(sender)
+    {
+    }
+}
+
+public class SendRandomDataMessage : Message
+{
+    public SendRandomDataMessage(object sender, int number) : base(sender)
+    {
+        Number = number;
+    }
+
+    public int Number { get; set; }
+}
+
+public class ReceivedResponseMessage : Message
+{
+    public ReceivedResponseMessage(object sender) : base(sender)
+    {
+    }
+}
+```
+
+除了`SendRandomDataMessage`传递了一个业务`Number`属性，另两个消息只是起到通知作用，实际开发时可能需要传递业务数据。
+
+#### **打开多窗体**
+
+即上面的第一个操作：点击主窗体A的【+】按钮，发送了`OpenSecondViewMessage`消息，打开子窗体B。
+
+在`RazorViews\MainView.razor`中执行按钮点击，发送打开子窗体消息：
+
+```html
+...
+<MCol>
+    <MButton class="mx-2" Fab Dark Color="indigo" OnClick="OpenNewSecondView">
+        <MIcon>mdi-plus</MIcon>
+    </MButton>
+</MCol>
+...
+
+@code{
+...
+void OpenNewSecondView()
+    {
+        Messenger.Default.Publish(this, new OpenSecondViewMessage(this));
+    }
+...
+}
+```
+
+在`App.xaml.cs`里订阅打开子窗体消息：
+
+```C#
+public partial class App : Application
+{
+    public App()
+    {
+        // 订阅打开子窗口消息，在主窗口点击【+】按钮
+        Messenger.Default.Subscribe<OpenSecondViewMessage>(this, msg =>
+        {
+            var chatWin = new SecondWindowView();
+            chatWin.Show();
+        }, ThreadOption.UiThread);
+    }
+}
+```
+
+实际开发可能情况更复杂，发送的消息`OpenSecondViewMessage`里带WPF窗体路由（定义的一套路径规则寻找窗体或`ViewModel`），订阅的地方也可能不在主程序，在子模块的`Module`类里。
+
+#### 发送业务数据
+
+即第二个操作：打开子窗体B后，再点击主窗体A的【桃心】按钮，发送了`SendRandomDataMessage`消息，子窗体B的第二个TabItem Header显示了消息传来的数字。
+
+1. 在`RazorViews\MainView.razor`中执行按钮点击，发送业务消息(就当前时间的Millisecond）：
+
+```html
+...
+<MCol>
+    <MButton class="mx-2" Fab Small Dark Color="pink" OnClick="SendNumber">
+        <MIcon>mdi-heart</MIcon>
+    </MButton>
+</MCol>
+...
+
+@code{
+...
+void SendNumber()
+{
+Messenger.Default.Publish(this, new SendRandomDataMessage(this, DateTime.Now.Millisecond));
+}
+...
+}
+```
+
+2. 在`RazorViews\SecondView.razor`的`OnInitialized()`方法里订阅业务消息通知：
+
+```html
+@using WPFBlazorChat.Messages
+<MApp>
+    <MToolbar>
+        <MTabs BackgroundColor="primary" Grow Dark>
+            <MTab>
+                <MBadge Color="pink" Dot>
+                    Item One
+                </MBadge>
+            </MTab>
+            <MTab>
+                <MBadge Color="green" Content="tagCount">
+                    Item Two
+                </MBadge>
+            </MTab>
+            <MTab>
+                <MBadge Color="deep-purple accent-4" Icon="mi-masa">
+                    Item Three
+                </MBadge>
+            </MTab>
+        </MTabs>
+    </MToolbar>
+    
+    <MRow>
+        <MButton class="mx-2" Fab Dark Large Color="purple" OnClick="ReponseMessage">
+            <MIcon>
+                mdi-android
+            </MIcon>
+        </MButton>
+    </MRow>
+</MApp>
+
+@code
+{
+    private int tagCount = 6;
+
+    protected override void OnInitialized()
+    {
+    // 订阅业务消息，在主窗口点击桃心按钮时触发
+        Messenger.Default.Subscribe<SendRandomDataMessage>(this, msg =>
+        {
+            this.InvokeAsync(() => { this.tagCount = msg.Number; });
+            this.StateHasChanged();
+        }, ThreadOption.UiThread);
+    }
+
+    void ReponseMessage()
+    {
+        // 通知主窗体，我已经收到消息，请不要再发
+        Messenger.Default.Publish(this, new ReceivedResponseMessage(this));
+    }
+}
+```
+
+注意看，上面收到消息时有两个方法要简单说一下，看`OnInitialized()`里的代码：
+
+- InvokeAsync：将Number赋值给变量`tagCount`的代码是在`InvokeAsync`方法里执行的，这个和WPF里的`Dispatcher.Invoke`是一个意思，相当于接收数据是在子线程，而赋值这个操作会即时的绑定到`<MBadge Color="green" Content="tagCount">`上，也需要UI线程同步。
+- StateHasChanged：相当于MVVM里的`PropertyChanged`事件通知，通知UI这里有值变化了，请你刷新一下，我要看看最新值。
+
+上面的代码把子窗体消息回应也贴上了，即点击安卓图标按钮时发送了`ReceivedResponseMessage`消息，在主窗体`RazorViews\MainView.razor`里也订阅了这个消息，和上面的代码类似：
+
+```html
+...
+    <!--确认对话框开始-->
+    <PConfirm Visible="_showComfirmDialog"
+              Title="子窗体来回应了"
+              Type="AlertTypes.Warning"
+              OnCancel="() => _showComfirmDialog = false"
+              OnOk="() => _showComfirmDialog = false">
+        说你别没事一直发，它们烦！
+    </PConfirm>
+    <!--确认对话框结束-->
+</MApp>
+
+@code{
+...
+	// 是否显示确认对话框
+    bool _showComfirmDialog;
+	protected override void OnInitialized()
+    {
+        WindowService.Init();
+
+    // 订阅子窗体响应的消息，它已经收到消息了，我可以休息下再发
+        Messenger.Default.Subscribe<ReceivedResponseMessage>(this, msg =>
+        {
+            this.InvokeAsync(() => { _showComfirmDialog = true; });
+            this.StateHasChanged();
+        }, ThreadOption.UiThread);
+        base.OnInitialized();
+    }
+...
+}
+```
+
+在`OnInitialized()`方法里订阅消息`ReceivedResponseMessage`，收到后将变化`_showComfirmDialog`置为`true`，即上面对话框的属性`Visible`绑定的值，同理需要在`InvokeAsync()`中处理数据接收，也需要调用`StateHasChanged`通知UI数据变化。
+
+上面说了部分代码，可能讲的不太清楚，可以看示例源码：[戳这里](https://github.com/dotnet9/WPFBlazorChat/tree/main/5WPFBlazor%E6%B6%88%E6%81%AF%E9%80%9A%E7%9F%A5/WPFBlazorChat)。
 
 ## 6. 实现本文示例
+
+
 
 ## 7. Click Once发布尝试
 
