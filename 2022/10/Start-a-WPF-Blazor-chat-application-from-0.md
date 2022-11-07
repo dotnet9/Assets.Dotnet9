@@ -1,5 +1,5 @@
 ---
-title: 从0开始做一个WPF+Blazor对话小程序
+title: 【炫丽】从0开始做一个WPF+Blazor对话小程序
 slug: Start-a-WPF-Blazor-chat-application-from-0
 description: 从一个WPF Hello World程序开始，逐渐引入Blazor，做个免费能看的对话小程序耍耍。
 date: 2022-10-28 22:06:32
@@ -17,9 +17,7 @@ categories: WPF,Blazor
 
 本文演示如何在[WPF](https://learn.microsoft.com/zh-cn/dotnet/desktop/wpf/overview/?view=netdesktop-6.0)中使用[Blazor](https://learn.microsoft.com/zh-cn/aspnet/core/blazor/?view=aspnetcore-7.0)开发漂亮的UI，为客户端开发注入新活力。
 
-**注**
-
-要使WPF支持Blazor，[.NET](https://dotnet.microsoft.com/zh-cn/)版本必须是 6.0 或更高版本，本文所有示例使用的.NET 7.0，版本要求见[链接](https://learn.microsoft.com/zh-cn/aspnet/core/blazor/hybrid/tutorials/wpf?view=aspnetcore-7.0)，截图看如下文字：
+**注** 要使WPF支持Blazor，[.NET](https://dotnet.microsoft.com/zh-cn/)版本必须是 6.0 或更高版本，本文所有示例使用的.NET 7.0，版本要求见[链接](https://learn.microsoft.com/zh-cn/aspnet/core/blazor/hybrid/tutorials/wpf?view=aspnetcore-7.0)，截图看如下文字：
 
 ![.NET版本要求](https://img1.dotnet9.com/2022/10/1003.png)
 
