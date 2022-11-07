@@ -3,7 +3,7 @@ title: 从0开始做一个WPF+Blazor对话小程序
 slug: Start-a-WPF-Blazor-chat-application-from-0
 description: 从一个WPF Hello World程序开始，逐渐引入Blazor，做个免费能看的对话小程序耍耍。
 date: 2022-10-28 22:06:32
-lastmod: 2022-11-05 12:27:38
+lastmod: 2022-11-07 23:11:28
 copyright: Default
 author: 沙漠尽头的狼
 draft: false
@@ -15,15 +15,17 @@ categories: WPF,Blazor
 
 >.NET是免费，跨平台，开源，用于构建所有应用的开发人员平台。
 
-本文演示如何在WPF中使用Blazor开发漂亮的UI，为客户端开发注入新活力。
+本文演示如何在[WPF](https://learn.microsoft.com/zh-cn/dotnet/desktop/wpf/overview/?view=netdesktop-6.0)中使用[Blazor](https://learn.microsoft.com/zh-cn/aspnet/core/blazor/?view=aspnetcore-7.0)开发漂亮的UI，为客户端开发注入新活力。
 
 **注**
 
-要使WPF支持Blazor，.NET版本必须是 6.0 或更高版本，本示例使用的.NET 7.0，版本要求见[链接](https://learn.microsoft.com/zh-cn/aspnet/core/blazor/hybrid/tutorials/wpf?view=aspnetcore-7.0)，截图看如下文字：
+要使WPF支持Blazor，[.NET](https://dotnet.microsoft.com/zh-cn/)版本必须是 6.0 或更高版本，本文所有示例使用的.NET 7.0，版本要求见[链接](https://learn.microsoft.com/zh-cn/aspnet/core/blazor/hybrid/tutorials/wpf?view=aspnetcore-7.0)，截图看如下文字：
 
 ![.NET版本要求](https://img1.dotnet9.com/2022/10/1003.png)
 
 ## 1. WPF默认程序
+
+本文从创建WPF `Hello World`开发：
 
 使用WPF模板创建一个默认程序，取名【WPFBlazorChat】，项目组织结构如下：
 
@@ -39,7 +41,9 @@ categories: WPF,Blazor
 
 依然使用上面的工程，添加Blazor支持，此部分参考微软文档[生成 Windows Presentation Foundation (WPF) Blazor 应用](https://learn.microsoft.com/zh-cn/aspnet/core/blazor/hybrid/tutorials/wpf?view=aspnetcore-7.0)，本小节快速略过。
 
-### 2.1 编辑工程文件`WPFBlazorChat.csproj`
+### 2.1 编辑工程文件
+
+双击工程文件`WPFBlazorChat.csproj`，修改处如下：
 
 ![工程文件修改对比](https://img1.dotnet9.com/2022/10/1004.png)
 
