@@ -230,23 +230,12 @@ OK，`WPF`与`Blazor`集成成功，打完收工？
     Background="Transparent"
     WindowStyle="None"
     mc:Ignorable="d">
-    <Border CornerRadius="3">
-        <Grid>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="35" />
-                <RowDefinition Height="*" />
-            </Grid.RowDefinitions>
-
-            <blazor:BlazorWebView
-                Grid.Row="1"
-                HostPage="wwwroot\index.html"
-                Services="{DynamicResource services}">
-                <blazor:BlazorWebView.RootComponents>
-                    <blazor:RootComponent ComponentType="{x:Type razorViews:Counter}" Selector="#app" />
-                </blazor:BlazorWebView.RootComponents>
-            </blazor:BlazorWebView>
-        </Grid>
-    </Border>
+    <Grid>
+        <blazor:BlazorWebView HostPage="wwwroot\index.html" Services="{DynamicResource services}">
+            <blazor:BlazorWebView.RootComponents>
+                <blazor:RootComponent ComponentType="{x:Type razorViews:Counter}" Selector="#app" />
+            </blazor:BlazorWebView.RootComponents>
+    </Grid>
 </Window>
 ```
 
@@ -367,8 +356,8 @@ public partial class MainWindow : Window
 
 代码简单，处理了窗体最小化、窗体最大化（还原）、关闭、标题栏双击窗体最大化（还原），上面的实现不是一个完美的自定义窗体实现，至少有这两个问题：
 
-- 当您尝试最大化后，窗体铺满了整个操作系统桌面（也霸占了任务栏区域）；
-- 窗体任务栏两个圆角未生效（标题栏区域是WPF控件，所以正常），即窗体下面的两个圆角，站长未找到让`BlazorWebView`出现圆角的属性或其他方法。
+- 当您尝试最大化后，窗体铺满了整个操作系统桌面（连任务栏区域也占用了）；
+- 窗体任务栏两个圆角未生效（红色矩形框选的部分），即窗体下面的两个圆角，站长未找到让`BlazorWebView`出现圆角的属性或其他方法；标题栏区域（绿色矩形框选的部分）是WPF控件，所以圆角显示正常。
 
 ![窗体圆角](https://img1.dotnet9.com/2022/10/1012.png)
 
@@ -386,13 +375,13 @@ public partial class MainWindow : Window
 
 上面使用了`WPF`制作自定义窗体，有没有这种需求，把菜单放置到标题栏？这个简单，WPF能很好实现。
 
-如果放Tab类控件呢？Tab Header是在标题栏显示，TabItem是在客户端区域，Tab Header与TabItem风格统一，在一套代码里面实现和维护也方便，那么在WPF+Blazor混合开发的情景怎么实现呢？相信通过本节`Razor`实现标题栏的介绍，你能做出来。
+如果放`Tab`类控件呢？`Tab Header`是在标题栏显示，`TabItem`是在客户端区域，`Tab Header`与`TabItem`风格统一，在一套代码里面实现和维护也方便，那么在`WPF`+`Blazor`混合开发的情况怎么实现呢？相信通过本节`Razor`组件实现标题栏的介绍，你能做出来。
 
-`MainWindow.xaml`恢复代码，只设置隐藏WPF默认窗体边框，并给BlazorWebView套一层背景：
+`MainWindow.xaml`恢复代码，只设置隐藏WPF默认窗体边框，并给`BlazorWebView`套一层背景：
 
 ![WPF透明窗体](https://img1.dotnet9.com/2022/10/1014.png)
 
-后面的代码有参考[[BlazorDesktopWPF-CustomTitleBar](https://github.com/James231/BlazorDesktopWPF-CustomTitleBar)](https://github.com/James231/BlazorDesktopWPF-CustomTitleBar)实现。
+后面的代码有参考 [BlazorDesktopWPF-CustomTitleBar](https://github.com/James231/BlazorDesktopWPF-CustomTitleBar) 开源项目实现。
 
 我们把标题栏做到`Counter.razor`组件，即标题栏、客户区放一个组件里，当然你也可以分离，这里我们方便演示：
 
@@ -610,7 +599,7 @@ public class WindowService
 
 上面的代码用于窗体的最小化、最大化（还原）、关闭等实现，需要在`Razor`组件里正确的调用这些方法：
 
-1. `Counter.razor`组件的`OnInitialized`初始化生命周期方法里调用`WindowService.Init();`，如上代码，这个方法开启定时器，定时调用`UpdateWindowPos`方法检查鼠标是否按下，如果按下，检查间隔内窗体的位置变化，然后修改窗体位置，从而实现窗体位置移动（移动窗体无法使用WPF的`DragMove`方法，您可以尝试使用看看它报什么错）。
+1. `Counter.razor`组件的`OnInitialized`初始化生命周期方法里调用`WindowService.Init();`，如上代码，这个方法开启定时器，定时调用`UpdateWindowPos`方法检查鼠标是否按下，如果按下，检查间隔内窗体的位置变化范围，然后修改窗体位置，从而实现窗体位置移动（移动窗体无法使用WPF的`DragMove`方法，您可以尝试使用看看它报什么错），移动窗体有更好的方法欢迎留言。
 
 2. `Razor`组件里窗体控制按钮的使用看上面的代码不难理解，不过多解释。
 
@@ -744,7 +733,7 @@ public class WindowService
 </Application>
 ```
 
-最后打开`MainWindow.xaml`，修改如下：
+最后打开`MainWindow.xaml`，修改如下（主要是引入的几个属性`ui:xxxxx`）：
 
 ```xml
 <Window x:Class="WPFBlazorChat.MainWindow"
@@ -779,23 +768,31 @@ public class WindowService
 
 ![窗体圆角](https://img1.dotnet9.com/2022/10/1018.png)
 
-最终还是WPF解决了所有问题【哈哈】，具体怎么实现的窗体最大化未占操作系统的任务栏，以及窗体圆角问题的解决（竟然能让`BlazorWebView`部分透明了）可以查看该组件相关代码，本文不过多深究。
+最终还是WPF解决了所有问题...
 
-另外，WPF熟手可能比较清楚，前面的代码不能正常的拖动改变窗体大小（不知道你发现没，我当你没发现。），使用该库后也解决了：
+![我笑了](https://img1.dotnet9.com/2022/10/1032.gif)
+
+具体怎么实现的窗体最大化未占操作系统的任务栏，以及窗体圆角问题的解决（竟然能让`BlazorWebView`部分透明了）可以查看该组件相关代码，本文不过多深究。
+
+另外，WPF熟手可能比较清楚，前面的代码还不能正常的拖动改变窗体大小（不知道你发现没，我当你没发现。），使用该库后也解决了：
 
 ![窗体手动改变大小](https://img1.dotnet9.com/2022/10/1027.gif)
 
 本小节源码在这[解决圆角和最大化问题](https://github.com/dotnet9/WPFBlazorChat/tree/main/3WPF%E4%B8%8EBlazor%E7%9A%84%E8%87%AA%E5%AE%9A%E4%B9%89%E7%AA%97%E4%BD%93/WPFBlazorChat_4Blazor%E4%B8%8EWPF%E6%AF%94%E8%BE%83%E5%AE%8C%E7%BE%8E%E7%9A%84%E5%AE%9E%E7%8E%B0%E6%95%88%E6%9E%9C)，下面开始本文的下半部分了，好累，终于到这了。
 
+![我累了](https://img1.dotnet9.com/2022/10/1033.gif)
+
 ## 4. 添加第三方Blazor组件
 
-工欲善其事，必先利其器！
+**工欲善其事，必先利其器！**
 
-鉴于大部分同学前端基础可能不是太好，即使使用[Blazor](https://learn.microsoft.com/zh-cn/aspnet/core/blazor/?view=aspnetcore-7.0)可以少用或者不用[JavaScript](https://baike.baidu.com/item/JavaScript/321142?fr=aladdin)，那么有那么一款漂亮、便捷的`Blazor`组件库，这不是如虎添翼吗？本文使用[Masa Blazor](https://www.masastack.com/blazor)做示例显示，如今Blazor组件库众多，选择自己喜欢的、顺手的就成：
+鉴于大部分同学前端基础可能不是太好，即使使用[Blazor](https://learn.microsoft.com/zh-cn/aspnet/core/blazor/?view=aspnetcore-7.0)可以少用或者不用[JavaScript](https://baike.baidu.com/item/JavaScript/321142?fr=aladdin)，但有那么一款漂亮、便捷的`Blazor`组件库，这不是如虎添翼吗？本文使用[Masa Blazor](https://www.masastack.com/blazor)做示例展示，如今`Blazor`组件库众多，选择自己喜欢的、顺手的就成：
 
 ![Masa Blazor](https://img1.dotnet9.com/2022/10/1019.png)
 
-站长前些日子介绍过[MAUI使用Masa blazor组件库](https://dotnet9.com/2022/06/Use-masa-blazor-in-maui-blazor)，本小节思路也是类似，且看我表演。
+站长前些日子介绍过[MAUI使用Masa blazor组件库](https://dotnet9.com/2022/06/Use-masa-blazor-in-maui-blazor)一文，本小节思路也是类似，且看我表演。
+
+![看我表演](https://img1.dotnet9.com/2022/10/1034.png)
 
 打开Masa Blazor文档站点：https://blazor.masastack.com/getting-started/installation，一起来往WPF中引入这款Blazor组件库吧。
 
@@ -882,7 +879,7 @@ public class WindowService
 
 ![Masa Blazor的Tab组件案例](https://img1.dotnet9.com/2022/10/1021.gif)
 
-Demo的代码我几乎不变的引入，打开`RazorViews\Counter.razor`文件，保留3.4节的标题栏，替换了客户区域内容，代码如下：
+Demo的代码我几乎不变的引入，打开`RazorViews\Counter.razor`文件，保留`3.4`节的标题栏，替换了客户区域内容，代码如下：
 
 ```html
 @using WPFBlazorChat.Services
@@ -1057,11 +1054,15 @@ Demo的代码我几乎不变的引入，打开`RazorViews\Counter.razor`文件�
 
 ![样式部分修改](https://img1.dotnet9.com/2022/10/1024.png)
 
-其实上面的窗体效果还是有点瑕疵，注意到窗体右侧的竖直滚动条了吗？在没引入`Masa.Blazor`之前都是没有的：
+其实上面的窗体效果还是有点瑕疵，注意到窗体右侧的竖直滚动条了吗？在没引入`Masa.Blazor`之前，右侧正常显示，引入后多了一个竖直滚动条：
 
 ![引入Masa.Blazor后多了竖直滚动条](https://img1.dotnet9.com/2022/10/1025.png)
 
-这个想去掉也简单，在`wwwroot\css\app.css`追加样式：
+这个想去掉也简单，在`wwwroot\css\app.css`追加样式（当时也是折腾了好一会儿，最后在`Masa.Blazor`群里群友给出了解决方案，十分感谢）：
+
+![问题解决过程](https://img1.dotnet9.com/2022/10/1035.jpg)
+
+问题解决`css`代码：
 
 ```css
 ::-webkit-scrollbar {
@@ -1284,7 +1285,7 @@ public class WeakActionAndToken
 }
 ```
 
-有兴趣的看上面的代码，封装代码上面简单全部给上。
+有兴趣的看上面的代码，封装代码上面简单全部给上，后面的消息通知都是基于上面的三个类实现的，比较核心。
 
 ### 5.2 代码整理
 
@@ -1292,13 +1293,13 @@ public class WeakActionAndToken
 
 ![整理后代码](https://img1.dotnet9.com/2022/10/1028.png)
 
-1. A：放Message，即一些消息通知类；
+1. A：放`Message`，即一些消息通知类；
 
-2. B：放Razor组件，如果需要与Maui\Blazor Server(Wasm)等共享Razor组件，可以创建Razor类库存储；
+2. B：放`Razor`组件，如果需要与`Maui\Blazor Server(Wasm)`等共享`Razor`组件，可以创建`Razor类库`存储；
 
-3. C：放通用服务，这里只放了一个窗体管理静态类，实际情况可以放Redis服务、RabbitMQ消息服务等；
+3. C：放通用服务，这里只放了一个窗体管理静态类，实际情况可以放`Redis`服务、`RabbitMQ`消息服务等；
 
-4. D：放WPF视图，本示例WPF窗体只是一个壳，承载BlazorWebView使用；
+4. D：放`WPF`视图，本示例WPF窗体只是一个壳，承载`BlazorWebView`使用；
 
 ### 5.3 示例及代码说明
 
@@ -1309,7 +1310,7 @@ public class WeakActionAndToken
 图中有三个操作：
 
 1. 点击主窗体A的【+】按钮，发送了`OpenSecondViewMessage`消息，打开子窗体B；
-2. 打开子窗体B后，再点击主窗体A的【桃心】按钮，发送了`SendRandomDataMessage`消息，子窗体B的第二个TabItem Header显示了消息传来的数字；
+2. 打开子窗体B后，再点击主窗体A的【桃心】按钮，发送了`SendRandomDataMessage`消息，子窗体B的第二个`TabItem Header`显示了消息传来的数字；
 3. 点击子窗体B的【安卓】图标按钮，给主窗体A响应了消息`ReceivedResponseMessage`,主窗体收到后弹出一个对话框。
 
 三个消息类定义如下：
@@ -1340,9 +1341,9 @@ public class ReceivedResponseMessage : Message
 }
 ```
 
-除了`SendRandomDataMessage`传递了一个业务`Number`属性，另两个消息只是起到通知作用，实际开发时可能需要传递业务数据。
+除了`SendRandomDataMessage`传递了一个业务`Number`属性，另两个消息只是起到通知作用(所以没有额外属性定义），实际开发时可能需要传递业务数据。
 
-#### **打开多窗体**
+#### 5.3.1 打开多窗体
 
 即上面的第一个操作：点击主窗体A的【+】按钮，发送了`OpenSecondViewMessage`消息，打开子窗体B。
 
@@ -1360,9 +1361,9 @@ public class ReceivedResponseMessage : Message
 @code{
 ...
 void OpenNewSecondView()
-    {
-        Messenger.Default.Publish(this, new OpenSecondViewMessage(this));
-    }
+{
+	Messenger.Default.Publish(this, new OpenSecondViewMessage(this));
+}
 ...
 }
 ```
@@ -1386,11 +1387,11 @@ public partial class App : Application
 
 实际开发可能情况更复杂，发送的消息`OpenSecondViewMessage`里带WPF窗体路由（定义的一套路径规则寻找窗体或`ViewModel`），订阅的地方也可能不在主程序，在子模块的`Module`类里。
 
-#### 发送业务数据
+#### 5.3.2 发送业务数据
 
-即第二个操作：打开子窗体B后，再点击主窗体A的【桃心】按钮，发送了`SendRandomDataMessage`消息，子窗体B的第二个TabItem Header显示了消息传来的数字。
+即第二个操作：打开子窗体B后，再点击主窗体A的【桃心】按钮，发送了`SendRandomDataMessage`消息，子窗体B的第二个`TabItem Header`显示了消息传来的数字。
 
-1. 在`RazorViews\MainView.razor`中执行按钮点击，发送业务消息(就当前时间的Millisecond）：
+1. 在`RazorViews\MainView.razor`中执行按钮点击，发送业务消息(就当前时间的`Millisecond`）：
 
 ```html
 ...
@@ -1405,7 +1406,7 @@ public partial class App : Application
 ...
 void SendNumber()
 {
-Messenger.Default.Publish(this, new SendRandomDataMessage(this, DateTime.Now.Millisecond));
+	Messenger.Default.Publish(this, new SendRandomDataMessage(this, DateTime.Now.Millisecond));
 }
 ...
 }
@@ -1451,7 +1452,7 @@ Messenger.Default.Publish(this, new SendRandomDataMessage(this, DateTime.Now.Mil
 
     protected override void OnInitialized()
     {
-    // 订阅业务消息，在主窗口点击桃心按钮时触发
+    	// 订阅业务消息，在主窗口点击桃心按钮时触发
         Messenger.Default.Subscribe<SendRandomDataMessage>(this, msg =>
         {
             this.InvokeAsync(() => { this.tagCount = msg.Number; });
@@ -1469,8 +1470,8 @@ Messenger.Default.Publish(this, new SendRandomDataMessage(this, DateTime.Now.Mil
 
 注意看，上面收到消息时有两个方法要简单说一下，看`OnInitialized()`里的代码：
 
-- InvokeAsync：将Number赋值给变量`tagCount`的代码是在`InvokeAsync`方法里执行的，这个和WPF里的`Dispatcher.Invoke`是一个意思，相当于接收数据是在子线程，而赋值这个操作会即时的绑定到`<MBadge Color="green" Content="tagCount">`上，也需要UI线程同步。
-- StateHasChanged：相当于MVVM里的`PropertyChanged`事件通知，通知UI这里有值变化了，请你刷新一下，我要看看最新值。
+- InvokeAsync：将`Number`赋值给变量`tagCount`的代码是在`InvokeAsync`方法里执行的，这个和WPF里的`Dispatcher.Invoke`是一个意思，相当于接收数据是在子线程，而赋值这个操作会即时的绑定到`<MBadge Color="green" Content="tagCount">`上，就需要UI线程同步。
+- StateHasChanged：相当于WPF MVVM里的`PropertyChanged`事件通知，通知`UI`这里有值变化了，请你刷新一下，我要看看最新值。
 
 上面的代码把子窗体消息回应也贴上了，即点击安卓图标按钮时发送了`ReceivedResponseMessage`消息，在主窗体`RazorViews\MainView.razor`里也订阅了这个消息，和上面的代码类似：
 
@@ -1507,13 +1508,13 @@ Messenger.Default.Publish(this, new SendRandomDataMessage(this, DateTime.Now.Mil
 }
 ```
 
-在`OnInitialized()`方法里订阅消息`ReceivedResponseMessage`，收到后将变化`_showComfirmDialog`置为`true`，即上面对话框的属性`Visible`绑定的值，同理需要在`InvokeAsync()`中处理数据接收，也需要调用`StateHasChanged`通知UI数据变化。
+在`OnInitialized()`方法里订阅消息`ReceivedResponseMessage`，收到后将变量`_showComfirmDialog`置为`true`，即上面对话框的属性`Visible`绑定的值，同理需要在`InvokeAsync()`中处理数据接收，也需要调用`StateHasChanged`通知UI数据变化。
 
-上面说了部分代码，可能讲的不太清楚，可以看示例源码：[多窗体消息通知](https://github.com/dotnet9/WPFBlazorChat/tree/main/5WPFBlazor%E6%B6%88%E6%81%AF%E9%80%9A%E7%9F%A5/WPFBlazorChat)。
+上面说了部分代码，可能讲的不太清楚，可以看本节示例源码：[多窗体消息通知](https://github.com/dotnet9/WPFBlazorChat/tree/main/5WPFBlazor%E6%B6%88%E6%81%AF%E9%80%9A%E7%9F%A5/WPFBlazorChat)。
 
 ## 6. 本文示例
 
-本来想写完整Demo的，发现上面把基本要点都拉了一遍，再粘贴一些重复代码有点没完没了了，有兴趣的拉源码[WPF与Blazor混合开发Demo](https://github.com/dotnet9/WPFBlazorChat/tree/main/src)，下面是项目代码结构大概：
+本来想写完整Demo说明的，发现上面把基本要点都拉了一遍，再粘贴一些重复代码有点没完没了了，有兴趣的拉源码[WPF与Blazor混合开发Demo](https://github.com/dotnet9/WPFBlazorChat/tree/main/src)查看、运行，下面是项目代码结构：
 
 ![Demo代码结构](https://img1.dotnet9.com/2022/10/1030.png)
 
@@ -1539,30 +1540,30 @@ Messenger.Default.Publish(this, new SendRandomDataMessage(this, DateTime.Now.Mil
 
 ## 7. Click Once发布尝试
 
-上一篇文章链接：[快速创建软件安装包-ClickOnce](https://mp.weixin.qq.com/s/zcO1J-AqiK7LkU52MRwmqw)
+上一篇文章链接：[快速创建软件安装包-ClickOnce](https://mp.weixin.qq.com/s/zcO1J-AqiK7LkU52MRwmqw)，本文示例Click Once安装页面：https://dotnet9.com/WPFBlazorChat
 
 ## 8. Q&A
 
 ### 8.1 为啥要在WPF里使用Blazor？吃饱了撑的？
 
-WPF虽然相较Winform做出比较好看的UI相对容易一些，但比起Blazor，或者直接说html开发界面，还是差了一点点，更何况html的资源更多一点，尝试一下为何不可？
+`WPF`虽然相较`Winform`做出比较好看的UI相对容易一些，但比起`Blazor`，或者直接说`html`开发界面，还是差了一点点，更何况`html`的资源更多一点，尝试一下为何不可？
 
 ### 8.2 WPF + Blazor支持哪些操作系统
 
-最低支持Windows 7 SP1吧，有群友已经尝试正常运行成功，这是本文示例Click Once安装页面：https://dotnet9.com/WPFBlazorChat
+最低支持`Windows 7 SP1`吧，有群友已经尝试在`Windows 7`正常运行成功，这是本文示例Click Once安装页面：https://dotnet9.com/WPFBlazorChat
 
 ### 8.3 Blazor 混合开发还支持哪些已有框架？
 
-Blazor混合开发的话，除了WPF，还有MAUI（跨平台框架，支持平台包括Windows\Mac\Linux\Android\iOS等）、Winform（同WPF，只能在Windows平台运行）等，建议阅读[微软文档](https://learn.microsoft.com/zh-cn/aspnet/core/blazor/hybrid/?view=aspnetcore-7.0)学习：
+`Blazor混合开发`的话，除了WPF，还有MAUI（跨平台框架，支持平台包括`Windows\Mac\Linux\Android\iOS`等）、`Winform`（同`WPF`，只能在`Windows平台`运行）等，建议阅读[微软文档](https://learn.microsoft.com/zh-cn/aspnet/core/blazor/hybrid/?view=aspnetcore-7.0)继续学习，本文只是个引子：
 
 ![微软文档学习Blazor](https://img1.dotnet9.com/2022/10/1031.png)
 
-### 8.4 Blazor组件除了Masa.Blazor还有哪些？
+### 8.4 Blazor组件库除了Masa.Blazor还有哪些？
 
-- 开源的Blazor组件：[Ant Design Blazor](https://antblazor.com/zh-CN/)、[Bootstrap Blazor](https://www.blazor.zone/)、[MudBlazor](https://mudblazor.com/)、[Blazorise](https://blazorise.com/)，以及微软自家的[FAST Blazor](https://www.fast.design/)等，当然还有不少开源的Blazor组件。
+- 开源的`Blazor`组件有：[Ant Design Blazor](https://antblazor.com/zh-CN/)、[Bootstrap Blazor](https://www.blazor.zone/)、[MudBlazor](https://mudblazor.com/)、[Blazorise](https://blazorise.com/)，以及微软自家的[FAST Blazor](https://www.fast.design/)等，当然还有不少开源的`Blazor`组件。
 
-- 收费的Blazor组件：[DevExpress](https://www.devexpress.com/blazor/)、[Telerik](https://www.telerik.com/support/blazor-ui)、[Syncfusion](https://www.syncfusion.com/blazor-components)等
+- 收费的`Blazor`组件：[DevExpress](https://www.devexpress.com/blazor/)、[Telerik](https://www.telerik.com/support/blazor-ui)、[Syncfusion](https://www.syncfusion.com/blazor-components)等
 
 ### 8.5 本文示例代码？
 
-文中各小节代码、最后的示例代码都给出了相应链接。
+文中各小节代码、最后的示例代码都给出了相应链接，您可返回查看。
