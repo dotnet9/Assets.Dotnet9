@@ -20,6 +20,7 @@
 | 日期        | 金额  | 赞助者                       | 来源                                                                    |
 | ---------- | ----: | --------------------------- | ----------------------------------------------------------------------- |
 | 2022-11-09 | 38.88￥   | 黑哥聊dotNet | 微信付款码 |
+| 2022-11-08 | 5￥   | 國 | 公众号文章赞赏[《【炫丽】从0开始做一个WPF+Blazor对话小程序》](https://mp.weixin.qq.com/s/c9PTK0lcKSOjyHjrHhsPjg) |
 | 2022-11-03 | 9.9￥   | 今晚打老虎 | 公众号文章赞赏[《快速创建软件安装包-ClickOnce》](https://mp.weixin.qq.com/s/zcO1J-AqiK7LkU52MRwmqw) |
 | 2022-10-25 | 5￥   | 习惯受伤([https://github.com/mrhuo](https://github.com/mrhuo)) | 公众号文章赞赏[《Uno开发的小游戏》](https://mp.weixin.qq.com/s/H-Vl2k3f3MkqVBn5tZZauQ) |
 | 2022-10-07 | 5￥   | iLiYan | 公众号文章赞赏[《国庆学go，完成了博客基本功能，迫不及待的发布上线了》](https://mp.weixin.qq.com/s/sJyb3rEIXsgrlsNDnDx2rQ) |
