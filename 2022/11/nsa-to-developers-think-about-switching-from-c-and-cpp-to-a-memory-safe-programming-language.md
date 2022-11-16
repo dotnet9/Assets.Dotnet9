@@ -9,7 +9,12 @@ cover: https://img1.dotnet9.com/2022/11/cover_03.png
 categories: 科技生活
 ---
 
+先丢出美国国家安全局的一篇文章：[NSA Releases Guidance on How to Protect Against Software Memory Safety Issues](https://www.nsa.gov/Press-Room/News-Highlights/Article/Article/3215760/nsa-releases-guidance-on-how-to-protect-against-software-memory-safety-issues/)：
+
+![](https://img1.dotnet9.com/2022/11/0301.png)
+
 本文翻译自两篇文章，第一篇是对美国国家安全局在“软件内存安全”网络安全信息表的解读，第二篇是普及什么是内存安全，为什么它很重要？
+
 
 ## 第一篇 为了避免内存攻击，美国国家安全局提倡Rust、C#、Go、Java、Ruby 和 Swift，但将 C 和 C++ 置于一边
 
