@@ -187,5 +187,12 @@
         "Name": "网上冲浪博客",
         "Description": "有技术的网站",
         "Url": "https://iwscl.com/"
+    },
+    {
+        "SequenceNumber": 22,
+        "Kind": "Friend",
+        "Name": "Linux常用命令",
+        "Description": "Linux常用命令",
+        "Url": "http://linuxido.com/"
     }
 ]

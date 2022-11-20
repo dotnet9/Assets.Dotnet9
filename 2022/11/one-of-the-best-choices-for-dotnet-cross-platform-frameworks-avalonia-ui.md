@@ -73,9 +73,11 @@ Avalonia UI文档教程：https://docs.avaloniaui.net/docs/getting-started
 
 ### 3.1 网友的分享
 
+以下内容摘自博文[Avalonia学习实践(二)--跨平台支持及发布](https://blog.csdn.net/lordwish/article/details/124767653)。
+
 #### 3.1.1 支持的平台
 
-支持的平台信息摘自博文[Avalonia学习实践(二)--跨平台支持及发布](https://blog.csdn.net/lordwish/article/details/124767653)，详细如下：
+支持的平台信息详细如下：
 
 | 运行平台 | 版本 |
 | ---- | ---- |
@@ -113,7 +115,7 @@ Web支持，即WebAssembly，这是国际标准。
 
 | 国产CPU | 指令集 |
 | ---- | ---- |
-| 龙芯 | MIPS |
+| 龙芯 | loongarch(站长注：网友指正是 loongarch，原文是~~MIPS~~) |
 | 海光 | x86 |
 | 兆芯 | x86 |
 | 飞腾 | arm |
