@@ -307,3 +307,10 @@ JetBrains Rider现在正式支持Avalonia。
 ### 6. 10支持哪些版本的macOS?
 
 macOS High Sierra 10.13+
+
+## 7. 学习资料
+
+- Avalonia UI官方网站：https://avaloniaui.net/
+- Avalonia UI仓库：https://github.com/AvaloniaUI/Avalonia
+- 社区Avalonia UI中文网：https://avaloniachina.gitbook.io
+- 社区Avalonia UI中文网仓库：https://github.com/avaloniachina/Documentation
