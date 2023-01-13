@@ -168,6 +168,13 @@
         "Url": "https://jhrs.com/"
     },
     {
+        "SequenceNumber": 18,
+        "Kind": "Friend",
+        "Name": "Token",
+        "Description": "来自token的笔记",
+        "Url": "https://docs.tokengo.top/"
+    },
+    {
         "SequenceNumber": 19,
         "Kind": "Friend",
         "Name": "OneByOneDotNet",
