@@ -397,12 +397,12 @@ server {
 
 如果您有更好的优化方案可以联系我.
 
-来着token的分享。
+来自token的分享。
 
 
-- demo在线访问 ：http://webassembly.tokengo.top
+- demo在线访问： http://webassembly.tokengo.top
 - GitHub: https://github.com/239573049/demand
-- Gitee：https://gitee.com/hejiale010426/demand
+- Gitee： https://gitee.com/hejiale010426/demand
 
 blazor交流群：452761192
 
