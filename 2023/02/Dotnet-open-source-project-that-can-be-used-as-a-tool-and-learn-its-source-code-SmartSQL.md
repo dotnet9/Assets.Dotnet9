@@ -38,11 +38,11 @@ tags: WPF,数据库管理工具,开源项目
 
 ![主工程](https://img1.dotnet9.com/2023/02/0403.png)
 
-这是主工程，是一个WPF项目，里面使用了[AduSkin](https://dotnet9.com/2020/02/Open-source-Csharp-WPF-control-library-AduSkin-UI)、[AvalonEdit](https://github.com/icsharpcode/AvalonEdit)、[HandyControl](https://dotnet9.com/2019/12/Open-source-WPF-control-library-handycontrol)、[FontAwesome.WPF](https://github.com/charri/Font-Awesome-WPF)等第三库，通过该工程可以学习怎么使用第三方控件库、字体库等，后面通过看工具截图可看控件库的实用效果。
+这是主工程，是一个WPF项目，里面使用了[AduSkin](https://dotnet9.com/2020/02/Open-source-Csharp-WPF-control-library-AduSkin-UI)、[AvalonEdit](https://github.com/icsharpcode/AvalonEdit)、[HandyControl](https://dotnet9.com/2019/12/Open-source-WPF-control-library-handycontrol)、[FontAwesome.WPF](https://github.com/charri/Font-Awesome-WPF)等第三方库，通过该工程可以学习怎么使用第三方控件库、字体库等，后面通过看工具截图可看控件库的实用效果。
 
 ![项目工具代码截图](https://img1.dotnet9.com/2023/02/0406.png)
 
-另外如上图代码文件截图，每个工具具体的实现也是在这个工程中，平时工作中如果有相关的功能需求可以直接参考项目，工具一览如下。
+另外如上图代码文件截图，每个工具具体的实现也是在这个工程中，平时工作中如果有相关的功能需求可以直接参考该项目，工具一览如下。
 
 ![项目工具一览](https://img1.dotnet9.com/2023/02/0411.png)
 
