@@ -8,7 +8,7 @@ author: 傲慢与偏见
 originaltitle: 使用C#简单制作一个看门狗程序
 originallink: https://www.cnblogs.com/chonglu/p/16913746.html
 draft: false
-cover: https://img1.dotnet9.com/2022/11/cover_05.png
+cover: https://img1.dotnet9.com/2022/11/cover_05.jpg
 categories: .NET相关
 ---
 
