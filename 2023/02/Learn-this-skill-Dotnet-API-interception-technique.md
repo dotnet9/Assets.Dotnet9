@@ -1,7 +1,7 @@
 ---
 title: 快学会这个技能-.NET API拦截技法
 slug: Learn-this-skill-Dotnet-API-interception-technique
-description: 怎么在不改变源码的情况下，篡改一个方法的入参？返回结果？
+description: 怎么在不改变源码的情况下，篡改一个方法的入参？伪造返回结果？
 date: 2023-02-13 20:21:19
 copyright: Default
 draft: False
@@ -116,6 +116,7 @@ public class HookClass
 
 即当程序中调用`Student`类的`GetDetails`方法时，`HookClass`内定义的方法就会分别执行：
 
+- 约定方法的定义必须为`静态`方法，`Prefix`返回值为`bool`，另两个为`void`；
 - Prefix约定方法表示拦截前缀，即拦截`Student`类的`GetDetails`方法参数定义，后面会细说；
 - Postfix约定方法表示拦截后缀，即拦截`Student`类的`GetDetails`方法结果，后面也会细说；
 - Finalizer约定方法表示拦截后最后的处理方法，就是最后执行的方法意思（本文不打算研究）。
@@ -242,6 +243,8 @@ public static void Postfix(ref string __result)
 - 篡改参数只会在`Prefix`方法中生效，所以它叫前缀呢，您可以在`Postfix`方法将传入的参数设置为`ref`进行修改尝试（不传入`__result`参数的前提）；
 - 伪造结果只会在`Postfix`方法中生效，只要在此方法中传入了`__result`参数，那么原生的方法（`GetDetails`）就不会执行了，您也可以在`Prefix`方法中传入`__result`并对他进行修改尝试。
 
+上面的示例[源码点这](https://github.com/dotnet9/TerminalMACS.ManagerForWPF/tree/master/src/Demo/HookDemos/HelloHook)。
+
 ## 3. 拦截第三方库的AIP
 
 上面是拦截自己可控的类库方法，但实际情况可能是需要拦截第三方库，比如微软的SDK方法，或第三方控件、类库等，基于以下原因可能产生的场景需要拦截：
@@ -251,7 +254,16 @@ public static void Postfix(ref string __result)
 
 上面第2点，不排除第三库升级API结构也变了，我们也要跟着修改拦截逻辑哦。
 
+## 4. 再次提问
+
+读者朋友们，相信不少人使用过Harmony或者其他的.NET Hook库，可在评论中留言分享，可提出自己的疑问：
+
+1. 我使用过这个Hook，它是XXX
+2. 想问，我能拦截这个API吗？场景是XXXX
+
 ## 4. 参考
 
+- [Harmony](https://github.com/pardeike/Harmony)
+- [Harmony wiki](https://github.com/pardeike/Harmony/wiki)
 - [动态IL织入框架Harmony简单入手](https://www.cnblogs.com/qhca/p/12336332.html)
 - [一个开放源代码，实现动态IL注入(Hook或补丁工具)框架:Lib.Harmony](https://config.net.cn/opensource/dataformat/a133596e-9d5a-43ef-9012-1e2a19c00e33-p1.html)
