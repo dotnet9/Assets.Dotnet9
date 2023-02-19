@@ -35,9 +35,11 @@ tags: hook, harmony
 
 今天，我将向您展示如何更改您认为不可能的事情 - 从Hook自己的库开始，到Hook第三方库、.NET默认库结束。
 
-## 2. 做好准备工作
+## 2. Hook自己的库
 
-### 2.1. 创建一个类库
+### 2.1. 做好准备工作
+
+### 2.1.1. 创建一个类库
 
 名字就叫`HookDemos.OwnerLibrary`，添加类`Student`，定义如下：
 
@@ -62,7 +64,7 @@ public class Student
 - `Student`类中定义了一个`GetDetails`方法，返回格式化的个人介绍信息，这个方法后面拦截试验使用；
 - `ToString`只简单的返回类名，方便拦截时打印拦截的类名；
 
-### 2.2. 创建一个控制台程序
+### 2.1.2. 创建一个控制台程序
 
 名字叫`HelloHook`，添加项目`HookDemos.OwnerLibrary`引用，在`Program.cs`中调用`Student`的`GetDetail`方法：
 
@@ -83,9 +85,9 @@ Console.ReadLine();
 
 基本工作准备完成，这就是一个简单的控制台程序，后文的内容就根据这两个工程展开细说。
 
-## 3. 拦截API
+### 2.2. 拦截API
 
-### 3.1. 引入拦截包-Lib.Harmony
+#### 2.2.1. 引入拦截包-Lib.Harmony
 
 我们使用`Lib.Harmony`包，API的拦截就靠它了，在`HelloHook`工程中添加如下Nuget包：
 
@@ -93,7 +95,7 @@ Console.ReadLine();
 <PackageReference Include="Lib.Harmony" Version="2.2.2" />
 ```
 
-### 3.2. 拦截处理
+#### 2.2.2. 拦截处理
 
 添加拦截类`HookClass`：
 
@@ -139,7 +141,7 @@ public class HookClass
 
 三个方法执行顺序是Prefix->Postfix->Finalizer，当然约定的方法不止这三个，其实我们常用的应该是`Prefix`和`Postfix`，详细后面说。
 
-### 3.3. 注册拦截
+#### 2.2.3. 注册拦截
 
 对`Program.cs`进行修改，添加`Harmony`对整个程序集的拦截：
 
@@ -185,7 +187,7 @@ Finalizer
 
 **这就完了？说啥呢，这才开始。**
 
-### 3.4. 说好的参数篡改呢？
+#### 2.2.4. 说好的参数篡改呢？
 
 ![](https://img1.dotnet9.com/2023/02/0501.png)
 
@@ -225,7 +227,7 @@ public static bool Prefix(ref string name)
 
 可通过给方法`GetDetails`打断点，第二次调用时是不会进这个断点的，控制台也打印出了返回值类型的默认值，即空字符串。
 
-### 3.5. 我要篡改被拦截方法的返回值呢？
+#### 2.2.5. 我要篡改被拦截方法的返回值呢？
 
 **注：** 记得恢复`Prefix`方法返回`true`。
 
@@ -254,33 +256,59 @@ public static void Postfix(ref string __result)
 
 ![](https://img1.dotnet9.com/2023/02/0505.png)
 
-### 3.6 篡改参数和伪造结果位置别搞错
+#### 2.2.6 篡改参数和伪造结果位置别搞错
 
 - 篡改参数只会在`Prefix`方法中生效，所以它叫前缀呢，您可以在`Postfix`方法将传入的参数设置为`ref`进行修改尝试（不传入`__result`参数的前提）；
 - 伪造结果只会在`Postfix`方法中生效，只要在此方法中传入了`__result`参数，那么原生的方法（`GetDetails`）就不会执行了，您也可以在`Prefix`方法中传入`__result`并对他进行修改尝试。
 
 上面的示例[源码点这](https://github.com/dotnet9/TerminalMACS.ManagerForWPF/tree/master/src/Demo/HookDemos/HelloHook)。
 
-## 4. 拦截第三方库的AIP
+## 3. 拦截第三方库的API
 
-上面是拦截自己可控的类库方法，但实际情况可能是需要拦截第三方库，比如微软的SDK方法，或第三方控件、类库等，基于以下原因可能产生的场景需要拦截：
+上面是拦截自己可控的类库方法，但实际情况可能是需要拦截第三方库，比如微软的SDK方法，或第三方控件、类库等，使用方法和上面其实是一样的。
+
+基于以下原因可能产生的场景需要拦截：
 
 1. 第三库未提供源码，但我们想改它的部分方法；
 2. 第三库提供了源码，虽然可以修改它的源码，但万一第三库后面迭代升级，我们又不得不更新时，那自己做的修改跟着升级可能麻烦了；
 
 拦截注意，如您所见，这提供了大量新的可能性。请记住，权力越大，责任越大。由于您以原始开发人员不打算的方式覆盖行为，因此无法保证您的补丁代码在他们发布新版本的代码时会起作用。即上面第2点，不排除第三库升级API结构也变了，我们也要跟着修改拦截逻辑哦
 
-## 5. 拦截.NET默认的API
+## 4. 拦截.NET默认的API
 
-## 5. 总结及问题
+即.NET框架提供的一些类库方法拦截，我们举例说明。
 
-**总结：** Harmony的原理是利用反射获取对应类中的方法，然后加上特性标签进行逻辑控制，达到不破坏原有代码进行更新的效果。
+## 5. 总结及分享
 
-除了文中使用`PatchAll`自动注册外，也可以使用另一个方法`Patch`进行指定拦截类的注册，这个资料可以看[Harmony wiki](https://github.com/pardeike/Harmony/wiki)上的使用。
+### 5.1. 总结
 
-读者朋友们，相信不少人使用过`Harmony`或者其他的.NET Hook库，可在评论中留言分享，可提出自己的疑问，或自己使用中的心得：
+Harmony的原理是利用反射获取对应类中的方法，然后加上特性标签进行逻辑控制，达到不破坏原有代码进行更新的效果。
 
-1. 我使用过这个Hook，它是XXX
+用于在运行时修补替换和装饰 .NET/.NET Core 方法的库。 但是该技术可以与任何.NET版本一起使用。它对同一方法的多次更改是累积而不是覆盖。 
+
+从《[Harmony wiki patching](https://github.com/pardeike/Harmony/wiki/Patching)》中了解以下使用注意事项：
+
+1. 最新2.0版支持 .NET Core ；
+2. Harmony支持手动（Patch，参考[Harmony wiki](https://github.com/pardeike/Harmony/wiki)上的使用）和自动（PatchAll，本文演示使用的这种方式，Lib.Harmony使用的是C#的特性机制）；
+3. 它为每个原始方法创建DynamicMethod方法，并向其织入代码，该代码在开始（Prefix）和结束时（Postfix）调用自定义方法。它还允许您编写过滤器（Transpiler）来处理原始的IL代码，从而可以对原始方法进行更详细的操作; 
+4. Getter/Setter、虚/ 非虚 方法、 静态 方法；
+5. 补丁方法必须是静态方法；
+6. Prefix需要返回void或者bool类型(void即不拦截)；
+7. Postfix需要返回void类型，或者返回的类型要与第一个参数一致(直通模式)；
+8. 如果原方法不是静态方法，则可以使用名为__instance(两个下划线)的参数来访问对象实例；
+9. 可以使用名为__result(两个下划线)的参数来访问方法的返回值，如果是Prefix，则得到返回值的默认值；
+10. 可以使用名为__state(两个下划线)的参数在Prefix补丁中存储任意类型的值，然后在Postfix中使用它，你有责任在Prefix中初始化它的值；
+11. 可以使用与原方法中同名的参数来访问对应的参数，如果你要写入非引用类型，记得使用ref关键字；
+12. 补丁使用的参数必须严格对应类型(或者使用object类型)和名字；
+13. 我们的补丁只需要定义我们需要用到的参数，不用把所有参数都写上；
+14. 要允许补丁重用，可以使用名为__originalMethod(两个下划线)的参数注入原始方法。
+
+### 5.2 分享
+
+读者朋友们，相信不少人使用过`Harmony`或者其他的 .NET Hook库，可在评论中留言分享，可提出自己的疑问，或自己的使用心得：
+
+1. 我使用过这个库进行API的Hook，它是XXX；
+2. 我自己实现过类似功能，分享文章链接是XXX；
 2. 想问，我能拦截这个API吗？场景是XXXX
 
 [我的分享] + [你的分享] ∈ [.NET圈子的一份小力量]
@@ -289,6 +317,7 @@ public static void Postfix(ref string __result)
 
 - [Harmony](https://github.com/pardeike/Harmony)
 - [Harmony wiki](https://github.com/pardeike/Harmony/wiki)
+- [Harmony API文档](https://harmony.pardeike.net/api/HarmonyLib.html)
 - [Hacking .NET – rewriting code you don’t control](https://stakhov.pro/hacking-net-rewriting-code-you-dont-control/)
 - [Rimworld Mod制作教程6 使用Harmony对C#代码Patch](https://blog.csdn.net/qq_29799917/article/details/105017151)
 - [动态IL织入框架Harmony简单入手](https://www.cnblogs.com/qhca/p/12336332.html)
