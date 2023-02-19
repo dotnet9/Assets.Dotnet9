@@ -19,9 +19,25 @@ tags: hook, harmony
 3. 同2，不修改源码的情况下，怎么对方法的参数进行校正（篡改）？
 3. 同3，不修改源码的情况下，怎么对方法的返回值进行伪造？
 
-## 1. 做好准备工作
+## 1. 前言
 
-### 1.1. 创建一个类库
+您是否曾经遇到过不属于您但想要更改其行为的类库方法？通常，该方法是非公开的，并且没有很好的方法来覆盖其行为。你可以看到它是如何工作的（因为你很棒，并且使用像Resharper、dnSpy之类反编译工具，对吧？），你只是无法改变它。你真的需要改变它，因为XXX原因。
+
+**有几个选项可供您使用：**
+
+1. 通过反编译或下载源代码（如果首先可用）获取源代码。这通常很冒险，因为它经常伴随着复杂的构建过程，许多依赖项，现在你负责维护库的整个分支，即使你只想做一个很小的改变。
+
+2. 使用 `ILDasm` 反编译应用，直接修补 `IL` 代码，然后使用 `ILAs` 将其组装回来。在许多方面，这更好，因为您可以创建一个战略性的手术切口，而不是全面的“从头开始”的方法。缺点是您必须完全在IL中实现您的方法，这是一个不平凡的冒险。
+
+如果您正在处理已签名的库，上述两种方法也不起作用。
+
+现在让我们看一下另一种解决方法-内存修补。这与游戏作弊引擎几十年来使用的技术相同，这些引擎附加到正在运行的进程，查找内存位置并改变其行为。听起来很复杂？ 实际上，在 .NET 中做到这一点比听起来容易得多。我们将使用一个名为`Harmony`的库，该库可通过“Lib.Harmony”包在NuGet上获得。这是一个用于 `.NET` 的内存修补引擎，主要针对使用 Unity 构建的游戏，当然不止`Unity`。
+
+今天，我将向您展示如何更改您认为不可能的事情 - 从Hook自己的库开始，到Hook第三方库、.NET默认库结束。
+
+## 2. 做好准备工作
+
+### 2.1. 创建一个类库
 
 名字就叫`HookDemos.OwnerLibrary`，添加类`Student`，定义如下：
 
@@ -46,7 +62,7 @@ public class Student
 - `Student`类中定义了一个`GetDetails`方法，返回格式化的个人介绍信息，这个方法后面拦截试验使用；
 - `ToString`只简单的返回类名，方便拦截时打印拦截的类名；
 
-### 1.2. 创建一个控制台程序
+### 2.2. 创建一个控制台程序
 
 名字叫`HelloHook`，添加项目`HookDemos.OwnerLibrary`引用，在`Program.cs`中调用`Student`的`GetDetail`方法：
 
@@ -67,9 +83,9 @@ Console.ReadLine();
 
 基本工作准备完成，这就是一个简单的控制台程序，后文的内容就根据这两个工程展开细说。
 
-## 2. 拦截API
+## 3. 拦截API
 
-### 2.1. 引入拦截包-Lib.Harmony
+### 3.1. 引入拦截包-Lib.Harmony
 
 我们使用`Lib.Harmony`包，API的拦截就靠它了，在`HelloHook`工程中添加如下Nuget包：
 
@@ -77,7 +93,7 @@ Console.ReadLine();
 <PackageReference Include="Lib.Harmony" Version="2.2.2" />
 ```
 
-### 2.2. 拦截处理
+### 3.2. 拦截处理
 
 添加拦截类`HookClass`：
 
@@ -123,7 +139,7 @@ public class HookClass
 
 三个方法执行顺序是Prefix->Postfix->Finalizer，当然约定的方法不止这三个，其实我们常用的应该是`Prefix`和`Postfix`，详细后面说。
 
-### 2.3. 注册拦截
+### 3.3. 注册拦截
 
 对`Program.cs`进行修改，添加`Harmony`对整个程序集的拦截：
 
@@ -169,7 +185,7 @@ Finalizer
 
 **这就完了？说啥呢，这才开始。**
 
-### 2.4. 说好的参数篡改呢？
+### 3.4. 说好的参数篡改呢？
 
 ![](https://img1.dotnet9.com/2023/02/0501.png)
 
@@ -209,7 +225,7 @@ public static bool Prefix(ref string name)
 
 可通过给方法`GetDetails`打断点，第二次调用时是不会进这个断点的，控制台也打印出了返回值类型的默认值，即空字符串。
 
-### 2.5. 我要篡改被拦截方法的返回值呢？
+### 3.5. 我要篡改被拦截方法的返回值呢？
 
 **注：** 记得恢复`Prefix`方法返回`true`。
 
@@ -238,32 +254,42 @@ public static void Postfix(ref string __result)
 
 ![](https://img1.dotnet9.com/2023/02/0505.png)
 
-### 2.6 篡改参数和伪造结果位置别搞错
+### 3.6 篡改参数和伪造结果位置别搞错
 
 - 篡改参数只会在`Prefix`方法中生效，所以它叫前缀呢，您可以在`Postfix`方法将传入的参数设置为`ref`进行修改尝试（不传入`__result`参数的前提）；
 - 伪造结果只会在`Postfix`方法中生效，只要在此方法中传入了`__result`参数，那么原生的方法（`GetDetails`）就不会执行了，您也可以在`Prefix`方法中传入`__result`并对他进行修改尝试。
 
 上面的示例[源码点这](https://github.com/dotnet9/TerminalMACS.ManagerForWPF/tree/master/src/Demo/HookDemos/HelloHook)。
 
-## 3. 拦截第三方库的AIP
+## 4. 拦截第三方库的AIP
 
 上面是拦截自己可控的类库方法，但实际情况可能是需要拦截第三方库，比如微软的SDK方法，或第三方控件、类库等，基于以下原因可能产生的场景需要拦截：
 
 1. 第三库未提供源码，但我们想改它的部分方法；
 2. 第三库提供了源码，虽然可以修改它的源码，但万一第三库后面迭代升级，我们又不得不更新时，那自己做的修改跟着升级可能麻烦了；
 
-上面第2点，不排除第三库升级API结构也变了，我们也要跟着修改拦截逻辑哦。
+拦截注意，如您所见，这提供了大量新的可能性。请记住，权力越大，责任越大。由于您以原始开发人员不打算的方式覆盖行为，因此无法保证您的补丁代码在他们发布新版本的代码时会起作用。即上面第2点，不排除第三库升级API结构也变了，我们也要跟着修改拦截逻辑哦
 
-## 4. 再次提问
+## 5. 拦截.NET默认的API
 
-读者朋友们，相信不少人使用过Harmony或者其他的.NET Hook库，可在评论中留言分享，可提出自己的疑问：
+## 5. 总结及问题
+
+**总结：** Harmony的原理是利用反射获取对应类中的方法，然后加上特性标签进行逻辑控制，达到不破坏原有代码进行更新的效果。
+
+除了文中使用`PatchAll`自动注册外，也可以使用另一个方法`Patch`进行指定拦截类的注册，这个资料可以看[Harmony wiki](https://github.com/pardeike/Harmony/wiki)上的使用。
+
+读者朋友们，相信不少人使用过`Harmony`或者其他的.NET Hook库，可在评论中留言分享，可提出自己的疑问，或自己使用中的心得：
 
 1. 我使用过这个Hook，它是XXX
 2. 想问，我能拦截这个API吗？场景是XXXX
 
-## 4. 参考
+[我的分享] + [你的分享] ∈ [.NET圈子的一份小力量]
+
+## 6. 参考
 
 - [Harmony](https://github.com/pardeike/Harmony)
 - [Harmony wiki](https://github.com/pardeike/Harmony/wiki)
+- [Hacking .NET – rewriting code you don’t control](https://stakhov.pro/hacking-net-rewriting-code-you-dont-control/)
+- [Rimworld Mod制作教程6 使用Harmony对C#代码Patch](https://blog.csdn.net/qq_29799917/article/details/105017151)
 - [动态IL织入框架Harmony简单入手](https://www.cnblogs.com/qhca/p/12336332.html)
 - [一个开放源代码，实现动态IL注入(Hook或补丁工具)框架:Lib.Harmony](https://config.net.cn/opensource/dataformat/a133596e-9d5a-43ef-9012-1e2a19c00e33-p1.html)
