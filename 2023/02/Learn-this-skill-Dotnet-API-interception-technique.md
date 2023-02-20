@@ -5,9 +5,9 @@ description: 怎么在不改变源码的情况下，篡改一个方法的入参�
 date: 2023-02-13 20:21:19
 copyright: Default
 draft: False
-cover: https://img1.dotnet9.com/2023/02/0501.png
+cover: https://img1.dotnet9.com/2023/02/cover_05.png
 categories: .NET相关
-tags: hook, harmony
+tags: hook, harmony,拦截
 ---
 
 大家好，我是沙漠尽头的狼。
@@ -18,8 +18,11 @@ tags: hook, harmony
 2. 一个方法被很多地方调用，怎么在不修改这个方法源码情况下，记录这个方法调用的前后时间？
 3. 同2，不修改源码的情况下，怎么对方法的参数进行校正（篡改）？
 3. 同3，不修改源码的情况下，怎么对方法的返回值进行伪造？
+...
 
 ## 1. 前言
+
+前言翻译自一个国外的文章，他写的更容易让人理解 - [Hacking .NET – rewriting code you don’t control](https://stakhov.pro/hacking-net-rewriting-code-you-dont-control/)：
 
 您是否曾经遇到过不属于您但想要更改其行为的类库方法？通常，该方法是非公开的，并且没有很好的方法来覆盖其行为。你可以看到它是如何工作的（因为你很棒，并且使用像Resharper、dnSpy之类反编译工具，对吧？），你只是无法改变它。你真的需要改变它，因为XXX原因。
 
@@ -31,20 +34,18 @@ tags: hook, harmony
 
 如果您正在处理已签名的库，上述两种方法也不起作用。
 
-现在让我们看一下另一种解决方法-内存修补。这与游戏作弊引擎几十年来使用的技术相同，这些引擎附加到正在运行的进程，查找内存位置并改变其行为。听起来很复杂？ 实际上，在 .NET 中做到这一点比听起来容易得多。我们将使用一个名为`Harmony`的库，该库可通过“Lib.Harmony”包在NuGet上获得。这是一个用于 `.NET` 的内存修补引擎，主要针对使用 Unity 构建的游戏，当然不止`Unity`。
+现在让我们看一下另一种解决方法-内存修补。这与游戏作弊引擎几十年来使用的技术相同，这些引擎附加到正在运行的进程，查找内存位置并改变其行为。听起来很复杂？ 实际上，在 .NET 中做到这一点比听起来容易得多。我们将使用一个名为`Harmony`的库，该库在NuGet上可通过“Lib.Harmony”包获得。这是一个用于 `.NET` 的内存修补引擎，主要针对使用 Unity 构建的游戏，当然不止`Unity`。
 
-今天，我将向您展示如何更改您认为不可能的事情 - 从Hook自己的库开始，到Hook第三方库、.NET默认库结束。
+站长将在本文向您展示如何更改您认为不可能的事情 - 从拦截(Hook)自己的库开始，到拦截(Hook) WPF库和.NET基础库结束。
 
-## 2. Hook自己的库
+## 2. 拦截(Hook)自己的库
 
-### 2.1. 做好准备工作
+### 2.1. 准备工作
 
-### 2.1.1. 创建一个类库
-
-名字就叫`HookDemos.OwnerLibrary`，添加类`Student`，定义如下：
+1. 创建一个控制台程序 `HelloHook`，添加类 `Student`：
 
 ```C#
-namespace HookDemos.OwnerLibrary;
+namespace HelloHook;
 
 public class Student
 {
@@ -52,29 +53,18 @@ public class Student
     {
         return $"大家好，我是Dotnet9网站站长：{name}";
     }
-
-    public override string ToString()
-    {
-        return nameof(Student);
-    }
 }
 ```
 
-- 定义了一个学生类`Student`;
-- `Student`类中定义了一个`GetDetails`方法，返回格式化的个人介绍信息，这个方法后面拦截试验使用；
-- `ToString`只简单的返回类名，方便拦截时打印拦截的类名；
+`Student`类中定义了一个`GetDetails`方法，返回格式化的个人介绍信息，这个方法后面拦截试验使用。
 
-### 2.1.2. 创建一个控制台程序
-
-名字叫`HelloHook`，添加项目`HookDemos.OwnerLibrary`引用，在`Program.cs`中调用`Student`的`GetDetail`方法：
+2. `Program.cs`中添加`Student`调用：
 
 ```C#
-using HookDemos.OwnerLibrary;
+using HelloHook;
 
 var student = new Student();
-Console.WriteLine(student.GetDetail("沙漠尽头的狼"));
-
-Console.ReadLine();
+Console.WriteLine(student.GetDetails("沙漠尽头的狼"));
 ```
 
 运行程序输出如下：
@@ -85,9 +75,9 @@ Console.ReadLine();
 
 基本工作准备完成，这就是一个简单的控制台程序，后文的内容就根据这两个工程展开细说。
 
-### 2.2. 拦截API
+### 2.2. 拦截`GetDetails`方法
 
-#### 2.2.1. 引入拦截包-Lib.Harmony
+1. 引入拦截包-Lib.Harmony
 
 我们使用`Lib.Harmony`包，API的拦截就靠它了，在`HelloHook`工程中添加如下Nuget包：
 
@@ -95,19 +85,18 @@ Console.ReadLine();
 <PackageReference Include="Lib.Harmony" Version="2.2.2" />
 ```
 
-#### 2.2.2. 拦截处理
+2. 拦截处理
 
-添加拦截类`HookClass`：
+添加拦截类`HookStudent`：
 
 ```C#
 using HarmonyLib;
-using HookDemos.OwnerLibrary;
 
 namespace HelloHook;
 
-[HarmonyPatch(typeof(Student))] // 定义拦截的类类型：Student
-[HarmonyPatch(nameof(Student.GetDetails))] // 定义拦截的方法：GetDetail
-public class HookClass
+[HarmonyPatch(typeof(Student))]
+[HarmonyPatch(nameof(Student.GetDetails))]
+public class HookStudent
 {
     public static bool Prefix()
     {
@@ -127,156 +116,282 @@ public class HookClass
 }
 ```
 
-看代码中的注释，`HookClass`类上添加了两个`HarmonyPatch`特性：
+看代码中的注释，`HookStudent`类上添加了两个`HarmonyPatch`特性：
 
-- 第一个是关联拦截的类`Student`；
-- 第二个是关联拦截的类方法`GetDetails`
+- 第一个是关联被拦截的类`Student`类型；
+- 第二个是关联被拦截的类方法`GetDetails`；
 
-即当程序中调用`Student`类的`GetDetails`方法时，`HookClass`内定义的方法就会分别执行：
+即当程序中调用`Student`类的`GetDetails`方法时，`HookStudent`内定义的方法就会分别执行，三个方法执行顺序是Prefix->Postfix->Finalizer，当然约定的方法不止这三个，其实我们常用的应该是`Prefix`和`Postfix`，约定方法的意义见后方说明，没说就看[Harmony wiki](https://github.com/pardeike/Harmony/wiki)...
 
-- 约定方法的定义必须为`静态`方法，`Prefix`返回值为`bool`，另两个为`void`；
-- Prefix约定方法表示拦截前缀，即拦截`Student`类的`GetDetails`方法参数定义，后面会细说；
-- Postfix约定方法表示拦截后缀，即拦截`Student`类的`GetDetails`方法结果，后面也会细说；
-- Finalizer约定方法表示拦截后最后的处理方法，就是最后执行的方法意思（本文不打算研究）。
-
-三个方法执行顺序是Prefix->Postfix->Finalizer，当然约定的方法不止这三个，其实我们常用的应该是`Prefix`和`Postfix`，详细后面说。
-
-#### 2.2.3. 注册拦截
+### 2.3. 注册拦截
 
 对`Program.cs`进行修改，添加`Harmony`对整个程序集的拦截：
 
 ```C#
 using HarmonyLib;
-using HookDemos.OwnerLibrary;
+using HelloHook;
 using System.Reflection;
 
-Console.WriteLine("程序开始---------------------");
-
 var student = new Student();
-Console.WriteLine(student.GetDetails("沙漠尽头的狼"));     // 这里是还没有拦截之前的，正常输出：大家好，我是Dotnet9网站站长沙漠尽头的狼！
+Console.WriteLine(student.GetDetails("沙漠尽头的狼"));  
 
-Console.WriteLine("注册拦截---------------------");
+var harmony = new Harmony("https://dotnet9.com");
+harmony.PatchAll(Assembly.GetExecutingAssembly());
 
-// 这里使用Harmony进行了整个程序集的拦截，即上面在拦截类上加了`HarmonyPatch`特性的类，在目标API调用时都会主动执行它里面的定义的约定方法，如：Prefix、Postfix
-var harmony = new Harmony("com.dotnet9"); // 参数是一个标识ID，表示一个Harmony实例，你可以注册多个尝试
-harmony.PatchAll(Assembly.GetExecutingAssembly());  // 自动注册所有的拦截类，即上面定义的HookClass类会被Harmony主动发现，并开始监视HookClass类定义拦截的类方法调用
+Console.WriteLine(student.GetDetails("沙漠尽头的狼"));
 
-Console.WriteLine("注册完成---------------------");
-
-Console.WriteLine(student.GetDetails("沙漠尽头的狼"));     // 注意和上面的代码对比，代码完全一样，但因为是在使用Harmony拦截后执行的，所以输出可能变了
-
-Console.WriteLine("程序结束---------------------");
 Console.ReadLine();
 ```
 
 运行程序输出如下：
 
 ```shell
-程序开始---------------------
 大家好，我是Dotnet9网站站长：沙漠尽头的狼
-注册拦截---------------------
-注册完成---------------------
 Prefix
 Postfix
 Finalizer
 大家好，我是Dotnet9网站站长：沙漠尽头的狼
-程序结束---------------------
 ```
 
-上面代码就完成了一个自定义类的拦截处理，我们可以在约定方法（`Prefix`和`Postfix`等）里做一些日志记录，类似于B/S中的AOP拦截，操作日志在这里记录正合适。
+上面代码就完成了一个自定义类的拦截处理，使用`PatchAll`能自动发现补丁类`HookStudent`，从而自动拦截`Student`类的`GetDetails`方法调用，发现第二次调用`student.GetDetails("沙漠尽头的狼")`时，`Harmony`的三个生命周期方法都被调用了。
+
+我们可以在拦截类的约定方法（`Prefix`和`Postfix`等）里做一些日志记录(Console.WriteLine\ILogger.LogInfo等)，类似于B/S中的AOP拦截，操作日志在这里记录正合适。
 
 **这就完了？说啥呢，这才开始。**
 
-#### 2.2.4. 说好的参数篡改呢？
+### 2.4. 说好的参数篡改呢？还有API结果伪造呢？
 
-![](https://img1.dotnet9.com/2023/02/0501.png)
-
-看上图，两处`Console.WriteLine(student.GetDetails("沙漠尽头的狼"));`代码输出的结果不一致了，`GetDetails`方法我们没改，主要是改`HookClass`的`Prefix`方法：
+修改`Program.cs`，多打印几行数据方便区分：
 
 ```C#
-public static bool Prefix(ref string name)
+using HarmonyLib;
+using HelloHook;
+using System.Reflection;
+
+var student = new Student();
+Console.WriteLine(student.GetDetails("沙漠尽头的狼"));
+
+var harmony = new Harmony("https://dotnet9.com");
+harmony.PatchAll(Assembly.GetExecutingAssembly());
+
+Console.WriteLine(student.GetDetails("沙漠之狐"));
+Console.WriteLine(student.GetDetails("Dotnet"));
+
+Console.ReadLine();
+```
+
+在注册`Harmony`之前，打印一次，注册后打印两次，注意看参数的不同。
+
+修改`HookStudent`，我们只使用`Prefix`方法，其他`Postfix`等方法类似，可看[Harmony wiki](https://github.com/pardeike/Harmony/wiki)了解更多的使用方法，修改如下：
+
+```C#
+using HarmonyLib;
+
+namespace HelloHook;
+
+[HarmonyPatch(typeof(Student))]
+[HarmonyPatch(nameof(Student.GetDetails))]
+public class HookStudent
 {
-    Console.WriteLine($"Prefix");
-    name = "沙漠之狐";
-    return true;
+    public static bool Prefix(ref string name, ref string __result)
+    {
+        if ("沙漠之狐".Equals(name))
+        {
+            __result = $"这是我的曾用网名";
+            return false;
+        }
+
+        if (!"沙漠尽头的狼".Equals(name))
+        {
+            name = "非站长名";
+        }
+
+        return true;
+    }
 }
 ```
 
-`Prefix`方法里可以定义和拦截的方法`GetDetails`一样的参数定义，注意前面的`ref`，这样就能达到篡改参数的目的了。
+先运行看输出：
 
-我们再把方法改成下图中这样，可能您就明白这个拦截方法的意义了：
+```shell
+大家好，我是Dotnet9网站站长：沙漠尽头的狼
+这是我的曾用网名
+大家好，我是Dotnet9网站站长：非站长名
+```
 
-![](https://img1.dotnet9.com/2023/02/0502.png)
+- 第1行“大家好，我是Dotnet9网站站长：沙漠尽头的狼”，这是没有注册拦截之前的正常格式化输出；
+- 第2行“这是我的曾用网名”，这里实现的是结果的伪造；
+- 第3行“大家好，我是Dotnet9网站站长：非站长名”，这里实现的是参数的篡改。
 
-上面的方法，在不改变原`GetDetails`方法的前提下，对参数进行校验，可记录日志或对参数进行格式修正。
+**结果伪造**
+
+注意看`Prefix`方法传入的参数`ref string __result`：其中`ref`表示引用传递，允许对结果进行修改；`string`与原方法的返回值类型必须一致；`__result`为返回值的约定命名，前面是两个"_"，即命名必须为`__result`。
+
+```C#
+if ("沙漠之狐".Equals(name))
+{
+    __result = $"这是我的曾用网名";
+    return false;
+}
+```
+
+注意返回值是`false`，表示不调用原生方法，这里就将被拦截的方法返回值伪造成功了。
+
+**参数篡改**
+
+看传入的参数`ref string name`：`ref`表示参数是引用传递，允许对参数进行修改；`string name`必须与原方法参数定义一样。
+
+```C#
+if (!"沙漠尽头的狼".Equals(name))
+{
+    name = "非站长名";
+}
+```
+
+`Prefix`方法默认返回的`true`，表示需要调用原生方法，这里会将篡改的参数传入原生方法，原生方法执行结果会将篡改的参数组合返回为“大家好，我是Dotnet9网站站长：非站长名”。
 
 **注意：**
 
-参数是可选的，如果不进行篡改，去掉`ref`也是可以的。
-
-**`Prefix`方法返回值什么用处呢？**
-
-修改`Prefix`方法返回false：
-
-![](https://img1.dotnet9.com/2023/02/0503.png)
-
-由结果可推导出：
-
-- 返回true：将执行原生方法；
-- 返回false：原生方法不会再执行，直接返回的结果是返回类型的默认值。既无论传入的参数是什么，或者怎么篡改，如返回值为string，则返回空字符串，返回值类型为int，则返回0.
-
-可通过给方法`GetDetails`打断点，第二次调用时是不会进这个断点的，控制台也打印出了返回值类型的默认值，即空字符串。
-
-#### 2.2.5. 我要篡改被拦截方法的返回值呢？
-
-**注：** 记得恢复`Prefix`方法返回`true`。
-
-修改`Postfix`方法如下：
-
-```C#
-public static void Postfix(ref string __result)
-{
-    __result = "我直接篡改了结果，不论参数是什么，Prefix里对参数怎么篡改";
-    Console.WriteLine($"Postfix");
-}
-```
-
-详细修改及运行结果：
-
-![](https://img1.dotnet9.com/2023/02/0504.png)
-
-**说明：**
-
-- __result前缀为两个下划线，这是固定名称，表示拦截方法的返回值；
-- 如果要对结果进行伪造，结果类型前需要加`ref`；
-
-**伪造结果要结合参数呢？**
-
-一样的，将参数传入即可：
-
-![](https://img1.dotnet9.com/2023/02/0505.png)
-
-#### 2.2.6 篡改参数和伪造结果位置别搞错
-
-- 篡改参数只会在`Prefix`方法中生效，所以它叫前缀呢，您可以在`Postfix`方法将传入的参数设置为`ref`进行修改尝试（不传入`__result`参数的前提）；
-- 伪造结果只会在`Postfix`方法中生效，只要在此方法中传入了`__result`参数，那么原生的方法（`GetDetails`）就不会执行了，您也可以在`Prefix`方法中传入`__result`并对他进行修改尝试。
+原生参数`name`和返回值`__result`是可选的，如果不进行篡改，去掉`ref`也是可以的。
 
 上面的示例[源码点这](https://github.com/dotnet9/TerminalMACS.ManagerForWPF/tree/master/src/Demo/HookDemos/HelloHook)。
 
-## 3. 拦截第三方库的API
+## 3. 拦截(Hook)WPF的API
 
-上面是拦截自己可控的类库方法，但实际情况可能是需要拦截第三方库，比如微软的SDK方法，或第三方控件、类库等，使用方法和上面其实是一样的。
+我们创建一个简单的WPF程序`HookWpf`，拦截`MessageBox.Show`方法：
 
-基于以下原因可能产生的场景需要拦截：
+```C#
+public static MessageBoxResult Show(string messageBoxText, string caption)
+```
 
-1. 第三库未提供源码，但我们想改它的部分方法；
-2. 第三库提供了源码，虽然可以修改它的源码，但万一第三库后面迭代升级，我们又不得不更新时，那自己做的修改跟着升级可能麻烦了；
+首先在`App`中使用自动拦截注册：
 
-拦截注意，如您所见，这提供了大量新的可能性。请记住，权力越大，责任越大。由于您以原始开发人员不打算的方式覆盖行为，因此无法保证您的补丁代码在他们发布新版本的代码时会起作用。即上面第2点，不排除第三库升级API结构也变了，我们也要跟着修改拦截逻辑哦
+```C#
+public partial class App : Application
+{
+    protected override void OnStartup(StartupEventArgs e)
+    {
 
-## 4. 拦截.NET默认的API
+        base.OnStartup(e);
 
-即.NET框架提供的一些类库方法拦截，我们举例说明。
+        var harmony = new Harmony("https://dotnet9.com");
+        harmony.PatchAll(Assembly.GetExecutingAssembly());
+    }
+}
+```
+
+定义拦截类`HookMessageBox`：
+
+```C#
+using HarmonyLib;
+using System.Windows;
+
+namespace HookWpf;
+
+[HarmonyPatch(typeof(MessageBox))]
+[HarmonyPatch(nameof(MessageBox.Show))]
+[HarmonyPatch(new [] { typeof(string), typeof(string) })]
+public class HookMessageBox
+{
+    public static bool Prefix(ref string messageBoxText, string caption)
+    {
+        if (messageBoxText.Contains("垃圾"))
+        {
+            messageBoxText = "这是一个不错的网站哟";
+        }
+
+        return true;
+    }
+}
+```
+
+类`HookMessageBox`上关联拦截的`MessageBox.Show`重载方法，在`Prefix`里对提示框内容进行合法性验证，不合法进行修正。
+
+最后就是在窗体`MainWindow.xaml`里添加两个弹出提示框的按钮：
+
+```xml
+<Window x:Class="HookWpf.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <StackPanel>
+        <Button Content="弹出默认提示框" Width="120" Height="30" Click="ShowDialog_OnClick"></Button>
+        <Button Content="这是一个垃圾网站" Width="120" Height="30" Click="ShowBadMessageDialog_OnClick"></Button>
+    </StackPanel>
+</Window>
+```
+
+后台处理按钮点击事件，弹出提示框：
+
+```C#
+using System.Windows;
+
+namespace HookWpf;
+
+public partial class MainWindow : Window
+{
+    public MainWindow()
+    {
+        InitializeComponent();
+    }
+
+    private void ShowDialog_OnClick(object sender, RoutedEventArgs e)
+    {
+        MessageBox.Show("https://dotnet9.com 是一个热衷于技术分享的程序员网站", "Dotnet9");
+    }
+
+    private void ShowBadMessageDialog_OnClick(object sender, RoutedEventArgs e)
+    {
+        MessageBox.Show("这是一个垃圾网站", "https://dotnet9.com");
+    }
+}
+```
+
+运行结果如下：
+
+![](https://img1.dotnet9.com/2023/02/0501.gif)
+
+上面效果即完成了提示框内容的验证，如果内容含有“垃圾”关键字，就换成好听的话（这是一个不错的网站哟）。
+
+本示例[源码在这](https://github.com/dotnet9/TerminalMACS.ManagerForWPF/tree/master/src/Demo/HookDemos/HookWpf)。
+
+## 4. 拦截(Hook).NET默认的API
+
+创建控制台程序`HookDotnetAPI`，引入`Lib.Harmony`nuget包，`Program.cs`修改如下：
+
+```C#
+using HarmonyLib;
+
+var dotnet9Domain = "https://dotnet9.com";
+Console.WriteLine($"9的位置：{dotnet9Domain.IndexOf('9',0)}");
+
+var harmony = new Harmony("com.dotnet9");
+harmony.PatchAll();
+
+Console.WriteLine($"9的位置：{dotnet9Domain.IndexOf('9', 0)}");
+
+[HarmonyPatch(typeof(String))]
+[HarmonyPatch(nameof(string.IndexOf))]
+[HarmonyPatch(new Type[] { typeof(char), typeof(int) })]
+public static class HookClass
+{
+    public static bool Prefix(ref int __result)
+    {
+        __result = 100;
+        return false;
+    }
+}
+```
+
+使用方法和前面类似，`string.IndexOf`方法被拦截后，总是返回100，不论查找的字符位置在哪，当然这个测试代码没有任何意义，这里只是演示而已，运行结果如下：
+
+```shell
+9的位置：14
+9的位置：100
+```
 
 ## 5. 总结及分享
 
@@ -284,9 +399,17 @@ public static void Postfix(ref string __result)
 
 Harmony的原理是利用反射获取对应类中的方法，然后加上特性标签进行逻辑控制，达到不破坏原有代码进行更新的效果。
 
-用于在运行时修补替换和装饰 .NET/.NET Core 方法的库。 但是该技术可以与任何.NET版本一起使用。它对同一方法的多次更改是累积而不是覆盖。 
+Harmony用于在运行时修补替换和装饰 .NET/.NET Core 方法的库。 但是该技术可以与任何.NET版本一起使用。它对同一方法的多次更改是累积而不是覆盖。 
 
-从《[Harmony wiki patching](https://github.com/pardeike/Harmony/wiki/Patching)》中了解以下使用注意事项：
+再次分析可能产生的场景需要拦截，加深您对本文的记忆：
+
+1. .NET的一些方法，我们直接在代码层面可能无法直接修改；
+1. 第三库未提供源码，但我们想改它的部分方法；
+2. 第三库提供了源码，虽然可以修改它的源码，但万一第三库后面迭代升级，我们又不得不更新时，那自己做的修改跟着升级可能麻烦了；
+
+**拦截注意**：如您所见，这提供了大量新的可能性。请记住，权力越大，责任越大。由于您以原始开发人员不打算的方式覆盖行为，因此无法保证您的补丁代码在他们发布新版本的代码时会起作用。即上面第3点，不排除第三库升级API结构也变了，我们也要跟着修改拦截逻辑哦
+
+从《[Harmony wiki patching](https://github.com/pardeike/Harmony/wiki/Patching)》中翻译出以下使用注意事项：
 
 1. 最新2.0版支持 .NET Core ；
 2. Harmony支持手动（Patch，参考[Harmony wiki](https://github.com/pardeike/Harmony/wiki)上的使用）和自动（PatchAll，本文演示使用的这种方式，Lib.Harmony使用的是C#的特性机制）；
@@ -303,6 +426,8 @@ Harmony的原理是利用反射获取对应类中的方法，然后加上特性�
 13. 我们的补丁只需要定义我们需要用到的参数，不用把所有参数都写上；
 14. 要允许补丁重用，可以使用名为__originalMethod(两个下划线)的参数注入原始方法。
 
+最后忘了补一条，.NET 7中使用Harmony还有点点问题，站长在测试WPF API和.NET基础库拦截Demo时一直不生效，折腾了2、3个晚上，以为是自己的使用问题，最后看到Harmony issue [.NET 7 Runtime Skipping Patches #504](https://github.com/pardeike/Harmony/issues/504)，将程序降级为.NET 6即可。
+
 ### 5.2 分享
 
 读者朋友们，相信不少人使用过`Harmony`或者其他的 .NET Hook库，可在评论中留言分享，可提出自己的疑问，或自己的使用心得：
@@ -315,6 +440,8 @@ Harmony的原理是利用反射获取对应类中的方法，然后加上特性�
 
 ## 6. 参考
 
+写作本文时以下文章都做了参考，建议大家都看看，特别是 [Harmony wiki](https://github.com/pardeike/Harmony/wiki)中写了Harmony的详细使用方法：
+
 - [Harmony](https://github.com/pardeike/Harmony)
 - [Harmony wiki](https://github.com/pardeike/Harmony/wiki)
 - [Harmony API文档](https://harmony.pardeike.net/api/HarmonyLib.html)
@@ -322,3 +449,4 @@ Harmony的原理是利用反射获取对应类中的方法，然后加上特性�
 - [Rimworld Mod制作教程6 使用Harmony对C#代码Patch](https://blog.csdn.net/qq_29799917/article/details/105017151)
 - [动态IL织入框架Harmony简单入手](https://www.cnblogs.com/qhca/p/12336332.html)
 - [一个开放源代码，实现动态IL注入(Hook或补丁工具)框架:Lib.Harmony](https://config.net.cn/opensource/dataformat/a133596e-9d5a-43ef-9012-1e2a19c00e33-p1.html)
+- [.NET 7 Runtime Skipping Patches #504](https://github.com/pardeike/Harmony/issues/504)
