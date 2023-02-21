@@ -154,3 +154,5 @@ Python 之禅 by Tim Peters
 15. 51Aspx：[https://club.51aspx.com/users/czwzxCmkj/post](https://club.51aspx.com/users/czwzxCmkj/post)
 16. InfoQ：[https://www.infoq.cn/profile/A417E2BA797068/publish](https://www.infoq.cn/profile/A417E2BA797068/publish)
 17. 腾讯云开发者社区：[https://cloud.tencent.com/developer/user/4880446](https://cloud.tencent.com/developer/user/4880446)
+18. 阿里云开发者社区：[https://developer.aliyun.com/profile/xzbu4dxrupikc](https://developer.aliyun.com/profile/xzbu4dxrupikc)
+19. 华为云开发者社区：[https://bbs.huaweicloud.com/community/usersnew/id_1676989516009343](https://bbs.huaweicloud.com/community/usersnew/id_1676989516009343)
