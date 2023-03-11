@@ -3,6 +3,7 @@ title: 分享我做Dotnet9博客网站时积累的一些资料
 slug: Share-some-learning-materials-I-accumulated-when-I-was-a-blog-website
 description: Dotnet9网站用WordPress搭建了两年，去年开始自学ASP.NET Core MVC，开始了独立开发网站之路，现在网站前台算是有模有样了，后台正在开发中
 date: 2022-03-02 07:57:36
+lastmod: 2023-03-11 16:26:14
 copyright: Default
 originaltitle: 分享我做Dotnet9博客网站时积累的一些资料
 draft: False
@@ -181,5 +182,29 @@ Blazor组件库使用的 Masa Blazor： https://masa-blazor-docs-dev.lonsid.cn/
 最后来个后台前端动图结束本文：
 
 ![开源项目Panda后台前端](https://img1.dotnet9.com/2022/03/0106.gif)
+
+## 2023年3月11号更新
+
+目前网站正在进行新一轮的重构，前台展示效果如下：
+
+首页：
+
+![首页](https://img1.dotnet9.com/2022/03/0116.png)
+
+详情页：
+
+![详情页](https://img1.dotnet9.com/2022/03/0117.png)
+
+参考项目：
+
+- 前台前端：https://github.com/linhaojun857/aurora/tree/master/aurora-vue/aurora-blog
+- 后台前端：https://github.com/linhaojun857/aurora/tree/master/aurora-vue/aurora-admin
+- 后端：https://github.com/yangzhongke/NETBookMaterials/tree/main/%E6%9C%80%E5%90%8E%E5%A4%A7%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/YouZack-VNext
+
+Dotnet9网站项目：
+
+- 前台前端（Vue 3 + Element Plus）：https://github.com/dotnet9/Dotnet9/tree/develop/src/dotnet9-web-vue3
+- 后台前端(Vue 2 + Element UI)：https://github.com/dotnet9/Dotnet9/tree/develop/src/Dotnet9.Admin.Web/dotnet9-adminvue
+- 后端(ASP.NET Core 7.0 Web API )：https://github.com/dotnet9/Dotnet9/tree/develop/src/Dotnet9.Admin.WebAPI
 
 本文持续更新，欢迎关注。
