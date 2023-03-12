@@ -130,4 +130,4 @@ private void Grid_Drop(object sender, DragEventArgs e)
 
 功能很简单，不求精深，会用就行。
 
-本文Markdown地址：[点击浏览](https://github.com/dotnet9/Assets.Dotnet9/blob/main/2020/11/2020-11-27_01.md)
+本文Markdown地址：[点击浏览](https://github.com/dotnet9/Assets.Dotnet9/blob/main/2020/11/wpf-file-drag.md)
