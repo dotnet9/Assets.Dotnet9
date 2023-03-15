@@ -5,7 +5,7 @@ description: 群友说.NET Core无法对接WebService，站长找了些资料，
 date: 2023-03-15 20:33:14
 copyright: Default
 draft: false
-cover: https://img1.dotnet9.com/2023/03/refit_logo.png
+cover: https://img1.dotnet9.com/2023/03/cover_07.jpg
 categories: .NET相关
 tags: Refit,WebService
 ---

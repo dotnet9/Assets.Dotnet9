@@ -5,19 +5,43 @@ description: 通过Type.GetType引申出工程文件app.config的配置使用。
 date: 2023-03-15 12:37:33
 copyright: Default
 draft: false
-cover: https://img1.dotnet9.com/2023/03/cover_04.png
+cover: https://img1.dotnet9.com/2023/03/cover_06.png
 categories: .NET相关
 ---
 
 ## 问题
 
-创建一个类库工程：TestLib，添加如下类Test(任意，只是方便引出问题)：
+插件化应用程序，插件是动态加载的，插件的动态库放各自目录下，比如运行目录的相对路径`./dlls/ChildAssembly.dll`，通过`Assembly.LoadFile`能正确加载程序集：
 
 ```C#
-
+var childAssemblyPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "dlls", "ChildAssembly.dll");
+if (File.Exists(childAssemblyPath))
+{
+    var childAssembly = Assembly.LoadFile(childAssemblyPath);
+}
 ```
 
-动态最近使用`Type.GetType("类的完整路径")`时无法获取
+也能通过`childAssembly.GetType("ChildAssembly.Student")`成功获取插件中的类类型，但实际开发时，插件中的类类型拼接的是完整路径，比如`ChildAssembly.Student, ChildAssembly, Version=0.1.0.0, Culture=neutral, PublicKeyToken=null`，类型获取代码：
+
+```C#
+var type = Type.GetType("ChildAssembly.Student, ChildAssembly, Version=0.1.0.0, Culture=neutral, PublicKeyToken=null");
+```
+
+上面的代码获取type为null?
+
+## 解决方案
+
+不绕弯子，解决方法是给应用程序的`app.config`的节点中`privatePath`配置好插件的目录就好：
+
+```xml
+<configuration>
+  <runtime>
+    <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
+      <probing privatePath="dlls"/>
+    </assemblyBinding>
+  </runtime>
+</configuration>
+```
 
 ## 知识点讲解
 
