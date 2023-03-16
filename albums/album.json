@@ -7,6 +7,12 @@
   },
   {
     "SequenceNumber":2,
+    "Name": "MASA Framework",
+    "Slug": "masa-framework",
+    "Cover": "albums/masa-framework.jpg"
+  },
+  {
+    "SequenceNumber":2,
     "Name": "开源Web",
     "Slug": "open-source-csharp-bs",
     "Cover": "albums/album_csharp.jpg"
