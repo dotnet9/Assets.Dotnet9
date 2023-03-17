@@ -3,6 +3,7 @@ title: 小知识点分享-C#的Type.GetType获取失败了？
 slug: Small-knowledge-sharing-Csharps-Type.GetType-acquisition-failed
 description: 通过Type.GetType引申出工程文件app.config的配置使用。
 date: 2023-03-15 12:37:33
+lastmod: 2023-03-17 21:36
 copyright: Default
 draft: false
 cover: https://img1.dotnet9.com/2023/03/cover_06.png
@@ -66,3 +67,10 @@ privatePath 可以包含一个或多个子目录，每个子目录之间使用�
 privatePath 的主要作用是允许应用程序在运行时加载附加的程序集。这在一些动态扩展的场景下非常有用，例如插件化应用程序、模块化应用程序等。通过在 privatePath 中指定插件或模块所在的目录，应用程序可以动态地加载这些附加的程序集，从而实现更加灵活的应用程序架构。
 
 需要注意的是，privatePath 只对本地文件系统上的程序集有效。如果要加载远程服务器上的程序集，需要使用其他的机制，例如 Assembly.Load 方法、AppDomain.AssemblyResolve 事件等。
+
+## 2023-03-17 
+
+有网友群聊指出一些问题，这里留言大家讨论：
+
+1. 有一点值得注意的是，.NET 程序运行过程中引用的第三方库，只有在代码中真正调用了才会加载；
+2. .NET Core项目不读取app.config
