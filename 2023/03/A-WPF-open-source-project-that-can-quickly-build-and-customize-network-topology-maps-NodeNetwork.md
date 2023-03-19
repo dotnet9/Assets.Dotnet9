@@ -10,7 +10,7 @@ categories: WPF
 albums: 开源WPF
 ---
 
-大家好，我是沙漠尽头的狼，今天介绍一个WPF开源项目，它可以帮助我们快速构建和定制网络拓扑图。
+大家好，我是沙漠尽头的狼，今天介绍一个WPF开源项目-NodeNetwork，它可以帮助我们快速构建和定制网络拓扑图。
 
 ## 一、前言
 
@@ -24,6 +24,10 @@ NodeNetwork的代码托管在GitHub上，是由荷兰的一位开发者Wouterdek
 
 ![仓库截图](https://img1.dotnet9.com/2023/03/1201.png)
 
+仓库源码结构：
+
+![仓库源码结构](https://img1.dotnet9.com/2023/03/1209.png)
+
 ## 二、示例
 
 ### 1. 计算器示例
@@ -36,7 +40,7 @@ NodeNetwork的代码托管在GitHub上，是由荷兰的一位开发者Wouterdek
 
 ### 2. 代码生成器示例
 
->在此示例中，用户可以创建 LUA 代码。与虚幻引擎中的蓝图类似，编辑器具有执行流程和数据流。 自定义输入/输出、端口、节点和编辑器为编辑器提供了更直观的体验。
+>在此示例中，用户可以创建 LUA 代码。与虚幻引擎中的蓝图类似，编辑器具有执行流程和数据流。 自定义输入/输出端口、节点编辑器提供了更直观的体验。
 
 下面是[代码生成器](https://github.com/Wouterdek/NodeNetwork/tree/master/ExampleCodeGenApp)应用程序的截图：
 
@@ -44,24 +48,24 @@ NodeNetwork的代码托管在GitHub上，是由荷兰的一位开发者Wouterdek
 
 ### 3. 着色器编辑器示例
 
-此库更现实的用例可能是着色器编辑器。
+此库更实用的示例可能是着色器编辑器。
 
 下面是使用 NodeNetwork 制作的[着色器编辑器](https://github.com/Wouterdek/NodeNetwork/tree/master/ExampleShaderEditorApp)示例的演示：
 
 ![着色器编辑器示例的演示](https://img1.dotnet9.com/2023/03/1203.gif)
 
-这些示例应用程序可在此处[下载](https://github.com/Wouterdek/NodeNetwork/releases)，其源代码包含在存储库中。 库的二进制版本在 NuGet 上可用。
+这些示例应用程序可在此处[下载](https://github.com/Wouterdek/NodeNetwork/releases)，其源代码包含在存储库中，库的二进制版本在 NuGet 上可用。
 
 ## 三、特征
 
-1. 专为 .NET Framework 4.7.2 和 .NET Core 3.1 或更高版本构建
+1. 专为 .NET Framework 4.7.2 和 .NET Core 3.1 或更高版本构建。
 2. 开放、宽松的许可证-[Apache-2.0 license](https://github.com/Wouterdek/NodeNetwork/blob/master/LICENSE)。
 3. 使用现代反应式 MVVM 代码构建的交互式、可靠的控件。
-4. 顺滑的平移、缩放控件
-5. 自动布局系统
+4. 顺滑的平移、缩放控件。
+5. 自动布局系统。
 6. 高度可定制，但默认情况下易于使用。
-7. 广泛的网络和连接验证支持。
-8. 单元测试提供支持
+7. 强大的节点和连接验证支持。
+8. 大量的单元测试提供支持。
 9. ...
 
 
@@ -131,7 +135,7 @@ Install-Package NodeNetwork
 
 MVVM在整个NodeNetwork库中都在贯彻使用。有关MVVM的介绍请点击[这里](https://www.codeproject.com/Articles/100175/Model-View-ViewModel-MVVM-Explained)查看。使用库中的元素，您需要创建合适的视图，并为其提供相应的ViewModel实例。
 
-在使用库之前，请在`App.xaml.cs`文件的`OnStartup`方法内使用`NNViewRegistrar.RegisterSplat()`方法将NodeNetwork的视图和相应的ViewModel相关联。
+在使用库之前，请在`App.xaml.cs`文件的`OnStartup`方法内使用`NNViewRegistrar.RegisterSplat()`方法将NodeNetwork的视图和相应的ViewModel进行注册关联。
 
 ```C#
 using System.Windows;
@@ -323,3 +327,8 @@ NodeNetwork是一个非常实用和灵活的C# WPF开源项目，它可以帮助
 - 贡献
 
 这些操作在 GitHub 页面上非常受欢迎：错误报告、补丁、功能请求、拉取请求...
+
+- 微信技术交流群：添加微信（dotnet9com）备注“入群”
+- QQ技术交流群：771992300。
+
+![](https://img1.dotnet9.com/site/knowledgeplanet2023.jpg)
