@@ -142,3 +142,8 @@ public abstract class PersonBase
 上面两种方式看.NET版本选择，第二种方式需要您明确知道子类类型，详细使用请看微软文档：[如何使用System.Text.Json序列化派生类的属性](https://learn.microsoft.com/zh-cn/dotnet/standard/serialization/system-text-json/polymorphism?pivots=dotnet-7-0)
 
 如果您有更好的方式欢迎留言探讨。
+
+- 微信技术交流群：添加微信（dotnet9com）备注“入群”
+- QQ技术交流群：771992300。
+
+![](https://img1.dotnet9.com/site/knowledgeplanet_youhui.png)
