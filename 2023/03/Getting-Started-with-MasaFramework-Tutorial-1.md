@@ -51,9 +51,9 @@ dotnet new masafx --name mfDemo
 
 项目区分`src/ApiGateways`，`src/Contracts`，`src/Services`，`src/Web`四层，这个时候可能就会有很多人有疑惑了，为什么跟传统的Abp架构设计有些差异，其实这个就是MasaFramework的框架美妙之处。
 
-`src/ApiGateways`中包含对外使用的接口实现，相当于我可以直接将`src/ApiGateways`给`src/Web`的前端项目使用，这样的好处就是减少前端项目的依赖性，并且利于接口的快速对接。
+`src/ApiGateways`中包含对外使用的接口实现（`站长注：客户端接口调用的封装`），相当于我可以直接将`src/ApiGateways`给`src/Web`的前端项目使用，这样的好处就是减少前端项目的依赖性，并且利于接口的快速对接。
 
-`src/Contracts`中包含了基本的模型，和一些共享的东西，`src/Contracts`是纯粹的，没有任何依赖，所以`src/ApiGateways`和`src/Services`都会直接依赖`src/Contracts`，用于共享Module或其他东西。
+`src/Contracts`中包含了基本的模型，和一些共享的东西，`src/Contracts`是纯粹的，没有任何依赖，所以`src/ApiGateways`和`src/Services`都会直接依赖`src/Contracts`，用于共享Model或其他东西。
 
 `src/Services`中就是包含了具体业务和实现，并且包含`Host`，在`Application`中包含业务处理或事件处理：
 
@@ -75,7 +75,7 @@ MasaFramework的设计就是简化项目复杂，将其揉合在一个项目中�
 
 创建的默认的模板提供是Blazor Server模式的项目，可以自行拆分成三层项目`mfDemo.Shared`，`mfDemo.Server`，`mfDemo.WebAssembly`三层项目架构。
 
-mfDemo.Shared可以理解成项目的所有实现和界面等一切功能。
+mfDemo.Shared可以理解成项目的所有实现和界面文件组织等一切功能。
 
 mfDemo.Server其实就是个Blazor Server的壳，用于托管mfDemo.Shared项目。
 

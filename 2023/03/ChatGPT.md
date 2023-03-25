@@ -1,5 +1,5 @@
 ---
-title: ChatGPT资源分享
+title: 【收藏】ChatGPT资源分享
 slug: ChatGPT
 description: 资源分享
 date: 2023-03-23 20:52:47

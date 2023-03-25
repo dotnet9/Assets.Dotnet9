@@ -156,13 +156,6 @@
     {
         "SequenceNumber": 18,
         "Kind": "Friend",
-        "Name": "杨青青个人博客",
-        "Description": "杨青青个人博客网站，是一个专注前端设计领域8年以上的女程序员的个人网站，也是一个提供原创个人博客模板，企业网站模板等优质资源下载的个人原创网站。",
-        "Url": "https://www.yangqq.net/"
-    },
-    {
-        "SequenceNumber": 18,
-        "Kind": "Friend",
         "Name": "江湖人士",
         "Description": "一个分享建站技术的网站，还有技术哦",
         "Url": "https://jhrs.com/"
