@@ -15,6 +15,8 @@ tags: CefSharp
 
 ## 一、示例搭建步骤
 
+先给出本文示例代码：[WpfWithCefSharpDemo](https://github.com/dotnet9/TerminalMACS.ManagerForWPF/tree/master/src/Demo/WpfWithCefSharpDemo)。
+
 ### 1. 创建项目
 
 创建一个WPF项目，比如命名为“WpfWithCefSharpDemo”，Winform项目类似。
@@ -217,7 +219,7 @@ C#传递Json对象给JS的方法：蓝色方框内，点击WPF按钮`C#传递Jso
 
 ## 二、总结
 
-请对着上面的示例完成一遍，如果做过WPF或Winform原生WebBrowser控件的使用的同学，我们这里做个WPF自带WebBrowser控件与CefSharp的优劣势对比结束本文（来着ChatGPT回答的结果），欢迎留言讨论：
+请对着上面的示例完成一遍，如果做过WPF或Winform原生WebBrowser控件的使用的同学，我们这里做个WPF自带WebBrowser控件与CefSharp的优劣势对比结束本文（来自ChatGPT回答的结果），欢迎留言讨论：
 
 **WPF自带的WebBrowser控件优势：**
 
@@ -253,3 +255,8 @@ C#传递Json对象给JS的方法：蓝色方框内，点击WPF按钮`C#传递Jso
 
 - [CefSharp](https://cefsharp.github.io/)
 - [关于CefSharp中C#与JS函数互相调用的应用](https://www.cnblogs.com/guhunjun/p/16229083.html)
+
+- 微信技术交流群：添加微信（dotnet9com）备注“入群”
+- QQ技术交流群：771992300。
+
+![](https://img1.dotnet9.com/site/knowledgeplanet.jpg)
