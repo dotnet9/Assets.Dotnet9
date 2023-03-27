@@ -67,7 +67,7 @@ tags: CefSharp
 上面的代码给了相关的注释，应该很明了：
 
 - JS方法`callCSharpMethod`：用于测试JS调用C#的方法，其中`cefSharpExample`为C#注册的一个对象，`testMethod`是其一个方法，JS中方法名首字母是小写（C#里按规则是大写），首字母这里有区别，要注意一下；
-- JS方法`displayMessage`和`displayJson`：用于测试C#调用JS的方法，方法定义内容，前者入参是一个普通字符串，后者入参是一个JSON字符串。
+- JS方法`displayMessage`和`displayJson`：用于测试C#调用JS的方法，方法定义类似，前者入参是一个普通字符串，后者入参是一个JSON字符串。
 - div元素jsonTable用于展示C#传来的JSon对象数据。
 
 ### 3. 添加CefSharp包
@@ -199,37 +199,55 @@ namespace WpfWithCefSharpDemo
 }
 ```
 
-`CefSharpExample`用于封装JS调用的类及方法定义。
+`CefSharpExample`用于封装JS调用的类及方法定义，注意C#这里`TestMethod`方法名首字母是大写的，前面创建的HTML网页调用的该方法名首字母小写，再提醒一次，这里的区别要注意。
 
 ### 6. 效果展示
 
-JS调用C#的方法：
+JS调用C#的方法：黄色方框内显示的网页内容，点击HTML按钮`调用C#方法`测试。
 
 ![](https://img1.dotnet9.com/2023/03/1601.gif)
 
-C#调用JS的普通方法：
+C#调用JS的普通方法：蓝色方框内显示的WPF控件，点击WPF按钮`调用JS方法`测试。
 
-![](https://img1.dotnet9.com/2023/03/1601.gif)
+![](https://img1.dotnet9.com/2023/03/1602.gif)
 
-C#传递Json对象给JS的方法：
+C#传递Json对象给JS的方法：蓝色方框内，点击WPF按钮`C#传递Json对象到网页`测试。
 
 ![](https://img1.dotnet9.com/2023/03/1603.gif)
 
 ## 二、总结
 
-通过上面的示例，我们再简单的列出几点C#使用CefSharp的优势结束本文：
+请对着上面的示例完成一遍，如果做过WPF或Winform原生WebBrowser控件的使用的同学，我们这里做个WPF自带WebBrowser控件与CefSharp的优劣势对比结束本文（来着ChatGPT回答的结果），欢迎留言讨论：
 
-1. 使用CefSharp可以轻松地在C#应用程序中嵌入一个现代化的Web浏览器，这使得我们可以在应用程序中展示丰富、交互式的Web内容，而不需要用户离开应用程序。
+**WPF自带的WebBrowser控件优势：**
 
-2. CefSharp提供了一个强大的API，我们可以通过它来与JavaScript交互，这使得我们能够在应用程序和Web内容之间建立起更深入的联系。比如，我们可以在JS中调用C#的方法，从而实现更多的功能。
+1. WebBrowser控件是WPF自带的，不需要安装任何其他的库或组件。
 
-3. CefSharp是基于Chromium项目构建的，具有出色的性能和稳定性。它支持多线程浏览和硬件加速渲染，这使得我们可以创建更快、更流畅的用户体验。
+2. WebBrowser控件是基于Internet Explorer内核，因此它在Windows操作系统中有天然的兼容性和稳定性。
 
-4. CefSharp提供了很多高级功能，例如自定义网络请求、拦截网页导航、修改HTML内容等，这些功能使得我们可以更好地控制应用程序中的Web浏览器。
+3. WebBrowser控件提供了许多与浏览器相关的事件，例如Navigating、Navigated、LoadCompleted等，我们可以通过这些事件对网页加载和导航进行控制和反馈。
 
-5. CefSharp本身是开源的，因此在遇到问题时，可以很容易地查看其源代码并进行修改。同时，CefSharp社区也十分活跃，我们可以获得丰富的开发经验和技术支持。
+**WPF自带的WebBrowser控件劣势：**
 
-总的来说，使用C#和CefSharp开发Web应用程序的优势在于，它们提供了一个一流的、现代化的Web浏览器API，以及C#强大的开发工具和生态系统。这让我们能够创造出更美好的用户体验和更强大的功能，同时又能在单个应用程序中集成Web内容。
+1. WebBrowser控件使用的是旧版本的IE内核，不支持现代HTML5、CSS3等标准，而且在性能上也不如CefSharp。
+
+2. WebBrowser控件的API相对较少，难以实现一些高级功能，例如拦截网页导航、自定义渲染等。
+
+**CefSharp优势：**
+
+1. CefSharp是基于Chromium项目构建的，支持最新的HTML5、CSS3等Web标准，并且性能表现更出色。
+
+2. CefSharp提供了一套丰富的API，我们可以通过它来实现多种高级功能，例如自定义网络请求、拦截网页导航、修改HTML内容等。
+
+3. CefSharp使用的是多线程模型和硬件加速渲染，不会阻塞UI线程，同时具有更好的稳定性和安全性。
+
+**CefSharp劣势：**
+
+1. CefSharp需要安装额外的库或组件，增加了开发的复杂度。
+
+2. CefSharp在某些情况下可能会出现性能问题，例如在高密度屏幕上渲染时。
+
+因此，在选择Web浏览器控件时，我们需要根据具体的需求来选择。如果只是简单地展示网页内容，并不需要过多的高级功能，那么WPF自带的WebBrowser控件足以满足需要。但如果需要实现一些复杂的功能，例如自定义网络请求、拦截网页导航等，那么CefSharp可能会更加适合。总的来说，CefSharp相对于WPF自带的WebBrowser控件，具有更强大的功能和更高的性能表现，但使用也相对更加复杂一些。
 
 ## 参考：
 
