@@ -12,10 +12,12 @@ categories: 科技生活
 
 目前测试可用的ChatGPT资源，部分资源请科学后使用，欢迎联系我更新！
 
-2023年03月23号 20:56:32更新
+2023年03月31号 16:11:43更新
 
 |名称|状态|链接|备注|
 |----|----|----|----|
+|智能问答|可用|[https://baimadadao.com/website/home/chat](https://baimadadao.com/website/home/chat)|
+|AI绘图|可用|[https://baimadadao.com/website/home/image](https://baimadadao.com/website/home/image)|
 ||可用|[http://yunhis.com/](http://yunhis.com/)|
 |文心一言|需要申请|[https://yiyan.baidu.com/](https://yiyan.baidu.com/)|
 |Chat For AI|可用|[https://chatforai.com/](https://chatforai.com/)|
