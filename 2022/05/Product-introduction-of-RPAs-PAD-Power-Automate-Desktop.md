@@ -9,7 +9,6 @@ originaltitle: RPA之PAD(Power Automate Desktop) 产品介绍
 originallink: https://blog.csdn.net/i2blue/article/details/125037626
 draft: False
 cover: https://img1.dotnet9.com/2022/05/6117.png
-albums: 学RPA吧
 categories: .NET相关
 ---
 

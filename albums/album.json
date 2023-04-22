@@ -48,12 +48,6 @@
     "Cover": "albums/album_wpfdesign.png"
   },
   {
-    "SequenceNumber":8,
-    "Name": "WPF开发者",
-    "Slug": "wpf-developer",
-    "Cover": "albums/album_wpfdevelopers.gif"
-  },
-  {
     "SequenceNumber":9,
     "Name": "开源Winform",
     "Slug": "open-source-winform",
@@ -64,17 +58,5 @@
     "Name": "开源Flutter",
     "Slug": "open-source-flutter",
     "Cover": "albums/album_flutter.png"
-  },
-  {
-    "SequenceNumber":11,
-    "Name": "学RPA吧",
-    "Slug": "Let-us-learn-rpa-together",
-    "Cover": "albums/album_rpa.jpg"
-  },
-  {
-    "SequenceNumber":12,
-    "Name": "Dotnet9WPFControls",
-    "Slug": "wpf-Dotnet9WPFControls",
-    "Cover": "albums/album_wpf.png"
   }
 ]

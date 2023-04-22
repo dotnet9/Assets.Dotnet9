@@ -9,7 +9,6 @@ originaltitle: RPA之基于FlaUI的微信发送消息给某人
 originallink: https://kesshei.blog.csdn.net/article/details/124955177
 draft: False
 cover: https://img1.dotnet9.com/2022/05/cover_54.png
-albums: 学RPA吧
 categories: .NET相关
 ---
 
