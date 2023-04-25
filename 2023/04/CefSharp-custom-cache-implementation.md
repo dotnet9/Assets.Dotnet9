@@ -1,10 +1,10 @@
 ---
 title: CefSharp自定义缓存实现
 slug: CefSharp-custom-cache-implementation
-description: 有在客户端内嵌网页的需求吗？CefSharp可能是个不错的选择！
+description: 使用好CefSharp的缓存功能，可以提高应用程序的性能和用户体验，减少网络流量和服务器负载，并支持离线访问，是一个非常有用的特性。
 date: 2023-04-25 11:36:26
 copyright: Default
-draft: true
+draft: false
 cover: https://img1.dotnet9.com/2023/03/cover_14.png
 categories: WPF,.NET相关,Winform
 tags: CefSharp
@@ -12,14 +12,15 @@ tags: CefSharp
 
 大家好，我是沙漠尽头的狼。
 
-上文介绍了[《C#使用CefSharp内嵌网页-并给出C#与JS的交互示例》](https://dotnet9.com/2023/03/Csharp-uses-CefSharp-to-embed-web-page-and-gives-an-example-of-the-interaction-between-Csharp-and-JS)，本文介绍CefSharp的缓存实现，先来说说添加缓存的好处如下：
+上文介绍了[《C#使用CefSharp内嵌网页-并给出C#与JS的交互示例》](https://dotnet9.com/2023/03/Csharp-uses-CefSharp-to-embed-web-page-and-gives-an-example-of-the-interaction-between-Csharp-and-JS)，本文介绍CefSharp的缓存实现，先来说说添加缓存的好处：
 
-1. 加速页面加载：CefSharp缓存可以缓存已经加载过的页面和资源，当用户再次访问相同的页面时，可以直接从缓存中加载，而不需要重新下载和解析页面和资源，从而加快页面加载速度。
-2. 减少网络流量：理由同上。
-3. 提高用户体验：CefSharp缓存可以提高用户体验，因为它可以使页面加载更快，减少页面闪烁和重新加载的情况，从而提高用户满意度。
-4. 离线访问：CefSharp缓存可以使应用程序支持离线访问，因为它可以缓存已经下载过的页面和资源，当用户没有网络连接时，可以直接从缓存中加载页面和资源。
+1. 提高页面加载加速：CefSharp缓存可以缓存已经加载过的页面和资源，当用户再次访问相同的页面时，可以直接从缓存中加载，而不需要重新下载和解析页面和资源，从而加快页面加载速度。
+2. 减少网络流量：使用缓存可以减少网络流量，因为已经下载过的资源可以直接从缓存中读取，而不需要重新下载。
+3. 提高用户体验：由于缓存可以提高页面加载速度，因此可以提高用户的体验，用户可以更快地访问页面和资源，从而更加愉快地使用应用程序。
+4. 减少服务器负载：使用缓存可以减少服务器的负载，因为已经下载过的资源可以直接从缓存中读取，而不需要重新生成和发送。
+5. 离线访问：可以使应用程序支持离线访问，因为它可以缓存已经下载过的页面和资源，当用户没有网络连接时，可以直接从缓存中加载页面和资源。
 
-CefSharp缓存可以提高应用程序的性能和用户体验，减少网络流量，并支持离线访问。
+总之，使用缓存可以提高应用程序的性能和用户体验，减少网络流量和服务器负载，并支持离线访问，是一个非常有用的特性。
 
 本文示例：[Github](https://github.com/dotnet9/TerminalMACS.ManagerForWPF/tree/master/src/Demo/WpfWithCefSharpCacheDemo)
 
@@ -87,12 +88,14 @@ cacheController.SetCacheLimit(100 * 1024 * 1024); // 100MB
 
 这是本文介绍的重点，相对于默认缓存，`自定义缓存`有以下好处：
 
-1. 更好的性能：自定义缓存可以根据应用程序的需求和特定的场景进行配置，以获得更好的性能。默认的缓存可能不适合某些特定的场景或者不适合您的应用程序的需求，而自定义缓存则可以根据您的需求进行调整，以获得更好的性能。
-2. 更好的响应性：自定义缓存可以更好地适应应用程序的响应性需求。默认的缓存可能不能提供足够的响应性能，而自定义缓存则可以根据您的需求进行调整，以提供更好的响应性能。
-3. 更好的安全性：自定义缓存可以提供更好的安全性。默认的缓存可能存在一些安全漏洞，而自定义缓存则可以根据您的需求进行调整，以提供更好的安全性能。
-4. 更好的兼容性：自定义缓存可以更好地适应不同的浏览器和设备。默认的缓存可能不能提供足够的兼容性，而自定义缓存则可以根据您的需求进行调整，以提供更好的兼容性。
+1. 更加灵活：可以根据应用程序的需求来灵活地配置缓存策略和缓存大小，从而更好地满足应用程序的需求。
+2. 更好的性能：可以根据应用程序的需求和特定的场景进行配置，以获得更好的性能。默认的缓存可能不适合某些特定的场景或者不适合您的应用程序的需求，而自定义缓存则可以根据您的需求进行调整，以获得更好的性能。
+3. 更好的安全性：可以更好地保护用户的隐私和安全，因为可以控制缓存中存储的内容和缓存的生命周期。
+4. 更加可控：可以更好地控制缓存的行为，例如可以控制缓存的清除时间和清除策略，从而更好地管理缓存。
+5. 更好的兼容性：可以更好地适应不同的浏览器和设备，默认的缓存可能不能提供足够的兼容性，而自定义缓存则可以根据您的需求进行调整，以提供更好的兼容性。
+6. 更加高效：可以更好地利用系统资源，例如可以使用更快的存储设备来存储缓存，从而提高缓存的读写速度。
 
-总结：自定义缓存可以为 CefSharp.Wpf 应用程序提供更好的性能、响应性、安全性和兼容性，从而提高应用程序的质量和用户体验，人话就是更好的`操控`。
+总结：自定义缓存可以提供更好的性能、响应性、安全性和兼容性，从而提高应用程序的质量和用户体验，人话就是更好的`操控`。
 
 ### 2.1. 代码实现
 
@@ -114,7 +117,23 @@ public TestCefCacheView()
 
 #### 2.1.2. 请求拦截处理程序
 
-在下面的`GetResourceRequestHandler`方法里返回`CefResourceRequestHandler`实例，页面中资源请求时会调用此方法：
+CefSharp里的`IRequestHandler`是一个接口，用于处理浏览器发出的请求。它定义了一些方法，可以在请求被发送到服务器之前或之后对请求进行处理。
+
+`IRequestHandler`的实现类可以用于以下几个方面：
+
+1. 拦截请求：可以通过实现OnBeforeBrowse方法来拦截请求，从而控制浏览器的行为。例如，可以在请求被发送到服务器之前检查请求的URL，如果不符合要求，则可以取消请求或者重定向到其他页面。
+
+2. 修改请求：可以通过实现OnBeforeResourceLoad方法来修改请求，例如可以添加一些自定义的HTTP头信息，或者修改请求的URL。
+
+3. 处理响应：可以通过实现OnResourceResponse方法来处理服务器返回的响应，例如可以检查响应的状态码和内容，从而决定是否继续加载页面。
+
+4. 缓存控制：可以通过实现OnQuotaRequest方法来控制缓存的大小和清除策略，从而优化缓存的使用。
+
+总之，`IRequestHandler`的实现类可以用于控制浏览器的行为，优化网络请求和缓存的使用，从而提高应用程序的性能和用户体验。
+
+我们不直接实现接口`IRequestHandler`，而是继承它的一个默认实现类`RequestHandler`，这可以简化我们的开发，毕竟实现接口要列出一系列接口方法。
+
+我们重载方法`GetResourceRequestHandler`, 在这个方法里返回`CefResourceRequestHandler`实例，页面中资源请求时会调用此方法：
 
 ```C#
 using CefSharp;
@@ -135,11 +154,25 @@ internal class CefRequestHandlerc : RequestHandler
 
 #### 2.1.3. 资源请求拦截程序
 
+在CefSharp中，`IResourceRequestHandler`接口是用于处理资源请求的，它可以拦截浏览器发出的资源请求，例如图片、CSS、JavaScript等，从而实现对资源请求的控制和优化。
+
+具体来说，`IResourceRequestHandler`接口定义了一些方法，例如`OnBeforeResourceLoad`、`OnResourceResponse`等方法，这些方法可以用于拦截请求、修改请求、处理响应等方面。例如：
+
+1. OnBeforeResourceLoad：在浏览器请求资源之前被调用，可以用于修改请求，例如添加一些自定义的HTTP头信息，或者修改请求的URL。
+
+2. OnResourceResponse：在浏览器接收到服务器返回的响应之后被调用，可以用于处理响应，例如检查响应的状态码和内容，从而决定是否继续加载页面。
+
+3. OnResourceLoadComplete：在资源加载完成后被调用，可以用于处理资源加载完成后的操作，例如保存资源到本地缓存。
+
+通过实现`IResourceRequestHandler`接口，可以对资源请求进行拦截和优化，从而提高应用程序的性能和用户体验。
+
+这里我们也不直接实现`IResourceRequestHandler`接口，我们定义`CefResourceRequestHandler`类，继承该接口的默认实现类`ResourceRequestHandler`。
+
 在下面的`CefResourceRequestHandler`类中:
 
-1、`GetResourceHandler`方法：处理资源是否需要缓存，返回null不缓存，返回`CefResourceHandler`表示需要缓存，在这个类中做跨域处理。
-2、`GetResourceResponseFilter`方法：注册资源缓存的操作类，即资源下载的实现。
-3、`OnBeforeResourceLoad`方法：在这个方法里，我们可以实现给页面传递header参数。
+1. `GetResourceHandler`方法：处理资源是否需要缓存，返回null不缓存，返回`CefResourceHandler`表示需要缓存，在这个类中做跨域处理。
+2. `GetResourceResponseFilter`方法：注册资源缓存的操作类，即资源下载的实现。
+3. `OnBeforeResourceLoad`方法：在这个方法里，我们可以实现给页面传递header参数。
 
 ```C#
 using System.Collections.Specialized;
@@ -200,7 +233,21 @@ internal class CefResourceRequestHandler : ResourceRequestHandler
 
 #### 2.1.4. CefResourceHandler
 
-处理跨域问题：
+在CefSharp中，`IResourceHandler`接口是用于处理资源的，它可以拦截浏览器发出的资源请求，并返回自定义的资源内容，从而实现对资源的控制和优化。
+
+具体来说，`IResourceHandler`接口定义了一些方法，例如`ProcessRequest`、`GetResponseHeaders`、`ReadResponse`等方法，这些方法可以用于处理资源请求、获取响应头信息、读取响应内容等方面。例如：
+
+1. ProcessRequest：在浏览器请求资源时被调用，可以用于处理资源请求，例如从本地缓存中读取资源内容，或者从网络中下载资源内容。
+
+2. GetResponseHeaders：在浏览器请求资源时被调用，可以用于获取响应头信息，例如设置响应的MIME类型、缓存策略等。
+
+3. ReadResponse：在浏览器请求资源时被调用，可以用于读取响应内容，例如从本地缓存中读取资源内容，或者从网络中下载资源内容。
+
+通过实现IResourceHandler接口，可以对资源进行自定义处理，例如从本地缓存中读取资源内容，从而提高应用程序的性能和用户体验。
+
+这里我们也不直接实现`IResourceHandler`接口，我们定义`CefResourceHandler`类，继承该接口的默认实现类`ResourceHandler`。
+
+在`CefResourceHandler`的构造函数里只处理跨域问题，其他需求可通过上面接口的方法查找资料处理即可：
 
 ```C#
 using CefSharp;
@@ -235,7 +282,79 @@ internal class CefResourceHandler : ResourceHandler
 
 #### 2.1.5. CefResponseFilter
 
-处理文件缓存实际操作类，即资源下载实现：
+在CefSharp中，`IResponseFilter`接口是用于过滤响应内容的，它可以拦截浏览器接收到的响应内容，并对其进行修改或者过滤，从而实现对响应内容的控制和优化。
+
+具体来说，`IResponseFilter`接口定义了一些方法，例如`InitFilter`、`Filter`、`GetSize`等方法，这些方法可以用于初始化过滤器、过滤响应内容、获取过滤后的响应内容大小等方面。例如：
+
+1. InitFilter：在浏览器接收到响应内容时被调用，可以用于初始化过滤器，例如设置过滤器的状态、获取响应头信息等。
+
+2. Filter：在浏览器接收到响应内容时被调用，可以用于过滤响应内容，例如修改响应内容、删除响应内容等。
+
+3. GetSize：在浏览器接收到响应内容时被调用，可以用于获取过滤后的响应内容大小，例如用于计算响应内容的压缩比例等。
+
+站长使用的`CefSharp.Wpf`的`89.0.170.0`版本中的`IResponseFilter`接口没有`GetSize`方法。在该版本中，`IResponseFilter`接口只定义了两个方法：`InitFilter`和`Filter`。
+
+如果在该版本中您需要获取过滤后的响应内容大小，可以考虑在`Filter`方法中自行计算。例如，在`Filter`方法中，您可以将过滤后的响应内容写入一个缓冲区，并记录缓冲区的大小，最后返回过滤后的响应内容和缓冲区的大小。
+
+```C#
+public class MyResponseFilter : IResponseFilter
+{
+    private MemoryStream outputStream = new MemoryStream();
+
+    public void Dispose()
+    {
+        outputStream.Dispose();
+    }
+
+    public bool InitFilter()
+    {
+        return true;
+    }
+
+    public FilterStatus Filter(Stream dataIn, out long dataInRead, Stream dataOut, out long dataOutWritten)
+    {
+        dataInRead = 0;
+        dataOutWritten = 0;
+
+        byte[] buffer = new byte[4096];
+        int bytesRead = 0;
+
+        do
+        {
+            bytesRead = dataIn.Read(buffer, 0, buffer.Length);
+            if (bytesRead > 0)
+            {
+                outputStream.Write(buffer, 0, bytesRead);
+            }
+        } while (bytesRead > 0);
+
+        byte[] outputBytes = outputStream.ToArray();
+        dataOut.Write(outputBytes, 0, outputBytes.Length);
+
+        dataInRead = outputBytes.Length;
+        dataOutWritten = outputBytes.Length;
+
+        return FilterStatus.Done;
+    }
+
+    public int GetResponseFilterBufferSize()
+    {
+        return 0;
+    }
+
+    public int GetResponseFilterDelay()
+    {
+        return 0;
+    }
+}
+
+```
+
+在上述示例代码中，我们在`Filter`方法中将过滤后的响应内容写入了一个`MemoryStream`对象中，并记录了缓冲区的大小。最后，我们在Filter方法的返回值中返回了过滤后的响应内容和缓冲区的大小。
+
+总结，通过实现`IResponseFilter`接口，可以对响应内容进行自定义处理，例如对响应内容进行压缩、加密等操作，从而提高应用程序的性能和安全性。
+
+本文示例这里定义类`CefResponseFilter`直接实现接口处理文件缓存实际操作类，即资源下载实现：
 
 ```C#
 using CefSharp;
@@ -407,41 +526,41 @@ internal static class CacheFileHelper
 }
 ```
 
-自定义缓存的子目录以资源的域名为名创建：
+自定义缓存的子目录以资源的域名(Host)为目录名称创建：
 
 ![](https://img1.dotnet9.com/2023/04/0403.png)
 
-打开缓存的[Dotnet9](https://dotnet9.com)目录，和程序发布目录基本一致，这更适合人看了！！！
+打开缓存的[dotnet9.com](https://dotnet9.com)目录，通过查看目录结构和程序发布目录基本一致，这更适合人看了，是不？
 
 ![](https://img1.dotnet9.com/2023/04/0404.png)
 
 ### 2.2. 可能存在的问题
 
-第一点，站长目前遇到的问题，后面4点由[文心一言](https://yiyan.baidu.com/)提供解释。
+第一点，站长目前遇到的问题，后面4点由[Token AI](https://open666.cn/)提供解释。
 
-#### 2.2.1. 对缓存的资源URL带QueryString的方式支持不好。
+#### 2.2.1. 对缓存的资源URL带QueryString的方式支持不好
    
 建议用Route(路由的方式：https://dotnet9.com/albums/wpf)代替QueryString(查询参数的试工：https://dotnet9.com/albums?slug=wpf)的方式，站长有空再研究下QueryString的缓存方式。
 
 如果确实资源带QueryString，那对于这种资源就放开缓存，直接通过网络请求吧。
 
-#### 2.2.2. 内存泄漏
+#### 2.2.2. 缓存一致性问题
 
-使用自定义缓存时，可能会发生内存泄漏。这是因为缓存实例在使用后没有被正确地销毁或回收，导致持有的内存无法释放。要避免内存泄漏，请确保在缓存实例不再需要时正确地释放它们。
+如果自定义缓存不正确地处理了缓存一致性，可能会导致浏览器显示过期的内容或者不一致的内容。例如，如果缓存了一个网页，但是该网页在服务器上已经被更新了，如果自定义缓存没有正确地处理缓存一致性，可能会导致浏览器显示过期的网页内容。
 
-#### 2.2.3. 性能问题
+#### 2.2.3. 缓存空间问题
 
-自定义缓存可能会影响应用程序的性能。这是因为缓存实例可能会消耗大量的系统资源，如内存和处理器时间。如果缓存实例的大小或性能限制了应用程序的性能，则可能会导致应用程序的运行速度变慢。要确保自定义缓存不会成为应用程序性能的瓶颈，请确保它们的大小和性能不会对应用程序的运行产生负面影响。
+如果自定义缓存没有正确地管理缓存空间，可能会导致浏览器占用过多的内存或者磁盘空间。例如，如果自定义缓存缓存了大量的数据，但是没有及时清理过期的数据或者限制缓存的大小，可能会导致浏览器占用过多的内存或者磁盘空间。
 
-#### 2.2.4. 兼容性问题
+#### 2.2.4. 缓存性能问题
 
-自定义缓存可能会与应用程序的依赖项发生冲突。这是因为不同的依赖项可能使用不同的缓存实现或者有不同的配置参数。要确保自定义缓存与应用程序的依赖项相容，请在设计阶段考虑到缓存实现和配置参数的差异，并进行适当的测试和兼容性验证。
+如果自定义缓存没有正确地处理缓存性能，可能会导致浏览器的性能下降。例如，如果自定义缓存没有正确地处理缓存的读取和写入，可能会导致浏览器的响应速度变慢。
 
-#### 2.2.5. 权限问题
+#### 2.2.5. 缓存安全问题
 
-在某些情况下，自定义缓存可能需要访问应用程序的私有数据或者访问受限的资源。在这种情况下，可能需要使用 CefSharp.WPF 提供的安全性功能来确保缓存的正确使用，并且遵守应用程序的访问控制策略。
+如果自定义缓存没有正确地处理缓存安全，可能会导致浏览器的安全性受到威胁。例如，如果自定义缓存缓存了敏感数据，但是没有正确地处理缓存的加密和解密，可能会导致敏感数据泄露。
 
-总之，在使用自定义缓存时，需要注意内存泄漏、性能问题、兼容性问题和权限问题等问题，并根据具体情况进行适当的优化和测试。
+因此，在自定义缓存时，需要注意处理缓存一致性、缓存空间、缓存性能和缓存安全等问题，以确保浏览器的正常运行和安全性。
 
 ## 参考：
 
