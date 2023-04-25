@@ -4,7 +4,7 @@ slug: Dotnet9-website-has-been-restructured-and-launched-again-this-time-it-is-b
 description: 网站已经进行了重构，并采用了简约风格，以提供更好的用户体验。
 date: 2023-04-23 08:28:13
 copyright: Default
-draft: false
+draft: true
 cover: https://img1.dotnet9.com/2023/04/cover_03.jpg
 categories: Web API,Razor Pages,EF Core
 tags: Dotnet9,MASA Framework,Razor Pages,EF Core
