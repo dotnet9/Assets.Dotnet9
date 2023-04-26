@@ -104,7 +104,7 @@ Python 之禅 by Tim Peters
 
 技术交流群
 
-1. 添加站长个人微信(dotnet9)加入微信群。
+1. 添加站长个人微信(dotnet9com)加入微信群。
 
 ![Dotnet9](https://img1.dotnet9.com/site/wechatowner.jpg)
 
