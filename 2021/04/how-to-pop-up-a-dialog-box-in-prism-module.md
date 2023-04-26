@@ -194,8 +194,8 @@ admin
 > 
 > 时间如流水，只能流去不流回。
 > 
->- 公众号：乐趣课堂
->- 号主微信号：dotnet9
+>- 公众号：Dotnet9
+>- 号主微信号：dotnet9com
 >- 作者、编辑：沙漠之尽头的狼
 >- 乐趣课堂仓库（欢迎提issue）：https://github.com/dotnet9/lqclass.com
 >- 日期：2021-04-14
