@@ -565,7 +565,6 @@ internal static class CacheFileHelper
 ## 参考：
 
 - [CefSharp](https://cefsharp.github.io/)
-- [关于CefSharp中C#与JS函数互相调用的应用](https://www.cnblogs.com/guhunjun/p/16229083.html)
 
 - 微信技术交流群：添加微信（dotnet9com）备注“入群”
 - QQ技术交流群：771992300。
