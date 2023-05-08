@@ -154,6 +154,13 @@
         "Url": "http://www.hzhcontrols.com/"
     },
     {
+        "SequenceNumber": 17,
+        "Kind": "Friend",
+        "Name": "程序设计实验室",
+        "Description": "一个技术探索与分享的平台，专注于互联网热门新技术探索与团队敏捷开发实践，包括Web前后端、移动端开发、机器学习、数据分析、算法、Linux等技术，欢迎探讨、分享学习实践经验。",
+        "Url": "http://blog.deali.cn"
+    },
+    {
         "SequenceNumber": 18,
         "Kind": "Friend",
         "Name": "江湖人士",

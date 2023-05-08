@@ -19,6 +19,7 @@
 
 | 日期        | 金额  | 赞助者                       | 来源                                                                    |
 | ---------- | ----: | --------------------------- | ----------------------------------------------------------------------- |
+| 2023-05-08 | 5￥   | 云醉月眠 | 公众号文章赞赏[《请Dotnet9知识星球付费用户找我退费！》](https://mp.weixin.qq.com/s/cKsN3iUl2f8MMM9MKzn_hQ) |
 | 2023-04-19 | 30￥   | 清风(johnzhao56)， [https://www.cnblogs.com/dikongpulu/](https://www.cnblogs.com/dikongpulu/) | 微信红包 |
 | 2022-11-09 | 38.88￥   | 黑哥聊dotNet | 微信付款码 |
 | 2022-11-08 | 5￥   | 國 | 公众号文章赞赏[《【炫丽】从0开始做一个WPF+Blazor对话小程序》](https://mp.weixin.qq.com/s/c9PTK0lcKSOjyHjrHhsPjg) |
