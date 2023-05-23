@@ -15,7 +15,7 @@ tags: Dotnet9,MASA Framework,Razor Pages,EF Core
 
 大家好，我是沙漠尽头的狼。
 
-我的网站Dotnet9 (https://dotnet9.com) 进行了新一轮的重构：前台由Vue 3换回[ASP.NET Core Razor Pages](https://learn.microsoft.com/zh-cn/aspnet/core/razor-pages/?view=aspnetcore-8.0&tabs=visual-studio)，风格以简约为主，主打内容为王，放弃花哨，网友称风格类似早期博客园，站长其实买的杨青青个人博客（https://www.yangqq.com/）的静态模板；后端采用MASA Framework搭建，框架地址是 https://blazor.masastack.com/framework/concepts/overview，后端依然以DDD设计为开发指导，这次加入了CQRS。开发总体规划是：后端框架采用MASA Framework应该是不变了，并且前后台现在全面拥抱了 .NET 8。
+我的网站Dotnet9 (https://dotnet9.com) 进行了新一轮的重构：前台由Vue 3换回[ASP.NET Core Razor Pages](https://learn.microsoft.com/zh-cn/aspnet/core/razor-pages/?view=aspnetcore-8.0&tabs=visual-studio)，风格以简约为主，主打内容为王，放弃花哨，网友称风格类似早期博客园，站长其实买的杨青青个人博客（https://www.yangqq.com/）的静态模板；后端采用MASA Framework搭建，框架地址是 https://www.masastack.com/framework，后端依然以DDD设计为开发指导，这次加入了CQRS。开发总体规划是：后端框架采用MASA Framework应该是不变了，并且前后台现在全面拥抱了 .NET 8。
 
 对了，网站开源地址是：https://github.com/dotnet9/dotnet9 。
 
@@ -36,7 +36,7 @@ tags: Dotnet9,MASA Framework,Razor Pages,EF Core
 
 技术栈：ASP.NET Core 8.0 Web API ( MASA Framework + EF Core 8.0(PostgreSQL), DDD + CQRS)
 
-在后台后端方面，Dotnet9网站采用了 [MASA Framework](https://blazor.masastack.com/framework/concepts/overview) 作为开发框架。[MASA Framework](https://www.masastack.com/framework) 是.NET下一代微服务开发框架, 助力开发者和企业开启全新的现代化应用开发交付体验。
+在后台后端方面，Dotnet9网站采用了 [MASA Framework](https://www.masastack.com/framework) 作为开发框架。[MASA Framework](https://www.masastack.com/framework) 是.NET下一代微服务开发框架, 助力开发者和企业开启全新的现代化应用开发交付体验。
 
 在开发设计上，Dotnet9网站依然采用了DDD（领域驱动设计）的思想实践。这种设计思想可以帮助开发者更好地理解业务需求，将业务逻辑和技术实现分离开来，从而提高代码的可维护性和可扩展性。
 
