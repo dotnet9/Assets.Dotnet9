@@ -118,7 +118,7 @@ ImageSharp	Currently in beta state	SixLabors.ImageSharp.Drawing	QrCodeBitmapExte
 var bmp = qr.ToBitmap(10, 2);
 ```
 
-- 拿到bmp以后，根据我的布局设定，我以图片的尺寸作为基地，1/10即为字高
+- 拿到bmp以后，根据我的布局设定，我以图片的尺寸作为基底，1/10即为字高
 
 ```CSharp
 int h = bmp.Height / 10;
@@ -226,14 +226,14 @@ private static IEnumerable<string> GetTextLines(
 
 **注意: 这是在网上找到的有部分修改，不是我从0开始写的**
 
-- 左下脚二维码
+- 左下角二维码
 
 ```CSharp
 // 因为二维码自身就对周围做了缩进处理 所以不需要再缩进
 canvas.DrawBitmap(bmp, new SKPoint(00 * h, 10 * h));
 ```
 
-- 右下脚文字备注
+- 右下角文字备注
 
 ```CSharp
 int row = 1;
