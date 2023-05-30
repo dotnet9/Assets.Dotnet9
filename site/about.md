@@ -10,7 +10,7 @@
 
 <div align="center">
 
-一个使用`Dotnet 7`开发的`博客`系统，一直在开发中...
+一个使用`Dotnet 8`开发的`博客`系统，一直在开发中...
 
  ![dotnet-version](https://img.shields.io/badge/.NET%207.0-blue)  ![Visual Studio 2022](https://img.shields.io/badge/Visual%20Studio%20-2022-blueviolet)  <a target="_blank" href="https://qm.qq.com/cgi-bin/qm/qr?k=iL6egdGSGCMPezcUyzMPEcs9qsllgwr-&jump_from=webapi"><img border="0" src="https://pub.idqqimg.com/wpa/images/group.png" alt="Dotnet9软件技术交流" title="Dotnet9软件技术交流"></a> [![码云](https://img.shields.io/badge/Gitee-%E7%A0%81%E4%BA%91-orange)](https://gitee.com/dotnet9/Dotnet9)   [![Github](https://img.shields.io/badge/%20-github-%2324292e)](https://github.com/dotnet9/Dotnet9) [![Github stars](https://img.shields.io/github/stars/dotnet9/Dotnet9)](https://github.com/dotnet9/Dotnet9)
 
@@ -23,9 +23,9 @@
   2. [x] 已有功能：文章列表、分类文章列表、专辑文章列表、文章归档、时间轴、网站地址、标签云、文章详情、RSS等。
   3. [ ] 还有很多功能待开发，比如登录、前台文章创建和文章修改等。
 - [x] 后台前端
-  1. [x] 使用[Vue 3.0](https://cn.vuejs.org/guide/introduction.html)搭建后台前端。
-  2. [x] 组件库使用[Element Plus](https://element-plus.gitee.io/zh-CN/guide/design.html)。
-  3. [ ] 参考的开源项目[Panda](https://github.com/coolqingcheng/Panda/)后台[前端](https://github.com/coolqingcheng/Panda/tree/master/Admin.Client)，正在调试中。
+  1. [x] 使用[React](https://react.dev/)搭建后台前端。
+  2. [x] 组件库使用[Semi-UI](https://semi.design/zh-CN/start/getting-started)。
+  3. [ ] 参考的开源项目[TokenBlog](https://github.com/239573049/TokenBlog)后台[前端](https://github.com/239573049/TokenBlog/tree/master/web)，正在调试中。
 - [x] 后端
   1. [x] 使用 [ASP.NET Core 8.0 Web API](https://learn.microsoft.com/zh-cn/aspnet/core/web-api/?view=aspnetcore-8.0) 搭建，框架选择 [Masa Framework(DDD+CQRS)](https://www.masastack.com/framework)。
   2. [x] 数据库使用 [EF Core](https://learn.microsoft.com/zh-cn/ef/core/) + [PostgreSQL](https://www.postgresql.org/)
