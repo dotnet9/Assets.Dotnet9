@@ -7,6 +7,13 @@
     "Description":"这个Github仓库专注于收集和介绍各种开源的C#项目，涵盖了多个领域和应用场景, 这些项目都是由全球开发者共同维护和更新，具有高质量、可靠性和可扩展性。通过这个仓库，您可以快速了解和发现适合自己的C#项目，并参与到开源社区中，共同推动C#生态的发展。"
   },
   {
+    "SequenceNumber":1,
+    "Name": "WPF-Prism",
+    "Slug": "wpf-prism",
+    "Cover": "albums/album_wpf_prism.png",
+    "Description":"Prism是一个框架，用于在WPF，Xamarin Forms，Uno Platform和WinUI中构建松散耦合，可维护和可测试的XAML应用程序。每个平台都有单独的版本，这些版本将在独立的时间表上开发。Prism 提供了一组设计模式的实现，这些模式有助于编写结构良好且可维护的 XAML 应用程序，包括 MVVM、依赖项注入、命令、事件聚合器等。"
+  },
+  {
     "SequenceNumber":2,
     "Name": "MASA Framework",
     "Slug": "masa-framework",
