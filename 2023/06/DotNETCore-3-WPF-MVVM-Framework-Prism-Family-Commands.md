@@ -1,5 +1,5 @@
 ---
-title: .NET Core 3 WPF MVVM框架 Prism系列之命令
+title: (2/7).NET Core 3 WPF MVVM框架 Prism系列之命令
 slug: DotNETCore-3-WPF-MVVM-Framework-Prism-Family-Commands
 description: 如何在.NET Core3环境下使用MVVM框架Prism的命令的用法
 date: 2023-06-10 23:41:26

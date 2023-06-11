@@ -1,5 +1,5 @@
 ---
-title: .NET Core 3 WPF MVVM框架 Prism系列之模块化
+title: (3/7).NET Core 3 WPF MVVM框架 Prism系列之模块化
 slug: Modularization-of-the-Prism-family-of-the-dotNET-Core-3-WPF-MVVM-framework
 description: 如何在.NET Core3环境下使用MVVM框架Prism的应用程序的模块化
 date: 2023-06-10 23:56:28

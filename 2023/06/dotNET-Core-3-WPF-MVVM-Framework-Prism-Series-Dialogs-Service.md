@@ -1,5 +1,5 @@
 ---
-title: .NET Core 3 WPF MVVM框架 Prism系列之对话框服务
+title: (7/7).NET Core 3 WPF MVVM框架 Prism系列之对话框服务
 slug: dotNET-Core-3-WPF-MVVM-Framework-Prism-Series-Dialogs-Service
 description: 如何在.NET Core3环境下使用MVVM框架Prism的对话框服务，这也是prism系列的最后一篇完结文章
 date: 2023-06-11 00:47:19
