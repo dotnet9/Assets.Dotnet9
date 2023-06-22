@@ -1,5 +1,10 @@
 [
   {
+    "Time": "2023-06-22",
+    "Title": "前台回归Blazor Server版本上线",
+    "Content": ".NET 8 Preview 5体验Blazor Web App，在Razor Pages中添加Razor组件，但添加的时间戳工具无交互能力，索性全部改为Blazor Server上线了"
+  },
+  {
     "Time": "2023-04-22",
     "Title": "Masa Framework + Razor Pages版本上线",
     "Content": "历经一个月，学习Masa Framework(DDD + CQRS), 使用一个清爽的杨青青博客前台静态页面完成又一轮重构，着急的上线了"

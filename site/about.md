@@ -12,20 +12,18 @@
 
 一个使用`Dotnet 8`开发的`博客`系统，一直在开发中...
 
- ![dotnet-version](https://img.shields.io/badge/.NET%207.0-blue)  ![Visual Studio 2022](https://img.shields.io/badge/Visual%20Studio%20-2022-blueviolet)  <a target="_blank" href="https://qm.qq.com/cgi-bin/qm/qr?k=iL6egdGSGCMPezcUyzMPEcs9qsllgwr-&jump_from=webapi"><img border="0" src="https://pub.idqqimg.com/wpa/images/group.png" alt="Dotnet9软件技术交流" title="Dotnet9软件技术交流"></a> [![码云](https://img.shields.io/badge/Gitee-%E7%A0%81%E4%BA%91-orange)](https://gitee.com/dotnet9/Dotnet9)   [![Github](https://img.shields.io/badge/%20-github-%2324292e)](https://github.com/dotnet9/Dotnet9) [![Github stars](https://img.shields.io/github/stars/dotnet9/Dotnet9)](https://github.com/dotnet9/Dotnet9)
+ ![dotnet-version](https://img.shields.io/badge/.NET%208.0-blue)  ![Visual Studio 2022](https://img.shields.io/badge/Visual%20Studio%20-2022-blueviolet)  <a target="_blank" href="https://qm.qq.com/cgi-bin/qm/qr?k=iL6egdGSGCMPezcUyzMPEcs9qsllgwr-&jump_from=webapi"><img border="0" src="https://pub.idqqimg.com/wpa/images/group.png" alt="Dotnet9软件技术交流" title="Dotnet9软件技术交流"></a> [![码云](https://img.shields.io/badge/Gitee-%E7%A0%81%E4%BA%91-orange)](https://gitee.com/dotnet9/Dotnet9)   [![Github](https://img.shields.io/badge/%20-github-%2324292e)](https://github.com/dotnet9/Dotnet9) [![Github stars](https://img.shields.io/github/stars/dotnet9/Dotnet9)](https://github.com/dotnet9/Dotnet9)
 
  </div>
 
  ## 0. 最新开发情况
 
 - [x] 前台
-  1. [x] 使用 [ASP.NET Core 8 Razor Pages](https://learn.microsoft.com/zh-cn/aspnet/core/razor-pages/?view=aspnetcore-8.0&tabs=visual-studio) 搭建前台。
+  1. [x] 使用 [ASP.NET Core 8 Blazor Server](https://learn.microsoft.com/zh-cn/aspnet/core/blazor/?WT.mc_id=dotnet-35129-website&view=aspnetcore-8.0) 搭建前台。
   2. [x] 已有功能：文章列表、分类文章列表、专辑文章列表、文章归档、时间轴、网站地址、标签云、文章详情、RSS等。
   3. [ ] 还有很多功能待开发，比如登录、前台文章创建和文章修改等。
 - [x] 后台前端
-  1. [x] 使用[React](https://react.dev/)搭建后台前端。
-  2. [x] 组件库使用[Semi-UI](https://semi.design/zh-CN/start/getting-started)。
-  3. [ ] 参考的开源项目[TokenBlog](https://github.com/239573049/TokenBlog)后台[前端](https://github.com/239573049/TokenBlog/tree/master/web)，正在调试中。
+  1. [ ] 技术选型中。
 - [x] 后端
   1. [x] 使用 [ASP.NET Core 8.0 Web API](https://learn.microsoft.com/zh-cn/aspnet/core/web-api/?view=aspnetcore-8.0) 搭建，框架选择 [Masa Framework(DDD+CQRS)](https://www.masastack.com/framework)。
   2. [x] 数据库使用 [EF Core](https://learn.microsoft.com/zh-cn/ef/core/) + [PostgreSQL](https://www.postgresql.org/)
@@ -94,13 +92,13 @@ Python 之禅 by Tim Peters
 
 ## 4. 站长技术栈
 
-1. 开发语言：C/S（C# + WPF\Winform，C++ + Qt Widgets, SwiftUI)、B/S(ASP.NET Core MVC，ASP.NET Core Blazor，React + ASP.NET Core Web API)。
-2. 开发框架：C/S(Prism、Qt Plugin System)、B/S(前端 Ant Design Pro，后端 ASP.NET Core Web API)等。
+1. 开发语言：C/S（C# + WPF\Winform，C++ + Qt Widgets, SwiftUI)、B/S(`ASP.NET Core` MVC/Razor Pages/Blazor，React + `ASP.NET Core Web API`)。
+2. 开发框架：C/S(Prism、Qt Plugin System)、B/S(前端 Ant Design Pro，后端 Masa Framework(`ASP.NET Core Web API`))等。
 3. C/S 控 件 库：Dev Express、Telerik、部分开源控件库(MaterialDesignInXamlToolkit、MahApps.Metro、HandyControl)等。
 4. B/S控件库：Ant Design、Bootstrap、Masa Blazor等。
 5. 通信协议：SignalR、Remoting、WebService、TCP/IP、UDP、HTTP、FTP、ICE、DDS、KNET、ENET、软件总线、事件总线等。
 6. 开发工具：Visual Studio、Qt Creator、Visual Studio Code、xCode等。
-7. 数 据 库：MySQL、Oracle、SQLServer、SQLite、Access、Redis等。
+7. 数 据 库：PostgreSQL、MySQL、Oracle、SQLServer、SQLite、Access、Redis等。
 8. 影音办公类：Adobe（Photoshop 、Axure）、OFFICE（Visio、Word、PPT、Excel）等应用软件。
 
 ## 5. 联系站长
