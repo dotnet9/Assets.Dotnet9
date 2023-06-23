@@ -4,7 +4,7 @@ slug: How-to-optimize-WebAssembly-to-1MB
 description: 将WebAssembly优化到1MB
 date: 2023-01-30 22:35:11
 copyright: Reprint
-author: tokengo
+author: Token
 originaltitle: 如何将WebAssembly优化到1MB?
 originallink: https://www.cnblogs.com/hejiale010426/p/17076817.html
 draft: false
@@ -408,7 +408,7 @@ blazor交流群：452761192
 
 > 本文来自转载。
 >
-> 作者：tokengo
+> 作者：Token
 >
 > 原文标题：如何将WebAssembly优化到1MB?
 >
