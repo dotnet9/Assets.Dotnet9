@@ -5,7 +5,7 @@ description: 网站使用Blazor Wasm开发，网站内容包括在线工具和�
 date: 2023-06-24 22:44:29
 lastmod: 2023-06-25 13:54:47
 copyright: Default
-draft: true
+draft: false
 cover: https://img1.dotnet9.com/2023/06/cover_12.png
 categories: Blazor
 tags: Dotnetools,WASM,Blazor WebAssembly,Client
