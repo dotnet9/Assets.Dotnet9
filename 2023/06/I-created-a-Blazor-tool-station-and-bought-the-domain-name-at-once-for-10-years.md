@@ -110,7 +110,7 @@ Blazor是一个用于构建Web应用程序的开源框架，它允许使用C#和
 今天分享到这，十分感谢您的阅读。
 
 - 网站地址：https://dotnetools.com/
-- 网站源码：https://github.com/dotnet9/dotnetools
+- 网站源码：https://github.com/dotnet9/Dotnet9
 - .NET版本： [.NET 8.0.0-preview.5.23280.8](https://dotnet.microsoft.com/zh-cn/download/dotnet/8.0)
 - 微信技术群：添加站长微信（dotnet9com），一定要备注【入群】2个字
 - QQ技术群：771992300
