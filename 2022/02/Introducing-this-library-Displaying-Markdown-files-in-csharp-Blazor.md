@@ -57,7 +57,7 @@ builder.Services.AddScoped<IHtmlSanitizer, HtmlSanitizer>(x =>
 });
 ```
 
-3. 引用命令空间
+3. 引用命名空间
 
 `_Imports.razor`
 

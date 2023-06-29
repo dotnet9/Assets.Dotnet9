@@ -34,7 +34,7 @@ WPF是用于替代Windows Form来创建Windows客户端的应用程序，和Web�
 </Window>
 ```
 
-上述包含Window元素以及Grid元素，Window元素代表整个窗口，Grid 可以放置所有的控件。总体结构其实是一个窗体对象内嵌套一个Grid对象。x:Class 代表后端的命名空间和类名，这样的好处在于将WPF里的前端XAML和后端实现代码分开维护，xmlns全拼是：XML namespace，即XML命令空间，xmlns后面可以跟一个可选映射前缀 x，两者之间用冒号分割，另外还声明了两个 xmlns 名称空间，如下表
+上述包含Window元素以及Grid元素，Window元素代表整个窗口，Grid 可以放置所有的控件。总体结构其实是一个窗体对象内嵌套一个Grid对象。x:Class 代表后端的命名空间和类名，这样的好处在于将WPF里的前端XAML和后端实现代码分开维护，xmlns全拼是：XML namespace，即XML命名空间，xmlns后面可以跟一个可选映射前缀 x，两者之间用冒号分割，另外还声明了两个 xmlns 名称空间，如下表
 
 ![](https://img1.dotnet9.com/2022/05/5901.png)
 
