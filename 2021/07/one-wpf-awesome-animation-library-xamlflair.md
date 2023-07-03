@@ -85,7 +85,7 @@ XamlFlair库的目标是简化常见动画的实现，并允许开发人员使�
 
 - [`ListViewBase` (_UWP 和 Uno_) 和 基于`ListBox` (_WPF_) 的动画](#listviewbase-uwp-and-uno-and-listbox-based-wpf-animations)
 
-## [从 Nuget 安装](@install-from-nuget)
+## 从 Nuget 安装<a name="install-from-nuget"/>
 
 | 平台 | Package | NuGet |
 | -------- | -------- | ------- |
@@ -117,7 +117,7 @@ Install-Package XamlFlair.Uno
 
 > 您的UWP应用程序必须至少针对Windows 10版本1809（构建18362）
 
-## [功能概述（Features Overview）](@features-overview)
+## 功能概述（Features Overview）<a name="features-overview"/>
 
 Feature                               | **UWP**     | **WPF**        | **UWP (Uno)**      | **iOS (Uno)**      | **Android (Uno)**  | **Wasm (Uno) 试验性**
 ------------------------------------- | ----------- | -------------- | ------------------ | ------------------ | ------------------ | ----------------------------
@@ -142,7 +142,7 @@ DefaultAnimations.xaml                |      -      |      ✔         |        
 透视旋转 (转台)(Perspective Rotations (Swivel))        |      ✔      |      -         |         -          |         -          |          -         |              -
 调试动画(Debugging Animations)                  |      ✔      |      ✔         |         ✔          |         ✔          |          ✔         |              -
 
-## 基础概念（Basic Concepts）
+## 基础概念（Basic Concepts）<a name="basic-concepts"/>
 
 XamlFlair的基本概念是基于From和To的动画。由From动画组成的任何UI元素都将以**一个或多个任意值开始，并使用相应属性的默认值完成**。由To动画组成的任何UI元素都将**以其当前状态开始，并设置为一个或多个任意值**。
 
@@ -157,7 +157,7 @@ To动画示例（从当前状态滑出的UI元素）：
 >**注意**：需要注意的是，对于彩色动画，此规则有一个例外，这在“基本动画类型”部分中进行了说明。
 
 
-## 使用
+## 使用<a name="usage"/>
 
 首先，需要添加以下Xaml命名空间引用：
 
@@ -181,7 +181,7 @@ xmlns:xf="clr-namespace:XamlFlair;assembly=XamlFlair.WPF"
 
 >**注意**：`StaticResource`的用法是引用全局通用动画，这将在下一节中讨论。
 
-### 基本动画类型（Base Animation Types）
+### 基本动画类型（Base Animation Types）<a name="base-animation-types"/>
 
 #### 淡入淡出（Fade）
 
@@ -238,7 +238,7 @@ xmlns:xf="clr-namespace:XamlFlair;assembly=XamlFlair.WPF"
 - **Saturation**: 0.5 (_UWP only_)
 - **Tint**: Transparent (_UWP only_)
 
-### 色彩动画 (Color Animations，仅WPF和Uno)
+### 色彩动画 (Color Animations，仅WPF和Uno)<a name="color-animations-wpf-and-uno-only"/>
 
 使用色彩动画时需要注意，因为它们与其他基本类型动画**略有**不同。使用`ColorTo`和`ColorFrom`时，必须执行以下操作：
 
@@ -258,7 +258,7 @@ xmlns:xf="clr-namespace:XamlFlair;assembly=XamlFlair.WPF"
            xf:Animations.Primary="{StaticResource SampleColorAnimation}" />
 ```
 
-### 覆盖全局默认值
+### 覆盖全局默认值<a name="overriding-the-global-default-values"/>
 
 如果需要全局更改默认动画值之一（例如，默认`Duration`为750而不是500），则可以在应用程序的初始化代码中调用`OverrideDefaultSettings`函数。以下示例更改`Duration`和`Easing`的默认值：
 
@@ -270,7 +270,7 @@ XamlFlair.Animations.OverrideDefaultSettings(
 
 因此，在上面的示例代码中，每个动画都将以二次缓和的方式运行750ms。
 
-### 使用`ResourceDictionary`进行基本设置
+### 使用`ResourceDictionary`进行基本设置<a name="using-a-resourcedictionary-for-base-settings"/>
 
 所有`常见`动画都应该放在全局`ResourceDictionary`（例如：`Animations.xaml`）中，并在应用程序中需要时使用。目标是将所有动画合并为一个具有有意义名称的文件，以便任何开发人员都能准确地了解将动画应用到`FrameworkElement`中的内容。下面是一个小例子：
 
@@ -335,7 +335,7 @@ XamlFlair.Animations.OverrideDefaultSettings(
 
 你的应用程序现在有一组`通用`动画可以使用了。
 
-### 默认动画 (*仅 WPF*)
+### 默认动画 (*仅 WPF*)<a name="default-animations-wpf-only"/>
 
 除了创建包含自定义`AnimationSettings`的`ResourceDictionary`之外，XamlFlair还提供一些`默认`动画。
 
@@ -373,7 +373,7 @@ XamlFlair.Animations.OverrideDefaultSettings(
 </Application.Resources>
 ```
 
-### `TransformOn` 属性 (*仅 WPF*)
+### `TransformOn` 属性 (*仅 WPF*)<a name="transformon-property-wpf-only"/>
 
 `RenderTransform`可使用`TransformOn`属性应用动画。可用选项为`Render`和`Layout`。未指定任何内容时，默认为`Render`。以下是关于两个选项的示例：
 
