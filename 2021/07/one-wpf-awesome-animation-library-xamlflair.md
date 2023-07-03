@@ -15,7 +15,7 @@ tags: WPF,动画库,开源
 
 >原文链接：https://github.com/XamlFlair/XamlFlair
 >
->翻译：沙漠尽头的狼(本文未全文翻译，建议阅读原文了解更多)
+>翻译：沙漠尽头的狼/Linluz(本文未全文翻译，建议阅读原文了解更多)
 
 ![](https://img1.dotnet9.com/2021/07/0501.png)
 
@@ -23,11 +23,11 @@ tags: WPF,动画库,开源
 
 XamlFlair库的目标是简化常见动画的实现，并允许开发人员使用几行Xaml`轻松`地添加单个或组合的动画集。
 
-![Sample App](https://img1.dotnet9.com/2021/07/0502.gif)
+![案例程序](https://img1.dotnet9.com/2021/07/0502.gif)
 
 # 展示
 
-[Sekuence Puzzle Game](https://sekuence.fun)|
+[Sekuence 益智游戏](https://sekuence.fun)|
 :-------------------------------------------:
 ![Sekuence](https://img1.dotnet9.com/2021/07/0503.gif)          |
 
@@ -37,61 +37,61 @@ XamlFlair库的目标是简化常见动画的实现，并允许开发人员使�
 
 ## 内容
 
-- [Install from Nuget](#install-from-nuget)
+- [从 Nuget 安装](#install-from-nuget)
 
-- [Features Overview](#features-overview)
+- [功能概述](#features-overview)
 
-- [Basic Concepts](#basic-concepts)
+- [基础概念](#basic-concepts)
 
-- [Usage](#usage)
+- [使用](#usage)
 
-- [Base Animation Types](#base-animation-types)
+- [基本动画类型](#base-animation-types)
 
-- [Color Animations (*WPF And Uno Only*)](#color-animations-wpf-and-uno-only)
+- [色彩动画 (*仅 WPF和 Uno*)](#color-animations-wpf-and-uno-only)
 
-- [Overriding the Global Default Values](#overriding-the-global-default-values)
+- [覆盖全局默认值](#overriding-the-global-default-values)
 
-- [Using a `ResourceDictionary` for Base Settings](#using-a-resourcedictionary-for-base-settings)
+- [使用`ResourceDictionary`进行基本设置](#using-a-resourcedictionary-for-base-settings)
 
-- [Default Animations (*WPF Only*)](#default-animations-wpf-only)
+- [默认动画(*仅 WPF*)](#default-animations-wpf-only)
 
-- [`TransformOn` Property (*WPF Only*)](#transformon-property-wpf-only)
+- [`TransformOn` 属性 (*仅 WPF*)](#transformon-property-wpf-only)
 
-- [Perspective Rotations (*UWP Only*)](#perspective-rotations-uwp-only)
+- [透视旋转 (*仅 UWP*)](#perspective-rotations-uwp-only)
 
-- [Combining Animations](#combining-animations)
+- [组合动画](#combining-animations)
 
-- [Overriding Values](#overriding-values)
+- [覆盖值](#overriding-values)
 
-- [Relative Translations on X and Y Axes](#relative-translations-on-x-and-y-axes)
+- [X和Y轴上的相对变换](#relative-translations-on-x-and-y-axes)
 
-- [Compound Animations](#compound-animations)
+- [复合动画](#compound-animations)
 
-- [Repeating Animations](#repeating-animations)
+- [循环动画](#repeating-animations)
 
-- [Events and Bindings](#events-and-bindings)
+- [事件和绑定](#events-and-bindings)
 
-- [Primary and Secondary Completion Commands](#primary-and-secondary-completion-commands)
+- [主和次完成命令](#primary-and-secondary-completion-commands)
 
-- [Using the `StartWith` Property](#using-the-startwith-property)
+- [使用 `StartWith` 属性](#using-the-startwith-property)
 
-- [Using the `AllowOpacityReset` Property (*WPF Only*)](#using-the-allowopacityreset-property-wpf-only)
+- [使用 `AllowOpacityReset` 属性 (*仅 WPF*)](#using-the-allowopacityreset-property-wpf-only)
 
-- [Using the `ClipToBounds` Property (*UWP And Uno Only*)](#using-the-cliptobounds-property-uwp-and-uno-only)
+- [使用 `ClipToBounds` 属性 (*仅 UWP 和 Uno*)](#using-the-cliptobounds-property-uwp-and-uno-only)
 
-- [Debugging Animations](#debugging-animations)
+- [调试动画](#debugging-animations)
 
-- [Logging Animations](#logging-animations)
+- [日志动画](#logging-animations)
 
-- [`ListViewBase` (_UWP and Uno_) and `ListBox`-based (_WPF_) Animations](#listviewbase-uwp-and-uno-and-listbox-based-wpf-animations)
+- [`ListViewBase` (_UWP 和 Uno_) 和 基于`ListBox` (_WPF_) 的动画](#listviewbase-uwp-and-uno-and-listbox-based-wpf-animations)
 
-## Nuget中下载
+## [从 Nuget 安装](@install-from-nuget)
 
-| Platform | Package | NuGet |
+| 平台 | Package | NuGet |
 | -------- | -------- | ------- |
-| UWP | [XamlFlair.UWP][UWPNuGet] | [![UWPNuGetShield]][UWPNuGet] |
-| WPF | [XamlFlair.WPF][WPFNuGet] | [![WPFNuGetShield]][WPFNuGet] |
-| Uno | [XamlFlair.Uno][UNONuGet] | [![UNONuGetShield]][UNONuGet] |
+| UWP | [XamlFlair.UWP](https://www.nuget.org/packages/XamlFlair.UWP/) | [![](https://img.shields.io/nuget/v/XamlFlair.UWP.svg?style=for-the-badge)](https://www.nuget.org/packages/XamlFlair.UWP/)|
+| WPF | [XamlFlair.WPF](https://www.nuget.org/packages/XamlFlair.WPF/) | [![](https://img.shields.io/nuget/v/XamlFlair.WPF.svg?style=for-the-badge)](https://www.nuget.org/packages/XamlFlair.WPF/)|
+| Uno | [XamlFlair.Uno](https://www.nuget.org/packages/XamlFlair.Uno/) | [![](https://img.shields.io/nuget/v/XamlFlair.Uno.svg?style=for-the-badge)](https://www.nuget.org/packages/XamlFlair.Uno/)|
 
 使用以下命令从**Package Manager Console**下载**XamlFlair**:
 
@@ -101,7 +101,7 @@ UWP:
 Install-Package XamlFlair.UWP
 ```
 
-> 您的应用程序必须至少针对Windows 10版本1809（内部版本17763）
+> 您的应用程序必须不低于Windows 10 版本 1809（内部版本 17763）
 
 WPF:
 
@@ -117,31 +117,32 @@ Install-Package XamlFlair.Uno
 
 > 您的UWP应用程序必须至少针对Windows 10版本1809（构建18362）
 
-## 功能概述（Features Overview）
+## [功能概述（Features Overview）](@features-overview)
 
-Feature                               | **UWP**     | **WPF**        | **UWP (Uno)**      | **iOS (Uno)**      | **Android (Uno)**  | **Wasm (Uno) EXPERIMENTAL**
+Feature                               | **UWP**     | **WPF**        | **UWP (Uno)**      | **iOS (Uno)**      | **Android (Uno)**  | **Wasm (Uno) 试验性**
 ------------------------------------- | ----------- | -------------- | ------------------ | ------------------ | ------------------ | ----------------------------
-*Animation System*                    | Composition | Storyboards    | Storyboards        | Storyboards        | Storyboards        | Storyboards
-*Transform Type*                      |     N/A     | TransformGroup | CompositeTransform | CompositeTransform | CompositeTransform | CompositeTransform
+*动画系统*                    | 组合 | 故事板    | 故事板        | 故事板        | 故事板        | 故事板
+*变换类型*                      |     N/A     | 变换群组 | 复合变换 | 复合变换 | 复合变换 | 复合变换
 DefaultAnimations.xaml                |      -      |      ✔         |         -          |         -          |          -         |              -
 `TransformOn`                         |      -      |      ✔         |         -          |         -          |          -         |              -
-Compound Animations                   |      ✔      |      ✔         |         ✔          |         ✔          |          ✔         |              ✔
-Relative Translations                 |      ✔      |      ✔         |         ✔          |         ✔          |          ✔         |              ✔
-Repeating Animations                  |      ✔      |      ✔         |         ✔          |         ✔          |          ✔         |              ✔
-Events & Bindings                     |      ✔      |      ✔         |         ✔          |         ✔          |          ✔         |              ✔
-Primary/Secondary Completion Commands |      ✔      |      ✔         |         ✔          |         ✔          |          ✔         |              ✔
+复合动画(Compound Animations)                   |      ✔      |      ✔         |         ✔          |         ✔          |          ✔         |              ✔
+相对变换(Relative Translations)                 |      ✔      |      ✔         |         ✔          |         ✔          |          ✔         |              ✔
+循环动画(Repeating Animations)                  |      ✔      |      ✔         |         ✔          |         ✔          |          ✔         |              ✔
+事件 & 绑定(Events & Bindings)                     |      ✔      |      ✔         |         ✔          |         ✔          |          ✔         |              ✔
+主/次完成命令(Primary/Secondary Completion Commands) |      ✔      |      ✔         |         ✔          |         ✔          |          ✔         |              ✔
+
 `StartWith`                           |      ✔      |      ✔         |         ✔          |         ✔          |          ✔         |              ✔
 `AllowOpacityReset`                   |      -      |      ✔         |         -          |         -          |          -         |              -
 `ClipToBounds`                        |      ✔      |     N/A        |         ✔          |         ✔          |          ✔         |              ✔
-Animated Lists                        |      ✔      |      ✔         |         ✔          |         ✔          |          ✔         |              ✔
-Blur Effect                           |      ✔      |      ✔         |         -          |         -          |          -         |              -
-Saturation Effect                     |      ✔      |      -         |         -          |         -          |          -         |              -
-Tint Effect                           |      ✔      |      -         |         -          |         -          |          -         |              -
-Color Animations                      |      -      |      ✔         |         ✔          |         ✔          |          ✔         |              ✔
-Perspective Rotations (Swivel)        |      ✔      |      -         |         -          |         -          |          -         |              -
-Debugging Animations                  |      ✔      |      ✔         |         ✔          |         ✔          |          ✔         |              -
+动画列表(Animated Lists)                        |      ✔      |      ✔         |         ✔          |         ✔          |          ✔         |              ✔
+模糊效果(Blur Effect)                           |      ✔      |      ✔         |         -          |         -          |          -         |              -
+饱和效果(Saturation Effect)                     |      ✔      |      -         |         -          |         -          |          -         |              -
+色调效果(Tint Effect)                           |      ✔      |      -         |         -          |         -          |          -         |              -
+色彩动画(Color Animations)                      |      -      |      ✔         |         ✔          |         ✔          |          ✔         |              ✔
+透视旋转 (转台)(Perspective Rotations (Swivel))        |      ✔      |      -         |         -          |         -          |          -         |              -
+调试动画(Debugging Animations)                  |      ✔      |      ✔         |         ✔          |         ✔          |          ✔         |              -
 
-## 基本概念（Basic Concepts）
+## 基础概念（Basic Concepts）
 
 XamlFlair的基本概念是基于From和To的动画。由From动画组成的任何UI元素都将以**一个或多个任意值开始，并使用相应属性的默认值完成**。由To动画组成的任何UI元素都将**以其当前状态开始，并设置为一个或多个任意值**。
 
@@ -237,7 +238,7 @@ xmlns:xf="clr-namespace:XamlFlair;assembly=XamlFlair.WPF"
 - **Saturation**: 0.5 (_UWP only_)
 - **Tint**: Transparent (_UWP only_)
 
-### 色彩动画 (Color Animations，只支持WPF和Uno)
+### 色彩动画 (Color Animations，仅WPF和Uno)
 
 使用色彩动画时需要注意，因为它们与其他基本类型动画**略有**不同。使用`ColorTo`和`ColorFrom`时，必须执行以下操作：
 
@@ -334,7 +335,7 @@ XamlFlair.Animations.OverrideDefaultSettings(
 
 你的应用程序现在有一组`通用`动画可以使用了。
 
-### 默认动画 (*只支持WPF*)
+### 默认动画 (*仅 WPF*)
 
 除了创建包含自定义`AnimationSettings`的`ResourceDictionary`之外，XamlFlair还提供一些`默认`动画。
 
@@ -372,7 +373,7 @@ XamlFlair.Animations.OverrideDefaultSettings(
 </Application.Resources>
 ```
 
-### `TransformOn` 属性 (*只支持WPF*)
+### `TransformOn` 属性 (*仅 WPF*)
 
 `RenderTransform`可使用`TransformOn`属性应用动画。可用选项为`Render`和`Layout`。未指定任何内容时，默认为`Render`。以下是关于两个选项的示例：
 
