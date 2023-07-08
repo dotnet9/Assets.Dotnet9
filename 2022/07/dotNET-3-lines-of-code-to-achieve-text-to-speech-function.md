@@ -24,7 +24,7 @@ categories: .NET相关
 
 2、输入如下代码，并添加引用`using System.Speech.Synthesis;`
 
-```C#
+```csharp
 static void  Main(string[] args)
 {
     // 实例化 SpeechSynthesizer.  
@@ -63,7 +63,7 @@ static void  Main(string[] args)
 
 3、在`Index.cshtml.cs`页面新建一个输入文字转换文本属性和文件路径属性，并构造函数注入读取路径中间件。
 
-```C#
+```csharp
 private readonly IHostingEnvironment _IhostingEnvironment;
 [BindProperty(SupportsGet = true)]
 //用来输入要转换的文本
@@ -79,7 +79,7 @@ public IndexModel(IHostingEnvironment hostingEnvironment)
 
 4、在`OnGetAsync`方法中编写音频处理逻辑，代码如下：
 
-```C#
+```csharp
 public async Task OnGetAsync()
 {
     string wavname = "test";

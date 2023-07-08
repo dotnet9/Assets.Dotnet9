@@ -28,7 +28,7 @@ EF Core 6.0 对 `GroupBy` 查询有更好的支持。
 - 在 `GroupBy` 之后使用 `ThenBy`
 - 支持从一个组中选择前 N 个结果
 
-```C#
+```csharp
 using var context = new ExampleContext();
 var query = context.People
     .GroupBy(p => p.FirstName)
@@ -77,7 +77,7 @@ LEFT JOIN(
 
 以前 EF Core 翻译 `string.Concat` 时只有两个参数。EF Core 6.0 支持翻译三个和四个参数的 `string.Concat`。
 
-```C#
+```csharp
 using var context = new ExampleContext();
 string fullName = "SamuelLanghorneClemens";
 var query = context.Blogs
@@ -114,7 +114,7 @@ WHERE(COALESCE([b].[FirstName], N'') + (COALESCE([b].[MiddleName], N'') +COALESC
 
 以前，尽管 SQL `FreeText` 函数支持二进制列，但你不能在二进制列上使用 `EF.Functions.FreeText` 方法。EF Core 6.0 解决了这个问题。
 
-```C#
+```csharp
 using var context = new ExampleContext();
 var query = context.Posts
     .Where(p => EF.Functions.FreeText(EF.Property<string>(p, "Content"), "Searching text"))
@@ -153,7 +153,7 @@ WHERE CAST("p"."PhoneNumber" AS TEXT) LIKE '%368%'
 
 EF Core 6.0 引入了一个新的 `EF.Functions.Random` 方法。它映射了 SQL 函数 `RAND()`。已经实现了对 SQL Server、SQLite 和 Cosmos 的翻译。
 
-```C#
+```csharp
 using var context = new ExampleContext();
 var query = context.Posts
     .Where(p => p.Rating == (int)(EF.Functions.Random() * 5.0) + 1)
@@ -186,7 +186,7 @@ WHERE[p].[Rating] = (CAST((RAND() * 5.0E0) AS int) + 1)
 
 以前，EF Core 将 `string.IsNullOrWhiteSpace` 翻译成在判断前将值进行 `trim` 操作。EF Core 6.0 已经不这么做了。
 
-```C#
+```csharp
 using var context = new ExampleContext();
 var query = context.Entities
                     .Where(e => string.IsNullOrWhiteSpace(e.Property))
@@ -226,7 +226,7 @@ WHERE [e].[Property] IS NULL OR ([e].[Property] = N'')
 
 在 EF Core 6.0 中，你可以通过一个新的方法 `ToInMemoryQuery` 来定义一个针对内存数据库的查询。这对于创建内存数据库的视图是最有用的。
 
-```C#
+```csharp
 using var context = new ExampleContext();
 var blogEn = new Blog
 {
@@ -306,7 +306,7 @@ class ExampleContext : DbContext
 
 以前，EF Core 只翻译有两个参数的 `string.Substring` 重载。EF Core 6.0 支持翻译单个参数的 `string.Substring`。
 
-```C#
+```csharp
 using var context = new ExampleContext();
 context.People.Add(new Person { Name = "John" });
 context.People.Add(new Person { Name = "Bred" });
@@ -346,7 +346,7 @@ FROM [People] AS [p]
 
 EF Core 支持将一个 LINQ 查询拆分成多个 SQL 查询。EF Core 6.0 可以分割一个 LINQ 查询，其中非导航集合属性包含在查询投影中。
 
-```C#
+```csharp
 using var context = new ExampleContext();
 var blog = new Blog { Name = ".NET Blog"};
 blog.Posts.Add(new Post { Title = "First .NET post" });
@@ -420,7 +420,7 @@ ORDER BY [b].[Id]
 
 当连接相关实体时，EF Core 添加了 ORDER BY 子句，以确保给定实体的所有相关实体被分组。然而，最后一个子句并不是必须的，而且会对性能产生影响。EF Core 6.0 删除了它。
 
-```C#
+```csharp
 using var context = new ExampleContext();
 var query = context.Blogs
     .Include(b => b.Posts.Where(p => p.Rating > 3))
@@ -479,7 +479,7 @@ ORDER BY [b].[Id]
 
 从 EF Core 2.2 开始，你可以给你的查询添加一个标签，以达到更好的调试目的。EF Core 6.0 更进一步，现在你可以用 LINQ 代码的文件名和行号来标记查询。
 
-```C#
+```csharp
 using var context = new ExampleContext();
 var query = context.Blogs
     .TagWithCallSite()
@@ -518,7 +518,7 @@ ORDER BY[b].[CreationDate]
 
 EF Core 6.0 改变了一些对自有可选从属关系的处理。当一个模型有自己的可选从属关系时，EF Core 会在你保存它时警告你所有缺失的属性。
 
-```C#
+```csharp
 using var context = new ExampleContext();
 var person = new Person
 {
@@ -565,7 +565,7 @@ class ExampleContext : DbContext
 
 当你有嵌套自有可选从属关系时，EF Core 将不允许创建模型。
 
-```C#
+```csharp
 using var context = new ExampleContext();
 var person = new Person
 {

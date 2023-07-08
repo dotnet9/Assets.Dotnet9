@@ -29,7 +29,7 @@ albums: WPF-Prism
 
 在Prism中，通过一个IDialogAware接口来实现对话框服务：
 
-```C#
+```csharp
 public interface IDialogAware
 {
     bool CanCloseDialog();
@@ -88,7 +88,7 @@ AlertDialog.xaml：
 
 AlertDialogViewModel.cs：
 
-```C#
+```csharp
 public class AlertDialogViewModel : BindableBase, IDialogAware
 {
     private DelegateCommand<string> _closeDialogCommand;
@@ -148,7 +148,7 @@ public class AlertDialogViewModel : BindableBase, IDialogAware
 
 App.cs：
 
-```C#
+```csharp
 protected override void RegisterTypes(IContainerRegistry containerRegistry)
 {
      containerRegistry.RegisterDialog<AlertDialog, AlertDialogViewModel>();
@@ -163,7 +163,7 @@ containerRegistry.RegisterDialog<AlertDialog, AlertDialogViewModel>(“alertDial
 
 CreateAccountViewModel.cs(修改部分)：
 
-```C#
+```csharp
 public CreateAccountViewModel(IRegionManager regionManager, IDialogService dialogService)
 {
      _regionManager = regionManager;
@@ -191,7 +191,7 @@ public CreateAccountViewModel(IRegionManager regionManager, IDialogService dialo
 
 我们是通过调用IDialogService接口的ShowDialog函数来调用，下面是该接口的定义：
 
-```C#
+```csharp
 public interface IDialogService : Object
 {
     Void Show(String name, IDialogParameters parameters, Action<IDialogResult> callback);
@@ -232,7 +232,7 @@ public interface IDialogService : Object
 
 DialogWindow.xaml.cs：
 
-```C#
+```csharp
 public partial class DialogWindow : Window, IDialogWindow
 {
     public DialogWindow()
@@ -251,7 +251,7 @@ public partial class DialogWindow : Window, IDialogWindow
 
 App.cs：
 
-```C#
+```csharp
 protected override void RegisterTypes(IContainerRegistry containerRegistry)
 {
      containerRegistry.RegisterDialogWindow<DialogWindow>();//注册自定义对话框窗体

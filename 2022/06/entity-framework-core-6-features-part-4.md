@@ -25,7 +25,7 @@ categories: EF Core
 
 在 EF Core 6.0 中，SQLite 提供者支持新的 `DateOnly` 和 `TimeOnly` 类型。它将它们存储为 `TEXT`。
 
-```C#
+```csharp
 using var context = new ExampleContext();
 
 var query1 = context.People
@@ -72,7 +72,7 @@ class ExampleContext : DbContext
 
 SQLite 数据库是一个文件。因此，在大多数情况下，创建一个连接是很快的。然而，打开一个加密数据库的连接会非常慢。因此，在 EF Core 6 中，SQLite 连接现在是池化的，就像其他数据库提供者一样。
 
-```C#
+```csharp
 class Person
 {
     public int Id { get; set; }
@@ -91,7 +91,7 @@ class ExampleContext : DbContext
 
 在 EF Core 6 的 SQLite 中，支持添加 `Command Timeout` 命令到连接字符串中，你可以用它来指定 SQLite 的默认超时时间。
 
-```C#
+```csharp
 class Person
 {
     public int Id { get; set; }
@@ -111,7 +111,7 @@ class ExampleContext : DbContext
 
 在 EF Core 6.0 中，SQLite 支持保存点(Savepoints)。你可以保存、回滚和释放保存点。
 
-```C#
+```csharp
 var dbPath = Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..\\..\\..\\Savepoints.db"));
 
 using var connection = new SqliteConnection($"Data Source={dbPath}");
@@ -142,7 +142,7 @@ transaction.Commit();
 
 在 EF Core 6.0 中，内存(In-memory)数据库验证了必需（In-momory）的属性。如果你试图保存一个实体的必需属性值为空，就会出现异常。如果有必要，你可以禁用这个验证。
 
-```C#
+```csharp
 using var context = new ExampleContext();
 
 var blog = new Blog();
@@ -178,7 +178,7 @@ class ExampleContext : DbContext
 
 在 EF Core 6.0 中，你可以使用 `EF.Functions.Contains` 方法来处理使用值转换器映射的列（也可以处理二进制列）。
 
-```C#
+```csharp
 using var context = new ExampleContext();
 
 var query = context.People

@@ -32,7 +32,7 @@ Install-Package Nito.AsyncEx -Version 5.1.2
 
 构造`AsyncLock`函数可以采用异步等待队列；传递自定义等待队列以指定您自己的排队逻辑。
 
-```C#
+```csharp
 private readonly AsyncLock _mutex = new AsyncLock();
 public async Task UseLockAsync()
 {
@@ -47,7 +47,7 @@ public async Task UseLockAsync()
 
 `AsyncLock`也完全支持取消
 
-```C#
+```csharp
 public async Task UseLockAsync()
 {
   // Attempt to take the lock only for 2 seconds.
@@ -64,7 +64,7 @@ public async Task UseLockAsync()
 
 `AsyncLock` 也有一个同步 API。 这允许一些线程异步获取锁，而其他线程同步获取锁（阻塞线程）。
 
-```C#
+```csharp
 public async Task UseLockAsync()
 {
   using (await _mutex.LockAsync())
@@ -86,7 +86,7 @@ public void UseLock()
 
 该`AsyncContext`类型提供了执行异步操作的上下文。`await`关键字需要返回一个上下文。对于大多数客户端程序，这是一个 `UI 上下文`；对于大多数服务端程序，这是一个`线程池上下文`。`AsyncContextThread`是一个单独的线程或任务，它运行`AsyncContext`。 `AsyncContextThread`不是从`Thread`类派生的。`AsyncContext`线程在创建后立即开始运行。`AsyncContextThread`将一直停留在其循环中，直到另一个线程调用`JoinAsync`。 处置 an AsyncContextThread也会要求它退出。
 
-```C#
+```csharp
 class Program
 {
   static async Task<int> AsyncMain()

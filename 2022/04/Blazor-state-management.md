@@ -83,7 +83,7 @@ tags: Blazor,状态管理
 <button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
 ```
 
-```C#
+```csharp
 private int currentCount = 0;
 private void IncrementCount()
 {
@@ -93,7 +93,7 @@ private void IncrementCount()
 
 要维持“内存中”（或Blazor服务器“电路中”）状态，可以创建计数器“服务”：
 
-```C#
+```csharp
 public class CounterService
 {
     public int Count { get; private set; }
@@ -106,7 +106,7 @@ public class CounterService
 
 在`Startup.cs`以下位置注册服务：
 
-```C#
+```csharp
 public void ConfigureServices(IServiceCollection services)
 {
     services.AddSingleton<CounterService, CounterService>();
@@ -128,7 +128,7 @@ public void ConfigureServices(IServiceCollection services)
 
 维护状态的一种方法是使用[HTML5 Web Storage](https://www.w3schools.com/html/html5_webstorage.asp)来利用浏览器缓存。该API非常简单。`BlazorState.Shared`中的`stateManagement.js`文件定义了一个简单的，可全局访问的界面。它使用`localStorage` JavaScript API，但您可以选择使用`sessionStorage`。
 
-```C#
+```csharp
 window.stateManager = {
     save: function (key, str) {
         localStorage[key] = str;
@@ -169,7 +169,7 @@ else
 
 初始化组件后，代码尝试从缓存中加载视图模型：
 
-```C#
+```csharp
 string vm;
 try
 {
@@ -183,7 +183,7 @@ catch(InvalidOperationException)
 
 在Blazor服务器中，组件已在服务器上预渲染。JavaScript不可用，因此interop调用将抛出`InvalidOperationException`。这是第一次被发现。第二个调用是从客户端进行的，并且如果缓存了viewmodel，它将成功。从高速缓存加载视图模型的JSON后，将对其进行反序列化，并将属性移至全局视图模型实例。
 
-```C#
+```csharp
 var viewModel = JsonSerializer.Deserialize<HealthModel>(vm);
 if (viewModel != null)
 {
@@ -199,7 +199,7 @@ if (viewModel != null)
 
 `isDeserializing`标志对于避免无限循环很重要，正如您在下一个注册属性更改通知的代码中所看到的：
 
-```C#
+```csharp
 Model.PropertyChanged += async (o, e) =>
 {
     if (isDeserializing)
@@ -244,7 +244,7 @@ hasLoaded = true;
 
  在初始化期间由页面组件调用`InitAsync`以加载视图模型状态。
 
-```C#
+```csharp
 public async Task InitAsync()
 {
     _initializing = true;
@@ -261,7 +261,7 @@ public async Task InitAsync()
 
 该代码与客户端缓存方法非常相似，但是从API调用而不是本地缓存中检索模型。属性更改处理程序序列化模型并将模型发布到服务器：
 
-```C#
+```csharp
 private async void Model_PropertyChanged(object sender, 
     System.ComponentModel.PropertyChangedEventArgs e)
 {

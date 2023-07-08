@@ -34,7 +34,7 @@ ReaderWriterLockSlim 有几个关键的方法，本文仅讨论写入锁：
 
 ## 2. 多线程同时写入文件
 
-```C#
+```csharp
 class Program
 {
     static int LogCount = 100;
@@ -76,7 +76,7 @@ class Program
 
 ## 3. 多线程使用读写锁同步写入文件
 
-```C#
+```csharp
 class Program
 {
     static int LogCount = 100;
@@ -136,7 +136,7 @@ class Program
 
 ## 4. 测试复杂多线程环境下使用读写锁同步写入文件
 
-```C#
+```csharp
 class Program
 {
     static int LogCount = 1000;
@@ -251,7 +251,7 @@ class Program
 
 虽然读写IO有共享模式，也可以实现但不推荐
 
-```C#
+```csharp
 static void WriteLog()
 {
     try

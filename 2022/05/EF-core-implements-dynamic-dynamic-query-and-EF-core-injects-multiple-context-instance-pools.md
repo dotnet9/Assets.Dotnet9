@@ -18,7 +18,7 @@ categories: EF Core
 
 ## EF 6.x和EF Core实现动态查询
 
-```C#
+```csharp
 public static IEnumerable<dynamic> SqlQueryDynamic(this DbContext db, string Sql, params SqlParameter[] parameters)
 {
     using (var cmd = db.Database.Connection.CreateCommand())
@@ -57,7 +57,7 @@ public static IEnumerable<dynamic> SqlQueryDynamic(this DbContext db, string Sql
 
 那么最终如上查询后返回动态集合，我们该如何转换为集合对象呢？我想都没想如下直接先序列化然后反序列化，若您有更好的解决方案，请自行实现即可。
 
-```C#
+```csharp
 using (var ctx = new EfDbContext())
 {
     ctx.Database.Log = Console.WriteLine;
@@ -76,7 +76,7 @@ using (var ctx = new EfDbContext())
 
 有很多人无论是在EF 6.x还是在EF Core中一直以来都是使用一个上下文，但是不知我们是否有想过使用多个上下文呢？比如在电商项目中，对于产品相关操作我们可以使用产品上下文，对于加入购物车操作使用购物车上下文，对于订单操作使用订单上下文。这么做的好处是什么呢？我们可以将数据库表也就说将实体拆分成不同的业务。至今我还没看到有人这么做过，如果是我的话，至少我会这么做。
 
-```C#
+```csharp
 //Add DbContext
 var dbConnetionString = Configuration.GetConnectionString("DbConnection");
 services.AddDbContextPool<ShopCartDbContext>(options =>

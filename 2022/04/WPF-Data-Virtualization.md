@@ -55,7 +55,7 @@ This solution makes use of the fact that when an `ItemsControl` is bound to an `
 
 In order to utilize this solution, the underlying data source must be able to provide the number of items in the collection, and be able to provide small chunks (or pages) of the entire collection. This requirement is encapsulated in the `IItemsProvider` interface.
 
-```C#
+```csharp
 /// <summary>
 /// Represents a provider of collection details.
 /// </summary>
@@ -88,7 +88,7 @@ The interesting parts are discussed below. For all the details, please refer to 
 
 The first aspect of the `IList` implementation is the implementation of the Count property. This is used to by the `ItemsControl` to gauge the size of the collection and render the scrollbar appropriately.
 
-```C#
+```csharp
 private int _count = -1;
 
 public virtual int Count
@@ -122,7 +122,7 @@ The `Count` property is implemented using the deferred or lazy loading pattern. 
 
 The other important aspect of the IList interface is the indexer implementation.
 
-```C#
+```csharp
 public T this[int index]
 {
     get
@@ -164,7 +164,7 @@ The additional step is then to load the next page or the previous page based upo
 
 Finally, a defensive check is in place in case the page is not yet available, which is necessary if `RequestPage` does not operate synchronously as in the case of the derived class `AsyncVirtualizingCollection<T>`.
 
-```C#
+```csharp
 // ...
       
 private readonly Dictionary<int, IList<T>> _pages = 
@@ -211,7 +211,7 @@ public void CleanUpPages()
 
 The pages are stored in a `Dictionary`, where the page index is used as the key. An additional `Dictionary` is used to store touch times. Touch times record the time each page was last accessed. This is used by the `CleanUpPages()` method to remove pages that have not been accessed for a considerable amount of time.
 
-```C#
+```csharp
 protected virtual void LoadPage(int pageIndex)
 {
     PopulatePage(pageIndex, FetchPage(pageIndex));
@@ -235,7 +235,7 @@ The `AsyncVirtualizingCollection<T>` class is derived from `VirtualizingCollecti
 
 The key behind an asynchronous data source in WPF is that it must then notify the UI via data binding when the data has been fetched. In a regular object, this is usually achieved with the `INotifyPropertyChanged` interface. For a collection implementation, however, it is necessary to use its close relative, `INotifyCollectionChanged`. This is the interface used by `ObservableCollection<T>`.
 
-```C#
+```csharp
 public event NotifyCollectionChangedEventHandler CollectionChanged;
 
 protected virtual void OnCollectionChanged(NotifyCollectionChangedEventArgs e)
@@ -270,7 +270,7 @@ private void FirePropertyChanged(string propertyName)
 
 The `AsyncVirtualizingCollection<T>` implements both `INotifyCollectionChanged` and `INotifyPropertyChanged`, providing maximum data binding flexibility. There is nothing really of note in this implementation.
 
-```C#
+```csharp
 protected override void LoadCount()
 {
     Count = 0;
@@ -294,7 +294,7 @@ private void LoadCountCompleted(object args)
 
 In the overridden `LoadCount()` method, the fetch is invoked asynchronously via the `ThreadPool`. Once completed, the new `Count` is set, and the `FireCollectionReset()` method is called to update the UI via the `INotifyCollectionChanged` interface. Note that the `LoadCountCompleted` method is invoked on the UI thread again, by using the `SynchronizationContext`. This `SynchronizationContext` property is set in the constructor, with the assumption that the collection instance will be created on the UI thread.
 
-```C#
+```csharp
 protected override void LoadPage(int index)
 {
     IsLoading = true;
@@ -323,7 +323,7 @@ The asynchronous load of the page data follows the same convention, and again th
 
 Note also the `IsLoading` property. This is a simple flag, which can be used to indicate to the UI that the collection is loading. When the `IsLoading` property is changed, the `FirePropertyChanged()` method is called to update the UI via the `INotifyPropertyChanged` mechanism.
 
-```C#
+```csharp
 public bool IsLoading
 {
     get
@@ -347,7 +347,7 @@ In order to demonstrate this solution, I have created a simple demo project (inc
 
 Firstly, an implementation of `IItemsProvider` was created, which provides dummy data with a thread sleep used to simulate delays in fetching data due to network or disk activity.
 
-```C#
+```csharp
 public class DemoCustomerProvider : IItemsProvider<Customer>
 {
     private readonly int _count;
@@ -517,7 +517,7 @@ A simple WPF window with a `ListView` was created to allow the user to experimen
 
 It is not necessary to go into details on the XAML. The only point to notice is the use of a custom ListView style to change the background and mouse cursor in response to the `IsLoading` property.
 
-```C#
+```csharp
 public partial class DemoWindow
 {
     /// <summary>

@@ -36,7 +36,7 @@ dotnet add package coravel
 
 在 .NET Core 应用程序的Startup.cs文件中，在ConfigureServices()方法内，添加以下内容：
 
-```C#
+```csharp
 services.AddScheduler()
 ```
 
@@ -44,7 +44,7 @@ services.AddScheduler()
 
 然后在Configure()方法中，可以使用调度器：
 
-```C#
+```csharp
 var provider = app.ApplicationServices;
 provider.UseScheduler(scheduler =>
 {
@@ -62,7 +62,7 @@ provider.UseScheduler(scheduler =>
 
 在您的Startup文件中，在ConfigureServices()：
 
-```C#
+```csharp
 services.AddQueue();
 ```
 
@@ -70,7 +70,7 @@ services.AddQueue();
 
 将接口的一个实例`Coravel.Queuing.Interfaces.IQueue`注入到控制器
 
-```C#
+```csharp
 IQueue _queue;
 
 public HomeController(IQueue queue) {
@@ -80,7 +80,7 @@ public HomeController(IQueue queue) {
 
 **同步**
 
-```C#
+```csharp
 public IActionResult QueueTask() {
     this._queue.QueueTask(() => Console.WriteLine("This was queued!"));
     return Ok();
@@ -89,7 +89,7 @@ public IActionResult QueueTask() {
 
 **异步**
 
-```C#
+```csharp
  this._queue.QueueAsyncTask(async() => {
     await Task.Delay(1000);
     Console.WriteLine("This was queued!");
@@ -102,7 +102,7 @@ public IActionResult QueueTask() {
 
 在Startup.ConfigureServices()：
 
-```C#
+```csharp
 services.AddCache();
 ```
 
@@ -112,7 +112,7 @@ services.AddCache();
 
 要使用缓存，将`Coravel.Cache.Interfaces.ICache`通过依赖注入进行注入。
 
-```C#
+```csharp
 private ICache _cache;
 
 public CacheController(ICache cache)
@@ -129,20 +129,20 @@ Coravel 的事件广播允许侦听器订阅应用程序中发生的事件。
 
 在ConfigureServices方法中：
 
-```C#
+```csharp
 services.AddEvents();
 ```
 
 接下来，在Configure方法中：
 
-```C#
+```csharp
 var provider = app.ApplicationServices;
 IEventRegistration registration = provider.ConfigureEvents();
 ```
 
 注册事件及其监听器
 
-```C#
+```csharp
 registration
  .Register<BlogPostCreated>()
  .Subscribe<TweetNewPost>()
@@ -157,7 +157,7 @@ registration
 
 例如，一个BlogPostCreated事件应该接受BlogPost创建的，然后通过公共属性公开它。
 
-```C#
+```csharp
 public class BlogPostCreated : IEvent
 {
     public BlogPost Post { get; set; }
@@ -175,7 +175,7 @@ public class BlogPostCreated : IEvent
 
 创建一个名为TweetNewPost的侦听器：
 
-```C#
+```csharp
 public class TweetNewPost : IListener<BlogPostCreated>
 {
     private TweetingService _tweeter;
@@ -205,7 +205,7 @@ public class TweetNewPost : IListener<BlogPostCreated>
 
 在Startup.ConfigureServices()：
 
-```C#
+```csharp
 services.AddMailer(this.Configuration); 
 ```
 
@@ -213,7 +213,7 @@ services.AddMailer(this.Configuration);
 
 Coravel 使用`Mailables`发送邮件。`Mailables` 继承`Coravel.Mailer.Mail.Mailable`并接受一个泛型类型，该类型表示您希望与发送邮件相关联的模型。
 
-```C#
+```csharp
 using Coravel.Mailer.Mail;
 using App.Models;
 

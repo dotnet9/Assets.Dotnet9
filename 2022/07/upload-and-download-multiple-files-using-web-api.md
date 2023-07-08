@@ -40,7 +40,7 @@ categories: Web API
  
 **FileService.cs**
 
-```C#
+```csharp
 using System.IO.Compression;
 
 namespace FileUploadAndDownload.Services;
@@ -136,7 +136,7 @@ public class FileService : IFileService
  
 **IFileService.cs**
 
-```C#
+```csharp
 namespace FileUploadAndDownload.Services;
 
 public interface IFileService
@@ -151,7 +151,7 @@ public interface IFileService
  
 **Program.cs**
 
-```C#
+```csharp
 using FileUploadAndDownload.Services;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -188,7 +188,7 @@ app.Run();
  
 **FileController.cs**
 
-```C#
+```csharp
 using FileUploadAndDownload.Services;
 using Microsoft.AspNetCore.Mvc;
 using System.ComponentModel.DataAnnotations;

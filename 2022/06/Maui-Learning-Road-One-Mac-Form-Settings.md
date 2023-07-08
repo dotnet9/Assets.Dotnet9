@@ -44,7 +44,7 @@ categories: MAUI
  
 - 代码实现：
 
-```C#
+```csharp
 builder.AddiOS(app =>
  {
      app.OnActivated(e =>
@@ -83,7 +83,7 @@ builder.AddiOS(app =>
 
 - 代码如下：
  
- ```C#
+ ```csharp
  builder.AddiOS(app =>
  {
      app.OnActivated(e =>

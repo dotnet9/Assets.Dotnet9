@@ -46,7 +46,7 @@ Sample01是一个helloworld，包含了几部分内容：
 
 1. 构建StepBody，就是workflow中需要执行的内容，每个类继承自StepBody这个虚拟类，重载`ExecutionResult Run(IStepExecutionContext context)`，这个函数中完成所需的工作
 
-```C#
+```csharp
 public class HelloWorld : StepBody
 {
     private ILogger logger;
@@ -106,7 +106,7 @@ public class SleepStep : StepBody
 
 2. 构建workflow，实现IWorkflow接口，每个workflow有一个Id和一个Version，标明这个workflow的身份，这里通过两种方法构建了HelloWorkflow，
 
-```C#
+```csharp
 public class HelloWorkflow : IWorkflow
 {
     public string Id => "HelloWorkflow";
@@ -151,7 +151,7 @@ public class HelloWorkflow2 : IWorkflow
 
 3. 万事俱备，准备让workflow运行起来。第一步当然是需要搭建service，Workflow Core通过Injection命名空间的ServiceCollection添加了Workflow相关的服务，对于有参数的StepBody，需要先通过service的AddTransient函数注册，这样才能正确的构造对象：
 
-```C#
+```csharp
 /// <summary>
 /// 配置workflow
 /// </summary>
@@ -181,7 +181,7 @@ private IServiceProvider ConfigureServices()
 
 接下来，启动workflow 主机，并启动一次workflow，将整个窗体代码贴一下，这样比较清晰
 
-```C#
+```csharp
 using Microsoft.Extensions.DependencyInjection;
 using System.Windows;
 using Microsoft.Extensions.Logging;

@@ -55,7 +55,7 @@ xaml代码如下：
 
 MainWindowViewModel类代码如下：
 
-```C#
+```csharp
 using Prism.Commands;
 using Prism.Mvvm;
 using System;
@@ -109,13 +109,13 @@ namespace CommandSample.ViewModels
 
 还有一个值得注意的是，我们通过Checkbox的IsChecked绑定了一个bool属性IsCanExcute，且在CanExecute方法中return IsCanExcute，我们都知道CanExecute控制着Execute方法的是否能够执行，也控制着Button的IsEnable状态,而在IsCanExcute的set方法我们增加了一句：
 
-```C#
+```csharp
 GetCurrentTimeCommand.RaiseCanExecuteChanged();
 ```
 
 其实通过prism源码我们可以知道RaiseCanExecuteChanged方法就是内部调用ICommand接口下的CanExecuteChanged事件去调用CanExecute方法
 
-```C#
+```csharp
 public void RaiseCanExecuteChanged()
 {
     OnCanExecuteChanged();
@@ -143,7 +143,7 @@ protected virtual void OnCanExecuteChanged()
 
 其实上述prism还提供了一个更简洁优雅的写法：
 
-```C#
+```csharp
  private bool _isCanExcute;
  public bool IsCanExcute
  {
@@ -185,7 +185,7 @@ xaml代码如下：
 
 GetCurrentTimeCommand命令代码改为如下：
 
-```C#
+```csharp
 private DelegateCommand<object> _getCurrentTimeCommand;
 public DelegateCommand<object> GetCurrentTimeCommand =>
     _getCurrentTimeCommand ?? (_getCurrentTimeCommand = new DelegateCommand<object>(ExecuteGetCurrentTimeCommand).ObservesCanExecute(()=> IsCanExcute));
@@ -226,7 +226,7 @@ xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
 
 MainWindowViewModel新增代码：
 
-```C#
+```csharp
 private string _foo;
 public string Foo
 {
@@ -268,7 +268,7 @@ xaml代码修改如下：
 
 MainWindowViewModel修改如下：
 
-```C#
+```csharp
 void ExecuteTextChangedCommand(object parameter)
 {
     this.CurrentTime = Foo + ((TextBox)parameter)?.Name;
@@ -293,7 +293,7 @@ xaml界面新增按钮代码如下：
 
 MainWindowViewModel新增代码：
 
-```C#
+```csharp
 private DelegateCommand _asyncCommand;
   public DelegateCommand AsyncCommand =>
      _asyncCommand ?? (_asyncCommand = new DelegateCommand(ExecuteAsyncCommand));
@@ -315,7 +315,7 @@ private DelegateCommand _asyncCommand;
 
 也可以更简洁的写法：
 
-```C#
+```csharp
  private DelegateCommand _asyncCommand;
  public DelegateCommand AsyncCommand =>
     _asyncCommand ?? (_asyncCommand = new DelegateCommand( async()=>await ExecuteAsyncCommand()));
@@ -349,7 +349,7 @@ prism提供CompositeCommand类支持复合命令，什么是复合命令，我�
    
 首先，我们创建一个类库项目，新增ApplicationCommands类作为全局命令类，代码如下：
 
-```C#
+```csharp
 public interface IApplicationCommands
 {
     CompositeCommand GetCurrentAllTimeCommand { get; }
@@ -373,7 +373,7 @@ public class ApplicationCommands : IApplicationCommands
 
 App.cs代码：
 
-```C#
+```csharp
 using Prism.Unity;
 using Prism.Ioc;
 using System.Windows;
@@ -416,7 +416,7 @@ namespace CompositeCommandsSample
 
 GetHourTabViewModel.cs:
 
-```C#
+```csharp
 IApplicationCommands _applicationCommands;
 
 public GetHourTabViewModel(IApplicationCommands applicationCommands)
@@ -438,7 +438,7 @@ void ExecuteGetHourCommand()
 
 GetMonthDayTabViewModel.cs:
 
-```C#
+```csharp
  IApplicationCommands _applicationCommands;
 
  public GetMonthDayTabViewModel(IApplicationCommands applicationCommands)
@@ -460,7 +460,7 @@ GetMonthDayTabViewModel.cs:
 
 MainWindowViewModel.cs:
 
-```C#
+```csharp
 IApplicationCommands _applicationCommands;
 
 public MainWindowViewModel(IApplicationCommands applicationCommands)
@@ -482,7 +482,7 @@ void ExecuteGetYearCommand()
 
 CommandSampleMoudle.cs:
 
-```C#
+```csharp
 using CommandSample.ViewModels;
 using CommandSample.Views;
 using Prism.Ioc;
@@ -551,7 +551,7 @@ namespace CommandSample
 
 MainWindowViewModel.cs：
 
-```C#
+```csharp
 using CompositeCommandsCore;
 using Prism.Mvvm;
 

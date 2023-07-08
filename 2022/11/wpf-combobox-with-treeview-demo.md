@@ -112,19 +112,19 @@ Xaml文件
 - 引用MVVM库，可以参考：[WPF MVVM通用封装库](https://blog.csdn.net/qq_28149763/article/details/126358900)
 - 后台逻辑（ViewModel）命令声明与使用
 
-```C#
+```csharp
 SelectItemChangeCommand = new RelayCommand<TypeModel>(onSelectItemChange);
 SelectionChangedCommand = new RelayCommand(onSelectionChanged);
 ```
 
-```C#
+```csharp
   public RelayCommand<TypeModel> SelectItemChangeCommand { get; set; }
   public RelayCommand SelectionChangedCommand { get; set; }
 ```
 
 后台逻辑（ViewModel）
 
-```C#
+```csharp
 public class ViewModel:ViewModelBase
 {
 
@@ -233,7 +233,7 @@ public class ViewModel:ViewModelBase
 
 数据类
 
-```C#
+```csharp
 public class TypeTreeModel: TypeModel
 {
     public ObservableCollection<TypeTreeModel> ChildList { get; set; }

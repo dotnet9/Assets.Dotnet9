@@ -34,7 +34,7 @@ GZY.Quartz.MUI是在github上开源的 ASP.NET Core 项目, 它旨在帮助开�
 
 第三步：在 StartUp.cs 中的 ConfigureServices 添加 GZY.Quartz.MUI 服务
 
-```C#
+```csharp
  public void ConfigureServices(IServiceCollection services)
 {
 	
@@ -47,7 +47,7 @@ GZY.Quartz.MUI是在github上开源的 ASP.NET Core 项目, 它旨在帮助开�
 
 第四步：启用该中间件
 
-```C#
+```csharp
 public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
 {
 		if (env.IsDevelopment())

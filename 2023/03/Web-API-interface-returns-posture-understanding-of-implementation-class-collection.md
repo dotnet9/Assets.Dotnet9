@@ -16,7 +16,7 @@ categories: .NET相关,Web API
 
 如下图，定义两个子类Student和Employ，都继承自抽象类PersonBase:
 
-```C#
+```csharp
 public abstract class PersonBase
 {
     public string Name { get; set; }
@@ -50,7 +50,7 @@ public class Employ : PersonBase
 
 添加Web API接口返回基类集合：
 
-```C#
+```csharp
 [ApiController]
 [Route("[controller]")]
 public class TestController : ControllerBase
@@ -92,7 +92,7 @@ public class TestController : ControllerBase
 
 解决方案：将接口返回值由`IEnumerable<PersonBase>`改为`object`，接口实现的`List<PersonBase>`改为`List<object>`:
 
-```C#
+```csharp
 [HttpGet(Name = "GetDetails")]
 public object Get()
 {
@@ -127,7 +127,7 @@ public object Get()
 
 我们将接口恢复，在抽象类上添加特性，标明基类序列化时需要映射的子类类型：
 
-```C#
+```csharp
 [JsonDerivedType(typeof(Student))]
 [JsonDerivedType(typeof(Employ))]
 public abstract class PersonBase

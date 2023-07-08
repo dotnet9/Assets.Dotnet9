@@ -62,7 +62,7 @@ prism注册模块有三种方式：
 
 MedicineModule.cs:
 
-```C#
+```csharp
  public class MedicineModule : IModule
  {
      public void OnInitialized(IContainerProvider containerProvider)
@@ -89,7 +89,7 @@ MedicineModule.cs:
 
 PatientModule.cs:
 
-```C#
+```csharp
  public class PatientModule : IModule
  {
      public void OnInitialized(IContainerProvider containerProvider)
@@ -114,7 +114,7 @@ PatientModule.cs:
 
 然后我们在PrismMetroSample.Shell主窗体的项目分别引用PrismMetroSample.MedicineModule和PrismMetroSample.PatientModule程序集，之后在App.xaml.cs中代码注册：
 
-```C#
+```csharp
 protected override void ConfigureModuleCatalog(IModuleCatalog moduleCatalog)
 {
    moduleCatalog.AddModule<PrismMetroSample.PatientModule.PatientModule>();
@@ -139,7 +139,7 @@ protected override void ConfigureModuleCatalog(IModuleCatalog moduleCatalog)
 
 首先我们先在MedicineModule加上特性,OnDemand为true为"按需"加载，而PatientModule默认加载则可以不加
 
-```C#
+```csharp
  [Module(ModuleName = "MedicineModule", OnDemand =true)]
  public class MedicineModule : IModule
 ```
@@ -156,7 +156,7 @@ xcopy "$(TargetDir)$(TargetName)*$(TargetExt)" "$(SolutionDir)\PrismMetroSample.
 
 然后我们在App.xaml.cs重载实现该函数：
 
-```C#
+```csharp
 protected override IModuleCatalog CreateModuleCatalog()
 {
    //获取该路径下的文件夹的模块目录
@@ -195,7 +195,7 @@ App.config:
 
 App.xaml.cs：
 
-```C#
+```csharp
  protected override IModuleCatalog CreateModuleCatalog()
  {
     return new ConfigurationModuleCatalog();//加载配置文件模块目录
@@ -215,7 +215,7 @@ prism应用程序加载模块有两种方式：
 
 MainWindowViewModle.cs:
 
-```C#
+```csharp
  public class MainWindowViewModel : BindableBase
  {
     IModuleManager _moduleManager;
@@ -237,7 +237,7 @@ MainWindowViewModle.cs:
 
 我们还可以去检测加载模块完成事件，我们MainWindowViewModle中加上这几句：
 
-```C#
+```csharp
 IModuleManager _moduleManager;
 public MainWindowViewModel(IModuleManager moduleManager)
 {
@@ -259,7 +259,7 @@ private void _moduleManager_LoadModuleCompleted(object sender, LoadModuleComplet
 
 加载模块后，模块就会进行初始化，我们以MedicineModule为例子,先来看看代码：
 
-```C#
+```csharp
  public class MedicineModule : IModule
  {
      public void OnInitialized(IContainerProvider containerProvider)

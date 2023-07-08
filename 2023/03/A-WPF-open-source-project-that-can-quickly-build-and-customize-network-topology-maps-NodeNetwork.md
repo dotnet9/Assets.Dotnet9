@@ -137,7 +137,7 @@ MVVM在整个NodeNetwork库中都在贯彻使用。有关MVVM的介绍请点击[
 
 在使用库之前，请在`App.xaml.cs`文件的`OnStartup`方法内使用`NNViewRegistrar.RegisterSplat()`方法将NodeNetwork的视图和相应的ViewModel进行注册关联。
 
-```C#
+```csharp
 using System.Windows;
 using NodeNetwork;
 
@@ -176,14 +176,14 @@ public partial class App : Application
 
 在NodeNetwork中，创建节点和连接非常简单。首先，我们需要创建NetworkViewModel，它是NetworkView视图的ViewModel，可以通过以下代码创建：
 
-```C#
+```csharp
 var network = new NetworkViewModel();
 networkView.ViewModel = network;
 ```
 
 然后通过以下代码创建第一个节点：
 
-```C#
+```csharp
 var node1 = new NodeViewModel();
 node1.Name = "节点1";
 network.Nodes.Add(node1);
@@ -191,7 +191,7 @@ network.Nodes.Add(node1);
 
 并给第一个节点创建一个输入端口：
 
-```C#
+```csharp
 var node1Input = new NodeInputViewModel();
 node1Input.Name = "节点1输入";
 node1.Inputs.Add(node1Input);
@@ -199,7 +199,7 @@ node1.Inputs.Add(node1Input);
 
 创建第二个节点，并以同样的方式给此节点创建一个输出端口：
 
-```C#
+```csharp
 var node2 = new NodeViewModel();
 node2.Name = "节点2";
 network.Nodes.Add(node2);
@@ -211,14 +211,14 @@ node2.Outputs.Add(node2Output);
 
 最后，我们可以通过以下代码将节点1的输入端口和节点2的输出端口连接到一起：
 
-```C#
+```csharp
 var connection = new ConnectionViewModel(network, node1Input, node2Output);
 network.Connections.Add(connection);
 ```
 
 完整代码如下：
 
-```C#
+```csharp
 using DynamicData;
 using NodeNetwork.ViewModels;
 using System.Windows;
@@ -273,13 +273,13 @@ public partial class MainWindow : Window
 
 在NodeNetwork中，布局非常灵活和自由。我们可以通过代码或图形界面进行布局。例如，我们可以通过以下代码将节点放置在指定的位置：
 
-```C#
+```csharp
 node.Position = new Point(100, 100);
 ```
 
 通过以下代码调整整个网络拓扑图的布局(参考[布局文档](https://wouterdek.me/NodeNetwork/cookbook/layout))：
 
-```C#
+```csharp
 ForceDirectedLayouter layouter = new ForceDirectedLayouter();
 var config = new Configuration
 {
@@ -294,7 +294,7 @@ layouter.Layout(config, 10000);
 
 在NodeNetwork中，序列化和反序列化非常简单。我们可以通过以下代码将节点和连接序列化为XML格式：
 
-```C#
+```csharp
 var serializer = new XmlSerializer(typeof(NodeNetworkViewModel));
 var writer = new StringWriter();
 serializer.Serialize(writer, nodeNetwork);

@@ -470,7 +470,7 @@ categories: WPF
 
 就一个窗体拖动方式：
 
-```C#
+```csharp
 using System.Windows;
 using System.Windows.Input;
 

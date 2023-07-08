@@ -40,7 +40,7 @@ Install-Package QuestPDF
 
 生成Pdf文档一共分为三部分，Header(页眉)，Content（内容）,Footer（页脚），下面是例子代码：
 
-```C#
+```csharp
 Document.Create(container =>
 {
     container.Page(page =>
@@ -90,7 +90,7 @@ Document.Create(container =>
 
 比如我们设计一个基本的发票信息 要设计一个购物清单，一个卖家买家的地址，以及发票编号等等 我们设计这样的3个Model类：
 
-```C#
+```csharp
 public class InvoiceModel
 {
     public int InvoiceNumber { get; set; }
@@ -124,7 +124,7 @@ public class Address
 
 Model定义好了之后我们就定义一些假数据来填充pdf：
 
-```C#
+```csharp
 public static class InvoiceDocumentDataSource
 {
     private static Random Random = new Random();
@@ -184,7 +184,7 @@ public static class InvoiceDocumentDataSource
 
 第一个是模板文档的一些基础信息，第二个是模板的容器，基于这些原则我们设计一个模板层类：
 
-```C#
+```csharp
  public class InvoiceDocument : IDocument
 {
     public InvoiceModel Model { get; }
@@ -222,7 +222,7 @@ pdf的page页面总是有三个元素:页眉,页脚，内容。查看一下我�
 
 接下来我们来填充他的页眉,我们把数据源整理好了之后，就可以调用Element方法填充：
 
-```C#
+```csharp
 public void Compose(IDocumentContainer container)
 {
     container
@@ -273,7 +273,7 @@ void ComposeHeader(IContainer container)
 
 最后我们来实现内容：
 
-```C#
+```csharp
 public void Compose(IDocumentContainer container)
 {
     container
@@ -367,7 +367,7 @@ void ComposeContent(IContainer container)
        
 在这些准备工作做完了之后我们就可以生成Pdf文档了：
 
-```C#
+```csharp
 var filePath = "invoice.pdf";
 
 var model = InvoiceDocumentDataSource.GetInvoiceDetails();

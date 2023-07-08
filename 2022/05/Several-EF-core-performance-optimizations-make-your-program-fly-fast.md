@@ -18,7 +18,7 @@ categories: EF Core
 
 A. Contains语句，生成的sql为：
 
-```C#
+```csharp
 var data3 = dbContext.T_UserInfor.Where(u => u.userName.Contains("p")).ToList();
 ```
 
@@ -28,7 +28,7 @@ var data3 = dbContext.T_UserInfor.Where(u => u.userName.Contains("p")).ToList();
 
 B. EF.Functions.Like语句生成的sql为：（Like搭配SQL查询的通配符使用）
 
-```C#
+```csharp
   var data1 = dbContext.T_UserInfor.Where(u => EF.Functions.Like(u.userName, "%p%")).ToList();
   //或者
   var data2 = (from p in dbContext.T_UserInfor
@@ -55,13 +55,13 @@ B. EF.Functions.Like语句生成的sql为：（Like搭配SQL查询的通配符�
 
 1. EFCore删除必须先查询再删除，优化后可直接删除：
 
-```C#
+```csharp
 context.User.Where(t => t.Id == 100).Delete();
 ```
 
 2. 优化更新语句：
 
-```C#
+```csharp
 context.User.Where(t => t.Id == 4).Update(t =>new User() { NickName = "2224114" ,Phone = "1234"} );
 ```
  
@@ -75,13 +75,13 @@ Find会优先查询缓存，当前面已经查询过这条数据的时候使用�
 
 但是当我们只需要查询出实体而不需要修改时（只读），实体追踪就没有任何用途了。这时我们就可以调用 AsNoTracking 获取非追踪的数据，这样可以提高查询性能。具体代码如下：
 
-```C#
+```csharp
 var users = db.Users.AsNoTracking().ToList();
 ```
 
 **注：如果是多表查询可以在查询前**
 
-```C#
+```csharp
 db.ChangeTracker.QueryTrackingBehavior = QueryTrackingBehavior.NoTracking;
 ```
 

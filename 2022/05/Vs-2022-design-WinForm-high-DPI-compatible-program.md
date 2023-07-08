@@ -47,7 +47,7 @@ categories: Winform
 
 6. 添加测试代码
 
-```C#
+```csharp
 namespace WinFormsApp1
 {
     public partial class Form1 : Form
@@ -135,7 +135,7 @@ namespace WinFormsApp1
 
 3. 如果提示找不到控件, 在 Form1.Designer.cs 和 Form1.cs 添加
 
-```C#
+```csharp
 using System;
 using System.Windows.Forms;
 ```
@@ -154,7 +154,7 @@ using System.Windows.Forms;
 
 6. Form1.cs 添加 'AutoScaleMode = AutoScaleMode.Dpi;'
 
-```C#
+```csharp
 public Form1()
 {
     AutoScaleMode = AutoScaleMode.Dpi; //添加这句,要在'InitializeComponent();'上方

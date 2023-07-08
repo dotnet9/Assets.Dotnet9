@@ -27,7 +27,7 @@ categories: .NET相关,RabbitMQ
 
 这意味着消息是由 `.NET` 类定义的。您要发送的每种不同的消息类型都由一个类表示。该类必须是公共的，必须具有默认构造函数和公共`读/写`属性。您通常不会在消息中实现任何功能，而是将其视为简单的数据容器或数据传输对象 (`DTO`)。这是一个简单的消息：
 
-```C#
+```csharp
 public class MyMessage
 {
     public string Text { get; set; }
@@ -76,25 +76,25 @@ EasyNetQ 旨在将所有这些问题封装在一个简单易用的库中，该�
 
 接到 RabbitMQ 代理
 
-```C#
+```csharp
 var bus = RabbitHutch.CreateBus("host=localhost");
 ```
 
 发布消息
 
-```C#
+```csharp
 await bus.PubSub.PublishAsync(message);
 ```
 
 发布一条延迟5秒的消息
 
-```C#
+```csharp
 await bus.Scheduler.FuturePublishAsync(message, TimeSpan.FromSeconds(5));
 ```
 
 订阅消息
 
-```C#
+```csharp
 await bus.PubSub.SubscribeAsync<MyMessage>(
     "my_subscription_id", msg => Console.WriteLine(msg.Text)
 );
@@ -102,7 +102,7 @@ await bus.PubSub.SubscribeAsync<MyMessage>(
 
 RPC 服务器
 
-```C#
+```csharp
 await bus.Rpc.RespondAsync<TestRequestMessage, TestResponseMessage>(request =>
     new TestResponseMessage{ Text = request.Text + " all done!" }
 );

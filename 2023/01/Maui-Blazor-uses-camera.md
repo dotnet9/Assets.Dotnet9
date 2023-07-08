@@ -118,7 +118,7 @@ function startVideo(src) {
 
 `Platforms/Android/MainActivity.cs`文件内容
 
-```C#
+```csharp
 [Activity(Theme = "@style/Maui.SplashTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation | ConfigChanges.UiMode | ConfigChanges.ScreenLayout | ConfigChanges.SmallestScreenSize | ConfigChanges.Density)]
 public class MainActivity : MauiAppCompatActivity
 {
@@ -134,7 +134,7 @@ public class MainActivity : MauiAppCompatActivity
 
 `MauiWebChromeClient.cs`文件内容
 
-```C#
+```csharp
 #if ANDROID
 using Android.Webkit;
 using Microsoft.AspNetCore.Components.WebView.Maui;
@@ -163,7 +163,7 @@ public class MauiBlazorWebViewHandler : BlazorWebViewHandler
 
 在`MauiProgram.cs`中添加以下代码；如果没有下面代码会出现没有摄像头权限，具体在这个 [issue](https://github.com/dotnet/maui/issues/3694) 体现
 
-```C#
+```csharp
 #if ANDROID
 builder.ConfigureMauiHandlers(handlers =>
 {
@@ -176,7 +176,7 @@ builder.ConfigureMauiHandlers(handlers =>
 
 然后编写界面
 
-```C#
+```csharp
 @page "/" @*界面路由*@
 
 @inject IJSRuntime JSRuntime @*注入jsRuntime*@

@@ -105,7 +105,7 @@ categories: MAUI
 
 完成上述设置你已经成为一个解决方案管理高手了，但是这还不够，我们都知道.net6或者是c#10引入了文件级别的命名空间（File-scoped）你只需要写一个 namespace xxx，更少的大括号让你的代码看起来更加简洁，很可惜如果你不做任何改变，那么他永远不会那么主动，你创建的默认class他一定长这样：
 
-```C#
+```csharp
 namespace MauiLib1
 {
    internal class Class2
@@ -132,7 +132,7 @@ namespace MauiLib1
 
 **此时你创建的新的class，他变成了这样：**
 
-```C#
+```csharp
 namespace MauiLib1;
 internal class Class3
 {
@@ -171,7 +171,7 @@ internal class Class3
 
 当我生成Window的应用时，我们要引用一个Window平台相关的package，比如我们很熟悉的Pinvoke.User32，很明显这个库只适合Windows平台，其他平台引用过去虽然不会造成编译错误，但是在打包文件内势必会有这个一个不相关的dll（也许没有我没测试过，我猜他有），这是我们不希望看到的，所以我们要这样：
 
-```C#
+```csharp
 <!--这是一个专属于Windows的设定，让他成为Windows忠诚的伴侣-->
 <ItemGroup Condition="$(TargetFramework.Contains('-windows'))">
   <!-- Required - WinUI does not yet have buildTransitive for everything -->
@@ -183,7 +183,7 @@ internal class Class3
 
 在编写代码时，我们通常会遇到我的部分代码是适用于Windows的而不适用于其他平台，此时你可以使用编译宏命令 `#if #elif #else #endif`等
 
-```C#
+```csharp
 public static MauiApp CreateMauiApp()
 {
    var builder = MauiApp.CreateBuilder();

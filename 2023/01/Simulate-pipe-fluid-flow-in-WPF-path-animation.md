@@ -37,7 +37,7 @@ WPF的一大特性就的动画系统，使用动画能够实现很多在WinForm�
 
 后台逻辑代码如下：
 
-```C#
+```csharp
 private void btnAnimo_Click(object sender, RoutedEventArgs e)
 {
     AnimationByPath(cvsMain, path1,path1.StrokeThickness);
@@ -96,7 +96,7 @@ private void AnimationByPath(Canvas cvs, Path path,double targetWidth, int durat
 
 解决这个问题的关键就在于路径数据的转换了。
 
-```C#
+```csharp
 private string ConvertPathData(string data)
 {
     data = data.Replace("M", "");
@@ -167,7 +167,7 @@ private string ConvertPathData(string data)
 
 另外作为动画对象的正方体可以换成任意控件对象，为了形象点，就把正方体换成箭头；同时为了区分正向和反向动画，路径也设置成不同的颜色。修改之后的代码如下：
 
-```C#
+```csharp
 /// <summary>
 /// 正向
 /// </summary>
@@ -287,7 +287,7 @@ private void AnimationByPath(Canvas cvs, Path path, double targetWidth, bool isI
 
 后台代码修改为：
 
-```C#
+```csharp
 /// <summary>
 /// 正转
 /// </summary>

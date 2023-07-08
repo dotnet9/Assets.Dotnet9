@@ -44,7 +44,7 @@ tags: hook, harmony,拦截
 
 1. 创建一个控制台程序 `HelloHook`，添加类 `Student`：
 
-```C#
+```csharp
 namespace HelloHook;
 
 public class Student
@@ -60,7 +60,7 @@ public class Student
 
 2. `Program.cs`中添加`Student`调用：
 
-```C#
+```csharp
 using HelloHook;
 
 var student = new Student();
@@ -89,7 +89,7 @@ Console.WriteLine(student.GetDetails("沙漠尽头的狼"));
 
 添加拦截类`HookStudent`：
 
-```C#
+```csharp
 using HarmonyLib;
 
 namespace HelloHook;
@@ -127,7 +127,7 @@ public class HookStudent
 
 对`Program.cs`进行修改，添加`Harmony`对整个程序集的拦截：
 
-```C#
+```csharp
 using HarmonyLib;
 using HelloHook;
 using System.Reflection;
@@ -163,7 +163,7 @@ Finalizer
 
 修改`Program.cs`，多打印几行数据方便区分：
 
-```C#
+```csharp
 using HarmonyLib;
 using HelloHook;
 using System.Reflection;
@@ -184,7 +184,7 @@ Console.ReadLine();
 
 修改`HookStudent`，我们只使用`Prefix`方法，其他`Postfix`等方法类似，可看[Harmony wiki](https://github.com/pardeike/Harmony/wiki)了解更多的使用方法，修改如下：
 
-```C#
+```csharp
 using HarmonyLib;
 
 namespace HelloHook;
@@ -227,7 +227,7 @@ public class HookStudent
 
 注意看`Prefix`方法传入的参数`ref string __result`：其中`ref`表示引用传递，允许对结果进行修改；`string`与原方法的返回值类型必须一致；`__result`为返回值的约定命名，前面是两个"_"，即命名必须为`__result`。
 
-```C#
+```csharp
 if ("沙漠之狐".Equals(name))
 {
     __result = $"这是我的曾用网名";
@@ -241,7 +241,7 @@ if ("沙漠之狐".Equals(name))
 
 看传入的参数`ref string name`：`ref`表示参数是引用传递，允许对参数进行修改；`string name`必须与原方法参数定义一样。
 
-```C#
+```csharp
 if (!"沙漠尽头的狼".Equals(name))
 {
     name = "非站长名";
@@ -260,13 +260,13 @@ if (!"沙漠尽头的狼".Equals(name))
 
 我们创建一个简单的WPF程序`HookWpf`，拦截`MessageBox.Show`方法：
 
-```C#
+```csharp
 public static MessageBoxResult Show(string messageBoxText, string caption)
 ```
 
 首先在`App`中使用自动拦截注册：
 
-```C#
+```csharp
 public partial class App : Application
 {
     protected override void OnStartup(StartupEventArgs e)
@@ -282,7 +282,7 @@ public partial class App : Application
 
 定义拦截类`HookMessageBox`：
 
-```C#
+```csharp
 using HarmonyLib;
 using System.Windows;
 
@@ -326,7 +326,7 @@ public class HookMessageBox
 
 后台处理按钮点击事件，弹出提示框：
 
-```C#
+```csharp
 using System.Windows;
 
 namespace HookWpf;
@@ -362,7 +362,7 @@ public partial class MainWindow : Window
 
 创建控制台程序`HookDotnetAPI`，引入`Lib.Harmony`nuget包，`Program.cs`修改如下：
 
-```C#
+```csharp
 using HarmonyLib;
 
 var dotnet9Domain = "https://dotnet9.com";

@@ -14,7 +14,7 @@ categories: .NET相关
 
 插件化应用程序，插件是动态加载的，插件的动态库放各自目录下，比如运行目录的相对路径`./dlls/ChildAssembly.dll`，通过`Assembly.LoadFile`能正确加载程序集：
 
-```C#
+```csharp
 var childAssemblyPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "dlls", "ChildAssembly.dll");
 if (File.Exists(childAssemblyPath))
 {
@@ -24,7 +24,7 @@ if (File.Exists(childAssemblyPath))
 
 也能通过`childAssembly.GetType("ChildAssembly.Student")`成功获取插件中的类类型，但实际开发时，插件中的类类型拼接的是完整路径，比如`ChildAssembly.Student, ChildAssembly, Version=0.1.0.0, Culture=neutral, PublicKeyToken=null`，类型获取代码：
 
-```C#
+```csharp
 var type = Type.GetType("ChildAssembly.Student, ChildAssembly, Version=0.1.0.0, Culture=neutral, PublicKeyToken=null");
 ```
 

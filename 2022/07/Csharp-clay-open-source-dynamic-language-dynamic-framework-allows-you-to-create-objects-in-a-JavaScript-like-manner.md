@@ -22,7 +22,7 @@ Clay非常类似于ExpandoObject, 可以看做是ExpandoObject的加强版. 它�
 
 1, 最简单的对象构建和初始化
 
-```C#
+```csharp
 dynamic New = new ClayFactory();
 var person = New.Person();
 person.FirstName = "Louis";
@@ -33,7 +33,7 @@ person.LastName = "Dejardin";
 
 2, 使用索引器的方式初始化
 
-```C#
+```csharp
 var person = New.Person();
 person["FirstName"] = "Louis";
 person["LastName"] = "Dejardin";
@@ -41,7 +41,7 @@ person["LastName"] = "Dejardin";
 
 3, 使用匿名对象的方式实现初始化
 
-```C#
+```csharp
 var person = New.Person(new {
     FirstName = "Louis",
     LastName = "Dejardin"
@@ -50,7 +50,7 @@ var person = New.Person(new {
 
 4，使用命名参数方式实现初始化
 
-```C#
+```csharp
 var person = New.Person(
     FirstName: "Louis",
     LastName: "Dejardin"
@@ -59,7 +59,7 @@ var person = New.Person(
 
 5，链式方式初始化
 
-```C#
+```csharp
 var person = New.Person()
                .FirstName("Louis")
                .LastName("Dejardin");
@@ -67,7 +67,7 @@ var person = New.Person()
 
 读取属性方式
 
-```C#
+```csharp
 person.FirstName
 person[“FirstName”]
 person.FirstName()
@@ -80,7 +80,7 @@ person.FirstName()
 
 我们可以创建 JavaScript 风格的 Array:
 
-```C#
+```csharp
 dynamic New = new ClayFactory();
           var people = New.Array(
               New.Person().FirstName("Louis").LastName("Dejardin"),
@@ -90,19 +90,19 @@ dynamic New = new ClayFactory();
 
 1. 构建的Array, 具有Count属性
 
-```C#
+```csharp
 Console.WriteLine("Count = {0}", people.Count);
 ```
 
 2. 可以通过索引访问
 
-```C#
+```csharp
 Console.WriteLine("people[0].FirstName = {0}", people[0].FirstName);
 ```
 
 3. 支持foreach遍历
 
-```C#
+```csharp
 foreach (var person in people) {
      Console.WriteLine("{0} {1}", person.FirstName, person.LastName);
 }
@@ -110,7 +110,7 @@ foreach (var person in people) {
 
 4. 简单方便地为对象添加Array属性
 
-```C#
+```csharp
 person.Aliases("bleroy", "BoudinFatal");
 ```
 
@@ -118,7 +118,7 @@ person.Aliases("bleroy", "BoudinFatal");
 
 下面的代码和上面的作用是等价的:
 
-```C#
+```csharp
 persons.Aliases1(new[] {"bleroy", "BoudinFatal"});
 ```
 
@@ -126,7 +126,7 @@ persons.Aliases1(new[] {"bleroy", "BoudinFatal"});
 
 因为`Array元素的类型是dynamic`, 所以可以有这样的Array:
 
-```C#
+```csharp
 var people = New.Array(
      New.Person().FirstName("Louis").LastName("Dejardin"),
      "Peter"
@@ -138,7 +138,7 @@ var people = New.Array(
 和ExpandoObject一样，你也可以为其扩展方法，`只是方法调用的时候，需要多添加一个()`.
 这可能是Clay支持用()来访问对象属性导致的。
 
-```C#
+```csharp
 var person = New.Pserson();
 person.FirstName = "Louis";
 person.LastName = "Dejardin";
@@ -151,7 +151,7 @@ Console.WriteLine(person.SayFullName()(" Here!"));
 
 假设我们定义了这个接口，用动态类型创建一个对象，而且这个对象是实现了该接口，这看起来是不是不可完成的任务? Clay能办到!
 
-```C#
+```csharp
 public interface IPerson
 { 
        string FirstName { get; set; } 

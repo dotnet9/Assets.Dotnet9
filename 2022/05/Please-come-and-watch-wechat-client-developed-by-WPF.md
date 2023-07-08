@@ -38,7 +38,7 @@ categories: WPF
 
 在程序启动以后，先通过请求获取到二维码，然后，在启动一个新的线程，不断的循环检索登录状态。
 
-```C#
+```csharp
 private void LoopLoginCheck()
 {
     object login_result = null;
@@ -154,7 +154,7 @@ RadioButton的样式是用path画的，可以看我另一篇博客[微信聊天�
 
 3、聊天内容部分用的是ScrollingListBox，继承自ListBox，但是重写了里面的OnItemsChanged属性，保证可以时刻滚动到最后一行
 
-```C#
+```csharp
 public class ScrollingListBox : ListBox
 {
     protected override void OnItemsChanged(System.Collections.Specialized.NotifyCollectionChangedEventArgs e)

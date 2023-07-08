@@ -46,7 +46,7 @@ git clone https://github.com/lionsoul2014/ip2region.git
 
 使用就很简单了，代码就一行
 
-```C#
+```csharp
 static void Main(string[] args)
 {
   using (var _search = new DbSearcher(Environment.CurrentDirectory + @"\DB\ip2region.db"))

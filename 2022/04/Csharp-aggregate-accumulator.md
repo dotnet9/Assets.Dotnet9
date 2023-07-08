@@ -19,13 +19,13 @@ tags: C#,Aggregate
 
 为方便理解，假设有一个int一维数组，储存5个数字，求出第一个值(-1)加上第二个值(0)的和(-1)，再将求得的值(-1)和数组的第三个数(3)相加，再次求和(2)，再次将该值和数组的第四个数（5）相加。。。以此类推，得出其实就是：int result = -1 + 0 + 3 + 5 + 8;
 
-```C#
+```csharp
 int[] numbers={-1, 0, 3, 5,8};
 ```
 
 ### 1.1 基本需求
 
-```C#
+```csharp
 //V1.0版本
 static void Main(string[] args)
 {
@@ -44,7 +44,7 @@ static void Main(string[] args)
 
 把中间的算法提取出来，这样可以输入其他不同长度的int类型数组了：
 
-```C#
+```csharp
 //V1.1 版本
 static void Main(string[] args)
 {
@@ -70,13 +70,13 @@ static int Aggregate(int[] array)
 
 累加器要做到不是只能做加法，例如：
 
-```C#
+```csharp
 int result = -1 * 0 * 3 * 5 * 8;
 
 int result = -1 - 0 - 3 - 5 - 8;
 ```
 
-```C#
+```csharp
 //V1.2 版本,实现算法替换
 //需了解委托,Lambda相关知识
 static void Main(string[] args)
@@ -104,7 +104,7 @@ static int Aggregate(int[] array,Func<int,int,int> func)
 
 目前该算法`int Aggregate(int[] array,Func<int,int,int> func)`只支持int类型，现在要扩展到任意类型–泛型。
 
-```C#
+```csharp
 //V1.3 版本，实现泛型
 //需了解泛型，IEnumerator接口相关知识
 static void Main(string[] args)
@@ -139,7 +139,7 @@ static TSource Aggregate<TSource>(IEnumerable<TSource> source,Func<TSource, TSou
 
 直接对实现了IEnumerator接口的类，添加扩展方法。至此，该Aggregate实现的功能已经和官网提供的累加器相似了。
 
-```C#
+```csharp
 //V1.4 版本，扩展方法
 class Program
 {
@@ -179,7 +179,7 @@ public static class Helper
 
 在System.Linq命名空间下，提供了：
 
-```C#
+```csharp
 1. public static TSource Aggregate<TSource>(this IEnumerable<TSource> source, Func<TSource, TSource, TSource> func);
 
 2. public static TAccumulate Aggregate<TSource, TAccumulate>(this IEnumerable<TSource> source, TAccumulate seed, Func<TAccumulate, TSource, TAccumulate> func);

@@ -18,7 +18,7 @@ categories: .NET相关
 
 嗯。。看定义好像有点迷糊，让我们看看下面的例子吧
 
-```C#
+```csharp
 class Program
 {
     static Action CreateGreeting(string message)
@@ -42,7 +42,7 @@ class Program
  
 闭包就是这么简单，其实我们经常都在使用，只是有时候我们都不自知而已。比如大家肯定都写过类似下面的代码。
 
-```C#
+```csharp
 void AddControlClickLogger(Control control, string message)
 {
 	control.Click += delegate
@@ -56,7 +56,7 @@ void AddControlClickLogger(Control control, string message)
  
 不过在使用闭包的时候，要注意一个陷阱。因为闭包会延迟局部变量的生命周期，在某些情况下程序产生的结果会和预想的不一样。让我们看看下面的例子。
 
-```C#
+```csharp
 class Program
 {
     static List<Action> CreateActions()
@@ -100,7 +100,7 @@ class Program
 
 要想解决这个问题也很简单，多声明一个局部变量，让各个闭包引用自己的局部变量就可以了。
 
-```C#
+```csharp
 //其他都保持与之前一致
 static List<Action> CreateActions()
 {
@@ -126,7 +126,7 @@ static List<Action> CreateActions()
 
 除此之外，还有一个修复的方法，在创建闭包的时候，使用`foreach`而不是`for`。至少在C# 7.0 的版本上面，这个问题已经被注意到了，使用foreach的时候编译器会自动生成代码绕过这个闭包陷阱。
 
-```C#
+```csharp
 //这样fix也是可以的
 static List<Action> CreateActions()
 {

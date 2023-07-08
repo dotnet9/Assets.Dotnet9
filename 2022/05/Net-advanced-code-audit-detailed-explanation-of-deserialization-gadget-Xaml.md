@@ -149,7 +149,7 @@ ysoserial在XmlSerializer反序列化链中使用XamlReader.Parse解析XAML字�
 </Window>
 ```
 
-```C#
+```csharp
 string xml = File.ReadAllText("../../Dictionary2.xaml");
 XamlReader.Parse(xml);
 ```
@@ -162,7 +162,7 @@ XamlReader.Parse(xml);
 
 XamlReader类提供了3种Load重载，另外还提供了LoadAsync异步方法，用于在大文件数据传输不影响程序主线程，可直接载入流转换为对象
 
-```C#
+```csharp
 //Test:Load
 string xml = File.ReadAllText("../../Dictionary2.xaml");
 MemoryStream ms = new MemoryStream(System.Text.Encoding.Default.GetBytes(xml));
@@ -180,7 +180,7 @@ xamlReader.LoadAsync(ms0);
 
 为了增强程序的可操作性，笔者改用aspx页面编写风险检查智能助手，同时设计了主机进程、主机信息采集、主机目录文件访问等功能，内部采用Base64编码和解码的解析方式运行，这样的好处在于对URL特殊字符串的处置，启动`Process`类调用`cmd.exe/c winver.ex`e 执行命令，核心代码和页面用户体验界面如下程序
 
-```C#
+```csharp
 public static void CodeInject(string input)
 {
     string ExecCode = EncodeBase64("utf-8", input);

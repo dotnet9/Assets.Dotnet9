@@ -60,13 +60,13 @@ categories: WPF
 
 既然要对某个控件进行指引的话，那就要把控件先给圈起来，圈起来的首要任务，就是获得控件在当前窗体的坐标位置。
 
-```C#
+```csharp
 Point point = fe.TransformToAncestor(Window.GetWindow(fe)).Transform(new Point(0, 0));
 ```
 
 当获取完坐标以后，则需要将控件给圈起来，我的方法，就是取当前的坐标-5，宽和高+10，来绘制一个空白的区域，其实，这个部分应该是指擦除
 
-```C#
+```csharp
 RectangleGeometry rg1 = new RectangleGeometry();
 rg1.Rect = new Rect(point.X - 5, point.Y - 5, fe.ActualWidth + 10, fe.ActualHeight + 10);
 borGeometry = Geometry.Combine(borGeometry, rg1, GeometryCombineMode.Exclude, null);
@@ -99,7 +99,7 @@ borGeometry = Geometry.Combine(borGeometry, rg1, GeometryCombineMode.Exclude, nu
 
 显示内容的部分是一个Textblock，当时遇到了一个问题，就是换行问题，Textblock必须要有Width，才会换行，但是由于最外层是Viewbox，所以，尝试过获取UC的Width或者ActualWidth，都不行，所以，最后的解决办法是，传入一个窗体的宽度和高度进来，而不是在外部设置此UC的宽和高。
 
-```C#
+```csharp
 public HintUC(string xh, string content, Visibility vis = Visibility.Visible, int width = 260, int height = 160)
 {
     InitializeComponent();
@@ -117,7 +117,7 @@ public HintUC(string xh, string content, Visibility vis = Visibility.Visible, in
 
 触发下一步，相当于是子控件调用主控件的事件，这样的话，就是写一个委托，在主窗体里去实现具体的方法。
 
-```C#
+```csharp
 private void show(int xh, FrameworkElement fe, string con, Visibility vis = Visibility.Visible)
 {
     Point point = fe.TransformToAncestor(Window.GetWindow(fe)).Transform(new Point(0, 0));//获取控件坐标点
@@ -144,7 +144,7 @@ private void show(int xh, FrameworkElement fe, string con, Visibility vis = Visi
 }
 ```
 
-```C#
+```csharp
 private void Hit_nextHintEvent()
 {
     if (list[index - 1] != null)

@@ -42,7 +42,7 @@ dotnet new cakefrosting
 
 该类Program包含配置和运行 Cake 的代码：
 
-```C#
+```csharp
 public static class Program
 {
     public static int Main(string[] args)
@@ -56,7 +56,7 @@ public static class Program
 
 该类`BuildContext`可用于添加其他自定义属性。`Delay`默认模板包含一个可以通过参数设置的示例属性`--delay`。您可以删除此属性并根据您的特定需求自定义属性。
 
-```C#
+```csharp
 public class BuildContext : FrostingContext
 {
     public bool Delay { get; set; }
@@ -71,7 +71,7 @@ public class BuildContext : FrostingContext
 
 该文件还包含三个任务类：
 
-```C#
+```csharp
 [TaskName("Hello")]
 public sealed class HelloTask : FrostingTask<BuildContext>
 {
@@ -114,7 +114,7 @@ public class DefaultTask : FrostingTask
 
 添加所需的 using 语句：
 
-```C#
+```csharp
 using Cake.Common;
 using Cake.Common.IO;
 using Cake.Common.Tools.DotNet;
@@ -124,7 +124,7 @@ using Cake.Common.Tools.DotNet.Test;
 
 从类中删除`Delay`属性`BuildContext`并添加一个属性`MsBuildConfiguration`，它存储应该构建的解决方案的配置：
 
-```C#
+```csharp
 public class BuildContext : FrostingContext
 {
     public string MsBuildConfiguration { get; set; }
@@ -141,7 +141,7 @@ public class BuildContext : FrostingContext
 
 `CleanTask`为清理目录的任务创建一个新类：
 
-```C#
+```csharp
 [TaskName("Clean")]
 public sealed class CleanTask : FrostingTask<BuildContext>
 {
@@ -154,7 +154,7 @@ public sealed class CleanTask : FrostingTask<BuildContext>
 
 创建一个BuildTask用于构建解决方案的新类：
 
-```C#
+```csharp
 [TaskName("Build")]
 [IsDependentOn(typeof(CleanTask))]
 public sealed class BuildTask : FrostingTask<BuildContext>
@@ -171,7 +171,7 @@ public sealed class BuildTask : FrostingTask<BuildContext>
 
 创建一个TestTask用于测试解决方案的新类：
 
-```C#
+```csharp
 [TaskName("Test")]
 [IsDependentOn(typeof(BuildTask))]
 public sealed class TestTask : FrostingTask<BuildContext>
@@ -189,7 +189,7 @@ public sealed class TestTask : FrostingTask<BuildContext>
 
 更新`DefaultTask`类以调用新任务：
 
-```C#
+```csharp
 [IsDependentOn(typeof(TestTask))]
 public sealed class Default : FrostingTask
 {

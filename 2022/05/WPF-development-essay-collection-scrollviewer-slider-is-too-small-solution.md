@@ -50,7 +50,7 @@ categories: WPF
 
 3. 接着再后台添加对应的逻辑处理代码，详细的一些东西都已经通过备注的形式写在代码里，这里就不在啰嗦了
 
-```C#
+```csharp
 public partial class MainWindow : Window
 {
     private bool isAdd = true;

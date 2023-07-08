@@ -93,7 +93,7 @@ albums: 开源WPF
 
 思维导图、目录组织图、鱼骨头图、逻辑结构图、组织结构图的布局都继承了以下接口：
 
-```C#
+```csharp
 public interface IMindLayout
 {
     /// <summary>
@@ -129,7 +129,7 @@ public interface IMindLayout
 
 其中：UpdatedLayout包括布局丈量MeasureOverride和摆放元素ArrangeOverride，是不是感觉和重新Panel差不多，先计算每个节点占的大小，然后开始布局。下面为思维导图的源代码，其它导图的，如有兴趣请下载源代码查看。
 
-```C#
+```csharp
 public SizeBase MeasureOverride(MindNode mindNode, bool isExpanded = true)
 {
     var sizewithSpacing = mindNode.SizeWithSpacing;

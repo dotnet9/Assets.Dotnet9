@@ -17,7 +17,7 @@ tags: C#,.NET,LINQ
 
 `Enumerable.FirstOrDefault` 方法返回一个序列的第一个元素，如果没有找到，则返回一个默认值。在 .NET 6 中，你可以覆盖该方法的默认值。同样，你还可以覆盖 `SingleOrDefault` 和 `LastOrDefault` 方法的默认值。
 
-```C#
+```csharp
 List<int> list1 = new() { 1, 2, 3 };
 int item1 = list1.FirstOrDefault(i => i == 4, -1);
 Console.WriteLine(item1); // -1
@@ -36,7 +36,7 @@ Console.WriteLine(item2); // Not found
 - IntersectBy
 - UnionBy
 
-```C#
+```csharp
 List<Product> products = new()
 {
     new() { Name = "Product1", Price = 100 },
@@ -62,7 +62,7 @@ record Product
 
 `Enumerable.Zip` 扩展方法可以将两个序列进行结合产生产生一个二元组序列。在 .NET 6 中，它可以结合三个序列产生一个三元组序列。
 
-```C#
+```csharp
 int[] numbers = { 1, 2, 3, 4, };
 string[] months = { "Jan", "Feb", "Mar" };
 string[] seasons = { "Winter", "Winter", "Spring" };
@@ -83,7 +83,7 @@ foreach ((int, string, string) zipped in numbers.Zip(months, seasons))
 
 .NET Core 3.0 中也引入了 `Range` 结构体，它被 C# 编译器用来支持一个范围操作符 `...`。在 .NET 6 中，`Enumerable.Take` 方法也支持 `Range`。
 
-```C#
+```csharp
 IEnumerable<int> numbers = new int[] { 1, 2, 3, 4, 5 };
 
 IEnumerable<int> taken1 = numbers.Take(2..4);

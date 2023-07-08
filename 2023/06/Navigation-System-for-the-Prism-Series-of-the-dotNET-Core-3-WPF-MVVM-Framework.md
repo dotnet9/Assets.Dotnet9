@@ -65,7 +65,7 @@ LoginWindow.xaml：
 
 App.cs：
 
-```C#
+```csharp
   protected override void RegisterTypes(IContainerRegistry containerRegistry)
   {
         containerRegistry.Register<IMedicineSerivce, MedicineSerivce>();
@@ -86,7 +86,7 @@ App.cs：
 
 LoginWindowViewModel.cs：
 
-```C#
+```csharp
 public class LoginWindowViewModel:BindableBase
 {
 
@@ -115,7 +115,7 @@ public class LoginWindowViewModel:BindableBase
 
 LoginMainContentViewModel.cs：
 
-```C#
+```csharp
 public class LoginMainContentViewModel : BindableBase
 {
     private readonly IRegionManager _regionManager;
@@ -152,14 +152,14 @@ public class LoginMainContentViewModel : BindableBase
 
 这里我们可以看到我们调用RegionMannager的RequestNavigate方法，其实这样看不能很好的说明是基于区域的做法，如果将换成下面的写法可能更好理解一点：
 
-```C#
+```csharp
    //在LoginContentRegion区域导航到LoginMainContent
   _regionManager.RequestNavigate(RegionNames.LoginContentRegion, "LoginMainContent");
 ```
 
 换成
 
-```C#
+```csharp
  //在LoginContentRegion区域导航到LoginMainContent
  IRegion region = _regionManager.Regions[RegionNames.LoginContentRegion];
  region.RequestNavigate("LoginMainContent");
@@ -167,7 +167,7 @@ public class LoginMainContentViewModel : BindableBase
 
 其实RegionMannager的RequestNavigate源码也是大概实现也是大概如此，就是去调Region的RequestNavigate的方法，而Region的导航是实现了一个INavigateAsync接口：
 
-```C#
+```csharp
 public interface INavigateAsync
 {
    void RequestNavigate(Uri target, Action<NavigationResult> navigationCallback);
@@ -184,7 +184,7 @@ public interface INavigateAsync
 
 那么我们将上述加上回调方法：
 
-```C#
+```csharp
  //在LoginContentRegion区域导航到LoginMainContent
  IRegion region = _regionManager.Regions[RegionNames.LoginContentRegion];
  region.RequestNavigate("LoginMainContent", NavigationCompelted);
@@ -212,7 +212,7 @@ public interface INavigateAsync
 
 我们经常在两个页面之间导航需要处理一些逻辑，例如，LoginMainContent页面导航到CreateAccount页面时候，LoginMainContent退出页面的时刻要保存页面数据，导航到CreateAccount页面的时刻处理逻辑(例如获取从LoginMainContent页面的信息)，Prism的导航系统通过一个INavigationAware接口：
 
-```C#
+```csharp
     public interface INavigationAware : Object
     {
         Void OnNavigatedTo(NavigationContext navigationContext);
@@ -231,7 +231,7 @@ public interface INavigateAsync
 
 LoginMainContentViewModel.cs：
 
-```C#
+```csharp
 public class LoginMainContentViewModel : BindableBase, INavigationAware
 {
      private readonly IRegionManager _regionManager;
@@ -275,7 +275,7 @@ public class LoginMainContentViewModel : BindableBase, INavigationAware
 
 CreateAccountViewModel.cs:
 
-```C#
+```csharp
 public class CreateAccountViewModel : BindableBase,INavigationAware
 {
      private DelegateCommand _loginMainContentCommand;
@@ -322,7 +322,7 @@ public class CreateAccountViewModel : BindableBase,INavigationAware
 
 修改IsNavigationTarget为false：
 
-```C#
+```csharp
 public class LoginMainContentViewModel : BindableBase, INavigationAware
 {
      public bool IsNavigationTarget(NavigationContext navigationContext)
@@ -354,7 +354,7 @@ public class CreateAccountViewModel : BindableBase,INavigationAware
 
 LoginMainContentViewModel.cs:
 
-```C#
+```csharp
 public class LoginMainContentViewModel : BindableBase, INavigationAware，IRegionMemberLifetime
 {
 
@@ -411,7 +411,7 @@ Prism的导航系统还支持再导航前允许是否需要导航的交互需求
 
 CreateAccountViewModel.cs:
 
-```C#
+```csharp
 public class CreateAccountViewModel : BindableBase, INavigationAware，IConfirmNavigationRequest
 {
      private DelegateCommand _loginMainContentCommand;
@@ -494,7 +494,7 @@ Prism提供NavigationParameters类以帮助指定和检索导航参数，在导�
 
 CreateAccountViewModel.cs(修改代码部分):
 
-```C#
+```csharp
 private string _registeredLoginId;
 public string RegisteredLoginId
 {
@@ -530,7 +530,7 @@ public void ConfirmNavigationRequest(NavigationContext navigationContext, Action
 
 LoginMainContentViewModel.cs(修改代码部分):
 
-```C#
+```csharp
 public void OnNavigatedTo(NavigationContext navigationContext)
 {
      MessageBox.Show("从CreateAccount导航到LoginMainContent");
@@ -552,7 +552,7 @@ public void OnNavigatedTo(NavigationContext navigationContext)
 
 Prism导航系统同样的和WPF导航系统一样，都支持导航日志，Prism是通过IRegionNavigationJournal接口来提供区域导航日志功能，
 
-```C#
+```csharp
 public interface IRegionNavigationJournal
 {
     bool CanGoBack { get; }
@@ -577,7 +577,7 @@ public interface IRegionNavigationJournal
 
 LoginMainContent.xaml(前进箭头代码部分):
 
-```C#
+```csharp
 <TextBlock Width="30" Height="30" HorizontalAlignment="Right" Text="&#xe624;" FontWeight="Bold" FontFamily="pack://application:,,,/PrismMetroSample.Infrastructure;Component/Assets/Fonts/#iconfont" FontSize="30" Margin="10" Visibility="{Binding IsCanExcute,Converter={StaticResource boolToVisibilityConverter}}">
       <i:Interaction.Triggers>
            <i:EventTrigger EventName="MouseLeftButtonDown">
@@ -627,7 +627,7 @@ public class BoolToVisibilityConverter : IValueConverter
 
 LoginMainContentViewModel.cs(修改代码部分):
 
-```C#
+```csharp
 IRegionNavigationJournal _journal;
 
 private DelegateCommand<PasswordBox> _loginCommand;
@@ -665,7 +665,7 @@ public void OnNavigatedTo(NavigationContext navigationContext)
 
 CreateAccountViewModel.cs(修改代码部分):
 
-```C#
+```csharp
 IRegionNavigationJournal _journal;
 
 private DelegateCommand _goBackCommand;
@@ -692,7 +692,7 @@ void ExecuteGoBackCommand()
 
 如果不打算将页面在导航过程中不加入导航日志，例如LoginMainContent页面，可以通过实现IJournalAware并从PersistInHistory（）返回false
 
-```C#
+```csharp
     public class LoginMainContentViewModel : IJournalAware
     {
         public bool PersistInHistory() => false;

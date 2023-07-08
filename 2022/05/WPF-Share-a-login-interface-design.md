@@ -84,7 +84,7 @@ C:.
 </Border>
 ```
 
-```C#
+```csharp
 private void textEmail_MouseDown(object sender, MouseButtonEventArgs e)
 {
     txtEmail.Focus();
@@ -127,7 +127,7 @@ private void txtEmail_TextChanged(object sender, TextChangedEventArgs e)
 </Border>
 ```
 
-```C#
+```csharp
 private void textPassword_MouseDown(object sender, MouseButtonEventArgs e)
 {
     txtPassword.Focus();

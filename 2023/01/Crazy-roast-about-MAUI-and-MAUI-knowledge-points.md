@@ -1108,7 +1108,7 @@ function InitializeCss(name) {
 
 生成证书使用的是 .NET 自带的库，不需要引入第三方包。
 
-```C#
+```csharp
 using System.Security.Cryptography;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
@@ -1124,7 +1124,7 @@ https://github.com/dotnetcore/FastGithub/blob/9f9cbce624310c207b01699de2a5818a74
 
 定义证书位置和名称：
 
-```C#
+```csharp
 private const string CACERT_PATH = "cacert";
 
 /// <summary>

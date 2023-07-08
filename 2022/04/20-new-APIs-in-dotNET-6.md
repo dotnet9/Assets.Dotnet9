@@ -18,7 +18,7 @@ categories: .NET相关
 
 .NET 6 引入了两种期待已久的类型 - DateOnly 和 TimeOnly, 它们分别代表DateTime的日期和时间部分。
 
-```C#
+```csharp
 DateOnly dateOnly = new(2021, 9, 25);
 Console.WriteLine(dateOnly);
 TimeOnly timeOnly = new(19, 0, 0);
@@ -33,7 +33,7 @@ Console.WriteLine(timeOnlyFromDate);
 
 它可以控制多个异步任务的并行度。
 
-```C#
+```csharp
 var userHandlers = new[]
 {
     "users/okyrylchuk",
@@ -74,7 +74,7 @@ public class GitHubUser
 
 ArgumentNullException 的小改进, 在抛出异常之前不需要在每个方法中检查 null, 现在只需要写一行, 和 `response.EnsureSuccessStatusCode();` 类似。
 
-```C#
+```csharp
 ExampleMethod(null);
 void ExampleMethod(object param)
 {
@@ -87,7 +87,7 @@ void ExampleMethod(object param)
 
 .NET 6 新增的数据结构, `PriorityQueue`, 队列每个元素都有一个关联的优先级，它决定了出队顺序, 编号小的元素优先出列。
 
-```C#
+```csharp
 PriorityQueue<string, int> priorityQueue = new();
 priorityQueue.Enqueue("Second", 2);
 priorityQueue.Enqueue("Fourth", 4);
@@ -111,7 +111,7 @@ while (priorityQueue.Count > 0)
 
 提供基于偏移量的 API，用于以线程安全的方式读取和写入文件。
 
-```C#
+```csharp
 using SafeFileHandle handle = File.OpenHandle("file.txt", access: FileAccess.ReadWrite);
 // Write to file
 byte[] strBytes = Encoding.UTF8.GetBytes("Hello world");
@@ -130,7 +130,7 @@ Console.WriteLine(content); // Hello world
 
 认识一个完全异步的`“PeriodicTimer”`, 更适合在异步场景中使用, 它有一个方法 `WaitForNextTickAsync`。
 
-```C#
+```csharp
 // One constructor: public PeriodicTimer(TimeSpan period)
 using PeriodicTimer timer = new(TimeSpan.FromSeconds(1));
 while (await timer.WaitForNextTickAsync())
@@ -160,7 +160,7 @@ while (await timer.WaitForNextTickAsync())
 
 使用的方法如下：
 
-```C#
+```csharp
 var builder = WebApplication.CreateBuilder(args);
 var app = builder.Build();
 // Create Meter
@@ -205,7 +205,7 @@ void StartMeterListener()
 - PropertyInfo 属性
 - EventInfo 事件
 
-```C#
+```csharp
 var example = new Example();
 var nullabilityInfoContext = new NullabilityInfoContext();
 foreach (var propertyInfo in example.GetType().GetProperties())
@@ -227,7 +227,7 @@ class Example
 
 它允许您获取嵌套元素的可为空的信息, 您可以指定数组属性必须为非空，但元素可以为空，反之亦然。
 
-```C#
+```csharp
 Type exampleType = typeof(Example);
 PropertyInfo notNullableArrayPI = exampleType.GetProperty(nameof(Example.NotNullableArray));
 PropertyInfo nullableArrayPI = exampleType.GetProperty(nameof(Example.NullableArray));
@@ -249,7 +249,7 @@ class Example
 
 直接通过 Environment 获取进程ID和路径。
 
-```C#
+```csharp
 int processId = Environment.ProcessId
 string path = Environment.ProcessPath;
 Console.WriteLine(processId);
@@ -260,7 +260,7 @@ Console.WriteLine(path);
 
 和 DI 的 `GetRequiredService()` 是一样的, 如果缺失, 则会抛出异常。
 
-```C#
+```csharp
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 WebApplication app = builder.Build();
 MySettings mySettings = new();
@@ -283,7 +283,7 @@ class MySettings
 - 随机数
 - 某些签名方案中的盐
 
-```C#
+```csharp
 // Fills an array of 300 bytes with a cryptographically strong random sequence of values.
 // GetBytes(byte[] data);
 // GetBytes(byte[] data, int offset, int count)
@@ -296,7 +296,7 @@ byte[] bytes = RandomNumberGenerator.GetBytes(300);
 
 .NET 6 引入了一个新的 API 来分配本机内存, `NativeMemory` 有`分配和释放内存`的方法。
 
-```C#
+```csharp
 unsafe
 {
     byte* buffer = (byte*)NativeMemory.Alloc(100);
@@ -324,7 +324,7 @@ unsafe
 - 'IsPow2' 判断指定值是否为 2 的幂。
 - 'RoundUpToPowerOf2' 将指定值四舍五入到 2 的幂。
 
-```C#
+```csharp
 // IsPow2 evaluates whether the specified Int32 value is a power of two.
 Console.WriteLine(BitOperations.IsPow2(128));            // True
 // RoundUpToPowerOf2 rounds the specified T:System.UInt32 value up to a power of two.
@@ -335,7 +335,7 @@ Console.WriteLine(BitOperations.RoundUpToPowerOf2(200)); // 256
 
 您可以更轻松地等待异步任务执行, 如果超时会抛出 “TimeoutException”
 
-```C#
+```csharp
 Task operationTask = DoSomethingLongAsync();
 await operationTask.WaitAsync(TimeSpan.FromSeconds(5));
 async Task DoSomethingLongAsync()
@@ -362,7 +362,7 @@ async Task DoSomethingLongAsync()
 - Min, Max, Abs, Sign, Clamp 支持 nint 和 nuint
 - DivRem 返回一个元组, 包括商和余数。
 
-```C#
+```csharp
 // New methods SinCos, ReciprocalEstimate and ReciprocalSqrtEstimate
 // Simultaneously computes Sin and Cos
 (double sin, double cos) = Math.SinCos(1.57);
@@ -406,7 +406,7 @@ Console.WriteLine($"Quotient = {quotient}\nRemainder = {remainder}");
 
 - [https://github.com/dotnet/runtime/issues/27062](https://github.com/dotnet/runtime/issues/27062)
 
-```C#
+```csharp
 Dictionary<int, MyStruct> dictionary = new()
 {
     { 1, new MyStruct { Count = 100 } }
@@ -431,7 +431,7 @@ struct MyStruct
 
 `IHostBuilder` 上的新 `ConfigureHostOptions API`, 可以更简单的配置应用。
 
-```C#
+```csharp
 public class Program
 {
     public static void Main(string[] args)
@@ -451,7 +451,7 @@ public class Program
 
 .NET 6 引入了一种新的`CreateAsyncScope`方法, 当您处理 `IAsyncDisposable` 的服务时现有的`CreateScope`方法会`引发异常`, 使用 `CreateAsyncScope` 可以`完美解决`。
 
-```C#
+```csharp
 await using var provider = new ServiceCollection()
         .AddScoped<Example>()
         .BuildServiceProvider();
@@ -474,7 +474,7 @@ class Example : IAsyncDisposable
 - EncryptCfb
 - EncryptEcb
 
-```C#
+```csharp
 static byte[] Decrypt(byte[] key, byte[] iv, byte[] ciphertext)
 {
     using (Aes aes = Aes.Create())

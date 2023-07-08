@@ -33,7 +33,7 @@ categories: WPF
 
 1. `PasswordBox` 不支持水印，所以需要用到`DependencyObject`[附加属性](https://docs.microsoft.com/zh-cn/dotnet/api/system.windows.dependencyobject?view=windowsdesktop-6.0)来实现水印；
 
-```C#
+```csharp
 public class ElementHelper : DependencyObject
 {
     public static string GetWatermark(DependencyObject obj)
@@ -65,7 +65,7 @@ public class ElementHelper : DependencyObject
 
 3. 水印设置完成后，下一步需要判断密码框内容为空时显示水印新增附加类`PasswordBoxHelper`；
 
-```C#
+```csharp
 public class PasswordBoxHelper : DependencyObject
 {
     public static bool GetIsMonitoring(DependencyObject obj)

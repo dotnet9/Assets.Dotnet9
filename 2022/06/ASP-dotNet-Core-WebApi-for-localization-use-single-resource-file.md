@@ -14,7 +14,7 @@ categories: Web API
 
 在Startup `ConfigureServices` 注册本地化所需要的服务`AddLocalization`和 `Configure<RequestLocalizationOptions>`
 
-```C#
+```csharp
 public void ConfigureServices(IServiceCollection services)
 {
     services.AddLocalization();
@@ -41,7 +41,7 @@ public void ConfigureServices(IServiceCollection services)
 
 在Startup.cs类的 `Configure` 方法中添加请求本地化中间件。
 
-```C#
+```csharp
 var localizeOptions = app.ApplicationServices.GetService<IOptions<RequestLocalizationOptions>>();
             app.UseRequestLocalization(localizeOptions.Value);
 ```
@@ -57,7 +57,7 @@ ASP.NET Core 本地化默认向我们提供了四个方式，可用于确定正�
 
 如下所示我将通过路由的方式,去确定当前区域
 
-```C#
+```csharp
 public class RouteDataRequestCultureProvider : RequestCultureProvider
 {
     public int IndexOfCulture;
@@ -81,7 +81,7 @@ public class RouteDataRequestCultureProvider : RequestCultureProvider
 
 通过如下代码片段实现IRouteConstraint对路由做相应的约束
 
-```C#
+```csharp
 public class LanguageRouteConstraint : IRouteConstraint
 {
     public bool Match(HttpContext httpContext, IRouter route, string routeKey, RouteValueDictionary values, RouteDirection routeDirection)
@@ -100,7 +100,7 @@ public class LanguageRouteConstraint : IRouteConstraint
 
 ![](https://img1.dotnet9.com/2022/06/1501.png)
 
-```C#
+```csharp
 [Route("{culture:culture}/[controller]")]
 [ApiController]
 public class HomeController : ControllerBase

@@ -37,7 +37,7 @@ function imgToLink(blob) {
 
 我们在`Index.razor`中添加以下代码
 
-```C#
+```csharp
 @page "/"
 @inject IJSRuntime JS
 

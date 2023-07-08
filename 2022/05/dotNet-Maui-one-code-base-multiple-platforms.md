@@ -65,7 +65,7 @@ categories: MAUI
 
 .NET MAUI 提供了简单的 API 来访问每个平台的服务和功能，例如加速计、应用操作、文件系统、通知等。在此示例中，我们配置了`app actions`，用于向每个平台上的应用图标添加菜单选项：
 
-```C#
+```csharp
 AppActions.SetAsync(
     new AppAction("current_info", "Check Current Weather", icon: "current_info"),
     new AppAction("add_location", "Add a Location", icon: "add_location")
@@ -80,7 +80,7 @@ AppActions.SetAsync(
 
 无论您是在扩展 .NET MAUI 控件的功能，还是在建立新的平台功能，.NET MAUI 都是针对可扩展性而设计的，因此您绝不会碰壁。以控件为例，控件是在一个平台上以不同方式呈现的控件的规范示例。Android 会在文本字段下方绘制一条下划线，开发人员通常希望删除该下划线。使用 .NET MAUI，只需几行代码即可自定义整个项目中的一切：`Entry`
 
-```C#
+```csharp
 #if ANDROID
 Microsoft.Maui.Handlers.EntryHandler.Mapper.ModifyMapping("NoUnderline", (h, v) =>
 {
@@ -93,7 +93,7 @@ Microsoft.Maui.Handlers.EntryHandler.Mapper.ModifyMapping("NoUnderline", (h, v) 
 
 以下是最近由 Cayas Software 创建新的 Map 平台控件的一个很好的[例子](https://www.cayas.de/blog/dotnet-maui-custom-map-handler)。这篇博客文章演示如何为控件创建处理程序，为每个平台实现，然后通过在 .NET MAUI 中注册控件来使其可用。
 
-```C#
+```csharp
 .ConfigureMauiHandlers(handlers =>
 {
     handlers.AddHandler(typeof(MapHandlerDemo.Maps.Map),typeof(MapHandler));
@@ -120,7 +120,7 @@ Microsoft.Maui.Handlers.EntryHandler.Mapper.ModifyMapping("NoUnderline", (h, v) 
 
 .NET MAUI 在 ASP.NET 和 Blazor 应用程序中使用`Microsoft.Extensions`库中流行的`建造者模式`作为初始化和配置应用的统一方式。在这里，您可以向 .NET MAUI 提供字体、利用特定于平台的生命周期事件、配置依赖项、启用特定功能、启用供应商控制工具包等。
 
-```C#
+```csharp
 public static class MauiProgram
 {
     public static MauiApp CreateMauiApp()
@@ -142,7 +142,7 @@ public static class MauiProgram
 }
 ```
 
-```C#
+```csharp
 public static class ServicesExtensions
 {
     public static MauiAppBuilder ConfigureServices(this MauiAppBuilder builder)

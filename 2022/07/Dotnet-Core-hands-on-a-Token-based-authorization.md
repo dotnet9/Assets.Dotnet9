@@ -34,14 +34,14 @@ categories: Web API
 
 ### 新建一个授权筛选器继承IAuthorizationFilter
 
-```C#
+```csharp
 public class ApiAuthorize : IAuthorizationFilter
 {}
 ```
 
 ### 新建一个需要应用授权的特性和允许未通过身份验证也可以访问的特性
 
-```C#
+```csharp
 public class MyAuthentication:Attribute, IFilterMetadata
 {
 }
@@ -53,7 +53,7 @@ public class MyNoAuthentication : Attribute, IFilterMetadata
 
 我们需要在我们的授权过滤器判断请求头是否带有应用授权的特性和允许未通过身份验证也可以访问的特性，如果有允许未通过身份验证也可以访问的特性就直接进入下一个管道 ，如果带有应用授权的特性则进行token判断
 
-```C#
+```csharp
 public class ApiAuthorize : IAuthorizationFilter
 {
     public void OnAuthorization(AuthorizationFilterContext context)
@@ -81,7 +81,7 @@ public class ApiAuthorize : IAuthorizationFilter
 
 ### CacheHelper代码
 
-```C#
+```csharp
 public class MemoryCacheHelper
 {
 
@@ -154,7 +154,7 @@ public class MemoryCacheHelper
 
 对于一个商用软件来说绝大多数接口都需要应用授权后才能使用，所以我们注册到全局， 在StartUp类里面注册
 
-```C#
+```csharp
 public void ConfigureServices(IServiceCollection services)
 {
     services.AddControllers(o=>
@@ -167,7 +167,7 @@ public void ConfigureServices(IServiceCollection services)
 
 Token生成原理我这里就不做过多解读了，本例子使用AES加密生成Token 在我们服务端的请求token接口加上允许未通过身份验证也可以访问的特性，然后颁发一个Token
 
-```C#
+```csharp
 [HttpGet("GetToken")]
 [MyNoAuthentication]
 public IActionResult GetToken(string UserCode)
@@ -184,7 +184,7 @@ public IActionResult GetToken(string UserCode)
 
 然后我们在新增一个需要应用授权的接口,由于我们注册了全局的应用授权特性就不需要在带上该特性了
 
-```C#
+```csharp
 [HttpGet("GetUserInformation")]
 public IActionResult GetUserInformation()
 {

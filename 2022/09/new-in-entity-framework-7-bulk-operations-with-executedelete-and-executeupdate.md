@@ -40,7 +40,7 @@ Entity Framework 7 包括一些已被要求的流行功能，其中之一是批�
 - Addresses: 地址（ 一个人有一个地址）
 - Pets: 宠物（一个人可以养很多宠物）
 
-```C#
+```csharp
 using Microsoft.EntityFrameworkCore;
 
 using (var context = new NewInEFContext())
@@ -125,7 +125,7 @@ public class Pet
 
 要批量删除一组实体，请使用`Where`方法过滤掉要删除的实体（与之前类似）。然后，调用`ExecuteDelete`方法删除实体集合。
 
-```C#
+```csharp
 using (var context = new NewInEFContext())
 {
     SetupAndPopulate(context);
@@ -150,7 +150,7 @@ WHERE [p].[Name] LIKE N'%1%'
 
 让我们看另一个例子，让我们删除一些持有地址和宠物引用的人。通过删除人员，我们也删除了地址和宠物，因为删除语句级联到外部表。
 
-```C#
+```csharp
 using (var context = new NewInEFContext())
 {
     SetupAndPopulate(context);
@@ -173,7 +173,7 @@ WHERE [p].[PersonId] <= CAST(500 AS bigint)
 
 还可以查看删除操作影响了多少行，`ExecuteDelete`返回受影响的行数。
 
-```C#
+```csharp
 using (var context = new NewInEFContext())
 {
     SetupAndPopulate(context);
@@ -195,7 +195,7 @@ using (var context = new NewInEFContext())
 
 例如，让我们将人员的姓氏设置为“Updated”。
 
-```C#
+```csharp
 using (var context = new NewInEFContext())
 {
     SetupAndPopulate(context);
@@ -217,7 +217,7 @@ WHERE [p].[PersonId] <= CAST(1000 AS bigint)
 
 我们还可以访问实体的值并使用它来创建新值。
 
-```C#
+```csharp
 using (var context = new NewInEFContext())
 {
     SetupAndPopulate(context);
@@ -241,7 +241,7 @@ WHERE [p].[PersonId] <= CAST(1000 AS bigint)
 
 我们甚至可以通过多次调用`SetProperty`来一次更新多个属性。
 
-```C#
+```csharp
 using (var context = new NewInEFContext())
 {
     SetupAndPopulate(context);
@@ -268,7 +268,7 @@ WHERE [p].[PersonId] <= CAST(1000 AS bigint)
 
 就像`ExecuteDelete`,`ExecuteUpdate`也返回受影响的行数。
 
-```C#
+```csharp
 using (var context = new NewInEFContext())
 {
     SetupAndPopulate(context);

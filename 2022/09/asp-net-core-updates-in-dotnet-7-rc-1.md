@@ -64,7 +64,7 @@ Blazor 为使用 OpenID Connect 和各种身份提供程序（包括 Azure Activ
 
 例如，您可以为身份提供者指定一个登录提示，以便像这样进行身份验证：
 
-```C#
+```csharp
 InteractiveRequestOptions requestOptions = new()
 {
     Interaction = InteractionType.SignIn,
@@ -76,7 +76,7 @@ NavigationManager.NavigateToLogin("authentication/login", requestOptions);
 
 同样，您可以指定 OpenID Connect `prompt` 参数，例如当您想要强制交互式登录时：
 
-```C#
+```csharp
 InteractiveRequestOptions requestOptions = new()
 {
     Interaction = InteractionType.SignIn,
@@ -88,7 +88,7 @@ NavigationManager.NavigateToLogin("authentication/login", requestOptions);
 
 您可以使用`IAccessTokenProvider`直接用于请求令牌时指定这些选项：
 
-```C#
+```csharp
 var accessTokenResult = await AccessTokenProvider.RequestAccessToken(
     new AccessTokenRequestOptions
     {
@@ -104,7 +104,7 @@ if (!accessTokenResult.TryGetToken(out var token))
 
 当无法获取令牌时，您还可以通过`AuthorizationMessageHandler`指定身份验证请求选项：
 
-```C#
+```csharp
 try
 {
     await httpclient.Get("/orders");
@@ -131,7 +131,7 @@ catch (AccessTokenNotAvailableException ex)
 
 例如，以下处理程序阻止导航到计数器页面：
 
-```C#
+```csharp
 var registration = NavigationManager.RegisterLocationChangingHandler(async context =>
 {
     if (context.TargetLocation.EndsWith("counter"))
@@ -248,7 +248,7 @@ await runMainAndExit(config.mainAssemblyName, ["dotnet", "is", "great!"]); // Ru
 
 要导入 JavaScript 函数以便可以从 C# 调用它，请在匹配的方法签名上使用新的`JSImportAttribute`：
 
-```C#
+```csharp
 [JSImport("window.location.href", "main.js")]
 internal static partial string GetHRef();
 ```
@@ -259,7 +259,7 @@ internal static partial string GetHRef();
 
 使用`JSExportAttribute`导出 .NET 方法以便可以从 JavaScript 调用：
 
-```C#
+```csharp
 [JSExport]
 internal static string Greeting()
 {
@@ -296,7 +296,7 @@ Blazor 提供了自己的基于IJSRuntime接口的 JavaScript 互操作机制，
 
 以下示例显示如何使用 SNI 回调来解析 TLS 选项：
 
-```C#
+```csharp
 var builder = WebApplication.CreateBuilder(args);
 builder.WebHost.ConfigureKestrel(options =>
 {
@@ -341,7 +341,7 @@ builder.WebHost.ConfigureKestrel(options =>
 - 添加对[Microsoft.AspNetCore.Grpc.Swagger](https://www.nuget.org/packages/Microsoft.AspNetCore.Grpc.Swagger)的包引用。版本必须为 0.3.0-xxx 或更高版本。
 - 在启动时配置 Swashbuckle。该`AddGrpcSwagger`方法将 Swashbuckle 配置为包含 gRPC 端点。
 
-```C#
+```csharp
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddGrpc().AddJsonTranscoding();
 builder.Services.AddGrpcSwagger();
@@ -372,7 +372,7 @@ app.Run();
 
 我们添加了可用于启用或禁用给定端点上的速率限制的属性。例如，以下是如何将命名策略应用`MyControllerPolicy`到控制器：
 
-```C#
+```csharp
 public class MyController : Controller
 {
     [EnableRateLimitingAttribute("MyControllerPolicy")]
@@ -385,19 +385,19 @@ public class MyController : Controller
 
 您还可以在给定端点或一组端点上完全禁用速率限制。假设您在一组端点上启用了速率限制：
 
-```C#
+```csharp
 app.MapGroup("/public/todos").RequireRateLimiting("MyGroupPolicy");
 ```
 
 然后，您可以禁用该组中特定端点的速率限制，如下所示：
 
-```C#
+```csharp
 app.MapGroup("/public/todos/donothing").DisableRateLimiting();
 ```
 
 您现在还可以将策略直接应用于端点。与命名策略不同，以这种方式添加的策略不需要在`RateLimiterOptions`. 假设您已经定义了一个策略类型：
 
-```C#
+```csharp
 public class MyRateLimiterPolicy : IRateLimiterPolicy<string>
 {
 ...
@@ -406,13 +406,13 @@ public class MyRateLimiterPolicy : IRateLimiterPolicy<string>
 
 您可以将其实例直接添加到端点，如下所示：
 
-```C#
+```csharp
 app.MapGet("/", () => "Hello World!").RequireRateLimiting(new MyRateLimiterPolicy());
 ```
 
 最后，我们更新了`RateLimiterOptions`便捷方法以采用`Action<Options>`而不是`Options`实例，还添加了`IServiceCollection`使用速率限制的扩展方法。因此，要在您的应用中启用上述所有速率限制策略，您可以执行以下操作：
 
-```C#
+```csharp
 builder.Services.AddRateLimiter(options =>
 {
     options.AddTokenBucketLimiter("MyControllerPolicy", options =>

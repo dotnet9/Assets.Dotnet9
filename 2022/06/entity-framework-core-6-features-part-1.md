@@ -18,7 +18,7 @@ categories: EF Core
 
 在 EF Core 6.0 中，新的 `UnicodeAttribute` 允许你将一个字符串属性映射到一个非 `Unicode` 列，而不需要直接指定数据库类型。当数据库系统只支持 `Unicode` 类型时，`Unicode` 特性会被忽略。
 
-```C#
+```csharp
 public class Book
 {
     public int Id { get; set; }
@@ -32,7 +32,7 @@ public class Book
 
 对应的迁移代码：
 
-```C#
+```csharp
 protected override void Up(MigrationBuilder migrationBuilder)
 {
     migrationBuilder.CreateTable(
@@ -55,7 +55,7 @@ protected override void Up(MigrationBuilder migrationBuilder)
 
 在 EF Core 6.0 之前，你可以用 Fluent API 配置精度。现在，你也可以用数据标注和一个新的 `PrecisionAttribute` 来做这件事。
 
-```C#
+```csharp
 public class Product
 {
     public int Id { get; set; }
@@ -67,7 +67,7 @@ public class Product
 
 对应的迁移代码：
 
-```C#
+```csharp
 protected override void Up(MigrationBuilder migrationBuilder)
 {
     migrationBuilder.CreateTable(
@@ -89,7 +89,7 @@ protected override void Up(MigrationBuilder migrationBuilder)
 
 从 EF Core 6.0 开始，你可以在实体类型上放置一个新的 `EntityTypeConfiguration` 特性，这样 EF Core 就可以找到并使用适当的配置。在此之前，类的配置必须被实例化并从 `OnModelCreating` 方法中调用。
 
-```C#
+```csharp
 public class ProductConfiguration : IEntityTypeConfiguration<Product>
 {
     public void Configure(EntityTypeBuilder<Product> builder)
@@ -113,7 +113,7 @@ public class Product
 
 此外，你还可以使用新的 Fluent API--`HasColumnOrder()` 来实现。
 
-```C#
+```csharp
 public class EntityBase
 {
     [Column(Order = 1)]
@@ -150,7 +150,7 @@ public class ContactInfo
 
 对应的迁移代码：
 
-```C#
+```csharp
 protected override void Up(MigrationBuilder migrationBuilder)
 {
     migrationBuilder.CreateTable(
@@ -179,7 +179,7 @@ protected override void Up(MigrationBuilder migrationBuilder)
 
 EF Core 6.0 支持 SQL Server 的时态表。一个表可以被配置成一个具有 SQL Server 默认的时间戳和历史表的时态表。
 
-```C#
+```csharp
 public class ExampleContext : DbContext
 {
     public DbSet<Person> People { get; set; }
@@ -201,7 +201,7 @@ public class Person
 
 对应的迁移代码：
 
-```C#
+```csharp
 protected override void Up(MigrationBuilder migrationBuilder)
 {
     migrationBuilder.CreateTable(
@@ -242,7 +242,7 @@ protected override void Up(MigrationBuilder migrationBuilder)
 
 使用时态表：
 
-```C#
+```csharp
 using ExampleContext context = new();
 context.People.Add(new() { Name = "Oleg" });
 context.People.Add(new() { Name = "Steve" });
@@ -265,7 +265,7 @@ foreach (var person in people)
 
 查询历史数据：
 
-```C#
+```csharp
 var oleg = await context.People.FirstAsync(x => x.Name == "Oleg");
 context.People.Remove(oleg);
 await context.SaveChangesAsync();
@@ -294,7 +294,7 @@ foreach (var pointInTime in history)
 
 检索历史数据：
 
-```C#
+```csharp
 var removedOleg = await context
     .People
     .TemporalAsOf(history.First().PeriodStart)
@@ -311,7 +311,7 @@ Console.WriteLine($"Id = {removedOleg.Id}; Name = {removedOleg.Name}");
 
 EF Core 6.0 支持 SQL Server 稀疏列。在使用 TPH（table per hierarchy）继承映射时，它可能很有用。
 
-```C#
+```csharp
 public class ExampleContext : DbContext
 {
     public DbSet<Person> People { get; set; }
@@ -352,7 +352,7 @@ public class Employee : Person
 
 对应迁移代码：
 
-```C#
+```csharp
 protected override void Up(MigrationBuilder migrationBuilder)
 {
     migrationBuilder.CreateTable(
@@ -381,7 +381,7 @@ protected override void Up(MigrationBuilder migrationBuilder)
 
 EF Core 6.0 有它自己的最小 API。新的扩展方法可在同一行代码注册一个 DbContext 类型，并提供一个数据库 Provider 的配置。
 
-```C#
+```csharp
 const string AccountKey = "[CosmosKey]";
 
 var builder = WebApplication.CreateBuilder(args);
@@ -424,7 +424,7 @@ Bundle-Migration
 
 EF Core 6.0 引入了一个预设模型配置。它允许你为一个给定的类型指定一次映射配置。例如，在处理值对象时，它可能很有帮助。
 
-```C#
+```csharp
 public class ExampleContext : DbContext
 {
     public DbSet<Person> People { get; set; }
@@ -483,7 +483,7 @@ public class AddressConverter : ValueConverter<Address, string>
 
 在 EF Core 6.0 中，你可以生成已编译的模型（compiled models）。当你有一个大的模型，而你的 EF Core 启动很慢时，这个功能是有意义的。你可以使用 CLI 或包管理器控制台来做。
 
-```C#
+```csharp
 public class ExampleContext : DbContext
 {
     public DbSet<Person> People { get; set; }

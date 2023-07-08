@@ -64,7 +64,7 @@ Gitee：[https://gitee.com/Juster-zhu/GeneralUpdate](https://gitee.com/Juster-zh
 
 说明：本示例使用的是`GeneralUpdate.Core`的2.1.6版本。因为Github上的源码已升级到3.x.x版本，支持了.NET 6.0，但笔者电脑上的缺乏相关框架，无法编译通过，所以检出到了源码的某次提交，这样即使使用的时候出了问题也可以通过调试源码的方式来解决。如果大家充分理解了本文的意思，直接安装最新版本的nuget包也可以，直接参考最新版源码的相关示例。
 
-```C#
+```csharp
 using System;
 using System.ComponentModel;
 using System.Diagnostics;
@@ -149,7 +149,7 @@ namespace AutoUpdate.ConsoleApp
 
 ## 客户端调用
 
-```C#
+```csharp
 Version version = System.Reflection.Assembly.GetExecutingAssembly().GetName().Version;
 var ver = $"{version.Major}.{version.Minor}.{version.Build}";
 //从数据库获取比当前程序集版本更高的版本信息

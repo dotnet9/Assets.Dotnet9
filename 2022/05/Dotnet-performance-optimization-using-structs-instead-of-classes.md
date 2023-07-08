@@ -56,7 +56,7 @@ OTA平台为了能让你更快的搜索想要的航班，会将热门的航线�
 
 假设我们有如下一个类，类里面有这些属性(现实中要复杂的多，而且会分航线、日期等各个维度存储，而且不同航班有不同的售卖规则，这里演示方便忽略)，那么这1亿数据缓存在内存中需要多少空间呢？
 
-```C#
+```csharp
 public class FlightPriceClass
 {
     /// <summary>
@@ -113,7 +113,7 @@ public class FlightPriceClass
 
 我们可以写一个Benchmark，来看看100W的数据需要多少空间，然后在推导出1亿的数据
 
-```C#
+```csharp
 // 随机预先生成100W的数据 避免计算逻辑导致结果不准确
 public static readonly FlightPriceClass[] FlightPrices = Enumerable.Range(0,
         100_0000
@@ -171,7 +171,7 @@ public FlightPriceClass[] GetClassStore()
 
 我们暂时也不用这些方法，对照本文的的标题，大家应该能想到用什么办法，嘿嘿，那就是使用结构体来替代类，我们定义了一个一样的结构体，如下所示。
 
-```C#
+```csharp
 [StructLayout(LayoutKind.Auto)]
 public struct FlightPriceStruct
 {
@@ -220,7 +220,7 @@ public struct FlightPriceStruct
 
 那可不可以节省更多的内存呢？我们知道在64位平台上一个引用(指针)是8byte，而在C#上默认的字符串使用`Unicode-16`，也就是说2byte代表一个字符，像航司二字码、起抵机场这些小于4个字符的完全可以使用char数组来节省内存，比一个指针占用还要少，那我们修改一下代码。
 
-```C#
+```csharp
 // 跳过本地变量初始化
 [SkipLocalsInit]
 // 调整布局方式 使用Explicit自定义布局
@@ -271,7 +271,7 @@ public struct FlightPriceStructExplicit
 
 可以看到现在只需要68byte了，最后4byte是为了地址对齐，因为CPU字长是64bit，我们不用管。按照我们的计算能比88Byte节省了29%的空间。当然使用`unsafe fixed char`以后就不能直接赋值了，需要进行数据拷贝才行，代码如下。
 
-```C#
+```csharp
 // 用于设置string值的扩展方法
 [MethodImpl(MethodImplOptions.AggressiveInlining)]  
 public static unsafe void SetTo(this string str, char* dest)  
@@ -324,7 +324,7 @@ public static unsafe FlightPriceStructExplicit[] GetStructStoreStructExplicit()
 
 但是我们发现这个Gen0 Gen1 Gen2这些GC发生了很多次，在实际中的话因为这些都是使用的托管内存，GC在进行回收的时候会扫描这65MB的内存，可能会让它的STW变得更久；既然这些是缓存的数据，一段时间内不会回收和改变，那我们能让GC别扫描这些嘛？答案是有的，我们可以直接使用非托管内存，使用[Marshal](https://docs.microsoft.com/zh-cn/dotnet/api/system.runtime.interopservices.marshal?view=net-6.0)类就可以申请和管理非托管内存，可以达到你写C语言的时候用的`malloc`函数类似的效果。
 
-```C#
+```csharp
 // 分配非托管内存 
 // 传参是所需要分配的字节数
 // 返回值是指向内存的指针
@@ -337,7 +337,7 @@ void Marshal.FreeHGlobal(IntPtr hglobal);
 
 再修改一下Benchmark的代码，将它改成使用非托管内存。
 
-```C#
+```csharp
 // 定义了out ptr参数，用于将指针传回
 public static unsafe int GetStructStoreUnManageMemory(out IntPtr ptr)  
 {  
@@ -393,7 +393,7 @@ public void GetStructStoreUnManageMemory()
 
 到现在的话存储1亿的数据差不多6.3GB，如果使用上文中提高的其它方法，应该还能降低一些，比如像如下代码一样，使用枚举来替换字符串，金额使用'分'存储，只存时间戳。
 
-```C#
+```csharp
 [StructLayout(LayoutKind.Explicit, CharSet = CharSet.Unicode)]
 [SkipLocalsInit]
 public struct FlightPriceStructExplicit
@@ -438,7 +438,7 @@ public struct FlightPriceStructExplicit
 
 那么使用结构体有什么问题吗？我们来看看计算，这个计算很简单，就是把符合条件的航线筛选出来，首先类和结构体都定义了如下代码的方法，Explicit结构体比较特殊，我们使用Span比较。
 
-```C#
+```csharp
 // 类和结构体定义的方法 当然实际中的筛选可能更加复杂
 // 比较航司
 public bool EqulasAirline(string airline)  
@@ -504,7 +504,7 @@ public static bool IsPriceLess(FlightPriceStructExplicit item, decimal min)
 
 最后Benchmark的代码如下所示，对于每种存储结构都是同样的代码逻辑，由于100W数据一下就跑完了，每种存储方式的数据量都为150W。
 
-```C#
+```csharp
 // 将需要的数据初始化好  避免对测试造成影响
 private static readonly FlightPriceClass[] FlightPrices = FlightPriceCreate.GetClassStore();  
 private static readonly FlightPriceStruct[] FlightPricesStruct = FlightPriceCreate.GetStructStore();  
@@ -615,7 +615,7 @@ Benchmark的结果如下。
 
 那么有没有什么办法不发生值拷贝呢？当然，值类型在C#中也可以引用传递，我们有ref关键字，只需要在值拷贝的地方加上就好了，代码如下所示。
 
-```C#
+```csharp
 // 改造比较方法，使其支持引用传递
 // 加入ref
 public static unsafe bool EqualsAirlineRef(ref FlightPriceStructExplicit item, string airline)  
@@ -669,7 +669,7 @@ public unsafe int GetStructStoreUnManageMemoryRef()
 
 那么如何验证我们的观点呢，其实`BenchmarkDotNet`提供了这样的指标展示，只需要引入`BenchmarkDotNet.Diagnostics.Windows` Nuget包，然后在需要评测的类上面加入以下代码。
 
-```C#
+```csharp
 [HardwareCounters(
     HardwareCounter.LlcMisses, // 缓存未命中次数  
     HardwareCounter.LlcReference)]  // 解引用次数

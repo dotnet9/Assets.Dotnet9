@@ -20,7 +20,7 @@ Simple Logging是EF Core提供的一项功能，可用于在开发和调试应�
 
 配置起来非常简单，只需在`DbContext.OnConfiguring`实现中调用`LogTo`方法即可：
 
-```C#
+```csharp
 public class DefaultDbContext : DbContext
 {
     protected override void OnConfiguring(DbContextOptionsBuilder options)
@@ -39,7 +39,7 @@ public class DefaultDbContext : DbContext
 
 默认情况下，Simple Logging记录Debug或更高级别的每条日志。这样会导致输出的日志过多，对调试没有任何帮助，可以限制只记录Information或更高级别的日志：
 
-```C#
+```csharp
 options.LogTo(Console.WriteLine, 
     Microsoft.Extensions.Logging.LogLevel.Information);
 ```
@@ -48,7 +48,7 @@ options.LogTo(Console.WriteLine,
 
 但是，这样还是会产生很多日志。这时我们可以结合`查询标记`，帮助我们快速定位到需要的日志：
 
-```C#
+```csharp
 var users = context.User.TagWith("查询所有用户").ToList();
 ```
 

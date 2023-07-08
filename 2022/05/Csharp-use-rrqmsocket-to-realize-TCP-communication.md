@@ -44,7 +44,7 @@ TcpService是TCP系服务器基类，但是不参与实际的数据交互，实�
 
 所以具体创建过程如下。
 
-```C#
+```csharp
 TcpService service = new TcpService();
 service.Connecting += (client, e) =>{};//有客户端正在连接
 service.Connected += (client, e) =>{};//有客户端连接
@@ -67,7 +67,7 @@ service.Start();
 
 TcpClient是TCP客户端的基类，为抽象类，不可创建实例，须通过继承实现HandleReceivedData方法，该方法指示如何处理接收到的数据。
 
-```C#
+```csharp
 SimpleTcpClient tcpClient = new SimpleTcpClient();
 tcpClient.Connected += (client, e) =>{};//成功连接到服务器
 tcpClient.Disconnected += (client, e) =>{};//从服务器断开连接，当连接不成功时不会触发。
@@ -85,7 +85,7 @@ tcpClient.Send(Encoding.UTF8.GetBytes("RRQM"));
 
 客户端 服务端发送都是封装了send方法，TcpClient和TcpService已经内置了多种发送方法，直接调用就可以发送。如果发送失败，则会立即抛出异常。
 
-```C#
+```csharp
 service.Send(“”);
 ```
 

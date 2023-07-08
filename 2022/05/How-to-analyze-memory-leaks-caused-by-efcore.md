@@ -54,7 +54,7 @@ WHERE UserId = 5
 
 因此，这就是我们所做的更改：
 
-```C#
+```csharp
 // Before
 var param = Expressions.Expression.Parameter(typeof(T));
 Expression = Expressions.Expression.Lambda<Func<T, bool>>(

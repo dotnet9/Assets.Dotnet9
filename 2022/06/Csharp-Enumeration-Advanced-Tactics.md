@@ -28,7 +28,7 @@ categories: .NET相关
 
 枚举类型的作用是限制其变量只能从有限的选项中取值，这些选项（枚举类型的成员）各自对应于一个数字，数字默认从 0 开始，并以此递增。例如：
 
-```C#
+```csharp
 public enum Days
 {
     Sunday, Monday, Tuesday, // ...
@@ -37,7 +37,7 @@ public enum Days
 
 其中 Sunday 的值是 0，Monday 是 1，以此类推。为了一眼能看出每个成员代表的值，一般推荐显示地将成员值写出来，不要省略：
 
-```C#
+```csharp
 public enum Days
 {
     Sunday = 0, Monday = 1, Tuesday = 2, // ...
@@ -46,7 +46,7 @@ public enum Days
 
 C# 枚举成员的类型默认是 int 类型，通过继承可以声明枚举成员为其它类型，比如：
 
-```C#
+```csharp
 public enum Days : byte
 {
     Monday = 1,
@@ -63,7 +63,7 @@ public enum Days : byte
 
 下面是几个枚举的常见用法（以上面的 Days 枚举为例）：
 
-```C#
+```csharp
 // 枚举转字符串
 string foo = Days.Saturday.ToString(); // "Saturday"
 string foo = Enum.GetName(typeof(Days), 6); // "Saturday"
@@ -87,20 +87,20 @@ string[] foo = Enum.GetNames(typeof(Days));
 
 另外，值得注意的是，枚举可能会得到非预期的值（值没有对应的成员）。比如：
 
-```C#
+```csharp
 Days d = (Days)21; // 不会报错
 Enum.IsDefined(typeof(Days), d); // false
 ```
 
 即使枚举没有值为 0 的成员，它的默认值永远都是 0。
 
-```C#
+```csharp
 var z = default(Days); // 0
 ```
 
 枚举可以通过 Description、Display 等特性来为成员添加有用的辅助信息，比如：
 
-```C#
+```csharp
 public enum ApiStatus
 {
     [Description("成功")]
@@ -134,7 +134,7 @@ static void Main(string[] args)
 
 我们先定义一个枚举类型来表示两种用户角色：
 
-```C#
+```csharp
 public enum Roles
 {
     Admin = 1,
@@ -158,7 +158,7 @@ SELECT * FROM `User` WHERE `Roles` & 3 = 3;
 
 对这条 SQL 语句用 C# 来实现查询是这样的（为了简单，这里使用了 Dapper）：
 
-```C#
+```csharp
 public class User
 {
     public int Id { get; set; }
@@ -172,7 +172,7 @@ connection.Query<User>(
 
 对应的，在 C# 中要判断用户是否拥有某个角色，可以这么判断：
 
-```C#
+```csharp
 // 方式一
 if (user.Roles & Roles.Admin == Roles.Admin)
 {
@@ -188,7 +188,7 @@ if (user.Roles.HasFlag(Roles.Admin))
 
 同理，在 C# 中你可以对枚举进行任意位逻辑运算，比如要把角色从某个枚举变量中移除：
 
-```C#
+```csharp
 var foo = Roles.Admin | Roles.Member;
 var bar = foo & ~foo;
 ```
@@ -199,7 +199,7 @@ var bar = foo & ~foo;
 
 下面我们提供一个通过角色来查询用户的方法，并演示如何调用，如下：
 
-```C#
+```csharp
 public IEnumerable<User> GetUsersInRoles(Roles roles)
 {
     _logger.LogDebug(roles.ToString());
@@ -214,7 +214,7 @@ _repository.GetUsersInRoles(Roles.Admin | Roles.Member);
 
 `Roles.Admin | Roles.Member` 的值是 3，由于 Roles 枚举类型中并没有定义一个值为 3 的字段，所以在方法内 roles 参数显示的是 3。3 这个信息对于我们调试或打印日志很不友好。在方法内，我们并不知道这个 3 代表的是什么。为了解决这个问题，C# 枚举有个很有用的特性：FlagsAtrribute。
 
-```C#
+```csharp
 [Flags]
 public enum Roles
 {
@@ -225,7 +225,7 @@ public enum Roles
 
 加上这个 Flags 特性后，我们再来调试 `GetUsersInRoles(Roles roles)` 方法时，roles 参数的值就会显示为 `Admin|Member` 了。简单来说，加不加 Flags 的区别是：
 
-```C#
+```csharp
 var roles = Roles.Admin | Roles.Member;
 Console.WriteLing(roles.ToString()); // "3"，没有 Flags 特性
 Console.WriteLing(roles.ToString()); // "Admin, Member"，有 Flags 特性
@@ -237,7 +237,7 @@ Console.WriteLing(roles.ToString()); // "Admin, Member"，有 Flags 特性
 
 到这，枚举类型 Roles 一切看上去没什么问题，但如果现在要增加一个角色：Mananger，会发生什么情况？按照数字值递增的规则，Manager 的值应当设为 3。
 
-```C#
+```csharp
 [Flags]
 public enum Roles
 {
@@ -260,7 +260,7 @@ public enum Roles
 
 再往后增加的话就是 16、32、64...，其中各值不论怎么相加都不会和成员的任一值冲突。这样问题就解决了，所以我们要这样定义 Roles 枚举的值：
 
-```C#
+```csharp
 [Flags]
 public enum Roles
 {
@@ -273,7 +273,7 @@ public enum Roles
 
 不过在定义值的时候要在心中小小计算一下，如果你想懒一点，可以用下面这种“位移”的方法来定义：
 
-```C#
+```csharp
 [Flags]
 public enum Roles
 {

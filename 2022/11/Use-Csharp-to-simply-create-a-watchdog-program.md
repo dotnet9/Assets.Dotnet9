@@ -40,7 +40,7 @@ Tips：文末有完整源代码，就不一步一步写了
 
 开了个定时器，每5秒去检查1次，如果没有找到进程则使用`Process`启动程序
 
-```c#
+```csharp
 public class Dog
 {
     private Timer timer = new Timer();
@@ -93,7 +93,7 @@ public class Dog
 
 2、在程序入口接收被看护程序的路径，启动`Dog`扫描
 
-```c#
+```csharp
 static class Program
 {
     static NotifyIcon icon = new NotifyIcon();
@@ -149,7 +149,7 @@ static class Program
 
 3、简单实现个日志记录器（使用第三方库也行，建议看护程序最好不要有任何依赖），也可直接使用我下面这个，很简单，无任何依赖
 
-```c#
+```csharp
 public class Log
 {
     //读写锁，当资源处于写入模式时，其他线程写入需要等待本次写入结束之后才能继续写入
@@ -202,7 +202,7 @@ public class Log
 
 4、主程序封装看门狗启停类
 
-```c#
+```csharp
  public static class WatchDog
 {
     private static string processName = "WatchDog";  //看护程序进程名（注意这里不是被看护程序名，你可以试一下换成主程序名字会使什么效果）
@@ -252,7 +252,7 @@ public class Log
 
 5、在主程序入口点启动看门狗
 
-```c#
+```csharp
 public partial class App : Application
 {
     [STAThread]

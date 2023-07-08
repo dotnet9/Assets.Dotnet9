@@ -18,7 +18,7 @@ categories: EF Core
 
 在 EF Core 6.0 中，`HasConversion` 方法的泛型重载方法可以指定内置或自定义的值转换器。
 
-```C#
+```csharp
 public class ExampleContext : DbContext
 {
     public DbSet<Person> People { get; set; }
@@ -58,7 +58,7 @@ public class AddressConverter : ValueConverter<Address, string>
 
 从 EF Core 6.0 开始，你可以在多对多的关系中配置一个连接实体，而无需任何额外的配置。另外，你可以配置一个连接实体，而不需要明确指定左右关系。
 
-```C#
+```csharp
 public class BloggingContext : DbContext
 {
     public DbSet<Post> Posts { get; set; }
@@ -110,7 +110,7 @@ dotnet ef dbcontext scaffold "Data Source=(localdb)\MSSQLLocalDB;Initial Catalog
 
 来自生成的 `DbContext` 的 `OnModelCreating`：
 
-```C#
+```csharp
 protected override void OnModelCreating(ModelBuilder modelBuilder)
 {
     modelBuilder.Entity<Post>(entity =>
@@ -150,7 +150,7 @@ CREATE TABLE [Posts] (
 
 会生成模型：
 
-```C#
+```csharp
 public partial class Post
 {
     public int Id { get; set; }
@@ -194,7 +194,7 @@ EXEC sp_addextendedproperty
 
 生成的模型：
 
-```C#
+```csharp
 /// <summary>
 /// The post table
 /// </summary>
@@ -219,7 +219,7 @@ public partial class Post
 
 在 EF Core 5.0 中，你可以注册一个工厂来手动创建 DbContext 实例。从 EF Core 6.0 开始，可用 `AddDbContextFactory` 注册 `DbContext`。所以你可以根据你的需要同时注入工厂和 DbContext。
 
-```C#
+```csharp
 var serviceProvider = new ServiceCollection()
     .AddDbContextFactory<ExampleContext>(builder =>
         builder.UseSqlServer(@"Server=(localdb)\mssqllocaldb;Database = EFCore6Playground"))
@@ -244,7 +244,7 @@ class ExampleContext : DbContext
 
 在 EF Core 6.0 中，你可以使用没有依赖注入的 `DbContext` 池。`PooledDbContextFactory` 类型已经定义为 `public` 了。池是用 `DbContextOptions` 创建的，它将被用来创建 `DbContext` 实例。
 
-```C#
+```csharp
 var options = new DbContextOptionsBuilder<ExampleContext>()
     .UseSqlServer(@"Server=(localdb)\mssqllocaldb;Database=EFCore6Playground")
     .Options;
@@ -274,7 +274,7 @@ class ExampleContext : DbContext
 
 在 Db 命令拦截器中使用 `CommandSource`：
 
-```C#
+```csharp
 class ExampleInterceptor : DbCommandInterceptor
 {
     public override InterceptionResult<DbDataReader> ReaderExecuting(DbCommand command,
@@ -301,7 +301,7 @@ class ExampleInterceptor : DbCommandInterceptor
 
 `DbContext`:
 
-```C#
+```csharp
 class ExampleContext : DbContext
 {
     public DbSet<Product> Products { get; set; }
@@ -321,7 +321,7 @@ class Product
 
 `Program`:
 
-```C#
+```csharp
 using var context = new ExampleContext();
 
 context.Products.Add(new Product { Name = "Laptop", Price = 1000 });
@@ -352,7 +352,7 @@ SELECT* FROM dbo.Products
 
 在 EF Core 6.0 中，值转换器允许转换空值。当你有一个未知值的枚举，并且它在表中表示一个可空的字符串列时，这很有用。
 
-```C#
+```csharp
 public class ExampleContext : DbContext
 {
     public DbSet<Dog> Dogs { get; set; }
@@ -405,7 +405,7 @@ public class BreedConverter : ValueConverter<Breed, string>
 
 在 EF Core 6.0 中，你可以在实体被追踪之前显式地给它们设置临时值。当值被标记为临时值时，EF 将不会像以前那样重置它。
 
-```C#
+```csharp
 using var context = new ExampleContext();
 
 Blog blog = new Blog { Id = -5 };

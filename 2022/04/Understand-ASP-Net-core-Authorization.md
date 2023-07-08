@@ -31,7 +31,7 @@ ASP.NET Core中的授权方式有很多，我们一起了解一下其中三种�
 
 在进入正文之前，我们要先认识一个很重要的特性——`AuthorizeAttribute`，通过它，我们可以很方便的针对Controller、Action等维度进行权限控制：
 
-```C#
+```csharp
 [AttributeUsage(AttributeTargets.Class | AttributeTargets.Method, AllowMultiple = true, Inherited = true)]
 public class AuthorizeAttribute : Attribute, IAuthorizeData
 {
@@ -55,7 +55,7 @@ public class AuthorizeAttribute : Attribute, IAuthorizeData
 
 另外，为了方便测试，我们先添加一下基于Cookie的身份认证：
 
-```C#
+```csharp
 public class Startup
 {
     public void ConfigureServices(IServiceCollection services)
@@ -104,7 +104,7 @@ public class Startup
 
 我们先看一个简单的例子：
 
-```C#
+```csharp
 [Authorize(Roles = "Admin")]
 public string GetForAdmin()
 {
@@ -116,7 +116,7 @@ public string GetForAdmin()
 
 如果某个接口想要允许多个角色访问，该怎么做呢？很简单，通过英文逗号（,）分隔多个角色即可：
 
-```C#
+```csharp
 [Authorize(Roles = "Developer,Tester")]
 public string GetForDeveloperOrTester()
 {
@@ -128,7 +128,7 @@ public string GetForDeveloperOrTester()
 
 最后，如果某个接口要求用户必须同时拥有多个角色时才允许访问，那我们可以通过添加多个`AuthorizeAttribute`特性来达到目的：
 
-```C#
+```csharp
 [Authorize(Roles = "Developer")]
 [Authorize(Roles = "Tester")]
 public string GetForDeveloperAndTester()
@@ -141,7 +141,7 @@ public string GetForDeveloperAndTester()
 
 你现在可能已经迫不及待要亲自验证一下了，不过你还记得如何设置用户的角色吗？我们在身份认证的文章中介绍过，在颁发身份票据时，可以通过声明添加角色，例如：
 
-```C#
+```csharp
 public async Task<IActionResult> LoginForAdmin()
 {
     var identity = new ClaimsIdentity(CookieAuthenticationDefaults.AuthenticationScheme);
@@ -171,7 +171,7 @@ public async Task<IActionResult> LoginForAdmin()
 
 基于声明的授权，是在基于策略的授权基础上实现的。为什么这么说呢？因为我们需要通过添加策略来使用声明：
 
-```C#
+```csharp
 public class Startup
 {
     public void ConfigureServices(IServiceCollection services)
@@ -186,7 +186,7 @@ public class Startup
 
 一个简单的声明策略如下：
 
-```C#
+```csharp
 options.AddPolicy("RankClaim", policy => policy.RequireClaim("Rank"));
 ```
 
@@ -194,7 +194,7 @@ options.AddPolicy("RankClaim", policy => policy.RequireClaim("Rank"));
 
 当然，我们也可以将Rank的值限定一下：
 
-```C#
+```csharp
 options.AddPolicy("RankClaimP3", policy => policy.RequireClaim("Rank", "P3"));
 options.AddPolicy("RankClaimM3", policy => policy.RequireClaim("Rank", "M3"));
 ```
@@ -203,7 +203,7 @@ options.AddPolicy("RankClaimM3", policy => policy.RequireClaim("Rank", "M3"));
 
 类似于基于角色的声明，我们也可以添加“Or”、“And”逻辑的策略：
 
-```C#
+```csharp
 options.AddPolicy("RankClaimP3OrM3", policy => policy.RequireClaim("Rank", "P3", "M3"));
 options.AddPolicy("RankClaimP3AndM3", policy => policy.RequireClaim("Rank", "P3").RequireClaim("Rank", "M3"));
 ```
@@ -212,7 +212,7 @@ options.AddPolicy("RankClaimP3AndM3", policy => policy.RequireClaim("Rank", "P3"
 
 策略的用法与之前的类似（**注意策略不能像角色一样通过逗号分隔**）：
 
-```C#
+```csharp
 // 仅要求用户具有声明“Rank”，不关心值是多少
 [Authorize(Policy = "RankClaim")]
 public string GetForRankClaim()
@@ -238,7 +238,7 @@ public string GetForRankClaimP3OrM3()
 
 表示“And”逻辑的策略可以有两种写法：
 
-```C#
+```csharp
 // 要求用户具有声明“Rank”，且值为“P3” 和 “M3”
 [Authorize(Policy = "RankClaimP3AndM3")]
 public string GetForRankClaimP3AndM3V1()
@@ -257,7 +257,7 @@ public string GetForRankClaimP3AndM3V2()
 
 另外，有时候声明策略略微有些复杂，可以使用`RequireAssertion`来实现：
 
-```C#
+```csharp
 options.AddPolicy("ComplexClaim", policy => policy.RequireAssertion(context =>
     context.User.HasClaim(c => (c.Type == "Rank" || c.Type == "Name") && c.Issuer == "Issuer")));
 ```
@@ -276,7 +276,7 @@ options.AddPolicy("ComplexClaim", policy => policy.RequireAssertion(context =>
 
 现在，我们虚构一个场景：网吧管理，未满18岁的人员不准入内，只允许年满18岁的成年人进入。为此，我们需要一个限定最小年龄的要求：
 
-```C#
+```csharp
 public class MinimumAgeRequirement : IAuthorizationRequirement
 {
     public MinimumAgeRequirement(int minimumAge) =>
@@ -288,7 +288,7 @@ public class MinimumAgeRequirement : IAuthorizationRequirement
 
 现在，要求有了，我们还需要一个授权处理器，来校验用户是否真的达到了指定年龄：
 
-```C#
+```csharp
 public class MinimumAgeAuthorizationHandler : AuthorizationHandler<MinimumAgeRequirement>
 {
     protected override Task HandleRequirementAsync(AuthorizationHandlerContext context, MinimumAgeRequirement requirement)
@@ -330,7 +330,7 @@ public class MinimumAgeAuthorizationHandler : AuthorizationHandler<MinimumAgeReq
 
 为了实现这个逻辑，我们再增加一个授权处理器：
 
-```C#
+```csharp
 public class MinimumAgeAnotherAuthorizationHandler : AuthorizationHandler<MinimumAgeRequirement>
 {
     protected override Task HandleRequirementAsync(AuthorizationHandlerContext context, MinimumAgeRequirement requirement)
@@ -349,7 +349,7 @@ public class MinimumAgeAnotherAuthorizationHandler : AuthorizationHandler<Minimu
 
 授权要求和授权处理器我们都已经实现了，接下来就是添加策略了，不过在这之前，不要忘了注入我们的要求和授权处理器：
 
-```C#
+```csharp
 public class Startup
 {
     public void ConfigureServices(IServiceCollection services)
@@ -371,7 +371,7 @@ public class Startup
 
 你可以写一个类似的接口进行测试：
 
-```C#
+```csharp
 [Authorize(Policy = "AtLeast18Age")]
 public string GetForAtLeast18Age()
 {
@@ -381,7 +381,7 @@ public string GetForAtLeast18Age()
 
 最后，多说一句，如果你想让一个Handler可以同时处理多个Requirement，可以这样做：
 
-```C#
+```csharp
 public class MultiRequirementsAuthorizationHandler : IAuthorizationHandler
 {
     public Task HandleAsync(AuthorizationHandlerContext context)
@@ -425,7 +425,7 @@ public class Custom2Requirement : IAuthorizationRequirement
 
 首先，继承`AuthorizeAttribute`来实现一个自定义授权特性`MinimumAgeAuthorizeAttribute`：
 
-```C#
+```csharp
 public class MinimumAgeAuthorizeAttribute : AuthorizeAttribute
 {
     // 策略名前缀
@@ -460,7 +460,7 @@ public class MinimumAgeAuthorizeAttribute : AuthorizeAttribute
 
 好了，现在策略名可以动态创建了，那下一步就是根据策略名动态创建出策略实例了，可以通过替换接口`IAuthorizationPolicyProvider`的默认实现来达到目的：
 
-```C#
+```csharp
 public class AppAuthorizationPolicyProvider : IAuthorizationPolicyProvider
 {
     // 引用自第三方库 Nito.AsyncEx
@@ -527,13 +527,13 @@ public class AppAuthorizationPolicyProvider : IAuthorizationPolicyProvider
 
 最后，只需要注入一下服务就好啦：
 
-```C#
+```csharp
 services.AddTransient<IAuthorizationPolicyProvider, AppAuthorizationPolicyProvider>();
 ```
 
 现在你就可以使用`MinimumAgeAuthorizeAttribute`进行授权了，比如限制最小年龄20岁：
 
-```C#
+```csharp
 [MinimumAgeAuthorize(20)]
 public string GetForAtLeast20Age()
 {
@@ -549,7 +549,7 @@ public string GetForAtLeast20Age()
 
 首先，我们再熟悉一下`AuthorizeAttribute`：
 
-```C#
+```csharp
 public interface IAuthorizeData
 {
     // 策略
@@ -584,7 +584,7 @@ public class AuthorizeAttribute : Attribute, IAuthorizeData
 
 你可能会疑问，即使我没有显式的添加`services.AddAuthorization`这行代码，程序也不会报错，其实这个我们在前文 Startup 中就提到过，`services.AddControllers()`中会默认调用`AddAuthorization`。
 
-```C#
+```csharp
 public static IServiceCollection AddAuthorization(this IServiceCollection services)
 {
     services.AddAuthorizationCore();
@@ -628,7 +628,7 @@ public static IServiceCollection AddAuthorizationPolicyEvaluator(this IServiceCo
 
 这里面有几个接口是我们之前见过的，比如`IAuthorizationPolicyProvider`、`IAuthorizationHandler`。不着急研究其他几个接口的作用，咱们接着看下`AuthorizationOptions`：
 
-```C#
+```csharp
 public class AuthorizationOptions
 {
     // 存放添加的策略，策略名不分区大小写
@@ -674,7 +674,7 @@ public class AuthorizationOptions
 
 接下来看中间件的注册`app.UseAuthorization()`：
 
-```C#
+```csharp
 public static class AuthorizationAppBuilderExtensions
 {
     public static IApplicationBuilder UseAuthorization(this IApplicationBuilder app)
@@ -702,7 +702,7 @@ internal class AuthorizationPolicyMarkerService
 
 接下来，深入`AuthorizationMiddleware`的实现：
 
-```C#
+```csharp
 public class AuthorizationMiddleware
 {
     private const string SuppressUseHttpContextAsAuthorizationResource = "Microsoft.AspNetCore.Authorization.SuppressUseHttpContextAsAuthorizationResource";
@@ -770,7 +770,7 @@ public class AuthorizationMiddleware
 
 下面我们一步步来分析它。先看第1步，了解它是如何将多种授权要求组装为一个策略的：
 
-```C#
+```csharp
 public class AuthorizationPolicy
 {
     public static async Task<AuthorizationPolicy?> CombineAsync(IAuthorizationPolicyProvider policyProvider, IEnumerable<IAuthorizeData> authorizeData)
@@ -849,7 +849,7 @@ public class AuthorizationPolicy
 
 整体逻辑已经通过注释给出了，就不多做解释了。我们来看一下`IAuthorizationPolicyProvider`，在之前我们就已经认识它了，这里也用到了：
 
-```C#
+```csharp
 public interface IAuthorizationPolicyProvider
 {
     Task<AuthorizationPolicy?> GetPolicyAsync(string policyName);
@@ -870,7 +870,7 @@ public interface IAuthorizationPolicyProvider
 
 下面就看下该接口的默认实现`DefaultAuthorizationPolicyProvider`：
 
-```C#
+```csharp
 public class DefaultAuthorizationPolicyProvider : IAuthorizationPolicyProvider
 {
     private readonly AuthorizationOptions _options;
@@ -916,7 +916,7 @@ OK，`IAuthorizationPolicyProvider`我们就看到这。
 
 下面，我们回到`AuthorizationMiddleware`，继续往下来到第2步，出现了新接口`IPolicyEvaluator`：
 
-```C#
+```csharp
 public interface IPolicyEvaluator
 {
     Task<AuthenticateResult> AuthenticateAsync(AuthorizationPolicy policy, HttpContext context);
@@ -934,7 +934,7 @@ public interface IPolicyEvaluator
 
 该接口的默认实现类为`PolicyEvaluator`：
 
-```C#
+```csharp
 public class PolicyEvaluator : IPolicyEvaluator
 {
     private readonly IAuthorizationService _authorization;
@@ -1000,7 +1000,7 @@ public class PolicyEvaluator : IPolicyEvaluator
 
 这里面使用到了新的接口`IAuthorizationService`，从名字也可以看出它是专门用来做授权的服务接口，真正的授权逻辑代码被封装到了该接口的实现类中，我们看下它的定义：
 
-```C#
+```csharp
 public interface IAuthorizationService
 {
     Task<AuthorizationResult> AuthorizeAsync(ClaimsPrincipal user, object? resource, IEnumerable<IAuthorizationRequirement> requirements);
@@ -1016,7 +1016,7 @@ public interface IAuthorizationService
 
 如果你足够细心，你会发现这两个重载并不能满足上方代码的调用，因为调用时第三个参数我们传递的是`AuthorizationPolicy`类型，其实啊，它是被放到了扩展方法中。
 
-```C#
+```csharp
 public static class AuthorizationServiceExtensions
 {
     public static Task<AuthorizationResult> AuthorizeAsync(this IAuthorizationService service, ClaimsPrincipal user, object? resource, AuthorizationPolicy policy)
@@ -1030,7 +1030,7 @@ public static class AuthorizationServiceExtensions
 
 该接口的默认实现为`DefaultAuthorizationService`：
 
-```C#
+```csharp
 public class DefaultAuthorizationService : IAuthorizationService
 {
     // 以下字段均为构造函数注入
@@ -1075,7 +1075,7 @@ public class DefaultAuthorizationService : IAuthorizationService
 
 首先，这里用到了`IAuthorizationHandlerContextFactory`，它用来创建授权处理器上下文：
 
-```C#
+```csharp
 public interface IAuthorizationHandlerContextFactory
 {
     AuthorizationHandlerContext CreateContext(IEnumerable<IAuthorizationRequirement> requirements, ClaimsPrincipal user, object? resource);
@@ -1092,7 +1092,7 @@ public class DefaultAuthorizationHandlerContextFactory : IAuthorizationHandlerCo
 
 然后，下面用到了`IAuthorizationHandlerProvider`，它用来提供Handler，这些Handler包括我们之前实现的`MinimumAgeAuthorizationHandler`等。
 
-```C#
+```csharp
 public interface IAuthorizationHandlerProvider
 {
     Task<IEnumerable<IAuthorizationHandler>> GetHandlersAsync(AuthorizationHandlerContext context);
@@ -1114,7 +1114,7 @@ public class DefaultAuthorizationHandlerProvider : IAuthorizationHandlerProvider
 
 另外，这里还用到了`IAuthorizationEvaluator`，该接口用于评估授权结果是成功还是失败，并将结果构造为`AuthorizationResult`实例。
 
-```C#
+```csharp
 public interface IAuthorizationEvaluator
 {
     AuthorizationResult Evaluate(AuthorizationHandlerContext context);
@@ -1133,7 +1133,7 @@ public class DefaultAuthorizationEvaluator : IAuthorizationEvaluator
 
 最后，获取到授权结果`AuthorizationResult`后，我们就来到了第5步，由`IAuthorizationMiddlewareResultHandler`针对不同的授权结果进行响应处理。
 
-```C#
+```csharp
 public interface IAuthorizationMiddlewareResultHandler
 {
     Task HandleAsync(RequestDelegate next, HttpContext context, AuthorizationPolicy policy, PolicyAuthorizationResult authorizeResult);

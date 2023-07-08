@@ -307,7 +307,7 @@ OK，`WPF`与`Blazor`集成成功，打完收工？
 
 我们给整个窗体客户端区域加了一个背景`Border`(您可以去掉Border背景色，点击界面按钮试试)，然后又套了一个Grid，用于放置自定义的标题栏（标题和窗体控制按钮）和`BlazorWebView`(用于渲染Razor组件的浏览器组件)，下面是窗体控制按钮的响应事件：
 
-```C#
+```csharp
 using Microsoft.Extensions.DependencyInjection;
 using System.Windows;
 
@@ -466,7 +466,7 @@ public partial class MainWindow : Window
 
 添加窗体帮助类：`Services\WindowService.cs`
 
-```C#
+```csharp
 using System;
 using System.Linq;
 using System.Windows;
@@ -1088,7 +1088,7 @@ Demo的代码我几乎不变的引入，打开`RazorViews\Counter.razor`文件�
 
 消息抽象类，用于定义消息类型，具体的消息需要继承该类，比如后面的打开子窗体消息`OpenSecondViewMessage`。
 
-```C#
+```csharp
 using System;
 
 namespace WPFBlazorChat.Messages;
@@ -1112,7 +1112,7 @@ public abstract class Message
 2. Unsubscribe：取消消息订阅
 3. Publish：消息发送
 
-```C#
+```csharp
 using System;
 
 namespace WPFBlazorChat.Messages;
@@ -1139,7 +1139,7 @@ public enum ThreadOption
 
 消息的管理，消息中转等实现：
 
-```C#
+```csharp
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -1313,7 +1313,7 @@ public class WeakActionAndToken
 
 三个消息类定义如下：
 
-```C#
+```csharp
 public class OpenSecondViewMessage : Message
 {
     public OpenSecondViewMessage(object sender) : base(sender)
@@ -1368,7 +1368,7 @@ void OpenNewSecondView()
 
 在`App.xaml.cs`里订阅打开子窗体消息：
 
-```C#
+```csharp
 public partial class App : Application
 {
     public App()

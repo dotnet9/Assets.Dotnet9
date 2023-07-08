@@ -26,7 +26,7 @@ categories: Web API
 
 校验登录账号是否存在，如果不存在，我们抛出不存在的错误
 
-```C#
+```csharp
 [HttpPost("GetWeather")]
 public IActionResult ApiLimit(WeatherInfor weatherInfor)
 {
@@ -45,7 +45,7 @@ public IActionResult ApiLimit(WeatherInfor weatherInfor)
 
 **缓存类**
 
-```C#
+```csharp
 public class MemoryCacheHelper
 {
 
@@ -110,7 +110,7 @@ public class MemoryCacheHelper
 
 **业务逻辑**
 
-```C#
+```csharp
 public bool IsLimit(string appId)
 {
     if (MemoryCacheHelper.Exists(appId))
@@ -135,7 +135,7 @@ public bool IsLimit(string appId)
 
 去查询天气接口， 返回数据
 
-```C#
+```csharp
 [HttpPost("GetWeather")]
 public IActionResult ApiLimit(WeatherInfor weatherInfor)
 {

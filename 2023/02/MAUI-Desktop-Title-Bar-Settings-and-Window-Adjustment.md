@@ -42,7 +42,7 @@ maui自带的windows下的窗口是这样的(完全不在我审美上)：
 
 1. 完美去掉标题栏，下面是代码，写在MauiProgram.cs里配置生命周期方法，具体的资料在上面的链接: [Maui学习之路(1)-Windows窗体设置](https://dotnet9.com/2022/06/Maui-Learning-Road-One-Windows-Form-Settings) 里也有，但是看起来比较麻烦，直接看代码可能好理解一点：
 
-```C#
+```csharp
 var builder = MauiApp.CreateBuilder();
 builder.UseMauiApp<App>()
 		.ConfigureFonts(fonts =>
@@ -93,7 +93,7 @@ builder.UseMauiApp<App>()
 
 2. 直接在MainPage里写Loaded方法，这也是一开始我用的方法，代码如下:
 
-```C#
+```csharp
 private void ContentPage_Loaded(object sender, EventArgs e)
     {
 

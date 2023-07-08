@@ -70,7 +70,7 @@ categories: MAUI,Blazor
 
 ![](https://img1.dotnet9.com/2022/04/3607.png)
 
-```C#
+```csharp
 builder.Services.AddMasaBlazor();
 ```
 

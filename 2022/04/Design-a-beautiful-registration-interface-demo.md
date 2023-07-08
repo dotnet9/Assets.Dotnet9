@@ -126,7 +126,7 @@ categories: WPF
 
 ### 2.3 MainWindow.xaml.cs代码
 
-```C#
+```csharp
 using System.Windows;
 using System.Windows.Input;
 
@@ -303,7 +303,7 @@ namespace RegisterPage
 
 ### 2.5 App.xaml.cs代码
 
-```C#
+```csharp
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -344,7 +344,7 @@ namespace RegisterPage
 
 ### 2.7 MyOption.xaml.cs代码
 
-```C#
+```csharp
 using System.Windows;
 using System.Windows.Controls;
 
@@ -405,7 +405,7 @@ namespace RegisterPage.UserControls
 
 ### 2.9 MyTextBox.xaml.cs代码
 
-```C#
+```csharp
 using System.Windows;
 using System.Windows.Controls;
 

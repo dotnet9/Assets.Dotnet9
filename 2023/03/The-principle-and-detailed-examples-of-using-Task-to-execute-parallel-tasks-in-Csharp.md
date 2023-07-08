@@ -22,7 +22,7 @@ categories: .NET相关
 
 下面是一个简单的示例，展示如何使用Task来执行并行任务：
 
-```C#
+```csharp
 void Task1()
 {
     // 创建任务数组
@@ -72,7 +72,7 @@ void Task1()
 
 另一个使用Task的示例是计算斐波那契数列。我们可以将斐波那契数列的每一项看成一个任务，然后使用Task.WaitAll方法等待所有任务完成。
 
-```C#
+```csharp
 void Task2()
 {
     static long Fib(int n)
@@ -132,7 +132,7 @@ void Task2()
 
 除了使用Task数组存储所有任务，还可以使用Task.Factory.StartNew方法创建并行任务。这个方法与Task.Run方法类似，都可以创建异步任务并提交给线程池。
 
-```C#
+```csharp
 void Task3()
 {
     long Factorial(int n)
@@ -170,7 +170,7 @@ void Task3()
 
 另一个使用Task的示例是异步读取文件。在这个示例中，我们使用Task.FromResult方法创建一个完成任务，并将文件内容作为结果返回。
 
-```C#
+```csharp
 void Task4()
 {
     const string filePath = "test.txt";
@@ -202,7 +202,7 @@ void Task4()
 
 最后一个示例是使用Task和async/await实现异步任务。在这个示例中，我们将一个耗时的操作封装为异步方法，并使用async/await关键字来等待该操作完成。
 
-```C#
+```csharp
 async Task Task5()
 {
     async Task<string> LongOperationAsync()
@@ -240,7 +240,7 @@ async Task Task5()
 
 示例代码如下所示：
 
-```C#
+```csharp
 async Task Task6()
 {
     async Task<string> LongOperationAsync(int id)
@@ -281,7 +281,7 @@ async Task Task6()
 
 示例代码: 假设我们有一个控制台应用程序，其中有两个异步方法：MethodAAsync()和MethodBAsync()。MethodAAsync()会等待1秒钟，然后返回一个字符串。MethodBAsync()会等待2秒钟，然后返回一个字符串。代码如下所示：
 
-```C#
+```csharp
 async Task<string> MethodAAsync()
 {
     await Task.Delay(1000);
@@ -297,7 +297,7 @@ async Task<string> MethodBAsync()
 
 现在，我们想要同时调用这两个方法，并将它们的结果合并成一个字符串。我们可以像下面这样编写代码：
 
-```C#
+```csharp
 async Task<string> CombineResultsAAsync()
 {
     var resultA = await MethodAAsync();
@@ -310,7 +310,7 @@ async Task<string> CombineResultsAAsync()
 
 这种情况下，我们可以使用ConfigureAwait(false)方法来指定不需要保留当前上下文的线程执行状态，从而让异步操作在一个线程池线程上运行。这可以通过下面的代码实现：
 
-```C#
+```csharp
 async Task<string> CombineResultsBAsync()
 {
     var resultA = await MethodAAsync().ConfigureAwait(false);

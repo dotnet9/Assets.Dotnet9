@@ -24,7 +24,7 @@ categories: .NET相关
 
 微软提供的`ValueStringBuilder`有两种使用方式，一种是自己已经有了一块内存空间可供字符串构建使用。这意味着你可以使用栈空间，也可以使用堆空间甚至非托管堆的空间，这对于GC来说是非常友好的，在高并发情况下能大大降低GC压力。
 
-```C#
+```csharp
 // 构造函数：传入一个Span的Buffer数组
 public ValueStringBuilder(Span<char> initialBuffer);
 
@@ -44,7 +44,7 @@ NativeMemory.Free(ptr); // 非托管堆用完一定要Free
 
 另外一种方式是指定一个容量，它会从默认的`ArrayPool`的`char`对象池中获取缓冲空间，因为使用的是对象池，所以对于GC来说也是比较友好的，千万需要注意，池中的对象一定要记得归还。
 
-```C#
+```csharp
 // 传入预计的容量
 public ValueStringBuilder(int initialCapacity)  
 {  
@@ -56,7 +56,7 @@ public ValueStringBuilder(int initialCapacity)
 
 那么我们就来比较一下使用`+=`、`StringBuilder`和`ValueStringBuilder`这几种方式的性能吧。
 
-```C#
+```csharp
 // 一个简单的类
 public class SomeClass  
 {  
@@ -267,7 +267,7 @@ public class StringBuilderBenchmark
 
 `ValueStringBuilder`的源码不长，我们挑几个重要的方法给大家分享一下，部分源码如下。
 
-```C#
+```csharp
 // 使用 ref struct 该对象只能在栈上分配
 public ref struct ValueStringBuilder
 {

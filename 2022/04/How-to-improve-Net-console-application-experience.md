@@ -26,7 +26,7 @@ tags: C#,控制台,酷炫的控制台
 
 `Colorful.Console`是一个Nuget包，它可以增强我们对控制台输出文字样式的控制。我们可以使用`System.Drawing.Color`中定义的颜色来定义控制台程序的配色方案。
 
-```C#
+```csharp
 using System;
 using System.Drawing;
 using Console = Colorful.Console;
@@ -42,7 +42,7 @@ Console.WriteLine("console in default");
 
 - FIGLet: [http://www.figlet.org/](http://www.figlet.org/)
 
-```C#
+```csharp
 FigletFont font = FigletFont.Load("chunky.flf");
 Figlet figlet = new Figlet(font);
 
@@ -63,7 +63,7 @@ Console.WriteLine(figlet.ToAscii("cream."), ColorTranslator.FromHtml("#B8DBFF"))
 
 `ConsoleTables`包是我（作者）自己编写的，这里有一点厚颜无耻.。 使用这个库，可以让开发人员很轻松的将一组对象以表格的形式展示在控制台中。
 
-```C#
+```csharp
 static void Main(String[] args)
 {
     var table = new ConsoleTable("one", "two", "three");
@@ -121,7 +121,7 @@ FORMAT: Alternative:
 
 `ShellProgressBar`使用起来相当的直接。
 
-```C#
+```csharp
 const int totalTicks = 10;
 var options = new ProgressBarOptions
 {
@@ -157,7 +157,7 @@ using (var pbar = new ProgressBar(totalTicks, "Initial message", options))
 
 使用它，开发人员可以在控制台应用中实现一些令人难以置信的效果。这个库是由`Miguel De Icaza`编写的，是控制台技术的巅峰之作，下面让我们一起来看一个实例程序。
 
-```C#
+```csharp
 using Terminal.Gui;
 
 class Demo {

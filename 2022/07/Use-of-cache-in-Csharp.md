@@ -40,7 +40,7 @@ categories: .NET相关
 
 就是在我程序发布后只要我们不去清理该缓存，该缓存会一直有效！
 
-```C#
+```csharp
  /// <summary>
  /// 永不过期时间
  /// </summary>
@@ -54,7 +54,7 @@ static void NeverExpire()
 
 用的是绝对时间点 可以理解成"截止日期"
 
-```C#
+```csharp
 static void AbsoluteExpiration()
  {
   DateTime time = new DateTime(2022, 04, 01, 23, 59, 59);
@@ -66,7 +66,7 @@ static void AbsoluteExpiration()
 
 相对现在的过期时间，就比如说我们设置缓存后的一分钟内有效，可以参考我们常见的 短信登录，后端随机生成一个验证码并存入redis,并且设置该key的过期时间，然后就是校验了，发送手机号码和验证码到后台， 从redis中取出对应的验证码就行校验，如果正确就把该验证码删掉，防止可以验证多次
 
-```C#
+```csharp
 static void ExpirationTimeRelativeToThePresent()
 {
     _cache.Set("AbsoluteExpiration", "123456", new TimeSpan(0, 0, 60));
@@ -77,7 +77,7 @@ static void ExpirationTimeRelativeToThePresent()
 
 缓存在设定的时间内没有被使用，则失效，使用后缓存的过期时间重新被刷新
 
-```C#
+```csharp
 static void SlidingExpirationTime()
 {
     _cache.Set("SlidingExpirationTime", "3", new MemoryCacheEntryOptions()
@@ -98,7 +98,7 @@ static void SlidingExpirationTime()
 
 ConcurrentDictionary<object, CacheEntry> _entries：一个多线程安全的字典类型， 其实缓存的本质就是这个字典，将所有缓存都放入这个字典中，然后通过字典的key(字典的key其实和缓存实体CacheEntry的key值一样)获取CacheEntry实体(CacheEntry实体包含key和value， 也就是我们代码中设置的key和value)。
 
-```C#
+```csharp
  static void GetCache()
  {
   //方式一
@@ -114,7 +114,7 @@ ConcurrentDictionary<object, CacheEntry> _entries：一个多线程安全的字�
 
 ### 清除缓存值
 
-```C#
+```csharp
 static void GetCache()
 {
     string value = "";
@@ -131,7 +131,7 @@ static void GetCache()
 
 将上面代码进行一个简化
 
-```C#
+```csharp
 static void GetCache()
 {
     if (_cache.TryGetValue("NeverExpire", out _))
@@ -143,7 +143,7 @@ static void GetCache()
 
 ## 完整代码
 
-```C#
+```csharp
 class Program
 {
     public static IMemoryCache _cache = new MemoryCache(new MemoryCacheOptions());

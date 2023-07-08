@@ -91,7 +91,7 @@ xxxx.yyyy.zzzz
 
 **ApplicationDbContext.cs** 
 
-```C#
+```csharp
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -116,7 +116,7 @@ namespace IdentityDemo.Auth
 
 **UserRoles.cs**
 
-```C#
+```csharp
 namespace IdentityDemo.Auth
 {
     public static class UserRoles
@@ -155,7 +155,7 @@ namespace IdentityDemo.Auth
 
 **LoginModel.cs**
 
-```C#
+```csharp
 using System.ComponentModel.DataAnnotations;
 
 namespace IdentityDemo.Auth
@@ -173,7 +173,7 @@ namespace IdentityDemo.Auth
 
 **Response.cs**
 
-```C#
+```csharp
 namespace IdentityDemo.Auth
 {
     public class Response
@@ -188,7 +188,7 @@ namespace IdentityDemo.Auth
 
 **AuthenticateController.cs**
 
-```C#
+```csharp
 using IdentityDemo.Auth;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -340,7 +340,7 @@ namespace IdentityDemo.Controllers
 
 **Program.cs**
 
-```C#
+```csharp
 using IdentityDemo.Auth;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;

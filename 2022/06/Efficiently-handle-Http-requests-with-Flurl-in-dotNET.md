@@ -28,7 +28,7 @@ https://www.some-api.com/login?name=Lee&pwd=123456
 
 使用 Flurl 构建，首先需要通过 Nuget 安装 `Flurl` 组件。
 
-```C#
+```csharp
 var url = "http://www.some-api.com"
           .AppendPathSegment("login")
           .SetQueryParams(new
@@ -40,7 +40,7 @@ var url = "http://www.some-api.com"
 
 这很简单，这是最简单的Get请求，同样的我们也可以使用 Uri 的扩展方法
 
-```C#
+```csharp
 var url = new Uri("http://www.some-api.com").AppendPathSegment(...
 ```
 
@@ -48,7 +48,7 @@ var url = new Uri("http://www.some-api.com").AppendPathSegment(...
 
 Flurl 是模块化的，所以还需要安装 `Flurl.Http`
 
-```C#
+```csharp
 using Flurl;
 using Flurl.Http;
 
@@ -59,7 +59,7 @@ var result = await "http://www.some-api.com".AppendPathSegment("login").GetAsync
 
 如果只是想获取响应内容，我们看看 Flurl 有多简单：
 
-```C#
+```csharp
 T poco = await "http://api.foo.com".GetJsonAsync<T>();
 string text = await "http://site.com/readme.txt".GetStringAsync();
 byte[] bytes = await "http://site.com/image.jpg".GetBytesAsync();
@@ -68,19 +68,19 @@ Stream stream = await "http://site.com/music.mp3".GetStreamAsync();
 
 **Post提交**
 
-```C#
+```csharp
 await "http://api.foo.com".PostJsonAsync(new { a = 1, b = 2 });
 ```
 
 **动态类型 dynamic**
 
-```C#
+```csharp
 dynamic d = await "http://api.foo.com".GetJsonAsync();
 ```
 
 **设置请求标头：**
 
-```C#
+```csharp
 await url.WithHeader("Accept", "text/plain").GetJsonAsync();
 
 await url.WithHeaders(new { Accept = "text/plain", User_Agent = "Flurl" }).GetJsonAsync();
@@ -88,19 +88,19 @@ await url.WithHeaders(new { Accept = "text/plain", User_Agent = "Flurl" }).GetJs
 
 **基础身份验证**
 
-```C#
+```csharp
 await url.WithBasicAuth("username", "password").GetJsonAsync();
 ```
 
 **OAuth 2.0**
 
-```C#
+```csharp
 await url.WithOAuthBearerToken("mytoken").GetJsonAsync();
 ```
 
 **表单提交**
 
-```C#
+```csharp
 await "http://site.com/login".PostUrlEncodedAsync(new { 
     user = "user", 
     pass = "pass"

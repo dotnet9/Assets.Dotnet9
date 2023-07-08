@@ -120,7 +120,7 @@ dotnet add package JavaScriptEngineSwitcher.Jurassic
 
 剩下的就是编写代码，在我们的程序中运行脚本。下面的代码段设置了 JavaScript 引擎，从程序集中加载嵌入的 `prism.js` 库，并执行它。
 
-```C#
+```csharp
 using JavaScriptEngineSwitcher.Jurassic;
 
 // Create an instance of the JavaScript engine
@@ -132,7 +132,7 @@ engine.ExecuteResource("JsInDotnet.prism.js", typeof(Program).Assembly);
 
 现在我们可以在同一个上下文中运行我们自己的 JavaScript 命令。我们可以通过使用 `SetVariableName`、`Execute` 和 `Evaluate` 从 C# 向 JavaScript 引擎传递数值：
 
-```C#
+```csharp
 // This is the code we want to highlight
 string code = @"
 using System;

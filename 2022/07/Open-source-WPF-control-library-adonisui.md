@@ -90,7 +90,7 @@ Adonis UI 带有浅色和深色配色方案。可以不受限制地添加自定�
 
 要在运行时切换配色方案，`ResourceDictionary`需要从应用程序资源中删除包含方案的所有颜色和画笔，以便可以添加不同的配色方案。这可以使用内置`ResourceLocator`类来完成，例如在单击事件处理程序中。
 
-```C#
+```csharp
 AdonisUI.ResourceLocator.SetColorScheme(Application.Current.Resources, ResourceLocator.DarkColorScheme);
 ```
 

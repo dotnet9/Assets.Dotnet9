@@ -32,7 +32,7 @@ categories: .NET相关
 
 那么我们了解了这些属性了之后就可以开始工作了，第一步加载我们的pdf文件，获取文件的页数和文件的大小。
 
-```C#
+```csharp
 var pdf = PdfiumViewer.PdfDocument.Load(strpdfPath);
 var pdfpage = pdf.PageCount;
 var pagesizes = pdf.PageSizes;
@@ -40,19 +40,19 @@ var pagesizes = pdf.PageSizes;
 
 然后组装图片的高度宽度以及水平分辨率和垂直分辨率等属性
 
-```C#
+```csharp
 document.Render(pageNumber - 1, size.Width, size.Height, dpi, dpi, PdfRenderFlags.Annotations);
 ```
 
 最后保存图片即可
 
-```C#
+```csharp
 image.Save(stream, ImageFormat.Jpeg);
 ```
 
 完整代码如下
 
-```C#
+```csharp
 public class PdfToImage
 {
     /// <summary>

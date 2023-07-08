@@ -40,7 +40,7 @@ Install-Package Masa.Blazor -Version 0.5.0-preview.3
 
 添加文件`./MasaExtensions/MasaSetup.cs`，代码如下：
 
-```C#
+```csharp
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Dotnet9.WebApp.MasaExtensions;
@@ -70,7 +70,7 @@ public static class MasaSetup
 
 1. 修改`MauiProgram.cs`文件，添加上面封装的扩展方法`AddMasaSetup()`:
 
-```C#
+```csharp
 using Dotnet9.WebApp.MasaExtensions;    // 第1处：添加这个命名空间
 
 namespace Dotnet9.MAUI;
@@ -114,7 +114,7 @@ public static class MauiProgram
 
 1. 修改`Program.cs`文件，添加上面封装的扩展方法`AddMasaSetup()`:
 
-```C#
+```csharp
 using Dotnet9.WebApp;
 using Dotnet9.WebApp.MasaExtensions;        // 第1处：添加这个命名空间
 using Microsoft.AspNetCore.Components.Web;
@@ -139,7 +139,7 @@ await builder.Build().RunAsync();
 
 1. 修改`Program.cs`文件，添加上面封装的扩展方法`AddMasaSetup()`:
 
-```C#
+```csharp
 using Dotnet9.WebApp.MasaExtensions;        // 第1处：添加这个命名空间
 
 var builder = WebApplication.CreateBuilder(args);

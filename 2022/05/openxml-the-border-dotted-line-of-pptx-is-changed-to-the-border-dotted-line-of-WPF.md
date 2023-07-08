@@ -36,7 +36,7 @@ Install-Package dotnetCampus.DocumentFormat.OpenXml.Flatten -Version 2.0.0
 
 然后解析代码如下,解析主要逻辑部分：
 
-```C#
+```csharp
 private void PptxToGeometry(string filePath)
 {
     if (!File.Exists(filePath) || !filePath.EndsWith(".pptx", StringComparison.OrdinalIgnoreCase))
@@ -88,7 +88,7 @@ private void PptxToGeometry(string filePath)
 
 PPTX映射成WPF虚线的方法：
 
-```C#
+```csharp
 private DoubleCollection GetDashArrayByPresetLineDashValues(PresetLineDashValues presetLineDashValues)
 {
     DoubleCollection dashStyle = presetLineDashValues switch
@@ -112,7 +112,7 @@ private DoubleCollection GetDashArrayByPresetLineDashValues(PresetLineDashValues
 
 最终绘制线条的方法：
 
-```C#
+```csharp
 private Line ConverterToGeometry(double width, double height, DoubleCollection dashDoubleCollection)
 {
     var line = new Line

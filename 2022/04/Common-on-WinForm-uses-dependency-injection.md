@@ -37,7 +37,7 @@ ASP.NetCore中本身容器容器已经创建好了，只需要往容器添加服
 
 - Service：IUserservice、Userservice、IOrderService、OrderService
 
-```C#
+```csharp
 public interface IUserservice
 {
     string GetName();
@@ -79,7 +79,7 @@ public class OrderService : IOrderService
 
 增加了一个ServiceProviderHelper的操作类
 
-```C#
+```csharp
 public static class ServiceProviderHelper
 {
     /// <summary>
@@ -133,7 +133,7 @@ public static class ServiceProviderHelper
 
 修改Program方法
 
-```C#
+```csharp
 internal static class Program
 {
     /// <summary>
@@ -177,7 +177,7 @@ internal static class Program
 
 分别在Form1和Form2进行注入
 
-```C#
+```csharp
 private readonly IUserservice _userservice;
 
 public Form1(IUserservice userservice)
@@ -196,7 +196,7 @@ public Form2(IOrderService orderService) : this()
 
 点击Form1窗体按钮让Form2窗体显示
 
-```C#
+```csharp
 private void button1_Click(object sender, EventArgs e)
 {
     var form2 = ServiceProviderHelper.GetFormService(typeof(Form2));

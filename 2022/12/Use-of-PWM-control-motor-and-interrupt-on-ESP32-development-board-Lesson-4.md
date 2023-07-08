@@ -33,7 +33,7 @@ categories: .NET相关
 
 这都马上2022年底了，出了这bug后，赶紧搭建个模拟环境跑一下，发现如下原来的代码确实有问题，原始代码如下：
 
-```C#
+```csharp
 /// <summary>
 /// 解压文件
 /// </summary>
@@ -78,7 +78,7 @@ public static void UnZipFiles(string saveDir, Stream stream)
 
 知道了问题所在，修复自然简单，调用[Path.Combine](https://learn.microsoft.com/zh-cn/dotnet/api/system.io.path.combine?view=net-7.0)方法即可，解压时再判断一下是目录还是文件即可，最终修复后的代码如下：
 
-```C#
+```csharp
 /// <summary>
 /// 解压文件
 /// </summary>

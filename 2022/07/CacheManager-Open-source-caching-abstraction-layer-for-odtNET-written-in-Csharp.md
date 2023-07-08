@@ -39,7 +39,7 @@ categories: Web API
 
 ## 例子
 
-```C#
+```csharp
 private static void MostSimpleCacheManager()
 {
     var config = new ConfigurationBuilder()

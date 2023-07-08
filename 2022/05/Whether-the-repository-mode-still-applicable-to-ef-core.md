@@ -124,7 +124,7 @@ https://docs.microsoft.com/en-us/aspnet/mvc/overview/older-versions/getting-star
 
 下面的列表给出了一个查询对象的简单例子，它可以选择一个整数列表的排序方式。
 
-```C#
+```csharp
 public static class MyLinqExtension
 {
     public static IQueryable<int> MyOrder
@@ -139,7 +139,7 @@ public static class MyLinqExtension
 
 下面这是这个 `MyOrder` 查询对象使用示例：
 
-```C#
+```csharp
 var numsQ = new[] { 1, 5, 4, 2, 3 }.AsQueryable();
 
 var result = numsQ
@@ -152,7 +152,7 @@ var result = numsQ
 
 因为 `IQueryable<T>` 类型直到最后才被执行，所以你可以将多个查询对象连锁起来。让我从我的书《Entity Framework Core in Action》中给你一个更复杂的数据库查询的例子。在下面的代码中，使用了四个查询对象链在一起，对一些图书的数据进行选择、排序、过滤和分页。你可以在实时网站 `efcoreinaction.com` 看到这些。
 
-```C#
+```csharp
 public IQueryable<BookListDto> SortFilterPage
     (SortFilterPageOptions options)
 {
@@ -182,7 +182,7 @@ public IQueryable<BookListDto> SortFilterPage
 
 最明显的方法是使用 EF Core 方法来完成数据库的更新。下面是一个方法，它将为一本书添加一个新的评论，其中包括用户提供的评论信息。注意：`ReviewDto` 是一个持有用户填写完评论信息后返回的信息类。
 
-```C#
+```csharp
 public Book AddReviewToBook(ReviewDto dto)
 {
     var book = _context.Books
@@ -205,7 +205,7 @@ EF Core 为我们提供了一个新的地方来编写你的更新代码--实体�
 
 DDD 谈到了聚合（前面提到过），所有的聚合只能通过根实体中的方法来改变，我把它称为**访问方法**。在 DDD 术语中，评论是图书实体的聚合，所以我们应该通过图书实体类中的一个名为 `AddReview` 的访问方法来添加一个评论。这样一来，上面的代码就变成了 `Book` 实体中的一个方法，在这里：
 
-```C#
+```csharp
 public Book AddReviewToBook(ReviewDto dto)
 {
     var book = _context.Find<Book>(dto.BookId);
@@ -218,7 +218,7 @@ public Book AddReviewToBook(ReviewDto dto)
 
 `Book` 实体类中的 `AddReview` 访问方法看起来像这样：
 
-```C#
+```csharp
 public class Book
 {
     private HashSet<Review> _reviews;

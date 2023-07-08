@@ -39,7 +39,7 @@ categories: .NET相关
 
 于是我选择了From Web 来解析我们的html文档，代码如下:
 
-```C#
+```csharp
 var html = @"https://dotnet9.com/";
 HtmlWeb web = new HtmlWeb();
 var htmlDoc = web.Load(html);
@@ -60,13 +60,13 @@ var htmlDoc = web.Load(html);
 
 ![](https://img1.dotnet9.com/2022/06/0903.png)
 
-```C#
+```csharp
 var allNodes = htmlDoc.DocumentNode.SelectNodes("//ul[@id='starlist']//li[@class='menu']");
 ```
 
 当然我们也可以使用`Xpath`来获取节点内容
 
-```C#
+```csharp
 var singNodes = htmlDoc.DocumentNode.SelectSingleNode("/html[1]/body[1]/header[1]/div[3]/nav[1]/ul[1]/li[3]//ul[1]")
 ```
 
@@ -74,7 +74,7 @@ var singNodes = htmlDoc.DocumentNode.SelectSingleNode("/html[1]/body[1]/header[1
 
 ![](https://img1.dotnet9.com/2022/06/0904.png)
 
-```C#
+```csharp
 var singNodes = htmlDoc.DocumentNode.SelectSingleNode("/html[1]/body[1]/header[1]/div[3]/nav[1]/ul[1]/li[3]//ul[1]")
     .ChildNodes.Where(o => o.Name=="li");
 
@@ -91,7 +91,7 @@ foreach (var item in singNodes)
 
 ![](https://img1.dotnet9.com/2022/06/0905.png)
 
-```C#
+```csharp
 foreach (var item in lstUrl)
 {
     htmlDoc = web.Load("https://dotnet9.com"+item);

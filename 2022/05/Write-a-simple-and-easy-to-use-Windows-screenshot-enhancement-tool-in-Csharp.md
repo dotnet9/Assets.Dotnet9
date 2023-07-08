@@ -37,7 +37,7 @@ categories: MySQL
 
 `SetWindowsHookExA` 函数定义
 
-```C#
+```csharp
 HHOOK SetWindowsHookExA(
   [in] int       idHook,    // 钩子类型
   [in] HOOKPROC  lpfn,      // 钩子处理函数
@@ -48,7 +48,7 @@ HHOOK SetWindowsHookExA(
 
 键盘处理函数定义
 
-```C#
+```csharp
 LRESULT CALLBACK LowLevelKeyboardProc(
   _In_ int    nCode,
   _In_ WPARAM wParam, // 键盘消息
@@ -60,7 +60,7 @@ LRESULT CALLBACK LowLevelKeyboardProc(
 
 ### C# PInvoke 定义
 
-```C#
+```csharp
 const int HC_ACTION = 0;
 const int WH_KEYBOARD_LL = 13;
 const int WM_KEYUP = 0x0101;
@@ -100,7 +100,7 @@ public static extern IntPtr GetModuleHandle([Optional] string lpModuleName);
 
 `SetWindowsHookEx` 函数第一个参数传 `WH_KEYBOARD_LL` 低等级键盘钩子、第二个参数传键盘消息处理函数的委托、第三个参数使用 `GetModuleHandle` 函数获取模块句柄、第四个参数传 0。
 
-```C#
+```csharp
 HookProc _hookProc;
 IntPtr _hhook;
 
@@ -115,7 +115,7 @@ void StartHook()
 
 在键盘消息处理函数里面捕获 `PrintScreen` 按键消息，然后显示预览和保存图片逻辑
 
-```C#
+```csharp
 IntPtr LowLevelKeyboardProc(int nCode, IntPtr wParam, ref KBDLLHOOKSTRUCT lParam)
 {
     if (nCode == HC_ACTION)
@@ -136,7 +136,7 @@ IntPtr LowLevelKeyboardProc(int nCode, IntPtr wParam, ref KBDLLHOOKSTRUCT lParam
 
 从系统剪贴板获取图片
 
-```C#
+```csharp
 void SaveImage()
 {
     if (Clipboard.ContainsImage())

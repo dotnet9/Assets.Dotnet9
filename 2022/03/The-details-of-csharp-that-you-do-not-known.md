@@ -28,7 +28,7 @@ C# 里面其实也暗藏了很多类似鸭子类型的东西，但是很多开�
 
 因此在封装 I/O 操作的时候，我们可以自行实现一个 Awaiter，它基于底层的 epoll/IOCP 实现，这样当 await 的时候就不会创建出任何的线程，也不会出现任何的线程调度，而是直接让出控制权。而 OS 在完成 I/O 调用后通过 CompletionPort (Windows) 等通知用户态完成异步调用，此时恢复上下文继续执行剩余逻辑，这其实就是一个真正的 stackless coroutine。
 
-```C#
+```csharp
 public class MyTask<T>
 {
     public MyAwaiter<T> GetAwaiter()
@@ -68,7 +68,7 @@ UWP 开发中所用的 IAsyncAction/IAsyncOperation<T> 则是来自底层的封�
 
 经常我们会写如下的代码：
 
-```C#
+```csharp
 foreach (var i in list)
 {
     // ......
@@ -79,7 +79,7 @@ foreach (var i in list)
 
 但是实际上，如果想要一个对象可被 foreach，只需要提供一个 GetEnumerator() 方法，并且 GetEnumerator() 返回的对象包含一个 bool MoveNext() 方法加一个 Current 属性即可。
 
-```C#
+```csharp
 class MyEnumerator<T>
 {
     public T Current { get; private set; }
@@ -116,7 +116,7 @@ class Program
 
 其中 MoveNextAsync() 返回的东西应该是一个 Awaitable<bool>，至于这个 Awaitable 到底是什么，它可以是 Task/ValueTask，也可以是其他的或者你自己实现的。
 
-```C#
+```csharp
 class MyAsyncEnumerator<T>
 {
     public T Current { get; private set; }
@@ -151,7 +151,7 @@ class Program
 
 众所周知 ref struct 因为必须在栈上且不能被装箱，所以不能实现接口，但是如果你的 ref struct 中有一个 void Dispose() 那么就可以用 using 语法实现对象的自动销毁。
 
-```C#
+```csharp
 ref struct MyDisposable
 {
     public void Dispose() => throw new NotImplementedException();
@@ -173,7 +173,7 @@ C# 8 引入了 Ranges，允许切片操作，但是其实并不是必须提供�
 
 只要你的类可以被计数（拥有 Length 或 Count 属性），并且可以被切片（拥有一个 Slice(int, int) 方法），那么就可以用该特性。
 
-```C#
+```csharp
 class MyRange
 {
     public int Count { get; private set; }
@@ -196,7 +196,7 @@ C# 8 引入了 Indexes 用于索引，例如使用 ^1 索引倒数第一个元�
 
 只要你的类可以被计数（拥有 Length 或 Count 属性），并且可以被索引（拥有一个接收 int 参数的索引器），那么就可以用该特性。
 
-```C#
+```csharp
 class MyIndex
 {
     public int Count { get; private set; }
@@ -220,7 +220,7 @@ class Program
 
 如何给一个类型实现解构呢？其实只需要写一个名字为 Deconstruct() 的方法，并且参数都是 out 的即可。
 
-```C#
+```csharp
 class MyDeconstruct
 {
     private int A => 1;
@@ -246,7 +246,7 @@ class Program
 
 LINQ 是 C# 中常用的一种集成查询语言，允许你这样写代码：
 
-```C#
+```csharp
 from c in list where c.Id > 5 select c;
 ```
 

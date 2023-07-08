@@ -118,7 +118,7 @@ categories: WPF
 
 注意上面的根节点 `<prism:PrismApplication />`，同时修改`App.xaml.cs`文件，这里不做过多说明，具体使用请参考 [Prism](https://github.com/PrismLibrary/Prism)：
 
-```C#
+```csharp
 using Prism.DryIoc;
 using Prism.Ioc;
 using System.Windows;
@@ -143,7 +143,7 @@ namespace NewbieGuideDemo
 
 给主窗体 `MainWindow` 添加一个 ViewModel 类：`MainWindowViewModel.cs`：
 
-```C#
+```csharp
 using Dotnet9WPFControls.Controls;
 using Prism.Mvvm;
 using System.Collections.Generic;
@@ -293,7 +293,7 @@ namespace NewbieGuideDemo
 
 如上代码引入 `BindControlToGuideConverter 转换器`, 该转换器是个黏合类，将目标控件的引用添加到引导对象上，转换器具体定义如下：
 
-```C#
+```csharp
 public class BindControlToGuideConverter : IMultiValueConverter
 {
     public object? Convert(object[] values, Type targetType, object parameter, CultureInfo culture)

@@ -83,7 +83,7 @@ categories: .NET相关
 
 配置Startup
 
-```C#
+```csharp
 // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
 public void ConfigureServices(IServiceCollection services)
 {
@@ -161,7 +161,7 @@ public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
 
  `app.UseHttpReports();` 这一行最好放到 Configure 方法 最上面
 
-```C#
+```csharp
 public void ConfigureServices(IServiceCollection services)
 {
     services.AddHttpReports().AddHttpTransport();
@@ -169,7 +169,7 @@ public void ConfigureServices(IServiceCollection services)
 }
 ```
 
-```C#
+```csharp
 // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
 public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
 {

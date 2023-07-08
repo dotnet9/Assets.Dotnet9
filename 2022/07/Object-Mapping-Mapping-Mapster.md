@@ -39,7 +39,7 @@ dotnet add package Mapster --version 7.3.0
 
 1. 新建类`UserDto`
 
-```C#
+```csharp
 public class UserDto
 {
     public int Id { get; set; }
@@ -54,7 +54,7 @@ public class UserDto
 
 2. 新建一个匿名对象，作为待转换的对象源
 
-```C#
+```csharp
 var user = new
 {
     Id = 1,
@@ -66,7 +66,7 @@ var user = new
 
 3. 将user源对象映射到目标对象 (UserDto)
 
-```C#
+```csharp
 var userDto = user.Adapt<UserDto>();
 Console.WriteLine($"映射到新对象，Name: {userDto.Name}");
 ```
@@ -83,7 +83,7 @@ Console.WriteLine($"映射到新对象，Name: {userDto.Name}");
 
 - 提供类型映射的功能，类似Convert.ChangeType()
 
-```C#
+```csharp
 string res = "123";
 decimal i = res.Adapt<decimal>(); //equal to (decimal)123;
 Console.WriteLine($"结果为：{i == int.Parse(res)}");
@@ -97,7 +97,7 @@ Console.WriteLine($"结果为：{i == int.Parse(res)}");
 
 - 把枚举映射到数字类型，同样也支持字符串到枚举和枚举到字符串的映射，比.NET的默认实现快两倍
 
-```C#
+```csharp
 var fileMode = "Create, Open".Adapt<FileMode>();//等于 FileMode.Create | FileMode.Open
 Console.WriteLine($"枚举类型转换的结果为：{fileMode == (FileMode.Create | FileMode.Open)}");
 ```
@@ -112,7 +112,7 @@ Mapster提供了Queryable的扩展，用于实现DbContext的按需查找，例�
 
 1. 新建类`UserDbContext`
 
-```C#
+```csharp
 using Assignment.Mapster.Domain;
 using Microsoft.EntityFrameworkCore;
 
@@ -132,7 +132,7 @@ public class UserDbContext : DbContext
 
 2. 新建类`User`
 
-```C#
+```csharp
 public class User
 {
     public int Id { get; set; }
@@ -154,7 +154,7 @@ public class User
 
 3. 使用基于Queryable的扩展方法`ProjectToType`
 
-```C#
+```csharp
 using (var dbContext = new UserDbContext())
 {
     dbContext.Database.EnsureCreated();
@@ -201,7 +201,7 @@ dotnet add package Microsoft.Extensions.DependencyInjection --version 6.0.0
 
 1. 新建类`OrderItem`
 
-```C#
+```csharp
 public class OrderItem
 {
     public string Name { get; set; }
@@ -226,7 +226,7 @@ public class OrderItem
 
 2. 新建类`Order`
 
-```C#
+```csharp
 public class Order
 {
     public string Name { get; set; }
@@ -250,7 +250,7 @@ public class Order
 
 3. 修改类`Program`
 
-```C#
+```csharp
 using Assignment.Masa.Mapster.Domain.Aggregate;
 using Masa.BuildingBlocks.Data.Mapping;
 using Masa.Contrib.Data.Mapping.Mapster;

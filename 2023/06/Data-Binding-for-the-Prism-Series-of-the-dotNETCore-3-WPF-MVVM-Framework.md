@@ -71,7 +71,7 @@ xaml代码如下：
 
 ViewModel代码如下：
 
-```C#
+```csharp
 using Prism.Commands;
 using Prism.Mvvm;
 
@@ -139,7 +139,7 @@ xaml代码如下：
  
 cs后台代码如下：
 
-```C#
+```csharp
 using Prism.Unity;
 using Prism.Ioc;
 using Prism.Mvvm;
@@ -186,13 +186,13 @@ namespace PrismSample
 
 ".Viewsb." 表示View所在文件夹namespace,".ViewModelsa.OhMyGod." 表示ViewModel所在namespace
 
-```C#
+```csharp
 var viewName = viewType.FullName.Replace(".Viewsb.", ".ViewModelsa.OhMyGod.");
 ```
 
 Test表示ViewModel后缀
 
-```C#
+```csharp
 var viewModelName = $"{viewName}Test, {viewAssemblyName}";
  ```
 
@@ -200,7 +200,7 @@ var viewModelName = $"{viewName}Test, {viewAssemblyName}";
 
 我们新建一个Foo类作为自定义类，代码如下：
 
-```C#
+```csharp
 using Prism.Commands;
 using Prism.Mvvm;
 
@@ -235,7 +235,7 @@ namespace PrismSample
  
 修改App.cs代码:
 
-```C#
+```csharp
 protected override void ConfigureViewModelLocator()
 {
     base.ConfigureViewModelLocator();
@@ -264,14 +264,14 @@ protected override void ConfigureViewModelLocator()
 
 且官方提供4种方式，其余三种的注册方式如下：
 
-```C#
+```csharp
 ViewModelLocationProvider.Register(typeof(MainWindow).ToString(), typeof(MainWindowTest)); 
 ```
 
-```C#
+```csharp
 ViewModelLocationProvider.Register(typeof(MainWindow).ToString(), () => Container.Resolve<Foo>());
 ```
 
-```C#
+```csharp
 ViewModelLocationProvider.Register<MainWindow>(() => Container.Resolve<Foo>());
 ```

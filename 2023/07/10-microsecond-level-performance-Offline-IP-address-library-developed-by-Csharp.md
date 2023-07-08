@@ -52,7 +52,7 @@ Install-Package IP2Region.Net
 
 2. 使用 API 查询, 非常简单！
 
-```C#
+```csharp
 using IP2Region.Net.XDB;
  
 Searcher searcher = new Searcher();
@@ -61,7 +61,7 @@ searcher.Search("IP地址");
 
 **依赖注入**
 
-```C#
+```csharp
 services.AddSingleton<ISearcher,Searcher>();
 ```
 

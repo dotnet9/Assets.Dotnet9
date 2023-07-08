@@ -58,7 +58,7 @@ ASP.NET Core 3.0 开始，支持`gRPC`作为 .NET 平台中的“一等公民”
 
 定义接口文件：
 
-```C#
+```csharp
 syntax = "proto3";
 
 // 指定自动生成的类所在的命名空间，如果不指定则以下面的 package 为命名空间，这主要便于本项目内部的模块划分
@@ -93,7 +93,7 @@ message HelloReply {
 
 编译一下，Grpc.Tools 将帮我们生成 GreeterBase 类及两个模型类:
 
-```C#
+```csharp
 public abstract partial class GreeterBase
 {
     public virtual Task<HelloReply> SayHello(HelloRequest request, ServerCallContext context)
@@ -115,7 +115,7 @@ public class HelloReply
 
 这里的 SayHello 是个空实现，我们新建一个实现类并填充业务逻辑，比如：
 
-```C#
+```csharp
 public class GreeterService : GreeterBase
 {
     public override Task<HelloReply> SayHello(HelloRequest request, ServerCallContext context)
@@ -127,7 +127,7 @@ public class GreeterService : GreeterBase
 
 最后将服务添加到路由管道，对外暴露：
 
-```C#
+```csharp
 using Demo.Grpc.Services;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -149,7 +149,7 @@ app.Run();
 
 首先我们不需要再引用 Grpc.AspNetCore，而是改为引用 protobuf-net.Grpc 库。同样也不需要写 .proto 文件，而是直接写接口类：
 
-```C#
+```csharp
 using ProtoBuf.Grpc;
 using System.Runtime.Serialization;
 using System.ServiceModel;
@@ -189,7 +189,7 @@ public interface IGreeterService
 
 .Net 为 gRPC 提供了拦截器机制，可新建一个拦截器统一处理业务异常，比如：
 
-```C#
+```csharp
 public class GrpcGlobalExceptionInterceptor : Interceptor
 {
     private readonly ILogger<GrpcGlobalExceptionInterceptor> _logger;
@@ -223,7 +223,7 @@ public class GrpcGlobalExceptionInterceptor : Interceptor
 
 上述代码在处理完异常后重新抛出，旨在让客户端接收处理该异常，然而，实际上客户端是无法接收到该异常信息的，除非服务端抛出的是`RpcException`；同时，为使客户端得到正确的 HttpStatusCode（默认是 200，即使客户端得到是 RpcException），需要显式给`HttpContext.Response.StatusCode`赋值，如下：
 
-```C#
+```csharp
 // ...
 
 catch(Exception ex)
@@ -242,7 +242,7 @@ catch(Exception ex)
 
 拦截器逻辑完成后，需要在服务注入时设置如下：
 
-```C#
+```csharp
 builder.Services.AddGrpc(options =>
 {
     options.Interceptors.Add<GrpcGlobalExceptionInterceptor>();
@@ -258,7 +258,7 @@ builder.Services.AddGrpc(options =>
 
 如果要用方法 2，那么要先引入`Grpc.AspNetCore.Server.Reflection`类库，然后在 Program.cs 中注册接口：
 
-```C#
+```csharp
 // ...
 builder.Services.AddGrpcReflection();
 
@@ -294,7 +294,7 @@ if (env.IsDevelopment())
 
 编译一下，然后在 Program.cs 中注册服务客户端：
 
-```C#
+```csharp
 // .proto 文件中的 package
 using TestDemo;
 
@@ -309,7 +309,7 @@ builder.Services.AddGrpcClient<Greeter.GreeterClient>(o =>
 
 同服务端一样，我们可以给客户端配置统一的拦截器。如果服务端返回上文提到的 RpcException，客户端得到后是直接抛出的（就像是本地异常），我们可以新建一个专门的异常拦截器处理 RpcException 异常。
 
-```C#
+```csharp
 builder.Services
     .AddGrpcClient<Greeter.GreeterClient>(o =>
     {

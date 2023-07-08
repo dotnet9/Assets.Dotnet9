@@ -54,7 +54,7 @@ Install-Package AspNetCoreRateLimit.Redis
 
 **Startup.cs代码：**
 
-```C#
+```csharp
 public void ConfigureServices(IServiceCollection services)
 {
   services.AddOptions();

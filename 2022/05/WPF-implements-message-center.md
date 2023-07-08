@@ -148,7 +148,7 @@ categories: WPF
 
 这里就是在Model层定义好具体的枚举即可。
 
-```C#
+```csharp
 /// <summary>
 /// 消息处理结果
 /// </summary>

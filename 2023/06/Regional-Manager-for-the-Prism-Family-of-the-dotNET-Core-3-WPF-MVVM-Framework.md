@@ -68,13 +68,13 @@ MainWindow.xaml：
 
 这里相当于在后台MainWindow.cs：
 
-```C#
+```csharp
 RegionManager.SetRegionName(ContentControl, "PatientListRegion");
 ```
 
 PatientModule.cs：
 
-```C#
+```csharp
  public class PatientModule : IModule
  {
     public void OnInitialized(IContainerProvider containerProvider)
@@ -110,7 +110,7 @@ MainWindow.xaml：
 
 MainWindowViewModel.cs:
 
-```C#      
+```csharp      
 private IRegionManager _regionManager;
 private IRegion _paientListRegion;        
 private PatientList _patientListView;
@@ -168,7 +168,7 @@ MainWindow.xaml：
 
 MainWindowViewModel.cs：
 
-```C#
+```csharp
   private IRegionManager _regionManager;
   private IRegion _paientListRegion;
   private IRegion _medicineListRegion;
@@ -274,7 +274,7 @@ Prism其中还支持监控视图的激活状态，是通过在View中继承IActi
 
 MedicineMainContentViewModel.cs:
 
-```C#
+```csharp
  public class MedicineMainContentViewModel : BindableBase,IActiveAware
  {
      public event EventHandler IsActiveChanged;
@@ -317,7 +317,7 @@ MainWindow.xaml:
 
 MainWindow.cs:
 
-```C#
+```csharp
  public MainWindow()
  {
     InitializeComponent();
@@ -365,7 +365,7 @@ ShowSearchPatient.xaml：
 
 ShowSearchPatientViewModel.cs:
 
-```C#
+```csharp
  private IApplicationCommands _applicationCommands;
  private readonly IRegionManager _regionManager;
  private ShowSearchPatient _showSearchPatientView;
@@ -457,7 +457,7 @@ ShowSearchPatientViewModel.cs:
 
 新建类UniformGridRegionAdapter.cs：
 
-```C#
+```csharp
 public class UniformGridRegionAdapter : RegionAdapterBase<UniformGrid>
 {
     public UniformGridRegionAdapter(IRegionBehaviorFactory regionBehaviorFactory) : base(regionBehaviorFactory)
@@ -490,7 +490,7 @@ public class UniformGridRegionAdapter : RegionAdapterBase<UniformGrid>
 
 App.cs:
 
-```C#
+```csharp
 protected override void ConfigureRegionAdapterMappings(RegionAdapterMappings regionAdapterMappings)
 {
     base.ConfigureRegionAdapterMappings(regionAdapterMappings);
@@ -518,7 +518,7 @@ MainWindow.xaml:
 
 MainWindowViewModel.cs
 
-```C#
+```csharp
   void ExecuteLoadingCommand()
   {
          _regionManager = CommonServiceLocator.ServiceLocator.Current.GetInstance<IRegionManager>();

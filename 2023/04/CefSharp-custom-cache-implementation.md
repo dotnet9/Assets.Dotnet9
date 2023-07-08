@@ -105,7 +105,7 @@ cacheController.SetCacheLimit(100 * 1024 * 1024); // 100MB
 
 首先在使用`ChromiumWebBrowser`控件的后台代码里，注册请求拦截处理程序，`CefBrowser`是控件名，`CefRequestHandlerc`是处理程序：
 
-```C#
+```csharp
 public TestCefCacheView()
 {
     InitializeComponent();
@@ -135,7 +135,7 @@ CefSharp里的`IRequestHandler`是一个接口，用于处理浏览器发出的�
 
 我们重载方法`GetResourceRequestHandler`, 在这个方法里返回`CefResourceRequestHandler`实例，页面中资源请求时会调用此方法：
 
-```C#
+```csharp
 using CefSharp;
 using CefSharp.Handler;
 
@@ -174,7 +174,7 @@ internal class CefRequestHandlerc : RequestHandler
 2. `GetResourceResponseFilter`方法：注册资源缓存的操作类，即资源下载的实现。
 3. `OnBeforeResourceLoad`方法：在这个方法里，我们可以实现给页面传递header参数。
 
-```C#
+```csharp
 using System.Collections.Specialized;
 using CefSharp;
 using CefSharp.Handler;
@@ -249,7 +249,7 @@ internal class CefResourceRequestHandler : ResourceRequestHandler
 
 在`CefResourceHandler`的构造函数里只处理跨域问题，其他需求可通过上面接口的方法查找资料处理即可：
 
-```C#
+```csharp
 using CefSharp;
 using System.IO;
 
@@ -296,7 +296,7 @@ internal class CefResourceHandler : ResourceHandler
 
 如果在该版本中您需要获取过滤后的响应内容大小，可以考虑在`Filter`方法中自行计算。例如，在`Filter`方法中，您可以将过滤后的响应内容写入一个缓冲区，并记录缓冲区的大小，最后返回过滤后的响应内容和缓冲区的大小。
 
-```C#
+```csharp
 public class MyResponseFilter : IResponseFilter
 {
     private MemoryStream outputStream = new MemoryStream();
@@ -356,7 +356,7 @@ public class MyResponseFilter : IResponseFilter
 
 本文示例这里定义类`CefResponseFilter`直接实现接口处理文件缓存实际操作类，即资源下载实现：
 
-```C#
+```csharp
 using CefSharp;
 using System.IO;
 
@@ -455,7 +455,7 @@ internal class CefResponseFilter : IResponseFilter
 
 缓存文件帮助类，用于管理页面的ajax接口缓存白名单、缓存文件路径规范等：
 
-```C#
+```csharp
 using CefSharp;
 using System;
 using System.Collections.Generic;

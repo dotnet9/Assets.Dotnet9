@@ -156,7 +156,7 @@ categories: .NET相关,WPF
 
 先定义应用相关的预设的启动节点
 
-```C#
+```csharp
 /// <summary>
 /// 包含预设的启动节点。
 /// </summary>
@@ -198,7 +198,7 @@ public class StartupNodes
 
 再定义一个和应用业务方相关的日志类型，不同的应用记录日志的方式大部分都是不相同的，所使用的底层日志记录也都是不相同的
 
-```C#
+```csharp
 /// <summary>
 /// 和项目关联的日志
 /// </summary>
@@ -228,7 +228,7 @@ public class StartupLogger : StartupLoggerBase
 
 加上和应用业务相关的属性之后的启动任务项的参数定义如下
 
-```C#
+```csharp
 public class StartupContext : IStartupContext
 {
     public StartupContext(IStartupContext startupContext, CommandLine commandLine, StartupLogger logger, FileConfigurationRepo configuration, IAppConfigurator configs)
@@ -268,7 +268,7 @@ public class StartupContext : IStartupContext
 
 完成了启动任务项的参数的定义，就可以来定制具体应用的启动任务项的基类型了。因为启动任务项的基类型一定是和启动任务项的参数相关，而启动任务项的参数每个应用都有所不同，因此启动任务项的基类型也就不同。即使不同的程度只有启动任务项的参数，代码层面可以使用泛形来解决，但也会因为泛形的将会让业务层的代码量较多，不如在应用上再定义
 
-```C#
+```csharp
 /// <summary>
 /// 表示一个和当前业务强相关的启动任务
 /// </summary>
@@ -292,7 +292,7 @@ public class StartupTask : StartupTaskBase
 
 在完成了定制启动任务基类型之后，就需要编写基于 StartupManagerBase 的和应用业务相关的 StartupManager 类型，在这里的逻辑需要包含如何启动具体的启动任务项的逻辑，代码如下
 
-```C#
+```csharp
 /// <summary>
 /// 和项目关联的启动管理器，用来注入业务相关的逻辑
 /// </summary>
@@ -319,7 +319,7 @@ public class StartupManager : StartupManagerBase
 
 以上几步完成之后，还有一项需要完成的是，刚才新建的 WPFDemo.Api 项目其实没有加上 WPF 的依赖，而在应用里面，是有启动任务项需要依赖在 UI 线程执行，于是就在加上 WPF 的依赖的 WPFDemo.App 上完成定义
 
-```C#
+```csharp
 class MainThreadDispatcher : IMainThreadDispatcher
 {
     public async Task InvokeAsync(Action action)
@@ -331,7 +331,7 @@ class MainThreadDispatcher : IMainThreadDispatcher
 
 以上的基础完成之后，就可以在 Program.cs 的主函数将启动框架跑起来，进入到 WPFDemo.App 项目的 Program 类型，在主函数里面先解析命令行，然后再创建 App 再跑起启动框架
 
-```C#
+```csharp
 [STAThread]
 static void Main(string[] args)
 {
@@ -348,7 +348,7 @@ static void Main(string[] args)
 
 在 StartStartupTasks 方法里面使用 Task.Run 的方式在后台线程跑起来启动框架，如此可以让主线程也就是此应用的 UI 线程开始跑起来界面相关逻辑
 
-```C#
+```csharp
 private static void StartStartupTasks(CommandLine commandLine)
 {
     Task.Run(() =>
@@ -403,7 +403,7 @@ private static void StartStartupTasks(CommandLine commandLine)
 
 在 AssemblyInfo.cs 文件里面添加如下代码
 
-```C#
+```csharp
 [assembly: dotnetCampus.Telescope.MarkExport(typeof(WPFDemo.Api.StartupTaskFramework.StartupTask), typeof(dotnetCampus.ApplicationStartupManager.StartupTaskAttribute))]
 ```
 
@@ -419,7 +419,7 @@ C:\lindexi\Code\ApplicationStartupManager\demo\WPFDemo\WPFDemo.Api\obj\Debug\net
 
 假设有一个叫 Foo1Startup 的启动任务项定义如下
 
-```C#
+```csharp
 [StartupTask(BeforeTasks = StartupNodes.CoreUI, AfterTasks = StartupNodes.Foundation)]
 public class Foo1Startup : StartupTask
 {
@@ -433,7 +433,7 @@ public class Foo1Startup : StartupTask
 
 那么生成的 AttributedTypesExport.g.cs 将包含以下代码
 
-```C#
+```csharp
 using dotnetCampus.ApplicationStartupManager;
 using dotnetCampus.Telescope;
 using System;
@@ -471,7 +471,7 @@ namespace dotnetCampus.Telescope
 
 可以在启动框架模块里面，新建一个叫 AssemblyMetadataExporter 的类型来从 AttributedTypesExport.g.cs 拿到收集的类型。从 Telescope 拿到 `__AttributedTypesExport__` 生成类型的方法是调用 AttributedTypes 的 FromAssembly 方法，代码如下
 
-```C#
+```csharp
     IEnumerable<AttributedTypeMetadata<StartupTask, StartupTaskAttribute>> collection = AttributedTypes.FromAssembly<StartupTask, StartupTaskAttribute>(_assemblies);
 ```
 
@@ -479,7 +479,7 @@ namespace dotnetCampus.Telescope
 
 将此收集的返回值封装为 StartupTaskMetadata 即可返回给启动框架
 
-```C#
+```csharp
 using System.Reflection;
 
 using dotnetCampus.ApplicationStartupManager;
@@ -519,7 +519,7 @@ namespace WPFDemo.Api.StartupTaskFramework
 
 回到 Program.cs 里面，新建一个 BuildStartupAssemblies 方法，此方法里面，写明需要收集启动任务项的程序集列表，交给 AssemblyMetadataExporter 去获取
 
-```C#
+```csharp
 class Program
 {
     private static void StartStartupTasks(CommandLine commandLine)
@@ -550,7 +550,7 @@ class Program
 
 通过 StartupManager 的 AddStartupTaskMetadataCollector 即可将导出的启动任务项加入到启动框架
 
-```C#
+```csharp
 var assemblyMetadataExporter = new AssemblyMetadataExporter(BuildStartupAssemblies());
 
 var startupManager = new StartupManager(/*忽略代码*/)
@@ -566,7 +566,7 @@ startupManager.Run();
 
 在 WPFDemo.App 添加 MainWindowStartup 用来做主窗口的启动，代码如下
 
-```C#
+```csharp
 using System.Threading.Tasks;
 
 using dotnetCampus.ApplicationStartupManager;
@@ -593,7 +593,7 @@ namespace WPFDemo.App.Startup
 
 接下来再添加一个和业务相关的启动任务项，添加 BusinessStartup 实现业务，业务要求在主界面添加一个按钮。因此如需求，需要让 BusinessStartup 在 MainWindowStartup 执行完成之后才能启动，代码如下
 
-```C#
+```csharp
 [StartupTask(BeforeTasks = StartupNodes.AppReady, AfterTasks = "MainWindowStartup", Scheduler = StartupScheduler.UIOnly)]
 internal class BusinessStartup : StartupTask
 {
@@ -619,7 +619,7 @@ internal class BusinessStartup : StartupTask
 
 此外，依赖关系是可以跨多个项目的，例如在基础设施里面有 WPFDemo.Lib1 程序集的 LibStartup 表示某个组件的初始化，这个组件属于基础设施，通过 BeforeTasks 指定要在 Foundation 预设启动节点启动
 
-```C#
+```csharp
 [StartupTask(BeforeTasks = StartupNodes.Foundation)]
 class LibStartup : StartupTask
 {
@@ -637,7 +637,7 @@ class LibStartup : StartupTask
 
 在 WPFDemo.Api 程序集里面有一个 OptionStartup 表示根据命令行决定执行的逻辑，这个也属于基础设施，但是依赖于 LibStartup 的执行完成，代码如下
 
-```C#
+```csharp
 [StartupTask(BeforeTasks = StartupNodes.Foundation, AfterTasks = "LibStartup")]
 class OptionStartup : StartupTask
 {
@@ -658,7 +658,7 @@ class OptionStartup : StartupTask
 
 在 BeforeTasks 和 AfterTasks 都是可以传入多个不同的启动项列表，多个之间使用分号分割。也可以换成使用 BeforeTaskList 和 AfterTaskList 使用数组的方式，例如有 WPFDemo.Api 程序集的 Foo1Startup 和在 WPFDemo.Lib1 的 Foo2Startup 和 Foo3Startup 启动任务项，其中 Foo3Startup 需要依赖 Foo1Startup 和 Foo2Startup 的执行完成，可以使用如下代码
 
-```C#
+```csharp
 [StartupTask(BeforeTasks = StartupNodes.CoreUI, AfterTaskList = new[] { nameof(WPFDemo.Lib1.Startup.Foo2Startup), "Foo1Startup" })]
 public class Foo3Startup : StartupTask
 {

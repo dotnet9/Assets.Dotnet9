@@ -28,7 +28,7 @@ nuget搜索`ObjectsComparer`：
 
 首先我们定义一个简单类：
 
-```C#
+```csharp
 public class UserInfomation 
 {
     public string Name { get; set; }
@@ -39,13 +39,13 @@ public class UserInfomation
 
 实例化两个`UserInfomation`对象并赋不同的值，再实例化 `ObjectsComparer.Comparer`比较器：
 
-```C#
+```csharp
 var comparer1 = new ObjectsComparer.Comparer<UserInfomation>();
 ```
 
 然后我们将实例化的两个对象传入到 `ObjectsComparer.Comparer` 方法中：
 
-```C#
+```csharp
 IEnumerable<Difference> differences1;
 var isEqual1 = comparer1.Compare(userInfomationOld, userInfomationNew, out differences1);
 ```
@@ -58,7 +58,7 @@ var isEqual1 = comparer1.Compare(userInfomationOld, userInfomationNew, out diffe
 
 那我们再试试`List<T>`类型的:
 
-```C#
+```csharp
 List<UserInfomation> lstUserInfomationsOld=new List<UserInfomation>();
 for (int i = 0; i < 3; i++)
 {
@@ -98,7 +98,7 @@ Console.WriteLine(differencesMsg);
 
 那么我们的Objects Comparer就派上用场了， 我们首先封装一个BaseForm，然后在基类控件中 封装一个比较方法：		
 
-```C#
+```csharp
 protected Result ComPare<T>(T t, T s)
 {
     Result result =new Result();
@@ -125,7 +125,7 @@ public class Result
 
 获取两个对象之间值是否有改变，如果没有改变，我们就给出"数据未修改，请问是否关闭窗体“等提示：
 
-```C#
+```csharp
 public partial class MainFrm : BaseForm
 {
     Test _testOld;

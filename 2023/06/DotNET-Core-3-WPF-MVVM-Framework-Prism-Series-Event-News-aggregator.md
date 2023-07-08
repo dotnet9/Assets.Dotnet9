@@ -37,7 +37,7 @@ albums: WPF-Prism
 
 PatientSentEvent.cs:
 
-```C#
+```csharp
 public class PatientSentEvent: PubSubEvent<Patient>
 {
 }
@@ -49,7 +49,7 @@ public class PatientSentEvent: PubSubEvent<Patient>
 
 PatientDetailViewModel.cs:
 
-```C#
+```csharp
  public class PatientDetailViewModel : BindableBase
  {
     IEventAggregator _ea;
@@ -94,7 +94,7 @@ PatientDetailViewModel.cs:
 
 PatientListViewModel.cs:
 
-```C#
+```csharp
 public class PatientListViewModel : BindableBase
 {
 
@@ -155,7 +155,7 @@ public class PatientListViewModel : BindableBase
 
 MedicineSentEvent.cs:
 
-```C#
+```csharp
  public class MedicineSentEvent: PubSubEvent<Medicine>
  {
 
@@ -166,7 +166,7 @@ MedicineSentEvent.cs:
 
 PatientDetailViewModel.cs:
 
-```C#
+```csharp
  public PatientDetailViewModel(IEventAggregator ea, IMedicineSerivce medicineSerivce)
  {
       _medicineSerivce = medicineSerivce;
@@ -188,7 +188,7 @@ PatientDetailViewModel.cs:
 
 MedicineMainContentViewModel.cs：
 
-```C#
+```csharp
 public class MedicineMainContentViewModel : BindableBase
 {
    IMedicineSerivce _medicineSerivce;
@@ -222,7 +222,7 @@ public class MedicineMainContentViewModel : BindableBase
 
 SearchMedicineViewModel.cs:
 
-```C#
+```csharp
  IEventAggregator _ea;
 
  private DelegateCommand<Medicine> _addMedicineCommand;
@@ -258,7 +258,7 @@ public SearchMedicineViewModel(IMedicineSerivce medicineSerivce, IEventAggregato
 
 PatientDetailViewModel.cs:
 
-```C#
+```csharp
  private DelegateCommand _cancleSubscribeCommand;
  public DelegateCommand CancleSubscribeCommand =>
        _cancleSubscribeCommand ?? (_cancleSubscribeCommand = new DelegateCommand(ExecuteCancleSubscribeCommand));
@@ -279,7 +279,7 @@ PatientDetailViewModel.cs:
 
 Subscribe.cs:
 
-```C#
+```csharp
 public virtual SubscriptionToken Subscribe(Action<TPayload> action, ThreadOption threadOption, bool keepSubscriberReferenceAlive, Predicate<TPayload> filter);
 ```
 
@@ -293,7 +293,7 @@ ThreadOption类型参数threadOption是个枚举类型参数，代码如下：
 
 ThreadOption.cs
 
-```C#
+```csharp
 public enum ThreadOption
 {
         /// <summary>
@@ -332,7 +332,7 @@ public enum ThreadOption
 
 PatientDetailViewModel.cs：
 
-```C#
+```csharp
   _ea.GetEvent<MedicineSentEvent>().Subscribe(MedicineMessageReceived,
 ThreadOption.PublisherThread,false,medicine=>medicine.Name=="当归"|| medicine.Name== "琼浆玉露");
 ```

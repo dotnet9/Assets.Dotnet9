@@ -28,7 +28,7 @@ categories: Web API
 2. 通过Nuget安装包：Swashbuckle.AspNetCore，当前示例版本5.5.0；
 3. 在Startup类的ConfigureServices方法内添加以下注入代码：
 
-```C#
+```csharp
 services.AddSwaggerGen(c =>
 {
     c.SwaggerDoc("v1", new OpenApiInfo
@@ -54,7 +54,7 @@ services.AddSwaggerGen(c =>
 
 Startup类的Configure方法添加如下代码：
 
-```C#
+```csharp
 //配置Swagger
             app.UseSwagger();            
             app.UseSwaggerUI(c =>
@@ -71,7 +71,7 @@ Ctrl+F5进入浏览，按上述配置修改路径为：http://localhost:***/api/
 
 然而到这里还没完，相关接口的注释说明我们看不到，通过配置XML文件的方式继续调整代码如下，新增代码见加粗部分：
 
-```C#
+```csharp
 services.AddSwaggerGen(c =>
 {
     c.SwaggerDoc("v1", new OpenApiInfo
@@ -108,7 +108,7 @@ services.AddSwaggerGen(c =>
 
 如果不想将XML文件输出为debug下的目录，譬如想要放在项目根目录（但不要修改成磁盘绝对路径），可调整相关代码如下，xml文件的名字也可以改成自己想要的：
 
-```C#
+```csharp
 var basePath = Path.GetDirectoryName(typeof(Program).Assembly.Location);//获取应用程序所在目录
 var xmlPath = Path.Combine(basePath, "CoreAPI_Demo.xml");
 c.IncludeXmlComments(xmlPath, true);
@@ -191,7 +191,7 @@ c.IncludeXmlComments(xmlPath, true);
 
 1. 配置文件的基本读取
 
-```C#
+```csharp
 public class Startup
 {
     public Startup(IConfiguration configuration)
@@ -225,7 +225,7 @@ public class Startup
 
 以上介绍了2种读取配置信息的方式，如果要在Controller内使用，类似地，进行注入并调用如下：
 
-```C#
+```csharp
 public class ValuesController : ControllerBase
 {
     private IConfiguration _configuration;
@@ -252,7 +252,7 @@ public class ValuesController : ControllerBase
 
 以SystemConfig节点为例，定义类如下：
 
-```C#
+```csharp
 public class SystemConfig
 {
     public string UploadPath { get; set; }
@@ -262,7 +262,7 @@ public class SystemConfig
 ```
 调整代码如下：
 
-```C#
+```csharp
 public class Startup
 {
     public Startup(IConfiguration configuration)
@@ -285,7 +285,7 @@ public class Startup
 
  然后Controller内进行注入调用：
 
-```C#
+```csharp
 [Route("api/[controller]/[action]")]
 [ApiController]
 public class ValuesController : ControllerBase
@@ -310,7 +310,7 @@ public class ValuesController : ControllerBase
 
 定义相关静态类如下：
 
-```C#
+```csharp
 public static class MySettings
 {
     public static SystemConfig Setting { get; set; } = new SystemConfig();
@@ -318,7 +318,7 @@ public static class MySettings
 ```
 调整Startup类构造函数如下：
 
-```C#
+```csharp
 public Startup(IConfiguration configuration, IWebHostEnvironment env)
 {            
     var builder = new ConfigurationBuilder()
@@ -340,7 +340,7 @@ public Startup(IConfiguration configuration, IWebHostEnvironment env)
 
 **后端代码**
 
-```C#
+```csharp
 [Route("api/[controller]/[action]")]
 [ApiController]
 public class UploadController : ControllerBase
@@ -491,7 +491,7 @@ public class UploadController : ControllerBase
 
 在访问wwwroot下的静态文件之前，必须先在Startup类的Configure方法下进行注册：
 
-```C#
+```csharp
 public void Configure(IApplicationBuilder app)
 {
     app.UseStaticFiles();//用于访问wwwroot下的文件    
@@ -506,7 +506,7 @@ public void Configure(IApplicationBuilder app)
 
 为了方便前后端使用约定好的数据格式，通常我们会定义统一的数据返回，其包括是否成功、返回状态、具体数据等；为便于说明，定义一个数据返回类如下：
 
-```C#
+```csharp
 public class ApiResult
 {
     public bool IsSuccess { get; set; }
@@ -518,7 +518,7 @@ public class ApiResult
  
 这样，我们将每一个action接口操作封装为ApiResult格式进行返回。新建一个ProductController示例如下：
 
-```C#
+```csharp
 [Produces("application/json")]  
 [Route("api/[controller]")]
 [ApiController]
@@ -554,7 +554,7 @@ public class ProductController : ControllerBase
 
 .Net Core Web Api默认以首字母小写的类驼峰式命名返回，但遇到DateTime类型的数据，会返回T格式时间，如要解决T时间格式，定义一个时间格式转换类如下：
 
-```C#
+```csharp
 public class DatetimeJsonConverter : JsonConverter<DateTime>
 {
     public override DateTime Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
@@ -576,7 +576,7 @@ public class DatetimeJsonConverter : JsonConverter<DateTime>
 
 然后在Startup类的ConfigureServices中调整services.AddControllers代码如下：
 
-```C#
+```csharp
 services.AddControllers()
     .AddJsonOptions(configure =>
     {
@@ -588,7 +588,7 @@ services.AddControllers()
 
 模型验证在ASP.NET MVC已存在，使用方式基本一致。指对向接口提交过来的数据进行参数校验，包括必填项、数据格式、字符长度、范围等等。一般的，我们会将POST提交过来的对象定义为一个实体类进行接收，譬如定义一个注册类如下：
 
-```C#
+```csharp
 public class RegisterEntity
 {
     /// <summary>
@@ -634,7 +634,7 @@ Display标识提示字段的名称，Required表示必填，StringLength限制�
 
 　　那么上述模型验证在Web API中是怎么工作的呢？在Startup类的ConfigureServices添加如下代码：
 
-```C#
+```csharp
 //模型参数验证
 services.Configure<ApiBehaviorOptions>(options =>
 {
@@ -650,7 +650,7 @@ options.InvalidModelStateResponseFactory = (context) =>
  
 　　添加注册示例Action代码：
 
-```C#
+```csharp
 /// <summary>
 /// 注册
 /// </summary>
@@ -724,7 +724,7 @@ public async Task<ApiResult> Register(RegisterEntity model)
 
 ③ 调整Program.cs文件如下；
 
-```C#
+```csharp
 public class Program
 {
     public static void Main(string[] args)
@@ -766,7 +766,7 @@ public class Program
 
 Controller通过注入调用如下：
 
-```C#
+```csharp
 public class WeatherForecastController : ControllerBase
 {
     private static readonly string[] Summaries = new[]
@@ -803,7 +803,7 @@ public class WeatherForecastController : ControllerBase
 
 使用.Net Core少不了和依赖注入打交道，这也是.Net Core的设计思想之一，关于什么是依赖注入（DI），以及为什么要使用依赖注入，这里不再赘述，先来看一个简单示例的依赖注入。
 
-```C#
+```csharp
 public interface IProductRepository
 {
     IEnumerable<Product> GetAll();
@@ -820,7 +820,7 @@ public class ProductRepository : IProductRepository
 
 Startup类进行注册：
 
-```C#
+```csharp
 public void ConfigureServices(IServiceCollection services)
 {
     services.AddScoped<IProductRepository, ProductRepository>();    
@@ -829,7 +829,7 @@ public void ConfigureServices(IServiceCollection services)
 
 请求 IProductRepository 服务并用于调用 GetAll 方法：
 
-```C#
+```csharp
 public class ProductController : ControllerBase
 {
     private readonly IProductRepository _productRepository;
@@ -849,7 +849,7 @@ public class ProductController : ControllerBase
 
 **生命周期**
 
-```C#
+```csharp
 services.AddScoped<IMyDependency, MyDependency>();
 services.AddTransient<IMyDependency, MyDependency>();
 services.AddSingleton<IMyDependency, MyDependency>();
@@ -863,7 +863,7 @@ services.AddSingleton<IMyDependency, MyDependency>();
 
 实际应用中，我们会有很多个服务需要注册到ConfigureServices内，一个个写入显然繁琐，而且容易忘记漏写，一般地，我们可能会想到利用反射进行批量注入，并通过扩展的方式进行注入，譬如：
 
-```C#
+```csharp
 public static class AppServiceExtensions
 {
     /// <summary>
@@ -885,7 +885,7 @@ public static class AppServiceExtensions
 }
 ```
 
-```C#
+```csharp
 public void ConfigureServices(IServiceCollection services)
 {
     services.AddAppServices();//批量注册服务    
@@ -898,7 +898,7 @@ public void ConfigureServices(IServiceCollection services)
 
 Scrutor是基于微软注入组件的一个扩展库，简单示例如下：
 
-```C#
+```csharp
 services.Scan(scan => scan
     .FromAssemblyOf<Startup>()
         .AddClasses(classes => classes.Where(s => s.Name.EndsWith("Repository") || s.Name.EndsWith("Service")))
@@ -921,14 +921,14 @@ services.Scan(scan => scan
 
 按官方说明，开发人员需合理说用缓存，以及限制缓存大小，Core运行时不会根据内容压力限制缓存大小。对于使用方式，依旧还是先行注册，然后控制器调用：
 
-```C#
+```csharp
 public void ConfigureServices(IServiceCollection services)
 {
     services.AddMemoryCache();//缓存中间件
 }
 ```
 
-```C#
+```csharp
 public class ProductController : ControllerBase
     {
         private IMemoryCache _cache;
@@ -967,7 +967,7 @@ public class ProductController : ControllerBase
 
 附一个封装好的Cache类如下：
 
-```C#
+```csharp
 public class CacheHelper
 {
     public static IMemoryCache _memoryCache = new MemoryCache(new MemoryCacheOptions());
@@ -1061,7 +1061,7 @@ public class CacheHelper
 
 这里主要针对全局异常进行捕获处理并记录日志，并以统一的json格式返回给接口调用者；说异常处理前先提下中间件，关于什么是中间件，在此不在赘述，一个中间件其基本的结构如下：
 
-```C#
+```csharp
 public class CustomMiddleware
 {
     private readonly RequestDelegate _next;
@@ -1080,7 +1080,7 @@ public class CustomMiddleware
 
 下面我们定义自己的全局异常处理中间件，代码如下：
 
-```C#
+```csharp
 public class CustomExceptionMiddleware
 {
     private readonly RequestDelegate _next;
@@ -1127,7 +1127,7 @@ public static class CustomExceptionMiddlewareExtensions
 
 然后在Startup类的Configure方法里添加上述扩展的中间件，见加粗部分：
 
-```C#
+```csharp
 public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
 {
     if (env.IsDevelopment())
@@ -1146,7 +1146,7 @@ public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
 
 关于http状态码，常见的如正常返回的200，其他401、403、404、502等等等等，因为系统有时候并不总是返回200成功，对于返回非200的异常状态码，WebApi也要做到相应的处理，以便接口调用者能正确接收，譬如紧接下来的`JWT认证`，当认证令牌过期或没有权限时，系统实际会返回401、403，但接口并不提供有效的可接收的返回，因此，这里列举一些常见的异常状态码，并以200方式提供给接口调用者，在Startup类的Configure方法里添加代码如下：
 
-```C#
+```csharp
 app.UseStatusCodePages(async context =>
 {
     //context.HttpContext.Response.ContentType = "text/plain";  
@@ -1191,7 +1191,7 @@ ConfigureServices进行注入，默认以Bearer命名，这里你也可以改成
 
 appsettings.json添加JWT配置节点（见前述【配置文件】），添加JWT相关认证类：
 
-```C#
+```csharp
 public static class JwtSetting
 {
     public static JwtConfig Setting { get; set; } = new JwtConfig();
@@ -1208,7 +1208,7 @@ public class JwtConfig
 ```
 采用前述绑定静态类的方式读取JWT配置，并进行注入：
 
-```C#
+```csharp
 public Startup(IConfiguration configuration, IWebHostEnvironment env)
 {
     //Configuration = configuration;
@@ -1257,7 +1257,7 @@ public void ConfigureServices(IServiceCollection services)
 
 给Swagger添加JWT认证支持，完成后，Swagger页面会出现锁的标识，获取token后填入Value（Bearer token形式）项进行Authorize登录即可，Swagger配置JWT见加粗部分：
 
-```C#
+```csharp
 services.AddSwaggerGen(c =>
 {
     c.SwaggerDoc("v1", new OpenApiInfo
@@ -1321,7 +1321,7 @@ services.AddSwaggerGen(c =>
 
 Starup类添加Configure注册，注意，需放到 app.UseAuthorization();前面：
 
-```C#
+```csharp
 public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
 {
     app.UseAuthentication();//jwt认证
@@ -1333,7 +1333,7 @@ public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
 
 这样，JWT就基本配置完毕，接下来实施认证登录和授权，模拟操作如下：
 
-```C#
+```csharp
 [HttpPost]
 public async Task<ApiResult> Login(LoginEntity model)      
 {           
@@ -1380,7 +1380,7 @@ public async Task<ApiResult> Login(LoginEntity model)
 
 上述代码模拟登录操作（账号密码登录，成功后设置有效期一天），生成token并返回，前端调用者拿到token后以诸如localstorage方式进行存储，调取授权接口时，添加该token到header（Bearer token）进行接口请求。接下来，给需要身份授权的Controller或Action打上Authorize标识：
 
-```C#
+```csharp
 [Authorize]
 [Route("api/[controller]/[action]")]
 public class UserController : ControllerBase
@@ -1390,7 +1390,7 @@ public class UserController : ControllerBase
 
 如果要添加基于角色的授权，可限制操作如下：
 
-```C#
+```csharp
 [Authorize(Roles = "user")]
 [Route("api/[controller]/[action]")]
 public class UserController : ControllerBase
@@ -1415,7 +1415,7 @@ public class UserController : ControllerBase
 
 添加扩展支持
 
-```C#
+```csharp
 public static class CrosExtensions
 {
     public static void ConfigureCors(this IServiceCollection services)
@@ -1446,14 +1446,14 @@ public static class CrosExtensions
 
 Startup类添加相关注册如下：
 
-```C#
+```csharp
 public void ConfigureServices(IServiceCollection services)
 {
     services.ConfigureCors();
 }
 ```
 
-```C#
+```csharp
 public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
 {
     app.UseCors("CorsPolicy");//跨域          

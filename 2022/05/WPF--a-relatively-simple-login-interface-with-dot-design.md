@@ -177,7 +177,7 @@ categories: WPF
 
 窗体拖动和关闭按钮事件：
 
-```C#
+```csharp
 using System.Windows;
 using System.Windows.Input;
 

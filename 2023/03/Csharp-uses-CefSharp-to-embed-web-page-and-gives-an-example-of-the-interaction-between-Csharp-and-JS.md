@@ -116,7 +116,7 @@ tags: CefSharp
 
 在`MainWindow.xaml.cs`里，添加相关控件的事件处理方法，即C#调用JS方法的相关代码：
 
-```C#
+```csharp
 using CefSharp;
 using Newtonsoft.Json;
 using System;

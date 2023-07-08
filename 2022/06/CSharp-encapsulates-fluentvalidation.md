@@ -16,7 +16,7 @@ categories: .NET相关
 
 前几天看公司一个新项目使用了`FluentValidation`，大家都知道`FluentValidation`是一个非常强大的用于构建强类型验证规则的 .NET 框架，帮程序员解决了繁琐的校验问题，用起来非常爽，但我还是遇到了一件非常不爽的事情,如下代码所示：
 
-```C#
+```csharp
 public class UserInformationValidator : AbstractValidator<UserInformation>
 {
  public UserInformationValidator()
@@ -59,7 +59,7 @@ static void Main(string[] args)
 
 仔细看上面的代码你会发现，我们每新建一个验证器，就必须要创建一个继承自`AbstractValidator<T>`的类，其中`T`是您希望验证的类的类型，封装一个验证器父类
 
-```C#
+```csharp
 public class CommonVaildator<T> : AbstractValidator<T>
 {
 
@@ -72,7 +72,7 @@ public class CommonVaildator<T> : AbstractValidator<T>
 
 首先让我们看看RuleFor的原型
 
-```C#
+```csharp
 public IRuleBuilderInitial<T, TProperty> RuleFor<TProperty>(Expression<Func<T, TProperty>> expression)
 ```
 
@@ -86,7 +86,7 @@ public IRuleBuilderInitial<T, TProperty> RuleFor<TProperty>(Expression<Func<T, T
 
 那么我们就能很轻易的封装出长度验证器规则了！
 
-```C#
+```csharp
 public void LengthVaildator(Expression<Func<T, string>> expression, int min, int max, string Message)
 {
     RuleFor(expression).Length(min, max).WithMessage(Message);
@@ -95,7 +95,7 @@ public void LengthVaildator(Expression<Func<T, string>> expression, int min, int
 
 同理，我们也可以接着封装**谓词验证器规则** **邮箱验证器规则**等等
 
-```C#
+```csharp
 public void MustVaildator(Expression<Func<T, string>> expression ,Func<T,string, bool> expression2, string Message)
 {
     RuleFor(expression).Must(expression2).WithMessage(Message);
@@ -110,7 +110,7 @@ public void EmailAddressVaildator(Expression<Func<T, string>> expression, string
 
 上面我们把验证器封装好了，那么将  `var result=   validationRules.Validate(userInformation);`这种验证方法封装一下不是手到擒来,代码如下:
 
-```C#
+```csharp
 public static string ModelValidator<T>(T source, AbstractValidator<T> sourceValidator) where T : class
 {
     var results = sourceValidator.Validate(source);
@@ -124,7 +124,7 @@ public static string ModelValidator<T>(T source, AbstractValidator<T> sourceVali
   
 ### 测试封装后的代码
 
-```C#
+```csharp
 CommonVaildator<UserInformation> commonUserInformation = new CommonVaildator<UserInformation>();
 commonUserInformation.LengthVaildator(o => o.UserName, 2, 30, "姓名长度输入错误");
 commonUserInformation.MustVaildator(o => o.Sex, (user, _) => user.Sex =="男"||user.Sex=="女" , "性别输入错误");

@@ -113,7 +113,7 @@ UI 会自动更新:
 
 该OnCounterClicked文件上的方法当前具有以下代码：
 
-```C#
+```csharp
 private void OnCounterClicked(object sender, EventArgs e)
 {
     count++;
@@ -129,7 +129,7 @@ private void OnCounterClicked(object sender, EventArgs e)
 
 通过将 更改为 来更新count++;以增加 10 count += 10;
 
-```C#
+```csharp
 private void OnCounterClicked(object sender, EventArgs e)
 {
     count += 10;

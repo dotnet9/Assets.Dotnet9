@@ -100,7 +100,7 @@ see more details at https://www.chromestatus.com/feature/5633521622188032.
 
 ### 5.1 要添加到项目中的类
  
-```C#
+```csharp
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 
@@ -242,7 +242,7 @@ namespace Microsoft.Extensions.DependencyInjection
 
 要使用此 cookie 策略，您需要将以下内容添加到您的启动代码中：
 
-```C#
+```csharp
 public void ConfigureServices(IServiceCollection services)
 {
    // Add this

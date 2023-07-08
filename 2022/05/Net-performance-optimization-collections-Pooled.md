@@ -56,7 +56,7 @@ paket add Collections.Pooled
 
 在使用时，我们只需要将对应的.NET原生版本换成`Collections.Pooled`版本就可以了，如下方的代码所示：
 
-```C#
+```csharp
 using Collections.Pooled;
 
 // 使用方式是一样的
@@ -74,7 +74,7 @@ var pooledDictionary1 = Enumerable.Range(0,100).ToPooledDictionary(i => i, i => 
 
 但是我们需要注意，`Pooled`类型实现了`IDispose`接口，它通过`Dispose()`方法将使用的内存归还到池中，所以我们需要在使用完`Pooled`集合对象以后调用它的`Dispose()`方法。或者可以直接使用`using var`关键字。
 
-```C#
+```csharp
 using Collections.Pooled;
 
 // 使用using var 会在pooled对象使用完毕后自动释放
@@ -97,7 +97,7 @@ pooledList.Dispose();
 
 由于它会复用内存空间，在将内存空间返回到池中的时候，需要对集合内的元素做处理，它提供了一个叫`ClearMode`的枚举供使用，定义如下：
 
-```C#
+```csharp
 namespace Collections.Pooled
 {
     /// <summary>
@@ -169,7 +169,7 @@ namespace Collections.Pooled
 
 另外在上文中我们提到了`Pooled`的集合类型需要释放，但是不释放也没有太大的关系，因为GC会去回收。
 
-```C#
+```csharp
 private static readonly string[] List = Enumerable  
     .Range(0, 10000).Select(c => c.ToString()).ToArray();  
 // 使用默认的集合类型  
@@ -229,7 +229,7 @@ Benchmark结果如下：
 
 构造函数代码如下，可以看到是直接创建的泛型数组：
 
-```C#
+```csharp
 public List(int capacity)
 {
       if (capacity < 0)
@@ -246,7 +246,7 @@ public List(int capacity)
 
 而我们`Pooled`类型的底层就是使用`ArrayPool`来共享资源池，从它的构造函数中，我们可以看到它默认使用的是`ArrayPool<T>.Shared`来分配数组对象，当然你也可以创建自己的`ArrayPool`来让它使用。
 
-```C#
+```csharp
 // 默认使用ArrayPool<T>.Shared池
 public PooledList(int capacity, ClearMode clearMode, bool sizeToCapacity) : this(capacity, clearMode, ArrayPool<T>.Shared, sizeToCapacity) { }  
 
@@ -279,7 +279,7 @@ public PooledList(int capacity, ClearMode clearMode, ArrayPool<T> customPool, bo
 
 另外在进行容量调整操作（扩容）时，会将旧的数组归还回线程池，新的数组也在池中获取。
 
-```C#
+```csharp
  public int Capacity
 {
     get => _items.Length;

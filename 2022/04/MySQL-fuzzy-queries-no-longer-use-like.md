@@ -248,7 +248,7 @@ WHERE
 
 **demo6：\***
 
-```C#
+```csharp
 SELECT
     * 
 FROM

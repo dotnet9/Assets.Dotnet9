@@ -104,7 +104,7 @@ func main() {
 
 服务绑定IP与端口是写死的，可写到配置文件，你就说和如下 `ASP.NET Core` 最小API像不像吧：
 
-```C#
+```csharp
 var app = WebApplication.Create(args);
 
 app.MapGet("/", () => "Hello World!");

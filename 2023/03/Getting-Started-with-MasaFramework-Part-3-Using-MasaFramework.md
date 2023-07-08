@@ -48,7 +48,7 @@ albums: MASA Framework
 ```
 Masa.Contrib.Data.Contracts提供了[数据过滤](https://docs.masastack.com/framework/building-blocks/data/data-filter)的能力, 但它不是必须的，然后会出现报错，`LogMiddleware`将代码修改为以下代码：
 
-```C#
+```csharp
 namespace TokenDemo.Service.Infrastructure.Middleware;
 
 public class LogMiddleware<TEvent> : EventMiddleware<TEvent>
@@ -74,7 +74,7 @@ public class LogMiddleware<TEvent> : EventMiddleware<TEvent>
 
 ValidatorMiddleware将代码修改为以下代码：
 
-```C#
+```csharp
 namespace TokenDemo.Service.Infrastructure.Middleware;
 
 public class ValidatorMiddleware<TEvent> : EventMiddleware<TEvent>
@@ -115,7 +115,7 @@ public class ValidatorMiddleware<TEvent> : EventMiddleware<TEvent>
 
 OrderEventHandler将代码修改为以下代码：
 
-```C#
+```csharp
 namespace TokenDemo.Service.Infrastructure.Handlers;
 
 public class OrderEventHandler
@@ -163,7 +163,7 @@ public class OrderEventAfterHandler : IEventHandler<QueryOrderListEvent>
 
 修改Program.cs代码：
 
-```C#
+```csharp
 using TokenDemo.Service.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -267,7 +267,7 @@ app.Run();
 
 打开TokenDemo.Caller项目中的`Callers\OrderCaller.cs`文件，修改`BaseAdderss`为`TokenDemo.Service.Order`的服务地址，打开`TokenDemo.Service.Order`项目的`Services\OrderService.cs`文件并且修改代码：
 
-```C#
+```csharp
 namespace TokenDemo.Service.Services;
 
 public class OrderService : ServiceBase
@@ -293,7 +293,7 @@ public class OrderService : ServiceBase
 
 打开`TokenDemo\Admin`项目的`Pages\Home\Index.razor`文件并且修改代码：
 
-```C#
+```csharp
 @page "/"
 @using TokenDemo.Caller.Callers
 @inherits LayoutComponentBase
@@ -313,7 +313,7 @@ public class OrderService : ServiceBase
 
 并且在`await base.OnAfterRenderAsync(firstRender);`这里打一个断点用于查看是否获取到消息，打开`TokenDemo.Admin.Server`项目的`Program.cs`，添加以下代码:
 
-```C#
+```csharp
 builder.Services.AddCaller(typeof(TokenDemo.Caller.Callers.OrderCaller).Assembly);
 ```
 

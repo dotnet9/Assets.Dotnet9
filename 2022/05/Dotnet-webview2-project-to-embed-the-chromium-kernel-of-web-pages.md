@@ -52,7 +52,7 @@ Microsoft.Web.WebView2
 
 这个时候，我们添加一下的基础环境代码，就可以让页面启动了。
 
-```C#
+```csharp
  public partial class Form1 : Form
     {
         public Form1()
@@ -93,11 +93,11 @@ Microsoft.Web.WebView2
 
 其中这一行，在本地Cache增加了，这个时候，如果你登录了账号，你重启，账号还是存在的，因为数据存到本地缓存了。
 
-```C#
+```csharp
 var result = await CoreWebView2Environment.CreateAsync(null, Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "cache"), null);
 ```
 
-```C#
+```csharp
 webView21.CoreWebView2.OpenDevToolsWindow();
 ```
 
@@ -109,7 +109,7 @@ webView21.CoreWebView2.OpenDevToolsWindow();
 
 添加以下脚本即可
 
-```C#
+```csharp
 /// <summary>
 /// 点击按钮
 /// </summary>
