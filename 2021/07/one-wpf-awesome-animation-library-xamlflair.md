@@ -6,7 +6,7 @@ date: 2021-07-01 17:04:47
 lastmod: 2023-07-03 13:33:32
 banner: true
 copyright: Default
-editor: 沙漠尽头的狼,Linluz
+lastmodifyuser: Linluz
 originaltitle: WPF牛逼的动画库：XamlFlair
 draft: False
 cover: https://img1.dotnet9.com/2021/07/cover_05.jpg
