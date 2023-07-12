@@ -3,8 +3,10 @@ title: WPF牛逼的动画库：XamlFlair
 slug: one-wpf-awesome-animation-library-xamlflair
 description: XamlFlair库的目标是简化常见动画的实现，并允许开发人员使用几行Xaml`轻松`地添加单个或组合的动画集。
 date: 2021-07-01 17:04:47
+lastmod: 2023-07-03 13:33:32
 banner: true
 copyright: Default
+editor: 沙漠尽头的狼,Linluz
 originaltitle: WPF牛逼的动画库：XamlFlair
 draft: False
 cover: https://img1.dotnet9.com/2021/07/cover_05.jpg
@@ -15,7 +17,7 @@ tags: WPF,动画库,开源
 
 >原文链接：https://github.com/XamlFlair/XamlFlair
 >
->翻译：沙漠尽头的狼/Linluz(本文未全文翻译，建议阅读原文了解更多)
+>翻译：沙漠尽头的狼,Linluz(本文未全文翻译，建议阅读原文了解更多)
 
 ![](https://img1.dotnet9.com/2021/07/0501.png)
 
