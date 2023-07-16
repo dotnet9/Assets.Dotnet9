@@ -127,12 +127,11 @@ Feature                               | **UWP**     | **WPF**        | **UWP (Un
 *变换类型*                      |     N/A     | 变换群组 | 复合变换 | 复合变换 | 复合变换 | 复合变换
 DefaultAnimations.xaml                |      -      |      ✔         |         -          |         -          |          -         |              -
 `TransformOn`                         |      -      |      ✔         |         -          |         -          |          -         |              -
-复合动画(Compound Animations)                   |      ✔      |      ✔         |         ✔          |         ✔          |          ✔         |              ✔
-相对变换(Relative Translations)                 |      ✔      |      ✔         |         ✔          |         ✔          |          ✔         |              ✔
-循环动画(Repeating Animations)                  |      ✔      |      ✔         |         ✔          |         ✔          |          ✔         |              ✔
-事件 & 绑定(Events & Bindings)                     |      ✔      |      ✔         |         ✔          |         ✔          |          ✔         |              ✔
-主/次完成命令(Primary/Secondary Completion Commands) |      ✔      |      ✔         |         ✔          |         ✔          |          ✔         |              ✔
-
+复合动画(Compound Animations)          |      ✔      |      ✔         |         ✔          |         ✔          |          ✔         |              ✔
+相对变换(Relative Translations)        |      ✔      |      ✔         |         ✔          |         ✔          |          ✔         |              ✔
+循环动画(Repeating Animations)         |      ✔      |      ✔         |         ✔          |         ✔          |          ✔         |              ✔
+事件 & 绑定(Events & Bindings)         |      ✔      |      ✔         |         ✔          |         ✔          |          ✔         |              ✔
+主/次完成命令                          |      ✔      |      ✔         |         ✔          |         ✔          |          ✔         |              ✔
 `StartWith`                           |      ✔      |      ✔         |         ✔          |         ✔          |          ✔         |              ✔
 `AllowOpacityReset`                   |      -      |      ✔         |         -          |         -          |          -         |              -
 `ClipToBounds`                        |      ✔      |     N/A        |         ✔          |         ✔          |          ✔         |              ✔
