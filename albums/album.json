@@ -15,6 +15,13 @@
   },
   {
     "SequenceNumber":2,
+    "Name": "WPF面试题",
+    "Slug": "interview-questions-of-wpf",
+    "Cover": "albums/album_wpf.png",
+    "Description": "无论你是初学者还是经验丰富的开发者，这个专辑都将为你提供全面而深入的学习机会，让你在WPF的世界中腾飞。让我们一起挑战自我，成为WPF的大师！"
+  },
+  {
+    "SequenceNumber":2,
     "Name": "MASA Framework",
     "Slug": "masa-framework",
     "Cover": "albums/masa-framework.jpg",
