@@ -29,7 +29,7 @@ categories: Docker
 
 ## 一、讲个故事
 
-为了更好的理解 Docker 是什么，我们先来讲个故事：
+为了更好的理解 Docker 是什么，我们先来讲个[故事](https://my.oschina.net/jamesview/blog/2994112)：
 
 我需要盖一个房子，于是我搬石头、砍木头、画图纸、盖房子。一顿操作，终于把这个房子盖好了。
 盖房子
