@@ -201,5 +201,12 @@
         "Name": "Linux常用命令",
         "Description": "Linux常用命令",
         "Url": "http://linuxido.com/"
+    },
+    {
+        "SequenceNumber": 23,
+        "Kind": "Friend",
+        "Name": "King-AbpVnext-Pro",
+        "Description": "一个神奇的开箱即用的中后台管理系统解决方案",
+        "Url": "https://menglou.github.io/king-abpvnext-pro"
     }
 ]
