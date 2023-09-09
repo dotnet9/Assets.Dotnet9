@@ -1,7 +1,7 @@
 ---
 title: 【译】基于XAML的跨平台框架对比分析
 slug: Comparative-Analysis-of-Cross-Platform-Frameworks-Based-on-XAML
-description: 多年来，基于XAML的UI框架已经有了很大的发展。这些框架主要包含：支持跨平台应用的Avalonia UI, Uno Platform和 .NET MAUI。如果微软早点推出一个类似Flutter这样的跨平台UI框架，我们可能就不会有这个么多的选择。
+description: 多年来，基于XAML的UI框架已经有了很大的发展。这些框架主要包含：支持跨平台应用的Avalonia UI, Uno Platform和 .NET MAUI。如果微软早点推出一个类似Flutter这样的跨平台UI框架，我们可能就不会有这么多的选择。
 date: 2023-09-09 21:40:18
 lastmod: 2023-09-21 22:15:23
 copyright: Reprint
@@ -13,7 +13,7 @@ cover: https://img1.dotnet9.com/2023/09/cover_04.png
 categories: .NET相关
 ---
 
-多年来，基于XAML的UI框架已经有了很大的发展。下面的图表是最好的说明。这些框架主要包含：支持跨平台应用的Avalonia UI, Uno Platform和 .NET MAUI。事实上，除了Avalonia UI之外，对跨平台XAML的需求是其发展的主要驱动力。如果微软早点推出一个类似Flutter这样的跨平台UI框架，我们可能就不会有这个么多的选择。这样有利有弊：好处在于我们选择有很多跨平台方案可以选择，坏处在于不同的框架有不同的对象模型以及各自的特有的XAML语法（dialect of XAML）。
+多年来，基于XAML的UI框架已经有了很大的发展，下面的图表是最好的说明。这些框架主要包含：支持跨平台应用的Avalonia UI, Uno Platform和 .NET MAUI。事实上，除了Avalonia UI之外，对跨平台XAML的需求是其发展的主要驱动力。如果微软早点推出一个类似Flutter这样的跨平台UI框架，我们可能就不会有这么多的选择。这样有利有弊：好处在于我们有很多跨平台方案可以选择，坏处在于不同的框架有不同的对象模型以及各自的特有的XAML语法（dialect of XAML）。
 
 在关注各种 .NET UI 框架时，我们会提出同一个问题：应该使用哪一个XAML UI框架来开发我们的应用？这是一个合理且重要的问题。迄今为止还没有一个明确的答案。但是，对于每个具体的应用，这个问题很容易回答，因为可以针对特定的应用需求比较分析每一种框架的优点和缺点。通过概述基于 XAML 的主要 UI 框架的优点和缺点，本文档旨在帮助公司和开发人员回答以下问题：
 
@@ -23,7 +23,7 @@ categories: .NET相关
 
 高屋建瓴地看，可以从架构上描述这些基于XAML的跨平台UI框架的差异。这些框架都是基于相同的 .NET（以前的Mono）工具。不容忽视的是，Xamarin对 .NET 的贡献使得这些框架存在。此外，在 .NET 6+ 中，这些框架在每个平台上都使用相同的运行时和核心库。
 
-- [**Avalonia UI**](https://github.com/AvaloniaUI/Avalonia) : 完全自己呈现控件和用户界面元素。这一点和Flutter相同。
+- [**Avalonia UI**](https://github.com/AvaloniaUI/Avalonia) : 完全自己呈现控件和用户界面元素，这一点和Flutter相同。
 - [**.NET MAUI**](https://github.com/dotnet/maui) : 标准化一组名称、属性、事件，并将它们应用/链接到特定平台的原生控件。如果单个平台不支持某项功能，该功能则不会出现在所有平台的MAUI中（不涉及特定平台的代码）
 - [**Uno Platform**](https://github.com/unoplatform/uno) : 使用选定的几个特定于平台的基本元素来构建和渲染控件。 对于高级控件，这提供了近乎像素完美的结果。这意味着 Uno Platform 像 Avalonia UI 和 Flutter那样完全渲染控件; 不过, 它还支持直接嵌入特定平台的原生控件，是一个混合架构。
 
@@ -39,10 +39,10 @@ categories: .NET相关
 
 **其他框架**
 
-还有一些其他可用于 .NET跨平台开发的解决方案在本文的不再详细描述。即便本文不会进行详细对比，这些框架或者解决方案也值得了解以下
+还有一些其他可用于 .NET跨平台开发的解决方案在本文不再详细描述。即便本文不会进行详细对比，这些框架或者解决方案也值得了解一下：
 
 1. [WPF](https://github.com/dotnet/wpf) : 正如上文所讲，WPF 可以通过[Wine Mono](https://github.com/madewokherd/wine-mono) 或者 [Avalonia XPF](https://avaloniaui.net/XPF)跨平台运行。对于WPF代码量较大的现有应用，可以考虑这种跨平台解决方案。
-2. [Eto.Forms](https://github.com/picoe/Eto) : 一个类似于 .NET MAUI 的UI框架，使用平台原生控件构建UI。XAML也可以用于序列化和构造UI.
+2. [Eto.Forms](https://github.com/picoe/Eto) : 一个类似于 .NET MAUI 的UI框架，使用平台原生控件构建UI，XAML也可以用于序列化和构造UI。
 3. [Noesis GUI](https://www.noesisengine.com/) : 用于游戏开发, Noesis GUI 重新创建WPF，用于游戏引擎（如Unity）以构建用户界面。Noesis GUI 对 XAML 的支持非常广泛，可以和 Microsoft Blend 一起使用。 如果它可以在游戏引擎之外工作，并且对较小的应用程序有更好的许可，那么它将是一项早于其他跨平台XAML实现的有趣技术。
 4. [.NET MAUI + Blazor Hybrid](https://learn.microsoft.com/en-us/aspnet/core/blazor/hybrid/tutorials/maui?view=aspnetcore-7.0) : .NET MAUI 可以托管 Blazor Web 应用（在 BlazorWebView 控件内），使其更像是应用程序和服务容器。对于那些希望将现有 Web 应用程序重新打包并分发为移动应用程序的人来说，这是一个非常有吸引力的选择。
 5. [.NET MAUI + Avalonia UI Hybrid](https://github.com/AvaloniaUI/AvaloniaMauiHybrid) : .NET MAUI 还可以托管 Avalonia UI(在AvaloniaView控件里)，使其更像是一个应用程序和服务的容器。 由于 Avalonia 只是一个 UI 框架，要轻松获取 .NET MAUI 的所有附加平台抽象功能 （Essentials） 以及更轻松地打包和部署移动应用时，这是一个非常有吸引力的选择。
@@ -188,7 +188,7 @@ categories: .NET相关
 
 ## 各平台框架推荐
 
-在每个平台上，都有性能最佳的框架。这也是主观的;但是，总体而言，评估应该是正确的，并考虑到所有的因素。
+在每个平台上，都有性能最佳的框架。这也是主观的; 但是，总体而言，评估应该是正确的，并考虑到所有的因素。
 
 | 平台     | 最佳框架                                                     |             |
 | -------- | ------------------------------------------------------------ | ----------- |
