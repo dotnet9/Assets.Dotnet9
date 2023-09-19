@@ -3,7 +3,8 @@ title: 使用它做为短链接生成可以吗？-Hashids.net
 slug: Is-it-possible-to-use-it-as-a-short-link-generator-Hashidsnet
 description: Hashids.net是一款轻量级开源的将数字编码成字符串的加密(短ID生成)工具类库，其实灵活用它将字符串生成短Id也是可以的，只是不可逆。
 date: 2023-09-17 20:31:49
-copyright: Default
+copyright: Reprint
+author: Rector
 originaltitle: 分享.NET/.NET 5轻量级开源的将数字编码成字符串的加密(短ID生成)工具类库--hashids.net
 originallink: https://codedefault.com/p/lightweight-open-source-project-hashids-net-for-generating-short-ids-from-numbers
 draft: false

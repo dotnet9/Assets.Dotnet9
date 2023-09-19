@@ -19,15 +19,23 @@
  ## 0. 最新开发情况
 
 - [x] 前台
-  1. [x] 使用 [ASP.NET Core 8 Blazor Server](https://learn.microsoft.com/zh-cn/aspnet/core/blazor/?WT.mc_id=dotnet-35129-website&view=aspnetcore-8.0) 搭建前台。
-  2. [x] 已有功能：文章列表、分类文章列表、专辑文章列表、文章归档、时间轴、网站地址、标签云、文章详情、RSS等。
-  3. [ ] 还有很多功能待开发，比如登录、前台文章创建和文章修改等。
+  1. [x] 使用ASP.NET Core 8 Razor Pages搭建前台
+  2. [x] 已有功能：文章列表、分类文章列表、文章详情+评论、归档+评论、关于+评论等
+  3. [ ] 还有很多功能待开发，比如隐私、登录、前台文章创建和文章修改等
 - [x] 后台前端
-  1. [ ] 技术选型中。
+  1. [x] 使用Vue 2.x搭建，有空有能力的话升级为3.x
+  2. [x] 基础表的CRUD
+  3. [ ] 文章管理正在开发中
+  4. [ ] 文件管理，目前使用的腾讯cos
+  5. [ ] 其他功能
 - [x] 后端
-  1. [x] 使用 [ASP.NET Core 8.0 Web API](https://learn.microsoft.com/zh-cn/aspnet/core/web-api/?view=aspnetcore-8.0) 搭建，框架选择 [Masa Framework(DDD+CQRS)](https://www.masastack.com/framework)。
-  2. [x] 数据库使用 [EF Core](https://learn.microsoft.com/zh-cn/ef/core/) + [PostgreSQL](https://www.postgresql.org/)
-  3. [ ] 根据前台和后台前端的功能迭代，进行维护中。
+  1. [x] 使用ASP.NET Core 8 Web API + EF Core 8.0 + PostgreSQL搭建
+  2. [x] 使用微软自家的Identity实现权限认证
+  3. [x] 基础表的接口管理
+  4. [ ] 根据前台和后台前端的功能迭代，进行维护中
+
+- [x] Dotnet工具箱前台
+  1. [x] 使用 [ASP.NET Core 8 Blazor WebAssembly](https://learn.microsoft.com/zh-cn/aspnet/core/blazor/?WT.mc_id=dotnet-35129-website&view=aspnetcore-8.0) 搭建前台。
 
 ## 1. Python之禅
 
@@ -107,7 +115,8 @@ Python 之禅 by Tim Peters
 
 1. 添加站长个人微信(dotnet9com)加入微信群。
 
-![Dotnet9](https://img1.dotnet9.com/site/wechatowner.jpg)
+| ![站长微信号](https://img1.dotnet9.com/site/wechatowner.jpg) | ![公众号1](https://img1.dotnet9.com/site/wechatpublic.jpg) | ![公众号2](https://img1.dotnet9.com/lequ.co/8cm.jpg) |
+| ------------------------------------------------------------ | ---------------------------------------------------------- | ---------------------------------------------------- |
 
 2. QQ群：771992300
 
