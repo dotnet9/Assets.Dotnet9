@@ -450,3 +450,9 @@ Harmony用于在运行时修补替换和装饰 .NET/.NET Core 方法的库。 �
 - [动态IL织入框架Harmony简单入手](https://www.cnblogs.com/qhca/p/12336332.html)
 - [一个开放源代码，实现动态IL注入(Hook或补丁工具)框架:Lib.Harmony](https://config.net.cn/opensource/dataformat/a133596e-9d5a-43ef-9012-1e2a19c00e33-p1.html)
 - [.NET 7 Runtime Skipping Patches #504](https://github.com/pardeike/Harmony/issues/504)
+
+## 7. 补充
+
+- 2023年9月23号 手动注册拦截
+
+非public类及方法如何拦截[拦截|篡改|伪造.NET类库中不限于public的类和方法](https://dotnet9.com/2023/09/Intercept-tamper-with-and-forge-classes-and-methods-in-the-dotNET-class-library-that-are-not-limited-to-public)
