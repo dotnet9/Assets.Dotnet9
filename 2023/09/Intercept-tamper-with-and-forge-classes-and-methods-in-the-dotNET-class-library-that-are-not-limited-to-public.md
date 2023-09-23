@@ -12,7 +12,7 @@ categories: .NET相关
 
 大家好，我是沙漠尽头的狼。
 
-本文首发于[Dotnet9](Intercept-tamper-with-and-forge-classes-and-methods-in-the-dotNET-class-library-that-are-not-limited-to-public)，介绍使用`Lib.Harmony`库拦截第三方`.NET`库方法，达到不修改其源码并能实现修改方法逻辑、预期行为的效果，并且不限于只拦截`public`访问修饰的类及方法，行文目录：
+本文首发于[Dotnet9](https://dotnet9.com/2023/09/Intercept-tamper-with-and-forge-classes-and-methods-in-the-dotNET-class-library-that-are-not-limited-to-public)，介绍使用`Lib.Harmony`库拦截第三方`.NET`库方法，达到不修改其源码并能实现修改方法逻辑、预期行为的效果，并且不限于只拦截`public`访问修饰的类及方法，行文目录：
 
 1. 什么是方法拦截？
 2. 示例程序拦截
