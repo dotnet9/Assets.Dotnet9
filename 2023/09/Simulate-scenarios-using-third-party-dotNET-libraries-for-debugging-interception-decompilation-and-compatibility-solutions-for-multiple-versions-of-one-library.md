@@ -1,51 +1,54 @@
 ---
-title: 终章：模拟.NET应用场景，综合应用反编译、第三方库调试、拦截、一库多版本兼容方案
+title: 【细致完整】终章：模拟.NET应用场景，综合应用反编译、第三方库调试、拦截、一库多版本兼容方案
 slug: Simulate-scenarios-using-third-party-dotNET-libraries-for-debugging-interception-decompilation-and-compatibility-solutions-for-multiple-versions-of-one-library
 description: 模拟.NET实际应用场景，综合应用三个主要知识点：一是使用dnSpy反编译第三库及调试，二是使用Lib.Harmony库实现第三库拦截、伪造，三是实现同一个库支持多版本同时引用。
 date: 2023-09-23 14:43:19
-lastmod: 2023-09-23 12:31:32
+lastmod: 2023-09-26 00:16:17
 copyright: Default
 draft: false
 cover: https://img1.dotnet9.com/2023/09/cover_08.png
 categories: .NET相关
+tags: dnSpy, Lib.Harmony, 反编译, 拦截, 强签名
 ---
 
 >**免责声明**
 
-> 由于传播、利用本公众号所提供的信息而造成的任何直接或者间接的后果及损失，均由使用者本人负责，公众号及作者不为**此**承担任何责任，一旦造成后果请自行承担！谢谢！
+> 使用者本人对于传播和利用本公众号提供的信息所造成的任何直接或间接的后果和损失负全部责任。公众号及作者对于这些后果不承担任何责任。如果造成后果，请自行承担责任。谢谢！
 
 大家好，我是沙漠尽头的狼。
 
-本文首发于[Dotnet9](https://dotnet9.com/2023/09/Simulate-scenarios-using-third-party-dotNET-libraries-for-debugging-interception-decompilation-and-compatibility-solutions-for-multiple-versions-of-one-library)，结合前面2篇（[如何在没有第三方.NET库源码的情况，调试第三库代码？](https://dotnet9.com/2023/09/How-to-be-without-a-third-party-dotNET-library-source-code-debugging-the-third-library-code)和[拦截|篡改|伪造.NET类库中不限于public的类和方法](https://dotnet9.com/2023/09/Intercept-tamper-with-and-forge-classes-and-methods-in-the-dotNET-class-library-that-are-not-limited-to-public)），本文设计一个案例手把手带大家同时应用这两篇涉及的技能，并再加入一库多版本支持方案（涉及第三方库反编译和强签名），行文目录：
+本文首发于[Dotnet9](https://dotnet9.com/2023/09/Simulate-scenarios-using-third-party-dotNET-libraries-for-debugging-interception-decompilation-and-compatibility-solutions-for-multiple-versions-of-one-library)，结合前面两篇（[如何在没有第三方.NET库源码的情况下调试第三库代码？](https://dotnet9.com/2023/09/How-to-be-without-a-third-party-dotNET-library-source-code-debugging-the-third-library-code)和[拦截、篡改、伪造.NET类库中不限于public的类和方法](https://dotnet9.com/2023/09/Intercept-tamper-with-and-forge-classes-and-methods-in-the-dotNET-class-library-that-are-not-limited-to-public)），本文将设计一个案例，手把手地带大家应用这两篇文章中涉及的技能，并介绍一种支持多个版本的库的兼容性解决方案（涉及第三方库的反编译和强签名）。
 
-1. 写在前面的话
+本文的目录如下：
+
+1. 前言
 2. 案例设计
-3. 使用dnSpy调试
+3. 使用dnSpy进行调试
 4. 使用Lib.Harmony拦截
-5. 引入高版本Lib.Harmony：一库多版本兼容使用
+5. 引入高版本Lib.Harmony：支持多个版本的库的兼容性使用
 6. 总结
 
-## 1. 写在前面的话
+## 1. 前言
 
-技术存在即合理，看怎么使用，前面文章有网友留言：
+技术的存在即合理，关键在于如何使用。在前面的文章中，有读者留言：
 
->（Lib.Harmony）不像什么正经的库，有什么合法的场景里需要这个需求的么？
+>Lib.Harmony似乎不是一个正经的库，有什么合法的场景需要使用它吗？
 
-站长回答：**非常正经**，你使用第三方库，版本确定，并且已经上线，有时不能随便升级第三方库，怕有隐藏风险，只有修改自己的代码，第三方库不动库的情况。
+站长回答：**非常正经**。当你使用一个第三方库，并且确定了版本并已经上线，有时候不能随意升级第三方库，因为可能存在潜在的风险。这时，你只能修改自己的代码，而不动第三方库。
 
-也有网友说的也在理：
+还有读者说得很有道理：
 
->这个用处很强大，有时也很可怕
+>这个工具非常强大，但有时也很可怕。
 
-既然网友有疑惑，所以有了本文，站长花些精力尽量模拟一个看似比较实际的应用场景，您看看正经不正经，可以跟着做一做，应该说是手把手详细教程了。
+既然读者有疑问，所以我写了这篇文章，尽量模拟一个看起来比较实际的应用场景。你可以跟着做一做，看看这个工具到底是不是正经的。本文提供了详细的手把手教程。
 
 ## 2. 案例设计
 
-这是一个小动画游戏，站长已经将其发布到NuGet：[Dotnet9Games](https://www.nuget.org/packages/Dotnet9Games/)，在这个小动画里埋了两个雷，跟着我的节奏我们一一解决它，首先我们创建一个`.NET Framework 4.6.1`的WPF空程序【Dotnet9Playground】，我想大部分小伙伴做的桌面还是以这个版本为主，不是的话请留言。
+这是一个小动画游戏，我已经将其发布到NuGet上：[Dotnet9Games](https://www.nuget.org/packages/Dotnet9Games/)。在这个小动画游戏中，我设置了两个陷阱。我们将按照我的步骤一一解决这些问题。首先，我们创建一个`.NET Framework 4.6.1`的WPF空项目【Dotnet9Playground】。我认为大部分人都会使用这个版本的桌面应用程序，如果不是，请在评论中告诉我。
 
 ### 2.1. 引入Dotnet9Games包
 
-站长已将做好的（假）游戏发布在[NuGet]([NuGet Gallery | Dotnet9Games 1.0.2](https://www.nuget.org/packages/Dotnet9Games/))上，做为第三方包使用，模拟比较真实的场景，直接安装最新的版本即可：
+我已经将制作好的（虚构的）游戏发布在[NuGet]([NuGet Gallery | Dotnet9Games 1.0.2](https://www.nuget.org/packages/Dotnet9Games/))上作为第三方包使用。为了模拟一个比较真实的场景，直接安装最新版本即可：
 
 ![](https://img1.dotnet9.com/2023/09/0801.png)
 
@@ -152,20 +155,20 @@ public partial class MainWindow : Window
 
 ![](https://img1.dotnet9.com/2023/09/0802.gif)
 
-这个游戏比较简单，简单说说：
+这个游戏比较简单，主要包含以下几个步骤：
 
-- 在主界面提供一个文本输入框，填写生成的气球个数，可直接绑定到游戏`BallCount`属性；
-- 点击`开始游戏`按钮进行气球生成和动画播放`MyBallGame.StartGame();`。
+1. 在主界面提供一个文本输入框，用于填写生成的气球个数。可以通过数据绑定将文本框的值绑定到游戏的`BallCount`属性。
+2. 提供一个`开始游戏`按钮，点击按钮后会触发`MyBallGame.StartGame()`方法，用于生成气球并播放动画。
 
-### 2.3. 引入第一个雷
+### 2.3. 引入第一个陷阱
 
-气球生成8个太少了，来80个：
+气球生成8个可能太少了，让我们来生成80个气球吧：
 
 ![](https://img1.dotnet9.com/2023/09/0803.gif)
 
-**怎么弹出一个红色的大圆，就没了？**
+**怎么弹出一个红色的大圆，气球都消失了？这就是陷阱！**
 
-## 3. 使用dnSpy调试
+## 3. 使用dnSpy进行调试
 
 ### 3.1. 分析
 
@@ -314,7 +317,7 @@ public partial class App : Application
 
 ![](https://img1.dotnet9.com/2023/09/0808.gif)
 
-### 4.3. 就这样？No，再来一雷
+### 4.3. 就这样？No，再来一陷阱
 
 看着气球在动，我们缩放下窗体大小（这里建议Debug下尝试，因为程序会崩溃，导致操作系统会卡那么一小会儿）：
 
@@ -359,7 +362,7 @@ protected override Size MeasureOverride(Size constraint)
 - 1. 如果存在一个运动的气球，那么计算`BallGame`的实际宽度减去所有子气球的宽度之间的差，得到`remainWidth`; 
   2. 使用`remainWidth`重新计算最后一个气球的大小；
   3. `remainWidth`在做减法操作，那么气球个数足够多，以致于游戏控件宽度小于这些气球宽之和时，就会为负数；
-  4. 我们再看看`Size`构造函数代码，如下截图：
+  4. 我们再看看`Size`构造函数代码（如果你用的VS，这里推荐大家安装ReSharper，十分方便的查看引用库方法 ），如下截图：
 
 ![](https://img1.dotnet9.com/2023/09/0811.png)
 
@@ -474,19 +477,19 @@ namespace Dotnet9Playground
 
 好，那我们使用高版本`Lib.Harmony`？
 
-## 5. 引入高版本Lib.Harmony：一库多版本兼容使用
+## 5. 引入高版本Lib.Harmony：支持多个版本的库的兼容性使用
 
 ### 5.1. 新创建工程引入高版本Lib.Harmony
 
 > **理由**
 
-> 有可能程序中使用低版本的`Lib.Harmony`库做了不少拦截操作，贸然全部升级，测试不到位，容易出现程序大崩溃（当前本程序只加了一个`HookBallGameStartGame`)，而同个工程`Dotnet9Playground`直接引入同一个库多版本无法实现（网友如果有建议欢迎留言）。
+> 有可能程序中使用低版本的`Lib.Harmony`库做了不少拦截操作，贸然全部升级，测试不到位，容易出现程序大崩溃（当前本程序只加了一个`HookBallGameStartGame`拦截类)，而工程`Dotnet9Playground`直接引入同一个库多版本无法实现（网友如果有建议欢迎留言）。
 
-添加新类库“Dotnet9HookHigh”，`NuGet`安装最新版`Lib.Harmony`库：
+添加新类库“Dotnet9HookHigh”，并使用`NuGet`安装`2.2.2`稳定最新版`Lib.Harmony`库：
 
 ![](https://img1.dotnet9.com/2023/09/0815.png)
 
-同时也添加`Dotnet9Games`的`NuGet`包，将前面添加的`HookBallgameMeasureOverride`类剪切复制到该库，`Lib.Harmony`高版本用法与低版本有所区别，在代码中有注释，注意对比，升级后的`HookBallgameMeasureOverride`类定义：
+同时也添加`Dotnet9Games`的`NuGet`包，将前面添加的`HookBallgameMeasureOverride`类剪切到该库，`Lib.Harmony`高版本用法与低版本有所区别，在代码中有注释，注意对比，升级后的`HookBallgameMeasureOverride`类定义：
 
 ```csharp
 using Dotnet9Games.Views;
@@ -563,7 +566,7 @@ namespace Dotnet9Playground
 
 ![](https://img1.dotnet9.com/2023/09/0817.png)
 
-新工程未使用到高版本`Lib.Harmony`。。。
+这提示是指我的新工程`Dotnet9HookHigh`未成功应用高版本`Lib.Harmony`(2.2.2)，亦指主工程`Dotnet9Playground`未成功识别加载高版本`Lib.Harmony`，怎么办？看我接下来的表演！
 
 ### 5.2. 高低版本的库分目录存放
 
@@ -571,11 +574,11 @@ namespace Dotnet9Playground
 
 ![](https://img1.dotnet9.com/2023/09/0818.png)
 
-只有一个`0Harmony.dll`，高低2个版本应该是两个库才对，怎么办？
+程序输出目录只有一个`0Harmony.dll`，高低2个版本应该是两个库才对，怎么办？
 
 #### 5.2.2. 新创建目录
 
-低版本不变，为了兼容，我们把高版本改目录存放，比如：`Lib/Lib.Harmony/2.3.0-prerelease.2/0Harmony.dll`,将库按目录结构存放在工程`Dotnet9HookHigh`中：
+低版本不变（存在位置依然放输出目录的根目录），为了兼容，我们把高版本改目录存放，比如：`Lib/Lib.Harmony/2.2.2/0Harmony.dll`，将库按目录结构存放在工程`Dotnet9HookHigh`中：
 
 ![](https://img1.dotnet9.com/2023/09/0819.png)
 
@@ -588,7 +591,7 @@ namespace Dotnet9Playground
 
 ### 5.3. 同库多版本配置
 
-#### 5.3.1. App.config配置版本
+#### 5.3.1. `App.config`配置多版本
 
 修改`Dotnet9Palyground`的`App.config`文件，添加`0Harmony.dll`两个版本及读取位置：
 
@@ -608,14 +611,14 @@ namespace Dotnet9Playground
 			<dependentAssembly>
 				<assemblyIdentity name="0Harmony"
 				  publicKeyToken="null"/>
-				<codeBase version="2.3.0-prerelease.2" href="Lib\Lib.Harmony\2.3.0-prerelease.2\0Harmony.dll" />
+				<codeBase version="2.2.2.0" href="Lib\Lib.Harmony\2.2.2\0Harmony.dll" />
 			</dependentAssembly>
 		</assemblyBinding>
 	</runtime>
 </configuration>
 ```
 
-再运行，还是报错？啊，我要晕了。。。。
+再运行，还是报上面的错？啊，我要晕了。。。。
 
 #### 5.3.2. 重点：库的强签名
 
@@ -629,14 +632,18 @@ namespace Dotnet9Playground
 
 4. 强签名的dll可以防止第三方恶意篡改。
 
-这里，对于1.2.0.1版本的0Harmony.dll库我们依然不动，只对`2.3.0-prerelease.2`高版本做强签名处理，签名步骤参考[[VS2008版本引入第三方dll无强签名](https://www.cnblogs.com/liuxuemeicolorful/p/10314035.html)]，我们来一起做一遍，这里会借助`Everything`软件，建议提前下载。
+这里，对于1.2.0.1版本的`0Harmony.dll`库我们依然不动，只对`2.2.2`高版本做强签名处理，签名步骤参考[[VS2008版本引入第三方dll无强签名](https://www.cnblogs.com/liuxuemeicolorful/p/10314035.html)]，我们来一起做一遍，这里会借助`Everything`软件搜索使用到的命令程序，建议提前下载。
+
+**注意：暂时不要用最新预览版`2.3.0-prerelease.2`，站长做这个示例签名用这个版本花了2个晚上没成功，换成`2.2.2`就可以，下面的图也重新录了，可能该版本有其他依赖的缘故，只是猜测：**
+
+![](https://img1.dotnet9.com/2023/09/0827.png)
 
 1. 创建一个新的随机密钥对`0Harmony.snk`
 
 使用`Everything`查找一个`sn.exe`程序，随便使用一个，比如：`"C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.6.1 Tools\sn.exe"`,在高版本目录下生成一个密钥对文件`0Harmony.snk`，命令如下：
 
 ```shell
-"C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.6.1 Tools\sn.exe" -k "F:\github_gitee\TerminalMACS.ManagerForWPF\src\Demo\MultiVersionLibrary\Dotnet9HookHigh\Lib\Lib.Harmony\2.3.0-prerelease.2\0Harmony.snk"
+"C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.6.1 Tools\sn.exe" -k "F:\github_gitee\TerminalMACS.ManagerForWPF\src\Demo\MultiVersionLibrary\Dotnet9HookHigh\Lib\Lib.Harmony\2.2.2\0Harmony.snk"
 ```
 
 ![](https://img1.dotnet9.com/2023/09/0821.png)
@@ -646,7 +653,7 @@ namespace Dotnet9Playground
 查找`ildasm.exe`，比如`C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.6.1 Tools\ildasm.exe`，执行以下命令生成`0Harmony.dll`的il中间文件：
 
 ```shell
-"C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.6.1 Tools\ildasm.exe" "F:\github_gitee\TerminalMACS.ManagerForWPF\src\Demo\MultiVersionLibrary\Dotnet9HookHigh\Lib\Lib.Harmony\2.3.0-prerelease.2\0Harmony.dll" /out="F:\github_gitee\TerminalMACS.ManagerForWPF\src\Demo\MultiVersionLibrary\Dotnet9HookHigh\Lib\Lib.Harmony\2.3.0-prerelease.2\0Harmony.il"
+"C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.6.1 Tools\ildasm.exe" "F:\github_gitee\TerminalMACS.ManagerForWPF\src\Demo\MultiVersionLibrary\Dotnet9HookHigh\Lib\Lib.Harmony\2.2.2\0Harmony.dll" /out="F:\github_gitee\TerminalMACS.ManagerForWPF\src\Demo\MultiVersionLibrary\Dotnet9HookHigh\Lib\Lib.Harmony\2.2.2\0Harmony.il"
 ```
 
 ![](https://img1.dotnet9.com/2023/09/0822.png)
@@ -656,7 +663,7 @@ namespace Dotnet9Playground
 查找`ilasm.exe`，比如`C:\Windows\Microsoft.NET\Framework64\v2.0.50727\ilasm.exe`,执行以下命令做签名：
 
 ```shell
-"C:\Windows\Microsoft.NET\Framework64\v2.0.50727\ilasm.exe" "F:\github_gitee\TerminalMACS.ManagerForWPF\src\Demo\MultiVersionLibrary\Dotnet9HookHigh\Lib\Lib.Harmony\2.3.0-prerelease.2\0Harmony.il" /dll /resource="F:\github_gitee\TerminalMACS.ManagerForWPF\src\Demo\MultiVersionLibrary\Dotnet9HookHigh\Lib\Lib.Harmony\2.3.0-prerelease.2\0Harmony.res" /key="F:\github_gitee\TerminalMACS.ManagerForWPF\src\Demo\MultiVersionLibrary\Dotnet9HookHigh\Lib\Lib.Harmony\2.3.0-prerelease.2\0Harmony.snk" /optimize
+"C:\Windows\Microsoft.NET\Framework64\v2.0.50727\ilasm.exe" "F:\github_gitee\TerminalMACS.ManagerForWPF\src\Demo\MultiVersionLibrary\Dotnet9HookHigh\Lib\Lib.Harmony\2.2.2\0Harmony.il" /dll /resource="F:\github_gitee\TerminalMACS.ManagerForWPF\src\Demo\MultiVersionLibrary\Dotnet9HookHigh\Lib\Lib.Harmony\2.2.2\0Harmony.res" /key="F:\github_gitee\TerminalMACS.ManagerForWPF\src\Demo\MultiVersionLibrary\Dotnet9HookHigh\Lib\Lib.Harmony\2.2.2\0Harmony.snk" /optimize
 ```
 
 ![](https://img1.dotnet9.com/2023/09/0823.png)
@@ -664,7 +671,7 @@ namespace Dotnet9Playground
 4. 验证签名信息
 
 ```shell
-"C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.6.1 Tools\sn.exe" -v "F:\github_gitee\TerminalMACS.ManagerForWPF\src\Demo\MultiVersionLibrary\Dotnet9HookHigh\Lib\Lib.Harmony\2.3.0-prerelease.2\0Harmony.dll" 
+"C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.6.1 Tools\sn.exe" -v "F:\github_gitee\TerminalMACS.ManagerForWPF\src\Demo\MultiVersionLibrary\Dotnet9HookHigh\Lib\Lib.Harmony\2.2.2\0Harmony.dll" 
 ```
 
 ![](https://img1.dotnet9.com/2023/09/0824.png)
@@ -677,20 +684,167 @@ namespace Dotnet9Playground
 
 ![](https://img1.dotnet9.com/2023/09/0825.png)
 
-我们将签名补充进`App.Config`文件：
+我们将签名补充进`App.Config`文件。
+
+![](https://img1.dotnet9.com/2023/09/0828.png)
+
+**注意**：因为我们使用的随机密钥对，所以您生成的签名和我的肯定不一样：
+
+再调试，能正常拦截`MeasureOverride`方法了，传入的实例也能正常显示`BallGame`（就这？对，我搞了2个晚上。。。。）：
+
+![](https://img1.dotnet9.com/2023/09/0829.png)
+
+### 5.4. 一切就绪，完善最后一个拦截
+
+代码如下：
+
+```csharp
+using Dotnet9Games.Views;
+using HarmonyLib;
+using System.Collections;
+using System.Data;
+using System.Linq;
+using System.Reflection;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Shapes;
+
+namespace Dotnet9HookHigh;
+
+/// <summary>
+/// 拦截BallGame的MeasureOverride方法
+/// </summary>
+public class HookBallgameMeasureOverride
+{
+    /// <summary>
+    /// 拦截游戏的MeasureOverride方法
+    /// </summary>
+    public static void StartHook()
+    {
+        //var harmony =  HarmonyInstance.Create("https://dotnet9.com/HookBallgameMeasureOverride");
+        // 上面是低版本Harmony实例获取代码，下面是高版本
+        var harmony = new Harmony("https://dotnet9.com/HookBallgameMeasureOverride");
+        var hookClassType = typeof(BallGame);
+        var hookMethod = hookClassType!.GetMethod("MeasureOverride", BindingFlags.NonPublic | BindingFlags.Instance);
+        var replaceMethod = typeof(HookBallgameMeasureOverride).GetMethod(nameof(HookMeasureOverride));
+        var replaceHarmonyMethod = new HarmonyMethod(replaceMethod);
+        harmony.Patch(hookMethod, replaceHarmonyMethod);
+    }
+
+    /// <summary>
+    /// MeasureOverride替换方法
+    /// </summary>
+    /// <param name="__instance">BallGame实例</param>
+    /// <returns></returns>
+    public static bool HookMeasureOverride(ref object __instance)
+    {
+        #region 原方法代码逻辑
+
+        //// 计算最后一个元素宽度，不需要关注为什么这样写，只是为了引出Size异常使得
+
+        //var lastChild = _balloons.LastOrDefault();
+        //if (lastChild != null)
+        //{
+        //    var remainWidth = ActualWidth;
+        //    foreach (var balloon in _balloons)
+        //    {
+        //        remainWidth -= balloon.Shape.Width;
+        //    }
+
+        //    lastChild.Shape.Measure(new Size(remainWidth, lastChild.Shape.Height));
+        //}
+
+        //return base.MeasureOverride(constraint);
+
+        #endregion
+
+        #region 拦截替换代码
+
+        var instanceType = __instance.GetType();
+        var balloonsField = instanceType.GetField("_balloons", BindingFlags.NonPublic | BindingFlags.Instance);
+        var balloons = (IEnumerable)balloonsField!.GetValue(__instance);
+
+        var lastChild = balloons.Cast<object>().LastOrDefault();
+        if (lastChild == null)
+        {
+            return false;
+        }
+
+        var remainWidth = ((UserControl)__instance).ActualWidth;
+        foreach (object balloon in balloons)
+        {
+            remainWidth -= GetBalloonSize(balloon).Width;
+        }
+
+        // 注意：关键代码在这，如果剩余宽度大于0才重新计算最后一个子项大小
+		// 这段代码可能没什么意义，可按实际开发修改
+        if (remainWidth > 0)
+        {
+            var lashShape = GetBalloonShape(lastChild);
+            lashShape.Measure(new Size(remainWidth, lashShape.Height));
+        }
+
+        #endregion
+
+        return false;
+    }
+
+    private static Ellipse GetBalloonShape(object balloon)
+    {
+        var shapeProperty = balloon.GetType().GetProperty("Shape");
+        var shape = (Ellipse)shapeProperty!.GetValue(balloon);
+        return shape;
+    }
+
+    private static Size GetBalloonSize(object balloon)
+    {
+        var shape = GetBalloonShape(balloon);
+        return new Size(shape.Width, shape.Height);
+    }
+}
+```
+
+其中关键代码是：
+
+```csharp
+// 注意：关键代码在这，如果剩余宽度大于0才重新计算最后一个子项大小
+// 这段代码可能没什么意义，可按实际开发修改
+if (remainWidth > 0)
+{
+    var lashShape = GetBalloonShape(lastChild);
+    lashShape.Measure(new Size(remainWidth, lashShape.Height));
+}
+```
+
+其他代码就是反射的使用，不再细说，我们运行程序，现在随便缩放窗体了：
+
+![](https://img1.dotnet9.com/2023/09/0830.gif)
+
+当剩余宽度小于0时跳过计算最后一个子项大小
+
+![](https://img1.dotnet9.com/2023/09/0831.gif)
 
 ### 5.4. 小优化
 
-Git一般是配置成不能上传可执行程序及dll文件的，但多版本dll特殊，部分库不能直接从NuGet引用，所以本文中的高版本`Lib.Harmony`库只能使用自己强签名版本，我们将文件扩展名改为“.ref"以允许上传，他人能正常使用，程序如果需要正常编译、生成，则给`Dotnet9HookHigh`工程添加生成前命令行：
+上面部分截图中可能您也看到了`0Harmony.ref`文件，我们简单说说。
+
+Git一般是配置成不能上传可执行程序或`dll`文件的，但多版本`dll`特殊，部分库不能直接从`NuGet`引用，所以本文中的高版本`Lib.Harmony`库只能使用自己强签名版本，我们将`dll`文件扩展名改为“.ref"以允许上传，他人能正常使用，程序如果需要正常编译、生成，则给`Dotnet9HookHigh`工程添加生成前命令行，即生成时将`.ref`复制一份为`.dll`：
 
 ```shell
-ren "$(ProjectDir)Lib\Lib.Harmony\2.3.0-prerelease.2\0Harmony.ref" "$(ProjectDir)Lib\Lib.Harmony\2.3.0-prerelease.2\0Harmony.dll"
+copy "$(ProjectDir)Lib\Lib.Harmony\2.2.2\0Harmony.ref" "$(ProjectDir)Lib\Lib.Harmony\2.2.2\0Harmony.dll"
 ```
 
+![](https://img1.dotnet9.com/2023/09/0832.png)
 
-
-## 4. 总结
+## 6. 总结
 
 - 技术交流加群请添加站长微信号：dotnet9com
 - 文中示例代码：[MultiVersionLibrary](https://github.com/dotnet9/TerminalMACS.ManagerForWPF/tree/master/src/Demo/MultiVersionLibrary)
 
+本文通过一个模拟实际案例，帮助大家应用前两篇文章中涉及的技能(`dnSpy`调试第三方库和`Lib.Harmony`拦截第三方库)，并且介绍一种支持多个版本的库的兼容性解决方案。
+
+通过本文介绍支持多个版本的库的兼容性解决方案，读者可以简单了解如何反编译第三方库，以及如何使用强签名技术来保证库的兼容性（和安全性，本文未展开说，可以阅读此文[浅谈.NET程序集安全签名]([浅谈.NET程序集安全签名 - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/26125837))）。希望本文提供的案例能帮助读者更好地理解和应用这些技能。
+
+谢谢您阅读到这，可以关注【Dotnet9】微信公众号，大家技术交流、保持进步：
+
+![](https://img1.dotnet9.com/site/wechatpublic.jpg))

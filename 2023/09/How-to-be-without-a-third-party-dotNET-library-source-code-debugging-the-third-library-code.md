@@ -1,5 +1,5 @@
 ---
-title: 如何在没有第三方.NET库源码的情况，调试第三库代码？
+title: 如何在没有第三方.NET库源码的情况下调试第三库代码？
 slug: How-to-be-without-a-third-party-dotNET-library-source-code-debugging-the-third-library-code
 description: 借助dnSpy调试第三方库代码
 date: 2023-09-21 22:00:19

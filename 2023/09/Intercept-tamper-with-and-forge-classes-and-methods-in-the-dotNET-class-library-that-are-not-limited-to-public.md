@@ -1,5 +1,5 @@
 ---
-title: 拦截|篡改|伪造.NET类库中不限于public的类和方法
+title: 拦截、篡改、伪造.NET类库中不限于public的类和方法
 slug: Intercept-tamper-with-and-forge-classes-and-methods-in-the-dotNET-class-library-that-are-not-limited-to-public
 description: 本文除了回顾拦截.NET类库中的方法，实现方法参数的篡改、方法返回结果的伪造，再着重介绍.NET类库中非public类及方法如何拦截。
 date: 2023-09-22 20:49:57
