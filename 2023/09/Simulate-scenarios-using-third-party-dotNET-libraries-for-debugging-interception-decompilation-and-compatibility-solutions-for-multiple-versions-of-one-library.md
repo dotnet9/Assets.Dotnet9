@@ -847,4 +847,4 @@ copy "$(ProjectDir)Lib\Lib.Harmony\2.2.2\0Harmony.ref" "$(ProjectDir)Lib\Lib.Har
 
 谢谢您阅读到这，可以关注【Dotnet9】微信公众号，大家技术交流、保持进步：
 
-![](https://img1.dotnet9.com/site/wechatpublic.jpg))
+![](https://img1.dotnet9.com/site/wechatpublic.jpg)
