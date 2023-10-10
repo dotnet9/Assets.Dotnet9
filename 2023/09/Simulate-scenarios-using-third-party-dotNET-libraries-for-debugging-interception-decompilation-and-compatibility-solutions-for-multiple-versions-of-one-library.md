@@ -48,7 +48,7 @@ tags: dnSpy, Lib.Harmony, 反编译, 拦截, 强签名
 
 ### 2.1. 引入Dotnet9Games包
 
-我已经将制作好的（虚构的）游戏发布在[NuGet]([NuGet Gallery | Dotnet9Games 1.0.2](https://www.nuget.org/packages/Dotnet9Games/))上作为第三方包使用。为了模拟一个比较真实的场景，直接安装最新版本即可：
+我已经将制作好的（虚构的）游戏发布在[NuGet]([NuGet Gallery | Dotnet9Games 1.0.2](https://www.nuget.org/packages/Dotnet9Games/))上作为第三方包使用。为了模拟一个比较真实的场景，直接安装最新版本【本文基于1.0.3版本编写】即可：
 
 ![](https://img1.dotnet9.com/2023/09/0801.png)
 
@@ -622,7 +622,7 @@ namespace Dotnet9Playground
 
 #### 5.3.2. 重点：库的强签名
 
-上面分目录、配置文件版本配置目录也还不够，主工程还是无法区分两个版本的`Lib.Harmony`库，这里涉及.NET 库强签名，就是上面`App.config`配置中的`publicKeyToken`特性，加上这个主程序就认识了，关于强签名网上找到个说明[《**.Net程序集强签名详解**》]([.Net程序集强签名详解_51CTO博客_.net 签名](https://blog.51cto.com/u_15693505/5589203))：
+上面分目录、配置文件版本配置目录也还不够，主工程还是无法区分两个版本的`Lib.Harmony`库，这里涉及.NET 库强签名，就是上面`App.config`配置中的`publicKeyToken`特性，加上这个主程序就认识了，关于强签名网上找到个说明[《**.Net程序集强签名详解**》](https://blog.51cto.com/u_15693505/5589203)：
 
 1. 可以将强签名的dll注册到GAC，不同的应用程序可以共享同一dll。
 
