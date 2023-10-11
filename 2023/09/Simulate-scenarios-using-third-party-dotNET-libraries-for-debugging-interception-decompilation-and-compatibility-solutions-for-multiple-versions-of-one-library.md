@@ -602,7 +602,7 @@ namespace Dotnet9Playground
         <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.6.1" />
     </startup>
 	<runtime>
-		<assemblyBinding>
+		<assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
 			<dependentAssembly>
 				<assemblyIdentity name="0Harmony"
 				  publicKeyToken="null"/>

@@ -114,6 +114,13 @@
     {
         "SequenceNumber": 14,
         "Kind": "Friend",
+        "Name": "迷恋自留地",
+        "Description": "个人折腾站点，一个C#菜鸡。",
+        "Url": "https://hunji.xyz/"
+    },
+    {
+        "SequenceNumber": 14,
+        "Kind": "Friend",
         "Name": "AIoTDB物联网",
         "Description": "一款聚焦物联网、高性能轻量级的时序数据库，为用户提供数据收集、存储和分析等服务",
         "Url": "https://aiotdb.net"
