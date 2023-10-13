@@ -1,5 +1,12 @@
 [
     {
+        "SequenceNumber": 0,
+        "Kind": "Friend",
+        "Name": "Dotnet工具箱",
+        "Description": "Dotnet工具箱为开发人员和IT工作者收集了有用的工具。",
+        "Url": "https://dotnetools.com/"
+    },
+    {
         "SequenceNumber": 1,
         "Kind": "Owner",
         "Name": "Github",
