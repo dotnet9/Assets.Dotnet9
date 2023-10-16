@@ -198,7 +198,7 @@ slug 清楚地说明了网页的内容，它可以改善用户的体验。
 1. 在百度翻译中翻译文章标题“Dotnet工具箱：开源、免费的纯前端工具网站，带你探索10大工具分类和73个实时在线小工具”；
 2. 将得到的英文标题“Dotnet Toolbox: Open source, free pure front-end tool website that takes you to explore 10 major tool categories and 73 real-time online small tools”复制到[别名字符串](https://dotnetools.com/slugify-string)工具【需要转别名的字符串】输入框；
 3. 点击【复制别名】将【别名】输入框中转换的别名字符串粘贴到本文Markdown文件内，文件也以转换的【[别名].md】命名；
-4. 使用别名访问本文：[dotnet-toolbox-open-source-free-pure-front-end-tool-website-that-takes-you-to-explore-10-major-tool-categories-and-73-real-time-online-small-tools](https://dotnet9.com/2023/10/dotnet-toolbox-open-source-free-pure-front-end-tool-website-that-takes-you-to-explore-10-major-tool-categories-and-73-real-time-online-small-tools)
+4. 使用别名访问本文：[https://dotnet9.com/2023/10/dotnet-toolbox-open-source-free-pure-front-end-tool-website-that-takes-you-to-explore-10-major-tool-categories-and-73-real-time-online-small-tools9](https://dotnet9.com/2023/10/dotnet-toolbox-open-source-free-pure-front-end-tool-website-that-takes-you-to-explore-10-major-tool-categories-and-73-real-time-online-small-tools)
 
 #### 2.3.6. HTTP 状态代码
 
