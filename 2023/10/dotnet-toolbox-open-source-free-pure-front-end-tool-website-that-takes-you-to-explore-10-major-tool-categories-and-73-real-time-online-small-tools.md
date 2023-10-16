@@ -3,7 +3,7 @@ title: Dotnet工具箱：开源、免费的纯前端工具网站，带你探索1
 slug: dotnet-toolbox-open-source-free-pure-front-end-tool-website-that-takes-you-to-explore-10-major-tool-categories-and-73-real-time-online-small-tools
 description: Dotnet工具箱是一个纯前端的、开源和免费的工具网站，周末我参考了开源项目it-tools，对网站界面文字进行了汉化，并重新部署了网站。该网站共有10大工具分类，提供了73个实时在线小工具。使用Vue3开发的Dotnet工具箱具有独特的特色，本文详细介绍了其中一些特色工具，并简单分享了如何部署自己的工具网站。如果你对工具网站感兴趣，不妨来了解一下Dotnet工具箱吧！
 date: 2023-10-16 08:05:14
-lastmod: 2023-10-16 10:48:40
+lastmod: 2023-10-16 14:08:40
 copyright: Default
 draft: false
 cover: https://img1.dotnet9.com/2023/10/cover_02.png
