@@ -28,7 +28,7 @@ tags: WPF,Prism,Module
 1. NET Core 3.x WPF MVVM框架Prism系列(后续版本通用)
 
 ```shell
-https://dotnet9.com/11338.html
+https://dotnet9.com/album/wpf-prism
 ```
 
 2. WPF企业级开发框架搭建指南（启示录），2020从入门到放弃

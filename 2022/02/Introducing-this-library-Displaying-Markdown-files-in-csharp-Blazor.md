@@ -23,7 +23,7 @@ categories: Blazor
 我的想法是，除了提供工具免费使用外，也能让大家了解这个工具是如果开发的，这样应该更方便：
 
 1. 默认是不显示的，点击`如何开发的？`的按钮加载开发文章说明。
-2. 评论功能目前没有（不排除后面加上），需要点击`我要建议（吐槽）`按钮跳转到[Dotnet9](https://dotnet9.com)网站同篇[博文](https://dotnet9.com/1715)留言。
+2. 评论功能目前没有（不排除后面加上），需要点击`我要建议（吐槽）`按钮跳转到[Dotnet9](https://dotnet9.com)网站同篇[博文](https://dotnet9.com/2022/02/Introducing-this-library-Displaying-Markdown-files-in-csharp-Blazor)留言。
 3. 旁边有个按钮`我要浏览源码`可以点击浏览工具源码。
 
 下面说说在Blazor中怎么展示Markdown文件，先说明目前完成的功能：

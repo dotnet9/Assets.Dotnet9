@@ -482,8 +482,7 @@ public class ImageHelperTests
 
 页面下载时使用上面贴过的方法`DownloadFile(string fromFilePath, string saveFileName)`，这里不再贴代码。
 
-下载文件使用到`JS互操作`(什么是`JS互操作`？可以参考我转载的这篇文章了解[首页.NETBlazorBlazor Server
-(14/30)大家一起学Blazor：JavaScript interop(互操作)](https://dotnet9.com/1038))
+下载文件使用到`JS互操作`(什么是`JS互操作`？可以参考我转载的这篇文章了解[(14/30)大家一起学Blazor：JavaScript interop(互操作)](https://dotnet9.com/2021/12/14-of-30-let-us-learn-blazor-together-javascript-interop))
 
 ## 3. 总结
 

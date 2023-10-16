@@ -136,7 +136,7 @@ protected override async Task OnAfterRenderAsync(bool firstRender)
 ```html
 <MarkdownComponent
     LocalPostFilePath="wwwroot/2022/02/2022-02-22_02.md"
-    RemotePostUrl="https://dotnet9.com/1715"
+    RemotePostUrl="https://dotnet9.com/2022/02/Perfect-Display-Markdown-in-Csharp-Blazor-and-add-code-highlighting"
     SourceCodeUrl="https://github.com/dotnet9/dotnet9.com/blob/develop/src/Dotnet9.Tools.Web/Pages/Public/ImageTools/IcoTool.razor"/>
 ```
 

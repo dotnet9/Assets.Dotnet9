@@ -105,7 +105,7 @@ tags: Login Window
 
 - [Design com WPF](https://www.youtube.com/channel/UCf0J9AO-KeLEkBe3ZpVpfKQ) 大神的学习视频：[First Impressions and new VS 2019](https://www.youtube.com/watch?v=2Nu5zpT6Ezw)
 - 开源控件库：[MaterialDesignInXamlToolkit](https://github.com/MaterialDesignInXAML/MaterialDesignInXamlToolkit)
-- 本站对MD开源控件库的介绍：[控件介绍](https://dotnet9.com/2180.html)
+- 本站对MD开源控件库的介绍：[控件介绍](https://dotnet9.com/2020/12/Material-designinxaml-an-open-source-csharp-WPF-Control-Library)
 
 ## 5. 代码下载
 
