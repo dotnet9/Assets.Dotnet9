@@ -23,7 +23,7 @@ Dotnet工具箱已有工具如下：
 
 关于Dotnet工具箱和it-tools项目
 
->Dotnet工具箱仓库：https://github.com/dotnet9/Dotnet9/tree/develop/src/Dotnetools
+>Dotnet工具箱仓库（基于it-tools）：https://github.com/dotnet9/Dotnet9/tree/develop/src/Dotnetools
 >
 >it-tools仓库：https://github.com/CorentinTh/it-tools
 >
@@ -65,7 +65,7 @@ Dotnet工具箱已有工具如下：
 
 ![](https://img1.dotnet9.com/2023/10/0205.gif)
 
-### 2.1.3. 文本加密、解密
+#### 2.1.3. 文本加密、解密
 
 在线工具访问地址：https://dotnetools.com/encryption
 
@@ -73,7 +73,7 @@ Dotnet工具箱已有工具如下：
 
 ![](https://img1.dotnet9.com/2023/10/0206.png)
 
-### 2.1.4. RSA密钥对生成器
+#### 2.1.4. RSA密钥对生成器
 
 在线工具访问地址：https://dotnetools.com/rsa-key-pair-generator
 
@@ -81,7 +81,7 @@ Dotnet工具箱已有工具如下：
 
 ![](https://img1.dotnet9.com/2023/10/0207.gif)
 
-### 2.1.5. 密码强度分析器
+#### 2.1.5. 密码强度分析器
 
 在线工具访问地址：https://dotnetools.com/password-strength-analyser
 
@@ -292,16 +292,50 @@ slug 清楚地说明了网页的内容，它可以改善用户的体验。
 
 ![](https://img1.dotnet9.com/2023/10/0229.png)
 
+### 2.x. 其他分类
+
+小工具太多，逐一介绍太占篇幅，有兴趣可访问[Dotnet工具箱-为开发人员提供方便的在线工具 (dotnetools.com)](https://dotnetools.com/)探索使用。
+
 ## 3. 开发部署自己的工具站
 
-[it-tools](https://github.com/CorentinTh/it-tools)项目readme说明有比较详细的项目相关说明、Docker网站部署步骤，下面是站长Dotnet工具箱的打包、部署简单说明：
+[it-tools](https://it-tools.tech/)是一个开源项目，站长基于它开发部署了自己的[Dotnet工具站](https://dotnetools.com)，当然您也可以基于[it-tools](https://it-tools.tech/)或[Dotnet工具站](https://dotnetools.com)开发部署自己的工具网站，让我们动起手来试试吧。
+
+### 3.1. 简单部署
+
+[it-tools](https://it-tools.tech/)项目[readme](https://github.com/CorentinTh/it-tools)说明有比较详细的项目相关说明、Docker网站部署步骤，下面是站长Dotnet工具箱的打包、部署简单说明：
 
 1. 克隆项目：https://github.com/dotnet9/Dotnet9
-2. 打开Dotent工具箱目录：./src/Dotnetools
-3. 安装前端开发必要环境：Node
-4. 终端安装依赖：npm install
-5. 终端打包：npm run build
+2. 定位到Dotnet工具箱目录：`./src/Dotnetools`
+3. 安装前端开发必要环境：Node.js
+4. 终端安装依赖：`npm install`
+5. 终端打包：`npm run build`
 6. 复制发布目录到服务器即可。
+
+### 3.2. 修改或扩展自己的工具
+
+每个小工具源码在`./src/Dotnetools/src/tools/`下：
+
+![](https://img1.dotnet9.com/2023/10/0230.png)
+
+在`tools`目录下增加或删除小工具目录后，需要改`src\tools\index.ts`文件，这里组织工具目录列表：
+
+![](https://img1.dotnet9.com/2023/10/0234.png)
+
+### 3.3. 关于翻译
+
+部分小工具支持多语言本地化，可在下图中`src\tools\token-generator`添加或维护语言：
+
+![](https://img1.dotnet9.com/2023/10/0231.png)
+
+`src\plugins\i18n.plugin.ts`配置本地化使用的语言：
+
+![](https://img1.dotnet9.com/2023/10/0232.png)
+
+但大部分工具是未支持多语言的，可直接在`xx.vue或xxx.ts`中直接修改语言(比如：`src\tools\http-status-codes\http-status-codes.vue`)：
+
+![](https://img1.dotnet9.com/2023/10/0233.png)
+
+[Dotnet工具站](https://dotnetools.com)部分视图翻译肯定是存在问题的，欢迎大家提PR纠正。
 
 ## 4. 总结
 
