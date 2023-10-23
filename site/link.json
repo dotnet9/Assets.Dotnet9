@@ -4,223 +4,215 @@
         "Kind": "Friend",
         "Name": "Dotnet工具箱",
         "Description": "Dotnet工具箱为开发人员和IT工作者收集了有用的工具。",
-        "Url": "https://dotnetools.com/"
+        "Url": "https://dotnetools.com/",
+        "Logo": "https://img1.dotnet9.com/dotnetools/favicon.ico"
     },
     {
         "SequenceNumber": 1,
         "Kind": "Owner",
         "Name": "Github",
         "Description": "本站Github源码",
-        "Url": "https://github.com/dotnet9/Dotnet9"
+        "Url": "https://github.com/dotnet9/Dotnet9",
+        "Logo":"https://img1.dotnet9.com/imgs/github.png"
     },
     {
         "SequenceNumber": 2,
         "Kind": "Owner",
         "Name": "Gitee",
         "Description": "本站Gitee源码",
-        "Url": "https://gitee.com/dotnet9/Dotnet9"
+        "Url": "https://gitee.com/dotnet9/Dotnet9",
+        "Logo":"https://img1.dotnet9.com/imgs/mayun.png"
     },
     {
         "SequenceNumber": 3,
         "Kind": "Friend",
         "Name": "Murat Yücedağ",
         "Description": "油管一位大神，专注分享.NET Core技术，有条件可翻过去看看",
-        "Url": "https://www.youtube.com/channel/UCbkbOlw8snP93RJ2BhH44Qw"
+        "Url": "https://www.youtube.com/channel/UCbkbOlw8snP93RJ2BhH44Qw",
+        "Logo":"https://img1.dotnet9.com/site/friendlinks/murat.jpg"
     },
     {
         "SequenceNumber": 4,
         "Kind": "Friend",
         "Name": "老张的哲学",
         "Description": "博客园大佬，学习Vue + .NET CORE Web API的好地方",
-        "Url": "https://www.cnblogs.com/laozhang-is-phi/"
+        "Url": "https://www.cnblogs.com/laozhang-is-phi/",
+        "Logo":"https://img1.dotnet9.com/site/friendlinks/laozhang-is-phi.jpg"
     },
     {
         "SequenceNumber": 5,
         "Kind": "Friend",
         "Name": "林德熙",
         "Description": "WPF大佬",
-        "Url": "https://blog.lindexi.com/"
-    },
-    {
-        "SequenceNumber": 5,
-        "Kind": "Friend",
-        "Name": "KnowledgeBase",
-        "Description": "知识字典",
-        "Url": "https://azrng.gitee.io/kbms"
+        "Url": "https://blog.lindexi.com/",
+        "Logo": "https://blog.lindexi.com/img/avatar.png"
     },
     {
         "SequenceNumber": 6,
         "Kind": "Friend",
         "Name": "YouZack",
         "Description": "YouZack-英语听力精听、背单词",
-        "Url": "https://www.youzack.com/"
+        "Url": "https://www.youzack.com/",
+        "Logo": "https://www.youzack.com/favicon.ico"
     },
     {
         "SequenceNumber": 7,
         "Kind": "Friend",
         "Name": "WTM",
         "Description": "WTM框架把常规编码结构化，重复编码自动化，它不仅是一个框架，它是强有力的生产力工具！",
-        "Url": "https://wtmdoc.walkingtec.cn/"
-    },
-    {
-        "SequenceNumber": 7,
-        "Kind": "Friend",
-        "Name": "Vol开发框架",
-        "Description": ".Net Core+Vue2/Vue3+Element plus+uniapp前后端分离，全自动生成PC与移动端代码；支持移动端(uniapp)ios/android/h5/微信小程序。http://www.volcore.xyz/",
-        "Url": "http://www.volcore.xyz/"
+        "Url": "https://wtmdoc.walkingtec.cn/",
+        "Logo": "https://wtmdoc.walkingtec.cn/favicon.ico"
     },
     {
         "SequenceNumber": 8,
         "Kind": "Friend",
-        "Name": "加菲的博客",
-        "Description": "专注于IT互联网，只有原创，没有转载，只有实践，才会成文。",
-        "Url": "http://randyfield.cn/"
+        "Name": "Vol开发框架",
+        "Description": ".Net Core+Vue2/Vue3+Element plus+uniapp前后端分离，全自动生成PC与移动端代码；支持移动端(uniapp)ios/android/h5/微信小程序。http://www.volcore.xyz/",
+        "Url": "http://www.volcore.xyz/",
+        "Logo": "http://www.volcore.xyz/favicon.ico"
     },
     {
         "SequenceNumber": 9,
         "Kind": "Friend",
-        "Name": "非羽的个人空间",
-        "Description": "坚硬的代替了那些柔软的，清晰的取代了那些模糊的。",
-        "Url": "http://feiyu.vin/"
+        "Name": "可乐不加冰",
+        "Description": "欢迎来到《可乐不加冰》的博客！这是一个专注于DotNet开发的博客，为您带来关于这门令人着迷的编程语言的最新资讯、技巧和实用指南。",
+        "Url": "https://www.okay123.top/",
+        "Logo": "https://www.okay123.top/favicon.ico"
     },
     {
         "SequenceNumber": 10,
         "Kind": "Friend",
-        "Name": "Ant Design of Blazor",
-        "Description": "一套基于 Ant Design 和 Blazor 的企业级组件库",
-        "Url": "https://antblazor.com"
+        "Name": "加菲的博客",
+        "Description": "专注于IT互联网，只有原创，没有转载，只有实践，才会成文。",
+        "Url": "http://randyfield.cn/",
+        "Logo": "http://randyfield.cn/favicon.ico"
     },
     {
         "SequenceNumber": 11,
         "Kind": "Friend",
-        "Name": "MASA Blazor",
-        "Description": "基于Material Design和BlazorComponent的交互能力提供标准的基础组件库。",
-        "Url": "https://blazor.masastack.com/"
+        "Name": "非羽的个人空间",
+        "Description": "坚硬的代替了那些柔软的，清晰的取代了那些模糊的。",
+        "Url": "http://feiyu.vin/",
+        "Logo": "http://feiyu.vin/images/favicon.png"
     },
     {
         "SequenceNumber": 12,
         "Kind": "Friend",
-        "Name": "Bootstrap Blazor",
-        "Description": "Bootstrap 风格的 Blazor UI 组件库",
-        "Url": "https://www.blazor.zone/"
+        "Name": "Ant Design of Blazor",
+        "Description": "一套基于 Ant Design 和 Blazor 的企业级组件库",
+        "Url": "https://antblazor.com",
+        "Logo": "https://antblazor.com/logo.png"
     },
     {
         "SequenceNumber": 13,
         "Kind": "Friend",
+        "Name": "MASA Blazor",
+        "Description": "基于Material Design和BlazorComponent的交互能力提供标准的基础组件库。",
+        "Url": "https://blazor.masastack.com/",
+        "Logo": "https://cdn.masastack.com/stack/images/logo/MASAStack/logo.png"
+    },
+    {
+        "SequenceNumber": 14,
+        "Kind": "Friend",
+        "Name": "Bootstrap Blazor",
+        "Description": "Bootstrap 风格的 Blazor UI 组件库",
+        "Url": "https://www.blazor.zone/",
+        "Logo": "https://www.blazor.zone/favicon.ico"
+    },
+    {
+        "SequenceNumber": 15,
+        "Kind": "Friend",
         "Name": "Furion",
         "Description": "让 .NET 开发更简单，更通用，更流行。",
-        "Url": "https://dotnetchina.gitee.io/furion/"
-    },
-    {
-        "SequenceNumber": 14,
-        "Kind": "Friend",
-        "Name": "懒得勤快",
-        "Description": "一个即有稀缺资源，又有.NET技术博文的网站",
-        "Url": "https://ldqk.xyz/"
-    },
-    {
-        "SequenceNumber": 14,
-        "Kind": "Friend",
-        "Name": "迷恋自留地",
-        "Description": "个人折腾站点，一个C#菜鸡。",
-        "Url": "https://hunji.xyz/"
-    },
-    {
-        "SequenceNumber": 14,
-        "Kind": "Friend",
-        "Name": "AIoTDB物联网",
-        "Description": "一款聚焦物联网、高性能轻量级的时序数据库，为用户提供数据收集、存储和分析等服务",
-        "Url": "https://aiotdb.net"
-    },
-    {
-        "SequenceNumber": 14,
-        "Kind": "Friend",
-        "Name": "痴者工良",
-        "Description": "面向云技术架构 - 痴者工良",
-        "Url": "https://www.whuanle.cn/"
-    },
-    {
-        "SequenceNumber": 15,
-        "Kind": "Friend",
-        "Name": "DotNetJob",
-        "Description": "一个有技术博文的网站",
-        "Url": "https://dotnetjob.cn/"
-    },
-    {
-        "SequenceNumber": 15,
-        "Kind": "Friend",
-        "Name": "52ABP",
-        "Description": "52ABP框架官网",
-        "Url": "https://www.52abp.com/"
+        "Url": "http://furion.baiqian.ltd/",
+        "Logo": "http://furion.baiqian.ltd/img/favicon.ico"
     },
     {
         "SequenceNumber": 16,
         "Kind": "Friend",
-        "Name": "dotnet全栈开发",
-        "Description": "一个分享.NET技术的博主",
-        "Url": "https://blog.csdn.net/kebi007"
+        "Name": "懒得勤快",
+        "Description": "一个即有稀缺资源，又有.NET技术博文的网站",
+        "Url": "https://ldqk.xyz/",
+        "Logo": "https://ldqk.xyz/favicon.png"
     },
     {
         "SequenceNumber": 17,
         "Kind": "Friend",
-        "Name": "HZHControls",
-        "Description": "一个基于.Net Framework4.0,扁平化的、漂亮的、开源的Winform控件库",
-        "Url": "http://www.hzhcontrols.com/"
-    },
-    {
-        "SequenceNumber": 17,
-        "Kind": "Friend",
-        "Name": "程序设计实验室",
-        "Description": "一个技术探索与分享的平台，专注于互联网热门新技术探索与团队敏捷开发实践，包括Web前后端、移动端开发、机器学习、数据分析、算法、Linux等技术，欢迎探讨、分享学习实践经验。",
-        "Url": "http://blog.deali.cn"
+        "Name": "迷恋自留地",
+        "Description": "个人折腾站点，一个C#菜鸡。",
+        "Url": "https://hunji.xyz/",
+        "Logo": "https://s2.ax1x.com/2019/04/15/AjocdA.md.jpg"
     },
     {
         "SequenceNumber": 18,
         "Kind": "Friend",
-        "Name": "江湖人士",
-        "Description": "一个分享建站技术的网站，还有技术哦",
-        "Url": "https://jhrs.com/"
-    },
-    {
-        "SequenceNumber": 18,
-        "Kind": "Friend",
-        "Name": "Token",
-        "Description": "一个热爱.NET技术的token，分享更多技术",
-        "Url": "https://blog.tokengo.top/"
+        "Name": "痴者工良",
+        "Description": "面向云技术架构 - 痴者工良",
+        "Url": "https://www.whuanle.cn/",
+        "Logo": "https://www.whuanle.cn/wp-content/uploads/2019/07/cropped-d07a083fc6534a668cc2d4735cd5d9b6-1-192x192.png"
     },
     {
         "SequenceNumber": 19,
         "Kind": "Friend",
-        "Name": "OneByOneDotNet",
-        "Description": "一个有技术博文的网站",
-        "Url": "https://onebyone.icu/"
+        "Name": "52ABP",
+        "Description": "52ABP框架官网",
+        "Url": "https://www.52abp.com/",
+        "Logo": "https://www.52abp.com/favicon.ico"
     },
     {
         "SequenceNumber": 20,
         "Kind": "Friend",
-        "Name": "Code Life",
-        "Description": "英文技术网站",
-        "Url": "https://znlive.com/"
+        "Name": "dotnet全栈开发",
+        "Description": "一个分享.NET技术的博主",
+        "Url": "https://blog.csdn.net/kebi007",
+        "Logo": "https://blog.csdn.net/favicon.ico"
     },
     {
         "SequenceNumber": 21,
         "Kind": "Friend",
-        "Name": "网上冲浪博客",
-        "Description": "有技术的网站",
-        "Url": "https://iwscl.com/"
+        "Name": "HZHControls",
+        "Description": "一个基于.Net Framework4.0,扁平化的、漂亮的、开源的Winform控件库",
+        "Url": "http://www.hzhcontrols.com/",
+        "Logo": "http://www.hzhcontrols.com/favicon.ico"
     },
     {
         "SequenceNumber": 22,
         "Kind": "Friend",
-        "Name": "Linux常用命令",
-        "Description": "Linux常用命令",
-        "Url": "http://linuxido.com/"
+        "Name": "程序设计实验室",
+        "Description": "一个技术探索与分享的平台，专注于互联网热门新技术探索与团队敏捷开发实践，包括Web前后端、移动端开发、机器学习、数据分析、算法、Linux等技术，欢迎探讨、分享学习实践经验。",
+        "Url": "http://blog.deali.cn",
+        "Logo": "https://blog.sblt.deali.cn:9000/favicon.ico"
     },
     {
         "SequenceNumber": 23,
         "Kind": "Friend",
+        "Name": "江湖人士",
+        "Description": "一个分享建站技术的网站，还有技术哦",
+        "Url": "https://jhrs.com/",
+        "Logo": "https://jhrs.com/favicon.ico"
+    },
+    {
+        "SequenceNumber": 24,
+        "Kind": "Friend",
+        "Name": "Token",
+        "Description": "一个热爱.NET技术的token，分享更多技术",
+        "Url": "https://blog.tokengo.top/",
+        "Logo": "https://blog.tokengo.top/favicon.ico"
+    },
+    {
+        "SequenceNumber": 25,
+        "Kind": "Friend",
+        "Name": "Code Life",
+        "Description": "英文技术网站",
+        "Url": "https://znlive.com/",
+        "Logo": "https://znlive.com/wp-content/uploads/2021/03/cropped-znlive-32x32.png"
+    },
+    {
+        "SequenceNumber": 26,
+        "Kind": "Friend",
         "Name": "King-AbpVnext-Pro",
         "Description": "一个神奇的开箱即用的中后台管理系统解决方案",
-        "Url": "https://menglou.github.io/king-abpvnext-pro"
+        "Url": "https://menglou.github.io/king-abpvnext-pro",
+        "Logo": "https://menglou.github.io/king-abpvnext-pro/_media/icon.jpg"
     }
 ]
