@@ -1,0 +1,191 @@
+[
+    {
+        "Sort": 0,
+        "SiteName": "Dotnet工具箱",
+        "Remark": "Dotnet工具箱为开发人员和IT工作者收集了有用的工具。",
+        "Url": "https://dotnetools.com/",
+        "Logo": "https://img1.dotnet9.com/dotnetools/favicon.ico"
+    },
+    {
+        "Sort": 1,
+        "SiteName": "Github",
+        "Remark": "本站Github源码",
+        "Url": "https://github.com/dotnet9/Dotnet9",
+        "Logo":"https://img1.dotnet9.com/imgs/github.png"
+    },
+    {
+        "Sort": 2,
+        "SiteName": "Gitee",
+        "Remark": "本站Gitee源码",
+        "Url": "https://gitee.com/dotnet9/Dotnet9",
+        "Logo":"https://img1.dotnet9.com/imgs/mayun.png"
+    },
+    {
+        "Sort": 3,
+        "SiteName": "Murat Yücedağ",
+        "Remark": "油管一位大神，专注分享.NET Core技术，有条件可翻过去看看",
+        "Url": "https://www.youtube.com/channel/UCbkbOlw8snP93RJ2BhH44Qw",
+        "Logo":"https://img1.dotnet9.com/site/friendlinks/murat.jpg"
+    },
+    {
+        "Sort": 4,
+        "SiteName": "老张的哲学",
+        "Remark": "博客园大佬，学习Vue + .NET CORE Web API的好地方",
+        "Url": "https://www.cnblogs.com/laozhang-is-phi/",
+        "Logo":"https://img1.dotnet9.com/site/friendlinks/laozhang-is-phi.jpg"
+    },
+    {
+        "Sort": 5,
+        "SiteName": "林德熙",
+        "Remark": "WPF大佬",
+        "Url": "https://blog.lindexi.com/",
+        "Logo": "https://blog.lindexi.com/img/avatar.png"
+    },
+    {
+        "Sort": 6,
+        "SiteName": "YouZack",
+        "Remark": "YouZack-英语听力精听、背单词",
+        "Url": "https://www.youzack.com/",
+        "Logo": "https://www.youzack.com/favicon.ico"
+    },
+    {
+        "Sort": 7,
+        "SiteName": "WTM",
+        "Remark": "WTM框架把常规编码结构化，重复编码自动化，它不仅是一个框架，它是强有力的生产力工具！",
+        "Url": "https://wtmdoc.walkingtec.cn/",
+        "Logo": "https://wtmdoc.walkingtec.cn/favicon.ico"
+    },
+    {
+        "Sort": 8,
+        "SiteName": "Vol开发框架",
+        "Remark": ".Net Core+Vue2/Vue3+Element plus+uniapp前后端分离，全自动生成PC与移动端代码；支持移动端(uniapp)ios/android/h5/微信小程序。http://www.volcore.xyz/",
+        "Url": "http://www.volcore.xyz/",
+        "Logo": "http://www.volcore.xyz/favicon.ico"
+    },
+    {
+        "Sort": 9,
+        "SiteName": "可乐不加冰",
+        "Remark": "欢迎来到《可乐不加冰》的博客！这是一个专注于DotNet开发的博客，为您带来关于这门令人着迷的编程语言的最新资讯、技巧和实用指南。",
+        "Url": "https://www.okay123.top/",
+        "Logo": "https://www.okay123.top/favicon.ico"
+    },
+    {
+        "Sort": 10,
+        "SiteName": "加菲的博客",
+        "Remark": "专注于IT互联网，只有原创，没有转载，只有实践，才会成文。",
+        "Url": "http://randyfield.cn/",
+        "Logo": "http://randyfield.cn/favicon.ico"
+    },
+    {
+        "Sort": 11,
+        "SiteName": "非羽的个人空间",
+        "Remark": "坚硬的代替了那些柔软的，清晰的取代了那些模糊的。",
+        "Url": "http://feiyu.vin/",
+        "Logo": "http://feiyu.vin/images/favicon.png"
+    },
+    {
+        "Sort": 12,
+        "SiteName": "Ant Design of Blazor",
+        "Remark": "一套基于 Ant Design 和 Blazor 的企业级组件库",
+        "Url": "https://antblazor.com",
+        "Logo": "https://antblazor.com/logo.png"
+    },
+    {
+        "Sort": 13,
+        "SiteName": "MASA Blazor",
+        "Remark": "基于Material Design和BlazorComponent的交互能力提供标准的基础组件库。",
+        "Url": "https://blazor.masastack.com/",
+        "Logo": "https://cdn.masastack.com/stack/images/logo/MASAStack/logo.png"
+    },
+    {
+        "Sort": 14,
+        "SiteName": "Bootstrap Blazor",
+        "Remark": "Bootstrap 风格的 Blazor UI 组件库",
+        "Url": "https://www.blazor.zone/",
+        "Logo": "https://www.blazor.zone/favicon.ico"
+    },
+    {
+        "Sort": 15,
+        "SiteName": "Furion",
+        "Remark": "让 .NET 开发更简单，更通用，更流行。",
+        "Url": "http://furion.baiqian.ltd/",
+        "Logo": "http://furion.baiqian.ltd/img/favicon.ico"
+    },
+    {
+        "Sort": 16,
+        "SiteName": "懒得勤快",
+        "Remark": "一个即有稀缺资源，又有.NET技术博文的网站",
+        "Url": "https://ldqk.xyz/",
+        "Logo": "https://ldqk.xyz/favicon.png"
+    },
+    {
+        "Sort": 17,
+        "SiteName": "迷恋自留地",
+        "Remark": "个人折腾站点，一个C#菜鸡。",
+        "Url": "https://hunji.xyz/",
+        "Logo": "https://s2.ax1x.com/2019/04/15/AjocdA.md.jpg"
+    },
+    {
+        "Sort": 18,
+        "SiteName": "痴者工良",
+        "Remark": "面向云技术架构 - 痴者工良",
+        "Url": "https://www.whuanle.cn/",
+        "Logo": "https://www.whuanle.cn/wp-content/uploads/2019/07/cropped-d07a083fc6534a668cc2d4735cd5d9b6-1-192x192.png"
+    },
+    {
+        "Sort": 19,
+        "SiteName": "52ABP",
+        "Remark": "52ABP框架官网",
+        "Url": "https://www.52abp.com/",
+        "Logo": "https://www.52abp.com/favicon.ico"
+    },
+    {
+        "Sort": 20,
+        "SiteName": "dotnet全栈开发",
+        "Remark": "一个分享.NET技术的博主",
+        "Url": "https://blog.csdn.net/kebi007",
+        "Logo": "https://blog.csdn.net/favicon.ico"
+    },
+    {
+        "Sort": 21,
+        "SiteName": "HZHControls",
+        "Remark": "一个基于.Net Framework4.0,扁平化的、漂亮的、开源的Winform控件库",
+        "Url": "http://www.hzhcontrols.com/",
+        "Logo": "http://www.hzhcontrols.com/favicon.ico"
+    },
+    {
+        "Sort": 22,
+        "SiteName": "程序设计实验室",
+        "Remark": "一个技术探索与分享的平台，专注于互联网热门新技术探索与团队敏捷开发实践，包括Web前后端、移动端开发、机器学习、数据分析、算法、Linux等技术，欢迎探讨、分享学习实践经验。",
+        "Url": "http://blog.deali.cn",
+        "Logo": "https://blog.sblt.deali.cn:9000/favicon.ico"
+    },
+    {
+        "Sort": 23,
+        "SiteName": "江湖人士",
+        "Remark": "一个分享建站技术的网站，还有技术哦",
+        "Url": "https://jhrs.com/",
+        "Logo": "https://jhrs.com/favicon.ico"
+    },
+    {
+        "Sort": 24,
+        "SiteName": "Token",
+        "Remark": "一个热爱.NET技术的token，分享更多技术",
+        "Url": "https://blog.tokengo.top/",
+        "Logo": "https://blog.tokengo.top/favicon.ico"
+    },
+    {
+        "Sort": 25,
+        "SiteName": "Code Life",
+        "Remark": "英文技术网站",
+        "Url": "https://znlive.com/",
+        "Logo": "https://znlive.com/wp-content/uploads/2021/03/cropped-znlive-32x32.png"
+    },
+    {
+        "Sort": 26,
+        "SiteName": "King-AbpVnext-Pro",
+        "Remark": "一个神奇的开箱即用的中后台管理系统解决方案",
+        "Url": "https://menglou.github.io/king-abpvnext-pro",
+        "Logo": "https://menglou.github.io/king-abpvnext-pro/_media/icon.jpg"
+    }
+]
