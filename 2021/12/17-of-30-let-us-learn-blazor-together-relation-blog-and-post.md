@@ -3,7 +3,7 @@ title: (17/30)大家一起学Blazor：建立Blog和Post关联
 slug: 17-of-30-let-us-learn-blazor-together-relation-blog-and-post
 description: 接下来就是讲跟数据库关联的内容了，会着重说明ASP.NET Core 跟EF Core，如果有需要改页面才会说到Blazor，这边会花比较多篇幅着墨。
 date: 2021-12-19 18:56:17
-copyright: Reprint
+copyright: Reprinted
 author: StrayaWorker
 originaltitle: (17/30)大家一起学Blazor：建立Blog和Post关联
 originallink: https://ithelp.ithome.com.tw/articles/10266555

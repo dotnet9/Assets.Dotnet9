@@ -3,7 +3,7 @@ title: ASP.NET Core WebAPI实现本地化（单资源文件）
 slug: ASP-dotNet-Core-WebApi-for-localization-use-single-resource-file
 description: 微软默认的是一个类对应多个资源文件的方式，使用起来是比较麻烦的，本文介绍单资源文件使用方式，即整个项目所有类对应一套多语言资源文件。
 date: 2022-06-22 22:37:47
-copyright: Reprint
+copyright: Reprinted
 author: HueiFeng
 originaltitle: ASP.NET Core WebAPI实现本地化（单资源文件）
 originallink: https://www.cnblogs.com/yyfh/archive/2020/05/30/12995208.html

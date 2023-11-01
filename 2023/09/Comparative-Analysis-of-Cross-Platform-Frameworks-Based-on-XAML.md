@@ -4,7 +4,7 @@ slug: Comparative-Analysis-of-Cross-Platform-Frameworks-Based-on-XAML
 description: 多年来，基于XAML的UI框架已经有了很大的发展。这些框架主要包含：支持跨平台应用的Avalonia UI, Uno Platform和 .NET MAUI。如果微软早点推出一个类似Flutter这样的跨平台UI框架，我们可能就不会有这么多的选择。
 date: 2023-09-09 21:40:18
 lastmod: 2023-09-21 22:15:23
-copyright: Reprint
+copyright: Reprinted
 author: czwy
 originaltitle: 【译】基于XAML的跨平台框架对比分析
 originallink: https://www.cnblogs.com/czwy/p/17572226.html

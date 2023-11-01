@@ -3,7 +3,7 @@ title: 保证接口数据安全的10种方案
 slug: 10-Solutions-to-Ensure-Interface-Data-Security
 description: 我们日常开发中，如何保证接口数据的安全性呢？
 date: 2022-07-16 14:04:14
-copyright: Reprint
+copyright: Reprinted
 author: 捡田螺的小男孩
 originaltitle: 保证接口数据安全的10种方案
 originallink: https://mp.weixin.qq.com/s/xcKXtB6Ck-phhua2fY4aYw

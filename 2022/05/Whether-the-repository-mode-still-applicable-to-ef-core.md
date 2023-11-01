@@ -3,7 +3,7 @@ title: 仓储模式是否依然适用于EF Core？
 slug: Whether-the-repository-mode-still-applicable-to-ef-core
 description: 昨天『.NET 大牛之路』群里的小伙伴们谈论了使用 EF Core 实现仓储模式的话题，我想起以前看过一篇一名国外大佬写的文章，觉得非常有参考价值。
 date: 2022-05-04 16:04:32
-copyright: Reprint
+copyright: Reprinted
 author: liamwang 精致码农
 originaltitle: 仓储模式是否依然适用于EF Core？
 originallink: https://mp.weixin.qq.com/s/DyzREfZbtZVOQ5MbIQ46cg

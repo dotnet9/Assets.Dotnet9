@@ -4,7 +4,7 @@ slug: ChatGPT
 description: 资源分享
 date: 2023-03-23 20:52:47
 lastmod: 2023-03-23 21:55:32
-copyright: Default
+copyright: Original
 draft: false
 cover: https://img1.dotnet9.com/2023/03/cover_13.jpg
 categories: 科技生活

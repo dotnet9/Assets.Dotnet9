@@ -4,7 +4,7 @@ slug: Intercept-tamper-with-and-forge-classes-and-methods-in-the-dotNET-class-li
 description: 本文除了回顾拦截.NET类库中的方法，实现方法参数的篡改、方法返回结果的伪造，再着重介绍.NET类库中非public类及方法如何拦截。
 date: 2023-09-22 20:49:57
 lastmod: 2023-09-23 12:31:32
-copyright: Default
+copyright: Original
 draft: false
 cover: https://img1.dotnet9.com/2023/09/cover_07.png
 categories: .NET相关

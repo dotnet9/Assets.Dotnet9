@@ -3,7 +3,7 @@ title: @机器人 能万字详细说说C# 的委托和事件吗？
 slug: Can-robots-talk-about-the-commission-and-events-of-Csharp-in-ten-thousand-words
 description: 昨晚站长与ChatGPT的一个问答，大家看它回答的标准不?
 date: 2023-03-07 09:06:35
-copyright: Default
+copyright: Original
 author: 机器人
 draft: false
 cover: https://img1.dotnet9.com/2023/03/cover_03.jpg

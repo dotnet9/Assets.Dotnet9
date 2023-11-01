@@ -3,11 +3,11 @@ title: 低调使用：全网音乐免费听，WOW！
 slug: Low-key-use-listen-to-the-whole-network-music-for-free-wow
 description: 一直以来，听歌都是热门需求，音乐可以说是人类的重要的精神粮食之一，但是现在的音乐版权都被几大音乐平台瓜分。`即使在一个平台充了会员，也不一定能听到想听的歌`，这一点与国外的流媒体音乐平台不同。
 date: 2022-04-09 22:23:12
-copyright: Default
+copyright: Original
 originaltitle: 低调使用：全网音乐免费听，WOW！
 draft: False
 cover: https://img1.dotnet9.com/2022/04/0601.png
-categories: WPF,Flutter,软件分享
+categories: WPF
 ---
 
 大家好，我是程序员小黑，每天给大家更新各种免费手机软件、各种好玩有趣的功能福利！

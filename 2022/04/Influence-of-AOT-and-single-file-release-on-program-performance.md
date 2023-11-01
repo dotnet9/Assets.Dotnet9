@@ -3,7 +3,7 @@ title: AOT和单文件发布对程序性能的影响
 slug: Influence-of-AOT-and-single-file-release-on-program-performance
 description: 以前的.NET框架原生并不支持最终编译结果的单文件发布（需要依赖第三方工具）
 date: 2022-04-20 07:31:25
-copyright: Reprint
+copyright: Reprinted
 author: InCerry
 originaltitle: AOT和单文件发布对程序性能的影响
 originallink: https://www.cnblogs.com/InCerry/p/Single-File-And-AOT-Publish.html

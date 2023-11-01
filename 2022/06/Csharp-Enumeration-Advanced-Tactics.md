@@ -3,7 +3,7 @@ title: C# 枚举高级战术
 slug: Csharp-Enumeration-Advanced-Tactics
 description: 阅读体验好，也不容易编错
 date: 2022-06-02 21:32:27
-copyright: Reprint
+copyright: Reprinted
 author: liamwang 精致码农
 originaltitle: C# 枚举高级战术
 originallink: https://mp.weixin.qq.com/s/gKUIEVoG4aW69x6ExIMvYg

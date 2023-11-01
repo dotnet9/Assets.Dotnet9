@@ -3,7 +3,7 @@ title: 用WPF做一个思维导图
 slug: Using-WPF-to-create-a-mind-map
 description: 思维导图、目录组织图、鱼骨头图、逻辑结构图、组织结构图
 date: 2023-04-05 09:23:17
-copyright: Contribution
+copyright: Contributes
 author: 竹天笑
 originaltitle: 用Wpf做一个思维导图（续3-Diagram画板）
 originallink: https://www.cnblogs.com/akwkevin/p/17288814.html

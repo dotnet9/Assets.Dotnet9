@@ -3,7 +3,7 @@ title: 劳动仲裁回忆录（四）：仲裁庭开庭审理
 slug: Memoirs-of-labor-arbitration-4-hearing-of-the-arbitration-tribunal
 description: 个人全程劳动仲裁实录
 date: 2022-03-17 23:18:23
-copyright: Reprint
+copyright: Reprinted
 author: 逃离沙漠
 originaltitle: 劳动仲裁回忆录（四）：仲裁庭开庭审理
 originallink: https://mp.weixin.qq.com/s/JLoj3bCrU3HJFZdyPHuMZQ

@@ -3,7 +3,7 @@ title: 一个适合于.NET Core的超轻量级工作流引擎：Workflow-Core
 slug: An-ultra-lightweight-workflow-engine-suitable-for-dotNET-Workflow-Core
 description: 听说有workflow的东西，没有搞明白到底能够用它做什么。
 date: 2023-02-6 22:36:12
-copyright: Reprint
+copyright: Reprinted
 author: Jimmy.Tang
 originaltitle: 一个适合于.NET Core的超轻量级工作流引擎：Workflow-Core
 originallink: https://www.cnblogs.com/keep-study-to-die/p/12001408.html

@@ -3,7 +3,7 @@ title: 善用Xcode快捷键，提高您的生产力
 slug: use-xcode-shortcuts-to-increase-your-productivity
 description: 如果你是一个iOS、macOS、tvOS或watchOS的开发者，Xcode或许是你最常接触的IDE。
 date: 2021-06-22 22:57:07
-copyright: Default
+copyright: Original
 originaltitle: 善用Xcode快捷键，提高您的生产力
 draft: False
 cover: https://img1.dotnet9.com/2021/06/cover_02.jpg

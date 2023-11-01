@@ -3,7 +3,7 @@ title: 使用C#实现23种常见的设计模式
 slug: Using-Csharp-to-Implement-23-Common-Design-Patterns
 description: 这些模式是用于解决常见的对象导向设计问题的最佳实践。
 date: 2023-06-08 21:51:48
-copyright: Reprint
+copyright: Reprinted
 author: Token
 originaltitle: 使用C#实现23种常见的设计模式
 originallink: https://blog.tokengo.top/blog?id=28

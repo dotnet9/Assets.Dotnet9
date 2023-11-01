@@ -3,7 +3,7 @@ title: Flutter 3 发布了(文末推荐一个免费的在线Flutter学习教程)
 slug: Introducing-Flutter-3
 description: Flutter 3发布了，你还在等什么呢？一起来了解、学习吧！！！
 date: 2022-05-12 08:25:17
-copyright: Default
+copyright: Original
 originaltitle: Flutter 3 发布了(文末推荐一个免费的在线Flutter学习教程)
 draft: False
 cover: https://img1.dotnet9.com/2022/05/cover_35.png

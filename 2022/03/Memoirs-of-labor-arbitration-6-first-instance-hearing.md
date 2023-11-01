@@ -3,7 +3,7 @@ title: 劳动仲裁回忆录（六）：一审开庭
 slug: Memoirs-of-labor-arbitration-6-first-instance-hearing
 description: 个人全程劳动仲裁实录
 date: 2022-03-17 23:31:23
-copyright: Reprint
+copyright: Reprinted
 author: 逃离沙漠
 originaltitle: 劳动仲裁回忆录（六）：一审开庭
 originallink: https://mp.weixin.qq.com/s/O9oOq5MHXbfmiKUa3e74fQ

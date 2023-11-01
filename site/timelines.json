@@ -1,5 +1,30 @@
 [
   {
+    "Time": "2023-11-01",
+    "Title": "Dotnet9重构完成上线",
+    "Content": "Dotnet9重构完成上线，可以在此基础上慢慢优化了"
+  },
+  {
+    "Time": "2023-10-21",
+    "Title": "重构Dotnet9博客网站",
+    "Content": "参考开源项目（https://gitee.com/miss_you/easy-admin）和它的在线博客网站（https://gitee.com/miss_you/easy-admin)重构Dotnet9博客网站"
+  },
+  {
+    "Time": "2023-10-13",
+    "Title": "重新整理上线Dotnet工具箱：dotnetools.com",
+    "Content": "参考开源项目（https://github.com/CorentinTh/it-tools）和它的在线工具网站（https://it-tools.tech)重新开发Dotnet工具箱，使用Vue3重构"
+  },
+  {
+    "Time": "2023-09-17",
+    "Title": "挽回Razor Pages开发网站",
+    "Content": "Blazor开发前台体验还是差强人意，换回原来的版本"
+  },
+  {
+    "Time": "2023-07-02",
+    "Title": "整理Blazor版Dotnet工具箱：dotnetools.com",
+    "Content": "参考国外的Blazor游戏（https://blazorgames.net/）和网上常用的在线工具开发Blazor版本的在线工具和游戏"
+  },
+  {
     "Time": "2023-06-22",
     "Title": "前台回归Blazor Server版本上线",
     "Content": ".NET 8 Preview 5体验Blazor Web App，在Razor Pages中添加Razor组件，但添加的时间戳工具无交互能力，索性全部改为Blazor Server上线了"

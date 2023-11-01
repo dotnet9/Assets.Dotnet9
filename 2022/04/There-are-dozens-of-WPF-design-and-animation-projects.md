@@ -3,7 +3,7 @@ title: 有几十个WPF设计和动画的项目
 slug: There-are-dozens-of-WPF-design-and-animation-projects
 description: 这是一个 WPF 项目，用于创作及收集一些好玩的设计和动画。目前已有数十个 Demo，部分 Demo 有相关博客介绍详细的实现步骤和原理
 date: 2022-04-17 17:51:36
-copyright: Reprint
+copyright: Reprinted
 author: dino.c
 originaltitle: 有几十个WPF设计和动画的项目
 originallink: https://github.com/DinoChan/wpf_design_and_animation_lab

@@ -3,7 +3,7 @@ title: 10 微秒级别性能！C# 开发的离线IP地址库
 slug: 10-microsecond-level-performance-Offline-IP-address-library-developed-by-Csharp
 description: ip2region v2.0 - 是一个离线IP地址定位库和IP定位数据管理框架，10微秒级别的查询效率，提供了众多主流编程语言的 xdb 数据生成和查询客户端实现。
 date: 2023-07-07 01:08:39
-copyright: Reprint
+copyright: Reprinted
 author: 工具箱
 originaltitle: 10 微秒级别性能！C# 开发的离线IP地址库
 originallink: https://mp.weixin.qq.com/s/h3yG5tod1Cs-KNRZQo1xNA

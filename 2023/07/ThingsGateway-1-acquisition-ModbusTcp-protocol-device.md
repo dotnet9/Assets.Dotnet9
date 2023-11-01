@@ -3,7 +3,7 @@ title: ThingsGateway(一)采集ModbusTcp协议设备
 slug: ThingsGateway-1-acquisition-ModbusTcp-protocol-device
 description: ThingsGateway是国内新生开源项目,归属工业数据采集网关,经过近四个月的洗礼,已经趋于稳定。
 date: 2023-07-16 15:55:27
-copyright: Contribution
+copyright: Contributes
 author: Diego
 draft: false
 cover: https://img1.dotnet9.com/2023/05/cover_02.png

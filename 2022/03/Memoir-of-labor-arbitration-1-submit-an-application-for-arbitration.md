@@ -3,7 +3,7 @@ title: 劳动仲裁回忆录（一）：提交仲裁申请
 slug: Memoir-of-labor-arbitration-1-submit-an-application-for-arbitration
 description: 个人全程劳动仲裁实录
 date: 2022-03-17 23:05:13
-copyright: Reprint
+copyright: Reprinted
 author: 逃离沙漠
 originaltitle: 劳动仲裁回忆录（一）：提交仲裁申请
 originallink: https://mp.weixin.qq.com/s/jBIbbEU2FPhMJDg78uvioQ

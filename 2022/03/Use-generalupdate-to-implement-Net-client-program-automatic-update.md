@@ -3,7 +3,7 @@ title: 使用GeneralUpdate实现.NET客户端程序自动更新
 slug: Use-generalupdate-to-implement-Net-client-program-automatic-update
 description: .NET自动更新框架推荐
 date: 2022-03-26 09:28:33
-copyright: Reprint
+copyright: Reprinted
 author: 星悬_月
 originaltitle: 使用GeneralUpdate实现.NET客户端程序自动更新
 originallink: https://blog.csdn.net/u012441819/article/details/122978250

@@ -3,7 +3,7 @@ title: Coravel是.NetCore中开源的工具库，可以让你使用定时任务�
 slug: Using-cron-tasks-caches-queues-events-broadcasts-and-more-is-a-breeze-with-Coravel
 description: Coravel 帮助开发人员在不影响代码质量的情况下快速启动和运行他们的 .NET Core 应用程序。
 date: 2022-07-07 07:34:12
-copyright: Reprint
+copyright: Reprinted
 author: 黑哥聊dotNet
 originaltitle: Coravel是.NetCore中开源的工具库，可以让你使用定时任务，缓存，队列，事件，广播等高级应用程序变得轻而易举！
 originallink: https://mp.weixin.qq.com/s/q6mNrmulYKnnhqLKxubz2A

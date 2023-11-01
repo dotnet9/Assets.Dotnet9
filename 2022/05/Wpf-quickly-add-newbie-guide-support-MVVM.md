@@ -3,7 +3,7 @@ title: WPF|快速添加新手引导功能（支持MVVM）
 slug: Wpf-quickly-add-newbie-guide-support-MVVM
 description: 使用这个WPF库，快速的给你的应用程序添加新手引导功能
 date: 2022-05-23 23:37:54
-copyright: Default
+copyright: Original
 originaltitle: WPF|快速添加新手引导功能（支持MVVM）
 draft: False
 cover: https://img1.dotnet9.com/2022/05/5201.gif

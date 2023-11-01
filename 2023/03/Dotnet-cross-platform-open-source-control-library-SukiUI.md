@@ -3,7 +3,7 @@ title: .NET跨平台开源控件库-SukiUI
 slug: Dotnet-cross-platform-open-source-control-library-SukiUI
 description: 作者以他的宠物狗命名的控件库
 date: 2023-03-13 22:16:47
-copyright: Default
+copyright: Original
 draft: false
 cover: https://img1.dotnet9.com/2023/03/suki_photo.jpg
 categories: Avalonia UI

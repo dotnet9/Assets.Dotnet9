@@ -3,7 +3,7 @@ title: .NET 项目集成 OAuth2 登录最全面的、最方便的框架
 slug: The-dotNet-project-integrates-the-most-comprehensive-and-convenient-framework-for-oauth2-login
 description: MrHuo.OAuth 是 .NET 项目集成 OAuth2 登录最全面的、最方便的框架
 date: 2022-04-12 22:48:23
-copyright: Reprint
+copyright: Reprinted
 author: mrhuo
 originaltitle: .NET 项目集成 OAuth2 登录最全面的、最方便的框架
 originallink: https://github.com/mrhuo/MrHuo.OAuth

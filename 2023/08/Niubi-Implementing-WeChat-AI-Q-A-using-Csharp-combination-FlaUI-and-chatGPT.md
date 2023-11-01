@@ -3,7 +3,7 @@ title: 牛逼：使用C#组合FlaUI和chatGPT实现微信AI问答
 slug: Niubi-Implementing-WeChat-AI-Q-A-using-Csharp-combination-FlaUI-and-chatGPT
 description: 基于FlaUI自动化+chatGPT实现微信自动回复
 date: 2023-08-30 19:57:19
-copyright: Reprint
+copyright: Contributes
 author: 且听风吟
 originaltitle: 基于FlaUI自动化+chatGPT实现微信自动回复
 originallink: https://blog.csdn.net/ftfmatlab/article/details/132589169

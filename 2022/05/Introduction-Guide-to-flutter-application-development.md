@@ -3,7 +3,7 @@ title: Flutter应用开发入门指南
 slug: Introduction-Guide-to-flutter-application-development
 description: 随着跨平台开发在软件交付市场上的迅速流行，全球顶尖的移动应用开发公司也聚焦到了该领域。
 date: 2022-05-06 06:12:41
-copyright: Reprint
+copyright: Reprinted
 author: 51CTO
 originaltitle: Flutter应用开发入门指南
 originallink: https://baijiahao.baidu.com/s?id=1727350760917736118&wfr=spider&for=pc

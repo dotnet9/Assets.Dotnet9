@@ -3,7 +3,8 @@ title: WPF开发的实用小工具 - 快捷悬浮菜单
 slug: wpf-development-of-practical-gadgets-shortcut-menu
 description: 本文由网友投稿，Dotnet9站长整理。站长觉得这小工具很实用，站长家里、公司也在尝试使用了。
 date: 2020-11-29 22:50:35
-copyright: Default
+copyright: Contributes
+author: 闫金华（闫驚鏵）
 originaltitle: WPF开发的实用小工具 - 快捷悬浮菜单
 draft: False
 cover: https://img1.dotnet9.com/2020/11/cover_01.png

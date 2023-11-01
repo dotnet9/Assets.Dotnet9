@@ -3,7 +3,7 @@ title: WPF 英雄联盟
 slug: WPF-LOL
 description: 您可以了解如何正确实施 WPF 项目
 date: 2022-06-09 23:11:27
-copyright: Reprint
+copyright: Reprinted
 author:  驚鏵 WPF开发者
 originaltitle: WPF 英雄联盟
 originallink: https://mp.weixin.qq.com/s/vgha1ZRGYU40zR6g7v_1uA

@@ -3,7 +3,7 @@ title: C#/.Net 不要再使用Aspose和iTextSharp啦！QuestPDF操作生成PDF�
 slug: dotNet-stop-using-Aspose-or-iTextSharp-Questpdf-operation-generates-PDF-faster-and-more-efficient
 description: 它提供了一个布局引擎，设计时考虑到了完整的分页支持以及灵活性要求！比市面上常见的Aspose和iTextSharp好用太多了！
 date: 2022-04-23 13:55:39
-copyright: Reprint
+copyright: Reprinted
 author: 黑哥聊dotNet
 originaltitle: C#/.Net 不要再使用Aspose和iTextSharp啦！QuestPDF操作生成PDF更快更高效！
 originallink: https://mp.weixin.qq.com/s/TZp2PwHd9VRZk6_sdW4cQw

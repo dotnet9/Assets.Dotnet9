@@ -3,7 +3,7 @@ title: 如果诸葛亮会编程，用Java写出师表...
 slug: if-zhuge-liang-can-program-write-a-teacher-s-example-in-java
 description: 继上一篇 《如果诸葛亮用C#写出师表...》后，站长想自己的第一语言是Java，虽然平时工作上用的不多，也用Java实现一遍吧，改改就是了
 date: 2021-03-19 10:28:09
-copyright: Default
+copyright: Original
 originaltitle: 如果诸葛亮会编程，用Java写出师表...
 draft: False
 cover: https://img1.dotnet9.com/2021/03/cover_01.jpeg

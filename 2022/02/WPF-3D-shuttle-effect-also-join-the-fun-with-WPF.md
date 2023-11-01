@@ -3,7 +3,7 @@ title: WPF 3D穿梭效果，用WPF也凑凑热闹
 slug: WPF-3D-shuttle-effect-also-join-the-fun-with-WPF
 description: 相对CSS和UWP，老牌的WPF对于3D效果的操作是相对繁琐的。 要首先做出3D模型，接着旋转XY轴，其次调整Z轴拉伸，最后一步调整FOV。 穿梭效果要靠这Z轴拉伸的数字决定
 date: 2022-02-21 13:58:11
-copyright: Reprint
+copyright: Reprinted
 author: ARM830
 originaltitle: WPF 3D穿梭效果，用WPF也凑凑热闹
 originallink: https://www.cnblogs.com/T-ARF/p/15552980.html

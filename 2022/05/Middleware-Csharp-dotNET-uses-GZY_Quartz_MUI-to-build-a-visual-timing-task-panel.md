@@ -3,7 +3,7 @@ title: 【中间件】C#/.NET使用GZY.Quartz.MUI搭建可视化的定时任务�
 slug: Middleware-Csharp-dotNET-uses-GZY_Quartz_MUI-to-build-a-visual-timing-task-panel
 description: 帮助开发人员通过面板来设置定时任务，主要想做的就是像SwaggerUI一样,项目入侵量小,仅需要在Startup中注入的UI组件
 date: 2022-05-26 20:17:45
-copyright: Reprint
+copyright: Reprinted
 author: 黑哥聊dotNet
 originaltitle: 【中间件】C#/.NET使用GZY.Quartz.MUI搭建可视化的定时任务面板
 originallink: https://mp.weixin.qq.com/s/6Ik5Igi2ei7QTQxanVayCQ

@@ -3,7 +3,7 @@ title: (2/30)大家一起学Blazor：网页和Blazor介绍
 slug: 2-of-30-let-us-learn-blazor-together-web-and-blazor-introduction
 description: 笔者对网站的认知为前端、后端及数据库，使用者在浏览器页面按下按钮或是表单请求，触发前端事件，将收集起来的条件打包送往后端
 date: 2021-12-09 23:04:23
-copyright: Reprint
+copyright: Reprinted
 author: StrayaWorker
 originaltitle: (2/30)大家一起学Blazor：网页和Blazor介绍
 originallink: https://ithelp.ithome.com.tw/articles/10258950

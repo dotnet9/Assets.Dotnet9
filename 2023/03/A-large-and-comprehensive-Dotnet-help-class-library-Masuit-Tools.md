@@ -3,7 +3,7 @@ title: 一个大而全的.NET帮助类库-Masuit.Tools
 slug: A-large-and-comprehensive-Dotnet-help-class-library-Masuit-Tools
 description: 包含一些常用的操作类，大都是静态类
 date: 2023-03-11 14:58:14
-copyright: Reprint
+copyright: Reprinted
 author: 懒得勤快
 originaltitle: 一个大而全的.NET帮助类库-Masuit.Tools
 originallink: https://github.com/ldqk/Masuit.Tools

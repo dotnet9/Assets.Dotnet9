@@ -3,7 +3,7 @@ title: 利用Inno Setup在VS编译时自动构建安装包
 slug: Using-Inno-Setup-to-automatically-build-installation-packages-during-VS-compilation
 description: 很多C/S开发领域的同学或多或少都可能会遇到需要制作安装包的场景，打包的工具也是五花八门。
 date: 2023-07-20 23:35:16
-copyright: Contribution
+copyright: Contributes
 author: 傲慢与偏见
 originaltitle: 利用Inno Setup在VS编译时自动构建安装包
 originallink: https://www.cnblogs.com/chonglu/p/17566940.html

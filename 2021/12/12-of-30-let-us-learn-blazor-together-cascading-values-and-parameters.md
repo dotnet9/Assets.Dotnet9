@@ -3,7 +3,7 @@ title: (12/30)大家一起学Blazor：Cascading values and parameters
 slug: 12-of-30-let-us-learn-blazor-together-cascading-values-and-parameters
 description: 昨天不小心把Reset按钮的type改成button，今天改回reset。
 date: 2021-12-15 23:38:24
-copyright: Reprint
+copyright: Reprinted
 author: StrayaWorker
 originaltitle: (12/30)大家一起学Blazor：Cascading values and parameters
 originallink: https://ithelp.ithome.com.tw/articles/10262797

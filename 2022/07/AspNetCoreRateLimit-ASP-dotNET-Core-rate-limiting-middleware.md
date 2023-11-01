@@ -3,7 +3,7 @@ title: AspNetCoreRateLimit - ASP.NET Core 速率限制中间件
 slug: AspNetCoreRateLimit-ASP-dotNET-Core-rate-limiting-middleware
 description: AspNetCoreRateLimit 是一种 ASP.NET Core 速率限制解决方案
 date: 2022-07-12 20:26:47
-copyright: Reprint
+copyright: Reprinted
 author: 黑哥聊dotNet
 originaltitle: AspNetCoreRateLimit - ASP.NET Core 速率限制中间件
 originallink: https://mp.weixin.qq.com/s/URLZCyrLWM-NEM8eMvnVhw

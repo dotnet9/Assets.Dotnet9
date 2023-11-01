@@ -3,7 +3,7 @@ title: 初识MASA Blazor
 slug: First-met-Masa-blazor
 description: 一个Mateial风格的开源Blazor组件库
 date: 2022-01-12 22:12:04
-copyright: Reprint
+copyright: Reprinted
 author: MASA技术团队
 originaltitle: 初识MASA Blazor
 originallink: https://www.cnblogs.com/MASA/p/15766886.html

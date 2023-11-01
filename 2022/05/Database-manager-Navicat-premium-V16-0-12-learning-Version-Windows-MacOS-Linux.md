@@ -3,7 +3,7 @@ title: 数据库管理利器——Navicat Premium v16.0.12学习版(Windows+MacO
 slug: Database-manager-Navicat-premium-V16-0-12-learning-Version-Windows-MacOS-Linux
 description: Navicat Premium 是一套数据库管理工具，让你以单一程序同時连接到 MySQL、MariaDB、SQL Server、SQLite、Oracle 和 PostgreSQL 数据库。
 date: 2022-05-06 07:12:11
-copyright: Reprint
+copyright: Reprinted
 author: 懒得勤快
 originaltitle: 数据库管理利器——Navicat Premium v16.0.12学习版(Windows+MacOS+Linux)
 originallink: https://ldqk.xyz/37?t=uptjw5h2j0n4

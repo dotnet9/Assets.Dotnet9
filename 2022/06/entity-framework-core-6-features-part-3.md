@@ -3,7 +3,7 @@ title: EF Core 6 新功能汇总（三）
 slug: entity-framework-core-6-features-part-3
 description: 在这篇文章中，我将重点介绍 EF Core 6 中 LINQ 查询功能的增强。
 date: 2022-06-02 22:02:35
-copyright: Reprint
+copyright: Reprinted
 author: liamwang 精致码农
 originaltitle: EF Core 6 新功能汇总（三）
 originallink: https://mp.weixin.qq.com/s/ZRNu1Lvx6ZYr0kStMjc_Ug

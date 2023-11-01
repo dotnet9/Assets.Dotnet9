@@ -3,7 +3,7 @@ title: 开箱即用，基于 C# 和 Blazor 开发的前后端分离快速开发�
 slug: Out-of-the-box-fast-development-framework-for-front-end-and-back-end-separation-based-on-Csharp-and-Blazor-development
 description: Known是基于C#和Blazor开发的前后端分离快速开发框架，开箱即用，跨平台，一处代码，多处运行。
 date: 2023-07-07 00:58:32
-copyright: Reprint
+copyright: Reprinted
 author: Known
 originaltitle: 开箱即用，基于 C# 和 Blazor 开发的前后端分离快速开发框架
 originallink: https://mp.weixin.qq.com/s/149wzCSfADo2IloXipQq9w

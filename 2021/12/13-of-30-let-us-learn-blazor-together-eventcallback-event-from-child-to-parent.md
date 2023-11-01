@@ -3,7 +3,7 @@ title: (13/30)大家一起学Blazor：EventCallback, event from child to parent
 slug: 13-of-30-let-us-learn-blazor-together-eventcallback-event-from-child-to-parent
 description: 目前的4篇日志是来自我们写好的假数据，但正常来说不会这样做，而是有个按钮让用户点击了之后，增加或减少日志的数量。
 date: 2021-12-16 20:48:19
-copyright: Reprint
+copyright: Reprinted
 author: StrayaWorker
 originaltitle: (13/30)大家一起学Blazor：EventCallback, event from child to parent
 originallink: https://ithelp.ithome.com.tw/articles/10262982

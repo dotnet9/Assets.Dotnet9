@@ -3,7 +3,7 @@ title: 如何提升.NET 控制台应用体验？
 slug: How-to-improve-Net-console-application-experience
 description: 来，教你写出酷炫的控制台应用
 date: 2022-04-04 11:21:39
-copyright: Reprint
+copyright: Reprinted
 author: 古道轻风
 originaltitle: 如何提升.NET 控制台应用体验？
 originallink: https://www.cnblogs.com/88223100/p/upgraded-dotnet-console-experience.html

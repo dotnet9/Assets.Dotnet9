@@ -3,7 +3,7 @@ title: 965七年我失去了什么？得到了什么？
 slug: What-did-I-lose-in-1967-What-did-you-get
 description: 你都不像一个程序员，程序员哪有下班这么早的？
 date: 2022-03-17 22:33:49
-copyright: Reprint
+copyright: Reprinted
 author: 逃离沙漠
 originaltitle: 965七年我失去了什么？得到了什么？
 originallink: https://mp.weixin.qq.com/s/noXd0xHpa-9ceWvIptl_cw

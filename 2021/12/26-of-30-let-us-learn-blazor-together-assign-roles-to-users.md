@@ -3,7 +3,7 @@ title: (26/30)大家一起学Blazor：给用户分配角色
 slug: 26-of-30-let-us-learn-blazor-together-assign-roles-to-users
 description: 昨天角色的`CRUD` 功能都完成了，接着就是要把角色分配给用户了
 date: 2021-12-24 23:20:13
-copyright: Reprint
+copyright: Reprinted
 author: StrayaWorker
 originaltitle: (26/30)大家一起学Blazor：给用户分配角色
 originallink: https://ithelp.ithome.com.tw/articles/10272459

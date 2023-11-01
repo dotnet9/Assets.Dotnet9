@@ -3,7 +3,7 @@ title: (23/30)大家一起学Blazor：ASP.NET Core Identity(3)
 slug: 23-of-30-let-us-learn-blazor-together-asp-dotnet-core-identity-3
 description: 前面有说到`UserAuthentication()`跟`UserAuthorization()`，这两个的差别在于：前者用于验证登录者是谁，后者则决定登录者可以做什么。
 date: 2021-12-23 22:19:53
-copyright: Reprint
+copyright: Reprinted
 author: StrayaWorker
 originaltitle: (23/30)大家一起学Blazor：ASP.NET Core Identity(3)
 originallink: https://ithelp.ithome.com.tw/articles/10270593

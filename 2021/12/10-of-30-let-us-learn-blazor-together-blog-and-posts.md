@@ -3,7 +3,7 @@ title: (10/30)大家一起学Blazor：Blog and Posts
 slug: 10-of-30-let-us-learn-blazor-together-blog-and-posts
 description: 现在我们有一个可以输入日志的界面了，但日志就是每天都要写的意思，只有一篇怎么够呢？我们来加上blog。
 date: 2021-12-14 23:31:22
-copyright: Reprint
+copyright: Reprinted
 author: StrayaWorker
 originaltitle: (10/30)大家一起学Blazor：Blog and Posts
 originallink: https://ithelp.ithome.com.tw/articles/10262250

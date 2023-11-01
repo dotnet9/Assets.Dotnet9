@@ -3,7 +3,7 @@ title: MYSQL优化技巧：5 大步骤 + 10 个案例
 slug: MYSQL-Optimization-Tips-5-Steps-10-Cases
 description: 希望对大家有用
 date: 2022-05-12 08:05:27
-copyright: Reprint
+copyright: Reprinted
 author: IT技术分享社区
 originaltitle: MYSQL优化技巧：5 大步骤 + 10 个案例
 originallink: https://mp.weixin.qq.com/s/eyz995VWcIEMLBQP7PL0FQ

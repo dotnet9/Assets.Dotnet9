@@ -3,7 +3,7 @@ title: Blazor 状态管理
 slug: Blazor-state-management
 description: 想象一下，您正在填写世界上最长的表格。您已经花了30分钟时间输入详细信息，从地址到您的生日，再到最近访问过的七个国家/地区的列表。您单击“提交”按钮，将立即获得“连接已丢失”消息。
 date: 2022-04-18 19:53:36
-copyright: Reprint
+copyright: Reprinted
 author: 寒冰屋
 originaltitle: Blazor 状态管理
 originallink: https://blog.csdn.net/mzl87/article/details/104642025

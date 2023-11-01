@@ -3,7 +3,7 @@ title: Docker 入门终极指南，详细版！别再说不会用 Docker 了！
 slug: Docker-Getting-Started-Ultimate-Guide-Detailed-Edition-Do-not-say-you-can-not-use-Docker-anymore
 description: 富 Web 时代，应用变得越来越强大，与此同时也越来越复杂。集群部署、隔离环境、灰度发布以及动态扩容缺一不可，而容器化则成为中间的必要桥梁。
 date: 2023-08-15 20:39:23
-copyright: Reprint
+copyright: Reprinted
 author: Jartto's blog
 originaltitle: Docker 边学边用
 originallink: http://jartto.wang/2020/07/04/learn-docker/

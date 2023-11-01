@@ -3,7 +3,7 @@ title: 【微信自动化】使用c#实现微信自动化
 slug: WeChat-Automation-Using-Csharp-to-Realize-WeChat-Automation
 description: 模拟鼠标来操作UI，实现UI自动化
 date: 2023-08-29 22:12:14
-copyright: Reprint
+copyright: Contributes
 author: 四处观察
 originaltitle: 【微信自动化】使用c#实现微信自动化
 originallink: https://www.cnblogs.com/1996-Chinese-Chen/p/17663064.html

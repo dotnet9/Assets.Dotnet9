@@ -3,7 +3,7 @@ title: RPA之PAD(Power Automate Desktop)组件开发
 slug: RPAs-PAD-Power-Automate-Desktop-component-development
 description: 只要有一扇门，就会有一个世界，现在已经有了一扇门
 date: 2022-05-30 21:24:17
-copyright: Reprint
+copyright: Contributes
 author: 蓝创精英团队
 originaltitle: RPA之PAD(Power Automate Desktop)组件开发
 originallink: https://blog.csdn.net/i2blue/article/details/125040323

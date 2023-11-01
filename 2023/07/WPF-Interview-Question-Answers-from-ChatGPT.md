@@ -3,7 +3,7 @@ title: WPF面试题-来自ChatGPT的解答
 slug: WPF-Interview-Question-Answers-from-ChatGPT
 description: 面试题，答案主要由ChatGPT提供
 date: 2023-07-17 22:16:29
-copyright: Default
+copyright: Original
 draft: false
 cover: https://img1.dotnet9.com/2023/07/cover_08.png
 categories: WPF

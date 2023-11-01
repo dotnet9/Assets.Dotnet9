@@ -3,7 +3,7 @@ title: (18/30)大家一起学Blazor：修改Add()方法
 slug: 18-of-30-let-us-learn-blazor-together-modify-add-function
 description: 假设今天有个状况是这样：有一条日志，新增第二条但还没提交前，想将第一条删除，这时会发生什么事呢？
 date: 2021-12-20 23:04:06
-copyright: Reprint
+copyright: Reprinted
 author: StrayaWorker
 originaltitle: (18/30)大家一起学Blazor：修改Add()方法
 originallink: https://ithelp.ithome.com.tw/articles/10267015

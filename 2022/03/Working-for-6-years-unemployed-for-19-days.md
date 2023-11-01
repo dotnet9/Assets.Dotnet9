@@ -3,7 +3,7 @@ title: 工作6年，失业19天
 slug: Working-for-6-years-unemployed-for-19-days
 description: 我是一名Java程序员，在北京工作了6年，此篇文章记录了我2019年11月，在这个寒冷的冬天被裁员之后，心态变化及重新找工作的心路历程。
 date: 2022-03-17 22:49:03
-copyright: Reprint
+copyright: Reprinted
 author: 逃离沙漠
 originaltitle: 工作6年，失业19天
 originallink: https://mp.weixin.qq.com/s/q0avLE1dl-yPheDiT2illg

@@ -3,7 +3,7 @@ title: .NET Core程序瘦身器发布，压缩程序尺寸到1/3
 slug: The-dotNet-core-program-slimmer-is-released-compressing-the-program-size-to-1-to-3
 description:  .NET Core具有【剪裁未使用的代码】的功能，但是由于它是使用静态分析来实现的，因此它的剪裁效果并不是最优的。
 date: 2022-03-10 13:12:32
-copyright: Reprint
+copyright: Reprinted
 author: 杨中科
 originaltitle: .NET Core程序瘦身器发布，压缩程序尺寸到1/3
 originallink: https://mp.weixin.qq.com/s/U5mwB9Mxjkw1aRfcdO60uQ

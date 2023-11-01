@@ -3,7 +3,7 @@ title: AsyncEx - async/await 的辅助库
 slug: AsyncEx-Auxiliary-library-for-async-and-await
 description: async/await 的辅助库
 date: 2022-07-08 07:21:19
-copyright: Reprint
+copyright: Reprinted
 author: 黑哥聊dotNet
 originaltitle: AsyncEx - async/await 的辅助库
 originallink: https://mp.weixin.qq.com/s/WyGsouPOZ-85NQRqpfYZzQ

@@ -3,7 +3,7 @@ title: 基于.NET动态编译技术实现任意代码执行
 slug: be-based-on-dotNet-dynamic-compilation-technology-to-realize-arbitrary-code-execution
 description: .Net可通过编译技术将外部输入的字符串作为代码执行，动态编译技术提供了最核心的两个类
 date: 2022-05-15 23:15:14
-copyright: Reprint
+copyright: Reprinted
 author: Ivan1ee dotNet安全矩阵
 originaltitle: 基于.NET动态编译技术实现任意代码执行
 originallink: https://mp.weixin.qq.com/s/eZgnxEihQu-KULLeLJatCw

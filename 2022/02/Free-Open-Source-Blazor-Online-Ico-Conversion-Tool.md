@@ -3,7 +3,7 @@ title: 免费开源Blazor在线Ico转换工具
 slug: Free-Open-Source-Blazor-Online-Ico-Conversion-Tool
 description: 免费开源Blazor在线Ico转换工具，不保存源文件及转换后文件，下载完成即删除，请放心使用。
 date: 2022-02-22 21:38:26
-copyright: Default
+copyright: Original
 originaltitle: 免费开源Blazor在线Ico转换工具
 draft: False
 cover: https://img1.dotnet9.com/2022/02/cover_13.jpg

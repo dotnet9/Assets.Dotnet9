@@ -3,7 +3,7 @@ title: 疫情下的北京失业中年
 slug: Unemployed-middle-aged-people-in-Beijing-under-the-epidemic
 description: 最近身边的一个朋友突然间就被辞退了，而且是一线互联网大厂，周末跟我聚了下。喝了点小酒，聊了很多，他说我可以把他的经历发出来，因为他已经看淡了
 date: 2022-03-29 08:33:33
-copyright: Reprint
+copyright: Reprinted
 author: 九边
 originaltitle: 疫情下的北京失业中年
 originallink: https://mp.weixin.qq.com/s/qpgd8jwpucbFx0e_u8nztQ

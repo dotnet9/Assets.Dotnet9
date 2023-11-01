@@ -3,7 +3,7 @@ title: WPF中XAML中使用String.Format格式化字符串示例
 slug: Using-string-In-XAML-in-WPF-Format-format-string-example
 description: 字符串格式化
 date: 2022-05-22 21:50:47
-copyright: Reprint
+copyright: Reprinted
 author: 眾尋
 originaltitle: WPF中XAML中使用String.Format格式化字符串示例
 originallink: https://www.cnblogs.com/ZXdeveloper/p/15513657.html

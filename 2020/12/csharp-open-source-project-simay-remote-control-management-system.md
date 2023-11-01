@@ -3,7 +3,7 @@ title: C#开源项目：SiMay远程控制管理系统
 slug: csharp-open-source-project-simay-remote-control-management-system
 description: 一个底层基于IOCP异步通信模型的Windows远程控制系统
 date: 2020-12-04 08:33:55
-copyright: Reprint
+copyright: Reprinted
 author: dWwwang
 originaltitle: C#开源项目：SiMay远程控制管理系统
 originallink: https://gitee.com/dotnetchina/SiMayRemoteMonitorOS

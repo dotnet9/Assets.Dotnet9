@@ -3,7 +3,7 @@ title: 欢迎来到元宇宙的虚拟世界
 slug: Welcome-to-the-virtual-world-of-the-meta-universe
 description: 本文介绍了元宇宙的基础知识, 并讨论了它的未来以及它的潜在问题， 当前元宇宙的应用主要表现在游戏、娱乐、企业办公等领域, 未来，伴随元宇宙技术和产业成熟度的持续提高，应用范围将逐步扩大，并不断深入。元宇宙能够对我们的生活产生多大的影响，我们拭目以待！
 date: 2022-04-06 20:16:29
-copyright: Reprint
+copyright: Reprinted
 author: SHUSWABHIT 全球技术精选
 originaltitle: 欢迎来到元宇宙的虚拟世界
 originallink: https://mp.weixin.qq.com/s/fgL8WX3JXVYe8NuB7scDGA

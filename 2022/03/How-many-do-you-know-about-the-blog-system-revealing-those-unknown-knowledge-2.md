@@ -3,7 +3,7 @@ title: 博客系统知多少：揭秘那些不为人知的学问（二）
 slug: How-many-do-you-know-about-the-blog-system-revealing-those-unknown-knowledge-2
 description: 大佬说博客
 date: 2022-03-08 21:55:33
-copyright: Reprint
+copyright: Reprinted
 author: 汪宇杰博客
 originaltitle: 博客系统知多少：揭秘那些不为人知的学问（二）
 originallink: https://mp.weixin.qq.com/s/FX3t75q0BMtb3hOsfM1-VQ

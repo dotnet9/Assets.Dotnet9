@@ -3,7 +3,7 @@ title: gRPC 与.NET 入门
 slug: Grpc-and-DotNet-introduction
 description: 从本质上来讲，API 就是服务器和客户端之间的一个协议，指定了服务器如何基于客户端的请求提供特定的数据。
 date: 2022-02-18 21:55:31
-copyright: Reprint
+copyright: Reprinted
 author: Mohamad Lawand
 originaltitle: gRPC 与.NET 入门
 originallink: https://www.infoq.com/articles/getting-started-grpc-dotnet/、https://www.infoq.cn/article/VutWdcVAGpE5ugdar92q

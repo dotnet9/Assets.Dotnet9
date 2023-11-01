@@ -3,7 +3,7 @@ title: 劳动仲裁回忆录（三）：提交证据&取公司证据
 slug: Memoirs-of-labor-arbitration-3-Submitting-Evidence-taking-company-evidence
 description: 个人全程劳动仲裁实录
 date: 2022-03-17 23:18:23
-copyright: Reprint
+copyright: Reprinted
 author: 逃离沙漠
 originaltitle: 劳动仲裁回忆录（三）：提交证据&取公司证据
 originallink: https://mp.weixin.qq.com/s/w2uKoK1ROBg3spB3Ul5CdA

@@ -3,7 +3,7 @@ title: PaddleOCR 训练模型参考
 slug: Paddleocr-training-model-reference
 description: 本文章介绍的是NV显卡训练。CPU训练 仅供参考，部分不同的地方请前往官方网站获取信息。
 date: 2022-03-30 11:00:13
-copyright: Reprint
+copyright: Reprinted
 author: Dream.Machine
 originaltitle: PaddleOCR 训练模型参考
 draft: False

@@ -3,7 +3,7 @@ title: 【实用技巧】教你Markdown 转 PDF、PNG、JPEG
 slug: practical-skills-teach-you-how-to-convert-markdown-to-PDF-PNG-and-JPEG
 description: Markdown作为一种非常容易掌握的文档格式，正在被越来越多的人用来写文档，简历，博客等。
 date: 2022-05-08 19:00:00
-copyright: Reprint
+copyright: Reprinted
 author: 青城 网上冲浪程序员
 originaltitle: 【实用技巧】教你Markdown 转 PDF、PNG、JPEG
 originallink: https://mp.weixin.qq.com/s/keaj9WXM280F74lfQtPEQw

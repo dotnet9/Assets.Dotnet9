@@ -3,7 +3,7 @@ title: .NET近期面试题分享与总结
 slug: Dotnet-recent-interview-questions-sharing-and-summary
 description: 以下内容不是NET面试的全部，而是写一些我认为可能会遗漏的。
 date: 2023-03-01 23:02:16
-copyright: Reprint
+copyright: Reprinted
 author: 少年知有
 originaltitle: .NET近期面试题分享与总结
 originallink: https://www.cnblogs.com/chumochen/p/17134303.html

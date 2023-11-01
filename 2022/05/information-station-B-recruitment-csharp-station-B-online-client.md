@@ -3,7 +3,7 @@ title: 【资讯】B站招聘C#、B站上线客户端
 slug: information-station-B-recruitment-csharp-station-B-online-client
 description: 偶然发现，B站上线Windows客户端版本了
 date: 2022-05-15 21:06:17
-copyright: Reprint
+copyright: Reprinted
 author: 趣小编 趣编程ACE
 originaltitle: 【资讯】B站招聘C#、B站上线客户端
 originallink: https://mp.weixin.qq.com/s/e2QtVKB0uwcS-NXS64McvA

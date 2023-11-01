@@ -3,7 +3,7 @@ title: WPF|一个比较简单带点设计的登录界面
 slug: WPF--a-relatively-simple-login-interface-with-dot-design
 description: 如题
 date: 2022-05-18 22:06:14
-copyright: Default
+copyright: Original
 originaltitle: WPF|一个比较简单带点设计的登录界面
 draft: False
 cover: https://img1.dotnet9.com/2022/05/cover_47.png

@@ -3,7 +3,7 @@ title: 银行核心项目之测试阶段
 slug: Test-phase-of-bank-core-projects
 description: 想了解核心系统建设中，冒烟、SIT、UAT、回归测试的重点，如何设计测试案例，或相关的资料推荐等
 date: 2023-03-01 23:16:25
-copyright: Reprint
+copyright: Reprinted
 author:  代堂鸣 小代嘚吧嘚
 originaltitle: 银行核心项目之测试阶段
 originallink: https://mp.weixin.qq.com/s/kwfJXT9IjIOM-cKOxyNNuw

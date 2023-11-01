@@ -3,7 +3,7 @@ title: C# 10 必知的五大新功能
 slug: five-new-features-of-csharp-10-you-must-know
 description: C# 的 GitHub 页面上记载了一长串诱人的想法，其中一些令人头疼的问题仍在讨论中。
 date: 2021-12-12 10:01:23
-copyright: Reprint
+copyright: Reprinted
 author: Matthew MacDonald
 originaltitle: C# 10 必知的五大新功能
 originallink: https://medium.com/young-coder/a-closer-look-at-5-new-features-in-c-10-f99738b0158e

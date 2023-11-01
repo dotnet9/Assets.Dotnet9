@@ -3,7 +3,7 @@ title: 10个我经常逛的“小网站”，嘿嘿嘿！！！
 slug: 10-small-websites-I-often-visit-hey-hey
 description: 你的文件夹里有没有一些私人喜好的小网站？嘿嘿！！！必须有啊！分享10个我经常使用、能够提高工作效率、美化图片、绘制流程图的网站，你可能也用得上喔。
 date: 2022-04-21 07:51:26
-copyright: Reprint
+copyright: Reprinted
 author: 前端胖头鱼
 originaltitle: 10个我经常逛的“小网站”，嘿嘿嘿！！！
 originallink: https://segmentfault.com/a/1190000041728567

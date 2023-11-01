@@ -3,7 +3,7 @@ title: 分享VS的两个技巧
 slug: Share-two-tips-for-using-vs
 description: 两个应该比较实用的技巧
 date: 2022-05-08 21:52:36
-copyright: Reprint
+copyright: Reprinted
 author: C# WPF UI Academy
 originaltitle: 分享VS的两个技巧
 originallink: https://www.youtube.com/watch?v=h5vbk9H0luE

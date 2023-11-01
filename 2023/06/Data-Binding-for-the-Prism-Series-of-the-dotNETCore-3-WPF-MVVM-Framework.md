@@ -3,7 +3,7 @@ title: (1/7).NET Core 3 WPF MVVM框架 Prism系列之数据绑定
 slug: Data-Binding-for-the-Prism-Series-of-the-dotNETCore-3-WPF-MVVM-Framework
 description: 数据绑定
 date: 2023-06-10 23:30:18
-copyright: Reprint
+copyright: Reprinted
 author: RyzenAdorer
 originaltitle: .NET Core 3 WPF MVVM框架 Prism系列之数据绑定
 originallink: https://www.cnblogs.com/ryzen/p/11905866.html

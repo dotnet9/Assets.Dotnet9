@@ -3,7 +3,7 @@ title: 分享Go书籍-《Go Web编程》
 slug: Share-Go-books-Go-Web-Programming
 description: 最近几天在看一本Go的书籍，看了100来页，感觉不错，分享给大家​。​
 date: 2022-10-03 09:24:39
-copyright: Default
+copyright: Original
 author: 沙漠尽头的狼
 draft: false
 cover: https://img1.dotnet9.com/cats/cat_go.jpeg

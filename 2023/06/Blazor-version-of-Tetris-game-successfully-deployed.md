@@ -4,7 +4,7 @@ slug: Blazor-version-of-Tetris-game-successfully-deployed
 description: 上线了Blazor版俄罗斯方块游戏，并且把在线工具和在线游戏组件提取到Razor共享库，可以被Dotnet9网站和Dotnet工具箱网站复用。
 date: 2023-06-27 20:58:14
 lastmod: 2023-06-27 23:40:59
-copyright: Default
+copyright: Original
 draft: false
 cover: https://img1.dotnet9.com/2023/06/cover_14.png
 categories: Blazor

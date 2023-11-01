@@ -3,7 +3,7 @@ title: 为了看Flutter到底有没有人用我竟然
 slug: In-order-to-see-if-someone-uses-flutter-I-unexpectedly
 description: 所以，整体在知乎上吵「Flutter被抛弃了」、「Flutter要崛起了」，有什么意义呢？所有的争论都抵不过数据来的真实。
 date: 2022-05-04 16:59:14
-copyright: Reprint
+copyright: Reprinted
 author:  徐宜生 群英传
 originaltitle: 为了看Flutter到底有没有人用我竟然
 originallink: https://xuyisheng.top/flutter_app_check/

@@ -4,7 +4,7 @@ slug: ant-groups-language-sparrow-collapses-how-to-avoid-similar-situations-crea
 description: 昨天（2023年10月23日）蚂蚁集团旗下语雀崩了：在线文档及官网均无法打开 官方称紧急恢复中，建议读者自己开发一个属于自己的博客网站，遇到这种事才不会惊慌。
 date: 2023-10-24 09:31:25
 lastmod: 2023-10-24 10:30:45
-copyright: Default
+copyright: Original
 draft: false
 cover: https://img1.dotnet9.com/2023/10/cover_03.png
 categories: 科技生活

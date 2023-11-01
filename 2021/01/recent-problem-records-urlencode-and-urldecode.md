@@ -3,7 +3,7 @@ title: 最近遇到的问题记录：UrlEncode、UrlDecode
 slug: recent-problem-records-urlencode-and-urldecode
 description: 简单分享
 date: 2021-01-09 17:03:26
-copyright: Default
+copyright: Original
 originaltitle: 最近遇到的问题记录：UrlEncode、UrlDecode
 draft: False
 cover: https://img1.dotnet9.com/2021/01/cover_01.jpeg

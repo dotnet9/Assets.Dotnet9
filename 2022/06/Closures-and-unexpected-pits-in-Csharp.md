@@ -3,7 +3,7 @@ title: C#中的闭包和意想不到的坑
 slug: Closures-and-unexpected-pits-in-Csharp
 description: 使用委托或者lambda表达式，也可以在C#中使用闭包。
 date: 2022-06-15 22:49:32
-copyright: Reprint
+copyright: Reprinted
 author: 老胡写代码
 originaltitle: C#中的闭包和意想不到的坑
 originallink: https://www.cnblogs.com/deatharthas/p/13166987.html

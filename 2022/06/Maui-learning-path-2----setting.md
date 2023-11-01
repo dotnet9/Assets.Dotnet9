@@ -3,7 +3,7 @@ title: Maui的学习之路（二）--设置
 slug: Maui-learning-path-2----setting
 description: 不只是MAUI，本篇非常实用
 date: 2022-06-23 23:29:17
-copyright: Reprint
+copyright: Reprinted
 author: 轩研 Maui开发者
 originaltitle: Maui的学习之路（二）--设置
 originallink: https://mp.weixin.qq.com/s/kX-dZFW64331A47i3G0IoQ

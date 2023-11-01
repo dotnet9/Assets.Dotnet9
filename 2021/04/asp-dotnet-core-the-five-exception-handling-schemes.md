@@ -3,7 +3,7 @@ title: ASP.NET Core 5种异常处理方案
 slug: asp-dotnet-core-the-five-exception-handling-schemes
 description: 异常处理在编程中非常重要，一来可以给用户友好提示，二来也是为了程序安全。
 date: 2021-04-29 09:27:26
-copyright: Reprint
+copyright: Reprinted
 author: .NET技术栈
 originaltitle: ASP.NET Core 5种异常处理方案
 originallink: https://ut32.com/post/handle-exception

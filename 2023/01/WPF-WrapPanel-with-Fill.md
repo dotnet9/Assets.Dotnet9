@@ -3,7 +3,7 @@ title: WPF-带填充的 WrapPanel
 slug: WPF-WrapPanel-with-Fill
 description: 一个 WPF WrapPanel，可以用任何控件填充任何行上的空白区域
 date: 2023-01-18 20:36:19
-copyright: Reprint
+copyright: Reprinted
 author: Eric Ouellet
 originaltitle: WPF - WrapPanel with Fill
 originallink: https://www.codeproject.com/Tips/990854/WPF-WrapPanel-with-Fill

@@ -3,7 +3,7 @@ title: ASP.NET Core在.NET 7 RC1中的更新
 slug: asp-net-core-updates-in-dotnet-7-rc-1
 description: .NET 7 Release Candidate 1 (RC1) 现已推出，其中包括对 ASP.NET Core 的许多重大新改进。
 date: 2022-09-15 09:23:56
-copyright: Reprint
+copyright: Reprinted
 author: Daniel Roth
 originaltitle: ASP.NET Core updates in .NET 7 Release Candidate 1
 originallink: https://devblogs.microsoft.com/dotnet/asp-net-core-updates-in-dotnet-7-rc-1/

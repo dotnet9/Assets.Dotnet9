@@ -3,7 +3,7 @@ title: (11/30)大家一起学Blazor：Arbitrary属性
 slug: 11-of-30-let-us-learn-blazor-together-arbitrary-property
 description: 目前`MyButton`有3个`[Parameter]`，如果再增加的话，又要再定义新的`[Parameter]`，为了避免不断更新这个Component，我们来用Blazor提供的`@attribute`。
 date: 2021-12-15 22:53:17
-copyright: Reprint
+copyright: Reprinted
 author: StrayaWorker
 originaltitle: (11/30)大家一起学Blazor：Arbitrary属性
 originallink: https://ithelp.ithome.com.tw/articles/10262490

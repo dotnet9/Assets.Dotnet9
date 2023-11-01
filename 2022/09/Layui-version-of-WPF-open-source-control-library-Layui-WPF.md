@@ -3,7 +3,7 @@ title: Layui版本的WPF开源控件库-Layui-WPF
 slug: Layui-version-of-WPF-open-source-control-library-Layui-WPF
 description: 一个WPF版的Layui前端UI样式库
 date: 2022-09-30 21:07:47
-copyright: Default
+copyright: Original
 author: 沙漠尽头的狼
 draft: false
 cover: https://img1.dotnet9.com/2022/09/layui-wpf-cover.png

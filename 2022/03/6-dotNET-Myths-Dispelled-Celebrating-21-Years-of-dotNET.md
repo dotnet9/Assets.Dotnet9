@@ -3,7 +3,7 @@ title: .NET 很好，你可能对它有一些误解
 slug: 6-dotNET-Myths-Dispelled-Celebrating-21-Years-of-dotNET
 description: 本文章介绍的是NV显卡训练。CPU训练 仅供参考，部分不同的地方请前往官方网站获取信息。
 date: 2022-03-30 11:11:24
-copyright: Reprint
+copyright: Reprinted
 author:  全球技术精选
 originaltitle: .NET 很好，你可能对它有一些误解
 originallink: https://mp.weixin.qq.com/s/Ri4RbyNKhb5z7IdUGetvPw

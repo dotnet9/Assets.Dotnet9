@@ -3,7 +3,7 @@ title: 如何在 2022 年开发桌面
 slug: How-to-develop-desktop-in-2022
 description: 恭喜，如果你在 2021 年读到这篇文章，那么你已经穿越到了明年。
 date: 2022-05-06 06:39:14
-copyright: Reprint
+copyright: Reprinted
 author: 顾中民
 originaltitle: 如何在 2022 年开发桌面
 originallink: https://www.bilibili.com/read/cv13119608/

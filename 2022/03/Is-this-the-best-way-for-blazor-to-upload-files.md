@@ -3,7 +3,7 @@ title: 这是Blazor上传文件的最佳方式吗？
 slug: Is-this-the-best-way-for-blazor-to-upload-files
 description: Blazor不得不说真是好东西，极大的提升了开发效率，很多的页面交互功能基本上只需要写很少的代码就能实现了，而且还是无js实现，你也绝对没有想到过，Blazor实现文件上传是有多么简单！
 date: 2022-03-16 07:36:14
-copyright: Reprint
+copyright: Reprinted
 author: 懒得勤快
 originaltitle: 这是Blazor上传文件的最佳方式吗？
 originallink: https://masuit.org/1676

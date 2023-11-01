@@ -3,7 +3,7 @@ title: 用 WinUI 3 开发了一个摸鱼应用
 slug: developed-a-fishing-application-with-winui-3
 description: 不要小看摸鱼，所有天才的点子都不是敲键盘时激发的。在工作遇到阻滞时，越是投入工作越是找不到解决方案，这时候把目光从屏幕挪开，说不定在一边洗澡一边玩着小黄鸭时，一边发呆一边看着窗外时，一边睡觉一边扣肚子时，解决问题的灵感突然就掉进了脑海里。
 date: 2021-12-16 20:51:16
-copyright: Reprint
+copyright: Reprinted
 author: dino.c
 originaltitle: 用 WinUI 3 开发了一个摸鱼应用
 originallink: https://www.cnblogs.com/dino623/archive/2021/12/15/developing_an_app_with_winui3.html

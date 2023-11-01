@@ -3,7 +3,7 @@ title: （2）MasaFramework入门第二篇，安装MasaFramework了解各个模�
 slug: Getting-Started-with-MasaFramework-Part-2-Installing-MasaFramework-Understanding-Various-Templates
 description: 安装MasaFramework了解各个模板
 date: 2023-03-25 19:43:47
-copyright: Reprint
+copyright: Reprinted
 author:  token的技术分享
 originaltitle: （2）MasaFramework入门第二篇，安装MasaFramework了解各个模板
 originallink: https://www.cnblogs.com/hejiale010426/p/17223279.html

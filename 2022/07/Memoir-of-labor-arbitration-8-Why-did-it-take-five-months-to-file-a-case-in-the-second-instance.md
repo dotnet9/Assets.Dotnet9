@@ -3,7 +3,7 @@ title: 劳动仲裁回忆录（八）：二审立案为何耗时5个月？
 slug: Memoir-of-labor-arbitration-8-Why-did-it-take-five-months-to-file-a-case-in-the-second-instance
 description: 本文回顾二审立案流程，看完你会明白为何能耗时5个月。
 date: 2022-07-02 22:30:47
-copyright: Reprint
+copyright: Reprinted
 author: 逃离沙漠
 originaltitle: 劳动仲裁回忆录（八）：二审立案为何耗时5个月？
 originallink: https://mp.weixin.qq.com/s/tnpDQT9shvw8WiQzvbXcmA

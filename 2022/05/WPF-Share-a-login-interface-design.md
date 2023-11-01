@@ -3,7 +3,7 @@ title: WPF|分享一个登录界面设计
 slug: WPF-Share-a-login-interface-design
 description: 分享一个WPF登录界面设计
 date: 2022-05-11 07:45:42
-copyright: Reprint
+copyright: Reprinted
 author: 沙漠尽头的狼
 originaltitle: WPF|分享一个登录界面设计
 originallink: https://mp.weixin.qq.com/s/seSaQkhkE7dpWqoiQ96fzQ

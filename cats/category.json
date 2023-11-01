@@ -42,12 +42,6 @@
         "Cover": "cats/cat_avalonia_ui.png"
       },
       {
-        "Sort":1007,
-        "Name": "Xamarin",
-        "Slug": "dotnet-mobile-xamarin",
-        "Cover": "cats/cat_xamarin.jpg"
-      },
-      {
         "Sort":1008,
         "Name": "WPF",
         "Slug": "dotnet-desktop-wpf",

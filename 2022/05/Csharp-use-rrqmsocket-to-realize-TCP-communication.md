@@ -3,7 +3,7 @@ title: C# 使用 RRQMSocket 实现 TCP 通信
 slug: Csharp-use-rrqmsocket-to-realize-TCP-communication
 description: 经过RRQM封装后，将高连接、高并发，数据处理等一系列基础功能打包，让使用者不再关心基础架构建设，专心于业务。
 date: 2022-05-26 21:11:14
-copyright: Reprint
+copyright: Reprinted
 author: 黑哥聊dotNet
 originaltitle: C# 使用 RRQMSocket 实现 TCP 通信
 originallink: https://mp.weixin.qq.com/s/2Nha9GVAnOox-K5_Vf-SZg

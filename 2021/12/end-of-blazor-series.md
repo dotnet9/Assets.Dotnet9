@@ -3,7 +3,7 @@ title: Blazor系列终结！
 slug: end-of-blazor-series
 description: Blazor系列转载`终结啦`，其实站长在25号时就已`完成转载`，并同步在`Dotnet9`网站（`https://dotnet9.com`）发布，并创建了一个专辑`《大家一起学Blazor》`，大家可随时在网站浏览。
 date: 2021-12-30 22:46:19
-copyright: Default
+copyright: Original
 originaltitle: Blazor系列终结！
 draft: False
 cover: https://img1.dotnet9.com/2021/12/cover_45.jpeg

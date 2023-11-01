@@ -3,7 +3,7 @@ title: 劳动仲裁回忆录（五）：领取仲裁结果、送达证明及考�
 slug: Memoir-of-labor-arbitration-5-receiving-the-arbitration-result-service-certificate-and-considering-whether-to-appeal-war-has-just-begun
 description: 个人全程劳动仲裁实录
 date: 2022-03-17 23:27:23
-copyright: Reprint
+copyright: Reprinted
 author: 逃离沙漠
 originaltitle: 劳动仲裁回忆录（五）：领取仲裁结果、送达证明及考虑是否上诉，“战争”才刚刚开始
 originallink: https://mp.weixin.qq.com/s/PCL9kiuDgBYOmxk--A517w

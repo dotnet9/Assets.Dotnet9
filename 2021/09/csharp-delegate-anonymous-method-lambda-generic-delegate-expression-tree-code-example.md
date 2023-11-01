@@ -3,7 +3,7 @@ title: C#委托，匿名方法，Lambda，泛型委托，表达式树代码示�
 slug: csharp-delegate-anonymous-method-lambda-generic-delegate-expression-tree-code-example
 description: 有些教材，博客说到委托都会提到事件，虽然事件是委托的一个实例，但是为了理解起来更简单，今天只谈委托不谈事件。
 date: 2021-09-18 11:39:58
-copyright: Reprint
+copyright: Reprinted
 author: QueryWord
 originaltitle: C#委托，匿名方法，Lambda，泛型委托，表达式树代码示例
 originallink: https://www.cnblogs.com/QueryWord/archive/2019/08/05/11302125.html

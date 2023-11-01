@@ -3,7 +3,7 @@ title: Maui学习之路(2)-Mac窗体设置
 slug: Maui-Learning-Road-One-Mac-Form-Settings
 description: 发现微软官网的`UIKit`官方文档居然比`Apple`提供的还要全面
 date: 2022-06-02 21:21:27
-copyright: Reprint
+copyright: Reprinted
 author: 轩研 WPF开发者
 originaltitle: Maui学习之路(2)-Mac窗体设置
 originallink: https://mp.weixin.qq.com/s/G3hhhl4L3MYi_74_AV_ybg

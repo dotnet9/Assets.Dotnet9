@@ -3,7 +3,7 @@ title: RPA之基于FlaUI的微信发送消息给某人
 slug: RPA-flaui-based-wechat-sends-a-message-to-someone
 description: 实现微信的群发功能
 date: 2022-05-25 00:24:45
-copyright: Reprint
+copyright: Contributes
 author: 蓝创精英团队
 originaltitle: RPA之基于FlaUI的微信发送消息给某人
 originallink: https://kesshei.blog.csdn.net/article/details/124955177

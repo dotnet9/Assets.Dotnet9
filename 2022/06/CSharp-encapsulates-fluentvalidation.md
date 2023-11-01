@@ -3,7 +3,7 @@ title: C#封装FluentValidation,用了之后通篇还是AbstractValidator，真�
 slug: CSharp-encapsulates-fluentvalidation
 description: FluentValidation是一个非常强大的用于构建强类型验证规则的 .NET 框架
 date: 2022-06-09 22:12:35
-copyright: Reprint
+copyright: Reprinted
 author: 黑哥聊dotNet
 originaltitle: C#封装FluentValidation,用了之后通篇还是AbstractValidator，真的看不下去了
 originallink: https://mp.weixin.qq.com/s/u9xXyFxvpSpPBAMNhfR5Og

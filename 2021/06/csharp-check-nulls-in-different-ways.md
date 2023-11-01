@@ -3,7 +3,7 @@ title: C#: 不同的方式检查Null
 slug: csharp-check-nulls-in-different-ways
 description: 多了解点没错的
 date: 2021-06-19 14:24:28
-copyright: Default
+copyright: Original
 originaltitle: C#: 不同的方式检查Null
 draft: False
 cover: https://img1.dotnet9.com/2021/06/cover_03.jpg

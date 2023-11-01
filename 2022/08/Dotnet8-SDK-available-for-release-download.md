@@ -7,7 +7,7 @@ author: 沙漠尽头的狼
 draft: false
 cover: https://img1.dotnet9.com/2022/08/cover_02.png
 categories: .NET相关
-copyright: Default
+copyright: Original
 ---
 
 今早在一个技术交流群看到有`.NET 8`的安装交流，站长下载了，把安装过程记录了，总结是：

@@ -3,7 +3,7 @@ title: (22/30)大家一起学Blazor：ASP.NET Core Identity(2)
 slug: 22-of-30-let-us-learn-blazor-together-asp-dotnet-core-identity-2
 description: 昨天做的验证只针对`Identity` 系统，没有包含到我们的日志
 date: 2021-12-22 23:59:48
-copyright: Reprint
+copyright: Reprinted
 author: StrayaWorker
 originaltitle: (22/30)大家一起学Blazor：ASP.NET Core Identity(2)
 originallink: https://ithelp.ithome.com.tw/articles/10269706

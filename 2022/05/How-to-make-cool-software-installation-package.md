@@ -3,7 +3,7 @@ title: 怎么制作炫酷软件安装包
 slug: How-to-make-cool-software-installation-package
 description: 介绍一款非常棒的软件程序打包工具
 date: 2022-05-06 06:53:32
-copyright: Default
+copyright: Original
 originaltitle: 怎么制作炫酷软件安装包
 draft: False
 cover: https://img1.dotnet9.com/2022/05/cover_21.png

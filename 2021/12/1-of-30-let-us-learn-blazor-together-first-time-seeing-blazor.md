@@ -3,7 +3,7 @@ title: (1/30)大家一起学Blazor：初见Blazor
 slug: 1-of-30-let-us-learn-blazor-together-first-time-seeing-blazor
 description: 笔者接触软件行业的时间不长，先后接触三种架构
 date: 2021-12-09 22:35:19
-copyright: Reprint
+copyright: Reprinted
 author: StrayaWorker
 originaltitle: (1/30)大家一起学Blazor：初见Blazor
 originallink: https://ithelp.ithome.com.tw/articles/10258944

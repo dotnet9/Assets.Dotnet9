@@ -3,7 +3,7 @@ title:  C#使用Refit对接WebService接口
 slug: Csharp-Use-refit-to-interface-with-webservice
 description: 群友说.NET Core无法对接WebService，站长找了些资料，希望能帮助到他
 date: 2023-03-15 20:33:14
-copyright: Default
+copyright: Original
 draft: false
 cover: https://img1.dotnet9.com/2023/03/cover_07.jpg
 categories: .NET相关

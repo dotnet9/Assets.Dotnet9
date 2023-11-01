@@ -3,8 +3,8 @@ title: 开源C# Winform控件库《SunnyUI》
 slug: Open-source-csharp-WinForm-control-library-sunny-UI
 description: 基于.Net Framework 4.0+、.Net 5、.Net 6 框架的 C# WinForm 开源控件库、工具类库、扩展类库、多页面开发框架。
 date: 2020-12-05 13:21:25
-banner: true
-copyright: Reprint
+banner: false
+copyright: Reprinted
 author: Sunny
 originaltitle: 开源C# Winform控件库《SunnyUI》
 originallink: https://gitee.com/yhuse/SunnyUI

@@ -3,7 +3,7 @@ title: 如何处理EF Core的多对多关系？
 slug: how-to-handle-many-to-many-relationships-with-ef-Core
 description: 多对多关系不像其他关系那么简单，在这篇文章中，我将向您展示如何创建多对多关系以及如何在 EF Core 中使用它们。
 date: 2021-11-02 20:47:54
-copyright: Reprint
+copyright: Reprinted
 author: Zbigniew
 originaltitle: 如何处理EF Core的多对多关系？
 originallink: https://softdevpractice.com/blog/many-to-many-ef-core/

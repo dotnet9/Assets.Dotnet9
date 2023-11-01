@@ -4,7 +4,7 @@ slug: Use-blazor-to-develop-mini-games-and-strike-while-the-iron-is-hot
 description: Blazor上线1天了，开发上手真舒服，再上一个工具+几个小游戏吧。
 date: 2023-06-23 22:20:25
 lastmod: 2023-06-23 23:50:47
-copyright: Default
+copyright: Original
 draft: false
 cover: https://img1.dotnet9.com/games/minesweeper.png
 categories: Blazor

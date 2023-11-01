@@ -3,13 +3,13 @@ title: EasyNetQ-用于使用 RabbitMQ 的 .NET API开源的工具库
 slug: EasyNetQ-Open-source-tool-library-for-using-RabbitMQ-dotNET-API
 description: EasyNetQ 的目标是提供一个库，用于在 .NET 中使用 RabbitMQ 尽可能简单。
 date: 2022-07-26 06:32:24
-copyright: Reprint
+copyright: Reprinted
 author: 黑哥聊dotNet
 originaltitle: EasyNetQ-用于使用 RabbitMQ 的 .NET API开源的工具库
 originallink: https://mp.weixin.qq.com/s/hBDvEe9E8k2M0cv_8Y9h2w
 draft: False
 cover: https://img1.dotnet9.com/2022/07/cover_24.png
-categories: .NET相关,RabbitMQ
+categories: .NET相关
 ---
 
 ## Part1介绍

@@ -3,7 +3,7 @@ title: Maui Blazor 使用摄像头实现
 slug: Maui-Blazor-uses-camera
 description: 由于Maui Blazor中界面是由WebView渲染，所以再使用Android的摄像头时无法去获取，因为原生的摄像头需要绑定界面组件
 date: 2023-01-12 20:51:15
-copyright: Contribution
+copyright: Contributes
 author: dotnet-simple
 originaltitle: Maui Blazor 使用摄像头实现
 originallink: https://www.cnblogs.com/hejiale010426/p/17045707.html

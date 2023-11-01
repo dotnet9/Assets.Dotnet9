@@ -3,7 +3,7 @@ title: Vue3.2 setup语法糖总结
 slug: Vue3-to-2-Summary-of-setup-syntax
 description: 在 Vue3.2 中只需要在 script 标签上加上 setup 属性，无需 return，template 便可直接使用，非常的香啊！
 date: 2022-05-19 06:47:26
-copyright: Reprint
+copyright: Reprinted
 author: 玲小叮当
 originaltitle: Vue3.2 setup语法糖总结
 originallink: https://segmentfault.com/a/1190000041849882

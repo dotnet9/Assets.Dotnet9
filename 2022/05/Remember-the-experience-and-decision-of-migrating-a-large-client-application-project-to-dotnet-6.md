@@ -3,7 +3,7 @@ title: 记将一个大型客户端应用项目迁移到 dotnet 6 的经验和决
 slug: Remember-the-experience-and-decision-of-migrating-a-large-client-application-project-to-dotnet-6
 description: 在经过了两年的准备，以及迁移了几个应用项目积累了让我有信心的经验之后，我最近在开始将团队里面最大的一个项目，从 .NET Framework 4.5 迁移到 .NET 6 上。
 date: 2022-05-05 22:55:32
-copyright: Reprint
+copyright: Reprinted
 author: lindexi
 originaltitle: 记将一个大型客户端应用项目迁移到 dotnet 6 的经验和决策
 originallink: https://www.cnblogs.com/lindexi/archive/2022/05/05/16226168.html

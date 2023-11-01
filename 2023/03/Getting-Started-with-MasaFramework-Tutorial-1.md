@@ -3,7 +3,7 @@ title: （1）入门MasaFramework教程
 slug: Getting-Started-with-MasaFramework-Tutorial-1
 description: 首先了解一下MasaFramework是什么
 date: 2023-03-16 22:50:32
-copyright: Reprint
+copyright: Reprinted
 author:  token的技术分享
 originaltitle: （1）入门MasaFramework教程
 originallink: https://www.cnblogs.com/hejiale010426/p/17209926.html

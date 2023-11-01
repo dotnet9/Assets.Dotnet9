@@ -4,7 +4,7 @@ slug: Dotnet9-website-returns-to-Blazor-refactoring-with-fast-access-speed-and-m
 description: 本来站长奔着体验.NET 8 Blazor Web App的，在Razor Pages中添加了Razor 组件，但目前该混合模式Razor组件无法交互，页面还出现了重连置灰UI，索性直接用Blazor Server重构，经过几天的奋战，网站前台已经用Blazor Server完全替换Razor Pages，烦人的重连也解决了，现在访问网站飞快，不知道是不是错觉，个人感觉很好。
 date: 2023-06-23 08:49:11
 lastmod: 2023-06-23 09:10:41
-copyright: Default
+copyright: Original
 draft: false
 cover: https://img1.dotnet9.com/2023/06/cover_11.png
 categories: Blazor

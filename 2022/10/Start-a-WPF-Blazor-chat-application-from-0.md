@@ -4,11 +4,11 @@ slug: Start-a-WPF-Blazor-chat-application-from-0
 description: 从一个WPF Hello World程序开始，逐渐引入Blazor，做个免费能看的对话小程序耍耍。
 date: 2022-10-28 22:06:32
 lastmod: 2022-11-07 23:11:28
-copyright: Default
+copyright: Original
 author: 沙漠尽头的狼
 draft: false
 cover: https://img1.dotnet9.com/2022/10/2-chat-window.png
-categories: WPF,Blazor
+categories: Blazor
 ---
 
 大家好，我是沙漠尽头的狼。

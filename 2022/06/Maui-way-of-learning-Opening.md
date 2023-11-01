@@ -3,7 +3,7 @@ title: Maui的学习之路 -- 开篇
 slug: Maui-way-of-learning-Opening
 description: 什么是.NET Maui
 date: 2022-06-23 23:08:32
-copyright: Reprint
+copyright: Reprinted
 author: 轩研 Maui开发者
 originaltitle: Maui的学习之路 -- 开篇
 originallink: https://mp.weixin.qq.com/s/LkKUrldQb1jEyJN8GhaDqA

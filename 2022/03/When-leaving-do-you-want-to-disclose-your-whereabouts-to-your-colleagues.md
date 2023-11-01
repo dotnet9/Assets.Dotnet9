@@ -3,7 +3,7 @@ title: 离职时，要不要跟同事透露去向？
 slug: When-leaving-do-you-want-to-disclose-your-whereabouts-to-your-colleagues
 description: 前不久，在网上看到一则这样的信
 date: 2022-03-17 22:11:23
-copyright: Reprint
+copyright: Reprinted
 author: 棠雪 智联招聘服务号
 originaltitle: 离职时，要不要跟同事透露去向？
 originallink: https://mp.weixin.qq.com/s/rCr0w4H_0pB-1B1L_-a4xA

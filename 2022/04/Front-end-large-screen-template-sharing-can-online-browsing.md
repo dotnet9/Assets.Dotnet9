@@ -3,12 +3,12 @@ title: 前端大屏模板分享-可在线浏览
 slug: Front-end-large-screen-template-sharing-can-online-browsing
 description: 几十套大屏模板，可在线浏览，也可下载
 date: 2022-04-21 07:41:42
-copyright: Default
+copyright: Original
 originaltitle: 前端大屏模板分享-可在线浏览
 draft: False
 cover: https://img1.dotnet9.com/2022/04/2602.png
 albums: 开源Web
-categories: HTML,开源项目
+categories: HTML
 tags: 大屏模板,在线浏览
 ---
 

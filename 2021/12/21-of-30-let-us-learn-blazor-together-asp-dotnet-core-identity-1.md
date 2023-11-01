@@ -3,7 +3,7 @@ title: (21/30)大家一起学Blazor：ASP.NET Core Identity(1)
 slug: 21-of-30-let-us-learn-blazor-together-asp-dotnet-core-identity-1
 description: 今天来实现身分验证的部分
 date: 2021-12-22 23:01:31
-copyright: Reprint
+copyright: Reprinted
 author: StrayaWorker
 originaltitle: (21/30)大家一起学Blazor：ASP.NET Core Identity(1)
 originallink: https://ithelp.ithome.com.tw/articles/10268982

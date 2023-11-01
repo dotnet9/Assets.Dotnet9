@@ -3,7 +3,7 @@ title: Maui学习之路(1)-Windows窗体设置
 slug: Maui-Learning-Road-One-Windows-Form-Settings
 description: 终于一个简单的窗体指定窗体大小、最大化窗体、无边框的窗体终于完成了
 date: 2022-06-02 20:52:17
-copyright: Reprint
+copyright: Reprinted
 author: 轩研 WPF开发者
 originaltitle: Maui学习之路(1)-Windows窗体设置
 originallink: https://mp.weixin.qq.com/s/_wdRtzSAPkIa3-kK8nKGbQ

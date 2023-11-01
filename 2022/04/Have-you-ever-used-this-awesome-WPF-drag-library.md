@@ -3,7 +3,7 @@ title: 您用过这个牛逼的WPF拖拽库吗？
 slug: Have-you-ever-used-this-awesome-WPF-drag-library
 description: 一个使您能在WPF里更方便的使用拖拽功能的框架
 date: 2022-04-19 21:56:32
-copyright: Default
+copyright: Original
 originaltitle: 您用过这个牛逼的WPF拖拽库吗？
 draft: False
 cover: https://img1.dotnet9.com/2022/04/2201.png

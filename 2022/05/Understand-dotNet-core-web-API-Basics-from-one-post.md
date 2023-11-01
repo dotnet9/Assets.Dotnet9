@@ -3,7 +3,7 @@ title: 一文了解.Net Core Web API基础知识
 slug: Understand-dotNet-core-web-API-Basics-from-one-post
 description: 本文通过.NET Core 3.1分享Web API基础知识，其他更新版本相差不离
 date: 2022-05-04 14:43:22
-copyright: Reprint
+copyright: Reprinted
 author: 白云任去留
 originaltitle: 一文了解.Net Core Web API基础知识
 originallink: https://www.cnblogs.com/ang/p/13206871.html

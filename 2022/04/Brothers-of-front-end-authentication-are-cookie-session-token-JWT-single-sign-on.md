@@ -3,7 +3,7 @@ title: 前端鉴权的兄弟们：cookie、session、token、jwt、单点登录
 slug: Brothers-of-front-end-authentication-are-cookie-session-token-JWT-single-sign-on
 description: 基于 HTTP 的前端鉴权背景，cookie 为什么是最方便的存储方案，有哪些操作 cookie 的方式，session 方案是如何实现的，存在哪些问题
 date: 2022-04-27 07:31:23
-copyright: Reprint
+copyright: Reprinted
 author: HenryLulu_几木
 originaltitle: 前端鉴权的兄弟们：cookie、session、token、jwt、单点登录
 originallink: https://juejin.cn/post/6898630134530752520

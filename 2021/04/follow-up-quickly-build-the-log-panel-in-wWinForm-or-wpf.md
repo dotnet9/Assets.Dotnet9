@@ -3,11 +3,11 @@ title: 后续来啦：Winform/WPF中快速搭建日志面板
 slug: follow-up-quickly-build-the-log-panel-in-wWinForm-or-wpf
 description: 原理是将`Winform或WPF 应用程序，宿主到ASP.NET Core Web API`上
 date: 2021-04-18 15:45:15
-copyright: Default
+copyright: Original
 originaltitle: 后续来啦：Winform/WPF中快速搭建日志面板
 draft: False
 cover: https://img1.dotnet9.com/2021/04/cover_02.jpg
-categories: Winform,WPF
+categories: .NET相关
 tags: Winform,WPF,日志面板,LogDashboard
 ---
 

@@ -3,7 +3,7 @@ title: 这些CSS提效技巧，你需要知道！
 slug: These-CSS-efficiency-tips-you-need-to-know
 description: 技巧
 date: 2022-04-28 07:12:32
-copyright: Reprint
+copyright: Reprinted
 author: knaagar
 originaltitle: 这些CSS提效技巧，你需要知道！
 originallink: https://dev.to/devsyedmohsin/css-tips-and-tricks-you-will-add-to-cart-163p

@@ -3,7 +3,7 @@ title: 为了避免内存攻击，美国国家安全局提倡Rust、C#、Go、Ja
 slug: nsa-to-developers-think-about-switching-from-c-and-cpp-to-a-memory-safe-programming-language
 description: 对于许多开发人员来说，这可能意味着转向 C#、Go、Java、Ruby、Rust 和 Swift。
 date: 2022-11-16 07:31:26
-copyright: Default
+copyright: Original
 draft: False
 cover: https://img1.dotnet9.com/2022/11/cover_03.png
 categories: 科技生活

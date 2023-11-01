@@ -4,7 +4,7 @@ slug: Launch-a-color-value-conversion-tool
 description: HEX、RGB、RGBA、ARGB、HSL之间相互转换
 date: 2023-07-04 22:11:29
 lastmod: 2023-07-04 22:49:17
-copyright: Default
+copyright: Original
 draft: false
 cover: https://img1.dotnet9.com/2023/07/0701.gif
 categories: Blazor

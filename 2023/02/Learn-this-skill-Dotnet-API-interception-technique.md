@@ -3,7 +3,7 @@ title: 快学会这个技能-.NET API拦截技法
 slug: Learn-this-skill-Dotnet-API-interception-technique
 description: 怎么在不改变源码的情况下，篡改一个方法的入参？伪造返回结果？
 date: 2023-02-13 20:21:19
-copyright: Default
+copyright: Original
 draft: False
 cover: https://img1.dotnet9.com/2023/02/cover_05.png
 categories: .NET相关

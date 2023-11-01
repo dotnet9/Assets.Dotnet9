@@ -3,7 +3,7 @@ title: .NET 7 预览版来啦，我升级体验了
 slug: here-comes-the-preview-version-of-dotnet-7-i-have-upgraded-my-experience
 description: 听说`.NET 7` 来了，站长怎能不尝鲜呢，在除夕当天将体验情况简单汇报下，然后迎新春喽
 date: 2022-01-31 10:35:27
-copyright: Default
+copyright: Original
 originaltitle: .NET 7 预览版来啦，我升级体验了
 draft: False
 cover: https://img1.dotnet9.com/2022/01/cover_02.png

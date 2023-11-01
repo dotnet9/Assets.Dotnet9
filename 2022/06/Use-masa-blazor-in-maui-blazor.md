@@ -3,11 +3,11 @@ title: MAUI使用Masa blazor组件库
 slug: Use-masa-blazor-in-maui-blazor
 description: 有一款漂亮、美观的组件库可以达到事半功倍的效果
 date: 2022-06-21 21:09:47
-copyright: Default
+copyright: Original
 originaltitle: MAUI使用Masa blazor组件库
 draft: False
 cover: https://img1.dotnet9.com/2022/06/1309.png
-categories: MAUI,Blazor
+categories: MAUI
 ---
 
 上一篇([点击阅读](https://dotnet9.com/2022/06/Share-razor-library-between-maui-and-blazor-server-or-client))我们实现了UI在Web端(Blazor Server/Wasm)和客户端(Windows/macOS/Android/iOS)共享，这篇我加上 [Masa Blazor](https://masa-blazor-docs-dev.lonsid.cn/)组件库的引用，并把前几个月写的[时间戳转换](https://dotnet9.com/2022/02/Use-Blazor-to-be-a-simple-online-timestamp-conversion-tool)工具加上。

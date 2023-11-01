@@ -3,7 +3,7 @@ title: meta 标签到底有什么用？终于有人说出了真相
 slug: what-is-the-use-of-meta-tags-finally-someone-told-the-truth
 description: 最近部门在推微前端，需要按功能拆分多个子应用，主应用在加载的过程中经常出现加载失败的问题。
 date: 2021-12-23 21:02:21
-copyright: Reprint
+copyright: Reprinted
 author: 隐冬
 originaltitle: meta 标签到底有什么用？终于有人说出了真相
 originallink: https://juejin.cn/post/6987919006468407309

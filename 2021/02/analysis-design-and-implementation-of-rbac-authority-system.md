@@ -3,7 +3,7 @@ title: RBAC权限系统分析、设计与实现
 slug: analysis-design-and-implementation-of-rbac-authority-system
 description: 最近，因为项目上需要设计实现一个权限管理模块，所以专门整理总结了RBAC的一些知识。
 date: 2021-02-18 16:16:23
-copyright: Reprint
+copyright: Reprinted
 author: shuwoom.com
 originaltitle: RBAC权限系统分析、设计与实现
 originallink: https://shuwoom.com/?p=3041

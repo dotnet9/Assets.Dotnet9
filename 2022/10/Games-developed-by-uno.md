@@ -3,7 +3,7 @@ title: Uno开发的小游戏
 slug: Games-developed-by-uno
 description: 一直以为uno只能开发桌面和移动App，原来它也能开发Web，而且这还是个Web小游戏！
 date: 2022-10-24 21:19:47
-copyright: Default
+copyright: Original
 author: 沙漠尽头的狼
 draft: false
 cover: https://img1.dotnet9.com/2022/10/0701.png

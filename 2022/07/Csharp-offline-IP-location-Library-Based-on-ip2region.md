@@ -3,7 +3,7 @@ title: C#-基于ip2region的离线IP定位库
 slug: Csharp-offline-IP-location-Library-Based-on-ip2region
 description: 在开发中，我们需要记录关于登录者的ip和位置信息，可以通过ip2region来实现！
 date: 2022-07-02 10:01:17
-copyright: Reprint
+copyright: Reprinted
 author: 黑哥聊dotNet
 originaltitle: C#-基于ip2region的离线IP定位库
 originallink: https://mp.weixin.qq.com/s/7eW4fQ-A_ZUsUlQD1vv8VQ

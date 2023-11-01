@@ -3,7 +3,7 @@ title: .Net WebView2 项目，实现 嵌入 WEB 页面 Chromium内核
 slug: Dotnet-webview2-project-to-embed-the-chromium-kernel-of-web-pages
 description: WebView2 项目得天独厚，有微软操作系统win10以及win11的加持
 date: 2022-05-17 20:47:26
-copyright: Reprint
+copyright: Reprinted
 author: 蓝创精英团队
 originaltitle: .Net WebView2 项目，实现 嵌入 WEB 页面 Chromium内核
 originallink: https://blog.csdn.net/i2blue/article/details/124820407

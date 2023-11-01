@@ -3,7 +3,7 @@ title: .NET 8.0 AOT DebugView
 slug: dotnet8_AOT_DebugView
 description: Debugview 是一个应用程序，支持你监视本地系统上或可通过 TCP/IP 访问的网络上任何计算机上的调试输出。
 date: 2023-08-29 13:44:34
-copyright: Reprint
+copyright: Reprinted
 author: JusterZhu
 originaltitle: .NET8 AOT DebugView
 originallink: https://mp.weixin.qq.com/s/lrQK4fdo_TTbXNNyJTY9Yg

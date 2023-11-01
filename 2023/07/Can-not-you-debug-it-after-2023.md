@@ -3,13 +3,13 @@ title: 2023了还不会调试吗？
 slug: Can-not-you-debug-it-after-2023
 description: 本文结合自身实战经验，梳理日常开发中神一般的调试技巧。
 date: 2023-07-22 07:06:19
-copyright: Reprint
+copyright: Reprinted
 author: 河畔一角
 originaltitle: 2022了还不会调试吗？
 originallink: https://juejin.cn/post/7124104703884918798
 draft: false
 cover: https://img1.dotnet9.com/2023/07/cover_10.png
-categories: 更多前端,技巧分享
+categories: 更多前端
 ---
 
 ![](https://img1.dotnet9.com/2023/07/1001.png)

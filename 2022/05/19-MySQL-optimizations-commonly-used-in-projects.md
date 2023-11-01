@@ -3,7 +3,7 @@ title: 项目中常用的19条MySQL优化
 slug: 19-MySQL-optimizations-commonly-used-in-projects
 description: 声明一下优化方案都是基于 Mysql-索引-BTree类型 的
 date: 2022-05-02 17:33:12
-copyright: Reprint
+copyright: Reprinted
 author: anchovy
 originaltitle: 项目中常用的19条MySQL优化
 originallink: https://segmentfault.com/a/1190000012155267

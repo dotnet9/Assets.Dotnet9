@@ -3,7 +3,7 @@ title: (3/30)大家一起学Blazor：Blazor Server和Blazor WebAssembly的差异
 slug: 3-of-30-let-us-learn-blazor-together-differences-between-blazor-berver-and-blazor-webassembly
 description: 下载Visual Studio后首先建立一个Blazor解决方案，里面建立Blazor Server项目，方案位置可以自己选择(注：新版Visual Studio将Blazor Server跟Blazor WebAssembly的新建项目模板拆分了，较为直观)
 date: 2021-12-10 00:13:34
-copyright: Reprint
+copyright: Reprinted
 author: StrayaWorker
 originaltitle: (3/30)大家一起学Blazor：Blazor Server和Blazor WebAssembly的差异
 originallink: https://ithelp.ithome.com.tw/articles/10259814

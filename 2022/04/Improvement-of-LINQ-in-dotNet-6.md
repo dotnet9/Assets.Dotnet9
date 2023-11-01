@@ -3,7 +3,7 @@ title: .NET 6 中 LINQ 的改进
 slug: Improvement-of-LINQ-in-dotNet-6
 description: 如题
 date: 2022-04-23 14:29:14
-copyright: Reprint
+copyright: Reprinted
 author: 一个小伙子
 originaltitle: .NET 6 中 LINQ 的改进
 originallink: https://www.cnblogs.com/paopaotang/p/16133578.html

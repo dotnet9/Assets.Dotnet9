@@ -3,7 +3,7 @@ title: SwiftUI @State @Published @ObservedObject 深入理解和使用
 slug: swiftui-state-published-observadobject-in-depth-understanding-and-use
 description: SwiftUI 是Apple 新出面向未来、跨多端解决方案、声明式编程
 date: 2021-10-18 16:51:27
-copyright: Reprint
+copyright: Reprinted
 author: Renew全栈工程师
 originaltitle: SwiftUI @State @Published @ObservedObject 深入理解和使用
 originallink: https://www.jianshu.com/p/e589181b14db

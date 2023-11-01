@@ -3,7 +3,7 @@ title: .NET性能优化-使用ValueStringBuilder拼接字符串
 slug: Dotnet-Perf-Opt-Use-ValueStringBuilder
 description: 这一次要和大家分享的一个Tips是在字符串拼接场景使用的
 date: 2022-05-11 07:13:26
-copyright: Reprint
+copyright: Reprinted
 author: InCerry
 originaltitle: .NET性能优化-使用ValueStringBuilder拼接字符串
 originallink: https://www.cnblogs.com/InCerry/p/Dotnet-Perf-Opt-Use-ValueStringBuilder.html

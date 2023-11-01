@@ -3,7 +3,7 @@ title: 【开源】一个WPF开发的XML记事本
 slug: An-XML-notepad-developed-by-WPF
 description: WPF开发的XML记事本
 date: 2022-08-18 20:36:17
-copyright: Default
+copyright: Original
 originaltitle: 【开源】一个WPF开发的XML记事本
 draft: False
 cover: https://img1.dotnet9.com/2022/08/cover_01.png

@@ -3,7 +3,7 @@ title: .NET 3行代码实现文字转语音功能
 slug: dotNET-3-lines-of-code-to-achieve-text-to-speech-function
 description: 在人工智能时代，文字转语音是现在人工智能比较热门的功能，各大公司都有这方面的业务，可以可以通过接口对各种文字转语音，甚至能模拟真人，非常的强大
 date: 2022-07-25 21:42:17
-copyright: Reprint
+copyright: Reprinted
 author: 翔星 DotNet开发跳槽
 originaltitle: .NET 3行代码实现文字转语音功能
 originallink: https://mp.weixin.qq.com/s/dz5LsedViYkPJ3FoD3a1rQ

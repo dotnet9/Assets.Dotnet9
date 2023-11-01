@@ -3,8 +3,8 @@ title: .NET进行客户端Web开发又一利器 - Ant Design Blazor
 slug: Another-powerful-tool-for-client-side-web-development-with-dotNet-Ant-Design-Blazer
 description: 继上篇介绍Bootstrap风格的BlazorUI组件库后，今天我来介绍另一款Blazor UI组件库：一套基于 Ant Design 和 Blazor 的企业级组件库。
 date: 2020-06-21 13:45:56
-copyright: Default
-banner: true
+copyright: Original
+banner: false
 originaltitle: .NET进行客户端Web开发又一利器 - Ant Design Blazor
 draft: False
 cover: https://img1.dotnet9.com/2020/06/0109.jpg

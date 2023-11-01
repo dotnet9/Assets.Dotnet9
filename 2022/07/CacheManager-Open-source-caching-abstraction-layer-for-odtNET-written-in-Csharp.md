@@ -3,7 +3,7 @@ title: CacheManager - 用 C# 编写的 .NET 的开源缓存抽象层
 slug: CacheManager-Open-source-caching-abstraction-layer-for-odtNET-written-in-Csharp
 description: CacheManager 是用 C# 编写的 .NET 的开源缓存抽象层。它支持各种缓存提供程序并实现了许多高级功能
 date: 2022-07-08 07:03:43
-copyright: Reprint
+copyright: Reprinted
 author: 黑哥聊dotNet
 originaltitle: CacheManager - 用 C# 编写的 .NET 的开源缓存抽象层
 originallink: https://mp.weixin.qq.com/s/k5u-JpLOUsjh__8mZTDNww

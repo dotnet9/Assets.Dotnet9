@@ -3,7 +3,7 @@ title: (30/30)大家一起学Blazor：.NET 6 <ErrorBoundary>
 slug: 30-of-30-let-us-learn-blazor-together-dotnet6-errorboundary
 description: 昨天说到单元测试，但有些时候可能由于时间关系没办法完整测试
 date: 2021-12-25 21:50:23
-copyright: Reprint
+copyright: Reprinted
 author: StrayaWorker
 originaltitle: (30/30)大家一起学Blazor：.NET 6 <ErrorBoundary>
 originallink: https://ithelp.ithome.com.tw/articles/10275330

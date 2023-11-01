@@ -3,7 +3,7 @@ title: 树形表的平行查询设计
 slug: Parallel-query-design-of-tree-table
 description: 树形表设计讨论
 date: 2022-05-24 18:53:47
-copyright: Reprint
+copyright: Contributes
 author: 长空X
 originaltitle: 树形表的平行查询设计
 originallink: https://www.cnblogs.com/gtxck/articles/16293295.html

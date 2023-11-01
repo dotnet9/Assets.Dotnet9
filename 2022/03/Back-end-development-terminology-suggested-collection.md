@@ -3,7 +3,7 @@ title: 后端开发术语大全【建议收藏】
 slug: Back-end-development-terminology-suggested-collection
 description: 工欲善其事，必先利其器；士欲宣其义，必先读其书。后台开发作为互联网技术领域的掌上明珠，一直都是开发者们的追逐的高峰。
 date: 2022-03-31 11:31:23
-copyright: Reprint
+copyright: Reprinted
 author: 云加社区
 originaltitle: 后端开发术语大全【建议收藏】
 originallink: https://mp.weixin.qq.com/s/i4MAVUnDbP1tsdxaQpkjAQ

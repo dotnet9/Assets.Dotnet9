@@ -3,7 +3,7 @@ title: cake-build -.NET Core 跨平台构建自动化系统
 slug: cake-build-dotNet-Core-cross-platform-build-automation-system
 description: Cake (C# Make) 是一个带有 C# DSL 的构建自动化系统，用于执行编译代码、复制文件/文件夹、运行单元测试、压缩文件和构建 NuGet 包等操作。
 date: 2022-07-12 20:13:27
-copyright: Reprint
+copyright: Reprinted
 author: 黑哥聊dotNet
 originaltitle: cake-build -.NET Core 跨平台构建自动化系统
 originallink: https://mp.weixin.qq.com/s/FWP4AskTvcK_6NpdFo4dQg

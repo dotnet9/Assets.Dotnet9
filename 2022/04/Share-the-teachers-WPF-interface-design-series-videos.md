@@ -3,7 +3,7 @@ title: 分享这位大神的WPF界面设计系列视频
 slug: Share-the-teachers-WPF-interface-design-series-videos
 description: 对于玩WPF的同学，他的一些界面设计是可以学习的，甚至可以直接复制过来使用。
 date: 2022-04-27 21:12:21
-copyright: Default
+copyright: Original
 originaltitle: 分享这位大神的WPF界面设计系列视频
 draft: False
 cover: https://img1.dotnet9.com/2022/04/4005.png

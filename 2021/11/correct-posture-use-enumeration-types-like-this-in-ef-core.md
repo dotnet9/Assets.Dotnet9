@@ -3,7 +3,7 @@ title: 正确姿势？EF Core 中这样使用枚举类型？
 slug: correct-posture-use-enumeration-types-like-this-in-ef-core
 description: 在EntityFramework Core中的实体是不直接支持枚举类型的操作，这让我们在开发过程中带来不少的麻烦
 date: 2021-11-09 10:06:30
-copyright: Reprint
+copyright: Reprinted
 author: waitaction
 originaltitle: 正确姿势？EF Core 中这样使用枚举类型？
 originallink: https://blog.csdn.net/waitaction/article/details/88639152

@@ -4,7 +4,7 @@ slug: Small-knowledge-sharing-Csharps-Type.GetType-acquisition-failed
 description: 通过Type.GetType引申出工程文件app.config的配置使用。
 date: 2023-03-15 12:37:33
 lastmod: 2023-03-17 21:36
-copyright: Default
+copyright: Original
 draft: false
 cover: https://img1.dotnet9.com/2023/03/cover_06.png
 categories: .NET相关

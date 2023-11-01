@@ -3,7 +3,7 @@ title: 理解ASP.NET Core - 授权(Authorization)
 slug: Understand-ASP-Net-core-Authorization
 description: ASP.NET Core中的授权方式有很多，我们一起了解一下其中三种较为常见的方式
 date: 2022-04-18 20:31:13
-copyright: Reprint
+copyright: Reprinted
 author: xiaoxiaotank
 originaltitle: 理解ASP.NET Core - 授权(Authorization)
 originallink: https://www.cnblogs.com/xiaoxiaotank/p/16157344.html

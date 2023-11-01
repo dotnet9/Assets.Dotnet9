@@ -3,7 +3,7 @@ title: 如何在生产环境下用好EFCore
 slug: How-to-make-good-use-of-efcore-in-production-environment
 description: 这是使用EF Core迁移数据库的系列文章中的第二篇。
 date: 2022-05-04 16:19:32
-copyright: Reprint
+copyright: Reprinted
 author: Jon P Smith DotNET技术圈
 originaltitle: 如何在生产环境下用好EFCore
 originallink: https://mp.weixin.qq.com/s/GDo6_6YpmH4r0tkHXf0yAg

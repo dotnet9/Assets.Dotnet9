@@ -3,7 +3,7 @@ title: (16/30)大家一起学Blazor：建立数据库
 slug: 16-of-30-let-us-learn-blazor-together-create-database
 description: 我们现在有了基本的日志，但是每次输入完重新加载页面数据都会重置，因为这些数据都只存在于浏览器，没有真正储存到数据库，为了保存下来，我们要跟数据库连接。
 date: 2021-12-18 23:34:26
-copyright: Reprint
+copyright: Reprinted
 author: StrayaWorker
 originaltitle: (16/30)大家一起学Blazor：建立数据库
 originallink: https://ithelp.ithome.com.tw/articles/10265408

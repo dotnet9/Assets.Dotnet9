@@ -3,7 +3,7 @@ title: (28/30)大家一起学Blazor：Policy-based authorization
 slug: 28-of-30-let-us-learn-blazor-together-policy-based-authorization
 description: 之前有说到`ASP.NET Core Identity` 使用的是基于`Claim` 的验证，其实`ASP.NET Core Identity` 有不同类型的授权方式，最简单的`登录授权`、`角色授权`、`Claim 授权`，但上述几种都是以一种方式实现：原则授权(`Policy-based authorization`)。
 date: 2021-12-25 17:51:34
-copyright: Reprint
+copyright: Reprinted
 author: StrayaWorker
 originaltitle: (28/30)大家一起学Blazor：Policy-based authorization
 originallink: https://ithelp.ithome.com.tw/articles/10273858

@@ -3,7 +3,7 @@ title: .NET下如何拦截鼠标、键盘消息？Win32NET来帮你
 slug: How-to-intercept-mouse-and-keyboard-messages-under-Net-Win32net-to-help-you
 description: Win32NET是一个Win32API的.NET下封装的类库
 date: 2022-01-20 14:12:04
-copyright: Reprint
+copyright: Reprinted
 author: 明月心技术学堂
 originaltitle: .NET下如何拦截鼠标、键盘消息？Win32NET来帮你
 originallink: https://mp.weixin.qq.com/s/_c4T7R_HeVLVg6sqvLoABw

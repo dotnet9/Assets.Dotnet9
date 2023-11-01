@@ -3,7 +3,7 @@ title: WPF开源控件扩展库ControlzEx
 slug: wpf-open-source-control-extension-library-controlzex
 description: 开源分享
 date: 2021-06-19 13:45:19
-copyright: Default
+copyright: Original
 originaltitle: WPF开源控件扩展库ControlzEx
 draft: False
 cover: https://img1.dotnet9.com/2021/06/cover_04.jpg

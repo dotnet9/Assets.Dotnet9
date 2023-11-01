@@ -3,7 +3,7 @@ title: (5/30)大家一起学Blazor：依赖注入(Dependency Injection)
 slug: 5-of-30-let-us-learn-blazor-together-dependency-injection
 description: 问题来了，为什么Blazor会知道WeatherForecastService在这里可以调用？
 date: 2021-12-11 13:27:42
-copyright: Reprint
+copyright: Reprinted
 author: StrayaWorker
 originaltitle: (5/30)大家一起学Blazor：依赖注入(Dependency Injection)
 originallink: https://ithelp.ithome.com.tw/articles/10260278

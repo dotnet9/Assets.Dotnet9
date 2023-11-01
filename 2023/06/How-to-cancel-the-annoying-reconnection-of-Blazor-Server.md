@@ -3,7 +3,7 @@ title: 如何取消Blazor Server烦人的重新连接？
 slug: How-to-cancel-the-annoying-reconnection-of-Blazor-Server
 description: 使用微软提供的方案解决这个问题
 date: 2023-06-23 08:26:19
-copyright: Reprint
+copyright: Reprinted
 author: Token
 originaltitle: 如何取消Blazor Server烦人的重新连接？
 originallink: https://www.cnblogs.com/hejiale010426/p/17498629.html

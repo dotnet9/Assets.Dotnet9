@@ -3,7 +3,7 @@ title: WPF中的数据绑定表达式
 slug: data-binding-expressions-in-wpf
 description: 数据绑定是一种强大的技术，它允许数据在UI元素和业务模型之间流动。当业务模型中的数据发生变化时，它会自动将更改反映到UI元素上。
 date: 2021-10-18 16:53:35
-copyright: Reprint
+copyright: Reprinted
 author: Swati Gupta
 originaltitle: WPF中的数据绑定表达式
 originallink: https://www.c-sharpcorner.com/article/data-binding-expression-in-wpf/

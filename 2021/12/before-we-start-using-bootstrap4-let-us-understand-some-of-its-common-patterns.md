@@ -3,7 +3,7 @@ title: 要开始使用Bootstrap 4 前，我们先了解几个它的通用模式�
 slug: before-we-start-using-bootstrap4-let-us-understand-some-of-its-common-patterns
 description: 简单来说，若是我们不使用Bootstrap 4，而是用手刻的方式来撰写网页，HTML 的内容我们得要自己写(废话)，CSS 我们也得要一个一个自己设定(又一个废话)，可是若是使用Bootstrap 4 的话，很多常用的CSS 他已经预先帮我们写好了，我们只要熟悉Bootstrap 4 的文件，知道他预写的CSS 是用哪一个class 名，届时只要直接套用到标签上就可以了
 date: 2021-12-06 14:16:59
-copyright: Reprint
+copyright: Reprinted
 author: Alec
 originaltitle: 要开始使用Bootstrap 4 前，我们先了解几个它的通用模式吧
 originallink: https://ithelp.ithome.com.tw/articles/10228808

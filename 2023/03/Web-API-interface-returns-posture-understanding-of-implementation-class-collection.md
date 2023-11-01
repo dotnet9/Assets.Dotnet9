@@ -4,10 +4,10 @@ slug: Web-API-interface-returns-posture-understanding-of-implementation-class-co
 description: .NET Web API接口返回基类列表，测试接口只返回了基类的属性，实现类的属性怎么返回呢？
 date: 2023-03-16 12:23:16
 lastmod: 2023-03-19 20:55:32
-copyright: Default
+copyright: Original
 draft: false
 cover: https://img1.dotnet9.com/2023/03/cover_08.jpeg
-categories: .NET相关,Web API
+categories: Web API
 ---
 
 大家好，我是沙漠尽头的狼。

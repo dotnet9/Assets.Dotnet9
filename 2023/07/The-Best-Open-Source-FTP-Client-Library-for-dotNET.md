@@ -3,7 +3,7 @@ title: .NET 最好用的开源 FTP 客户端库
 slug: The-Best-Open-Source-FTP-Client-Library-for-dotNET
 description: FluentFTP 是一个适用于 .NET 和 .NET Standard 的 FTP 和 FTPS 客户端。
 date: 2023-07-17 19:59:34
-copyright: Reprint
+copyright: Reprinted
 author: 工具箱
 originaltitle: .NET 最好用的开源 FTP 客户端库
 originallink: https://mp.weixin.qq.com/s/ZwV-hgGlgFlkGY-Yy8oCLA

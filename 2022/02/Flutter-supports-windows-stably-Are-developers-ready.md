@@ -3,7 +3,7 @@ title: Flutter稳定支持Windows，开发者做好准备了吗？
 slug: Flutter-supports-windows-stably-Are-developers-ready
 description: Flutter是由谷歌开发的开源移动UI框架，可快速在不同平台上构建高质量原生用户界面。
 date: 2022-02-07 22:24:11
-copyright: Reprint
+copyright: Reprinted
 author: 技术视野
 originaltitle: Flutter稳定支持Windows，开发者做好准备了吗？
 originallink: https://blog.csdn.net/csdndevelopers/article/details/122808516

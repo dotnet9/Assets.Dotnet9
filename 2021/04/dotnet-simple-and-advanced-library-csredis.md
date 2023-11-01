@@ -3,7 +3,7 @@ title: .NET Core 简单且高级的库 csredis
 slug: dotnet-simple-and-advanced-library-csredis
 description: 开源免费的redis包
 date: 2021-04-11 09:50:47
-copyright: Reprint
+copyright: Reprinted
 author: FreeSql & CSRedis
 originaltitle: .NET Core 简单且高级的库 csredis
 originallink: https://www.cnblogs.com/kellynic/p/9803314.html

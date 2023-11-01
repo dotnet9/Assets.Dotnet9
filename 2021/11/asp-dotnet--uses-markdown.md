@@ -3,7 +3,7 @@ title: ASP.NET (Core)使用Markdown
 slug: asp-dotnet--uses-markdown
 description: 分享一下之前学习的一个登录小案例
 date: 2021-11-02 21:57:48
-copyright: Reprint
+copyright: Reprinted
 author: 殷慈航
 originaltitle: ASP.NET (Core)使用Markdown
 originallink: https://www.cnblogs.com/jiyuwu/p/11791004.html

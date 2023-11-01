@@ -3,15 +3,15 @@ title: 100套大数据可视化模板
 slug: 100-sets-of-big-data-visualization-templates
 description: 100套大数据可视化炫酷大屏Html5模板;包含行业:社区、物业、政务、交通、金融银行等，全网最新、最多，最全、最酷、最炫大数据可视化模板。陆续更新中
 date: 2022-04-21 20:13:49
-banner: true
-copyright: Reprint
+banner: false
+copyright: Reprinted
 author: iGaoWei
 originaltitle: 100套大数据可视化模板
 originallink: https://gitee.com/iGaoWei/big-data-view
 draft: False
 cover: https://img1.dotnet9.com/2022/04/2801.gif
 albums: 开源Web
-categories: HTML,开源项目
+categories: HTML
 tags: 大屏模板,在线浏览
 ---
 

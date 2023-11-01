@@ -3,7 +3,7 @@ title: 10分钟实现dotnet程序在linux下的自动部署
 slug: Automatic-deployment-of-dotnet-program-under-Linux-in-10-minutes
 description: 一直以来，程序署都是非常麻烦且无聊的事情，在公司一般都会有 devops 方案，整个 cicd 过程涉及的工具还是挺多的，搭建起来比较麻烦。
 date: 2022-07-02 21:57:29
-copyright: Reprint
+copyright: Reprinted
 author: xhznl
 originaltitle: 10分钟实现dotnet程序在linux下的自动部署
 originallink: https://www.cnblogs.com/xhznl/p/16438063.html

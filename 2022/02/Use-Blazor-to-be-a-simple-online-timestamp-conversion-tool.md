@@ -3,7 +3,7 @@ title: 使用Blazor做个简单的时间戳在线转换工具
 slug: Use-Blazor-to-be-a-simple-online-timestamp-conversion-tool
 description: 时间戳转换，关键点在于双向绑定`@bind-Value`，就简单贴源码吧
 date: 2022-02-27 23:20:12
-copyright: Default
+copyright: Original
 originaltitle: 使用Blazor做个简单的时间戳在线转换工具
 draft: False
 cover: https://img1.dotnet9.com/2022/02/cover_17.jpeg

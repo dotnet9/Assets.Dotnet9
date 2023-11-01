@@ -3,7 +3,7 @@ title: EF Core使用Simple Logging输出日志
 slug: EF-core-uses-simple-logging-to-output-logs
 description: 在使用EF Core的时候，很多时候需要知道EF Core实际执行的SQL语句是什么。
 date: 2022-05-04 15:56:21
-copyright: Reprint
+copyright: Reprinted
 author: MyIO
 originaltitle: EF Core使用Simple Logging输出日志
 originallink: https://mp.weixin.qq.com/s/QXBhG_ayoeCcE9dGsgbNKw

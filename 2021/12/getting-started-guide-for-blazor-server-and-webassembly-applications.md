@@ -3,7 +3,7 @@ title: Blazor Server 和 WebAssembly 应用程序入门指南
 slug: getting-started-guide-for-blazor-server-and-webassembly-applications
 description: 如果您一直紧跟 .NET 世界的最新发展趋势，那么现在您一定听说过 Blazor。
 date: 2021-12-09 21:25:22
-copyright: Reprint
+copyright: Reprinted
 author: 技术译民
 originaltitle: Blazor Server 和 WebAssembly 应用程序入门指南
 originallink: https://www.cnblogs.com/ittranslator/p/a-beginners-guide-to-blazor-server-and-webassembly-applications.html

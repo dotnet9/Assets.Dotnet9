@@ -3,7 +3,7 @@ title: 开源.NET 7和Blazor组合开发的跨平台边缘采集网-ThingsGatewa
 slug: Cross-platform-edge-collection-network-developed-by-combining-open-source-dotnet-7-and-Blazor-ThingsGateway
 description: ThingsGateway 基于net6/7+ ，跨平台边缘采集(物联网)网关，支持南北端插件式开发，支持常用Modbus/OPCDA/OPCUA/S7采集插件，MQTT/OPCUAServer等上传插件
 date: 2023-05-11 20:48:46
-copyright: Contribution
+copyright: Contributes
 author: Diego
 draft: false
 cover: https://img1.dotnet9.com/2023/05/cover_02.png

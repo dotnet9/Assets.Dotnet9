@@ -3,7 +3,7 @@ title: 1. N+1和2N的计算方法及法律依据是什么？
 slug: 1-What-is-the-calculation-method-and-legal-basis-of-N-add-1-and-2n
 description: 分享常识
 date: 2022-03-17 23:41:23
-copyright: Reprint
+copyright: Reprinted
 author: 逃离沙漠
 originaltitle: 1. N+1和2N的计算方法及法律依据是什么？
 originallink: https://mp.weixin.qq.com/s/QIsePgO1PPRgXyNpruog9A

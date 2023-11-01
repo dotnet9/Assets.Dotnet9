@@ -3,7 +3,7 @@ title: (19/30)大家一起学Blazor：图片上传
 slug: 19-of-30-let-us-learn-blazor-together-upload-image
 description: 在大部分的网站中，上传图片也是很重要的功能，今天我们就来操作下。
 date: 2021-12-21 22:04:11
-copyright: Reprint
+copyright: Reprinted
 author: StrayaWorker
 originaltitle: (19/30)大家一起学Blazor：图片上传
 originallink: https://ithelp.ithome.com.tw/articles/10267909

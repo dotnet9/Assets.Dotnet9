@@ -3,7 +3,7 @@ title: 一套Flutter代码多端运行
 slug: a-set-of-flutter-code-runs-at-multiple-ends
 description: 本文不打算介绍功能代码，分享一个油管关于Flutter的分享视频
 date: 2021-07-10 23:29:38
-copyright: Default
+copyright: Original
 originaltitle: 一套Flutter代码多端运行
 draft: False
 cover: https://img1.dotnet9.com/2021/07/cover_02.png

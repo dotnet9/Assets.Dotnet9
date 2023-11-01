@@ -3,7 +3,7 @@ title: EF CORE 7 RC1 发布
 slug: announcing-ef7-rc1
 description: Entity Framework Core 7 (EF7) Release Candidate 1 已发布！该团队专注于解决缺陷、小幅改进以及对功能进行最后润色。
 date: 2022-09-15 08:35:17
-copyright: Reprint
+copyright: Reprinted
 author: Jeremy Likness
 originaltitle: Announcing Entity Framework 7 Release Candidate 1
 originallink: https://devblogs.microsoft.com/dotnet/announcing-ef7-rc1/

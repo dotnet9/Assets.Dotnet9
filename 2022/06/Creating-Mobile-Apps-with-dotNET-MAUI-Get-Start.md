@@ -3,7 +3,7 @@ title: 使用 .NET MAUI 创建移动应用——Get Start
 slug: Creating-Mobile-Apps-with-dotNET-MAUI-Get-Start
 description: 一次MAUI简单使用之旅
 date: 2022-06-15 22:52:17
-copyright: Reprint
+copyright: Reprinted
 author: 张飞洪[厦门] 
 originaltitle: 使用 .NET MAUI 创建移动应用——Get Start
 originallink: https://www.cnblogs.com/jackyfei/p/16349599.html

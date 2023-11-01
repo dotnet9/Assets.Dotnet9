@@ -4,8 +4,8 @@ slug: one-wpf-awesome-animation-library-xamlflair
 description: XamlFlair库的目标是简化常见动画的实现，并允许开发人员使用几行Xaml`轻松`地添加单个或组合的动画集。
 date: 2021-07-01 17:04:47
 lastmod: 2023-07-03 13:33:32
-banner: true
-copyright: Default
+banner: false
+copyright: Original
 lastmodifyuser: Linluz
 originaltitle: WPF牛逼的动画库：XamlFlair
 draft: False

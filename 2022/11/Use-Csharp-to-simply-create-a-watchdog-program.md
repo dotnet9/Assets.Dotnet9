@@ -3,7 +3,7 @@ title: 使用C#简单制作一个看门狗程序
 slug: Use-Csharp-to-simply-create-a-watchdog-program
 description: 在有些特殊项目中，软件可能是无人值守的，如果程序莫名其妙挂了或者进程被干掉了等等，这时开发一个看门狗程序是非常有必要的
 date: 2022-11-11 11:20:47
-copyright: Contribution
+copyright: Contributes
 author: 傲慢与偏见
 originaltitle: 使用C#简单制作一个看门狗程序
 originallink: https://www.cnblogs.com/chonglu/p/16913746.html

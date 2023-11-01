@@ -3,7 +3,7 @@ title: 提高国内访问 GitHub 的速度的 9 种方案
 slug: 9-solutions-to-improve-the-speed-of-domestic-access-to-GitHub
 description: 因为某些原因，github访问速度确实太慢了，图片经常刷不出来，甚至会出现项目无法下载的情况。码云虽好，可目前还是无法代替github在编程界的地位。
 date: 2022-04-15 20:23:24
-copyright: Reprint
+copyright: Reprinted
 author: 猪哥
 originaltitle: 提高国内访问 GitHub 的速度的 9 种方案
 originallink: https://urlify.cn/IFzQRb

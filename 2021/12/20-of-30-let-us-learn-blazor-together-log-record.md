@@ -3,7 +3,7 @@ title: (20/30)大家一起学Blazor：日志记录
 slug: 20-of-30-let-us-learn-blazor-together-log-record
 description: 在开发系统时，记录是一件很重要的事，前面都没有提到，笔者在最近才想到这点，所以就来实现吧！
 date: 2021-12-21 23:36:29
-copyright: Reprint
+copyright: Reprinted
 author: StrayaWorker
 originaltitle: (20/30)大家一起学Blazor：日志记录
 originallink: https://ithelp.ithome.com.tw/articles/10268616

@@ -3,7 +3,7 @@ title: C# Clay开源的动态语言dynamic框架，让您形如javascript的方�
 slug: Csharp-clay-open-source-dynamic-language-dynamic-framework-allows-you-to-create-objects-in-a-JavaScript-like-manner
 description: 能够让我们在不需要定义类的情况下，就构建出我们想要的对象。
 date: 2022-07-15 21:33:17
-copyright: Reprint
+copyright: Reprinted
 author: 黑哥聊dotNet
 originaltitle: C# Clay开源的动态语言dynamic框架，让您形如javascript的方式创建对象！
 originallink: https://mp.weixin.qq.com/s/CQj7lR_7c97KUq07BU0Jlg

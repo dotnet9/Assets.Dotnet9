@@ -3,7 +3,7 @@ title: .NET性能优化-推荐使用Collections.Pooled
 slug: Net-performance-optimization-collections-Pooled
 description: 性能优化就是如何在保证处理相同数量的请求情况下占用更少的资源
 date: 2022-05-28 23:34:47
-copyright: Reprint
+copyright: Reprinted
 author: InCerry
 originaltitle: .NET性能优化-推荐使用Collections.Pooled
 originallink: https://www.cnblogs.com/InCerry/p/Recommand_Use_Collections_Pooled.html

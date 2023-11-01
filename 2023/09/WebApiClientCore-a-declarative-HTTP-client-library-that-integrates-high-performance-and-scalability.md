@@ -4,7 +4,7 @@ slug: WebApiClientCore-a-declarative-HTTP-client-library-that-integrates-high-pe
 description: WebApiClient.JIT/AOT的netcore版本，集高性能高可扩展性于一体的声明式http客户端库，特别适用于微服务的restful资源请求，也适用于各种畸形http接口请求。
 date: 2023-09-05 12:17:32
 lastmod: 2023-09-06 12:26:23
-copyright: Reprint
+copyright: Reprinted
 author: 老九
 originaltitle: WebApiClientCore使用说明
 originallink: https://www.cnblogs.com/kewei/p/12939866.html

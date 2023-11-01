@@ -3,7 +3,7 @@ title: WPF本地化扩展概述及实例
 slug: wpf-localization-extension-overview-and-examples
 description: WPF本地化是将应用程序资源转换为支持该应用程序的特定区域性的本地化版本。
 date: 2021-04-05 22:34:51
-copyright: Default
+copyright: Original
 originaltitle: WPF本地化扩展概述及实例
 draft: False
 cover: https://img1.dotnet9.com/2021/04/cover_07.jpg

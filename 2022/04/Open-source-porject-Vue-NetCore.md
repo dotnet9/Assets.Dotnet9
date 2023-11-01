@@ -3,14 +3,14 @@ title: 开源项目《Vue.NetCore》
 slug: Open-source-porject-Vue-NetCore
 description: .NetCore+Vue2/Vue3+Element plus+uniapp前后端分离，全自动生成PC与移动端代码；支持移动端(uniapp)ios/android/h5/微信小程序。http://www.volcore.xyz/
 date: 2022-04-11 20:22:16
-copyright: Reprint
+copyright: Reprinted
 author: x_discoverer
 originaltitle: 开源项目《Vue.NetCore》
 originallink: https://gitee.com/x_discoverer/Vue.NetCore
 draft: False
 cover: https://img1.dotnet9.com/2022/04/h5.jpg
 albums: 开源Web
-categories: Web API,Dapper,Vue
+categories: Web API
 tags: 开源项目,Vue,Web API
 ---
 

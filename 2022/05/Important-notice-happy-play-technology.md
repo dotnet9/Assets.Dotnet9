@@ -3,7 +3,7 @@ title: 重要通知：快乐玩转技术
 slug: Important-notice-happy-play-technology
 description: 新号专注于 `.NET` 和 `Flutter` 跨平台开发技术，计划对感兴趣的国外技术文章进行翻译、油管视频分享（不搬运视频，只分享视频中案例代码）
 date: 2022-05-10 21:27:17
-copyright: Reprint
+copyright: Reprinted
 author: 快乐玩转技术
 originaltitle: 重要通知：快乐玩转技术
 originallink: https://dotnet9.com/2022/05/%e9%87%8d%e8%a6%81%e9%80%9a%e7%9f%a5%ef%bc%9a%e5%bf%ab%e4%b9%90%e7%8e%a9%e8%bd%ac%e6%8a%80%e6%9c%af/

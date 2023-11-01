@@ -3,7 +3,7 @@ title: 数据埋点是什么？设置埋点的意义是什么？
 slug: What-is-the-data-buried-point-What-is-the-meaning-of-setting-the-buried-point
 description: 所谓埋点就是在应用中特定的流程收集一些信息，用来跟踪应用使用的状况，后续用来进一步优化产品或是提供运营的数据支撑
 date: 2022-04-24 20:25:19
-copyright: Reprint
+copyright: Reprinted
 author: MY少数派
 originaltitle: 数据埋点是什么？设置埋点的意义是什么？
 originallink: https://zhuanlan.zhihu.com/p/25195217

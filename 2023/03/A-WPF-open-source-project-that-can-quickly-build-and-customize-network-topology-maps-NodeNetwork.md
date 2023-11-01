@@ -3,7 +3,7 @@ title: 能快速构建和定制网络拓扑图的WPF开源项目-NodeNetwork
 slug: A-WPF-open-source-project-that-can-quickly-build-and-customize-network-topology-maps-NodeNetwork
 description: 在现代软件开发中，数据可视化和可交互性越来越受到关注。为了实现这一点，通常需要使用各种图表、表格、网络拓扑图等控件。NodeNetwork就是一种这样的自定义方式，它是一个基于C# WPF的开源项目，可以帮助我们快速构建和定制网络拓扑图。
 date: 2023-03-18 22:05:18
-copyright: Default
+copyright: Original
 draft: false
 cover: https://img1.dotnet9.com/2023/03/cover_12.png
 categories: WPF

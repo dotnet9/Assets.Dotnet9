@@ -3,7 +3,7 @@ title: ABP会臃肿吗
 slug: Will-ABP-be-bloated
 description: 我有时候在想在JAVA领域，Spring基本一统天下，新手也好，高手也罢都在学习、研究和项目实战。
 date: 2022-04-24 20:44:57
-copyright: Reprint
+copyright: Reprinted
 author: 张飞洪[厦门]
 originaltitle: ABP会臃肿吗
 originallink: https://www.cnblogs.com/jackyfei/p/16063572.html

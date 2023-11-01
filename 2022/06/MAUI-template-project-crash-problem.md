@@ -3,7 +3,7 @@ title: MAUI模板项目闪退问题
 slug: MAUI-template-project-crash-problem
 description: 在使用MAUI框架时遇到新建的模板应用居然启动时直接闪退，最终也是解决了这个闪退问题，遂分享下这一经历。
 date: 2022-06-18 14:57:32
-copyright: Reprint
+copyright: Reprinted
 author: gui.h
 originaltitle: MAUI模板项目闪退问题
 originallink: https://www.cnblogs.com/springhgui/p/16381483.html

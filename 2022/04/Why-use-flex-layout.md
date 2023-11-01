@@ -3,7 +3,7 @@ title: 为什么要使用flex布局?
 slug: Why-use-flex-layout
 description: Flex布局分享
 date: 2022-04-29 07:13:29
-copyright: Reprint
+copyright: Reprinted
 author: 前端精髓
 originaltitle: 为什么要使用flex布局?
 originallink: https://juejin.cn/post/7063823914136256543

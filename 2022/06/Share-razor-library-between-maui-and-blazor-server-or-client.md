@@ -3,11 +3,11 @@ title: MAUI与Blazor共享一套UI，媲美Flutter，实现Windows、macOS、And
 slug: Share-razor-library-between-maui-and-blazor-server-or-client
 description: 在MAUI Blazor和Blazor Server(或者Client)项目之间，通过Razor类库共用一套UI，统一Web、客户端、App界面
 date: 2022-06-19 23:35:14
-copyright: Default
+copyright: Original
 originaltitle: MAUI与Blazor共享一套UI，媲美Flutter，实现Windows、macOS、Android、iOS、Web通用UI
 draft: False
 cover: https://img1.dotnet9.com/2022/06/1309.png
-categories: MAUI,Blazor
+categories: MAUI
 ---
 
 ## 1. 前言

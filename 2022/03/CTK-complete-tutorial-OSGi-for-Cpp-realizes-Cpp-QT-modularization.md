@@ -3,7 +3,7 @@ title: CTK完整教程(OSGI for C++ 实现 C++ Qt 模块化)
 slug: CTK-complete-tutorial-OSGi-for-Cpp-realizes-Cpp-QT-modularization
 description: Qt模块化开发框架介绍
 date: 2022-03-24 00:32:33
-copyright: Reprint
+copyright: Reprinted
 author: 来唧唧歪歪
 originaltitle: CTK完整教程(OSGI for C++ 实现 C++ Qt 模块化)
 originallink: https://www.ljjyy.com/archives/2021/03/100645.html

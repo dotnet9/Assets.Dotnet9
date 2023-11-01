@@ -3,7 +3,7 @@ title: 开源WPF控件库-AdonisUI
 slug: Open-source-WPF-control-library-adonisui
 description: 用于 WPF 应用程序的轻量级 UI 工具包，提供经典和增强的 Windows 视觉效果
 date: 2022-07-14 20:44:21
-copyright: Default
+copyright: Original
 originaltitle: 开源WPF控件库-AdonisUI
 draft: False
 cover: https://img1.dotnet9.com/2022/07/1501.gif

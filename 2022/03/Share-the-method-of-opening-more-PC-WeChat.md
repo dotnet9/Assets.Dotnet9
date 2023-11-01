@@ -3,7 +3,7 @@ title: 分享PC微信多开的方法
 slug: Share-the-method-of-opening-more-PC-WeChat
 description: 多开微信
 date: 2022-03-18 07:32:16
-copyright: Default
+copyright: Original
 originaltitle: 分享PC微信多开的方法
 draft: False
 cover: https://img1.dotnet9.com/2022/03/cover_21.png

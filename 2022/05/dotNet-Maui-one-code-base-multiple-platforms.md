@@ -3,7 +3,7 @@ title: .NET MAUI – 一个代码库，多个平台
 slug: dotNet-Maui-one-code-base-multiple-platforms
 description: .NET 开发人员拥有了针对 Android、iOS、macOS 和 Windows 的一流跨平台 UI 堆栈
 date: 2022-05-26 21:19:14
-copyright: Reprint
+copyright: Reprinted
 author: gui.h
 originaltitle: .NET MAUI – 一个代码库，多个平台
 originallink: https://www.cnblogs.com/springhgui/p/16304492.html

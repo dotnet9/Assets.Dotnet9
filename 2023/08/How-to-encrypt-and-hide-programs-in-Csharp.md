@@ -3,7 +3,7 @@ title: C# 如何将程序加密隐藏？
 slug: How-to-encrypt-and-hide-programs-in-Csharp
 description: 介绍如何通过LiteDB将自己的程序进行加密，实现介绍一下LiteDB。
 date: 2023-08-15 20:23:53
-copyright: Reprint
+copyright: Reprinted
 author: tokengo
 originaltitle: c# 如何将程序加密隐藏？
 originallink: https://mp.weixin.qq.com/s/JPBwcTfTjFZrSa-iI8gqCQ

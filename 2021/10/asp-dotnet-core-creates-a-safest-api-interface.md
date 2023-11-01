@@ -3,7 +3,7 @@ title: ASP.NET Core打造一个“最安全”的API接口
 slug: asp-dotnet-core-creates-a-safest-api-interface
 description: 公司交给你一个任务让你写一个API接口,那么我们应该如何设计？
 date: 2021-10-21 10:34:33
-copyright: Reprint
+copyright: Reprinted
 author: 薛家明
 originaltitle: ASP.NET Core打造一个“最安全”的API接口
 originallink: https://www.cnblogs.com/xuejiaming/p/15384015.html

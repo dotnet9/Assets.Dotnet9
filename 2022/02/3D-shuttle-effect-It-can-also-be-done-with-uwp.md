@@ -3,7 +3,7 @@ title: 3D 穿梭效果？使用 UWP 也能搞定
 slug: 3D-shuttle-effect-It-can-also-be-done-with-uwp
 description: 晚上回家吃饭溜娃打打帝国时代 4，突然想起我很久没有宠幸 UWP 了。一股“吾有上将 UWP，可搞定 3D 穿梭效果”的豪气油然而生。
 date: 2022-02-21 14:31:11
-copyright: Reprint
+copyright: Reprinted
 author: dino.c
 originaltitle: 3D 穿梭效果？使用 UWP 也能搞定
 originallink: https://www.cnblogs.com/T-ARF/p/15552980.html

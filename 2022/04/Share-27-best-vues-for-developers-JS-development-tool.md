@@ -3,7 +3,7 @@ title: 分享 27 个面向开发人员的最佳 Vue.js 开发工具
 slug: Share-27-best-vues-for-developers-JS-development-tool
 description: 如题
 date: 2022-04-21 07:23:14
-copyright: Reprint
+copyright: Reprinted
 author: Vue社区
 originaltitle: 分享 27 个面向开发人员的最佳 Vue.js 开发工具
 originallink: https://javascript.plainenglish.io/best-27-vuejs-development-tools-for-developers-bd972bb5f573

@@ -3,7 +3,7 @@ title: WPF 基础控件之 PasswordBox 样式
 slug: Passwordbox-style-of-WPF-basic-control
 description: 基础控件
 date: 2022-05-05 06:49:41
-copyright: Reprint
+copyright: Reprinted
 author: 驚鏵 WPF开发者
 originaltitle: WPF 基础控件之 PasswordBox 样式
 originallink: https://mp.weixin.qq.com/s/RTG4FxBT9hTAUNpbapuLwQ

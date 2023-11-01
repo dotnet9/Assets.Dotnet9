@@ -3,13 +3,13 @@ title: 2022年终结版WPF项目实战合集发布
 slug: The-final-version-of-WPF-project-in-2022-was-released
 description: 本次视频合集共58集, 包含了WPF的基础部分(布局、样式、资源、动画、模板、MVVM) 、Prism的概念(Region、Navigation、DialogService、Module..)、MaterialDesign集成、Asp.Net Core WebApi部分(Entityframework、发布部署)、客户端发布、部署等完整的开发流程。
 date: 2022-01-14 23:12:04
-copyright: Reprint
+copyright: Reprinted
 author: 痕迹
 originaltitle: 2022年终结版WPF项目实战合集发布
 originallink: https://www.cnblogs.com/zh7791/p/15754663.html
 draft: False
 cover: https://img1.dotnet9.com/2022/01/0601.jpg
-categories: WPF,.NET课程
+categories: .NET课程
 tags: C#,WPF
 ---
 

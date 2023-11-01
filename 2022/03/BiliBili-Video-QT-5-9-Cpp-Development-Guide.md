@@ -3,7 +3,7 @@ title: B站视频：Qt 5.9 C++开发指南
 slug: BiliBili-Video-QT-5-9-Cpp-Development-Guide
 description: 很全的一套Qt学习视频
 date: 2022-03-24 00:12:23
-copyright: Reprint
+copyright: Reprinted
 author: 阿西拜-南昌
 originaltitle: B站视频：Qt 5.9 C++开发指南
 originallink: https://www.bilibili.com/video/BV1AX4y1w7Nt?spm_id_from=333.999.0.0

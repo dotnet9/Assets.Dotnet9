@@ -3,7 +3,7 @@ title: (25/30)大家一起学Blazor：添加角色功能
 slug: 25-of-30-let-us-learn-blazor-together-add-role-feature
 description: 首先添加承载角色数据的`ViewModel`，因为接下来的权限会以角色判断
 date: 2021-12-23 23:08:41
-copyright: Reprint
+copyright: Reprinted
 author: StrayaWorker
 originaltitle: (25/30)大家一起学Blazor：添加角色功能
 originallink: https://ithelp.ithome.com.tw/articles/10272010

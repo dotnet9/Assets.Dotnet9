@@ -3,7 +3,7 @@ title: .NET 7 预览版 1 发布
 slug: Dotnet7-Preview-1-release
 description: .NET 7 建立在 .NET 6 建立的基础之上，包括一套统一的基础库、运行时和 SDK，简化了开发体验，提高了开发人员的工作效率。
 date: 2022-02-19 01:01:56
-copyright: Reprint
+copyright: Reprinted
 author: WeihanLi amazingdotnet
 originaltitle: .NET 7 预览版 1 发布
 originallink: https://mp.weixin.qq.com/s/m7pl_JOerkKU8CqWIoDtRw

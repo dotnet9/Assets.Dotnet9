@@ -3,7 +3,7 @@ title: 走进WPF之MVVM完整案例
 slug: A-complete-case-of-MVVM-entering-WPF
 description: 学习WPF如果不学MVVM，仿佛缺少了灵魂。那什么是MVVM呢？为什么要学MVVM呢，本以一个简单的增删改查的小例子，简述MVVM的基本知识及如何通过进行MVVM架构的程序开发，仅供学习分享使用，如有不足之处，还请指正。
 date: 2022-02-21 13:43:11
-copyright: Reprint
+copyright: Reprinted
 author: 小六公子
 originaltitle: 走进WPF之MVVM完整案例
 originallink: https://www.cnblogs.com/hsiang/archive/2021/11/22/15579839.html

@@ -3,13 +3,13 @@ title: 在 .NET 应用程序中运行 JavaScript
 slug: running-javascript-in-a-dotnet-app-with-javascriptengineswitcher
 description: 前几天我在做一个副业，意识到我需要使用一些 JavaScript 功能。
 date: 2022-05-11 06:51:42
-copyright: Reprint
+copyright: Reprinted
 author: liamwang 精致码农
 originaltitle: 在 .NET 应用程序中运行 JavaScript
 originallink: https://mp.weixin.qq.com/s/nBO53jDbvmi7tL-js0tz6w
 draft: False
 cover: https://img1.dotnet9.com/2022/05/cover_31.png
-categories: .NET相关,更多前端
+categories: .NET相关
 ---
 
 前几天我在做一个副业，意识到我需要使用一些 JavaScript 功能。一想到要再次处理 Node.js 和 npm，我就完全放弃了，所以我决定研究一下在 .NET 应用程序中运行 JavaScript 的可能性。很疯狂吧？实际上，这出乎意料的简单。

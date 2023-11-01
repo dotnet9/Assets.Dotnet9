@@ -3,7 +3,7 @@ title: (3) MasaFramework 入门第三篇，使用MasaFramework
 slug: Getting-Started-with-MasaFramework-Part-3-Using-MasaFramework
 description: 使用MasaFramework
 date: 2023-03-26 10:54:17
-copyright: Reprint
+copyright: Reprinted
 author:  token的技术分享
 originaltitle: (3) MasaFramework 入门第三篇，使用MasaFramework
 originallink: https://www.cnblogs.com/hejiale010426/p/17227910.html

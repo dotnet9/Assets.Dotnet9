@@ -4,7 +4,7 @@ slug: Csharp-Essential-Skills-Chapter-Create-a-NuGet-package-and-publish-it-on-t
 description: 非常详细的教程
 date: 2023-10-10 12:45:06
 lastmod: 2023-10-10 13:28:23
-copyright: Reprint
+copyright: Reprinted
 author: 明如正午
 originaltitle: C#【必备技能篇】制作NuGet程序包，并发布到NuGet官网
 originallink: https://blog.csdn.net/sinat_40003796/article/details/130407108

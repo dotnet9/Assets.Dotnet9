@@ -3,7 +3,7 @@ title: 劳动仲裁回忆录（七）：喜讯！一审胜诉了！
 slug: Memoirs-of-labor-arbitration-7-good-news-Won-the-first-instance
 description: 个人全程劳动仲裁实录
 date: 2022-03-17 23:36:23
-copyright: Reprint
+copyright: Reprinted
 author: 逃离沙漠
 originaltitle: 劳动仲裁回忆录（七）：喜讯！一审胜诉了！
 originallink: https://mp.weixin.qq.com/s/56GER__3Jp1CgskI_1enLg

@@ -3,7 +3,7 @@ title: (7/30)大家一起学Blazor：生命周期(Lifetime)
 slug: 7-of-30-let-us-learn-blazor-together-lifetime
 description: 自己建立的Service都必须在Startup.cs(Blazor Server)或Program.cs(Blazor WebAssemlby)注册，但有些基本Service就不用自己做了。
 date: 2021-12-13 21:38:15
-copyright: Reprint
+copyright: Reprinted
 author: StrayaWorker
 originaltitle: (7/30)大家一起学Blazor：生命周期(Lifetime)
 originallink: https://ithelp.ithome.com.tw/articles/10261219

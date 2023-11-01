@@ -3,7 +3,7 @@ title: 为什么 C#/.Net在国内的人气远不如国外？
 slug: Why-Csharp-Net-is-far-less-popular-at-home-than-abroad
 description: 水文图一乐
 date: 2022-03-26 09:23:33
-copyright: Reprint
+copyright: Reprinted
 author: Python咖啡
 originaltitle: 为什么 C#/.Net在国内的人气远不如国外？
 originallink: https://www.zhihu.com/question/408313966/answer/1366266291

@@ -3,7 +3,7 @@ title: 实现一个登录：Mac+.NET 5+Identity+JWT+VS Code
 slug: implement-a-login-mac-dotnet-5-identity-jwt-vs-code
 description: 分享一下之前学习的一个登录小案例
 date: 2021-10-18 16:51:00
-copyright: Reprint
+copyright: Reprinted
 author: Jarry
 originaltitle: 实现一个登录：Mac+.NET 5+Identity+JWT+VS Code
 originallink: https://blog.csdn.net/qbc12345678/article/details/120758144

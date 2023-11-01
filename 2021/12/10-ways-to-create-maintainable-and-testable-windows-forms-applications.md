@@ -3,13 +3,13 @@ title: 创建可维护和可测试的 Windows 窗体应用程序的 10 种方法
 slug: 10-ways-to-create-maintainable-and-testable-windows-forms-applications
 description: 我遇到的大多数 Windows 窗体应用程序都不存在或单元测试覆盖率极低。而且它们通常也很难维护，项目中各种 Form 类的代码背后有数百甚至数千行代码，但它不必是这样。
 date: 2021-12-10 23:51:41
-copyright: Reprint
+copyright: Reprinted
 author: Mark Heath
 originaltitle: 创建可维护和可测试的 Windows 窗体应用程序的 10 种方法(译)
 originallink: https://markheath.net/post/maintainable-winforms
 draft: False
 cover: https://img1.dotnet9.com/2021/12/cover_09.jpeg
-categories: Winform,单元测试
+categories: Winform
 tags: Winform,单元测试
 ---
 

@@ -3,7 +3,7 @@ title: Flurl使用Polly实现重试Policy
 slug: flurl-uses-policy-to-implement-retry-policy
 description: 在使用Flurl作为HttpClient向Server请求时，由于网络或者其它一些原因导致请求会有失败的情况
 date: 2021-03-15 11:57:53
-copyright: Reprint
+copyright: Reprinted
 author: 非法关键字
 originaltitle: Flurl使用Polly实现重试Policy
 originallink: https://www.cnblogs.com/linxmouse/p/14533151.html

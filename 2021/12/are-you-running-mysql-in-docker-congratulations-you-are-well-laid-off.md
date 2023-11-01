@@ -3,13 +3,13 @@ title: 你在 Docker 中跑 MySQL？恭喜你，好下岗了！
 slug: are-you-running-mysql-in-docker-congratulations-you-are-well-laid-off
 description: 目前，容器和 Docker 依旧是技术领域最热门的词语，无状态的服务容器化已经是大势所趋，同时也带来了一个热点问题被大家所争论不以：`数据库 MySQL 是否需要容器化？`
 date: 2021-12-22 22:49:21
-copyright: Reprint
+copyright: Reprinted
 author: 老王谈运维
 originaltitle: 你在 Docker 中跑 MySQL？恭喜你，好下岗了！
 originallink: https://www.toutiao.com/i6675622107390411276?wid=1640184427889
 draft: False
 cover: https://img1.dotnet9.com/2021/12/cover_31.png
-categories: Docker,MySQL
+categories: MySQL
 tags: Docker,MySQL
 ---
 

@@ -3,7 +3,7 @@ title: Dapper in .NET Core
 slug: Dapper-in-dotNET-Core
 description: 关于什么是Dapper（详细入口），在此不做赘述；本文仅对Dapper在.Net Core中的使用作扼要说明，所陈代码以示例讲解为主，乃抛砖引玉，开发者可根据自身需要进行扩展和调整
 date: 2022-01-10 22:12:04
-copyright: Reprint
+copyright: Reprinted
 author: 白云任去留
 originaltitle: Dapper in .NET Core
 originallink: cnblogs.com/ang/p/13620452.html

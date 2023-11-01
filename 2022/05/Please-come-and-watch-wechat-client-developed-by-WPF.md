@@ -3,7 +3,7 @@ title: 请来围观：WPF开发的微信客户端
 slug: Please-come-and-watch-wechat-client-developed-by-WPF
 description: 做WPF微信DEMO，用到了转换器，转换颜色，转换显隐；重写了控件的样式，例如Button、RadioButton、ListBox；然后MVVM模式下，Bind的用法，感觉这个DEOM对于初学者来说应该会有很大的帮助。
 date: 2022-05-20 07:14:27
-copyright: Reprint
+copyright: Reprinted
 author: 眾尋
 originaltitle: 请来围观：WPF开发的微信客户端
 originallink: https://www.cnblogs.com/ZXdeveloper/p/6058206.html

@@ -3,7 +3,7 @@ title: VS 2022 设计 WinForm 高DPI兼容程序
 slug: Vs-2022-design-WinForm-high-DPI-compatible-program
 description: 高DPI下(缩放>100%), UI设计器一直提示缩放到100%, 如果不重启到100%,设计的控件会乱飞.
 date: 2022-05-14 12:02:43
-copyright: Reprint
+copyright: Reprinted
 author: AlexChow
 originaltitle: VS 2022 设计 WinForm 高DPI兼容程序
 originallink: https://www.cnblogs.com/densen2014/p/16142939.html

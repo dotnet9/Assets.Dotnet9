@@ -3,7 +3,7 @@ title: 对.NET系统架构改造的一点经验和教训
 slug: Some-experiences-and-lessons-learned-from-the-transformation-of-the-NET-system-architecture
 description: 在互联网行业，基于 Unix/Linux 的网站系统架构毫无疑问是当今主流的架构解决方案，这不仅仅是因为 Linux 本身足够的开放性，更因为围绕传统 Unix/Linux 社区有大量的成熟开源解决方案，覆盖了网站应用扩展的方方面面。
 date: 2023-09-03 21:36:47
-copyright: Reprint
+copyright: Reprinted
 author: 大佬
 originaltitle: 对.NET系统架构改造的一点经验和教训
 originallink: http://robbinfan.com/blog/43/rid-off-dotnet-experience

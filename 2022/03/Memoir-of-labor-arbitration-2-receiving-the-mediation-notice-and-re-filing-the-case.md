@@ -3,7 +3,7 @@ title: 劳动仲裁回忆录（二）：接到调解通知及重新立案
 slug: Memoir-of-labor-arbitration-2-receiving-the-mediation-notice-and-re-filing-the-case
 description: 个人全程劳动仲裁实录
 date: 2022-03-17 23:09:13
-copyright: Reprint
+copyright: Reprinted
 author: 逃离沙漠
 originaltitle: 劳动仲裁回忆录（二）：接到调解通知及重新立案
 originallink: https://mp.weixin.qq.com/s/XIfN6M3abqdwdlq1A0ZYAQ

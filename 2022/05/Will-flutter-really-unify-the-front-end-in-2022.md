@@ -3,7 +3,7 @@ title: 2022年Flutter真的会一统大前端吗？
 slug: Will-flutter-really-unify-the-front-end-in-2022
 description: 在创建 iOS 和 Android 应用程序时，通常推荐使用 Flutter，因为使用它更加简单高效。
 date: 2022-05-06 06:28:41
-copyright: Reprint
+copyright: Reprinted
 author: 坚果
 originaltitle: 2022年Flutter真的会一统大前端吗？
 originallink: https://www.aisoutu.com/a/1610740

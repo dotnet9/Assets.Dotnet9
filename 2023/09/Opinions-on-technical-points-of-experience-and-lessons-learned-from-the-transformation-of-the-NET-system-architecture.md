@@ -3,7 +3,7 @@ title: 【对.NET系统架构改造的一点经验和教训】的技术要点的
 slug: Opinions-on-technical-points-of-experience-and-lessons-learned-from-the-transformation-of-the-NET-system-architecture
 description: 如题
 date: 2023-09-03 21:45:47
-copyright: Reprint
+copyright: Reprinted
 author: 张巍
 originaltitle: 【对.NET系统架构改造的一点经验和教训】的技术要点的看法
 originallink: https://www.cnblogs.com/ac1985482/archive/2013/05/14/3077473.html

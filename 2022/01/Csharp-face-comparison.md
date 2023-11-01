@@ -3,7 +3,7 @@ title: C# 人脸比对
 slug: Csharp-face-comparison
 description: 前面已经写过文字识别和人脸检测。都是在使用现成的轮子（直接调用的百度SDK），其实仔细看看文档，也就都知道怎么写了，而且百度还提供了多种语言的代码示例
 date: 2022-01-20 14:12:04
-copyright: Reprint
+copyright: Reprinted
 author: Csharp小记
 originaltitle: C# 人脸比对
 originallink: https://mp.weixin.qq.com/s/VM5L4cTnSljU-Z7rL5EgDA

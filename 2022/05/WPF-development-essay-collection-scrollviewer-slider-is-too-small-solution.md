@@ -3,7 +3,7 @@ title: WPF开发随笔收录-ScrollViewer滑块太小解决方案
 slug: WPF-development-essay-collection-scrollviewer-slider-is-too-small-solution
 description: 当ScrollViewer里面的内容太长时，滚动条的滑块就会变得很小，然后导致点击起来不太友好。
 date: 2022-05-13 07:13:36
-copyright: Reprint
+copyright: Reprinted
 author: 流浪g
 originaltitle: WPF开发随笔收录-ScrollViewer滑块太小解决方案
 originallink: https://www.cnblogs.com/cong2312/p/16006433.html

@@ -3,7 +3,7 @@ title: 对象映射 - Mapping.Mapster
 slug: Object-Mapping-Mapping-Mapster
 description: 在项目中我们会经常遇到对象的映射，比如像Model和Dto之间的映射，或者是对象的深拷贝，这些都是需要我们自己实现的。
 date: 2022-07-06 20:18:46
-copyright: Reprint
+copyright: Reprinted
 author: 磊_磊
 originaltitle: 对象映射 - Mapping.Mapster
 originallink: https://www.cnblogs.com/zhenlei520/p/16324870.html

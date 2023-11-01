@@ -3,7 +3,7 @@ title: 【单片机入门】(一)应用层软件开发的单片机学习之路--
 slug: Introduction-to-Single-Chip-Microcomputer-Introduction-to-Basic-Knowledge
 description: 硬件也有很多可玩之处，相比于软件，看得见摸得着的东西可能更容易令人接受，做出成品也更容易有成就感
 date: 2022-10-13 08:05:36
-copyright: Contribution
+copyright: Contributes
 author: 陈显达
 originaltitle: 【单片机入门】(一)应用层软件开发的单片机学习之路-----基础知识入门
 originallink: https://www.cnblogs.com/1996-Chinese-Chen/p/16786374.html

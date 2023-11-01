@@ -3,7 +3,7 @@ title: 来，WinForm使用依赖注入！
 slug: Common-on-WinForm-uses-dependency-injection
 description: 关于依赖注入是什么？依赖注入是一种具体的编码技巧，对我来说最明显的就是解决代码的耦合性。
 date: 2022-04-22 07:21:26
-copyright: Reprint
+copyright: Reprinted
 author: AZRNG 鹏祥
 originaltitle: 来，WinForm使用依赖注入！
 originallink: https://mp.weixin.qq.com/s/murWKgo5KFMmMOJ4UQJWBQ

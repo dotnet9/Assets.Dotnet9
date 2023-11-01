@@ -4,7 +4,7 @@ slug: Please-ask-Dotnet9-Knowledge-Planet-paying-users-to-contact-me-for-a-refun
 description: 付费用户可退费
 date: 2023-05-07 15:48:08
 lastmod: 2023-05-07 20:34:48
-copyright: Default
+copyright: Original
 draft: false
 cover: https://img1.dotnet9.com/2023/05/cover_01.png
 categories: 科技生活

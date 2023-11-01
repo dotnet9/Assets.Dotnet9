@@ -3,7 +3,7 @@ title: 多图分享：我的十年与.NET的二十年
 slug: Share-more-pictures-my-ten-years-and-Net-twenty-years
 description: 弹指一挥间，十年已经过去了，从第一次接触.net到今天，正好十年
 date: 2022-02-08 07:47:04
-copyright: Reprint
+copyright: Reprinted
 author: 老张的哲学 MVP
 originaltitle: 多图分享：我的十年与.NET的二十年
 originallink: https://mp.weixin.qq.com/s/bKIyQnOQFQsqbN8y6bgTFA

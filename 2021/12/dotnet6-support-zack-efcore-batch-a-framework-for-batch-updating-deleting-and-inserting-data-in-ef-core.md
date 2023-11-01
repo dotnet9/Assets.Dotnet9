@@ -3,13 +3,13 @@ title: 支持.NET6！EF Core中批量执行更新、删除、插入数据的框�
 slug: dotnet6-support-zack-efcore-batch-a-framework-for-batch-updating-deleting-and-inserting-data-in-ef-core
 description: 在`EF Core`中`批量`执行`更新`、`删除`、`插入`数据的框架`Zack.EFCore.Batch`已经发布新版，新版增加了对`.NET 6`的支持，数据批量插入的时候支持`ValueConverter`，彻底解决了`“更新数据的时候，当两列的表达式等价时候出现的The count of columns should be even异常”`。
 date: 2021-12-25 19:23:26
-copyright: Reprint
+copyright: Reprinted
 author: 杨中科
 originaltitle: 支持.NET6！EF Core中批量执行更新、删除、插入数据的框架Zack.EFCore.Batch
 originallink: https://mp.weixin.qq.com/s/MYxVGxa_DQnn4XMIDryd9Q
 draft: False
 cover: https://img1.dotnet9.com/2021/12/cover_40.jpeg
-categories: .NET,EF Core
+categories: EF Core
 tags: C#,EF Core,批量更新,批量删除,批量插入
 ---
 

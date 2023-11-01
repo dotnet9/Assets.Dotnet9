@@ -3,7 +3,7 @@ title: 如何在 C# 9 中使用record类型？
 slug: how-to-use-record-type-in-csharp-9
 description: 使用过record吗？
 date: 2021-07-10 22:27:47
-copyright: Default
+copyright: Original
 originaltitle: 如何在 C# 9 中使用record类型？
 draft: False
 cover: https://img1.dotnet9.com/2021/07/cover_03.jpg

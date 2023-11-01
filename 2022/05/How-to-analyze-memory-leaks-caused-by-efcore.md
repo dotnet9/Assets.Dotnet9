@@ -3,7 +3,7 @@ title: 如何分析EFCore引发的内存泄漏
 slug: How-to-analyze-memory-leaks-caused-by-efcore
 description: 术语“内存泄漏”和“ .NET应用程序”不是经常一起使用。
 date: 2022-05-04 16:47:46
-copyright: Reprint
+copyright: Reprinted
 author: Richard Brown DotNET技术圈
 originaltitle: 如何分析EFCore引发的内存泄漏
 originallink: https://mp.weixin.qq.com/s/nntus3fGCvx3FT_uZYERUQ

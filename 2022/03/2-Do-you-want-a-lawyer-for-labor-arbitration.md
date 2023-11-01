@@ -3,7 +3,7 @@ title: 2. 劳动仲裁要不要请律师？
 slug: 2-Do-you-want-a-lawyer-for-labor-arbitration
 description: 要吗？
 date: 2022-03-17 23:47:23
-copyright: Reprint
+copyright: Reprinted
 author: 逃离沙漠
 originaltitle: 2. 劳动仲裁要不要请律师？
 originallink: https://mp.weixin.qq.com/s/TYWH_m6xEg7mK-17CNerGA

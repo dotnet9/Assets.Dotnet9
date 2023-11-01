@@ -3,7 +3,7 @@ title: 如何在保留原本所有样式/绑定和用户设置值的情况下，
 slug: how-to-set-and-restore-the-value-of-a-wpf-dependency-property-while-preserving-all-original-styles-bindings-and-user-set-values
 description: WPF 备份某控件的一些属性，做一些神奇的操作，然后再还原这些属性。
 date: 2021-11-09 10:08:39
-copyright: Reprint
+copyright: Reprinted
 author: 吕毅
 originaltitle: 如何在保留原本所有样式/绑定和用户设置值的情况下，设置和还原 WPF 依赖项属性的值
 originallink: https://blog.walterlv.com/post/change-and-restore-wpf-dependency-value-without-disabling-the-declared-use-of-the-property.html

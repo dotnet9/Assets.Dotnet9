@@ -3,7 +3,7 @@ title: WPF|C# Lottie 动画播放【感觉好牛】
 slug: Wpf-csharp-Lottie-animation-playback-feel-good
 description: Lottie 动画是一种以 json 文件保存的动画文件。相比 gif 在文件体积和动画流畅度上有很大的优势，而且是图形是矢量的，放大不会糊。
 date: 2022-05-19 06:58:14
-copyright: Reprint
+copyright: Reprinted
 author: xiejiang
 originaltitle: WPF|C# Lottie 动画播放【感觉好牛】
 originallink: https://www.cnblogs.com/8u7tgyjire7890/p/15881159.html

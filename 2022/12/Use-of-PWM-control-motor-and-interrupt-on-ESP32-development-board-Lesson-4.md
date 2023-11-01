@@ -3,7 +3,7 @@ title: 2022年底C# 解压zip文件遇到的一个Bug
 slug: At-the-end-of-2022-one-bug-encountered-by-Csharp-decompressing-zip-files
 description: 最近在排查一个上传功能时，客户端上传的是zip文件，到服务器端后使用C# 解压zip文件的代码将上传文件解压后验证是否是允许上传的文件类型，并且要验证乱改文件后缀啊，文件头什么的都要走一遭，结果解压zip文件时就出妖蛾子了。
 date: 2022-12-23 09:39:26
-copyright: Contribution
+copyright: Contributes
 author: 江湖人士
 originaltitle: 2022年底C# 解压zip文件遇到的一个bug
 originallink: https://jhrs.com/2022/46060.html

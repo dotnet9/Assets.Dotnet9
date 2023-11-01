@@ -3,13 +3,13 @@ title: 大胆推测：未来的王者，或属于C#
 slug: Bold-speculation-the-future-king-or-belong-to-Csharp
 description: 这个世界，自古是用户驱动资本，资本驱动变革，变革造就生态。
 date: 2022-04-16 22:33:45
-copyright: Reprint
+copyright: Reprinted
 author: 邪恶的二进制
 originaltitle: 大胆推测：未来的王者，或属于C#
 originallink: https://zhuanlan.zhihu.com/p/499713602
 draft: False
 cover: https://img1.dotnet9.com/2022/04/cover_19.jpeg
-categories: .NET相关,科技生活
+categories: .NET相关
 ---
 
 **这个世界，自古是用户驱动资本，资本驱动变革，变革造就生态。**

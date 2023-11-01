@@ -3,13 +3,13 @@ title: 【OpenXml】Pptx的边框虚线转为WPF的边框虚线
 slug: openxml-the-border-dotted-line-of-pptx-is-changed-to-the-border-dotted-line-of-WPF
 description: 如题
 date: 2022-05-02 20:59:47
-copyright: Reprint
+copyright: Reprinted
 author: RyzenAdorer
 originaltitle: 【OpenXml】Pptx的边框虚线转为WPF的边框虚线
 originallink: https://www.cnblogs.com/ryzen/p/15740488.html
 draft: False
 cover: https://img1.dotnet9.com/2022/05/cover_04.jpeg
-categories: WPF,OpenXML
+categories: OpenXML
 ---
 
 ## 1. 安装Openxml sdk

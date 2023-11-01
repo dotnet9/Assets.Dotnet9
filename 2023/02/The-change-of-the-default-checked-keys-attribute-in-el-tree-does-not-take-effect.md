@@ -3,7 +3,7 @@ title: el-tree中default-checked-keys属性变化不生效
 slug: The-change-of-the-default-checked-keys-attribute-in-el-tree-does-not-take-effect
 description: 这里是笔者在开发 MAUI 应用时踩的坑，以及一些笔记的汇总。
 date: 2023-01-18 22:02:29
-copyright: Reprint
+copyright: Reprinted
 author: 水星梦月
 originaltitle: el-tree中default-checked-keys属性变化不生效
 originallink: https://blog.csdn.net/monparadis/article/details/114087838

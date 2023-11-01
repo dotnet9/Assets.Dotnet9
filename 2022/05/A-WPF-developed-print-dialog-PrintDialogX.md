@@ -3,7 +3,7 @@ title: 一个WPF开发的打印对话框-PrintDialogX
 slug: A-WPF-developed-print-dialog-PrintDialogX
 description: 用于 C# 的自定义 PrintDialog，可实时预览。您可以选择打印机并设置份数、方向、颜色、质量、比例、每张页数、双面、纸张尺寸、纸张类型、纸张来源等。它也很优雅。
 date: 2022-05-01 21:48:14
-copyright: Default
+copyright: Original
 originaltitle: 一个WPF开发的打印对话框-PrintDialogX
 draft: False
 cover: https://img1.dotnet9.com/2022/05/0101.png

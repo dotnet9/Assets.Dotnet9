@@ -3,7 +3,7 @@ title: 你所不知道的 C# 中的细节
 slug: The-details-of-csharp-that-you-do-not-known
 description: 有一个东西叫做鸭子类型，所谓鸭子类型就是，只要一个东西表现得像鸭子那么就能推出这玩意就是鸭子。
 date: 2022-03-29 08:23:33
-copyright: Reprint
+copyright: Reprinted
 author: hez2010
 originaltitle: 你所不知道的 C# 中的细节
 originallink: https://www.cnblogs.com/hez2010/p/12606419.html

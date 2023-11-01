@@ -3,7 +3,7 @@ title: 大家有没有觉得今年找工作特别特别难？
 slug: Do-you-find-it-particularly-difficult-to-find-a-job-this-year
 description: 人生最大的悲剧不外乎，工作丢了，老婆跑了，房子被收走了。
 date: 2022-05-15 21:37:27
-copyright: Reprint
+copyright: Reprinted
 author: 黑石
 originaltitle: 大家有没有觉得今年找工作特别特别难？
 originallink: https://www.zhihu.com/question/520706669/answer/2483330222

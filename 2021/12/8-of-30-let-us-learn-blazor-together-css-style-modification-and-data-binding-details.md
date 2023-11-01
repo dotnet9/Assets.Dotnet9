@@ -3,7 +3,7 @@ title: (8/30)大家一起学Blazor：CSS样式修改和数据绑定详述
 slug: 8-of-30-let-us-learn-blazor-together-css-style-modification-and-data-binding-details
 description: 现在每次启动项目，预设路径都会是`/`，但我们目前没有Component套用这个路由，要自己切换到`Post`实在有些麻烦，另外Menu的图案也跟名称不符，我们来调整一下。
 date: 2021-12-13 22:36:21
-copyright: Reprint
+copyright: Reprinted
 author: StrayaWorker
 originaltitle: (8/30)大家一起学Blazor：CSS样式修改和数据绑定详述
 originallink: https://ithelp.ithome.com.tw/articles/10261579

@@ -3,7 +3,7 @@ title: 一个WPF开发的、界面简洁漂亮的音频播放器
 slug: A-simple-and-beautiful-audio-player-developed-by-WPF
 description: 推荐一个界面简洁、美观的、支持国际化开源音频播放器。
 date: 2023-07-17 20:31:30
-copyright: Reprint
+copyright: Reprinted
 author: 编程乐趣
 originaltitle: 一个WPF开发的、界面简洁漂亮的音频播放器
 originallink: https://mp.weixin.qq.com/s/3nioR2zleQKWWAfkvgOxMg

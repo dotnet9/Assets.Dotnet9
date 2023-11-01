@@ -3,7 +3,7 @@ title: Blazor创建TabControl组件
 slug: blazor-creates-tabcontrol-component
 description: 创建一个Blazor TabControl组件，有两个目标知识点
 date: 2021-12-06 22:01:36
-copyright: Reprint
+copyright: Reprinted
 author: Blazor University
 originaltitle: Blazor创建TabControl组件
 originallink: https://blazor-university.com/templating-components-with-renderfragements/creating-a-tabcontrol/

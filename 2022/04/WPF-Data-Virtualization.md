@@ -3,7 +3,7 @@ title: WPF：数据虚拟化
 slug: WPF-Data-Virtualization
 description: 这篇文章不错，本来借助谷歌翻译，站长想再人工检查一遍，发现里面专业术语挺多的，个人英语也太渣，直接原文照搬了，希望你的英文可以的。
 date: 2022-04-13 21:14:35
-copyright: Reprint
+copyright: Reprinted
 author: Paul McClean
 originaltitle: WPF：数据虚拟化
 originallink: https://www.codeproject.com/Articles/34405/WPF-Data-Virtualization

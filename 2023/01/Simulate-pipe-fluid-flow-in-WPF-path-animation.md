@@ -3,7 +3,7 @@ title: 在WPF中模拟管道流体流向-路径动画
 slug: Simulate-pipe-fluid-flow-in-WPF-path-animation
 description: WPF的一大特性就的动画系统，使用动画能够实现很多在WinForm很难实现的效果。
 date: 2023-01-15 12:46:26
-copyright: Reprint
+copyright: Reprinted
 author: ludewig
 originaltitle: WPF随笔（九）--使用路径动画模拟管道流体流向
 originallink: https://blog.csdn.net/lordwish/article/details/85007867

@@ -3,7 +3,7 @@ title: WPF值得注意的IsHitTestVisible
 slug: wpf-noteworthy-ishittestvisible
 description: 这个属性设置为false,看起来没有变化,但操作上已经把他完全忽视了,不触发事件,可以直接点到它下面的东西。
 date: 2021-10-20 18:18:16
-copyright: Reprint
+copyright: Reprinted
 author: 普通的地球人
 originaltitle: WPF值得注意的IsHitTestVisible
 originallink: https://www.cnblogs.com/tsliwei/p/5923107.html

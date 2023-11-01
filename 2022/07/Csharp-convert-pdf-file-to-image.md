@@ -3,7 +3,7 @@ title: C#将PDF文件转成图片
 slug: Csharp-convert-pdf-file-to-image
 description: 今日一同事给我说你获取到的pdf文件有点不符合我们现有软件流程,你能不能将我们pdf文件转成图片啊！
 date: 2022-07-16 13:19:25
-copyright: Reprint
+copyright: Reprinted
 author: 黑哥聊dotNet
 originaltitle: C#将PDF文件转成图片
 originallink: https://mp.weixin.qq.com/s/_Zduaj6_hsQy3c4HvSDLEg

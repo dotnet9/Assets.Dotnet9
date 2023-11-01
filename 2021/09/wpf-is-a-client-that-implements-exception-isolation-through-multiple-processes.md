@@ -3,7 +3,7 @@ title: WPF 通过多进程实现异常隔离的客户端
 slug: wpf-is-a-client-that-implements-exception-isolation-through-multiple-processes
 description: 当 WPF 客户端需要实现插件系统的时候，一般可以基于容器或者进程来实现。如果需要对外部插件实现异常隔离，那么只能使用子进程来加载插件，这样插件如果抛出异常，也不会影响到主进程
 date: 2021-09-22 22:10:21
-copyright: Reprint
+copyright: Reprinted
 author: 鹅群中的鸭霸
 originaltitle: WPF 通过多进程实现异常隔离的客户端
 originallink: https://www.cnblogs.com/wengzp/archive/2021/09/17/15305896.html

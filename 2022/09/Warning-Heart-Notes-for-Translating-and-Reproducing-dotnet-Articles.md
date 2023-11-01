@@ -3,7 +3,7 @@ title: 告诫之心-翻译转载Dotnet文章注意事项
 slug: Warning-Heart-Notes-for-Translating-and-Reproducing-dotnet-Articles
 description: 总结：翻译微软开发者博客文章需要申请，不能标原创
 date: 2022-09-26 07:42:05
-copyright: Default
+copyright: Original
 author: 沙漠尽头的狼
 draft: false
 cover: https://img1.dotnet9.com/2022/09/cover_06.png

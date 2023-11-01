@@ -3,7 +3,7 @@ title: (29/30)大家一起学Blazor：Blazor单元测试
 slug: 29-of-30-let-us-learn-blazor-together-unit-test-of-blazor
 description: 开发一个系统最无聊的过程大概就是解决BUG了，尤其是那种尝试对null 对象取值的错误(`Object reference not set to an instance of an object.`)，这应该是大部分人刚踏入编程领域最常碰到的问题，为了从枯燥的解决BUG过程解脱，这篇就来介绍`单元测试`。
 date: 2021-12-25 20:39:11
-copyright: Reprint
+copyright: Reprinted
 author: StrayaWorker
 originaltitle: (29/30)大家一起学Blazor：Blazor单元测试
 originallink: https://ithelp.ithome.com.tw/articles/10274629

@@ -18,24 +18,23 @@
 
  ## 0. 最新开发情况
 
-- [x] 前台
-  1. [x] 使用ASP.NET Core 8 Razor Pages搭建前台
-  2. [x] 已有功能：文章列表、分类文章列表、文章详情+评论、归档+评论、关于+评论等
-  3. [ ] 还有很多功能待开发，比如隐私、登录、前台文章创建和文章修改等
-- [x] 后台前端
-  1. [x] 使用Vue 2.x搭建，有空有能力的话升级为3.x
+- [x] 博客网站前台
+  1. [x] 使用Vue 3.x搭建前台
+  2. [x] 已有功能：文章列表、分类文章列表、文章详情、文章评论、归档等
+  3. [ ] 其他待补充
+- [x] 博客网站后台前端
+  1. [x] 使用Vu3 3.x搭建
   2. [x] 基础表的CRUD
-  3. [ ] 文章管理正在开发中
-  4. [ ] 文件管理，目前使用的腾讯cos
-  5. [ ] 其他功能
-- [x] 后端
-  1. [x] 使用ASP.NET Core 8 Web API + EF Core 8.0 + PostgreSQL搭建
-  2. [x] 使用微软自家的Identity实现权限认证
-  3. [x] 基础表的接口管理
-  4. [ ] 根据前台和后台前端的功能迭代，进行维护中
+  3. [x] 文章管理正在开发中
+  4. [x] 可使用腾讯cos对象存储图片资源，或本地文件系统存储
+  5. [ ] 其他功能待补充
+- [x] 博客网站后端
+  1. [x] 使用ASP.NET Core 8 Web API + Furion + SqlSugar + PostgreSQL搭建
+  2. [x] 基础表的接口管理
+  3. [ ] 根据前台和后台前端的功能迭代，进行维护中
 
-- [x] Dotnet工具箱前台
-  1. [x] 使用 [ASP.NET Core 8 Blazor WebAssembly](https://learn.microsoft.com/zh-cn/aspnet/core/blazor/?WT.mc_id=dotnet-35129-website&view=aspnetcore-8.0) 搭建前台。
+- [x] Dotnet工具箱
+  1. [x] 使用 Vue 3.0 搭建。
 
 ## 1. Python之禅
 
@@ -87,29 +86,37 @@ Python 之禅 by Tim Peters
 
 站长平时忙于编程和带娃，建此站目的如下：
 
-1. 对编程技术进行一些积累总结；
-2. 记录带娃的点点心酸感悟。
+1. 对编程技术进行一些积累总结
 
 ## 3. 站长简介
 
 你好，我是本站（https://dotnet9.com）站长“沙漠尽头的狼”。
 
-本人从事Dotnet开发10年+，建此站目的在于分享以Dotnet为主的技术类文章，希望以此平台与更多的程序员朋友交流技术，祝愿Dotnet社区发展越来越好。 
+本人从事Dotnet开发12年，建此站目的在于分享以Dotnet为主的技术类文章，希望以此平台与更多的程序员朋友交流技术，祝愿Dotnet社区发展越来越好。 
 
-89年Dotnet程序猿一枚，C#高级工程师， 目前从事B/S开发工作。
+89年Dotnet程序猿一枚，C#高级工程师。
 
-## 4. 站长技术栈
+### 3.1 技能特长
 
-1. 开发语言：C/S（C# + WPF\Winform，C++ + Qt Widgets, SwiftUI)、B/S(`ASP.NET Core` MVC/Razor Pages/Blazor，React + `ASP.NET Core Web API`)。
-2. 开发框架：C/S(Prism、Qt Plugin System)、B/S(前端 Ant Design Pro，后端 Masa Framework(`ASP.NET Core Web API`))等。
-3. C/S 控 件 库：Dev Express、Telerik、部分开源控件库(MaterialDesignInXamlToolkit、MahApps.Metro、HandyControl)等。
-4. B/S控件库：Ant Design、Bootstrap、Masa Blazor等。
-5. 通信协议：SignalR、Remoting、WebService、TCP/IP、UDP、HTTP、FTP、ICE、DDS、KNET、ENET、软件总线、事件总线等。
-6. 开发工具：Visual Studio、Qt Creator、Visual Studio Code、xCode等。
-7. 数 据 库：PostgreSQL、MySQL、Oracle、SQLServer、SQLite、Access、Redis等。
-8. 影音办公类：Adobe（Photoshop 、Axure）、OFFICE（Visio、Word、PPT、Excel）等应用软件。
+1. 编程语言：C#，C++;
+2. 后端应用开发：.NET Core Web API，MVC，Razor Pages，Blazor;
+3. 桌面应用开发：WPF，Winform，Qt;
+4. 前端应用开发：Vue，React;
+5. 移动端应用开发：MAUI;
+6. 数据库：PostgreSQL（PGSQL），MySQL，SQL Server，SQLite，Oracle，Access，Redis;
+7. ORM框架：EF Core，SqlSugar，Dapper
+8. 版本管理：SVN，Git
+9. 原型设计：Axure，Figma
 
-## 5. 联系站长
+### 3.2. 自我评价
+
+1. 热爱技术，具备超过10年的编程开发经验，将工作和学习融入生活；
+2. 严格遵守代码规范，注重代码的整洁、清晰和风格统一，认为这在整个项目中非常重要；
+3. 具备责任心，拥有出色的沟通和理解能力，能够承受压力，在时间紧张的情况下自主加班或下班后深入研究技术和业务；
+4. 熟悉Github，热衷于开源，经常在个人公众号和博客网站分享技术文章，创建个人开源项目并分享技术心得；
+5. 在架构和开发方面有丰富的经验，开发了15+个WPF、15+个Winform、10+个B/S（React|Vue + .NET Core Web API，Blazor Server/WWSM + .NET Web API）、2个Qt Widgets、1个Qt Quick、2个Xamarin.Forms/MAUI、1个SwiftUI和1个Flutter项目和产品。
+
+## 4. 联系站长
 
 技术交流群
 
@@ -137,7 +144,7 @@ Python 之禅 by Tim Peters
 6. 本群的目的是为实现技能的长期沉淀！
 7. 为了保护群主和其他管理员的安全。请在国家法律允许范围内聊天。违禁词包括色情、政治，宗教信仰，地方歧视，语言歧视，棋牌，和其他一切与现行法律法规不符的地方。
 
-## 6. 站长其他平台链接：
+## 5. 站长其他平台链接：
 
 1. QQ邮箱：[632871194@qq.com](https://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=632871194@qq.com)
 2. YouTube：[https://www.youtube.com/channel/UCYVJHthYAcGQgOHNFQC0ylQ](https://www.youtube.com/channel/UCYVJHthYAcGQgOHNFQC0ylQ)

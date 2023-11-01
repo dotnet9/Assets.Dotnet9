@@ -3,13 +3,13 @@ title: Xamarin.Forms 5.0 项目实战发布！
 slug: Xamarin-Forms-5-project-actual-combat-release
 description: 本次活动主要是 .NET Xamarin.Forms 移动端项目开发实战教程
 date: 2022-04-13 19:49:17
-copyright: Reprint
+copyright: Reprinted
 author: 痕迹g
 originaltitle: Xamarin.Forms 5.0 项目实战发布！
 originallink: https://www.cnblogs.com/zh7791/p/16079409.html
 draft: False
 cover: https://img1.dotnet9.com/2022/04/1305.png
-categories: Xamarin,.NET课程
+categories: .NET课程
 ---
 
 ## 活动介绍

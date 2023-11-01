@@ -3,7 +3,7 @@ title: C# 编写简单易用的 Windows 截屏增强工具
 slug: Write-a-simple-and-easy-to-use-Windows-screenshot-enhancement-tool-in-Csharp
 description: 一个简单易用的 Windows 截屏增强工具
 date: 2022-05-12 08:15:27
-copyright: Reprint
+copyright: Reprinted
 author: IT技术分享社区
 originaltitle: C# 编写简单易用的 Windows 截屏增强工具
 originallink: https://mp.weixin.qq.com/s/eyz995VWcIEMLBQP7PL0FQ

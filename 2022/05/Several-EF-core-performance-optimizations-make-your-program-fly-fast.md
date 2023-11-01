@@ -3,7 +3,7 @@ title: 几条EF core性能优化，让你程序健步如飞
 slug: Several-EF-core-performance-optimizations-make-your-program-fly-fast
 description: 数条建议
 date: 2022-05-04 15:41:07
-copyright: Reprint
+copyright: Reprinted
 author: 清和时光
 originaltitle: 几条EF core性能优化，让你程序健步如飞
 originallink: https://www.cnblogs.com/qingheshiguang/p/13559561.html

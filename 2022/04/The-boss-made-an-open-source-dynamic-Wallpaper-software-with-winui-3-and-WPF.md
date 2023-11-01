@@ -3,14 +3,14 @@ title: 大佬用 WinUI 3 和 WPF 做了一个开源的动态壁纸软件
 slug: The-boss-made-an-open-source-dynamic-Wallpaper-software-with-winui-3-and-WPF
 description: 说到动态壁纸软件，相信很多人都听说过或用过 `Wallpaper Engine`, 这是 Steam Store 一个好评如潮的壁纸软件，售价为 `18` 元。我之前也一直在使用，当然今天介绍的是另外一个壁纸软件 `Lively Wallpaper`。
 date: 2022-04-04 11:21:39
-copyright: Reprint
+copyright: Reprinted
 author: SpringLeee 全球技术精选
 originaltitle: 大佬用 WinUI 3 和 WPF 做了一个开源的动态壁纸软件
 originallink: https://mp.weixin.qq.com/s/ACihOXY8v2l2qZmUxKw-ow
 draft: False
 cover: https://img1.dotnet9.com/2022/04/0301.gif
 albums: 开源WPF
-categories: Winform,WPF,UWP,WinUI
+categories: .NET相关
 tags: C#,Winform,WPF,UWP,WinUI,动态壁纸
 ---
 

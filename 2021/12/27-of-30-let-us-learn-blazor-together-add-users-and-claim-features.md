@@ -3,7 +3,7 @@ title: (27/30)大家一起学Blazor：添加用户和Claim功能
 slug: 27-of-30-let-us-learn-blazor-together-add-users-and-claim-features
 description: 前面说过`ASP.NET Core Identity` 是基于`Claim` 的验证，而`Role` 就是类型为`Role` 的`Claim`
 date: 2021-12-25 11:08:26
-copyright: Reprint
+copyright: Reprinted
 author: StrayaWorker
 originaltitle: (27/30)大家一起学Blazor：添加用户和Claim功能
 originallink: https://ithelp.ithome.com.tw/articles/10273602

@@ -3,7 +3,7 @@ title: C# 脚本
 slug: csharp-script
 description: 有些情况下，需要在程序运行期间动态执行C#代码，比如，将某些经常改变的算法保存在配置文件中，在运行期间从配置文件中读取并执行运算。这时可以使用C#脚本来完成这些工作。
 date: 2021-12-24 22:46:51
-copyright: Reprint
+copyright: Reprinted
 author: 寻找无名的特质
 originaltitle: C# 脚本
 originallink: https://www.cnblogs.com/zhenl/p/15714453.html
