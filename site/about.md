@@ -18,23 +18,22 @@
 
  ## 0. 最新开发情况
 
-- [x] 博客网站前台
-  1. [x] 使用Vue 3.x搭建前台
-  2. [x] 已有功能：文章列表、分类文章列表、文章详情、文章评论、归档等
-  3. [ ] 其他待补充
-- [x] 博客网站后台前端
-  1. [x] 使用Vu3 3.x搭建
+- [x] 前台前端
+  1. [x] 使用Vue3 + Typescript + Vuetify + Pinia搭建前台
+  2. [x] 已有功能：文章列表、分类文章列表、专辑文章列表、标签云、文章详情、文章评论、归档、留言、关于等
+  3. [ ] 还有很多功能待开发，比如隐私、评论管理等
+- [x] 后台前端
+  1. [x] 使用Vue3 + Typescript + Vuetify + Pinia搭建
   2. [x] 基础表的CRUD
-  3. [x] 文章管理
-  4. [x] 可使用腾讯cos对象存储图片资源，或本地文件系统存储
-  5. [ ] 其他功能待补充
-- [x] 博客网站后端
-  1. [x] 使用ASP.NET Core 8 Web API + Furion + SqlSugar + PostgreSQL搭建
-  2. [x] 基础表的接口管理
-  3. [ ] 根据前台和后台前端的功能迭代，进行维护中
+  5. [ ] 其他功能
+- [x] 后端
+  1. [x] 使用.NET 8 + Furion + SqlSugar + PostgreSQL搭建
+  3. [x] 提供前后台前端接口-基础表的接口管理
+  4. [ ] 根据前台和后台前端的功能迭代，进行维护中
 
 - [x] Dotnet工具箱
-  1. [x] 使用 Vue 3.0 搭建。
+  1. [x] 参考[it-tools](https://github.com/CorentinTh/it-tools)使用 [Vue 3.0](https://vue3js.cn/) 搭建。
+  2. [x] 目前有10大分类，在线74个小工具
 
 ## 1. Python之禅
 
@@ -99,22 +98,12 @@ Python 之禅 by Tim Peters
 ### 3.1 技能特长
 
 1. 编程语言：C#，C++;
-2. 后端应用开发：.NET Core Web API，MVC，Razor Pages，Blazor;
+2. 后端应用开发：.NET;
 3. 桌面应用开发：WPF，Winform，Qt;
 4. 前端应用开发：Vue，React;
 5. 移动端应用开发：MAUI;
 6. 数据库：PostgreSQL（PGSQL），MySQL，SQL Server，SQLite，Oracle，Access，Redis;
 7. ORM框架：EF Core，SqlSugar，Dapper
-8. 版本管理：SVN，Git
-9. 原型设计：Axure，Figma
-
-### 3.2. 自我评价
-
-1. 热爱技术，具备超过10年的编程开发经验，将工作和学习融入生活；
-2. 严格遵守代码规范，注重代码的整洁、清晰和风格统一，认为这在整个项目中非常重要；
-3. 具备责任心，拥有出色的沟通和理解能力，能够承受压力，在时间紧张的情况下自主加班或下班后深入研究技术和业务；
-4. 熟悉Github，热衷于开源，经常在个人公众号和博客网站分享技术文章，创建个人开源项目并分享技术心得；
-5. 在架构和开发方面有丰富的经验，开发了15+个WPF、15+个Winform、10+个B/S（React|Vue + .NET Core Web API，Blazor Server/WWSM + .NET Web API）、2个Qt Widgets、1个Qt Quick、2个Xamarin.Forms/MAUI、1个SwiftUI和1个Flutter项目和产品。
 
 ## 4. 联系站长
 
