@@ -9,7 +9,7 @@ author: Catcher Wong
 originaltitle: 一篇短文带您了解一下EasyCaching
 originallink: https://www.cnblogs.com/catcher1994/p/10806607.html
 draft: false
-cover: https://img1.dotnet9.com/2023/10/cover_01.png
+cover: https://img1.dotnet9.com/2023/11/cover_01.png
 categories: .NET相关
 ---
 
