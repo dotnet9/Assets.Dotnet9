@@ -16,7 +16,7 @@ ClearScript 是一个 .NET 平台下的开源库，用于在 C# 和其他 .NET �
 
 ClearScript 可以通过 NuGet 包管理器进行安装。要安装 ClearScript，可以在 Visual Studio 中打开 NuGet 包管理器控制台，并运行以下命令：
 
-```
+```shell
 Install-Package ClearScript
 ```
 

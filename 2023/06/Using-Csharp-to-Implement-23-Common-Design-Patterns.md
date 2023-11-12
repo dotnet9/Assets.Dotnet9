@@ -1149,7 +1149,7 @@ class Program
 
 当运行上述代码时，将在控制台上打印出以下输出：
 
-```
+```shell
 ConcreteHandler1 handled request 2
 ConcreteHandler1 handled request 5
 ConcreteHandler2 handled request 14

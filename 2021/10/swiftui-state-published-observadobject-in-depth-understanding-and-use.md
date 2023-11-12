@@ -140,7 +140,7 @@ struct ContentView: View {
 
 这时候点击按钮还会更新数据吗，答案是否定的，那这个是为啥呀？？？
 
-```
+```shell
 因为SwiftUI更新数据的前提是触发 
 第一层 绑定的对象 wrapperModel下的属性（字段）发生更新才会调用视图层更新数据
 但是 第一次下绑定的对象还绑定了 @ObservedObject 或者其他类型的对象呢?

@@ -18,7 +18,7 @@ Refit 是一款强大的类型安全的 RESTful HTTP 客户端库，它能够帮
 
 2. 然后，我们需要定义一个接口来描述 Web Service 接口，例如：
 
-```
+```csharp
 public interface IMyWebService
 {
     [Post("/MyWebService.asmx")]
@@ -30,7 +30,7 @@ public interface IMyWebService
 
 3. 接下来，我们需要使用 Refit 的 `RestService.For` 方法创建一个客户端实例：
 
-```
+```csharp
 var client = RestService.For<IMyWebService>("http://example.com");
 ```
 
@@ -38,7 +38,7 @@ var client = RestService.For<IMyWebService>("http://example.com");
 
 4. 最后，我们就可以使用客户端实例来调用 Web Service 接口了：
 
-```
+```csharp
 var result = await client.MyWebServiceMethod("param1", "param2");
 ```
 
@@ -46,7 +46,7 @@ var result = await client.MyWebServiceMethod("param1", "param2");
 
 需要注意的是，由于 Web Service 接口不是基于 RESTful 架构的，因此需要进行一些特定的配置。例如，在接口定义中使用 `[Post]` 指定调用的 HTTP 方法为 POST，同时需要将 Web Service 方法的名称作为 URL 的一部分，例如：
 
-```
+```csharp
 public interface IMyWebService
 {
     [Post("/MyWebService.asmx/MyWebServiceMethod")]
@@ -56,7 +56,7 @@ public interface IMyWebService
 
 另外，需要在客户端实例中指定 Web Service 的 SOAP 1.1 命名空间，例如：
 
-```
+```csharp
 var client = RestService.For<IMyWebService>("http://example.com", new RefitSettings
 {
     UrlParameterFormatter = new SoapUrlParameterFormatter(),

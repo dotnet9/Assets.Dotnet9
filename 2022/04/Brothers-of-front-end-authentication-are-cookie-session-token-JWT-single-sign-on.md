@@ -108,13 +108,13 @@ cookie 可以限制::「使用方式」::。
 
 HTTP 返回的一个 Set-Cookie 头用于向浏览器写入「一条（且只能是一条）」cookie，格式为 cookie 键值 + 配置键值。例如：
 
-```
+```shell
 Set-Cookie: username=jimu; domain=jimu.com; path=/blog; Expires=Wed, 21 Oct 2015 07:28:00 GMT; Secure; HttpOnly
 ```
 
 那我想一次多 set 几个 cookie 怎么办？多给几个 Set-Cookie 头（一次 HTTP 请求中允许重复）
 
-```
+```shell
 Set-Cookie: username=jimu; domain=jimu.com
 Set-Cookie: height=180; domain=me.jimu.com
 Set-Cookie: weight=80; domain=me.jimu.com
@@ -122,7 +122,7 @@ Set-Cookie: weight=80; domain=me.jimu.com
 
 HTTP 请求的 Cookie 头用于浏览器把符合当前「空间、时间、使用方式」配置的所有 cookie 一并发给服务端。因为由浏览器做了筛选判断，就不需要归还配置内容了，只要发送键值就可以。
 
-```
+```shell
 Cookie: username=jimu; height=180; weight=80
 ```
 
@@ -132,7 +132,7 @@ Cookie: username=jimu; height=180; weight=80
 
 调用`document.cookie`可以创建、修改 cookie，和 HTTP 一样，一次`document.cookie`能且只能操作一个 cookie。
 
-```
+```shell
 document.cookie = 'username=jimu; domain=jimu.com; path=/blog; Expires=Wed, 21 Oct 2015 07:28:00 GMT; Secure; HttpOnly';
 ```
 
@@ -258,7 +258,7 @@ token 的流程是这样的：
 
 解决方案就是给 token 加签名，来识别 token 是否被篡改过。例如在 [cookie-session  -  npm](https://www.npmjs.com/package/cookie-session) 库中，增加两项配置：
 
-```
+```shell
 secret: 'iAmSecret',
 signed: true,
 ```
@@ -277,7 +277,7 @@ signed: true,
 
 它是一种成熟的 token 字符串生成方案，包含了我们前面提到的数据、签名。不如直接看一下一个 JWT token 长什么样：
 
-```
+```shell
 eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyaWQiOiJhIiwiaWF0IjoxNTUxOTUxOTk4fQ.2jf3kl_uKWRkwjOP6uQRJFqMlwSABcgqqcJofFH5XCo 
 ```
 

@@ -29,13 +29,13 @@ C#中委托（Delegate）和事件（Event）是两个重要的概念，它们�
 
 定义委托的语法如下：
 
-```
+```csharp
 delegate returnType delegateName(parameterList);
 ```
 
 其中，returnType是返回值类型，delegateName是委托名称，parameterList是参数列表。例如，定义一个委托可以用以下代码：
 
-```
+```csharp
 delegate void MyDelegate(string message);
 ```
 
@@ -43,7 +43,7 @@ delegate void MyDelegate(string message);
 
 使用委托可以将方法作为参数传递给其他方法，例如：
 
-```
+```csharp
 void Method1(string message) {
     Console.WriteLine(message);
 }
@@ -62,14 +62,14 @@ Method2(del, "Hello, world!");
 
 定义多播委托的语法如下：
 
-```
+```csharp
 delegateName += methodName;
 delegateName -= methodName;
 ```
 
 其中，delegateName是多播委托的名称，methodName是要连接或断开连接的方法名称。例如：
 
-```
+```csharp
 MyDelegate del1 = new MyDelegate(Method1);
 MyDelegate del2 = new MyDelegate(Method2);
 MyDelegate del3 = del1 + del2;
@@ -88,13 +88,13 @@ del3("Hello, world!");
 
 定义事件的语法如下：
 
-```
+```csharp
 public event delegateName eventName;
 ```
 
 其中，public是访问修饰符，delegateName是委托的名称，eventName是事件的名称。例如：
 
-```
+```csharp
 public delegate void MyDelegate(string message);
 
 public class MyClass {

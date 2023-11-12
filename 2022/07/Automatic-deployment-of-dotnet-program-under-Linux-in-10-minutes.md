@@ -101,7 +101,7 @@ dotnet publish -c Release -o out
 
 ![](https://img1.dotnet9.com/2022/07/0211.png)
 
-```
+```shell
 ## 创建目录
 
 mkdir -p /home/admin/aspnetcoredemo/

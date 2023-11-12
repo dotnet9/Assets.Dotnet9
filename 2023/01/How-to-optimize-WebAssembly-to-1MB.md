@@ -352,7 +352,7 @@ services:
 
 在`conf.d`中创建`webassembly.conf`，并且添加以下代码：
 
-```
+```shell
 server {
     listen 80;
     server_name http://localhost;

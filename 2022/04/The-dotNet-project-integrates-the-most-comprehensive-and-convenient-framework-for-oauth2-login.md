@@ -87,87 +87,87 @@ tags: .NET,OAuth2
 [https://www.nuget.org/packages?q=MrHuo.OAuth](https://www.nuget.org/packages?q=MrHuo.OAuth)
 
 #### Gitlab
-```
+```shell
 Install-Package MrHuo.OAuth.Gitlab -Version 1.1.1
 ```
 
 #### 微信公众号
-```
+```shell
 Install-Package MrHuo.OAuth.Wechat -Version 1.1.1
 ```
 
 #### oschina.net
-```
+```shell
 Install-Package MrHuo.OAuth.OSChina -Version 1.1.1
 ```
 
 #### coding.net
-```
+```shell
 Install-Package MrHuo.OAuth.Coding -Version 1.1.1
 ```
 
 #### github.com
-```
+```shell
 Install-Package MrHuo.OAuth.Github -Version 1.1.1
 ```
 
 #### alipay.com
-```
+```shell
 Install-Package MrHuo.OAuth.Alipay -Version 1.1.1
 ```
 
 #### baidu.com
-```
+```shell
 Install-Package MrHuo.OAuth.Baidu -Version 1.1.1
 ```
 
 #### huawei.com
-```
+```shell
 Install-Package MrHuo.OAuth.Huawei -Version 1.1.1
 ```
 
 #### gitee.com
-```
+```shell
 Install-Package MrHuo.OAuth.Gitee -Version 1.1.1
 ```
 
 #### weibo.com
-```
+```shell
 Install-Package MrHuo.OAuth.SinaWeibo -Version 1.1.1
 ```
 
 #### xunlei.com
-```
+```shell
 Install-Package MrHuo.OAuth.XunLei -Version 1.1.1
 ```
 
 #### qq.com
-```
+```shell
 Install-Package MrHuo.OAuth.QQ -Version 1.1.1
 ```
 
 #### microsoft.com
-```
+```shell
 Install-Package MrHuo.OAuth.Microsoft -Version 1.1.1
 ```
 
 #### mi.com
-```
+```shell
 Install-Package MrHuo.OAuth.Mi -Version 1.1.1
 ```
 
 #### stackoverflow.com
-```
+```shell
 Install-Package MrHuo.OAuth.StackOverflow -Version 1.1.1
 ```
 
 #### facebook.com
-```
+```shell
 Install-Package MrHuo.OAuth.Facebook -Version 1.1.1
 ```
 
 #### google.com
-```
+```shell
 Install-Package MrHuo.OAuth.Google -Version 1.0.0
 ```
 

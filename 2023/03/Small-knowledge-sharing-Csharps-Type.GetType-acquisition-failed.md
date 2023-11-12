@@ -52,7 +52,7 @@ var type = Type.GetType("ChildAssembly.Student, ChildAssembly, Version=0.1.0.0, 
 
 privatePath 可以包含一个或多个子目录，每个子目录之间使用分号 (;) 分隔。例如：
 
-```
+```xml
 <configuration>
   <runtime>
     <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">

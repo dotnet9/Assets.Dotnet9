@@ -40,7 +40,7 @@ foreach (int element in array)
 
 输出结果为：
 
-```
+```shell
 1
 2
 4
@@ -77,7 +77,7 @@ foreach (int element in array)
 
 输出结果为：
 
-```
+```shell
 1
 2
 5

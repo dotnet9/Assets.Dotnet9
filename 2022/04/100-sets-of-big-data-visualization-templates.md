@@ -499,6 +499,6 @@ git clone https://github.com/iGaoWei/BigDataView.git
 
 ## 温馨提示：更多模板陆续更新中
 
-```
+```shell
 如果觉得对你有对您有帮助，您可以点右上角 💘Star💘支持,谢谢！～
 ```

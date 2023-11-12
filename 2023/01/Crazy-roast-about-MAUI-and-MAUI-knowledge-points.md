@@ -244,7 +244,7 @@ private static void MainWindowCreated(MauiWinUIWindow nativeWindow)
 
 可以通过以下代码获取当前程序打开的所有窗口。
 
-```
+```shell
 App.Current.Windows
 Application.Current.Windows
 ```
@@ -263,7 +263,7 @@ Current.GetWindos()
 
 如果要修改窗口标题，只能在窗口创建时修改，也就是 `Microsoft.Maui.Controls.Windows`，用 `Microsoft.UI.Xaml.Window`，或 `Microsoft.UI.Windowing.AppWindow` 都改不了。
 
-```
+```shell
 Microsoft.Maui.Controls.Window window = base.CreateWindow(activationState);
 window.Title = Constants.Name;
 ```
@@ -860,7 +860,7 @@ An application manifest specifies declarative application identity, dependency a
 
 能够拿到参数：
 
-```
+```shell
                 $(_DeploymentBaseManifest);
                 @(ResolvedIsolatedComModules);
                 @(_DeploymentManifestDependencies);
