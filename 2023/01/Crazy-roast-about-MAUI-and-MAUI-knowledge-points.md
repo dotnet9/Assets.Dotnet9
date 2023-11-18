@@ -12,14 +12,6 @@ cover: https://img1.dotnet9.com/2023/01/cover_06.jpg
 categories: MAUI
 ---
 
-> 本文来自转载。
->
-> 作者：痴者工良
->
-> 原文标题：疯狂吐槽 MAUI 以及 MAUI 入坑知识点
->
-> 原文链接：https://www.cnblogs.com/whuanle/p/17060473.html
-
 ![](https://img1.dotnet9.com/2023/01/cover_06.jpg)
 
 这里是笔者在开发 MAUI 应用时踩的坑，以及一些笔记的汇总。
@@ -244,7 +236,7 @@ private static void MainWindowCreated(MauiWinUIWindow nativeWindow)
 
 可以通过以下代码获取当前程序打开的所有窗口。
 
-```shell
+```csharp
 App.Current.Windows
 Application.Current.Windows
 ```
@@ -290,7 +282,7 @@ appWindow.SetPresenter(AppWindowPresenterKind.Overlapped);
 
 然后常用的窗口方法有：
 
-````csharp
+```csharp
 /*
     AppWindow 的 Presenter ，一定是 OverlappedPresenter
     */
@@ -400,7 +392,7 @@ public class WindowService : IWindowService
         return (_appWindow.Position, _appWindow.Size, _appWindow.ClientSize);
     }
 }
-````
+```
 
 让窗口全屏有两种方法，一种是全屏时，窗口把任务栏吞了，真正意义上的的全屏，另一种是保留任务栏。
 
