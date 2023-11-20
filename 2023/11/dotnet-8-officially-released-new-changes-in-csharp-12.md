@@ -82,8 +82,8 @@ public class DerivedImplement : IDerived
 
 - KebabCaseLower：小写中划线，例如：user-name。
 - KebabCaseUpper：大写中划线，例如：USER-NAME。
-- SnakeCaseLower：小写中划线，例如：user_name。
-- SnakeCaseUpper：大写中划线，例如：USER_NAME。
+- SnakeCaseLower：小写下划线，例如：user_name。
+- SnakeCaseUpper：大写下划线，例如：USER_NAME。
 
 ```csharp
 var options1 = new JsonSerializerOptions
