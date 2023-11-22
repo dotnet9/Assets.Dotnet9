@@ -545,13 +545,7 @@ public List <RegionInfo> CountriesList
 
 ---
 
-> 
-> 时间如流水，只能流去不流回。
-> 
->- 作者：Swati Gupta
->- 原文标题：DataBinding Expressions In WPF
->- 原文链接：https://www.c-sharpcorner.com/article/data-binding-expression-in-wpf/
->- 编辑：沙漠之尽头的狼
->- 日期：2021-05-04
-
-- 本文Markdown：[点击浏览](https://github.com/dotnet9/Assets.Dotnet9/blob/main/2021/10/2021-10-18_01.md)
+- 作者：Swati Gupta
+- 原文标题：DataBinding Expressions In WPF
+- 原文链接：https://www.c-sharpcorner.com/article/data-binding-expression-in-wpf/
+- 编辑：沙漠之尽头的狼

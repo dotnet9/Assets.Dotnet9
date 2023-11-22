@@ -161,13 +161,3 @@ public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
 <video id="video" controls="" preload="none" poster="https://img1.dotnet9.com/2021/04/0301.png">
   <source id="mp4" src="https://img1.dotnet9.com/2021/04/0303.mp4" type="video/mp4">
 </video>
-
-> 
-> 时间如流水，只能流去不流回。
-> 
->- 公众号：Dotnet9
->- 作者、编辑：沙漠尽头的狼
->- 日期：2021-04-17
-> 
-
-- 本文Markdown：[点击浏览](https://github.com/dotnet9/Assets.Dotnet9/blob/main/2021/04/2021-04-17_01.md)

@@ -191,14 +191,4 @@ admin
   <source id="mp4" src="https://img1.dotnet9.com/2021/04/0409.mp4" type="video/mp4">
 </video>
 
-> 
-> 时间如流水，只能流去不流回。
-> 
->- 公众号：Dotnet9
->- 号主微信号：dotnet9com
->- 作者、编辑：沙漠之尽头的狼
->- 乐趣课堂仓库（欢迎提issue）：https://github.com/dotnet9/lqclass.com
->- 日期：2021-04-14
-> 
-
-- 本文Markdown：[点击浏览](https://github.com/dotnet9/Assets.Dotnet9/blob/main/2021/04/2021-04-14_01.md)
+仓库（欢迎提issue）：https://github.com/dotnet9/lqclass.com

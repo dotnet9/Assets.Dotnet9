@@ -241,13 +241,4 @@ OK，功能已经完成，本文基于`WPF`搭建的项目，也是适用于`Win
 
 本文是否对您有用？记得3连走起哦。
 
-> 
-> 时间如流水，只能流去不流回。
-> 
->- 公众号：Dotnet9
->- 作者、编辑：沙漠尽头的狼
->- 文中示例源码：https://github.com/dotnet9/TerminalMACS.ManagerForWPF/tree/master/src/Demo/WPFWithLogDashboard
->- 日期：2021-04-18
-> 
-
-- 本文Markdown：[点击浏览](https://github.com/dotnet9/Assets.Dotnet9/blob/main/2021/04/2021-04-18_01.md)
+文中示例源码：https://github.com/dotnet9/TerminalMACS.ManagerForWPF/tree/master/src/Demo/WPFWithLogDashboard
