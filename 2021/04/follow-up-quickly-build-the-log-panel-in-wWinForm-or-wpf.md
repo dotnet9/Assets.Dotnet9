@@ -162,7 +162,7 @@ http://localhost:5000/logdashboard
 
 主窗体`MainWindow.xaml`添加几个按钮，用于模拟添加普通日志、添加异常日志、打开可视化日志面板网页：
 
-```XAML
+```html
 <Window x:Class="WPFWithLogDashboard.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
