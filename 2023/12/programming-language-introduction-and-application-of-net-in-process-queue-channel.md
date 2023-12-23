@@ -14,6 +14,8 @@ categories: .NET相关
 tags: .NET
 ---
 
+![](https://img1.dotnet9.com/2023/12/cover_04.jpg)
+
 最近，博主为 [FakeRPC](https://github.com/qinyuanpei/FakeRpc) 增加了 [WebSocket](https://developer.mozilla.org/zh-CN/docs/Web/API/WebSocket) 协议的支持。这意味着，我们可以借助其全双工通信的特性，在一个连接请求内发送多条数据。FakeRPC 目前最大的遗憾是，建立在 HTTP 协议上而不是 TCP/IP 协议上。因此，考虑 WebSocket 协议，更多的是为了验证 [JSON-RPC](https://www.jsonrpc.org/specification) 的可行性，以及为接下来的要支持的 TCP/IP 协议铺路。也许，你从未意识到这些概念间千丝万缕的联系，可如果我们把每一次 RPC 调用都理解为一组消息，你是不是就能更加深刻地理解 RPC 这个稍显古老的事物了呢？在编写 FakeRPC 的过程中，我使用了 `.NET` 中的全新数据结构 `Channel` 来实现消息的转发。以服务端为例，每一个 RPC 请求经过 CallInvoker 处理以后，作为 RPC 响应的结果其实并不是立即发回给客户端，而是通过一个后台线程从 `Channel` 取出消息再发回客户端。 那么，博主为什么要舍近求远呢？我希望，这篇文章可以告诉你答案。
 
 # Channel 入门
@@ -86,8 +88,6 @@ var boundedChannel = Channel.CreateBounded<int>(100);
 var unboundedChannel = Channel.CreateUnbounded<string>();
 ```
 
-Copy
-
 好了，对于 `Channel` 我们该从哪里开始说起呢？ 可以注意到，创建一个 Channel 是非常简单的，除非你打算创建的是一个有限容量的 Channel。还记得我们一开始提出的问题吗？在生产者-消费者模型中，一个容量有限的固定，一定会无可避免地出现队列“满”的情形，此时，我们就需要制定某种策略或者机制来完善整个模型。对于这个问题，Channel 的解决方案是 `BoundedChannelFullMode` ：
 
 ```csharp
@@ -96,8 +96,6 @@ var boundedChannel = Channel.CreateBounded<string>(
         FullMode = BoundedChannelFullMode.Wait
 });
 ```
-
-Copy
 
 注意到，这是一个枚举类型，事实上，它共有 `Wait`、`DropNewest`、`DropOldest`、`DropWrite` 四个取值，默认为 `Wait`。其中：
 
@@ -116,8 +114,6 @@ var boundedChannel = Channel.CreateBounded<string>(
         FullMode = BoundedChannelFullMode.Wait
 });
 ```
-
-Copy
 
 例如，通过以上代码片段，我们就可以创建出一个单生产者、多消费者的 `Channel` ，对于 `Channel` 而言，其最重要的两个成员分别是 `Writer` 和 `Reader` , 前者对应生产者，类型定义为：`ChannelWriter<T>`；后者对应消费者，类型定义为：`ChannelReader<T>`，这一次，我们做到了真正意义上的读写分离：
 
@@ -144,8 +140,6 @@ while (await channel.Reader.WaitToReadAsync())
     }
 }
 ```
-
-Copy
 
 也许，你对这个话题意犹未尽，可我不得不非常遗憾的告诉你，这就是 `Channel` 最为核心的用法了。怎么样，是不是感觉非常简单？这的确符合微软一贯的作风，即：让一个复杂的东西变得简单好用。关于 `Channel` 更多的细节，这里不再赘述，大家可以去阅读官方文档。我发誓，MSDN 和 [MDN](https://developer.mozilla.org/en-US/) 是我见过写得最好的文档。
 
@@ -199,8 +193,6 @@ _logger?.LogInformation("Send response to {0}/{1}, payload:{3}", request.Service
 _messagesToReadQueue.Writer.TryWrite(new ArraySegment<byte>(bytes));
 ```
 
-Copy
-
 此时，借助于动态代理，我们可以非常轻松地调用一个 `RPC` 接口，并且它是以长连接的形式运行在 `WebSocket` 协议上：
 
 ```csharp
@@ -216,11 +208,7 @@ var calculatorProxy = _clientFactory.Create<ICalculatorService>(new Uri("ws://lo
 var result = calculatorProxy.Random();
 ```
 
-Copy
-
 可以注意到，我们不仅在传输协议上实现了抽象，而且在消息协议上实现了抽象，你可以像以前一样自由地使用 `MessagePack` 或者 `Protobuf` ，为了证明 `Channel` 真的对性能提升有用，这里我放一张 FakeRPC 的 brenchmark 测试结果：
-
-
 
 ![FakeRPC 不同通讯协议、消息协议性能对比](https://img1.dotnet9.com/2023/12/0404.png)FakeRPC 不同通讯协议、消息协议性能对比
 
