@@ -177,6 +177,8 @@ public class TranslationServiceUnitTest
 
 文中截图是跨平台桌面版本，采用[Avalonia UI](https://avaloniaui.net/)和控件库[Neumorphism.Avalonia](https://github.com/flarive/Neumorphism.Avalonia)开发，待功能开发到一定程度，站长会介绍工具框架的搭建，下面是工具效果图：
 
+![工具效果图](https://img1.dotnet9.com/2024/01/0103.png)
+
 ![工具效果图](https://img1.dotnet9.com/2024/01/0102.gif)
 
 如果你对这个工具感兴趣，可以访问码界工坊官网https://codewf.com，查看更多实用工具。码界工坊的源码也在[Github](https://github.com/dotnet9/CodeWF)开源，欢迎大家关注和贡献。
