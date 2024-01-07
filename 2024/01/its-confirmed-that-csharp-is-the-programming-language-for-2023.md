@@ -4,7 +4,10 @@ slug: its-confirmed-that-csharp-is-the-programming-language-for-2023
 description: 朋友圈看到桂素伟大佬发的消息截图，站长赶紧翻译向大家报喜，确定了-C#是2023年度的编程语言！
 date: 2024-01-07 09:56:26
 lastmod: 2024-01-07 10:23:17
-copyright: Original
+copyright: Reprinted
+author: TIOBE
+originaltitle: TIOBE Index for January 2024
+originallink: https://www.tiobe.com/tiobe-index/
 draft: false
 cover: https://img1.dotnet9.com/2024/01/cover_02.png
 categories: .NET相关
