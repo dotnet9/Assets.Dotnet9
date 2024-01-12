@@ -3,6 +3,7 @@ title: .NET跨平台框架选择之一 - Avalonia UI
 slug: one-of-the-best-choices-for-dotnet-cross-platform-frameworks-avalonia-ui
 description: 这是一个基于WPF XAML的跨平台UI框架，并支持多种操作系统（Windows（.NET Core），Linux（GTK），MacOS，Android和iOS），Web（WebAssembly）
 date: 2022-11-19 21:24:26
+banner: true
 copyright: Original
 draft: False
 cover: https://img1.dotnet9.com/2022/11/0402.png

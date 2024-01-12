@@ -4,6 +4,7 @@ slug: Simulate-scenarios-using-third-party-dotNET-libraries-for-debugging-interc
 description: 模拟.NET实际应用场景，综合应用三个主要知识点：一是使用dnSpy反编译第三库及调试，二是使用Lib.Harmony库实现第三库拦截、伪造，三是实现同一个库支持多版本同时引用。
 date: 2023-09-23 14:43:19
 lastmod: 2023-09-26 00:16:17
+banner: true
 copyright: Original
 draft: false
 cover: https://img1.dotnet9.com/2023/09/cover_08.png

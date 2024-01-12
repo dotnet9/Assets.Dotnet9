@@ -3,6 +3,7 @@ title: Blazor是春天还是寒风里的挣扎
 slug: blazor-is-spring-or-a-struggle-in-the-cold-wind
 description: Blazor允许您`使用C#`而不是JavaScript`构建交互式`Web UI`。 Blazor应用由可重用的Web UI组件组成，这些组件使用C#、HTML和CSS实现。客户端和服务器代码都是用c#编写的，允许您共享代码和库。
 date: 2021-12-16 12:57:34
+banner: true
 copyright: Reprinted
 author: MASA Blazor
 originaltitle: Blazor是春天还是寒风里的挣扎
