@@ -1,5 +1,5 @@
 ---
-title: 确定了-C#是2023年度的编程语言！
+title: C#创历史成为2023年度编程语言
 slug: its-confirmed-that-csharp-is-the-programming-language-for-2023
 description: 朋友圈看到桂素伟大佬发的消息截图，站长赶紧翻译向大家报喜，确定了-C#是2023年度的编程语言！
 date: 2024-01-07 09:56:26
