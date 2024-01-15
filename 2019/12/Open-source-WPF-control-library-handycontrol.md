@@ -1,5 +1,5 @@
 ---
-title: 开源C# WPF控件库《HandyControl》
+title: WPF开源控件库 - HandyControl
 slug: Open-source-WPF-control-library-handycontrol
 description: 一个很多人参与贡献的WPF开源控件项目
 banner: true

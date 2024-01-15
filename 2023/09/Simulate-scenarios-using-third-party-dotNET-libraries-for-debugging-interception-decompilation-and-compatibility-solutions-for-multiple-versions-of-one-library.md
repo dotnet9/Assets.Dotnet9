@@ -1,5 +1,5 @@
 ---
-title: .NET综合应用反编译、三方库调试、拦截、兼容一库多版本
+title: .NET反编译、第三方库调试（拦截、篡改、伪造）、一库多版本兼容
 slug: Simulate-scenarios-using-third-party-dotNET-libraries-for-debugging-interception-decompilation-and-compatibility-solutions-for-multiple-versions-of-one-library
 description: 模拟.NET实际应用场景，综合应用三个主要知识点：一是使用dnSpy反编译第三库及调试，二是使用Lib.Harmony库实现第三库拦截、伪造，三是实现同一个库支持多版本同时引用。
 date: 2023-09-23 14:43:19

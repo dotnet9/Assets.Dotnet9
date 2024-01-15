@@ -4,6 +4,7 @@ slug: each-version-of-the-operating-system-is-correct-dotnet-support
 description: 借助虚拟机和测试机，检测各版本操作系统对.NET的支持情况。安装操作系统后，实测安装相应运行时并能够运行星尘代理为通过。
 date: 2024-01-13 15:51:26
 lastmod: 2024-01-13 16:13:28
+banner: true
 copyright: Reprinted
 author: 大石头
 originaltitle: 各版本操作系统对.NET支持情况（1124更新）
