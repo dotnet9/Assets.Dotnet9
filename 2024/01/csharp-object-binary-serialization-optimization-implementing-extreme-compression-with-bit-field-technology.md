@@ -3,7 +3,7 @@ title: C#对象二进制序列化优化：位域技术实现极限压缩
 slug: csharp-object-binary-serialization-optimization-implementing-extreme-compression-with-bit-field-technology
 description: 展示如何将C#对象转换为二进制形式，并进行优化以减少网络传输中的数据包大小。
 date: 2024-01-21 21:43:19
-lastmod: 2024-01-21 23:21:11
+lastmod: 2024-01-21 23:55:11
 copyright: Original
 draft: false
 cover: https://img1.dotnet9.com/2024/01/cover_10.png
@@ -316,6 +316,8 @@ public void Test_SerializeToBytes2_Success()
 | PowerUsageTrend | 54     | 3    | 电源使用情况趋势（一段时间内CPU、磁盘和GPU对功耗的影响），0：非常低，1：低，2：中，3：高，4：非常高 | 0    |
 | Type            | 57     | 1    | 进程类型，0：应用，1：后台进程                               | 0    |
 | Status          | 58     | 2    | 进程状态，0：正常运行，1：效率模式，2：挂起                  | 1    |
+
+上面这张表是位域规则表，Offset表示字段在Data字节数组中的位置（以bit为单位计算)，Size表示字段在Data中占有的大小（同样以bit单位计算），如Memory字段，在Data字节数组中，占据10到20位的空间。
 
 修改类定义如下，注意看代码中的注释：
 
