@@ -3,7 +3,7 @@ title: C#对象二进制序列化优化：位域技术实现极限压缩
 slug: csharp-object-binary-serialization-optimization-implementing-extreme-compression-with-bit-field-technology
 description: 展示如何将C#对象转换为二进制形式，并进行优化以减少网络传输中的数据包大小。
 date: 2024-01-21 21:43:19
-lastmod: 2024-01-21 23:55:11
+lastmod: 2024-01-22 00:33:28
 copyright: Original
 draft: false
 cover: https://img1.dotnet9.com/2024/01/cover_10.png
@@ -293,13 +293,13 @@ public void Test_SerializeToBytes2_Success()
 
 看前面一张表，部分字段只是一些枚举值，使用的`byte`表示，即8位(bit)，其中比如进程类型只有2个状态（0：应用，1：后台进程），正好可以用1位即表示；像电源使用情况，无非就是5个状态，用3位可表示全，按这个规则我们重新定义字段规则如下：
 
-| 字段名      | 数据类型 | 说明                           | 示例                      |
-| ----------- | -------- | ------------------------------ | ------------------------- |
-| PID         | int      | 进程ID                         | 10565                     |
-| Name        | string?  | 进程名称                       | 码界工坊                  |
-| Publisher   | string?  | 发布者                         | 沙漠尽头的狼              |
-| CommandLine | string?  | 命令行                         | `dotnet CodeWF.Tools.dll` |
-| Data        | byte[8]  | 固定大小的几个字段，见下表定义 |                           |
+| 字段名      | 数据类型 | 说明                                                  | 示例                      |
+| ----------- | -------- | ----------------------------------------------------- | ------------------------- |
+| PID         | int      | 进程ID                                                | 10565                     |
+| Name        | string?  | 进程名称                                              | 码界工坊                  |
+| Publisher   | string?  | 发布者                                                | 沙漠尽头的狼              |
+| CommandLine | string?  | 命令行                                                | `dotnet CodeWF.Tools.dll` |
+| Data        | byte[8]  | 固定大小的几个字段，见下表定义，为什么定义成8个字节？ |                           |
 
 
 固定字段(Data)的详细说明如下：
@@ -318,6 +318,8 @@ public void Test_SerializeToBytes2_Success()
 | Status          | 58     | 2    | 进程状态，0：正常运行，1：效率模式，2：挂起                  | 1    |
 
 上面这张表是位域规则表，Offset表示字段在Data字节数组中的位置（以bit为单位计算)，Size表示字段在Data中占有的大小（同样以bit单位计算），如Memory字段，在Data字节数组中，占据10到20位的空间。
+
+> 知道为什么Data字段定义成8个字节长度了吗？
 
 修改类定义如下，注意看代码中的注释：
 
