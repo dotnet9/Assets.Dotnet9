@@ -47,7 +47,10 @@ tags: WPF,FluentValiatoin
 
 ### 4.2. 创建实体类
 
-我创建了两个实体类：Student和Field，分别代表对象属性和集合项属性。这两个类都实现了IDataErrorInfo接口，以触发FluentValidation的验证机制。
+我创建了两个实体类：Student和Field，分别代表对象属性和集合项属性。这两个类都实现了IDataErrorInfo接口：
+
+1. `IDataErrorInfo`接口常用于提供实体数据验证的错误信息。这个接口包含两个成员：一个索引器（`this[string columnName]`）和一个`Error`属性。索引器用于按属性名称提供错误信息，而`Error`属性则用于提供整个实体的错误概述。
+1. 在ViewModel中实现`IDataErrorInfo`接口，并在`this[string columnName]`索引器和`Error`属性中使用FluentValidation来验证属性。
 
 #### 4.2.1. 普通类 - Student
 
