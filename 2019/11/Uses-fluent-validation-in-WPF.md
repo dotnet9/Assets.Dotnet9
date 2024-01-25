@@ -3,7 +3,7 @@ title: FluentValidation在C# WPF中的应用
 slug: Uses-fluent-validation-in-WPF
 description: 本文将深入探讨如何在C# WPF项目中运用FluentValidation进行属性验证，并展示如何通过MVVM模式实现这一功能。
 date: 2019-11-19 03:43:13
-lastmod: 2024-01-20 23:43:47
+lastmod: 2024-01-25 05:17:26
 author: 沙漠尽头的狼
 draft: false
 cover: https://img1.dotnet9.com/2019/11/cover_01.png
@@ -50,11 +50,11 @@ tags: WPF,FluentValiatoin
 我创建了两个实体类：Student和Field，分别代表对象属性和集合项属性。这两个类都实现了IDataErrorInfo接口：
 
 1. `IDataErrorInfo`接口常用于提供实体数据验证的错误信息。这个接口包含两个成员：一个索引器（`this[string columnName]`）和一个`Error`属性。索引器用于按属性名称提供错误信息，而`Error`属性则用于提供整个实体的错误概述。
-1. 在ViewModel中实现`IDataErrorInfo`接口，并在`this[string columnName]`索引器和`Error`属性中使用FluentValidation来验证属性。
+1. 两个实体类和另外在后面提及的ViewModel中也实现`IDataErrorInfo`接口，并在`this[string columnName]`索引器和`Error`属性中使用FluentValidation来验证属性。
 
 #### 4.2.1. 普通类 - Student
 
-学生类包含3个属性：名字、年龄、邮政编码。
+学生类包含5个属性：名字、年龄、邮政编码、最小值和最大值，其中最小值和最大值涉及关联验证，即最小值变化后通知最大值验证，反之同理。
 
 ```C#
 /// <summary>
@@ -87,6 +87,33 @@ public class Student : BindableBase, IDataErrorInfo
         set => SetProperty(ref _zip, value);
     }
 
+    private int _minValue;
+
+    public int MinValue
+    {
+        get => _minValue;
+        set
+        {
+            SetProperty(ref _minValue, value);
+
+            // 关联更新最大值验证
+            RaisePropertyChanged(nameof(MaxValue));
+        }
+    }
+
+    private int _maxValue;
+
+    public int MaxValue
+    {
+        get => _maxValue;
+        set
+        {
+            SetProperty(ref _maxValue, value);
+
+            // 关联更新最小值验证
+            RaisePropertyChanged(nameof(MinValue));
+        }
+    }
 
     public string this[string columnName]
     {
@@ -121,7 +148,7 @@ public class Student : BindableBase, IDataErrorInfo
 }
 ```
 
-上面关键代码在`public string this[string columnName]`：这里进行输入表单项的数据校验，`FluentValidation`调用就在这里，校验逻辑封装在`StudentValidator`，表单输入时会实时调用该处代码，`columnName`表示表单项的列名，就是ViewModel绑定的属性名。
+上面关键代码在`public string this[string columnName]`：这里进行输入表单项的数据校验，`FluentValidation`调用就在这里，校验逻辑封装在`StudentValidator`，表单输入时会实时调用该处代码，`columnName`表示表单项的列名，就是View绑定的属性名。
 
 #### 4.2.2. 集合类 - Field
 
@@ -135,7 +162,7 @@ public class Student : BindableBase, IDataErrorInfo
 /// </summary>
 public class Field : BindableBase, IDataErrorInfo
 {
-    private string _value;
+    private string? _value;
     private readonly FieldValidator _validator = new();
 
 
@@ -165,7 +192,7 @@ public class Field : BindableBase, IDataErrorInfo
     /// <summary>
     ///     值
     /// </summary>
-    public string Value
+    public string? Value
     {
         get => _value;
         set => SetProperty(ref _value, value);
@@ -215,14 +242,13 @@ public enum DataType
 
 ### 4.3. 创建验证器
 
-对于每个实体类，我都创建了一个对应的验证器类：StudentValidator和FieldValidator。这些验证器类继承自AbstractValidator，并在其中定义了验证规则。
+对于每个实体类，我都创建了一个对应的验证器类：`StudentValidator`和`FieldValidator`。这些验证器类继承自`AbstractValidator`，并在其中定义了验证规则。验证属性的写法有两种：
 
-> 注：验证属性的写法有两种：
->
-> 1. 可以在实体属性上方添加特性（本文不作特别说明，百度文章介绍很多）；
-> 2. 通过代码的形式添加，如下方，创建一个验证器类，继承自AbstractValidator，在此验证器构造函数中写规则验证属性，方便管理。
+1. 可以在实体属性上方添加特性（本文不作特别说明，百度文章介绍很多）；
 
-本文使用第二种，通过创建`StudentValidator`和`FieldValidator`两个验证器类介绍。
+2. 通过代码的形式添加，如下方，创建一个验证器类，继承自AbstractValidator，在此验证器构造函数中写规则验证属性，方便管理。
+
+本文使用第二种，下面通过创建`StudentValidator`和`FieldValidator`两个验证器类介绍。
 
 #### 4.3.1. StudentValidator
 
@@ -245,27 +271,31 @@ public class StudentValidator : AbstractValidator<Student>
             .ExclusiveBetween(10, 150)
             .WithMessage("请正确输入学生年龄(10-150)");
 
-        RuleFor(vm => vm.Zip)
+        _ = RuleFor(vm => vm.Zip)
             .NotEmpty()
             .WithMessage("邮政编码不能为空！")
             .Must(BeAValidZip)
             .WithMessage("邮政编码由六位数字组成。");
+
+        RuleFor(model => model.MinValue).Must((model, minValue) => minValue < model.MaxValue).WithMessage("最小值应该小于最大值");
+
+        RuleFor(model => model.MaxValue).Must((model, maxValue) => maxValue > model.MinValue).WithMessage("最大值应该大于最小值");
     }
 
-    private static bool BeAValidZip(string zip)
+    private static bool BeAValidZip(string? zip)
     {
-        if (!string.IsNullOrEmpty(zip))
+        if (string.IsNullOrEmpty(zip))
         {
-            var regex = new Regex(@"\d{6}");
-            return regex.IsMatch(zip);
+            return false;
         }
 
-        return false;
+        var regex = new Regex(@"\d{6}");
+        return regex.IsMatch(zip);
     }
 }
 ```
 
-代码简单，使用到数字的大小和范围验证（见Age）、字符串不能为空和长度限制（见Name）、字符串正则表达式验证（见Zip）。
+代码简单，使用到数字的大小和范围验证（见Age）、字符串不能为空和长度限制（见Name）、字符串正则表达式验证（见Zip）、多属性关联验证（最小值和最大值，这里配合属性`set`时通知其他属性验证通知`RaisePropertyChanged(nameof(MaxValue));`）。
 
 #### 4.3.2. FieldValidator
 
@@ -277,9 +307,9 @@ public class FieldValidator : AbstractValidator<Field>
     public FieldValidator()
     {
         RuleFor(field => field.Value)
-            .Must((field, value) => (field.Type == DataType.Text && !string.IsNullOrWhiteSpace(field.Value))
-                                    || (field.Type == DataType.Number && double.TryParse(field.Value, out var _))
-                                    || (field.Type == DataType.Date && DateTime.TryParse(field.Value, out var _)))
+            .Must((field, value) => (field.Type == DataType.Text && !string.IsNullOrWhiteSpace(value))
+                                    || (field.Type == DataType.Number && double.TryParse(value, out _))
+                                    || (field.Type == DataType.Date && DateTime.TryParse(value, out _)))
             .WithMessage("1.文本不能为空；2.数字类型请填写数字；3.日志类型请填写日期类型");
     }
 }
@@ -291,11 +321,11 @@ public class FieldValidator : AbstractValidator<Field>
 2. 数字数据类型，必须是`double`类型；
 3. 日期类型，必须能使用`DateTime`转换；
 
-本文只做简单演示，可按实际情况修改。
+本文只做简单演示，多种数据类型放`Must`方法中做统一验证，验证出错给出统一的提示信息，读者可按实际情况修改。
 
 #### 4.3.3. StudentViewModelValidator
 
-此外，我们还创建了一个StudentViewModelValidator，用于验证ViewModel层的属性。这个验证器能够处理基本数据类型、对象属性以及集合属性的验证。
+此外，我还创建了一个`StudentViewModelValidator`，用于验证`ViewModel`层的属性。这个验证器能够处理基本数据类型、对象属性以及集合属性的验证。
 
 ```csharp
 public class StudentViewModelValidator : AbstractValidator<StudentViewModel>
@@ -477,7 +507,7 @@ private void Validate(object sender, PropertyChangedEventArgs e)
 
 ### 4.5. 视图层实现
 
-在视图层，我创建了一个用户控件StudentView，用于显示输入表单和验证结果。通过绑定ViewModel层的属性和命令，视图层能够与ViewModel层进行交互，并实时显示验证错误。这里比较简单，提供简单属性标题(Title)、复杂属性(包括学生姓名(CurrentStudent.Name)、学生年龄( CurrentStudent .Age)、学生邮政编码( CurrentStudent .Zip)）验证、集合属性验证，xaml代码如下：
+在视图层，我创建了一个用户控件`StudentView`，用于显示输入表单和验证结果。通过绑定`ViewModel`层的属性和命令，视图层能够与`ViewModel`层进行交互，并实时显示验证错误。这里比较简单，提供简单属性标题(Title)、复杂属性(包括学生姓名(CurrentStudent.Name)、学生年龄( CurrentStudent .Age)、学生邮政编码( CurrentStudent .Zip)、最小值(CurrentStudent.MinValue)、最大值(CurrentStudent.MaxValue)）验证、集合属性验证(Fields)，`xaml`代码如下：
 
 ```xml
 <UserControl
@@ -529,6 +559,16 @@ private void Validate(object sender, PropertyChangedEventArgs e)
                             <Label Content="邮编：" />
                             <TextBox Style="{StaticResource Styles.TextBox.ErrorStyle2}"
                                      Text="{Binding CurrentStudent.Zip, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" />
+                        </StackPanel>
+                        <StackPanel>
+                            <Label Content="最小值：" />
+                            <TextBox Style="{StaticResource Styles.TextBox.ErrorStyle2}"
+                                     Text="{Binding CurrentStudent.MinValue, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" />
+                        </StackPanel>
+                        <StackPanel>
+                            <Label Content="最大值：" />
+                            <TextBox Style="{StaticResource Styles.TextBox.ErrorStyle2}"
+                                     Text="{Binding CurrentStudent.MaxValue, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" />
                         </StackPanel>
                     </StackPanel>
                 </GroupBox>
