@@ -1,5 +1,5 @@
 ---
-title:开源Winform控件库-AntdUI
+title: 开源Winform控件库-AntdUI
 slug: Open-source-Winform-control-library-Antd-style
 description: 一款基于Antd风格设计的开源Winform控件库
 date: 2024-01-26 04:56:47
@@ -7,8 +7,9 @@ lastmod: 2024-01-26 05:59:15
 copyright: Original
 draft: false
 cover: https://img1.dotnet9.com/2024/01/1101.png
-categories: 开源Winfrom
-tags: 开源,Winfrom控件
+albums: 开源Winform
+categories: Winform
+tags: 开源,Winform控件
 ---
 
 ![横幅](https://img1.dotnet9.com/2024/01/1101.png)
