@@ -10,7 +10,7 @@ originallink: https://gitee.com/dotnetchina/SiMayRemoteMonitorOS
 draft: False
 cover: https://img1.dotnet9.com/2020/12/cover_02.jpg
 albums: 开源Winform
-categories: Winform
+categories: .NET
 tags: Winform,SiMay,开源Winform,远程控制,IOCP,异步通信
 ---
 

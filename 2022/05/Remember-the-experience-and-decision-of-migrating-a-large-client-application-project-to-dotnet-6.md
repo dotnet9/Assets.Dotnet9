@@ -9,7 +9,7 @@ originaltitle: 记将一个大型客户端应用项目迁移到 dotnet 6 的经�
 originallink: https://www.cnblogs.com/lindexi/archive/2022/05/05/16226168.html
 draft: False
 cover: https://img1.dotnet9.com/2022/05/cover_17.jpg
-categories: WPF
+categories: .NET
 ---
 
 在经过了两年的准备，以及迁移了几个应用项目积累了让我有信心的经验之后，我最近在开始将团队里面最大的一个项目，从 .NET Framework 4.5 迁移到 .NET 6 上。这是一个从 2016 时开始开发，最多有 50 多位开发者参与，代码的 MR 数量过万，而且整个团队没有一个人能说清楚项目里面的所有功能。此项目引用了团队内部的大量的基础库，有很多基础库长年不活跃。此应用项目当前也有近千万的用户量，迁移的过程也需要准备很多补救方法。如此复杂的一个项目，自然需要用到很多黑科技才能完成到 .NET 6 的落地。本文将告诉大家这个过程里，我踩到的坑，以及学到的知识，和为什么会如此做。

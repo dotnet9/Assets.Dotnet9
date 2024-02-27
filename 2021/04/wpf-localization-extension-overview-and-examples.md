@@ -7,7 +7,7 @@ copyright: Original
 originaltitle: WPF本地化扩展概述及实例
 draft: False
 cover: https://img1.dotnet9.com/2021/04/cover_07.jpg
-categories: WPF
+categories: .NET
 tags: WPF,本地化
 ---
 

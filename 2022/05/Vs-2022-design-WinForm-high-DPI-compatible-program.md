@@ -9,7 +9,7 @@ originaltitle: VS 2022 设计 WinForm 高DPI兼容程序
 originallink: https://www.cnblogs.com/densen2014/p/16142939.html
 draft: False
 cover: https://img1.dotnet9.com/2022/05/4014.png
-categories: Winform
+categories: .NET
 ---
 
 ## 本文主要解决两个问题

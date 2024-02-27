@@ -7,7 +7,7 @@ copyright: Original
 originaltitle: Prism For WPF Login对话框又简单又合理的方案之一
 draft: False
 cover: https://img1.dotnet9.com/2022/01/cover_01.jpeg
-categories: WPF
+categories: .NET
 tags: C#,WPF,Prism
 ---
 

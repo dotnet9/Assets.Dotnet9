@@ -8,7 +8,7 @@ banner: false
 draft: false
 cover: https://img1.dotnet9.com/2019/12/0105.gif
 albums: 开源Winform
-categories: Winform
+categories: .NET
 copyright: Original
 ---
 

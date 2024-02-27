@@ -8,7 +8,7 @@ author: 沙漠尽头的狼
 draft: false
 cover: https://img1.dotnet9.com/2019/12/0206.png
 albums: 开源WPF
-categories: WPF
+categories: .NET
 copyright: Original
 ---
 

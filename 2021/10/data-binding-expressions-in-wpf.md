@@ -9,7 +9,7 @@ originaltitle: WPF中的数据绑定表达式
 originallink: https://www.c-sharpcorner.com/article/data-binding-expression-in-wpf/
 draft: False
 cover: https://img1.dotnet9.com/2021/10/cover_03.png
-categories: WPF
+categories: .NET
 tags: Binding
 ---
 

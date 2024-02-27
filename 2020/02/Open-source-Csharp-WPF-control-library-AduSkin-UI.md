@@ -9,7 +9,7 @@ originaltitle: 开源C# WPF控件库《AduSkin–UI》
 draft: False
 cover: https://img1.dotnet9.com/2020/02/0101.gif
 albums: 开源WPF
-categories: WPF
+categories: .NET
 ---
 
 追求极致，永臻完美

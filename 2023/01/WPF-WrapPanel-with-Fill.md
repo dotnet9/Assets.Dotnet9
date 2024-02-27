@@ -9,7 +9,7 @@ originaltitle: WPF - WrapPanel with Fill
 originallink: https://www.codeproject.com/Tips/990854/WPF-WrapPanel-with-Fill
 draft: false
 cover: https://img1.dotnet9.com/2023/01/0501.png
-categories: WPF
+categories: .NET
 ---
 
 > 本文来自翻译(谷歌翻译加持)。

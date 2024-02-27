@@ -11,7 +11,7 @@ originallink: https://gitee.com/yhuse/SunnyUI
 draft: False
 cover: https://img1.dotnet9.com/2020/12/0407.png
 albums: 开源Winform
-categories: Winform
+categories: .NET
 tags: Winform,SunnyUI,开源Winform
 ---
 

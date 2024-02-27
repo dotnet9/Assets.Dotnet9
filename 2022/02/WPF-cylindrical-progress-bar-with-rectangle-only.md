@@ -9,7 +9,7 @@ originaltitle: [WPF] 仅用 Rectangle 实现圆柱形进度条
 originallink: https://www.cnblogs.com/dino623/p/wpf_column_progress_bar.html
 draft: False
 cover: https://img1.dotnet9.com/2022/02/1101.png
-categories: WPF
+categories: .NET
 ---
 
 ![](https://img1.dotnet9.com/2022/02/1101.png)

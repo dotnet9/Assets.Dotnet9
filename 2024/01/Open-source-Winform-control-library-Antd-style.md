@@ -8,7 +8,7 @@ copyright: Original
 draft: false
 cover: https://img1.dotnet9.com/2024/01/1101.png
 albums: 开源Winform
-categories: Winform
+categories: .NET
 tags: 开源,Winform控件
 ---
 

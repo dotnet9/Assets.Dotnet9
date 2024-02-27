@@ -7,7 +7,7 @@ lastmod: 2023-11-14 15:25:41
 copyright: Original
 draft: false
 cover: https://img1.dotnet9.com/2023/11/cover_05.png
-categories: WPF
+categories: .NET
 tags: 工具箱
 ---
 

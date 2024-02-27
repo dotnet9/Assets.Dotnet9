@@ -9,7 +9,7 @@ originaltitle: WPF开发随笔收录-ScrollViewer滑块太小解决方案
 originallink: https://www.cnblogs.com/cong2312/p/16006433.html
 draft: False
 cover: https://img1.dotnet9.com/2022/05/cover_39.gif
-categories: WPF
+categories: .NET
 ---
 
 ## 一、前言

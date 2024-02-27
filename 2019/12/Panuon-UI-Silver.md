@@ -8,7 +8,7 @@ banner: false
 draft: false
 cover: https://img1.dotnet9.com/2019/12/0402.gif
 albums: 开源WPF
-categories: WPF
+categories: .NET
 copyright: Original
 ---
 

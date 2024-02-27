@@ -9,7 +9,7 @@ originaltitle: 开源Winform控件库：花木兰控件库
 draft: False
 cover: https://img1.dotnet9.com/2021/11/cover_07.gif
 albums: 开源Winform
-categories: Winform
+categories: .NET
 tags: C#,Winform,开源
 ---
 

@@ -9,7 +9,7 @@ originaltitle: WPF：使用AdornerDecorator装饰器实现水印
 originallink: https://www.cnblogs.com/s0611163/archive/2021/09/09/15245412.html
 draft: False
 cover: https://img1.dotnet9.com/2021/09/cover_04.jpg
-categories: WPF
+categories: .NET
 tags: WPF,水印
 ---
 

@@ -9,7 +9,7 @@ originaltitle: WPF开源控件库：MahApps.Metro
 draft: False
 cover: https://img1.dotnet9.com/2020/12/cover_01.jpg
 albums: 开源WPF
-categories: WPF
+categories: .NET
 tags: WPF,MahApps.Metro,开源WPF,控件库,WPF控件库,开源WPF控件库
 ---
 

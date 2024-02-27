@@ -10,7 +10,7 @@ originallink: https://mp.weixin.qq.com/s/seSaQkhkE7dpWqoiQ96fzQ
 draft: False
 cover: https://img1.dotnet9.com/2022/05/cover_34.png
 albums: WPF Design
-categories: WPF
+categories: .NET
 ---
 
 分享一个登录界面，先看效果图：

@@ -10,7 +10,7 @@ originaltitle: 开源WPF自定义控件库：WPFDevelopers
 originallink: https://github.com/WPFDevelopersOrg/WPFDevelopers
 draft: False
 cover: https://img1.dotnet9.com/2022/02/cover_04.gif
-categories: WPF
+categories: .NET
 ---
 
 ![Github仓库详情](https://img1.dotnet9.com/2022/02/0401.png)

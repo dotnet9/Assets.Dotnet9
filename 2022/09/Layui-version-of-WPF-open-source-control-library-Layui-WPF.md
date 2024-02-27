@@ -7,7 +7,7 @@ copyright: Original
 author: 沙漠尽头的狼
 draft: false
 cover: https://img1.dotnet9.com/2022/09/layui-wpf-cover.png
-categories: WPF
+categories: .NET
 albums: 开源WPF
 ---
 

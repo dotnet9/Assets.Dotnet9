@@ -9,7 +9,7 @@ originaltitle: 开源WPF控件库：ModernWpf
 draft: False
 cover: https://img1.dotnet9.com/2020/09/0103.png
 albums: 开源WPF
-categories: WPF
+categories: .NET
 tags: WPF
 ---
 

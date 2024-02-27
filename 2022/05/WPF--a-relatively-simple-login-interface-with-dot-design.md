@@ -8,7 +8,7 @@ originaltitle: WPF|一个比较简单带点设计的登录界面
 draft: False
 cover: https://img1.dotnet9.com/2022/05/cover_47.png
 albums: WPF Design
-categories: WPF
+categories: .NET
 ---
 
 **阅读目录**

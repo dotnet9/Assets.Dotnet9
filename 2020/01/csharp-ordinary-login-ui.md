@@ -10,7 +10,7 @@ originallink: https://www.youtube.com/watch?v=2Nu5zpT6Ezw
 draft: False
 cover: https://img1.dotnet9.com/2020/01/cover_01.png
 albums: WPF Design
-categories: WPF
+categories: .NET
 tags: Login Window
 ---
 

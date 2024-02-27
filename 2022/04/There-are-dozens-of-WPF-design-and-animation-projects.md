@@ -10,7 +10,7 @@ originallink: https://github.com/DinoChan/wpf_design_and_animation_lab
 draft: False
 cover: https://img1.dotnet9.com/2022/04/2001.png
 albums: WPF Design
-categories: WPF
+categories: .NET
 tags: WPF,动画,设计
 ---
 

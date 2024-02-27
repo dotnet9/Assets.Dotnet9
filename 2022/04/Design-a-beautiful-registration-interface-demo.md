@@ -10,7 +10,7 @@ originallink: https://blog.csdn.net/weixin_48239221/article/details/123968073
 draft: False
 cover: https://img1.dotnet9.com/2022/04/1501.png
 albums: WPF Design
-categories: WPF
+categories: .NET
 ---
 
 ## 1. 实现效果

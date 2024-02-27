@@ -9,7 +9,7 @@ originaltitle: WPF ComboBox里嵌入TreeView的实现（MVVM）
 originallink: https://blog.csdn.net/qq_28149763/article/details/126539635
 draft: False
 cover: https://img1.dotnet9.com/2022/11/0103.gif
-categories: WPF
+categories: .NET
 ---
 
 > 本文来自转载。

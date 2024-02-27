@@ -9,7 +9,7 @@ originaltitle: WPF怎么做新手引导界面？
 originallink: https://www.cnblogs.com/ZXdeveloper/p/8391864.html
 draft: False
 cover: https://img1.dotnet9.com/2022/05/cover_50.png
-categories: WPF
+categories: .NET
 ---
 
 >本文经原作者授权以原创方式二次分享，欢迎转载、分享。

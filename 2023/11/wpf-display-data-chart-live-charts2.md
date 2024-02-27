@@ -10,7 +10,7 @@ originaltitle: WPF显示数据图表(LiveCharts2)
 originallink: https://mp.weixin.qq.com/s/l3fmYcPlEryS6idnd9urXA
 draft: false
 cover: https://img1.dotnet9.com/2023/11/0618.gif
-categories: WPF
+categories: .NET
 tags: LiveChart
 ---
 

@@ -6,7 +6,7 @@ date: 2023-07-17 22:16:29
 copyright: Original
 draft: false
 cover: https://img1.dotnet9.com/2023/07/cover_08.png
-categories: WPF
+categories: .NET
 albums: WPF面试题
 ---
 
