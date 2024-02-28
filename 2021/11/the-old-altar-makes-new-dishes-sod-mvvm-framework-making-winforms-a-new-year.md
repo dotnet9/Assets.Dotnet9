@@ -10,9 +10,8 @@ originaltitle: “老坛泡新菜”:SOD MVVM框架，让WinForms焕发新春
 originallink: https://cloud.tencent.com/developer/article/1045710
 draft: False
 cover: https://img1.dotnet9.com/2021/11/cover_08.png
-albums: 开源Winform
 categories: .NET
-tags: Winform,开源
+tags: Winform,开源Winform
 ---
 
 ## 1. 火热的MVVM框架
@@ -535,5 +534,3 @@ SOD开发团队
 - SOD库仓库地址：[https://github.com/znlgis/sod](https://github.com/znlgis/sod)
 
 ![](https://img1.dotnet9.com/2021/11/0810.png)
-
-- 本文Markdown：[点击浏览](https://github.com/dotnet9/Assets.Dotnet9/blob/main/2021/11/2021-11-24_01.md)

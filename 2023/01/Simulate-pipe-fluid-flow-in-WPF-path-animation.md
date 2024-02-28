@@ -10,6 +10,7 @@ originallink: https://blog.csdn.net/lordwish/article/details/85007867
 draft: false
 cover: https://img1.dotnet9.com/2023/01/0403.gif
 categories: .NET
+tags: .NET,WPF
 ---
 
 WPF的一大特性就的动画系统，使用动画能够实现很多在WinForm很难实现的效果。最近在网上偶然看到大神用WPF动画实现对象沿特定路径正向或反向移动的效果，就想参考着自己试一试。

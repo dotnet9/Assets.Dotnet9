@@ -9,9 +9,8 @@ originaltitle: (29/30)大家一起学Blazor：Blazor单元测试
 originallink: https://ithelp.ithome.com.tw/articles/10274629
 draft: False
 cover: https://img1.dotnet9.com/2021/12/cover_05.png
-albums: 学Blazor
-categories: Blazor
-tags: Blazor Server
+categories: .NET
+tags: Blazor Server,学Blazor
 ---
 
 开发一个系统最无聊的过程大概就是解决BUG了，尤其是那种尝试对null 对象取值的错误(`Object reference not set to an instance of an object.`)，这应该是大部分人刚踏入编程领域最常碰到的问题，为了从枯燥的解决BUG过程解脱，这篇就来介绍`单元测试`。
@@ -65,5 +64,3 @@ tags: Blazor Server
 1. [Creating a new bUnit test project](https://bunit.dev/docs/getting-started/create-test-project.html?tabs=mstest)
 2. [Writing tests for Blazor components](https://bunit.dev/docs/getting-started/writing-tests.html?tabs=mstest)
 3. [Mocking with NSubstitute](https://www.youtube.com/watch?v=aTx8_79QkDE)
-
-- 本文Markdown：[点击浏览](https://github.com/dotnet9/Assets.Dotnet9/blob/main/2021/12/2021-12-25_04.md)

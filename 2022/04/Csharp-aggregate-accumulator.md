@@ -9,7 +9,7 @@ originaltitle: C# Aggregate 累加器
 originallink: https://blog.csdn.net/weixin_42117950/article/details/121985075
 draft: False
 cover: https://img1.dotnet9.com/2022/04/cover_23.jpg
-categories: .NET相关
+categories: .NET
 tags: C#,Aggregate
 ---
 

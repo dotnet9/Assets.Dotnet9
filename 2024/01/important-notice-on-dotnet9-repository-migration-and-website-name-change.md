@@ -7,7 +7,7 @@ lastmod: 2024-01-14 05:37:27
 copyright: Original
 draft: false
 cover: https://img1.dotnet9.com/2024/01/cover_05.png
-categories: .NET相关
+categories: .NET
 tags: 码界工坊,在线工具,Avalonia UI
 ---
 

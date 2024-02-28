@@ -1,6 +1,6 @@
 ---
 title: Maui的学习之路（二）--设置
-slug: Maui-learning-path-2----setting
+slug: Maui-learning-path-2-setting
 description: 不只是MAUI，本篇非常实用
 date: 2022-06-23 23:29:17
 copyright: Reprinted
@@ -9,7 +9,8 @@ originaltitle: Maui的学习之路（二）--设置
 originallink: https://mp.weixin.qq.com/s/kX-dZFW64331A47i3G0IoQ
 draft: False
 cover: https://img1.dotnet9.com/2022/06/1701.png
-categories: MAUI
+categories: .NET
+tags: MAUI
 ---
 
 上一篇我们做了Maui的基本介绍，理论上这一篇应该会创建第一个Maui的应用，以便对此进行详细的评估，并逐步深入。

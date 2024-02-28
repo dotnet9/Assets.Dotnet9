@@ -9,7 +9,7 @@ originaltitle: 实现一个登录：Mac+.NET 5+Identity+JWT+VS Code
 originallink: https://blog.csdn.net/qbc12345678/article/details/120758144
 draft: False
 cover: https://img1.dotnet9.com/2021/10/cover_05.jpg
-categories: .NET相关
+categories: .NET
 tags: Web API,Mac,Identity,JWT,Visual Studio Code
 ---
 
@@ -484,5 +484,3 @@ services.AddSingleton<IAuthorizationMiddlewareResultHandler,AuthorizationHandleM
 ```
 
 以上就是一个登录的简单demo,详细代码请访问码云：[https://gitee.com/holyace/together/tree/JarryGu_develop/framework/JwtLoginDemo](https://gitee.com/holyace/together/tree/JarryGu_develop/framework/JwtLoginDemo)
-
-- 本文Markdown：[点击浏览](https://github.com/dotnet9/Assets.Dotnet9/blob/main/2021/10/2021-10-18_03.md)

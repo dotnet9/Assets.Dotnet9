@@ -7,7 +7,7 @@ lastmod: 2023-11-11 18:11:26
 copyright: Original
 draft: false
 cover: https://img1.dotnet9.com/2023/11/cover_04.png
-categories: .NET相关
+categories: .NET
 tags: 算法
 ---
 

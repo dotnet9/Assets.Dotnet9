@@ -9,7 +9,8 @@ originaltitle: 优雅！又一个.NetCore开源框架项目-意框架
 originallink: https://mp.weixin.qq.com/s/SXOsBJUO23ct8x2QwJfhCQ
 draft: False
 cover: https://img1.dotnet9.com/2024/01/0301.png
-categories: .NET相关
+categories: .NET
+tags: .NET
 ---
 
 ![](https://img1.dotnet9.com/2024/01/0301.png)

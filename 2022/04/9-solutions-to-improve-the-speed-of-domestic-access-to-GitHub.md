@@ -9,7 +9,8 @@ originaltitle: 提高国内访问 GitHub 的速度的 9 种方案
 originallink: https://urlify.cn/IFzQRb
 draft: False
 cover: https://img1.dotnet9.com/2022/04/cover_16.png
-categories: 技巧分享
+categories: 分享
+tags: Github
 ---
 
 >来源｜https://urlify.cn/IFzQRb

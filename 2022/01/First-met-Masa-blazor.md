@@ -9,8 +9,7 @@ originaltitle: 初识MASA Blazor
 originallink: https://www.cnblogs.com/MASA/p/15766886.html
 draft: False
 cover: https://img1.dotnet9.com/2022/01/0711.png
-albums: 开源Blazor
-categories: Blazor
+categories: .NET
 tags: C#,Blazor
 ---
 

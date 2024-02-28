@@ -9,7 +9,8 @@ originaltitle: 【资讯】B站招聘C#、B站上线客户端
 originallink: https://mp.weixin.qq.com/s/e2QtVKB0uwcS-NXS64McvA
 draft: False
 cover: https://img1.dotnet9.com/2022/05/4204.png
-categories: .NET相关
+categories: .NET
+tags: .NET
 ---
 
 

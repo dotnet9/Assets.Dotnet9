@@ -7,7 +7,8 @@ copyright: Original
 author: 沙漠尽头的狼
 draft: false
 cover: https://img1.dotnet9.com/2022/09/cover_06.png
-categories: 技巧分享
+categories: 分享
+tags: .NET
 ---
 
 ## 故事开头

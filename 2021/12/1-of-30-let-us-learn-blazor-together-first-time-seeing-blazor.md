@@ -9,9 +9,8 @@ originaltitle: (1/30)大家一起学Blazor：初见Blazor
 originallink: https://ithelp.ithome.com.tw/articles/10258944
 draft: False
 cover: https://img1.dotnet9.com/2021/12/cover_05.png
-albums: 学Blazor
-categories: Blazor
-tags: Blazor,ASP.NET Core
+categories: .NET
+tags: Blazor,ASP.NET Core,学Blazor
 ---
 
 笔者接触软件行业的时间不长，先后接触三种架构，分别为ASP.NET MVC、ASP.NET Core & Blazor、ASP.NET Core & Angular，由于ASP.NET MVC 是笔者初入软件行业的新人时期，迷迷糊糊地就在前辈的带领下完成了项目，所以没什么感悟，只是大概了解前后端的差别，前端以HTTP Request 发送向后端取数据，后端回传数据，前端再将结果呈现在页面上。
@@ -38,5 +37,3 @@ Blazor 使用C# 编写，虽然也可以用VB、F# 编写，但笔者只熟习C#
 [Visual Studio download Link](https://visualstudio.microsoft.com/zh-hant/vs/whatsnew/)
 
 **注：本文代码通过 .NET 6 + Visual Studio 2022重构，可点击原文链接与重构后代码比较学习，谢谢阅读，支持原作者**
-
-- 本文Markdown：[点击浏览](https://github.com/dotnet9/Assets.Dotnet9/blob/main/2021/12/2021-12-09_02.md)

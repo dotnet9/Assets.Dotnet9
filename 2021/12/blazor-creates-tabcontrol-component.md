@@ -9,7 +9,7 @@ originaltitle: Blazor创建TabControl组件
 originallink: https://blazor-university.com/templating-components-with-renderfragements/creating-a-tabcontrol/
 draft: False
 cover: https://img1.dotnet9.com/2021/12/cover_03.jpeg
-categories: Blazor
+categories: .NET
 tags: 前端,Blazor
 ---
 
@@ -192,5 +192,3 @@ void ActivatePage(TabPage page)
 OK代码完，效果见本文开头。
 
 >文中代码已放:[Github](https://github.com/dotnet9/BlazorDemo)
-
-- 本文Markdown：[点击浏览](https://github.com/dotnet9/Assets.Dotnet9/blob/main/2021/12/2021-12-06_02.md)

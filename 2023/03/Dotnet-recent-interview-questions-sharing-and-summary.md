@@ -9,7 +9,8 @@ originaltitle: .NET近期面试题分享与总结
 originallink: https://www.cnblogs.com/chumochen/p/17134303.html
 draft: false
 cover: https://img1.dotnet9.com/2023/03/cover_01.png
-categories: .NET相关
+categories: .NET
+tags: .NET
 ---
 
 以下内容不是NET面试的全部，而是写一些我认为可能会遗漏的。

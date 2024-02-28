@@ -9,9 +9,8 @@ originaltitle: (8/30)大家一起学Blazor：CSS样式修改和数据绑定详�
 originallink: https://ithelp.ithome.com.tw/articles/10261579
 draft: False
 cover: https://img1.dotnet9.com/2021/12/cover_05.png
-albums: 学Blazor
-categories: Blazor
-tags: Blazor Server
+categories: .NET
+tags: Blazor Server,学Blazor
 ---
 
 现在每次启动项目，预设路径都会是`/`，但我们目前没有Component套用这个路由，要自己切换到`Post`实在有些麻烦，另外Menu的图案也跟名称不符，我们来调整一下。
@@ -67,5 +66,3 @@ Blazor的数据绑定有分为单向绑定(one way binding)跟双向绑定(two w
 - [Unparsable values](https://docs.microsoft.com/en-us/aspnet/core/blazor/components/data-binding?view=aspnetcore-5.0#unparsable-values-1)
 
 **注：本文代码通过 .NET 6 + Visual Studio 2022重构，可点击原文链接与重构后代码比较学习，谢谢阅读，支持原作者**
-
-- 本文Markdown：[点击浏览](https://github.com/dotnet9/Assets.Dotnet9/blob/main/2021/12/2021-12-13_02.md)

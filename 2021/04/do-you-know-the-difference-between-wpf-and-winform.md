@@ -7,7 +7,7 @@ copyright: Original
 originaltitle: 你知道WPF与WinForms的区别吗？
 draft: False
 cover: https://img1.dotnet9.com/2021/04/cover_06.jpg
-categories: .NET相关
+categories: .NET
 tags: .NET,Winform,WPF
 ---
 
@@ -128,5 +128,3 @@ WPF还提供了完全受支持的数据绑定功能，如下面的示例所示�
 本文通过两种创建桌面应用程序的.NET方式之间的体系结构，语法，文件结构以及应用程序行为差异，展示了WinForms和WPF之间的主要差异。尽管WinForms设计看似友好和直接，但是XAML带来了开发人员在现代桌面应用程序中可能需要的一些有用功能。
   
 >原文链接：https://www.c-sharpcorner.com/article/wpf-vs-winforms/
-
-- 本文Markdown：[点击浏览](https://github.com/dotnet9/Assets.Dotnet9/blob/main/2021/04/2021-04-07_01.md)

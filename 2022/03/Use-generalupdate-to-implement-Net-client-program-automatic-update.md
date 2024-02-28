@@ -9,7 +9,8 @@ originaltitle: 使用GeneralUpdate实现.NET客户端程序自动更新
 originallink: https://blog.csdn.net/u012441819/article/details/122978250
 draft: False
 cover: https://img1.dotnet9.com/2022/03/cover_25.jpeg
-categories: .NET相关
+categories: .NET
+tags: 自动更新
 ---
 
 ## .NET客户端程序自动更新

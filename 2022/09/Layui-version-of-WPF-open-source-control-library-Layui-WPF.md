@@ -8,7 +8,7 @@ author: 沙漠尽头的狼
 draft: false
 cover: https://img1.dotnet9.com/2022/09/layui-wpf-cover.png
 categories: .NET
-albums: 开源WPF
+tags: 开源WPF
 ---
 
 大家好，我是沙漠尽头的狼。

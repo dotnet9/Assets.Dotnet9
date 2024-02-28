@@ -9,7 +9,8 @@ originaltitle: el-tree中default-checked-keys属性变化不生效
 originallink: https://blog.csdn.net/monparadis/article/details/114087838
 draft: false
 cover: https://img1.dotnet9.com/2023/02/cover_01.png
-categories: MAUI
+categories: .NET
+tags: MAUI
 ---
 
 >站长开发[Dotnet9](https://dotnet9.com)网站后台前端的文章编辑分类管理功能时遇到了`element-ui`的`tree`组件使用问题，个人尝试未解决，下面一文是一个前端大佬给出的解决方案，至于问题是什么、怎么解决的，请接着看吧，希望对大家有用。

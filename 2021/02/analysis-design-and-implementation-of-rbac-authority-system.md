@@ -9,7 +9,7 @@ originaltitle: RBAC权限系统分析、设计与实现
 originallink: https://shuwoom.com/?p=3041
 draft: False
 cover: https://img1.dotnet9.com/2021/02/cover_01.jpeg
-categories: 架构设计
+categories: 分享
 tags: 架构设计
 ---
 
@@ -118,5 +118,3 @@ RBAC2中的一个基本限制是互斥角色的限制，互斥角色是指各自
 ### 3、RBAC数据库设计
 
 ![RBAC数据库设计](https://img1.dotnet9.com/2021/02/0108.png)
-
-- 本文Markdown：[点击浏览](https://github.com/dotnet9/Assets.Dotnet9/blob/main/2021/02/2021-02-18_01.md)

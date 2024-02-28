@@ -9,7 +9,8 @@ originaltitle: MAUI桌面端标题栏设置和窗口调整
 originallink: https://blog.csdn.net/Sir_aligaduo/article/details/128880940
 draft: false
 cover: https://img1.dotnet9.com/2023/02/0302.png
-categories: MAUI
+categories: .NET
+tags: MAUI
 ---
 
 > 本文由网友投稿。

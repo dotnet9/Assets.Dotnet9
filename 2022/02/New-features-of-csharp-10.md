@@ -9,7 +9,7 @@ originaltitle: C# 10的新特性
 originallink: https://mp.weixin.qq.com/s/zLwo05uQOTXg_f2dwgRP-w
 draft: False
 cover: https://img1.dotnet9.com/2022/02/cover_03.jpg
-categories: .NET相关
+categories: .NET
 tags: .NET 6,C# 10
 ---
 
@@ -426,5 +426,3 @@ void MyMethod(object value)
 - [了解有关 CallerArgumentExpressionAttribute 的更多信息](https://docs.microsoft.com/dotnet/csharp/languagereference/attributes/caller-information#argument-expressions)
 
 欢迎在下方留言，告诉我们您的建议或想法，谢谢！
-
-- 本文Markdown：[点击浏览](https://github.com/dotnet9/Assets.Dotnet9/blob/main/2022/02/2022-02-12_01.md)

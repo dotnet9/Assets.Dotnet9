@@ -7,7 +7,7 @@ copyright: Original
 originaltitle: 使用Blazor做个简单的时间戳在线转换工具
 draft: False
 cover: https://img1.dotnet9.com/2022/02/cover_17.jpeg
-categories: Blazor
+categories: .NET
 tags: .NET 7,Blazor,时间戳转换,双向绑定
 ---
 

@@ -9,7 +9,7 @@ originaltitle: .NET 6 中 LINQ 的改进
 originallink: https://www.cnblogs.com/paopaotang/p/16133578.html
 draft: False
 cover: https://img1.dotnet9.com/2022/04/cover_31.jpeg
-categories: .NET相关
+categories: .NET
 tags: C#,.NET,LINQ
 ---
 

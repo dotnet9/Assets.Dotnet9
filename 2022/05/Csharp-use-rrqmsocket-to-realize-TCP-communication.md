@@ -9,7 +9,8 @@ originaltitle: C# 使用 RRQMSocket 实现 TCP 通信
 originallink: https://mp.weixin.qq.com/s/2Nha9GVAnOox-K5_Vf-SZg
 draft: False
 cover: https://img1.dotnet9.com/2022/05/cover_56.jpeg
-categories: .NET相关
+categories: .NET
+tags: C#,RRQMSocket,TCP
 ---
 
 ## 介绍

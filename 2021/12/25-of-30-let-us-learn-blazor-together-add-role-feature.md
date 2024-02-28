@@ -9,9 +9,8 @@ originaltitle: (25/30)大家一起学Blazor：添加角色功能
 originallink: https://ithelp.ithome.com.tw/articles/10272010
 draft: False
 cover: https://img1.dotnet9.com/2021/12/cover_05.png
-albums: 学Blazor
-categories: Blazor
-tags: Blazor Server
+categories: .NET
+tags: Blazor Server,学Blazor
 ---
 
 首先添加承载角色数据的`ViewModel`，因为接下来的权限会以角色判断，`ASP.NET Core Identity` 承载角色的`Model` 为`IdentityRole`，里面有太多不该让用户看到的信息，通常会自己写新的`ViewModel` 以过滤多余信息，这边只呈现`Role`的`Id`、`Name` 跟`Role` 底下所有用户的名称。
@@ -475,5 +474,3 @@ public partial class EditRole
 3. [Edit role in asp net core](https://www.youtube.com/watch?v=7ikyZk5fGzk&list=PL6n9fhu94yhVkdrusLaQsfERmL_Jh4XmU&index=80)
 
 **注：本文代码通过 .NET 6 + Visual Studio 2022重构，可点击原文链接与重构后代码比较学习，谢谢阅读，支持原作者**
-
-- 本文Markdown：[点击浏览](https://github.com/dotnet9/Assets.Dotnet9/blob/main/2021/12/2021-12-23_04.md)

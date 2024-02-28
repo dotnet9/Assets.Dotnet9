@@ -9,7 +9,7 @@ originaltitle: 精：C#语法特性总结
 originallink: https://www.cnblogs.com/louzixl/archive/2021/11/14/15553715.html
 draft: False
 cover: https://img1.dotnet9.com/2021/11/cover_06.jpg
-categories: .NET相关
+categories: .NET
 tags: C#
 ---
 
@@ -590,5 +590,3 @@ public record NamedPoint(string Name, int X, int Y);
 var p1 = new NamedPoint("A", 0, 0);
 var p2 = p1 with { Name = "B", X = 5 };
 ```
-
-- 本文Markdown：[点击浏览](https://github.com/dotnet9/Assets.Dotnet9/blob/main/2021/11/2021-11-19_01.md)

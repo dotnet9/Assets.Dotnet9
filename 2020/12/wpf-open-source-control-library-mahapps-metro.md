@@ -8,7 +8,6 @@ copyright: Original
 originaltitle: WPF开源控件库：MahApps.Metro
 draft: False
 cover: https://img1.dotnet9.com/2020/12/cover_01.jpg
-albums: 开源WPF
 categories: .NET
 tags: WPF,MahApps.Metro,开源WPF,控件库,WPF控件库,开源WPF控件库
 ---
@@ -82,5 +81,3 @@ Github上的MahApps.Metro仓库截图
 后面有WPF相关的项目，或者站长自己的开源项目，站长决定加入这款控件尝试下，这么多人用，肯定不错的。
 
 >- 仓库地址：[MahApps.Metro](https://github.com/MahApps/MahApps.Metro)
-
-- 本文Markdown：[点击浏览](https://github.com/dotnet9/Assets.Dotnet9/blob/main/2020/11/2020-12-12_01.md)

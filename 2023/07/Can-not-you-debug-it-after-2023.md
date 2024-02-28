@@ -9,7 +9,8 @@ originaltitle: 2022了还不会调试吗？
 originallink: https://juejin.cn/post/7124104703884918798
 draft: false
 cover: https://img1.dotnet9.com/2023/07/cover_10.png
-categories: 更多前端
+categories: 前端
+tags: 前端
 ---
 
 ![](https://img1.dotnet9.com/2023/07/1001.png)

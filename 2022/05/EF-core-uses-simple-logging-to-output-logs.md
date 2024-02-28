@@ -9,7 +9,8 @@ originaltitle: EF Core使用Simple Logging输出日志
 originallink: https://mp.weixin.qq.com/s/QXBhG_ayoeCcE9dGsgbNKw
 draft: False
 cover: https://img1.dotnet9.com/2022/05/cover_08.jpg
-categories: EF Core
+categories: .NET
+tags: .NET, ORM, EF Core
 ---
 
 在使用EF Core的时候，很多时候需要知道EF Core实际执行的SQL语句是什么。

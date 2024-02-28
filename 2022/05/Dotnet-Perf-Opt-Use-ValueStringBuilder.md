@@ -9,7 +9,8 @@ originaltitle: .NET性能优化-使用ValueStringBuilder拼接字符串
 originallink: https://www.cnblogs.com/InCerry/p/Dotnet-Perf-Opt-Use-ValueStringBuilder.html
 draft: False
 cover: https://img1.dotnet9.com/2022/05/cover_32.jpg
-categories: .NET相关
+categories: .NET
+tags: .NET
 ---
 
 ## 前言

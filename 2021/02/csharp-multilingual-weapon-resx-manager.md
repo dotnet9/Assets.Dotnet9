@@ -93,5 +93,3 @@ WPF国际化实现方式很多:
 如上图，完善翻译后，再选择导入即可。
 
 该扩展程序是不是很方便？欢迎留言交流。
-
-- 本文Markdown：[点击浏览](https://github.com/dotnet9/Assets.Dotnet9/blob/main/2021/02/2021-02-16_01.md)

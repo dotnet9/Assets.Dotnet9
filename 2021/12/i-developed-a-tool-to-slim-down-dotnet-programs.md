@@ -9,7 +9,7 @@ originaltitle: 我开发了一个对.NET程序进行瘦身的工具
 originallink: https://mp.weixin.qq.com/s/B7QdVQWtgBKNKOEFj2Lg4g
 draft: False
 cover: https://img1.dotnet9.com/2021/12/cover_43.png
-categories: .NET相关
+categories: .NET
 tags: .NET,瘦身
 ---
 
@@ -28,5 +28,3 @@ tags: .NET,瘦身
 >原文作者：杨中科
 >
 >原文链接：https://mp.weixin.qq.com/s/B7QdVQWtgBKNKOEFj2Lg4g
-
-- 本文Markdown：[点击浏览](https://github.com/dotnet9/Assets.Dotnet9/blob/main/2021/12/2021-12-26_01.md)

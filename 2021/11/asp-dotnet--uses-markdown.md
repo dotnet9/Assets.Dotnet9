@@ -9,7 +9,7 @@ originaltitle: ASP.NET (Core)使用Markdown
 originallink: https://www.cnblogs.com/jiyuwu/p/11791004.html
 draft: False
 cover: https://img1.dotnet9.com/2021/11/cover_04.jpeg
-categories: MVC
+categories: .NET
 tags: Markdown
 ---
 
@@ -75,5 +75,3 @@ function btnSave() {
  
 
 注意：我们机遇屋该项目将长期为大家提供asp.net core各种好用demo，旨在帮助.net开发者提升竞争力和开发速度，建议尽早收藏[该模板集合项目](https://github.com/jiyuwu/TemplateCore "该模板集合项目")。
-
-- 本文Markdown：[点击浏览](https://github.com/dotnet9/Assets.Dotnet9/blob/main/2021/11/2021-11-02_01.md)

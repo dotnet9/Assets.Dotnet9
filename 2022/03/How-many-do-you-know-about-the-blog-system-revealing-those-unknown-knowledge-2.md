@@ -9,7 +9,7 @@ originaltitle: 博客系统知多少：揭秘那些不为人知的学问（二�
 originallink: https://mp.weixin.qq.com/s/FX3t75q0BMtb3hOsfM1-VQ
 draft: False
 cover: https://img1.dotnet9.com/2022/03/cover_03.png
-categories: 架构设计
+categories: 分享
 tags: 博客
 ---
 

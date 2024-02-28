@@ -9,7 +9,8 @@ originaltitle: 利用Inno Setup在VS编译时自动构建安装包
 originallink: https://www.cnblogs.com/chonglu/p/17566940.html
 draft: false
 cover: https://img1.dotnet9.com/2023/07/cover_09.png
-categories: .NET相关
+categories: .NET
+tags: .NET
 ---
 
 > 本文由网友投稿，.NET是免费、开源、跨平台的。

@@ -9,7 +9,7 @@ originaltitle: .NET下如何拦截鼠标、键盘消息？Win32NET来帮你
 originallink: https://mp.weixin.qq.com/s/_c4T7R_HeVLVg6sqvLoABw
 draft: False
 cover: https://img1.dotnet9.com/2022/01/cover_04.jpeg
-categories: .NET相关
+categories: .NET
 tags: 拦截鼠标,拦截键盘
 ---
 

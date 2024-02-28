@@ -7,7 +7,7 @@ copyright: Original
 originaltitle: 后续来啦：Winform/WPF中快速搭建日志面板
 draft: False
 cover: https://img1.dotnet9.com/2021/04/cover_02.jpg
-categories: .NET相关
+categories: .NET
 tags: Winform,WPF,日志面板,LogDashboard
 ---
 

@@ -9,9 +9,8 @@ originaltitle: (19/30)大家一起学Blazor：图片上传
 originallink: https://ithelp.ithome.com.tw/articles/10267909
 draft: False
 cover: https://img1.dotnet9.com/2021/12/cover_05.png
-albums: 学Blazor
-categories: Blazor
-tags: Blazor Server
+categories: .NET
+tags: Blazor Server,学Blazor
 ---
 
 在大部分的网站中，上传图片也是很重要的功能，今天我们就来操作下。
@@ -250,5 +249,3 @@ public async ValueTask<bool> Confirm(string jsonString)
 5. [Day 26：Blazor WebAssembly 上传文件](https://ithelp.ithome.com.tw/articles/10251852)
 
 **注：本文代码通过 .NET 6 + Visual Studio 2022重构，可点击原文链接与重构后代码比较学习，谢谢阅读，支持原作者**
-
-- 本文Markdown：[点击浏览](https://github.com/dotnet9/Assets.Dotnet9/blob/main/2021/12/2021-12-21_02.md)

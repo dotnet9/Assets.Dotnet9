@@ -9,9 +9,8 @@ originaltitle: (13/30)大家一起学Blazor：EventCallback, event from child to
 originallink: https://ithelp.ithome.com.tw/articles/10262982
 draft: False
 cover: https://img1.dotnet9.com/2021/12/cover_05.png
-albums: 学Blazor
-categories: Blazor
-tags: Blazor Server
+categories: .NET
+tags: Blazor Server,学Blazor
 ---
 
 目前的4篇日志是来自我们写好的假数据，但正常来说不会这样做，而是有个按钮让用户点击了之后，增加或减少日志的数量。
@@ -169,5 +168,3 @@ public class BlogBase : ComponentBase
 3. [Blazor Tutorial - Ep11 - EventCallback and how it is different from delegate](https://www.youtube.com/watch?v=NQ7P0IPIqZk)
 
 **注：本文代码通过 .NET 6 + Visual Studio 2022重构，可点击原文链接与重构后代码比较学习，谢谢阅读，支持原作者**
-
-- 本文Markdown：[点击浏览](https://github.com/dotnet9/Assets.Dotnet9/blob/main/2021/12/2021-12-16_03.md)

@@ -278,5 +278,3 @@ namespace WPF水印装饰器
 >有一款PPT插件叫"[iSlide](https://islide.kf5.com/hc/kb/article/1378386/)"，其中Windows客户端是用WPF开发的，有个功能是PPT拼图，其中的水印功能就是上面类似的代码，我们看看效果结束本文：
 >
 >![iSlide-PPT拼](https://img1.dotnet9.com/2021/09/0402.gif)
-
-- 本文Markdown：[点击浏览](https://github.com/dotnet9/Assets.Dotnet9/blob/main/2021/09/2021-09-09_01.md)

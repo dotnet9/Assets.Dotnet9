@@ -9,7 +9,8 @@ originaltitle: 2022年Flutter真的会一统大前端吗？
 originallink: https://www.aisoutu.com/a/1610740
 draft: False
 cover: https://img1.dotnet9.com/2022/05/cover_19.png
-categories: Flutter
+categories: 前端
+tags: Flutter
 ---
 
 副标题《理性对待Flutter》

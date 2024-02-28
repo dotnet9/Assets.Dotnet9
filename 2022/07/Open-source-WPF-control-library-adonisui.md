@@ -7,8 +7,8 @@ copyright: Original
 originaltitle: 开源WPF控件库-AdonisUI
 draft: False
 cover: https://img1.dotnet9.com/2022/07/1501.gif
-albums: 开源WPF
 categories: .NET
+tags: .NET,开源WPF
 ---
 
 >原文：[https://github.com/benruehl/adonis-ui](https://github.com/benruehl/adonis-ui)

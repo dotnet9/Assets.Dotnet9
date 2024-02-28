@@ -9,7 +9,8 @@ originaltitle: C#中缓存的使用
 originallink: https://mp.weixin.qq.com/s/0Nc9wXjDYPIa_ZrIOqOdNQ
 draft: False
 cover: https://img1.dotnet9.com/2022/07/cover_12.png
-categories: .NET相关
+categories: .NET
+tags: .NET
 ---
 
 ## 简介

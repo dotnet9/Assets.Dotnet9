@@ -9,7 +9,8 @@ originaltitle: 如何分析EFCore引发的内存泄漏
 originallink: https://mp.weixin.qq.com/s/nntus3fGCvx3FT_uZYERUQ
 draft: False
 cover: https://img1.dotnet9.com/2022/05/cover_12.jpg
-categories: EF Core
+categories: .NET
+tags: .NET,ORM,EF Core
 ---
 
 ![不要让内存泄漏成为洪水](https://img1.dotnet9.com/2022/05/cover_12.jpg)

@@ -9,7 +9,8 @@ originaltitle: 【单片机入门】(三)应用层软件开发的单片机学习
 originallink: https://www.cnblogs.com/1996-Chinese-Chen/p/16826558.html
 draft: false
 cover: https://img1.dotnet9.com/2022/10/0801.png
-categories: 硬件相关
+categories: 分享
+tags: 硬件相关
 ---
 
 > 本文由网友投稿。

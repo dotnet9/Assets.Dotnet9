@@ -7,7 +7,7 @@ copyright: Original
 originaltitle: 善用Xcode快捷键，提高您的生产力
 draft: False
 cover: https://img1.dotnet9.com/2021/06/cover_02.jpg
-categories: IDE
+categories: 分享
 tags: Xcode
 ---
 
@@ -262,5 +262,3 @@ Xcode 11给了我们Minimap。IDE右侧有一个非常需要的代码大纲视�
 对于刚开始使用快捷键的开发人员，我建议慢慢来。选择一些快捷键，并将它们包含在你的日常使用案例中，以建立肌肉记忆。试图一次记住所有东西并不是掌握键盘快捷键的最佳方法。
 
 本文就到此为止-谢谢您的阅读！
-
-- 本文Markdown：[点击浏览](https://github.com/dotnet9/Assets.Dotnet9/blob/main/2021/06/2021-06-22_01.md)

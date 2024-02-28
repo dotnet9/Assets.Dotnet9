@@ -9,7 +9,8 @@ originaltitle: 离职时，要不要跟同事透露去向？
 originallink: https://mp.weixin.qq.com/s/rCr0w4H_0pB-1B1L_-a4xA
 draft: False
 cover: https://img1.dotnet9.com/2022/03/cover_10.jpeg
-categories: 职场生活
+categories: 分享
+tags: 离职
 ---
 
 前不久，在网上看到一则这样的信息：“收到心仪公司的offer后，却发现离职是件让人忧心的事。领导不愿意签字，还旁敲侧击问我离职去向，实在不知如何回答？实话实说，毕竟是去竞品公司，一不小心就会翻盘；若是不说，又显得不够真诚。” 

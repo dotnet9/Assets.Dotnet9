@@ -9,7 +9,8 @@ originaltitle: cake-build -.NET Core 跨平台构建自动化系统
 originallink: https://mp.weixin.qq.com/s/FWP4AskTvcK_6NpdFo4dQg
 draft: False
 cover: https://img1.dotnet9.com/2022/07/cover_13.png
-categories: .NET相关
+categories: .NET
+tags: .NET
 ---
 
 ## 介绍

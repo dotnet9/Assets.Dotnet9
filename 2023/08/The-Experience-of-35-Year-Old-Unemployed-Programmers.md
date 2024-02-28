@@ -9,7 +9,8 @@ originaltitle: 35岁失业程序员的现身说法
 originallink: https://www.cnblogs.com/royzshare/p/17596403.html
 draft: false
 cover: https://img1.dotnet9.com/2023/08/cover_01.png
-categories: 职场生活
+categories: 分享
+tags: 生活
 ---
 
 >本文来自转载

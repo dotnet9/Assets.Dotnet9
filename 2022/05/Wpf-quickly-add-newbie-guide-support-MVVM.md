@@ -8,6 +8,7 @@ originaltitle: WPF|快速添加新手引导功能（支持MVVM）
 draft: False
 cover: https://img1.dotnet9.com/2022/05/5201.gif
 categories: .NET
+tags: WPF,MVVM,新手引导
 ---
 
 **阅读导航**

@@ -9,7 +9,8 @@ originaltitle: ASP.NET Core WebApi返回结果统一包装实践
 originallink: https://www.cnblogs.com/wucy/p/16124449.html
 draft: False
 cover: https://img1.dotnet9.com/2022/04/cover_12.jpg
-categories: Web API
+categories: .NET
+tags: Web API
 ---
 
 ## 前言

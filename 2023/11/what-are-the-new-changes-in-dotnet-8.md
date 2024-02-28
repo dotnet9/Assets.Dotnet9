@@ -10,7 +10,7 @@ originaltitle: .NET 8.0 中有哪些新的变化？
 originallink: https://www.cnblogs.com/powertoolsteam/p/17833417.html
 draft: false
 cover: https://img1.dotnet9.com/2023/11/0801.png
-categories: .NET相关
+categories: .NET
 tags: 技术更新
 ---
 

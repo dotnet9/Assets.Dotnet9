@@ -9,9 +9,8 @@ originaltitle: (4/30)大家一起学Blazor：Component及路由介绍
 originallink: https://ithelp.ithome.com.tw/articles/10260047
 draft: False
 cover: https://img1.dotnet9.com/2021/12/cover_05.png
-albums: 学Blazor
-categories: Blazor
-tags: Blazor Server
+categories: .NET
+tags: Blazor Server,学Blazor
 ---
 
 由于笔者当初是用ASP.NET Core API + Blazor Server，所以会以Blazor Server示范，日后研究完Blazor WebAssembly会再将心得补上。
@@ -63,5 +62,3 @@ currentCount定义的方式跟页面呈现就是一种模型绑定(model binding
 引用: [ASP NET Core blazor project structure](https://www.youtube.com/watch?v=1MkPWOiwLIM)
 
 **注：本文代码通过 .NET 6 + Visual Studio 2022重构，可点击原文链接与重构后代码比较学习，谢谢阅读，支持原作者**
-
-- 本文Markdown：[点击浏览](https://github.com/dotnet9/Assets.Dotnet9/blob/main/2021/12/2021-12-10_02.md)

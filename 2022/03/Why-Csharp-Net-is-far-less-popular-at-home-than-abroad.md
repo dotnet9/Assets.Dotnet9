@@ -9,7 +9,8 @@ originaltitle: 为什么 C#/.Net在国内的人气远不如国外？
 originallink: https://www.zhihu.com/question/408313966/answer/1366266291
 draft: False
 cover: https://img1.dotnet9.com/2022/03/cover_24.png
-categories: .NET相关
+categories: .NET
+tags: 分享
 ---
 
 这个话题有点自黑的意思，我从.NET 1.1开始玩.NET，到现在已经11年了，我是看着.NET成长起来，在中国壮大的，也见证了近几年.NET被各种嫌弃，其实说到底还是中国的架构师太少，我是说真正懂行的架构师，一个资深的架构师是不会直接攻击一门语言或者嫌弃一门语言的，而是会从操作系统、服务器应用容器层面是分析性能、实现成本以及有多少坑。

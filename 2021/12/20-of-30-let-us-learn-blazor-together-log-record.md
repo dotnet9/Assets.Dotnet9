@@ -9,9 +9,8 @@ originaltitle: (20/30)大家一起学Blazor：日志记录
 originallink: https://ithelp.ithome.com.tw/articles/10268616
 draft: False
 cover: https://img1.dotnet9.com/2021/12/cover_05.png
-albums: 学Blazor
-categories: Blazor
-tags: Blazor Server
+categories: .NET
+tags: Blazor Server,学Blazor
 ---
 
 在开发系统时，记录是一件很重要的事，前面都没有提到，笔者在最近才想到这点，所以就来实现吧！
@@ -95,5 +94,3 @@ Server 的`render-mode`分为三种：`Static`、`Server`及`ServerPrerendered`�
 6. [RenderMode Enum](https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.mvc.rendering.rendermode?view=aspnetcore-5.0)
 
 **注：本文代码通过 .NET 6 + Visual Studio 2022重构，可点击原文链接与重构后代码比较学习，谢谢阅读，支持原作者**
-
-- 本文Markdown：[点击浏览](https://github.com/dotnet9/Assets.Dotnet9/blob/main/2021/12/2021-12-21_02.md)

@@ -9,9 +9,8 @@ originaltitle: (3/30)大家一起学Blazor：Blazor Server和Blazor WebAssembly�
 originallink: https://ithelp.ithome.com.tw/articles/10259814
 draft: False
 cover: https://img1.dotnet9.com/2021/12/cover_05.png
-albums: 学Blazor
-categories: Blazor
-tags: Blazor Server,Blazor WebAssembly
+categories: .NET
+tags: Blazor Server,Blazor WebAssembly,学Blazor
 ---
 
 下载Visual Studio后首先建立一个Blazor解决方案，里面建立Blazor Server项目，方案位置可以自己选择(注：新版Visual Studio将Blazor Server跟Blazor WebAssembly的新建项目模板拆分了，较为直观)，先不管里面的程序，按下F5执行后在网页按下F12或是Ctrl+Shift+I开启开发人员工具(Dev tool)，切换到Network页签后重新加载网页，可以看到几个文件，其中blazor.server.js就是在服务器跟浏览器之间通过SingalR建立WebSocket通道的文件。
@@ -98,5 +97,3 @@ Blazor Wasm的Program.cs文件：
 - 引用: [ASP NET Core blazor project structure](https://www.youtube.com/watch?v=1MkPWOiwLIM)
 
 **注：本文代码通过 .NET 6 + Visual Studio 2022重构，可点击原文链接与重构后代码比较学习，谢谢阅读，支持原作者**
-
-- 本文Markdown：[点击浏览](https://github.com/dotnet9/Assets.Dotnet9/blob/main/2021/12/2021-12-10_01.md)

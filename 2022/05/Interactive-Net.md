@@ -9,7 +9,8 @@ originaltitle: 交互式 .Net
 originallink: https://mp.weixin.qq.com/s/diIvOonESreeKLgC_5u-vw
 draft: False
 cover: https://img1.dotnet9.com/2022/05/cover_27.png
-categories: .NET相关
+categories: .NET
+tags: .NET
 ---
 
 ## 1. 名词解析       

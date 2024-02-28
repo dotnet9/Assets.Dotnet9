@@ -9,7 +9,8 @@ originaltitle: EF Core 6 新功能汇总（一）
 originallink: https://mp.weixin.qq.com/s/VpqEWQPdEJUw_HHNeqBPdg
 draft: False
 cover: https://img1.dotnet9.com/2022/06/cover_04.jpg
-categories: EF Core
+categories: .NET
+tags: .NET,ORM,EF Core
 ---
 
 在这篇文章中，你将看到 EF Core 6 中的十个新功能，包括新的特性标注，对时态表、稀疏列的支持，以及其他新功能。

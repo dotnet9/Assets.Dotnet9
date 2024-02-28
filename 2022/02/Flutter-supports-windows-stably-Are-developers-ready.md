@@ -9,7 +9,8 @@ originaltitle: Flutter稳定支持Windows，开发者做好准备了吗？
 originallink: https://blog.csdn.net/csdndevelopers/article/details/122808516
 draft: False
 cover: https://img1.dotnet9.com/2022/02/0707.png
-categories: Flutter
+categories: 前端
+tags: Flutter
 ---
 
 Flutter是由谷歌开发的开源移动UI框架，可快速在不同平台上构建高质量原生用户界面。Flutter支持现有的所有代码，在世界各地受到越来越多开发者的追捧。到目前为止，全球已发布了近50万个使用Flutter的应用程序，其中包括来自字节跳动等大型公司的应用程序，以及谷歌三十个团队的应用程序。据Statista和SlashData的分析师表示，Flutter是2021年最受欢迎的跨平台UI工具。

@@ -8,7 +8,7 @@ originaltitle: C# WPF：这次把文件拖出去！
 draft: False
 cover: https://img1.dotnet9.com/2020/12/cover_03.jpg
 categories: .NET
-tags: WPF
+tags: WPF,文件拖拽
 ---
 
 回顾上篇文章：[C# WPF：把文件给我拖进来！！！](https://mp.weixin.qq.com/s/d8dWW-ss82GK1H-YmGKBzQ)
@@ -65,5 +65,3 @@ private void Grid_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs
 上面的功能，程序其实要做不少事情，需要监听拖放的路径，得到拖放路径后，就可以通过原文件网络路径进行下载了，建议阅读这篇文章，参考拖放下载文件操作：[WPF拖拽文件(拖入拖出)，监控拖拽到哪个位置，类似百度网盘拖拽](https://www.cnblogs.com/zbfamily/p/11249900.html)。
 
 另外，这篇文章对WPF的拖放写得也不做，建议阅读：[WPF之DragDrop拖放实例](https://blog.csdn.net/ugfdfgg/article/details/83834541)。
-
-- 本文Markdown：[点击浏览](https://github.com/dotnet9/Assets.Dotnet9/blob/main/2020/12/2020-12-03_01.md)

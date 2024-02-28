@@ -6,7 +6,7 @@ date: 2023-03-15 20:33:14
 copyright: Original
 draft: false
 cover: https://img1.dotnet9.com/2023/03/cover_07.jpg
-categories: .NET相关
+categories: .NET
 tags: Refit,WebService
 ---
 

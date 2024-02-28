@@ -9,9 +9,8 @@ originaltitle: (11/30)大家一起学Blazor：Arbitrary属性
 originallink: https://ithelp.ithome.com.tw/articles/10262490
 draft: False
 cover: https://img1.dotnet9.com/2021/12/cover_05.png
-albums: 学Blazor
-categories: Blazor
-tags: Blazor Server
+categories: .NET
+tags: Blazor Server,学Blazor
 ---
 
 目前`MyButton`有3个`[Parameter]`，如果再增加的话，又要再定义新的`[Parameter]`，为了避免不断更新这个Component，我们来用Blazor提供的`@attribute`。
@@ -64,5 +63,3 @@ tags: Blazor Server
 2. [Ref: Arbitrary attributes and parameters in Blazor](https://www.pragimtech.com/blog/blazor/blazor-arbitrary-attributes/)
 
 **注：本文代码通过 .NET 6 + Visual Studio 2022重构，可点击原文链接与重构后代码比较学习，谢谢阅读，支持原作者**
-
-- 本文Markdown：[点击浏览](https://github.com/dotnet9/Assets.Dotnet9/blob/main/2021/12/2021-12-15_01.md)

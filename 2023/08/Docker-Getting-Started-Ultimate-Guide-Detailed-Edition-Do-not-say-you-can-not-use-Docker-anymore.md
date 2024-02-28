@@ -9,7 +9,8 @@ originaltitle: Docker 边学边用
 originallink: http://jartto.wang/2020/07/04/learn-docker/
 draft: false
 cover: https://img1.dotnet9.com/2023/08/cover_02.png
-categories: Docker
+categories: 分享
+tags: Docker
 ---
 
 富 `Web` 时代，应用变得越来越强大，与此同时也越来越复杂。集群部署、隔离环境、灰度发布以及动态扩容缺一不可，而容器化则成为中间的必要桥梁。

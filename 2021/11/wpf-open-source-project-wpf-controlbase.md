@@ -10,9 +10,8 @@ originaltitle: WPF开源项目：WPF-ControlBase
 originallink: https://github.com/HeBianGu/WPF-ControlBase
 draft: False
 cover: https://img1.dotnet9.com/2021/11/cover_09.png
-albums: 开源WPF
 categories: .NET
-tags: WPF
+tags: WPF,开源WPF
 ---
 
 ![仓库截图](https://img1.dotnet9.com/2021/11/0901.png)
@@ -1607,5 +1606,3 @@ GitHub下载地址:[GitHub - HeBianGu/WPF-ControlBase: Wpf封装的自定义控�
 更新：2019.12.16  增加.Net Core 3.0
 
 目前已支持Core3.0 和.net 4.5 如有解决方案程序集无法加载请安装这两个框架
-
-- 本文Markdown：[点击浏览](https://github.com/dotnet9/Assets.Dotnet9/blob/main/2021/11/2021-11-30_01.md)

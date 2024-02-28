@@ -10,7 +10,7 @@ originaltitle: 热心网友收集的.NET实战面试题1和2
 originallink: https://mp.weixin.qq.com/s/M5U5JhDs-k6bnV6yckYzqw
 draft: false
 cover: https://img1.dotnet9.com/2023/11/cover_03.png
-categories: .NET相关
+categories: .NET
 tags: 面试题
 ---
 

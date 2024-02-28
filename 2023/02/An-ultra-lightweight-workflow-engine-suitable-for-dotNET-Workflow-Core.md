@@ -9,7 +9,8 @@ originaltitle: 一个适合于.NET Core的超轻量级工作流引擎：Workflow
 originallink: https://www.cnblogs.com/keep-study-to-die/p/12001408.html
 draft: false
 cover: https://img1.dotnet9.com/2023/02/cover_02.jpg
-categories: .NET相关
+categories: .NET
+tags: .NET
 ---
 
 >站长工作中会使用到该技术，所以转载该篇文章，大家一起了解workflow，能够用它做什么。

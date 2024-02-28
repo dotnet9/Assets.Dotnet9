@@ -9,9 +9,8 @@ originaltitle: (17/30)大家一起学Blazor：建立Blog和Post关联
 originallink: https://ithelp.ithome.com.tw/articles/10266555
 draft: False
 cover: https://img1.dotnet9.com/2021/12/cover_05.png
-albums: 学Blazor
-categories: Blazor
-tags: Blazor Server
+categories: .NET
+tags: Blazor Server,学Blazor
 ---
 
 接下来就是讲跟数据库关联的内容了，会着重说明ASP.NET Core 跟EF Core，如果有需要改页面才会说到Blazor，这边会花比较多篇幅着墨。
@@ -124,5 +123,3 @@ public class ResultViewModel
 2. [Loading Related Data](https://docs.microsoft.com/en-us/ef/core/querying/related-data/)
 
 **注：本文代码通过 .NET 6 + Visual Studio 2022重构，可点击原文链接与重构后代码比较学习，谢谢阅读，支持原作者**
-
-- 本文Markdown：[点击浏览](https://github.com/dotnet9/Assets.Dotnet9/blob/main/2021/12/2021-12-19_01.md)

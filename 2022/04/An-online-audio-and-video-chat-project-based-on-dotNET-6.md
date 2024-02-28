@@ -9,9 +9,8 @@ originaltitle: 基于 .NET 6 开发的在线音视频聊天项目
 originallink: https://www.cnblogs.com/xymfblogs/archive/2022/04/02/16091037.html
 draft: False
 cover: https://img1.dotnet9.com/2022/04/0108.png
-albums: 开源WPF
-categories: .NET相关
-tags: .NET 6,WPF,.NET Core Web API,音视频,聊天
+categories: .NET
+tags: .NET 6,WPF,.NET Core Web API,音视频,聊天,开源WPF
 ---
 
 >一个基于`.NET 6`开发的在线音视频聊天项目，客户端使用`WPF`开发，后端使用`.NET Core Web API`。

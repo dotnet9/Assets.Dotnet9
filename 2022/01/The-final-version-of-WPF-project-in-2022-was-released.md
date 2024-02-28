@@ -9,7 +9,7 @@ originaltitle: 2022年终结版WPF项目实战合集发布
 originallink: https://www.cnblogs.com/zh7791/p/15754663.html
 draft: False
 cover: https://img1.dotnet9.com/2022/01/0601.jpg
-categories: .NET课程
+categories: 课程
 tags: C#,WPF
 ---
 

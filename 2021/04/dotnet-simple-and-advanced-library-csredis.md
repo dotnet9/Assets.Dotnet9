@@ -9,7 +9,7 @@ originaltitle: .NET Core 简单且高级的库 csredis
 originallink: https://www.cnblogs.com/kellynic/p/9803314.html
 draft: False
 cover: https://img1.dotnet9.com/2021/04/cover_05.png
-categories: .NET相关
+categories: .NET
 tags: .NET,Redis,csredis
 ---
 
@@ -159,5 +159,3 @@ csredis 源码地址： https://github.com/2881099/csredis
 >***版权声明***：本博客所有文章除特别声明外，均采用 BY-NC-SA 许可协议。转载请注明出处！
 >
 >***声援博主***：如果您觉得文章对您有帮助，可以点击文章右下角【推荐】一下。您的鼓励是博主的最大动力！
-
-- 本文Markdown：[点击浏览](https://github.com/dotnet9/Assets.Dotnet9/blob/main/2021/04/2021-04-11_01.md)

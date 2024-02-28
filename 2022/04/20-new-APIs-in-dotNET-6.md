@@ -9,7 +9,8 @@ originaltitle: 20 个 .NET 6 新增的 API
 originallink: https://mp.weixin.qq.com/s/LBNPyVAACUEc786QF_GMqg
 draft: False
 cover: https://img1.dotnet9.com/2022/04/cover_32.png
-categories: .NET相关
+categories: .NET
+tags: .NET
 ---
 
 ![](https://img1.dotnet9.com/2022/04/cover_32.png)

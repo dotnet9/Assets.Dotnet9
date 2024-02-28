@@ -251,5 +251,3 @@ namespace WpfApp1Localization {
 在这个博客中，我们了解了WPF本地化，它的重要性，它的类型，以及它是如何实际工作的。这是理解WPF概述的主要概念之一，它将有助于应用程序解决语言障碍的问题。
 
 >原文链接：https://www.c-sharpcorner.com/blogs/an-overview-of-wpf-localization-extension-with-an-example
-
-- 本文Markdown：[点击浏览](https://github.com/dotnet9/Assets.Dotnet9/blob/main/2021/04/2021-04-05_01.md)

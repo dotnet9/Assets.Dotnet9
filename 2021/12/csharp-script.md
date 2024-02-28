@@ -9,7 +9,7 @@ originaltitle: C# 脚本
 originallink: https://www.cnblogs.com/zhenl/p/15714453.html
 draft: False
 cover: https://img1.dotnet9.com/2021/12/cover_38.png
-categories: .NET相关
+categories: .NET
 tags: C#,脚本
 ---
 
@@ -107,5 +107,3 @@ Console.WriteLine((await script.RunAsync()).ReturnValue);
 完整的实例可以从github下载：https://github.com/zhenl/CSharpScriptDemo
 
 本文来自博客园，作者：寻找无名的特质，转载请注明原文链接：https://www.cnblogs.com/zhenl/p/15714453.html
-
-- 本文Markdown：[点击浏览](https://github.com/dotnet9/Assets.Dotnet9/blob/main/2021/12/2021-12-24_01.md)

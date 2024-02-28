@@ -74,5 +74,3 @@ private void Btn2_Click(object sender, RoutedEventArgs e)
 >作者：王景浩
 >
 >微信ID：daidai_cn
-
-- 本文Markdown：[点击浏览](https://github.com/dotnet9/Assets.Dotnet9/blob/main/2022/01/2022-01-10_01.md)

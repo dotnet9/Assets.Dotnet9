@@ -9,7 +9,7 @@ originaltitle: 【知乎】特斯拉为何使用.NET Core技术框架？为何�
 originallink: https://www.zhihu.com/question/496204534/answer/2213155471
 draft: False
 cover: https://img1.dotnet9.com/2021/11/cover_01.jpeg
-categories: 职场生活
+categories: 分享
 tags: .NET CORE,Java,Go
 ---
 
@@ -49,5 +49,3 @@ tags: .NET CORE,Java,Go
 ![kareler](https://img1.dotnet9.com/2021/11/0105.png)
 
 『见渔人，乃大惊，问所从来。具答之。便要还家，设酒杀鸡作食。村中闻有此人，咸来问讯。自云先世避秦时乱，率妻子邑人来此绝境，不复出焉，遂与外人间隔。问今是何世，乃不知有汉，无论魏晋。此人一一为具言所闻，皆叹惋。余人各复延至其家，皆出酒食。停数日，辞去。此中人语云：“不足为外人道也。” 』
-
-- 本文Markdown：[点击浏览](https://github.com/dotnet9/Assets.Dotnet9/blob/main/2021/11/2021-11-10_01.md)

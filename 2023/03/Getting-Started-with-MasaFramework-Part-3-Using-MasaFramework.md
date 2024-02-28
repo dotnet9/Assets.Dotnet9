@@ -9,8 +9,8 @@ originaltitle: (3) MasaFramework 入门第三篇，使用MasaFramework
 originallink: https://www.cnblogs.com/hejiale010426/p/17227910.html
 draft: false
 cover: https://img1.dotnet9.com/2023/03/cover_09.png
-categories: Web API
-albums: MASA Framework
+categories: .NET
+tags: MASA Framework
 ---
 
 首先我们需要创建一个MasaFramework模板的项目，项目名称TokenDemo，项目类型如图所示：

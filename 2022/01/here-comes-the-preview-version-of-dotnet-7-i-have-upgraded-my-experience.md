@@ -7,8 +7,8 @@ copyright: Original
 originaltitle: .NET 7 预览版来啦，我升级体验了
 draft: False
 cover: https://img1.dotnet9.com/2022/01/cover_02.png
-categories: .NET相关
-tags: .NET 7.0
+categories: .NET
+tags: .NET
 ---
 
 听说`.NET 7` 来了，站长怎能不尝鲜呢，在除夕当天将体验情况简单汇报下，然后迎新春喽：
@@ -118,5 +118,3 @@ https://aka.ms/dotnet/7.0.1xx/daily/dotnet-sdk-win-x64.exe
 6、秒秒快快乐乐，分分平平安安，时时和和睦睦，天天得意洋洋，月月身体健康，年年财源广进。盼你新一年情绪日新月异，快乐如糖似蜜，朋友重情重义，爱人不离不弃，工作频传佳绩，万事称心如意!
 
 ![虎年祝福](https://img1.dotnet9.com/2022/01/0211.png)
-
-- 本文Markdown：[点击浏览](https://github.com/dotnet9/Assets.Dotnet9/blob/main/2022/01/2022-01-31_01.md)

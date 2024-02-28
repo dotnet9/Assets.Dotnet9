@@ -9,7 +9,8 @@ originaltitle: 大前端时代的乱流：带你了解最全面的 Flutter Web
 originallink: https://juejin.cn/post/7095294020900880420/
 draft: False
 cover: https://img1.dotnet9.com/2022/05/cover_28.png
-categories: Flutter
+categories: 前端
+tags: Flutter
 ---
 
 Flutter Web  稳定版本发布至今也有一年多了，经过这一年多的发展，今天就让我们来看看作为大前端时代的乱流，Flutter Web 究竟有什么不同之处，`本篇分享主要内容是目前  Flutter 下少有较为全面的  Web  内容`。

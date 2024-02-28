@@ -7,7 +7,8 @@ copyright: Original
 originaltitle: 介绍这个库：C# Blazor中显示Markdown文件
 draft: False
 cover: https://img1.dotnet9.com/2022/02/cover_14.jpg
-categories: Blazor
+categories: .NET
+tags: Blazor,Markdown
 ---
 
 ## 1 讲目的
@@ -83,7 +84,7 @@ builder.Services.AddScoped<IHtmlSanitizer, HtmlSanitizer>(x =>
 
 忘了，markdown中有图片等多媒体文件，记得加上这些样式实现自适应：
 
-```style
+```css
 <style>
     h3 {
         border-bottom: 1px solid #eee;

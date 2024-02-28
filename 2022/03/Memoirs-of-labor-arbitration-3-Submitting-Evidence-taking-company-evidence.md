@@ -9,7 +9,8 @@ originaltitle: 劳动仲裁回忆录（三）：提交证据&取公司证据
 originallink: https://mp.weixin.qq.com/s/w2uKoK1ROBg3spB3Ul5CdA
 draft: False
 cover: https://img1.dotnet9.com/2022/03/cover_12.jpeg
-categories: 职场生活
+categories: 分享
+tags: 仲裁
 ---
 
 >本篇介绍了提交劳动仲裁证据，以及取回公司提交的证据的过程。同时说明了提交证据时可以补充申请事项以及证据时工作人员所说的关键信息。

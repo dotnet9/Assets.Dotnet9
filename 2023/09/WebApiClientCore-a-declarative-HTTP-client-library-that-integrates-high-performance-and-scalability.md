@@ -10,7 +10,8 @@ originaltitle: WebApiClientCore使用说明
 originallink: https://www.cnblogs.com/kewei/p/12939866.html
 draft: false
 cover: https://img1.dotnet9.com/2023/09/cover_03.png
-categories: .NET相关
+categories: .NET
+tags: .NET
 ---
 
 ## WebApiClientCore

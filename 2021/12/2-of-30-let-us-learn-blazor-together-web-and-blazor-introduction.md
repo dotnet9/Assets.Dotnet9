@@ -9,9 +9,8 @@ originaltitle: (2/30)大家一起学Blazor：网页和Blazor介绍
 originallink: https://ithelp.ithome.com.tw/articles/10258950
 draft: False
 cover: https://img1.dotnet9.com/2021/12/cover_05.png
-albums: 学Blazor
-categories: Blazor
-tags: Blazor,ASP.NET Core
+categories: .NET
+tags: Blazor,ASP.NET Core,学Blazor
 ---
 
 笔者对网站的认知为前端、后端及数据库，使用者在浏览器页面按下按钮或是表单请求，触发前端事件，将收集起来的条件打包送往后端，后端接收条件后去数据库据此处理判断，捞出使用者想要的数据后，后端将页面、数据回传给前端，前端再将相应数据呈现在页面上，这就是最原始的前后端交流。

@@ -9,7 +9,8 @@ originaltitle: MAUI模板项目闪退问题
 originallink: https://www.cnblogs.com/springhgui/p/16381483.html
 draft: False
 cover: https://img1.dotnet9.com/2022/06/1306.jpg
-categories: MAUI
+categories: .NET
+tags: MAUI
 ---
 
 在`MAUI`最初发布的时候就曾创建过几个模板项目进行体验过，没遇到什么坑。由于最近需要开发针对餐饮行业的收银机（安卓系统）开发一款应用，这种收银机一般配置不咋滴，系统版本和性能也肯定比不上我们自己使用的手机。在做技术选型时首先想到了`MAUI`，备选`Flutter`,`React Native`。都是大厂维护的跨平台应用框架，在使用`MAUI`框架时遇到新建的模板应用居然启动时直接闪退，最终也是解决了这个闪退问题，遂分享下这一经历。

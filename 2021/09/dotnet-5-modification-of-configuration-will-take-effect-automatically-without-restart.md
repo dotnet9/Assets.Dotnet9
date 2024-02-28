@@ -9,8 +9,8 @@ originaltitle: .NET 5 修改配置不重启自动生效
 originallink: https://www.cnblogs.com/wei325/p/15277177.html
 draft: False
 cover: https://img1.dotnet9.com/2021/09/cover_03.png
-categories: .NET相关
-tags: .NET 5
+categories: .NET
+tags: 配置文件
 ---
 
 ## 一、设置配置文件实时生效
@@ -254,5 +254,3 @@ public class HomeController : Controller
     }
 }
 ```
-
-- 本文Markdown：[点击浏览](https://github.com/dotnet9/Assets.Dotnet9/blob/main/2021/09/2021-09-18_02.md)

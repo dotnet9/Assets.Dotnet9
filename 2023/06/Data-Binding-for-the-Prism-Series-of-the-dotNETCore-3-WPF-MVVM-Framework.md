@@ -10,7 +10,7 @@ originallink: https://www.cnblogs.com/ryzen/p/11905866.html
 draft: false
 cover: https://img1.dotnet9.com/albums/album_wpf_prism.png
 categories: .NET
-albums: WPF-Prism
+tags: WPF,Prism
 ---
 
 > 本文来自转载

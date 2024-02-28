@@ -8,7 +8,7 @@ originaltitle: .NET类库“Vanara”：简单易用的Windows API封装库
 draft: False
 cover: https://img1.dotnet9.com/2021/06/cover_01.png
 albums: 开源C#
-categories: .NET相关
+categories: .NET
 tags: .NET,C#,Windows API
 ---
 
@@ -85,5 +85,3 @@ var bret = GetComputerName(sb, ref sbSz);
 ## 示例代码
 
 There are numerous examples in the [UnitTest](https://github.com/dahall/Vanara/tree/master/UnitTests) folder and in the [WinClassicSamplesCS](https://github.com/dahall/WinClassicSamplesCS) project that recreates the Windows Samples in C# using Vanara.
-
-- 本文Markdown：[点击浏览](https://github.com/dotnet9/Assets.Dotnet9/blob/main/2021/06/2021-06-28_01.md)

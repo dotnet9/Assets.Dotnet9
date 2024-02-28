@@ -9,9 +9,8 @@ originaltitle: (24/30)大家一起学Blazor：<AuthorizeRouteView>运用
 originallink: https://ithelp.ithome.com.tw/articles/10271129
 draft: False
 cover: https://img1.dotnet9.com/2021/12/cover_05.png
-albums: 学Blazor
-categories: Blazor
-tags: Blazor Server
+categories: .NET
+tags: Blazor Server,学Blazor
 ---
 
 前天有在`Blog.razor`加入通过验证及未通过的显示内容，但如果系统要呈现的未通过验证内容都一样，在每个Component 都这样写就太浪费时间了，可以利用`App.razor`帮我们做统一呈现的事。
@@ -27,5 +26,3 @@ tags: Blazor Server
 目前只要通过验证的用户都能看到相同Component，不过大部分系统通常都会有角色或是权限划分，以区分不同用户，明天就来尝试用`Role` 区分授权。
 
 **注：本文代码通过 .NET 6 + Visual Studio 2022重构，可点击原文链接与重构后代码比较学习，谢谢阅读，支持原作者**
-
-- 本文Markdown：[点击浏览](https://github.com/dotnet9/Assets.Dotnet9/blob/main/2021/12/2021-12-23_03.md)

@@ -9,7 +9,8 @@ originaltitle: 为了看Flutter到底有没有人用我竟然
 originallink: https://xuyisheng.top/flutter_app_check/
 draft: False
 cover: https://img1.dotnet9.com/2022/05/1301.png
-categories: Flutter
+categories: 前端
+tags: Flutter
 ---
 
 Flutter这个东西出来这么久了，到底市场占有率怎么样呢？为了让大家了解这一真实数据，也为了让大家了解当前Flutter在各大App中的使用情况，我今天下载了几百个App，占了手机将近80G空间，就为了得出一个结论——Flutter，到底有没有人用。

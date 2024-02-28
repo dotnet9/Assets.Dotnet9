@@ -9,7 +9,8 @@ originaltitle: 后端思想篇：设计好接口的36个锦囊！
 originallink: https://mp.weixin.qq.com/s/RqsJ_1Ubqpgfv6FCwJmIsA
 draft: False
 cover: https://img1.dotnet9.com/2022/07/cover_20.jpeg
-categories: 架构设计
+categories: 分享
+tags: 架构设计
 ---
 
 ## 前言

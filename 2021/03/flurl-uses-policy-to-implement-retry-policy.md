@@ -9,7 +9,7 @@ originaltitle: Flurl使用Polly实现重试Policy
 originallink: https://www.cnblogs.com/linxmouse/p/14533151.html
 draft: False
 cover: https://img1.dotnet9.com/2021/03/cover_03.jpg
-categories: .NET相关
+categories: .NET
 tags: C#,Flurl,Policy
 ---
 
@@ -303,5 +303,3 @@ var time = await Policy
 _logger.LogInformation($"App: success - {time.time}");
 return View(time.time);
 ```
-
-- 本文Markdown：[点击浏览](https://github.com/dotnet9/Assets.Dotnet9/blob/main/2021/03/2021-03-15_01.md)

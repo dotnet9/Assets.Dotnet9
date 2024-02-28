@@ -9,7 +9,8 @@ originaltitle: 劳动仲裁回忆录（九）：二审线上开庭
 originallink: https://mp.weixin.qq.com/s/dKLdTcxj9LcbIkfSlI_NrA
 draft: False
 cover: https://img1.dotnet9.com/2022/03/cover_12.jpeg
-categories: 职场生活
+categories: 分享
+tags: 仲裁
 ---
 
 >在前面的篇幅中，我讲述了我从申请劳动总裁，到一审，然而二审。一路下来，其实二审是最简单的，本文讲述二审线上开庭过程。

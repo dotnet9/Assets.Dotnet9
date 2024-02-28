@@ -7,7 +7,8 @@ lastmod: 2023-03-19 20:55:32
 copyright: Original
 draft: false
 cover: https://img1.dotnet9.com/2023/03/cover_08.jpeg
-categories: Web API
+categories: .NET
+tags: .NET
 ---
 
 大家好，我是沙漠尽头的狼。

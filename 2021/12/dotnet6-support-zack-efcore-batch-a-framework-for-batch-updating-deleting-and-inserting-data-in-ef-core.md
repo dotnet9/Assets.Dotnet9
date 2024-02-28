@@ -9,7 +9,7 @@ originaltitle: 支持.NET6！EF Core中批量执行更新、删除、插入数�
 originallink: https://mp.weixin.qq.com/s/MYxVGxa_DQnn4XMIDryd9Q
 draft: False
 cover: https://img1.dotnet9.com/2021/12/cover_40.jpeg
-categories: EF Core
+categories: .NET
 tags: C#,EF Core,批量更新,批量删除,批量插入
 ---
 
@@ -40,5 +40,3 @@ await ctx.BatchUpdate<Book>()
 >原文链接：https://mp.weixin.qq.com/s/MYxVGxa_DQnn4XMIDryd9Q
 >
 >项目地址：https://github.com/yangzhongke/Zack.EFCore.Batch
-
-- 本文Markdown：[点击浏览](https://github.com/dotnet9/Assets.Dotnet9/blob/main/2021/12/2021-12-25_02.md)

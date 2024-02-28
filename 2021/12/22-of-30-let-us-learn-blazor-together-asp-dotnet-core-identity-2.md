@@ -9,9 +9,8 @@ originaltitle: (22/30)大家一起学Blazor：ASP.NET Core Identity(2)
 originallink: https://ithelp.ithome.com.tw/articles/10269706
 draft: False
 cover: https://img1.dotnet9.com/2021/12/cover_05.png
-albums: 学Blazor
-categories: Blazor
-tags: Blazor Server
+categories: .NET
+tags: Blazor Server,学Blazor
 ---
 
 昨天做的验证只针对`Identity` 系统，没有包含到我们的日志，如果在未登录状态下于地址栏输入`https://localhost:5018/Blog`，还是可以看到博客，让我们整合验证。
@@ -80,5 +79,3 @@ tags: Blazor Server
 2. [Blazor cookie authentication Logout page](https://www.youtube.com/watch?v=pVaY7Th68U0&list=PL6n9fhu94yhVowClAs8-6nYnfsOTma14P&index=54)
 
 **注：本文代码通过 .NET 6 + Visual Studio 2022重构，可点击原文链接与重构后代码比较学习，谢谢阅读，支持原作者**
-
-- 本文Markdown：[点击浏览](https://github.com/dotnet9/Assets.Dotnet9/blob/main/2021/12/2021-12-22_03.md)

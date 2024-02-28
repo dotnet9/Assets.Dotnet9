@@ -9,7 +9,8 @@ originaltitle: c# 如何将程序加密隐藏？
 originallink: https://mp.weixin.qq.com/s/JPBwcTfTjFZrSa-iI8gqCQ
 draft: false
 cover: https://img1.dotnet9.com/2023/08/cover_02.png
-categories: .NET相关
+categories: .NET
+tags: .NET
 ---
 
 下面将介绍如何通过LiteDB将自己的程序进行加密，实现介绍一下LiteDB。

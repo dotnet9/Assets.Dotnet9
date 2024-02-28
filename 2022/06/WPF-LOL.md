@@ -10,6 +10,7 @@ originallink: https://mp.weixin.qq.com/s/vgha1ZRGYU40zR6g7v_1uA
 draft: False
 cover: https://img1.dotnet9.com/2022/06/1001.png
 categories: .NET
+tags: WPF
 ---
 
 >WPF 英雄联盟

@@ -9,7 +9,7 @@ originaltitle: 用 WinUI 3 开发了一个摸鱼应用
 originallink: https://www.cnblogs.com/dino623/archive/2021/12/15/developing_an_app_with_winui3.html
 draft: False
 cover: https://img1.dotnet9.com/2021/12/cover_20.png
-categories: WinUI
+categories: .NET
 tags: WinUI 3
 ---
 
@@ -149,5 +149,3 @@ https://github.com/DinoChan/Loaf
 >出处：https://www.cnblogs.com/dino623/p/developing_an_app_with_winui3.html
 >
 >版权：本文采用「CC BY 4.0」知识共享许可协议进行许可。
-
-- 本文Markdown：[点击浏览](https://github.com/dotnet9/Assets.Dotnet9/blob/main/2021/12/2021-12-16_02.md)

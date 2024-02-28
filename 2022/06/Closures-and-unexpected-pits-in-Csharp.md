@@ -9,7 +9,8 @@ originaltitle: C#中的闭包和意想不到的坑
 originallink: https://www.cnblogs.com/deatharthas/p/13166987.html
 draft: False
 cover: https://img1.dotnet9.com/2022/06/cover_11.jpeg
-categories: .NET相关
+categories: .NET
+tags: C#
 ---
 
 虽然闭包主要是函数式编程的玩意儿，而C#的最主要特征是面向对象，但是利用委托或lambda表达式，C#也可以写出具有函数式编程风味的代码。同样的，使用委托或者lambda表达式，也可以在C#中使用闭包。

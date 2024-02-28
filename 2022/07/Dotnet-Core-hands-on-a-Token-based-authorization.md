@@ -9,7 +9,8 @@ originaltitle: .NET Core手撸一个基于Token的权限认证
 originallink: https://mp.weixin.qq.com/s/eZBDEqJaayjhJvyYI53qIA
 draft: False
 cover: https://img1.dotnet9.com/2022/07/cover_11.jpeg
-categories: Web API
+categories: .NET
+tags: .NET
 ---
 
 ## 说明

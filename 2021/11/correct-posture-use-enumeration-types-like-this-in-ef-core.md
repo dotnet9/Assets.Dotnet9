@@ -9,8 +9,8 @@ originaltitle: 正确姿势？EF Core 中这样使用枚举类型？
 originallink: https://blog.csdn.net/waitaction/article/details/88639152
 draft: False
 cover: https://img1.dotnet9.com/2021/11/cover_03.jpeg
-categories: EF Core
-tags: .NET CORE,EF Core
+categories: .NET
+tags: .NET CORE,ORM,EF Core
 ---
 
 ![](https://img1.dotnet9.com/2021/11/cover_03.jpeg)
@@ -130,5 +130,3 @@ public enum SendStateEnum
     UnKnow =3 
 }
 ```
-
-- 本文Markdown：[点击浏览](https://github.com/dotnet9/Assets.Dotnet9/blob/main/2021/11/2021-11-09_02.md)

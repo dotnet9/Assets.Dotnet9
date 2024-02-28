@@ -9,7 +9,8 @@ originaltitle: 银行核心项目之测试阶段
 originallink: https://mp.weixin.qq.com/s/kwfJXT9IjIOM-cKOxyNNuw
 draft: false
 cover: https://img1.dotnet9.com/2023/03/cover_02.jpg
-categories: 技巧分享
+categories: 分享
+tags: 银行
 ---
 
 ![云南 · 大理 · 洱海](https://img1.dotnet9.com/2023/03/cover_02.jpg)

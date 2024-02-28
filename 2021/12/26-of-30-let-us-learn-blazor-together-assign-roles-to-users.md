@@ -9,9 +9,8 @@ originaltitle: (26/30)大家一起学Blazor：给用户分配角色
 originallink: https://ithelp.ithome.com.tw/articles/10272459
 draft: False
 cover: https://img1.dotnet9.com/2021/12/cover_05.png
-albums: 学Blazor
-categories: Blazor
-tags: Blazor Server
+categories: .NET
+tags: Blazor Server,学Blazor
 ---
 
 昨天角色的`CRUD` 功能都完成了，接着就是要把角色分配给用户了，先建立一个ViewModel `CustomUserRoleViewModel`，这是用来呈现角色底下用户的ViewModel。
@@ -241,5 +240,3 @@ public void EditUsersInRole()
 1. [Add or remove users from role in asp net core](https://www.youtube.com/watch?v=TzhqymQm5kw&list=PL6n9fhu94yhVkdrusLaQsfERmL_Jh4XmU&index=81)
 
 **注：本文代码通过 .NET 6 + Visual Studio 2022重构，可点击原文链接与重构后代码比较学习，谢谢阅读，支持原作者**
-
-- 本文Markdown：[点击浏览](https://github.com/dotnet9/Assets.Dotnet9/blob/main/2021/12/2021-12-24_02.md)

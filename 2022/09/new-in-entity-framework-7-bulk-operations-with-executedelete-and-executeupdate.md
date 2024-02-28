@@ -9,7 +9,8 @@ originaltitle: New in Entity Framework 7: Bulk Operations with ExecuteDelete and
 originallink: https://timdeschryver.dev/blog/new-in-entity-framework-7-bulk-operations-with-executedelete-and-executeupdate
 draft: false
 cover: https://img1.dotnet9.com/2022/09/cover_01.png
-categories: EF Core
+categories: .NET
+tags: .NET
 ---
 
 >原文链接：[https://timdeschryver.dev/blog/new-in-entity-framework-7-bulk-operations-with-executedelete-and-executeupdate](https://timdeschryver.dev/blog/new-in-entity-framework-7-bulk-operations-with-executedelete-and-executeupdate)

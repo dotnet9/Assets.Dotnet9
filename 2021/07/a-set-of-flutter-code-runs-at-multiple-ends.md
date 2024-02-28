@@ -7,8 +7,7 @@ copyright: Original
 originaltitle: 一套Flutter代码多端运行
 draft: False
 cover: https://img1.dotnet9.com/2021/07/cover_02.png
-albums: 开源Flutter
-categories: Flutter
+categories: 前端
 tags: Flutter,Mac,iOS,Android,Web,Desktop
 ---
 
@@ -51,5 +50,3 @@ android(模拟器)
 </video>
 
 是否感兴趣？回到文章开头，点击视频（或源码）学习吧。
-
-- 本文Markdown：[点击浏览](https://github.com/dotnet9/Assets.Dotnet9/blob/main/2021/07/2021-07-10_01.md)

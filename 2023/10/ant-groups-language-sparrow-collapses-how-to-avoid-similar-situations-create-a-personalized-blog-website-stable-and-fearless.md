@@ -7,7 +7,8 @@ lastmod: 2023-11-05 12:15:18
 copyright: Original
 draft: false
 cover: https://img1.dotnet9.com/2023/10/cover_03.png
-categories: 科技生活
+categories: 分享
+tags: 科技
 ---
 
 ## 1. 本文背景

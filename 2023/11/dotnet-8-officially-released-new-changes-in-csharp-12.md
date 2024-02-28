@@ -10,7 +10,7 @@ originaltitle: .NET8 正式发布， C#12 新变化
 originallink: https://mp.weixin.qq.com/s/FwbdnbYXIrSxLFmd3_0rAA
 draft: false
 cover: https://img1.dotnet9.com/2023/11/cover_07.jpg
-categories: .NET相关
+categories: .NET
 tags: 技术更新
 ---
 

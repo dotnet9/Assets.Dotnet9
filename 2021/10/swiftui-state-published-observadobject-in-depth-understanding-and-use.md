@@ -9,7 +9,7 @@ originaltitle: SwiftUI @State @Published @ObservedObject 深入理解和使用
 originallink: https://www.jianshu.com/p/e589181b14db
 draft: False
 cover: https://img1.dotnet9.com/2021/10/cover_04.jpeg
-categories: SwiftUI
+categories: 前端
 tags: State,Published,ObservedObject
 ---
 
@@ -218,5 +218,3 @@ struct ContentView: View {
 /// 所以，直接继承 ObservableObject 下的属性（字段）没更新，就不会更新View
 /// 最简单的解决办法就是 更新直接继承 ObservableObject（父对象） 里面的随便一个属性
 ```
-
-- 本文Markdown：[点击浏览](https://github.com/dotnet9/Assets.Dotnet9/blob/main/2021/10/2021-10-18_02.md)

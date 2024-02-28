@@ -7,7 +7,7 @@ lastmod: 2023-06-23 23:50:47
 copyright: Original
 draft: false
 cover: https://img1.dotnet9.com/games/minesweeper.png
-categories: Blazor
+categories: .NET
 tags: Dotnet9
 ---
 

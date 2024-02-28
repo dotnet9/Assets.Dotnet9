@@ -9,9 +9,8 @@ originaltitle: (12/30)大家一起学Blazor：Cascading values and parameters
 originallink: https://ithelp.ithome.com.tw/articles/10262797
 draft: False
 cover: https://img1.dotnet9.com/2021/12/cover_05.png
-albums: 学Blazor
-categories: Blazor
-tags: Blazor Server
+categories: .NET
+tags: Blazor Server,学Blazor
 ---
 
 **(注：昨天不小心把Reset按钮的type改成button，今天改回reset。)**
@@ -73,5 +72,3 @@ tags: Blazor Server
 3. [Blazor cascading values performance](https://www.pragimtech.com/blog/blazor/blazor-cascading-values-performance/)
 
 **注：本文代码通过 .NET 6 + Visual Studio 2022重构，可点击原文链接与重构后代码比较学习，谢谢阅读，支持原作者**
-
-- 本文Markdown：[点击浏览](https://github.com/dotnet9/Assets.Dotnet9/blob/main/2021/12/2021-12-15_02.md)

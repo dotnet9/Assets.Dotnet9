@@ -9,7 +9,8 @@ originaltitle: .NET Core使用FluentEmail发送邮件
 originallink: https://www.cnblogs.com/wucy/p/13797578.html
 draft: False
 cover: https://img1.dotnet9.com/2020/11/cover_03.jpeg
-categories: .NET相关
+categories: .NET
+tags: Web API,FluentEmail,邮件发送
 ---
 
 ## 前言

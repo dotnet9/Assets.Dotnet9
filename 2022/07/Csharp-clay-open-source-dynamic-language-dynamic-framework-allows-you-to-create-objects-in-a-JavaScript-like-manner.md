@@ -9,7 +9,8 @@ originaltitle: C# Clay开源的动态语言dynamic框架，让您形如javascrip
 originallink: https://mp.weixin.qq.com/s/CQj7lR_7c97KUq07BU0Jlg
 draft: False
 cover: https://img1.dotnet9.com/2022/07/cover_16.jpeg
-categories: .NET相关
+categories: .NET
+tags: .NET
 ---
 
 ## 简介

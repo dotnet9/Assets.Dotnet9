@@ -7,7 +7,8 @@ copyright: Contributes
 author: VleaStwo
 draft: false
 cover: https://img1.dotnet9.com/2023/05/cover_03.png
-categories: .NET相关
+categories: .NET
+tags: .NET
 ---
 
 > 本文由网友投稿，欢迎更多的朋友来分享。

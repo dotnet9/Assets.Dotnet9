@@ -9,9 +9,8 @@ originaltitle: (15/30)大家一起学Blazor：CSS isolation（隔离）
 originallink: https://ithelp.ithome.com.tw/articles/10264484
 draft: False
 cover: https://img1.dotnet9.com/2021/12/cover_05.png
-albums: 学Blazor
-categories: Blazor
-tags: Blazor Server
+categories: .NET
+tags: Blazor Server,学Blazor
 ---
 
 ## CSS isolation 介绍
@@ -55,5 +54,3 @@ CSS isolation 会在创建时被处理，Blazor 会改写CSS 选择器并产生�
 1. [ASP.NET Core Blazor CSS isolation](https://docs.microsoft.com/en-us/aspnet/core/blazor/components/css-isolation?view=aspnetcore-5.0)
 
 **注：本文代码通过 .NET 6 + Visual Studio 2022重构，可点击原文链接与重构后代码比较学习，谢谢阅读，支持原作者**
-
-- 本文Markdown：[点击浏览](https://github.com/dotnet9/Assets.Dotnet9/blob/main/2021/12/2021-12-18_02.md)

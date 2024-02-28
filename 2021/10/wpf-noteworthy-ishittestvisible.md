@@ -116,5 +116,3 @@ private void StackPanel_Click(object sender, RoutedEventArgs e)
     sb.Begin();
 }
 ```
-
-- 本文Markdown：[点击浏览](https://github.com/dotnet9/Assets.Dotnet9/blob/main/2021/10/2021-10-20_01.md)

@@ -9,7 +9,8 @@ originaltitle: C#使用Objects Comparer进行对象比较
 originallink: https://mp.weixin.qq.com/s/gfPZ-yFtTzFky1Z3I-goUw
 draft: False
 cover: https://img1.dotnet9.com/2022/07/cover_17.jpeg
-categories: .NET相关
+categories: .NET
+tags: .NET
 ---
 
 ## 介绍

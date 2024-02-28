@@ -9,7 +9,8 @@ originaltitle: 项目中常用的19条MySQL优化
 originallink: https://segmentfault.com/a/1190000012155267
 draft: False
 cover: https://img1.dotnet9.com/2022/05/cover_02.png
-categories: MySQL
+categories: 数据库
+tags: MySQL
 ---
 
 在写文章之前，首先感谢 [飞友科技](http://www.variflight.com/) 陆老师提供的文档。。

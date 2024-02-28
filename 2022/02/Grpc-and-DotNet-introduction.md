@@ -9,7 +9,7 @@ originaltitle: gRPC 与.NET 入门
 originallink: https://www.infoq.com/articles/getting-started-grpc-dotnet/、https://www.infoq.cn/article/VutWdcVAGpE5ugdar92q
 draft: False
 cover: https://img1.dotnet9.com/2022/02/cover_01.jpg
-categories: .NET相关
+categories: .NET
 tags: .NET,gRPC
 ---
 
@@ -558,7 +558,3 @@ Mohamad Lawand 是一位坚定的、具有前瞻性的技术架构师，拥有 1
 **原文链接：**
 
 https://www.infoq.com/articles/getting-started-grpc-dotnet/
-
-本文翻译链接
-
-- 本文Markdown：[点击浏览](https://github.com/dotnet9/Assets.Dotnet9/blob/main/2022/02/2022-02-18_01.md)

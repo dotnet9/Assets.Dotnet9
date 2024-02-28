@@ -9,7 +9,8 @@ originaltitle: 使用C#实现23种常见的设计模式
 originallink: https://blog.tokengo.top/blog?id=28
 draft: false
 cover: https://img1.dotnet9.com/2023/06/cover_01.png
-categories: .NET相关
+categories: .NET
+tags: .NET
 ---
 
 设计模式通常分为三个主要类别：

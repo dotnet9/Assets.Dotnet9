@@ -9,7 +9,8 @@ originaltitle: .NET 很好，你可能对它有一些误解
 originallink: https://mp.weixin.qq.com/s/Ri4RbyNKhb5z7IdUGetvPw
 draft: False
 cover: https://img1.dotnet9.com/2022/03/cover_29.png
-categories: .NET相关
+categories: .NET
+tags: .NET
 ---
 
 在 20 年前的 2002 年, 微软公布了下一代的软件、服务的愿景和路线，2 月 13 日，Visual Studio .NET 推出，.NET 开发平台的第一个版本正式向世界发布。

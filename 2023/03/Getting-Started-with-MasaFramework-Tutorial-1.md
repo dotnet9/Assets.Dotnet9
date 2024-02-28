@@ -9,8 +9,8 @@ originaltitle: （1）入门MasaFramework教程
 originallink: https://www.cnblogs.com/hejiale010426/p/17209926.html
 draft: false
 cover: https://img1.dotnet9.com/2023/03/cover_09.png
-categories: Web API
-albums: MASA Framework
+categories: .NET
+tags: MASA Framework
 ---
 
 ## 首先了解一下MasaFramework是什么?

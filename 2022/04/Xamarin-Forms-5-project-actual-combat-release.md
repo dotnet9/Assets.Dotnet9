@@ -9,7 +9,8 @@ originaltitle: Xamarin.Forms 5.0 项目实战发布！
 originallink: https://www.cnblogs.com/zh7791/p/16079409.html
 draft: False
 cover: https://img1.dotnet9.com/2022/04/1305.png
-categories: .NET课程
+categories: 课程
+tags: .NET课程
 ---
 
 ## 活动介绍

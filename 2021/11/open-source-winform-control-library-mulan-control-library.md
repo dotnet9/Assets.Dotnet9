@@ -8,9 +8,8 @@ copyright: Original
 originaltitle: 开源Winform控件库：花木兰控件库
 draft: False
 cover: https://img1.dotnet9.com/2021/11/cover_07.gif
-albums: 开源Winform
 categories: .NET
-tags: C#,Winform,开源
+tags: C#,Winform,开源Winform
 ---
 
 微信好友推荐，挺好看的Winfrom控件库，下面来看看。
@@ -204,5 +203,3 @@ Chart分析：
 - 博客：[https://www.cnblogs.com/tlmbem/](https://www.cnblogs.com/tlmbem/)控件的介绍。
 - 邮箱：1252578118@qq.com，有问题可以发到这个邮箱，我有空会回复你。
 - qq交流群： **180744253** 
-
-- 本文Markdown：[点击浏览](https://github.com/dotnet9/Assets.Dotnet9/blob/main/2021/11/2021-11-22_01.md)

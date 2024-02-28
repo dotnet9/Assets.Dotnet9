@@ -9,7 +9,8 @@ originaltitle: 拉勾网CEO：大厂高薪惯坏了年轻人 互联网泡沫要�
 originallink: https://news.cnblogs.com/n/720119/
 draft: False
 cover: https://img1.dotnet9.com/2022/05/cover_26.jpg
-categories: 职场生活
+categories: 分享
+tags: 职场生活
 ---
 
 近日，拉勾网 CEO 许单单在社交账号上称大厂被裁员工找工作时要求涨薪 30%，简直是被行业惯坏了。

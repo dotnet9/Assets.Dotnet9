@@ -7,7 +7,7 @@ copyright: Original
 originaltitle: 怎么做一个专业的软件安装包？
 draft: False
 cover: https://img1.dotnet9.com/2021/02/cover_04.jpeg
-categories: 软件分享
+categories: 分享
 tags: C#,Winform,WPF,安装包
 ---
 
@@ -174,5 +174,3 @@ C/S客户端开发完成，需要将程序交付给用户，直接压缩发给�
 参考文章：
 - [Advanced Installer 11.0实战教程](https://blog.csdn.net/neweastsun/article/details/43729983)
 - [Advanced Installer 在开始菜单添加卸载选项及设置桌面快捷方式](http://www.360doc.com/showweb/0/0/960057626.aspx)
-
-- 本文Markdown：[点击浏览](https://github.com/dotnet9/Assets.Dotnet9/blob/main/2021/02/2021-02-01_01.md)

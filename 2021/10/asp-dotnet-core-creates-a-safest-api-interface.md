@@ -9,7 +9,7 @@ originaltitle: ASP.NET Core打造一个“最安全”的API接口
 originallink: https://www.cnblogs.com/xuejiaming/p/15384015.html
 draft: False
 cover: https://img1.dotnet9.com/2021/10/cover_01.jpeg
-categories: Web API
+categories: .NET
 tags: 安全,API
 ---
 
@@ -604,5 +604,3 @@ demo：[AspNetCoreSafeApi](https://github.com/xuejmnet/AspNetCoreSafeApi)
 分享本人开发的efcore分表分库读写分离组件,希望为.net生态做一份共享,如果喜欢或者觉得有用请点下star或者赞让更多的人看到
 
 [Gitee Star](https://gitee.com/dotnetchina/sharding-core) 助力dotnet 生态 [Github Star](https://github.com/xuejmnet/sharding-core)
-
-- 本文Markdown：[点击浏览](https://github.com/dotnet9/Assets.Dotnet9/blob/main/2021/10/2021-10-21_01.md)

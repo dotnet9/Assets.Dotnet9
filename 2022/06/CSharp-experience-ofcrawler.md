@@ -9,7 +9,8 @@ originaltitle: C#基于.Net-HtmlAgilityPack库的爬虫初体验
 originallink: https://mp.weixin.qq.com/s/o4YQVRtCKbckf0lmq7oT9w
 draft: False
 cover: https://img1.dotnet9.com/2022/06/cover_09.jpeg
-categories: .NET相关
+categories: .NET
+tags: C#
 ---
 
  ## 讲故事

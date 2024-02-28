@@ -9,9 +9,8 @@ originaltitle: (14/30)大家一起学Blazor：JavaScript interop(互操作)
 originallink: https://ithelp.ithome.com.tw/articles/10263798
 draft: False
 cover: https://img1.dotnet9.com/2021/12/cover_05.png
-albums: 学Blazor
-categories: Blazor
-tags: Blazor Server
+categories: .NET
+tags: Blazor Server,学Blazor
 ---
 
 虽然Blazor 不需要用到JavaScript，但某些已有的js库 还是很方便，不能因为不想用JavaScript 就全部舍弃，Blazor 就提供了调用JavaScript 的方法，这种情况称为JavaScript interoperability(简称JavaScript interop)。这篇就来实现Delete 按钮的提醒窗口，因为删除是很重要的功能，不能让使用者轻轻一按就轻易删除。
@@ -96,5 +95,3 @@ Promise 是前端避不掉的语法，有兴趣的人可以看笔者附上的链
 8. [SweetAlert - upgrading-from-1x](https://sweetalert.js.org/guides/#upgrading-from-1x)
 
 **注：本文代码通过 .NET 6 + Visual Studio 2022重构，SweetAlert使用的2.0版本，和原文出入较大，可点击原文链接与重构后代码比较学习，谢谢阅读。**
-
-- 本文Markdown：[点击浏览](https://github.com/dotnet9/Assets.Dotnet9/blob/main/2021/12/2021-12-16_04.md)

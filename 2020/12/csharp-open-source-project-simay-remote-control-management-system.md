@@ -9,7 +9,6 @@ originaltitle: C#开源项目：SiMay远程控制管理系统
 originallink: https://gitee.com/dotnetchina/SiMayRemoteMonitorOS
 draft: False
 cover: https://img1.dotnet9.com/2020/12/cover_02.jpg
-albums: 开源Winform
 categories: .NET
 tags: Winform,SiMay,开源Winform,远程控制,IOCP,异步通信
 ---
@@ -167,5 +166,3 @@ Bin为编译目录，重新生成后，主控程序将编译到此目录，Bin->
  2. 跨平台的系统管理监控
 
 >- 仓库地址：[SiMay远程控制管理系统](https://gitee.com/dotnetchina/SiMayRemoteMonitorOS)
-
-- 本文Markdown：[点击浏览](https://github.com/dotnet9/Assets.Dotnet9/blob/main/2020/11/2020-12-04_01.md)

@@ -9,7 +9,7 @@ originaltitle: 你在 Docker 中跑 MySQL？恭喜你，好下岗了！
 originallink: https://www.toutiao.com/i6675622107390411276?wid=1640184427889
 draft: False
 cover: https://img1.dotnet9.com/2021/12/cover_31.png
-categories: MySQL
+categories: 数据库
 tags: Docker,MySQL
 ---
 
@@ -82,5 +82,3 @@ MySQL 也不是全然不能容器化。
 >原文作者：老王谈运维
 >
 >原文链接：https://www.toutiao.com/i6675622107390411276?wid=1640184427889
-
-- 本文Markdown：[点击浏览](https://github.com/dotnet9/Assets.Dotnet9/blob/main/2021/12/2021-12-22_01.md)

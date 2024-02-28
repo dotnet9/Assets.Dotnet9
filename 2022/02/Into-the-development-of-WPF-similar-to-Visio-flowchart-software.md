@@ -10,6 +10,7 @@ originallink: https://mp.weixin.qq.com/s/rR8kX7aZCXpgpULRu0ZYdg
 draft: False
 cover: https://img1.dotnet9.com/2022/02/cover_15.jpeg
 categories: .NET
+tags: WPF,Visio
 ---
 
 当你想画一个流程图的时候，你会发现，很多软件要么需要秘钥，要么需要会员，这时我就在想，可不可自己制作一款流程图软件呢？本文以一个简单的小例子，简述如何利用WPF制作属于自己的流程图软件，仅供学习分享使用，如有不足之处，还请指正。

@@ -7,7 +7,7 @@ copyright: Original
 originaltitle: Blazor系列终结！
 draft: False
 cover: https://img1.dotnet9.com/2021/12/cover_45.jpeg
-categories: Blazor
+categories: .NET
 tags: C#,前端,Blazor
 ---
 
@@ -49,5 +49,3 @@ Blazor目前`用的人不多`，从前段时间发文阅读量可以看出来。
 >站长发文系列：见Dotnet9公众号及网站
 >
 >站长Dotnet6重构案例仓库：https://github.com/dotnet9/BlazorDemo
-
-- 本文Markdown：[点击浏览](https://github.com/dotnet9/Assets.Dotnet9/blob/main/2021/12/2021-12-30_01.md)

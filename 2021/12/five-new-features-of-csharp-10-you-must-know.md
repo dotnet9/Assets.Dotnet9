@@ -9,7 +9,7 @@ originaltitle: C# 10 必知的五大新功能
 originallink: https://medium.com/young-coder/a-closer-look-at-5-new-features-in-c-10-f99738b0158e
 draft: False
 cover: https://img1.dotnet9.com/2021/12/cover_11.png
-categories: .NET相关
+categories: .NET
 tags: C# 10
 ---
 
@@ -259,5 +259,3 @@ public string FirstName {get;
 >出品：CSDN（ID：CSDNnews）
 >
 >声明：本文由CSDN翻译，转载请注明来源。
-
-- 本文Markdown：[点击浏览](https://github.com/dotnet9/Assets.Dotnet9/blob/main/2021/12/2021-12-12_01.md)

@@ -9,7 +9,8 @@ originaltitle: C#封装FluentValidation,用了之后通篇还是AbstractValidato
 originallink: https://mp.weixin.qq.com/s/u9xXyFxvpSpPBAMNhfR5Og
 draft: False
 cover: https://img1.dotnet9.com/2022/06/cover_08.jpeg
-categories: .NET相关
+categories: .NET
+tags: C#,FluentValidation
 ---
 
 ## 讲故事

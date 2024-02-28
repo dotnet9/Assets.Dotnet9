@@ -7,7 +7,7 @@ copyright: Original
 originaltitle: MAUI初体验：爽
 draft: False
 cover: https://img1.dotnet9.com/2022/04/cover_18.png
-categories: MAUI
+categories: .NET
 tags: C#开发移动端,多端开发,极致开发体验
 ---
 

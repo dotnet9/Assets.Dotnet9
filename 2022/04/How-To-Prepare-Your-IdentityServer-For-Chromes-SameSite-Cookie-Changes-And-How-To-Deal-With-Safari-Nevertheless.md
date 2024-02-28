@@ -9,7 +9,8 @@ originaltitle: 使用IdentityServer出现过SameSite Cookie这个问题吗？
 originallink: https://www.thinktecture.com/en/identityserver/prepare-your-identityserver/
 draft: False
 cover: https://img1.dotnet9.com/2022/04/cover_41.jpg
-categories: .NET相关
+categories: .NET
+tags: 同源
 ---
 
 >原文作者：Sebastian Gingter

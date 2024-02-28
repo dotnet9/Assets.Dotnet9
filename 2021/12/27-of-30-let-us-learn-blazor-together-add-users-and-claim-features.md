@@ -9,9 +9,8 @@ originaltitle: (27/30)大家一起学Blazor：添加用户和Claim功能
 originallink: https://ithelp.ithome.com.tw/articles/10273602
 draft: False
 cover: https://img1.dotnet9.com/2021/12/cover_05.png
-albums: 学Blazor
-categories: Blazor
-tags: Blazor Server
+categories: .NET
+tags: Blazor Server,学Blazor
 ---
 
 前面说过`ASP.NET Core Identity` 是基于`Claim` 的验证，而`Role` 就是类型为`Role` 的`Claim`，`ASP.NET Framework Identity` 时代只有`Role` 验证，`Claim` 是`ASP.NET Core Identity` 才出现的，目的是为了取得外部程序如`Facebook`、`Twitter` 等等`第三方的授权`，如此一来用户就不用在不同平台注册重复帐号。
@@ -588,5 +587,3 @@ public partial class EditClaimsInUser
 2. [Claim type and claim value in claims policy based authorization in asp net core](https://www.youtube.com/watch?v=I2wgxzLbESA&list=PL6n9fhu94yhVkdrusLaQsfERmL_Jh4XmU&index=98)
 
 **注：本文代码通过 .NET 6 + Visual Studio 2022重构，可点击原文链接与重构后代码比较学习，谢谢阅读，支持原作者**
-
-- 本文Markdown：[点击浏览](https://github.com/dotnet9/Assets.Dotnet9/blob/main/2021/12/2021-12-25_01.md)

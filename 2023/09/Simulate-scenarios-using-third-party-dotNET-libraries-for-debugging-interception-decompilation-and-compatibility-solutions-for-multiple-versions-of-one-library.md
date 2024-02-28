@@ -8,7 +8,7 @@ banner: true
 copyright: Original
 draft: false
 cover: https://img1.dotnet9.com/2023/09/cover_08.png
-categories: .NET相关
+categories: .NET
 tags: dnSpy, Lib.Harmony, 反编译, 拦截, 强签名
 ---
 

@@ -10,9 +10,8 @@ lastmodifyuser: Linluz
 originaltitle: WPF牛逼的动画库：XamlFlair
 draft: False
 cover: https://img1.dotnet9.com/2021/07/cover_05.jpg
-albums: 开源WPF
 categories: .NET
-tags: WPF,动画库,开源
+tags: WPF,动画库,开源WPF
 ---
 
 >原文链接：https://github.com/XamlFlair/XamlFlair
@@ -385,5 +384,3 @@ XamlFlair.Animations.OverrideDefaultSettings(
 原文readme.md太长了，翻译累了，大家有兴趣看原文吧，最后上一图：
 
 ![](https://img1.dotnet9.com/2021/07/0516.gif)
-
-- 本文Markdown：[点击浏览](https://github.com/dotnet9/Assets.Dotnet9/blob/main/2021/07/2021-07-01_01.md)

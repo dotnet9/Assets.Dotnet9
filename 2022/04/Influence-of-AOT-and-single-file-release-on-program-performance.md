@@ -9,7 +9,7 @@ originaltitle: AOT和单文件发布对程序性能的影响
 originallink: https://www.cnblogs.com/InCerry/p/Single-File-And-AOT-Publish.html
 draft: False
 cover: https://img1.dotnet9.com/2022/04/cover_24.jpg
-categories: .NET相关
+categories: .NET
 tags: C#,AOT
 ---
 

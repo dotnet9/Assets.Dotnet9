@@ -11,7 +11,7 @@ originaltitle: 微软用它取代了Nginx吞吐量提升了百分之八十！
 originallink: https://mp.weixin.qq.com/s/PSG4HrJzhybfr2oZWgNuNg
 draft: false
 cover: https://img1.dotnet9.com/2024/01/cover_06.png
-categories: .NET相关
+categories: .NET
 tags: 技术更新
 ---
 

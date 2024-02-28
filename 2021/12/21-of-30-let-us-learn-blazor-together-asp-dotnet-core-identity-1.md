@@ -9,9 +9,8 @@ originaltitle: (21/30)大家一起学Blazor：ASP.NET Core Identity(1)
 originallink: https://ithelp.ithome.com.tw/articles/10268982
 draft: False
 cover: https://img1.dotnet9.com/2021/12/cover_05.png
-albums: 学Blazor
-categories: Blazor
-tags: Blazor Server
+categories: .NET
+tags: Blazor Server,学Blazor
 ---
 
 今天来实现身分验证的部分，笔者此前是用`ASP.NET Core Web API` 搭配`Blazor`，用户第一次成功登录时，在后端将`Role`、`Claim` 等权限储存在`JWT`，将`JWT` 存在浏览器的`LocalStorage` 里面，前端再自己重写`AuthenticationStateProvider`，去检查`LocalStorage` 的`JWT`，接着将`AuthenticationState` 当作`CascadingParameter` 层层传递到各`Component`，这样就不需要不停跟后端交换数据，这是个很宝贵的经验，让笔者对身分验证有深入了解，这次笔者试试看`ASP.NET Core` 自己的`Identity`。
@@ -75,5 +74,3 @@ tags: Blazor Server
 4. [Unable to resolve service for type IEmailSender while attempting to activate RegisterModel](https://stackoverflow.com/questions/52089864/unable-to-resolve-service-for-type-iemailsender-while-attempting-to-activate-reg)
 
 **注：本文代码通过 .NET 6 + Visual Studio 2022重构，可点击原文链接与重构后代码比较学习，谢谢阅读，支持原作者**
-
-- 本文Markdown：[点击浏览](https://github.com/dotnet9/Assets.Dotnet9/blob/main/2021/12/2021-12-22_02.md)

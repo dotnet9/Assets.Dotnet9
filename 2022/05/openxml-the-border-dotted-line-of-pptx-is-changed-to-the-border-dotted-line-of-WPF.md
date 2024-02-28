@@ -9,7 +9,8 @@ originaltitle: 【OpenXml】Pptx的边框虚线转为WPF的边框虚线
 originallink: https://www.cnblogs.com/ryzen/p/15740488.html
 draft: False
 cover: https://img1.dotnet9.com/2022/05/cover_04.jpeg
-categories: OpenXML
+categories: .NET
+tags: OpenXML
 ---
 
 ## 1. 安装Openxml sdk

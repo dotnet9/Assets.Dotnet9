@@ -9,7 +9,8 @@ originaltitle: 劳动仲裁回忆录（八）：二审立案为何耗时5个月�
 originallink: https://mp.weixin.qq.com/s/tnpDQT9shvw8WiQzvbXcmA
 draft: False
 cover: https://img1.dotnet9.com/2022/03/cover_12.jpeg
-categories: 职场生活
+categories: 分享
+tags: 仲裁
 ---
 
 >在前面的篇幅中，我介绍了，自2021年3月2日立案开始劳动仲裁获胜，然后到一审继续获胜。一审之后，公司不服裁决继续上诉。然而二审的立案时间竟然花了近5个月。本文回顾二审立案流程，看完你会明白为何能耗时5个月。

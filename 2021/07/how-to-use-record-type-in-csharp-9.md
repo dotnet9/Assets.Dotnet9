@@ -7,7 +7,7 @@ copyright: Original
 originaltitle: 如何在 C# 9 中使用record类型？
 draft: False
 cover: https://img1.dotnet9.com/2021/07/cover_03.jpg
-categories: .NET相关
+categories: .NET
 tags: C#,Record
 ---
 
@@ -230,5 +230,3 @@ public record DbMetadata
 >Type 'DbMetadata' already defines a member called 'Equals' with the same parameter types
 
 尽管`record`类型是一个类，但 `record` 关键字提供了额外的类似值类型的行为和语义，使`record`与类不同。`record`本身是一种引用类型，但它使用自己的内置相等性检查——相等性是通过值而不是引用来检查的。最后，请注意`record`可以是可变的，但它们主要是为不变性而设计的。
-
-- 本文Markdown：[点击浏览](https://github.com/dotnet9/Assets.Dotnet9/blob/main/2021/07/2021-07-10_02.md)

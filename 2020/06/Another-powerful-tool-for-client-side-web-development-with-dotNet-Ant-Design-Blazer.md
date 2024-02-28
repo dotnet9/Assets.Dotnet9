@@ -8,12 +8,11 @@ banner: true
 originaltitle: .NET进行客户端Web开发又一利器 - Ant Design Blazor
 draft: False
 cover: https://img1.dotnet9.com/2020/06/0109.jpg
-albums: 开源Blazor
-categories: Blazor
-tags: Blazor
+categories: .NET
+tags: Blazor,开源Blazor
 ---
 
-你好，我是Dotnet9，继上篇介绍Bootstrap风格的BlazorUI组件库后，今天我来介绍另一款Blazor UI组件库：一套基于 Ant Design 和 Blazor 的企业级组件库。
+你好，我是沙漠尽头的狼，继上篇介绍Bootstrap风格的BlazorUI组件库后，今天我来介绍另一款Blazor UI组件库：一套基于 Ant Design 和 Blazor 的企业级组件库。
 
 本文导航：
 

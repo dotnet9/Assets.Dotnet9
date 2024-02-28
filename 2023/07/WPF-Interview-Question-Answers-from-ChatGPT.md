@@ -7,7 +7,7 @@ copyright: Original
 draft: false
 cover: https://img1.dotnet9.com/2023/07/cover_08.png
 categories: .NET
-albums: WPF面试题
+tags: WPF面试题
 ---
 
 问题来自[【愚公系列】2023年07月 WPF控件专题 2023秋招WPF高频面试题](https://blog.csdn.net/aa2528877987/article/details/121410927)，回答站长通过ChatGPT重新整理，可对比两者区别学习、整理。

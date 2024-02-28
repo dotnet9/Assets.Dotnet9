@@ -7,7 +7,7 @@ copyright: Original
 originaltitle: 如果诸葛亮会编程，用Java写出师表...
 draft: False
 cover: https://img1.dotnet9.com/2021/03/cover_01.jpeg
-categories: Java
+categories: 更多语言
 tags: Java,出师表
 ---
 
@@ -414,5 +414,3 @@ public static void main(String[] args) {
 今南方已定，兵甲已足，当奖率三军，北定中原，庶竭驽钝，攘除奸凶，兴复汉室, 还于旧都。
 今当远离, 临表涕零, 不知所言。
 ```
-
-- 本文Markdown：[点击浏览](https://github.com/dotnet9/Assets.Dotnet9/blob/main/2021/03/2021-03-19_01.md)

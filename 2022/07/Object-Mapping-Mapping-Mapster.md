@@ -9,7 +9,8 @@ originaltitle: 对象映射 - Mapping.Mapster
 originallink: https://www.cnblogs.com/zhenlei520/p/16324870.html
 draft: False
 cover: https://img1.dotnet9.com/2022/07/cover_05.png
-categories: .NET相关
+categories: .NET
+tags: .NET
 ---
 
 ## 前言

@@ -9,9 +9,8 @@ originaltitle: Xamarin Forms Goodlooking UI
 originallink: https://github.com/jsuarezruiz/xamarin-forms-goodlooking-UI
 draft: False
 cover: https://img1.dotnet9.com/2022/04/images/fishing.webp
-albums: 开源MAUI
-categories: MAUI
-tags: .NET,Xamarin Forms
+categories: .NET
+tags: .NET,Xamarin Forms,MAUI,开源MAUI
 ---
 
 

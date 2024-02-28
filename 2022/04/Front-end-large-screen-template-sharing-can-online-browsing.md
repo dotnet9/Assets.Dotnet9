@@ -8,7 +8,7 @@ originaltitle: 前端大屏模板分享-可在线浏览
 draft: False
 cover: https://img1.dotnet9.com/2022/04/2602.png
 albums: 开源Web
-categories: HTML
+categories: 前端
 tags: 大屏模板,在线浏览
 ---
 

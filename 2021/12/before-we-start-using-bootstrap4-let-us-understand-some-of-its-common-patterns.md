@@ -9,7 +9,7 @@ originaltitle: 要开始使用Bootstrap 4 前，我们先了解几个它的通�
 originallink: https://ithelp.ithome.com.tw/articles/10228808
 draft: False
 cover: https://img1.dotnet9.com/2021/12/cover_02.jpg
-categories: Bootstrap
+categories: 前端
 tags: 前端,Bootstrap 4
 ---
 
@@ -218,5 +218,3 @@ d-inline → display: inline
 参考资料：
 1. [Bootstrap · The most popular HTML, CSS, and JS library in the world.](https://getbootstrap.com/)
 2. [Bootstrap 4 繁体中文手册[六角学院译]](https://bootstrap.hexschool.com/)
-
-- 本文Markdown：[点击浏览](https://github.com/dotnet9/Assets.Dotnet9/blob/main/2021/12/2021-12-06_01.md)

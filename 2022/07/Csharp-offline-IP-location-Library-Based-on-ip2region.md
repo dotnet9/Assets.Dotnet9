@@ -9,7 +9,8 @@ originaltitle: C#-基于ip2region的离线IP定位库
 originallink: https://mp.weixin.qq.com/s/7eW4fQ-A_ZUsUlQD1vv8VQ
 draft: False
 cover: https://img1.dotnet9.com/2022/07/cover_01.jpeg
-categories: .NET相关
+categories: .NET
+tags: .NET
 ---
 
 ## 前言

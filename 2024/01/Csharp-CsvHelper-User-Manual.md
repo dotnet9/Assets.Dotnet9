@@ -11,7 +11,7 @@ originaltitle: 【C#】CsvHelper 使用手册
 originallink: https://www.cnblogs.com/gl1573/p/12922857.html
 draft: false
 cover: https://img1.dotnet9.com/2024/01/cover_08.png
-categories: .NET相关
+categories: .NET
 tags: CSV
 ---
 

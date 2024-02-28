@@ -9,8 +9,8 @@ originaltitle: B站视频：Qt 5.9 C++开发指南
 originallink: https://www.bilibili.com/video/BV1AX4y1w7Nt?spm_id_from=333.999.0.0
 draft: False
 cover: https://img1.dotnet9.com/2022/03/cover_22.png
-categories: Qt
-tags: 视频教程
+categories: 前端,课程
+tags: Qt,视频教程
 ---
 
 今天分享一个B站的C++ Qt视频教程，2021年07月录制的，还是比较新，有需要的朋友可以去看看：[Qt 5.9 C++开发指南](https://www.bilibili.com/video/BV1AX4y1w7Nt?spm_id_from=333.999.0.0)

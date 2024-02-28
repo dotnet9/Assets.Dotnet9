@@ -9,7 +9,8 @@ originaltitle: Flutter应用开发入门指南
 originallink: https://baijiahao.baidu.com/s?id=1727350760917736118&wfr=spider&for=pc
 draft: False
 cover: https://img1.dotnet9.com/2022/05/cover_18.jpeg
-categories: Flutter
+categories: 前端
+tags: Flutter
 ---
 
 >译者：陈峻

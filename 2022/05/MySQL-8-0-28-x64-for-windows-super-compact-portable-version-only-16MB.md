@@ -9,7 +9,8 @@ originaltitle: mysql 8.0.28 x64 for Windows超级精简便携版，仅16MB
 originallink: https://ldqk.xyz/1567?kw=mysql&t=uptl3b9wq874
 draft: False
 cover: https://img1.dotnet9.com/2022/05/cover_23.png
-categories: MySQL
+categories: 数据库
+tags: MySQL
 ---
 
 ![](https://img1.dotnet9.com/2022/05/cover_23.png)

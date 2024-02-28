@@ -9,7 +9,7 @@ originaltitle: 欢迎来到元宇宙的虚拟世界
 originallink: https://mp.weixin.qq.com/s/fgL8WX3JXVYe8NuB7scDGA
 draft: False
 cover: https://img1.dotnet9.com/2022/04/0402.png
-categories: 科技生活
+categories: 分享
 tags: 元宇宙
 ---
 

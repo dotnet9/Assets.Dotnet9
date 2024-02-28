@@ -7,7 +7,7 @@ lastmod: 2023-06-27 23:40:59
 copyright: Original
 draft: false
 cover: https://img1.dotnet9.com/2023/06/cover_14.png
-categories: Blazor
+categories: .NET
 tags: Dotnetools,WASM,Blazor WebAssembly,Client
 ---
 

@@ -5,9 +5,10 @@ description: .NET 8已经有了安装包提供下载，这是一个好消息，�
 date: 2022-08-24 09:17:26
 author: 沙漠尽头的狼
 draft: false
-cover: https://img1.dotnet9.com/2022/08/cover_02.png
-categories: .NET相关
 copyright: Original
+cover: https://img1.dotnet9.com/2022/08/cover_02.png
+categories: .NET
+tags: .NET
 ---
 
 今早在一个技术交流群看到有`.NET 8`的安装交流，站长下载了，把安装过程记录了，总结是：

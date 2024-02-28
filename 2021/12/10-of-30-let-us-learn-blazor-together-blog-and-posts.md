@@ -9,9 +9,8 @@ originaltitle: (10/30)大家一起学Blazor：Blog and Posts
 originallink: https://ithelp.ithome.com.tw/articles/10262250
 draft: False
 cover: https://img1.dotnet9.com/2021/12/cover_05.png
-albums: 学Blazor
-categories: Blazor
-tags: Blazor Server
+categories: .NET
+tags: Blazor Server,学Blazor
 ---
 
 现在我们有一个可以输入日志的界面了，但日志就是每天都要写的意思，只有一篇怎么够呢？我们来加上blog。
@@ -125,5 +124,3 @@ public class BlogBase : ComponentBase
 1. [Employee list blazor component](https://www.youtube.com/watch?v=_vqolzW5emY)
 
 **注：本文代码通过 .NET 6 + Visual Studio 2022重构，可点击原文链接与重构后代码比较学习，谢谢阅读，支持原作者**
-
-- 本文Markdown：[点击浏览](https://github.com/dotnet9/Assets.Dotnet9/blob/main/2021/12/2021-12-14_02.md)

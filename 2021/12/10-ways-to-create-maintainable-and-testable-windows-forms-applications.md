@@ -87,5 +87,3 @@ interface INewUserView
 >转载自微信公众号： OneByOneDotNet
 >
 >公众号文章链接：https://mp.weixin.qq.com/s/ks_ghCRxMmOQPYFib0cb3g
-
-- 本文Markdown：[点击浏览](https://github.com/dotnet9/Assets.Dotnet9/blob/main/2021/12/2021-12-10_03.md)

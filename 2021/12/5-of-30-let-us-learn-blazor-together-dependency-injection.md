@@ -9,9 +9,8 @@ originaltitle: (5/30)大家一起学Blazor：依赖注入(Dependency Injection)
 originallink: https://ithelp.ithome.com.tw/articles/10260278
 draft: False
 cover: https://img1.dotnet9.com/2021/12/cover_05.png
-albums: 学Blazor
-categories: Blazor
-tags: Blazor Server
+categories: .NET
+tags: Blazor Server,学Blazor
 ---
 
 问题来了，为什么Blazor会知道WeatherForecastService在这里可以调用？
@@ -68,5 +67,3 @@ Program.cs改用IWeatherForecastService跟NewWeatherForecastService注册
 **注：由于笔者是在写完这篇之后才想起来生命周期，原本想用git rebase的功能回到这一次的commit新增Demo，但会有git断头疑虑，所以笔者会在day 07再说明生命周期，若有不便敬请见谅。**
 
 **注：本文代码通过 .NET 6 + Visual Studio 2022重构，可点击原文链接与重构后代码比较学习，谢谢阅读，支持原作者**
-
-- 本文Markdown：[点击浏览](https://github.com/dotnet9/Assets.Dotnet9/blob/main/2021/12/2021-12-11_01.md)

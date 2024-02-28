@@ -9,7 +9,8 @@ originaltitle: 你所不知道的 C# 中的细节
 originallink: https://www.cnblogs.com/hez2010/p/12606419.html
 draft: False
 cover: https://img1.dotnet9.com/2022/03/cover_26.png
-categories: .NET相关
+categories: .NET
+tags: C#
 ---
 
 ## 前言

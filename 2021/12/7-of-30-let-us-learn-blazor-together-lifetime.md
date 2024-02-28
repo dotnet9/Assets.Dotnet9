@@ -9,9 +9,8 @@ originaltitle: (7/30)大家一起学Blazor：生命周期(Lifetime)
 originallink: https://ithelp.ithome.com.tw/articles/10261219
 draft: False
 cover: https://img1.dotnet9.com/2021/12/cover_05.png
-albums: 学Blazor
-categories: Blazor
-tags: Blazor Server
+categories: .NET
+tags: Blazor Server,学Blazor
 ---
 
 前面说过自己建立的Service都必须在`Program.cs`注册，但有些基本Service就不用自己做了。
@@ -64,5 +63,3 @@ tags: Blazor Server
 - [ASP.NET Core Blazor dependency injection](https://docs.microsoft.com/en-us/aspnet/core/blazor/fundamentals/dependency-injection?view=aspnetcore-5.0&pivots=server)
 
 **注：本文代码通过 .NET 6 + Visual Studio 2022重构，可点击原文链接与重构后代码比较学习，谢谢阅读，支持原作者**
-
-- 本文Markdown：[点击浏览](https://github.com/dotnet9/Assets.Dotnet9/blob/main/2021/12/2021-12-13_01.md)

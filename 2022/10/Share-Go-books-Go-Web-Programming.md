@@ -7,7 +7,8 @@ copyright: Original
 author: 沙漠尽头的狼
 draft: false
 cover: https://img1.dotnet9.com/cats/cat_go.jpeg
-categories: Go
+categories: 更多语言
+tags: Go
 ---
 
 大家好，我是沙漠尽头的狼。

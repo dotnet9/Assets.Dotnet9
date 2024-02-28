@@ -8,7 +8,8 @@ author: Dream.Machine
 originaltitle: PaddleOCR 训练模型参考
 draft: False
 cover: https://img1.dotnet9.com/2022/03/cover_28.jpeg
-categories: .NET相关
+categories: .NET
+tags: 模式训练
 ---
 
 本文章介绍的是NV显卡训练。CPU训练 仅供参考，部分不同的地方请前往官方网站获取信息。

@@ -9,7 +9,7 @@ originaltitle: 理解ASP.NET Core - 授权(Authorization)
 originallink: https://www.cnblogs.com/xiaoxiaotank/p/16157344.html
 draft: False
 cover: https://img1.dotnet9.com/2022/04/2105.png
-categories: .NET相关
+categories: .NET
 tags: ASP.NET Core,授权,Authorization
 ---
 

@@ -9,9 +9,8 @@ originaltitle: C# WPF 普通登录界面
 originallink: https://www.youtube.com/watch?v=2Nu5zpT6Ezw
 draft: False
 cover: https://img1.dotnet9.com/2020/01/cover_01.png
-albums: WPF Design
 categories: .NET
-tags: Login Window
+tags: WPF Design,Login Window
 ---
 
 >本文只是简单的登录界面布局，没有太重要的功能效果。
@@ -110,7 +109,3 @@ tags: Login Window
 ## 5. 代码下载
 
 Github源码下载：[HelloDotNetCore](https://github.com/Abel13/dotnetcore_login/blob/master/HelloDotNetCore)
-
-本文Markdown地址：[点这](https://github.com/dotnet9/Assets.Dotnet9/blob/main/2020/01/2020-01-07_01.md)
-
-本文博客地址：[点这](https://dotnet9.com/722)

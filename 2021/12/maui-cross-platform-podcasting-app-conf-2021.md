@@ -9,8 +9,7 @@ originaltitle: MAUI 跨平台播客应用程序(Conf 2021)
 originallink: https://mp.weixin.qq.com/s/SqcrRomZyn7bzlNzeWZdrQ
 draft: False
 cover: https://img1.dotnet9.com/2021/12/cover_01.png
-albums: 开源MAUI
-categories: MAUI
+categories: .NET
 tags: MAUI,开源MAUI,Conf 2021
 ---
 
@@ -197,5 +196,3 @@ xmlns:b="clr-namespace:Microsoft.AspNetCore.Components.WebView.Maui;assembly=Mic
 ## 总结
 
 项目已在Github发布, [https://github.com/microsoft/dotnet-podcasts](https://github.com/microsoft/dotnet-podcasts), 更多特性探索源代码。
-
-- 本文Markdown：[点击浏览](https://github.com/dotnet9/Assets.Dotnet9/blob/main/2021/11/2021-12-03_01.md)

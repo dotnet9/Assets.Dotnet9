@@ -9,7 +9,7 @@ originaltitle: 如何处理EF Core的多对多关系？
 originallink: https://softdevpractice.com/blog/many-to-many-ef-core/
 draft: False
 cover: https://img1.dotnet9.com/2021/11/cover_05.jpeg
-categories: EF Core
+categories: .NET
 tags: ORM,EF Core
 ---
 
@@ -185,5 +185,3 @@ db.SaveChanges();
 >原文链接：https://softdevpractice.com/blog/many-to-many-ef-core/
 >
 >翻译：沙漠尽头的狼
-
-- 本文Markdown：[点击浏览](https://github.com/dotnet9/Assets.Dotnet9/blob/main/2021/11/2021-11-02_02.md)

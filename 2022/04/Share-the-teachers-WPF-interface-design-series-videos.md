@@ -7,8 +7,8 @@ copyright: Original
 originaltitle: 分享这位大神的WPF界面设计系列视频
 draft: False
 cover: https://img1.dotnet9.com/2022/04/4005.png
-albums: WPF Design
-categories: .NET
+albums: .NET
+categories: WPF Design
 ---
 
 本文结构：

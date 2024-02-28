@@ -10,7 +10,8 @@ originaltitle: 一篇短文带您了解一下EasyCaching
 originallink: https://www.cnblogs.com/catcher1994/p/10806607.html
 draft: false
 cover: https://img1.dotnet9.com/2023/11/cover_01.png
-categories: .NET相关
+categories: .NET
+tags: .NET
 ---
 
 ## 前言

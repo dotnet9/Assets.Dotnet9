@@ -11,7 +11,7 @@ originaltitle: TIOBE Index for January 2024
 originallink: https://www.tiobe.com/tiobe-index/
 draft: false
 cover: https://img1.dotnet9.com/2024/01/cover_02.png
-categories: .NET相关
+categories: .NET
 tags: 技术更新
 ---
 

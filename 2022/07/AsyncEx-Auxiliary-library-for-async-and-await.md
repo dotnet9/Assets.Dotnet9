@@ -9,7 +9,8 @@ originaltitle: AsyncEx - async/await 的辅助库
 originallink: https://mp.weixin.qq.com/s/WyGsouPOZ-85NQRqpfYZzQ
 draft: False
 cover: https://img1.dotnet9.com/2022/07/cover_10.png
-categories: .NET相关
+categories: .NET
+tags: .NET
 ---
 
 ## 简介

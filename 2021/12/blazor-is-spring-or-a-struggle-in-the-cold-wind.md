@@ -10,7 +10,7 @@ originaltitle: Blazor是春天还是寒风里的挣扎
 originallink: https://www.cnblogs.com/doddgu/p/masa-blazor-0.html
 draft: False
 cover: https://img1.dotnet9.com/2021/12/cover_19.png
-categories: Blazor
+categories: .NET
 tags: Blazor
 ---
 
@@ -288,5 +288,3 @@ Blazor：
 5. https://ssr.vuejs.org/zh/
 
 欢迎加入技术交流群: [MASA Stack](https://qm.qq.com/cgi-bin/qm/qr?k=YqUI_NM-WCWkWxbFpGhdMMx6ghDzUEhH&jump_from=webapi)
-
-- 本文Markdown：[点击浏览](https://github.com/dotnet9/Assets.Dotnet9/blob/main/2021/12/2021-12-16_01.md)

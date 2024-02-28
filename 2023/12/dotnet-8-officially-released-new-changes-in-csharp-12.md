@@ -10,7 +10,7 @@ originaltitle: .NET Core 3.1 升级到 .NET 8
 originallink: https://mp.weixin.qq.com/s/2U4JfJPLa_53ybL2ETAMsw
 draft: false
 cover: https://img1.dotnet9.com/2023/12/cover_01.jpg
-categories: .NET相关
+categories: .NET
 tags: 技术更新
 ---
 

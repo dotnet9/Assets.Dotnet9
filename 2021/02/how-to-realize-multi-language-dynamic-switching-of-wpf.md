@@ -66,5 +66,3 @@ I18nManager.Instance.CurrentUICulture = culture;
 - [Accelerider.Windows](https://github.com/Accelerider/Accelerider.Windows)
 - [TerminalMACS.ManagerForWPF](https://github.com/dotnet9/TerminalMACS.ManagerForWPF)
 - [乐趣课堂（即本号正在做的一个开源项目）](https://github.com/dotnet9/lqclass.com)
-
-- 本文Markdown：[点击浏览](https://github.com/dotnet9/Assets.Dotnet9/blob/main/2021/02/2021-02-17_01.md)

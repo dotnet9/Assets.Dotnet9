@@ -9,7 +9,7 @@ originaltitle: meta 标签到底有什么用？终于有人说出了真相
 originallink: https://juejin.cn/post/6987919006468407309
 draft: False
 cover: https://img1.dotnet9.com/2021/12/cover_34.png
-categories: HTML
+categories: 前端
 tags: HTML,Meta
 ---
 
@@ -300,5 +300,3 @@ base标签包含的属性。
 >链接：https://juejin.cn/post/6987919006468407309
 >
 >来源：稀土掘金
-
-- 本文Markdown：[点击浏览](https://github.com/dotnet9/Assets.Dotnet9/blob/main/2021/12/2021-12-23_01.md)

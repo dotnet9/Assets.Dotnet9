@@ -9,7 +9,8 @@ originaltitle: 【中间件】.NET Core中使用HttpReports进行接口统计，
 originallink: https://mp.weixin.qq.com/s/HGMlp_l30VaJWOnVVq1nxw
 draft: False
 cover: https://img1.dotnet9.com/2022/07/cover_07.png
-categories: .NET相关
+categories: .NET
+tags: .NET
 ---
 
 `HttpReports`  基于`.NET Core` 开发的`APM`监控系统，使用`MIT`开源协议，主要功能包括，统计, 分析, 可视化， 监控，追踪等，适合在微服务环境中使用。

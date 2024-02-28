@@ -266,5 +266,3 @@ ControlzEx 提供``ThemeManager``帮助您为应用程序提供主题管理支�
 ## Licence
 
 MIT
-
-- 本文Markdown：[点击浏览](https://github.com/dotnet9/Assets.Dotnet9/blob/main/2021/06/2021-06-19_02.md)

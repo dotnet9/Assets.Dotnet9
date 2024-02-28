@@ -7,7 +7,7 @@ copyright: Original
 originaltitle: 分享PC微信多开的方法
 draft: False
 cover: https://img1.dotnet9.com/2022/03/cover_21.png
-categories: 技巧分享
+categories: 分享
 tags: 微信多开
 ---
 

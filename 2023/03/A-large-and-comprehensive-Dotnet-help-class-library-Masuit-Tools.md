@@ -9,7 +9,8 @@ originaltitle: 一个大而全的.NET帮助类库-Masuit.Tools
 originallink: https://github.com/ldqk/Masuit.Tools
 draft: false
 cover: https://img1.dotnet9.com/2023/03/cover_03.png
-categories: .NET相关
+categories: .NET
+tags: .NET
 ---
 
 - 仓库地址：https://github.com/ldqk/Masuit.Tools

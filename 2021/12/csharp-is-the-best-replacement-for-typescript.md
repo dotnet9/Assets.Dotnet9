@@ -388,5 +388,3 @@ MessageReceived?.Invoke(message);
 - 很像`C#`，而且标准库很好，但也有许多陷阱（大多数与内存管理有关）。我更希望使用`Rust`，因为它的内存安全性更好，但我的许多工作都要与已有的`C++`代码结合，因此使用`C++`会更容易。
 
 参考链接：https://nate.org/csharp-and-typescript
-
-- 本文Markdown：[点击浏览](https://github.com/dotnet9/Assets.Dotnet9/blob/main/2021/12/2021-12-27_01.md)

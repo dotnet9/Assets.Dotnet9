@@ -9,7 +9,8 @@ originaltitle: 如何将WebAssembly优化到1MB?
 originallink: https://www.cnblogs.com/hejiale010426/p/17076817.html
 draft: false
 cover: https://img1.dotnet9.com/2023/01/0714.png
-categories: Blazor
+categories: .NET
+tags: Blazor,Wasm,WebAssembly
 ---
 
 # Blazor WebAssembly加载优化方案

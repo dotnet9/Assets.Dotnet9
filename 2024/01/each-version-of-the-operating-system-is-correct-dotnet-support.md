@@ -11,7 +11,7 @@ originaltitle: 各版本操作系统对.NET支持情况（1124更新）
 originallink: https://newlifex.com/tech/os_net
 draft: false
 cover: https://img1.dotnet9.com/2024/01/cover_02.png
-categories: .NET相关
+categories: .NET
 tags: 技术更新
 ---
 

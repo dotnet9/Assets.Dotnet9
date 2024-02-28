@@ -10,6 +10,7 @@ originallink: https://mp.weixin.qq.com/s/3nioR2zleQKWWAfkvgOxMg
 draft: false
 cover: https://img1.dotnet9.com/2023/07/0602.png
 categories: .NET
+tags: .NET
 ---
 
 今天推荐一个界面简洁、美观的、支持国际化开源音频播放器。

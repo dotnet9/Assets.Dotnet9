@@ -7,7 +7,7 @@ copyright: Original
 originaltitle: 免费开源Blazor在线Ico转换工具
 draft: False
 cover: https://img1.dotnet9.com/2022/02/cover_13.jpg
-categories: Blazor
+categories: .NET
 tags: .NET 7,Blazor,Ico图标转换,在线工具,免费,开源
 ---
 

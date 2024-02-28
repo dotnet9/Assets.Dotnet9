@@ -7,7 +7,7 @@ copyright: Original
 originaltitle: 最近遇到的问题记录：UrlEncode、UrlDecode
 draft: False
 cover: https://img1.dotnet9.com/2021/01/cover_01.jpeg
-categories: .NET相关
+categories: .NET
 tags: Web API,UrlEncode,UrlDecode
 ---
 
@@ -172,5 +172,3 @@ public static string UrlEncode(string str)
     return (sb.ToString());
 }
 ```
-
-- 本文Markdown：[点击浏览](https://github.com/dotnet9/Assets.Dotnet9/blob/main/2021/01/2021-01-09_01.md)

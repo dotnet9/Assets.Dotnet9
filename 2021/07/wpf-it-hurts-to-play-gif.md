@@ -7,9 +7,8 @@ copyright: Original
 originaltitle: WPF：播放GIF很伤神！
 draft: False
 cover: https://img1.dotnet9.com/2021/07/cover_04.gif
-albums: 开源WPF
 categories: .NET
-tags: WPF,GIF,开源
+tags: WPF,GIF,开源WPF
 ---
 
 # 为WPF播放GIF伤神不？
@@ -70,5 +69,3 @@ ImageBehavior.SetAnimatedSource(img, image);
 - 动画播放完成时可通知，可用于动画完成后做一些特定的事
 - 设计模式下的动画预览（必须明确启用）
 - 支持手动控制动画（暂停/恢复/跳转）
-
-- 本文Markdown：[点击浏览](https://github.com/dotnet9/Assets.Dotnet9/blob/main/2021/07/2021-07-02_01.md)

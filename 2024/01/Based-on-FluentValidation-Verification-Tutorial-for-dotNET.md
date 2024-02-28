@@ -11,7 +11,7 @@ originaltitle: 基于 .NET 的 FluentValidation 验证教程
 originallink: https://www.xcode.me/post/5849
 draft: false
 cover: https://img1.dotnet9.com/2024/01/cover_07.png
-categories: .NET相关
+categories: .NET
 tags: 技术更新
 ---
 

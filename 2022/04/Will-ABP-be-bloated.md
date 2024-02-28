@@ -9,7 +9,8 @@ originaltitle: ABP会臃肿吗
 originallink: https://www.cnblogs.com/jackyfei/p/16063572.html
 draft: False
 cover: https://img1.dotnet9.com/2022/04/cover_34.jpg
-categories: .NET相关
+categories: .NET
+tags: ABP
 ---
 
 ## 1. 有了ABP，还要学其他的框架？

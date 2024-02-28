@@ -8,9 +8,8 @@ copyright: Original
 originaltitle: WPF开源项目：AIStudio.Wpf.AClient
 draft: False
 cover: https://img1.dotnet9.com/2021/07/cover_01.png
-albums: 开源WPF
 categories: .NET
-tags: WPF,Prism,MVVM,ASP.NET Core
+tags: WPF,Prism,MVVM,ASP.NET Core,开源WPF
 ---
 
 ## 介绍
@@ -151,5 +150,3 @@ https://gitee.com/akwkevin/aistudio.-wpf.-diagram
 - 逻辑图
 
 ![逻辑图](https://img1.dotnet9.com/2021/07/0113.png)
-
-- 本文Markdown：[点击浏览](https://github.com/dotnet9/Assets.Dotnet9/blob/main/2021/07/2021-07-25_01.md)

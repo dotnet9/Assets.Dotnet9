@@ -7,7 +7,7 @@ copyright: Original
 originaltitle: C#: 不同的方式检查Null
 draft: False
 cover: https://img1.dotnet9.com/2021/06/cover_03.jpg
-categories: .NET相关
+categories: .NET
 tags: C#
 ---
 
@@ -97,5 +97,3 @@ if (name is not null) { }
 ```
 
 祝您编程愉快！
-
-- 本文Markdown：[点击浏览](https://github.com/dotnet9/Assets.Dotnet9/blob/main/2021/06/2021-06-19_01.md)

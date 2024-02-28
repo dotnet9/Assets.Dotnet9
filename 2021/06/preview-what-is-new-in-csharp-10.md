@@ -9,7 +9,7 @@ originaltitle: 预览 C# 10 的新东西
 originallink: https://www.cnblogs.com/Rwing/p/introducing-csharp-10.html
 draft: False
 cover: https://img1.dotnet9.com/2021/06/cover_05.png
-categories: .NET相关
+categories: .NET
 tags: C#
 ---
 
@@ -159,5 +159,3 @@ class Foo : IFoo
 就个人而言，我喜欢这些变化。我最喜欢的是对命名空间的改变和对接口的改进。总之，未来是光明的 C# 的。嗯嗯... (译注：这里作者玩了一个梗，原文 ``the future is seeing sharp，see sharp`` 发音类似 C# )
 
 谢谢各位，大家再见。
-
-- 本文Markdown：[点击浏览](https://github.com/dotnet9/Assets.Dotnet9/blob/main/2021/06/2021-06-01_01.md)

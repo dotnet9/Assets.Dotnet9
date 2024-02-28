@@ -9,7 +9,8 @@ originaltitle: .Net WebView2 项目，实现 嵌入 WEB 页面 Chromium内核
 originallink: https://blog.csdn.net/i2blue/article/details/124820407
 draft: False
 cover: https://img1.dotnet9.com/2022/05/cover_45.png
-categories: .NET相关
+categories: .NET
+tags: .NET,WebView2
 ---
 
 WebView2 项目得天独厚，有微软操作系统win10以及win11的加持，最起码，生成的项目文件是很小的，我这边是3.6M，相对于CefSharp项目动辄100M的大小来讲，大大降低分发的大小，所以还是值得深入研究一下的。

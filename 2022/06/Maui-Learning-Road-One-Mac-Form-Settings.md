@@ -9,7 +9,8 @@ originaltitle: Maui学习之路(2)-Mac窗体设置
 originallink: https://mp.weixin.qq.com/s/G3hhhl4L3MYi_74_AV_ybg
 draft: False
 cover: https://img1.dotnet9.com/2022/06/0208.png
-categories: MAUI
+categories: .NET
+tags: MAUI
 ---
 
 今天是我开启`Maui`学习之路的第二天，我不是很高兴又能水一篇文章，我只能说这文章真好水。

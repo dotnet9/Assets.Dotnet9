@@ -9,8 +9,8 @@ originaltitle: C# Wpf 个人初学小案例---09设计一个优美的注册界�
 originallink: https://blog.csdn.net/weixin_48239221/article/details/123968073
 draft: False
 cover: https://img1.dotnet9.com/2022/04/1501.png
-albums: WPF Design
 categories: .NET
+tags: WPF Design
 ---
 
 ## 1. 实现效果

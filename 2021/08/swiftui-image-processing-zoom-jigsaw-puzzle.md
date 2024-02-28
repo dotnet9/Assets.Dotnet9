@@ -7,7 +7,7 @@ copyright: Original
 originaltitle: SwiftUI图片处理(缩放、拼图)
 draft: False
 cover: https://img1.dotnet9.com/2021/08/cover_01.jpeg
-categories: SwiftUI
+categories: 前端
 tags: SwiftUI,缩放,拼图
 ---
 
@@ -501,5 +501,3 @@ struct TestImageDemo_Previews: PreviewProvider {
 >参考文章标题：[《MAC图像NSIMAGE缩放、组合、压缩及CIIMAGEREF和NSIMAGE转换处理》](https://www.freesion.com/article/774352759/)
 >
 >参考文章链接：[https://www.freesion.com/article/774352759/](https://www.freesion.com/article/774352759/)
-
-- 本文Markdown：[点击浏览](https://github.com/dotnet9/Assets.Dotnet9/blob/main/2021/08/2021-08-21_01.md)

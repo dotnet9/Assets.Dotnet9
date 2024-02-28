@@ -7,7 +7,7 @@ copyright: Original
 author: 机器人
 draft: false
 cover: https://img1.dotnet9.com/2023/03/cover_03.jpg
-categories: .NET相关
+categories: .NET
 tags: ChatGPT
 ---
 

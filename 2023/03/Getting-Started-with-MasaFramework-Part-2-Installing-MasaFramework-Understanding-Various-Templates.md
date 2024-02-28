@@ -9,8 +9,8 @@ originaltitle: （2）MasaFramework入门第二篇，安装MasaFramework了解�
 originallink: https://www.cnblogs.com/hejiale010426/p/17223279.html
 draft: false
 cover: https://img1.dotnet9.com/2023/03/cover_09.png
-categories: Web API
-albums: MASA Framework
+categories: .NET
+tags: MASA Framework
 ---
 
 ## 安装MasaFramework模板

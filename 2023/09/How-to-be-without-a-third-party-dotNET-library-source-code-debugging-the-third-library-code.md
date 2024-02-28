@@ -6,7 +6,8 @@ date: 2023-09-21 22:00:19
 copyright: Original
 draft: false
 cover: https://img1.dotnet9.com/2023/09/cover_06.gif
-categories: .NET相关
+categories: .NET
+tags: .NET
 ---
 
 大家好，我是沙漠尽头的狼。

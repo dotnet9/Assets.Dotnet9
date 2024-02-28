@@ -9,7 +9,8 @@ originaltitle: EasyNetQ-用于使用 RabbitMQ 的 .NET API开源的工具库
 originallink: https://mp.weixin.qq.com/s/hBDvEe9E8k2M0cv_8Y9h2w
 draft: False
 cover: https://img1.dotnet9.com/2022/07/cover_24.png
-categories: .NET相关
+categories: .NET
+tags: .NET
 ---
 
 ## Part1介绍

@@ -7,7 +7,8 @@ banner: true
 copyright: Original
 draft: False
 cover: https://img1.dotnet9.com/2022/11/0402.png
-categories: Avalonia UI
+categories: .NET
+tags: 跨平台,桌面,Avalonia UI
 ---
 
 ![](https://img1.dotnet9.com/2022/11/0402.png)

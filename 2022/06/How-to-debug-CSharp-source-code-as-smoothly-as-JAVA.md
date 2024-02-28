@@ -9,7 +9,8 @@ originaltitle: 像JAVA一样流畅调试C#源代码？
 originallink: https://www.cnblogs.com/gtxck/articles/16423094.html
 draft: False
 cover: https://img1.dotnet9.com/2022/06/cover_21.png
-categories: .NET相关
+categories: .NET
+tags: Java
 ---
 
 ## 起因

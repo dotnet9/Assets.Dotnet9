@@ -9,7 +9,8 @@ originaltitle: Vue3.2 setup语法糖总结
 originallink: https://segmentfault.com/a/1190000041849882
 draft: False
 cover: https://img1.dotnet9.com/2022/05/cover_48.jpg
-categories: Vue
+categories: 前端
+tags: Vue
 ---
 
 ## 前言

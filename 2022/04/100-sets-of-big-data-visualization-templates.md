@@ -11,7 +11,7 @@ originallink: https://gitee.com/iGaoWei/big-data-view
 draft: False
 cover: https://img1.dotnet9.com/2022/04/2801.gif
 albums: 开源Web
-categories: HTML
+categories: 前端
 tags: 大屏模板,在线浏览
 ---
 
