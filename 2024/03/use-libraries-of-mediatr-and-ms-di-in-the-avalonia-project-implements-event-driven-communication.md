@@ -1,12 +1,12 @@
 ---
 title: 在Avalonia项目中使用MediatR和MS.DI库实现事件驱动通信
 slug: use-libraries-of-mediatr-and-ms-di-in-the-avalonia-project-implements-event-driven-communication
-description: 在C#开发过程中，我们经常需要处理各种事件，有时候还需要动态地注册第三方库定义的事件。今天，我将为大家分享一个关于如何动态注册第三方库事件的Demo，并根据提供的代码和注释，详细讲解每一步骤。
+description: AvaloniaUI是一个强大的跨平台.NET客户端开发框架，让开发者能够针对Windows、Linux、macOS、Android和iOS等多个平台构建应用程序。在构建复杂的应用程序时，模块化和组件间的通信变得尤为重要。Prism框架提供了模块化的开发方式，支持插件的热拔插，而MediatR则是一个实现了中介者（Mediator）模式的事件订阅发布框架，非常适合用于模块之间以及模块与主程序之间的通信。
 date: 2024-03-02 09:57:26
-lastmod: 2024-03-02 13:45:27
+lastmod: 2024-03-02 15:45:27
 copyright: Original
 draft: false
-cover: https://img1.dotnet9.com/2024/02/cover_01.png
+cover: https://img1.dotnet9.com/2024/03/cover_01.png
 categories: .NET
 tags: AvaloniaUI,MediatR
 ---
@@ -21,9 +21,9 @@ AvaloniaUI是一个强大的跨平台.NET客户端开发框架，让开发者能
 
 ![](https://img1.dotnet9.com/2024/03/0103.png)
 
-## 0. 基础知识准备
+## 0. 基础知识准备-MediatR的基本用法
 
-`MediatR` 的基本用法，`MediatR`中有两种消息传递的方式：
+`MediatR`中有两种消息传递的方式：
 
 - `Request/Response`，用于一个单独的Handler。
 - `Notification`，用于多个Handler。
@@ -74,42 +74,7 @@ namespace CodeWF.Tools.Desktop;
 
 public class App : PrismApplication
 {
-    public override void Initialize()
-    {
-        AvaloniaXamlLoader.Load(this);
-        base.Initialize(); // <-- Required
-    }
-
-    protected override void ConfigureModuleCatalog(IModuleCatalog moduleCatalog)
-    {
-        base.ConfigureModuleCatalog(moduleCatalog);
-
-        moduleCatalog.AddModule<SlugifyStringModule>();
-        moduleCatalog.AddModule<FooterModule>();
-    }
-
-    protected override void ConfigureRegionAdapterMappings(RegionAdapterMappings regionAdapterMappings)
-    {
-        base.ConfigureRegionAdapterMappings(regionAdapterMappings);
-        regionAdapterMappings.RegisterMapping(typeof(StackPanel), Container.Resolve<StackPanelRegionAdapter>());
-        regionAdapterMappings.RegisterMapping(typeof(Grid), Container.Resolve<GridRegionAdapter>());
-        regionAdapterMappings.RegisterMapping(typeof(TabControl), Container.Resolve<TabControlAdapter>());
-    }
-
-    protected override AvaloniaObject CreateShell()
-    {
-        return Container.Resolve<MainWindow>();
-    }
-
-    protected override void RegisterTypes(IContainerRegistry containerRegistry)
-    {
-        var container = containerRegistry.GetContainer();
-        // Views - Generic
-        containerRegistry.Register<MainWindow>();
-
-        containerRegistry.RegisterSingleton<INotificationService, NotificationService>();
-        containerRegistry.RegisterSingleton<IClipboardService, ClipboardService>();
-    }
+    // 省略了模块注入等和主题无关的代码，有兴趣源码在文末可查
 
     /// <summary>
     /// 1、DryIoc.Microsoft.DependencyInjection低版本可不要这个方法（5.1.0及以下）
@@ -176,7 +141,7 @@ public class App : PrismApplication
 
 ## 3. MediatR2种传递方式
 
-有了前面的基础知识准备，我们添加类库工程`CodeWF.Tools.MediatR.Notifications`，添加请求定义：
+有了前面的基础知识准备，我们添加类库工程`CodeWF.Tools.MediatR.Notifications`，并添加请求定义（主工程及模块的响应处理程序需要实现）：
 
 ```csharp
 public class TestRequest : IRequest<string>
@@ -197,6 +162,8 @@ public class TestNotification : INotification
 请求和通知定义结构一样，只有一个字符串参数，只是实现接口不同。
 
 ## 4. 添加处理程序
+
+示例工程结构如下，因为该开源项目（文末链接）写在站长的AvaloniaUI桌面工具工程，本文只关注如下图3个工程即可：
 
 ![程序结构](https://img1.dotnet9.com/2024/03/0106.png)
 
@@ -252,7 +219,9 @@ public class TestNotificationHandler(INotificationService notificationService) :
 }
 ```
 
-## 5. 请求和通知触发
+几个响应处理程序类定义类似：收到请求时，返回格式化字符串；收到通知时，弹出提示表明当前是哪个位置收到的通知，便于演示效果。
+
+## 5. 请求和通知演示
 
 触发操作我们写在模块【CodeWF.Tools.Modules.SlugifyString】中，在模块的ViewModel类里通过依赖注入获取请求和通知的发送者实例ISender和IPublisher：
 
@@ -263,6 +232,8 @@ namespace CodeWF.Tools.Modules.SlugifyString.ViewModels;
 
 public class SlugifyViewModel : ViewModelBase
 {
+    // 省略别名转换相关逻辑代码，源码文末查看
+    
     private readonly INotificationService _notificationService;
     private readonly IClipboardService? _clipboardService;
     private readonly ITranslationService? _translationService;
@@ -291,19 +262,29 @@ public class SlugifyViewModel : ViewModelBase
 }
 ```
 
-界面按钮触发调用ISender.Send发出请求并得到响应，通过IPublisher.Publish发出通知，程序运行效果：
+点击`测试MediatR-Request`按钮触发调用`ISender.Send`发出请求并得到响应，通过点击`测试MediatR-Notification`按钮触发调用`IPublisher.Publish`发出通知。
 
-请求效果：虽然在主工程和模块工程都注册了一个响应，但只有主工程被触发：
-
-![](https://img1.dotnet9.com/2024/03/0101.gif)
-
-通知效果：在主工程和模块工程都注册了一个响应，都被触发：
+请求效果：
 
 ![](https://img1.dotnet9.com/2024/03/0101.gif)
 
-代码并未贴全，但核心原理就是这样，欢迎留言交流。
+看上面的请求效果：虽然在主工程和模块工程都注册了一个响应，但只有主工程被触发。
 
-## 6. 参考
+通知效果：
+
+![](https://img1.dotnet9.com/2024/03/0102.gif)
+
+在主工程和模块工程都注册了一个通知响应，所以两个处理程序都弹出了提示。
+
+## 6. 总结
+
+### 为什么使用MediatR，而未使用Prism的事件聚合器？
+
+站长开发工具做了在线版(https://blazor.dotnet9.com)，也做了跨平台桌面版本（AvaloniaUI），两个版本使用MediatR可以复用大部分事件代码。
+
+### 参考
+
+文中写了主要代码，但可能缺失部分细节，源码链接如下，欢迎留言交流。
 
 参考文章：[MediatR 在 .NET 应用中的实践](https://yimingzhi.net/2021/12/mediatr-zai-dotnet-ying-yong-zhong-de-shi-jian)
 
