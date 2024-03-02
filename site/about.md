@@ -2,117 +2,40 @@
 
 <p align="center">
   <a href="https://dotnet9.com">
-    <img src="https://img1.dotnet9.com/site/logo.png" width="128" height="128" alt="Dotnet9">
+    <img src="https://img1.dotnet9.com/site/CodeWF//logo.png" width="128" height="128" alt="Dotnet9">
   </a>
 </p>
-
-<h1 align="center">Dotnet9</h1>
+<h1 align="center">码界工坊</h1>
 
 <div align="center">
 
-一个使用`Dotnet 8`开发的`博客`系统，一直在开发中...
+一个使用`Dotnet 9`开发的`博客`+`在线工具箱`系统，一直在开发中...
 
- ![dotnet-version](https://img.shields.io/badge/.NET%208.0-blue)  ![Visual Studio 2022](https://img.shields.io/badge/Visual%20Studio%20-2022-blueviolet)  <a target="_blank" href="https://qm.qq.com/cgi-bin/qm/qr?k=iL6egdGSGCMPezcUyzMPEcs9qsllgwr-&jump_from=webapi"><img border="0" src="https://pub.idqqimg.com/wpa/images/group.png" alt="Dotnet9软件技术交流" title="Dotnet9软件技术交流"></a> [![码云](https://img.shields.io/badge/Gitee-%E7%A0%81%E4%BA%91-orange)](https://gitee.com/dotnet9/Dotnet9)   [![Github](https://img.shields.io/badge/%20-github-%2324292e)](https://github.com/dotnet9/Dotnet9) [![Github stars](https://img.shields.io/github/stars/dotnet9/Dotnet9)](https://github.com/dotnet9/Dotnet9)
+ ![dotnet-version](https://img.shields.io/badge/.NET%209.0-blue)  ![Visual Studio 2022](https://img.shields.io/badge/Visual%20Studio%20-2022-blueviolet)  <a target="_blank" href="https://qm.qq.com/cgi-bin/qm/qr?k=iL6egdGSGCMPezcUyzMPEcs9qsllgwr-&jump_from=webapi"><img border="0" src="https://pub.idqqimg.com/wpa/images/group.png" alt="Dotnet9软件技术交流" title="Dotnet9软件技术交流"></a> [![码云](https://img.shields.io/badge/Gitee-%E7%A0%81%E4%BA%91-orange)](https://gitee.com/dotnet9/Dotnet9)   [![Github](https://img.shields.io/badge/%20-github-%2324292e)](https://github.com/dotnet9/Dotnet9) [![Github stars](https://img.shields.io/github/stars/dotnet9/Dotnet9)](https://github.com/dotnet9/Dotnet9)
 
  </div>
 
  ## 0. 最新开发情况
 
-- [x] 前台前端
-  1. [x] 使用Vue3 + Typescript + Vuetify + Pinia搭建前台
-  2. [x] 已有功能：文章列表、分类文章列表、专辑文章列表、标签云、文章详情、文章评论、归档、留言、关于等
-  3. [ ] 还有很多功能待开发，比如隐私、评论管理等
-- [x] 后台前端
-  1. [x] 使用Vue3 + Typescript + Vuetify + Pinia搭建
-  2. [x] 基础表的CRUD
-  5. [ ] 其他功能
-- [x] 后端
-  1. [x] 使用.NET 8 + Furion + SqlSugar + PostgreSQL搭建
-  3. [x] 提供前后台前端接口-基础表的接口管理
-  4. [ ] 根据前台和后台前端的功能迭代，进行维护中
-
+- [x] 导航站
+  1. [x]Razor Pages
+- [x] IT Tools
+  1. [x]开源Vue工具箱
+- [x] 博客站
+  1. [x]Razor Pages
 - [x] Dotnet工具箱
-  1. [x] 参考[it-tools](https://github.com/CorentinTh/it-tools)使用 [Vue 3.0](https://vue3js.cn/) 搭建。
-  2. [x] 目前有10大分类，在线74个小工具
+  1. [x] Blzor
 
-## 1. Python之禅
+建此站目的在于分享以Dotnet为主的技术类文章，希望以此平台与更多的程序员朋友交流技术，祝愿Dotnet社区发展越来越好。 
 
-介绍本人及本站之前，我们看看 Python 之禅，在 Python Shell 中输入 import this 命令，显示内容就是 Python 之禅，见下文：
-
-```shell
-The Zen of Python, by Tim Peters
-Beautiful is better than ugly.
-Explicit is better than implicit.
-Simple is better than complex.
-Complex is better than complicated.
-Flat is better than nested.
-Sparse is better than dense.
-Readability counts.
-Special cases aren’t special enough to break the rules.
-Although practicality beats purity.
-Errors should never pass silently.
-Unless explicitly silenced.
-In the face of ambiguity, refuse the temptation to guess.
-There should be one– and preferably only one –obvious way to do it.
-Although that way may not be obvious at first unless you’re Dutch.
-Now is better than never.
-Although never is often better than right now.
-If the implementation is hard to explain, it’s a bad idea.
-If the implementation is easy to explain, it may be a good idea.
-Namespaces are one honking great idea — let’s do more of those!
-```
-
-```shell
-Python 之禅 by Tim Peters
-优美胜于丑陋。
-明了胜于晦涩。
-简洁胜于复杂。
-复杂胜于凌乱。
-扁平胜于嵌套。
-宽松胜于紧凑。
-可读性很重要。
-即便是特例，也不可违背这些规则。
-不要捕获所有错误，除非你确定需要这样做。
-如果存在多种可能，不要猜测。
-通常只有唯一一种是最佳的解决方案。
-虽然这并不容易，因为你不是 Python 之父。
-做比不做要好，但不假思索就动手还不如不做。
-如果你的方案很难懂，那肯定不是一个好方案，反之亦然。
-命名空间非常有用，应当多加利用。
-```
-
-## 2. 关于本站
-
-站长平时忙于编程和带娃，建此站目的如下：
-
-1. 对编程技术进行一些积累总结
-
-## 3. 站长简介
-
-你好，我是本站（https://dotnet9.com）站长“沙漠尽头的狼”。
-
-本人从事Dotnet开发12年，建此站目的在于分享以Dotnet为主的技术类文章，希望以此平台与更多的程序员朋友交流技术，祝愿Dotnet社区发展越来越好。 
-
-89年Dotnet程序猿一枚，C#高级工程师。
-
-### 3.1 技能特长
-
-1. 编程语言：C#，C++;
-2. 后端应用开发：.NET;
-3. 桌面应用开发：WPF，Winform，Qt;
-4. 前端应用开发：Vue，React;
-5. 移动端应用开发：MAUI;
-6. 数据库：PostgreSQL（PGSQL），MySQL，SQL Server，SQLite，Oracle，Access，Redis;
-7. ORM框架：EF Core，SqlSugar，Dapper
-
-## 4. 联系站长
+## 1. 联系
 
 技术交流群
 
 1. 添加站长个人微信(dotnet9com)加入微信群。
 
-| ![站长微信号](https://img1.dotnet9.com/site/wechatowner.jpg) | ![公众号1](https://img1.dotnet9.com/site/wechatpublic.jpg) | ![公众号2](https://img1.dotnet9.com/lequ.co/8cm.jpg) |
-| ------------------------------------------------------------ | ---------------------------------------------------------- | ---------------------------------------------------- |
+| ![站长微信号](https://img1.dotnet9.com/site/wechatowner.jpg) | ![公众号1](https://img1.dotnet9.com/site/wechatpublic.jpg) | ![公众号2](https://img1.dotnet9.com/site/wechatpublic.jpg) |
+| ------------------------------------------------------------ | ---------------------------------------------------------- | ---------------------------------------------------------- |
 
 2. QQ群：771992300
 
