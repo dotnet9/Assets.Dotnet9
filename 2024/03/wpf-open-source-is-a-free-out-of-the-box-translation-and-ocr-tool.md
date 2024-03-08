@@ -105,4 +105,4 @@ WPF 是一个强大的桌面应用程序框架，用于构建具有丰富用户�
 
 **更多项目实用功能和特性欢迎前往项目开源地址查看👀，别忘了给项目一个Star支持💖。**
 
-https://github.com/ZGGSONG/STranslate
+[https://github.com/ZGGSONG/STranslate](https://github.com/ZGGSONG/STranslate)
