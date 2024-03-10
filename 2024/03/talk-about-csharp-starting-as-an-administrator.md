@@ -14,7 +14,7 @@ copyright: Contributes
 
 banner: false
 
-author: 段xx
+author: nobody
 
 originaltitle: 谈谈C# 以管理员方式启动实现过程
 
@@ -32,7 +32,7 @@ tags: 管理员
 
 ## 前言
 
-本文由网友(@段xx)投稿，欢迎留言技术讨论。
+本文由网友(@nobody)投稿，欢迎留言技术讨论。
 
 以管理员方式不只是简单的启动一个进程，在实际开发过程中遇到的情况可能会复杂的多。比如用户打开应用程序就是以管理员方式启动的，那这个时候就不需要再以管理员方式自启；比如用户是在无人值守的情况下使用，就需要考虑管理员提权的提示行为，只有在”不提示，直接提升“的情况下才以管理员方式启动；比如管理员启动方式会进行传递，比如应用A以管理员方式启动，那应用A启动应用B通常情况下，应用B默认获取了应用A的管理员权限等。
 
@@ -110,7 +110,7 @@ public static bool IsInAdminGroup()
     WindowsIdentity windowsIdentity = WindowsIdentity.GetCurrent();
     WindowsPrincipal windowsPrincipal = new WindowsPrincipal(windowsIdentity);
     var claims = windowsPrincipal.Claims;
-    //声明集合中有用户组的信息，s-1-5-32-544代码管理员组
+    //声明集合中有用户组的信息，S-1-5-32-544代表管理员组
     return claims.Any(c => c.Type == "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/denyonlysid" && c.Value == "S-1-5-32-544");
 }
 ```
