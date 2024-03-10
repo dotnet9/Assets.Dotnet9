@@ -1,34 +1,18 @@
-\---
-
+---
 title: 谈谈C# 以管理员方式启动实现过程
-
 slug: talk-about-csharp-starting-as-an-administrator
-
 description: 以管理员方式不只是简单的启动一个进程，在实际开发过程中遇到的情况可能会复杂的多。
-
 date: 2024-03-10 21:47:12
-
 lastmod: 2024-03-10 22:05:27
-
 copyright: Contributes
-
 banner: false
-
 author: nobody
-
 originaltitle: 谈谈C# 以管理员方式启动实现过程
-
 draft: False
-
 cover: https://img1.dotnet9.com/2024/03/cover_05.png
-
 categories: .NET
-
 tags: 管理员
-
-\---
-
-
+---
 
 ## 前言
 
