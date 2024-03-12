@@ -5,6 +5,11 @@
     "RouteName": "dotnet" 
   },
   {
+    "Sort":11,
+    "DisplayName": "Python",
+    "RouteName": "python" 
+  },
+  {
     "Sort":20,
     "DisplayName": "前端",
     "RouteName": "frontend"
