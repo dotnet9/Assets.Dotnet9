@@ -19,7 +19,7 @@ NetBeauty2是一个开源的.NET依赖库整理工具，它的主要作用是在
 
 项目仓库地址：[https://github.com/nulastudio/NetBeauty2](https://github.com/nulastudio/NetBeauty2)
 
-下图为优化后输出目录：
+下图为优化后输出目录（.NET运行时及引用依赖库移到`libraries`目录，目录名可配置）：
 
 ![](https://img1.dotnet9.com/2024/03/after_beauty.png)
 
@@ -27,7 +27,7 @@ NetBeauty2是一个开源的.NET依赖库整理工具，它的主要作用是在
 
 ![](https://img1.dotnet9.com/2024/03/after_beauty_with_hiddens.png)
 
-再来对比下未使用前输出目录（震撼吧！）：
+再来对比下未使用前输出目录（震撼吧！.NET运行时及相关依赖库全放在了根输出目录，.NET Framework可以配置`privatePath`，.NET Core可没那么方便）：
 
 ![](https://img1.dotnet9.com/2024/03/before_beauty.png)
 
@@ -111,7 +111,7 @@ dotnet add package nulastudio.NetBeauty
 
 ### 3.2. 如果应用已经发布？
 
-如果你的应用程序已经发布，可以这样使用：
+如果你的应用程序已经发布，可以这样使用（站长没试过，这可以做为发布后补偿措施）：
 
 ```shell
 Usage:
@@ -160,8 +160,16 @@ dotnet tool install --global nulastudio.nbeauty
 >
 > 推荐开源控件库：[irihitech/Semi.Avalonia](https://github.com/irihitech/Semi.Avalonia)，[irihitech/Ursa.Avalonia](https://github.com/irihitech/Ursa.Avalonia)
 
+## 5. 总结
+
+林德熙大佬分享过类似的包[NuGet Gallery | dotnetCampus.PublishFolderCleaner 3.11.1](https://www.nuget.org/packages/dotnetCampus.PublishFolderCleaner)，但该库说明只在Windows发布支持，大家可以对比使用，原文链接：[PublishFolderCleaner 让你的 dotnet 应用发布文件夹更加整洁 - lindexi - 博客园 (cnblogs.com)](https://www.cnblogs.com/lindexi/p/15423277.html)，再次给出本文介绍库NetBeauty2开源地址：
+
+项目仓库地址：[https://github.com/nulastudio/NetBeauty2](https://github.com/nulastudio/NetBeauty2)
+
 参考：
 
 - [nulastudio/NetBeauty2: Move a .NET Framework/.NET Core app runtime components and dependencies into a sub-directory and make it beauty. (github.com)](https://github.com/nulastudio/NetBeauty2)
 
 - [路遥工具箱 .NET 6.0 独立部署时优化目录结构-码农很忙 (coderbusy.com)](https://www.coderbusy.com/archives/2301.html)
+
+- [PublishFolderCleaner 让你的 dotnet 应用发布文件夹更加整洁 - lindexi - 博客园 (cnblogs.com)](https://www.cnblogs.com/lindexi/p/15423277.html)
