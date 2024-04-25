@@ -2,8 +2,8 @@
 title: 分享文档结构化标注平台的集成实践
 slug: share-the-integration-practice-of-document-structured-annotation-platform
 description: 随着信息技术的快速发展，数字化转型已经成为各行各业发展的必然趋势。在航天设计领域，数字化建设也得到了广泛的重视和应用。航天总体设计单位作为航天行业的重要组成部分，其数字化建设对于提升航天产业的核心竞争力具有重要意义。笔者将结合实际项目经历，详细介绍航天总体设计单位的数字化现状，包括数据类型、非结构化数据的治理难度以及自然语言处理技术在非结构化数据处理场景下的典型应用。
-date: 2017-01-14 09:14:26
-lastmod: 2017-01-15 14:29:05
+date: 2020-03-15 09:14:26
+lastmod: 2020-03-15 14:29:05
 copyright: Reprinted
 banner: false
 author: 佚名
