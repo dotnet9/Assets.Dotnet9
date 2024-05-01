@@ -1,9 +1,9 @@
 ---
 title: 轻松使用Aspire RabbitMQ
 slug: easy-to-use-aspire-rabbitmq
-description: Aspire 是微软基金会推出的新一代云原生编排框架
+description: .NET Aspire是微软推出的一个技术栈，旨在简化云原生应用的开发和管理。
 date: 2024-05-01 21:56:40
-lastmod: 2024-05-01 22:26:27
+lastmod: 2024-05-01 22:38:43
 copyright: Contributes
 author: Sky.楚子航
 originaltitle: 轻松使用aspire rabbitmq
