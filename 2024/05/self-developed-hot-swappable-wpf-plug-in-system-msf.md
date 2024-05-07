@@ -11,7 +11,7 @@ originaltitle: 自研可热插拔的WPF插件系统(MSF)
 originallink: https://mp.weixin.qq.com/s/j7PIlfScHtzUZHB8ouT4lw
 draft: false
 cover: https://img1.dotnet9.com/2024/05/0202.png
-categories: WPF
+categories: .NET
 tags: 插件系统,MSF
 ---
 
