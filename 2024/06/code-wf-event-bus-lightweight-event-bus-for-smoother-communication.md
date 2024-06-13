@@ -3,20 +3,20 @@ title: CodeWF.EventBus：轻量级事件总线，让通信更流畅
 slug: code-wf-event-bus-lightweight-event-bus-for-smoother-communication
 description: CodeWF.EventBus，一款灵活的事件总线库，实现模块间解耦通信。支持多种.NET项目类型，如WPF、WinForms、ASP.NET Core等。采用简洁设计，轻松实现事件的发布与订阅。通过有序的消息处理，确保事件得到妥善处理。简化您的代码，提升系统可维护性。
 date: 2024-06-10 08:04:26
-lastmod: 2024-06-10 10:28:27
+lastmod: 2024-06-13 21:09:47
 copyright: Original
 draft: false
 cover: https://img1.dotnet9.com/2024/06/cover_01.png
 categories: .NET
-tags: NetBeauty2,输出目录,干净,清爽
+tags: C#,事件总线,EventBus
 ---
 
 ## 1. CodeWF.EventBus
 
 EventBus(事件总线)，用于解耦模块之间的通讯。本库（[CodeWF.EventBus](https://www.nuget.org/packages?q=CodeWF.EventBus)）适用于进程内消息传递（无其他外部依赖），与大家普遍使用的[MediatR](https://github.com/jbogard/MediatR)通知功能类似，但[MediatR](https://github.com/jbogard/MediatR)库侧重于[ASP.NET Core](https://learn.microsoft.com/zh-cn/aspnet/core/?view=aspnetcore-9.0)设计使用，本库优势：
 
-1. 设计可在各种模板项目使用，如WPF、Winform、Avalonia UI、ASP.NET Core等。
-2. 支持使用了IOC容器的项目，当然也支持未使用任何IOC容器的模板项目。
+1. 设计可在各种模板项目使用，如 WPF、Winform、Avalonia UI、ASP.NET Core 等。
+2. 支持使用了 IOC 容器的项目，当然也支持未使用任何 IOC 容器的模板项目。
 3. 参考[MASA Framework](https://docs.masastack.com/framework/tutorial/mf-part-3#section-69828ff0)增强消息处理能力：
 
 ```CSharp
@@ -57,13 +57,13 @@ public class MessageHandler
 
 ## 2. 怎么使用事件总线？
 
-首先请搜索NuGet包`CodeWF.EventBus`并安装，下面细说使用方法。
+首先请搜索 NuGet 包`CodeWF.EventBus`并安装，下面细说使用方法。
 
 ### 2.1. 添加事件总线
 
-#### 2.1.1. 使用了IOC
+#### 2.1.1. 使用了 IOC
 
-如果是ASP.NET Core程序，比如MVC、Razor Pages、Blazor Server等，，在`Program`中添加如下代码：
+如果是 ASP.NET Core 程序，比如 MVC、Razor Pages、Blazor Server 等，，在`Program`中添加如下代码：
 
 ```csharp
 // ....
@@ -84,10 +84,10 @@ EventBusExtensions.UseEventBus((t) => app.Services.GetRequiredService(t), typeof
 // ...
 ```
 
-- `AddEventBus`方法会扫描传入的程序集列表，将标注`Event`特性的类下又标注`EventHandler`特性方法的类采用单例方式注入IOC容器。
-- `UseEventBus`方法会将上一步注入的类通过IOC单例获取到实例，将实例的消息处理方法注册到消息管理队列中去，待收到消息发布时，会从消息管理队列中查找消息处理方法并调用，达到消息通知的功能。
+- `AddEventBus`方法会扫描传入的程序集列表，将标注`Event`特性的类下又标注`EventHandler`特性方法的类采用单例方式注入 IOC 容器。
+- `UseEventBus`方法会将上一步注入的类通过 IOC 单例获取到实例，将实例的消息处理方法注册到消息管理队列中去，待收到消息发布时，会从消息管理队列中查找消息处理方法并调用，达到消息通知的功能。
 
-如果使用的其他IOC，比如WPF中使用了Prism框架，写法如下：
+如果使用的其他 IOC，比如 WPF 中使用了 Prism 框架，写法如下：
 
 ```csharp
 protected override void RegisterTypes(IContainerRegistry containerRegistry)
@@ -95,11 +95,11 @@ protected override void RegisterTypes(IContainerRegistry containerRegistry)
     IContainer? container = containerRegistry.GetContainer();
 
     // ...
-    
+
     // Register EventBus
     EventBusExtensions.AddEventBus(
         (t1,t2)=> containerRegistry.RegisterSingleton(t1,t2),
-        t=> containerRegistry.RegisterSingleton(t), 
+        t=> containerRegistry.RegisterSingleton(t),
         typeof(App).Assembly);
 
     // ...
@@ -109,15 +109,15 @@ protected override void RegisterTypes(IContainerRegistry containerRegistry)
 }
 ```
 
-根据IOC注册单例、获取服务的API不同，做相应修改即可。
+根据 IOC 注册单例、获取服务的 API 不同，做相应修改即可。
 
-#### 2.1.2. 未使用IOC
+#### 2.1.2. 未使用 IOC
 
-未使用IOC容器，比如默认的WPF、Winform、AvaloniaUI、控制台程序不包含IOC容器，不做事件服务注册操作。
+未使用 IOC 容器，比如默认的 WPF、Winform、AvaloniaUI、控制台程序不包含 IOC 容器，不做事件服务注册操作。
 
 ### 2.2. 定义消息（事件类型）
 
-首先定义消息类，即需要发布或订阅的事件类型，消息需要继承自`CodeWF.EventBus.Message`：
+消息即需要发布或订阅的事件类型，消息需要继承自`CodeWF.EventBus.Message`：
 
 ```CSharp
 public class CreateProductMessage : CodeWF.EventBus.Message
@@ -188,14 +188,14 @@ public class MessageHandler
 }
 ```
 
-- 类`MessageHandler`添加了`Event`特性，在IOC注入时标识为可以做为单例注入。
+- 类`MessageHandler`添加了`Event`特性，在 IOC 注入时标识为可以做为单例注入。
 - 标注了`EventHandler`特性的方法拥有处理消息的能力，该方法只能有一个事件类型参数。
 
-使用IOC容器的程序会自动将标注`Event`特性的类做为单例注入容器，事件总线收到消息通知时自动查找标注`EventHandle`特性的方法进行调用，达到消息通知的功能。
+使用 IOC 容器的程序会自动将标注`Event`特性的类做为单例注入容器，事件总线收到消息通知时自动查找标注`EventHandle`特性的方法进行调用，达到消息通知的功能。
 
 #### 2.3.2. 手动订阅
 
-对于未标注`Event`特性的类，可手动注册消息处理程序，如下图是未使用IOC，手动注册示例：
+对于未标注`Event`特性的类，可手动注册消息处理程序，如下图是未使用 IOC，手动注册示例：
 
 ```csharp
 internal class MessageHandler
@@ -248,7 +248,7 @@ internal class MessageHandler
 }
 ```
 
-使用了IOC，可以注入`IMessenger`服务替换`Messenger.Default`使用，`Messenger`是`IMessenger`接口的默认实现，`Messenger.Default`是单例引用。
+使用了 IOC，可以注入`IMessenger`服务替换`Messenger.Default`使用，`Messenger`是`IMessenger`接口的默认实现，`Messenger.Default`是单例引用。
 
 ```csharp
 public class MessageTestViewModel : ViewModelBase
@@ -270,7 +270,7 @@ public class MessageTestViewModel : ViewModelBase
 }
 ```
 
-手动订阅可以在WPF的ViewModel中使用（代码如上），也可以在IOC其他生命周期的服务中使用：
+手动订阅可以在 WPF 的 ViewModel 中使用（代码如上），也可以在 IOC 其他生命周期的服务中使用：
 
 ```csharp
 public class TimeService : ITimeService
@@ -361,13 +361,20 @@ public class MessageTestViewModel : ViewModelBase
 
 ## 3. 总结
 
-CodeWF.EventBus，一款灵活的事件总线库，实现模块间解耦通信。支持多种.NET项目类型，如Avalonia UI、WPF、WinForms、ASP.NET Core等。采用简洁设计，轻松实现事件的发布与订阅。通过有序的消息处理，确保事件得到妥善处理。
+CodeWF.EventBus，一款灵活的事件总线库，实现模块间解耦通信。支持多种.NET 项目类型，如 Avalonia UI、WPF、WinForms、ASP.NET Core 等。采用简洁设计，轻松实现事件的发布与订阅。通过有序的消息处理，确保事件得到妥善处理。
 
 简化您的代码，提升系统可维护性。
 
-立即体验CodeWF.EventBus，让事件处理更加高效！
+立即体验 CodeWF.EventBus，让事件处理更加高效！
 
-仓库地址是https://github.com/dotnet9/CodeWF.EventBus，开发过程中参考不少开源项目，他们是：
+仓库地址 https://github.com/dotnet9/CodeWF.EventBus，具体使用可参考Demo如下：
+
+1. 控制台：[ConsoleDemo](https://github.com/dotnet9/CodeWF.EventBus/tree/main/src/ConsoleDemo)
+2. WPF: [WPFDemo](https://github.com/dotnet9/CodeWF.EventBus/tree/main/src/WPFDemo)
+3. AvaloniaUI + Prism：[Tools.CodeWF](https://github.com/dotnet9/Tools.CodeWF/tree/prism-modules)
+4. Web API：[WebAPIDemo](https://github.com/dotnet9/CodeWF.EventBus/tree/main/src/WebAPIDemo)
+
+开发过程中参考不少开源项目，他们是：
 
 1. [Messenger | MvvmCross](https://www.mvvmcross.com/documentation/plugins/messenger?scroll=1000)
 2. [Prism.Events](https://github.com/PrismLibrary/Prism/tree/master/src/Prism.Events)
