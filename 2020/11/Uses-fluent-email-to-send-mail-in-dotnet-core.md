@@ -343,8 +343,3 @@ public async Task<IActionResult> SendEmail([FromServices]IFluentEmail email)
 ## 总结
 
 关于FluentEmail的基本使用方式我们就介绍到这里，我个人感觉它自身的功能还是非常强大的，而且使用起来非常的简单。说实话在之前我没接触到FluentEmail之前，我经常在园子里看到其他语言集成发送邮件的组件，确实非常强大，比如在springboot中集成spring-boot-starter-mail真的是非常的便捷。后来无意中接触到了FluentEmail心里还是蛮欣慰的，一是它强大的功能和易用性，其次是可以去结合.Net Core进一步优化了它的使用方式，至少在.Net和.Net Core中我们也拥有一款非常便捷的邮件发送组件。FluentEmail的作者也呼吁更多的开发者能够了解并参与到FluentEmail开发和实践中去，最后再次贴上它的GitHub地址https://github.com/lukencode/FluentEmail，有兴趣的可以去了解学习一下顺便别忘了给个Star。
-
-
-👇欢迎扫码关注我的公众号👇 
-
-![](https://img1.dotnet9.com/2020/11/0301.png)

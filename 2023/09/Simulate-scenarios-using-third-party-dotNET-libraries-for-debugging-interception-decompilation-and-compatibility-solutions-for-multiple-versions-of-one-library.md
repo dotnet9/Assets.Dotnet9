@@ -839,15 +839,10 @@ copy "$(ProjectDir)Lib\Lib.Harmony\2.2.2\0Harmony.ref" "$(ProjectDir)Lib\Lib.Har
 
 ## 6. 总结
 
-- 技术交流加群请添加站长微信号：dotnet9com
-- 文中示例代码：[MultiVersionLibrary](https://github.com/dotnet9/TerminalMACS.ManagerForWPF/tree/master/src/Demo/MultiVersionLibrary)
+文中示例代码：[MultiVersionLibrary](https://github.com/dotnet9/TerminalMACS.ManagerForWPF/tree/master/src/Demo/MultiVersionLibrary)
 
 > 文中案例写的一般，特别是第二个陷阱，有兴趣可以阅读游戏相关代码，提PR大家一起切磋，把这个案例写的更合理、更有趣、更好玩一点，能让第二个陷阱写一些好玩的特效，拦截后实现不同的效果，这才是拦截的乐趣。
 
 本文通过一个模拟实际案例，帮助大家应用前两篇文章中涉及的技能(`dnSpy`调试第三方库和`Lib.Harmony`拦截第三方库)，并且介绍一种支持多个版本的库的兼容性解决方案。
 
 通过本文介绍支持多个版本的库的兼容性解决方案，读者可以简单了解如何反编译第三方库，以及如何使用强签名技术来保证库的兼容性（和安全性，本文未展开说，可以阅读此文[浅谈.NET程序集安全签名]([浅谈.NET程序集安全签名 - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/26125837))）。希望本文提供的案例能帮助读者更好地理解和应用这些技能。
-
-谢谢您阅读到这，可以关注【Dotnet9】微信公众号，大家技术交流、保持进步：
-
-![](https://img1.dotnet9.com/site/wechatpublic.jpg)

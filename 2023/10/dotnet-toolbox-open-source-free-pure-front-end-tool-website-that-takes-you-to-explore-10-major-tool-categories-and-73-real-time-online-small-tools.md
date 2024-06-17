@@ -351,7 +351,3 @@ slug 清楚地说明了网页的内容，它可以改善用户的体验。
 >纠正Dotnet工具箱中文翻译、提Issue、提PR都请访问：https://github.com/dotnet9/Dotnet9
 >
 >技术交流加群请添加站长微信号：dotnet9com
-
-谢谢您阅读到这，可以关注【Dotnet9】微信公众号，一起技术交流、共同进步：
-
-![](https://img1.dotnet9.com/site/wechatpublic.jpg)
