@@ -3,7 +3,7 @@ title: CodeWF.EventBus：轻量级事件总线，让通信更流畅
 slug: code-wf-event-bus-lightweight-event-bus-for-smoother-communication
 description: CodeWF.EventBus，一款灵活的事件总线库，实现模块间解耦通信。支持多种.NET项目类型，如WPF、WinForms、ASP.NET Core等。采用简洁设计，轻松实现命令的发布与订阅、请求与响应。通过有序的事件处理，确保事件得到妥善处理。简化您的代码，提升系统可维护性。
 date: 2024-06-10 08:04:26
-lastmod: 2024-06-17 21:36:29
+lastmod: 2024-06-20 13:02:17
 copyright: Original
 draft: false
 cover: https://img1.dotnet9.com/2024/06/cover_01.png
@@ -62,12 +62,12 @@ protected override void RegisterTypes(IContainerRegistry containerRegistry)
     // ...
 
     // Register EventBus
-    EventBusExtensions.AddEventBus();
+    containerRegistry.AddEventBus();
 
     // ...
 
     // Use EventBus
-    EventBusExtensions.UseEventBus();
+    container.UseEventBus();
 }
 ```
 
