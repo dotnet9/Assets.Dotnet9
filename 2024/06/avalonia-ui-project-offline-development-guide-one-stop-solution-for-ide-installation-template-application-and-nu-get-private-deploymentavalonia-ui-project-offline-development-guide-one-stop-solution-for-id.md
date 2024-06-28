@@ -93,11 +93,11 @@ OK，这就算部署完成了，复制图中的标红的URL地址：`http://loca
 
 ![](https://img1.dotnet9.com/2024/06/0211.png)
 
-点击`Upload a package`:
+点击`Upload a package`，切换到了NuGet包上传命令说明:
 
 ![](https://img1.dotnet9.com/2024/06/0212.png)
 
-我们以`.NET CLI`上传NuGet包举例，首先准备NuGet文件，比如从`[NuGet Gallery | Packages matching avalonia](https://www.nuget.org/packages?q=avalonia)`下载Avalonia UI的基础包：
+我们以`.NET CLI`上传NuGet包举例，首先准备NuGet文件，比如从[NuGet](https://www.nuget.org/packages?q=avalonia)下载Avalonia UI的基础包：
 
 ![](https://img1.dotnet9.com/2024/06/0213.png)
 
@@ -121,7 +121,7 @@ dotnet nuget push -s http://localhost:5000/v3/index.json avalonia.11.1.0-rc1.nup
 
 NuGet首页也能搜索到了：
 
-![](https://img1.dotnet9.com/2024/06/0217.png)
+![](https://img1.dotnet9.com/2024/06/0218.png)
 
 ## 6. 总结
 
