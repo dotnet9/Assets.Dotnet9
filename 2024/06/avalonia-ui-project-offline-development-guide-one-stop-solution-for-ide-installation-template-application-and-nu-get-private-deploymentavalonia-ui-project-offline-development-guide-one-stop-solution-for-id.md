@@ -3,7 +3,7 @@ title: AvaloniaUI项目离线开发全攻略：IDE安装、模板应用与NuGet�
 slug: avalonia-ui-project-offline-development-guide-one-stop-solution-for-ide-installation-template-application-and-nu-get-private-deployment
 description: 本文将指导您如何在本地网络环境中成功安装并配置AvaloniaUI所需的工具和模板。
 date: 2024-06-27 21:13:32
-lastmod: 2024-06-27 23:29:47
+lastmod: 2024-06-28 22:26:47
 copyright: Original
 draft: false
 cover: https://img1.dotnet9.com/2024/06/cover_02.png
@@ -87,6 +87,44 @@ OK，这就算部署完成了，复制图中的标红的URL地址：`http://loca
 
 ![](https://img1.dotnet9.com/2024/06/0210.png)
 
-## 5. 总结
+## 5. NuGet上传
 
-本文介绍了如何在本地网络环境中成功安装并配置AvaloniaUI所需的开发工具和模板，以及如何部署私有NuGet服务以便团队内部成员之间共享和管理NuGet包。希望这些信息能对您的AvaloniaUI项目开发有所帮助。至于NuGet包的制作、上传需要您从其他途径学习（比如百度），如有其他问题，欢迎随时向我提问。
+至于NuGet包的上传就简单了，打开NuGet首页`http://localhost:5000`:
+
+![](https://img1.dotnet9.com/2024/06/0211.png)
+
+点击`Upload a package`:
+
+![](https://img1.dotnet9.com/2024/06/0212.png)
+
+我们以`.NET CLI`上传NuGet包举例，首先准备NuGet文件，比如从`[NuGet Gallery | Packages matching avalonia](https://www.nuget.org/packages?q=avalonia)`下载Avalonia UI的基础包：
+
+![](https://img1.dotnet9.com/2024/06/0213.png)
+
+![](https://img1.dotnet9.com/2024/06/0214.png)
+
+下载好以后，在当前下载目录打开CMD命令行输入：
+
+```shell
+dotnet nuget push -s http://localhost:5000/v3/index.json avalonia.11.1.0-rc1.nupkg
+```
+
+![](https://img1.dotnet9.com/2024/06/0215.png)
+
+上面提示NuGet服务配置了密钥，我们为了简单，先停止NuGet服务，打开它的配置文件`appsettings.json`，清空`ApiKey`节点值，再运行NuGet服务：
+
+![](https://img1.dotnet9.com/2024/06/0216.png)
+
+再执行上传命令，现在成功了：
+
+![](https://img1.dotnet9.com/2024/06/0217.png)
+
+NuGet首页也能搜索到了：
+
+![](https://img1.dotnet9.com/2024/06/0217.png)
+
+## 6. 总结
+
+本文介绍了如何在本地网络环境中成功安装并配置AvaloniaUI所需的开发工具和模板，以及如何部署私有NuGet服务并上传NuGet包以便团队内部成员之间共享和管理NuGet包。希望这些信息能对您的AvaloniaUI项目开发有所帮助。
+
+至于NuGet包的制作需要您从其他途径学习（比如百度，站长的事件总线开源项目[CodeWF.EventBus](https://github.com/dotnet9/CodeWF.EventBus)也有NuGet配置，发布时可直接生成NuGet包），如有其他问题，欢迎随时向我提问。
