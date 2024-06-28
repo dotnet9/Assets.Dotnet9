@@ -168,6 +168,6 @@ NuGet首页也能搜索到了：
 
 ## 8. 总结
 
-本文介绍了如何在本地网络环境中成功安装并配置AvaloniaUI所需的开发工具和模板，以及如何部署私有NuGet服务并上传NuGet包以便团队内部成员之间共享和管理NuGet包。希望这些信息能对您的AvaloniaUI项目开发有所帮助。
+本文介绍了如何在本地网络环境中成功安装并配置AvaloniaUI所需的开发工具和模板，以及如何部署私有NuGet服务并制作及上传NuGet包以便团队内部成员之间共享和管理NuGet包。
 
-至于NuGet包的制作需要您从其他途径学习（比如百度，站长的事件总线开源项目[CodeWF.EventBus](https://github.com/dotnet9/CodeWF.EventBus)也有NuGet配置，发布时可直接生成NuGet包），如有其他问题，欢迎随时向我提问。
+希望这些信息能对您的AvaloniaUI项目开发有所帮助。如有其他问题，欢迎随时向我提问。
