@@ -3,7 +3,7 @@ title: 各版本操作系统对.NET支持情况
 slug: each-version-of-the-operating-system-is-correct-dotnet-support
 description: 借助虚拟机和测试机，检测各版本操作系统对.NET的支持情况。安装操作系统后，实测安装相应运行时并能够运行星尘代理为通过。
 date: 2024-01-13 15:51:26
-lastmod: 2024-01-13 16:13:28
+lastmod: 2024-06-29 14:01:10
 banner: true
 copyright: Reprinted
 author: 大石头
@@ -19,6 +19,8 @@ tags: 技术更新
 
 安装操作系统后，实测安装相应运行时并能够运行星尘代理为通过。
 
+
+
 测试平台：VMware Workstation
 
 镜像来源：[MSDN, 我告诉你 - 做一个安静的工具站 (itellyou.cn)](https://msdn.itellyou.cn/)
@@ -27,6 +29,14 @@ tags: 技术更新
 
 - [.NET Framework 版本和依赖关系](https://learn.microsoft.com/zh-cn/dotnet/framework/migration-guide/versions-and-dependencies)
 - [.NET Framework 系统要求](https://learn.microsoft.com/zh-cn/dotnet/framework/get-started/system-requirements)
+
+
+
+# 安装dotNet
+
+参考[《[LuckyClover\]新生命团队dotNet安装神器》](https://newlifex.com/blood/luckyclover)
+
+
 
 # WinXP系列
 
@@ -73,6 +83,8 @@ win7能够安装net7，但是占用内存很大，空白应用启动起码占500
 | Windows 2012    | .NET4.5   | 支持              | 支持    | 支持。需vc++2019         |
 | Windows 2012 R2 | .NET4.5.1 | 支持。需KB2919355 | 支持    | 失败。缺vc++2019但装不上 |
 
+
+
 # Win10/Win11系列
 
 | 操作系统             | 自带       | .NET4.8 | NET7 | NET8 | AOT8 |
@@ -86,27 +98,30 @@ win7能够安装net7，但是占用内存很大，空白应用启动起码占500
 | Windows 2019 UP2020  |            |         |      |      | 支持 |
 | Windows 2022         |            |         |      |      |      |
 
+
+
 # Linux系列
 
 | 操作系统               | Mono      | NET3.1 | NET6 | NET7 | NET8 | NativeAOT | 备注                |
 | ---------------------- | --------- | ------ | ---- | ---- | ---- | --------- | ------------------- |
-| Deepin 20              | Mono 5.18 |        | 支持 | 支持 |      | 支持      | 容易                |
+| Deepin 20              | Mono 5.18 |        | 支持 | 支持 | 支持 | 支持      | 容易                |
 | Ubuntu 16              |           |        |      |      | 支持 |           |                     |
 | Ubuntu 18              |           |        |      |      | 支持 |           |                     |
-| Ubuntu 20              | Mono 6.8  |        | 支持 | 支持 |      | 支持      | 较容易              |
-| Debian 11              | Mono 6.8  |        | 支持 | 支持 |      | 支持      |                     |
-| CentOS 7.6             |           |        |      |      | 支持 |           | NET8需替换libstdC++ |
+| Ubuntu 20              | Mono 6.8  |        | 支持 | 支持 | 支持 | 支持      | 较容易              |
+| Debian 11              | Mono 6.8  |        | 支持 | 支持 | 支持 | 支持      |                     |
+| CentOS 7.6             |           |        |      |      | 支持 |           | NET8需替换libstdc++ |
 | CentOS 8               |           |        |      |      |      |           |                     |
 | Kali 2022.3            | Mono 6.12 | 支持   | 支持 | 支持 |      | 支持      | 自带.NETCore3.1     |
 | Fedora 37              |           |        | 支持 | 支持 |      | 支持      |                     |
 | UOS 20 Home            | Mono 5.18 |        | 支持 | 支持 |      | 支持      |                     |
 | UOS 20 Pro Arm64       |           |        |      | 支持 |      |           | HUAWEI Kunpeng 920  |
 | UOS 20 Pro Mips64      |           | 支持   | 失败 | 失败 |      | 失败      | Loongson-3          |
-| openKylin              | Mono 6.12 |        | 支持 | 支持 |      | 支持      | 容易                |
-| NeoKylin7              |           |        | 支持 | 支持 |      | 支持      |                     |
+| openKylin              | Mono 6.12 |        | 支持 | 支持 | 支持 | 支持      | 容易                |
+| NeoKylin7              |           |        | 支持 | 支持 | 支持 | 支持      | NET8需替换libstdc++ |
 | Keylin Desktop V10 SP1 | Mono 6.12 |        | 支持 | 支持 |      | 支持      |                     |
 | Keylin Server V10 SP1  | Mono 6.12 |        | 支持 | 支持 |      | 支持      |                     |
 | Kylin V10 SP1          |           |        |      | 支持 |      |           | Phytium,FT-2000+/64 |
+| Linx V6                |           |        |      |      | 支持 |           | NET8需替换libstdc++ |
 | SmartOS A4             |           |        | 支持 | 支持 | 支持 |           |                     |
 
 感谢 [@_well](https://www.yuque.com/_well) 在UOS上的支持
@@ -159,5 +174,5 @@ win7能够安装net7，但是占用内存很大，空白应用启动起码占500
 | Windows 11                     | .NET Framework 4.8               | Latest                         |
 
 - 作者：大石头
-- 发布：2023-11-24 08:11:07
+- 发布：*2024-06-19 14:32:05*
 - 原文链接：[各版本操作系统对.NET支持情况（1124更新） (newlifex.com)](https://newlifex.com/tech/os_net)
