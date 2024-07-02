@@ -579,7 +579,7 @@ namespace Dotnet9Playground
 
 #### 5.2.2. 新创建目录
 
-低版本不变（存在位置依然放输出目录的根目录），为了兼容，我们把高版本改目录存放，比如：`Lib/Lib.Harmony/2.2.2/0Harmony.dll`，将库按目录结构存放在工程`Dotnet9HookHigh`中：
+低版本不变（存储位置依然放输出目录的根目录），为了兼容，我们把高版本改目录存放，比如：`Lib/Lib.Harmony/2.2.2/0Harmony.dll`，将库按目录结构存放在工程`Dotnet9HookHigh`中：
 
 ![](https://img1.dotnet9.com/2023/09/0819.png)
 
