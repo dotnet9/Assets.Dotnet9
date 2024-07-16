@@ -164,5 +164,5 @@ https://dotnet9.com/2023/10/ant-groups-language-sparrow-collapses-how-to-avoid-s
 
 站长会持续更新网站源码及文章内容，欢迎大家关注：https://dotnet9.com
 
-- 微信技术交流群：dotnet9com（加站长拉群聊）
+- 微信技术交流群：codewf（加站长拉群聊）
 - QQ技术交流群：771992300

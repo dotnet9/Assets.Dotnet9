@@ -566,7 +566,7 @@ internal static class CacheFileHelper
 
 - [CefSharp](https://cefsharp.github.io/)
 
-- 微信技术交流群：添加微信（dotnet9com）备注“入群”
+- 微信技术交流群：添加微信（codewf）备注“入群”
 - QQ技术交流群：771992300。
 
 ![](https://img1.dotnet9.com/site/knowledgeplanet.jpg)

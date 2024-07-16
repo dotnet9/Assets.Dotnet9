@@ -91,7 +91,7 @@ Dotnet9网站的重构，不仅提高了网站的性能和用户体验，还采�
 ## 技术交流
 
 - 微信公众号如下：Dotnet9
-- 微信技术交流群：添加微信（dotnet9com）备注“入群”
+- 微信技术交流群：添加微信（codewf）备注“入群”
 - QQ技术交流群：771992300。
 
 ![](https://img1.dotnet9.com/site/knowledgeplanet.jpg)

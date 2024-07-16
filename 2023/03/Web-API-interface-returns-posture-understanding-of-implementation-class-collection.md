@@ -144,7 +144,7 @@ public abstract class PersonBase
 
 如果您有更好的方式欢迎留言探讨。
 
-- 微信技术交流群：添加微信（dotnet9com）备注“入群”
+- 微信技术交流群：添加微信（codewf）备注“入群”
 - QQ技术交流群：771992300。
 
 ![](https://img1.dotnet9.com/site/knowledgeplanet_youhui.png)

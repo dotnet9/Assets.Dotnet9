@@ -256,7 +256,7 @@ C#传递Json对象给JS的方法：蓝色方框内，点击WPF按钮`C#传递Jso
 - [CefSharp](https://cefsharp.github.io/)
 - [关于CefSharp中C#与JS函数互相调用的应用](https://www.cnblogs.com/guhunjun/p/16229083.html)
 
-- 微信技术交流群：添加微信（dotnet9com）备注“入群”
+- 微信技术交流群：添加微信（codewf）备注“入群”
 - QQ技术交流群：771992300。
 
 ![](https://img1.dotnet9.com/site/knowledgeplanet.jpg)

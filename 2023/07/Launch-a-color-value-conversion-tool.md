@@ -128,5 +128,5 @@ public static Color? ParseRGBA(string color)
 - 本工具地址：[Blazor Server版](https://dotonet9.com/tools/rgb)， [Blazor Wasm版](https://dotnetools.com/tools/rgb)
 - 网站源码及Issue：[源码](https://github.com/dotnet9/Dotnet9)，[Issue](https://github.com/dotnet9/Dotnet9/issues)
 - .NET版本： [.NET 8.0.0-preview.5.23280.8](https://dotnet.microsoft.com/zh-cn/download/dotnet/8.0)
-- 微信技术群：添加站长微信（dotnet9com），一定要备注【入群】2个字
+- 微信技术群：添加站长微信（codewf），一定要备注【入群】2个字
 - QQ技术群：771992300

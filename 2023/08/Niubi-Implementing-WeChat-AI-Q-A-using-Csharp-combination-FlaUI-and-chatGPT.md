@@ -476,6 +476,6 @@ public interface IChat
 
 技术交流添加QQ群：771992300
 
-或扫站长微信加入微信技术交流群：
+或扫站长微信(codewf，备注“加群”)加入微信技术交流群：
 
 ![](https://img1.dotnet9.com/site/wechatowner.jpg)

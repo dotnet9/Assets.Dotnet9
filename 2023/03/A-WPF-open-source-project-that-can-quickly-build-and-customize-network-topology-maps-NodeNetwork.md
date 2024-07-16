@@ -328,7 +328,5 @@ NodeNetwork是一个非常实用和灵活的C# WPF开源项目，它可以帮助
 
 这些操作在 GitHub 页面上非常受欢迎：错误报告、补丁、功能请求、拉取请求...
 
-- 微信技术交流群：添加微信（dotnet9com）备注“入群”
+- 微信技术交流群：添加微信（codewf）备注“入群”
 - QQ技术交流群：771992300。
-
-![](https://img1.dotnet9.com/site/knowledgeplanet2023.jpg)

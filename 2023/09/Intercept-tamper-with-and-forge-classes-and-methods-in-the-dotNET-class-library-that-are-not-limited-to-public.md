@@ -339,7 +339,7 @@ HookGetValidNumber.StartHook();
 
 ## 4. 总结
 
-- 技术交流加群请添加站长微信号：dotnet9com
+- 技术交流加群请添加站长微信号：codewf
 - 文中示例代码：[MultiVersionLibrary](https://github.com/dotnet9/TerminalMACS.ManagerForWPF/tree/master/src/Demo/MultiVersionLibrary)
 
 使用`Lib.Harmony`库拦截注册有两种方式的用处如下：
