@@ -35,21 +35,39 @@ tags: .NET 9,AOT,X86,Win7,XP,SP1
 
 Winform都可以 x86 aot运行..
 
-![](https://img1.dotnet9.com/2024/07/0706.png)
+![](https://img1.dotnet9.com/2024/07/0707.png)
+
+Winform工程配置如下：
+
+![](https://img1.dotnet9.com/2024/07/0710.png)
 
 ## XP支持（理论）
 
-XP存在理论上运行可能行，网友反馈XP还不能直接运行：
+目前测试可运行控制台程序：
 
 ![](https://img1.dotnet9.com/2024/07/0703.png)
+
+网友得出结论：
+
+![](https://img1.dotnet9.com/2024/07/0711.png)
 
 XP需要链接YY-Thunks，参考链接：https://github.com/Chuyu-Team/YY-Thunks
 
 ![](https://img1.dotnet9.com/2024/07/0704.png)
 
-有尝试成功的朋友可以联系站长完善这篇文章，另外大家可关注YY-Thunks这个ISSUE：https://github.com/Chuyu-Team/YY-Thunks/issues/66
+大家可关注YY-Thunks这个ISSUE：https://github.com/Chuyu-Team/YY-Thunks/issues/66
 
 ![](https://img1.dotnet9.com/2024/07/0708.png)
+
+
+
+控制台支持XP的工程配置如下：
+
+![](https://img1.dotnet9.com/2024/07/0712.jpg)
+
+网友心得：
+
+![](https://img1.dotnet9.com/2024/07/0713.png)
 
 ## 小知识分享
 
