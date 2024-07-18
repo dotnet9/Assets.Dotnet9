@@ -3,7 +3,7 @@ title: 好消息：NET 9 X86 AOT的突破 - 支持老旧Win7与XP环境
 slug: good-news-breakthrough-in-net-9-x86-aot-supports-old-win7-and-xp-environments
 description: .NET 9开始，X86 AOT支持Win7和XP，不仅仅只支持SP1版本
 date: 2024-07-16 05:24:47
-lastmod: 2024-07-16 06:09:47
+lastmod: 2024-07-18 20:33:57
 copyright: Original
 draft: false
 cover: https://img1.dotnet9.com/2024/07/cover_01.png
