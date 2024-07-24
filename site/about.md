@@ -1,30 +1,15 @@
 # 关于本站及站长
 
 <p align="center">
-  <a href="https://dotnet9.com">
-    <img src="https://img1.dotnet9.com/site/CodeWF//logo.png" width="128" height="128" alt="Dotnet9">
+  <a href="https://codewf.com">
+    <img src="https://img1.dotnet9.com/site/logo.png" width="128" alt="Dotnet9">
   </a>
 </p>
 <h1 align="center">码界工坊</h1>
 
-<div align="center">
-
 一个使用`Dotnet 9`开发的`博客`+`在线工具箱`系统，一直在开发中...
 
- ![dotnet-version](https://img.shields.io/badge/.NET%209.0-blue)  ![Visual Studio 2022](https://img.shields.io/badge/Visual%20Studio%20-2022-blueviolet)  <a target="_blank" href="https://qm.qq.com/cgi-bin/qm/qr?k=iL6egdGSGCMPezcUyzMPEcs9qsllgwr-&jump_from=webapi"><img border="0" src="https://pub.idqqimg.com/wpa/images/group.png" alt="Dotnet9软件技术交流" title="Dotnet9软件技术交流"></a> [![码云](https://img.shields.io/badge/Gitee-%E7%A0%81%E4%BA%91-orange)](https://gitee.com/dotnet9/Dotnet9)   [![Github](https://img.shields.io/badge/%20-github-%2324292e)](https://github.com/dotnet9/Dotnet9) [![Github stars](https://img.shields.io/github/stars/dotnet9/Dotnet9)](https://github.com/dotnet9/Dotnet9)
-
- </div>
-
- ## 0. 最新开发情况
-
-- [x] 导航站
-  1. [x]Razor Pages
-- [x] IT Tools
-  1. [x]开源Vue工具箱
-- [x] 博客站
-  1. [x]Razor Pages
-- [x] Dotnet工具箱
-  1. [x] Blzor
+ ![dotnet-version](https://img.shields.io/badge/.NET%209.0-blue)  ![Visual Studio 2022](https://img.shields.io/badge/Visual%20Studio%20-2022-blueviolet)  <a target="_blank" href="https://qm.qq.com/cgi-bin/qm/qr?k=iL6egdGSGCMPezcUyzMPEcs9qsllgwr-&jump_from=webapi"><img border="0" src="https://pub.idqqimg.com/wpa/images/group.png" alt="Dotnet9软件技术交流" title="Dotnet9软件技术交流"></a> [![码云](https://img.shields.io/badge/Gitee-%E7%A0%81%E4%BA%91-orange)](https://gitee.com/dotnet9/CodeWF)   [![Github](https://img.shields.io/badge/%20-github-%2324292e)](https://github.com/dotnet9/CodeWF) [![Github stars](https://img.shields.io/github/stars/dotnet9/CodeWF)](https://github.com/dotnet9/CodeWF)
 
 建此站目的在于分享以Dotnet为主的技术类文章，希望以此平台与更多的程序员朋友交流技术，祝愿Dotnet社区发展越来越好。 
 
@@ -34,8 +19,8 @@
 
 1. 添加站长个人微信(codewf)加入微信群。
 
-| ![站长微信号](https://img1.dotnet9.com/site/wechatowner.jpg) | ![公众号1](https://img1.dotnet9.com/site/wechatpublic.jpg) | ![公众号2](https://img1.dotnet9.com/site/wechatpublic.jpg) |
-| ------------------------------------------------------------ | ---------------------------------------------------------- | ---------------------------------------------------------- |
+| ![站长微信号](https://img1.dotnet9.com/site/wechatowner.jpg) | ![公众号1](https://img1.dotnet9.com/site/wechatpublic.jpg) | ![公众号2](https://img1.dotnet9.com/site/wechatpublic1.jpg) |
+| ------------------------------------------------------------ | ---------------------------------------------------------- | ----------------------------------------------------------- |
 
 2. QQ群：771992300
 
