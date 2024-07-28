@@ -8,7 +8,7 @@ copyright: Original
 draft: false
 cover: https://img1.dotnet9.com/2024/07/cover_02.png
 categories: .NET
-tags: .NET 9,AOT,X86,Win7,XP,SP1
+tags: C#,EventBus,Distributed,Socket,MQ
 ---
 
 简体中文 | [English](README.md)
