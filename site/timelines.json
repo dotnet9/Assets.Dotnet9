@@ -1,5 +1,10 @@
 [
   {
+    "Time": "2024-07-12",
+    "Title": "又一轮使用Masa Blazor重构网站开始",
+    "Content": "先使用了几天Ant Blazor，现在使用Masa Blazor文档站源码进行修改，老思路：集文章浏览和工具使用的一体站"
+  },
+  {
     "Time": "2023-11-01",
     "Title": "Dotnet9重构完成上线",
     "Content": "Dotnet9重构完成上线，可以在此基础上慢慢优化了"
