@@ -3,7 +3,7 @@ title: .NET 9 AOT的突破 - 支持老旧Win7与XP环境
 slug: good-news-breakthrough-in-net-9-aot-supports-old-win7-and-xp-environments
 description: .NET 9开始，AOT支持Win7和XP，不仅仅只支持SP1版本
 date: 2024-07-16 05:24:47
-lastmod: 2024-07-31 05:27:16
+lastmod: 2024-08-02 00:14:26
 copyright: Original
 draft: false
 cover: https://img1.dotnet9.com/2024/07/cover_01.png
@@ -200,6 +200,32 @@ XP 需要链接 YY-Thunks，参考链接：https://github.com/Chuyu-Team/YY-Thun
 使用HttpClient也会出错：
 
 ![](https://img1.dotnet9.com/2024/07/0715.jpg)
+
+> **2024-08-02**
+>
+> 通过阅读开源Avalonia主题库 [Semi.Avalonia]([irihitech/Semi.Avalonia: Avalonia theme inspired by Semi Design (github.com)](https://github.com/irihitech/Semi.Avalonia)) 的源码及作者 `Rabbitism` 兔佬的PR已经解决Prism问题的，其它库问题使用方法应该类似，修改如果：
+>
+> 主工程添加Roots.xml，内容如下：
+>
+> ```csharp
+> <linker>
+>     <assembly fullname="CodeWF.Toolbox.Desktop" preserve="All"/>
+>     <assembly fullname="Ursa.PrismExtension" preserve="All" />
+>     <assembly fullname="Prism" preserve="All" />
+>     <assembly fullname="DryIoc" preserve="All" />
+>     <assembly fullname="Prism.Avalonia" preserve="All"/>
+>     <assembly fullname="Prism.DryIoc.Avalonia" preserve="All"/>
+>     <assembly fullname="CodeWF.Toolbox" preserve="All" />
+> </linker>
+> ```
+>
+> 主工程添加该XML配置：
+>
+> ```xml
+> <ItemGroup>
+>     <TrimmerRootDescriptor Include="Roots.xml" />
+> </ItemGroup>
+> ```
 
 每个公司的不同项目都是极其不同、复杂的，实际发布还需要不断测试，为了支持Windows7、Windows XP可能不得不做出使用库替换、部分API使用取舍等操作，欢迎读者在使用过程中的心得体会进行分享。
 
