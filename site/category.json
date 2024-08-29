@@ -1,37 +1,37 @@
 [
   {
     "Sort":10,
-    "DisplayName": ".NET",
-    "RouteName": "dotnet" 
+    "Name": ".NET",
+    "Slug": "dotnet" 
   },
   {
     "Sort":11,
-    "DisplayName": "Python",
-    "RouteName": "python" 
+    "Name": "Python",
+    "Slug": "python" 
   },
   {
     "Sort":20,
-    "DisplayName": "前端",
-    "RouteName": "frontend"
+    "Name": "前端",
+    "Slug": "frontend"
   },
   {
     "Sort":30,
-    "DisplayName": "数据库",
-    "RouteName": "database"
+    "Name": "数据库",
+    "Slug": "database"
   },
   {
     "Sort":40,
-    "DisplayName": "更多语言",
-    "RouteName": "morelanguage"
+    "Name": "更多语言",
+    "Slug": "morelanguage"
   },
   {
     "Sort":50,
-    "DisplayName": "课程",
-    "RouteName": "course"
+    "Name": "课程",
+    "Slug": "course"
   },
   {
     "Sort":60,
-    "DisplayName": "分享",
-    "RouteName": "share"
+    "Name": "分享",
+    "Slug": "share"
   }
 ]
