@@ -5,8 +5,8 @@ description: 继上一篇之后，这一篇将给大家带来另外十个 EF Cor
 date: 2022-06-02 21:51:47
 copyright: Reprinted
 author: liamwang 精致码农
-originaltitle: EF Core 6 新功能汇总（二）
-originallink: https://mp.weixin.qq.com/s/IJd0pwvQhCIohGR0dfekew
+originalTitle: EF Core 6 新功能汇总（二）
+originalLink: https://mp.weixin.qq.com/s/IJd0pwvQhCIohGR0dfekew
 draft: False
 cover: https://img1.dotnet9.com/2022/06/cover_04.jpg
 categories: .NET
@@ -452,8 +452,8 @@ class ExampleContext : DbContext
 
 本文所有代码示例都可以在我的 GitHub 中找到：[https://github.com/okyrylchuk/dotnet6_features/tree/main/EF%20Core%206#miscellaneous-enhancements](https://github.com/okyrylchuk/dotnet6_features/tree/main/EF%20Core%206#miscellaneous-enhancements)
 
->原文：https://blog.okyrylchuk.dev/entity-framework-core-6-features-part-2
+> 原文：https://blog.okyrylchuk.dev/entity-framework-core-6-features-part-2
 >
->作者：Oleg Kyrylchuk
+> 作者：Oleg Kyrylchuk
 >
->翻译：精致码农
+> 翻译：精致码农

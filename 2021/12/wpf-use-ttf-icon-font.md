@@ -5,8 +5,8 @@ description: 将矢量图形打包成字体的形式，使用方式也和我们�
 date: 2021-12-20 00:21:26
 copyright: Reprinted
 author: 丑萌气质狗
-originaltitle: WPF使用ttf图标字体
-originallink: https://www.cnblogs.com/choumengqizhigou/p/15550133.html
+originalTitle: WPF使用ttf图标字体
+originalLink: https://www.cnblogs.com/choumengqizhigou/p/15550133.html
 draft: False
 cover: https://img1.dotnet9.com/2021/12/cover_27.jpeg
 categories: .NET
@@ -30,30 +30,31 @@ tags: WPF
 
 首先推荐的是[阿里巴巴矢量图标库](https://www.iconfont.cn/)，这个里面方案比较多，也有很多成套的图标，可以多尝试尝试，之前只需要登录就行了，现在好像还要验证手机号，有点恶心。
 
-其次就是[Font Awesome 图标](http://www.fontawesome.com.cn/)，这里分为旧版和新版（V5版本 or Pro版本），旧版是免费，图标较少。
+其次就是[Font Awesome 图标](http://www.fontawesome.com.cn/)，这里分为旧版和新版（V5 版本 or Pro 版本），旧版是免费，图标较少。
 
-微软目前提供了两套，一套是Windows10的[Segoe MDL2 Assets 图标](https://docs.microsoft.com/zh-cn/windows/apps/design/style/segoe-ui-symbol-font) ，一套是windows11的[Segoe Fluent 图标](https://docs.microsoft.com/zh-cn/windows/apps/design/style/segoe-fluent-icons-font)。
+微软目前提供了两套，一套是 Windows10 的[Segoe MDL2 Assets 图标](https://docs.microsoft.com/zh-cn/windows/apps/design/style/segoe-ui-symbol-font) ，一套是 windows11 的[Segoe Fluent 图标](https://docs.microsoft.com/zh-cn/windows/apps/design/style/segoe-fluent-icons-font)。
 
-Google有一套开源的Material Design icons的图标字体，之前是提供下载到本地的，没找到了[Material Design icons by Google](https://github.com/google/material-design-icons)。
+Google 有一套开源的 Material Design icons 的图标字体，之前是提供下载到本地的，没找到了[Material Design icons by Google](https://github.com/google/material-design-icons)。
 
 剩下的就不说了，图标字体比较多，自己去搜一搜吧！
 
-## 如何在WPF中使用图标字体
+## 如何在 WPF 中使用图标字体
 
 本例子中使用的是微软的 [Segoe MDL2 Assets 图标](https://aka.ms/SegoeFonts)，下图是网站中图标字体的部分展示，其中可以看到一个`Unicode码位`，这个是用来标识当前这个字体的，后面也需要用这个来显示我们的字体。
 
 ![字体展示](https://img1.dotnet9.com/2021/12/2701.png)
 
-## Windows10中的应用方式
+## Windows10 中的应用方式
 
 这套图标字体在`Windows10`中是自带的，所以可以直接设置`FontFamily`属性为`Segoe MDL2 Assets`，来获得图标的支持：
 
 ```html
 <TextBlock
-            FontFamily="Segoe MDL2 Assets"
-            FontSize="50"
-            Foreground="Red"
-            Text="&#xE702;" />
+  FontFamily="Segoe MDL2 Assets"
+  FontSize="50"
+  Foreground="Red"
+  Text="&#xE702;"
+/>
 ```
 
 ![](https://img1.dotnet9.com/2021/12/2702.png)
@@ -62,15 +63,15 @@ Google有一套开源的Material Design icons的图标字体，之前是提供�
 
 ## 引用字体文件的方式
 
-但是这种方式只支持`Window10`系统，如果在其他系统上，就会无法显示，所以我们[下载Segoe MDL2 Assets](https://aka.ms/SegoeFonts)图标字体，将下载的压缩包中的`SegMDL2.ttf`拷贝到我们的项目，为了方便管理，放到了项目中新建的`Fonts`文件夹下：
+但是这种方式只支持`Window10`系统，如果在其他系统上，就会无法显示，所以我们[下载 Segoe MDL2 Assets](https://aka.ms/SegoeFonts)图标字体，将下载的压缩包中的`SegMDL2.ttf`拷贝到我们的项目，为了方便管理，放到了项目中新建的`Fonts`文件夹下：
 
 ![](https://img1.dotnet9.com/2021/12/2703.png)
 
-然后选中`SegMDL2.ttf`在下方的属性栏中将`生成操作`改为`资源`，这样这个文件就会以资源的形式包含在我们的WPF程序中：
+然后选中`SegMDL2.ttf`在下方的属性栏中将`生成操作`改为`资源`，这样这个文件就会以资源的形式包含在我们的 WPF 程序中：
 
 ![](https://img1.dotnet9.com/2021/12/2704.png)
 
-使用图标字体的方式跟上面是一样的，但是因为是通过外置字体的形式来添加到WPF程序中的，所以`FontFamily`设置的属性值就有点讲究了，大概可以表述为`pack://application:,,,/项目名称空间;component/字体路径/字体文件名#字体实际名称`，下面来一个一个介绍（**后面引用自定义资源文件也可以参考此规则，不过#字体名称就不需要了，具体看下方**）：
+使用图标字体的方式跟上面是一样的，但是因为是通过外置字体的形式来添加到 WPF 程序中的，所以`FontFamily`设置的属性值就有点讲究了，大概可以表述为`pack://application:,,,/项目名称空间;component/字体路径/字体文件名#字体实际名称`，下面来一个一个介绍（**后面引用自定义资源文件也可以参考此规则，不过#字体名称就不需要了，具体看下方**）：
 
 `项目名称空间`：如果没有私自改过项目名称空间，那么你的项目名称空间就是项目的名称，我这里的项目名称叫`WPF_Blog_Test`,所以项目名称空间也是如此，如果不清楚你的项目名称空间是什么，可以打开你的`XAML`文件，比如项目中的`App.xaml`，可以看到`xaml`文件中的`x:Class`属性，或者后台类的`namespace`：
 
@@ -82,7 +83,7 @@ Google有一套开源的Material Design icons的图标字体，之前是提供�
 
 ![](https://img1.dotnet9.com/2021/12/2707.png)
 
-`字体实际名称`：字体的实际名称需要我们双击打开字体，然后才能看到（**别再VS中打开，不然看到的是字节码，在windows的文件夹中选中文件双击打开**），这里`SegMDL2.ttf`的实际名称是`Segoe MDL2 Assets`：
+`字体实际名称`：字体的实际名称需要我们双击打开字体，然后才能看到（**别再 VS 中打开，不然看到的是字节码，在 windows 的文件夹中选中文件双击打开**），这里`SegMDL2.ttf`的实际名称是`Segoe MDL2 Assets`：
 
 ![](https://img1.dotnet9.com/2021/12/2708.png)
 
@@ -90,17 +91,18 @@ Google有一套开源的Material Design icons的图标字体，之前是提供�
 
 ```html
 <TextBlock
-            FontFamily="pack://application:,,,/WPF_Blog_Test;component/Fonts/SegMDL2.ttf#Segoe MDL2 Assets"
-            FontSize="50"
-            Foreground="Red"
-            Text="&#xE702;" />
+  FontFamily="pack://application:,,,/WPF_Blog_Test;component/Fonts/SegMDL2.ttf#Segoe MDL2 Assets"
+  FontSize="50"
+  Foreground="Red"
+  Text="&#xE702;"
+/>
 ```
 
-​ PS：为了不让每次用都写这么长的`FontFamily`，可以考虑在资源中写好再引用，或者定义一个TextBlock图标字体样式（再扯点），`已经了解资源定义的下面可以略过`。
+​ PS：为了不让每次用都写这么长的`FontFamily`，可以考虑在资源中写好再引用，或者定义一个 TextBlock 图标字体样式（再扯点），`已经了解资源定义的下面可以略过`。
 
 ## 自定义资源
 
-新建文件夹`Styles`，在该文件夹下新建资源文件`IconFonts`（**右键Styles，选择添加资源字典**）。两种方式都写在`IconFonts`这个文件中了，方便演示就少搞点：
+新建文件夹`Styles`，在该文件夹下新建资源文件`IconFonts`（**右键 Styles，选择添加资源字典**）。两种方式都写在`IconFonts`这个文件中了，方便演示就少搞点：
 
 ![](https://img1.dotnet9.com/2021/12/2709.png)
 
@@ -110,16 +112,15 @@ Google有一套开源的Material Design icons的图标字体，之前是提供�
 
 ```html
 <FontFamily x:Key="SegIconFont">
-	pack://application:,,,/WPF_Blog_Test;component/Fonts/SegMDL2.ttf#Segoe MDL2 Assets
+  pack://application:,,,/WPF_Blog_Test;component/Fonts/SegMDL2.ttf#Segoe MDL2
+  Assets
 </FontFamily>
 
-<Style
-	x:Key="tbSegIconFontKey"
-	TargetType="{x:Type TextBlock}">
-	<Setter Property="FontFamily" Value="pack://application:,,,/WPF_Blog_Test;component/Fonts/SegMDL2.ttf#Segoe MDL2 Assets" />
-	<Setter Property="Foreground" Value="Red" />
-	<Setter Property="FontSize" Value="50" />
-</Style>
+<style x:Key="tbSegIconFontKey" TargetType="{x:Type TextBlock}">
+  <Setter Property="FontFamily" Value="pack://application:,,,/WPF_Blog_Test;component/Fonts/SegMDL2.ttf#Segoe MDL2 Assets" />
+  <Setter Property="Foreground" Value="Red" />
+  <Setter Property="FontSize" Value="50" />
+</style>
 ```
 
 此时只是添加了一个名叫`IconFonts`资源字典，还需要引入到项目中，才能在界面中使用，所以需要在`App.xaml`文件中添加一条引用语句，即告知程序需要将新建的这个资源字典包含进来，语句为`<ResourceDictionary Source="pack://application:,,,/WPF_Blog_Test;component/Styles/IconFonts.xaml" />`，名称空间和资源路径规则上面已表述，添加一个`App.xaml`的截图：
@@ -131,28 +132,31 @@ Google有一套开源的Material Design icons的图标字体，之前是提供�
 ```html
 <!--  最原始方式  -->
 <TextBlock
-	FontFamily="pack://application:,,,/WPF_Blog_Test;component/Fonts/SegMDL2.ttf#Segoe MDL2 Assets"
-	FontSize="50"
-	Foreground="Red"
-	Text="&#xE702;" />
+  FontFamily="pack://application:,,,/WPF_Blog_Test;component/Fonts/SegMDL2.ttf#Segoe MDL2 Assets"
+  FontSize="50"
+  Foreground="Red"
+  Text="&#xE702;"
+/>
 
 <!--  定义FontFamily资源  -->
 <TextBlock
-	FontFamily="{StaticResource SegIconFont}"
-	FontSize="50"
-	Foreground="Red"
-	Text="&#xE702;" />
+  FontFamily="{StaticResource SegIconFont}"
+  FontSize="50"
+  Foreground="Red"
+  Text="&#xE702;"
+/>
 
 <!--  定义TextBlock Style样式  -->
 <TextBlock
-	FontSize="50"
-	Foreground="Red"
-	Style="{StaticResource tbSegIconFontKey}"
-	Text="&#xE702;" />
+  FontSize="50"
+  Foreground="Red"
+  Style="{StaticResource tbSegIconFontKey}"
+  Text="&#xE702;"
+/>
 ```
 
 没想到截了这么多图，希望逻辑是清晰的，感谢你的观看！
 
->本文来自博客园，作者：丑萌气质狗，转载请注明原文链接：https://www.cnblogs.com/choumengqizhigou/p/15550133.html
+> 本文来自博客园，作者：丑萌气质狗，转载请注明原文链接：https://www.cnblogs.com/choumengqizhigou/p/15550133.html
 >
->转载请注明出处QQ群：560611514
+> 转载请注明出处 QQ 群：560611514

@@ -5,8 +5,8 @@ description: 高DPI下(缩放>100%), UI设计器一直提示缩放到100%, 如�
 date: 2022-05-14 12:02:43
 copyright: Reprinted
 author: AlexChow
-originaltitle: VS 2022 设计 WinForm 高DPI兼容程序
-originallink: https://www.cnblogs.com/densen2014/p/16142939.html
+originalTitle: VS 2022 设计 WinForm 高DPI兼容程序
+originalLink: https://www.cnblogs.com/densen2014/p/16142939.html
 draft: False
 cover: https://img1.dotnet9.com/2022/05/4014.png
 categories: .NET
@@ -15,8 +15,8 @@ tags: Winform
 
 ## 本文主要解决两个问题
 
-- C# Winform高DPI字体模糊.
-- 高DPI下(缩放>100%), UI设计器一直提示缩放到100%, 如果不重启到100%,设计的控件会乱飞.
+- C# Winform 高 DPI 字体模糊.
+- 高 DPI 下(缩放>100%), UI 设计器一直提示缩放到 100%, 如果不重启到 100%,设计的控件会乱飞.
 
 ![](https://img1.dotnet9.com/2022/05/4001.png)
 
@@ -24,7 +24,7 @@ tags: Winform
 
 ## 建立测试程序
 
-1. 新建.Net Windows窗体应用 (Winform)工程
+1. 新建.Net Windows 窗体应用 (Winform)工程
 
 ![](https://img1.dotnet9.com/2022/05/4003.png)
 
@@ -60,7 +60,7 @@ namespace WinFormsApp1
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            Text = this.Width + "x" + this.Height + " pic "+ pictureBox1.Width + "x" + pictureBox1.Height + 启动环境(); 
+            Text = this.Width + "x" + this.Height + " pic "+ pictureBox1.Width + "x" + pictureBox1.Height + 启动环境();
 
         }
 
@@ -70,14 +70,14 @@ namespace WinFormsApp1
             return (".NET Framework 4.6.1");
 #elif NET6_0
             return (".NET6");
-#endif  
+#endif
         }
 
     }
 }
 ```
 
-7. 运行看看效果: net6下运行,尺寸都是对的
+7. 运行看看效果: net6 下运行,尺寸都是对的
 
 ![](https://img1.dotnet9.com/2022/05/4009.png)
 
@@ -100,7 +100,7 @@ namespace WinFormsApp1
 
 2. 双击工程名称, 编辑配置文件
 
-`TargetFrameworks` 改为双目标框架 `<TargetFrameworks>net6.0-windows;net461;</TargetFrameworks>` , 保存后提示重载工程 , 最好是关闭vs再打开一次.
+`TargetFrameworks` 改为双目标框架 `<TargetFrameworks>net6.0-windows;net461;</TargetFrameworks>` , 保存后提示重载工程 , 最好是关闭 vs 再打开一次.
 
 完整文件如下
 
@@ -169,7 +169,7 @@ public Form1()
 
 完美!
 
-7. 双击编辑窗体,没有提示100%缩放, 添加标准菜单和DataGridView测试
+7. 双击编辑窗体,没有提示 100%缩放, 添加标准菜单和 DataGridView 测试
 
 ![](https://img1.dotnet9.com/2022/05/4014.png)
 
@@ -177,15 +177,15 @@ public Form1()
 
 ## 总结
 
-- 新建.Net Windows窗体应用 (Winform)工程 [.Net6.0]
+- 新建.Net Windows 窗体应用 (Winform)工程 [.Net6.0]
 - 添加应用程序清单 `app.manifest`, 打开感知 DPI
 - `TargetFrameworks` 改为双目标框架 `<TargetFrameworks>net6.0-windows;net461;</TargetFrameworks>`
 - `Program.cs`注释掉 `ApplicationConfiguration.Initialize();`
 - `AutoScaleMode = AutoScaleMode.Dpi;` //添加这句,要在'InitializeComponent();'上方
 
-**老工程也可以通过编辑projet文件升级到这种新工程格式,支持本文说的功能, 需要继续出教程的请在评论区留言, 这几天都在度假中, 今天就写到这里了. 下回见!**
+**老工程也可以通过编辑 projet 文件升级到这种新工程格式,支持本文说的功能, 需要继续出教程的请在评论区留言, 这几天都在度假中, 今天就写到这里了. 下回见!**
 
-**配套DEMO**
+**配套 DEMO**
 
 - [https://github.com/densen2014/WinformHighDPICompatibleProgram](https://github.com/densen2014/WinformHighDPICompatibleProgram)
 

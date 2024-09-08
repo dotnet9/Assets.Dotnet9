@@ -4,18 +4,18 @@ slug: how-to-use-record-type-in-csharp-9
 description: 使用过record吗？
 date: 2021-07-10 22:27:47
 copyright: Original
-originaltitle: 如何在 C# 9 中使用record类型？
+originalTitle: 如何在 C# 9 中使用record类型？
 draft: False
 cover: https://img1.dotnet9.com/2021/07/cover_03.jpg
 categories: .NET
 tags: C#,Record
 ---
 
->原文链接：[https://www.infoworld.com/article/3607372/how-to-work-with-record-types-in-csharp-9.html](https://www.infoworld.com/article/3607372/how-to-work-with-record-types-in-csharp-9.html)
+> 原文链接：[https://www.infoworld.com/article/3607372/how-to-work-with-record-types-in-csharp-9.html](https://www.infoworld.com/article/3607372/how-to-work-with-record-types-in-csharp-9.html)
 >
->原文标题：[How to work with record types in C# 9](https://www.infoworld.com/article/3607372/how-to-work-with-record-types-in-csharp-9.html)
+> 原文标题：[How to work with record types in C# 9](https://www.infoworld.com/article/3607372/how-to-work-with-record-types-in-csharp-9.html)
 >
->翻译：沙漠尽头的狼(谷歌翻译加持)
+> 翻译：沙漠尽头的狼(谷歌翻译加持)
 
 利用 C# 9 中的`record`类型来构建不可变类型和线程安全对象。
 
@@ -68,7 +68,7 @@ DbMetadata dbMetadata = new DbMetadata()
 dbMetadata.DbType = "SQL Server";
 ```
 
-## 在 C# 9 中使用record类型
+## 在 C# 9 中使用 record 类型
 
 C# 9 中的`record`类型是仅具有只读属性的轻量级、不可变数据类型（或轻量级类）。因为`record`类型是不可变的，所以它是线程安全的，并且在创建后不能改变或更改。您只能在构造函数中初始化`record`类型。
 
@@ -120,15 +120,15 @@ var newPerson = person;
 newPerson.Address = "112 Stafford Hills";
 newPerson.City = "Bangalore";
 ```
-  
+
 幸运的是，有一个解决方法——with 关键字。通过指定属性值的更改，您可以利用 with 关键字从另一个`record`类型创建一个实例。以下代码片段说明了如何实现这一点。
 
 ```C#
 var newPerson = person with
             { Address = "112 Stafford Hills", City = "Bangalore" };
 ```
-                   
-## C# 9 中record类型的继承
+
+## C# 9 中 record 类型的继承
 
 `record`类型支持继承。也就是说，您可以从现有`record`类型创建新`record`类型并添加新属性。以下代码片段说明了如何通过扩展现有`record`类型来创建新`record`类型。
 
@@ -139,8 +139,8 @@ public record Employee : Person
    public double Salary { get; init; }
 }
 ```
-        
-## C# 9 中的位置record
+
+## C# 9 中的位置 record
 
 默认情况下，使用位置参数创建的`record`类型实例是不可变的。换句话说，您可以通过使用构造函数参数传递有序的参数列表来创建`record`类型的不可变实例，如下面给出的代码片段所示。
 
@@ -148,7 +148,7 @@ public record Employee : Person
 var person = new Person("Joydip", "Kanjilal", "192/79 Stafford Hills", "Hyderabad", "India");
 ```
 
-## 在 C# 9 中检查record实例是否相等
+## 在 C# 9 中检查 record 实例是否相等
 
 在 C# 中检查类的两个实例是否相等时，比较基于这些对象的引用（身份）。但是，如果您检查`record`类型的两个实例是否相等，则比较基于`record`类型的实例中的值。
 
@@ -160,8 +160,8 @@ public record DbMetadata
    public string DbName { get; init; }
    public string DbType { get; init; }
 }
-```     
-        
+```
+
 以下代码片段显示了如何创建 DbMetadata 记录类型的两个实例。
 
 ```C#
@@ -176,7 +176,7 @@ DbMetadata dbMetadata2 = new DbMetadata()
    DbType = "SQL Server"
 };
 ```
-  
+
 您可以使用 `Equals` 方法检查相等性。以下两个语句将在控制台窗口中显示“false”。
 
 ```C#
@@ -192,8 +192,8 @@ DbMetadata dbMetadata3 = new DbMetadata()
    DbName = "Test",
    DbType = "Oracle"
 };
-```  
-     
+```
+
 以下两条语句将在控制台窗口中显示“true”。
 
 ```C#
@@ -206,7 +206,7 @@ Console.WriteLine(dbMetadata3.Equals(dbMetadata1));
 - `Object.Equals(Object)` 方法的重载
 - 接受`record`类型作为其参数的虚拟 `Equals` 方法
 - `Object.GetHashCode()` 方法的重载
-- 两个相等运算符的方法，即 `==` 运算符 和 `!=` 运算符 
+- 两个相等运算符的方法，即 `==` 运算符 和 `!=` 运算符
 - `record`类型实现 `System.IEquatable<T>`
 
 此外，记录类型提供了 `Object.ToString()` 方法的重载。这些方法是隐式生成的，您无需重新实现它们。
@@ -224,9 +224,9 @@ public record DbMetadata
     obj is DbMetadata dbMetadata && Equals(dbMetadata);
 }
 ```
-    
+
 当您编译代码时，编译器将用以下消息标记错误：
 
->Type 'DbMetadata' already defines a member called 'Equals' with the same parameter types
+> Type 'DbMetadata' already defines a member called 'Equals' with the same parameter types
 
 尽管`record`类型是一个类，但 `record` 关键字提供了额外的类似值类型的行为和语义，使`record`与类不同。`record`本身是一种引用类型，但它使用自己的内置相等性检查——相等性是通过值而不是引用来检查的。最后，请注意`record`可以是可变的，但它们主要是为不变性而设计的。

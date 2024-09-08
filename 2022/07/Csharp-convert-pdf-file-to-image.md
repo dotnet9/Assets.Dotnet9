@@ -5,8 +5,8 @@ description: 今日一同事给我说你获取到的pdf文件有点不符合我�
 date: 2022-07-16 13:19:25
 copyright: Reprinted
 author: 黑哥聊dotNet
-originaltitle: C#将PDF文件转成图片
-originallink: https://mp.weixin.qq.com/s/_Zduaj6_hsQy3c4HvSDLEg
+originalTitle: C#将PDF文件转成图片
+originalLink: https://mp.weixin.qq.com/s/_Zduaj6_hsQy3c4HvSDLEg
 draft: False
 cover: https://img1.dotnet9.com/2022/07/cover_18.png
 categories: .NET
@@ -17,21 +17,21 @@ tags: .NET
 
 ## 前言
 
-今日一同事给我说你获取到的pdf文件有点不符合我们现有软件流程,你能不能将我们pdf文件转成图片啊！说干就干，由于以前研究过一段时间pdf文件的相关组件，所以我在github上找到我以前star的仓库，PdfiumViewer 开源地址: [https://github.com/pvginkel/PdfiumViewer](https://github.com/pvginkel/PdfiumViewer)：
+今日一同事给我说你获取到的 pdf 文件有点不符合我们现有软件流程,你能不能将我们 pdf 文件转成图片啊！说干就干，由于以前研究过一段时间 pdf 文件的相关组件，所以我在 github 上找到我以前 star 的仓库，PdfiumViewer 开源地址: [https://github.com/pvginkel/PdfiumViewer](https://github.com/pvginkel/PdfiumViewer)：
 
 ![](https://img1.dotnet9.com/2022/07/1801.png)
 
-首先我们打开Nuget安装`PdfiumViewer`和`ImageResizer.Plugins.PdfiumRenderer.Pdfium.Dll`。
+首先我们打开 Nuget 安装`PdfiumViewer`和`ImageResizer.Plugins.PdfiumRenderer.Pdfium.Dll`。
 
 ![](https://img1.dotnet9.com/2022/07/1802.jpg)
 
 对于一个需求，我们应该明白我们所操作的对象具有哪些属性？
 
-那么我们拿到pdf文件就应该知道，pdf具有页数以及文件的高度和宽度等属性。
+那么我们拿到 pdf 文件就应该知道，pdf 具有页数以及文件的高度和宽度等属性。
 
 对于图片来说，图片具有高度，宽度(分辨率)以及水平分辨率和垂直分辨率(dpi)等属性比较重要！
 
-那么我们了解了这些属性了之后就可以开始工作了，第一步加载我们的pdf文件，获取文件的页数和文件的大小。
+那么我们了解了这些属性了之后就可以开始工作了，第一步加载我们的 pdf 文件，获取文件的页数和文件的大小。
 
 ```csharp
 var pdf = PdfiumViewer.PdfDocument.Load(strpdfPath);
@@ -57,7 +57,7 @@ image.Save(stream, ImageFormat.Jpeg);
 public class PdfToImage
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     /// <param name="filePath">pdf文件路径</param>
     /// <param name="picPath">picture文件路径</param>

@@ -5,15 +5,15 @@ description: 微软默认的是一个类对应多个资源文件的方式，使�
 date: 2022-06-22 22:37:47
 copyright: Reprinted
 author: HueiFeng
-originaltitle: ASP.NET Core WebAPI实现本地化（单资源文件）
-originallink: https://www.cnblogs.com/yyfh/archive/2020/05/30/12995208.html
+originalTitle: ASP.NET Core WebAPI实现本地化（单资源文件）
+originalLink: https://www.cnblogs.com/yyfh/archive/2020/05/30/12995208.html
 draft: False
 cover: https://img1.dotnet9.com/2022/06/cover_15.jpeg
 categories: .NET
 tags: Web API
 ---
 
-在Startup `ConfigureServices` 注册本地化所需要的服务`AddLocalization`和 `Configure<RequestLocalizationOptions>`
+在 Startup `ConfigureServices` 注册本地化所需要的服务`AddLocalization`和 `Configure<RequestLocalizationOptions>`
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
@@ -40,13 +40,13 @@ public void ConfigureServices(IServiceCollection services)
 }
 ```
 
-在Startup.cs类的 `Configure` 方法中添加请求本地化中间件。
+在 Startup.cs 类的 `Configure` 方法中添加请求本地化中间件。
 
 ```csharp
 var localizeOptions = app.ApplicationServices.GetService<IOptions<RequestLocalizationOptions>>();
             app.UseRequestLocalization(localizeOptions.Value);
 ```
-  
+
 `RequestCultureProvider` 它使用简单的委托来确定当前的本地化区域性，当然我们还可以通过`RequestCultureProvider`自定义源的请求区域信息比如说配置文件或者数据库都是可以的.或者说我们可以选用默认的一些方式让我们去获取到当前区域.
 
 ASP.NET Core 本地化默认向我们提供了四个方式，可用于确定正在执行的请求的当前区域性：
@@ -79,8 +79,7 @@ public class RouteDataRequestCultureProvider : RequestCultureProvider
 }
 ```
 
-
-通过如下代码片段实现IRouteConstraint对路由做相应的约束
+通过如下代码片段实现 IRouteConstraint 对路由做相应的约束
 
 ```csharp
 public class LanguageRouteConstraint : IRouteConstraint
@@ -119,6 +118,5 @@ public class HomeController : ControllerBase
 ```
 
 ![](https://img1.dotnet9.com/2022/06/1502.png)
-
 
 Reference：[https://github.com/hueifeng/BlogSample/tree/master/src/LocalizationSingleResx](https://github.com/hueifeng/BlogSample/tree/master/src/LocalizationSingleResx)

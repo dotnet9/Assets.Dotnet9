@@ -5,21 +5,21 @@ description: C# 的 GitHub 页面上记载了一长串诱人的想法，其中�
 date: 2021-12-12 10:01:23
 copyright: Reprinted
 author: Matthew MacDonald
-originaltitle: C# 10 必知的五大新功能
-originallink: https://medium.com/young-coder/a-closer-look-at-5-new-features-in-c-10-f99738b0158e
+originalTitle: C# 10 必知的五大新功能
+originalLink: https://medium.com/young-coder/a-closer-look-at-5-new-features-in-c-10-f99738b0158e
 draft: False
 cover: https://img1.dotnet9.com/2021/12/cover_11.png
 categories: .NET
 tags: C# 10
 ---
 
-C# 的 GitHub 页面上记载了一长串诱人的想法，其中一些令人头疼的问题仍在讨论中。如果你想知道C# 10中究竟包含了哪些新功能，可以等待11 月新版本的发布。或者，你也可以关注 C# 团队展示的他们最喜欢的功能。在最近的微软Build 大会上，C# 的首席设计师 Mads Torgersen 透漏了一些目前正在进行的工作。以下是该语言的下一个版本将会提供的五大新功能。
+C# 的 GitHub 页面上记载了一长串诱人的想法，其中一些令人头疼的问题仍在讨论中。如果你想知道 C# 10 中究竟包含了哪些新功能，可以等待 11 月新版本的发布。或者，你也可以关注 C# 团队展示的他们最喜欢的功能。在最近的微软 Build 大会上，C# 的首席设计师 Mads Torgersen 透漏了一些目前正在进行的工作。以下是该语言的下一个版本将会提供的五大新功能。
 
 ![](https://img1.dotnet9.com/2021/12/1101.jpg)
 
 ## 1. global using
 
-C# 的源代码文件开头一般都会导入一堆命名空间。下面是一个普通的ASP.NET Web 应用程序的代码片段：
+C# 的源代码文件开头一般都会导入一堆命名空间。下面是一个普通的 ASP.NET Web 应用程序的代码片段：
 
 ```C#
 using LoggingTestApp.Data;
@@ -48,7 +48,7 @@ namespace LoggingTestApp
 
 这段代码的写法没有什么特别之处。以前，命名空间的导入可以让我们快速了解某个类正在使用哪些库。然而如今，这只不过是一堆不得不写又没人去看的代码了。
 
-C# 10 引入了一种新模式，允许你使用关键字 global 定义整个项目的命名空间导入。推荐做法是，将全局导入放在一个单独的文件中（每个项目一个），可以命名为 usings.cs 或imports.cs。其中的内容大致为：
+C# 10 引入了一种新模式，允许你使用关键字 global 定义整个项目的命名空间导入。推荐做法是，将全局导入放在一个单独的文件中（每个项目一个），可以命名为 usings.cs 或 imports.cs。其中的内容大致为：
 
 ```C#
 global using Microsoft.AspNetCore.Builder;
@@ -80,7 +80,7 @@ namespace LoggingTestApp
 }
 ```
 
-Visual Studio会突出显示重复的命名空间（即同时在全局文件和本地文件中导入的命名空间）。尽管这不是错误，但删除重复的命名空间可以减少代码量，并将注意力集中在特定文件正在使用的特殊命名空间上。
+Visual Studio 会突出显示重复的命名空间（即同时在全局文件和本地文件中导入的命名空间）。尽管这不是错误，但删除重复的命名空间可以减少代码量，并将注意力集中在特定文件正在使用的特殊命名空间上。
 
 ## 2. 文件范围的命名空间
 
@@ -118,9 +118,7 @@ namespace Component
 }
 ```
 
-C# 设计者认为这个改动可以清理水平空间的浪费（就像global using清理了垂直空间的浪费一样）。总体目标是让代码更短、更窄、更简洁。但这些变化也可以降低新手学习C#的难度。结合global using与文件范围的命名空间，只需几行代码就可以创建出一个Hello World 控制台应用程序。
-
-
+C# 设计者认为这个改动可以清理水平空间的浪费（就像 global using 清理了垂直空间的浪费一样）。总体目标是让代码更短、更窄、更简洁。但这些变化也可以降低新手学习 C#的难度。结合 global using 与文件范围的命名空间，只需几行代码就可以创建出一个 Hello World 控制台应用程序。
 
 ## 3. 空参数检查
 
@@ -189,13 +187,13 @@ public record Employee
 
 如此一来，如果不设置 Name 属性就无法创建 Employee 了。
 
-## 5. 关键字field
+## 5. 关键字 field
 
 多年来，为了通过自动实现属性简化代码，C# 团队做出了大量努力，上面的 Employee 记录就是一个很好的例子，它使用 get 和 init 关键字声明了三个不可变的属性。数据存储在三个私有字段中，但这些字段都是自动创建的，无需人工干预。而且你永远不会看到这些字段。
 
-自动实现的属性很棒，但它们的作用也仅限于此。当无法使用自动实现的属性时，你就必须添加支持字段到类，并编写正常的属性方法，就像回到 C# 2一样。但是 C# 10中提供了一个关键字field，可以自动创建支持字段。
+自动实现的属性很棒，但它们的作用也仅限于此。当无法使用自动实现的属性时，你就必须添加支持字段到类，并编写正常的属性方法，就像回到 C# 2 一样。但是 C# 10 中提供了一个关键字 field，可以自动创建支持字段。
 
-例如，假设你想创建一个记录，用于处理初始属性值。在下面的代码中，我们对 Employee 类进行了一些修改，确保HiredDate 字段只包含来自 DateTime 对象的日期信息（不包含时间信息）：
+例如，假设你想创建一个记录，用于处理初始属性值。在下面的代码中，我们对 Employee 类进行了一些修改，确保 HiredDate 字段只包含来自 DateTime 对象的日期信息（不包含时间信息）：
 
 ```C#
 public record Employee
@@ -244,18 +242,18 @@ public string FirstName {get;
 
 ## 6. 总结
 
-当然，C# 10中的新功能肯定不止这个五个。还有一些表达式方面的变化，以及一个有争议的变动：在接口中定义静态成员。我们只有耐心等待了。
+当然，C# 10 中的新功能肯定不止这个五个。还有一些表达式方面的变化，以及一个有争议的变动：在接口中定义静态成员。我们只有耐心等待了。
 
 总体来看，C# 10 的发展重点很明确，即减少代码量，提供更多便利性，减轻开发人员的负担。
 
->原文作者：Matthew MacDonald      
+> 原文作者：Matthew MacDonald
 >
->原文链接：https://medium.com/young-coder/a-closer-look-at-5-new-features-in-c-10-f99738b0158e 
+> 原文链接：https://medium.com/young-coder/a-closer-look-at-5-new-features-in-c-10-f99738b0158e
 >
->译者：弯月
+> 译者：弯月
 >
->责编：欧阳姝黎
+> 责编：欧阳姝黎
 >
->出品：CSDN（ID：CSDNnews）
+> 出品：CSDN（ID：CSDNnews）
 >
->声明：本文由CSDN翻译，转载请注明来源。
+> 声明：本文由 CSDN 翻译，转载请注明来源。

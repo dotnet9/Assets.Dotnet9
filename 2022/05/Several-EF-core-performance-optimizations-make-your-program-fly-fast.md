@@ -5,8 +5,8 @@ description: 数条建议
 date: 2022-05-04 15:41:07
 copyright: Reprinted
 author: 清和时光
-originaltitle: 几条EF core性能优化，让你程序健步如飞
-originallink: https://www.cnblogs.com/qingheshiguang/p/13559561.html
+originalTitle: 几条EF core性能优化，让你程序健步如飞
+originalLink: https://www.cnblogs.com/qingheshiguang/p/13559561.html
 draft: False
 cover: https://img1.dotnet9.com/2022/05/cover_07.png
 categories: .NET
@@ -15,19 +15,19 @@ tags: .NET,ORM,EF Core
 
 ## 1. 使用 EF.Functions.xxx 进行查询
 
-### 1.1 使用 EF.Functions.Like进行模糊查询要比 StartsWith、Contains 和 EndsWith 方法生成的SQL语句性能更优。
+### 1.1 使用 EF.Functions.Like 进行模糊查询要比 StartsWith、Contains 和 EndsWith 方法生成的 SQL 语句性能更优。
 
-A. Contains语句，生成的sql为：
+A. Contains 语句，生成的 sql 为：
 
 ```csharp
 var data3 = dbContext.T_UserInfor.Where(u => u.userName.Contains("p")).ToList();
 ```
 
-用的是charindex
+用的是 charindex
 
 ![](https://img1.dotnet9.com/2022/05/0701.png)
 
-B. EF.Functions.Like语句生成的sql为：（Like搭配SQL查询的通配符使用）
+B. EF.Functions.Like 语句生成的 sql 为：（Like 搭配 SQL 查询的通配符使用）
 
 ```csharp
   var data1 = dbContext.T_UserInfor.Where(u => EF.Functions.Like(u.userName, "%p%")).ToList();
@@ -37,24 +37,23 @@ B. EF.Functions.Like语句生成的sql为：（Like搭配SQL查询的通配符�
                select p).ToList();
 ```
 
-用的是Like
+用的是 Like
 
 ![](https://img1.dotnet9.com/2022/05/0702.png)
 
-**PS**：在传统的.Net中，还有种用法 SqlMethods，详见：[https://www.cnblogs.com/yaopengfei/p/11805980.html](https://www.cnblogs.com/yaopengfei/p/11805980.html)
+**PS**：在传统的.Net 中，还有种用法 SqlMethods，详见：[https://www.cnblogs.com/yaopengfei/p/11805980.html](https://www.cnblogs.com/yaopengfei/p/11805980.html)
 
-### 1.2. 还有EF.Functions.DateDiffDay (DateDiffHour、DateDiffMonth),求天、小时、月之间的数量
+### 1.2. 还有 EF.Functions.DateDiffDay (DateDiffHour、DateDiffMonth),求天、小时、月之间的数量
 
-**PS**：在EF Core中StartsWith、Contains和EndsWith模糊查询实际分别被解析成为Left、CharIndex和Right，而不是Like,而EF.Functions.Like会解析成Like语句。
+**PS**：在 EF Core 中 StartsWith、Contains 和 EndsWith 模糊查询实际分别被解析成为 Left、CharIndex 和 Right，而不是 Like,而 EF.Functions.Like 会解析成 Like 语句。
 
 详见：[https://www.cnblogs.com/tdfblog/p/entity-framework-core-like-query.html](https://www.cnblogs.com/tdfblog/p/entity-framework-core-like-query.html)
- 
 
-## 2. 添加Z.EntityFramework.Plus.EFCore依赖使用一些特殊的语法
+## 2. 添加 Z.EntityFramework.Plus.EFCore 依赖使用一些特殊的语法
 
-这个是免费的，但 Z.EntityFramework.Plus的一些批量数据操作的包是收费的
+这个是免费的，但 Z.EntityFramework.Plus 的一些批量数据操作的包是收费的
 
-1. EFCore删除必须先查询再删除，优化后可直接删除：
+1. EFCore 删除必须先查询再删除，优化后可直接删除：
 
 ```csharp
 context.User.Where(t => t.Id == 100).Delete();
@@ -65,10 +64,10 @@ context.User.Where(t => t.Id == 100).Delete();
 ```csharp
 context.User.Where(t => t.Id == 4).Update(t =>new User() { NickName = "2224114" ,Phone = "1234"} );
 ```
- 
-## 3. 正确使用Find(id=10)来代替FirstOrDefault(t=>t.id=10)
 
-Find会优先查询缓存，当前面已经查询过这条数据的时候使用，而FirstOrDefault每次都会查询数据库；当id=10的数据被修改之后，find查出的数据是新数据。
+## 3. 正确使用 Find(id=10)来代替 FirstOrDefault(t=>t.id=10)
+
+Find 会优先查询缓存，当前面已经查询过这条数据的时候使用，而 FirstOrDefault 每次都会查询数据库；当 id=10 的数据被修改之后，find 查出的数据是新数据。
 
 ## 4. 禁用实体追踪
 

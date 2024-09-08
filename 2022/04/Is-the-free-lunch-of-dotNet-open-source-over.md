@@ -1,12 +1,12 @@
 ---
-title: .NET 开源的免费午餐结束了？ 
+title: .NET 开源的免费午餐结束了？
 slug: Is-the-free-lunch-of-dotNet-open-source-over
 description: 去年 10 月，IdentityServer 的两位创建者和维护者 Dominick Baier 和 Brock Allen 宣布，他们当前的商业模式本质上是不可持续的
 date: 2022-04-20 07:51:25
 copyright: Reprinted
 author: Aaron Stannard
-originaltitle: .NET 开源的免费午餐结束了？ 
-originallink: https://www.sohu.com/a/472062543_115128
+originalTitle: .NET 开源的免费午餐结束了？
+originalLink: https://www.sohu.com/a/472062543_115128
 draft: False
 cover: https://img1.dotnet9.com/2022/04/cover_25.jpeg
 categories: .NET
@@ -19,13 +19,13 @@ tags: C#,开源,知识付费,开源协议
 
 去年 10 月，IdentityServer 的两位创建者和维护者 Dominick Baier 和 Brock Allen 宣布，他们当前的商业模式本质上是不可持续的，因此他们将使用互惠公共许可（Reciprocal Public License，RPL）的付费许可模式，并在一家新公司 Duende Software 下提供 IdentityServer5。
 
-近期，微软宣布他们的 ASP.NET 6 模板将继续包含 Duende 的 IdentityServer 依赖项。IdentityServer 曾经是一款使用宽松的 Apache 2.0 许可的免费开源产品，并且是 ASP.NET 开发人员常用的处理 OpenID 和 OAuth 2.0 令牌的工具，因此多年来微软的ASP.NET 模板一直会默认包含该库。`如今， 微软的流行模板中包含的 IdentityServer 要求年收入超过 100 万美元的用户每年最少支付 1,500 美元的许可费。`
+近期，微软宣布他们的 ASP.NET 6 模板将继续包含 Duende 的 IdentityServer 依赖项。IdentityServer 曾经是一款使用宽松的 Apache 2.0 许可的免费开源产品，并且是 ASP.NET 开发人员常用的处理 OpenID 和 OAuth 2.0 令牌的工具，因此多年来微软的 ASP.NET 模板一直会默认包含该库。`如今， 微软的流行模板中包含的 IdentityServer 要求年收入超过 100 万美元的用户每年最少支付 1,500 美元的许可费。`
 
 .NET 社区非常有风度地回应了这则公告，他们仔细考虑了自己在通过支持独立软件供应商，促进 .NET 开源生态系统创新发展方面的作用，并认同 IdentityServer 通过年费的形式征收许可费用，从而维护代码库的行为非常可取，因为这总好过维护者放弃项目。
 
-然而，.NET 社区的众人陷入了恐慌，他们要求与.NET开源软件的经理讨论一些模板中包含的代码。最糟糕的问题在于，.NET开源软件生态系统真正的管理者乃是微软。
+然而，.NET 社区的众人陷入了恐慌，他们要求与.NET 开源软件的经理讨论一些模板中包含的代码。最糟糕的问题在于，.NET 开源软件生态系统真正的管理者乃是微软。
 
-如今，围绕微软、IdentityServer 以及免费与付费“开源”软件的话题讨论层出不穷，因此我决定在本文中一起来探讨一下.NET开源软件的免费午餐结束，对用户来说意味着什么。
+如今，围绕微软、IdentityServer 以及免费与付费“开源”软件的话题讨论层出不穷，因此我决定在本文中一起来探讨一下.NET 开源软件的免费午餐结束，对用户来说意味着什么。
 
 ## 2. 人心不足蛇吞象
 
@@ -35,14 +35,14 @@ tags: C#,开源,知识付费,开源协议
 
 说起开源，如果维护者只需要支持少量的用户，而且需求都很类似，那么其实成本并不高，但一旦项目达到临界点，而且用户的要求超出了维护者的提供意愿，那么必须有一方付出代价。
 
-IdentityServer 的用户实在是贪心了。在过去的十年里，大多数IdentityServer用户都在贪婪地享用免费的晚餐，如今账单来了。
+IdentityServer 的用户实在是贪心了。在过去的十年里，大多数 IdentityServer 用户都在贪婪地享用免费的晚餐，如今账单来了。
 
 不难想象，微软的这个帖子（https://github.com/dotnet/aspnetcore/issues/32494）中出现了各种观点：
 
-1. 这是一项必不可少的服务，微软应该收购Duende，并再次免费提供 IdentityServer；
-2. 没有人阅读 Duende 的定价条款中有关“任何年收入低于 100 万美元的公司或非营利组织都可以免费使用IdentityServer”的规定，因此很多人在抱怨；
-3. 为仍在Apache 2.0下免费开源的IdentityServer4做贡献，实在是太难了；
-4. 也许微软应该使用其他产品来代替IdentityServer，例如 https://github.com/openiddict/openiddict-core ，或 https://github.com/simpleidserver/SimpleIdServer ，这样免费的午餐就可以持续下去，直到这些项目也遇到与IdentityServer相同的可持续性问题。
+1. 这是一项必不可少的服务，微软应该收购 Duende，并再次免费提供 IdentityServer；
+2. 没有人阅读 Duende 的定价条款中有关“任何年收入低于 100 万美元的公司或非营利组织都可以免费使用 IdentityServer”的规定，因此很多人在抱怨；
+3. 为仍在 Apache 2.0 下免费开源的 IdentityServer4 做贡献，实在是太难了；
+4. 也许微软应该使用其他产品来代替 IdentityServer，例如 https://github.com/openiddict/openiddict-core ，或 https://github.com/simpleidserver/SimpleIdServer ，这样免费的午餐就可以持续下去，直到这些项目也遇到与 IdentityServer 相同的可持续性问题。
 
 而对于微软选择在某些模板中包含 IdentityServer，而不是包含采用了 RPL 条款的核心库，人们的反映也很荒谬。
 
@@ -82,14 +82,14 @@ IdentityServer 的用户实在是贪心了。在过去的十年里，大多数Id
 
 与开源软件项目建立良好的交换价值循环是“开源可持续性危机”的必然结果，每个人都可以因此而受益。因此，现在就开始行动吧，为开源项目做贡献，因为这些项目的持续发展最终也会触及你的自身利益。
 
->原文作者：Aaron Stannard
+> 原文作者：Aaron Stannard
 >
->原文标题：.NET Open Source: What Happens When the Free Lunch Ends?
+> 原文标题：.NET Open Source: What Happens When the Free Lunch Ends?
 >
->原文链接：https://aaronstannard.com/dotnetoss-free-lunch-ends/
+> 原文链接：https://aaronstannard.com/dotnetoss-free-lunch-ends/
 >
->译者 | 弯月 责编 | 欧阳姝黎 | 出品 | CSDN（ID：CSDNnews）
+> 译者 | 弯月 责编 | 欧阳姝黎 | 出品 | CSDN（ID：CSDNnews）
 >
->译文标题：.NET 开源的免费午餐结束了？ 
+> 译文标题：.NET 开源的免费午餐结束了？
 >
->译文链接：https://www.sohu.com/a/472062543_115128
+> 译文链接：https://www.sohu.com/a/472062543_115128

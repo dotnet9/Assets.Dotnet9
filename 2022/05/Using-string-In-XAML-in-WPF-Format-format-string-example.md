@@ -5,8 +5,8 @@ description: 字符串格式化
 date: 2022-05-22 21:50:47
 copyright: Reprinted
 author: 眾尋
-originaltitle: WPF中XAML中使用String.Format格式化字符串示例
-originallink: https://www.cnblogs.com/ZXdeveloper/p/15513657.html
+originalTitle: WPF中XAML中使用String.Format格式化字符串示例
+originalLink: https://www.cnblogs.com/ZXdeveloper/p/15513657.html
 draft: False
 cover: https://img1.dotnet9.com/2022/05/cover_51.jpeg
 categories: .NET
@@ -122,12 +122,12 @@ tags: WPF
 \n  &#x0a;  LF, NL - Linefeed, New Line
 \r  &#x0d;  CR - Carriage return
 \t  &#x09;  HT - Tab, Horizontal Tabelator
-\v  &#x0b;  VT - Vertical Tabelator 
+\v  &#x0b;  VT - Vertical Tabelator
 -->
 ```
 
 ---
 
->原文作者：眾尋
+> 原文作者：眾尋
 >
->原文链接：https://www.cnblogs.com/ZXdeveloper/p/15513657.html
+> 原文链接：https://www.cnblogs.com/ZXdeveloper/p/15513657.html

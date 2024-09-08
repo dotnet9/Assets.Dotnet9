@@ -5,8 +5,8 @@ description: Lottie 动画是一种以 json 文件保存的动画文件。相比
 date: 2022-05-19 06:58:14
 copyright: Reprinted
 author: xiejiang
-originaltitle: WPF|C# Lottie 动画播放【感觉好牛】
-originallink: https://www.cnblogs.com/8u7tgyjire7890/p/15881159.html
+originalTitle: WPF|C# Lottie 动画播放【感觉好牛】
+originalLink: https://www.cnblogs.com/8u7tgyjire7890/p/15881159.html
 draft: False
 cover: https://img1.dotnet9.com/2022/05/cover_49.jpg
 categories: .NET
@@ -15,7 +15,7 @@ tags: WPF,动画
 
 [Lottie](https://lottiefiles.com/) 动画是一种以 json 文件保存的动画文件。 相比 gif 在文件体积和动画流畅度上有很大的优势，而且是图形是矢量的，放大不会糊。
 
-Lottie 的官方提供了web,android,iOS 的实现, 微软提供了 UWP 的实现 [Lottie-Windows](https://github.com/CommunityToolkit/Lottie-Windows)。 WPF 则~~没有找到可用的实现~~。下有 [https://github.com/ascora/LottieSharp](https://github.com/ascora/LottieSharp) 不过我测试了几轮，发现其依赖的 sharpDx 经常报错，而且我完全不熟悉 sharpDx，不知道如何解决。
+Lottie 的官方提供了 web,android,iOS 的实现, 微软提供了 UWP 的实现 [Lottie-Windows](https://github.com/CommunityToolkit/Lottie-Windows)。 WPF 则~~没有找到可用的实现~~。下有 [https://github.com/ascora/LottieSharp](https://github.com/ascora/LottieSharp) 不过我测试了几轮，发现其依赖的 sharpDx 经常报错，而且我完全不熟悉 sharpDx，不知道如何解决。
 
 那么作为 WPF 开发者，想要使用 Lottie 动画看来还是要自己动手。
 
@@ -25,13 +25,13 @@ Lottie 的官方提供了web,android,iOS 的实现, 微软提供了 UWP 的实�
 2. 将上面得到的数据转换为具体的绘图参数。
 3. 在 WPF 中进行高帧率的绘制。
 
-截至2022-02-10, 觉得可行的方案为:
+截至 2022-02-10, 觉得可行的方案为:
 
-1. 微软提供的 UWP 的实现中, 有现成的解析模块, 可直接将 Json 文件读取为一个数据类, 且该模块并没有依赖 UWP, 所以可以直接拿来用。虽然还有一些 Bug(测试了几十个动画文件, 有3个无法正常播放), 但当前该库还比较活跃, 可以期待其改进。
+1. 微软提供的 UWP 的实现中, 有现成的解析模块, 可直接将 Json 文件读取为一个数据类, 且该模块并没有依赖 UWP, 所以可以直接拿来用。虽然还有一些 Bug(测试了几十个动画文件, 有 3 个无法正常播放), 但当前该库还比较活跃, 可以期待其改进。
 2. SkiaSharp 的功能非常全面, 覆盖 Lottie 动画所需的功能应该不成问题, 而且其跨平台, 所以按照数据要求使用 SkiaSharp 进行绘制即可。
-3. SkiaSharp 官方提供的 WPF 画布即使开启 GPU 绘图模式, 其速度依然无法达到1080p 60帧, 不过之前进行其它项目时对 [GLWpfControl](https://github.com/opentk/GLWpfControl) 进行了改进, 实测 2k 144 帧占会用 RTX 2070 23%, 达到可用程度, 虽然有少量内存泄漏, 但问题不大。
+3. SkiaSharp 官方提供的 WPF 画布即使开启 GPU 绘图模式, 其速度依然无法达到 1080p 60 帧, 不过之前进行其它项目时对 [GLWpfControl](https://github.com/opentk/GLWpfControl) 进行了改进, 实测 2k 144 帧占会用 RTX 2070 23%, 达到可用程度, 虽然有少量内存泄漏, 但问题不大。
 
-如果成功实现的话, 应该可以同时支持  WinForm、WPF、UnoPlatform(GTK)、Avalonia、Blazor(Wasm) 以及所有 SkiaSharp 和 .Net Core 3.0+ 可以运行的平台上.
+如果成功实现的话, 应该可以同时支持 WinForm、WPF、UnoPlatform(GTK)、Avalonia、Blazor(Wasm) 以及所有 SkiaSharp 和 .Net Core 3.0+ 可以运行的平台上.
 
 ~~当前仍然处于探索验证阶段,无实用价值。~~
 
@@ -39,7 +39,7 @@ Lottie 的官方提供了web,android,iOS 的实现, 微软提供了 UWP 的实�
 
 本文发布于[https://www.cnblogs.com/8u7tgyjire7890/p/15881159.html](https://www.cnblogs.com/8u7tgyjire7890/p/15881159.html)
 
-以下会持续更新成功实现的动画,每次更新都说明支持了更多的 lottie 特性 
+以下会持续更新成功实现的动画,每次更新都说明支持了更多的 lottie 特性
 
 2022-02-10 选了几个简单的动画进行测试.
 
@@ -77,7 +77,7 @@ Lottie-Windows 没有实现 PolyStar 的数据解析,所以缺少黄色的星星
 
 ![](https://img1.dotnet9.com/2022/05/4906.gif)
 
- 2022-02-16:
+2022-02-16:
 
 层级关系,旋转
 
@@ -93,7 +93,7 @@ Lottie-Windows 没有实现 PolyStar 的数据解析,所以缺少黄色的星星
 
 ![](https://img1.dotnet9.com/2022/05/4908.gif)
 
-更复杂的路径动画. 对比 Lottie Viewer 提示需要 UAP11,我已经升级到 Windows10 21H2了 依然无法播放,不清楚具体原因.
+更复杂的路径动画. 对比 Lottie Viewer 提示需要 UAP11,我已经升级到 Windows10 21H2 了 依然无法播放,不清楚具体原因.
 
 [https://lottiefiles.com/87491-liquid-blobby-loader-green](https://lottiefiles.com/87491-liquid-blobby-loader-green)
 
@@ -109,7 +109,7 @@ ImageAsset 和 ImageLayer
 
 [https://lottiefiles.com/93795-dog-car-ride](https://lottiefiles.com/93795-dog-car-ride)
 
- ![](https://img1.dotnet9.com/2022/05/4911.gif)
+![](https://img1.dotnet9.com/2022/05/4911.gif)
 
 Opacity
 
@@ -130,17 +130,17 @@ Opacity
 更复杂的例子
 
 [https://lottiefiles.com/96388-tiger](https://lottiefiles.com/96388-tiger)
- 
- ![](https://img1.dotnet9.com/2022/05/4915.gif)
+
+![](https://img1.dotnet9.com/2022/05/4915.gif)
 
 2022-02-27
 
-路径的FillType
+路径的 FillType
 
 [https://lottiefiles.com/96511-listening-animation](https://lottiefiles.com/96511-listening-animation)
 
 ![](https://img1.dotnet9.com/2022/05/4916.gif)
- 
+
 2022-03-02
 
 [https://lottiefiles.com/97409-404-page-animation](https://lottiefiles.com/97409-404-page-animation)
@@ -167,7 +167,7 @@ Opacity
 
 [https://lottiefiles.com/96957-lock](https://lottiefiles.com/96957-lock)
 
- ![](https://img1.dotnet9.com/2022/05/4921.gif)
+![](https://img1.dotnet9.com/2022/05/4921.gif)
 
 [https://lottiefiles.com/89881-smiling-star](https://lottiefiles.com/89881-smiling-star)
 
@@ -186,8 +186,8 @@ Opacity
 2022-04-17
 
 [https://lottiefiles.com/96245-success](https://lottiefiles.com/96245-success)
- 
- ![](https://img1.dotnet9.com/2022/05/4925.gif)
+
+![](https://img1.dotnet9.com/2022/05/4925.gif)
 
 [https://lottiefiles.com/88282-rocket](https://lottiefiles.com/88282-rocket)
 

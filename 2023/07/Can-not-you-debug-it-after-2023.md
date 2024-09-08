@@ -5,8 +5,8 @@ description: 本文结合自身实战经验，梳理日常开发中神一般的�
 date: 2023-07-22 07:06:19
 copyright: Reprinted
 author: 河畔一角
-originaltitle: 2022了还不会调试吗？
-originallink: https://juejin.cn/post/7124104703884918798
+originalTitle: 2022了还不会调试吗？
+originalLink: https://juejin.cn/post/7124104703884918798
 draft: false
 cover: https://img1.dotnet9.com/2023/07/cover_10.png
 categories: 前端
@@ -19,7 +19,7 @@ tags: 前端
 
 作者介绍
 
->大家好，我是河畔一角，一名老前端，平常工作比较忙，文章不经常发布，也希望每次的梳理都能给各路朋友带来帮助。
+> 大家好，我是河畔一角，一名老前端，平常工作比较忙，文章不经常发布，也希望每次的梳理都能给各路朋友带来帮助。
 
 ## 前端小白
 
@@ -29,7 +29,7 @@ tags: 前端
 
 ## 前端菜鸟
 
-### console大法
+### console 大法
 
 这个大家肯定不陌生了，遇到问题，可以通过 `console` 来输出日志，分析问题。
 
@@ -38,33 +38,33 @@ tags: 前端
 普通日志输出，也是前端使用频次最高的打印方法
 
 ```js
-function Person(){
-  this.name = 'jack';
+function Person() {
+  this.name = "jack";
   this.age = 30;
 }
 
 let person = new Person();
 
 // 查看person对象都有哪些属性和方法
-console.log(person)
+console.log(person);
 
 // 可以同时姓名和年龄
-console.log(person.name, person.age)
+console.log(person.name, person.age);
 
 // 也可以使用占位符进行输出
 
-console.log('姓名：%s，年龄：%d', person.name, person.age)
+console.log("姓名：%s，年龄：%d", person.name, person.age);
 ```
 
 输出如下：
 
 ![](https://img1.dotnet9.com/2023/07/1002.png)
 
->模板字符串肯定比占位符要更简单，此处不展开讨论。
+> 模板字符串肯定比占位符要更简单，此处不展开讨论。
 
 2. console.warn()
 
-用于控制台输出警告信息。同`console.log`用法一样，只是样式显示不同，通过warn方法输出，前面会显示黄色警告标志。
+用于控制台输出警告信息。同`console.log`用法一样，只是样式显示不同，通过 warn 方法输出，前面会显示黄色警告标志。
 
 输出如下：
 
@@ -80,7 +80,7 @@ console.log('姓名：%s，年龄：%d', person.name, person.age)
 
 4. console.error()
 
-用于控制台输出错误信息。同`console.log`用法一样，只是样式显示不同，通过error方法输出，前面会显示错误图标。
+用于控制台输出错误信息。同`console.log`用法一样，只是样式显示不同，通过 error 方法输出，前面会显示错误图标。
 
 输出如下：
 
@@ -92,28 +92,28 @@ console.log('姓名：%s，年龄：%d', person.name, person.age)
 
 ```js
 // 计时开始
-console.time() 
+console.time();
 
-for(let i=0; i<1000; i++){
- // to-do 
+for (let i = 0; i < 1000; i++) {
+  // to-do
 }
 
 // 计时结束
-console.timeEnd() 
+console.timeEnd();
 ```
 
 输出如下：
 
 ![](https://img1.dotnet9.com/2023/07/1006.png)
 
->注意：`console.timeEnd()` 不可以单独使用，必须先定义 `console.time()` 否则，会提示：`VM578:1 Timer 'default' does not exist`
+> 注意：`console.timeEnd()` 不可以单独使用，必须先定义 `console.time()` 否则，会提示：`VM578:1 Timer 'default' does not exist`
 
 6. console.count()
 
 如果想要获取代码执行次数，可使用 `console.count()`。
 
 ```js
-for(let i=0; i<5; i++){
+for (let i = 0; i < 5; i++) {
   // 次数统计
   console.count();
 }
@@ -123,26 +123,25 @@ for(let i=0; i<5; i++){
 
 ![](https://img1.dotnet9.com/2023/07/1007.png)
 
-
->也可以传入一个参数，进行标记，比如： console.count('次数：')
+> 也可以传入一个参数，进行标记，比如： console.count('次数：')
 
 以上是关于通过 `console` 打印来做调试的比较常用的几个方法，当然还有不少，比较冷门和低频的就不一一列举了。
 
 ### debugger
 
 除了 `console` 日志打印外，比较常用的就是 `debugger` 了，当程序出错或者找不到问题时，我们需要在代码中直接定义 `debugger` 来暂停程序执行，进而分析问题。
-js复制代码let list = [{ name:'jack' , age: 30 , info:{ score: 70} },{ name:'tom' , age: 28 }]
+js 复制代码 let list = [{ name:'jack' , age: 30 , info:{ score: 70} },{ name:'tom' , age: 28 }]
 
 ```js
-for(let item of list){
-    debugger
-    if(item.info.score > 60){
-       console.log(`恭喜你：${item.name}`);
-    }
+for (let item of list) {
+  debugger;
+  if (item.info.score > 60) {
+    console.log(`恭喜你：${item.name}`);
+  }
 }
 ```
 
-上述代码很明显会报错，如果程序再复杂一些，就需要我们断点调试了。通过debugger，我们可以调试得知 `item.info` 为 `null` 导致程序报错。
+上述代码很明显会报错，如果程序再复杂一些，就需要我们断点调试了。通过 debugger，我们可以调试得知 `item.info` 为 `null` 导致程序报错。
 
 调试如下：
 
@@ -160,7 +159,7 @@ for(let item of list){
 
 ![](https://img1.dotnet9.com/2023/07/1010.png)
 
->进入断点以后，鼠标悬浮在变量上，会显示该变量值，悬浮在对象上会显示对象下的属性和方法，右侧面板包含：监视区、断点、作用域、调用堆栈等板块。
+> 进入断点以后，鼠标悬浮在变量上，会显示该变量值，悬浮在对象上会显示对象下的属性和方法，右侧面板包含：监视区、断点、作用域、调用堆栈等板块。
 
 ![](https://img1.dotnet9.com/2023/07/1011.png)
 
@@ -176,7 +175,7 @@ for(let item of list){
 
 ![](https://img1.dotnet9.com/2023/07/1013.png)
 
-- 当userId == 1000002时，才触发断点
+- 当 userId == 1000002 时，才触发断点
 
 ![](https://img1.dotnet9.com/2023/07/1014.png)
 
@@ -184,7 +183,7 @@ for(let item of list){
 
 ![](https://img1.dotnet9.com/2023/07/1015.png)
 
->条件断点，简直太好用了，爆赞
+> 条件断点，简直太好用了，爆赞
 
 ![](https://img1.dotnet9.com/2023/07/1016.gif)
 
@@ -197,9 +196,9 @@ for(let item of list){
 操作步骤：
 
 1. 打开控制台
-2. 选择Network(中文叫网络)
+2. 选择 Network(中文叫网络)
 3. 找到要重发的接口
-4. 右键选择Replay XHR(中文叫重放XHR)
+4. 右键选择 Replay XHR(中文叫重放 XHR)
 
 于是你就看到了惊人的一幕，请求再次发送了...
 
@@ -216,9 +215,9 @@ for(let item of list){
 如果请求重发的时候，需要修改参数，如何处理？
 
 1. 打开控制台
-2. 选择Network(中文叫网络)
+2. 选择 Network(中文叫网络)
 3. 找到要修改参数的接口
-4. 右键选择Copy -> Copy as fetch (中文叫以fetch格式复制)
+4. 右键选择 Copy -> Copy as fetch (中文叫以 fetch 格式复制)
 5. 在控制台界面，粘贴
 6. 修改请求参数，直接回车即可
 
@@ -234,7 +233,7 @@ for(let item of list){
 
 ![](https://img1.dotnet9.com/2023/07/1021.png)
 
-### HTML节点复制
+### HTML 节点复制
 
 当页面布局出问题时，我们往往需要通过审查元素进行分析，同时也会在控制台通过 `DOM API` 来进行读写调试，但是 `DOM API` 操作起来过于麻烦，殊不知浏览器已自带 `api` 功能？
 
@@ -246,30 +245,29 @@ for(let item of list){
 
 ![](https://img1.dotnet9.com/2023/07/1023.png)
 
-- 用 `$` 或 `$$` 代替  `docuement.querySelector()`
+- 用 `$` 或 `$$` 代替 `docuement.querySelector()`
 
 ![](https://img1.dotnet9.com/2023/07/1024.png)
 
->这简直太好用了，如果你还不知道，真的就 `out` 了，`chrome` 太懂前端了
+> 这简直太好用了，如果你还不知道，真的就 `out` 了，`chrome` 太懂前端了
 
-### JavaScript对象复制
+### JavaScript 对象复制
 
 有时候我们通过 `console.log` 打印了一个比较复杂的对象，但是需要一层一层展开进行查看，非常不方便，有什么好办法？
 
 ```js
-function Person(){
-  this.name = 'jack';
+function Person() {
+  this.name = "jack";
   this.age = 30;
 }
 
 let person = new Person();
 
 // 查看person对象都有哪些属性和方法
-console.log(person)
+console.log(person);
 ```
 
 浏览器自带 `copy` 函数
-
 
 `1. 输入 `copy(person)`
 
@@ -284,14 +282,14 @@ console.log(person)
 - `$` // 简单理解就是 document.querySelector 而已。
 - `$$` // 简单理解就是 document.querySelectorAll 而已。
 - `$_` // 是上一个表达式的值
-- `$0-$4` // 是最近5个Elements面板选中的DOM元素，待会会讲。
+- `$0-$4` // 是最近 5 个 Elements 面板选中的 DOM 元素，待会会讲。
 - `dir` // 其实就是 console.dir
 - `keys` // 取对象的键名, 返回键名组成的数组
 - `values` // 取对象的值, 返回值组成的数组
 
 ### 本地文件替换远程
 
-我曾经遇到过一种场景，有一个项目已经部署到服务器上了，但是本地没有仓库代码，服务器全部是压缩的代码，我们要调试变得很困难，普通的做法就是下载服务器的压缩包到本地，通过nginx运行，进行本地调试，最后修改压缩包再重新部署到服务器。殊不知浏览器已经提供了 `overrides` 功能？
+我曾经遇到过一种场景，有一个项目已经部署到服务器上了，但是本地没有仓库代码，服务器全部是压缩的代码，我们要调试变得很困难，普通的做法就是下载服务器的压缩包到本地，通过 nginx 运行，进行本地调试，最后修改压缩包再重新部署到服务器。殊不知浏览器已经提供了 `overrides` 功能？
 
 1. 打开控制台
 

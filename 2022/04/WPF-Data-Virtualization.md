@@ -5,21 +5,21 @@ description: 这篇文章不错，本来借助谷歌翻译，站长想再人工�
 date: 2022-04-13 21:14:35
 copyright: Reprinted
 author: Paul McClean
-originaltitle: WPF：数据虚拟化
-originallink: https://www.codeproject.com/Articles/34405/WPF-Data-Virtualization
+originalTitle: WPF：数据虚拟化
+originalLink: https://www.codeproject.com/Articles/34405/WPF-Data-Virtualization
 draft: False
 cover: https://img1.dotnet9.com/2022/04/cover_14.png
 categories: .NET
 tags: UI虚拟化,数据虚拟化
 ---
 
->原文标题：WPF: Data Virtualization
+> 原文标题：WPF: Data Virtualization
 >
->原文链接：https://www.codeproject.com/Articles/34405/WPF-Data-Virtualization
+> 原文链接：https://www.codeproject.com/Articles/34405/WPF-Data-Virtualization
 >
->原文作者：Paul McClean
+> 原文作者：Paul McClean
 
->这篇文章不错，本来借助谷歌翻译，站长想再人工检查一遍，发现里面专业术语挺多的，个人英语也太渣，直接原文照搬了，希望你的英文可以的。
+> 这篇文章不错，本来借助谷歌翻译，站长想再人工检查一遍，发现里面专业术语挺多的，个人英语也太渣，直接原文照搬了，希望你的英文可以的。
 
 ![](https://img1.dotnet9.com/2022/04/1401.png)
 
@@ -166,10 +166,10 @@ Finally, a defensive check is in place in case the page is not yet available, wh
 
 ```csharp
 // ...
-      
-private readonly Dictionary<int, IList<T>> _pages = 
+
+private readonly Dictionary<int, IList<T>> _pages =
         new Dictionary<int, IList<T>>();
-private readonly Dictionary<int, DateTime> _pageTouchTimes = 
+private readonly Dictionary<int, DateTime> _pageTouchTimes =
         new Dictionary<int, DateTime>();
 
 protected virtual void RequestPage(int pageIndex)
@@ -199,7 +199,7 @@ public void CleanUpPages()
     {
         // page 0 is a special case, since the WPF ItemsControl
         // accesses the first item frequently
-        if ( key != 0 && (DateTime.Now - 
+        if ( key != 0 && (DateTime.Now -
              _pageTouchTimes[key]).TotalMilliseconds > PageTimeout )
         {
             _pages.Remove(key);
@@ -247,7 +247,7 @@ protected virtual void OnCollectionChanged(NotifyCollectionChangedEventArgs e)
 
 private void FireCollectionReset()
 {
-    NotifyCollectionChangedEventArgs e = 
+    NotifyCollectionChangedEventArgs e =
       new NotifyCollectionChangedEventArgs(NotifyCollectionChangedAction.Reset);
     OnCollectionChanged(e);
 }
@@ -362,7 +362,7 @@ public class DemoCustomerProvider : IItemsProvider<Customer>
     public int FetchCount()
     {
         Thread.Sleep(_fetchDelay);
-        return _count; 
+        return _count;
     }
 
     public IList<Customer> FetchRange(int startIndex, int count)
@@ -389,7 +389,7 @@ A simple WPF window with a `ListView` was created to allow the user to experimen
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     Title="Data Virtualization Demo - By Paul McClean" Height="600" Width="600">
-    
+
     <Window.Resources>
         <Style x:Key="lvStyle" TargetType="{x:Type ListView}">
             <Setter Property="VirtualizingStackPanel.IsVirtualizing" Value="True"/>
@@ -424,9 +424,9 @@ A simple WPF window with a `ListView` was created to allow the user to experimen
             </Style.Triggers>
         </Style>
     </Window.Resources>
-    
+
     <Grid Margin="5">
-        
+
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
@@ -434,16 +434,16 @@ A simple WPF window with a `ListView` was created to allow the user to experimen
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-       
+
         <GroupBox Grid.Row="0" Header="ItemsProvider">
             <StackPanel Orientation="Horizontal" Margin="0,2,0,0">
-                <TextBlock Text="Number of items:" Margin="5" 
+                <TextBlock Text="Number of items:" Margin="5"
                   TextAlignment="Right" VerticalAlignment="Center"/>
-                <TextBox x:Name="tbNumItems" Margin="5" 
+                <TextBox x:Name="tbNumItems" Margin="5"
                   Text="1000000" Width="60" VerticalAlignment="Center"/>
-                <TextBlock Text="Fetch Delay (ms):" Margin="5" 
+                <TextBlock Text="Fetch Delay (ms):" Margin="5"
                   TextAlignment="Right" VerticalAlignment="Center"/>
-                <TextBox x:Name="tbFetchDelay" Margin="5" 
+                <TextBox x:Name="tbFetchDelay" Margin="5"
                   Text="1000" Width="60" VerticalAlignment="Center"/>
             </StackPanel>
         </GroupBox>
@@ -451,40 +451,40 @@ A simple WPF window with a `ListView` was created to allow the user to experimen
         <GroupBox Grid.Row="1" Header="Collection">
             <StackPanel>
                 <StackPanel Orientation="Horizontal" Margin="0,2,0,0">
-                    <TextBlock Text="Type:" Margin="5" 
+                    <TextBlock Text="Type:" Margin="5"
                       TextAlignment="Right" VerticalAlignment="Center"/>
-                    <RadioButton x:Name="rbNormal" GroupName="rbGroup" 
+                    <RadioButton x:Name="rbNormal" GroupName="rbGroup"
                       Margin="5" Content="List(T)" VerticalAlignment="Center"/>
-                    <RadioButton x:Name="rbVirtualizing" GroupName="rbGroup" 
-                      Margin="5" Content="VirtualizingList(T)" 
+                    <RadioButton x:Name="rbVirtualizing" GroupName="rbGroup"
+                      Margin="5" Content="VirtualizingList(T)"
                       VerticalAlignment="Center"/>
-                    <RadioButton x:Name="rbAsync" GroupName="rbGroup" 
-                      Margin="5" Content="AsyncVirtualizingList(T)" 
+                    <RadioButton x:Name="rbAsync" GroupName="rbGroup"
+                      Margin="5" Content="AsyncVirtualizingList(T)"
                       IsChecked="True" VerticalAlignment="Center"/>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" Margin="0,2,0,0">
-                    <TextBlock Text="Page size:" Margin="5" 
+                    <TextBlock Text="Page size:" Margin="5"
                       TextAlignment="Right" VerticalAlignment="Center"/>
-                    <TextBox x:Name="tbPageSize" Margin="5" 
+                    <TextBox x:Name="tbPageSize" Margin="5"
                       Text="100" Width="60" VerticalAlignment="Center"/>
-                    <TextBlock Text="Page timeout (s):" Margin="5" 
+                    <TextBlock Text="Page timeout (s):" Margin="5"
                       TextAlignment="Right" VerticalAlignment="Center"/>
-                    <TextBox x:Name="tbPageTimeout" Margin="5" 
+                    <TextBox x:Name="tbPageTimeout" Margin="5"
                       Text="30" Width="60" VerticalAlignment="Center"/>
                 </StackPanel>
              </StackPanel>
         </GroupBox>
 
         <StackPanel Orientation="Horizontal" Grid.Row="2">
-            <TextBlock Text="Memory Usage:" Margin="5" 
+            <TextBlock Text="Memory Usage:" Margin="5"
               VerticalAlignment="Center"/>
-            <TextBlock x:Name="tbMemory" Margin="5" 
+            <TextBlock x:Name="tbMemory" Margin="5"
               Width="80" VerticalAlignment="Center"/>
 
-            <Button Content="Refresh" Click="Button_Click" 
+            <Button Content="Refresh" Click="Button_Click"
               Margin="5" Width="100" VerticalAlignment="Center"/>
 
-            <Rectangle Name="rectangle" Width="20" Height="20" 
+            <Rectangle Name="rectangle" Width="20" Height="20"
                      Fill="Blue" Margin="5" VerticalAlignment="Center">
                 <Rectangle.RenderTransform>
                     <RotateTransform Angle="0" CenterX="10" CenterY="10"/>
@@ -493,24 +493,24 @@ A simple WPF window with a `ListView` was created to allow the user to experimen
                     <EventTrigger RoutedEvent="Rectangle.Loaded">
                         <BeginStoryboard>
                             <Storyboard>
-                                <DoubleAnimation Storyboard.TargetName="rectangle" 
+                                <DoubleAnimation Storyboard.TargetName="rectangle"
                                    Storyboard.TargetProperty=
-                                     "(TextBlock.RenderTransform).(RotateTransform.Angle)" 
-                                   From="0" To="360" Duration="0:0:5" 
+                                     "(TextBlock.RenderTransform).(RotateTransform.Angle)"
+                                   From="0" To="360" Duration="0:0:5"
                                    RepeatBehavior="Forever" />
                             </Storyboard>
                         </BeginStoryboard>
                     </EventTrigger>
                 </Rectangle.Triggers>
             </Rectangle>
-            
-            <TextBlock Margin="5" VerticalAlignment="Center" 
+
+            <TextBlock Margin="5" VerticalAlignment="Center"
               FontStyle="Italic" Text="Pause in animation indicates UI thread stalled."/>
-            
+
         </StackPanel>
 
         <ListView Grid.Row="3" Margin="5" Style="{DynamicResource lvStyle}"/>
-        
+
     </Grid>
 </Window>
 ```
@@ -526,7 +526,7 @@ public partial class DemoWindow
     public DemoWindow()
     {
         InitializeComponent();
-        
+
         // use a timer to periodically update the memory usage
         DispatcherTimer timer = new DispatcherTimer();
         timer.Interval = new TimeSpan(0, 0, 1);
@@ -536,7 +536,7 @@ public partial class DemoWindow
 
     private void timer_Tick(object sender, EventArgs e)
     {
-        tbMemory.Text = string.Format("{0:0.00} MB", 
+        tbMemory.Text = string.Format("{0:0.00} MB",
                              GC.GetTotalMemory(true)/1024.0/1024.0);
     }
 
@@ -545,7 +545,7 @@ public partial class DemoWindow
         // create the demo items provider according to specified parameters
         int numItems = int.Parse(tbNumItems.Text);
         int fetchDelay = int.Parse(tbFetchDelay.Text);
-        DemoCustomerProvider customerProvider = 
+        DemoCustomerProvider customerProvider =
                        new DemoCustomerProvider(numItems, fetchDelay);
 
         // create the collection according to specified parameters
@@ -554,7 +554,7 @@ public partial class DemoWindow
 
         if ( rbNormal.IsChecked.Value )
         {
-            DataContext = new List<Customer>(customerProvider.FetchRange(0, 
+            DataContext = new List<Customer>(customerProvider.FetchRange(0,
                                                    customerProvider.FetchCount()));
         }
         else if ( rbVirtualizing.IsChecked.Value )
@@ -563,7 +563,7 @@ public partial class DemoWindow
         }
         else if ( rbAsync.IsChecked.Value )
         {
-            DataContext = new AsyncVirtualizingCollection<Customer>(customerProvider, 
+            DataContext = new AsyncVirtualizingCollection<Customer>(customerProvider,
                               pageSize, pageTimeout*1000);
         }
     }
@@ -595,16 +595,16 @@ In practice, it would appear that the `ItemsControl` binding will also invoke th
 
 This is my first article on CodeProject. Having lurked in the shadows for several years, it was finally time to come out into the open. I hope you find this article useful, and I would appreciate any comments or suggestions. If you find any errors, please accept my apologies and leave a comment; I will endeavor to fix any errors promptly.
 
-## Update 
+## Update
 
-Since I first published this article, [Bea Stollnitz](http://www.zagstudio.com/blog/498#.UVSu2KUbBcA) has published a much more comprehensive and complete solution to data virtualization. I would refer readers to her [solution](http://www.zagstudio.com/blog/498#.UVSu2KUbBcA). 
+Since I first published this article, [Bea Stollnitz](http://www.zagstudio.com/blog/498#.UVSu2KUbBcA) has published a much more comprehensive and complete solution to data virtualization. I would refer readers to her [solution](http://www.zagstudio.com/blog/498#.UVSu2KUbBcA).
 
-I am greatly encouraged by all the positive comments this article received and would like to thank all those who read it, commented on it or voted. I hope people will continue to find this article and example code useful. As such I would like to remove the license on the source code and place it in the public domain. This means anyone may use it in any application, but without any warranty. 
+I am greatly encouraged by all the positive comments this article received and would like to thank all those who read it, commented on it or voted. I hope people will continue to find this article and example code useful. As such I would like to remove the license on the source code and place it in the public domain. This means anyone may use it in any application, but without any warranty.
 
-## History 
+## History
 
-- 23 March 2009 - First submission. 
-- 28 March 2011 - Minor update and change of license 
+- 23 March 2009 - First submission.
+- 28 March 2011 - Minor update and change of license
 
 ## License
 

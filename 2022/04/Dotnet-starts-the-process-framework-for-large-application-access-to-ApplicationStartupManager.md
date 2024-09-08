@@ -5,8 +5,8 @@ description: 设想，用户双击了桌面图标，然而等待几分钟，应�
 date: 2022-04-10 08:38:46
 copyright: Reprinted
 author: 林德熙
-originaltitle: dotnet 为大型应用接入 ApplicationStartupManager 启动流程框架
-originallink: https://blog.lindexi.com/post/dotnet-%E4%B8%BA%E5%A4%A7%E5%9E%8B%E5%BA%94%E7%94%A8%E6%8E%A5%E5%85%A5-ApplicationStartupManager-%E5%90%AF%E5%8A%A8%E6%B5%81%E7%A8%8B%E6%A1%86%E6%9E%B6.html
+originalTitle: dotnet 为大型应用接入 ApplicationStartupManager 启动流程框架
+originalLink: https://blog.lindexi.com/post/dotnet-%E4%B8%BA%E5%A4%A7%E5%9E%8B%E5%BA%94%E7%94%A8%E6%8E%A5%E5%85%A5-ApplicationStartupManager-%E5%90%AF%E5%8A%A8%E6%B5%81%E7%A8%8B%E6%A1%86%E6%9E%B6.html
 draft: False
 cover: https://img1.dotnet9.com/2022/04/0704.jpg
 categories: .NET
@@ -16,6 +16,7 @@ tags: .NET
 对于大型的应用软件，特别是客户端应用软件，应用启动过程中，需要执行大量的逻辑，包括各个模块的初始化和注册等等逻辑。大型应用软件的启动过程都是非常复杂的，而客户端应用软件是对应用的启动性能有所要求的，不同于服务端的应用软件。设想，用户双击了桌面图标，然而等待几分钟，应用才启动完毕，那用户下一步会不会就是点击卸载了。为了权衡大型应用软件在启动过程，既需要执行复杂的启动逻辑，又需要关注启动性能，为此过程造一个框架是一个完全合理的事情。我所在的团队为启动过程造的库，就是本文将要和大家介绍我所在团队开源的 `dotnetCampus.ApplicationStartupManager` 启动流程框架的库
 
 ## 背景
+
 这个库的起源是一次听 VisualStudio 团队的分享，当时大佬们告诉我，为了优化 VisualStudio 的启动性能，他的团队制定了一个有趣的方向，那就是在应用启动的时候将 CPU 和内存和磁盘跑满。当然，这是一个玩笑的话，本来的意思是，在 VisualStudio 应用启动的时候，应该充分压榨计算机的性能。刚好，我所在的团队也有很多个大型的应用，代码的 MergeRequest 数都破万的应用。这些应用的逻辑复杂度都是非常高的，原本只能是采用单个线程执行，从而减少模块之间的依赖复杂度导致的坑。但在后续为了优化应用软件的启动性能，考虑到进行机器性能的压榨策略，其中就包括了多线程的方式
 
 然而在开多线程的时候，自然就会遇到很多线程相关的问题，最大的问题就是如何处理各个启动模块之间的依赖关系。如果没有一个较好的框架来进行处理，只靠开发者的个人能力来处理，做此重构是完全不靠谱的，或者说这个事情是做不远的，也许这个版本能优化，但下个版本呢
@@ -456,7 +457,7 @@ namespace dotnetCampus.Telescope
                     typeof(WPFDemo.Api.Startup.Foo1Startup),
                     new StartupTaskAttribute()
                     {
-      
+
                         BeforeTasks = StartupNodes.CoreUI,
                         AfterTasks = StartupNodes.Foundation
                     },

@@ -4,14 +4,14 @@ slug: Perfect-Display-Markdown-in-Csharp-Blazor-and-add-code-highlighting
 description: 自认为应该是比较完美了，下面说说怎么做的。
 date: 2022-02-27 17:46:36
 copyright: Original
-originaltitle: 完美：C# Blazor中显示Markdown并添加代码高亮
+originalTitle: 完美：C# Blazor中显示Markdown并添加代码高亮
 draft: False
 cover: https://img1.dotnet9.com/2022/02/cover_14.jpg
 categories: .NET
 tags: Blazor,Markdown
 ---
 
-昨天发了一篇[介绍这个库：C# Blazor中显示Markdown文件](https://mp.weixin.qq.com/s/CGSJ4qkVdaSg738nSyXhLg)，介绍怎么在Blazor中显示Markdown内容的文章，文章内的代码是没有高亮的，思来相去，还是要做好，于是百度到这篇文章[.NET C# Blazor 服务端渲染Markdown](https://blog.csdn.net/qq_37214567/article/details/122949945)，现在渲染效果如下：
+昨天发了一篇[介绍这个库：C# Blazor 中显示 Markdown 文件](https://mp.weixin.qq.com/s/CGSJ4qkVdaSg738nSyXhLg)，介绍怎么在 Blazor 中显示 Markdown 内容的文章，文章内的代码是没有高亮的，思来相去，还是要做好，于是百度到这篇文章[.NET C# Blazor 服务端渲染 Markdown](https://blog.csdn.net/qq_37214567/article/details/122949945)，现在渲染效果如下：
 
 ![](https://img1.dotnet9.com/2022/02/1601.gif)
 
@@ -19,7 +19,7 @@ tags: Blazor,Markdown
 
 ## 一、准备工具
 
-### 1.1 添加Markdown转html包：Markdig
+### 1.1 添加 Markdown 转 html 包：Markdig
 
 [Markdig](https://github.com/xoofx/markdig)：Markdig 是一个快速、强大、符合[CommonMark](http://commonmark.org/)标准、可扩展的 .NET Markdown 处理器。
 
@@ -27,39 +27,51 @@ tags: Blazor,Markdown
 <PackageReference Include="Markdig" Version="0.27.0" />
 ```
 
-## 1.2 引入Prism插件
+## 1.2 引入 Prism 插件
 
-此[Prism](https://github.com/PrismJS/prism)非彼[Prism](https://github.com/PrismLibrary/Prism)，是一个JS插件：Prism 是一个轻量级、健壮且优雅的语法高亮库。这是[Dabblet](https://dabblet.com/)的一个衍生项目。
+此[Prism](https://github.com/PrismJS/prism)非彼[Prism](https://github.com/PrismLibrary/Prism)，是一个 JS 插件：Prism 是一个轻量级、健壮且优雅的语法高亮库。这是[Dabblet](https://dabblet.com/)的一个衍生项目。
 
 在`_Layout.cshtml`的`head`中引入：
 
 ```html
 <head>
-....
-<!--重置浏览器样式-->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.css">
-<!--代码块主题-->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.27.0/themes/prism-coy.min.css">
-<!--工具栏插件-->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.27.0/plugins/toolbar/prism-toolbar.min.css">
-<!--行号插件-->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.27.0/plugins/line-numbers/prism-line-numbers.min.css">
-...
+  ....
+  <!--重置浏览器样式-->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.css"
+  />
+  <!--代码块主题-->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/prismjs@1.27.0/themes/prism-coy.min.css"
+  />
+  <!--工具栏插件-->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/prismjs@1.27.0/plugins/toolbar/prism-toolbar.min.css"
+  />
+  <!--行号插件-->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/prismjs@1.27.0/plugins/line-numbers/prism-line-numbers.min.css"
+  />
+  ...
 </head>
 <body>
-...
-<!--prism核心js (用于渲染代码块)-->
-<script src="https://cdn.jsdelivr.net/npm/prismjs@1.27.0/prism.min.js"></script>
-<!--显示代码块行号-->
-<script src="https://cdn.jsdelivr.net/npm/prismjs@1.27.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
-<!--工具栏(一些插件的前置依赖)-->
-<script src="https://cdn.jsdelivr.net/npm/prismjs@1.27.0/plugins/toolbar/prism-toolbar.min.js"></script>
-<!--代码块显示语言名称-->
-<script src="https://cdn.jsdelivr.net/npm/prismjs@1.27.0/plugins/show-language/prism-show-language.min.js"></script>
-<!--复制代码-->
-<script src="https://cdn.jsdelivr.net/npm/prismjs@1.27.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js"></script>
-<!--自动去cdn加载对应语言的代码高亮js-->
-<script src="https://cdn.jsdelivr.net/npm/prismjs@1.27.0/plugins/autoloader/prism-autoloader.min.js"></script>
+  ...
+  <!--prism核心js (用于渲染代码块)-->
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.27.0/prism.min.js"></script>
+  <!--显示代码块行号-->
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.27.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
+  <!--工具栏(一些插件的前置依赖)-->
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.27.0/plugins/toolbar/prism-toolbar.min.js"></script>
+  <!--代码块显示语言名称-->
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.27.0/plugins/show-language/prism-show-language.min.js"></script>
+  <!--复制代码-->
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.27.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js"></script>
+  <!--自动去cdn加载对应语言的代码高亮js-->
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.27.0/plugins/autoloader/prism-autoloader.min.js"></script>
 </body>
 ```
 
@@ -119,16 +131,7 @@ protected override async Task OnAfterRenderAsync(bool firstRender)
 
 ```html
 <div class="line-numbers">
-    @{
-        if (_hasXss)
-        {
-            @_postHtmlContent.ToString()
-        }
-        else
-        {
-            @_postHtmlContent
-        }
-    }
+  @{ if (_hasXss) { @_postHtmlContent.ToString() } else { @_postHtmlContent } }
 </div>
 ```
 
@@ -136,13 +139,14 @@ protected override async Task OnAfterRenderAsync(bool firstRender)
 
 ```html
 <MarkdownComponent
-    LocalPostFilePath="wwwroot/2022/02/2022-02-22_02.md"
-    RemotePostUrl="https://dotnet9.com/2022/02/Perfect-Display-Markdown-in-Csharp-Blazor-and-add-code-highlighting"
-    SourceCodeUrl="https://github.com/dotnet9/dotnet9.com/blob/develop/src/Dotnet9.Tools.Web/Pages/Public/ImageTools/IcoTool.razor"/>
+  LocalPostFilePath="wwwroot/2022/02/2022-02-22_02.md"
+  RemotePostUrl="https://dotnet9.com/2022/02/Perfect-Display-Markdown-in-Csharp-Blazor-and-add-code-highlighting"
+  SourceCodeUrl="https://github.com/dotnet9/dotnet9.com/blob/develop/src/Dotnet9.Tools.Web/Pages/Public/ImageTools/IcoTool.razor"
+/>
 ```
 
-当然组件封装看个人需求，大致思路是上面的，就不贴详细代码了，有兴趣看看[Dotnet9工具箱源码](https://github.com/dotnet9/dotnet9.com)。
+当然组件封装看个人需求，大致思路是上面的，就不贴详细代码了，有兴趣看看[Dotnet9 工具箱源码](https://github.com/dotnet9/dotnet9.com)。
 
 参考文章：
 
-- [.NET C# Blazor 服务端渲染Markdown](https://blog.csdn.net/qq_37214567/article/details/122949945)
+- [.NET C# Blazor 服务端渲染 Markdown](https://blog.csdn.net/qq_37214567/article/details/122949945)

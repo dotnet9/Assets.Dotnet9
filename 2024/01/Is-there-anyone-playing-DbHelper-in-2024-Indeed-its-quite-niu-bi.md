@@ -7,8 +7,8 @@ lastmod: 2024-01-21 00:27:47
 banner: true
 copyright: Reprinted
 author: 游子吟i
-originaltitle: 基于Ado.Net多个关系型数据库DbHelper封装
-originallink: https://blog.csdn.net/ftfmatlab/article/details/135655836
+originalTitle: 基于Ado.Net多个关系型数据库DbHelper封装
+originalLink: https://blog.csdn.net/ftfmatlab/article/details/135655836
 draft: false
 cover: https://img1.dotnet9.com/2024/01/cover_09.png
 categories: .NET
@@ -17,7 +17,7 @@ tags: 技术更新
 
 ## 引言
 
-时光荏苒，转眼已是2024年。在这个技术日新月异的时代，有些经典却永远不会过时。`DbHelper`，这个在开发者社区中一直备受瞩目的名字，如今依然熠熠生辉。最近，一位技术大佬再次展示了DbHelper的强大魅力，让我们一起来欣赏一下吧！
+时光荏苒，转眼已是 2024 年。在这个技术日新月异的时代，有些经典却永远不会过时。`DbHelper`，这个在开发者社区中一直备受瞩目的名字，如今依然熠熠生辉。最近，一位技术大佬再次展示了 DbHelper 的强大魅力，让我们一起来欣赏一下吧！
 
 ![](https://img1.dotnet9.com/2024/01/0901.png)
 
@@ -26,7 +26,7 @@ tags: 技术更新
 - 原文链接：https://blog.csdn.net/ftfmatlab/article/details/135655836
 - 源码地址：https://download.csdn.net/download/ftfmatlab/88765289
 
-## DbHelper的封装：简约而不简单
+## DbHelper 的封装：简约而不简单
 
 基于[ADO.NET](https://learn.microsoft.com/zh-cn/dotnet/framework/data/adonet/)框架，这位大佬巧妙地封装了适用于多个关系型数据库的`DbHelper`。通过简洁明了的代码，实现了对各种数据库的高效操作。
 
@@ -45,12 +45,12 @@ public class DbHelper
         public DbConnection GetDbConnection()
         {
             var conn = _dataBase.CreationConnection();
- 
+
             if (conn.State == ConnectionState.Closed)
             {
                 conn.Open();
             }
- 
+
             return conn;
         }
         /// <summary>
@@ -121,7 +121,7 @@ public class DbHelper
         {
             if (reader == null)
                 throw new Exception("数据读取器是空的!");
- 
+
             List<T> list = new List<T>();
             using (DbConnection connection = GetDbConnection())
             {
@@ -144,7 +144,7 @@ public class DbHelper
                     }
                 }
             }
- 
+
             return list;
         }
         /// <summary>
@@ -162,7 +162,7 @@ public class DbHelper
             {
                 throw new Exception("数据读取器是空的!");
             }
- 
+
             var model = default(T);
             using (DbConnection connection = GetDbConnection())
             {
@@ -175,7 +175,7 @@ public class DbHelper
                         cmd.Parameters.Clear();
                         if (myReader.Read())
                             model = reader(myReader);
- 
+
                         myReader.Close();
                     }
                     catch (DbException e)
@@ -184,7 +184,7 @@ public class DbHelper
                     }
                 }
             }
- 
+
             return model;
         }
         /// <summary>
@@ -238,7 +238,7 @@ public class DbHelper
             {
                 throw new Exception("数据读取器是空的!");
             }
- 
+
             T t = default(T);
             using (DbConnection connection = GetDbConnection())
             {
@@ -266,7 +266,7 @@ public class DbHelper
             {
                 throw new Exception("数据读取器是空的!");
             }
- 
+
             List<T> list = new List<T>();
             using (DbConnection connection = GetDbConnection())
             {
@@ -341,10 +341,10 @@ public class DbHelper
                         {
                             list.Add(reader(myReader));
                         }
- 
+
                         if (myReader.NextResult() && myReader.Read())
                             page.Count = myReader.GetInt64Ex(0);
- 
+
                         myReader.Close();
                     }
                     catch (MySqlException e)
@@ -353,7 +353,7 @@ public class DbHelper
                     }
                 }
             }
- 
+
             return list;
         }
         /// <summary>
@@ -369,12 +369,12 @@ public class DbHelper
             {
                 sql = sql + " WHERE " + where;
             }
- 
+
             if (!string.IsNullOrEmpty(order))
             {
                 sql = sql + " " + order;
             }
- 
+
             return sql;
         }
         /// <summary>
@@ -399,13 +399,13 @@ public class DbHelper
                 {
                     return string.Format("LIMIT {0},{1}", offset, size);
                 }
- 
+
                 if (_dataBase.DbType == DbBaseType.PostgreSql || _dataBase.DbType == DbBaseType.Sqlite)
                 {
                     return string.Format(" LIMIT {0} OFFSET {1}", size, offset);
                 }
             }
- 
+
             throw new Exception("暂时不支持其它分页语法");
         }
         public DbParameter CreateDbParameter(string parameterName, DbType dbType, object value)
@@ -451,7 +451,7 @@ public class DbHelper
                     {
                         parameter.Value = DBNull.Value;
                     }
- 
+
                     command.Parameters.Add(parameter);
                 }
             }
@@ -459,21 +459,21 @@ public class DbHelper
     }
 ```
 
-## Demo项目中一探究竟
+## Demo 项目中一探究竟
 
-想要一睹DbHelper在实战中的风采？没问题，大佬已经为我们准备好了Demo项目。通过以下截图，我们可以先睹为快：
+想要一睹 DbHelper 在实战中的风采？没问题，大佬已经为我们准备好了 Demo 项目。通过以下截图，我们可以先睹为快：
 
 ![](https://img1.dotnet9.com/2024/01/0902.png)
 
-在Demo项目中，DataAchieve类继承了DataBase抽象类，并重写了CreationConnection()方法。通过DataBaseFactory工厂类，我们可以轻松创建DataBase实例。这种设计模式不仅提高了代码的复用性，还使得项目结构更加清晰。
+在 Demo 项目中，DataAchieve 类继承了 DataBase 抽象类，并重写了 CreationConnection()方法。通过 DataBaseFactory 工厂类，我们可以轻松创建 DataBase 实例。这种设计模式不仅提高了代码的复用性，还使得项目结构更加清晰。
 
 ![](https://img1.dotnet9.com/2024/01/0903.png)
 
-该项目已上传，感兴趣的朋友可以下载下来一探究竟。 
+该项目已上传，感兴趣的朋友可以下载下来一探究竟。
 
-## 2024/01/20新增多个参数生成
+## 2024/01/20 新增多个参数生成
 
-为了满足更多场景下的需求，大佬在近期对DbHelper进行了升级。新增的多个参数生成功能无疑将为开发者们带来更多便利。让我们一起来看看这个新特性吧！
+为了满足更多场景下的需求，大佬在近期对 DbHelper 进行了升级。新增的多个参数生成功能无疑将为开发者们带来更多便利。让我们一起来看看这个新特性吧！
 
 ![](https://img1.dotnet9.com/2024/01/0904.png)
 

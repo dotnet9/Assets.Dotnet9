@@ -4,24 +4,25 @@ slug: csharp-multilingual-weapon-resx-manager
 description: 本文不是要介绍怎样实现项目国际化，主要是介绍一款`VS`扩展程序，可方便的管理通用的资源文件(*.resx)
 date: 2021-02-16 22:23:32
 copyright: Original
-originaltitle: C# 多语言利器 - ResX Manager
+originalTitle: C# 多语言利器 - ResX Manager
 draft: False
 cover: https://img1.dotnet9.com/2021/02/cover_03.jpeg
 categories: .NET
 tags: C#,WPF,资源文件,ResX Manager
 ---
 
-WPF国际化实现方式很多:
+WPF 国际化实现方式很多:
 
-1. 可使用xaml资源文件(*.xaml)存储各语言展示的内容,本人另一号有过介绍：
-- [WPF国际化方式1之资源文件](https://mp.weixin.qq.com/s/49AZBiZoY1FPRWBlvxFUpg)
-- [C#/.Net Core/WPF框架初建(国际化、主题色)](https://mp.weixin.qq.com/s/8vxbcBwr05a_-4tKEDB19w))
+1. 可使用 xaml 资源文件(\*.xaml)存储各语言展示的内容,本人另一号有过介绍：
 
-2. 也可使用通用的资源文件(*.resx)，该方式不受限于项目模板，可适用于其它项目类型，C/S、B/S、App(Xamarin)等皆可使用。
+- [WPF 国际化方式 1 之资源文件](https://mp.weixin.qq.com/s/49AZBiZoY1FPRWBlvxFUpg)
+- [C#/.Net Core/WPF 框架初建(国际化、主题色)](https://mp.weixin.qq.com/s/8vxbcBwr05a_-4tKEDB19w))
 
-本文不是要介绍怎样实现项目国际化，主要是介绍一款`VS`扩展程序，可方便的管理通用的资源文件(*.resx)，比如下面这样：
+2. 也可使用通用的资源文件(\*.resx)，该方式不受限于项目模板，可适用于其它项目类型，C/S、B/S、App(Xamarin)等皆可使用。
 
-使用ResX Manager管理多资源文件
+本文不是要介绍怎样实现项目国际化，主要是介绍一款`VS`扩展程序，可方便的管理通用的资源文件(\*.resx)，比如下面这样：
+
+使用 ResX Manager 管理多资源文件
 
 ![使用ResX Manager管理多资源文件](https://img1.dotnet9.com/2021/02/0301.png)
 
@@ -30,7 +31,7 @@ WPF国际化实现方式很多:
 - 一个界面列出整个解决方案所有的资源文件
 - 同一工程国际化资源文件一个界面比照着即可管理
 
-*按多语言资源文件命名规则，相同前缀的资源文件，后缀(.resx前的一小部分)区分不同语言，比如`UiResource.zh-CN.resx`为简体中文，`UiResource.resx`为默认语言，其他语言扩展只需要增加一个资源文件，修改后缀即可。*
+_按多语言资源文件命名规则，相同前缀的资源文件，后缀(.resx 前的一小部分)区分不同语言，比如`UiResource.zh-CN.resx`为简体中文，`UiResource.resx`为默认语言，其他语言扩展只需要增加一个资源文件，修改后缀即可。_
 
 对比直接打开资源文件效果：
 
@@ -48,7 +49,7 @@ WPF国际化实现方式很多:
 
 ## 1 安装
 
-请到ResXManager发布地址[下载](https://marketplace.visualstudio.com/items?itemName=TomEnglert.ResXManager)安装：
+请到 ResXManager 发布地址[下载](https://marketplace.visualstudio.com/items?itemName=TomEnglert.ResXManager)安装：
 
 ![插件详情](https://img1.dotnet9.com/2021/02/0304.png)
 
@@ -60,7 +61,7 @@ WPF国际化实现方式很多:
 
 ## 2.1 统一管理和修改各资源文件
 
-见本文第一张图(来自[乐趣课堂WPF项目资源文件](https://github.com/dotnet9/lqclass.com))，左侧展示解决方案中所有工程的资源文件结构、位置，选择某资源文件后，右侧展示资源文件中的键及键对应的各语言翻译文字，同一名命名规则的资源文件可同时进行编辑。
+见本文第一张图(来自[乐趣课堂 WPF 项目资源文件](https://github.com/dotnet9/lqclass.com))，左侧展示解决方案中所有工程的资源文件结构、位置，选择某资源文件后，右侧展示资源文件中的键及键对应的各语言翻译文字，同一名命名规则的资源文件可同时进行编辑。
 
 ## 2.2 查漏
 
@@ -80,9 +81,9 @@ WPF国际化实现方式很多:
 
 ![清晰显示待翻译的语言](https://img1.dotnet9.com/2021/02/0307.png)
 
-## 2.3 导出和导入Excel文件
+## 2.3 导出和导入 Excel 文件
 
-当多语言翻译工作量较大，或者某一语言需要专业人士协助，让别人使用`Visual Studio`来编辑资源文件是不太合理的，这时使用导出功能将指定的资源文件导出为Excel格式，直接填写缺漏部分，再将完善的Excel文件导入自动更新各资源文件。
+当多语言翻译工作量较大，或者某一语言需要专业人士协助，让别人使用`Visual Studio`来编辑资源文件是不太合理的，这时使用导出功能将指定的资源文件导出为 Excel 格式，直接填写缺漏部分，再将完善的 Excel 文件导入自动更新各资源文件。
 
 ![导出资源文件为Excel](https://img1.dotnet9.com/2021/02/0308.png)
 

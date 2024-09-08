@@ -5,8 +5,8 @@ description: 不要小看摸鱼，所有天才的点子都不是敲键盘时激�
 date: 2021-12-16 20:51:16
 copyright: Reprinted
 author: dino.c
-originaltitle: 用 WinUI 3 开发了一个摸鱼应用
-originallink: https://www.cnblogs.com/dino623/archive/2021/12/15/developing_an_app_with_winui3.html
+originalTitle: 用 WinUI 3 开发了一个摸鱼应用
+originalLink: https://www.cnblogs.com/dino623/archive/2021/12/15/developing_an_app_with_winui3.html
 draft: False
 cover: https://img1.dotnet9.com/2021/12/cover_20.png
 categories: .NET
@@ -43,7 +43,7 @@ WinUI 3 是随 Windows App SDK 提供的适用于 Windows 桌面应用程序和 
 2. [Windows UI 库 (WinUI) 3 - Windows apps](https://docs.microsoft.com/zh-cn/windows/apps/winui/winui3/)
 3. [通过 Windows 应用 SDK 生成桌面 Windows 应用 - Windows apps](https://docs.microsoft.com/zh-cn/windows/apps/windows-app-sdk/)
 4. [Windows 应用 SDK 的稳定通道发行说明 - Windows apps](https://docs.microsoft.com/zh-cn/windows/apps/windows-app-sdk/stable-channel)
-5. [microsoft_microsoft-ui-xaml_ Windows UI Library_ the latest Windows 10 native controls and Fluent styles for your applications](https://github.com/microsoft/microsoft-ui-xaml)
+5. [microsoft*microsoft-ui-xaml* Windows UI Library\_ the latest Windows 10 native controls and Fluent styles for your applications](https://github.com/microsoft/microsoft-ui-xaml)
 6. [microsoft-ui-xaml_roadmap](https://github.com/microsoft/microsoft-ui-xaml/blob/main/docs/roadmap.md)
 7. [WinUI 3 试玩报告](https://www.cnblogs.com/dino623/p/Get-started-with-WinUI-3-for-desktop-apps.html)
 8. [WinUI 3 Preview 3 发布了，再一次试试它的性能](https://www.cnblogs.com/dino623/p/test_winui3_preview3_performance.html)
@@ -144,8 +144,8 @@ Windows App SDK 这个名字本身就不好，所有引擎搜出来一大堆 Win
 
 https://github.com/DinoChan/Loaf
 
->作者：Dino.C
+> 作者：Dino.C
 >
->出处：https://www.cnblogs.com/dino623/p/developing_an_app_with_winui3.html
+> 出处：https://www.cnblogs.com/dino623/p/developing_an_app_with_winui3.html
 >
->版权：本文采用「CC BY 4.0」知识共享许可协议进行许可。
+> 版权：本文采用「CC BY 4.0」知识共享许可协议进行许可。

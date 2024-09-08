@@ -5,8 +5,8 @@ description: FluentFTP 是一个适用于 .NET 和 .NET Standard 的 FTP 和 FTP
 date: 2023-07-17 19:59:34
 copyright: Reprinted
 author: 工具箱
-originaltitle: .NET 最好用的开源 FTP 客户端库
-originallink: https://mp.weixin.qq.com/s/ZwV-hgGlgFlkGY-Yy8oCLA
+originalTitle: .NET 最好用的开源 FTP 客户端库
+originalLink: https://mp.weixin.qq.com/s/ZwV-hgGlgFlkGY-Yy8oCLA
 draft: false
 cover: https://img1.dotnet9.com/2023/07/0501.png
 categories: .NET
@@ -21,11 +21,11 @@ FluentFTP 是一个适用于 .NET 和 .NET Standard 的 FTP 和 FTPS 客户端�
 
 ## 功能特性
 
-完全支持 FTP、FXP、FTPS、带 TLS 1.3 的 FTPS、带客户端证书的 FTPS和FTPS 代理。
+完全支持 FTP、FXP、FTPS、带 TLS 1.3 的 FTPS、带客户端证书的 FTPS 和 FTPS 代理。
 
 全面支持 30 多种 FTP Server 类型。
 
-支持各种文件和目录列表（Unix、Windows/IIS、Azure、Pure-FTPd、ProFTPD、Vax、VMS、OpenVMS、Tandem、HP NonStop Guardian、IBM z/OS 和 OS/400、Windows CE、Serv- U等）。
+支持各种文件和目录列表（Unix、Windows/IIS、Azure、Pure-FTPd、ProFTPD、Vax、VMS、OpenVMS、Tandem、HP NonStop Guardian、IBM z/OS 和 OS/400、Windows CE、Serv- U 等）。
 
 支持递归目录列出和进行目录删除。
 
@@ -69,9 +69,9 @@ await client.MoveFile("/htdocs/MyVideo.mp4", "/htdocs/MyVideo_2.mp4");
 
 // 下载文件
 await client.DownloadFile(@"C:\MyVideo_2.mp4", "/htdocs/MyVideo_2.mp4");
- 
+
 // 删除文件
-await client.DeleteFile("/htdocs/MyVideo_2.mp4"); 
+await client.DeleteFile("/htdocs/MyVideo_2.mp4");
 
 // 关闭连接，结束
 await client.Disconnect();

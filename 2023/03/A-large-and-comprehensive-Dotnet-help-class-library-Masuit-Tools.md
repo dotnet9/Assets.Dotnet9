@@ -5,8 +5,8 @@ description: 包含一些常用的操作类，大都是静态类
 date: 2023-03-11 14:58:14
 copyright: Reprinted
 author: 懒得勤快
-originaltitle: 一个大而全的.NET帮助类库-Masuit.Tools
-originallink: https://github.com/ldqk/Masuit.Tools
+originalTitle: 一个大而全的.NET帮助类库-Masuit.Tools
+originalLink: https://github.com/ldqk/Masuit.Tools
 draft: false
 cover: https://img1.dotnet9.com/2023/03/cover_03.png
 categories: .NET
@@ -17,35 +17,35 @@ tags: .NET
 
 ![](https://img1.dotnet9.com/2023/03/0304.png)
 
-[![LICENSE](https://img.shields.io/badge/license-Anti%20996-blue.svg)](https://github.com/996icu/996.ICU/blob/master/LICENSE) [![nuget](https://img.shields.io/nuget/v/Masuit.Tools.Core.svg)](https://www.nuget.org/packages/Masuit.Tools.Core) [![nuget](https://img.shields.io/nuget/dt/Masuit.Tools.Core.svg)](https://www.nuget.org/packages/Masuit.Tools.Core) ![codeSize](https://img.shields.io/github/languages/code-size/ldqk/Masuit.Tools.svg) ![language](https://img.shields.io/github/languages/top/ldqk/Masuit.Tools.svg) <a href="https://gitee.com/masuit/Masuit.Tools"><img src="https://gitee.com/static/images/logo-black.svg" height="24"></a> <a href="https://github.com/ldqk/Masuit.Tools"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Font_Awesome_5_brands_github.svg/54px-Font_Awesome_5_brands_github.svg.png" height="24"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/GitHub_logo_2013.svg/128px-GitHub_logo_2013.svg.png" height="24"></a>  
+[![LICENSE](https://img.shields.io/badge/license-Anti%20996-blue.svg)](https://github.com/996icu/996.ICU/blob/master/LICENSE) [![nuget](https://img.shields.io/nuget/v/Masuit.Tools.Core.svg)](https://www.nuget.org/packages/Masuit.Tools.Core) [![nuget](https://img.shields.io/nuget/dt/Masuit.Tools.Core.svg)](https://www.nuget.org/packages/Masuit.Tools.Core) ![codeSize](https://img.shields.io/github/languages/code-size/ldqk/Masuit.Tools.svg) ![language](https://img.shields.io/github/languages/top/ldqk/Masuit.Tools.svg) <a href="https://gitee.com/masuit/Masuit.Tools"><img src="https://gitee.com/static/images/logo-black.svg" height="24"></a> <a href="https://github.com/ldqk/Masuit.Tools"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Font_Awesome_5_brands_github.svg/54px-Font_Awesome_5_brands_github.svg.png" height="24"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/GitHub_logo_2013.svg/128px-GitHub_logo_2013.svg.png" height="24"></a>
 
-包含一些常用的操作类，大都是静态类，加密解密，反射操作，权重随机筛选算法，分布式短id，表达式树，linq扩展，文件压缩，多线程下载和FTP客户端，硬件信息，字符串扩展方法，日期时间扩展操作，中国农历，大文件拷贝，图像裁剪，验证码，断点续传，集合扩展、Excel导出等常用封装。**诸多功能集一身，代码量不到2MB！**  
+包含一些常用的操作类，大都是静态类，加密解密，反射操作，权重随机筛选算法，分布式短 id，表达式树，linq 扩展，文件压缩，多线程下载和 FTP 客户端，硬件信息，字符串扩展方法，日期时间扩展操作，中国农历，大文件拷贝，图像裁剪，验证码，断点续传，集合扩展、Excel 导出等常用封装。**诸多功能集一身，代码量不到 2MB！**
 
-[官网教程](https://masuit.com/55)  
+[官网教程](https://masuit.com/55)
 
 ![Masuit Tools](https://img1.dotnet9.com/2023/03/0301.png)
 
-
 项目开发模式：日常代码积累+网络搜集  
-⭐⭐⭐喜欢这个项目的话就Star、Fork、Follow素质三连关♂注一下吧⭐⭐⭐  
-关于本项目，如果你有任何不懂的地方或使用过程中遇到任何问题，可以直接提issue或私信联系我，我会为你提供**完全免费**的技术指导，当然，如果你觉得不好意思接受免费的指导，想适当打赏我也是不会拒绝的！🤣🤣🤣
+⭐⭐⭐ 喜欢这个项目的话就 Star、Fork、Follow 素质三连关 ♂ 注一下吧 ⭐⭐⭐  
+关于本项目，如果你有任何不懂的地方或使用过程中遇到任何问题，可以直接提 issue 或私信联系我，我会为你提供**完全免费**的技术指导，当然，如果你觉得不好意思接受免费的指导，想适当打赏我也是不会拒绝的！🤣🤣🤣
 
-## 本项目已得到[JetBrains](https://www.jetbrains.com/shop/eform/opensource)的支持！  
+## 本项目已得到[JetBrains](https://www.jetbrains.com/shop/eform/opensource)的支持！
 
-<img src="https://img1.dotnet9.com/2023/03/0302.png" height="100">     
+<img src="https://img1.dotnet9.com/2023/03/0302.png" height="100">
 
-## Star趋势
-<img src="https://img1.dotnet9.com/2023/03/0303.png">    
+## Star 趋势
+
+<img src="https://img1.dotnet9.com/2023/03/0303.png">
 
 ## 请注意：
 
-一旦使用本开源项目以及引用了本项目或包含本项目代码的公司因为违反劳动法（包括但不限定非法裁员、超时用工、雇佣童工等）在任何法律诉讼中败诉的，一经发现，本项目作者有权利追讨本项目的使用费（**公司工商注册信息认缴金额的2-5倍作为本项目的授权费**），或者直接不允许使用任何包含本项目的源代码！任何性质的`外包公司`或`996公司`需要使用本类库，请联系作者进行商业授权！其他企业或个人可随意使用不受限。996那叫用人，也是废人。8小时工作制才可以让你有时间自我提升，将来有竞争力。反对996，人人有责！
+一旦使用本开源项目以及引用了本项目或包含本项目代码的公司因为违反劳动法（包括但不限定非法裁员、超时用工、雇佣童工等）在任何法律诉讼中败诉的，一经发现，本项目作者有权利追讨本项目的使用费（**公司工商注册信息认缴金额的 2-5 倍作为本项目的授权费**），或者直接不允许使用任何包含本项目的源代码！任何性质的`外包公司`或`996公司`需要使用本类库，请联系作者进行商业授权！其他企业或个人可随意使用不受限。996 那叫用人，也是废人。8 小时工作制才可以让你有时间自我提升，将来有竞争力。反对 996，人人有责！
 
 ## 建议开发环境
 
-操作系统：Windows 10 1903及以上版本  
-开发工具：VisualStudio2019 v16.5及以上版本  
-SDK：.Net Core 2.1.0及以上所有版本
+操作系统：Windows 10 1903 及以上版本  
+开发工具：VisualStudio2019 v16.5 及以上版本  
+SDK：.Net Core 2.1.0 及以上所有版本
 
 ## 安装程序包
 
@@ -75,32 +75,33 @@ PM> Install-Package Masuit.Tools.Abstraction
 PM> Install-Package Masuit.Tools.Core
 ```
 
-#### .NET Framework 4.5特供版  
+#### .NET Framework 4.5 特供版
 
-请注意：`这是.NET Framework 4.5的专用版本，相比4.6.1及.NET Core的版本，阉割了Redis、HTML、文件压缩、ASP.NET扩展、硬件监测、Session扩展等一些功能。`**如果你的项目版本高于4.5，请务必使用上述版本的包，以享受完整的功能体验！**
+请注意：`这是.NET Framework 4.5的专用版本，相比4.6.1及.NET Core的版本，阉割了Redis、HTML、文件压缩、ASP.NET扩展、硬件监测、Session扩展等一些功能。`**如果你的项目版本高于 4.5，请务必使用上述版本的包，以享受完整的功能体验！**
 
 ```shell
 PM> Install-Package Masuit.Tools.Net45
 ```
+
 ### 增值包
 
 #### Masuit.Tools.AspNetCore
 
-`AspNetCore项目推荐首选包`  
+`AspNetCore项目推荐首选包`
 
-ASP.NET Core Web专用包，包含Masuit.Tools.Core的全部功能，并且增加了一些对ASP.NET Core Web功能的额外支持。
+ASP.NET Core Web 专用包，包含 Masuit.Tools.Core 的全部功能，并且增加了一些对 ASP.NET Core Web 功能的额外支持。
 
 #### Masuit.Tools.Excel
 
-Excel导入导出的专用独立包
+Excel 导入导出的专用独立包
 
 #### Masuit.Tools.NoSQL.MongoDBClient
 
-mongodb的封装操作类独立包
+mongodb 的封装操作类独立包
 
 ## 为工具库注册配置
 
-工具库需要用到外部配置节，.NET Framework项目配置在web.config/app.config的AppSettings配置节中，.NET Core项目配置在appsettings.json中：  
+工具库需要用到外部配置节，.NET Framework 项目配置在 web.config/app.config 的 AppSettings 配置节中，.NET Core 项目配置在 appsettings.json 中：
 
 1. EmailDomainWhiteList，邮箱校验需要用到的白名单域名，英文逗号分隔，每个元素支持正则表达式，若未配置，则不启用邮箱校验白名单，示例: `"^\\w{1,5}@qq.com,^\\w{1,5}@163.com,^\\w{1,5}@gmail.com,^\\w{1,5}@outlook.com"`
 
@@ -119,7 +120,7 @@ public Startup(IConfiguration configuration)
 
 https://replit.com/@ldqk/MasuitToolsDemo?v=1#main.cs
 
-### 1.检验字符串是否是Email、手机号、URL、IP地址、身份证号等
+### 1.检验字符串是否是 Email、手机号、URL、IP 地址、身份证号等
 
 ```csharp
 var (isMatch, match) = "337845818@qq.com".MatchEmail(); // 可在appsetting.json中添加EmailDomainWhiteList和EmailDomainBlockList配置邮箱域名黑白名单，逗号分隔，如"EmailDomainBlockList": "^\\w{1,5}@qq.com,^\\w{1,5}@163.com,^\\w{1,5}@gmail.com,^\\w{1,5}@outlook.com",
@@ -130,7 +131,7 @@ bool isIdentifyCard = "312000199502230660".MatchIdentifyCard();// 校验中国�
 bool isCNPatentNumber = "200410018477.9".MatchCNPatentNumber(); // 校验中国专利申请号或专利号，是否带校验位，校验位前是否带“.”，都可以校验，待校验的号码前不要带CN、ZL字样的前缀
 ```
 
-### 2.硬件监测(仅支持Windows，部分函数仅支持物理机模式)
+### 2.硬件监测(仅支持 Windows，部分函数仅支持物理机模式)
 
 ```csharp
 float load = SystemInfo.CpuLoad;// 获取CPU占用率
@@ -153,7 +154,8 @@ var ramInfo = RamInfo.Local; // 快速获取内存的信息
 var diskInfos = DiskInfo.Locals; // 快速获取硬盘的信息
 var biosInfo = BiosInfo.Local; // 快速获取主板的信息
 ```
-### 3.html的防XSS处理：
+
+### 3.html 的防 XSS 处理：
 
 ```csharp
 string html = @"<link href='/Content/font-awesome/css' rel='stylesheet'/>
@@ -171,16 +173,17 @@ string html = @"<link href='/Content/font-awesome/css' rel='stylesheet'/>
 string s = html.HtmlSantinizerStandard();//清理后：<div><span><a href="/users/account/LogOff">退出</a></span></div>
 ```
 
-### 4.整理Windows系统的内存：
+### 4.整理 Windows 系统的内存：
 
 类似于各大系统优化软件的加速球功能
 
 ```csharp
 Windows.ClearMemorySilent();
 ```
+
 ### 5.任意进制转换
 
-可用于生成短id，短hash，随机字符串等操作，纯数学运算。
+可用于生成短 id，短 hash，随机字符串等操作，纯数学运算。
 
 ```csharp
 NumberFormater nf = new NumberFormater(36);//内置2-62进制的转换
@@ -220,6 +223,7 @@ for (int i = 0; i < 100000; i++)
 timer.Stop();
 Console.WriteLine("执行for循环100000次耗时"+timer.Duration+"s");
 ```
+
 ```csharp
 double time = HiPerfTimer.Execute(() =>
 {
@@ -231,7 +235,7 @@ double time = HiPerfTimer.Execute(() =>
 Console.WriteLine("执行for循环100000次耗时"+time+"s");
 ```
 
-### 7.产生分布式唯一有序短id(雪花id)
+### 7.产生分布式唯一有序短 id(雪花 id)
 
 ```csharp
 var sf = SnowFlake.GetInstance();
@@ -264,7 +268,7 @@ Console.WriteLine(today.DateHoliday);// 获取按公历计算的节假日
 ...
 ```
 
-### 9.Linq表达式树扩展
+### 9.Linq 表达式树扩展
 
 ```csharp
 Expression<Func<string, bool>> where1 = s => s.StartsWith("a");
@@ -309,7 +313,7 @@ tmp.Set("name", "万金油");
 string s = tmp.Render();// throw 模版变量{{greet}}未被使用
 ```
 
-### 11.List转Datatable
+### 11.List 转 Datatable
 
 ```csharp
 var list = new List<MyClass>()
@@ -364,7 +368,7 @@ Startup.cs
 services.AddSevenZipCompressor();
 ```
 
-构造函数注入ISevenZipCompressor
+构造函数注入 ISevenZipCompressor
 
 ```csharp
 private readonly ISevenZipCompressor _sevenZipCompressor;
@@ -374,7 +378,7 @@ public Test(ISevenZipCompressor sevenZipCompressor)
 }
 ```
 
-使用方式同.NET Framework版本
+使用方式同.NET Framework 版本
 
 ### 13.简易日志组件(又不是不能用.jpg)
 
@@ -388,7 +392,7 @@ LogManager.Info("记录一次消息");
 LogManager.Error(new Exception("异常消息"));
 ```
 
-### 14.FTP客户端
+### 14.FTP 客户端
 
 ```csharp
 FtpClient ftpClient = FtpClient.GetAnonymousClient("192.168.2.2");//创建一个匿名访问的客户端
@@ -487,16 +491,16 @@ public class MyClass
 
     [ComplexPassword]//密码复杂度校验
     public string Password { get; set; }
-    
+
     [EnumOf] // 检测是否是有效枚举值
     public MyEnum MyEnum { get; set; }
-    
+
     [MinItemsCount(1)] // 检测集合元素最少1个
     public List<string> Strs { get; set; }
 }
 ```
 
-### 18.HTML操作
+### 18.HTML 操作
 
 ```csharp
 List<string> srcs = "html".MatchImgSrcs().ToList();// 获取html字符串里所有的img标签的src属性
@@ -505,7 +509,7 @@ var str="html".RemoveHtmlTag(); // 去除html标签
 ...
 ```
 
-### 19.DateTime扩展
+### 19.DateTime 扩展
 
 ```csharp
 double milliseconds = DateTime.Now.GetTotalMilliseconds();// 获取毫秒级时间戳
@@ -516,7 +520,7 @@ double minutes = DateTime.Now.GetTotalMinutes();// 获取分钟级时间戳
 ...
 ```
 
-### 20.IP地址和URL
+### 20.IP 地址和 URL
 
 ```csharp
 bool inRange = "192.168.2.2".IpAddressInRange("192.168.1.1","192.168.3.255");// 判断IP地址是否在这个地址段里
@@ -559,7 +563,7 @@ public enum MyEnum
     [Display(Name = "读")]
     [Description("读")]
     Read,
-    
+
     [Display(Name = "写")]
     [Description("写")]
     Write
@@ -575,7 +579,7 @@ var value = typeof(MyEnum).GetValue("Read");//获取字符串表示值对应的�
 string enumString = 0.ToEnumString(typeof(MyEnum));// 获取枚举值对应的字符串表示
 ```
 
-### 23.定长队列和ConcurrentHashSet实现
+### 23.定长队列和 ConcurrentHashSet 实现
 
 `如果是.NET5及以上，推荐使用框架自带的Channel实现该功能`
 
@@ -598,10 +602,12 @@ myClass.DeepClone(); // 对象深拷贝，带嵌套层级的
 ```
 
 ### 25.获取线程内唯一对象
+
 ```csharp
 CallContext<T>.SetData("db",dbContext);//设置线程内唯一对象
 CallContext<T>.GetData("db");//获取线程内唯一对象
 ```
+
 ### 26.邮件发送
 
 ```csharp
@@ -691,7 +697,7 @@ var item = selector.Select();//按权重选出1个元素
 var list = selector.SelectMultiple(3);//按权重选出3个元素
 ```
 
-### 30.EF Core支持AddOrUpdate方法
+### 30.EF Core 支持 AddOrUpdate 方法
 
 ```csharp
 /// <summary>
@@ -705,6 +711,7 @@ public override Post SavePost(Post t)
 ```
 
 ### 31.敏感信息掩码
+
 ```csharp
 "13123456789".Mask(); // 131****5678
 "admin@masuit.com".MaskEmail(); // a****n@masuit.com
@@ -807,7 +814,7 @@ list.ChangeIndex(item,3); // 将元素item的索引位置变为第3个
 list.ChangeIndex(t=>t.Id=="123",2); // 将id为123的元素的索引位置变为第2个
 ```
 
-### 33.Mime类型
+### 33.Mime 类型
 
 ```csharp
 var mimeMapper = new MimeMapper();
@@ -869,7 +876,7 @@ bool b=1.23.TryConvertTo<T>(out result); // 小数转T基本类型
 var num=1.2345.ToDecimal(2); //转decimal并保留两位小数
 ```
 
-### 37.INI配置文件操作(仅支持Windows)
+### 37.INI 配置文件操作(仅支持 Windows)
 
 ```csharp
 INIFile ini=new INIFile("filename.ini");
@@ -880,7 +887,9 @@ ini.ClearSection(section); // 清空配置节
 ```
 
 ### 38.雷达图计算引擎
+
 应用场景：计算两个多边形的相似度，用户画像之类的
+
 ```csharp
 var points=RadarChartEngine.ComputeIntersection(chart1,chart2); //获取两个多边形的相交区域
 points.ComputeArea(); //计算多边形面积
@@ -889,9 +898,9 @@ points.ComputeArea(); //计算多边形面积
 ### 39.树形结构实现
 
 基本接口类：  
-ITreeChildren：带Children属性的接口  
-ITreeParent：带Parent属性的接口  
-ITree：继承ITreeParent和ITreeChildren，同时多了Name属性  
+ITreeChildren：带 Children 属性的接口  
+ITreeParent：带 Parent 属性的接口  
+ITree：继承 ITreeParent 和 ITreeChildren，同时多了 Name 属性
 
 相关扩展方法：
 
@@ -909,7 +918,7 @@ var tree=list.ToTree(c => c.Id, c => c.Pid);//继承自ITreeParent<T>, ITreeChil
 var tree=list.ToTreeGeneral(c => c.Id, c => c.Pid);//一般的集合转换成树形结构
 ```
 
-### 40.简单的Excel导出
+### 40.简单的 Excel 导出
 
 需要额外依赖包：`Masuit.Tools.Excel`
 
@@ -923,31 +932,32 @@ var stream=list.Select(item=>new{
 var stream=list.ToDataTable("Sheet1").ToExcel("文件密码");
 ```
 
-#### 一些约定规则：  
+#### 一些约定规则：
 
-1. 图片列支持Stream、Bitmap、IEnumerable<Stream>、IEnumerable<Bitmap>、IDictionary<string,Stream>、IDictionary<string,MemoryStream>、IDictionary<string,Bitmap>类型；
-2. 其中，如果是IDictionary类型的图片列，字典的键为图片超链接的完整url；
+1. 图片列支持 Stream、Bitmap、IEnumerable<Stream>、IEnumerable<Bitmap>、IDictionary<string,Stream>、IDictionary<string,MemoryStream>、IDictionary<string,Bitmap>类型；
+2. 其中，如果是 IDictionary 类型的图片列，字典的键为图片超链接的完整 url；
 3. 默认字段名作为列名导出；
-4. 若list是一个具体的强类型，默认会先查找每个字段的Description标记，若有Description标记，则取Description标记作为列名显示
-5. ToExcel方法支持DataTable、List<DataTable>、Dictionary<string, DataTable>类型的直接调用
+4. 若 list 是一个具体的强类型，默认会先查找每个字段的 Description 标记，若有 Description 标记，则取 Description 标记作为列名显示
+5. ToExcel 方法支持 DataTable、List<DataTable>、Dictionary<string, DataTable>类型的直接调用
 
-### 41.EFCore实体对比功能
+### 41.EFCore 实体对比功能
 
 获取指定实体的变更
 
 ```csharp
 var changes=dbContext.GetChanges<Post>();//获取变更字段信息
 var added=dbContext.GetAdded<Post>();//获取添加的实体字段信息
-var removed=dbContext.GetRemoved<Post>();//获取被移除的实体字段信息  
-var allchanges=dbContext.GetAllChanges<Post>();//获取增删改的实体字段信息  
+var removed=dbContext.GetRemoved<Post>();//获取被移除的实体字段信息
+var allchanges=dbContext.GetAllChanges<Post>();//获取增删改的实体字段信息
 ```
 
 获取所有实体的变更
+
 ```csharp
 var changes=dbContext.GetChanges();//获取变更字段信息
 var added=dbContext.GetAdded();//获取添加的实体字段信息
-var removed=dbContext.GetRemoved();//获取被移除的实体字段信息  
-var allchanges=dbContext.GetAllChanges();//获取增删改的实体字段信息  
+var removed=dbContext.GetRemoved();//获取被移除的实体字段信息
+var allchanges=dbContext.GetAllChanges();//获取增删改的实体字段信息
 ```
 
 对比信息包含属性信息、旧值、新值、实体信息、键信息、变更状态等
@@ -959,11 +969,11 @@ a.Next(func1).Next(func2).Next(func3);
 "123".Next(s=>s.ToInt32()).Next(x=>x*2).Next(x=>Math.Log(x));
 ```
 
-### 43.Newtonsoft.Json的只允许字段反序列化行为的契约解释器
+### 43.Newtonsoft.Json 的只允许字段反序列化行为的契约解释器
 
 #### DeserializeOnlyContractResolver
 
-该解释器针对类属性被DeserializeOnlyJsonPropertyAttribute标记的，在反序列化的时候生效，在序列化的时候忽略
+该解释器针对类属性被 DeserializeOnlyJsonPropertyAttribute 标记的，在反序列化的时候生效，在序列化的时候忽略
 
 ```csharp
 public class ClassDto
@@ -973,14 +983,14 @@ public class ClassDto
 
         public int Num { get; set; }
     }
-    
+
     JsonConvert.SerializeObject(new MyClass(),new JsonSerializerSettings()
     {
         ContractResolver = new DeserializeOnlyContractResolver() // 配置使用DeserializeOnlyContractResolver解释器
     });
 ```
 
-如果是WebAPI全局使用：
+如果是 WebAPI 全局使用：
 
 ```csharp
         //在Startup.ConfigureServices中
@@ -994,7 +1004,7 @@ public class ClassDto
 
 #### FallbackJsonPropertyResolver
 
-该解释器针对某个属性设置多个别名，反序列化时支持多个别名key进行绑定，弥补官方JsonProperty别名属性只能设置单一别名的不足
+该解释器针对某个属性设置多个别名，反序列化时支持多个别名 key 进行绑定，弥补官方 JsonProperty 别名属性只能设置单一别名的不足
 
 ```csharp
     public class ClassDto
@@ -1004,7 +1014,7 @@ public class ClassDto
 
         public int Num { get; set; }
     }
-    
+
     JsonConvert.SerializeObject(new MyClass(),new JsonSerializerSettings()
     {
         ContractResolver = new FallbackJsonPropertyResolver() // 配置使用FallbackJsonPropertyResolver解释器
@@ -1013,20 +1023,19 @@ public class ClassDto
 
 #### CompositeContractResolver
 
-该解释器是DeserializeOnlyContractResolver和FallbackJsonPropertyResolver的融合版
+该解释器是 DeserializeOnlyContractResolver 和 FallbackJsonPropertyResolver 的融合版
 
+### 44. ASP.NET Core Action 同时支持 queryString、表单和 json 请求类型的模型绑点器 BodyOrDefaultModelBinder
 
-### 44. ASP.NET Core Action同时支持queryString、表单和json请求类型的模型绑点器BodyOrDefaultModelBinder
+用法：
 
-用法：  
-
-引入包：`Masuit.Tools.AspNetCore`  
+引入包：`Masuit.Tools.AspNetCore`
 
 ```shell
 PM> Install-Package Masuit.Tools.AspNetCore
 ```
 
-Startup配置：
+Startup 配置：
 
 ```csharp
     services.AddMvc(options =>
@@ -1035,14 +1044,15 @@ Startup配置：
         })
 ```
 
-在action的参数模型前打上标记：`[FromBodyOrDefault]`即可，当然也可以省略，示例代码如下：
+在 action 的参数模型前打上标记：`[FromBodyOrDefault]`即可，当然也可以省略，示例代码如下：
+
 ```csharp
         [HttpGet("query"),HttpPost("query")]
         public IActionResult Query([FromBodyOrDefault]QueryModel query)
         {
             return Ok(...);
         }
-    
+
         [HttpGet("query"),HttpPost("query")]
         public IActionResult Query([FromBodyOrDefault]int id,[FromBodyOrDefault]string name)
         {
@@ -1050,7 +1060,7 @@ Startup配置：
         }
 ```
 
-### 45. 字符串SimHash相似度算法
+### 45. 字符串 SimHash 相似度算法
 
 ```csharp
 var dis="12345678".HammingDistance("1234567");
@@ -1071,99 +1081,100 @@ detector.FormatCategories;//格式类别
 ```
 
 #### 默认支持的文件类型
-| 扩展名 |       说明       |
-|:-----------------:|:------------------:|
-| 3GP               | 3GPP, 3GPP 2       |
-| 7Z                | 7-Zip              |
-| APK               | ZIP based Android Package |
-| AVI               | Audio-Video Interleave |
-| SH                | Shell Script       |
-| BPLIST            | Binary Property List |
-| BMP, DIB          | Bitmap             |
-| BZ2               | Bunzip2 Compressed |
-| CAB               | Microsoft Cabinet  |
-| CLASS             | Java Bytecode      |
-| CONFIG            | .NET Configuration File |
-| CRT, CERT         | Certificate        |
-| CUR               | Cursor             |
-| DB                | Windows Thumbs.db Thumbnail Database |
-| DDS               | DirectDraw Surface |
-| DLL               | Windows Dynamic Linkage Library |
-| DMG               | Apple Disk Mount Image |
-| DMP               | Windows Memory Dump File |
-| DOC               | Microsoft Office Word 97-2003 Document |
-| DOCX              | Microsoft Office Word OpenXML Document |
-| EPUB              | e-Pub Document     |
-| EXE               | Windows Executive  |
-| FLAC              | Loseless Audio     |
-| FLV               | Flash Video        |
-| GIF               | Graphics Interchage Format |
-| GZ                | GZ Compressed      |
-| HDP               | HD Photo(JPEG XR) Image |
-| HWP               | Legacy HWP, HWPML, CFBF HWP |
-| ICO               | Icon               |
-| INI               | Initialization File |
-| ISO               | ISO-9660 Disc Image |
-| LNK               | Windows Shortcut Link |
-| JP2               | JPEG 2000 Image    |
-| JPG, JPEG         | Joint Photographic Experts Group Image |
-| LZH               | LZH Compressed     |
-| M4A               | MP4 Container Contained Audio Only |
-| M4V               | MP4 Container Contained Video |
-| MID               | Midi Sound         |
-| MKA               | Matroska Container Contained Audio Only |
-| MKV               | Matroska Container Contained Video |
-| MOV               | QuickTime Movie Video |
-| MP4               | MP4 Container Contained Contents |
-| MSI               | Microsoft Installer |
-| OGG               | OGG Video or Audio |
-| ODF               | OpenDocument Formula |
-| ODG               | OpenDocument Graphics |
-| ODP               | OpenDocument Presentation |
-| ODS               | OpenDocument Spreadsheet |
-| ODT               | OpenDocument Text  |
-| PAK               | PAK Archive or Quake Archive |
-| PDB               | Microsoft Program Database |
-| PDF               | Portable Document Format |
-| PFX               | Microsoft Personal Information Exchange Certificate |
-| PNG               | Portable Network Graphics Image |
-| PPT               | Microsoft Office PowerPoint 97-2003 Document |
-| PPTX              | Microsoft Office PowerPoint OpenXML Document |
-| PPSX              | Microsoft Office PowerPoint OpenXML Document for Slideshow only |
-| PSD               | Photoshop Document |
-| RAR               | WinRAR Compressed  |
-| REG               | Windows Registry   |
-| RPM               | RedHat Package Manager Package |
-| RTF               | Rich Text Format Document |
-| SLN               | Microsoft Visual Studio Solution |
-| SRT               | SubRip Subtitle    |
-| SWF               | Shockwave Flash    |
-| SQLITE, DB        | SQLite Database    |
-| TAR               | pre-ISO Type and UStar Type TAR Package |
-| TIFF              | Tagged Image File Format Image |
-| TXT               | Plain Text         |
-| WAV               | Wave Audio         |
-| WASM              | Binary WebAssembly |
-| WEBM              | WebM Video         |
-| WEBP              | WebP Image         |
-| XAR               | XAR Package        |
-| XLS               | Microsoft Office Excel 97-2003 Document |
-| XLSX              | Microsoft Office Excep OpenXML Document |
-| XML               | Extensible Markup Language Document |
-| Z                 | Z Compressed       |
-| ZIP               | ZIP Package        |
 
-# Asp.Net MVC和Asp.Net Core的支持断点续传和多线程下载的ResumeFileResult
+|   扩展名   |                              说明                               |
+| :--------: | :-------------------------------------------------------------: |
+|    3GP     |                          3GPP, 3GPP 2                           |
+|     7Z     |                              7-Zip                              |
+|    APK     |                    ZIP based Android Package                    |
+|    AVI     |                     Audio-Video Interleave                      |
+|     SH     |                          Shell Script                           |
+|   BPLIST   |                      Binary Property List                       |
+|  BMP, DIB  |                             Bitmap                              |
+|    BZ2     |                       Bunzip2 Compressed                        |
+|    CAB     |                        Microsoft Cabinet                        |
+|   CLASS    |                          Java Bytecode                          |
+|   CONFIG   |                     .NET Configuration File                     |
+| CRT, CERT  |                           Certificate                           |
+|    CUR     |                             Cursor                              |
+|     DB     |              Windows Thumbs.db Thumbnail Database               |
+|    DDS     |                       DirectDraw Surface                        |
+|    DLL     |                 Windows Dynamic Linkage Library                 |
+|    DMG     |                     Apple Disk Mount Image                      |
+|    DMP     |                    Windows Memory Dump File                     |
+|    DOC     |             Microsoft Office Word 97-2003 Document              |
+|    DOCX    |             Microsoft Office Word OpenXML Document              |
+|    EPUB    |                         e-Pub Document                          |
+|    EXE     |                        Windows Executive                        |
+|    FLAC    |                         Loseless Audio                          |
+|    FLV     |                           Flash Video                           |
+|    GIF     |                   Graphics Interchage Format                    |
+|     GZ     |                          GZ Compressed                          |
+|    HDP     |                     HD Photo(JPEG XR) Image                     |
+|    HWP     |                   Legacy HWP, HWPML, CFBF HWP                   |
+|    ICO     |                              Icon                               |
+|    INI     |                       Initialization File                       |
+|    ISO     |                       ISO-9660 Disc Image                       |
+|    LNK     |                      Windows Shortcut Link                      |
+|    JP2     |                         JPEG 2000 Image                         |
+| JPG, JPEG  |             Joint Photographic Experts Group Image              |
+|    LZH     |                         LZH Compressed                          |
+|    M4A     |               MP4 Container Contained Audio Only                |
+|    M4V     |                  MP4 Container Contained Video                  |
+|    MID     |                           Midi Sound                            |
+|    MKA     |             Matroska Container Contained Audio Only             |
+|    MKV     |               Matroska Container Contained Video                |
+|    MOV     |                      QuickTime Movie Video                      |
+|    MP4     |                MP4 Container Contained Contents                 |
+|    MSI     |                       Microsoft Installer                       |
+|    OGG     |                       OGG Video or Audio                        |
+|    ODF     |                      OpenDocument Formula                       |
+|    ODG     |                      OpenDocument Graphics                      |
+|    ODP     |                    OpenDocument Presentation                    |
+|    ODS     |                    OpenDocument Spreadsheet                     |
+|    ODT     |                        OpenDocument Text                        |
+|    PAK     |                  PAK Archive or Quake Archive                   |
+|    PDB     |                   Microsoft Program Database                    |
+|    PDF     |                    Portable Document Format                     |
+|    PFX     |       Microsoft Personal Information Exchange Certificate       |
+|    PNG     |                 Portable Network Graphics Image                 |
+|    PPT     |          Microsoft Office PowerPoint 97-2003 Document           |
+|    PPTX    |          Microsoft Office PowerPoint OpenXML Document           |
+|    PPSX    | Microsoft Office PowerPoint OpenXML Document for Slideshow only |
+|    PSD     |                       Photoshop Document                        |
+|    RAR     |                        WinRAR Compressed                        |
+|    REG     |                        Windows Registry                         |
+|    RPM     |                 RedHat Package Manager Package                  |
+|    RTF     |                    Rich Text Format Document                    |
+|    SLN     |                Microsoft Visual Studio Solution                 |
+|    SRT     |                         SubRip Subtitle                         |
+|    SWF     |                         Shockwave Flash                         |
+| SQLITE, DB |                         SQLite Database                         |
+|    TAR     |             pre-ISO Type and UStar Type TAR Package             |
+|    TIFF    |                 Tagged Image File Format Image                  |
+|    TXT     |                           Plain Text                            |
+|    WAV     |                           Wave Audio                            |
+|    WASM    |                       Binary WebAssembly                        |
+|    WEBM    |                           WebM Video                            |
+|    WEBP    |                           WebP Image                            |
+|    XAR     |                           XAR Package                           |
+|    XLS     |             Microsoft Office Excel 97-2003 Document             |
+|    XLSX    |             Microsoft Office Excep OpenXML Document             |
+|    XML     |               Extensible Markup Language Document               |
+|     Z      |                          Z Compressed                           |
+|    ZIP     |                           ZIP Package                           |
 
-在ASP.NET Core中通过MVC/WebAPI应用程序传输文件数据时使用断点续传以及多线程下载支持。
+# Asp.Net MVC 和 Asp.Net Core 的支持断点续传和多线程下载的 ResumeFileResult
+
+在 ASP.NET Core 中通过 MVC/WebAPI 应用程序传输文件数据时使用断点续传以及多线程下载支持。
 
 它提供了`ETag`标头以及`Last-Modified`标头。 它还支持以下前置条件标头：`If-Match`，`If-None-Match`，`If-Modified-Since`，`If-Unmodified-Since`，`If-Range`。
 
 ## 支持 ASP.NET Core 2.0+
 
-从.NET Core2.0开始，ASP.NET Core内部支持断点续传。 因此只是对FileResult做了一些扩展。 只留下了“Content-Disposition” Inline的一部分。 所有代码都依赖于基础.NET类。
+从.NET Core2.0 开始，ASP.NET Core 内部支持断点续传。 因此只是对 FileResult 做了一些扩展。 只留下了“Content-Disposition” Inline 的一部分。 所有代码都依赖于基础.NET 类。
 
-## 如何使用 
+## 如何使用
 
 ### .NET Framework
 
@@ -1196,7 +1207,7 @@ public ActionResult ResumePhysicalFile()
 
 ### Asp.Net Core
 
-要使用ResumeFileResults，必须在`Startup.cs`的`ConfigureServices`方法调用中配置服务：
+要使用 ResumeFileResults，必须在`Startup.cs`的`ConfigureServices`方法调用中配置服务：
 
 ```csharp
 using Masuit.Tools.AspNetCore.ResumeFileResults.Extensions;
@@ -1226,7 +1237,7 @@ private readonly IHostingEnvironment _hostingEnvironment;
 private readonly DateTimeOffset _lastModified = new DateTimeOffset(2016, 1, 1, 0, 0, 0, TimeSpan.Zero);
 
 /// <summary>
-/// 
+///
 /// </summary>
 /// <param name="hostingEnvironment"></param>
 public TestController(IHostingEnvironment hostingEnvironment)
@@ -1332,7 +1343,7 @@ public IActionResult VirtualFile(bool fileName, bool etag)
 }
 ```
 
-以上示例将为您的数据提供“Content-Disposition：attachment”。 当没有提供fileName时，数据将作为“Content-Disposition：inline”提供。
+以上示例将为您的数据提供“Content-Disposition：attachment”。 当没有提供 fileName 时，数据将作为“Content-Disposition：inline”提供。
 另外，它可以提供`ETag`和`LastModified`标头。
 
 ```csharp
@@ -1347,9 +1358,11 @@ public IActionResult VirtualFile(bool fileName)
     return result;
 }
 ```
+
 </details>
 
 ### 推荐项目
-基于EntityFrameworkCore和Lucene.NET实现的全文检索搜索引擎：[Masuit.LuceneEFCore.SearchEngine](https://github.com/ldqk/Masuit.LuceneEFCore.SearchEngine "Masuit.LuceneEFCore.SearchEngine")
+
+基于 EntityFrameworkCore 和 Lucene.NET 实现的全文检索搜索引擎：[Masuit.LuceneEFCore.SearchEngine](https://github.com/ldqk/Masuit.LuceneEFCore.SearchEngine "Masuit.LuceneEFCore.SearchEngine")
 
 开源博客系统：[Masuit.MyBlogs](https://github.com/ldqk/Masuit.MyBlogs "Masuit.MyBlogs")

@@ -6,15 +6,15 @@ date: 2022-03-09 07:19:26
 banner: false
 copyright: Reprinted
 author: 杨中科
-originaltitle: .NET Core全部视频录完了，全免费，无套路
-originallink: https://mp.weixin.qq.com/s/SbidWHbMmNDtknD4HuAmNg
+originalTitle: .NET Core全部视频录完了，全免费，无套路
+originalLink: https://mp.weixin.qq.com/s/SbidWHbMmNDtknD4HuAmNg
 draft: False
 cover: https://img1.dotnet9.com/2022/03/cover_07.png
 categories: 课程
 tags: .NET Core,全免费,无套路
 ---
 
-我一直在更新的.NET Core视频终于录完了，203节，内容涉及.NET Core基础类、Entity Framework Core、ASP.NET Core WebAPI、DDD（领域驱动设计）、实战项目。
+我一直在更新的.NET Core 视频终于录完了，203 节，内容涉及.NET Core 基础类、Entity Framework Core、ASP.NET Core WebAPI、DDD（领域驱动设计）、实战项目。
 
 视频`全部免费`，在`哔哩哔哩搜索“杨中科”，今日头条、西瓜视频搜索“杨中科”`就可以自取全部视频，没有套路。
 
@@ -30,8 +30,8 @@ tags: .NET Core,全免费,无套路
 
 再提醒一遍，在`哔哩哔哩搜索“杨中科”，今日头条、西瓜视频搜索“杨中科”免费`自取全部视频。
 
-这套视频对应的图书预计于2022年5月份出版。
+这套视频对应的图书预计于 2022 年 5 月份出版。
 
-- 杨老师B站主页：[https://space.bilibili.com/27948784](https://space.bilibili.com/27948784)
+- 杨老师 B 站主页：[https://space.bilibili.com/27948784](https://space.bilibili.com/27948784)
 - 1-194：[https://www.bilibili.com/video/BV1pK41137He](https://www.bilibili.com/video/BV1pK41137He)
 - 英文听力网站：1-12：[https://www.bilibili.com/video/BV1zr4y1q7iR](https://www.bilibili.com/video/BV1zr4y1q7iR)

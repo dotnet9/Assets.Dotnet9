@@ -5,8 +5,8 @@ description: 前面已经写过文字识别和人脸检测。都是在使用现�
 date: 2022-01-20 14:12:04
 copyright: Reprinted
 author: Csharp小记
-originaltitle: C# 人脸比对
-originallink: https://mp.weixin.qq.com/s/VM5L4cTnSljU-Z7rL5EgDA
+originalTitle: C# 人脸比对
+originalLink: https://mp.weixin.qq.com/s/VM5L4cTnSljU-Z7rL5EgDA
 draft: False
 cover: https://img1.dotnet9.com/2022/01/cover_03.jpeg
 categories: .NET
@@ -15,9 +15,9 @@ tags: C#,人脸比对
 
 ## 前言
 
-前面已经写过文字识别和人脸检测。都是在使用现成的轮子（直接调用的百度SDK），其实仔细看看文档，也就都知道怎么写了，而且百度还提供了多种语言的代码示例；
+前面已经写过文字识别和人脸检测。都是在使用现成的轮子（直接调用的百度 SDK），其实仔细看看文档，也就都知道怎么写了，而且百度还提供了多种语言的代码示例；
 
-所以如果后面没什么特殊需求的话，关于调用百度API来实现AI部分功能的代码就到此为止了；之所以写这三个，是因为这三种场景在日常生活、工作中使用的比较频繁。
+所以如果后面没什么特殊需求的话，关于调用百度 API 来实现 AI 部分功能的代码就到此为止了；之所以写这三个，是因为这三种场景在日常生活、工作中使用的比较频繁。
 
 人脸比对功能，一般会用在人脸与本人身份证做比对验证的情况下。
 
@@ -31,7 +31,7 @@ tags: C#,人脸比对
 
 - 开发工具：Visual Studio 2013
 
-- .NET Framework版本：4.5
+- .NET Framework 版本：4.5
 
 ## 实现代码
 
@@ -134,9 +134,9 @@ private void pictureBox2_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e
 
 ![](https://img1.dotnet9.com/2022/01/0302.gif)
 
-根据百度的说法就是：相似度大于80一般会认为是同一个人。
+根据百度的说法就是：相似度大于 80 一般会认为是同一个人。
 
-大家在看文档的时候可能会发现官网提供的参数与我写的不一致，是因为官方提供了V2和V3两种API。根据需要选择就行。
+大家在看文档的时候可能会发现官网提供的参数与我写的不一致，是因为官方提供了 V2 和 V3 两种 API。根据需要选择就行。
 
 **由简入繁，拿来即用**
 

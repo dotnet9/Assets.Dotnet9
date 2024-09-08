@@ -5,8 +5,8 @@ description: 思维导图、目录组织图、鱼骨头图、逻辑结构图、�
 date: 2023-04-05 09:23:17
 copyright: Contributes
 author: 竹天笑
-originaltitle: 用Wpf做一个思维导图（续3-Diagram画板）
-originallink: https://www.cnblogs.com/akwkevin/p/17288814.html
+originalTitle: 用Wpf做一个思维导图（续3-Diagram画板）
+originalLink: https://www.cnblogs.com/akwkevin/p/17288814.html
 draft: false
 cover: https://img1.dotnet9.com/2023/04/0105.png
 categories: .NET
@@ -17,7 +17,7 @@ tags: 开源WPF
 >
 > 作者：竹天笑
 >
-> 原文标题：用Wpf做一个思维导图（续3-Diagram画板）
+> 原文标题：用 Wpf 做一个思维导图（续 3-Diagram 画板）
 >
 > 原文链接：https://www.cnblogs.com/akwkevin/p/17288814.html
 
@@ -60,7 +60,7 @@ tags: 开源WPF
 ![](https://img1.dotnet9.com/2023/04/0108.png)
 
 #### 2.6.切换类型
-   
+
 ![](https://img1.dotnet9.com/2023/04/0109.png)
 
 ![](https://img1.dotnet9.com/2023/04/0110.png)
@@ -70,7 +70,7 @@ tags: 开源WPF
 ![](https://img1.dotnet9.com/2023/04/0112.png)
 
 #### 2.7. 切换主题
-     
+
 ![](https://img1.dotnet9.com/2023/04/0113.png)
 
 ![](https://img1.dotnet9.com/2023/04/0114.png)
@@ -123,11 +123,11 @@ public interface IMindLayout
     /// 更新布局
     /// </summary>
     /// <param name="mindNode"></param>
-    void UpdatedLayout(MindNode mindNode);        
+    void UpdatedLayout(MindNode mindNode);
 }
 ```
 
-其中：UpdatedLayout包括布局丈量MeasureOverride和摆放元素ArrangeOverride，是不是感觉和重新Panel差不多，先计算每个节点占的大小，然后开始布局。下面为思维导图的源代码，其它导图的，如有兴趣请下载源代码查看。
+其中：UpdatedLayout 包括布局丈量 MeasureOverride 和摆放元素 ArrangeOverride，是不是感觉和重新 Panel 差不多，先计算每个节点占的大小，然后开始布局。下面为思维导图的源代码，其它导图的，如有兴趣请下载源代码查看。
 
 ```csharp
 public SizeBase MeasureOverride(MindNode mindNode, bool isExpanded = true)
@@ -171,7 +171,7 @@ public void ArrangeOverride(MindNode mindNode)
             foreach (var child in rights)
             {
                 child.Offset = new PointBase(child.Offset.X - child.RootNode.Offset.X, child.Offset.Y - child.RootNode.Offset.Y);
-                
+
                 child.DesiredPosition = new PointBase(left + child.Spacing.Width, lefttop + child.DesiredSize.Height / 2 - child.ItemHeight / 2);
                 child.Left = child.DesiredPosition.X + child.Offset.X;
                 child.Top = child.DesiredPosition.Y + child.Offset.Y;
@@ -204,7 +204,7 @@ public void ArrangeOverride(MindNode mindNode)
                 connector?.SetVisible(child.Visible);
             }
         }
-        
+
         mindNode.Offset = new PointBase();//修正后归0
     }
     else
@@ -261,8 +261,8 @@ public void ArrangeOverride(MindNode mindNode)
 }
 ```
 
-### 5. 最后为了方便大家使用，我封装了一个思维脑图的控件MindEditor，可以直接绑定json格式的数据，数据改变，可以直接加载应用。（见[AIStudio.Wpf.DiagramDesigner.Demo](https://gitee.com/akwkevin/aistudio.-wpf.-diagram/tree/master/AIStudio.Wpf.DiagramDesigner.Demo)）
+### 5. 最后为了方便大家使用，我封装了一个思维脑图的控件 MindEditor，可以直接绑定 json 格式的数据，数据改变，可以直接加载应用。（见[AIStudio.Wpf.DiagramDesigner.Demo](https://gitee.com/akwkevin/aistudio.-wpf.-diagram/tree/master/AIStudio.Wpf.DiagramDesigner.Demo)）
 
-![](https://img1.dotnet9.com/2023/04/0120.png) 
+![](https://img1.dotnet9.com/2023/04/0120.png)
 
 近期会持续更新，欢迎大家光临[艾竹 (akwkevin) - Gitee.com](https://gitee.com/akwkevin)，支持的朋友们，点个小星星，你们的支持能燃烧我开源的力量。

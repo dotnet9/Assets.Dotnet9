@@ -4,14 +4,14 @@ slug: if-zhuge-liang-can-program-write-a-teacher-s-example-in-java
 description: 继上一篇 《如果诸葛亮用C#写出师表...》后，站长想自己的第一语言是Java，虽然平时工作上用的不多，也用Java实现一遍吧，改改就是了
 date: 2021-03-19 10:28:09
 copyright: Original
-originaltitle: 如果诸葛亮会编程，用Java写出师表...
+originalTitle: 如果诸葛亮会编程，用Java写出师表...
 draft: False
 cover: https://img1.dotnet9.com/2021/03/cover_01.jpeg
 categories: 更多语言
 tags: Java,出师表
 ---
 
-继上一篇 "[如果诸葛亮用C#写出师表...](https://mp.weixin.qq.com/s/q1p8xjJyxQJoDiLgXgMwwA)"后，站长想自己的第一语言是Java，虽然平时工作上用的不多，也用Java实现一遍吧，改改就是了，无非就是:
+继上一篇 "[如果诸葛亮用 C#写出师表...](https://mp.weixin.qq.com/s/q1p8xjJyxQJoDiLgXgMwwA)"后，站长想自己的第一语言是 Java，虽然平时工作上用的不多，也用 Java 实现一遍吧，改改就是了，无非就是:
 
 1. `C#`的`Console.WriteLine`改为`Java`的`System.out.println`；
 2. `C#`的`string`改为`Java`的`String`；
@@ -27,7 +27,7 @@ tags: Java,出师表
 
 今天让我们码农以特有的方式，来表达对丞相大人的敬仰与怀念！
 
-蜀章武元年（221年），刘备称帝，诸葛亮为丞相。蜀汉建兴元年（223年），刘备病死，将刘禅托付给诸葛亮。诸葛亮实行了一系列比较正确的政治和经济措施，使蜀汉境内呈现兴旺景象。为了实现全国统一，诸葛亮在平息南方叛乱之后，于建兴五年（227年）决定北上伐魏，拟夺取魏的长安，临行之前上书后主，即这篇《出师表》。
+蜀章武元年（221 年），刘备称帝，诸葛亮为丞相。蜀汉建兴元年（223 年），刘备病死，将刘禅托付给诸葛亮。诸葛亮实行了一系列比较正确的政治和经济措施，使蜀汉境内呈现兴旺景象。为了实现全国统一，诸葛亮在平息南方叛乱之后，于建兴五年（227 年）决定北上伐魏，拟夺取魏的长安，临行之前上书后主，即这篇《出师表》。
 
 ## Java 源码
 
@@ -392,7 +392,6 @@ public static void main(String[] args) {
 ## 代码输出《出师表》
 
 ![出师表部分输出](https://img1.dotnet9.com/2021/03/0101.png)
-
 
 ```shell
 创业未半而中道崩殂！

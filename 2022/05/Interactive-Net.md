@@ -5,15 +5,15 @@ description: 交互式是指输入代码后可直接运行该代码，然后持�
 date: 2022-05-09 06:25:35
 copyright: Reprinted
 author: Erik Xu 跬步之巅
-originaltitle: 交互式 .Net
-originallink: https://mp.weixin.qq.com/s/diIvOonESreeKLgC_5u-vw
+originalTitle: 交互式 .Net
+originalLink: https://mp.weixin.qq.com/s/diIvOonESreeKLgC_5u-vw
 draft: False
 cover: https://img1.dotnet9.com/2022/05/cover_27.png
 categories: .NET
 tags: .NET
 ---
 
-## 1. 名词解析       
+## 1. 名词解析
 
 1. 交互式
 
@@ -27,15 +27,13 @@ tags: .NET
 
 `交互式 .Net` 可以解析 `markdown`，执行本地指令，如 `powershell`，执行 .Net 代码，因此，非常适用于教案编写，或者关键代码记录。并且生成的 `ipynb` 文件可上传到 `Github` 等平台，非常方便查阅。
 
-## 2. 安装设置 
+## 2. 安装设置
 
 需要先安装 `Visual Studio Code` 和 `.Net 5 及以上`版本，然后在 Visual Studio Code 中安装 `.NET Interactive Notebooks` 插件，可以在 Visual Studio Code 中搜索 .NET Interactive Notebooks 进行安装：
 
 ![](https://img1.dotnet9.com/2022/05/2701.png)
 
-## 3. 使用介绍       
-
-
+## 3. 使用介绍
 
 1. 新建交互
 
@@ -97,7 +95,7 @@ tags: .NET
 
 可以通过 [https://github.com/ErikXu/Blogs/blob/master/ipynb/dotnet-interactive.ipynb](https://github.com/ErikXu/Blogs/blob/master/ipynb/dotnet-interactive.ipynb) 查看示例
 
-## 4. 参考总结       
+## 4. 参考总结
 
 以上就是本文希望分享的内容，其中 `interactive` 的 `Github` 地址为：[https://github.com/dotnet/interactive](https://github.com/dotnet/interactive)
 

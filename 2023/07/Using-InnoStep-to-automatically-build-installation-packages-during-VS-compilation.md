@@ -5,34 +5,35 @@ description: 很多C/S开发领域的同学或多或少都可能会遇到需要�
 date: 2023-07-20 23:35:16
 copyright: Contributes
 author: 傲慢与偏见
-originaltitle: 利用Inno Setup在VS编译时自动构建安装包
-originallink: https://www.cnblogs.com/chonglu/p/17566940.html
+originalTitle: 利用Inno Setup在VS编译时自动构建安装包
+originalLink: https://www.cnblogs.com/chonglu/p/17566940.html
 draft: false
 cover: https://img1.dotnet9.com/2023/07/cover_09.png
 categories: .NET
 tags: .NET
 ---
 
-> 本文由网友投稿，.NET是免费、开源、跨平台的。
+> 本文由网友投稿，.NET 是免费、开源、跨平台的。
 >
 > 作者：傲慢与偏见
 >
-> 原文标题：利用Inno Setup在VS编译时自动构建安装包
+> 原文标题：利用 Inno Setup 在 VS 编译时自动构建安装包
 >
 > 原文链接：https://www.cnblogs.com/chonglu/p/17566940.html
 
 欢迎网友们投稿技术类文章，题材不限，没有稿费...
 
 ![](https://img1.dotnet9.com/2022/11/0502.gif)
+
 ## 1. 摘要
 
-很多C/S开发领域的同学或多或少都可能会遇到需要制作安装包的场景，打包的工具也是五花八门，例如有NSIS、InstallShield、Wix Toolset、ClickOnce等等，这里以Inno Setup为例简单演示下如何构建安装包，以及在Visual Studio中编译程序时自动去构建这个安装包。
+很多 C/S 开发领域的同学或多或少都可能会遇到需要制作安装包的场景，打包的工具也是五花八门，例如有 NSIS、InstallShield、Wix Toolset、ClickOnce 等等，这里以 Inno Setup 为例简单演示下如何构建安装包，以及在 Visual Studio 中编译程序时自动去构建这个安装包。
 
 ## 2. 操作演示
 
 Tips：如果是想自动化构建，建议先从文章尾部开始看起，前面只是简单演示如何手动构建
 
-### 2.1. 去官网下载Inno Setup打包工具
+### 2.1. 去官网下载 Inno Setup 打包工具
 
 点击 [Inno Setup Downloads](https://jrsoftware.org/isdl.php) 下载：
 
@@ -42,7 +43,7 @@ Tips：如果是想自动化构建，建议先从文章尾部开始看起，前�
 
 ![](https://img1.dotnet9.com/2023/07/0902.png)
 
-下载完手动放进Inno Setup安装目录下的Languages目录下即可
+下载完手动放进 Inno Setup 安装目录下的 Languages 目录下即可
 
 ![](https://img1.dotnet9.com/2023/07/0903.png)
 
@@ -58,7 +59,7 @@ Tips：如果是想自动化构建，建议先从文章尾部开始看起，前�
 
 ![](https://img1.dotnet9.com/2023/07/0906.png)
 
-### 2.5. 在VS中右键项目属性，更改项目输出路径，有多个项目则都改为同一个
+### 2.5. 在 VS 中右键项目属性，更改项目输出路径，有多个项目则都改为同一个
 
 ![](https://img1.dotnet9.com/2023/07/0907.png)
 
@@ -92,7 +93,7 @@ Tips：如果是想自动化构建，建议先从文章尾部开始看起，前�
 
 ![](https://img1.dotnet9.com/2023/07/0913.png)
 
-官方默认是不提供中文语言包的，但官网上有第三方用户提供和维护了中文包，有需要的可以在 [Inno Setup Translations](https://jrsoftware.org/files/istrans/)下载，然后手动放进Inno Setup安装目录下的Languages下即可，链接前面也提到过。
+官方默认是不提供中文语言包的，但官网上有第三方用户提供和维护了中文包，有需要的可以在 [Inno Setup Translations](https://jrsoftware.org/files/istrans/)下载，然后手动放进 Inno Setup 安装目录下的 Languages 下即可，链接前面也提到过。
 
 ### 2.12. 安装包设置
 
@@ -102,7 +103,7 @@ Tips：如果是想自动化构建，建议先从文章尾部开始看起，前�
 
 ![](https://img1.dotnet9.com/2023/07/0915.png)
 
-### 2.14. 编译完成，则会在目录生成一个exe文件，双击就可以进行安装
+### 2.14. 编译完成，则会在目录生成一个 exe 文件，双击就可以进行安装
 
 ![](https://img1.dotnet9.com/2023/07/0916.png)
 
@@ -112,7 +113,7 @@ Tips：如果是想自动化构建，建议先从文章尾部开始看起，前�
 
 至此，一个简易的安装包制作完成。
 
-但....这并不是本篇的主题。显而易见，如果每次程序有改动，就需要去Inno Setup的编辑器手动执行编译一下生成安装包，有些繁琐。
+但....这并不是本篇的主题。显而易见，如果每次程序有改动，就需要去 Inno Setup 的编辑器手动执行编译一下生成安装包，有些繁琐。
 
 ## 3. 自动化构建安装包
 
@@ -169,7 +170,7 @@ Name: "{group}\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"
 Filename: "{app}\{#MyAppExeName}"; Description: "{cm:LaunchProgram,{#StringChange(MyAppName, '&', '&&')}}"; Flags: nowait postinstall skipifsilent
 ```
 
-### 3.2. 把Inno Setup的安装目录拷贝一下放到工程目录
+### 3.2. 把 Inno Setup 的安装目录拷贝一下放到工程目录
 
 里面有些无用的可以删掉，减小体积，可以参考以下
 
@@ -188,28 +189,28 @@ IF "$(ConfigurationName)" == "Release" (
 )
 ```
 
-为防止影响调试，可以加个判断，只有Release模式编译项目则执行命令，该命令的意思就是通过调用解决方案下的ISCC程序传入安装包脚本从而构建编译出一个最新的安装包，最后再调起文件资源管理器打开安装包目录。
+为防止影响调试，可以加个判断，只有 Release 模式编译项目则执行命令，该命令的意思就是通过调用解决方案下的 ISCC 程序传入安装包脚本从而构建编译出一个最新的安装包，最后再调起文件资源管理器打开安装包目录。
 
 ## 4. 效果演示
 
 ![](https://img1.dotnet9.com/2023/07/0920.gif)
 
-每次需要发布新版本时，将解决方案切换为Release模式编译，F6 Build一下，安装包就自动生成出来了，这里只是抛砖引玉给个思路，可以多阅读下官方文档实现出更为完美的安装包。
+每次需要发布新版本时，将解决方案切换为 Release 模式编译，F6 Build 一下，安装包就自动生成出来了，这里只是抛砖引玉给个思路，可以多阅读下官方文档实现出更为完美的安装包。
 
-Tips：为避免编写代码调试时编译速度过慢，最好还是要在生成后事件中加上Release模式的判断，当解决方案中有很多个项目时，或编译目录依赖文件过多的情况下，Inno Setup构建的会有点慢。
+Tips：为避免编写代码调试时编译速度过慢，最好还是要在生成后事件中加上 Release 模式的判断，当解决方案中有很多个项目时，或编译目录依赖文件过多的情况下，Inno Setup 构建的会有点慢。
 
 ## 5. 结语
 
-Visual Studio中的生成事件其实是一个很实用的东西，可以在编译前、编译后自动化执行一些经常需要人为手工操作的事，比如还可以利用生成后事件进行代码混淆，本篇文章就暂时不展开细说了。
+Visual Studio 中的生成事件其实是一个很实用的东西，可以在编译前、编译后自动化执行一些经常需要人为手工操作的事，比如还可以利用生成后事件进行代码混淆，本篇文章就暂时不展开细说了。
 
 如果在实际操作中遇到错误或有疑问，以及更好的建议可以在评论中交流..
 
 ## 6. 附录
 
-- Inno Setup官网：https://jrsoftware.org/
+- Inno Setup 官网：https://jrsoftware.org/
 
-- Inno Setup编辑器：https://jrsoftware.org/isdl.php
+- Inno Setup 编辑器：https://jrsoftware.org/isdl.php
 
-- Inno Setup语言包：https://jrsoftware.org/files/istrans/
+- Inno Setup 语言包：https://jrsoftware.org/files/istrans/
 
-- Inno Setup文档：https://jrsoftware.org/ishelp/
+- Inno Setup 文档：https://jrsoftware.org/ishelp/

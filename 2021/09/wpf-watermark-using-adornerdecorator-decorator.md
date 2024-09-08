@@ -5,15 +5,15 @@ description: 基本全是代码
 date: 2021-09-09 23:55:02
 copyright: Reprinted
 author: 秋荷雨翔
-originaltitle: WPF：使用AdornerDecorator装饰器实现水印
-originallink: https://www.cnblogs.com/s0611163/archive/2021/09/09/15245412.html
+originalTitle: WPF：使用AdornerDecorator装饰器实现水印
+originalLink: https://www.cnblogs.com/s0611163/archive/2021/09/09/15245412.html
 draft: False
 cover: https://img1.dotnet9.com/2021/09/cover_04.jpg
 categories: .NET
 tags: WPF,水印
 ---
 
-水印装饰器WatermarkAdorner类代码：
+水印装饰器 WatermarkAdorner 类代码：
 
 ```C#
 using System;
@@ -156,7 +156,7 @@ namespace WPF水印装饰器
 
 如何使用：
 
-在窗体或控件的Loaded方法中，添加如下代码：
+在窗体或控件的 Loaded 方法中，添加如下代码：
 
 ```C#
 UIElement uiElement = (UIElement)this.Content;
@@ -164,49 +164,83 @@ AdornerLayer adornerLayer = AdornerLayer.GetAdornerLayer(uiElement);
 adornerLayer.Add(new WatermarkAdorner(uiElement, _watermarkText));
 ```
 
-完整MainWindow.xaml代码：
+完整 MainWindow.xaml 代码：
 
 ```html
-<Window x:Class="WPF水印装饰器.MainWindow"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:WPF水印装饰器"
-        mc:Ignorable="d"
-        Title="MainWindow" Height="1040" Width="1920" Loaded="Window_Loaded" WindowStyle="None"  ResizeMode="NoResize" WindowStartupLocation="CenterScreen" MouseRightButtonDown="Window_MouseRightButtonDown">
-    <Window.Template>
-        <ControlTemplate TargetType="{x:Type Window}">
-            <!-- ControlTemplate不包含AdornerDecorator，需要在ControlTemplate中添加AdornerDecorator -->
-            <AdornerDecorator>
-                <ContentPresenter />
-            </AdornerDecorator>
-        </ControlTemplate>
-    </Window.Template>
-    <Window.Resources>
-        <ResourceDictionary>
-            <ControlTemplate x:Key="tmplBtn" TargetType="{x:Type Button}" >
-                <Border x:Name="border" Background="#068d6b" CornerRadius="5">
-                    <TextBlock Text="{TemplateBinding Content}" Foreground="#ffffff" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
-                </Border>
-                <ControlTemplate.Triggers>
-                    <Trigger Property="IsMouseOver" Value="true">
-                        <Setter TargetName="border" Property="Background" Value="#069d8b"></Setter>
-                    </Trigger>
-                </ControlTemplate.Triggers>
-            </ControlTemplate>
-        </ResourceDictionary>
-    </Window.Resources>
-    <Grid x:Name="grid" Background="#094760">
-        <Button x:Name="button" Content="显示子窗体" Margin="0,0,0,0" Width="100" Height="35" Click="button_Click" Template="{StaticResource tmplBtn}"></Button>
-        <Button x:Name="button2" Content="显示子窗体2" Margin="0,100,0,0" Width="100" Height="35" Click="button2_Click" Template="{StaticResource tmplBtn}"></Button>
-    </Grid>
+<Window
+  x:Class="WPF水印装饰器.MainWindow"
+  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+  xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+  xmlns:local="clr-namespace:WPF水印装饰器"
+  mc:Ignorable="d"
+  Title="MainWindow"
+  Height="1040"
+  Width="1920"
+  Loaded="Window_Loaded"
+  WindowStyle="None"
+  ResizeMode="NoResize"
+  WindowStartupLocation="CenterScreen"
+  MouseRightButtonDown="Window_MouseRightButtonDown"
+>
+  <Window.Template>
+    <ControlTemplate TargetType="{x:Type Window}">
+      <!-- ControlTemplate不包含AdornerDecorator，需要在ControlTemplate中添加AdornerDecorator -->
+      <AdornerDecorator>
+        <ContentPresenter />
+      </AdornerDecorator>
+    </ControlTemplate>
+  </Window.Template>
+  <Window.Resources>
+    <ResourceDictionary>
+      <ControlTemplate x:Key="tmplBtn" TargetType="{x:Type Button}">
+        <Border x:Name="border" Background="#068d6b" CornerRadius="5">
+          <TextBlock
+            Text="{TemplateBinding Content}"
+            Foreground="#ffffff"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+          ></TextBlock>
+        </Border>
+        <ControlTemplate.Triggers>
+          <Trigger Property="IsMouseOver" Value="true">
+            <Setter
+              TargetName="border"
+              Property="Background"
+              Value="#069d8b"
+            ></Setter>
+          </Trigger>
+        </ControlTemplate.Triggers>
+      </ControlTemplate>
+    </ResourceDictionary>
+  </Window.Resources>
+  <Grid x:Name="grid" Background="#094760">
+    <button
+      x:Name="button"
+      Content="显示子窗体"
+      Margin="0,0,0,0"
+      Width="100"
+      Height="35"
+      Click="button_Click"
+      Template="{StaticResource tmplBtn}"
+    ></button>
+    <button
+      x:Name="button2"
+      Content="显示子窗体2"
+      Margin="0,100,0,0"
+      Width="100"
+      Height="35"
+      Click="button2_Click"
+      Template="{StaticResource tmplBtn}"
+    ></button>
+  </Grid>
 </Window>
 ```
 
-**注意：如果窗体或控件使用了ControlTemplate，因为ControlTemplate不包含AdornerDecorator，所以需要在ControlTemplate中添加AdornerDecorator。**
+**注意：如果窗体或控件使用了 ControlTemplate，因为 ControlTemplate 不包含 AdornerDecorator，所以需要在 ControlTemplate 中添加 AdornerDecorator。**
 
-完整MainWindow.xaml.cs代码：
+完整 MainWindow.xaml.cs 代码：
 
 ```C#
 using System;
@@ -274,7 +308,6 @@ namespace WPF水印装饰器
 
 ![效果图](https://img1.dotnet9.com/2021/09/0401.png)
 
+> 有一款 PPT 插件叫"[iSlide](https://islide.kf5.com/hc/kb/article/1378386/)"，其中 Windows 客户端是用 WPF 开发的，有个功能是 PPT 拼图，其中的水印功能就是上面类似的代码，我们看看效果结束本文：
 >
->有一款PPT插件叫"[iSlide](https://islide.kf5.com/hc/kb/article/1378386/)"，其中Windows客户端是用WPF开发的，有个功能是PPT拼图，其中的水印功能就是上面类似的代码，我们看看效果结束本文：
->
->![iSlide-PPT拼](https://img1.dotnet9.com/2021/09/0402.gif)
+> ![iSlide-PPT拼](https://img1.dotnet9.com/2021/09/0402.gif)

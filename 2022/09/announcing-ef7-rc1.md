@@ -5,25 +5,25 @@ description: Entity Framework Core 7 (EF7) Release Candidate 1 已发布！该�
 date: 2022-09-15 08:35:17
 copyright: Reprinted
 author: Jeremy Likness
-originaltitle: Announcing Entity Framework 7 Release Candidate 1
-originallink: https://devblogs.microsoft.com/dotnet/announcing-ef7-rc1/
+originalTitle: Announcing Entity Framework 7 Release Candidate 1
+originalLink: https://devblogs.microsoft.com/dotnet/announcing-ef7-rc1/
 draft: false
 cover: https://img1.dotnet9.com/2022/09/ef7.jpeg
 categories: .NET
 tags: .NET
 ---
 
->原文链接：[https://devblogs.microsoft.com/dotnet/announcing-ef7-rc1/](https://devblogs.microsoft.com/dotnet/announcing-ef7-rc1/)
+> 原文链接：[https://devblogs.microsoft.com/dotnet/announcing-ef7-rc1/](https://devblogs.microsoft.com/dotnet/announcing-ef7-rc1/)
 >
->原文作者：Jeremy Likness
+> 原文作者：Jeremy Likness
 >
->翻译：沙漠尽头的狼(谷歌翻译加持)
+> 翻译：沙漠尽头的狼(谷歌翻译加持)
 
 Entity Framework Core 7 (EF7) Release Candidate 1 已发布！该团队专注于解决缺陷、小幅改进以及对功能进行最后润色。
 
 在 GitHub 上查看[EF7 RC1 更改的完整列表](https://github.com/dotnet/efcore/issues?q=milestone%3A7.0.0-rc1)。
 
-要详细了解 EF7 中的新增功能以及工作示例，请查看我们最新更新的 [EF7文档中的新增功能](https://docs.microsoft.com/ef/core/what-is-new/ef-core-7.0/whatsnew)。您还可以阅读我们之前的博客文章中的功能深入探讨：
+要详细了解 EF7 中的新增功能以及工作示例，请查看我们最新更新的 [EF7 文档中的新增功能](https://docs.microsoft.com/ef/core/what-is-new/ef-core-7.0/whatsnew)。您还可以阅读我们之前的博客文章中的功能深入探讨：
 
 - [EF7 Preview 7 – Interceptors](https://devblogs.microsoft.com/dotnet/announcing-ef7-preview7-entity-framework/)
 - [EF7 Preview 6 – Performance](https://devblogs.microsoft.com/dotnet/announcing-ef-core-7-preview6-performance-optimizations/)
@@ -37,7 +37,7 @@ Entity Framework Core 7 (EF7) Release Candidate 1 已发布！该团队专注于
 - EF7 面向 .NET 6，这意味着它可以在 .NET 6 (LTS) 或 .NET 7 上使用。
 - EF7 不会在 .NET Framework 上运行。
 
-EF7 是 EF Core 6.0 的继承者，不要与 [EF6](https://github.com/dotnet/ef6)混淆。如果您正在考虑从 EF6 升级，请阅读我们的[从 EF6 移植到 EF Core的指南](https://docs.microsoft.com/ef/efcore-and-ef6/porting/)。
+EF7 是 EF Core 6.0 的继承者，不要与 [EF6](https://github.com/dotnet/ef6)混淆。如果您正在考虑从 EF6 升级，请阅读我们的[从 EF6 移植到 EF Core 的指南](https://docs.microsoft.com/ef/efcore-and-ef6/porting/)。
 
 ## 如何获得 EF7 RC1
 
@@ -49,22 +49,22 @@ dotnet add package Microsoft.EntityFrameworkCore.SqlServer --version 7.0.0-rc.1.
 
 下表链接到 EF Core 包的 RC1 版本并描述了它们的用途。
 
-|包裹|	目的|
-|:--|:--|
-|[Microsoft.EntityFrameworkCore](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore/7.0.0-rc.1.22426.7)	|独立于特定数据库提供程序的主 EF Core 包|
-|[Microsoft.EntityFrameworkCore.SqlServer](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.SqlServer/7.0.0-rc.1.22426.7)	|Microsoft SQL Server 和 SQL Azure 的数据库提供程序|
-|[Microsoft.EntityFrameworkCore.SqlServer.NetTopologySuite](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.SqlServer.NetTopologySuite/7.0.0-rc.1.22426.7)	|SQL Server 对空间类型的支持|
-|[Microsoft.EntityFrameworkCore.Sqlite](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.Sqlite/7.0.0-rc.1.22426.7)	|SQLite 的数据库提供程序，包括数据库引擎的本机二进制文件|
-|[Microsoft.EntityFrameworkCore.Sqlite.Core](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.Sqlite.Core/7.0.0-rc.1.22426.7)	|SQLite 的数据库提供程序，没有打包的本机二进制文件|
-|[Microsoft.EntityFrameworkCore.Sqlite.NetTopologySuite](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.Sqlite.NetTopologySuite/7.0.0-rc.1.22426.7)	|SQLite 对空间类型的支持|
-|[Microsoft.EntityFrameworkCore.Cosmos](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.Cosmos/7.0.0-rc.1.22426.7)|	Azure Cosmos DB 的数据库提供程序|
-|[Microsoft.EntityFrameworkCore.InMemory](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.InMemory/7.0.0-rc.1.22426.7)|	内存数据库提供程序|
-|[Microsoft.EntityFrameworkCore.Tools](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.Tools/7.0.0-rc.1.22426.7)|	用于 Visual Studio 包管理器控制台的 EF Core PowerShell 命令；使用它来将脚手架和迁移等工具与 Visual Studio集成|
-|[Microsoft.EntityFrameworkCore.Design](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.Design/7.0.0-rc.1.22426.7)	|EF Core 工具的共享设计时组件|
-|[Microsoft.EntityFrameworkCore.Proxies](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.Proxies/7.0.0-rc.1.22426.7)|	延迟加载和更改跟踪代理|
-|[Microsoft.EntityFrameworkCore.Abstractions](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.Abstractions/7.0.0-rc.1.22426.7)|	解耦 EF Core 抽象；将此用于 EF Core 定义的扩展数据注释等功能|
-|[Microsoft.EntityFrameworkCore.Relational](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.Relational/7.0.0-rc.1.22426.7)|	用于关系数据库提供程序的共享 EF Core 组件|
-|[Microsoft.EntityFrameworkCore.Analyzers](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.Analyzers/7.0.0-rc.1.22426.7)|	EF Core 的 C# 分析器|
+| 包裹                                                                                                                                                                   | 目的                                                                                                           |
+| :--------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------- |
+| [Microsoft.EntityFrameworkCore](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore/7.0.0-rc.1.22426.7)                                                       | 独立于特定数据库提供程序的主 EF Core 包                                                                        |
+| [Microsoft.EntityFrameworkCore.SqlServer](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.SqlServer/7.0.0-rc.1.22426.7)                                   | Microsoft SQL Server 和 SQL Azure 的数据库提供程序                                                             |
+| [Microsoft.EntityFrameworkCore.SqlServer.NetTopologySuite](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.SqlServer.NetTopologySuite/7.0.0-rc.1.22426.7) | SQL Server 对空间类型的支持                                                                                    |
+| [Microsoft.EntityFrameworkCore.Sqlite](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.Sqlite/7.0.0-rc.1.22426.7)                                         | SQLite 的数据库提供程序，包括数据库引擎的本机二进制文件                                                        |
+| [Microsoft.EntityFrameworkCore.Sqlite.Core](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.Sqlite.Core/7.0.0-rc.1.22426.7)                               | SQLite 的数据库提供程序，没有打包的本机二进制文件                                                              |
+| [Microsoft.EntityFrameworkCore.Sqlite.NetTopologySuite](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.Sqlite.NetTopologySuite/7.0.0-rc.1.22426.7)       | SQLite 对空间类型的支持                                                                                        |
+| [Microsoft.EntityFrameworkCore.Cosmos](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.Cosmos/7.0.0-rc.1.22426.7)                                         | Azure Cosmos DB 的数据库提供程序                                                                               |
+| [Microsoft.EntityFrameworkCore.InMemory](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.InMemory/7.0.0-rc.1.22426.7)                                     | 内存数据库提供程序                                                                                             |
+| [Microsoft.EntityFrameworkCore.Tools](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.Tools/7.0.0-rc.1.22426.7)                                           | 用于 Visual Studio 包管理器控制台的 EF Core PowerShell 命令；使用它来将脚手架和迁移等工具与 Visual Studio 集成 |
+| [Microsoft.EntityFrameworkCore.Design](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.Design/7.0.0-rc.1.22426.7)                                         | EF Core 工具的共享设计时组件                                                                                   |
+| [Microsoft.EntityFrameworkCore.Proxies](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.Proxies/7.0.0-rc.1.22426.7)                                       | 延迟加载和更改跟踪代理                                                                                         |
+| [Microsoft.EntityFrameworkCore.Abstractions](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.Abstractions/7.0.0-rc.1.22426.7)                             | 解耦 EF Core 抽象；将此用于 EF Core 定义的扩展数据注释等功能                                                   |
+| [Microsoft.EntityFrameworkCore.Relational](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.Relational/7.0.0-rc.1.22426.7)                                 | 用于关系数据库提供程序的共享 EF Core 组件                                                                      |
+| [Microsoft.EntityFrameworkCore.Analyzers](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.Analyzers/7.0.0-rc.1.22426.7)                                   | EF Core 的 C# 分析器                                                                                           |
 
 我们还发布了[ADO.NET](https://docs.microsoft.com/dotnet/framework/data/adonet/ado-net-overview)的[Microsoft.Data.Sqlite.Core](https://www.nuget.org/packages/Microsoft.Data.Sqlite.Core/7.0.0-rc.1.22426.7)提供程序的候选版本 1 。
 
@@ -75,13 +75,13 @@ dotnet add package Microsoft.EntityFrameworkCore.SqlServer --version 7.0.0-rc.1.
 要全局安装 RC 工具，请使用以下命令安装：
 
 ```shell
-dotnet tool install --global dotnet-ef --version 7.0.0-rc.1.22426.7 
+dotnet tool install --global dotnet-ef --version 7.0.0-rc.1.22426.7
 ```
 
 如果您已经安装了该工具，则可以使用以下命令对其进行升级：
 
 ```shell
-dotnet tool update --global dotnet-ef --version 7.0.0-rc.1.22426.7 
+dotnet tool update --global dotnet-ef --version 7.0.0-rc.1.22426.7
 ```
 
 可以将此新版本的 EF7 CLI 用于使用旧版本 EF Core 运行时的项目。

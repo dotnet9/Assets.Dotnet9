@@ -7,15 +7,15 @@ lastmod: 2024-02-04 05:21:46
 copyright: Reprinted
 banner: false
 author: 大佛脚下
-originaltitle: 【WPF】自定义GridLineDecorator给ListView画网格
-originallink: https://www.cnblogs.com/RMay/archive/2010/12/27/1918048.html
+originalTitle: 【WPF】自定义GridLineDecorator给ListView画网格
+originalLink: https://www.cnblogs.com/RMay/archive/2010/12/27/1918048.html
 draft: false
 cover: https://img1.dotnet9.com/2024/02/cover_02.png
 categories: .NET
 tags: ListView
 ---
 
-感谢 [rgqancy](http://www.cnblogs.com/rgqancy/) 指出的Bug，已经修正
+感谢 [rgqancy](http://www.cnblogs.com/rgqancy/) 指出的 Bug，已经修正
 
 先给个效果图：
 
@@ -38,9 +38,9 @@ tags: ListView
 
 ------------------------正文-------------------------------
 
-经常看见有人问在使用WPF的ListView的时候，怎样能够有网格线的效果。例如http://www.bbniu.com/forum/thread-1090-1-1.html
+经常看见有人问在使用 WPF 的 ListView 的时候，怎样能够有网格线的效果。例如http://www.bbniu.com/forum/thread-1090-1-1.html
 
-对这个问题，首先能想到的解决办法是，在GridViewColumn的CellTemplate中，放上一个Border，然后设置Border的BorderBrush和BorderThickness。例如：
+对这个问题，首先能想到的解决办法是，在 GridViewColumn 的 CellTemplate 中，放上一个 Border，然后设置 Border 的 BorderBrush 和 BorderThickness。例如：
 
 ```xml
 <GridViewColumn.CellTemplate>
@@ -52,11 +52,11 @@ tags: ListView
 </GridViewColumn.CellTemplate>
 ```
 
-但是，很快你会发现，Border不能随着列宽的变化而变化，就像这样：
+但是，很快你会发现，Border 不能随着列宽的变化而变化，就像这样：
 
 ![img](https://img1.dotnet9.com/2024/02/0201.png)
 
-而且，即使将ListView的HorizontalContentAlignment置为Stretch，也不能起到作用。必须在ListViewItem上设置HorizontalContentAlignment="True"。因此，必须添加一个ListViewItem的样式，统一指定：
+而且，即使将 ListView 的 HorizontalContentAlignment 置为 Stretch，也不能起到作用。必须在 ListViewItem 上设置 HorizontalContentAlignment="True"。因此，必须添加一个 ListViewItem 的样式，统一指定：
 
 ```xml
 <Style TargetType="ListViewItem">
@@ -64,29 +64,29 @@ tags: ListView
 </Style>
 ```
 
-但问题还是没有解决，因为Border不能填满整个Cell，就像这样：
+但问题还是没有解决，因为 Border 不能填满整个 Cell，就像这样：
 
 ![img](https://img1.dotnet9.com/2024/02/0202.png)
 
-于是，你得小心的设置各个Border的Margin，来让它们“恰好”都连在一起，看上去就像是连续的线条。也许调整Margin还不够，还得修改ListViewItem的模板；模板修改好了，发现创建这么多的Border性能又跟不上；最头大的是，每个Column都要指定一次CellTemplate，万一哪天边线的颜色要统一调整一下……
+于是，你得小心的设置各个 Border 的 Margin，来让它们“恰好”都连在一起，看上去就像是连续的线条。也许调整 Margin 还不够，还得修改 ListViewItem 的模板；模板修改好了，发现创建这么多的 Border 性能又跟不上；最头大的是，每个 Column 都要指定一次 CellTemplate，万一哪天边线的颜色要统一调整一下……
 
-因此，这种办法固然可行，操作起来其实麻烦的要死。 
+因此，这种办法固然可行，操作起来其实麻烦的要死。
 
-有没有一种方式，可以直接在ListView上“画线”呢？固然，我们可以自己写一个ListView，在OnRender里面画线什么的，但理想的情况还是能够在可以不改动任何现有控件的条件下，实现这个画网格的功能。同时，这个网格线的颜色可以随意调整就更好了。
+有没有一种方式，可以直接在 ListView 上“画线”呢？固然，我们可以自己写一个 ListView，在 OnRender 里面画线什么的，但理想的情况还是能够在可以不改动任何现有控件的条件下，实现这个画网格的功能。同时，这个网格线的颜色可以随意调整就更好了。
 
 因此，总的要求如下：
 
 1. 可以画网格
 
-2. 不用改动ListView，或者自己写ListView
+2. 不用改动 ListView，或者自己写 ListView
 
-3. 可以调整网格的颜色 
+3. 可以调整网格的颜色
 
-如果对设计模式熟悉的话，“不改动现有代码，增加新的功能”，应该马上能够想到装饰器模式。其实，WPF中本身就有Decorator这个控件，而常用的Border就是一个Decorator，可以帮助控件画背景色，画边线等等。
+如果对设计模式熟悉的话，“不改动现有代码，增加新的功能”，应该马上能够想到装饰器模式。其实，WPF 中本身就有 Decorator 这个控件，而常用的 Border 就是一个 Decorator，可以帮助控件画背景色，画边线等等。
 
-因此，如果能够有这么一个Decorator，把ListView往里面一放，就能有画线的功能，岂不快哉？不过，这里我并不打算直接继承Decorator来修改，因为WPF提供的Decorator是针对所有UIElment的，而我们只想针对ListView。
+因此，如果能够有这么一个 Decorator，把 ListView 往里面一放，就能有画线的功能，岂不快哉？不过，这里我并不打算直接继承 Decorator 来修改，因为 WPF 提供的 Decorator 是针对所有 UIElment 的，而我们只想针对 ListView。
 
-GridLineDecorator直接继承自FrameworkElement，并且通过重载VisualChild和LogicalChild相关的代码来显示其包装的ListView。 
+GridLineDecorator 直接继承自 FrameworkElement，并且通过重载 VisualChild 和 LogicalChild 相关的代码来显示其包装的 ListView。
 
 ```csharp
 using System;
@@ -125,7 +125,7 @@ namespace ListViewWithLines
                     new PropertyChangedCallback(OnGridLineBrushChanged)));
 
         /// <summary>
-        /// Gets or sets the GridLineBrush property.  This dependency property 
+        /// Gets or sets the GridLineBrush property.  This dependency property
         /// indicates ....
         /// </summary>
         public Brush GridLineBrush
@@ -200,7 +200,7 @@ namespace ListViewWithLines
 
             var gridView = Target.View as GridView;
             if (gridView == null) return;
-            
+
             // 获取drawingContext
             var drawingContext = _gridLinesVisual.RenderOpen();
             var startPoint = new Point(0, 0);
@@ -337,11 +337,11 @@ namespace ListViewWithLines
 }
 ```
 
-其中，Target是一个属性，类型是ListView，还有一个_guidLinesVisual，则是用于绘制网格的DrawingVisual。有人可能会问，为什么不直接重载OnRender方法，在里面画线呢？ 
+其中，Target 是一个属性，类型是 ListView，还有一个\_guidLinesVisual，则是用于绘制网格的 DrawingVisual。有人可能会问，为什么不直接重载 OnRender 方法，在里面画线呢？
 
-理由是，重载OnRender方法画线，当ListView设置了背景后，会将我们画的线盖住。这是因为控件的背景是在模板中放了一个Border来绘制的，Border也是在OnRender中绘制的，它后绘制，我们的先绘制，会将我们画的线给盖住。同时，你会发现，当ListView的Column改变大小的时候，并不会引起GridLineDecorator重绘，所以网格线无法同步变化。
+理由是，重载 OnRender 方法画线，当 ListView 设置了背景后，会将我们画的线盖住。这是因为控件的背景是在模板中放了一个 Border 来绘制的，Border 也是在 OnRender 中绘制的，它后绘制，我们的先绘制，会将我们画的线给盖住。同时，你会发现，当 ListView 的 Column 改变大小的时候，并不会引起 GridLineDecorator 重绘，所以网格线无法同步变化。
 
-其实，GridLineDecorator里面的GetVisualChild重载也非常讲究：
+其实，GridLineDecorator 里面的 GetVisualChild 重载也非常讲究：
 
 ```csharp
 protected override Visual GetVisualChild(int index)
@@ -352,15 +352,15 @@ protected override Visual GetVisualChild(int index)
 }
 ```
 
-首先返回的是ListView，接着才是_gridLinesVisual。
-不过，即使是使用DrawingVisual，也会有Column宽度改变无法通知重绘的问题。解决这个问题有好几个思路：
+首先返回的是 ListView，接着才是\_gridLinesVisual。
+不过，即使是使用 DrawingVisual，也会有 Column 宽度改变无法通知重绘的问题。解决这个问题有好几个思路：
 
-1. 监听一下GridViewColumn的宽度变化
-2. 监听CompositionTarget.Rendering事件
+1. 监听一下 GridViewColumn 的宽度变化
+2. 监听 CompositionTarget.Rendering 事件
 
-第一个办法，不可行，因为GridViewColumn的宽度变化事件你找不到，第二个办法是可行，不过效率嘛……
+第一个办法，不可行，因为 GridViewColumn 的宽度变化事件你找不到，第二个办法是可行，不过效率嘛……
 
-在经过一番研究之后，终于找到了一个可行的办法，监听ScrollViewer的ScrollChanged事件，因为ListView内部是放置了两个ScrollViewer，一个用于显示Header，一个用于显示Items。当Column的宽度变化时，会触发ScrollViewer的ScrollChanged事件。
+在经过一番研究之后，终于找到了一个可行的办法，监听 ScrollViewer 的 ScrollChanged 事件，因为 ListView 内部是放置了两个 ScrollViewer，一个用于显示 Header，一个用于显示 Items。当 Column 的宽度变化时，会触发 ScrollViewer 的 ScrollChanged 事件。
 
 因此，在构造函数里面：
 
@@ -372,9 +372,9 @@ public GridLineDecorator()
 }
 ```
 
-画线的逻辑，主要就是遍历所有的Container（其实是ListViewItem），计算其相对于GridLineDecorator的位移，算出横线和纵线的坐标和长度，画线。代码比较多，大家可以下载以后自己看。
+画线的逻辑，主要就是遍历所有的 Container（其实是 ListViewItem），计算其相对于 GridLineDecorator 的位移，算出横线和纵线的坐标和长度，画线。代码比较多，大家可以下载以后自己看。
 
-细心的童鞋可能会发现，有时候底部的线条在ListViewItem显示不完整时，没有画到最下端，这是由于ListView做了Virtualize处理。大家可以设置VirtualizingStackPanel.IsVirtualizing="False"来强制绘制。
+细心的童鞋可能会发现，有时候底部的线条在 ListViewItem 显示不完整时，没有画到最下端，这是由于 ListView 做了 Virtualize 处理。大家可以设置 VirtualizingStackPanel.IsVirtualizing="False"来强制绘制。
 
 附代码：https://files.cnblogs.com/RMay/ListViewWithLines.zip
 
@@ -393,7 +393,7 @@ public GridLineDecorator()
 
 ![img](https://img1.dotnet9.com/2024/02/0203.gif)
 
-- 原文标题：【WPF】自定义GridLineDecorator给ListView画网格
+- 原文标题：【WPF】自定义 GridLineDecorator 给 ListView 画网格
 - 原文作者：大佛脚下
 - 原文链接：https://www.cnblogs.com/RMay/archive/2010/12/27/1918048.html
 - 原文示例代码：https://files.cnblogs.com/RMay/ListViewWithLines.zip

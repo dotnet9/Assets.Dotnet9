@@ -4,14 +4,14 @@ slug: how-to-pop-up-a-dialog-box-in-prism-module
 description: 有网友提出需求，在Prism的Module中如何弹出对话框？像主界面弹出关于对话框一样？
 date: 2021-04-14 17:32:16
 copyright: Original
-originaltitle: 如何在 Prism 的 Module 中弹出对话框？
+originalTitle: 如何在 Prism 的 Module 中弹出对话框？
 draft: False
 cover: https://img1.dotnet9.com/2021/04/cover_04.jpg
 categories: .NET
 tags: WPF,Prism,Module
 ---
 
->有网友提出需求，在Prism的Module中如何弹出对话框？像主界面弹出关于对话框一样？
+> 有网友提出需求，在 Prism 的 Module 中如何弹出对话框？像主界面弹出关于对话框一样？
 
 ![网友需求](https://img1.dotnet9.com/2021/04/0401.png)
 
@@ -23,15 +23,15 @@ tags: WPF,Prism,Module
 
 效果一般，如果有设计师可以做的很漂亮。
 
-本文不打算写的很详细，具体做法可以看源码（文末附仓库链接），另外关于Prism的学习可参考如下文章：
+本文不打算写的很详细，具体做法可以看源码（文末附仓库链接），另外关于 Prism 的学习可参考如下文章：
 
-1. NET Core 3.x WPF MVVM框架Prism系列(后续版本通用)
+1. NET Core 3.x WPF MVVM 框架 Prism 系列(后续版本通用)
 
 ```shell
 https://dotnet9.com/album/wpf-prism
 ```
 
-2. WPF企业级开发框架搭建指南（启示录），2020从入门到放弃
+2. WPF 企业级开发框架搭建指南（启示录），2020 从入门到放弃
 
 ```shell
 https://jhrs.com/2020/37391.html
@@ -56,7 +56,7 @@ protected override void RegisterTypes(IContainerRegistry containerRegistry)
 
 ### 1.2 实际对话框注册
 
-也是在App.xaml.cs文件中，下面的代码即为注册实际的对话框代码：`QQ群对话框`、`关于对话模式`、`推荐网站对话框`等，`括号中的字符串(如"About")`用于弹出对话框定位使用，**注：实际的对话框是基于`UserControl`编写的，只有这样才能套入是一个`Window`的`RegisterDialogWindow`内**。
+也是在 App.xaml.cs 文件中，下面的代码即为注册实际的对话框代码：`QQ群对话框`、`关于对话模式`、`推荐网站对话框`等，`括号中的字符串(如"About")`用于弹出对话框定位使用，**注：实际的对话框是基于`UserControl`编写的，只有这样才能套入是一个`Window`的`RegisterDialogWindow`内**。
 
 ```C#
 protected override void RegisterTypes(IContainerRegistry containerRegistry)
@@ -72,23 +72,25 @@ protected override void RegisterTypes(IContainerRegistry containerRegistry)
 
 ### 1.3 菜单触发调出对话框
 
-这个就更简单了，直接在xaml中使用，比如主窗口的关于菜单：
+这个就更简单了，直接在 xaml 中使用，比如主窗口的关于菜单：
 
 ```html
-<MenuItem
-    Command="{Binding RaiseShowDialogCommand}"
-    CommandParameter="About"
-    Header="{markup:I18n {x:Static i18NResources:Language.About}}">
-    <MenuItem.Icon>
-        <Path
-            Width="16"
-            Data="{StaticResource InfoGeometry}"
-            Fill="{DynamicResource SuccessBrush}" />
-    </MenuItem.Icon>
-</MenuItem>
+<menuitem
+  Command="{Binding RaiseShowDialogCommand}"
+  CommandParameter="About"
+  Header="{markup:I18n {x:Static i18NResources:Language.About}}"
+>
+  <MenuItem.Icon>
+    <Path
+      Width="16"
+      Data="{StaticResource InfoGeometry}"
+      Fill="{DynamicResource SuccessBrush}"
+    />
+  </MenuItem.Icon>
+</menuitem>
 ```
 
-`RaiseShowDialogCommand`在VM的基类`ViewModelBase`定义的，实际调用代码如下：
+`RaiseShowDialogCommand`在 VM 的基类`ViewModelBase`定义的，实际调用代码如下：
 
 ```C#
 /// <summary>
@@ -103,11 +105,11 @@ private void RaiseShowDialogHandler(string dlgName)
 
 参数`dlgName`即上面`1.2`注册对话框时指定的字符串，视情况指定。
 
-## 2 Module中的对话框如何弹出？
+## 2 Module 中的对话框如何弹出？
 
 这一节就是本文的重点了。
 
-## 2.1 关键：IModule的RegisterTypes方法
+## 2.1 关键：IModule 的 RegisterTypes 方法
 
 `Module`是动态加载的，模块中的对话框不可能写在`App.xaml.cs`中噻？如果你对`Prism`比较熟悉，看看各模块的`Module`入口类，即继承`IModule`的模块入口类方法`RegisterTypes(IContainerRegistry containerRegistry)`，可以在这里注入模块使用的类型和对话框，供本模块或者其他模块使用。
 
@@ -132,7 +134,7 @@ public void RegisterTypes(IContainerRegistry containerRegistry)
 
 ```XAML
 <Button
-  Margin="10,15,10,0" 
+  Margin="10,15,10,0"
   Style="{StaticResource ButtonSuccess}"
   Command="{Binding RaiseShowDialogCommand}"
   CommandParameter="AddLogView"
@@ -149,17 +151,17 @@ public void RegisterTypes(IContainerRegistry containerRegistry)
 
 ## 3 关于项目怎么运行？
 
-**说明：本项目服务端基于[WTM](https://wtmdoc.walkingtec.cn/)搭建，客户端由WPF编写。**
+**说明：本项目服务端基于[WTM](https://wtmdoc.walkingtec.cn/)搭建，客户端由 WPF 编写。**
 
 ### 3.1 运行服务端
 
-如果需要运行查看客户端效果，请先编译服务端`src\LQClass.Admin`，至于怎么编译，不会的自行百度哦，编译成功后，调试运行服务端项目，或者双击运行服务端Exe：`src\LQClass.Admin\LQClass.Admin\bin\Debug\net5.0\LQClass.Admin.exe`，服务端默认开启5000端口。
+如果需要运行查看客户端效果，请先编译服务端`src\LQClass.Admin`，至于怎么编译，不会的自行百度哦，编译成功后，调试运行服务端项目，或者双击运行服务端 Exe：`src\LQClass.Admin\LQClass.Admin\bin\Debug\net5.0\LQClass.Admin.exe`，服务端默认开启 5000 端口。
 
 <video id="video" controls="" preload="none" poster="https://img1.dotnet9.com/2021/04/0406.png">
   <source id="mp4" src="https://img1.dotnet9.com/2021/04/0407.mp4" type="video/mp4">
 </video>
 
-### 3.2 运行WPF客户端
+### 3.2 运行 WPF 客户端
 
 如果只是看源码，可以忽略本步骤。
 
@@ -176,7 +178,7 @@ public void RegisterTypes(IContainerRegistry containerRegistry)
 </configuration>
 ```
 
-项目路径：`src\LQClass.AdminForWPF`，生成成功，调试客户端项目，或者双击客户端Exe：`\src\LQClass.AdminForWPF\Build\LQClass.AdminForWPF.exe`即可运行本客户端了。
+项目路径：`src\LQClass.AdminForWPF`，生成成功，调试客户端项目，或者双击客户端 Exe：`\src\LQClass.AdminForWPF\Build\LQClass.AdminForWPF.exe`即可运行本客户端了。
 
 后端默认管理员账号：
 
@@ -191,4 +193,4 @@ admin
   <source id="mp4" src="https://img1.dotnet9.com/2021/04/0409.mp4" type="video/mp4">
 </video>
 
-仓库（欢迎提issue）：https://github.com/dotnet9/lqclass.com
+仓库（欢迎提 issue）：https://github.com/dotnet9/lqclass.com

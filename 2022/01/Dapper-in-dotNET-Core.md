@@ -5,8 +5,8 @@ description: 关于什么是Dapper（详细入口），在此不做赘述；本�
 date: 2022-01-10 22:12:04
 copyright: Reprinted
 author: 白云任去留
-originaltitle: Dapper in .NET Core
-originallink: cnblogs.com/ang/p/13620452.html
+originalTitle: Dapper in .NET Core
+originalLink: cnblogs.com/ang/p/13620452.html
 draft: False
 cover: https://img1.dotnet9.com/2022/01/cover_08.jpg
 categories: .NET
@@ -16,22 +16,22 @@ tags: C#,.NET,Dapper,ORM
 **目录**
 
 - 一、前言
-- 二、Dapper环境搭建
-- 三、Dapper封装
-  - 定义DapperDBContext类
+- 二、Dapper 环境搭建
+- 三、Dapper 封装
+  - 定义 DapperDBContext 类
   - 异步分页构建（PageAsync）
   - 定义工作单元与事务
   - 定义数据仓储
   - 数据库连接
-- 四、Dapper使用
- 
+- 四、Dapper 使用
+
 ## 一、前言
 
-关于什么是Dapper（详细入口），在此不做赘述；本文仅对Dapper在.Net Core中的使用作扼要说明，所陈代码以示例讲解为主，乃抛砖引玉，开发者可根据自身需要进行扩展和调整；其中如有疏漏之处，望不吝斧正。
+关于什么是 Dapper（详细入口），在此不做赘述；本文仅对 Dapper 在.Net Core 中的使用作扼要说明，所陈代码以示例讲解为主，乃抛砖引玉，开发者可根据自身需要进行扩展和调整；其中如有疏漏之处，望不吝斧正。
 
-## 二、Dapper环境搭建
+## 二、Dapper 环境搭建
 
-当前以.Net Core WebAPI或MVC项目为例，框架版本为.NET 5.0，相关NuGet包引用如下：
+当前以.Net Core WebAPI 或 MVC 项目为例，框架版本为.NET 5.0，相关 NuGet 包引用如下：
 
 ```shell
 Install-Package Dapper
@@ -40,20 +40,20 @@ Install-Package Dapper.SqlBuilder
 Install-Package System.Data.SqlClient
 ```
 
-其中Dapper.Contrib和Dapper.SqlBuilder为Dapper的扩展，当然，Dapper的扩展还有如Dapper.Rainbow等其他包，根据自身需要引用，对相关引用作下说明：
+其中 Dapper.Contrib 和 Dapper.SqlBuilder 为 Dapper 的扩展，当然，Dapper 的扩展还有如 Dapper.Rainbow 等其他包，根据自身需要引用，对相关引用作下说明：
 
 - Dapper：不言而喻；
-- Dapper.Contrib：可使用对象进行数据表的增删改查，免却SQL语句的编写；
-- Dapper.SqlBuilder：可以方便动态构建SQL语句，如Join、SELECT、Where、OrderBy等等；
-- System.Data.SqlClient：由于示例数据库为Sql Server，如MySql则引用MySql.Data；
+- Dapper.Contrib：可使用对象进行数据表的增删改查，免却 SQL 语句的编写；
+- Dapper.SqlBuilder：可以方便动态构建 SQL 语句，如 Join、SELECT、Where、OrderBy 等等；
+- System.Data.SqlClient：由于示例数据库为 Sql Server，如 MySql 则引用 MySql.Data；
 
-对于Dapper.Contrib实体配置选项，以Product类为例，作扼要说明如下：
+对于 Dapper.Contrib 实体配置选项，以 Product 类为例，作扼要说明如下：
 
 ```C#
 [Table("Product")]
 public class Product
 {
-    [Key]  
+    [Key]
     public int Id { get; set; }
     public string Name{ get; set; }
     public string Description { get; set; }
@@ -66,18 +66,18 @@ public class Product
 
 - Table：指定数据库表名，可忽略；
 - Key：指定为自动增长主键；
-- ExplicitKey：指定非自动增长主键，如guid；
-- Computed：计算列属性，Insert、Update操作将忽略此列；
-- Write：是否可写入，true/false，如[Write(false)]，false时Insert、Update操作将忽略此列，比如可扩展局部类作数据表额外查询字段使用；
+- ExplicitKey：指定非自动增长主键，如 guid；
+- Computed：计算列属性，Insert、Update 操作将忽略此列；
+- Write：是否可写入，true/false，如[Write(false)]，false 时 Insert、Update 操作将忽略此列，比如可扩展局部类作数据表额外查询字段使用；
 
-对于数据表对象实体，可结合T4模板生成即可。
+对于数据表对象实体，可结合 T4 模板生成即可。
 
-## 三、Dapper封装
+## 三、Dapper 封装
 
-关于Dapper数据访问，这里参考Github上的某示例（入口：https://github.com/EloreTec/UnitOfWorkWithDapper），作修改调整封装如下：
+关于 Dapper 数据访问，这里参考 Github 上的某示例（入口：https://github.com/EloreTec/UnitOfWorkWithDapper），作修改调整封装如下：
 
-### 定义DapperDBContext类
- 
+### 定义 DapperDBContext 类
+
 ```C#
 public abstract class DapperDBContext : IContext
     {
@@ -175,7 +175,7 @@ public abstract class DapperDBContext : IContext
 
         public async Task<bool> UpdateAsync<T>(T model) where T : class, new()
         {
-            return await _connection.UpdateAsync<T>(model, _transaction, _commandTimeout);          
+            return await _connection.UpdateAsync<T>(model, _transaction, _commandTimeout);
         }
 
         public async Task<Page<T>> PageAsync<T>(long pageIndex, long pageSize, string sql, object param = null)
@@ -196,13 +196,13 @@ public abstract class DapperDBContext : IContext
             result.Items = await _connection.QueryAsync<T>(sqlPage, param);
             return result;
         }
-      
+
 
         #endregion
 
 
         #region Dapper Execute & Query
-      
+
 
         public int ExecuteScalar(string sql, object param = null, CommandType commandType = CommandType.Text)
         {
@@ -279,7 +279,7 @@ public abstract class DapperDBContext : IContext
         }
     }
 ```
- 
+
 ```C#
 public class DapperDBContextOptions : IOptions<DapperDBContextOptions>
     {
@@ -302,21 +302,20 @@ public class DapperDBContextOptions : IOptions<DapperDBContextOptions>
         void Rollback();
     }
 ```
- 
 
-以上代码涵盖了Dapper访问数据库的基本操作，分同步和异步，其中大部分不作赘述，着重说下分页部分；
+以上代码涵盖了 Dapper 访问数据库的基本操作，分同步和异步，其中大部分不作赘述，着重说下分页部分；
 
 ### 异步分页构建（PageAsync）
 
-分页这里为方便调用，只需传入要查询的Sql语句（如：SELECT * FROM Table，必须带Order BY）、页索引、页大小即可；
+分页这里为方便调用，只需传入要查询的 Sql 语句（如：SELECT \* FROM Table，必须带 Order BY）、页索引、页大小即可；
 
-至于具体如何构建的，这里参照某小型ORM工具PetaPoco，抽取相关代码如下，有兴趣的同学也可以自行改造：
+至于具体如何构建的，这里参照某小型 ORM 工具 PetaPoco，抽取相关代码如下，有兴趣的同学也可以自行改造：
 
 ```C#
 public class Page<T>
     {
         /// <summary>
-        /// The current page number contained in this page of result set 
+        /// The current page number contained in this page of result set
         /// </summary>
         public long CurrentPage { get; set; }
 
@@ -377,7 +376,7 @@ public class Page<T>
             if (PagingHelper.rxDistinct.IsMatch(parts.sqlSelectRemoved))
             {
                 parts.sqlSelectRemoved = "peta_inner.* FROM (SELECT " + parts.sqlSelectRemoved + ") peta_inner";
-            }    
+            }
 
             var sqlOrderBy = parts.sqlOrderBy ?? "ORDER BY (SELECT NULL)";
             var sqlPage = $"SELECT {parts.sqlSelectRemoved} {sqlOrderBy} OFFSET {skip} ROWS FETCH NEXT {take} ROWS ONLY";
@@ -437,11 +436,11 @@ public class Page<T>
         public static Regex rxOrderBy = new Regex(@"\bORDER\s+BY\s+(?!.*?(?:\)|\s+)AS\s)(?:\((?>\((?<depth>)|\)(?<-depth>)|.?)*(?(depth)(?!))\)|[\w\(\)\.])+(?:\s+(?:ASC|DESC))?(?:\s*,\s*(?:\((?>\((?<depth>)|\)(?<-depth>)|.?)*(?(depth)(?!))\)|[\w\(\)\.])+(?:\s+(?:ASC|DESC))?)*", RegexOptions.RightToLeft | RegexOptions.IgnoreCase | RegexOptions.Multiline | RegexOptions.Singleline | RegexOptions.Compiled);
         public static Regex rxDistinct = new Regex(@"\ADISTINCT\s", RegexOptions.IgnoreCase | RegexOptions.Multiline | RegexOptions.Singleline | RegexOptions.Compiled);
     }
-``` 
+```
 
-对于构建分页语句，分别示例BuildPageQuery和BuildPageQuery2，前者为通过ROW_NUMBER进行分页（针对SqlServer2005、2008），后者通过OFFSET、FETCH分页（针对SqlServer2012及以上版本），相关辅助操作类一览便知，如果使用MySql数据库，可酌情自行封装； 
+对于构建分页语句，分别示例 BuildPageQuery 和 BuildPageQuery2，前者为通过 ROW_NUMBER 进行分页（针对 SqlServer2005、2008），后者通过 OFFSET、FETCH 分页（针对 SqlServer2012 及以上版本），相关辅助操作类一览便知，如果使用 MySql 数据库，可酌情自行封装；
 
-至于Where查询的进一步封装，有兴趣的也可兑Dapper lamada查询进行扩展。
+至于 Where 查询的进一步封装，有兴趣的也可兑 Dapper lamada 查询进行扩展。
 
 ### 定义工作单元与事务
 
@@ -496,7 +495,7 @@ public class DapperUnitOfWorkFactory : IUnitOfWorkFactory
         }
     }
 ```
- 
+
 ### 定义数据仓储
 
 ```C#
@@ -513,7 +512,7 @@ public class DapperUnitOfWorkFactory : IUnitOfWorkFactory
 
         bool Update(Product model);
 
-        Task<bool> UpdateAsync(Product model);       
+        Task<bool> UpdateAsync(Product model);
 
         int Count(string where, object param = null);
 
@@ -521,7 +520,7 @@ public class DapperUnitOfWorkFactory : IUnitOfWorkFactory
 
         bool Exists(string where, object param = null);
 
-        Task<bool> ExistsAsync(string where, object param = null);        
+        Task<bool> ExistsAsync(string where, object param = null);
 
         Product FirstOrDefault(string where, object param = null);
 
@@ -555,7 +554,7 @@ public class DapperUnitOfWorkFactory : IUnitOfWorkFactory
         }
 
         public async Task<Product> GetAsync(int id)
-        { 
+        {
             return await _context.GetAsync<Product>(id);
         }
 
@@ -572,15 +571,15 @@ public class DapperUnitOfWorkFactory : IUnitOfWorkFactory
         public async Task<int> InsertAsync(Product model)
         {
             return await _context.InsertAsync<Product>(model);
-        }    
+        }
 
         public bool Update(Product model)
-        { 
+        {
             return _context.Update<Product>(model);
-        }    
+        }
 
         public async Task<bool> UpdateAsync(Product model)
-        { 
+        {
             return await _context.UpdateAsync<Product>(model);
         }
 
@@ -659,8 +658,8 @@ public class DapperUnitOfWorkFactory : IUnitOfWorkFactory
         }
 
         public async Task<Page<Product>> PageAsync(long pageIndex, long pageSize, SqlBuilder builder)
-        {         
-            var strSql = "SELECT * FROM Product";   
+        {
+            var strSql = "SELECT * FROM Product";
             return await PageAsync<Product>(strSql, pageIndex, pageSize, builder);
         }
 
@@ -671,18 +670,18 @@ public class DapperUnitOfWorkFactory : IUnitOfWorkFactory
         }
 
         public async Task<SqlMapper.GridReader> QueryMultipleAsync(string sql, object param = null)
-        {          
+        {
             return await _context.QueryMultipleAsync(sql, param);
         }
     }
     #endregion
 ```
- 
-根据自身需要进行调整或扩展，一般借助T4模板生成
+
+根据自身需要进行调整或扩展，一般借助 T4 模板生成
 
 ### 数据库连接
 
-通过Ioptions模式读取配置文件appsettings中连接字符串
+通过 Ioptions 模式读取配置文件 appsettings 中连接字符串
 
 ```C#
 public class MyDBContext : DapperDBContext
@@ -699,13 +698,13 @@ public class MyDBContext : DapperDBContext
     }
 ```
 
-## 四、Dapper使用
+## 四、Dapper 使用
 
-Startup.cs注入并读取数据库连接字符串
+Startup.cs 注入并读取数据库连接字符串
 
 ```json
 {
-  "SQLConnString": "Data Source=(local);Initial Catalog=database;Persist Security Info=True;User ID=sa;Password=123456;MultipleActiveResultSets=True;",  
+  "SQLConnString": "Data Source=(local);Initial Catalog=database;Persist Security Info=True;User ID=sa;Password=123456;MultipleActiveResultSets=True;",
   "Logging": {
     "LogLevel": {
       "Default": "Information",
@@ -724,26 +723,26 @@ services.AddDapperDBContext<MyDBContext>(options =>
             });
 ```
 
-简单示例WebAPI或Net Core MVC下的调用示例：
+简单示例 WebAPI 或 Net Core MVC 下的调用示例：
 
 ```C#
 public class ProductController : BaseController
 {
-    private readonly IProductRepository _productRepository;     
-    
+    private readonly IProductRepository _productRepository;
+
 
     public ProductController(
         IProductRepository productRepository
-        
+
         )
     {
 
-        _productRepository = productRepository;          
-        
+        _productRepository = productRepository;
+
     }
 
     //商品列表
-    [HttpGet]        
+    [HttpGet]
     public async Task<IActionResult> ProductList(DateTime? startDate, DateTime? endDate, int id = 1, int productStatus = 0, string keyword = "")
     {
         var model = new ProductModels();
@@ -757,28 +756,28 @@ public class ProductController : BaseController
         if (endDate.HasValue)
         {
             builder.Where("CreateTime<@endDate", new { endDate = endDate.Value.AddDays(1)});
-        }           
+        }
 
         if (!string.IsNullOrWhiteSpace(keyword))
         {
             builder.Where("Name LIKE @keyword", new { keyword = $"%{StringHelper.ReplaceSql(keyword)}%" });
-        }  
+        }
 
         builder.OrderBy("SortNum DESC,CreateTime DESC");
 
         var list = await _productRepository.PageAsync(id, PageSize, builder);
-        
+
 
         model.ProductList = new PagedList<Product>(list.Items, id, PageSize, list.TotalItems);
 
         if (Request.IsAjaxRequest())
             return PartialView("_ProductList", model.ProductList);
-        
+
         return View(model);
     }
 
     //添加商品
-    [HttpPost] 
+    [HttpPost]
     public async Task<int> AddProduct(ProductModels model)
     {
         return await _productRepository.InsertAsync(model);
@@ -790,8 +789,8 @@ public class ProductController : BaseController
 
 ```C#
 public partial interface IProductService
-    { 
-        Task<bool> AddProduct(Product productInfo, List<ProductStock> skuList);     
+    {
+        Task<bool> AddProduct(Product productInfo, List<ProductStock> skuList);
 
     }
     public class ProductService: IProductService
@@ -820,14 +819,14 @@ public partial interface IProductService
                 await _context.InsertAsync(productInfo);
 
                 //添加Sku库存售价
-               
+
                 //await _context.InsertAsync(skuList);
 
                 uow.SaveChanges();
                 result = true;
             }
             return result;
-        }        
+        }
 
     }
 ```

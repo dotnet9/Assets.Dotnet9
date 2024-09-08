@@ -4,18 +4,18 @@ slug: Creating-Mobile-Apps-with-dotNET-MAUI-Get-Start
 description: 一次MAUI简单使用之旅
 date: 2022-06-15 22:52:17
 copyright: Reprinted
-author: 张飞洪[厦门] 
-originaltitle: 使用 .NET MAUI 创建移动应用——Get Start
-originallink: https://www.cnblogs.com/jackyfei/p/16349599.html
+author: 张飞洪[厦门]
+originalTitle: 使用 .NET MAUI 创建移动应用——Get Start
+originalLink: https://www.cnblogs.com/jackyfei/p/16349599.html
 draft: False
 cover: https://img1.dotnet9.com/2022/06/1224.png
 categories: .NET
 tags: MAUI
 ---
 
-## 1、IDE下载安装
+## 1、IDE 下载安装
 
-- 如果你还没安装Visual Studio 2022 预览版
+- 如果你还没安装 Visual Studio 2022 预览版
 
 你可以点击[下载](https://c2rsetup.officeapps.live.com/c2r/downloadVS.aspx?sku=Community&channel=Preview&Version=VS2022&source=VSLandingPage&add=Microsoft.VisualStudio.Workload.CoreEditor&add=Microsoft.VisualStudio.Workload.NetCrossPlat&includeRecommended=true&cid=2300)
 
@@ -31,18 +31,18 @@ tags: MAUI
 
 - 打开 Visual Studio 2022 预览版。
 - 选择创建新项目按钮。
-- 从项目类型下拉列表中选择MAUI 。
-- 选择.NET MAUI App模板并选择下一步按钮。
+- 从项目类型下拉列表中选择 MAUI 。
+- 选择.NET MAUI App 模板并选择下一步按钮。
 
 ![](https://img1.dotnet9.com/2022/06/1202.png)
- 
+
 - 输入`MyFirstMauiApp`作为项目名称并选择`Create`按钮。
 
 ![](https://img1.dotnet9.com/2022/06/1203.png)
 
 - 还原 NuGet 包
 
-等待NuGet 自动还原应用程序的依赖项，等到屏幕左下方的状态栏中出现已恢复或就绪消息。
+等待 NuGet 自动还原应用程序的依赖项，等到屏幕左下方的状态栏中出现已恢复或就绪消息。
 
 ![](https://img1.dotnet9.com/2022/06/1204.png)
 
@@ -58,7 +58,7 @@ tags: MAUI
 
 1. 在 Windows 上，转到“设置”应用程序。
 2. 在 Windows 11 上的隐私和安全和 Windows 10 上的更新和安全中搜索开发人员设置。
-3. 打开Developer Mode下的切换开关。
+3. 打开 Developer Mode 下的切换开关。
 
 ![](https://img1.dotnet9.com/2022/06/1205.png)
 
@@ -68,7 +68,7 @@ tags: MAUI
 
 - 在 Windows 上运行
 
-现在已准备好运行 .NET MAUI 应用并将其部署到 Windows。在工具栏中，默认将Windows 机器视为调试目标。
+现在已准备好运行 .NET MAUI 应用并将其部署到 Windows。在工具栏中，默认将 Windows 机器视为调试目标。
 
 ![](https://img1.dotnet9.com/2022/06/1207.png)
 
@@ -80,19 +80,19 @@ tags: MAUI
 
 使用 .NET MAUI 开发时，可以在调试时使用 XAML 热重载。这意味着您可以在运行时更改 XAML 用户界面， UI 将自动更新。
 
-在`解决方案资源管理器`中，双击项目MainPage.xaml下的文件MyFirstMauiApp。
+在`解决方案资源管理器`中，双击项目 MainPage.xaml 下的文件 MyFirstMauiApp。
 
-目前，Text第一个Label设置为Hello, World!如下代码所示：
+目前，Text 第一个 Label 设置为 Hello, World!如下代码所示：
 
 ```xml
 <Label
-    Text="Hello, World!" 
+    Text="Hello, World!"
     SemanticProperties.HeadingLevel="Level1"
     FontSize="32"
     HorizontalOptions="Center" >
 ```
 
-将文本更新为Hello, .NET MAUI!：
+将文本更新为 Hello, .NET MAUI!：
 
 ```xml
 <Label
@@ -108,11 +108,11 @@ UI 会自动更新:
 
 使用 .NET MAUI 开发时，还可以使用 .NET Hot Reload 重新加载 C# 代码。我们修改程序中的逻辑，将计数增加 10 而不是 1。
 
-打开MainPage.xaml.cs（此文件嵌套在 MainPage.xaml 下，或者您可以右键单击并从菜单中选择`查看代码`）。
+打开 MainPage.xaml.cs（此文件嵌套在 MainPage.xaml 下，或者您可以右键单击并从菜单中选择`查看代码`）。
 
 ![](https://img1.dotnet9.com/2022/06/1210.png)
 
-该OnCounterClicked文件上的方法当前具有以下代码：
+该 OnCounterClicked 文件上的方法当前具有以下代码：
 
 ```csharp
 private void OnCounterClicked(object sender, EventArgs e)
@@ -128,7 +128,7 @@ private void OnCounterClicked(object sender, EventArgs e)
 }
 ```
 
-通过将 更改为 来更新count++;以增加 10 count += 10;
+通过将 更改为 来更新 count++;以增加 10 count += 10;
 
 ```csharp
 private void OnCounterClicked(object sender, EventArgs e)
@@ -195,7 +195,7 @@ Android 模拟器将启动。等待它完全完成启动，您将看到它显示
 您的 Android 模拟器现已创建并可以使用。下次运行 Visual Studio 时，模拟器将直接出现在调试目标窗口中，并在您选择它时启动。
 
 - 设置安卓设备
-要使用 Android 设备进行开发，需要启用 USB 调试。按照设备上的这些步骤将其连接到 Visual Studio。如果您没有 Android 设备，则可以跳过此部分。
+  要使用 Android 设备进行开发，需要启用 USB 调试。按照设备上的这些步骤将其连接到 Visual Studio。如果您没有 Android 设备，则可以跳过此部分。
 
 **启用开发者模式**
 

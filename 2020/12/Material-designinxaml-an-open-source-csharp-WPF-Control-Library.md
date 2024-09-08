@@ -5,18 +5,18 @@ description: 今天介绍一个开源的C# WPF开源控件库，非常漂亮，�
 date: 2020-12-03 13:21:25
 banner: false
 copyright: Original
-originaltitle: 开源C# WPF控件库《MaterialDesignInXAML》
+originalTitle: 开源C# WPF控件库《MaterialDesignInXAML》
 draft: False
 cover: https://img1.dotnet9.com/2020/12/0502.jpg
 categories: .NET
 tags: WPF,WPF控件库,开源WPF,开源WPF控件库
 ---
 
-今天介绍一个开源的C# WPF开源控件库，非常漂亮，重点是开源哦
+今天介绍一个开源的 C# WPF 开源控件库，非常漂亮，重点是开源哦
 
-WPF做桌面开发是很有优势的，除了微软自带的控件外，还有很多第三方的控件库，比如收费的Dev Express For WPF、Telerik For WPF等，及Github上开源免费的控件库如MaterialDesignInXAML等。
+WPF 做桌面开发是很有优势的，除了微软自带的控件外，还有很多第三方的控件库，比如收费的 Dev Express For WPF、Telerik For WPF 等，及 Github 上开源免费的控件库如 MaterialDesignInXAML 等。
 
-本文主要介绍第三方C# WPF开源控件库：MaterialDesignInXAML ，该库有多优秀、多漂亮，你可以点击链接下载查看，也可以看我下面截的比较有特色、比较实用的部分截图。
+本文主要介绍第三方 C# WPF 开源控件库：MaterialDesignInXAML ，该库有多优秀、多漂亮，你可以点击链接下载查看，也可以看我下面截的比较有特色、比较实用的部分截图。
 
 **导航目录：**
 
@@ -47,19 +47,19 @@ WPF做桌面开发是很有优势的，除了微软自带的控件外，还有�
 
 ## 3、按钮
 
-界面开发中，交互式按钮用的比较多了，看下图，圆形按钮、图标按钮、按钮进度、按钮文字提示等等，Web中常见的效果WPF中也可以简单使用了。
+界面开发中，交互式按钮用的比较多了，看下图，圆形按钮、图标按钮、按钮进度、按钮文字提示等等，Web 中常见的效果 WPF 中也可以简单使用了。
 
 ![](https://img1.dotnet9.com/2020/12/0503.jpg)
 
 ## 4、输入验证框
 
-表单验证，常规做法是在ViewModel中写业务逻辑验证代码，或者在XAML中写验证表达式。该控件库实现了较多的验证器，可直接使用，代码使用简单，且界面提示很友好，类似手机端输入、错误提示。
+表单验证，常规做法是在 ViewModel 中写业务逻辑验证代码，或者在 XAML 中写验证表达式。该控件库实现了较多的验证器，可直接使用，代码使用简单，且界面提示很友好，类似手机端输入、错误提示。
 
 ![](https://img1.dotnet9.com/2020/12/0504.jpg)
 
 ## 5、标签
 
-控件英文Chips，可用于标签，当列表显示数据较多时，可显示多个标签，用于点击过滤。
+控件英文 Chips，可用于标签，当列表显示数据较多时，可显示多个标签，用于点击过滤。
 
 ![](https://img1.dotnet9.com/2020/12/0505.png)
 
@@ -77,7 +77,7 @@ Icon Pack，有成百上千种矢量图标供选择，极大的方便了开发�
 
 ## 8、分组框
 
-Group Boxes，组合框，类似卡片，组合框Header自定义很方便，可添加图片
+Group Boxes，组合框，类似卡片，组合框 Header 自定义很方便，可添加图片
 
 ![](https://img1.dotnet9.com/2020/12/0508.jpg)
 
@@ -107,6 +107,6 @@ Drawer，抽屉式控件，支持东、南、西、北四个方向打开抽屉�
 
 ## 写在文章最后的话
 
-WPF开源控件库很多，大家可以在Github上搜索，这套控件库应该是开源中最好的了，站长个人认为哈，大家也可以在下方留言，大家相互讨论学习，站长在工作中也常用此控件库，真的是极大的方便了工作。
+WPF 开源控件库很多，大家可以在 Github 上搜索，这套控件库应该是开源中最好的了，站长个人认为哈，大家也可以在下方留言，大家相互讨论学习，站长在工作中也常用此控件库，真的是极大的方便了工作。
 
 官方介绍网址：http://materialdesigninxaml.net/ 。

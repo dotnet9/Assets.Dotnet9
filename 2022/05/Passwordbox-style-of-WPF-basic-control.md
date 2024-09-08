@@ -5,8 +5,8 @@ description: 基础控件
 date: 2022-05-05 06:49:41
 copyright: Reprinted
 author: 驚鏵 WPF开发者
-originaltitle: WPF 基础控件之 PasswordBox 样式
-originallink: https://mp.weixin.qq.com/s/RTG4FxBT9hTAUNpbapuLwQ
+originalTitle: WPF 基础控件之 PasswordBox 样式
+originalLink: https://mp.weixin.qq.com/s/RTG4FxBT9hTAUNpbapuLwQ
 draft: False
 cover: https://img1.dotnet9.com/2022/05/cover_14.jpg
 categories: .NET
@@ -26,7 +26,7 @@ tags: WPF
 9. ListBox
 10. ListView11.Menu
 
-`PasswordBox`  实现下面的效果
+`PasswordBox` 实现下面的效果
 
 ![](https://img1.dotnet9.com/2022/05/1401.png)
 
@@ -56,12 +56,15 @@ public class ElementHelper : DependencyObject
 2. 引入命名空间`xmlns:wpfs="clr-namespace:WPFDevelopers.Minimal.Helpers"`；
 
 ```html
-<TextBlock x:Name="PART_TextBlockWatermark"
-    Text="{Binding Path=(wpfs:ElementHelper.Watermark),RelativeSource={RelativeSource TemplatedParent}}"
-    Foreground="{StaticResource RegularTextSolidColorBrush}"
-    VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
-    FontSize="{StaticResource NormalFontSize}"
-    Margin="7.5,0" Visibility="Collapsed"/>
+<TextBlock
+  x:Name="PART_TextBlockWatermark"
+  Text="{Binding Path=(wpfs:ElementHelper.Watermark),RelativeSource={RelativeSource TemplatedParent}}"
+  Foreground="{StaticResource RegularTextSolidColorBrush}"
+  VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+  FontSize="{StaticResource NormalFontSize}"
+  Margin="7.5,0"
+  Visibility="Collapsed"
+/>
 ```
 
 3. 水印设置完成后，下一步需要判断密码框内容为空时显示水印新增附加类`PasswordBoxHelper`；
@@ -130,11 +133,15 @@ public class PasswordBoxHelper : DependencyObject
 
 ```html
 <Trigger Property="wpfs:PasswordBoxHelper.PasswordLength" Value="0">
-    <Setter Property="Visibility" TargetName="PART_TextBlockWatermark" Value="Visible"/>
+  <Setter
+    Property="Visibility"
+    TargetName="PART_TextBlockWatermark"
+    Value="Visible"
+  />
 </Trigger>
 ```
 
-5. `Styles.PasswordBox.xaml`  代码如下；
+5. `Styles.PasswordBox.xaml` 代码如下；
 
 ```xml
 <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
@@ -161,8 +168,8 @@ public class PasswordBoxHelper : DependencyObject
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type PasswordBox}">
-                    <Border x:Name="PART_Border"  
-                            CornerRadius="{Binding Path=(wpfs:ElementHelper.CornerRadius),RelativeSource={RelativeSource TemplatedParent}}" 
+                    <Border x:Name="PART_Border"
+                            CornerRadius="{Binding Path=(wpfs:ElementHelper.CornerRadius),RelativeSource={RelativeSource TemplatedParent}}"
                             BorderThickness="1"
                             Width="{TemplateBinding Width}"
                             Height="{TemplateBinding Height}">
@@ -214,9 +221,9 @@ public class PasswordBoxHelper : DependencyObject
 
 ```html
 <WrapPanel Margin="0,10">
-    <PasswordBox />
-    <PasswordBox Margin="10,0" ws:ElementHelper.Watermark="请输入密码"/>
-    <PasswordBox IsEnabled="False"/>
+  <PasswordBox />
+  <PasswordBox Margin="10,0" ws:ElementHelper.Watermark="请输入密码" />
+  <PasswordBox IsEnabled="False" />
 </WrapPanel>
 ```
 

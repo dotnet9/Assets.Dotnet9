@@ -5,41 +5,41 @@ description: TypeScript非常优秀。它完美地结合了强类型和快速开
 date: 2021-12-27 20:53:19
 copyright: Reprinted
 author: CSDN
-originaltitle: C# 是 TypeScript 的最佳替补？
-originallink: https://mp.weixin.qq.com/s/yXShXwe9O7uzOBTRqMPd7Q
+originalTitle: C# 是 TypeScript 的最佳替补？
+originalLink: https://mp.weixin.qq.com/s/yXShXwe9O7uzOBTRqMPd7Q
 draft: False
 cover: https://img1.dotnet9.com/2021/12/cover_44.jpg
 categories: .NET
 tags: C#,TypeScript
 ---
 
->作者 | Nate Hill
+> 作者 | Nate Hill
 >
->译者 | 弯月
+> 译者 | 弯月
 >
->出品 | CSDN（ID：CSDNnews）
+> 出品 | CSDN（ID：CSDNnews）
 
-TypeScript非常优秀。它完美地结合了强类型和快速开发，因此非常好用，我在许多情况下都会默认选择这个库。但是，世上没有完美的语言，有些情况下TypeScript并不是最合适的工具：
+TypeScript 非常优秀。它完美地结合了强类型和快速开发，因此非常好用，我在许多情况下都会默认选择这个库。但是，世上没有完美的语言，有些情况下 TypeScript 并不是最合适的工具：
 
 1. 性能至关重要（例如实时通信、视频游戏）
-2. 需要与原生代码（如C/C++或Rust）交互
+2. 需要与原生代码（如 C/C++或 Rust）交互
 3. 需要更严格的类型系统（例如金融系统）
 
-对于这些情况，TypeScript开发人员最好还是选用其他语言。C#、Go和Java都是非常好的选择。它们的速度远超 TypeScript，每种语言都有自己的长处。C#能与TypeScript配合得很好，我来解释一下为什么。
+对于这些情况，TypeScript 开发人员最好还是选用其他语言。C#、Go 和 Java 都是非常好的选择。它们的速度远超 TypeScript，每种语言都有自己的长处。C#能与 TypeScript 配合得很好，我来解释一下为什么。
 
 ![图源：CSDN 付费下载自东方 IC](https://img1.dotnet9.com/2021/12/cover_44.jpg)
 
 ## 1. TypeScript 就是添加了 C# 的 JavaScript
- 
-C#能与TypeScript配合得很好，因为它们看上去就像是同一种语言。两者都是由Anders Hejlsberg设计的，而且从许多方面来看，**TypeScript就是添加了C#的JavaScript**。它们的特性和语法都很相似，因此在同一个项目中结合使用二者非常容易。更重要的是，C#的语言与TypeScript很相似，因此开发人员阅读和编写代码也非常轻松。
-相反，Go是一种完全不同的语言：没有类，没有继承，没有异常，没有包级别的封装（只有类级别的封装），而且语法也完全不同。当然这并不一定是坏事，但开发人员的确需要重新思考并用不同的方式设计代码，因此，同时使用Go和TypeScript是比较困难的。不过，Java与C#很相似，但依然缺乏许多C#和TypeScript都有的功能。
 
-## 2. C#和TypeScript的相似之处
- 
-也许你已经知道，C#和TypeScript有很多相似之处，如基于C的语法、类、接口、泛型等。下面，我来详细列举一下二者的相似之处：
+C#能与 TypeScript 配合得很好，因为它们看上去就像是同一种语言。两者都是由 Anders Hejlsberg 设计的，而且从许多方面来看，**TypeScript 就是添加了 C#的 JavaScript**。它们的特性和语法都很相似，因此在同一个项目中结合使用二者非常容易。更重要的是，C#的语言与 TypeScript 很相似，因此开发人员阅读和编写代码也非常轻松。
+相反，Go 是一种完全不同的语言：没有类，没有继承，没有异常，没有包级别的封装（只有类级别的封装），而且语法也完全不同。当然这并不一定是坏事，但开发人员的确需要重新思考并用不同的方式设计代码，因此，同时使用 Go 和 TypeScript 是比较困难的。不过，Java 与 C#很相似，但依然缺乏许多 C#和 TypeScript 都有的功能。
+
+## 2. C#和 TypeScript 的相似之处
+
+也许你已经知道，C#和 TypeScript 有很多相似之处，如基于 C 的语法、类、接口、泛型等。下面，我来详细列举一下二者的相似之处：
 
 - 2.1 async/await
-- 2.2 lambda表达式和函数式数组方法
+- 2.2 lambda 表达式和函数式数组方法
 - 2.3 用于处理空的操作符（?，!，??）
 - 2.4 解构
 - 2.5 命令行界面（CLI）
@@ -47,9 +47,9 @@ C#能与TypeScript配合得很好，因为它们看上去就像是同一种语�
 
 ### 2.1 async/await
 
-首先，C#和JavaScript都使用async/await来处理异步代码。在JavaScript中，异步操作用Promise表示，而应用程序可以await一个异步操作结束。C#中的Promise其实是Task，概念上与Promise完全相同，也有相应的方法。下面的例子演示了两种语言中async/await的用法：
+首先，C#和 JavaScript 都使用 async/await 来处理异步代码。在 JavaScript 中，异步操作用 Promise 表示，而应用程序可以 await 一个异步操作结束。C#中的 Promise 其实是 Task，概念上与 Promise 完全相同，也有相应的方法。下面的例子演示了两种语言中 async/await 的用法：
 
-**TypeScript中async/await的例子：**
+**TypeScript 中 async/await 的例子：**
 
 ```TypeScript
 async function fetchAndWriteToFile(url: string, filePath:string): Promise<string> {
@@ -62,7 +62,7 @@ async function fetchAndWriteToFile(url: string, filePath:string): Promise<string
 }
 ```
 
-**C#中async/await的例子：**
+**C#中 async/await 的例子：**
 
 ```C#
 using System.IO;
@@ -78,21 +78,21 @@ async Task<string> FetchAndWriteToFile(string url, stringfilePath) {
 }
 ```
 
-下面是`JavaScript`的`Promise` API与等价的`C#` `Task` API：
+下面是`JavaScript`的`Promise` API 与等价的`C#` `Task` API：
 
-|JavaScript API|等价的C# API|
-|----|----|
-|Promise.all()|Task.WaitAll()|
-|Promise.resolve()|Task.FromResult()|
-|Promise.reject()|Task.FromException()|
-|Promise.prototype.then()|Task.ContinueWith()|
-|new Promise()|new TaskCompletionSource()|
+| JavaScript API           | 等价的 C# API              |
+| ------------------------ | -------------------------- |
+| Promise.all()            | Task.WaitAll()             |
+| Promise.resolve()        | Task.FromResult()          |
+| Promise.reject()         | Task.FromException()       |
+| Promise.prototype.then() | Task.ContinueWith()        |
+| new Promise()            | new TaskCompletionSource() |
 
-### 2.2 Lambda表达式和函数式数组方法
+### 2.2 Lambda 表达式和函数式数组方法
 
 `C#`和`JavaScript`都用熟悉的`=>`语法（即`箭头函数`）来表示`lambda表达式`。下面是`TypeScript`和`C#`的比较：
 
-**TypeScript中使用lambda表达式：**
+**TypeScript 中使用 lambda 表达式：**
 
 ```TypeScript
 const months = ['January', 'February', 'March', 'April'];
@@ -103,7 +103,7 @@ const monthStartingWithF = months.find(month => {
 });
 ```
 
-**C#中使用lambda表达式：**
+**C#中使用 lambda 表达式：**
 
 ```C#
 
@@ -120,31 +120,31 @@ var monthStartingWithF = months.Find(month => {
 
 上述示例演示了`C#`的`System.Linq`命名空间中的一些方法，相当于`JavaScript`的`函数式数组方法`。下面是`JavaScript`的`数组方法`与等价的`C# Linq`方法：
 
-|JavaScript API|等价的C# API|
-|----|----|
-|Array.prototype.filter()|Enumerable.Where()|
-|Array.prototype.map()|Enumerable.Select()|
-|Array.prototype.reduce()|Enumerable.Aggregate()|
-|Array.prototype.every()|Enumerable.All()|
-|Array.prototype.find()|List.Find()|
-|Array.prototype.findIndex()|List.FindIndex()|
+| JavaScript API              | 等价的 C# API          |
+| --------------------------- | ---------------------- |
+| Array.prototype.filter()    | Enumerable.Where()     |
+| Array.prototype.map()       | Enumerable.Select()    |
+| Array.prototype.reduce()    | Enumerable.Aggregate() |
+| Array.prototype.every()     | Enumerable.All()       |
+| Array.prototype.find()      | List.Find()            |
+| Array.prototype.findIndex() | List.FindIndex()       |
 
 ### 2.3 处理空操作符
 
-C#和TypeScript处理空的特性也一样：
+C#和 TypeScript 处理空的特性也一样：
 
-|Feature name|Syntax|Documentation links|
-|----|----|----|
-|Optional properties|property?|TS ：https://www.typescriptlang.org/docs/handbook/2/objects.html#optional-properties，<br>C#：https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/nullable-reference-types|
-|Non-null assertion|object!.property|TS：https://www.typescriptlang.org/docs/handbook/release-notes/typescript-2-0.html#non-null-assertion-operator，<br>C#：https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/null-forgiving|
-|Optional chaining|object?.property|JS ：https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining，<br>C#：https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/member-access-operators#null-conditional-operators--and-
-|Nullish coalescing|object ?? alternativeValue|JS：https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator，<br>C#：https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/null-coalescing-operator|
+| Feature name        | Syntax                     | Documentation links                                                                                                                                                                                                                              |
+| ------------------- | -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Optional properties | property?                  | TS ：https://www.typescriptlang.org/docs/handbook/2/objects.html#optional-properties，<br>C#：https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/nullable-reference-types                                           |
+| Non-null assertion  | object!.property           | TS：https://www.typescriptlang.org/docs/handbook/release-notes/typescript-2-0.html#non-null-assertion-operator，<br>C#：https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/null-forgiving                               |
+| Optional chaining   | object?.property           | JS ：https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining，<br>C#：https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/member-access-operators#null-conditional-operators--and- |
+| Nullish coalescing  | object ?? alternativeValue | JS：https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator，<br>C#：https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/null-coalescing-operator                        |
 
 ### 2.4 解构
 
-尽管C#默认不支持数组或类的解构，但它支持Tuple和Record的解构，用户也可以为自定义类型定义解构。下面是TypeScript和C#中解构的例子：
+尽管 C#默认不支持数组或类的解构，但它支持 Tuple 和 Record 的解构，用户也可以为自定义类型定义解构。下面是 TypeScript 和 C#中解构的例子：
 
-**TypeScript中解构的例子：**
+**TypeScript 中解构的例子：**
 
 ```TypeScript
 const author = { firstName: 'Kurt', lastName: 'Vonnegut' };
@@ -176,7 +176,7 @@ record Author(string FirstName, string LastName);
 
 ### 2.5 命令行界面（CLI）
 
-我的开发方式是使用文本编辑器编写代码，然后在终端运行命令，构建并运行。对于`TypeScript`，这意味着需要`使用node或deno命令行界面（CLI）`。`C#`也有`类似的CLI`，名为`dotnet`（由C#的.NET运行时得名）。下面是使用`dotnet CLI`的一些例子：
+我的开发方式是使用文本编辑器编写代码，然后在终端运行命令，构建并运行。对于`TypeScript`，这意味着需要`使用node或deno命令行界面（CLI）`。`C#`也有`类似的CLI`，名为`dotnet`（由 C#的.NET 运行时得名）。下面是使用`dotnet CLI`的一些例子：
 
 ```shell
 mkdir app && cd app
@@ -194,9 +194,9 @@ dotnet publish -c Release -r linux-x64
 
 ### 2.6 基本功能（类、泛型、错误和枚举）
 
-这些是TypeScript和C#之间更基本的相似性。下面的例子是有关这几个方面的介绍：
+这些是 TypeScript 和 C#之间更基本的相似性。下面的例子是有关这几个方面的介绍：
 
-**TypeScript类的示例：**
+**TypeScript 类的示例：**
 
 ```TypeScript
 import { v4 as uuidv4 } from'https://deno.land/std/uuid/mod.ts';
@@ -285,7 +285,7 @@ class AccountManager {
 
 ## 3. C#的其他优势
 
-与TypeScript相似并不是C#的唯一优点，它还有其他优点：
+与 TypeScript 相似并不是 C#的唯一优点，它还有其他优点：
 
 - 3.1 与原生代码结合更容易
 - 3.2 事件
@@ -293,7 +293,7 @@ class AccountManager {
 
 ### 3.1 与原生代码结合
 
-`C#`的最大优势之一就是它可以`深入原生代码`。本文开头提到，`TypeScript`并`不擅长与C/C++代码结合`。`Node.js`有一个`支持原生C/C++的插件`，名为`Node-API`，但是它需要为原生函数编写额外的`C++包裹器`，将原生类型转换成`JavaScript`对象，或相反，`类似于JNI`的工作方式。而`C#`可以直接调用`原生函数`，只需把库放到应用程序的bin目录下，然后将API定义为C#中的外部函数即可。然后就能像`C#`函数一样使用外部函数，`.NET运行时`会处理好C#数据类型与原生数据类型之间的转换。例如，如果原生库导出了下面的C函数：
+`C#`的最大优势之一就是它可以`深入原生代码`。本文开头提到，`TypeScript`并`不擅长与C/C++代码结合`。`Node.js`有一个`支持原生C/C++的插件`，名为`Node-API`，但是它需要为原生函数编写额外的`C++包裹器`，将原生类型转换成`JavaScript`对象，或相反，`类似于JNI`的工作方式。而`C#`可以直接调用`原生函数`，只需把库放到应用程序的 bin 目录下，然后将 API 定义为 C#中的外部函数即可。然后就能像`C#`函数一样使用外部函数，`.NET运行时`会处理好 C#数据类型与原生数据类型之间的转换。例如，如果原生库导出了下面的 C 函数：
 
 ```C
 int countOccurrencesOfCharacter(char *string, char character) {
@@ -307,7 +307,7 @@ int countOccurrencesOfCharacter(char *string, char character) {
 }
 ```
 
-那么可像下面这样从C#中调用：
+那么可像下面这样从 C#中调用：
 
 ```C#
 using System;
@@ -326,7 +326,7 @@ class MyLib {
 
 这种方法可以通过`C`连接访问任何动态库（`.so`、`.dll`或`.dylib`），也就是说，你可以轻松地调用`C`、`C++`、`Rust`、`Go`或`其他语言`编写的代码，只要编译成`机器码`即可。原生交互的其他应用还有：
 
-- 将指针作为IntPtr传给原生对象
+- 将指针作为 IntPtr 传给原生对象
 - 利用`GetFunctionPointerForDelegate()`将`C#`方法作为函数指针传给原生函数
 - 使用`Marshal.PtrToStringAnsi()`将`C`字符串转换为`C#`字符串
 - 转换结构和数组
@@ -366,7 +366,7 @@ MessageReceived?.Invoke(message);
 4. 高级功能：`C#`有许多其他语言没有的功能，如`运算符重载`、`析构函数`等。
 
 ## 5. 总结
- 
+
 如前所述，`世上没有完美的语言`。在设计语言时总要`有所权衡`，所以一些语言的速度更快，但使用难度会增加（例如`Rust`的借出检查）。另一方面，一些语言非常易用，但通常性能的优化难度就会增加（例如`JavaScript`的动态语言特性）。正因如此，我相信`掌握一组相似的语言会非常有用`：这些语言`分别有各自的长处`，但都很相似，而且能互相配合。例如，下面是我选择的一组语言：
 
 ### 5.1 TypeScript

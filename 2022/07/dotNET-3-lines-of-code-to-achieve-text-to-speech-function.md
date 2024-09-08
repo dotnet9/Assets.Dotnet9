@@ -5,21 +5,21 @@ description: 在人工智能时代，文字转语音是现在人工智能比较�
 date: 2022-07-25 21:42:17
 copyright: Reprinted
 author: 翔星 DotNet开发跳槽
-originaltitle: .NET 3行代码实现文字转语音功能
-originallink: https://mp.weixin.qq.com/s/dz5LsedViYkPJ3FoD3a1rQ
+originalTitle: .NET 3行代码实现文字转语音功能
+originalLink: https://mp.weixin.qq.com/s/dz5LsedViYkPJ3FoD3a1rQ
 draft: False
 cover: https://img1.dotnet9.com/2022/07/cover_23.jpg
 categories: .NET
 tags: .NET
 ---
 
-在人工智能时代，文字转语音是现在人工智能比较热门的功能，各大公司都有这方面的业务，可以可以通过接口对各种文字转语音，甚至能模拟真人，非常的强大,.NET东家微软其实也有这方面的服务。如果大家对语言转文字的要求不高，可以用微软自己的语音转换类库，而且实现很简单，只需要5行代码实现，本文将介绍如何使用
+在人工智能时代，文字转语音是现在人工智能比较热门的功能，各大公司都有这方面的业务，可以可以通过接口对各种文字转语音，甚至能模拟真人，非常的强大,.NET 东家微软其实也有这方面的服务。如果大家对语言转文字的要求不高，可以用微软自己的语音转换类库，而且实现很简单，只需要 5 行代码实现，本文将介绍如何使用
 
 ## 使用步骤
 
 1、环境准备
 
-新建一个控制台项目，并使用nuget工具安装：`System.Speech`，也可以在本地类库添加安装，如下图nuget安装
+新建一个控制台项目，并使用 nuget 工具安装：`System.Speech`，也可以在本地类库添加安装，如下图 nuget 安装
 
 ![](https://img1.dotnet9.com/2022/07/2301.png)
 
@@ -28,11 +28,11 @@ tags: .NET
 ```csharp
 static void  Main(string[] args)
 {
-    // 实例化 SpeechSynthesizer.  
+    // 实例化 SpeechSynthesizer.
     SpeechSynthesizer synth = new SpeechSynthesizer();
-    // 配置音频输出.   
+    // 配置音频输出.
     synth.SetOutputToDefaultAudioDevice();
-    // 字符串转语言.  
+    // 字符串转语言.
     synth.Speak("你好！DotNeT开发跳槽");
 
     Console.WriteLine();
@@ -41,25 +41,26 @@ static void  Main(string[] args)
 }
 ```
 
-成功朗读“你好！DotNeT开发跳槽”,这里是控制台应用，大家可以拿winfrom和wpf实现一下更加完美。
+成功朗读“你好！DotNeT 开发跳槽”,这里是控制台应用，大家可以拿 winfrom 和 wpf 实现一下更加完美。
 
 ## 扩展实例
 
 我们这里拿`.NET`网站实现一下转语音的功能，需求是输入文本框一句话，用这个`System.Speech`控件转换成音频，并加载到页面读取。
 
-1、首先新建一个`.NET`的web应用，按上面的例子用`nuget`引入`System.Speech`
+1、首先新建一个`.NET`的 web 应用，按上面的例子用`nuget`引入`System.Speech`
 
 2、新建一个`index.shtml`页面，设计一个简单的文本框和查询按钮和一个音频输出控件，代码如下
 
 ```html
 <form>
-    <p>
-        Title: <input type="text" asp-for="Speektext" />
-        <input type="submit" value="生成语音" />
-    </p>
+  <p>
+    Title: <input type="text" asp-for="Speektext" />
+    <input type="submit" value="生成语音" />
+  </p>
 </form>
 <audio style="width:350px;height:50px;" id="bofang" controls>
-<source src="@Model.filename" type="audio/mpeg"></audio>
+  <source src="@Model.filename" type="audio/mpeg" />
+</audio>
 ```
 
 3、在`Index.cshtml.cs`页面新建一个输入文字转换文本属性和文件路径属性，并构造函数注入读取路径中间件。
@@ -111,17 +112,17 @@ public async Task OnGetAsync()
 }
 ```
 
-5、在前端用js加载到音频控件。
+5、在前端用 js 加载到音频控件。
 
 ```html
 <input type="button" id="aa" value="播放" onclick="bofang()" />
-   <script type="text/javascript">
-        function bofang() {
-            var url = "@Model.filename.Replace("\\","\\\\")";
-            var audio = document.getElementById('bofang');
-                    $('#bofang').attr('src',url);
-                    audio.play();
-                }
+<script type="text/javascript">
+  function bofang() {
+      var url = "@Model.filename.Replace("\\","\\\\")";
+      var audio = document.getElementById('bofang');
+              $('#bofang').attr('src',url);
+              audio.play();
+          }
 </script>
 ```
 
@@ -138,13 +139,13 @@ https://pan.baidu.com/s/1IJadMleVEM3ePHE_KHqRqA?pwd=soiq
 
 ## 结语
 
-本文介绍了.NET 简单的使用文本转语音的方法，大家可以参考一下，封装成自己的方法。注意本例子只支持Windows环境，在跨平台项目大家可以自己探究一下。希望本文对大家学习和工作有一定参考价值，谢谢大家的支持。
+本文介绍了.NET 简单的使用文本转语音的方法，大家可以参考一下，封装成自己的方法。注意本例子只支持 Windows 环境，在跨平台项目大家可以自己探究一下。希望本文对大家学习和工作有一定参考价值，谢谢大家的支持。
 
 本文参考：微软官方技术文档
 
 ## 站长扩展
 
-参考原文 [.NET 3行代码实现文字转语音功能](https://mp.weixin.qq.com/s/dz5LsedViYkPJ3FoD3a1rQ)，站长创建MAUI Blazor项目，按照文中步骤，添加nuget包，成功实现文字转语音功能，贴下[关键代码](https://github.com/dotnet9/TerminalMACS.ManagerForWPF/tree/master/src/Demo/ConvertWordToSound)并附上拍摄的视频：
+参考原文 [.NET 3 行代码实现文字转语音功能](https://mp.weixin.qq.com/s/dz5LsedViYkPJ3FoD3a1rQ)，站长创建 MAUI Blazor 项目，按照文中步骤，添加 nuget 包，成功实现文字转语音功能，贴下[关键代码](https://github.com/dotnet9/TerminalMACS.ManagerForWPF/tree/master/src/Demo/ConvertWordToSound)并附上拍摄的视频：
 
 ```html
 @page "/"

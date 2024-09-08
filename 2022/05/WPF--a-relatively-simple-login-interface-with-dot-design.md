@@ -4,7 +4,7 @@ slug: WPF--a-relatively-simple-login-interface-with-dot-design
 description: 如题
 date: 2022-05-18 22:06:14
 copyright: Original
-originaltitle: WPF|一个比较简单带点设计的登录界面
+originalTitle: WPF|一个比较简单带点设计的登录界面
 draft: False
 cover: https://img1.dotnet9.com/2022/05/cover_47.png
 categories: .NET
@@ -26,7 +26,7 @@ tags: WPF,WPF Design
 
 ## 2. 准备
 
-创建一个WPF工程，比如站长使用 [.NET 7](https://dotnet.microsoft.com/zh-cn/) 创建名为 **Login5** 的WPF项目。
+创建一个 WPF 工程，比如站长使用 [.NET 7](https://dotnet.microsoft.com/zh-cn/) 创建名为 **Login5** 的 WPF 项目。
 
 ![](https://img1.dotnet9.com/2022/05/4702.png)
 
@@ -34,8 +34,7 @@ tags: WPF,WPF Design
 
 ![](https://img1.dotnet9.com/2022/05/4703.png)
 
-添加Nuget包 [MaterialDesignThemes](https://dotnet9.com/2020/12/Material-designinxaml-an-open-source-csharp-WPF-Control-Library)：
-
+添加 Nuget 包 [MaterialDesignThemes](https://dotnet9.com/2020/12/Material-designinxaml-an-open-source-csharp-WPF-Control-Library)：
 
 ```xml
 <PackageReference Include="MaterialDesignThemes" Version="4.6.0-ci176" />

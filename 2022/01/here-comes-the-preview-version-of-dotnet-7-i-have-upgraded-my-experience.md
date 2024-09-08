@@ -4,7 +4,7 @@ slug: here-comes-the-preview-version-of-dotnet-7-i-have-upgraded-my-experience
 description: 听说`.NET 7` 来了，站长怎能不尝鲜呢，在除夕当天将体验情况简单汇报下，然后迎新春喽
 date: 2022-01-31 10:35:27
 copyright: Original
-originaltitle: .NET 7 预览版来啦，我升级体验了
+originalTitle: .NET 7 预览版来啦，我升级体验了
 draft: False
 cover: https://img1.dotnet9.com/2022/01/cover_02.png
 categories: .NET
@@ -16,11 +16,13 @@ tags: .NET
 本文目录
 
 1. .NET 7 详情（Proposed .NET 7 Breaking Changes #7131）
-2. .NET 7 SDK下载
+2. .NET 7 SDK 下载
 3. 尝鲜体验
+
 - 3.1 安装.NET 7 SDK
 - 3.2 Hello Word
 - 3.3 个人网站（Dotnet9）拥抱.NET 7
+
 4. 结尾
 
 ## 1. .NET 7 详情（Proposed .NET 7 Breaking Changes #7131）
@@ -39,7 +41,7 @@ https://github.com/dotnet/core/issues/7131
 
 ![7131-2](https://img1.dotnet9.com/2022/01/0205.png)
 
-## 2. .NET 7 SDK下载
+## 2. .NET 7 SDK 下载
 
 安装信息描述见以下地址
 
@@ -47,13 +49,13 @@ https://github.com/dotnet/core/issues/7131
 https://github.com/dotnet/installer
 ```
 
-`Mac` 下的SDK下载地址
+`Mac` 下的 SDK 下载地址
 
 ```shell
 https://aka.ms/dotnet/7.0.1xx/daily/dotnet-sdk-osx-x64.pkg
 ```
 
-`Windows X64`下的SDK下载地址
+`Windows X64`下的 SDK 下载地址
 
 ```shell
 https://aka.ms/dotnet/7.0.1xx/daily/dotnet-sdk-win-x64.exe
@@ -85,25 +87,25 @@ https://aka.ms/dotnet/7.0.1xx/daily/dotnet-sdk-win-x64.exe
 
 ### 3.3 个人网站（Dotnet9）拥抱.NET 7
 
-本站采用 [ABP vNext](https://abp.io/) + [MASA Blazor](https://masa-blazor-docs-dev.lonsid.cn/) 搭建，升级 `.NET 7` 及其他Nuget包后，无缝编译成功，现已成功上线运行：[https://dotnet9.com](https://dotnet9.com)。
+本站采用 [ABP vNext](https://abp.io/) + [MASA Blazor](https://masa-blazor-docs-dev.lonsid.cn/) 搭建，升级 `.NET 7` 及其他 Nuget 包后，无缝编译成功，现已成功上线运行：[https://dotnet9.com](https://dotnet9.com)。
 
-[Dotnet9网站](https://dotnet9.com)无缝编译成功：
+[Dotnet9 网站](https://dotnet9.com)无缝编译成功：
 
 ![Dotnet9无缝编译成功](https://img1.dotnet9.com/2022/01/0208.png)
 
-[Dotnet9网站](https://dotnet9.com)运行情况：
+[Dotnet9 网站](https://dotnet9.com)运行情况：
 
 ![Dotnet9运行情况](https://img1.dotnet9.com/2022/01/0210.png)
 
-[Dotnet9网站](https://dotnet9.com)使用`.NET 7`上线正常运行：
+[Dotnet9 网站](https://dotnet9.com)使用`.NET 7`上线正常运行：
 
 ![Dotnet9使用.NET 7上线正常运行](https://img1.dotnet9.com/2022/01/0209.png)
 
-网站正在开发中，一直在优化，目前占用内存400MB左右，不着急，慢慢来。
+网站正在开发中，一直在优化，目前占用内存 400MB 左右，不着急，慢慢来。
 
 ## 4. 结尾
 
-至此，[Dotnet9网站](https://dotnet9.com)拥抱`.NET 7`完美升级，至少到现在（2021-01-31 11：38）已经稳定运行快12个小时了，哈哈，祝福各位：
+至此，[Dotnet9 网站](https://dotnet9.com)拥抱`.NET 7`完美升级，至少到现在（2021-01-31 11：38）已经稳定运行快 12 个小时了，哈哈，祝福各位：
 
 1、给你虎虎的祝福，虎虎的甜蜜，虎虎的运气，虎虎的健康，虎虎的快乐，虎虎的心情，虎虎的欣慰，虎虎的顺利，虎虎的幸福，虎虎的人生!
 

@@ -1,13 +1,13 @@
 ---
-title: [WPF] 仅用 Rectangle 实现圆柱形进度条
-slug: WPF-cylindrical-progress-bar-with-rectangle-only
+title: WPF 仅用 Rectangle 实现圆柱形进度条
+slug: wppf-cylindrical-progress-bar-with-rectangle-only
 description: 本文将简单介绍如何仅使用 Rectangle 实现圆柱形进度条
 date: 2022-02-21 14:50:11
 copyright: Reprinted
 author: dino.c
-originaltitle: [WPF] 仅用 Rectangle 实现圆柱形进度条
-originallink: https://www.cnblogs.com/dino623/p/wpf_column_progress_bar.html
-draft: False
+originalTitle: WPF 仅用 Rectangle 实现圆柱形进度条
+originalLink: https://www.cnblogs.com/dino623/p/wpf_column_progress_bar.html
+draft: false
 cover: https://img1.dotnet9.com/2022/02/1101.png
 categories: .NET
 tags: WPF
@@ -24,21 +24,25 @@ tags: WPF
 如下面这个例子，可以看到 RadiusX="50" RadiusY="20" 的 Rectangle 的圆角和 Width="100" Height="40" 的 Ellipse (X 轴半径 50，Y 轴半径 20 )完全重合在一起。
 
 ```html
-<Rectangle  Height="100"
-            Width="100"
-            Fill="#FF7E9EC0"
-            Stroke="#FFFF0EC4"
-            StrokeThickness="5"
-            RadiusX="50"
-            RadiusY="20" />
-<Ellipse HorizontalAlignment="Left"
-         VerticalAlignment="Top"
-         StrokeThickness="5"
-         Stroke="Yellow"
-         Fill="Red"
-         Width="100"
-         Height="40"
-         Opacity="0.5" />
+<Rectangle
+  Height="100"
+  Width="100"
+  Fill="#FF7E9EC0"
+  Stroke="#FFFF0EC4"
+  StrokeThickness="5"
+  RadiusX="50"
+  RadiusY="20"
+/>
+<Ellipse
+  HorizontalAlignment="Left"
+  VerticalAlignment="Top"
+  StrokeThickness="5"
+  Stroke="Yellow"
+  Fill="Red"
+  Width="100"
+  Height="40"
+  Opacity="0.5"
+/>
 ```
 
 ![](https://img1.dotnet9.com/2022/02/1102.png)
@@ -49,16 +53,14 @@ tags: WPF
 
 ```html
 <Grid.Resources>
-   <Style TargetType="Rectangle">
-       <Setter Property="Fill" Value="#36a8e2" />
-       <Setter Property="RadiusX" Value="25" />
-       <Setter Property="RadiusY" Value="5" />
-   </Style>
+  <style TargetType="Rectangle">
+    <Setter Property="Fill" Value="#36a8e2" />
+    <Setter Property="RadiusX" Value="25" />
+    <Setter Property="RadiusY" Value="5" />
+  </style>
 </Grid.Resources>
 <Rectangle Opacity="0.2" />
-<Rectangle Height="10"
-          VerticalAlignment="Top"
-          Opacity="0.1" />
+<Rectangle Height="10" VerticalAlignment="Top" Opacity="0.1" />
 ```
 
 再在下面加上一个不透明的 Rectangle：
@@ -73,13 +75,13 @@ tags: WPF
 
 ```html
 <Rectangle Opacity="0.6">
-    <Rectangle.Fill>
-        <LinearGradientBrush StartPoint="0,0.5" EndPoint="1,.5">
-            <GradientStop Color="Black" />
-            <GradientStop Offset="1" Color="Transparent" />
-            <GradientStop Offset="0.6" Color="#41000000" />
-        </LinearGradientBrush>
-    </Rectangle.Fill>
+  <Rectangle.Fill>
+    <LinearGradientBrush StartPoint="0,0.5" EndPoint="1,.5">
+      <GradientStop Color="Black" />
+      <GradientStop Offset="1" Color="Transparent" />
+      <GradientStop Offset="0.6" Color="#41000000" />
+    </LinearGradientBrush>
+  </Rectangle.Fill>
 </Rectangle>
 ```
 
@@ -89,7 +91,7 @@ tags: WPF
 
 ```html
 <Grid Height="100" VerticalAlignment="Bottom">
-    <Rectangle Height="10" VerticalAlignment="Top" />
+  <Rectangle Height="10" VerticalAlignment="Top" />
 </Grid>
 ```
 
@@ -99,6 +101,6 @@ tags: WPF
 
 - [https://github.com/DinoChan/wpf_design_and_animation_lab](https://github.com/DinoChan/wpf_design_and_animation_lab)
 
->原文作者：dino.c
+> 原文作者：dino.c
 >
->原文链接：https://www.cnblogs.com/dino623/p/wpf_column_progress_bar.html
+> 原文链接：https://www.cnblogs.com/dino623/p/wpf_column_progress_bar.html

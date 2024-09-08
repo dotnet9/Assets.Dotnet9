@@ -5,19 +5,19 @@ description: .NET 7 Release Candidate 1 (RC1) 现已推出，其中包括对 ASP
 date: 2022-09-15 09:23:56
 copyright: Reprinted
 author: Daniel Roth
-originaltitle: ASP.NET Core updates in .NET 7 Release Candidate 1
-originallink: https://devblogs.microsoft.com/dotnet/asp-net-core-updates-in-dotnet-7-rc-1/
+originalTitle: ASP.NET Core updates in .NET 7 Release Candidate 1
+originalLink: https://devblogs.microsoft.com/dotnet/asp-net-core-updates-in-dotnet-7-rc-1/
 draft: false
 cover: https://img1.dotnet9.com/2022/09/aspdotnet7-preview-1-Blog-550x428.png
 categories: .NET
 tags: .NET
 ---
 
->原文链接：[https://devblogs.microsoft.com/dotnet/asp-net-core-updates-in-dotnet-7-rc-1/](https://devblogs.microsoft.com/dotnet/asp-net-core-updates-in-dotnet-7-rc-1/)
+> 原文链接：[https://devblogs.microsoft.com/dotnet/asp-net-core-updates-in-dotnet-7-rc-1/](https://devblogs.microsoft.com/dotnet/asp-net-core-updates-in-dotnet-7-rc-1/)
 >
->原文作者：Daniel Roth
+> 原文作者：Daniel Roth
 >
->翻译：沙漠尽头的狼(谷歌翻译加持)
+> 翻译：沙漠尽头的狼(谷歌翻译加持)
 
 [.NET 7 Release Candidate 1 (RC1) 现已推出](https://devblogs.microsoft.com/dotnet/announcing-dotnet-7-rc-1)，其中包括对 ASP.NET Core 的许多重大新改进。
 
@@ -26,7 +26,7 @@ tags: .NET
 - Blazor WebAssembly 中的动态身份验证请求
 - 处理位置变化事件
 - Blazor WebAssembly 调试改进
-- .NET 6项目的.NET WebAssembly项目构建工具
+- .NET 6 项目的.NET WebAssembly 项目构建工具
 - WebAssembly 上的 .NET JavaScript 互操作
 - Kestrel 完整的证书链改进
 - 更快的 HTTP/2 上传
@@ -36,7 +36,7 @@ tags: .NET
 - 速率限制中间件改进
 - macOS 开发证书改进
 
-有关为 .NET 7 计划的 ASP.NET Core 工作的更多详细信息，请参阅GitHub 上的 [.NET 7 的完整 ASP.NET Core 路线图](https://aka.ms/aspnet/roadmap)。
+有关为 .NET 7 计划的 ASP.NET Core 工作的更多详细信息，请参阅 GitHub 上的 [.NET 7 的完整 ASP.NET Core 路线图](https://aka.ms/aspnet/roadmap)。
 
 ## 开始使用
 
@@ -54,14 +54,14 @@ dotnet workload install wasm-tools
 
 要将现有的 ASP.NET Core 应用从 .NET 7 Preview 7 升级到 .NET 7 RC1：
 
-- 将所有 Microsoft.AspNetCore.* 包引用更新为`.7.0.0-rc.1.*`
-- 将所有 Microsoft.Extensions.* 包引用更新为`.7.0.0-rc.1.*`
+- 将所有 Microsoft.AspNetCore._ 包引用更新为`.7.0.0-rc.1._`
+- 将所有 Microsoft.Extensions._ 包引用更新为`.7.0.0-rc.1._`
 
-另请参阅.NET 7 的 ASP.NET Core中的[重大更改](https://docs.microsoft.com/dotnet/core/compatibility/7.0#aspnet-core)的完整列表。
+另请参阅.NET 7 的 ASP.NET Core 中的[重大更改](https://docs.microsoft.com/dotnet/core/compatibility/7.0#aspnet-core)的完整列表。
 
 ## Blazor WebAssembly 中的动态身份验证请求
 
-Blazor 为使用 OpenID Connect 和各种身份提供程序（包括 Azure Active Directory (Azure AD) 和 Azure AD B2C）的身份验证提供开箱即用的支持。在 .NET 7 中，Blazor 现在支持在运行时使用自定义参数创建动态身份验证请求，以处理 Blazor WebAssembly 应用中更高级的身份验证方案。要指定其他参数，请使用新的`InteractiveRequestOptions`类型和`NavigateToLogin``辅助方法NavigationManager`。
+Blazor 为使用 OpenID Connect 和各种身份提供程序（包括 Azure Active Directory (Azure AD) 和 Azure AD B2C）的身份验证提供开箱即用的支持。在 .NET 7 中，Blazor 现在支持在运行时使用自定义参数创建动态身份验证请求，以处理 Blazor WebAssembly 应用中更高级的身份验证方案。要指定其他参数，请使用新的`InteractiveRequestOptions`类型和` NavigateToLogin``辅助方法NavigationManager `。
 
 例如，您可以为身份提供者指定一个登录提示，以便像这样进行身份验证：
 
@@ -122,7 +122,7 @@ catch (AccessTokenNotAvailableException ex)
 
 为身份验证请求指定的任何其他参数都将传递到底层身份验证库，然后由其处理。
 
->注意：为msal.js指定附加参数尚未完全实现，但预计将在即将发布的版本中完成。
+> 注意：为 msal.js 指定附加参数尚未完全实现，但预计将在即将发布的版本中完成。
 
 ## 处理位置变化事件
 
@@ -142,7 +142,7 @@ var registration = NavigationManager.RegisterLocationChangingHandler(async conte
 });
 ```
 
-请注意，您的处理程序只会被用于应用程序内的内部导航调用。外部导航只能使用JavaScript 中的`beforeunload` 事件同步处理。
+请注意，您的处理程序只会被用于应用程序内的内部导航调用。外部导航只能使用 JavaScript 中的`beforeunload` 事件同步处理。
 
 新`NavigationLock`组件使处理位置变化事件的常见场景更容易。`NavigationLock`公开一个`OnBeforeInternalNavigation`回调，您可以使用它来拦截和处理内部位置更改事件。如果您希望用户也确认外部导航，您可以使用该`ConfirmExternalNavigations`属性，它将拦截`beforeunload`事件并触发浏览器特定提示。
 
@@ -185,7 +185,7 @@ var registration = NavigationManager.RegisterLocationChangingHandler(async conte
 - 正确处理派生成员的`new`关键字
 - 在`System.Diagnostics`中支持调试器相关的属性
 
-## 为.NET 6项目的.NET WebAssembly 构建工具
+## 为.NET 6 项目的.NET WebAssembly 构建工具
 
 现在，在使用 .NET 7 SDK 时，您可以将 .NET WebAssembly 构建工具用于 .NET 6 项目。新的`wasm-tools-net6`工作负载包括用于 .NET 6 项目的 .NET WebAssembly 构建工具，以便它们可以与 .NET 7 SDK 一起使用。要安装新`wasm-tools-net6`工作负载，请从提升的命令提示符运行以下命令：
 
@@ -215,27 +215,28 @@ dotnet new wasmbrowser
 
 此模板创建一个简单的 Web 应用程序，演示如何在浏览器中同时使用 .NET 和 JavaScript。WebAssembly 控制台应用程序类似，但作为 Node.js 控制台应用程序而不是基于浏览器的 Web 应用程序运行。
 
-创建的示例项目中的main.js中的 JavaScript 模块演示了如何从 JavaScript 运行 .NET 代码。相关 API 是从dotnet.js导入的。这些 API 使您能够设置可以导入到 C# 代码中的命名模块，以及调用 .NET 代码公开的方法，包括`Program.Main`：
+创建的示例项目中的 main.js 中的 JavaScript 模块演示了如何从 JavaScript 运行 .NET 代码。相关 API 是从 dotnet.js 导入的。这些 API 使您能够设置可以导入到 C# 代码中的命名模块，以及调用 .NET 代码公开的方法，包括`Program.Main`：
 
 ```js
-import { dotnet } from './dotnet.js'
+import { dotnet } from "./dotnet.js";
 
 const is_browser = typeof window != "undefined";
 if (!is_browser) throw new Error(`Expected to be running in a browser`);
 
 // Setup the .NET WebAssembly runtime
-const { setModuleImports, getAssemblyExports, getConfig, runMainAndExit } = await dotnet
+const { setModuleImports, getAssemblyExports, getConfig, runMainAndExit } =
+  await dotnet
     .withDiagnosticTracing(false)
     .withApplicationArgumentsFromQuery()
     .create();
 
 // Set module imports that can be called from .NET
 setModuleImports("main.js", {
-    window: {
-        location: {
-            href: () => globalThis.window.location.href
-        }
-    }
+  window: {
+    location: {
+      href: () => globalThis.window.location.href,
+    },
+  },
 });
 
 const config = getConfig();
@@ -254,9 +255,9 @@ await runMainAndExit(config.mainAssemblyName, ["dotnet", "is", "great!"]); // Ru
 internal static partial string GetHRef();
 ```
 
-`JSImportAttribute`的第一个参数是要导入的 JavaScript 函数的名称，第二个参数是模块的名称，这两个参数都是由main.js中的`setModuleImports`调用设置的。
+`JSImportAttribute`的第一个参数是要导入的 JavaScript 函数的名称，第二个参数是模块的名称，这两个参数都是由 main.js 中的`setModuleImports`调用设置的。
 
-在导入的方法签名中，您可以对参数和返回值使用 .NET 类型，这些类型将为您编组。使用`JSMarshalAsAttribute<T>`控制导入的方法参数的编组方式。例如，您可以选择将一个`long` 编组为`JSType.Number`或`JSType.BigInt`。您可以将`Action/Func`回调作为参数传递，这些参数将被编组为可调用的 JavaScript 函数。您可以同时传递 JavaScript 和托管对象引用，它们将被编组为代理对象，使对象在边界上保持活动状态，直到代理被垃圾回收。您还可以导入和导出带`Task`返回值的异步方法，它将作为 JavaScript promises进行编组。在导入和导出的方法上，大多数封装类型作为参数和返回值双向工作，。
+在导入的方法签名中，您可以对参数和返回值使用 .NET 类型，这些类型将为您编组。使用`JSMarshalAsAttribute<T>`控制导入的方法参数的编组方式。例如，您可以选择将一个`long` 编组为`JSType.Number`或`JSType.BigInt`。您可以将`Action/Func`回调作为参数传递，这些参数将被编组为可调用的 JavaScript 函数。您可以同时传递 JavaScript 和托管对象引用，它们将被编组为代理对象，使对象在边界上保持活动状态，直到代理被垃圾回收。您还可以导入和导出带`Task`返回值的异步方法，它将作为 JavaScript promises 进行编组。在导入和导出的方法上，大多数封装类型作为参数和返回值双向工作，。
 
 使用`JSExportAttribute`导出 .NET 方法以便可以从 JavaScript 调用：
 
@@ -270,7 +271,7 @@ internal static string Greeting()
 }
 ```
 
-Blazor 提供了自己的基于IJSRuntime接口的 JavaScript 互操作机制，该机制在所有 Blazor 托管模型中得到统一支持。这种常见的异步抽象使库作者能够构建可在 Blazor 生态系统中共享的 JavaScript 互操作库，并且仍然是在 Blazor 中执行 JavaScript 互操作的推荐方式。但是，在 Blazor WebAssembly 应用程序中，您还可以选择`IJSInProcessRuntime`进行同步JavaScript互操作调用，甚至使用`IJSUnmarshalledRuntime`进行解组调用。 `IJSUnmarshalledRuntime`使用起来很棘手，仅部分支持。在 .NET 7 中`IJSUnmarshalledRuntime`现在已经过时，应该用[JSImport]/[JSExport]机制替换。Blazor 不直接公开从 JavaScript 使用的`dotnet`运行时实例，但仍然可以通过`.getDotnetRuntime(0)`调用。您还可以通过在C#代码中调用`JSHost.ImportAsync`导入JavaScript模块，这可以使模块导出对` [JSImport]`可见。
+Blazor 提供了自己的基于 IJSRuntime 接口的 JavaScript 互操作机制，该机制在所有 Blazor 托管模型中得到统一支持。这种常见的异步抽象使库作者能够构建可在 Blazor 生态系统中共享的 JavaScript 互操作库，并且仍然是在 Blazor 中执行 JavaScript 互操作的推荐方式。但是，在 Blazor WebAssembly 应用程序中，您还可以选择`IJSInProcessRuntime`进行同步 JavaScript 互操作调用，甚至使用`IJSUnmarshalledRuntime`进行解组调用。 `IJSUnmarshalledRuntime`使用起来很棘手，仅部分支持。在 .NET 7 中`IJSUnmarshalledRuntime`现在已经过时，应该用[JSImport]/[JSExport]机制替换。Blazor 不直接公开从 JavaScript 使用的`dotnet`运行时实例，但仍然可以通过`.getDotnetRuntime(0)`调用。您还可以通过在 C#代码中调用`JSHost.ImportAsync`导入 JavaScript 模块，这可以使模块导出对` [JSImport]`可见。
 
 ## Kestrel 完整的证书链改进
 
@@ -293,7 +294,7 @@ Blazor 提供了自己的基于IJSRuntime接口的 JavaScript 互操作机制，
 
 .NET 7 RC1 继续改进 Kestrel 对 HTTP/3 的支持。改进的两个主要领域是与 HTTP/1.1 和 HTTP/2 的功能对等以及性能。
 
-此版本最大的特点是完全支持[ListenOptions.UseHttps](https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.hosting.listenoptionshttpsextensions.usehttps)使用HTTP/3。Kestrel 提供了用于配置连接证书的高级选项，例如拦截到[Server Name Indication (SNI)](https://wikipedia.org/wiki/Server_Name_Indication)。
+此版本最大的特点是完全支持[ListenOptions.UseHttps](https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.hosting.listenoptionshttpsextensions.usehttps)使用 HTTP/3。Kestrel 提供了用于配置连接证书的高级选项，例如拦截到[Server Name Indication (SNI)](https://wikipedia.org/wiki/Server_Name_Indication)。
 
 以下示例显示如何使用 SNI 回调来解析 TLS 选项：
 

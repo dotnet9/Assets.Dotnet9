@@ -7,17 +7,17 @@ lastmod: 2024-02-29 05:29:14
 copyright: Reprinted
 banner: false
 author: DotNet学习交流
-originaltitle: winform的界面也可以变好看？
-originallink: https://mp.weixin.qq.com/s/QCAlQNqDW-sicae2ybELkw
+originalTitle: winform的界面也可以变好看？
+originalLink: https://mp.weixin.qq.com/s/QCAlQNqDW-sicae2ybELkw
 draft: false
 cover: https://img1.dotnet9.com/2024/02/0401.gif
 categories: .NET
 tags: .NET,Blazor,Winform,混合应用
 ---
 
-## 在winform blazor hybrid中绘图
+## 在 winform blazor hybrid 中绘图
 
-前几天跟大家介绍了在winform中使用blazor hybrid，而且还说配上blazor的ui可以让我们的winform程序设计的更加好看，接下来我想以一个在winform blazor hybrid中绘图的例子来进行说明，希望对你有所帮助。
+前几天跟大家介绍了在 winform 中使用 blazor hybrid，而且还说配上 blazor 的 ui 可以让我们的 winform 程序设计的更加好看，接下来我想以一个在 winform blazor hybrid 中绘图的例子来进行说明，希望对你有所帮助。
 
 ## 效果
 
@@ -31,17 +31,17 @@ tags: .NET,Blazor,Winform,混合应用
 
 如果你对具体实现感兴趣，可以继续往下阅读。
 
-### 1、引入ant design blazor
+### 1、引入 ant design blazor
 
-该应用中用到的所有组件都来源于ant design blazor。
+该应用中用到的所有组件都来源于 ant design blazor。
 
-在本文中我只介绍绘图部分的实现，首先需要在项目中引入ant design blazor。
+在本文中我只介绍绘图部分的实现，首先需要在项目中引入 ant design blazor。
 
 安装 Nuget 包引用，如下所示：
 
 ![图片](https://img1.dotnet9.com/2024/02/0403.png)
 
-如果需要画图的话，还需要引用AntDesign.Charts包引用。
+如果需要画图的话，还需要引用 AntDesign.Charts 包引用。
 
 在项目的 `Form1.cs` 中注册相关服务：
 
@@ -56,15 +56,15 @@ services.AddAntDesign();
 引入静态样式和脚本文件：
 
 ```html
-<link href="_content/AntDesign/css/ant-design-blazor.css" rel="stylesheet">
+<link href="_content/AntDesign/css/ant-design-blazor.css" rel="stylesheet" />
 <script src="_content/AntDesign/js/ant-design-blazor.js"></script>
 ```
 
-winform blazor hybrid项目在wwwroot/index.html中引入，如下所示：
+winform blazor hybrid 项目在 wwwroot/index.html 中引入，如下所示：
 
 ![图片](https://img1.dotnet9.com/2024/02/0405.png)
 
-这里我也把AntDesign.Charts的引入了。
+这里我也把 AntDesign.Charts 的引入了。
 
 在 `_Imports.razor` 中加入命名空间：
 
@@ -74,11 +74,11 @@ winform blazor hybrid项目在wwwroot/index.html中引入，如下所示：
 
 为了动态地显示弹出组件，需要在 `App.razor` 中添加一个 `<AntContainer />` 组件。
 
-这是官网的说法，在winform blazor hybrid中可以在当做主页面的razor中添加，我这里是Index.razor如下所示：
+这是官网的说法，在 winform blazor hybrid 中可以在当做主页面的 razor 中添加，我这里是 Index.razor 如下所示：
 
 ![图片](https://img1.dotnet9.com/2024/02/0406.png)
 
-现在就可以使用ant design blazor的组件了。
+现在就可以使用 ant design blazor 的组件了。
 
 ### 2、页面设计
 
@@ -92,11 +92,11 @@ winform blazor hybrid项目在wwwroot/index.html中引入，如下所示：
 
 自己修改一下图标与名字，那么现在摆在面前的第一个问题就是，如何实现点击切换页面呢？
 
-每一个MenuItem都有一个Key属性，如下所示：
+每一个 MenuItem 都有一个 Key 属性，如下所示：
 
 ![图片](https://img1.dotnet9.com/2024/02/0409.png)
 
-在这里每一个Key都是唯一的。点击不同的MenuItem都会触发点击事件，而点击事件使用了lambda表达式调用了同一个方法，但是参数不同。
+在这里每一个 Key 都是唯一的。点击不同的 MenuItem 都会触发点击事件，而点击事件使用了 lambda 表达式调用了同一个方法，但是参数不同。
 
 现在来看看这个方法：
 
@@ -108,9 +108,9 @@ winform blazor hybrid项目在wwwroot/index.html中引入，如下所示：
  }
 ```
 
-很简单，只是将参数传给selectedMenuItem。
+很简单，只是将参数传给 selectedMenuItem。
 
-然后在内容这个地方，使用switch case：
+然后在内容这个地方，使用 switch case：
 
 ```csharp
 <Content Class="site-layout-background" Style="margin: 24px 16px;padding: 24px;min-height: 450px;">
@@ -127,12 +127,12 @@ winform blazor hybrid项目在wwwroot/index.html中引入，如下所示：
            break;
    case 4:
       <Export></Export>
-           break;               
+           break;
  }
  </Content>
 ```
 
-然后就可以根据不同的selectedMenuItem值显示不同的组件了。
+然后就可以根据不同的 selectedMenuItem 值显示不同的组件了。
 
 现在来看看`<Painting></Painting>`组件的设计。
 
@@ -140,53 +140,62 @@ winform blazor hybrid项目在wwwroot/index.html中引入，如下所示：
 
 ```html
 <div>
-    <GridRow>
-        <GridCol Span="8">    
-        <Space Direction="DirectionVHType.Vertical">
-                <SpaceItem>
-                    <Text Strong>开始日期：</Text>
-                </SpaceItem>
-                <SpaceItem>
-                    <DatePicker TValue="DateTime?" Format="yyyy/MM/dd" 
-                    Mask="yyyy/dd/MM" Placeholder="@("yyyy/dd/MM")"
-                    @bind-Value = "Date1"/>
-                </SpaceItem>
-                <SpaceItem>
-                    <Text Strong>结束日期：</Text>
-                </SpaceItem>
-                <SpaceItem>
-                    <DatePicker TValue="DateTime?" Format="yyyy/MM/dd" 
-                    Mask="yyyy/dd/MM" Placeholder="@("yyyy/dd/MM")"
-                    @bind-Value = "Date2"/>
-                </SpaceItem>
-            <SpaceItem>
-                <Text Strong>站名：</Text>
-            </SpaceItem>
-            <SpaceItem>
-                <AutoComplete @bind-Value="@value"
-                              Options="@options"
-                              OnSelectionChange="OnSelectionChange"
-                              OnActiveChange="OnActiveChange"
-                              Placeholder="input here" 
-                              Style="width:150px"/>
-            </SpaceItem>
-            <SpaceItem>
-                <Text Strong>绘图指标：</Text>
-            </SpaceItem>
-            <SpaceItem>
-                <div>            
-                    <AntDesign.CheckboxGroup Options="@ckeckAllOptions" @bind-Value = "selectedValues"/>
-                </div>
-            </SpaceItem>
-            <SpaceItem>
-                <Button Type="@ButtonType.Primary" OnClick="Painting_Clicked">绘图</Button>
-            </SpaceItem>
-            </Space>  
-            </GridCol>
-        <GridCol Span="12">          
-            <AntDesign.Charts.Line Data="@Data1" Config="Config1" @ref="lineChartRef" />         
-        </GridCol>
-    </GridRow>    
+  <GridRow>
+    <GridCol Span="8">
+      <Space Direction="DirectionVHType.Vertical">
+        <SpaceItem>
+          <Text Strong>开始日期：</Text>
+        </SpaceItem>
+        <SpaceItem>
+          <DatePicker TValue="DateTime?" Format="yyyy/MM/dd" Mask="yyyy/dd/MM"
+          Placeholder="@("yyyy/dd/MM")" @bind-Value = "Date1"/>
+        </SpaceItem>
+        <SpaceItem>
+          <Text Strong>结束日期：</Text>
+        </SpaceItem>
+        <SpaceItem>
+          <DatePicker TValue="DateTime?" Format="yyyy/MM/dd" Mask="yyyy/dd/MM"
+          Placeholder="@("yyyy/dd/MM")" @bind-Value = "Date2"/>
+        </SpaceItem>
+        <SpaceItem>
+          <Text Strong>站名：</Text>
+        </SpaceItem>
+        <SpaceItem>
+          <AutoComplete
+            @bind-Value="@value"
+            Options="@options"
+            OnSelectionChange="OnSelectionChange"
+            OnActiveChange="OnActiveChange"
+            Placeholder="input here"
+            Style="width:150px"
+          />
+        </SpaceItem>
+        <SpaceItem>
+          <Text Strong>绘图指标：</Text>
+        </SpaceItem>
+        <SpaceItem>
+          <div>
+            <AntDesign.CheckboxGroup
+              Options="@ckeckAllOptions"
+              @bind-Value="selectedValues"
+            />
+          </div>
+        </SpaceItem>
+        <SpaceItem>
+          <button type="@ButtonType.Primary" OnClick="Painting_Clicked">
+            绘图
+          </button>
+        </SpaceItem>
+      </Space>
+    </GridCol>
+    <GridCol Span="12">
+      <AntDesign.Charts.Line
+        Data="@Data1"
+        Config="Config1"
+        @ref="lineChartRef"
+      />
+    </GridCol>
+  </GridRow>
 </div>
 ```
 
@@ -201,25 +210,27 @@ winform blazor hybrid项目在wwwroot/index.html中引入，如下所示：
 首先使用`<AutoComplete>`自动完成这个组件，如下所示：
 
 ```html
- <AutoComplete @bind-Value="@value"
-               Options="@options"
-               OnSelectionChange="OnSelectionChange"
-               OnActiveChange="OnActiveChange"
-               Placeholder="input here" 
-               Style="width:150px"/>
+<AutoComplete
+  @bind-Value="@value"
+  Options="@options"
+  OnSelectionChange="OnSelectionChange"
+  OnActiveChange="OnActiveChange"
+  Placeholder="input here"
+  Style="width:150px"
+/>
 ```
 
 ```csharp
 List<string> options = new List<string>();
 protected override void OnInitialized()
 {
-    options = weatherServer.GetDifferentStations();      
+    options = weatherServer.GetDifferentStations();
 }
 ```
 
 在 Blazor 中，`OnInitialized` 是一个生命周期方法，用于在组件初始化时执行一些逻辑。具体而言，`OnInitialized` 方法是 `Microsoft.AspNetCore.Components.ComponentBase` 类中定义的一个虚拟方法，你可以在派生的组件中覆盖它，以在组件初始化的时候执行一些自定义的操作。
 
-这里采用了三层架构的方式，分为ui层、业务逻辑层、数据库访问层。
+这里采用了三层架构的方式，分为 ui 层、业务逻辑层、数据库访问层。
 
 其中的`weatherServer`是我自定义的服务，使用这个服务，需要在开头添加语句：
 
@@ -308,7 +319,7 @@ C# 中的类只支持单一继承，但一个类可以实现多个接口。接�
  }
 ```
 
-这里数据库使用的是SQLite，ORM使用的是SQLSugar，具体怎么设置，在这里我就不详细说明了，可以查看官网也可以查看历史文章。
+这里数据库使用的是 SQLite，ORM 使用的是 SQLSugar，具体怎么设置，在这里我就不详细说明了，可以查看官网也可以查看历史文章。
 
 ### 4、绘图的实现
 
@@ -332,11 +343,11 @@ async void Painting_Clicked()
                 Content = "正在画图中...",
                 Duration = 0
             };
-        var task = _message.Loading(cofig);           
+        var task = _message.Loading(cofig);
         var condition = new Condition();
         condition.StartDate = (DateTime)Date1;
         condition.EndDate = (DateTime)Date2;
-        condition.StationName = value;  
+        condition.StationName = value;
         for(int i = 0;i < selectedValues.Length;i ++)
         {
             switch (selectedValues[i])
@@ -379,23 +390,23 @@ async void Painting_Clicked()
                     break;
 
             }
-        }  
-        
+        }
+
         // 将自定义类型的数组投影为 object[] 类型的数组
         Data1 = plotDatas.Select(p => new { date = p.Date, type = p.Type, value = p.Value }).ToArray();
-        
-        // 更新图表数据     
-        await lineChartRef.ChangeData(Data1);        
+
+        // 更新图表数据
+        await lineChartRef.ChangeData(Data1);
         task.Start();
     }
     else
     {
         await _message.Error("请查看开始日期、结束日期、站名与绘图指标是否都已选择！！！");
-    }   
+    }
 }
 ```
 
-在AntDesign.Charts中画多条折线图，官网位置如下所示：
+在 AntDesign.Charts 中画多条折线图，官网位置如下所示：
 
 ![图片](https://img1.dotnet9.com/2024/02/0411.png)
 
@@ -423,7 +434,7 @@ List<PlotData> plotDatas = new List<PlotData>();
   {
       public DateTime StartDate{ get; set; }
       public DateTime EndDate { get; set; }
-      public string? StationName { get; set; }     
+      public string? StationName { get; set; }
   }
 ```
 
@@ -433,18 +444,18 @@ List<PlotData> plotDatas = new List<PlotData>();
 var condition = new Condition();
 condition.StartDate = (DateTime)Date1;
 condition.EndDate = (DateTime)Date2;
-condition.StationName = value; 
+condition.StationName = value;
 ```
 
 该对象包含了我们选择的开始时间、结束时间与站名。
 
-然后遍历selectedValues：
+然后遍历 selectedValues：
 
 ```csharp
  for(int i = 0;i < selectedValues.Length;i ++)
 ```
 
-selectedValues是string[]?类型。
+selectedValues 是 string[]?类型。
 
 ```csharp
 string[]? selectedValues;
@@ -461,7 +472,7 @@ string[]? selectedValues;
  };
 ```
 
-选择的Label都有对应的value。
+选择的 Label 都有对应的 value。
 
 ```csharp
  switch (selectedValues[i])
@@ -516,7 +527,7 @@ var result2 = weatherServer.GetDataByCondition(condition).Select(x => new PlotDa
              }).ToList();
 ```
 
-这里首先weatherServer.GetDataByCondition(condition)的实现如下：
+这里首先 weatherServer.GetDataByCondition(condition)的实现如下：
 
 ```csharp
  public List<WeatherData> GetDataByCondition(Condition condition)
@@ -525,7 +536,7 @@ var result2 = weatherServer.GetDataByCondition(condition).Select(x => new PlotDa
  }
 ```
 
-而dataService.GetDataByCondition(condition)的实现如下：
+而 dataService.GetDataByCondition(condition)的实现如下：
 
 ```csharp
  public List<WeatherData> GetDataByCondition(Condition condition)
@@ -537,7 +548,7 @@ var result2 = weatherServer.GetDataByCondition(condition).Select(x => new PlotDa
  }
 ```
 
-最终获得了满足日期与站名要求的`List<WeatherData>`，然后再使用Select方法构造PlotData对象：
+最终获得了满足日期与站名要求的`List<WeatherData>`，然后再使用 Select 方法构造 PlotData 对象：
 
 ```csharp
 Select(x => new PlotData
@@ -548,13 +559,13 @@ Select(x => new PlotData
              }).ToList();
 ```
 
-然后加入到plotDatas中：
+然后加入到 plotDatas 中：
 
 ```csharp
 plotDatas.AddRange(result1);
 ```
 
-这样遍历完selectedValues之后就得到了我们所有需要的画图数据，选中了几项就有几项，然后需要映射到object[] 类型的数组：
+这样遍历完 selectedValues 之后就得到了我们所有需要的画图数据，选中了几项就有几项，然后需要映射到 object[] 类型的数组：
 
 ```csharp
 object[]? Data1;
@@ -562,13 +573,13 @@ object[]? Data1;
  Data1 = plotDatas.Select(p => new { date = p.Date, type = p.Type, value = p.Value }).ToArray();
 ```
 
-这里我也很迷惑，Ant Design Charts Blazor 的 `AntLineChart` 等组件通常使用 `object[]` 类型的数组作为图表的数据源。这是因为 JavaScript 本身是一种弱类型语言，而 Blazor 通过 JavaScript Interop 进行与 JavaScript 的通信，这是ChatGPT的解释，大家可以参考一下。
+这里我也很迷惑，Ant Design Charts Blazor 的 `AntLineChart` 等组件通常使用 `object[]` 类型的数组作为图表的数据源。这是因为 JavaScript 本身是一种弱类型语言，而 Blazor 通过 JavaScript Interop 进行与 JavaScript 的通信，这是 ChatGPT 的解释，大家可以参考一下。
 
 然后更新图表：
 
 ```csharp
-// 更新图表数据     
-await lineChartRef.ChangeData(Data1);   
+// 更新图表数据
+await lineChartRef.ChangeData(Data1);
 ```
 
 绘图的设置：
@@ -580,7 +591,7 @@ await lineChartRef.ChangeData(Data1);
          XField = "date",
          YField = "value",
          SeriesField = "type",
-         Smooth = true          
+         Smooth = true
      };
 ```
 
@@ -588,4 +599,4 @@ await lineChartRef.ChangeData(Data1);
 
 ## 小结
 
-这是我第一次尝试使用winform blazor hybrid写一个小案例，blazor hybrid也才刚开始了解，不足之处，请各位多多包涵，最后希望对你有所帮助。
+这是我第一次尝试使用 winform blazor hybrid 写一个小案例，blazor hybrid 也才刚开始了解，不足之处，请各位多多包涵，最后希望对你有所帮助。

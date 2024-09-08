@@ -4,20 +4,20 @@ slug: Use-Blazor-to-be-a-simple-online-timestamp-conversion-tool
 description: 时间戳转换，关键点在于双向绑定`@bind-Value`，就简单贴源码吧
 date: 2022-02-27 23:20:12
 copyright: Original
-originaltitle: 使用Blazor做个简单的时间戳在线转换工具
+originalTitle: 使用Blazor做个简单的时间戳在线转换工具
 draft: False
 cover: https://img1.dotnet9.com/2022/02/cover_17.jpeg
 categories: .NET
 tags: .NET 7,Blazor,时间戳转换,双向绑定
 ---
 
- # 时间戳转换
+# 时间戳转换
 
- 沙漠尽头的狼 - 2022-02-27 23:20:12 - ![dotnet-version](https://img.shields.io/badge/.NET%207.0-blue)  ![Visual Studio 2022](https://img.shields.io/badge/Visual%20Studio%20-2022-blueviolet)  <a target="_blank" href="https://qm.qq.com/cgi-bin/qm/qr?k=iL6egdGSGCMPezcUyzMPEcs9qsllgwr-&jump_from=webapi"><img border="0" src="//pub.idqqimg.com/wpa/images/group.png" alt="Dotnet9软件技术交流" title="Dotnet9软件技术交流"></a> [![码云](https://img.shields.io/badge/Gitee-%E7%A0%81%E4%BA%91-orange)](https://gitee.com/dotnet9/dotnet9.com.git)   [![Github](https://img.shields.io/badge/%20-github-%2324292e)](https://github.com/dotnet9/dotnet9.com) [![Github stars](https://img.shields.io/github/stars/dotnet9/dotnet9.com)](https://github.com/dotnet9/dotnet9.com)
+沙漠尽头的狼 - 2022-02-27 23:20:12 - ![dotnet-version](https://img.shields.io/badge/.NET%207.0-blue) ![Visual Studio 2022](https://img.shields.io/badge/Visual%20Studio%20-2022-blueviolet) <a target="_blank" href="https://qm.qq.com/cgi-bin/qm/qr?k=iL6egdGSGCMPezcUyzMPEcs9qsllgwr-&jump_from=webapi"><img border="0" src="//pub.idqqimg.com/wpa/images/group.png" alt="Dotnet9软件技术交流" title="Dotnet9软件技术交流"></a> [![码云](https://img.shields.io/badge/Gitee-%E7%A0%81%E4%BA%91-orange)](https://gitee.com/dotnet9/dotnet9.com.git) [![Github](https://img.shields.io/badge/%20-github-%2324292e)](https://github.com/dotnet9/dotnet9.com) [![Github stars](https://img.shields.io/github/stars/dotnet9/dotnet9.com)](https://github.com/dotnet9/dotnet9.com)
 
 ![](https://img1.dotnet9.com/2022/02/1701.jpg)
-  
->时间戳转换，关键点在于双向绑定`@bind-Value`，就简单贴源码吧
+
+> 时间戳转换，关键点在于双向绑定`@bind-Value`，就简单贴源码吧
 
 `TimestampTool.razor`
 
@@ -163,10 +163,10 @@ tags: .NET 7,Blazor,时间戳转换,双向绑定
 }
 ```
 
-`Dotnet9工具箱`会不断添加新的免费、开源、在线工具，欢迎star支持，有什么需求我会考虑加上，仓库地址：[Dotnet9.Tools](https://github.com/dotnet9/dotnet9.com)，可[提交issue](https://github.com/dotnet9/dotnet9.com/issues/new)、[网站留言](https://dotnet9.com)、微信公众号(dotnet9)联系等等。
+`Dotnet9工具箱`会不断添加新的免费、开源、在线工具，欢迎 star 支持，有什么需求我会考虑加上，仓库地址：[Dotnet9.Tools](https://github.com/dotnet9/dotnet9.com)，可[提交 issue](https://github.com/dotnet9/dotnet9.com/issues/new)、[网站留言](https://dotnet9.com)、微信公众号(dotnet9)联系等等。
 
->本工具源码：[TimestampTool](https://github.com/dotnet9/dotnet9.com/blob/develop/src/Dotnet9.Tools.Web/Pages/Public/TimeTools/TimestampTool.razor)
+> 本工具源码：[TimestampTool](https://github.com/dotnet9/dotnet9.com/blob/develop/src/Dotnet9.Tools.Web/Pages/Public/TimeTools/TimestampTool.razor)
 >
->介绍文章：[使用Blazor做个简单的时间戳在线转换工具](https://dotnet9.com/?p=1801)
+> 介绍文章：[使用 Blazor 做个简单的时间戳在线转换工具](https://dotnet9.com/?p=1801)
 >
->在线演示地址：[https://tool.dotnet9.com/timestamp](https://tool.dotnet9.com/timestamp)
+> 在线演示地址：[https://tool.dotnet9.com/timestamp](https://tool.dotnet9.com/timestamp)

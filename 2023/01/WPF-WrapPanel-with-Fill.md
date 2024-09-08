@@ -5,8 +5,8 @@ description: 一个 WPF WrapPanel，可以用任何控件填充任何行上的�
 date: 2023-01-18 20:36:19
 copyright: Reprinted
 author: Eric Ouellet
-originaltitle: WPF - WrapPanel with Fill
-originallink: https://www.codeproject.com/Tips/990854/WPF-WrapPanel-with-Fill
+originalTitle: WPF - WrapPanel with Fill
+originalLink: https://www.codeproject.com/Tips/990854/WPF-WrapPanel-with-Fill
 draft: false
 cover: https://img1.dotnet9.com/2023/01/0501.png
 categories: .NET
@@ -25,7 +25,7 @@ tags: .NET,WPF
 
 ## 介绍
 
-我意识到很多人都需要和我一样的布局容器：一个WrapPanel，可以用一个或多个子控件填充右边空白空间(`Orientation=Horizontal`，站长注：注意了哦，不一定填充的是在最左边，也不一定是最右边，可以是中间哦)。我决定编写一个可重复使用的控件来在两个方向上完成这项工作。
+我意识到很多人都需要和我一样的布局容器：一个 WrapPanel，可以用一个或多个子控件填充右边空白空间(`Orientation=Horizontal`，站长注：注意了哦，不一定填充的是在最左边，也不一定是最右边，可以是中间哦)。我决定编写一个可重复使用的控件来在两个方向上完成这项工作。
 
 该代码包含一个小演示，您可以在其中轻松查看它是否符合您的需要。
 
@@ -41,7 +41,7 @@ StackOverflow 上有几个问答，但没有真正简单的解决方案可以在
 
 ## 使用代码
 
-您可以使用 DLL 或仅将源代码（只有一个.cs文件）复制到您自己的库中。
+您可以使用 DLL 或仅将源代码（只有一个.cs 文件）复制到您自己的库中。
 
 用法如下：
 
@@ -64,7 +64,7 @@ StackOverflow 上有几个问答，但没有真正简单的解决方案可以在
 ## 限制（改进方法）
 
 - 为定义为填充的控件考虑设置 `MaxWidth`属性（或当 `Orientation`是`Vertical`时设置`MaxHeight`）。
-- 每个子控件的填充宽度始终相同（当更多子控件被定义为“填充”时。如果在“Grid”中使用“GridLength”做相同的“比例”定义会很好。例如 RowDefinition的“Width”）。
+- 每个子控件的填充宽度始终相同（当更多子控件被定义为“填充”时。如果在“Grid”中使用“GridLength”做相同的“比例”定义会很好。例如 RowDefinition 的“Width”）。
 - 添加`HorizontalContentAlignement` 和`VerticalContentAlignement` 使控件更加完整。 当我们需要在`右侧`或`中心`而不是`左侧`对齐控件时，它很有用。 我在 [StackOverflow](http://stackoverflow.com/questions/806777/wpf-how-can-i-center-all-items-in-a-wrappanel) 的 DTig 找到了一个很好的解决方案。
 
 理想情况下，它是一个解决方案中每项改进的组合，这将是很好的。
@@ -116,6 +116,6 @@ StackOverflow 上有几个问答，但没有真正简单的解决方案可以在
 最后再给出本文所有代码出处：
 
 - 原文示例代码：https://www.codeproject.com/KB/static/990854/WpfWrapPanelWithFill.zip
-- Dotnet9WPFControls包：https://www.nuget.org/packages/Dotnet9WPFControls/0.1.0-preview.3
-- Dotnet9WPFControls源码：https://github.com/dotnet9/Dotnet9WPFControls
+- Dotnet9WPFControls 包：https://www.nuget.org/packages/Dotnet9WPFControls/0.1.0-preview.3
+- Dotnet9WPFControls 源码：https://github.com/dotnet9/Dotnet9WPFControls
 - 文末示例代码：https://github.com/dotnet9/TerminalMACS.ManagerForWPF/blob/master/src/Demo/WpfThemeDemo/MainWindow.xaml

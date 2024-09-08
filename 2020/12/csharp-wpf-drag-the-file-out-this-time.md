@@ -4,7 +4,7 @@ slug: csharp-wpf-drag-the-file-out-this-time
 description: 将文件从WPF窗体中拖出
 date: 2020-12-03 13:45:56
 copyright: Original
-originaltitle: C# WPF：这次把文件拖出去！
+originalTitle: C# WPF：这次把文件拖出去！
 draft: False
 cover: https://img1.dotnet9.com/2020/12/cover_03.jpg
 categories: .NET
@@ -21,7 +21,7 @@ tags: WPF,文件拖拽
 
 ![拖出文件](https://img1.dotnet9.com/2020/12/0302.gif)
 
-上面效果的代码很少，xaml中只注册事件`PreviewMouseLeftButtonDown`即可：
+上面效果的代码很少，xaml 中只注册事件`PreviewMouseLeftButtonDown`即可：
 
 ```HTML
 <Grid  MouseMove="Grid_MouseMove" AllowDrop="True" Drop="Grid_Drop" DragEnter="Grid_DragEnter" PreviewMouseLeftButtonDown="Grid_PreviewMouseLeftButtonDown">
@@ -62,6 +62,6 @@ private void Grid_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs
 
 ![百度网盘拖拽下载文件](https://img1.dotnet9.com/2020/12/0303.gif)
 
-上面的功能，程序其实要做不少事情，需要监听拖放的路径，得到拖放路径后，就可以通过原文件网络路径进行下载了，建议阅读这篇文章，参考拖放下载文件操作：[WPF拖拽文件(拖入拖出)，监控拖拽到哪个位置，类似百度网盘拖拽](https://www.cnblogs.com/zbfamily/p/11249900.html)。
+上面的功能，程序其实要做不少事情，需要监听拖放的路径，得到拖放路径后，就可以通过原文件网络路径进行下载了，建议阅读这篇文章，参考拖放下载文件操作：[WPF 拖拽文件(拖入拖出)，监控拖拽到哪个位置，类似百度网盘拖拽](https://www.cnblogs.com/zbfamily/p/11249900.html)。
 
-另外，这篇文章对WPF的拖放写得也不做，建议阅读：[WPF之DragDrop拖放实例](https://blog.csdn.net/ugfdfgg/article/details/83834541)。
+另外，这篇文章对 WPF 的拖放写得也不做，建议阅读：[WPF 之 DragDrop 拖放实例](https://blog.csdn.net/ugfdfgg/article/details/83834541)。

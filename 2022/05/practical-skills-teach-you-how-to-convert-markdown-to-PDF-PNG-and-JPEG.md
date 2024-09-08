@@ -5,8 +5,8 @@ description: Markdown作为一种非常容易掌握的文档格式，正在被�
 date: 2022-05-08 19:00:00
 copyright: Reprinted
 author: 青城 网上冲浪程序员
-originaltitle: 【实用技巧】教你Markdown 转 PDF、PNG、JPEG
-originallink: https://mp.weixin.qq.com/s/keaj9WXM280F74lfQtPEQw
+originalTitle: 【实用技巧】教你Markdown 转 PDF、PNG、JPEG
+originalLink: https://mp.weixin.qq.com/s/keaj9WXM280F74lfQtPEQw
 draft: False
 cover: https://img1.dotnet9.com/2022/05/cover_24.jpg
 categories: 分享
@@ -24,7 +24,7 @@ tags: Markdown
 
 `Markdown`作为一种非常容易掌握的文档格式，正在被越来越多的人用来写文档，简历，博客等。
 
->但是如果你要发文档的目标用户电脑上没有`Markdown`编辑器，那就无法看到预览效果。所以一般发给客户或者其他人，基本都是选择把`Markdown`文件转换成`PDF`等格式发送。
+> 但是如果你要发文档的目标用户电脑上没有`Markdown`编辑器，那就无法看到预览效果。所以一般发给客户或者其他人，基本都是选择把`Markdown`文件转换成`PDF`等格式发送。
 
 之前用`Typora`这个编辑器，自带了很好用的导出功能，但是现在这个编辑器已经是收费软件了。
 
@@ -48,7 +48,7 @@ tags: Markdown
 
 ![](https://img1.dotnet9.com/2022/05/2403.png)
 
-5. 选择`MPE:打开侧边预览`，或者使用快捷键：Ctrl + K V（上面的是Mac快捷键），即可预览`Markdown`渲染效果：
+5. 选择`MPE:打开侧边预览`，或者使用快捷键：Ctrl + K V（上面的是 Mac 快捷键），即可预览`Markdown`渲染效果：
 
 ![](https://img1.dotnet9.com/2022/05/2404.png)
 
@@ -72,7 +72,7 @@ tags: Markdown
 
 ## 4. 站长补录
 
-站长录制一张`Markdown Preview Enhanced`插件将`Markdown`文件导出为`PDF`文件的Gif动图，看看效果是不是很棒，默认的导出文件与`Markdown`原文件在同一目录下：
+站长录制一张`Markdown Preview Enhanced`插件将`Markdown`文件导出为`PDF`文件的 Gif 动图，看看效果是不是很棒，默认的导出文件与`Markdown`原文件在同一目录下：
 
 ![](https://img1.dotnet9.com/2022/05/2408.gif)
 
@@ -80,7 +80,7 @@ tags: Markdown
 
 ![](https://img1.dotnet9.com/2022/05/2409.gif)
 
-点开上图中的更多设置，可选择是否在页眉和页脚显示文件信息（文件导出时间、文件Url地址），一般是不勾选：
+点开上图中的更多设置，可选择是否在页眉和页脚显示文件信息（文件导出时间、文件 Url 地址），一般是不勾选：
 
 ![](https://img1.dotnet9.com/2022/05/2411.png)
 

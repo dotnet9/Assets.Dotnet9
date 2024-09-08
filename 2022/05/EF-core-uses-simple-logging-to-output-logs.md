@@ -5,17 +5,17 @@ description: 在使用EF Core的时候，很多时候需要知道EF Core实际�
 date: 2022-05-04 15:56:21
 copyright: Reprinted
 author: MyIO
-originaltitle: EF Core使用Simple Logging输出日志
-originallink: https://mp.weixin.qq.com/s/QXBhG_ayoeCcE9dGsgbNKw
+originalTitle: EF Core使用Simple Logging输出日志
+originalLink: https://mp.weixin.qq.com/s/QXBhG_ayoeCcE9dGsgbNKw
 draft: False
 cover: https://img1.dotnet9.com/2022/05/cover_08.jpg
 categories: .NET
 tags: .NET, ORM, EF Core
 ---
 
-在使用EF Core的时候，很多时候需要知道EF Core实际执行的SQL语句是什么。
+在使用 EF Core 的时候，很多时候需要知道 EF Core 实际执行的 SQL 语句是什么。
 
-Simple Logging是EF Core提供的一项功能，可用于在开发和调试应用程序时轻松获取日志。这种形式的日志记录需要最少的配置，而不需要其他NuGet包。
+Simple Logging 是 EF Core 提供的一项功能，可用于在开发和调试应用程序时轻松获取日志。这种形式的日志记录需要最少的配置，而不需要其他 NuGet 包。
 
 ## 功能一瞥
 
@@ -34,14 +34,14 @@ public class DefaultDbContext : DbContext
 }
 ```
 
-`LogTo`需要一个Action委托接受字符串，比如`Console.WriteLine`,你也可以编写自定义方法决定如何输出日志。
+`LogTo`需要一个 Action 委托接受字符串，比如`Console.WriteLine`,你也可以编写自定义方法决定如何输出日志。
 
 ## 筛选
 
-默认情况下，Simple Logging记录Debug或更高级别的每条日志。这样会导致输出的日志过多，对调试没有任何帮助，可以限制只记录Information或更高级别的日志：
+默认情况下，Simple Logging 记录 Debug 或更高级别的每条日志。这样会导致输出的日志过多，对调试没有任何帮助，可以限制只记录 Information 或更高级别的日志：
 
 ```csharp
-options.LogTo(Console.WriteLine, 
+options.LogTo(Console.WriteLine,
     Microsoft.Extensions.Logging.LogLevel.Information);
 ```
 

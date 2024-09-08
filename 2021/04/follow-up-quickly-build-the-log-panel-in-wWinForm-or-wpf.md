@@ -4,14 +4,14 @@ slug: follow-up-quickly-build-the-log-panel-in-wWinForm-or-wpf
 description: 原理是将`Winform或WPF 应用程序，宿主到ASP.NET Core Web API`上
 date: 2021-04-18 15:45:15
 copyright: Original
-originaltitle: 后续来啦：Winform/WPF中快速搭建日志面板
+originalTitle: 后续来啦：Winform/WPF中快速搭建日志面板
 draft: False
 cover: https://img1.dotnet9.com/2021/04/cover_02.jpg
 categories: .NET
 tags: Winform,WPF,日志面板,LogDashboard
 ---
 
-继昨天发文`ASP.NET Core 可视化日志组件使用(`[阅读文章](https://mp.weixin.qq.com/s/BSt2hL32_vBMliu9-Fs1zg)，[查看视频](https://mp.weixin.qq.com/s/rbOeuS5PDEZRSHeRR9r8wA))后，视频下有朋友留言 **“Winform客户端的程序能用它不?”**，微信也有朋友问能否嫁接到`WPF`上，站长今早尝试了，是可以的！
+继昨天发文`ASP.NET Core 可视化日志组件使用(`[阅读文章](https://mp.weixin.qq.com/s/BSt2hL32_vBMliu9-Fs1zg)，[查看视频](https://mp.weixin.qq.com/s/rbOeuS5PDEZRSHeRR9r8wA))后，视频下有朋友留言 **“Winform 客户端的程序能用它不?”**，微信也有朋友问能否嫁接到`WPF`上，站长今早尝试了，是可以的！
 
 ![](https://img1.dotnet9.com/2021/04/0201.png)
 
@@ -25,7 +25,7 @@ tags: Winform,WPF,日志面板,LogDashboard
 
 1. 创建一个 WPF 应用程序
 2. 添加`ASP.NET Core`、`Serilog`支持
-3. WPF窗体中使用Serilog
+3. WPF 窗体中使用 Serilog
 4. 完结
 
 ---
@@ -34,13 +34,13 @@ tags: Winform,WPF,日志面板,LogDashboard
 
 ## 1. 创建一个 WPF 应用程序
 
-使用VS 2019，创建一个`WPF 应用程序`项目，命名为**WPFWithLogDashboard**，本文基于`.NET 6搭建`。
+使用 VS 2019，创建一个`WPF 应用程序`项目，命名为**WPFWithLogDashboard**，本文基于`.NET 6搭建`。
 
 ## 2. 添加`ASP.NET Core`、`Serilog`支持
 
-### 2.1 Nuget 安装相关Nuget包
+### 2.1 Nuget 安装相关 Nuget 包
 
-`Microsoft.Extensions.Hosting`要指定版本，不能高于2.2.0:
+`Microsoft.Extensions.Hosting`要指定版本，不能高于 2.2.0:
 
 ```shell
 Install-Package Microsoft.Extensions.Hosting -Version 2.2.0
@@ -158,20 +158,40 @@ namespace WPFWithLogDashboard
 http://localhost:5000/logdashboard
 ```
 
-## 3. WPF窗体中使用Serilog
+## 3. WPF 窗体中使用 Serilog
 
 主窗体`MainWindow.xaml`添加几个按钮，用于模拟添加普通日志、添加异常日志、打开可视化日志面板网页：
 
 ```html
-<Window x:Class="WPFWithLogDashboard.MainWindow"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Windows中使用Serilog" Height="250" Width="350">
-    <StackPanel Margin="20">
-        <Button Content="打开日志面板" Width="100" Height="35" Click="OpenLogDashboard_Click"/>
-        <Button Content="添加普通日志" Width="100" Height="35" Margin="0 20" Click="AddInfoLog_Click"/>
-        <Button Content="添加异常日志" Width="100" Height="35" Click="AddErrorLog_Click"/>
-    </StackPanel>
+<Window
+  x:Class="WPFWithLogDashboard.MainWindow"
+  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+  Title="Windows中使用Serilog"
+  Height="250"
+  Width="350"
+>
+  <StackPanel Margin="20">
+    <button
+      Content="打开日志面板"
+      Width="100"
+      Height="35"
+      Click="OpenLogDashboard_Click"
+    />
+    <button
+      Content="添加普通日志"
+      Width="100"
+      Height="35"
+      Margin="0 20"
+      Click="AddInfoLog_Click"
+    />
+    <button
+      Content="添加异常日志"
+      Width="100"
+      Height="35"
+      Click="AddErrorLog_Click"
+    />
+  </StackPanel>
 </Window>
 ```
 
@@ -237,8 +257,8 @@ OK，功能已经完成，本文基于`WPF`搭建的项目，也是适用于`Win
 
 ## 4. 完结
 
-本文注重实践，如果您对`ASP.NET Core`不是很了解，建议您查看微软官方文档系统学习；不求甚解，直接Copy文中代码也成。
+本文注重实践，如果您对`ASP.NET Core`不是很了解，建议您查看微软官方文档系统学习；不求甚解，直接 Copy 文中代码也成。
 
-本文是否对您有用？记得3连走起哦。
+本文是否对您有用？记得 3 连走起哦。
 
 文中示例源码：https://github.com/dotnet9/TerminalMACS.ManagerForWPF/tree/master/src/Demo/WPFWithLogDashboard

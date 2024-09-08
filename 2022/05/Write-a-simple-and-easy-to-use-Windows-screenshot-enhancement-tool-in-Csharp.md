@@ -5,8 +5,8 @@ description: 一个简单易用的 Windows 截屏增强工具
 date: 2022-05-12 08:15:27
 copyright: Reprinted
 author: IT技术分享社区
-originaltitle: C# 编写简单易用的 Windows 截屏增强工具
-originallink: https://mp.weixin.qq.com/s/eyz995VWcIEMLBQP7PL0FQ
+originalTitle: C# 编写简单易用的 Windows 截屏增强工具
+originalLink: https://mp.weixin.qq.com/s/eyz995VWcIEMLBQP7PL0FQ
 draft: False
 cover: https://img1.dotnet9.com/2022/05/3701.gif
 categories: 数据库
@@ -104,7 +104,7 @@ public static extern IntPtr GetModuleHandle([Optional] string lpModuleName);
 HookProc _hookProc;
 IntPtr _hhook;
 
-void StartHook() 
+void StartHook()
 {
     _hookProc = new HookProc(LowLevelKeyboardProc); // 使用成员变量保存委托
     _hhook = SetWindowsHookEx(WH_KEYBOARD_LL, _hookProc, GetModuleHandle(null), 0); // 注册键盘钩子，保存返回值卸载钩子时用到。GetModuleHandle(null) 获取当前模块句柄

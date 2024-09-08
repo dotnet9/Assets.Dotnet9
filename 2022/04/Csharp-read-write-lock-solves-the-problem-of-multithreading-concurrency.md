@@ -5,8 +5,8 @@ description: 读写锁是以 ReaderWriterLockSlim 对象作为锁管理资源的
 date: 2022-04-25 20:41:27
 copyright: Reprinted
 author: Walter_lee2008
-originaltitle: C#使用读写锁三行代码简单解决多线程并发写入文件时线程同步的问题
-originallink: https://blog.csdn.net/zdhlwt2008/article/details/80702605
+originalTitle: C#使用读写锁三行代码简单解决多线程并发写入文件时线程同步的问题
+originalLink: https://blog.csdn.net/zdhlwt2008/article/details/80702605
 draft: False
 cover: https://img1.dotnet9.com/2022/04/cover_35.jpeg
 categories: .NET
@@ -29,7 +29,7 @@ ReaderWriterLockSlim 有几个关键的方法，本文仅讨论写入锁：
 
 - 调用 `EnterWriteLock` 方法 进入写入状态，在调用线程进入锁定状态之前一直处于阻塞状态，因此可能永远都不返回。
 
-- 调用 `TryEnterWriteLock` 方法 进入写入状态，可指定阻塞的间隔时间，如果调用线程在此间隔期间并未进入写入模式，将返回false。
+- 调用 `TryEnterWriteLock` 方法 进入写入状态，可指定阻塞的间隔时间，如果调用线程在此间隔期间并未进入写入模式，将返回 false。
 
 - 调用 `ExitWriteLock` 方法 退出写入状态，`应使用 finally 块执行 ExitWriteLock 方法，从而确保调用方退出写入模式`。
 
@@ -250,7 +250,7 @@ class Program
 
 ## 5. 后记
 
-虽然读写IO有共享模式，也可以实现但不推荐
+虽然读写 IO 有共享模式，也可以实现但不推荐
 
 ```csharp
 static void WriteLog()
@@ -261,14 +261,14 @@ static void WriteLog()
         var now = DateTime.Now;
         var logContent = string.Format("Tid: {0}{1} {2}.{3}\r\n", Thread.CurrentThread.ManagedThreadId.ToString().PadRight(4), now.ToLongDateString(), now.ToLongTimeString(), now.Millisecond.ToString());
         //File.AppendAllText(logFilePath, logContent);
- 
+
         var logContentBytes = Encoding.Default.GetBytes(logContent);
         using (FileStream logFile = new FileStream(logFilePath, FileMode.OpenOrCreate, FileAccess.Write, FileShare.Write))
         {
             logFile.Seek(0, SeekOrigin.End);
             logFile.Write(logContentBytes, 0, logContentBytes.Length);
         }
- 
+
         WritedCount++;
     }
     catch (Exception ex)

@@ -7,8 +7,8 @@ lastmod: 2024-03-08 05:19:27
 copyright: Reprinted
 banner: false
 author: 追逐时光者
-originaltitle: WPF开源的一款免费、开箱即用的翻译、OCR工具
-originallink: https://mp.weixin.qq.com/s/WTopCglS2ELPWaa5wAMyTQ
+originalTitle: WPF开源的一款免费、开箱即用的翻译、OCR工具
+originalLink: https://mp.weixin.qq.com/s/WTopCglS2ELPWaa5wAMyTQ
 draft: false
 cover: https://img1.dotnet9.com/2024/03/0407.png
 categories: .NET
@@ -17,9 +17,9 @@ tags: 翻译,OCR工具
 
 ## **前言**
 
-今天大姚给大家分享一款由WPF开源的、免费的（MIT License）、即开即用、即用即走的翻译、OCR工具：STranslate。
+今天大姚给大家分享一款由 WPF 开源的、免费的（MIT License）、即开即用、即用即走的翻译、OCR 工具：STranslate。
 
-## **WPF介绍**
+## **WPF 介绍**
 
 WPF 是一个强大的桌面应用程序框架，用于构建具有丰富用户界面的 Windows 应用。它提供了灵活的布局、数据绑定、样式和模板、动画效果等功能，让开发者可以创建出吸引人且交互性强的应用程序。
 
@@ -34,8 +34,8 @@ WPF 是一个强大的桌面应用程序框架，用于构建具有丰富用户�
 - `Alt` + `S`：截图选中区域内容并翻译
 - `Alt` + `G`：打开主界面
 - `Alt` + `Shift` + `D`：打开监听鼠标划词，鼠标滑动选中文字立即翻译
-- `Alt` + `Shift` + `S`：完全离线文字识别(基于PaddleOCR)
-- `Alt` + `Shift` + `F`：静默OCR(OCR后自动复制到剪贴板)
+- `Alt` + `Shift` + `S`：完全离线文字识别(基于 PaddleOCR)
+- `Alt` + `Shift` + `F`：静默 OCR(OCR 后自动复制到剪贴板)
 
 ### **软件内快捷键**
 
@@ -73,13 +73,13 @@ WPF 是一个强大的桌面应用程序框架，用于构建具有丰富用户�
 
 ## **工具下载**
 
-### **Github下载**
+### **Github 下载**
 
 - https://github.com/ZGGSONG/STranslate/releases
 
 ![](https://img1.dotnet9.com/2024/03/0405.png)
 
-### **Gitee下载**
+### **Gitee 下载**
 
 - https://gitee.com/zggsong/STranslate/releases/tag/1.0.6.201
 
@@ -103,6 +103,6 @@ WPF 是一个强大的桌面应用程序框架，用于构建具有丰富用户�
 
 ## 项目源码地址
 
-**更多项目实用功能和特性欢迎前往项目开源地址查看👀，别忘了给项目一个Star支持💖。**
+**更多项目实用功能和特性欢迎前往项目开源地址查看 👀，别忘了给项目一个 Star 支持 💖。**
 
 [https://github.com/ZGGSONG/STranslate](https://github.com/ZGGSONG/STranslate)

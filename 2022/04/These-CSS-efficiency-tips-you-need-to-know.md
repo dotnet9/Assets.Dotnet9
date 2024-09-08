@@ -5,21 +5,21 @@ description: 技巧
 date: 2022-04-28 07:12:32
 copyright: Reprinted
 author: knaagar
-originaltitle: 这些CSS提效技巧，你需要知道！
-originallink: https://dev.to/devsyedmohsin/css-tips-and-tricks-you-will-add-to-cart-163p
+originalTitle: 这些CSS提效技巧，你需要知道！
+originalLink: https://dev.to/devsyedmohsin/css-tips-and-tricks-you-will-add-to-cart-163p
 draft: False
 cover: https://img1.dotnet9.com/2022/04/cover_42.png
 categories: 前端
 tags: 样式,CSS
 ---
 
->原文作者：knaagar  
+> 原文作者：knaagar
 >
->原文链接：https://dev.to/devsyedmohsin/css-tips-and-tricks-you-will-add-to-cart-163p
+> 原文链接：https://dev.to/devsyedmohsin/css-tips-and-tricks-you-will-add-to-cart-163p
 >
->翻译：沙漠尽头的狼
+> 翻译：沙漠尽头的狼
 
-既然我们已经完成了 [HTML](https://dev.to/devsyedmohsin/html-tips-tricks-that-you-will-love-to-know-27ig) 和 [JavaScript](https://dev.to/devsyedmohsin/javascript-tips-and-tricks-2mhk) 技巧，现在是时候介绍 CSS 技巧和技巧了💖✨
+既然我们已经完成了 [HTML](https://dev.to/devsyedmohsin/html-tips-tricks-that-you-will-love-to-know-27ig) 和 [JavaScript](https://dev.to/devsyedmohsin/javascript-tips-and-tricks-2mhk) 技巧，现在是时候介绍 CSS 技巧和技巧了 💖✨
 
 ## 1. 打印媒体查询
 
@@ -27,21 +27,19 @@ tags: 样式,CSS
 
 ```css
 @media print {
-
   * {
     background-color: transparent;
-    color: #000 ;
+    color: #000;
     box-shadow: none;
     text-shadow: none;
   }
-
 }
 ```
 
 ## 2. 渐变文字
 
 ```css
-h1{
+h1 {
   background-image: linear-gradient(to right, #c6ffdd, #fbd786, #f7797d);
   background-clip: text;
   -webkit-background-clip: text;
@@ -53,12 +51,15 @@ h1{
 
 ## 3. 修改 media defaults
 
-编写css重置时，添加这些属性以改善媒体默认值。
+编写 css 重置时，添加这些属性以改善媒体默认值。
 
 ```css
-img, picture, video, svg {
+img,
+picture,
+video,
+svg {
   max-width: 100%;
-  object-fit: contain;  /* preserve a nice aspect-ratio */
+  object-fit: contain; /* preserve a nice aspect-ratio */
 }
 ```
 
@@ -67,9 +68,9 @@ img, picture, video, svg {
 使用列属性为文本元素制作漂亮的列布局。
 
 ```css
-p{
+p {
   column-count: 3;
-  column-gap: 5rem;          
+  column-gap: 5rem;
   column-rule: 1px solid salmon; /* border between columns */
 }
 ```
@@ -79,19 +80,19 @@ p{
 ## 5. 使用 position 居中元素
 
 ```css
-div{
+div {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
 }
 ```
 
 ## 6. 逗号分隔的列表
 
 ```css
-li:not(:last-child)::after{
-  content: ',';
+li:not(:last-child)::after {
+  content: ",";
 }
 ```
 
@@ -100,7 +101,7 @@ li:not(:last-child)::after{
 ## 7. 平滑的滚动
 
 ```css
- html {
+html {
   scroll-behavior: smooth;
 }
 ```
@@ -118,8 +119,8 @@ hyphens 告知浏览器在换行时如何使用连字符连接单词。可以完
 避免不必要的 `span` ，并使用伪元素来设计你的内容，同样第一个字母的伪元素，我们还有第一行的伪元素。
 
 ```css
- h1::first-letter{
-   color:#ff8A00;
+h1::first-letter {
+  color: #ff8a00;
 }
 ```
 
@@ -134,8 +135,8 @@ hyphens 告知浏览器在换行时如何使用连字符连接单词。可以完
 ## 11. Image filled text
 
 ```css
-h1{
-  background-image: url('illustration.webp');
+h1 {
+  background-image: url("illustration.webp");
   background-clip: text;
   color: transparent;
 }
@@ -148,30 +149,30 @@ h1{
 使用 `placeholder` 伪元素来改变 placeholder 样式：
 
 ```css
-input::placeholder{
-  font-size:1.5em;
-  letter-spacing:2px;
-  color:green;
-  text-shadow:1px 1px 1px black;
+input::placeholder {
+  font-size: 1.5em;
+  letter-spacing: 2px;
+  color: green;
+  text-shadow: 1px 1px 1px black;
 }
 ```
 
 ![](https://img1.dotnet9.com/2022/04/4207.png)
 
-## 13. colors  动画
+## 13. colors 动画
 
 使用颜色旋转滤镜改变元素颜色。
 
 ```css
-button{
+button {
   animation: colors 1s linear infinite;
 }
 
 @keyframes colors {
-  0%{
+  0% {
     filter: hue-rotate(0deg);
   }
-  100%{
+  100% {
     filter: hue-rotate(360deg);
   }
 }
@@ -179,14 +180,14 @@ button{
 
 ![](https://img1.dotnet9.com/2022/04/4208.gif)
 
-## 14. 使用margin居中
+## 14. 使用 margin 居中
 
 ```css
-.parent{
-  display: flex;  /* display: grid; also works */
+.parent {
+  display: flex; /* display: grid; also works */
 }
 
-.child{
+.child {
   margin: auto;
 }
 ```
@@ -196,8 +197,8 @@ button{
 `clamp()` 函数的作用是把一个值限制在一个上限和下限之间，当这个值超过最小值和最大值的范围时，在最小值和最大值之间选择一个值使用。它接收三个参数：最小值、首选值、最大值。
 
 ```css
-h1{
-  font-size: clamp(5.25rem,8vw,8rem);
+h1 {
+  font-size: clamp(5.25rem, 8vw, 8rem);
 }
 ```
 
@@ -208,8 +209,8 @@ h1{
 设置选中元素的样式。
 
 ```css
-::selection{
-  color:coral;
+::selection {
+  color: coral;
 }
 ```
 
@@ -220,17 +221,17 @@ h1{
 将列表样式类型设置为十进制前导零。
 
 ```css
-li{
-  list-style-type:decimal-leading-zero;
+li {
+  list-style-type: decimal-leading-zero;
 }
 ```
 
 ![](https://img1.dotnet9.com/2022/04/4211.png)
 
-## 18. 使用Flex居中
+## 18. 使用 Flex 居中
 
 ```css
-.parent{
+.parent {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -240,8 +241,8 @@ li{
 ## 19. 自定义光标
 
 ```css
-html{
-  cursor:url('no.png'), auto;
+html {
+  cursor: url("no.png"), auto;
 }
 ```
 
@@ -253,26 +254,26 @@ html{
 
 ![](https://img1.dotnet9.com/2022/04/4213.gif)
 
-## 22. resize属性
+## 22. resize 属性
 
 将 resize 属性设置为 none 以避免调整 textarea 的大小
 
 ```css
-textarea{
-  resize:none;
+textarea {
+  resize: none;
 }
 ```
 
 ## 23. only-child
 
-CSS伪类 `:only-child` 匹配没有任何兄弟元素的元素。等效的选择器还可以写成 `:first-child:last-child` 或者 `:nth-child(1):nth-last-child(1)` ,当然,前者的权重会低一点.
+CSS 伪类 `:only-child` 匹配没有任何兄弟元素的元素。等效的选择器还可以写成 `:first-child:last-child` 或者 `:nth-child(1):nth-last-child(1)` ,当然,前者的权重会低一点.
 
 ![](https://img1.dotnet9.com/2022/04/4214.png)
 
 ## 24. 使用 grid 居中元素
 
 ```css
-.parent{
+.parent {
   display: grid;
   place-items: center;
 }
@@ -283,8 +284,8 @@ CSS伪类 `:only-child` 匹配没有任何兄弟元素的元素。等效的选�
 `text-indent` 属性能定义一个块元素首行文本内容之前的缩进量。
 
 ```css
-p{
-  text-indent:5.275rem;
+p {
+  text-indent: 5.275rem;
 }
 ```
 
@@ -295,8 +296,8 @@ p{
 CSS 属性 `list-style-type` 可以设置列表元素的 marker（比如圆点、符号、或者自定义计数器样式）。
 
 ```css
-li{
-  list-style-type:'🟧';
+li {
+  list-style-type: "🟧";
 }
 ```
 

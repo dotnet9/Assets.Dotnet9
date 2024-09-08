@@ -5,15 +5,15 @@ description: 基于.NET 6开发的在线音视频聊天项目，客户端WPF，�
 date: 2022-04-03 17:34:24
 copyright: Reprinted
 author: 王_先_生
-originaltitle: 基于 .NET 6 开发的在线音视频聊天项目
-originallink: https://www.cnblogs.com/xymfblogs/archive/2022/04/02/16091037.html
+originalTitle: 基于 .NET 6 开发的在线音视频聊天项目
+originalLink: https://www.cnblogs.com/xymfblogs/archive/2022/04/02/16091037.html
 draft: False
 cover: https://img1.dotnet9.com/2022/04/0108.png
 categories: .NET
 tags: .NET 6,WPF,.NET Core Web API,音视频,聊天,开源WPF
 ---
 
->一个基于`.NET 6`开发的在线音视频聊天项目，客户端使用`WPF`开发，后端使用`.NET Core Web API`。
+> 一个基于`.NET 6`开发的在线音视频聊天项目，客户端使用`WPF`开发，后端使用`.NET Core Web API`。
 
 ## 一. 项目介绍
 
@@ -35,24 +35,24 @@ tags: .NET 6,WPF,.NET Core Web API,音视频,聊天,开源WPF
 
 1. log4net 日志记录。
 2. SignalR 用于服务器与客户端的通讯手段，该项目用于好友申请、消息提示、公告、聊天和音视频通话等一系列通知。
-3. EntityFrameworkCore 操作数据库的ORM工具，服务端使用SqlServer，客户端使用Sqlite。
-4. Newtonsoft.Json 序列化和反序列化JSON。
+3. EntityFrameworkCore 操作数据库的 ORM 工具，服务端使用 SqlServer，客户端使用 Sqlite。
+4. Newtonsoft.Json 序列化和反序列化 JSON。
 
 **服务端**
 
-1. TencentCloudSDK 操作腾讯云服务API，该项目用于管理通话房间。
-2. aliyun-net-sdk-core 操作阿里云服务API，该项目用于短信服务。
+1. TencentCloudSDK 操作腾讯云服务 API，该项目用于管理通话房间。
+2. aliyun-net-sdk-core 操作阿里云服务 API，该项目用于短信服务。
 3. CHSPinYinConv 获取中文拼音。
-4. Portable.BouncyCastle TRTC加密使用。
-5. SixLabors.ImageSharp 操作图片，因c#中操作图片需要微软的GDI绘图，但在linux上操作需要mono的libgdiplus库，处理效果并不理想。
+4. Portable.BouncyCastle TRTC 加密使用。
+5. SixLabors.ImageSharp 操作图片，因 c#中操作图片需要微软的 GDI 绘图，但在 linux 上操作需要 mono 的 libgdiplus 库，处理效果并不理想。
 
-**WPF端**
+**WPF 端**
 
-1. TXLiteAV 操作腾讯云的TRTC服务，本地设备音视频推流、获取房间内其他用户音视频数据。
-2. XamlAnimatedGif 播放GIF，因设备效率问题，改动作者源码后重新打包使用。
+1. TXLiteAV 操作腾讯云的 TRTC 服务，本地设备音视频推流、获取房间内其他用户音视频数据。
+2. XamlAnimatedGif 播放 GIF，因设备效率问题，改动作者源码后重新打包使用。
 
-  - 源库：[https://github.com/XamlAnimatedGif/XamlAnimatedGif](https://github.com/XamlAnimatedGif/XamlAnimatedGif) 
-  - 问题：[https://github.com/XamlAnimatedGif/XamlAnimatedGif/issues/160](https://github.com/XamlAnimatedGif/XamlAnimatedGif/issues/160)
+- 源库：[https://github.com/XamlAnimatedGif/XamlAnimatedGif](https://github.com/XamlAnimatedGif/XamlAnimatedGif)
+- 问题：[https://github.com/XamlAnimatedGif/XamlAnimatedGif/issues/160](https://github.com/XamlAnimatedGif/XamlAnimatedGif/issues/160)
 
 ## 三. 项目配置
 
@@ -86,7 +86,7 @@ Update-Database InitialCreate
 
 ### 3.2 客户端配置
 
-客户端使用WPF开发，如下图：
+客户端使用 WPF 开发，如下图：
 
 ![](https://img1.dotnet9.com/2022/04/0103.png)
 
@@ -98,7 +98,7 @@ Update-Database InitialCreate
 2. 添加好友
 3. 音视频在线通话
 4. 聊天（图片、文字、富文本）
-5. 截屏（多显示器不同dpi支持）
+5. 截屏（多显示器不同 dpi 支持）
 
 客户端部分截图：
 
@@ -106,7 +106,7 @@ Update-Database InitialCreate
 
 ![](https://img1.dotnet9.com/2022/04/0115.gif)
 
-下面是作者readmd和博客园的图片：
+下面是作者 readmd 和博客园的图片：
 
 ![](https://img1.dotnet9.com/2022/04/0104.png)
 
@@ -130,13 +130,13 @@ Update-Database InitialCreate
 
 我还是提供的测试账号和程序地址吧。
 
-不过需要安装NET6桌面运行时，这是下载地址：[.NET 6桌面运行时](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-desktop-6.0.3-windows-x64-installer)
+不过需要安装 NET6 桌面运行时，这是下载地址：[.NET 6 桌面运行时](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-desktop-6.0.3-windows-x64-installer)
 
 ### 测试用户
 
-1571221{1～9}177，
+1571221{1 ～ 9}177，
 
-密码统一为12345678。
+密码统一为 12345678。
 
 所有用户登录信息我都放在程序包里啦，并且都添加了我做为好友。😄
 
@@ -144,20 +144,20 @@ Update-Database InitialCreate
 
 ## 五. 程序包
 
->链接：[https://pan.baidu.com/s/1aTh_710GpKIIHOHpvVCpBw?pwd=cp4o](https://pan.baidu.com/s/1aTh_710GpKIIHOHpvVCpBw?pwd=cp4o)
+> 链接：[https://pan.baidu.com/s/1aTh_710GpKIIHOHpvVCpBw?pwd=cp4o](https://pan.baidu.com/s/1aTh_710GpKIIHOHpvVCpBw?pwd=cp4o)
 >
->提取码：cp4o
+> 提取码：cp4o
 >
->--来自百度网盘超级会员V4的分享
+> --来自百度网盘超级会员 V4 的分享
 
 ## 六. 演示视频
 
->链接：[https://pan.baidu.com/s/1n-sQZFgO9GEhS80jHLVouA?pwd=85x3](https://pan.baidu.com/s/1n-sQZFgO9GEhS80jHLVouA?pwd=85x3)
+> 链接：[https://pan.baidu.com/s/1n-sQZFgO9GEhS80jHLVouA?pwd=85x3](https://pan.baidu.com/s/1n-sQZFgO9GEhS80jHLVouA?pwd=85x3)
 >
->提取码：85x3
+> 提取码：85x3
 >
->--来自百度网盘超级会员V4的分享
+> --来自百度网盘超级会员 V4 的分享
 
 ## 七. 项目仓库地址
 
-GitHub地址：[https://github.com/qian-o/Dimension](https://github.com/qian-o/Dimension)
+GitHub 地址：[https://github.com/qian-o/Dimension](https://github.com/qian-o/Dimension)

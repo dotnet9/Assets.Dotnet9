@@ -5,15 +5,15 @@ description: 目前`MyButton`有3个`[Parameter]`，如果再增加的话，又�
 date: 2021-12-15 22:53:17
 copyright: Reprinted
 author: StrayaWorker
-originaltitle: (11/30)大家一起学Blazor：Arbitrary属性
-originallink: https://ithelp.ithome.com.tw/articles/10262490
+originalTitle: (11/30)大家一起学Blazor：Arbitrary属性
+originalLink: https://ithelp.ithome.com.tw/articles/10262490
 draft: False
 cover: https://img1.dotnet9.com/2021/12/cover_05.png
 categories: .NET
 tags: Blazor Server,学Blazor
 ---
 
-目前`MyButton`有3个`[Parameter]`，如果再增加的话，又要再定义新的`[Parameter]`，为了避免不断更新这个Component，我们来用Blazor提供的`@attribute`。
+目前`MyButton`有 3 个`[Parameter]`，如果再增加的话，又要再定义新的`[Parameter]`，为了避免不断更新这个 Component，我们来用 Blazor 提供的`@attribute`。
 
 首先把原本的`<button>`改为`<input>`，在`MyButton.razor`定义一个带有`[Parameter]`的`InputAttributes`，类型为`Dictionary<string, object>`，先给初始值，如果外部没有传入这个参数的话就会套用初始值。
 
@@ -27,11 +27,11 @@ tags: Blazor Server,学Blazor
 
 ![](https://img1.dotnet9.com/2021/12/1703.png)
 
-不过好像哪里怪怪的，因为只用了一个变量`InputAttributes`，导致原本的Reset按钮跟Submit变得一样了，但如果再定义一个为Reset产生的变量，又跟原本一样麻烦了。
+不过好像哪里怪怪的，因为只用了一个变量`InputAttributes`，导致原本的 Reset 按钮跟 Submit 变得一样了，但如果再定义一个为 Reset 产生的变量，又跟原本一样麻烦了。
 
 ![](https://img1.dotnet9.com/2021/12/1704.png)
 
-这时候就要用到`[Parameter]`的参数`CaptureUnmatchedValues`了，我们将原本的`[Parameter]`改成`[Parameter(CaptureUnmatchedValues = true)]`或是`[Parameter(true)]`也行，告诉Blazor这个变量会捕捉任何不符合`InputAttributes`中定义的值。
+这时候就要用到`[Parameter]`的参数`CaptureUnmatchedValues`了，我们将原本的`[Parameter]`改成`[Parameter(CaptureUnmatchedValues = true)]`或是`[Parameter(true)]`也行，告诉 Blazor 这个变量会捕捉任何不符合`InputAttributes`中定义的值。
 
 ![](https://img1.dotnet9.com/2021/12/1705.png)
 
@@ -39,13 +39,13 @@ tags: Blazor Server,学Blazor
 
 ![](https://img1.dotnet9.com/2021/12/1706.png)
 
-最后`PostBase.razor`随意给`<MyButton>`我们想要的html属性，就可以看到变回Submit跟Reset按钮了，要注意的是因为变成我们自由定义，所以没有了强类型的约束。
+最后`PostBase.razor`随意给`<MyButton>`我们想要的 html 属性，就可以看到变回 Submit 跟 Reset 按钮了，要注意的是因为变成我们自由定义，所以没有了强类型的约束。
 
 ![](https://img1.dotnet9.com/2021/12/1707.png)
 
 ![](https://img1.dotnet9.com/2021/12/1708.png)
 
-这时候有人可能会发现，两个`<MyButton>`有个相同html属性`type`，既然重复，可以定义在`PostBase.razor.cs`的`InputAttributes`吗？
+这时候有人可能会发现，两个`<MyButton>`有个相同 html 属性`type`，既然重复，可以定义在`PostBase.razor.cs`的`InputAttributes`吗？
 
 ![](https://img1.dotnet9.com/2021/12/1709.png)
 
@@ -53,7 +53,7 @@ tags: Blazor Server,学Blazor
 
 ![](https://img1.dotnet9.com/2021/12/1710.png)
 
-还有一点是html属性的读取顺序是由右到左，若有重复的html属性，右边的会覆盖左边的，我们在`MyButton.razor`的`@attribute`右边加上`value="MyButton"`，打开网页可以看到两颗按钮都变成Mybutton了，所以若要给初始值的话，最好是放在`@attribute`左边，以免覆盖传进来的值。
+还有一点是 html 属性的读取顺序是由右到左，若有重复的 html 属性，右边的会覆盖左边的，我们在`MyButton.razor`的`@attribute`右边加上`value="MyButton"`，打开网页可以看到两颗按钮都变成 Mybutton 了，所以若要给初始值的话，最好是放在`@attribute`左边，以免覆盖传进来的值。
 
 ![](https://img1.dotnet9.com/2021/12/1711.png)
 
@@ -62,4 +62,4 @@ tags: Blazor Server,学Blazor
 1. [Blazor Attribute Splatting](https://www.pragimtech.com/blog/blazor/blazor-attribute-splatting/)
 2. [Ref: Arbitrary attributes and parameters in Blazor](https://www.pragimtech.com/blog/blazor/blazor-arbitrary-attributes/)
 
-**注：本文代码通过 .NET 6 + Visual Studio 2022重构，可点击原文链接与重构后代码比较学习，谢谢阅读，支持原作者**
+**注：本文代码通过 .NET 6 + Visual Studio 2022 重构，可点击原文链接与重构后代码比较学习，谢谢阅读，支持原作者**

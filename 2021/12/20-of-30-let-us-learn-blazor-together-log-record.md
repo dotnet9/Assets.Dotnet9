@@ -5,8 +5,8 @@ description: 在开发系统时，记录是一件很重要的事，前面都没�
 date: 2021-12-21 23:36:29
 copyright: Reprinted
 author: StrayaWorker
-originaltitle: (20/30)大家一起学Blazor：日志记录
-originallink: https://ithelp.ithome.com.tw/articles/10268616
+originalTitle: (20/30)大家一起学Blazor：日志记录
+originalLink: https://ithelp.ithome.com.tw/articles/10268616
 draft: False
 cover: https://img1.dotnet9.com/2021/12/cover_05.png
 categories: .NET
@@ -20,28 +20,20 @@ tags: Blazor Server,学Blazor
 首先打开之前建立的`BlazorWasm` 项目，在`Counter.razor`加入`@using Microsoft.Extensions.Logging;`及注入服务`@inject ILogger<Counter> _logger;`，接着在原本的`IncrementCount()`内加入要提示的信息，这边用的是`LogWarning()`，除此之外还有`LogCritical`、`LogDebug`、`LogError`等等可以使用。
 
 ```html
-@page "/counter"
-@using Microsoft.Extensions.Logging
-@inject ILogger<Counter> _logger
+@page "/counter" @using Microsoft.Extensions.Logging @inject ILogger<Counter>
+  _logger
 
-<PageTitle>Counter</PageTitle>
+  <PageTitle>Counter</PageTitle>
 
-<h1>Counter</h1>
+  <h1>Counter</h1>
 
-<p role="status">Current count: @_currentCount</p>
+  <p role="status">Current count: @_currentCount</p>
 
-<button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
+  <button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
 
-@code {
-    private int _currentCount;
-
-    private void IncrementCount()
-    {
-        _logger.LogWarning("有美女点击我了！");
-        _currentCount++;
-    }
-
-}
+  @code { private int _currentCount; private void IncrementCount() {
+  _logger.LogWarning("有美女点击我了！"); _currentCount++; } }</Counter
+>
 ```
 
 接着将启动项目改成`BlazorWasm` 项目，启动后前往`Counter` 页面，点击按钮后，按下`F12` 切换到`Console` 页签，可以看到显示了我们定义的信息。
@@ -80,9 +72,9 @@ protected override async Task OnAfterRenderAsync(bool firstRender)
 
 ![](https://img1.dotnet9.com/2021/12/3004.png)
 
-Server 的`render-mode`分为三种：`Static`、`Server`及`ServerPrerendered`，第一种速度最快，将全部`Component`都转变为静态HTML 文件；第二种最慢，会先将一种标记传出，等到使用者启动该`Component` 后才会真的渲染成`HTML` 文件；第三种是折衷方案，先把`Component` 变成`静态HTML 文件`但没有交互功能，等到使用者启动该`Component` 后才会通知`Server` 将功能补上。
+Server 的`render-mode`分为三种：`Static`、`Server`及`ServerPrerendered`，第一种速度最快，将全部`Component`都转变为静态 HTML 文件；第二种最慢，会先将一种标记传出，等到使用者启动该`Component` 后才会真的渲染成`HTML` 文件；第三种是折衷方案，先把`Component` 变成`静态HTML 文件`但没有交互功能，等到使用者启动该`Component` 后才会通知`Server` 将功能补上。
 
-这也是为什么`render-mode`改成`Server`才有效的原因，因为此时的`ConsoleLog()`还没转成JavaScript 文件。
+这也是为什么`render-mode`改成`Server`才有效的原因，因为此时的`ConsoleLog()`还没转成 JavaScript 文件。
 
 **引用：**
 
@@ -93,4 +85,4 @@ Server 的`render-mode`分为三种：`Static`、`Server`及`ServerPrerendered`�
 5. [What's the difference between RenderMode.Server and RenderMode.ServerPrerendered in blazor?](https://stackoverflow.com/questions/58229732/whats-the-difference-between-rendermode-server-and-rendermode-serverprerendered)
 6. [RenderMode Enum](https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.mvc.rendering.rendermode?view=aspnetcore-5.0)
 
-**注：本文代码通过 .NET 6 + Visual Studio 2022重构，可点击原文链接与重构后代码比较学习，谢谢阅读，支持原作者**
+**注：本文代码通过 .NET 6 + Visual Studio 2022 重构，可点击原文链接与重构后代码比较学习，谢谢阅读，支持原作者**

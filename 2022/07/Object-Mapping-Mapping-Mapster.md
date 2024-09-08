@@ -5,8 +5,8 @@ description: 在项目中我们会经常遇到对象的映射，比如像Model�
 date: 2022-07-06 20:18:46
 copyright: Reprinted
 author: 磊_磊
-originaltitle: 对象映射 - Mapping.Mapster
-originallink: https://www.cnblogs.com/zhenlei520/p/16324870.html
+originalTitle: 对象映射 - Mapping.Mapster
+originalLink: https://www.cnblogs.com/zhenlei520/p/16324870.html
 draft: False
 cover: https://img1.dotnet9.com/2022/07/cover_05.png
 categories: .NET
@@ -15,9 +15,9 @@ tags: .NET
 
 ## 前言
 
-在项目中我们会经常遇到对象的映射，比如像Model和Dto之间的映射，或者是对象的深拷贝，这些都是需要我们自己实现的。此时，项目中会出现很多初始化对象的代码，这些代码写起来相当的枯燥乏味，那么有没有什么办法减轻我们的工作量，使得我们可以把时间花费到业务功能上呢？
+在项目中我们会经常遇到对象的映射，比如像 Model 和 Dto 之间的映射，或者是对象的深拷贝，这些都是需要我们自己实现的。此时，项目中会出现很多初始化对象的代码，这些代码写起来相当的枯燥乏味，那么有没有什么办法减轻我们的工作量，使得我们可以把时间花费到业务功能上呢？
 
-目前.Net中的对象映射框架，功能强大且性能极佳的对象映射框架已经存在，其中使用最多的有:
+目前.Net 中的对象映射框架，功能强大且性能极佳的对象映射框架已经存在，其中使用最多的有:
 
 - [Mapster](https://github.com/MapsterMapper/Mapster)
 - [AutoMapper](https://github.com/AutoMapper/AutoMapper)
@@ -26,7 +26,7 @@ tags: .NET
 
 ## Mapster 简介
 
-`Mapster`是一个使用简单，功能强大的对象映射框架，自2014年开源到现在已经过去8个年头，截止到现在，github上已经拥有2.6k的star，并保持着每年3次的发版频率，其功能与AutoMapper类似，提供对象到对象的映射、并支持IQueryable到对象的映射，与`AutoMapper`相比，在速度和内存占用方面表现的更加优秀，可以在只使用1/3内存的情况下获得4倍的性能提升，那我们下面就来看看`Mapster`如何使用？
+`Mapster`是一个使用简单，功能强大的对象映射框架，自 2014 年开源到现在已经过去 8 个年头，截止到现在，github 上已经拥有 2.6k 的 star，并保持着每年 3 次的发版频率，其功能与 AutoMapper 类似，提供对象到对象的映射、并支持 IQueryable 到对象的映射，与`AutoMapper`相比，在速度和内存占用方面表现的更加优秀，可以在只使用 1/3 内存的情况下获得 4 倍的性能提升，那我们下面就来看看`Mapster`如何使用？
 
 ### 准备工作
 
@@ -65,7 +65,7 @@ var user = new
 };
 ```
 
-3. 将user源对象映射到目标对象 (UserDto)
+3. 将 user 源对象映射到目标对象 (UserDto)
 
 ```csharp
 var userDto = user.Adapt<UserDto>();
@@ -82,7 +82,7 @@ Console.WriteLine($"映射到新对象，Name: {userDto.Name}");
 
 **基本类型**
 
-- 提供类型映射的功能，类似Convert.ChangeType()
+- 提供类型映射的功能，类似 Convert.ChangeType()
 
 ```csharp
 string res = "123";
@@ -90,13 +90,13 @@ decimal i = res.Adapt<decimal>(); //equal to (decimal)123;
 Console.WriteLine($"结果为：{i == int.Parse(res)}");
 ```
 
-运行控制台程序: 
+运行控制台程序:
 
 ![基本类型转换](https://img1.dotnet9.com/2022/07/0502.png)
 
 **枚举类型**
 
-- 把枚举映射到数字类型，同样也支持字符串到枚举和枚举到字符串的映射，比.NET的默认实现快两倍
+- 把枚举映射到数字类型，同样也支持字符串到枚举和枚举到字符串的映射，比.NET 的默认实现快两倍
 
 ```csharp
 var fileMode = "Create, Open".Adapt<FileMode>();//等于 FileMode.Create | FileMode.Open
@@ -107,9 +107,9 @@ Console.WriteLine($"枚举类型转换的结果为：{fileMode == (FileMode.Crea
 
 ![枚举类型转换](https://img1.dotnet9.com/2022/07/0503.png)
 
-### Queryable扩展
+### Queryable 扩展
 
-Mapster提供了Queryable的扩展，用于实现DbContext的按需查找，例如:
+Mapster 提供了 Queryable 的扩展，用于实现 DbContext 的按需查找，例如:
 
 1. 新建类`UserDbContext`
 
@@ -153,7 +153,7 @@ public class User
 }
 ```
 
-3. 使用基于Queryable的扩展方法`ProjectToType`
+3. 使用基于 Queryable 的扩展方法`ProjectToType`
 
 ```csharp
 using (var dbContext = new UserDbContext())
@@ -177,9 +177,9 @@ using (var dbContext = new UserDbContext())
 
 ![Queryable扩展](https://img1.dotnet9.com/2022/07/0504.png)
 
-除此之外，`Mapster`还提供了映射前/后处理，拷贝与合并以及映射配置嵌套支持，详细可查看[文档](https://www.cnblogs.com/staneee/p/14912794.html)，既然`Mapster`已经如此强大，那我直接使用它就可以了，为什么还要使用`Masa`提供的Mapper呢？
+除此之外，`Mapster`还提供了映射前/后处理，拷贝与合并以及映射配置嵌套支持，详细可查看[文档](https://www.cnblogs.com/staneee/p/14912794.html)，既然`Mapster`已经如此强大，那我直接使用它就可以了，为什么还要使用`Masa`提供的 Mapper 呢？
 
-## 什么是Masa.Contrib.Data.Mapping.Mapster？
+## 什么是 Masa.Contrib.Data.Mapping.Mapster？
 
 `Masa.Contrib.Data.Mapping.Mapster`是基于`Mapster`的一个对象到对象的映射器，并在原来`Mapster`的基础上增加自动获取并使用最佳构造函数映射，支持嵌套映射，减轻映射的工作量。
 
@@ -189,7 +189,7 @@ using (var dbContext = new UserDbContext())
 
 - 目标对象存在多个构造函数：获取最佳构造函数映射
 
->最佳构造函数: 目标对象构造函数参数数量从大到小降序查找，参数名称一致（不区分大小写）且参数类型与源对象属性一致
+> 最佳构造函数: 目标对象构造函数参数数量从大到小降序查找，参数名称一致（不区分大小写）且参数类型与源对象属性一致
 
 ### 准备工作
 
@@ -276,7 +276,7 @@ Console.WriteLine($"{nameof(Order.TotalPrice)} is {order.TotalPrice}");//控制�
 Console.ReadKey();
 ```
 
-如果转换成功，TotalPrice的值应该是49.9，那么我们运行控制台程序来验证转换是否成功：
+如果转换成功，TotalPrice 的值应该是 49.9，那么我们运行控制台程序来验证转换是否成功：
 
 ![Mapping.Mapster](https://img1.dotnet9.com/2022/07/0505.png)
 
@@ -292,7 +292,7 @@ Console.ReadKey();
 
 目前`Masa.Contrib.Data.Mapping.Mapster`的功能相对较弱，当前版本与`Mapster`的相比仅仅增加了一个自动获取并使用最佳构造函数的功能，让我们在面对无空构造函数且拥有多个构造函数的类时也能轻松的完成映射，不需要额外多写一行代码。
 
-但我觉得`Masa`版的Mapping最大的好处是项目依赖的是`BuildingBlocks`下的`IMapper`，而不是`Mapster`，这也就使得我们的项目与具体的映射器实现脱离，如果我们被要求项目必须要使用`AutoMapper`，只需要实现`AutoMapper`版的`IMapper`即可，无需更改太多的业务代码，仅需要更换一下引用的包即可，这也是`BuildingBlocks`的魅力所在
+但我觉得`Masa`版的 Mapping 最大的好处是项目依赖的是`BuildingBlocks`下的`IMapper`，而不是`Mapster`，这也就使得我们的项目与具体的映射器实现脱离，如果我们被要求项目必须要使用`AutoMapper`，只需要实现`AutoMapper`版的`IMapper`即可，无需更改太多的业务代码，仅需要更换一下引用的包即可，这也是`BuildingBlocks`的魅力所在
 
 ## 本章源码
 

@@ -5,8 +5,8 @@ description: Coravel 帮助开发人员在不影响代码质量的情况下快�
 date: 2022-07-07 07:34:12
 copyright: Reprinted
 author: 黑哥聊dotNet
-originaltitle: Coravel是.NetCore中开源的工具库，可以让你使用定时任务，缓存，队列，事件，广播等高级应用程序变得轻而易举！
-originallink: https://mp.weixin.qq.com/s/q6mNrmulYKnnhqLKxubz2A
+originalTitle: Coravel是.NetCore中开源的工具库，可以让你使用定时任务，缓存，队列，事件，广播等高级应用程序变得轻而易举！
+originalLink: https://mp.weixin.qq.com/s/q6mNrmulYKnnhqLKxubz2A
 draft: False
 cover: https://img1.dotnet9.com/2022/07/cover_06.png
 categories: .NET
@@ -15,13 +15,13 @@ tags: .NET
 
 ## Coravel
 
-Coravel是.NetCore中开源的工具库，可以让你使用定时任务，缓存，队列，事件，广播等高级应用程序变得轻而易举！
+Coravel 是.NetCore 中开源的工具库，可以让你使用定时任务，缓存，队列，事件，广播等高级应用程序变得轻而易举！
 
 Coravel 帮助开发人员在不影响代码质量的情况下快速启动和运行他们的 .NET Core 应用程序。
 
 它通过为您提供简单、富有表现力和直接的语法，使高级应用程序功能易于访问和使用。
 
-Github地址: [https://github.com/jamesmh/coravel](https://github.com/jamesmh/coravel)
+Github 地址: [https://github.com/jamesmh/coravel](https://github.com/jamesmh/coravel)
 
 ## 安装
 
@@ -35,7 +35,7 @@ dotnet add package coravel
 
 **配置**
 
-在 .NET Core 应用程序的Startup.cs文件中，在ConfigureServices()方法内，添加以下内容：
+在 .NET Core 应用程序的 Startup.cs 文件中，在 ConfigureServices()方法内，添加以下内容：
 
 ```csharp
 services.AddScheduler()
@@ -43,7 +43,7 @@ services.AddScheduler()
 
 **使用**
 
-然后在Configure()方法中，可以使用调度器：
+然后在 Configure()方法中，可以使用调度器：
 
 ```csharp
 var provider = app.ApplicationServices;
@@ -61,7 +61,7 @@ provider.UseScheduler(scheduler =>
 
 **配置**
 
-在您的Startup文件中，在ConfigureServices()：
+在您的 Startup 文件中，在 ConfigureServices()：
 
 ```csharp
 services.AddQueue();
@@ -101,7 +101,7 @@ public IActionResult QueueTask() {
 
 **配置**
 
-在Startup.ConfigureServices()：
+在 Startup.ConfigureServices()：
 
 ```csharp
 services.AddCache();
@@ -128,13 +128,13 @@ Coravel 的事件广播允许侦听器订阅应用程序中发生的事件。
 
 **配置**
 
-在ConfigureServices方法中：
+在 ConfigureServices 方法中：
 
 ```csharp
 services.AddEvents();
 ```
 
-接下来，在Configure方法中：
+接下来，在 Configure 方法中：
 
 ```csharp
 var provider = app.ApplicationServices;
@@ -152,11 +152,11 @@ registration
 
 **使用**
 
-创建一个实现接口的类Coravel.Events.Interfaces.IEvent。就是这样！
+创建一个实现接口的类 Coravel.Events.Interfaces.IEvent。就是这样！
 
 事件只是将提供给每个侦听器的数据对象。它应该公开与此特定事件关联的数据。
 
-例如，一个BlogPostCreated事件应该接受BlogPost创建的，然后通过公共属性公开它。
+例如，一个 BlogPostCreated 事件应该接受 BlogPost 创建的，然后通过公共属性公开它。
 
 ```csharp
 public class BlogPostCreated : IEvent
@@ -172,9 +172,9 @@ public class BlogPostCreated : IEvent
 
 创建一个新类，该类实现您将要监听的事件`Coravel.Events.Interfaces.IListener`的接口。**提示:每个侦听器只能与一个事件相关联。**
 
-该IListener接口需要您实现`HandleAsync(TEvent broadcasted)`。
+该 IListener 接口需要您实现`HandleAsync(TEvent broadcasted)`。
 
-创建一个名为TweetNewPost的侦听器：
+创建一个名为 TweetNewPost 的侦听器：
 
 ```csharp
 public class TweetNewPost : IListener<BlogPostCreated>
@@ -199,15 +199,15 @@ public class TweetNewPost : IListener<BlogPostCreated>
 
 安装 Nuget 包`Coravel.Mailer`，搭建一些基本文件：
 
-- ~/Views/Mail/_ViewStart.cshtml- 配置邮件视图以使用 Coravel 的电子邮件模板
-- ~/Views/Mail/_ViewImports.cshtml- 允许您使用 Coravel 的视图组件 
+- ~/Views/Mail/\_ViewStart.cshtml- 配置邮件视图以使用 Coravel 的电子邮件模板
+- ~/Views/Mail/\_ViewImports.cshtml- 允许您使用 Coravel 的视图组件
 - ~/Views/Mail/Example.cshtml- 示例邮件视图
 - ~/Mailables/Example.cs- 可邮寄样本
 
-在Startup.ConfigureServices()：
+在 Startup.ConfigureServices()：
 
 ```csharp
-services.AddMailer(this.Configuration); 
+services.AddMailer(this.Configuration);
 ```
 
 **使用**
@@ -236,6 +236,6 @@ namespace App.Mailables
 }
 ```
 
-Mailable 的所有配置都在该Build()方法中完成。然后，您可以调用各种方法，例如To和From来配置收件人、发件人等。
+Mailable 的所有配置都在该 Build()方法中完成。然后，您可以调用各种方法，例如 To 和 From 来配置收件人、发件人等。
 
-如果大家对.net开源项目感兴趣可以持续关注我。
+如果大家对.net 开源项目感兴趣可以持续关注我。

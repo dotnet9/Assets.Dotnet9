@@ -5,8 +5,8 @@ description: async/await 的辅助库
 date: 2022-07-08 07:21:19
 copyright: Reprinted
 author: 黑哥聊dotNet
-originaltitle: AsyncEx - async/await 的辅助库
-originallink: https://mp.weixin.qq.com/s/WyGsouPOZ-85NQRqpfYZzQ
+originalTitle: AsyncEx - async/await 的辅助库
+originalLink: https://mp.weixin.qq.com/s/WyGsouPOZ-85NQRqpfYZzQ
 draft: False
 cover: https://img1.dotnet9.com/2022/07/cover_10.png
 categories: .NET
@@ -21,7 +21,7 @@ async/await 的辅助库。
 
 ## 安装
 
-安装Nuget包 [Nito.AsyncEx](http://www.nuget.org/packages/Nito.AsyncEx)
+安装 Nuget 包 [Nito.AsyncEx](http://www.nuget.org/packages/Nito.AsyncEx)
 
 ```shell
 Install-Package Nito.AsyncEx -Version 5.1.2
@@ -53,7 +53,7 @@ public async Task UseLockAsync()
 {
   // Attempt to take the lock only for 2 seconds.
   var cts = new CancellationTokenSource(TimeSpan.FromSeconds(2));
-  
+
   // If the lock isn't available after 2 seconds, this will
   //  raise OperationCanceledException.
   using (await _mutex.LockAsync(cts.Token))
@@ -85,7 +85,7 @@ public void UseLock()
 
 ### AsyncContext
 
-该`AsyncContext`类型提供了执行异步操作的上下文。`await`关键字需要返回一个上下文。对于大多数客户端程序，这是一个 `UI 上下文`；对于大多数服务端程序，这是一个`线程池上下文`。`AsyncContextThread`是一个单独的线程或任务，它运行`AsyncContext`。 `AsyncContextThread`不是从`Thread`类派生的。`AsyncContext`线程在创建后立即开始运行。`AsyncContextThread`将一直停留在其循环中，直到另一个线程调用`JoinAsync`。 处置 an AsyncContextThread也会要求它退出。
+该`AsyncContext`类型提供了执行异步操作的上下文。`await`关键字需要返回一个上下文。对于大多数客户端程序，这是一个 `UI 上下文`；对于大多数服务端程序，这是一个`线程池上下文`。`AsyncContextThread`是一个单独的线程或任务，它运行`AsyncContext`。 `AsyncContextThread`不是从`Thread`类派生的。`AsyncContext`线程在创建后立即开始运行。`AsyncContextThread`将一直停留在其循环中，直到另一个线程调用`JoinAsync`。 处置 an AsyncContextThread 也会要求它退出。
 
 ```csharp
 class Program
@@ -110,6 +110,6 @@ class Program
 
 ![](https://img1.dotnet9.com/2022/07/1001.png)
 
-- Github地址：[https://github.com/StephenCleary/AsyncEx](https://github.com/StephenCleary/AsyncEx)
+- Github 地址：[https://github.com/StephenCleary/AsyncEx](https://github.com/StephenCleary/AsyncEx)
 
-最后大家如果喜欢我的文章，还麻烦给个关注并点个赞, 希望net生态圈越来越好！
+最后大家如果喜欢我的文章，还麻烦给个关注并点个赞, 希望 net 生态圈越来越好！

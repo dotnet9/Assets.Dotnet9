@@ -5,8 +5,8 @@ description: 最近公司需要开发项目能在Linux系统上运行，示例�
 date: 2022-05-11 06:35:47
 copyright: Reprinted
 author: chaney1992
-originaltitle: .NET Core + Angular 项目 部署到CentOS
-originallink: https://www.cnblogs.com/cwsheng/p/14129063.html
+originalTitle: .NET Core + Angular 项目 部署到CentOS
+originalLink: https://www.cnblogs.com/cwsheng/p/14129063.html
 draft: False
 cover: https://img1.dotnet9.com/2022/05/3002.png
 categories: .NET
@@ -15,35 +15,35 @@ tags: Web API
 
 ## 前言
 
-最近公司需要开发项目能在Linux系统上运行，示例开发项目采用.Net Core + Angular开发；理论上完全支持跨平台。
+最近公司需要开发项目能在 Linux 系统上运行，示例开发项目采用.Net Core + Angular 开发；理论上完全支持跨平台。
 
 但是实践才是检验真理的唯一标准；那么还是动手来验证实现下；过程中万一出现什么问题也算是积累经验。
 
 ## 一、环境准备
 
-由于本次主要验证项目部署Linux环境，也不想去重新搭建一个虚拟机环境；就使用Win10中Linux子系统（[WSL什么？](https://docs.microsoft.com/zh-cn/windows/wsl/about)）
+由于本次主要验证项目部署 Linux 环境，也不想去重新搭建一个虚拟机环境；就使用 Win10 中 Linux 子系统（[WSL 什么？](https://docs.microsoft.com/zh-cn/windows/wsl/about)）
 
-1. WSL启用步骤：
+1. WSL 启用步骤：
 
-- 进入【启用或关闭Windows功能】中启用WSL，如下图
+- 进入【启用或关闭 Windows 功能】中启用 WSL，如下图
 
 ![](https://img1.dotnet9.com/2022/05/3001.png)
 
-- 进入Microsoft store 选择相应版本，本机安装的是CentOS
-　　
+- 进入 Microsoft store 选择相应版本，本机安装的是 CentOS
+
 ![](https://img1.dotnet9.com/2022/05/3002.png)
 
 - 安装完成后启动时（出现问题）
-　　
+
 ![](https://img1.dotnet9.com/2022/05/3003.png)
 
-最终确定问题原因：[需要更新Linux内核包](https://github.com/microsoft/WSL/issues/5393)（更新包下载地址：[https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi](https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi)）
+最终确定问题原因：[需要更新 Linux 内核包](https://github.com/microsoft/WSL/issues/5393)（更新包下载地址：[https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi](https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi)）
 
-下载安装后，CentOS系统环境准备好了。
+下载安装后，CentOS 系统环境准备好了。
 
 2. NET Core 环境安装：
 
-- 更新下系统基础软件版本(可不执行)　　
+- 更新下系统基础软件版本(可不执行)
 
 ```shell
 sudo yum update
@@ -55,17 +55,17 @@ sudo yum update
 sudo rpm -Uvh https://packages.microsoft.com/config/rhel/7/packages-microsoft-prod.rpm
 ```
 
-- 安装.NET Core SDK，示例程序采用3.1版本开发(站长注：现在2022年5月11日，[.NET 7 Preview 4](https://devblogs.microsoft.com/dotnet/announcing-dotnet-7-preview-4/)已经发布)
+- 安装.NET Core SDK，示例程序采用 3.1 版本开发(站长注：现在 2022 年 5 月 11 日，[.NET 7 Preview 4](https://devblogs.microsoft.com/dotnet/announcing-dotnet-7-preview-4/)已经发布)
 
 ```shell
 sudo yum install dotnet-sdk-3.1
 ```
 
 - 查看是安装成功，如图则表示已经安装成功
-　　
+
 ![](https://img1.dotnet9.com/2022/05/3004.png)
 
-3. Nginx环境安装：（部署web项目）　　
+3. Nginx 环境安装：（部署 web 项目）
 
 - 依赖环境安装
 
@@ -76,46 +76,46 @@ yum install zlib zlib-devel
 yum install openssl openssl--devel
 ```
 
-- 添加Nginx的yum库
+- 添加 Nginx 的 yum 库
 
 ```shell
 sudo rpm -Uvh http://nginx.org/packages/centos/7/noarch/RPMS/nginx-release-centos-7-0.el7.ngx.noarch.rpm
 ```
 
-- 安装Nginx
+- 安装 Nginx
 
 ```shell
 sudo yum install nginx
 ```
 
-- Nginx基本信息
+- Nginx 基本信息
 
 目录结构：
 
-|      | Nginx目录 |
-| ---- | ---- |
-| 配置路径 | /etc/nginx/ |
-| 错误日志 | /var/log/nginx/error.log |
-| 访问日志 | /var/log/nginx/access.log |
-| 默认站点目录	/usr/share/nginx/html |
+|                                    | Nginx 目录                |
+| ---------------------------------- | ------------------------- |
+| 配置路径                           | /etc/nginx/               |
+| 错误日志                           | /var/log/nginx/error.log  |
+| 访问日志                           | /var/log/nginx/access.log |
+| 默认站点目录 /usr/share/nginx/html |
 
 基本命令：
 
-- nginx 　　　　　　//启动nginx
-- nginx -s quit 　　　//停止nginx
-- nginx -s reload 　   //重新载入配置文件
+- nginx 　　　　　　//启动 nginx
+- nginx -s quit 　　　//停止 nginx
+- nginx -s reload 　 //重新载入配置文件
 
 ## 二、项目部署
 
-部署项目到CentOS有多种方式：直接运行、Docker部署（前面学习文章已多次使用），本次就采用直接运行方式来部署应用。由于项目采用前后端分离实现，需要分别部署
+部署项目到 CentOS 有多种方式：直接运行、Docker 部署（前面学习文章已多次使用），本次就采用直接运行方式来部署应用。由于项目采用前后端分离实现，需要分别部署
 
 - 服务端部署
 
-1、将服务端项目文件拷贝到CentOS目录中：本次部署路径为：/home/www/publish
+1、将服务端项目文件拷贝到 CentOS 目录中：本次部署路径为：/home/www/publish
 
 ![](https://img1.dotnet9.com/2022/05/3005.png)
 
-2、修改配置文件：需要使用vim命令（需要单独安装）
+2、修改配置文件：需要使用 vim 命令（需要单独安装）
 
 通过命令进入配置文件编辑：
 
@@ -138,7 +138,7 @@ vim命令
 
 3、启动服务
 
-进入项目目录执行命令：　　　
+进入项目目录执行命令：
 
 ```sehll
 [root@Coder supervisor]# cd /home/www/publish
@@ -149,9 +149,9 @@ vim命令
 
 - 前端项目部署
 
-1、将web项目拷贝到：`/home/www/web`
+1、将 web 项目拷贝到：`/home/www/web`
 
-2、在Nginx配置文件目录中添加配置文件web.conf
+2、在 Nginx 配置文件目录中添加配置文件 web.conf
 
 ```json
 server {
@@ -177,10 +177,10 @@ server {
     }
 }
 ```
- 
-**注意： 由于Angular项目中使用了路由重定向，则需要使用标记内容**
 
-3、更新Nginx配置文件：　　　　
+**注意： 由于 Angular 项目中使用了路由重定向，则需要使用标记内容**
+
+3、更新 Nginx 配置文件：
 
 ```shell
 /usr/sbin/nginx -s reload
@@ -192,15 +192,15 @@ server {
 
 ![](https://img1.dotnet9.com/2022/05/3008.png)
 
-Web项目运行效果：
+Web 项目运行效果：
 
-![](https://img1.dotnet9.com/2022/05/3009.png)　　
+![](https://img1.dotnet9.com/2022/05/3009.png)
 
-到此项目已成功运行，但是当我把CentOS命令结束运行，则web服务端停止运行，那么需要把创建服务实现守护进程
+到此项目已成功运行，但是当我把 CentOS 命令结束运行，则 web 服务端停止运行，那么需要把创建服务实现守护进程
 
 ## 四、守护进程创建-supervisor
 
-1、安装supervisor
+1、安装 supervisor
 
 ```shell
 #安装python的扩展
@@ -243,7 +243,7 @@ cd /etc/supervisor
 supervisord -c supervisord.conf
 ```
 
-4、开启守护进程的界面管理功能　　
+4、开启守护进程的界面管理功能
 
 ```shell
 #修改配置文件：
@@ -272,8 +272,8 @@ $ supervisorctl status #查看所有任务状态
 
 ## 五、总结
 
-在CentOS系统中运行部署运行项目，主要是Linux相关内容是否熟练：如命令、权限、软件等相关内容，不管什么还是需要孰能生巧，多加练习吧。
+在 CentOS 系统中运行部署运行项目，主要是 Linux 相关内容是否熟练：如命令、权限、软件等相关内容，不管什么还是需要孰能生巧，多加练习吧。
 
-另外WSL中的Linux系统还是不够全面，暂时没有**服务、防火墙**相关功能，所以如果在真实环境中，可以设置服务开机启动、以及防火墙相关处理。
+另外 WSL 中的 Linux 系统还是不够全面，暂时没有**服务、防火墙**相关功能，所以如果在真实环境中，可以设置服务开机启动、以及防火墙相关处理。
 
 所以还是需要找个完整环境进行学习练习。

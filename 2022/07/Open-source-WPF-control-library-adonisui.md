@@ -4,16 +4,16 @@ slug: Open-source-WPF-control-library-adonisui
 description: 用于 WPF 应用程序的轻量级 UI 工具包，提供经典和增强的 Windows 视觉效果
 date: 2022-07-14 20:44:21
 copyright: Original
-originaltitle: 开源WPF控件库-AdonisUI
+originalTitle: 开源WPF控件库-AdonisUI
 draft: False
 cover: https://img1.dotnet9.com/2022/07/1501.gif
 categories: .NET
 tags: .NET,开源WPF
 ---
 
->原文：[https://github.com/benruehl/adonis-ui](https://github.com/benruehl/adonis-ui)
+> 原文：[https://github.com/benruehl/adonis-ui](https://github.com/benruehl/adonis-ui)
 >
->翻译：沙漠尽头的狼(谷歌翻译加持)
+> 翻译：沙漠尽头的狼(谷歌翻译加持)
 
 用于 WPF 应用程序的轻量级 UI 工具包，提供经典和增强的 Windows 视觉效果:
 
@@ -23,7 +23,6 @@ tags: .NET,开源WPF
 
 - 仓库地址：[https://github.com/benruehl/adonis-ui](https://github.com/benruehl/adonis-ui)
 - Demo：[https://github.com/benruehl/adonis-ui#demo](https://github.com/benruehl/adonis-ui#demo)
-
 
 ![](https://img1.dotnet9.com/2022/07/1504.png)
 
@@ -84,8 +83,8 @@ Install-Package AdonisUI.ClassicTheme -Version 1.17.1
 
 Adonis UI 带有浅色和深色配色方案。可以不受限制地添加自定义配色方案。
 
-| 浅色方案                                                    | 深色方案 Scheme                                                   |
-| --------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| 浅色方案                                                                  | 深色方案 Scheme                                                          |
+| ------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
 | ![Light color scheme overview](https://img1.dotnet9.com/2022/07/1505.gif) | ![Dark color scheme overview](https://img1.dotnet9.com/2022/07/1506.gif) |
 
 要在运行时切换配色方案，`ResourceDictionary`需要从应用程序资源中删除包含方案的所有颜色和画笔，以便可以添加不同的配色方案。这可以使用内置`ResourceLocator`类来完成，例如在单击事件处理程序中。
@@ -94,7 +93,7 @@ Adonis UI 带有浅色和深色配色方案。可以不受限制地添加自定�
 AdonisUI.ResourceLocator.SetColorScheme(Application.Current.Resources, ResourceLocator.DarkColorScheme);
 ```
 
-第一个参数必须是对ResourceDictionary包含配色方案的引用，作为其`MergedDictionaries`。 第二个参数是应添加的配色方案的 Uri。
+第一个参数必须是对 ResourceDictionary 包含配色方案的引用，作为其`MergedDictionaries`。 第二个参数是应添加的配色方案的 Uri。
 
 [阅读有关切换配色方案的更多信息](https://benruehl.github.io/adonis-ui/docs/guides/colors-and-brushes/#switching-color-schemes-at-runtime)
 
@@ -108,8 +107,8 @@ AdonisUI.ResourceLocator.SetColorScheme(Application.Current.Resources, ResourceL
 
 Adonis UI 带来了一个自定义窗口标题栏，默认情况下看起来与 Windows 10 标题栏一模一样，但有几个优点。首先，它尊重当前的配色方案，因此在切换到深色配色方案时它会变暗。其次，它的颜色也可以独立于颜色方案设置，例如通过绑定和触发器。第三，它的内容可以很容易地定制，例如通过隐藏图标、添加额外的按钮或在其中放置标签。派生您的窗口`AdonisWindow`以接收这些功能。
 
-|                                                                 |                                                                       |
-| --------------------------------------------------------------- | --------------------------------------------------------------------- |
+|                                                                                       |                                                                                             |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
 | ![Custom green title bar](https://img1.dotnet9.com/2022/07/adonis-titlebar-green.png) | ![Custom yellow title bar](https://img1.dotnet9.com/2022/07/adonis-titlebar-yellow.png)     |
 | ![Custom red title bar](https://img1.dotnet9.com/2022/07/adonis-titlebar-red.png)     | ![Custom gradient title bar](https://img1.dotnet9.com/2022/07/adonis-titlebar-gradient.png) |
 
@@ -119,8 +118,8 @@ Adonis UI 带来了一个自定义窗口标题栏，默认情况下看起来与 
 
 依赖交互的 UI 控件（如按钮、文本框、组合框、列表框等）在此处使用称为 `Cursor Spotlight` 的悬停效果。当将鼠标悬停在隐藏的控件上时，它会使光标周围的图层可见。它适用于两种配色方案。
 
-| 浅色方案                                                    | 深色方案 Scheme                                                   |
-| --------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| 浅色方案                                                                  | 深色方案 Scheme                                                          |
+| ------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
 | ![Light color scheme overview](https://img1.dotnet9.com/2022/07/1508.gif) | ![Dark color scheme overview](https://img1.dotnet9.com/2022/07/1509.gif) |
 
 因为它与`OpacityMasks`一起作用不仅限于照亮 UI 控件。它可以用来隐藏几乎所有可以用 WPF 渲染的东西。
@@ -131,8 +130,8 @@ Adonis UI 带来了一个自定义窗口标题栏，默认情况下看起来与 
 
 默认情况下，按钮和 ContextMenuItem 在单击时会显示涟漪效果。ListBoxItems 也支持它，但默认情况下禁用它。
 
-| 浅色方案                                                    | 深色方案 Scheme                                                   |
-| --------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| 浅色方案                                                                  | 深色方案 Scheme                                                          |
+| ------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
 | ![Light color scheme overview](https://img1.dotnet9.com/2022/07/1510.gif) | ![Dark color scheme overview](https://img1.dotnet9.com/2022/07/1511.gif) |
 
 [阅读有关涟漪效应的更多信息](https://benruehl.github.io/adonis-ui/docs/guides/ripple/)
@@ -143,8 +142,8 @@ Adonis UI 带来了一个自定义窗口标题栏，默认情况下看起来与 
 
 这就是为什么 Adonis UI 引入了一个简单的分层系统，它可以根据 UI 控件所属的层自动调整 UI 控件的颜色。默认情况下，所有样式的 Adonis UI 都会自动适应系统，但也可以禁用它。
 
-| 浅色方案                                                    | 深色方案 Scheme                                                   |
-| --------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| 浅色方案                                                                  | 深色方案 Scheme                                                          |
+| ------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
 | ![Light color scheme overview](https://img1.dotnet9.com/2022/07/1512.png) | ![Dark color scheme overview](https://img1.dotnet9.com/2022/07/1502.png) |
 
 这些图像显示了一个由 Buttons 和 GroupBoxes 组成的简单布局。所有控件都使用它们的默认样式，除了它们的内容之外没有设置任何属性。分层系统负责稍微调整每层按钮的颜色和 GroupBoxes 的背景。它确保容器的背景和容器中控件的背景始终存在差异。如果没有系统，所有按钮都将具有完全相同的背景颜色。
@@ -157,8 +156,8 @@ Adonis UI 带来了一个自定义窗口标题栏，默认情况下看起来与 
 
 WPF 的数据验证机制提供了验证属性值并在它们无效时分配错误消息的能力。在 Adonis UI 中，如果控件绑定到无效属性，则错误会在控件模板中由红色边框和错误图标指示。当控件获得键盘焦点或用户将鼠标悬停在图标上时，错误消息将显示为弹出窗口。要设置验证错误，可以使用接口`IDataErrorInfo`或`WPF`。
 
-| 浅色方案                                                    | 深色方案 Scheme                                                   |
-| --------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| 浅色方案                                                                  | 深色方案 Scheme                                                          |
+| ------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
 | ![Light color scheme overview](https://img1.dotnet9.com/2022/07/1503.png) | ![Dark color scheme overview](https://img1.dotnet9.com/2022/07/1513.png) |
 
 默认情况下，错误消息弹出窗口显示在键盘焦点和鼠标悬停上。两者都可以单独禁用。
@@ -173,7 +172,7 @@ WPF 的数据验证机制提供了验证属性值并在它们无效时分配错�
 
 ### Space
 
-控件之间的Space通常由边距、填充和网格行和列控制。为了确保每个位置的Space一致，可以选择一个固定的大小，在任何地方都使用（或它的倍数）。Adonis UI 提供了一个支持您这样做的系统。默认情况下，空间的基值为`8`，但可以分别针对水平和垂直空间进行调整。
+控件之间的 Space 通常由边距、填充和网格行和列控制。为了确保每个位置的 Space 一致，可以选择一个固定的大小，在任何地方都使用（或它的倍数）。Adonis UI 提供了一个支持您这样做的系统。默认情况下，空间的基值为`8`，但可以分别针对水平和垂直空间进行调整。
 
 可以像这样应用空间：
 
@@ -195,6 +194,7 @@ WPF 的数据验证机制提供了验证属性值并在它们无效时分配错�
 [阅读有关空间的更多信息](https://benruehl.github.io/adonis-ui/docs/guides/space/)
 
 ## 演示
+
 板上有一个 WPF 演示应用程序，它显示了 Adonis UI 的大部分功能。请不要犹豫，试一试。
 
 [在这里下载](https://github.com/benruehl/adonis-ui/releases/download/1.17/AdonisUI.Demo.zip)
@@ -202,7 +202,6 @@ WPF 的数据验证机制提供了验证属性值并在它们无效时分配错�
 ## License
 
 MIT © Benjamin Rühl
-
 
 ## 参考
 

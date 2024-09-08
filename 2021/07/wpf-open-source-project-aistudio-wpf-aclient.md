@@ -5,7 +5,7 @@ description: 使用Prism做MVVM，优点咱就不说了，主要用了容器注�
 date: 2021-07-25 12:06:07
 banner: false
 copyright: Original
-originaltitle: WPF开源项目：AIStudio.Wpf.AClient
+originalTitle: WPF开源项目：AIStudio.Wpf.AClient
 draft: False
 cover: https://img1.dotnet9.com/2021/07/cover_01.png
 categories: .NET
@@ -14,17 +14,15 @@ tags: WPF,Prism,MVVM,ASP.NET Core,开源WPF
 
 ## 介绍
 
-Wpf客户端，AIStudio.Wpf.AClient
+Wpf 客户端，AIStudio.Wpf.AClient
 
 ![](https://img1.dotnet9.com/2021/07/0101.png)
 
-
-
 ## 软件架构
 
-本框架使用Prism做MVVM，优点咱就不说了，主要用了容器注入，消息和DI，比自己写省很多事。网上有很多标准的MVVM的使用方法，但是没有形成一个系统级的框架。本框架从登录到具体业务的使用，还有自动升级都搭建完成，没有大神写的那么好，只是起个抛砖引玉的作用。
+本框架使用 Prism 做 MVVM，优点咱就不说了，主要用了容器注入，消息和 DI，比自己写省很多事。网上有很多标准的 MVVM 的使用方法，但是没有形成一个系统级的框架。本框架从登录到具体业务的使用，还有自动升级都搭建完成，没有大神写的那么好，只是起个抛砖引玉的作用。
 
-后端使用ASP.net core，采用的是Colder.Admin.AntdVue的框架，强烈推荐大家去看，我在其基础上增加了一些功能，
+后端使用 ASP.net core，采用的是 Colder.Admin.AntdVue 的框架，强烈推荐大家去看，我在其基础上增加了一些功能，
 
 网页客户端浏览地址（账号密码：Admin，Admin）：
 
@@ -32,10 +30,9 @@ Wpf客户端，AIStudio.Wpf.AClient
 http://121.36.12.76:5001/
 ```
 
-
 接口浏览地址http://121.36.12.76:5000/
 
-Wpf客户端下载可以直接运行，默认配置文件 AIStudio.Wpf.Client.exe.Config
+Wpf 客户端下载可以直接运行，默认配置文件 AIStudio.Wpf.Client.exe.Config
 
 ```xml
 <appSettings>
@@ -55,27 +52,26 @@ Wpf客户端下载可以直接运行，默认配置文件 AIStudio.Wpf.Client.ex
   </appSettings>
 ```
 
-
-其中ServerIP就是后台接口地址，http://121.36.12.76:5000可直接使用。
+其中 ServerIP 就是后台接口地址，http://121.36.12.76:5000可直接使用。
 
 账号密码：Admin，Admin。
-如果不连服务器，只看DemoPage，账号密码LocalUser，LocalUser。
+如果不连服务器，只看 DemoPage，账号密码 LocalUser，LocalUser。
 
-如果不连服务器，还可以使用SQLite本地数据，客户端可以独立运行。账号密码Admin, Admin
+如果不连服务器，还可以使用 SQLite 本地数据，客户端可以独立运行。账号密码 Admin, Admin
 
 ```xml
-<add key="ServerIP" value=""/> 
+<add key="ServerIP" value=""/>
 <add key="UpdateAddress" value="http://121.36.12.76:5000/Update/AutoUpdater.xml"/>
 <add key="ConString" value="Data Source=Admin.db"/>
 <add key="DatabaseType" value="SQLite"/>
 <add key="DeleteMode" value="Logic"/>
 ```
 
-注释掉ServerIP，那么是使用efcore获取数据，改变ConString和DatabaseType即可。另外，默认数据库删除模式为软删除。
+注释掉 ServerIP，那么是使用 efcore 获取数据，改变 ConString 和 DatabaseType 即可。另外，默认数据库删除模式为软删除。
 
 ## 部分截图
 
-下面上客户端部分截图，作者对该项目还在调整，源码、UI美观度等还在优化，欢迎给该作者提建议（带完整RBAC权限）：
+下面上客户端部分截图，作者对该项目还在调整，源码、UI 美观度等还在优化，欢迎给该作者提建议（带完整 RBAC 权限）：
 
 **系统管理**
 
@@ -121,17 +117,17 @@ Wpf客户端下载可以直接运行，默认配置文件 AIStudio.Wpf.Client.ex
 
 ## 与作者技术交流
 
->作者微信：akwkevin
+> 作者微信：akwkevin
 >
->作者QQ：80267720
+> 作者 QQ：80267720
 >
->QQ技术交流群:51286643（进群提供服务端的开源代码地址）
+> QQ 技术交流群:51286643（进群提供服务端的开源代码地址）
 >
->个人博客:https://www.cnblogs.com/akwkevin/
+> 个人博客:https://www.cnblogs.com/akwkevin/
 >
->文中项目仓库地址：https://gitee.com/akwkevin/aistudio.-wpf.-aclient
+> 文中项目仓库地址：https://gitee.com/akwkevin/aistudio.-wpf.-aclient
 
-大家可关注作者gitee账号，还有其他项目，比如：WPF开源项目：流程画板：
+大家可关注作者 gitee 账号，还有其他项目，比如：WPF 开源项目：流程画板：
 
 ```shell
 https://gitee.com/akwkevin/aistudio.-wpf.-diagram

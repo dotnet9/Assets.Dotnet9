@@ -5,8 +5,8 @@ description: 20 个
 date: 2022-04-24 20:15:29
 copyright: Reprinted
 author: Oleg Kyrylchuk 全球技术精选
-originaltitle: 20 个 .NET 6 新增的 API
-originallink: https://mp.weixin.qq.com/s/LBNPyVAACUEc786QF_GMqg
+originalTitle: 20 个 .NET 6 新增的 API
+originalLink: https://mp.weixin.qq.com/s/LBNPyVAACUEc786QF_GMqg
 draft: False
 cover: https://img1.dotnet9.com/2022/04/cover_32.png
 categories: .NET
@@ -17,17 +17,17 @@ tags: .NET
 
 ## 1. DateOnly & TimeOnly
 
-.NET 6 引入了两种期待已久的类型 - DateOnly 和 TimeOnly, 它们分别代表DateTime的日期和时间部分。
+.NET 6 引入了两种期待已久的类型 - DateOnly 和 TimeOnly, 它们分别代表 DateTime 的日期和时间部分。
 
 ```csharp
 DateOnly dateOnly = new(2021, 9, 25);
 Console.WriteLine(dateOnly);
 TimeOnly timeOnly = new(19, 0, 0);
-Console.WriteLine(timeOnly); 
+Console.WriteLine(timeOnly);
 DateOnly dateOnlyFromDate = DateOnly.FromDateTime(DateTime.Now);
-Console.WriteLine(dateOnlyFromDate); 
+Console.WriteLine(dateOnlyFromDate);
 TimeOnly timeOnlyFromDate = TimeOnly.FromDateTime(DateTime.Now);
-Console.WriteLine(timeOnlyFromDate); 
+Console.WriteLine(timeOnlyFromDate);
 ```
 
 ## 2. Parallel.ForEachAsync
@@ -63,10 +63,10 @@ public class GitHubUser
 // Output:
 // Name: David Fowler
 // Bio: Partner Software Architect at Microsoft on the ASP.NET team, Creator of SignalR
-// 
+//
 // Name: Oleg Kyrylchuk
 // Bio: Software developer | Dotnet | C# | Azure
-// 
+//
 // Name: Jared Parsons
 // Bio: Developer on the C# compiler
 ```
@@ -152,7 +152,7 @@ while (await timer.WaitForNextTickAsync())
 
 ## 7. Metrics API
 
-.NET 6 实现了 `OpenTelemetry Metrics API` 规范, 内置了指标API, 通过 `Meter` 类创建下面的指标
+.NET 6 实现了 `OpenTelemetry Metrics API` 规范, 内置了指标 API, 通过 `Meter` 类创建下面的指标
 
 - Counter
 - Histogram
@@ -197,7 +197,7 @@ void StartMeterListener()
 }
 ```
 
-## 8. 检查元素是否可为空的反射API
+## 8. 检查元素是否可为空的反射 API
 
 它提供来自反射成员的可空性信息和上下文：
 
@@ -224,7 +224,7 @@ class Example
 }
 ```
 
-## 9. 检查嵌套元素是否可为空的反射API
+## 9. 检查嵌套元素是否可为空的反射 API
 
 它允许您获取嵌套元素的可为空的信息, 您可以指定数组属性必须为非空，但元素可以为空，反之亦然。
 
@@ -248,7 +248,7 @@ class Example
 
 ## 10. ProcessId & ProcessPath
 
-直接通过 Environment 获取进程ID和路径。
+直接通过 Environment 获取进程 ID 和路径。
 
 ```csharp
 int processId = Environment.ProcessId
@@ -350,7 +350,7 @@ async Task DoSomethingLongAsync()
 // Unhandled exception.System.TimeoutException: The operation has timed out.
 ```
 
-## 16. 新的数学API
+## 16. 新的数学 API
 
 新方法:
 
@@ -488,6 +488,6 @@ static byte[] Decrypt(byte[] key, byte[] iv, byte[] ciphertext)
 
 全文完...
 
->作者: [Oleg Kyrylchuk](https://hashnode.com/@okyrylchuk)
+> 作者: [Oleg Kyrylchuk](https://hashnode.com/@okyrylchuk)
 >
->原文: [https://blog.okyrylchuk.dev/](https://blog.okyrylchuk.dev/)
+> 原文: [https://blog.okyrylchuk.dev/](https://blog.okyrylchuk.dev/)

@@ -4,7 +4,7 @@ slug: Wpf-quickly-add-newbie-guide-support-MVVM
 description: 使用这个WPF库，快速的给你的应用程序添加新手引导功能
 date: 2022-05-23 23:37:54
 copyright: Original
-originaltitle: WPF|快速添加新手引导功能（支持MVVM）
+originalTitle: WPF|快速添加新手引导功能（支持MVVM）
 draft: False
 cover: https://img1.dotnet9.com/2022/05/5201.gif
 categories: .NET
@@ -14,9 +14,11 @@ tags: WPF,MVVM,新手引导
 **阅读导航**
 
 1. 前言
- - 案例一
- - 案例二
- - 案例三（本文介绍的方式）
+
+- 案例一
+- 案例二
+- 案例三（本文介绍的方式）
+
 2. 如何使用？
 3. 控件如何开发的？
 4. 总结
@@ -41,7 +43,7 @@ tags: WPF,MVVM,新手引导
 
 并且提示框显示的位置还跟随目标控件在主窗体中的位置灵活变换，不至于显示在蒙版窗体之外，如下图所示：
 
->当目标控件右侧空间足够显示引导提示框时，引导提示框就显示在目标控件右侧；在右侧空间不足时，则将引导提示框显示在目标控件左侧：
+> 当目标控件右侧空间足够显示引导提示框时，引导提示框就显示在目标控件右侧；在右侧空间不足时，则将引导提示框显示在目标控件左侧：
 
 ![](https://img1.dotnet9.com/2022/05/5203.png)
 
@@ -57,26 +59,25 @@ tags: WPF,MVVM,新手引导
 
 ## 2. 如何使用？
 
-### 2.1 创建一个WPF项目
+### 2.1 创建一个 WPF 项目
 
 使用 .NET 6|7 创建一个名为 "NewbieGuideDemo" 的 WPF 解决方案：
 
 ![](https://img1.dotnet9.com/2022/05/5204.png)
 
-### 2.2 引入nuget包
+### 2.2 引入 nuget 包
 
-- 添加Nuget包1： **Dotnet9WPFControls**
+- 添加 Nuget 包 1： **Dotnet9WPFControls**
 
 该包提供引导控件及其样式，记得勾选“包括预发行版”，然后点击安装。
 
 ![](https://img1.dotnet9.com/2022/05/5205.png)
 
-
-- 添加Nuget包2：**Prism.DryIoc**
+- 添加 Nuget 包 2：**Prism.DryIoc**
 
 使用该包，主要是使用 [Prism](https://github.com/PrismLibrary/Prism) 封装的一些 [MVVM](https://docs.microsoft.com/zh-cn/archive/msdn-magazine/2009/february/patterns-wpf-apps-with-the-model-view-viewmodel-design-pattern)、[IOC](https://prismplugins.com/containers/dryioc/) 功能，方便协助开发。
 
-添加上述两个Nuget包后，项目工程文件定义如下：
+添加上述两个 Nuget 包后，项目工程文件定义如下：
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -170,8 +171,6 @@ namespace NewbieGuideDemo
 - 第一个参数定义了引导提示框的标题 `“快速添加新手引导”`
 - 第二个参数定义了引导提示框的提示内容 `“这样添加新手引导，或许比较优雅”`
 
-
-
 第二个属性 `Guides`, 是一个引导信息列表，可绑定多个引导信息，点击按钮即会查看下一个引导，本示例为了演示，只写了一个引导。
 
 ### 2.5 界面绑定引导信息
@@ -190,7 +189,7 @@ namespace NewbieGuideDemo
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     Title="Dotnet9 WPF新手引导功能" Width="800" Height="450"
     prism:ViewModelLocator.AutoWireViewModel="True"
-    AllowsTransparency="True" Background="Transparent" WindowStyle="None" 
+    AllowsTransparency="True" Background="Transparent" WindowStyle="None"
     WindowStartupLocation="CenterScreen"
     mc:Ignorable="d">
     <Window.Resources>
@@ -237,7 +236,7 @@ namespace NewbieGuideDemo
 
 - `prism` 命名空间
 
-主要用途在 `prism:ViewModelLocator.AutoWireViewModel="True"` 这句代码，将视图 `MainWindow.xaml` 与 `MainWindowViewModel.cs`进行绑定，有兴趣可以看 [Prism](https://github.com/PrismLibrary/Prism) 源码，了解视图是如何发现ViewModel的约定规则。
+主要用途在 `prism:ViewModelLocator.AutoWireViewModel="True"` 这句代码，将视图 `MainWindow.xaml` 与 `MainWindowViewModel.cs`进行绑定，有兴趣可以看 [Prism](https://github.com/PrismLibrary/Prism) 源码，了解视图是如何发现 ViewModel 的约定规则。
 
 - `i` 命名空间
 
@@ -245,7 +244,7 @@ namespace NewbieGuideDemo
 
 #### 2.5.2 几处关键代码简单说明
 
-上面代码贴的是引导控件（自定义控件）的使用方式（**站长注**：[Dotnet9WPFControls](https://github.com/dotnet9/Dotnet9WPFControls) 中还有引导窗体的方式，本文不做说明，要不然太占篇幅了，请查看控件Demo [GuideWindowView](https://github.com/dotnet9/Dotnet9WPFControls/blob/main/src/Dotnet9WPFControls.Demo/Views/GuideWindowView.xaml))。
+上面代码贴的是引导控件（自定义控件）的使用方式（**站长注**：[Dotnet9WPFControls](https://github.com/dotnet9/Dotnet9WPFControls) 中还有引导窗体的方式，本文不做说明，要不然太占篇幅了，请查看控件 Demo [GuideWindowView](https://github.com/dotnet9/Dotnet9WPFControls/blob/main/src/Dotnet9WPFControls.Demo/Views/GuideWindowView.xaml))。
 
 **a: 将引导控件加到容器最上层**
 
@@ -323,7 +322,7 @@ public class BindControlToGuideConverter : IMultiValueConverter
 
 目标控件的引用赋值给引导对象的 `TargetControl` 属性。
 
-Demo代码完毕，直接运行项目，效果如下，源码在这 [NewbieGuideDemo](https://github.com/dotnet9/TerminalMACS.ManagerForWPF/tree/master/src/NewbieGuideDemo)：
+Demo 代码完毕，直接运行项目，效果如下，源码在这 [NewbieGuideDemo](https://github.com/dotnet9/TerminalMACS.ManagerForWPF/tree/master/src/NewbieGuideDemo)：
 
 ![](https://img1.dotnet9.com/2022/05/5207.gif)
 
@@ -346,7 +345,7 @@ Demo代码完毕，直接运行项目，效果如下，源码在这 [NewbieGuide
 - GuideHelper：引导帮助类，绑定目标控件的引导信息使用，外加一个显示 [引导窗体](https://github.com/dotnet9/Dotnet9WPFControls/blob/main/src/Dotnet9WPFControls.Demo/Views/GuideWindowView.xaml) 的静态命令。
 - Guide.xaml：定义引导遮罩层(`GuideControl` 和 `GuideWindow`)、引导提示框(`GuideHintControl`)样式的资源文件，定义外观请改这个文件
 
-**重点：** 
+**重点：**
 
 `a)` GuideControlBase
 
@@ -358,19 +357,19 @@ Demo代码完毕，直接运行项目，效果如下，源码在这 [NewbieGuide
 
 `GuideWindow` 用于贴在目标控件所在的窗体上，`GuideWindow` 作为目标控件窗体的子窗体，`Show()`在目标控件窗体上，不能使用`ShowDialog()`的方式（为啥？`ShowDialog()`会使除引导窗体之外的窗体处于无效状态（disable））。
 
-这两种方式（GuideControl 和 GuideWindow）总体呈现效果是一样的，目标控件所在的窗体是自定义窗体，Demo能正常显示下面的效果，普通窗体需要对目标控件 [Clip](https://docs.microsoft.com/zh-cn/dotnet/api/system.windows.uielement.clip?redirectedfrom=MSDN&view=windowsdesktop-6.0#System_Windows_UIElement_Clip) 的位置和提示框的位置进行偏移处理，修改位置见 `GuideControl` 和 `GuideWindow`的方法 `ShowGuide(FrameworkElement? targetControl, GuideInfo guide)`。
+这两种方式（GuideControl 和 GuideWindow）总体呈现效果是一样的，目标控件所在的窗体是自定义窗体，Demo 能正常显示下面的效果，普通窗体需要对目标控件 [Clip](https://docs.microsoft.com/zh-cn/dotnet/api/system.windows.uielement.clip?redirectedfrom=MSDN&view=windowsdesktop-6.0#System_Windows_UIElement_Clip) 的位置和提示框的位置进行偏移处理，修改位置见 `GuideControl` 和 `GuideWindow`的方法 `ShowGuide(FrameworkElement? targetControl, GuideInfo guide)`。
 
-控件带的两个新手引导Demo如下：
+控件带的两个新手引导 Demo 如下：
 
-**新手引导Demo一**
+**新手引导 Demo 一**
 
-GuideControl方式，站长推荐，即以控件的方式显示新手引导，[点击看代码](https://github.com/dotnet9/Dotnet9WPFControls/blob/main/src/Dotnet9WPFControls.Demo/Views/GuideControlView.xaml)：
+GuideControl 方式，站长推荐，即以控件的方式显示新手引导，[点击看代码](https://github.com/dotnet9/Dotnet9WPFControls/blob/main/src/Dotnet9WPFControls.Demo/Views/GuideControlView.xaml)：
 
 ![](https://img1.dotnet9.com/2022/05/5209.gif)
 
-**新手引导Demo二**
+**新手引导 Demo 二**
 
-GuideWindow方式，即以子窗体的方式显示新手引导，[点击看代码](https://github.com/dotnet9/Dotnet9WPFControls/blob/main/src/Dotnet9WPFControls.Demo/Views/GuideWindowView.xaml)：
+GuideWindow 方式，即以子窗体的方式显示新手引导，[点击看代码](https://github.com/dotnet9/Dotnet9WPFControls/blob/main/src/Dotnet9WPFControls.Demo/Views/GuideWindowView.xaml)：
 
 ![](https://img1.dotnet9.com/2022/05/5210.gif)
 
@@ -382,7 +381,7 @@ GuideWindow方式，即以子窗体的方式显示新手引导，[点击看代�
 
 - 参考文章：[WPF 简易新手引导](https://www.cnblogs.com/ZXdeveloper/p/8391864.html)
 - 参考开源项目：[AIStudio.Wpf.Controls](https://gitee.com/akwkevin/aistudio.-wpf.-controls)
-- 本文Demo `NewbieGuideDemo`：[Github](https://github.com/dotnet9/TerminalMACS.ManagerForWPF/tree/master/src/NewbieGuideDemo)、[Gitee](https://gitee.com/dotnet9/TerminalMACS.ManagerForWPF/tree/master/src/NewbieGuideDemo)
-- Dotnet9Controls 新手引导Demo一 源码：[Github](https://github.com/dotnet9/Dotnet9WPFControls/blob/main/src/Dotnet9WPFControls.Demo/Views/GuideControlView.xaml)、[Gitee](https://gitee.com/dotnet9/Dotnet9WPFControls/blob/main/src/Dotnet9WPFControls.Demo/Views/GuideControlView.xaml)
-- Dotnet9Controls 新手引导Demo二 源码 `GuideWindowView`：[Github](https://github.com/dotnet9/Dotnet9WPFControls/blob/main/src/Dotnet9WPFControls.Demo/Views/GuideWindowView.xaml)、[Gitee](https://gitee.com/dotnet9/Dotnet9WPFControls/blob/main/src/Dotnet9WPFControls.Demo/Views/GuideWindowView.xaml)
-- Dotnet9Controls控件：[Github](https://github.com/dotnet9/Dotnet9WPFControls)、[Gitee](https://gitee.com/dotnet9/Dotnet9WPFControls)
+- 本文 Demo `NewbieGuideDemo`：[Github](https://github.com/dotnet9/TerminalMACS.ManagerForWPF/tree/master/src/NewbieGuideDemo)、[Gitee](https://gitee.com/dotnet9/TerminalMACS.ManagerForWPF/tree/master/src/NewbieGuideDemo)
+- Dotnet9Controls 新手引导 Demo 一 源码：[Github](https://github.com/dotnet9/Dotnet9WPFControls/blob/main/src/Dotnet9WPFControls.Demo/Views/GuideControlView.xaml)、[Gitee](https://gitee.com/dotnet9/Dotnet9WPFControls/blob/main/src/Dotnet9WPFControls.Demo/Views/GuideControlView.xaml)
+- Dotnet9Controls 新手引导 Demo 二 源码 `GuideWindowView`：[Github](https://github.com/dotnet9/Dotnet9WPFControls/blob/main/src/Dotnet9WPFControls.Demo/Views/GuideWindowView.xaml)、[Gitee](https://gitee.com/dotnet9/Dotnet9WPFControls/blob/main/src/Dotnet9WPFControls.Demo/Views/GuideWindowView.xaml)
+- Dotnet9Controls 控件：[Github](https://github.com/dotnet9/Dotnet9WPFControls)、[Gitee](https://gitee.com/dotnet9/Dotnet9WPFControls)

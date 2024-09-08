@@ -5,8 +5,8 @@ description: 这些模式是用于解决常见的对象导向设计问题的最�
 date: 2023-06-08 21:51:48
 copyright: Reprinted
 author: Token
-originaltitle: 使用C#实现23种常见的设计模式
-originallink: https://blog.tokengo.top/blog?id=28
+originalTitle: 使用C#实现23种常见的设计模式
+originalLink: https://blog.tokengo.top/blog?id=28
 draft: false
 cover: https://img1.dotnet9.com/2023/06/cover_01.png
 categories: .NET
@@ -23,7 +23,7 @@ tags: .NET
 
 这些模式是用于解决常见的对象导向设计问题的最佳实践。
 
-以下是23种常见的设计模式并且提供`c#代码案例`：
+以下是 23 种常见的设计模式并且提供`c#代码案例`：
 
 ## 创建型模式：
 
@@ -83,13 +83,11 @@ class Program
 
 ```
 
-
-
 ### 2. 工厂方法模式（Factory Method）
 
 工厂方法模式是一种创建型设计模式，它提供了一种创建对象的接口，但允许子类决定实例化哪个类。工厂方法让类的实例化推迟到子类中进行。
 
-下面是一个使用C#实现的工厂方法模式的简单示例：
+下面是一个使用 C#实现的工厂方法模式的简单示例：
 
 ```csharp
 // 抽象产品
@@ -142,7 +140,7 @@ public class CreatorB : Creator
 
 ```
 
-以上代码中定义了两个产品`ProductA`和`ProductB`，这两个产品都实现了`IProduct`接口。接着我们有两个Creator类，`CreatorA`和`CreatorB`，它们都继承自抽象基类`Creator`。`CreatorA`工厂创建`ProductA`，`CreatorB`工厂创建`ProductB`。
+以上代码中定义了两个产品`ProductA`和`ProductB`，这两个产品都实现了`IProduct`接口。接着我们有两个 Creator 类，`CreatorA`和`CreatorB`，它们都继承自抽象基类`Creator`。`CreatorA`工厂创建`ProductA`，`CreatorB`工厂创建`ProductB`。
 
 以下是一个使用这些工厂和产品的示例：
 
@@ -175,7 +173,7 @@ class Program
 
 抽象工厂模式是一种创建型设计模式，它提供了一种接口，用于创建相关或依赖对象的系列，而不指定这些对象的具体类。在这个模式中，客户端通过他们的抽象接口使用类，允许该模式在不影响客户端的情况下替换实现类。
 
-以下是一个简单的抽象工厂模式的C#实现：
+以下是一个简单的抽象工厂模式的 C#实现：
 
 ```csharp
 // 抽象产品：动物
@@ -255,14 +253,13 @@ class Program
 
 ```
 
-当你运行这个程序时，会打印出Dog和Cat的Speak方法的结果，这显示了我们已经成功地使用了抽象工厂模式创建了产品实例。这种方式使得客户端代码不需要直接实例化产品类，而只需要依赖工厂接口，增加了程序的灵活性和扩展性。
+当你运行这个程序时，会打印出 Dog 和 Cat 的 Speak 方法的结果，这显示了我们已经成功地使用了抽象工厂模式创建了产品实例。这种方式使得客户端代码不需要直接实例化产品类，而只需要依赖工厂接口，增加了程序的灵活性和扩展性。
 
 ### 4. 建造者模式（Builder）
 
-
 建造者模式是一种创建型设计模式，它提供了一种创建对象的接口，但是允许使用相同的构建过程来创建不同的产品。
 
-以下是在C#中实现建造者模式的一个简单示例：
+以下是在 C#中实现建造者模式的一个简单示例：
 
 ```csharp
 // 产品
@@ -351,10 +348,9 @@ class Program
 
 ### 5. 原型模式（Prototype）
 
-
 原型模式是一种创建型设计模式，它实现了一个原型接口，该接口用于创建当前对象的克隆。当直接创建对象的代价比较大时，则采用这种模式。例如，一个对象需要在一个高代价的数据库操作后被创建。
 
-以下是在C#中实现原型模式的一个简单示例：
+以下是在 C#中实现原型模式的一个简单示例：
 
 ```csharp
 // 抽象原型
@@ -410,11 +406,11 @@ class Program
 2. 调用原型对象的`Clone`方法，创建一个新的对象，该对象的属性与原型对象的属性相同。
 3. 打印原型对象和克隆对象的属性，验证它们是否相同。
 
-## 结构型模式： 
+## 结构型模式：
 
 ### 1. 适配器模式（Adapter）
 
-适配器模式(Adapter Pattern)的目标是将一个类的接口转换成客户端期望的另一个接口。适配器使得原本由于接口不兼容而不能在一起工作的那些类可以在一起工作。下面是一个使用C#实现的适配器模式的例子：
+适配器模式(Adapter Pattern)的目标是将一个类的接口转换成客户端期望的另一个接口。适配器使得原本由于接口不兼容而不能在一起工作的那些类可以在一起工作。下面是一个使用 C#实现的适配器模式的例子：
 
 在这个例子中，我将创建一个`ITarget`接口和一个`Adaptee`类。然后我将创建一个适配器`Adapter`，它会实现`ITarget`接口并使用`Adaptee`类的方法来满足`ITarget`的要求。
 
@@ -492,10 +488,9 @@ This is 'Specific request.'
 
 ### 2. 桥接模式（Bridge）
 
-
 桥接模式是一种结构型设计模式，用于将抽象部分与其实现部分分离，使它们都可以独立地变化。
 
-以下是在C#中实现桥接模式的一个简单示例：
+以下是在 C#中实现桥接模式的一个简单示例：
 
 ```csharp
 // 实现类接口
@@ -585,10 +580,9 @@ class Program
 
 ### 3. 组合模式（Composite）
 
-
 组合模式（Composite pattern）是一种结构型设计模式，它可以使你将对象组合成树形结构，并且能像使用独立对象一样使用它们。这种模式的主要目的是使单个对象和组合对象具有一致性。
 
-以下是在C#中实现组合模式的一个简单示例：
+以下是在 C#中实现组合模式的一个简单示例：
 
 ```csharp
 // 抽象组件类
@@ -712,7 +706,7 @@ class Program
 
 装饰模式是一种结构型设计模式，它允许在运行时动态地将功能添加到对象中，这种模式提供了比继承更有弹性的解决方案。
 
-以下是在C#中实现装饰模式的一个简单示例：
+以下是在 C#中实现装饰模式的一个简单示例：
 
 ```csharp
 // 抽象组件
@@ -815,7 +809,7 @@ class Program
 
 外观模式是一种结构型设计模式，提供了一个统一的接口，用来访问子系统中的一群接口。外观模式定义了一个高层接口，让子系统更容易使用。
 
-以下是在C#中实现外观模式的一个简单示例：
+以下是在 C#中实现外观模式的一个简单示例：
 
 ```csharp
 // 子系统A
@@ -892,14 +886,11 @@ class Program
 
 3. 子系统的操作被封装在外观对象的方法中，客户端不需要直接操作子系统。
 
-   
-
 ### 6. 享元模式（Flyweight）
-
 
 享元模式（Flyweight Pattern）是一种结构型设计模式，该模式主要用于减少创建对象的数量，以减少内存占用和提高性能。这种类型的设计模式属于结构型模式，它提供了一种减少对象数量从而改善应用所需的对象结构的方式。
 
-以下是在C#中实现享元模式的一个简单示例：
+以下是在 C#中实现享元模式的一个简单示例：
 
 ```csharp
 // 享元类
@@ -984,7 +975,7 @@ class Program
 
 代理模式是一种结构型设计模式，它提供了一个对象代替另一个对象来控制对它的访问。代理对象可以在客户端和目标对象之间起到中介的作用，并添加其他的功能。
 
-以下是在C#中实现代理模式的一个简单示例：
+以下是在 C#中实现代理模式的一个简单示例：
 
 ```csharp
 // 抽象主题接口
@@ -1070,9 +1061,9 @@ class Program
 2. 创建一个代理对象，代理对象包含一个真实主题的引用。
 3. 通过代理对象调用`Request`方法。在这个方法中，代理首先检查访问权限，然后调用真实主题的`Request`方法，最后记录日志。
 
-##  行为型模式： 
+## 行为型模式：
 
-###  1. 责任链模式（Chain of Responsibility）
+### 1. 责任链模式（Chain of Responsibility）
 
 责任链模式（Chain of Responsibility Pattern）是一种行为设计模式，该模式为请求创建了一个接收对象的链。这种模式给予请求的对象更多的自由度，并允许请求沿着链路传递，直到有一个对象处理它为止。
 
@@ -1166,7 +1157,7 @@ ConcreteHandler1 handled request 3
 
 命令模式（Command Pattern）是一种数据驱动的设计模式，它属于行为型模式。在命令模式中，请求在对象中封装成为一个操作或行为，这些请求被送到调用对象，调用对象寻找可以处理该命令的合适的对象，并把命令直接送达到对应的对象，该对象会执行这些命令。
 
-以下是在C#中实现命令模式的一个简单示例：
+以下是在 C#中实现命令模式的一个简单示例：
 
 ```csharp
 // 命令接口
@@ -1254,7 +1245,7 @@ class Program
 
 解释器模式（Interpreter Pattern）是一种行为型设计模式，用于解决一些固定语法格式的需求。它定义了如何在语言中表示和解析语法。
 
-以下是在C#中实现解释器模式的一个简单示例：
+以下是在 C#中实现解释器模式的一个简单示例：
 
 ```csharp
 // 抽象表达式
@@ -1341,7 +1332,7 @@ class Program
 
 ```
 
-在这个例子中，我们定义了两个规则，"Robert和John是男性"和"Julie是一个已婚的女性"。我们然后创建了两个表达式对象，分别表示这两个规则，并使用这两个对象来解析输入。
+在这个例子中，我们定义了两个规则，"Robert 和 John 是男性"和"Julie 是一个已婚的女性"。我们然后创建了两个表达式对象，分别表示这两个规则，并使用这两个对象来解析输入。
 
 执行流程如下：
 
@@ -1351,7 +1342,7 @@ class Program
 
 ### 4. 迭代器模式（Iterator）
 
-迭代器模式（Iterator Pattern）是一种行为型设计模式，它提供了一种方法来访问一个对象的元素，而不需要暴露该对象的内部表示。以下是在C#中实现迭代器模式的一个简单示例：
+迭代器模式（Iterator Pattern）是一种行为型设计模式，它提供了一种方法来访问一个对象的元素，而不需要暴露该对象的内部表示。以下是在 C#中实现迭代器模式的一个简单示例：
 
 ```csharp
 // 抽象聚合类
@@ -1775,7 +1766,7 @@ class Program
 
 ### 7. 观察者模式（Observer）
 
-观察者模式（Observer Pattern）是一种行为型设计模式，当一个对象的状态发生变化时，依赖它的所有对象都会得到通知并被自动更新。以下是在C#中实现观察者模式的一个简单示例：
+观察者模式（Observer Pattern）是一种行为型设计模式，当一个对象的状态发生变化时，依赖它的所有对象都会得到通知并被自动更新。以下是在 C#中实现观察者模式的一个简单示例：
 
 ```csharp
 // 抽象观察者
@@ -1936,7 +1927,7 @@ public class OverdrawnState : IAccountState
 
 ```
 
-然后，我们创建一个Context类，它使用这些状态来执行其任务：
+然后，我们创建一个 Context 类，它使用这些状态来执行其任务：
 
 ```csharp
 public class BankAccount
@@ -1978,7 +1969,7 @@ public class BankAccount
 
 ```
 
-现在，你可以创建一个实例并运行一个Demo来测试这个状态模式的代码：
+现在，你可以创建一个实例并运行一个 Demo 来测试这个状态模式的代码：
 
 ```csharp
 public class Program
@@ -2005,7 +1996,7 @@ public class Program
 
 策略模式定义了一系列的算法，并将每一个算法封装起来，使得它们可以相互替换。策略模式让算法独立于使用它的客户而独立变化。
 
-以下是一个简单的策略模式的C#实现。这个例子中，我们将创建一个排序策略，比如快速排序和冒泡排序，它们实现同一个接口，然后创建一个Context类，它使用这些策略来执行排序操作。
+以下是一个简单的策略模式的 C#实现。这个例子中，我们将创建一个排序策略，比如快速排序和冒泡排序，它们实现同一个接口，然后创建一个 Context 类，它使用这些策略来执行排序操作。
 
 首先，我们定义一个表示排序策略的接口：
 
@@ -2050,7 +2041,7 @@ public class BubbleSort : ISortStrategy
 
 ```
 
-然后，我们创建一个Context类，它使用这些策略来执行其任务：
+然后，我们创建一个 Context 类，它使用这些策略来执行其任务：
 
 ```csharp
 public class SortedList
@@ -2083,7 +2074,7 @@ public class SortedList
 
 ```
 
-现在，你可以创建一个实例并运行一个Demo来测试这个策略模式的代码：
+现在，你可以创建一个实例并运行一个 Demo 来测试这个策略模式的代码：
 
 ```csharp
 public class Program
@@ -2099,10 +2090,10 @@ public class Program
         sortedList.Add(2);
 
         sortedList.SetSortStrategy(new QuickSort());
-        sortedList.Sort();  // Output: QuickSorted list 1 2 3 4 5 
+        sortedList.Sort();  // Output: QuickSorted list 1 2 3 4 5
 
         sortedList.SetSortStrategy(new BubbleSort());
-        sortedList.Sort();  // Output: BubbleSorted list 1 2 3 4 5 
+        sortedList.Sort();  // Output: BubbleSorted list 1 2 3 4 5
 
         Console.ReadKey();
     }
@@ -2123,7 +2114,7 @@ public class Program
 ```csharp
 public abstract class CookingProcedure
 {
-    // The 'Template method' 
+    // The 'Template method'
     public void PrepareDish()
     {
         PrepareIngredients();
@@ -2168,7 +2159,7 @@ public class BakeCake : CookingProcedure
 
 ```
 
-现在，你可以创建一个实例并运行一个Demo来测试这个模板方法模式的代码：
+现在，你可以创建一个实例并运行一个 Demo 来测试这个模板方法模式的代码：
 
 ```csharp
 public class Program
@@ -2195,7 +2186,7 @@ public class Program
 
 访问者模式（Visitor Pattern）是一种将算法与对象结构分离的软件设计模式。这种模式的基本想法就是通过所谓的"访问者"来改变元素的操作。这样一来，元素的类可以用于表示元素结构，而具体的操作则可以在访问者类中定义。
 
-以下是一个使用C#实现的访问者模式示例，包括了详细的注释和执行流程。
+以下是一个使用 C#实现的访问者模式示例，包括了详细的注释和执行流程。
 
 这个示例中有三个主要部分：访问者（IVisitor）、可访问元素（IElement）和元素结构（ObjectStructure）。同时有具体访问者（ConcreteVisitor）和具体元素（ConcreteElement）。
 
@@ -2287,10 +2278,10 @@ public class ObjectStructure
 
 执行流程如下：
 
-1. 创建具体元素ConcreteElementA和ConcreteElementB的实例。
-2. 创建对象结构ObjectStructure的实例，并将步骤1创建的具体元素添加到对象结构中。
-3. 创建具体访问者ConcreteVisitorA和ConcreteVisitorB的实例。
-4. 调用对象结构的Accept方法，传入步骤3创建的具体访问者，使具体访问者访问对象结构中的所有元素。
+1. 创建具体元素 ConcreteElementA 和 ConcreteElementB 的实例。
+2. 创建对象结构 ObjectStructure 的实例，并将步骤 1 创建的具体元素添加到对象结构中。
+3. 创建具体访问者 ConcreteVisitorA 和 ConcreteVisitorB 的实例。
+4. 调用对象结构的 Accept 方法，传入步骤 3 创建的具体访问者，使具体访问者访问对象结构中的所有元素。
 
 以下是一个使用上述代码的示例：
 
@@ -2316,10 +2307,10 @@ public class Program
 
 ```
 
-这个程序会打印出访问者A和访问者B分别访问具体元素A和具体元素B的信息。
+这个程序会打印出访问者 A 和访问者 B 分别访问具体元素 A 和具体元素 B 的信息。
 
 ## 技术交流
 
-.NET Core交流群：737776595
+.NET Core 交流群：737776595
 
-来自token的分享
+来自 token 的分享

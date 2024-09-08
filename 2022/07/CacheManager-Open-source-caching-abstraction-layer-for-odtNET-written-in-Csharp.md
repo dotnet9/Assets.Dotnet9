@@ -5,8 +5,8 @@ description: CacheManager 是用 C# 编写的 .NET 的开源缓存抽象层。�
 date: 2022-07-08 07:03:43
 copyright: Reprinted
 author: 黑哥聊dotNet
-originaltitle: CacheManager - 用 C# 编写的 .NET 的开源缓存抽象层
-originallink: https://mp.weixin.qq.com/s/k5u-JpLOUsjh__8mZTDNww
+originalTitle: CacheManager - 用 C# 编写的 .NET 的开源缓存抽象层
+originalLink: https://mp.weixin.qq.com/s/k5u-JpLOUsjh__8mZTDNww
 draft: False
 cover: https://img1.dotnet9.com/2022/07/cover_09.png
 categories: .NET
@@ -33,7 +33,7 @@ tags: .NET
 - 多层 通过 `CacheManager` 管理多个缓存句柄，您可以轻松实现分层缓存
 - 缓存区域：即使某些缓存系统不支持或不实现缓存区域，`CacheManager` 也会实现该机制。例如，这可用于对元素进行分组并一次删除所有元素。
 - 统计信息：各种缓存操作的计数器。
-- 性能计数器：为了能够检查某些数字`perfmon``，CacheManager` 支持每个管理器实例和每个缓存句柄的性能计数器。
+- 性能计数器：为了能够检查某些数字` perfmon``，CacheManager ` 支持每个管理器实例和每个缓存句柄的性能计数器。
 - 事件系统：`CacheManager` 触发常见缓存操作的事件：`OnGet`、`OnAdd`、`OnPut`、`OnRemove`、`OnClear`、`OnClearRegion`
 - `System.Web.OutputCache`实现使用 `CacheManager` 作为 `OutputCache` 提供者，这使得 `OutputCache` 非常灵活，例如通过在许多 Web 服务器上使用像 Redis 这样的分布式缓存。
 - 缓存客户端同步 使用 Redis 发布/订阅功能实现
@@ -64,9 +64,9 @@ private static void EventsExample()
     cache.Remove("key");
 }
 ```
-    
-- Github地址：[https://github.com/MichaCo/CacheManager](https://github.com/MichaCo/CacheManager) 
 
-最后大家如果喜欢我的文章，还麻烦给个关注并点个赞, 希望net生态圈越来越好！
+- Github 地址：[https://github.com/MichaCo/CacheManager](https://github.com/MichaCo/CacheManager)
+
+最后大家如果喜欢我的文章，还麻烦给个关注并点个赞, 希望 net 生态圈越来越好！
 
 ![](https://img1.dotnet9.com/2022/07/0901.png)

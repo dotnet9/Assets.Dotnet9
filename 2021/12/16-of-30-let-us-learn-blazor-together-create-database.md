@@ -5,8 +5,8 @@ description: 我们现在有了基本的日志，但是每次输入完重新加�
 date: 2021-12-18 23:34:26
 copyright: Reprinted
 author: StrayaWorker
-originaltitle: (16/30)大家一起学Blazor：建立数据库
-originallink: https://ithelp.ithome.com.tw/articles/10265408
+originalTitle: (16/30)大家一起学Blazor：建立数据库
+originalLink: https://ithelp.ithome.com.tw/articles/10265408
 draft: False
 cover: https://img1.dotnet9.com/2021/12/cover_05.png
 categories: .NET
@@ -14,16 +14,16 @@ tags: Blazor Server,学Blazor
 ---
 
 我们现在有了基本的日志，但是每次输入完重新加载页面数据都会重置，因为这些数据都只存在于浏览器，没有真正储存到数据库，为了保存下来，我们要跟数据库连接。
-(注：Blazor WebAssembly 没有直接跟数据库交互的能力，不过微软有提供`ASP.NET Core hosted` 选项，可以在建立Blazor WebAssembly 时一并建立ASP.NET Core Web API 工程)
+(注：Blazor WebAssembly 没有直接跟数据库交互的能力，不过微软有提供`ASP.NET Core hosted` 选项，可以在建立 Blazor WebAssembly 时一并建立 ASP.NET Core Web API 工程)
 
 ## Entity Framework Core
 
-首先在`appsettings.json`加入连接字串，因为测试用，所以SqlServer 用本地数据库。
+首先在`appsettings.json`加入连接字串，因为测试用，所以 SqlServer 用本地数据库。
 
 ```json
 {
   "ConnectionStrings": {
-    "DBConnection": "Server=(localdb)\\MSSQLLocalDB;database=Blog;integrated security=true;" 
+    "DBConnection": "Server=(localdb)\\MSSQLLocalDB;database=Blog;integrated security=true;"
   },
   "Logging": {
     "LogLevel": {
@@ -35,7 +35,7 @@ tags: Blazor Server,学Blazor
 }
 ```
 
-接着 NuGet 下载两个组件，分别为`Microsoft.EntityFrameworkCore.SqlServer` 跟`Microsoft.EntityFrameworkCore.Tools`，这两个组件是跟SqlServer 交互用的ORM 组件，ORM 又是什么呢？
+接着 NuGet 下载两个组件，分别为`Microsoft.EntityFrameworkCore.SqlServer` 跟`Microsoft.EntityFrameworkCore.Tools`，这两个组件是跟 SqlServer 交互用的 ORM 组件，ORM 又是什么呢？
 
 **项目工程配置文件：BlazorServer.csproj**
 
@@ -102,23 +102,23 @@ public class AppDbContext : DbContext
 
 ![](https://img1.dotnet9.com/2021/12/2504.png)
 
-先在`PostModel`加上两个属性，`BlogId`跟`Blog`，切记一定要这样添加，`BlogId`是存在数据库用的，`Blog`则是在关联数据的时候有个实体可以用，让我们不用自己join 数据表，后续会再说明。
+先在`PostModel`加上两个属性，`BlogId`跟`Blog`，切记一定要这样添加，`BlogId`是存在数据库用的，`Blog`则是在关联数据的时候有个实体可以用，让我们不用自己 join 数据表，后续会再说明。
 
 ![](https://img1.dotnet9.com/2021/12/2505.png)
 
-接着用`Remove-Migration`将原先的Migration 清除，再新增一次Migration，即执行命令`Add-Migration Init`，可以看到新的Migration 有简化的名称`BlogId`了，这时候再去更新数据库。
+接着用`Remove-Migration`将原先的 Migration 清除，再新增一次 Migration，即执行命令`Add-Migration Init`，可以看到新的 Migration 有简化的名称`BlogId`了，这时候再去更新数据库。
 
 ![](https://img1.dotnet9.com/2021/12/2506.png)
 
-使用命令`Update-Database`去更新数据库，然后打开`SQL Server 对象资源管理器`，可以找到刚才建立的数据库`Blog`，数据库名来自连接字串`database`的名称，可以看到数据库已经建起来了，过程中没有用到SQL 语句或是SSMS 界面。
+使用命令`Update-Database`去更新数据库，然后打开`SQL Server 对象资源管理器`，可以找到刚才建立的数据库`Blog`，数据库名来自连接字串`database`的名称，可以看到数据库已经建起来了，过程中没有用到 SQL 语句或是 SSMS 界面。
 
 ![](https://img1.dotnet9.com/2021/12/2507.png)
 
 ![](https://img1.dotnet9.com/2021/12/2508.png)
 
-不过有一点要特别注意，中途如果换数据库的话，原先的Migration 有很大机率产生问题，各家数据库的数据类型都有差异，所以最好一开始就规划好用哪个数据库。
+不过有一点要特别注意，中途如果换数据库的话，原先的 Migration 有很大机率产生问题，各家数据库的数据类型都有差异，所以最好一开始就规划好用哪个数据库。
 
-除了`AddDbContext<T>`这种最常见的做法，还有`AddDbContextFactory<T>`这种在个别组件产生新的`DbContext`的方法，因为`AddDbContext<T>`的生命周期是`scoped`，对Blazor Server 来说也就是除非关闭系统，否则`DbContext`都不会dispose，有些人希望生命周期仅限于组件即可，就可以用`AddDbContextFactory<T>`。
+除了`AddDbContext<T>`这种最常见的做法，还有`AddDbContextFactory<T>`这种在个别组件产生新的`DbContext`的方法，因为`AddDbContext<T>`的生命周期是`scoped`，对 Blazor Server 来说也就是除非关闭系统，否则`DbContext`都不会 dispose，有些人希望生命周期仅限于组件即可，就可以用`AddDbContextFactory<T>`。
 
 **引用：**
 
@@ -127,4 +127,4 @@ public class AppDbContext : DbContext
 3. [Database Providers](https://docs.microsoft.com/en-us/ef/core/providers/?tabs=dotnet-core-cli)
 4. [New DbContext instances](https://docs.microsoft.com/en-us/aspnet/core/blazor/blazor-server-ef-core?view=aspnetcore-5.0#new-dbcontext-instances-1)
 
-**注：本文代码通过 .NET 6 + Visual Studio 2022重构，可点击原文链接与重构后代码比较学习，谢谢阅读，支持原作者**
+**注：本文代码通过 .NET 6 + Visual Studio 2022 重构，可点击原文链接与重构后代码比较学习，谢谢阅读，支持原作者**

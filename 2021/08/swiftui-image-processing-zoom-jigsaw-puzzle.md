@@ -4,14 +4,14 @@ slug: swiftui-image-processing-zoom-jigsaw-puzzle
 description: 采用SwiftUI Core Graphics技术，与C#的GDI+绘图类似
 date: 2021-08-21 23:44:11
 copyright: Original
-originaltitle: SwiftUI图片处理(缩放、拼图)
+originalTitle: SwiftUI图片处理(缩放、拼图)
 draft: False
 cover: https://img1.dotnet9.com/2021/08/cover_01.jpeg
 categories: 前端
 tags: SwiftUI,缩放,拼图
 ---
 
-采用SwiftUI Core Graphics技术，与C#的GDI+绘图类似，具体概念不多说，毕竟我也是新手，本文主要展示效果图及代码，本文示例代码需要请拉到文末自取。
+采用 SwiftUI Core Graphics 技术，与 C#的 GDI+绘图类似，具体概念不多说，毕竟我也是新手，本文主要展示效果图及代码，本文示例代码需要请拉到文末自取。
 
 ## 1、图片缩放
 
@@ -23,10 +23,10 @@ tags: SwiftUI,缩放,拼图
 
 ![原图 - 完全填充,变形压缩 - 居中缩放截取 - 等比缩放](https://img1.dotnet9.com/2021/08/0101.jpeg)
 
-1. 第1张为原图
-2. 第2张为完全填充,变形压缩
-3. 第3张为图像居中缩放截取
-4. 第4张为等比缩放
+1. 第 1 张为原图
+2. 第 2 张为完全填充,变形压缩
+3. 第 3 张为图像居中缩放截取
+4. 第 4 张为等比缩放
 
 示例中缩放前后的图片可导出
 
@@ -52,8 +52,8 @@ tags: SwiftUI,缩放,拼图
 import SwiftUI
 
 struct ImageHelper {
-    
-    
+
+
     static let shared = ImageHelper()
     private init() {}
 
@@ -75,7 +75,7 @@ struct ImageHelper {
     func saveImage(image: NSImage, fileName: String) -> Bool {
         guard var imageData = image.tiffRepresentation,
               let imageRep = NSBitmapImageRep(data: imageData) else { return false }
-        
+
         //    [imageRep setSize:size];  // 只是打开图片时的初始大小，对图片本省没有影响
         // jpg
         if(fileName.hasSuffix("jpg")) {
@@ -86,7 +86,7 @@ struct ImageHelper {
             // png
             imageData = imageRep.representation(using: .png, properties:[:])!
         }
-        
+
         do {
             // 写文件 保存到本地需要关闭沙盒  ---- 保存的文件路径一定要是绝对路径，相对路径不行
             try imageData.write(to: URL(fileURLWithPath: fileName), options: .atomic)
@@ -102,7 +102,7 @@ struct ImageHelper {
         guard let imageData = image.tiffRepresentation,
               let imageRep = NSBitmapImageRep(data: imageData) else { return nil }
         guard let data: Data = imageRep.representation(using: .jpeg, properties:[.compressionFactor:rate]) else { return nil }
-        
+
         return data as NSData;
     }
 
@@ -134,7 +134,7 @@ struct ImageHelper {
         let widthFactor: CGFloat = targetWidth / width
         let heightFactor: CGFloat = targetHeight / height
         scaleFactor = (widthFactor > heightFactor) ? widthFactor : heightFactor
-        
+
         // 需要读取的源图像的高度或宽度
         let readHeight: CGFloat = targetHeight / scaleFactor
         let readWidth: CGFloat = targetWidth / scaleFactor
@@ -256,7 +256,7 @@ struct ImageHelper {
         }
         return imageRef;
     }
-    
+
     // CGImage 转 NSImage
     func getNSImageWithCGImageRef(imageRef: CGImage) -> NSImage? {
 
@@ -280,7 +280,7 @@ struct ImageHelper {
 //
 //        return newImage;
     }
-    
+
     // NSImage转CIImage
     func getCIImageWithNSImage(image: NSImage) -> CIImage?{
 
@@ -338,9 +338,9 @@ struct TestImageDemo: View {
                     Button("选择展示图片拼图", action: self.choiceJoinImage)
                     Spacer()
                 }
-                
+
                 HStack {
-                    
+
                     VStack {
                         if let sImage = sourceImage {
                             Section(header: Text("原图")) {
@@ -417,7 +417,7 @@ struct TestImageDemo: View {
             }
         }
     }
-    
+
     private func choiceResizeImage() {
         let result: (fail: Bool, url: [URL?]?) =
             DialogProvider.shared.showOpenFileDialog(title: "", prompt: "", message: "选择图片", directoryURL: URL(fileURLWithPath: ""), allowedFileTypes: ["png", "jpg", "jpeg"])
@@ -444,7 +444,7 @@ struct TestImageDemo: View {
             }
         }
     }
-    
+
     private func choiceJoinImage() {
         let result: (fail: Bool, url: [URL?]?) =
             DialogProvider.shared.showOpenFileDialog(title: "", prompt: "", message: "选择图片", directoryURL: URL(fileURLWithPath: ""), allowedFileTypes: ["png", "jpg", "jpeg"], allowsMultipleSelection: true)
@@ -463,7 +463,7 @@ struct TestImageDemo: View {
             }
         }
     }
-    
+
     private func saveImage(image: NSImage) {
         let result: (isOpenFail: Bool, url: URL?) =
             DialogProvider.shared.showSaveDialog(
@@ -492,12 +492,12 @@ struct TestImageDemo_Previews: PreviewProvider {
 
 ## 5、结尾
 
-所有代码已贴，并且代码已上传Github，见下面备注。
+所有代码已贴，并且代码已上传 Github，见下面备注。
 
 ---
 
->本文示例代码：[https://github.com/dotnet9/MacTest/blob/main/src/macos_test/macos_test/TestImageDemo.swift](https://github.com/dotnet9/MacTest/blob/main/src/macos_test/macos_test/TestImageDemo.swift)
+> 本文示例代码：[https://github.com/dotnet9/MacTest/blob/main/src/macos_test/macos_test/TestImageDemo.swift](https://github.com/dotnet9/MacTest/blob/main/src/macos_test/macos_test/TestImageDemo.swift)
 >
->参考文章标题：[《MAC图像NSIMAGE缩放、组合、压缩及CIIMAGEREF和NSIMAGE转换处理》](https://www.freesion.com/article/774352759/)
+> 参考文章标题：[《MAC 图像 NSIMAGE 缩放、组合、压缩及 CIIMAGEREF 和 NSIMAGE 转换处理》](https://www.freesion.com/article/774352759/)
 >
->参考文章链接：[https://www.freesion.com/article/774352759/](https://www.freesion.com/article/774352759/)
+> 参考文章链接：[https://www.freesion.com/article/774352759/](https://www.freesion.com/article/774352759/)

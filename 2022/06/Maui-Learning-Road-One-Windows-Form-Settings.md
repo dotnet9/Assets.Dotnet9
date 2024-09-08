@@ -5,8 +5,8 @@ description: 终于一个简单的窗体指定窗体大小、最大化窗体、�
 date: 2022-06-02 20:52:17
 copyright: Reprinted
 author: 轩研 WPF开发者
-originaltitle: Maui学习之路(1)-Windows窗体设置
-originallink: https://mp.weixin.qq.com/s/_wdRtzSAPkIa3-kK8nKGbQ
+originalTitle: Maui学习之路(1)-Windows窗体设置
+originalLink: https://mp.weixin.qq.com/s/_wdRtzSAPkIa3-kK8nKGbQ
 draft: False
 cover: https://img1.dotnet9.com/2022/06/cover_01.png
 categories: .NET

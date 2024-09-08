@@ -5,8 +5,8 @@ description: Objects Comparer是用于对象比较的工具，C#常见的数据�
 date: 2022-07-15 21:55:23
 copyright: Reprinted
 author: 黑哥聊dotNet
-originaltitle: C#使用Objects Comparer进行对象比较
-originallink: https://mp.weixin.qq.com/s/gfPZ-yFtTzFky1Z3I-goUw
+originalTitle: C#使用Objects Comparer进行对象比较
+originalLink: https://mp.weixin.qq.com/s/gfPZ-yFtTzFky1Z3I-goUw
 draft: False
 cover: https://img1.dotnet9.com/2022/07/cover_17.jpeg
 categories: .NET
@@ -21,7 +21,7 @@ tags: .NET
 
 ## 安装
 
-nuget搜索`ObjectsComparer`：
+nuget 搜索`ObjectsComparer`：
 
 ![](https://img1.dotnet9.com/2022/07/1701.png)
 
@@ -30,7 +30,7 @@ nuget搜索`ObjectsComparer`：
 首先我们定义一个简单类：
 
 ```csharp
-public class UserInfomation 
+public class UserInfomation
 {
     public string Name { get; set; }
     public int Age { get; set; }
@@ -51,9 +51,9 @@ IEnumerable<Difference> differences1;
 var isEqual1 = comparer1.Compare(userInfomationOld, userInfomationNew, out differences1);
 ```
 
-然后通过返回值判断对象是否一致，如果不一致可以通过differences1获取到不一致的值。
+然后通过返回值判断对象是否一致，如果不一致可以通过 differences1 获取到不一致的值。
 
-查看输出 能够知道实例化的两个对象是age属性的值不一样:
+查看输出 能够知道实例化的两个对象是 age 属性的值不一样:
 
 ![](https://img1.dotnet9.com/2022/07/1702.png)
 
@@ -86,18 +86,18 @@ var isEqual = comparer.Compare(lstUserInfomationsNew, lstUserInfomationsOld, out
 string differencesMsg = string.Join(Environment.NewLine, differences);
 Console.WriteLine(differencesMsg);
 ```
-      
+
 查看输出能够看出是数量不一致的问题:
 
 ![](https://img1.dotnet9.com/2022/07/1703.png)
 
-## 应用场景	
+## 应用场景
 
-像做过.NET客户端开发的人都知道，我们在维护一些基础数据的时候都避免不了要编辑数据！
+像做过.NET 客户端开发的人都知道，我们在维护一些基础数据的时候都避免不了要编辑数据！
 
-有的时候我们打开编辑页面，实际未修改数据，再去点击保存按钮要不一个一个字段去对比有没有修改数据, 要不就直接暴力处理， 不校验有没有修改数据，直接调用update接口。
+有的时候我们打开编辑页面，实际未修改数据，再去点击保存按钮要不一个一个字段去对比有没有修改数据, 要不就直接暴力处理， 不校验有没有修改数据，直接调用 update 接口。
 
-那么我们的Objects Comparer就派上用场了， 我们首先封装一个BaseForm，然后在基类控件中 封装一个比较方法：		
+那么我们的 Objects Comparer 就派上用场了， 我们首先封装一个 BaseForm，然后在基类控件中 封装一个比较方法：
 
 ```csharp
 protected Result ComPare<T>(T t, T s)
@@ -108,7 +108,7 @@ protected Result ComPare<T>(T t, T s)
     bool isEqual = comparer.Compare(t, s, out differences);
     result.IsEqual = isEqual;
     if (!isEqual)
-    {  
+    {
         string differencesMsg = string.Join(Environment.NewLine, differences);
         result.Msg=differencesMsg;
     }
@@ -116,7 +116,7 @@ protected Result ComPare<T>(T t, T s)
 }
 
 public class Result
-{ 
+{
     public bool IsEqual { get; set; }
     public string Msg { get; set; }
 }
@@ -176,4 +176,4 @@ public class Test
 
 当然还有很多应用场景，我只是分享我常使用的场景罢了。
 
-最后希望各位neter分享更多有用的工具，共同改善net环境！
+最后希望各位 neter 分享更多有用的工具，共同改善 net 环境！

@@ -5,8 +5,8 @@ description: .NET 7 建立在 .NET 6 建立的基础之上，包括一套统一�
 date: 2022-02-19 01:01:56
 copyright: Reprinted
 author: WeihanLi amazingdotnet
-originaltitle: .NET 7 预览版 1 发布
-originallink: https://mp.weixin.qq.com/s/m7pl_JOerkKU8CqWIoDtRw
+originalTitle: .NET 7 预览版 1 发布
+originalLink: https://mp.weixin.qq.com/s/m7pl_JOerkKU8CqWIoDtRw
 draft: False
 cover: https://img1.dotnet9.com/2022/01/cover_02.png
 categories: .NET
@@ -84,7 +84,7 @@ Preview 1 版本现在提供以下功能。
 
 ### Microsoft.Extensions 的可空注解
 
-我们在为 Microsoft.Extensions.* 库添加注解以实现可空性方面取得了进展。在 .NET 7 Preview 1 中，以下库已针对可空性进行了注释：
+我们在为 Microsoft.Extensions.\* 库添加注解以实现可空性方面取得了进展。在 .NET 7 Preview 1 中，以下库已针对可空性进行了注释：
 
 - Microsoft.Extensions.DependencyInjection.Abstractions
 - Microsoft.Extensions.Logging.Abstractions
@@ -102,7 +102,7 @@ Preview 1 版本现在提供以下功能。
 - Microsoft.Extensions.Configuration.Ini
 - Microsoft.Extensions.Configuration.Json
 
-到 .NET 7 发布时，我们计划为所有 Microsoft.Extensions.* 库添加可空性注释。您可以查看剩余的库，并在[dotnet/runtime#43605](https://github.com/dotnet/runtime/issues/43605)处关注进度。
+到 .NET 7 发布时，我们计划为所有 Microsoft.Extensions.\* 库添加可空性注释。您可以查看剩余的库，并在[dotnet/runtime#43605](https://github.com/dotnet/runtime/issues/43605)处关注进度。
 
 非常感谢 @maxkoshevoi，他为这项工作做出了很大贡献。如果没有 @maxkoshevoi 的帮助，我们就不会走得那么远。
 
@@ -127,7 +127,7 @@ Preview 1 版本现在提供以下功能。
 
 来自@SeanWoo
 
-[[JIT] [问题：61620] 针对 *x = dblCns 优化 ARM64；runtime#61847](https://github.com/dotnet/runtime/pull/61847)
+[[JIT] [问题：61620] 针对 \*x = dblCns 优化 ARM64；runtime#61847](https://github.com/dotnet/runtime/pull/61847)
 
 来自@SingleAccretion
 
@@ -152,7 +152,7 @@ CoreRT 支持 ARM64&Unix runtime#41023
 
 来自@weilinwa
 
-基于覆写优化 FMA 代码生成  runtime#58196
+基于覆写优化 FMA 代码生成 runtime#58196
 
 动态 PGO
 对 Arm64 的 OSR 支持
@@ -171,7 +171,7 @@ Arm64：内存屏障改进
 [arm64] JIT: X % 2 == 0 -> X & 1 == 0
 [arm64] JIT：添加符号/零扩展
 [arm64] JIT：为“arrayBase + elementOffset”启用 CSE/提升
-[arm64] JIT：将“A * B + C”折叠为 MADD/MSUB
+[arm64] JIT：将“A \* B + C”折叠为 MADD/MSUB
 循环优化
 泛化循环前标头创建和循环提升
 循环重构和注释改进
@@ -190,14 +190,14 @@ Arm64：内存屏障改进
 互操作：p/Invoke 代码生成
 我们将在 .NET 6 中原型化的 p/invoke 源生成器(Source Generator) 集成到 dotnet/runtime 中，并且一直在转换运行时库以使用它。这意味着转换后的 p/invokes 与 AOT 兼容，不再需要在运行时生成 IL Stub。
 
-我们打算在未来使 p/invoke 源生成器在运行时之外可用。您可以在dotnet/runtime#60595中关注我们剩余的工作。
+我们打算在未来使 p/invoke 源生成器在运行时之外可用。您可以在 dotnet/runtime#60595 中关注我们剩余的工作。
 
 System.Text.Json 中的新 API
 System.Text.Json 附带了一些小的生命周期增强功能：
 
-开发人员现在可以访问System.Text.Json 内部使用的默认单例 JsonSerializerOptions（相关问题）。
+开发人员现在可以访问 System.Text.Json 内部使用的默认单例 JsonSerializerOptions（相关问题）。
 添加一个 JsonWriterOptions.MaxDepth 属性并确保此值来自序列化的 JsonSerializerOptions.MaxDepth 等效属性（相关问题）。
-将Patch方法添加到 System.Net.Http.Json（相关问题）。
+将 Patch 方法添加到 System.Net.Http.Json（相关问题）。
 热重载改进
 现在允许在 C# 热重载中为 Blazor WebAssembly 和 .NET 为 iOS 和 Android 进行以下编辑（相关问题）：
 
@@ -210,7 +210,7 @@ System.Text.Json 附带了一些小的生命周期增强功能：
 
 不支持新增类中的实例字段
 现有或新类中新添加的方法和字段对反射不可见
-您可以在dotnet/runtime#57365中关注我们的进度
+您可以在 dotnet/runtime#57365 中关注我们的进度
 
 指定 .NET 7
 要使用 .NET 7，您需要在项目文件中使用 .NET 7 Target Framework Moniker (TFM)。例如：

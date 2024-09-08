@@ -6,8 +6,8 @@ date: 2023-11-17 17:02:26
 lastmod: 2023-11-17 17:36:24
 copyright: Reprinted
 author: 不止dotNET
-originaltitle: .NET8 正式发布， C#12 新变化
-originallink: https://mp.weixin.qq.com/s/FwbdnbYXIrSxLFmd3_0rAA
+originalTitle: .NET8 正式发布， C#12 新变化
+originalLink: https://mp.weixin.qq.com/s/FwbdnbYXIrSxLFmd3_0rAA
 draft: false
 cover: https://img1.dotnet9.com/2023/11/cover_07.jpg
 categories: .NET
@@ -18,19 +18,19 @@ tags: 技术更新
 
 ![img](https://img1.dotnet9.com/2023/11/cover_07.jpg)
 
-在  .NET Conf  2023  大会上，.NET 8 正式发布了，.NET 8 是一个长期支持（LTS）版本，这意味着可以获得三年的支持和补丁。我们也计划将框架从 .NET Core3.1 升级到 8 ，关于如何升级等升级完成后再来分享。
+在 .NET Conf 2023 大会上，.NET 8 正式发布了，.NET 8 是一个长期支持（LTS）版本，这意味着可以获得三年的支持和补丁。我们也计划将框架从 .NET Core3.1 升级到 8 ，关于如何升级等升级完成后再来分享。
 
 要使用 .NET 8 ，需要安装相关的 SDK，可以在这个地址进行下载：https://dotnet.microsoft.com/zh-cn/download/dotnet/8.0，或者将 VS2022 升级到 17.8 。
 
-虽然 8 又带来了很多方面的增强，比如：人工智能、云原生、性能、native AOT  等，但我还是最关注  C# 语言和一些框架层面的变化，下面介绍下 C# 12 和框架中的我认为比较实用的新增功能，全部更新说明可以看官方文档：https://learn.microsoft.com/zh-cn/dotnet/core/whats-new/dotnet-8 。
+虽然 8 又带来了很多方面的增强，比如：人工智能、云原生、性能、native AOT 等，但我还是最关注 C# 语言和一些框架层面的变化，下面介绍下 C# 12 和框架中的我认为比较实用的新增功能，全部更新说明可以看官方文档：https://learn.microsoft.com/zh-cn/dotnet/core/whats-new/dotnet-8 。
 
 ## 序列化增强
 
 ### 其他类型的内置支持
 
 1. 可以对附加类型：Half、Int128、UInt128 进行序列化，在 .NET 7 中对这些类型序列化时不会报错，但内容不能正常获取。
-2. 可以对 ReadOnlyMemory、Memory类型进行序列化。
-3. 当  T  的类型为  byte  时，序列化结果为  base64，否则为  json 数组。
+2. 可以对 ReadOnlyMemory、Memory 类型进行序列化。
+3. 当 T 的类型为 byte 时，序列化结果为 base64，否则为 json 数组。
 
 ```csharp
 using System.Text.Json;
@@ -74,11 +74,11 @@ public class DerivedImplement : IDerived
 
 ### 命名策略
 
-下图是 8  中序列化时对命名策略的支持：
+下图是 8 中序列化时对命名策略的支持：
 
 ![img](https://img1.dotnet9.com/2023/11/0701.jpg)
 
-在之前的版本：3.1、6、7  中都只支持 CamelCase 。在  8  中新增的策略如下：
+在之前的版本：3.1、6、7 中都只支持 CamelCase 。在 8 中新增的策略如下：
 
 - KebabCaseLower：小写中划线，例如：user-name。
 - KebabCaseUpper：大写中划线，例如：USER-NAME。
@@ -140,7 +140,7 @@ Console.ReadKey();
 public record UserInfo(string userName);
 ```
 
-在版本 8  中可以直接调用 GetFromJsonAsAsyncEnumerable 方法直接得到对象，无需进行反序列化：
+在版本 8 中可以直接调用 GetFromJsonAsAsyncEnumerable 方法直接得到对象，无需进行反序列化：
 
 ```csharp
 const string RequestUri = "http://localhost:5145/user";
@@ -190,7 +190,7 @@ Console.ReadKey();
 
 1. 新增了 `FrozenDictionary<TKey,TValue>` 和 `FrozenSet`，这两个类型在 `System.Collections.Frozen` 命名空间下，创建这两种类型的集合后，就不允许对键和值进行任何更改，因此可以实现更快的读取操作。
 
-下面是使用 BenchmarkDotNet  对 FrozenDictionary 和 Dictionary 进行测试的代码：
+下面是使用 BenchmarkDotNet 对 FrozenDictionary 和 Dictionary 进行测试的代码：
 
 ```csharp
 BenchmarkRunner.Run<FrozenDicTest>();
@@ -231,7 +231,7 @@ public class FrozenDicTest
 
 ![img](https://img1.dotnet9.com/2023/11/0705.jpg)
 
-2. 新增的 `System.Buffers.SearchValues`类，可以用来进行字符串的查找和匹配，相比较  string  类型的操作，性能有大幅提升，下面还是用 BenchmarkDotNet 进行测试：
+2. 新增的 `System.Buffers.SearchValues`类，可以用来进行字符串的查找和匹配，相比较 string 类型的操作，性能有大幅提升，下面还是用 BenchmarkDotNet 进行测试：
 
 ```csharp
 BenchmarkRunner.Run<SearchValuesTest>();
@@ -275,7 +275,7 @@ public class SearchValuesTest
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddTransient<IUser, UserA>();
- 
+
 var app = builder.Build();
 
 app.MapGet("/user", (IUser user) =>

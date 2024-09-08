@@ -5,8 +5,8 @@ description: 分享一下之前学习的一个登录小案例
 date: 2021-10-18 16:51:00
 copyright: Reprinted
 author: Jarry
-originaltitle: 实现一个登录：Mac+.NET 5+Identity+JWT+VS Code
-originallink: https://blog.csdn.net/qbc12345678/article/details/120758144
+originalTitle: 实现一个登录：Mac+.NET 5+Identity+JWT+VS Code
+originalLink: https://blog.csdn.net/qbc12345678/article/details/120758144
 draft: False
 cover: https://img1.dotnet9.com/2021/10/cover_05.jpg
 categories: .NET
@@ -15,23 +15,23 @@ tags: Web API,Mac,Identity,JWT,Visual Studio Code
 
 分享一下之前学习的一个登录小案例，代码有不足之处欢迎指正！！！
 
-**工具：采用VS Code及其插件开发，轻量化的同时减少命令行的敲写，使用VS没有冲突哈**
+**工具：采用 VS Code 及其插件开发，轻量化的同时减少命令行的敲写，使用 VS 没有冲突哈**
 
 ![](https://img1.dotnet9.com/2021/10/0501.png)
 
 ![](https://img1.dotnet9.com/2021/10/0502.png)
 
-## 一、通过插件创建WebApi项目
+## 一、通过插件创建 WebApi 项目
 
 ![原文是个动图，可点击原文查看](https://img1.dotnet9.com/2021/10/0503.jpg)
 
-## 二、利用插件下载项目所需要的Nuget包
+## 二、利用插件下载项目所需要的 Nuget 包
 
 ![](https://img1.dotnet9.com/2021/10/0504.png)
 
 ## 三、代码编写
 
-①新建User实体
+① 新建 User 实体
 
 ```C#
 /// <summary>
@@ -43,11 +43,11 @@ public class AppUser:IdentityUser
     public DateTime DateCreated { get; set; }
     public DateTime DateModified { get; set; }
 
-    public string FullName { get; set; } 
+    public string FullName { get; set; }
 }
 ```
 
-②新建一个上下文类
+② 新建一个上下文类
 
 ```C#
 public class AppDBContext : IdentityDbContext<AppUser, IdentityRole, string>
@@ -58,7 +58,7 @@ public class AppDBContext : IdentityDbContext<AppUser, IdentityRole, string>
 }
 ```
 
-③在Startup依赖注入上下文类
+③ 在 Startup 依赖注入上下文类
 
 ```C#
 services.AddDbContext<AppDBContext>(options =>
@@ -69,7 +69,7 @@ services.AddDbContext<AppDBContext>(options =>
 services.AddIdentity<AppUser, IdentityRole>(opt => { }).AddEntityFrameworkStores<AppDBContext>();
 ```
 
-④在终端codefirst生成数据表
+④ 在终端 codefirst 生成数据表
 
 ```shell
 dotnet ef migrations add init
@@ -78,9 +78,9 @@ dotnet ef  database update
 
 ![](https://img1.dotnet9.com/2021/10/0505.png)
 
-⑤配置JWT 
+⑤ 配置 JWT
 
-ConfigureServices方法里面配置服务
+ConfigureServices 方法里面配置服务
 
 ```C#
 services.AddAuthentication(x =>
@@ -90,17 +90,17 @@ services.AddAuthentication(x =>
 })
     .AddJwtBearer(options =>
     {
-        // jwt的 key 需要设置复杂点 
+        // jwt的 key 需要设置复杂点
         var key = Encoding.ASCII.GetBytes(Configuration["JWTConfig:Key"]);
-        var issure = Configuration["JWTConfig:Issuer"];   // 发行人 
-        var audience = Configuration["JWTConfig:Audience"];  // 受众   
+        var issure = Configuration["JWTConfig:Issuer"];   // 发行人
+        var audience = Configuration["JWTConfig:Audience"];  // 受众
         options.TokenValidationParameters = new TokenValidationParameters()
         {
             ValidateIssuerSigningKey = true,
             IssuerSigningKey = new SymmetricSecurityKey(key),
             ValidateIssuer = true, // 设置为True时 ValidIssure 属性设置下 不然jwt验证不会通过
-            ValidateAudience = true, // 同上 ValidAudience 属性设置下  
-            RequireExpirationTime = true, 
+            ValidateAudience = true, // 同上 ValidAudience 属性设置下
+            RequireExpirationTime = true,
             ValidateLifetime=true,   //  token失效缓冲时间 默认是五分钟 失效时间需要加上这五分钟缓冲
             //  如果 上面 ValidateIssuer  配置为false 则不需要下面两个属性
             ValidIssuer = issure,
@@ -141,9 +141,9 @@ public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
 }
 ```
 
-⑥swagger配置
+⑥swagger 配置
 
-ConfigureServices方法里面配置服务
+ConfigureServices 方法里面配置服务
 
 ```C#
 services.AddSwaggerGen(c =>
@@ -171,8 +171,8 @@ services.AddSwaggerGen(c =>
         }
     });
 
-    // swagger接口注释显示 
-    // 注意 vscode 用户需要在项目的csproj文件里面手动配置生成注释文档的属性  
+    // swagger接口注释显示
+    // 注意 vscode 用户需要在项目的csproj文件里面手动配置生成注释文档的属性
     // 具体参见项目文件里的PropertyGroup
     var fileName = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
     var filePath = Path.Combine(AppContext.BaseDirectory, fileName);
@@ -208,7 +208,7 @@ public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
 }
 ```
 
-⑦创建UserController,并通过构造函数注入登录服务
+⑦ 创建 UserController,并通过构造函数注入登录服务
 
 ```C#
 private readonly UserManager<AppUser> _userManger;  // 用户服务
@@ -227,7 +227,7 @@ public UserController(ILogger<UserController> logger, UserManager<AppUser> userM
 }
 ```
 
-***注册用户***
+**_注册用户_**
 
 ```C#
 /// <summary>
@@ -266,11 +266,11 @@ public async Task<Object> RegisterUser(AddAndUpdateUserrRegisterModel model)
             DateCreated = DateTime.Now,
             DateModified = DateTime.UtcNow
         };
-        // 注册用户 
+        // 注册用户
         var result = await _userManger.CreateAsync(user, model.Password);
         if (result.Succeeded)
         {
-            // 注册成功后 获取临时刚刚创建的用户  
+            // 注册成功后 获取临时刚刚创建的用户
             var tempUser = await _userManger.FindByEmailAsync(model.Email);
             // 循环给创建的用户添加角色
             foreach (var role in model.Roles)
@@ -290,7 +290,7 @@ public async Task<Object> RegisterUser(AddAndUpdateUserrRegisterModel model)
 }
 ```
 
-***登录***
+**_登录_**
 
 ```C#
 /// <summary>
@@ -318,7 +318,7 @@ private string GenarateToken(AppUser user, List<string> roles)
     var tokenDescriptor = new SecurityTokenDescriptor
     {
         // 多重角色
-        Subject=new ClaimsIdentity(claims), 
+        Subject=new ClaimsIdentity(claims),
 
         // 单一角色
         // Subject = new ClaimsIdentity(new[]
@@ -329,10 +329,10 @@ private string GenarateToken(AppUser user, List<string> roles)
         //     // new System.Security.Claims.Claim(ClaimTypes.Role,"role")
         // }),
 
-        // 过期时间 12小时  
+        // 过期时间 12小时
         Expires = DateTime.UtcNow.AddSeconds(6),
         SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature),
-        Audience = _jwtConfig.Audience,  // 这里不配置 也会返回UnAuthorized 
+        Audience = _jwtConfig.Audience,  // 这里不配置 也会返回UnAuthorized
         Issuer = _jwtConfig.Issuer // 同上
     };
     // 创建token
@@ -368,7 +368,7 @@ public async Task<object> Login(LoginModel model)
             // await _userManger.GetRolesAsync(appUser);
             var user = new UserDto(appUser.FullName, appUser.Email, appUser.UserName, appUser.DateCreated, roles)
             {
-                // 生成Token 
+                // 生成Token
                 Token = GenarateToken(appUser,roles)
             };
             return await Task.FromResult(new ResponseModel(Enums.ResponseCode.Ok, "登录成功", user));
@@ -390,11 +390,11 @@ public async Task<object> Login(LoginModel model)
 
 ![](https://img1.dotnet9.com/2021/10/0507.png)
 
-***添加角色***
+**_添加角色_**
 
 ![](https://img1.dotnet9.com/2021/10/0508.png)
 
-先将上文用户登录产生的token 设置到swagger里面，然后访问只有 Admin 角色可以访问的接口
+先将上文用户登录产生的 token 设置到 swagger 里面，然后访问只有 Admin 角色可以访问的接口
 
 ```C#
 /// <summary>
@@ -414,7 +414,7 @@ public async Task<object> AddRole(AddRoleModel model)
         {
             return await Task.FromResult(new ResponseModel(Enums.ResponseCode.Error, "角色不能为空"));
         }
-        // 判断【AspNetRoles】 表里  角色是否存在  
+        // 判断【AspNetRoles】 表里  角色是否存在
         if (await _roleManger.RoleExistsAsync(model.Role))
         {
             return await Task.FromResult(new ResponseModel(Enums.ResponseCode.Ok, "角色存在了"));
@@ -443,7 +443,7 @@ public async Task<object> AddRole(AddRoleModel model)
 }
 ```
 
-***关于我们token权限在校验时出现失败怎么办？ 这里Asp.Net Core 5.0 新增一个接口【IAuthorizationMiddlewareResultHandler】可以处理权限验证  看下文代码展示！***
+**_关于我们 token 权限在校验时出现失败怎么办？ 这里 Asp.Net Core 5.0 新增一个接口【IAuthorizationMiddlewareResultHandler】可以处理权限验证 看下文代码展示！_**
 
 ```C#
 /// <summary>
@@ -456,7 +456,7 @@ public class AuthorizationHandleMiddleWare : IAuthorizationMiddlewareResultHandl
     public async Task HandleAsync(RequestDelegate next, HttpContext context, AuthorizationPolicy policy, PolicyAuthorizationResult authorizeResult)
     {
         // 当 token失效或者token不存在的时候 authorizeResult.Challenged 为True
-        if(authorizeResult.Challenged) 
+        if(authorizeResult.Challenged)
         {
             // todo 拿到上下文user对象后 此处可以check token  区分token是否是过期了
             var a=context.Request.Headers["Authorization"];
@@ -476,11 +476,11 @@ public class AuthorizationHandleMiddleWare : IAuthorizationMiddlewareResultHandl
 }
 ```
 
-另外还需要在ConfigureService里面注册下服务
+另外还需要在 ConfigureService 里面注册下服务
 
 ```C#
 // .net 5 新增的权限验证中间件  在此处依赖注入一下  详见 AuthorizationHandleMiddleWare.cs 文件
 services.AddSingleton<IAuthorizationMiddlewareResultHandler,AuthorizationHandleMiddleWare>();
 ```
 
-以上就是一个登录的简单demo,详细代码请访问码云：[https://gitee.com/holyace/together/tree/JarryGu_develop/framework/JwtLoginDemo](https://gitee.com/holyace/together/tree/JarryGu_develop/framework/JwtLoginDemo)
+以上就是一个登录的简单 demo,详细代码请访问码云：[https://gitee.com/holyace/together/tree/JarryGu_develop/framework/JwtLoginDemo](https://gitee.com/holyace/together/tree/JarryGu_develop/framework/JwtLoginDemo)

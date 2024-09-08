@@ -5,8 +5,8 @@ description: 2010 年，几个搞 IT 的年轻人，在美国旧金山成立了�
 date: 2023-08-15 21:49:17
 copyright: Reprinted
 author: 多多宜睡
-originaltitle: 干货满满！10 分钟看懂 Docker 和 K8S
-originallink: https://my.oschina.net/jamesview/blog/2994112
+originalTitle: 干货满满！10 分钟看懂 Docker 和 K8S
+originalLink: https://my.oschina.net/jamesview/blog/2994112
 draft: false
 cover: https://img1.dotnet9.com/2023/08/0401.png
 categories: 分享
@@ -204,7 +204,7 @@ Master 节点包括 API Server、Scheduler、Controller manager、etcd。
 
 Node 节点包括 Docker、kubelet、kube-proxy、Fluentd、kube-dns（可选），还有就是 Pod。
 
->Pod 是 Kubernetes 最基本的操作单元。一个 Pod 代表着集群中运行的一个进程，它内部封装了一个或多个紧密相关的容器。除了 Pod 之外，K8S 还有一个 Service 的概念，一个 Service 可以看作一组提供相同服务的 Pod 的对外访问接口。这段不太好理解，跳过吧。
+> Pod 是 Kubernetes 最基本的操作单元。一个 Pod 代表着集群中运行的一个进程，它内部封装了一个或多个紧密相关的容器。除了 Pod 之外，K8S 还有一个 Service 的概念，一个 Service 可以看作一组提供相同服务的 Pod 的对外访问接口。这段不太好理解，跳过吧。
 
 - Docker，不用说了，创建容器的。
 - Kubelet，主要负责监视指派到它所在 Node 上的 Pod，包括创建、修改、监控、删除等。

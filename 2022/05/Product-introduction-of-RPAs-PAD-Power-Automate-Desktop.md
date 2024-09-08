@@ -5,37 +5,37 @@ description: RPA之前我已经介绍了，它就是一个机器人流程自动�
 date: 2022-05-30 21:01:23
 copyright: Contributes
 author: 蓝创精英团队
-originaltitle: RPA之PAD(Power Automate Desktop) 产品介绍
-originallink: https://blog.csdn.net/i2blue/article/details/125037626
+originalTitle: RPA之PAD(Power Automate Desktop) 产品介绍
+originalLink: https://blog.csdn.net/i2blue/article/details/125037626
 draft: False
 cover: https://img1.dotnet9.com/2022/05/6117.png
 categories: .NET
 tags: RPA
 ---
 
->本文由网友`蓝创精英团队`投稿，欢迎转载、分享
+> 本文由网友`蓝创精英团队`投稿，欢迎转载、分享
 >
->原文作者：蓝创精英团队
+> 原文作者：蓝创精英团队
 >
->原文链接：https://blog.csdn.net/i2blue/article/details/125037626
+> 原文链接：https://blog.csdn.net/i2blue/article/details/125037626
 
 ---
 
 ## 简介
 
-RPA之前我已经介绍了，它就是一个机器人流程自动化的概念。
+RPA 之前我已经介绍了，它就是一个机器人流程自动化的概念。
 
-基于RPA，有很多的产品，其中 `Power Automate Desktop (PAD)`就是一个相对来讲，免费的，容易使用的一个RPA，另外它的国际化做的也很不错，中文效果也是很棒。
+基于 RPA，有很多的产品，其中 `Power Automate Desktop (PAD)`就是一个相对来讲，免费的，容易使用的一个 RPA，另外它的国际化做的也很不错，中文效果也是很棒。
 
-其中，国内的RPA产品`影刀`也是类似的产品，会了它，用影刀也很顺手的说。
+其中，国内的 RPA 产品`影刀`也是类似的产品，会了它，用影刀也很顺手的说。
 
 当然，实际用的时候，也有一些不方便的地方，必须，你得先有一个微软的账号。
 
-另外，对操作系统的限制也有，限制要在WIN10 ++ 才可以。
+另外，对操作系统的限制也有，限制要在 WIN10 ++ 才可以。
 
-所以，win7, win10的家庭版，估计都会遇到一些问题。
+所以，win7, win10 的家庭版，估计都会遇到一些问题。
 
-另外 win11是自带的就有，算是默认windows的一个RPA工具了（可以搜索一下关键词）
+另外 win11 是自带的就有，算是默认 windows 的一个 RPA 工具了（可以搜索一下关键词）
 
 ## 安装部署
 
@@ -75,18 +75,18 @@ RPA之前我已经介绍了，它就是一个机器人流程自动化的概念�
 
 ![](https://img1.dotnet9.com/2022/05/6108.png)
 
- 1. 新建工作流任务，就像下面的列表一样，如果创建好
- 2. 个人账号下，新建的桌面流
- 3. 系统官网自带的流
- 4. 启动流
- 5. 修改编辑
- 6. 其他设置信息
- 
- 其中5编辑后，就会出现PAD的流程设计器。如下所示
+1.  新建工作流任务，就像下面的列表一样，如果创建好
+2.  个人账号下，新建的桌面流
+3.  系统官网自带的流
+4.  启动流
+5.  修改编辑
+6.  其他设置信息
 
- ![](https://img1.dotnet9.com/2022/05/6109.png)
+其中 5 编辑后，就会出现 PAD 的流程设计器。如下所示
 
-左侧为相应的逻辑功能组件，中间为流程逻辑，右边为变量相关。 
+![](https://img1.dotnet9.com/2022/05/6109.png)
+
+左侧为相应的逻辑功能组件，中间为流程逻辑，右边为变量相关。
 
 左边清晰点就是
 
@@ -94,16 +94,15 @@ RPA之前我已经介绍了，它就是一个机器人流程自动化的概念�
 
 功能应用尽有，基本上，
 
- ![](https://img1.dotnet9.com/2022/05/6111.png)
+![](https://img1.dotnet9.com/2022/05/6111.png)
 
 另外一些，都是需要微软线上云平台的支持，才能实现的。需要账号，秘钥啥的。
 
-总的来说，它是面向全球，面向Windwos桌面端，但是，对国内很多实际场景还是没有特定的通用化方案，只能通过组件的扩展方式实现了。
+总的来说，它是面向全球，面向 Windwos 桌面端，但是，对国内很多实际场景还是没有特定的通用化方案，只能通过组件的扩展方式实现了。
 
- 
- ## 官网示例展示
- 
- 官方示例一共有三个示例，分别是Excel自动化，Web自动化，桌面自动化三部分。
+## 官网示例展示
+
+官方示例一共有三个示例，分别是 Excel 自动化，Web 自动化，桌面自动化三部分。
 
 ![](https://img1.dotnet9.com/2022/05/6112.png)
 
@@ -143,7 +142,7 @@ RPA之前我已经介绍了，它就是一个机器人流程自动化的概念�
 
 ![](https://img1.dotnet9.com/2022/05/6119.png)
 
-我们这里要更新一下它的UI界面路径为当下的路径就可以了
+我们这里要更新一下它的 UI 界面路径为当下的路径就可以了
 
 ![](https://img1.dotnet9.com/2022/05/6120.png)
 
@@ -159,7 +158,7 @@ RPA之前我已经介绍了，它就是一个机器人流程自动化的概念�
 
 ![](https://img1.dotnet9.com/2022/05/6122.png)
 
-添加过程就如下，想添加哪个UI元素，直接 Ctrl+鼠标左键就可以了
+添加过程就如下，想添加哪个 UI 元素，直接 Ctrl+鼠标左键就可以了
 
 ![](https://img1.dotnet9.com/2022/05/6123.gif)
 
@@ -188,7 +187,7 @@ MouseAndKeyboard.SendKeys.FocusAndSendKeys TextToSend: $'''{Control}{Shift}({S})
 UIAutomation.Click Element: appmask['Window \'*无标题 - 记事本\'']['Tree Item \'桌面\''] ClickType: UIAutomation.ClickType.LeftClick MousePositionRelativeToElement: UIAutomation.RectangleEdgePoint.MiddleCenter OffsetX: 0 OffsetY: 0
 UIAutomation.PopulateTextField TextField: appmask['Window \'*无标题 - 记事本\'']['Edit \'文件名:\''] Text: $'''测试.txt''' Mode: UIAutomation.PopulateTextMode.Replace ClickType: UIAutomation.PopulateMouseClickType.SingleClick
 UIAutomation.Click Element: appmask['Window \'*无标题 - 记事本\'']['Button \'保存(S)\''] ClickType: UIAutomation.ClickType.LeftClick MousePositionRelativeToElement: UIAutomation.RectangleEdgePoint.MiddleCenter OffsetX: 0 OffsetY: 0
-WAIT (UIAutomation.WaitForWindow.ToClose Window: appmask['Window \'测试.txt - 记事本\'']['Window \'另存为\'']) FOR 3 
+WAIT (UIAutomation.WaitForWindow.ToClose Window: appmask['Window \'测试.txt - 记事本\'']['Window \'另存为\'']) FOR 3
 ON ERROR
 
 END
@@ -215,13 +214,13 @@ Display.ShowMessageDialog.ShowMessage Title: $'''从文本中获取到的内容'
 
 ## 结束
 
-至此，我们也通过介绍，安装，简介，以及一个官方的示例修改，以及，自定义的功能的实现，我相信，你对RPA技术，以及PAD 这样的产品已经有了一个直观的概念了。
+至此，我们也通过介绍，安装，简介，以及一个官方的示例修改，以及，自定义的功能的实现，我相信，你对 RPA 技术，以及 PAD 这样的产品已经有了一个直观的概念了。
 
 提升生产力，从现在做起，加油！！！
 
 你的支持，关注，都是我前进的动力！，有你的支持，蓝创精英团队会做的更好。
 
-下一章，准备写一下PAD的扩展组件方式，让它的功能更强大。
+下一章，准备写一下 PAD 的扩展组件方式，让它的功能更强大。
 
 ## 引用
 

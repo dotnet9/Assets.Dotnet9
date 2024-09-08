@@ -5,8 +5,8 @@ description: 阅读体验好，也不容易编错
 date: 2022-06-02 21:32:27
 copyright: Reprinted
 author: liamwang 精致码农
-originaltitle: C# 枚举高级战术
-originallink: https://mp.weixin.qq.com/s/gKUIEVoG4aW69x6ExIMvYg
+originalTitle: C# 枚举高级战术
+originalLink: https://mp.weixin.qq.com/s/gKUIEVoG4aW69x6ExIMvYg
 draft: False
 cover: https://img1.dotnet9.com/2022/06/cover_03.jpg
 categories: .NET
@@ -17,7 +17,7 @@ tags: C#
 
 文章开头先给大家出一道面试题：
 
->在设计某小型项目的数据库（假设用的是 MySQL）时，如果给用户表（User）添加一个字段（Roles）用来存储用户的角色，你会给这个字段设置什么类型？提示：要考虑到角色在后端开发时需要用枚举表示，且一个用户可能会拥有多个角色。
+> 在设计某小型项目的数据库（假设用的是 MySQL）时，如果给用户表（User）添加一个字段（Roles）用来存储用户的角色，你会给这个字段设置什么类型？提示：要考虑到角色在后端开发时需要用枚举表示，且一个用户可能会拥有多个角色。
 
 映入你脑海的第一个答案可能是：varchar 类型，用分隔符的方式来存储多个角色，比如用 `1|2|3` 或 `1,2,3` 来表示用户拥有多个角色。当然如果角色数量可能超过个位数，考虑到数据库的查询方便（比如用 INSTR 或 POSITION 来判断用户是否包含某个角色），角色的值至少要从数字 10 开始。方案是可行的，可是不是太简单了，有没有更好的方案？
 

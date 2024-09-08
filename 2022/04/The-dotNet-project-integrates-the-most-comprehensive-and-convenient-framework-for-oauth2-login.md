@@ -5,8 +5,8 @@ description: MrHuo.OAuth 是 .NET 项目集成 OAuth2 登录最全面的、最�
 date: 2022-04-12 22:48:23
 copyright: Reprinted
 author: mrhuo
-originaltitle: .NET 项目集成 OAuth2 登录最全面的、最方便的框架
-originallink: https://github.com/mrhuo/MrHuo.OAuth
+originalTitle: .NET 项目集成 OAuth2 登录最全面的、最方便的框架
+originalLink: https://github.com/mrhuo/MrHuo.OAuth
 draft: False
 cover: https://img1.dotnet9.com/2022/04/1001.png
 categories: .NET
@@ -79,97 +79,113 @@ tags: .NET,OAuth2,开源C#
 
 ## 使用方法
 
-> 新建项目web项目，安装 `nuget` 包即可使用。
+> 新建项目 web 项目，安装 `nuget` 包即可使用。
 
 现可用的 `nuget` 包列表如下：
 
 [https://www.nuget.org/packages?q=MrHuo.OAuth](https://www.nuget.org/packages?q=MrHuo.OAuth)
 
 #### Gitlab
+
 ```shell
 Install-Package MrHuo.OAuth.Gitlab -Version 1.1.1
 ```
 
 #### 微信公众号
+
 ```shell
 Install-Package MrHuo.OAuth.Wechat -Version 1.1.1
 ```
 
 #### oschina.net
+
 ```shell
 Install-Package MrHuo.OAuth.OSChina -Version 1.1.1
 ```
 
 #### coding.net
+
 ```shell
 Install-Package MrHuo.OAuth.Coding -Version 1.1.1
 ```
 
 #### github.com
+
 ```shell
 Install-Package MrHuo.OAuth.Github -Version 1.1.1
 ```
 
 #### alipay.com
+
 ```shell
 Install-Package MrHuo.OAuth.Alipay -Version 1.1.1
 ```
 
 #### baidu.com
+
 ```shell
 Install-Package MrHuo.OAuth.Baidu -Version 1.1.1
 ```
 
 #### huawei.com
+
 ```shell
 Install-Package MrHuo.OAuth.Huawei -Version 1.1.1
 ```
 
 #### gitee.com
+
 ```shell
 Install-Package MrHuo.OAuth.Gitee -Version 1.1.1
 ```
 
 #### weibo.com
+
 ```shell
 Install-Package MrHuo.OAuth.SinaWeibo -Version 1.1.1
 ```
 
 #### xunlei.com
+
 ```shell
 Install-Package MrHuo.OAuth.XunLei -Version 1.1.1
 ```
 
 #### qq.com
+
 ```shell
 Install-Package MrHuo.OAuth.QQ -Version 1.1.1
 ```
 
 #### microsoft.com
+
 ```shell
 Install-Package MrHuo.OAuth.Microsoft -Version 1.1.1
 ```
 
 #### mi.com
+
 ```shell
 Install-Package MrHuo.OAuth.Mi -Version 1.1.1
 ```
 
 #### stackoverflow.com
+
 ```shell
 Install-Package MrHuo.OAuth.StackOverflow -Version 1.1.1
 ```
 
 #### facebook.com
+
 ```shell
 Install-Package MrHuo.OAuth.Facebook -Version 1.1.1
 ```
 
 #### google.com
+
 ```shell
 Install-Package MrHuo.OAuth.Google -Version 1.0.0
 ```
-
 
 1. `Startup.cs`
 
@@ -336,7 +352,7 @@ public class OAuthController : Controller
 
 扩展其他平台非常容易，拿 `Gitee` 平台的代码来说：[https://github.com/mrhuo/MrHuo.OAuth/tree/main/MrHuo.OAuth.Gitee](https://github.com/mrhuo/MrHuo.OAuth/tree/main/MrHuo.OAuth.Gitee)
 
-##### 第一步：找平台对应 OAuth 文档，找到获取用户信息接口返回JSON，转换为 C# 实体类。如下：
+##### 第一步：找平台对应 OAuth 文档，找到获取用户信息接口返回 JSON，转换为 C# 实体类。如下：
 
 > 根据自己需要和接口标准，扩展用户属性
 
@@ -379,7 +395,7 @@ public class GiteeOAuth : OAuthLoginBase<GiteeUserModel>
 
 加上注释，总共十行，如你所见，非常方便。如果该平台协议遵循 OAuth2 标准开发，那么就这么几行就好了。
 
-就连修改字段的微信登录实现，也不过复杂，只需要定义基本参数就OK。代码如下：
+就连修改字段的微信登录实现，也不过复杂，只需要定义基本参数就 OK。代码如下：
 
 ```csharp
 /// <summary>
@@ -444,9 +460,7 @@ public class WechatOAuth : OAuthLoginBase<WechatAccessTokenModel, WechatUserInfo
 
 ## Contribution
 
-1.欢迎参与开发，贡献其他未完成平台代码。
-2.欢迎在 issue 里提交需求平台，带上平台链接地址，我们将加入到计划之中。
-3.欢迎提交各种建议，文明交流。
+1.欢迎参与开发，贡献其他未完成平台代码。 2.欢迎在 issue 里提交需求平台，带上平台链接地址，我们将加入到计划之中。 3.欢迎提交各种建议，文明交流。
 
 ## License
 

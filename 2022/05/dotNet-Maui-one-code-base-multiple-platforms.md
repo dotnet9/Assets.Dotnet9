@@ -5,8 +5,8 @@ description: .NET 开发人员拥有了针对 Android、iOS、macOS 和 Windows 
 date: 2022-05-26 21:19:14
 copyright: Reprinted
 author: gui.h
-originaltitle: .NET MAUI – 一个代码库，多个平台
-originallink: https://www.cnblogs.com/springhgui/p/16304492.html
+originalTitle: .NET MAUI – 一个代码库，多个平台
+originalLink: https://www.cnblogs.com/springhgui/p/16304492.html
 draft: False
 cover: https://img1.dotnet9.com/2022/05/5706.png
 categories: .NET
@@ -15,9 +15,9 @@ tags: MAUI
 
 欢迎使用 [.NET 多平台应用 UI](https://dot.net/maui)。此版本标志着我们统一 .NET 平台的[多年旅程](https://devblogs.microsoft.com/dotnet/introducing-net-multi-platform-app-ui/)中的新里程碑。现在，您和超过 500 万其他 .NET 开发人员拥有了针对 Android、iOS、macOS 和 Windows 的一流跨平台 UI 堆栈，以补充 .NET 工具链 （SDK） 和基类库 （BCL）。您可以使用 .NET 构建任何内容。
 
->加入我们的 [Microsoft Build 2022](https://mybuild.microsoft.com/sessions/599c82b6-0c5a-4add-9961-48b85d9ffde0?source=sessions)，我们将为你介绍使用 .NET 和 Visual Studio 为任何设备构建原生应用的所有更新。[» 了解更多](https://mybuild.microsoft.com/sessions/599c82b6-0c5a-4add-9961-48b85d9ffde0?source=sessions)。
+> 加入我们的 [Microsoft Build 2022](https://mybuild.microsoft.com/sessions/599c82b6-0c5a-4add-9961-48b85d9ffde0?source=sessions)，我们将为你介绍使用 .NET 和 Visual Studio 为任何设备构建原生应用的所有更新。[» 了解更多](https://mybuild.microsoft.com/sessions/599c82b6-0c5a-4add-9961-48b85d9ffde0?source=sessions)。
 
-这只是我们创建让 .NET 开发人员满意的桌面和移动应用体验之旅的开始。对于下一阶段，现在已经为更广泛的.NET生态系统奠定了基础，将.NET Framework和旧项目系统中的插件，库和服务引入.NET 6和SDK样式的项目。目前可用的产品包括：
+这只是我们创建让 .NET 开发人员满意的桌面和移动应用体验之旅的开始。对于下一阶段，现在已经为更广泛的.NET 生态系统奠定了基础，将.NET Framework 和旧项目系统中的插件，库和服务引入.NET 6 和 SDK 样式的项目。目前可用的产品包括：
 
 <figure class="half">
     <img src="https://img1.dotnet9.com/2022/05/5701.png">
@@ -33,9 +33,9 @@ tags: MAUI
 
 ![](https://img1.dotnet9.com/2022/05/5705.png)
 
->有关将库迁移到 .NET 6 的帮助，请查看最近的客座博客文章，其中详细介绍了从 [Michael Rumpler](https://devblogs.microsoft.com/xamarin/migrating-mrgestures-to-dotnet-maui/) （MR.Gestures）和[Luis Matos](https://devblogs.microsoft.com/xamarin/tips-for-porting-your-xamarin-library-to-dotnet-maui/)（Plugin.ValidationRules）。
+> 有关将库迁移到 .NET 6 的帮助，请查看最近的客座博客文章，其中详细介绍了从 [Michael Rumpler](https://devblogs.microsoft.com/xamarin/migrating-mrgestures-to-dotnet-maui/) （MR.Gestures）和[Luis Matos](https://devblogs.microsoft.com/xamarin/tips-for-porting-your-xamarin-library-to-dotnet-maui/)（Plugin.ValidationRules）。
 
-在 18 个月的[当前发布计划](https://dotnet.microsoft.com/platform/support/policy)下，.NET MAUI 工作负载完全受支持，并将以与 .NET 相同的月度数提供服务。我们对 .NET MAUI 的持续关注点仍然是质量，根据您的反馈解决[已知问题](https://github.com/dotnet/maui/6.0/known-issues.md)并确定问题的优先级。这还包括我们提供的工作负载，用于构建专门针对Android，Android Wear，CarPlay，iOS，macOS和tvOS的应用程序，直接使用.NET的原生工具包，以及支持库AndroidX，Facebook，Firebase，Google Play Services和SkiaSharp。
+在 18 个月的[当前发布计划](https://dotnet.microsoft.com/platform/support/policy)下，.NET MAUI 工作负载完全受支持，并将以与 .NET 相同的月度数提供服务。我们对 .NET MAUI 的持续关注点仍然是质量，根据您的反馈解决[已知问题](https://github.com/dotnet/maui/6.0/known-issues.md)并确定问题的优先级。这还包括我们提供的工作负载，用于构建专门针对 Android，Android Wear，CarPlay，iOS，macOS 和 tvOS 的应用程序，直接使用.NET 的原生工具包，以及支持库 AndroidX，Facebook，Firebase，Google Play Services 和 SkiaSharp。
 
 借助 .NET MAUI，您可以实现不折不扣的用户体验，同时共享比以往更多的代码。.NET MAUI 通过每个平台提供的顶级应用工具包、现代开发人员的工作效率和我们迄今为止最快的移动平台使用原生 UI。
 
@@ -117,7 +117,7 @@ Microsoft.Maui.Handlers.EntryHandler.Mapper.ModifyMapping("NoUnderline", (h, v) 
 
 ![](https://img1.dotnet9.com/2022/05/5712.png)
 
->多项目 vs 单个项目 仍然支持为每个平台使用单独的项目来构建您的解决方案，因此您可以选择单项目方法何时适合您的应用程序。
+> 多项目 vs 单个项目 仍然支持为每个平台使用单独的项目来构建您的解决方案，因此您可以选择单项目方法何时适合您的应用程序。
 
 .NET MAUI 在 ASP.NET 和 Blazor 应用程序中使用`Microsoft.Extensions`库中流行的`建造者模式`作为初始化和配置应用的统一方式。在这里，您可以向 .NET MAUI 提供字体、利用特定于平台的生命周期事件、配置依赖项、启用特定功能、启用供应商控制工具包等。
 
@@ -181,7 +181,7 @@ public static class ServicesExtensions
 
 ### 将 Blazor 引入桌面和移动设备
 
-.NET MAUI 也非常适合希望通过原生客户端应用程序参与其中的 Web 开发人员。NET MAUI 与 [Blazor](https://blazor.net/) 集成，因此您可以直接在原生移动和桌面应用程序中重用现有的 Blazor Web UI 组件。借助 .NET MAUI 和 Blazor，您可以重用 Web 开发技能来构建跨平台原生客户端应用程序，并构建UI一致的跨移动、桌面和 Web 的应用。
+.NET MAUI 也非常适合希望通过原生客户端应用程序参与其中的 Web 开发人员。NET MAUI 与 [Blazor](https://blazor.net/) 集成，因此您可以直接在原生移动和桌面应用程序中重用现有的 Blazor Web UI 组件。借助 .NET MAUI 和 Blazor，您可以重用 Web 开发技能来构建跨平台原生客户端应用程序，并构建 UI 一致的跨移动、桌面和 Web 的应用。
 
 ![](https://img1.dotnet9.com/2022/05/5713.png)
 
@@ -209,7 +209,7 @@ Blazor 混合支持现在还可用于 WPF 和 Windows 窗体，因此您可以�
 
 ## 针对速度进行了优化
 
-.NET MAUI 专为提高性能而设计。您已经告诉我们，尽快启动您的应用程序是多么重要，尤其是在Android上。.NET MAUI 中的 UI 控件在本机平台控件上实现了精简的解耦处理程序映射器模式。这减少了 UI 呈现中的层数，并简化了控件自定义。
+.NET MAUI 专为提高性能而设计。您已经告诉我们，尽快启动您的应用程序是多么重要，尤其是在 Android 上。.NET MAUI 中的 UI 控件在本机平台控件上实现了精简的解耦处理程序映射器模式。这减少了 UI 呈现中的层数，并简化了控件自定义。
 
 .NET MAUI 中的布局已设计为使用一致的管理器模式，该模式可优化度量值并排列循环，以便更快地呈现和更新 UI。除了 StackLayout 之外，我们还展示了针对特定场景进行预优化的布局，例如 `HorizontalStackLayout` 和 `VerticalStackLayout`。
 
@@ -262,8 +262,8 @@ Visual Studio 2022 将在今年晚些时候发布 .NET MAUI 工具支持。在�
 
 > 转载自博客园
 >
->原文作者：https://www.cnblogs.com/springhgui/p/16304492.html
+> 原文作者：https://www.cnblogs.com/springhgui/p/16304492.html
 >
->原文链接：gui.h
+> 原文链接：gui.h
 >
->翻译原文地址：[https://devblogs.microsoft.com/dotnet/introducing-dotnet-maui-one-codebase-many-platforms/](https://devblogs.microsoft.com/dotnet/introducing-dotnet-maui-one-codebase-many-platforms/)
+> 翻译原文地址：[https://devblogs.microsoft.com/dotnet/introducing-dotnet-maui-one-codebase-many-platforms/](https://devblogs.microsoft.com/dotnet/introducing-dotnet-maui-one-codebase-many-platforms/)

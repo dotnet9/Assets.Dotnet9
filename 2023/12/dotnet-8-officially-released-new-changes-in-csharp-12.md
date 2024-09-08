@@ -6,8 +6,8 @@ date: 2023-12-08 05:12:14
 lastmod: 2023-12-08 05:27:41
 copyright: Reprinted
 author: 不止dotNET
-originaltitle: .NET Core 3.1 升级到 .NET 8
-originallink: https://mp.weixin.qq.com/s/2U4JfJPLa_53ybL2ETAMsw
+originalTitle: .NET Core 3.1 升级到 .NET 8
+originalLink: https://mp.weixin.qq.com/s/2U4JfJPLa_53ybL2ETAMsw
 draft: false
 cover: https://img1.dotnet9.com/2023/12/cover_01.jpg
 categories: .NET
@@ -22,7 +22,7 @@ tags: 技术更新
 
 ## 安装 Upgrade Assistant
 
-先确保  VS2022  已经升级到了 17.8 。然后在 VS2022 的扩展管理中安装扩展：.NET Upgrade Assistant ，需要特别注意的是，如果之前安装过升级工具扩展，需要卸载重新安装。
+先确保 VS2022 已经升级到了 17.8 。然后在 VS2022 的扩展管理中安装扩展：.NET Upgrade Assistant ，需要特别注意的是，如果之前安装过升级工具扩展，需要卸载重新安装。
 
 ![图片](https://img1.dotnet9.com/2023/12/0101.jpg)
 
@@ -54,13 +54,13 @@ tags: 技术更新
 
 我验证过好几个低版本的项目，使用工具升级的过程没有出现果任何错误，但升级完后进行代码编译就会出现各种问题了。
 
-### 问题1：Ionic.zip
+### 问题 1：Ionic.zip
 
 在原来的版本中，项目中的 zip 压缩用到了 Ionic.zip ,现在 .NET8 已经不支持了，需要换成 DotNetZip :
 
 ![图片](https://img1.dotnet9.com/2023/12/0107.jpg)
 
-### 问题2：BinaryFormatter 已经过时
+### 问题 2：BinaryFormatter 已经过时
 
 代码中有不少地方使用到了二进制的序列化，但 BinaryFormatter 在 .NET8 中已经弃用，有两种解决方式：
 
@@ -79,7 +79,7 @@ tags: 技术更新
 
 参考：https://learn.microsoft.com/zh-cn/dotnet/fundamentals/syslib-diagnostics/syslib0011
 
-### 问题 3：Aspose  使用问题
+### 问题 3：Aspose 使用问题
 
 项目中对 Office 文件的处理，使用了 Aspose 套件，升级后版本有兼容性问题，升级到对应的版本就行。
 

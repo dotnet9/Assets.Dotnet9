@@ -5,33 +5,33 @@ description: 昨天说到单元测试，但有些时候可能由于时间关系�
 date: 2021-12-25 21:50:23
 copyright: Reprinted
 author: StrayaWorker
-originaltitle: (30/30)大家一起学Blazor：.NET 6 <ErrorBoundary>
-originallink: https://ithelp.ithome.com.tw/articles/10275330
+originalTitle: (30/30)大家一起学Blazor：.NET 6 <ErrorBoundary>
+originalLink: https://ithelp.ithome.com.tw/articles/10275330
 draft: False
 cover: https://img1.dotnet9.com/2021/12/cover_05.png
 categories: .NET
 tags: Blazor Server,学Blazor
 ---
 
-昨天说到单元测试，但有些时候可能由于时间关系没办法完整测试，就可能因为`某个Component 出错`导致`整个系统崩溃`(如下图)，因为`Blazor Server` 是在Server 建立一个`circuit(流程)`，一旦有未处理的错误Server 就会将circuit 终止以避免安全问题。
+昨天说到单元测试，但有些时候可能由于时间关系没办法完整测试，就可能因为`某个Component 出错`导致`整个系统崩溃`(如下图)，因为`Blazor Server` 是在 Server 建立一个`circuit(流程)`，一旦有未处理的错误 Server 就会将 circuit 终止以避免安全问题。
 
 ![](https://img1.dotnet9.com/2021/12/4201.png)
 
-我们`不想每次出错都终止整个系统`，也`不想在每个方法都用 try…catch… 包住`程序处理所有错误，所以要用`.NET 6` 新推出的Component `<ErrorBoundary>`。
+我们`不想每次出错都终止整个系统`，也`不想在每个方法都用 try…catch… 包住`程序处理所有错误，所以要用`.NET 6` 新推出的 Component `<ErrorBoundary>`。
 
-在`React` 这个前端框架中同样有 `ErrorBoundary` 概念，它会捕捉`任何Component 产生的错误`并展示预设UI 页面，当错误发生就会将错误限缩到该Component，其他Component 则维持功能性。
+在`React` 这个前端框架中同样有 `ErrorBoundary` 概念，它会捕捉`任何Component 产生的错误`并展示预设 UI 页面，当错误发生就会将错误限缩到该 Component，其他 Component 则维持功能性。
 
-`Blazor 也是借用这个概念`，不过Blaozr 团队有说明`这并不能捕捉所有可能的例外状况`，而且 `<ErrorBoundary>` 并不是要处理`全域错误拦截`，那是 ILogger 的任务，`<ErrorBoundary>`主要目的还是`处理渲染或是生命周期方法( OnInitializedAsync、OnParametersSetAsync)产生的错误`，另外还有许多可能的风险，例如开发者以为 `<ErrorBoundary>` 可以处理所有错误、开发者觉得不需要再针对不同错误产生定制化UI 而导致复数不同错误产生时感到困惑、大量同类型 `<ErrorBoundary>` 同时产生时开发者又刚好针对该错误记录每笔log 可能导致log 堵塞…等等，所以不能把这个当成处理错误的最后一关。
+`Blazor 也是借用这个概念`，不过 Blaozr 团队有说明`这并不能捕捉所有可能的例外状况`，而且 `<ErrorBoundary>` 并不是要处理`全域错误拦截`，那是 ILogger 的任务，`<ErrorBoundary>`主要目的还是`处理渲染或是生命周期方法( OnInitializedAsync、OnParametersSetAsync)产生的错误`，另外还有许多可能的风险，例如开发者以为 `<ErrorBoundary>` 可以处理所有错误、开发者觉得不需要再针对不同错误产生定制化 UI 而导致复数不同错误产生时感到困惑、大量同类型 `<ErrorBoundary>` 同时产生时开发者又刚好针对该错误记录每笔 log 可能导致 log 堵塞…等等，所以不能把这个当成处理错误的最后一关。
 
 虽然上面说得有些惊悚，但 `<ErrorBoundary>` 用来`处理简单的页面逻辑`还是可以的，就来试试看吧！
 
-(注：如果是直接用Visual Studio 2022 建立项目的人可以省略下面一段的步骤)
+(注：如果是直接用 Visual Studio 2022 建立项目的人可以省略下面一段的步骤)
 
 因为笔者用的是`Visual Studio 2019`，.NET 6 只能以`Visual Studio 2022` 执行，所以先去下载`Visual Studio 2022`，接着开启`BlaozrPractice` 方案，将`BlazorServer`、`BlazorServerMsTest` 两个项目的 `<TargetFramework>` 都改成`net6.0`。
 
 ![](https://img1.dotnet9.com/2021/12/4202.png)
 
-然后记得去 `wwwroot/css/site.css` 加入下列class，`<ErrorBoundary>`会产生一个带有`blazor-error-boundaryclass` 的`<div>`。
+然后记得去 `wwwroot/css/site.css` 加入下列 class，`<ErrorBoundary>`会产生一个带有`blazor-error-boundaryclass` 的`<div>`。
 
 ```C#
 .blazor-error-boundary {
@@ -57,7 +57,7 @@ private async Task LoadData()
 }
 ```
 
-开启网站看看，可以看到这次没有再看到底下黄色的例外状况错误信息，而是呈现预设的UI。
+开启网站看看，可以看到这次没有再看到底下黄色的例外状况错误信息，而是呈现预设的 UI。
 
 ![](https://img1.dotnet9.com/2021/12/4204.png)
 
@@ -67,50 +67,38 @@ private async Task LoadData()
 
 ```html
 <ErrorBoundary>
-    <ChildContent>
-        @Body
-    </ChildContent>
-    <ErrorContent>
-        <p>很抱歉，目前出現未知錯誤，請聯絡管理員</p>
-    </ErrorContent>
+  <ChildContent> @Body </ChildContent>
+  <ErrorContent>
+    <p>很抱歉，目前出現未知錯誤，請聯絡管理員</p>
+  </ErrorContent>
 </ErrorBoundary>
 ```
 
-但这时候如果切换到`Roles` 或是`Users`，会发现那块红色错误信息依旧在页面上，这是因为 `<ErrorBoundary>` 只要侦测到错误就会呈现，此时要调用方法`Recover()`，这方法可以将错误数量`重设为0`，并调用 `StateHasChanged()`去通知各个Component 状态已经改变了，如此就会将Component `重新渲染`，千万记得要使用 `@ref` 去引用指定的`<ErrorBoundary>`，否则 `Recover()` 是不会执行的。
+但这时候如果切换到`Roles` 或是`Users`，会发现那块红色错误信息依旧在页面上，这是因为 `<ErrorBoundary>` 只要侦测到错误就会呈现，此时要调用方法`Recover()`，这方法可以将错误数量`重设为0`，并调用 `StateHasChanged()`去通知各个 Component 状态已经改变了，如此就会将 Component `重新渲染`，千万记得要使用 `@ref` 去引用指定的`<ErrorBoundary>`，否则 `Recover()` 是不会执行的。
 
 ![](https://img1.dotnet9.com/2021/12/4206.png)
 
 ```html
-		…
-        <div class="content px-4">
-            <ErrorBoundary @ref="errorBoundary">
-                <ChildContent>
-                    @Body
-                </ChildContent>
-                <ErrorContent>
-                    <p>很抱歉，目前出現未知错误，请联系管理员</p>
-                </ErrorContent>
-            </ErrorBoundary>
-        </div>
-		…
-
-@code {
-    private ErrorBoundary errorBoundary;
-
-    protected override void OnParametersSet()
-    {
-        errorBoundary?.Recover();
-    }
-}
+…
+<div class="content px-4">
+  <ErrorBoundary @ref="errorBoundary">
+    <ChildContent> @Body </ChildContent>
+    <ErrorContent>
+      <p>很抱歉，目前出現未知错误，请联系管理员</p>
+    </ErrorContent>
+  </ErrorBoundary>
+</div>
+… @code { private ErrorBoundary errorBoundary; protected override void
+OnParametersSet() { errorBoundary?.Recover(); } }
 ```
 
-另外 `<ErrorBoundary>` 有一个变量 `MaximumErrorCount` 预设100，只要 `MaximumErrorCount` 超过指定数量系统就会崩溃。
+另外 `<ErrorBoundary>` 有一个变量 `MaximumErrorCount` 预设 100，只要 `MaximumErrorCount` 超过指定数量系统就会崩溃。
 
 ![](https://img1.dotnet9.com/2021/12/4207.png)
 
 ## 感言
 
-笔者当初报名`IT 铁人赛`只是想把写项目的心得记录下来，当时很担心会没办法完赛，结果第17 天真的忘记了，实在很惭愧，竟然犯下这种低级错误。后面几天因为想到已经失败就有些灌水了，这心态实在不可取，笔者会再将几篇文章合并，另发新的主题。
+笔者当初报名`IT 铁人赛`只是想把写项目的心得记录下来，当时很担心会没办法完赛，结果第 17 天真的忘记了，实在很惭愧，竟然犯下这种低级错误。后面几天因为想到已经失败就有些灌水了，这心态实在不可取，笔者会再将几篇文章合并，另发新的主题。
 
 虽然没办法完赛，但笔者也从记录心得中学到了一些东西，过去一年多工作就算写心得也都是片段式纪录，没有完整始末，这次铁人赛为了写得详细，很多资料都查了好几遍，这才是正确的写心得方式，希望明年的铁人赛会有更多的进步。
 
@@ -121,9 +109,9 @@ private async Task LoadData()
 3. [Blazor .NET 6 - Error Boundaries - Custom UI for Errors](https://www.youtube.com/watch?v=HL9WFNKdzr8)
 4. [How To Get .NET 6 in Visual Studio 2019](https://www.youtube.com/watch?v=W-GU1hkK_Ms)
 
-(注：笔者照这视频的做法还是无法在Visual Studio 2019 切换.NET 6，若有人有其他方法还请告知)
-Ref: 
+(注：笔者照这视频的做法还是无法在 Visual Studio 2019 切换.NET 6，若有人有其他方法还请告知)
+Ref:
 
 5. [Download .NET SDKs for Visual Studio](https://dotnet.microsoft.com/download/visual-studio-sdks?utm_source=getdotnetsdk&utm_medium=referral)
 
-(注：微软官方下载网站指名.NET 6 不支援Visual Studio 2019 SDK，不清楚上面视频的作者是如何办到的。)
+(注：微软官方下载网站指名.NET 6 不支援 Visual Studio 2019 SDK，不清楚上面视频的作者是如何办到的。)

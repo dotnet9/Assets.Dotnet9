@@ -5,17 +5,17 @@ description: 在创建 iOS 和 Android 应用程序时，通常推荐使用 Flut
 date: 2022-05-06 06:28:41
 copyright: Reprinted
 author: 坚果
-originaltitle: 2022年Flutter真的会一统大前端吗？
-originallink: https://www.aisoutu.com/a/1610740
+originalTitle: 2022年Flutter真的会一统大前端吗？
+originalLink: https://www.aisoutu.com/a/1610740
 draft: False
 cover: https://img1.dotnet9.com/2022/05/cover_19.png
 categories: 前端
 tags: Flutter
 ---
 
-副标题《理性对待Flutter》
+副标题《理性对待 Flutter》
 
->作者：坚果
+> 作者：坚果
 
 在创建 iOS 和 Android 应用程序时，通常推荐使用 Flutter，因为使用它更加简单高效。正是由于 Flutter 的诸多优势，它在许多情况下都是移动应用程序的绝佳候选者。它的性能、逻辑架构和文档都备受推崇。国内的社区也非常的活跃，但在某些情况下，Flutter 可能并不是最合适的。这就是我们将在本博客中看到的内容。让我们看一些场景..
 
@@ -27,7 +27,7 @@ tags: Flutter
 
 ## 2. 当您的应用程序对应用大小要求很高时
 
-由于flutter不是原生的，它在应用程序之上添加了一些其他库来工作。如果每个字节对您的应用程序都很重要时，您可能需要在原生平台上进行开发。由于它具有内置的小部件而不是使用原生平台小部件，因此 Flutter 应用程序的最小大小超过 4MB，明显大于原生 Java（539KB）和 Kotlin（550KB）应用程序。
+由于 flutter 不是原生的，它在应用程序之上添加了一些其他库来工作。如果每个字节对您的应用程序都很重要时，您可能需要在原生平台上进行开发。由于它具有内置的小部件而不是使用原生平台小部件，因此 Flutter 应用程序的最小大小超过 4MB，明显大于原生 Java（539KB）和 Kotlin（550KB）应用程序。
 
 老实说，它的竞争对手也有同样的问题， React Native 占用 7MB。
 
@@ -41,11 +41,11 @@ tags: Flutter
 
 ## 4. Flutter for Web
 
-它不是html。是的，即使是 Web 版 Flutter 也已正式发布，但是它不会撼动互联网世界。市场上有许多简单有效的库来开发网站。当涉及到网站、页面加载速度、SEO、性能和一切都很重要时，Flutter 很难通过简单的 dart to Js Engine 来实现这些。
+它不是 html。是的，即使是 Web 版 Flutter 也已正式发布，但是它不会撼动互联网世界。市场上有许多简单有效的库来开发网站。当涉及到网站、页面加载速度、SEO、性能和一切都很重要时，Flutter 很难通过简单的 dart to Js Engine 来实现这些。
 
 但现在判断还为时过早。Flutter 可能会拿出精彩的优化性能。让我们敬请期待，在王叔的视频里，对此类问题也做过阐述，地址在这儿。
 
-Flutter可以做网站吗｜Flutter Web劝退指南｜从入门到放弃只需要几分钟
+Flutter 可以做网站吗｜ Flutter Web 劝退指南｜从入门到放弃只需要几分钟
 
 ## 5. 平台特定的外观和设计
 

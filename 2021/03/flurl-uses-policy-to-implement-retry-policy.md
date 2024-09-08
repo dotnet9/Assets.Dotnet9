@@ -5,17 +5,17 @@ description: 在使用Flurl作为HttpClient向Server请求时，由于网络或�
 date: 2021-03-15 11:57:53
 copyright: Reprinted
 author: 非法关键字
-originaltitle: Flurl使用Polly实现重试Policy
-originallink: https://www.cnblogs.com/linxmouse/p/14533151.html
+originalTitle: Flurl使用Polly实现重试Policy
+originalLink: https://www.cnblogs.com/linxmouse/p/14533151.html
 draft: False
 cover: https://img1.dotnet9.com/2021/03/cover_03.jpg
 categories: .NET
 tags: C#,Flurl,Policy
 ---
 
-> 在使用Flurl作为HttpClient向Server请求时，由于网络或者其它一些原因导致请求会有失败的情况，比如`HttpStatusCode.NotFound`、`HttpStatusCode.ServiceUnavailable`、HttpStatusCode.RequestTimeout等；网络上有比较多的HttpClientFactory使用Polly来实现重试的内容，奈何已经习惯使用Flurl的人，要全部换回到IHttpClient的确有不方便的地方，因为本文使用Flurl的Polly来实现重试机制做一个整理；
+> 在使用 Flurl 作为 HttpClient 向 Server 请求时，由于网络或者其它一些原因导致请求会有失败的情况，比如`HttpStatusCode.NotFound`、`HttpStatusCode.ServiceUnavailable`、HttpStatusCode.RequestTimeout 等；网络上有比较多的 HttpClientFactory 使用 Polly 来实现重试的内容，奈何已经习惯使用 Flurl 的人，要全部换回到 IHttpClient 的确有不方便的地方，因为本文使用 Flurl 的 Polly 来实现重试机制做一个整理；
 
-## 不使用Polly来测试
+## 不使用 Polly 来测试
 
 1. 提供一个接口以便做请求测试
 
@@ -112,29 +112,29 @@ info: SuppertRcsInterfaceTest.Controllers.PollyController[0]
      About to serve a 404
 ```
 
-> 针对这个情况有没有什么解决的办法呢，答案是肯定的，粗暴的想法就是失败了再重新做请求，直接在Flurl的返回结果中做这个逻辑处理会比较麻烦也不方便统一的管理，如此就找到了Polly
+> 针对这个情况有没有什么解决的办法呢，答案是肯定的，粗暴的想法就是失败了再重新做请求，直接在 Flurl 的返回结果中做这个逻辑处理会比较麻烦也不方便统一的管理，如此就找到了 Polly
 
-## 使用Polly来测试
+## 使用 Polly 来测试
 
-1. 首先安装Polly, `Install-Package Polly`
+1. 首先安装 Polly, `Install-Package Polly`
 
-2. 下面先给出Polly的简单介绍后接着给出`Policy`的代码片段
+2. 下面先给出 Polly 的简单介绍后接着给出`Policy`的代码片段
 
-> Polly的七种策略：重试、断路、超时、隔离、回退和缓存策略，本文使用到了重试、超时策略
+> Polly 的七种策略：重试、断路、超时、隔离、回退和缓存策略，本文使用到了重试、超时策略
 >
 > 重试（Retry）：出现故障自动重试，这个是常见的场景
 >
-> 断路（Circuit-breaker）：当系统遇到严重的问题时，快速回馈失败比让用户/调用者等待要好，限制系统出错的消耗，有助于系统恢复，比如，当我们去调用一个第三方的API，有很长一段时间API都没有响应，可能对方服务器瘫痪了，如果我们的系统还不停地重试，不仅会加重系统的负担，还有可能导致系统其它任务受影响，因此，当系统出错的次数超过了指定的阈值，就得中断当前线程，等待一段时间后再继续；比如: `Policy.Handle<SomeException>().CircuitBreaker(2, TimeSpan.FromMinutes(1));`表示当系统出现两次某个异常时就停下来，等待1分钟后再继续，还可以在断路时定义中断的回调和重启的回调。
+> 断路（Circuit-breaker）：当系统遇到严重的问题时，快速回馈失败比让用户/调用者等待要好，限制系统出错的消耗，有助于系统恢复，比如，当我们去调用一个第三方的 API，有很长一段时间 API 都没有响应，可能对方服务器瘫痪了，如果我们的系统还不停地重试，不仅会加重系统的负担，还有可能导致系统其它任务受影响，因此，当系统出错的次数超过了指定的阈值，就得中断当前线程，等待一段时间后再继续；比如: `Policy.Handle<SomeException>().CircuitBreaker(2, TimeSpan.FromMinutes(1));`表示当系统出现两次某个异常时就停下来，等待 1 分钟后再继续，还可以在断路时定义中断的回调和重启的回调。
 >
-> 超时（Timeout）：当系统超过一定时间的等待，就可以判断不可能会有成功的结果；比如平时一个网络请求瞬间就完成了，如果有一次网络请求超过了30秒还没有完成，我们就可以判定不可能会返回成功的结果了，因此，我们需要设置系统的超时时间，避免系统长时间无谓的等待；比如：`Policy.Timeout(30, (context, span, task) => {// do something});`表示设置了超时时间不能超过30秒，否则就认为是错误的结果，并执行回调。
+> 超时（Timeout）：当系统超过一定时间的等待，就可以判断不可能会有成功的结果；比如平时一个网络请求瞬间就完成了，如果有一次网络请求超过了 30 秒还没有完成，我们就可以判定不可能会返回成功的结果了，因此，我们需要设置系统的超时时间，避免系统长时间无谓的等待；比如：`Policy.Timeout(30, (context, span, task) => {// do something});`表示设置了超时时间不能超过 30 秒，否则就认为是错误的结果，并执行回调。
 >
-> 隔离（Bulkhead Isolation）：当系统的一处出现故障时，可能触发多个失败的调用，对资源有较大的消耗，下游系统出现故障可能导致上游的故障的调用，甚至可能蔓延到导致系统崩溃，所以要将可控的操作限制在一个固定大小的资源池中，以隔离有潜在可能相互影响的操作；比如：`Policy.Bulkhead(12, context => {// do something});`表示最多允许12个线程并发执行，如果执行被拒绝，则执行回调。
+> 隔离（Bulkhead Isolation）：当系统的一处出现故障时，可能触发多个失败的调用，对资源有较大的消耗，下游系统出现故障可能导致上游的故障的调用，甚至可能蔓延到导致系统崩溃，所以要将可控的操作限制在一个固定大小的资源池中，以隔离有潜在可能相互影响的操作；比如：`Policy.Bulkhead(12, context => {// do something});`表示最多允许 12 个线程并发执行，如果执行被拒绝，则执行回调。
 >
 > 回退（Fallback）：有些错误无法避免，就要有备用的方案，当无法避免的错误发生时，我们要有一个合理的返回来代替失败；比如：`Policy.Handle<Whatever>().Fallback<UserAvatar>(() => UserAvatar.GetRandomAvatar());`表示当用户没有上传头像时，我们就给他一个默认头像。
 >
-> 缓存（Cache）：一般我们会把频繁使用且不会怎么变化的资源缓存起来，以提高系统的响应速度，如果不对缓存资源的调用进行封装，那么我们调用的时候就要先判断缓存中有没有这个资源，有的话就从缓存返回，否则就从资源存储的地方获取后缓存起来再返回，而且有时还要考虑缓存过期和如何更新缓存的问题；Polly提供了缓存策略的支持，使得问题变得简单。
+> 缓存（Cache）：一般我们会把频繁使用且不会怎么变化的资源缓存起来，以提高系统的响应速度，如果不对缓存资源的调用进行封装，那么我们调用的时候就要先判断缓存中有没有这个资源，有的话就从缓存返回，否则就从资源存储的地方获取后缓存起来再返回，而且有时还要考虑缓存过期和如何更新缓存的问题；Polly 提供了缓存策略的支持，使得问题变得简单。
 >
-> 策略包（Policy Wrap）：一种操作会有多种不同的故障，而不同的故障处理需要不同的策略，这些不同的策略必须包在一起，作为一个策略包，才能应用在同一种操作上，这就是Polly的弹性特性，即各种不同的策略能够灵活地组合起来
+> 策略包（Policy Wrap）：一种操作会有多种不同的故障，而不同的故障处理需要不同的策略，这些不同的策略必须包在一起，作为一个策略包，才能应用在同一种操作上，这就是 Polly 的弹性特性，即各种不同的策略能够灵活地组合起来
 >
 > [更多...](https://github.com/App-vNext/Polly/wiki)
 
@@ -240,7 +240,7 @@ namespace WithPollyClient.Services
 }
 ```
 
-3. 接下来在`Starup`中对Flurl进行配置
+3. 接下来在`Starup`中对 Flurl 进行配置
 
 ```c#
 public void ConfigureServices(IServiceCollection services)
@@ -279,10 +279,9 @@ WithPollyClient.Services.Policies: Information: Policy: Retry delegate fired, at
 WithPollyClient.Controllers.HomeController: Information: App: success - 2021/3/14 16:50:46
 ```
 
-
 #### 富客户端中使用的情况
 
-> 有时候呢，例如在`WPF`或者是其它的富客户端上面也会经常使用到Flurl的情况，如下
+> 有时候呢，例如在`WPF`或者是其它的富客户端上面也会经常使用到 Flurl 的情况，如下
 
 ```c#
 var time = await Policy

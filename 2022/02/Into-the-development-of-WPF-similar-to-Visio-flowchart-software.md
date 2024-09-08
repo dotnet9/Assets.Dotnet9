@@ -5,40 +5,40 @@ description: 当你想画一个流程图的时候，你会发现，很多软件�
 date: 2022-02-27 15:04:26
 copyright: Reprinted
 author: Alan.hsiang
-originaltitle: 走进WPF之开发类似Visio流程图软件
-originallink: https://mp.weixin.qq.com/s/rR8kX7aZCXpgpULRu0ZYdg
+originalTitle: 走进WPF之开发类似Visio流程图软件
+originalLink: https://mp.weixin.qq.com/s/rR8kX7aZCXpgpULRu0ZYdg
 draft: False
 cover: https://img1.dotnet9.com/2022/02/cover_15.jpeg
 categories: .NET
 tags: WPF,Visio
 ---
 
-当你想画一个流程图的时候，你会发现，很多软件要么需要秘钥，要么需要会员，这时我就在想，可不可自己制作一款流程图软件呢？本文以一个简单的小例子，简述如何利用WPF制作属于自己的流程图软件，仅供学习分享使用，如有不足之处，还请指正。
+当你想画一个流程图的时候，你会发现，很多软件要么需要秘钥，要么需要会员，这时我就在想，可不可自己制作一款流程图软件呢？本文以一个简单的小例子，简述如何利用 WPF 制作属于自己的流程图软件，仅供学习分享使用，如有不足之处，还请指正。
 
 ## 涉及知识点
 
-本示例主要通过WPF技术进行开发，涉及知识点如下：
+本示例主要通过 WPF 技术进行开发，涉及知识点如下：
 
-1. WPF绘图，如矩形，直线等功能的相关图形技术。
-2. Thumb控件，本控件可以由用户自由拖动，示例中所用到的可移动的图形控件，都继承于Thumb控件。
+1. WPF 绘图，如矩形，直线等功能的相关图形技术。
+2. Thumb 控件，本控件可以由用户自由拖动，示例中所用到的可移动的图形控件，都继承于 Thumb 控件。
 
-## Thumb控件简介
+## Thumb 控件简介
 
-Thumb控件是WPF提供的用于用户拖动的控件。默认情况下，Thumb控件并不在工具箱中，需要手动添加，如下所示：
+Thumb 控件是 WPF 提供的用于用户拖动的控件。默认情况下，Thumb 控件并不在工具箱中，需要手动添加，如下所示：
 
 工具箱-->常规-->右键-->选择项，然后打开【选择工具箱对话框】，如下所示：
 
 ![](https://img1.dotnet9.com/2022/02/1501.png)
 
-在选【择工具箱项】页面，打开WPF组件-->选择Thumb-->点击确定按钮，如下所示：
+在选【择工具箱项】页面，打开 WPF 组件-->选择 Thumb-->点击确定按钮，如下所示：
 
 ![](https://img1.dotnet9.com/2022/02/1502.png)
 
- 添加成功后，即可从工具箱拖动到页面，如下所示：
+添加成功后，即可从工具箱拖动到页面，如下所示：
 
 ![](https://img1.dotnet9.com/2022/02/1503.png)
 
-关于Thumb控件的简介，如下所示：
+关于 Thumb 控件的简介，如下所示：
 
 ```C#
 namespace System.Windows.Controls.Primitives
@@ -161,33 +161,45 @@ namespace System.Windows.Controls.Primitives
 }
 ```
 
-通过上述摘要简介，发现Thumb控件提供了三个事件，分别是：
+通过上述摘要简介，发现 Thumb 控件提供了三个事件，分别是：
 
 - 拖动开始事件：public event DragStartedEventHandler DragStarted;
 - 拖动进行事件：public event DragDeltaEventHandler DragDelta;
 - 拖动完成事件：public event DragCompletedEventHandler DragCompleted;
 
-## Thumb控件示例
+## Thumb 控件示例
 
-首先在窗口页面上添加一个Thumb控件，然后分别添加三个事件，如下所示：
+首先在窗口页面上添加一个 Thumb 控件，然后分别添加三个事件，如下所示：
 
 ```html
-<Window x:Class="DemoVisio.MainWindow1"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:DemoVisio"
-        mc:Ignorable="d"
-        Title="Thumb示例" Height="450" Width="800">
-    <Canvas>
-        <Thumb x:Name="thumb" Canvas.Left="0" Canvas.Top="0"  Height="100"  Width="100"   DragStarted="thumb_DragStarted" DragDelta="thumb_DragDelta" DragCompleted="thumb_DragCompleted"/>
-
-    </Canvas>
+<Window
+  x:Class="DemoVisio.MainWindow1"
+  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+  xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+  xmlns:local="clr-namespace:DemoVisio"
+  mc:Ignorable="d"
+  Title="Thumb示例"
+  Height="450"
+  Width="800"
+>
+  <canvas>
+    <Thumb
+      x:Name="thumb"
+      Canvas.Left="0"
+      Canvas.Top="0"
+      Height="100"
+      Width="100"
+      DragStarted="thumb_DragStarted"
+      DragDelta="thumb_DragDelta"
+      DragCompleted="thumb_DragCompleted"
+    />
+  </canvas>
 </Window>
 ```
 
-然后在三个事件中添加代码，终点是DragDelta事件，如下所示：
+然后在三个事件中添加代码，终点是 DragDelta 事件，如下所示：
 
 ```C#
 namespace DemoVisio
@@ -229,15 +241,15 @@ namespace DemoVisio
 }
 ```
 
-注意，在XAML中，Thumb一定是在Canvas布局容器中，且一定要设置【Canvas.Left="0" Canvas.Top="0"】两个属性，如果不设置，在值为NaN，无法进行拖动。
+注意，在 XAML 中，Thumb 一定是在 Canvas 布局容器中，且一定要设置【Canvas.Left="0" Canvas.Top="0"】两个属性，如果不设置，在值为 NaN，无法进行拖动。
 
-默认情况下，Thumb控件就是一个丑丑的方块，如下所示：
+默认情况下，Thumb 控件就是一个丑丑的方块，如下所示：
 
 ![](https://img1.dotnet9.com/2022/02/1504.gif)
 
 ## 拖动控件基类
 
-在本示例中，流程图需要多种控件（如：圆形，矩形，线等），不能每一个控件都去实现那三个事件【DragStarted，DragDelta，DragCompleted】，所以需要定义一个基类ThumbControl，统一实现方案。具体如下所示：
+在本示例中，流程图需要多种控件（如：圆形，矩形，线等），不能每一个控件都去实现那三个事件【DragStarted，DragDelta，DragCompleted】，所以需要定义一个基类 ThumbControl，统一实现方案。具体如下所示：
 
 ```C#
 namespace DemoVisio
@@ -313,33 +325,59 @@ namespace DemoVisio
 
 ## 具体图形控件
 
-封装了基类以后，其他控件可以在此基础上进行使用，通过ControlTemplate展现不同的形态，如下所示：
+封装了基类以后，其他控件可以在此基础上进行使用，通过 ControlTemplate 展现不同的形态，如下所示：
 
 1. 矩形方块
 
 在流程图中，矩形方块一般表示过程，实现代码如下所示：
 
 ```html
-<UserControl x:Class="DemoVisio.SquareControl"
-             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-             xmlns:local="clr-namespace:DemoVisio"
-             mc:Ignorable="d"
-             d:DesignHeight="450" d:DesignWidth="800">
-    <Canvas>
-        <local:ThumbControl x:Name="s" BorderThickness="1" Canvas.Top ="0" Canvas.Left="0" Width="100" Height="60" Background="AliceBlue">
-            <Thumb.Template>
-                <ControlTemplate>
-                    <Border Width="{Binding ElementName=s, Path=Width}" Height="{Binding ElementName=s, Path=Height}" BorderBrush="Black" Background="{Binding ElementName=s, Path=Background}" BorderThickness="{Binding ElementName=s, Path=BorderThickness}" Padding="2">
-                        <TextBox Background="{Binding ElementName=s, Path=Background}" BorderThickness="0" VerticalAlignment="Center"  IsEnabled="{Binding ElementName=s, Path=IsEnableInput}" MinLines="3" MaxLines="3" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></TextBox>
-                    </Border>
-
-                </ControlTemplate>
-            </Thumb.Template>
-        </local:ThumbControl>
-    </Canvas>
+<UserControl
+  x:Class="DemoVisio.SquareControl"
+  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+  xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+  xmlns:local="clr-namespace:DemoVisio"
+  mc:Ignorable="d"
+  d:DesignHeight="450"
+  d:DesignWidth="800"
+>
+  <canvas>
+    <local:ThumbControl
+      x:Name="s"
+      BorderThickness="1"
+      Canvas.Top="0"
+      Canvas.Left="0"
+      Width="100"
+      Height="60"
+      Background="AliceBlue"
+    >
+      <Thumb.Template>
+        <ControlTemplate>
+          <Border
+            Width="{Binding ElementName=s, Path=Width}"
+            Height="{Binding ElementName=s, Path=Height}"
+            BorderBrush="Black"
+            Background="{Binding ElementName=s, Path=Background}"
+            BorderThickness="{Binding ElementName=s, Path=BorderThickness}"
+            Padding="2"
+          >
+            <TextBox
+              Background="{Binding ElementName=s, Path=Background}"
+              BorderThickness="0"
+              VerticalAlignment="Center"
+              IsEnabled="{Binding ElementName=s, Path=IsEnableInput}"
+              MinLines="3"
+              MaxLines="3"
+              HorizontalContentAlignment="Center"
+              VerticalContentAlignment="Center"
+            ></TextBox>
+          </Border>
+        </ControlTemplate>
+      </Thumb.Template>
+    </local:ThumbControl>
+  </canvas>
 </UserControl>
 ```
 
@@ -348,28 +386,56 @@ namespace DemoVisio
 在流程图中，圆形一般表示开始和结束，如下所示：
 
 ```html
-<UserControl x:Class="DemoVisio.CircleControl"
-             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-             xmlns:local="clr-namespace:DemoVisio"
-             mc:Ignorable="d"
-             d:DesignHeight="450" d:DesignWidth="800">
-    <Canvas>
-        <local:ThumbControl x:Name="s" Canvas.Top ="0" Canvas.Left="0" Width="60" Height="60" Background="AliceBlue" BorderThickness="1" >
-            <local:ThumbControl.Template>
-                <ControlTemplate>
-                    <Grid>
-                        <Border Width="{Binding Width}" Height="{Binding Height}" CornerRadius="30" BorderThickness="{Binding ElementName=s, Path=BorderThickness}" BorderBrush="Black" Background="{Binding ElementName=s, Path=Background}">
-                            <TextBox VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" MaxLines="2" MinLines="1" Width="{Binding Width}" Height="{Binding Height}" Background="{Binding ElementName=s, Path=Background}" BorderThickness="0" IsEnabled="{Binding ElementName=s, Path=IsEnableInput}"></TextBox>
-                        </Border>
-                    </Grid>
-                </ControlTemplate>
-            </local:ThumbControl.Template>
-
-        </local:ThumbControl>
-    </Canvas>
+<UserControl
+  x:Class="DemoVisio.CircleControl"
+  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+  xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+  xmlns:local="clr-namespace:DemoVisio"
+  mc:Ignorable="d"
+  d:DesignHeight="450"
+  d:DesignWidth="800"
+>
+  <canvas>
+    <local:ThumbControl
+      x:Name="s"
+      Canvas.Top="0"
+      Canvas.Left="0"
+      Width="60"
+      Height="60"
+      Background="AliceBlue"
+      BorderThickness="1"
+    >
+      <local:ThumbControl.Template>
+        <ControlTemplate>
+          <Grid>
+            <Border
+              Width="{Binding Width}"
+              Height="{Binding Height}"
+              CornerRadius="30"
+              BorderThickness="{Binding ElementName=s, Path=BorderThickness}"
+              BorderBrush="Black"
+              Background="{Binding ElementName=s, Path=Background}"
+            >
+              <TextBox
+                VerticalAlignment="Center"
+                HorizontalContentAlignment="Center"
+                VerticalContentAlignment="Center"
+                MaxLines="2"
+                MinLines="1"
+                Width="{Binding Width}"
+                Height="{Binding Height}"
+                Background="{Binding ElementName=s, Path=Background}"
+                BorderThickness="0"
+                IsEnabled="{Binding ElementName=s, Path=IsEnableInput}"
+              ></TextBox>
+            </Border>
+          </Grid>
+        </ControlTemplate>
+      </local:ThumbControl.Template>
+    </local:ThumbControl>
+  </canvas>
 </UserControl>
 ```
 
@@ -378,39 +444,75 @@ namespace DemoVisio
 在流程图中，菱形一般表示选择，表达程序中的布尔值。如下所示：
 
 ```html
-<UserControl x:Class="DemoVisio.RhombusControl"
-             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-             xmlns:local="clr-namespace:DemoVisio"
-             mc:Ignorable="d"
-             d:DesignHeight="450" d:DesignWidth="800">
-    <Canvas>
-        <local:ThumbControl x:Name="s" Canvas.Left="0" Canvas.Top="0"  Width="80" Height="80" Background="AliceBlue" BorderThickness="1"  >
-            <Thumb.Template>
-                <ControlTemplate>
-                    <Border Width="{Binding ElementName=s, Path=Width}" Height="{Binding ElementName=s, Path=Height}" BorderBrush="Black" Background="{Binding ElementName=s, Path=Background}" BorderThickness="{Binding ElementName=s, Path=BorderThickness}" Padding="1">
-                        <TextBox Background="{Binding ElementName=s, Path=Background}" BorderThickness="0" VerticalAlignment="Center"  IsEnabled="{Binding ElementName=s, Path=IsEnableInput}" Width="50" Height="50" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
-                            <TextBox.RenderTransform>
-                                <RotateTransform CenterX="25" CenterY="25" Angle="-45" ></RotateTransform>
-                            </TextBox.RenderTransform>
-                        </TextBox>
-                    </Border>
-
-                </ControlTemplate>
-
-            </Thumb.Template>
-            <Thumb.RenderTransform>
-
-                <TransformGroup>
-                    <RotateTransform CenterX="40" CenterY="40" Angle="45"></RotateTransform>
-                    <ScaleTransform CenterX="40" CenterY="40" ScaleX="0.8"></ScaleTransform>
-                    <TranslateTransform X="10" Y="15"></TranslateTransform>
-                </TransformGroup>
-            </Thumb.RenderTransform>
-        </local:ThumbControl>
-    </Canvas>
+<UserControl
+  x:Class="DemoVisio.RhombusControl"
+  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+  xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+  xmlns:local="clr-namespace:DemoVisio"
+  mc:Ignorable="d"
+  d:DesignHeight="450"
+  d:DesignWidth="800"
+>
+  <canvas>
+    <local:ThumbControl
+      x:Name="s"
+      Canvas.Left="0"
+      Canvas.Top="0"
+      Width="80"
+      Height="80"
+      Background="AliceBlue"
+      BorderThickness="1"
+    >
+      <Thumb.Template>
+        <ControlTemplate>
+          <Border
+            Width="{Binding ElementName=s, Path=Width}"
+            Height="{Binding ElementName=s, Path=Height}"
+            BorderBrush="Black"
+            Background="{Binding ElementName=s, Path=Background}"
+            BorderThickness="{Binding ElementName=s, Path=BorderThickness}"
+            Padding="1"
+          >
+            <TextBox
+              Background="{Binding ElementName=s, Path=Background}"
+              BorderThickness="0"
+              VerticalAlignment="Center"
+              IsEnabled="{Binding ElementName=s, Path=IsEnableInput}"
+              Width="50"
+              Height="50"
+              HorizontalContentAlignment="Center"
+              VerticalContentAlignment="Center"
+            >
+              <TextBox.RenderTransform>
+                <RotateTransform
+                  CenterX="25"
+                  CenterY="25"
+                  Angle="-45"
+                ></RotateTransform>
+              </TextBox.RenderTransform>
+            </TextBox>
+          </Border>
+        </ControlTemplate>
+      </Thumb.Template>
+      <Thumb.RenderTransform>
+        <TransformGroup>
+          <RotateTransform
+            CenterX="40"
+            CenterY="40"
+            Angle="45"
+          ></RotateTransform>
+          <ScaleTransform
+            CenterX="40"
+            CenterY="40"
+            ScaleX="0.8"
+          ></ScaleTransform>
+          <TranslateTransform X="10" Y="15"></TranslateTransform>
+        </TransformGroup>
+      </Thumb.RenderTransform>
+    </local:ThumbControl>
+  </canvas>
 </UserControl>
 ```
 
@@ -419,32 +521,75 @@ namespace DemoVisio
 在流程图中，直线一般表示两个过程之间的连接，如下所示：
 
 ```html
-<UserControl x:Class="DemoVisio.LineArrowControl"
-             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-             xmlns:local="clr-namespace:DemoVisio"
-             mc:Ignorable="d"
-             d:DesignHeight="450" d:DesignWidth="800">
-    <Canvas>
-        <local:ThumbControl x:Name="s" Canvas.Left="0" Canvas.Top="0"  Width="100" Height="100" Background="AliceBlue" IsEnableInput="False">
-            <local:ThumbControl.Template>
-                <ControlTemplate>
-                    <Grid>
-
-                        <Line X1="0" Y1="0" X2="0" Y2="100" Stroke="Black" StrokeThickness="2" HorizontalAlignment="Center" >
-
-                        </Line>
-                        <Line X1="-5" Y1="90" X2="1" Y2="100" StrokeThickness="2" Stroke="Black" HorizontalAlignment="Center"></Line>
-                        <Line X1="8" Y1="90" X2="3" Y2="100" StrokeThickness="2" Stroke="Black" HorizontalAlignment="Center"></Line>
-                        <TextBox VerticalAlignment="Center" Height="30" HorizontalContentAlignment="Center" BorderThickness="0" VerticalContentAlignment="Center" MinLines="1" MaxLines="2" IsEnabled="{Binding ElementName=s, Path=IsEnableInput}" Opacity="0" Visibility="{Binding ElementName=s, Path=IsEnableInput}"></TextBox>
-                    </Grid>
-                </ControlTemplate>
-            </local:ThumbControl.Template>
-
-        </local:ThumbControl>
-    </Canvas>
+<UserControl
+  x:Class="DemoVisio.LineArrowControl"
+  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+  xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+  xmlns:local="clr-namespace:DemoVisio"
+  mc:Ignorable="d"
+  d:DesignHeight="450"
+  d:DesignWidth="800"
+>
+  <canvas>
+    <local:ThumbControl
+      x:Name="s"
+      Canvas.Left="0"
+      Canvas.Top="0"
+      Width="100"
+      Height="100"
+      Background="AliceBlue"
+      IsEnableInput="False"
+    >
+      <local:ThumbControl.Template>
+        <ControlTemplate>
+          <Grid>
+            <Line
+              X1="0"
+              Y1="0"
+              X2="0"
+              Y2="100"
+              Stroke="Black"
+              StrokeThickness="2"
+              HorizontalAlignment="Center"
+            >
+            </Line>
+            <Line
+              X1="-5"
+              Y1="90"
+              X2="1"
+              Y2="100"
+              StrokeThickness="2"
+              Stroke="Black"
+              HorizontalAlignment="Center"
+            ></Line>
+            <Line
+              X1="8"
+              Y1="90"
+              X2="3"
+              Y2="100"
+              StrokeThickness="2"
+              Stroke="Black"
+              HorizontalAlignment="Center"
+            ></Line>
+            <TextBox
+              VerticalAlignment="Center"
+              Height="30"
+              HorizontalContentAlignment="Center"
+              BorderThickness="0"
+              VerticalContentAlignment="Center"
+              MinLines="1"
+              MaxLines="2"
+              IsEnabled="{Binding ElementName=s, Path=IsEnableInput}"
+              Opacity="0"
+              Visibility="{Binding ElementName=s, Path=IsEnableInput}"
+            ></TextBox>
+          </Grid>
+        </ControlTemplate>
+      </local:ThumbControl.Template>
+    </local:ThumbControl>
+  </canvas>
 </UserControl>
 ```
 
@@ -453,46 +598,93 @@ namespace DemoVisio
 主窗体主要用于绘制流程图，分为左右两部分，左边是控件列表，右边是布局容器，如下所示：
 
 ```html
-<Window x:Class="DemoVisio.MainWindow"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:DemoVisio"
-        mc:Ignorable="d"
-        Title="流程图" Height="800" Width="800" MouseDown="Window_MouseDown" Loaded="Window_Loaded">
-    <Window.Resources>
-        <Style TargetType="TextBlock">
-            <Setter Property="HorizontalAlignment" Value="Center"></Setter>
-        </Style>
-    </Window.Resources>
-    <Grid ShowGridLines="True">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="Auto" MinWidth="150"></ColumnDefinition>
-            <ColumnDefinition Width="*"></ColumnDefinition>
-        </Grid.ColumnDefinitions>
-        <StackPanel Grid.Column="0" x:Name="left" Orientation="Vertical">
-            <Rectangle Width="80" Height="50" Fill="AliceBlue" Stroke="Black" Margin="5" x:Name="rectangle" MouseLeftButtonDown="rectangle_MouseLeftButtonDown"></Rectangle>
-            <TextBlock Text="矩形"></TextBlock>
-            <Rectangle Width="100" Height="100" Fill="AliceBlue" Stroke="Black" Margin="5" x:Name="rhombus" MouseLeftButtonDown="rhombus_MouseLeftButtonDown">
-                <Rectangle.RenderTransform>
-                    <TransformGroup>
-                        <RotateTransform CenterX="50" CenterY="50" Angle="45"></RotateTransform>
-                        <ScaleTransform CenterX="50" CenterY="50" ScaleX="0.5" ScaleY="0.7"></ScaleTransform>
-                    </TransformGroup>
-                </Rectangle.RenderTransform>
-            </Rectangle>
-            <TextBlock Text="菱形" Margin="0,5"></TextBlock>
-            <Line X1="0" Y1="0" X2="0" Y2="80" Stroke="Black" StrokeThickness="2" HorizontalAlignment="Center" Margin="5" x:Name="line" MouseLeftButtonDown="line_MouseLeftButtonDown" ></Line>
-            <TextBlock Text="直线"></TextBlock>
-            <Ellipse Width="60" Height="60" Fill="AliceBlue" Stroke="Black" Margin="5" x:Name="circle" MouseLeftButtonDown="circle_MouseLeftButtonDown"></Ellipse>
-            <TextBlock Text="圆形"></TextBlock>
-        </StackPanel>
-        <Canvas Grid.Column="1" x:Name="right" >
-
-
-        </Canvas>
-    </Grid>
+<Window
+  x:Class="DemoVisio.MainWindow"
+  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+  xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+  xmlns:local="clr-namespace:DemoVisio"
+  mc:Ignorable="d"
+  Title="流程图"
+  Height="800"
+  Width="800"
+  MouseDown="Window_MouseDown"
+  Loaded="Window_Loaded"
+>
+  <Window.Resources>
+    <style TargetType="TextBlock">
+      <Setter Property="HorizontalAlignment" Value="Center"></Setter>
+    </style>
+  </Window.Resources>
+  <Grid ShowGridLines="True">
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="Auto" MinWidth="150"></ColumnDefinition>
+      <ColumnDefinition Width="*"></ColumnDefinition>
+    </Grid.ColumnDefinitions>
+    <StackPanel Grid.Column="0" x:Name="left" Orientation="Vertical">
+      <Rectangle
+        Width="80"
+        Height="50"
+        Fill="AliceBlue"
+        Stroke="Black"
+        Margin="5"
+        x:Name="rectangle"
+        MouseLeftButtonDown="rectangle_MouseLeftButtonDown"
+      ></Rectangle>
+      <TextBlock Text="矩形"></TextBlock>
+      <Rectangle
+        Width="100"
+        Height="100"
+        Fill="AliceBlue"
+        Stroke="Black"
+        Margin="5"
+        x:Name="rhombus"
+        MouseLeftButtonDown="rhombus_MouseLeftButtonDown"
+      >
+        <Rectangle.RenderTransform>
+          <TransformGroup>
+            <RotateTransform
+              CenterX="50"
+              CenterY="50"
+              Angle="45"
+            ></RotateTransform>
+            <ScaleTransform
+              CenterX="50"
+              CenterY="50"
+              ScaleX="0.5"
+              ScaleY="0.7"
+            ></ScaleTransform>
+          </TransformGroup>
+        </Rectangle.RenderTransform>
+      </Rectangle>
+      <TextBlock Text="菱形" Margin="0,5"></TextBlock>
+      <Line
+        X1="0"
+        Y1="0"
+        X2="0"
+        Y2="80"
+        Stroke="Black"
+        StrokeThickness="2"
+        HorizontalAlignment="Center"
+        Margin="5"
+        x:Name="line"
+        MouseLeftButtonDown="line_MouseLeftButtonDown"
+      ></Line>
+      <TextBlock Text="直线"></TextBlock>
+      <Ellipse
+        Width="60"
+        Height="60"
+        Fill="AliceBlue"
+        Stroke="Black"
+        Margin="5"
+        x:Name="circle"
+        MouseLeftButtonDown="circle_MouseLeftButtonDown"
+      ></Ellipse>
+      <TextBlock Text="圆形"></TextBlock>
+    </StackPanel>
+    <canvas Grid.Column="1" x:Name="right"> </canvas>
+  </Grid>
 </Window>
 ```
 

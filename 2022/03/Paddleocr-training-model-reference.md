@@ -5,14 +5,14 @@ description: 本文章介绍的是NV显卡训练。CPU训练 仅供参考，部�
 date: 2022-03-30 11:00:13
 copyright: Reprinted
 author: Dream.Machine
-originaltitle: PaddleOCR 训练模型参考
+originalTitle: PaddleOCR 训练模型参考
 draft: False
 cover: https://img1.dotnet9.com/2022/03/cover_28.jpeg
 categories: .NET
 tags: 模式训练
 ---
 
-本文章介绍的是NV显卡训练。CPU训练 仅供参考，部分不同的地方请前往官方网站获取信息。
+本文章介绍的是 NV 显卡训练。CPU 训练 仅供参考，部分不同的地方请前往官方网站获取信息。
 
 ## 官方地址：
 
@@ -25,23 +25,23 @@ tags: 模式训练
 
 - `Python`：是执行脚本的关键词，需要配置环境变量，下面的很多组件都需要配置环境变量，具体的请参考互联网信息。
 
-- `pip`: 作者本身不会Python，这个理解应该是一个安装的插件。可以安装第三方库，如果pip3无法执行 可以切换成pip，具体原因不明。
+- `pip`: 作者本身不会 Python，这个理解应该是一个安装的插件。可以安装第三方库，如果 pip3 无法执行 可以切换成 pip，具体原因不明。
 
-- `pip` 网络问题: 可以在使用pip的时候加参数`-i` [https://pypi.tuna.tsinghua.edu.cn/simple](https://pypi.tuna.tsinghua.edu.cn/simple) 
+- `pip` 网络问题: 可以在使用 pip 的时候加参数`-i` [https://pypi.tuna.tsinghua.edu.cn/simple](https://pypi.tuna.tsinghua.edu.cn/simple)
 
-例如：`pip install -i https://pypi.tuna.tsinghua.edu.cn/simple pyspider`，这样就会从清华这边的镜像去安装pyspider库。
+例如：`pip install -i https://pypi.tuna.tsinghua.edu.cn/simple pyspider`，这样就会从清华这边的镜像去安装 pyspider 库。
 
 - CUDA
 
 [https://developer.nvidia.com/cuda-downloads](https://developer.nvidia.com/cuda-downloads)
 
-作者安装的是10.2的版本
+作者安装的是 10.2 的版本
 
 - CUDNN
 
 [https://developer.nvidia.com/cudnn](https://developer.nvidia.com/cudnn)
 
-下载之后覆盖保存到CUDA目录
+下载之后覆盖保存到 CUDA 目录
 
 - PaddleOCR
 
@@ -59,7 +59,7 @@ tags: 模式训练
 pip3 install -r requirements.txt
 ```
 
-安装OCR需要的第三方python库
+安装 OCR 需要的第三方 python 库
 
 - PPOCRLabel
 
@@ -70,7 +70,7 @@ pip3 install -r requirements.txt
 ```shell
 cd ./PPOCRLabel # 将目录切换到PPOCRLabel文件夹下
 pip install pyqt5 # 安装QT5 运行环境
-pip3 install -r requirements.txt  
+pip3 install -r requirements.txt
 python PPOCRLabel.py --lang ch # 启动工具，如果启动没反应那么就是缺少环境
 ```
 
@@ -130,7 +130,7 @@ python tools/export_model.py -c configs/rec/ch_ppocr_v2.0/rec_chinese_lite_train
 
 ```shell
 //使用训练预测(预测文件夹)
-python tools/infer_rec.py -c configs/rec/ch_ppocr_v2.0/rec_chinese_lite_train_v2.0.yml -o Global.checkpoints=output/rec_chinese_lite_v2.0/latest Global.load_static_weights=false Global.infer_img=trainTest/ 
+python tools/infer_rec.py -c configs/rec/ch_ppocr_v2.0/rec_chinese_lite_train_v2.0.yml -o Global.checkpoints=output/rec_chinese_lite_v2.0/latest Global.load_static_weights=false Global.infer_img=trainTest/
 ```
 
 ```shell
@@ -140,9 +140,9 @@ python tools/infer_rec.py -c configs/rec/ch_ppocr_v2.0/rec_chinese_lite_train_v2
 
 ```shell
 //使用导出模型预测
-python tools/infer/predict_rec.py --image_dir="./trainTest/" --det_model_dir="./ch_PP-OCRv2_det_infer/"  --rec_model_dir="./output/inference/" --cls_model_dir="./ch_ppocr_mobile_v2.0_cls_infer/"  
+python tools/infer/predict_rec.py --image_dir="./trainTest/" --det_model_dir="./ch_PP-OCRv2_det_infer/"  --rec_model_dir="./output/inference/" --cls_model_dir="./ch_ppocr_mobile_v2.0_cls_infer/"
 ```
 
->作者：Dream.Machine
+> 作者：Dream.Machine
 >
->网站：www.dmskin.com
+> 网站：www.dmskin.com

@@ -5,8 +5,8 @@ description: 在有些特殊项目中，软件可能是无人值守的，如果�
 date: 2022-11-11 11:20:47
 copyright: Contributes
 author: 傲慢与偏见
-originaltitle: 使用C#简单制作一个看门狗程序
-originallink: https://www.cnblogs.com/chonglu/p/16913746.html
+originalTitle: 使用C#简单制作一个看门狗程序
+originalLink: https://www.cnblogs.com/chonglu/p/16913746.html
 draft: false
 cover: https://img1.dotnet9.com/2022/11/cover_05.jpg
 categories: .NET
@@ -17,7 +17,7 @@ tags: .NET
 >
 > 作者：傲慢与偏见
 >
-> 原文标题：使用C#简单制作一个看门狗程序
+> 原文标题：使用 C#简单制作一个看门狗程序
 >
 > 原文链接：https://www.cnblogs.com/chonglu/p/16913746.html
 
@@ -37,9 +37,9 @@ tags: .NET
 
 Tips：文末有完整源代码，就不一步一步写了
 
-1、创建一个Dog类，主要用于间隔性扫描被看护程序是否还在运行
+1、创建一个 Dog 类，主要用于间隔性扫描被看护程序是否还在运行
 
-开了个定时器，每5秒去检查1次，如果没有找到进程则使用`Process`启动程序
+开了个定时器，每 5 秒去检查 1 次，如果没有找到进程则使用`Process`启动程序
 
 ```csharp
 public class Dog
@@ -85,9 +85,9 @@ public class Dog
         }
         catch (Exception)
         {
-            
+
         }
-        
+
     }
 }
 ```
@@ -119,10 +119,10 @@ static class Program
         }
         Process current = Process.GetCurrentProcess();
         Process[] processes = Process.GetProcessesByName(current.ProcessName);
-        //遍历与当前进程名称相同的进程列表 
+        //遍历与当前进程名称相同的进程列表
         foreach (Process process in processes)
         {
-            //如果实例已经存在则忽略当前进程 
+            //如果实例已经存在则忽略当前进程
             if (process.Id != current.Id)
             {
                 //保证要打开的进程同已经存在的进程来自同一文件路径
@@ -268,7 +268,7 @@ public partial class App : Application
 }
 ```
 
-Winform、普通WPF、Prism等入口点都不太一样，根据项目实际情况灵活处理即可
+Winform、普通 WPF、Prism 等入口点都不太一样，根据项目实际情况灵活处理即可
 
 最后在需要正常退出程序的地方（也就是主程序关闭按钮或其它想要正常退出程序的地方）停止看门狗程序
 

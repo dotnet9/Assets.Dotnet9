@@ -4,9 +4,9 @@ slug: The-most-popular-dotNet-open-source-project-collection
 description: Github 上有很多优秀的 .NET 开源项目，它们很适合用来学习 .NET 、设计模式和架构。
 date: 2022-03-30 11:35:29
 copyright: Reprinted
-author:  全球技术精选
-originaltitle: 最流行的 .NET 开源项目合集
-originallink: https://mp.weixin.qq.com/s/VJAKv-c8l7Oiubc0qHHRXw
+author: 全球技术精选
+originalTitle: 最流行的 .NET 开源项目合集
+originalLink: https://mp.weixin.qq.com/s/VJAKv-c8l7Oiubc0qHHRXw
 draft: False
 cover: https://img1.dotnet9.com/2022/03/cover_30.png
 categories: .NET
@@ -17,7 +17,7 @@ tags: .NET
 
 Github 上有很多优秀的 .NET 开源项目，它们很适合用来学习 .NET 、设计模式和架构。
 
-## nopCommerce 
+## nopCommerce
 
 [https://github.com/nopSolutions/nopCommerce](https://github.com/nopSolutions/nopCommerce)
 
@@ -31,7 +31,7 @@ star: 7k ⭐
 
 nopCommerce 架构遵循了优秀的的软件模式和最佳安全实践，可插拔和整洁的架构, 项目的可扩展性也可以满足大部分的业务需求。
 
-## GrandNode   
+## GrandNode
 
 [https://github.com/grandnode/grandnode2](https://github.com/grandnode/grandnode2)
 
@@ -41,7 +41,7 @@ GrandNode 是免费、开源、高性能、多租户电子商务平台，使用�
 
 它是一个电子商务平台，可以灵活地开发在线商店，支持 B2B、B2C、多店铺、多厂商、多租户、多语言、多币种等多种商业模式。
 
-## VirtoCommerce   
+## VirtoCommerce
 
 [https://github.com/VirtoCommerce/vc-platform](https://github.com/VirtoCommerce/vc-platform)
 
@@ -57,17 +57,15 @@ Virto Commerce 架构的设计原则是：微服务、API-First、云原生、�
 
 ![](https://img1.dotnet9.com/2022/03/3002.png)
 
-## Miniblog.Core 
+## Miniblog.Core
 
 [https://github.com/madskristensen/Miniblog.Core](https://github.com/madskristensen/Miniblog.Core)
 
-
 star: 1.2k ⭐
-
 
 Miniblog.Coreshi 是基于 ASP.NET Core 构建且功能完善、轻量的博客引擎。
 
-## Blogifier 
+## Blogifier
 
 [https://github.com/blogifierdotnet/Blogifier](https://github.com/blogifierdotnet/Blogifier)
 
@@ -85,15 +83,15 @@ star: 20k ⭐
 
 该架构提出了一种面向微服务的架构实现，并在每个微服务中使用了不同的实现（简单的 CRUD 和 DDD/CQRS 模式）。
 
-## CleanArchitecture (ardalis)  
+## CleanArchitecture (ardalis)
 
 [https://github.com/ardalis/CleanArchitecture](https://github.com/ardalis/CleanArchitecture)
 
 star: 9.8k ⭐
 
-基于 .NET 6 的整洁架构解决方案模板，按照整洁架构原则设计，通过使用 Angular 和 ASP.NET Core 可以快速创建单页应用程序（SPA）。  
+基于 .NET 6 的整洁架构解决方案模板，按照整洁架构原则设计，通过使用 Angular 和 ASP.NET Core 可以快速创建单页应用程序（SPA）。
 
-## dotnet-webapi-boilerplate 
+## dotnet-webapi-boilerplate
 
 [https://github.com/fullstackhero/dotnet-webapi-boilerplate](https://github.com/fullstackhero/dotnet-webapi-boilerplate)
 
@@ -103,13 +101,13 @@ dotnet-webapi-boilerplate 是 .NET 6.0 WebApi 的整洁架构模板，它包含�
 
 特性：基于 .NET 6, 遵循整洁架构原则，领域驱动设计，多租户支持，支持 MySQL、MSSQL、Oracle 和 PostgreSQL！
 
-##  Abp Framework
+## Abp Framework
 
 [https://github.com/abpframework/abp](https://github.com/abpframework/abp)
 
 star: 7.6k ⭐
 
-ABP 框架是一个基于 ASP.NET Core 开发的完整基础架构，遵循软件开发最佳实践和最新技术来创建现代化 Web 应用程序和API。
+ABP 框架是一个基于 ASP.NET Core 开发的完整基础架构，遵循软件开发最佳实践和最新技术来创建现代化 Web 应用程序和 API。
 
 ABP 基于领域驱动设计提供了一个 完整的、模块化、分层的架构，并且提供了必须的基础设施，包括事件总线、后台作业、审计日志等等。
 
@@ -131,9 +129,8 @@ star: 207 ⭐
 
 ![](https://img1.dotnet9.com/2022/03/3004.png)
 
-
->原文: https://medium.com/dotnet-hub/top-dotnet-asp-net-core-open-source-projects-most-popular-aspnetcore-best-github-repos-6261569bdb06
+> 原文: https://medium.com/dotnet-hub/top-dotnet-asp-net-core-open-source-projects-most-popular-aspnetcore-best-github-repos-6261569bdb06
 >
->作者：Ashish Patel
+> 作者：Ashish Patel
 
 希望对您有用！

@@ -5,8 +5,8 @@ description: 在经过了两年的准备，以及迁移了几个应用项目积�
 date: 2022-05-05 22:55:32
 copyright: Reprinted
 author: lindexi
-originaltitle: 记将一个大型客户端应用项目迁移到 dotnet 6 的经验和决策
-originallink: https://www.cnblogs.com/lindexi/archive/2022/05/05/16226168.html
+originalTitle: 记将一个大型客户端应用项目迁移到 dotnet 6 的经验和决策
+originalLink: https://www.cnblogs.com/lindexi/archive/2022/05/05/16226168.html
 draft: False
 cover: https://img1.dotnet9.com/2022/05/cover_17.jpg
 categories: .NET
@@ -16,7 +16,6 @@ tags: .NET
 在经过了两年的准备，以及迁移了几个应用项目积累了让我有信心的经验之后，我最近在开始将团队里面最大的一个项目，从 .NET Framework 4.5 迁移到 .NET 6 上。这是一个从 2016 时开始开发，最多有 50 多位开发者参与，代码的 MR 数量过万，而且整个团队没有一个人能说清楚项目里面的所有功能。此项目引用了团队内部的大量的基础库，有很多基础库长年不活跃。此应用项目当前也有近千万的用户量，迁移的过程也需要准备很多补救方法。如此复杂的一个项目，自然需要用到很多黑科技才能完成到 .NET 6 的落地。本文将告诉大家这个过程里，我踩到的坑，以及学到的知识，和为什么会如此做。
 
 <!--more-->
-
 
 <!-- CreateTime:2022/4/24 14:25:43 -->
 
@@ -182,9 +181,9 @@ tags: .NET
 
 既然不合适做独立发布，也不合适放在 Program File 做全局，那只能放在应用自己的文件夹里面。为了能让放在应用自己的文件夹里面的 Runtime 文件夹能被识别，就需要定制 AppHost 文件，详细请参阅如下博客:
 
-- [在多个可执行程序（exe）之间共享同一个私有部署的 .NET 运行时 - walterlv](https://blog.walterlv.com/post/share-self-deployed-dotnet-runtime-among-multiple-exes )
-- [如何让 .NET 程序脱离系统安装的 .NET 运行时独立运行？除了 Self-Contained 之外还有更好方法！谈 dotnetCampus.AppHost 的工作原理 - walterlv](https://blog.walterlv.com/post/how-does-the-dotnet-campus-apphost-work )
-- [如何编译、修改和调试 dotnet runtime 仓库中的 apphost nethost comhost ijwhost - walterlv](https://blog.walterlv.com/post/how-to-modify-compile-and-debug-dotnet-apphost )
+- [在多个可执行程序（exe）之间共享同一个私有部署的 .NET 运行时 - walterlv](https://blog.walterlv.com/post/share-self-deployed-dotnet-runtime-among-multiple-exes)
+- [如何让 .NET 程序脱离系统安装的 .NET 运行时独立运行？除了 Self-Contained 之外还有更好方法！谈 dotnetCampus.AppHost 的工作原理 - walterlv](https://blog.walterlv.com/post/how-does-the-dotnet-campus-apphost-work)
+- [如何编译、修改和调试 dotnet runtime 仓库中的 apphost nethost comhost ijwhost - walterlv](https://blog.walterlv.com/post/how-to-modify-compile-and-debug-dotnet-apphost)
 
 开发时的输出文件夹是给开发者调试使用的，输出的文件夹是 `$(SolutionDir)bin\$(Configuration)\$(TargetFramework)` 文件夹，如 Debug 下的 dotnet 6 是输出到 `bin\Debug\net6.0-windows` 文件夹。在输出的文件夹的组织方式大概如下:
 
@@ -289,9 +288,9 @@ tags: .NET
 
 为了能让放在应用自己的文件夹里面的 Runtime 文件夹能被识别，定制 AppHost 文件，详细请参阅如下博客：
 
-- [在多个可执行程序（exe）之间共享同一个私有部署的 .NET 运行时 - walterlv](https://blog.walterlv.com/post/share-self-deployed-dotnet-runtime-among-multiple-exes )
-- [如何让 .NET 程序脱离系统安装的 .NET 运行时独立运行？除了 Self-Contained 之外还有更好方法！谈 dotnetCampus.AppHost 的工作原理 - walterlv](https://blog.walterlv.com/post/how-does-the-dotnet-campus-apphost-work )
-- [如何编译、修改和调试 dotnet runtime 仓库中的 apphost nethost comhost ijwhost - walterlv](https://blog.walterlv.com/post/how-to-modify-compile-and-debug-dotnet-apphost )
+- [在多个可执行程序（exe）之间共享同一个私有部署的 .NET 运行时 - walterlv](https://blog.walterlv.com/post/share-self-deployed-dotnet-runtime-among-multiple-exes)
+- [如何让 .NET 程序脱离系统安装的 .NET 运行时独立运行？除了 Self-Contained 之外还有更好方法！谈 dotnetCampus.AppHost 的工作原理 - walterlv](https://blog.walterlv.com/post/how-does-the-dotnet-campus-apphost-work)
+- [如何编译、修改和调试 dotnet runtime 仓库中的 apphost nethost comhost ijwhost - walterlv](https://blog.walterlv.com/post/how-to-modify-compile-and-debug-dotnet-apphost)
 
 除进行定制 AppHost 文件去识别 Runtime 文件夹之外，第二个方案，另一个方法是修改文件组织结构，最外层称为 Main 入口应用文件夹，只放主入口 Exe 文件及其依赖和运行时，而其他的 Exe 都放在里层文件夹。要求放在里层文件夹的 Exe 不能直接被外部执行，而是只能由外层的入口 Exe 进行间接调用。在外层的入口 Exe 启动里程文件夹的 Exe 的时候，通过环境变量告知里程文件夹的 Exe 的 dotnet 机制去使用到最外层称为 Main 入口应用文件夹的运行时内容。
 
@@ -342,7 +341,7 @@ tags: .NET
 
 根据官方文档，对 x86 的应用，需要使用 `DOTNET_ROOT(x86)` 环境变量。
 
-详细请看 [dotnet 6 通过 DOTNET_ROOT 让调起的应用的进程拿到共享的运行时文件夹](https://blog.lindexi.com/post/dotnet-6-%E9%80%9A%E8%BF%87-DOTNET_ROOT-%E8%AE%A9%E8%B0%83%E8%B5%B7%E7%9A%84%E5%BA%94%E7%94%A8%E7%9A%84%E8%BF%9B%E7%A8%8B%E6%8B%BF%E5%88%B0%E5%85%B1%E4%BA%AB%E7%9A%84%E8%BF%90%E8%A1%8C%E6%97%B6%E6%96%87%E4%BB%B6%E5%A4%B9.html )
+详细请看 [dotnet 6 通过 DOTNET_ROOT 让调起的应用的进程拿到共享的运行时文件夹](https://blog.lindexi.com/post/dotnet-6-%E9%80%9A%E8%BF%87-DOTNET_ROOT-%E8%AE%A9%E8%B0%83%E8%B5%B7%E7%9A%84%E5%BA%94%E7%94%A8%E7%9A%84%E8%BF%9B%E7%A8%8B%E6%8B%BF%E5%88%B0%E5%85%B1%E4%BA%AB%E7%9A%84%E8%BF%90%E8%A1%8C%E6%97%B6%E6%96%87%E4%BB%B6%E5%A4%B9.html)
 
 然而此方法也是有明确缺点的，那就是这些插件自身是不能单独运行的，单独运行将找不到运行时从而失败，必须由主入口进程或者其他拿到运行时的进程通过设置环境变量执行插件才能正确执行。
 
@@ -503,7 +502,7 @@ Changing Selected FX version from [C:\lindexi\App\App\runtime\shared\Microsoft.W
 Chose FX version [C:\Program Files (x86)\dotnet\shared\Microsoft.WindowsDesktop.App\6.0.4]
 ```
 
-从 `---` 开始，就是加载各个负载，如桌面等。开始读取的寻找文件夹是放在 AppHost 里面的配置，这是通过 [在多个可执行程序（exe）之间共享同一个私有部署的 .NET 运行时 - walterlv](https://blog.walterlv.com/post/share-self-deployed-dotnet-runtime-among-multiple-exes ) 的方法设置的，让应用去先寻找 runtime 文件夹的内容，如上文的文件布局。
+从 `---` 开始，就是加载各个负载，如桌面等。开始读取的寻找文件夹是放在 AppHost 里面的配置，这是通过 [在多个可执行程序（exe）之间共享同一个私有部署的 .NET 运行时 - walterlv](https://blog.walterlv.com/post/share-self-deployed-dotnet-runtime-among-multiple-exes) 的方法设置的，让应用去先寻找 runtime 文件夹的内容，如上文的文件布局。
 
 接着在 dotnet 里面，读取到的 Roll forward 策略是 minor 的值，接下来寻找到 6.0.1 版本，放在 runtime 文件夹的内容:
 

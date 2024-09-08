@@ -5,24 +5,24 @@ description: 我们很高兴地宣布 C# 10 作为 .NET 6 和 Visual Studio 2022
 date: 2022-02-12 10:14:31
 copyright: Reprinted
 author: 微软中国MSDN
-originaltitle: C# 10的新特性
-originallink: https://mp.weixin.qq.com/s/zLwo05uQOTXg_f2dwgRP-w
+originalTitle: C# 10的新特性
+originalLink: https://mp.weixin.qq.com/s/zLwo05uQOTXg_f2dwgRP-w
 draft: False
 cover: https://img1.dotnet9.com/2022/02/cover_03.jpg
 categories: .NET
 tags: .NET 6,C# 10
 ---
 
-（本文阅读所需15分钟）
+（本文阅读所需 15 分钟）
 
-我们很高兴地宣布 C# 10 作为 .NET 6 和 Visual Studio 2022的一部分已经发布了。在这篇文章中，我们将介绍 C# 10 的许多新功能，这些功能使您的代码更漂亮、更具表现力、更快。
+我们很高兴地宣布 C# 10 作为 .NET 6 和 Visual Studio 2022 的一部分已经发布了。在这篇文章中，我们将介绍 C# 10 的许多新功能，这些功能使您的代码更漂亮、更具表现力、更快。
 
 阅读 Visual Studio 2022 公告和.NET 6 公告以了解更多信息，包括如何安装。
 
 - [Visual Studio 2022 公告](https://aka.ms/vs2022gablog)
 - [.NET 6](https://aka.ms/dotnet6-GA)
 
-## 全局和隐式 usings 
+## 全局和隐式 usings
 
 using 指令简化了您使用命名空间的方式。C# 10 包括一个新的全局 using 指令和隐式 usings，以减少您需要在每个文件顶部指定的 usings 数量。
 
@@ -34,7 +34,7 @@ using 指令简化了您使用命名空间的方式。C# 10 包括一个新的�
 global using System;
 ```
 
-您可以在全局 using 指令中使用 using 的任何功能。例如，添加静态导入类型并使该类型的成员和嵌套类型在整个项目中可用。如果您在using 指令中使用别名，该别名也会影响您的整个项目：
+您可以在全局 using 指令中使用 using 的任何功能。例如，添加静态导入类型并使该类型的成员和嵌套类型在整个项目中可用。如果您在 using 指令中使用别名，该别名也会影响您的整个项目：
 
 ```C#
 global using static System.Console;
@@ -58,15 +58,15 @@ global using Env = System.Environment;
 </PropertyGroup>
 ```
 
-在新的 .NET 6 模板中启用了隐式 usings 。在此博客文章中阅读有关 .NET 6 模板更改的更多信息。 
+在新的 .NET 6 模板中启用了隐式 usings 。在此博客文章中阅读有关 .NET 6 模板更改的更多信息。
 
 一些特定全局 using 指令集取决于您正在构建的应用程序的类型。例如，控制台应用程序或类库的隐式 usings 不同于 ASP.NET 应用程序的隐式 usings。
-有关详细信息，请参阅此隐式usings文章。
+有关详细信息，请参阅此隐式 usings 文章。
 
 - [博客文章](https://devblogs.microsoft.com/dotnet/announcing-net-6-preview-7/#net-sdk-c-project-templates-modernized)
-- [隐式usings](https://docs.microsoft.com/en-us/dotnet/core/project-sdk/overview#implicit-using-directives)
+- [隐式 usings](https://docs.microsoft.com/en-us/dotnet/core/project-sdk/overview#implicit-using-directives)
 
-## Combining using 功能 
+## Combining using 功能
 
 文件顶部的传统 using 指令、全局 using 指令和隐式 using 可以很好地协同工作。隐式 using 允许您在项目文件中包含适合您正在构建的项目类型的 .NET 命名空间。全局 using 指令允许您包含其他命名空间，以使它们在整个项目中可用。代码文件顶部的 using 指令允许您包含项目中仅少数文件使用的命名空间。
 
@@ -88,7 +88,7 @@ global using Env = System.Environment;
 </ItemGroup>
 ```
 
-## 文件范围的命名空间 
+## 文件范围的命名空间
 
 许多文件包含单个命名空间的代码。从 C# 10 开始，您可以将命名空间作为语句包含在内，后跟分号且不带花括号：
 
@@ -96,7 +96,7 @@ global using Env = System.Environment;
 namespace MyCompany.MyNamespace;
 
 class MyClass // Note: no indentation
-{ ... } 
+{ ... }
 ```
 
 他简化了代码并删除了嵌套级别。只允许一个文件范围的命名空间声明，并且它必须在声明任何类型之前出现。
@@ -105,7 +105,7 @@ class MyClass // Note: no indentation
 
 - [命名空间关键字文章](https://docs.microsoft.com/dotnet/csharp/languagereference/keywords/namespace)
 
-## 对 lambda 表达式和方法组的改进 
+## 对 lambda 表达式和方法组的改进
 
 我们对 lambda 的语法和类型进行了多项改进。我们预计这些将广泛有用，并且驱动方案之一是使 ASP.NET Minimal API 更加简单。
 
@@ -143,7 +143,7 @@ object parse = (string s) => int.Parse(s);   // Func<string, int>
 Delegate parse = (string s) => int.Parse(s); // Func<string, int>
 ```
 
-当涉及到表达式树时，我们结合了“目标”和“自然”类型。如果目标类型是LambdaExpression 或非泛型 Expression（所有表达式树的基类型）并且 lambda 具有自然委托类型 D，我们将改为生成 Expression<D>：
+当涉及到表达式树时，我们结合了“目标”和“自然”类型。如果目标类型是 LambdaExpression 或非泛型 Expression（所有表达式树的基类型）并且 lambda 具有自然委托类型 D，我们将改为生成 Expression<D>：
 
 ```C#
 LambdaExpression parseExpr = (string s) => int.Parse(s); // Expression<Func<string, int>>
@@ -201,7 +201,7 @@ C# 10 为 structs 引入了功能，可在 structs (结构)和类之间提供更
 
 在 C# 10 之前，每个结构都有一个隐式的公共无参数构造函数，该构造函数将结构的字段设置为默认值。在结构上创建无参数构造函数是错误的。
 
-从 C# 10 开始，您可以包含自己的无参数结构构造函数。如果您不提供，则将提供隐式无参数构造函数以将所有字段设置为默认值。您在结构中创建的无参数构造函数必须是公共的并且不能是部分的： 
+从 C# 10 开始，您可以包含自己的无参数结构构造函数。如果您不提供，则将提供隐式无参数构造函数以将所有字段设置为默认值。您在结构中创建的无参数构造函数必须是公共的并且不能是部分的：
 
 ```C#
 public struct Address
@@ -227,7 +227,7 @@ public struct Address
 
 #### 02 Record structs
 
-从 C# 10 开始，现在可以使用 record struct 定义 record。这些类似于 C# 9 中引入的record 类：
+从 C# 10 开始，现在可以使用 record struct 定义 record。这些类似于 C# 9 中引入的 record 类：
 
 ```C#
 public record struct Person
@@ -267,7 +267,7 @@ public readonly record struct Person
 
 - [记录结构](https://docs.microsoft.com/dotnet/csharp/language-reference/builtin-types/record)
 
-#### 03 Record类中 ToString () 上的密封修饰符
+#### 03 Record 类中 ToString () 上的密封修饰符
 
 记录类也得到了改进。从 C# 10 开始，ToString() 方法可以包含 seal 修饰符，这会阻止编译器为任何派生记录合成 ToString 实现。
 
@@ -287,7 +287,7 @@ var person2 = person with { LastName = "Kristensen" };
 
 在本文中了解有关 with 的更多信息
 
-- [了解有关 with 的更多信息](https://docs.microsoft.com/dotnet/csharp/language-reference/builtin-types/record#built-in-formatting-for-display) 
+- [了解有关 with 的更多信息](https://docs.microsoft.com/dotnet/csharp/language-reference/builtin-types/record#built-in-formatting-for-display)
 
 ### 内插字符串改进
 
@@ -349,7 +349,7 @@ int x2;
 int y2;
 (x2, y2) = (0, 1);       // Works in C# 9
 (var x, var y) = (0, 1); // Works in C# 9
-(x2, var y3) = (0, 1);   // Works in C# 10 onwards 
+(x2, var y3) = (0, 1);   // Works in C# 10 onwards
 ```
 
 在有关解构的文章中了解更多信息。
@@ -392,7 +392,7 @@ if (obj is Person { Address.City: "Seattle" }) // Extended property pattern
 CallerArgumentExpressionAttribute 提供有关方法调用上下文的信息。与其他 CompilerServices 属性一样，此属性应用于可选参数。在这种情况下，一个字符串：
 
 ```C#
-void CheckExpression(bool condition, 
+void CheckExpression(bool condition,
     [CallerArgumentExpression("condition")] string? message = null )
 {
     Console.WriteLine($"Condition: {message}");

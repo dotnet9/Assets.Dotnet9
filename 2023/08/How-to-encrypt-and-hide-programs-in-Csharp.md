@@ -5,33 +5,33 @@ description: 介绍如何通过LiteDB将自己的程序进行加密，实现介�
 date: 2023-08-15 20:23:53
 copyright: Reprinted
 author: tokengo
-originaltitle: c# 如何将程序加密隐藏？
-originallink: https://mp.weixin.qq.com/s/JPBwcTfTjFZrSa-iI8gqCQ
+originalTitle: c# 如何将程序加密隐藏？
+originalLink: https://mp.weixin.qq.com/s/JPBwcTfTjFZrSa-iI8gqCQ
 draft: false
 cover: https://img1.dotnet9.com/2023/08/cover_02.png
 categories: .NET
 tags: .NET
 ---
 
-下面将介绍如何通过LiteDB将自己的程序进行加密，实现介绍一下LiteDB。
+下面将介绍如何通过 LiteDB 将自己的程序进行加密，实现介绍一下 LiteDB。
 
 ## LiteDB
 
-LiteDB是一个轻量级的嵌入式数据库，它是用C#编写的，适用于.NET平台。它的设计目标是提供一个简单易用的数据库解决方案，可以在各种应用程序中使用。
+LiteDB 是一个轻量级的嵌入式数据库，它是用 C#编写的，适用于.NET 平台。它的设计目标是提供一个简单易用的数据库解决方案，可以在各种应用程序中使用。
 
-LiteDB使用单个文件作为数据库存储，这个文件可以在磁盘上或内存中。它支持文档存储模型，类似于NoSQL数据库，每个文档都是一个JSON格式的对象。这意味着你可以存储和检索任意类型的数据，而不需要预定义模式。
+LiteDB 使用单个文件作为数据库存储，这个文件可以在磁盘上或内存中。它支持文档存储模型，类似于 NoSQL 数据库，每个文档都是一个 JSON 格式的对象。这意味着你可以存储和检索任意类型的数据，而不需要预定义模式。
 
-LiteDB提供了一组简单的API来执行各种数据库操作，包括插入、更新、删除和查询。它还支持事务，可以确保数据的一致性和完整性。
+LiteDB 提供了一组简单的 API 来执行各种数据库操作，包括插入、更新、删除和查询。它还支持事务，可以确保数据的一致性和完整性。
 
-LiteDB还提供了一些高级功能，如索引、全文搜索和文件存储。索引可以加快查询的速度，全文搜索可以在文本数据中进行关键字搜索，文件存储可以将文件直接存储在数据库中。
+LiteDB 还提供了一些高级功能，如索引、全文搜索和文件存储。索引可以加快查询的速度，全文搜索可以在文本数据中进行关键字搜索，文件存储可以将文件直接存储在数据库中。
 
-LiteDB的优点包括易于使用、轻量级、快速和可嵌入性。它的代码库非常小，可以很容易地集成到你的应用程序中。此外，它还具有跨平台的能力，可以在Windows、Linux和Mac等操作系统上运行。
+LiteDB 的优点包括易于使用、轻量级、快速和可嵌入性。它的代码库非常小，可以很容易地集成到你的应用程序中。此外，它还具有跨平台的能力，可以在 Windows、Linux 和 Mac 等操作系统上运行。
 
-总之，LiteDB是一个简单易用的嵌入式数据库，适用于各种应用程序。它提供了一组简单的API来执行数据库操作，并支持一些高级功能。如果你需要一个轻量级的数据库解决方案，可以考虑使用LiteDB。
+总之，LiteDB 是一个简单易用的嵌入式数据库，适用于各种应用程序。它提供了一组简单的 API 来执行数据库操作，并支持一些高级功能。如果你需要一个轻量级的数据库解决方案，可以考虑使用 LiteDB。
 
 ## 加密封装
 
-创建`LiteDB.Service`的WebApi项目。
+创建`LiteDB.Service`的 WebApi 项目。
 
 右键发布：
 
@@ -109,7 +109,7 @@ internal class EntryPointDiscoverer
 }
 ```
 
-然后打开`Program.cs`文件，**请注意修改SaveDb的参数为自己项目打包的地址**
+然后打开`Program.cs`文件，**请注意修改 SaveDb 的参数为自己项目打包的地址**
 
 ```csharp
 // 用于打包指定程序。
@@ -171,7 +171,7 @@ void StartServer(string assemblyName, string[] args)
     }
     catch (Exception e)
     {
-        
+
     }
 }
 
@@ -218,7 +218,7 @@ class FileAssembly
 }
 ```
 
-点击`LiteDB.Launch`项目文件，添加LiteDB依赖，并且修改SDK为`Microsoft.NET.Sdk.Web`
+点击`LiteDB.Launch`项目文件，添加 LiteDB 依赖，并且修改 SDK 为`Microsoft.NET.Sdk.Web`
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk.Web">
@@ -237,23 +237,22 @@ class FileAssembly
 </Project>
 ```
 
-在启动项目的时候先将`LiteDB.Service`发布一下。然后修改`SaveDb`参数为发布的目录（会自动扫描所有文件打包到LiteDB的文件中。）
+在启动项目的时候先将`LiteDB.Service`发布一下。然后修改`SaveDb`参数为发布的目录（会自动扫描所有文件打包到 LiteDB 的文件中。）
 
 然后启动项目；
 
 ![](https://img1.dotnet9.com/2023/08/0202.png)
 
-当我们启动了`LiteDB.Launch`以后在`StartServer`方法里面就会打开创建的LiteDB文件中搜索到指定的启动程序集。
+当我们启动了`LiteDB.Launch`以后在`StartServer`方法里面就会打开创建的 LiteDB 文件中搜索到指定的启动程序集。
 
 然后在`AppDomain.CurrentDomain.AssemblyResolve`中会将启动程序集缺少的程序集加载到域中。
 
 `AppDomain.CurrentDomain.AssemblyResolve`会在未找到依赖的时候触发的一个事件。
 
-在存储到LiteDB的时候可以对于存储的内容进行加密,然后在`AppDomain.CurrentDomain.AssemblyResolve`触发的时候将读取LiteDB的文件的内容的时候进行解密。
+在存储到 LiteDB 的时候可以对于存储的内容进行加密,然后在`AppDomain.CurrentDomain.AssemblyResolve`触发的时候将读取 LiteDB 的文件的内容的时候进行解密。
 
 ## 结尾
 
-来自token的分享
+来自 token 的分享
 
-qq技术交流群：737776595
-
+qq 技术交流群：737776595

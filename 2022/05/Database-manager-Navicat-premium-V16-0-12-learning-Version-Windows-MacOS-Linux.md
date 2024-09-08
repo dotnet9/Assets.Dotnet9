@@ -5,8 +5,8 @@ description: Navicat Premium 是一套数据库管理工具，让你以单一程
 date: 2022-05-06 07:12:11
 copyright: Reprinted
 author: 懒得勤快
-originaltitle: 数据库管理利器——Navicat Premium v16.0.12学习版(Windows+MacOS+Linux)
-originallink: https://ldqk.xyz/37?t=uptjw5h2j0n4
+originalTitle: 数据库管理利器——Navicat Premium v16.0.12学习版(Windows+MacOS+Linux)
+originalLink: https://ldqk.xyz/37?t=uptjw5h2j0n4
 draft: False
 cover: https://img1.dotnet9.com/2022/05/cover_22.png
 categories: 分享
@@ -41,27 +41,27 @@ Navicat 的功能足以符合专业开发人员的所有需求，但是对数据
 
 ## 下载地址
 
-官方Windows安装包：http://download.navicat.com.cn/download/navicat160_premium_cs_x64.exe
+官方 Windows 安装包：http://download.navicat.com.cn/download/navicat160_premium_cs_x64.exe
 
 `可使用无限试用脚本，将以下代码粘贴到记事本另存为bat文件执行即可：`
 
 ```shell
 @echo off
- 
+
 echo Delete HKEY_CURRENT_USER\Software\PremiumSoft\NavicatPremium\Registration[version and language]
 for /f %%i in ('"REG QUERY "HKEY_CURRENT_USER\Software\PremiumSoft\NavicatPremium" /s | findstr /L Registration"') do (
     reg delete %%i /va /f
 )
 echo.
- 
+
 echo Delete Info folder under HKEY_CURRENT_USER\Software\Classes\CLSID
 for /f %%i in ('"REG QUERY "HKEY_CURRENT_USER\Software\Classes\CLSID" /s | findstr /E Info"') do (
     reg delete %%i /va /f
 )
 echo.
- 
+
 echo Finish
- 
+
 pause
 ```
 

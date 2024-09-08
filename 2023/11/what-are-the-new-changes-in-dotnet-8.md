@@ -1,13 +1,13 @@
 ---
 title: .NET 8.0 中有哪些新的变化？
 slug: what-are-the-new-changes-in-dotnet-8
-description: .NET 8在整个堆栈中带来了数千项性能改进 
+description: .NET 8在整个堆栈中带来了数千项性能改进
 date: 2023-11-17 17:42:17
 lastmod: 2023-11-17 16:03:17
 copyright: Reprinted
 author: 葡萄城技术团队
-originaltitle: .NET 8.0 中有哪些新的变化？
-originallink: https://www.cnblogs.com/powertoolsteam/p/17833417.html
+originalTitle: .NET 8.0 中有哪些新的变化？
+originalLink: https://www.cnblogs.com/powertoolsteam/p/17833417.html
 draft: false
 cover: https://img1.dotnet9.com/2023/11/0801.png
 categories: .NET
@@ -16,14 +16,14 @@ tags: 技术更新
 
 ## **1. 性能提升**
 
-[.NET 8在整个](https://devblogs.microsoft.com/dotnet/performance-improvements-in-aspnet-core-8/)[堆栈](https://devblogs.microsoft.com/dotnet/dotnet-8-performance-improvements-in-dotnet-maui/)[中](https://devblogs.microsoft.com/dotnet/this-arm64-performance-in-dotnet-8/)带来了数千项性能[改进](https://devblogs.microsoft.com/dotnet/performance-improvements-in-net-8/) 。默认情况下会启用一种名为动态配置文件引导优化 (PGO) 的新代码生成器，它可以根据实际使用情况优化代码，并且可以将应用程序的性能提高高达 20%。现在支持的 AVX-512 指令集能够对 512 位数据向量执行并行操作，这意味着可以在更短的时间内处理更多的数据。原始类型（数字及其他类型）现在实现了新的可格式化和可解析接口，这使它们能够直接格式化和解析为 UTF-8，而无需任何转码开销。
+[.NET 8 在整个](https://devblogs.microsoft.com/dotnet/performance-improvements-in-aspnet-core-8/)[堆栈](https://devblogs.microsoft.com/dotnet/dotnet-8-performance-improvements-in-dotnet-maui/)[中](https://devblogs.microsoft.com/dotnet/this-arm64-performance-in-dotnet-8/)带来了数千项性能[改进](https://devblogs.microsoft.com/dotnet/performance-improvements-in-net-8/) 。默认情况下会启用一种名为动态配置文件引导优化 (PGO) 的新代码生成器，它可以根据实际使用情况优化代码，并且可以将应用程序的性能提高高达 20%。现在支持的 AVX-512 指令集能够对 512 位数据向量执行并行操作，这意味着可以在更短的时间内处理更多的数据。原始类型（数字及其他类型）现在实现了新的可格式化和可解析接口，这使它们能够直接格式化和解析为 UTF-8，而无需任何转码开销。
 ![img](https://img1.dotnet9.com/2023/11/0801.png)
 
 ## **2. NET Aspire**
 
 .NET Aspire 是一个用于使用 .NET 构建弹性、可观察和可配置的云原生应用程序的堆栈。它包括一组针对云原生而增强的精选组件，默认情况下包括遥测、弹性、配置和运行状况检查。结合复杂而简单的本地开发人员体验，.NET Aspire 可以在第 1 天和第 100 天轻松发现、获取和配置云原生应用程序的基本依赖项。
 
-点击这里查看.NET Aspire的预览版本。（站长注：这是没有链接，后面看怎么查找补充）
+点击这里查看.NET Aspire 的预览版本。（站长注：这是没有链接，后面看怎么查找补充）
 ![img](https://img1.dotnet9.com/2023/11/0802.png)
 
 ## **3. NET 8 容器增强功能 – 更安全、更紧凑、更高效**
@@ -34,7 +34,7 @@ tags: 技术更新
 
 ## **4. 原生 AoT – 迈向更高密度可持续计算的旅程**
 
-无需等待 JIT（即时）编译器在运行时编译代码。无需部署JIT编译器和IL代码。AOT 应用程序仅部署应用程序所需的代码。应用程序现在可以在不允许使用 JIT 编译器的受限环境中运行。
+无需等待 JIT（即时）编译器在运行时编译代码。无需部署 JIT 编译器和 IL 代码。AOT 应用程序仅部署应用程序所需的代码。应用程序现在可以在不允许使用 JIT 编译器的受限环境中运行。
 
 ![img](https://img1.dotnet9.com/2023/11/0804.png)
 
@@ -42,7 +42,7 @@ tags: 技术更新
 
 生成式人工智能和大型语言模型正在改变人工智能领域，使开发人员能够在其应用程序中创建独特的人工智能体验。[.NET 8 可以](https://gist.github.com/LadyNaggaga/5b0a708f2b945f5c8ca8ade4974665ff)通过 .NET SDK 中一流的开箱即用 AI 功能以及与多种工具的无缝集成来轻松利用 AI。
 
-.NET 8 为该库带来了多项增强功能，以提高其与生成式 AI 工作负载的兼容性，例如集成 Tensor Primitives。随着人工智能应用程序的兴起，新的工具和 SDK 出现了。我们与众多内部和外部合作伙伴合作，例如Azure OpenAI、Azure Cognitive Search、Milvus、Qdrant和Microsoft Teams，以确保 .NET 开发人员可以通过各自的 SDK 轻松访问各种 AI 模型、服务和平台。此外，开源语义内核System.Numerics SDK 简化了这些 AI 组件与新的和现有应用程序的集成，以帮助您提供创新的用户体验。
+.NET 8 为该库带来了多项增强功能，以提高其与生成式 AI 工作负载的兼容性，例如集成 Tensor Primitives。随着人工智能应用程序的兴起，新的工具和 SDK 出现了。我们与众多内部和外部合作伙伴合作，例如 Azure OpenAI、Azure Cognitive Search、Milvus、Qdrant 和 Microsoft Teams，以确保 .NET 开发人员可以通过各自的 SDK 轻松访问各种 AI 模型、服务和平台。此外，开源语义内核 System.Numerics SDK 简化了这些 AI 组件与新的和现有应用程序的集成，以帮助您提供创新的用户体验。
 
 现在提供各种示例和参考模板，展示模式和实践，以便开发人员轻松入门：
 
@@ -54,7 +54,7 @@ tags: 技术更新
 
 ## **6. Blazor – 使用 .NET 构建全栈 Web 应用程序**
 
-.NET 8 中的 Blazor 可以同时使用服务器和客户端来处理您的所有 Web UI 需求。这是全栈 Web UI！通过专注于优化页面加载时间、可扩展性和提升用户体验的多项新增强功能，开发人员现在可以在同一应用程序中使用Blazor Server 和 Blazor WebAssembly，在运行时自动将用户从服务器转移到客户端。得益于新的基于“Jiterpreter”的运行时和新的内置组件，您的 .NET 代码在 WebAssembly 上的运行速度显著加快。作为增强.NET 8 中整体身份验证、授权和身份管理的一部分，Blazor 现在支持生成完整的基于 Blazor 的身份 UI。
+.NET 8 中的 Blazor 可以同时使用服务器和客户端来处理您的所有 Web UI 需求。这是全栈 Web UI！通过专注于优化页面加载时间、可扩展性和提升用户体验的多项新增强功能，开发人员现在可以在同一应用程序中使用 Blazor Server 和 Blazor WebAssembly，在运行时自动将用户从服务器转移到客户端。得益于新的基于“Jiterpreter”的运行时和新的内置组件，您的 .NET 代码在 WebAssembly 上的运行速度显著加快。作为增强.NET 8 中整体身份验证、授权和身份管理的一部分，Blazor 现在支持生成完整的基于 Blazor 的身份 UI。
 
 ![img](https://img1.dotnet9.com/2023/11/0806.png)
 
@@ -66,7 +66,7 @@ tags: 技术更新
 
 ## **8. C# 12 功能 – 简化语法以提高开发人员的工作效率**
 
-C# 12 让您的编码体验更加高效和愉快。现在，您可以使用简单而优雅的语法在任何类和结构中创建主构造函数。不再需要样板代码来初始化您的字段和属性。使用简洁且富有表现力的语法创建数组、跨度和其他集合类型时会感到高兴。对 lambda 表达式中的参数使用新的默认值。不再需要重载或空检查来处理可选参数。您甚至可以使用using alias 指令为任何类型添加别名，而不仅仅是命名类型！
+C# 12 让您的编码体验更加高效和愉快。现在，您可以使用简单而优雅的语法在任何类和结构中创建主构造函数。不再需要样板代码来初始化您的字段和属性。使用简洁且富有表现力的语法创建数组、跨度和其他集合类型时会感到高兴。对 lambda 表达式中的参数使用新的默认值。不再需要重载或空检查来处理可选参数。您甚至可以使用 using alias 指令为任何类型添加别名，而不仅仅是命名类型！
 
 ### **8.1. 集合表达式**
 
@@ -104,7 +104,7 @@ public class BankAccount(string accountID, string owner)
 
 ### **8.3. 别名任意类型**
 
-别名类型是从代码中删除复杂类型签名的便捷方法。using从 C# 12 开始，其他类型在别名指令中有效。例如，这些别名在早期版本的 C# 中无效：
+别名类型是从代码中删除复杂类型签名的便捷方法。using 从 C# 12 开始，其他类型在别名指令中有效。例如，这些别名在早期版本的 C# 中无效：
 
 ```C#
 using intArray = int[]; // Array types.
@@ -219,7 +219,7 @@ Required modifier for first parameter: System.Runtime.InteropServices.InAttribut
 
 .NET 8 引入了一个源生成器，用于在 ASP.NET Core 中提供 AOT 和适合剪裁的配置。 该生成器是现有的基于反射的实现的替代方法。
 
-源生成器探测 [Configure(TOptions)](https://learn.microsoft.com/zh-cn/dotnet/api/microsoft.extensions.options.configureoptions-1.configure#microsoft-extensions-options-configureoptions-1-configure(-0))、Bind 和 [Get](https://learn.microsoft.com/zh-cn/dotnet/api/microsoft.extensions.configuration.configurationbinder.get) 调用来从中检索类型信息。 在项目中启用生成器后，编译器将隐式选择生成的方法，而非预先存在的基于反射的框架实现。
+源生成器探测 [Configure(TOptions)](<https://learn.microsoft.com/zh-cn/dotnet/api/microsoft.extensions.options.configureoptions-1.configure#microsoft-extensions-options-configureoptions-1-configure(-0)>)、Bind 和 [Get](https://learn.microsoft.com/zh-cn/dotnet/api/microsoft.extensions.configuration.configurationbinder.get) 调用来从中检索类型信息。 在项目中启用生成器后，编译器将隐式选择生成的方法，而非预先存在的基于反射的框架实现。
 
 无需更改源代码即可使用生成器。 AOT Web 应用中默认启用该生成器。 对于其他项目类型，源生成器默认关闭，但你可通过在项目文件中将 EnableConfigurationBindingGenerator 属性设置为 true 来选择使用它：
 
@@ -291,17 +291,17 @@ public class MyClass
 
 .NET 8 包括几个新的代码分析器和修复程序，可帮助验证是否正确且高效地使用 .NET 库 API。 下表总结了新的分析器。
 
-| 规则 ID                                                      | 类别     | 说明                                                         |
-| ------------------------------------------------------------ | -------- | ------------------------------------------------------------ |
-| CA1856                                                       | 性能     | 未在参数上正确应用 [ConstantExpectedAttribute](https://learn.microsoft.com/zh-cn/dotnet/api/system.diagnostics.codeanalysis.constantexpectedattribute) 属性时触发。 |
-| CA1857                                                       | 性能     | 当参数使用 [ConstantExpectedAttribute](https://learn.microsoft.com/zh-cn/dotnet/api/system.diagnostics.codeanalysis.constantexpectedattribute) 添加批注但提供的参数不是常量时触发。 |
-| [CA1858](https://learn.microsoft.com/zh-cn/dotnet/fundamentals/code-analysis/quality-rules/ca1858) | 性能     | 若要确定字符串是否以给定前缀开头，最好调用 [String.StartsWith](https://learn.microsoft.com/zh-cn/dotnet/api/system.string.startswith)，而不是调用 [String.IndexOf](https://learn.microsoft.com/zh-cn/dotnet/api/system.string.indexof)，然后将结果与零进行比较。 |
-| [CA1859](https://learn.microsoft.com/zh-cn/dotnet/fundamentals/code-analysis/quality-rules/ca1859) | 性能     | 此规则建议尽可能将特定局部变量、字段、属性、方法参数和方法返回类型从接口或抽象类型升级到具体类型。 使用具体类型可生成更高质量的代码。 |
-| [CA1860](https://learn.microsoft.com/zh-cn/dotnet/fundamentals/code-analysis/quality-rules/ca1860) | 性能     | 若要确定集合类型是否具有任何元素，最好使用 Length、Count 或 IsEmpty，而不是调用 [Enumerable.Any](https://learn.microsoft.com/zh-cn/dotnet/api/system.linq.enumerable.any)。 |
-| [CA1861](https://learn.microsoft.com/zh-cn/dotnet/fundamentals/code-analysis/quality-rules/ca1861) | 性能     | 重复调用时，不会重复使用作为参数传递的常量数组，这意味着每次都会创建一个新数组。 若要提高性能，请考虑将数组提取到静态只读字段。 |
-| [CA1865-CA1867](https://learn.microsoft.com/zh-cn/dotnet/fundamentals/code-analysis/quality-rules/ca1865-ca1867) | 性能     | 对于单字符串，char 重载的性能更好。                          |
-| CA2021                                                       | 可靠性   | [Enumerable.Cast(IEnumerable)](https://learn.microsoft.com/zh-cn/dotnet/api/system.linq.enumerable.cast#system-linq-enumerable-cast-1(system-collections-ienumerable)) 和 [Enumerable.OfType(IEnumerable)](https://learn.microsoft.com/zh-cn/dotnet/api/system.linq.enumerable.oftype#system-linq-enumerable-oftype-1(system-collections-ienumerable)) 需要兼容的类型才能正常运行。 泛型类型不支持扩大转换和用户定义的转换。 |
-| CA1510-CA1513                                                | 可维护性 | 在构造新的异常实例方面，引发帮助程序比 if 块更简单、更高效。 这四个分析器是为以下例外情况创建的：[ArgumentNullException](https://learn.microsoft.com/zh-cn/dotnet/api/system.argumentnullexception)、[ArgumentException](https://learn.microsoft.com/zh-cn/dotnet/api/system.argumentexception)、[ArgumentOutOfRangeException](https://learn.microsoft.com/zh-cn/dotnet/api/system.argumentoutofrangeexception) 和 [ObjectDisposedException](https://learn.microsoft.com/zh-cn/dotnet/api/system.objectdisposedexception)。 |
+| 规则 ID                                                                                                          | 类别     | 说明                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| ---------------------------------------------------------------------------------------------------------------- | -------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| CA1856                                                                                                           | 性能     | 未在参数上正确应用 [ConstantExpectedAttribute](https://learn.microsoft.com/zh-cn/dotnet/api/system.diagnostics.codeanalysis.constantexpectedattribute) 属性时触发。                                                                                                                                                                                                                                                                                                                                                         |
+| CA1857                                                                                                           | 性能     | 当参数使用 [ConstantExpectedAttribute](https://learn.microsoft.com/zh-cn/dotnet/api/system.diagnostics.codeanalysis.constantexpectedattribute) 添加批注但提供的参数不是常量时触发。                                                                                                                                                                                                                                                                                                                                         |
+| [CA1858](https://learn.microsoft.com/zh-cn/dotnet/fundamentals/code-analysis/quality-rules/ca1858)               | 性能     | 若要确定字符串是否以给定前缀开头，最好调用 [String.StartsWith](https://learn.microsoft.com/zh-cn/dotnet/api/system.string.startswith)，而不是调用 [String.IndexOf](https://learn.microsoft.com/zh-cn/dotnet/api/system.string.indexof)，然后将结果与零进行比较。                                                                                                                                                                                                                                                            |
+| [CA1859](https://learn.microsoft.com/zh-cn/dotnet/fundamentals/code-analysis/quality-rules/ca1859)               | 性能     | 此规则建议尽可能将特定局部变量、字段、属性、方法参数和方法返回类型从接口或抽象类型升级到具体类型。 使用具体类型可生成更高质量的代码。                                                                                                                                                                                                                                                                                                                                                                                       |
+| [CA1860](https://learn.microsoft.com/zh-cn/dotnet/fundamentals/code-analysis/quality-rules/ca1860)               | 性能     | 若要确定集合类型是否具有任何元素，最好使用 Length、Count 或 IsEmpty，而不是调用 [Enumerable.Any](https://learn.microsoft.com/zh-cn/dotnet/api/system.linq.enumerable.any)。                                                                                                                                                                                                                                                                                                                                                 |
+| [CA1861](https://learn.microsoft.com/zh-cn/dotnet/fundamentals/code-analysis/quality-rules/ca1861)               | 性能     | 重复调用时，不会重复使用作为参数传递的常量数组，这意味着每次都会创建一个新数组。 若要提高性能，请考虑将数组提取到静态只读字段。                                                                                                                                                                                                                                                                                                                                                                                             |
+| [CA1865-CA1867](https://learn.microsoft.com/zh-cn/dotnet/fundamentals/code-analysis/quality-rules/ca1865-ca1867) | 性能     | 对于单字符串，char 重载的性能更好。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| CA2021                                                                                                           | 可靠性   | [Enumerable.Cast(IEnumerable)](<https://learn.microsoft.com/zh-cn/dotnet/api/system.linq.enumerable.cast#system-linq-enumerable-cast-1(system-collections-ienumerable)>) 和 [Enumerable.OfType(IEnumerable)](<https://learn.microsoft.com/zh-cn/dotnet/api/system.linq.enumerable.oftype#system-linq-enumerable-oftype-1(system-collections-ienumerable)>) 需要兼容的类型才能正常运行。 泛型类型不支持扩大转换和用户定义的转换。                                                                                            |
+| CA1510-CA1513                                                                                                    | 可维护性 | 在构造新的异常实例方面，引发帮助程序比 if 块更简单、更高效。 这四个分析器是为以下例外情况创建的：[ArgumentNullException](https://learn.microsoft.com/zh-cn/dotnet/api/system.argumentnullexception)、[ArgumentException](https://learn.microsoft.com/zh-cn/dotnet/api/system.argumentexception)、[ArgumentOutOfRangeException](https://learn.microsoft.com/zh-cn/dotnet/api/system.argumentoutofrangeexception) 和 [ObjectDisposedException](https://learn.microsoft.com/zh-cn/dotnet/api/system.objectdisposedexception)。 |
 
 ## **13. .NET Core 库**
 
@@ -419,17 +419,17 @@ public static partial class ZipFile
 }
 ```
 
-------
+---
 
 [GrapeCity Documents for Excel](https://www.grapecity.com.cn/developer/grapecitydocuments/excel-net)
-（简称GcExcel）是一款借助是一款基于 .NET 和 .NET Core 平台的服务端高性能表格组件，无需依赖 Office、NPOI 或第三方应用软件，
+（简称 GcExcel）是一款借助是一款基于 .NET 和 .NET Core 平台的服务端高性能表格组件，无需依赖 Office、NPOI 或第三方应用软件，
 在前端展示表格数据，在服务端批量创建、加载、编辑、打印、导入/导出 Excel 文档，为您开发的应用程序提供在线文档的前后端数据同步、在线填报与服务端批量导出与打印。
 
-[ActiveReports](https://www.grapecity.com.cn/developer/activereports)是一款专注于 .NET 和 .NET Core 平台的报表控件。通过拖拽式报表设计器，可以快速地设计 Excel表格、Word文档、图表、数据过滤、数据钻取、精准套打等类型报表，全面满足 WinForm、ASP.NET、ASP.NET MVC、WPF 平台中各种报表的开发需要。同时，通过丰富的 API 可以灵活的实现报表创建、加载和运行时的个性化自定义需求。
+[ActiveReports](https://www.grapecity.com.cn/developer/activereports)是一款专注于 .NET 和 .NET Core 平台的报表控件。通过拖拽式报表设计器，可以快速地设计 Excel 表格、Word 文档、图表、数据过滤、数据钻取、精准套打等类型报表，全面满足 WinForm、ASP.NET、ASP.NET MVC、WPF 平台中各种报表的开发需要。同时，通过丰富的 API 可以灵活的实现报表创建、加载和运行时的个性化自定义需求。
 
-[Wyn商业智能](https://www.grapecity.com.cn/solutions/wyn)是基于葡萄城 20 多年数据分析技术积累打造的全新一代嵌入式 BI 产品，旨在提供可与应用系统深度集成的数据分析功能，能够与企业现有业务系统OA， ERP，MES，CRM等应用系统深度集成，整合、分析多个业务系统的数据，自助式分析业务数据、实时分析决策，全面提升企业竞争力。
+[Wyn 商业智能](https://www.grapecity.com.cn/solutions/wyn)是基于葡萄城 20 多年数据分析技术积累打造的全新一代嵌入式 BI 产品，旨在提供可与应用系统深度集成的数据分析功能，能够与企业现有业务系统 OA， ERP，MES，CRM 等应用系统深度集成，整合、分析多个业务系统的数据，自助式分析业务数据、实时分析决策，全面提升企业竞争力。
 
-[Spread .NET](https://www.grapecity.com.cn/developer/spreadstudio)是一个功能、布局与 Excel 高度类似的 .NET表格控件，可全面满足 WinForm、ASP.NET、XAML 和 WinRT 等平台下表格数据处理、数据可视化开发需求。Spread .NET 支持 462 种 Excel 公式，提供可嵌入系统的类Excel设计器和全面开放的 API，为 .NET开发人员构建企业级表格应用程序提供更加专业的选择。
+[Spread .NET](https://www.grapecity.com.cn/developer/spreadstudio)是一个功能、布局与 Excel 高度类似的 .NET 表格控件，可全面满足 WinForm、ASP.NET、XAML 和 WinRT 等平台下表格数据处理、数据可视化开发需求。Spread .NET 支持 462 种 Excel 公式，提供可嵌入系统的类 Excel 设计器和全面开放的 API，为 .NET 开发人员构建企业级表格应用程序提供更加专业的选择。
 
 参考资料：
 
@@ -439,12 +439,10 @@ https://learn.microsoft.com/zh-cn/dotnet/core/whats-new/dotnet-8#networking
 
 [如何使用 Blazor 框架在前端浏览器中导入/导出 Excel XLSX](https://www.grapecity.com.cn/blogs/excel-io-spreadjs-blazor)
 
-[如何在.NET电子表格应用程序中创建流程图](https://www.grapecity.com.cn/blogs/create-flow-chart-dotnet)
+[如何在.NET 电子表格应用程序中创建流程图](https://www.grapecity.com.cn/blogs/create-flow-chart-dotnet)
 
 [如何将实时数据显示在前端电子表格中](https://www.grapecity.com.cn/blogs/sjs-realtime-data-refresh-part1)
 
-------
-
-
+---
 
 本文是由葡萄城技术开发团队发布，转载请注明出处：[葡萄城官网](https://www.grapecity.com.cn/)

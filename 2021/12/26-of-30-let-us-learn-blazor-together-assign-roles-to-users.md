@@ -5,15 +5,15 @@ description: 昨天角色的`CRUD` 功能都完成了，接着就是要把角色
 date: 2021-12-24 23:20:13
 copyright: Reprinted
 author: StrayaWorker
-originaltitle: (26/30)大家一起学Blazor：给用户分配角色
-originallink: https://ithelp.ithome.com.tw/articles/10272459
+originalTitle: (26/30)大家一起学Blazor：给用户分配角色
+originalLink: https://ithelp.ithome.com.tw/articles/10272459
 draft: False
 cover: https://img1.dotnet9.com/2021/12/cover_05.png
 categories: .NET
 tags: Blazor Server,学Blazor
 ---
 
-昨天角色的`CRUD` 功能都完成了，接着就是要把角色分配给用户了，先建立一个ViewModel `CustomUserRoleViewModel`，这是用来呈现角色底下用户的ViewModel。
+昨天角色的`CRUD` 功能都完成了，接着就是要把角色分配给用户了，先建立一个 ViewModel `CustomUserRoleViewModel`，这是用来呈现角色底下用户的 ViewModel。
 
 ```C#
 namespace BlazorServer.ViewModels;
@@ -103,8 +103,8 @@ public class CustomUserRoleViewModel
 			IsSuccess = true
 		};
 	}
-```        
-        
+```
+
 接着加上页面。
 
 `EditUsersInRole.razor.cs`
@@ -163,32 +163,32 @@ public partial class EditUsersInRole
 `EditUsersInRole.razor`
 
 ```html
-@page "/RolesManagement/EditUsersInRole/{Id}"
-@attribute [Authorize]
+@page "/RolesManagement/EditUsersInRole/{Id}" @attribute [Authorize]
 
 <EditForm Model="UserRoleViewModel" OnValidSubmit="HandleValidSubmit">
-    <DataAnnotationsValidator />
-    <ValidationSummary />
-    <div class="card">
-        <div class="card-header">
-            <h2>从角色新增或者删除用户</h2>
-        </div>
-        <div class="card-body">
-            @foreach (var user in UserRoleViewModel)
-            {
-                <div class="form-check m-1">
-                    <label class="form-check-label">
-                        <InputCheckbox @bind-Value="@user.IsSelected"></InputCheckbox>
-                        @user.UserName
-                    </label>
-                </div>
-            }
-        </div>
-        <div class="card-footer">
-            <button type="submit" class="btn btn-primary">更新</button>
-            <button type="button" class="btn btn-danger" @onclick="@Cancel">取消</button>
-        </div>
+  <DataAnnotationsValidator />
+  <ValidationSummary />
+  <div class="card">
+    <div class="card-header">
+      <h2>从角色新增或者删除用户</h2>
     </div>
+    <div class="card-body">
+      @foreach (var user in UserRoleViewModel) {
+      <div class="form-check m-1">
+        <label class="form-check-label">
+          <InputCheckbox @bind-Value="@user.IsSelected"></InputCheckbox>
+          @user.UserName
+        </label>
+      </div>
+      }
+    </div>
+    <div class="card-footer">
+      <button type="submit" class="btn btn-primary">更新</button>
+      <button type="button" class="btn btn-danger" @onclick="@Cancel">
+        取消
+      </button>
+    </div>
+  </div>
 </EditForm>
 ```
 
@@ -204,7 +204,9 @@ public void EditUsersInRole()
 `EditRole.razor`加上一个按钮调用该方法。
 
 ```html
-<button type="button" class="btn btn-info" @onclick="EditUsersInRole">新增或移除该角色底下的用户</button>
+<button type="button" class="btn btn-info" @onclick="EditUsersInRole">
+  新增或移除该角色底下的用户
+</button>
 ```
 
 ![](https://img1.dotnet9.com/2021/12/3801.png)
@@ -213,19 +215,24 @@ public void EditUsersInRole()
 
 ![](https://img1.dotnet9.com/2021/12/3802.png)
 
-先将每个`razor component` 的`@attribute [Authorize]`改成`@attribute [Authorize(Roles = "Admin")]`，表示要看到这页面的人必须有Role `Admin`。
+先将每个`razor component` 的`@attribute [Authorize]`改成`@attribute [Authorize(Roles = "Admin")]`，表示要看到这页面的人必须有 Role `Admin`。
 
-再去`NavMenu.razor`，于原本的`<AuthorizeView>`上方加入下面这段代码，同理要看到跳转`Roles`链接的人必须有Role `Admin`，再把原本`<AuthorizeView>`的`Roles`链接删除。
+再去`NavMenu.razor`，于原本的`<AuthorizeView>`上方加入下面这段代码，同理要看到跳转`Roles`链接的人必须有 Role `Admin`，再把原本`<AuthorizeView>`的`Roles`链接删除。
 
 ```html
 <AuthorizeView Roles="Admin">
-    <Authorized>
-        <li class="nav-item px-3">
-            <NavLink class="nav-link" href="RolesManagement/RolesList" Match="NavLinkMatch.All">
-                <span class="bi bi-kanban-fill h4 p-2 mb-0" aria-hidden="true"></span> Roles
-            </NavLink>
-        </li>
-    </Authorized>
+  <Authorized>
+    <li class="nav-item px-3">
+      <NavLink
+        class="nav-link"
+        href="RolesManagement/RolesList"
+        Match="NavLinkMatch.All"
+      >
+        <span class="bi bi-kanban-fill h4 p-2 mb-0" aria-hidden="true"></span>
+        Roles
+      </NavLink>
+    </li>
+  </Authorized>
 </AuthorizeView>
 ```
 
@@ -239,4 +246,4 @@ public void EditUsersInRole()
 
 1. [Add or remove users from role in asp net core](https://www.youtube.com/watch?v=TzhqymQm5kw&list=PL6n9fhu94yhVkdrusLaQsfERmL_Jh4XmU&index=81)
 
-**注：本文代码通过 .NET 6 + Visual Studio 2022重构，可点击原文链接与重构后代码比较学习，谢谢阅读，支持原作者**
+**注：本文代码通过 .NET 6 + Visual Studio 2022 重构，可点击原文链接与重构后代码比较学习，谢谢阅读，支持原作者**

@@ -5,8 +5,8 @@ description: 这里是笔者在开发 MAUI 应用时踩的坑，以及一些笔�
 date: 2023-01-18 22:02:29
 copyright: Reprinted
 author: 痴者工良
-originaltitle: 疯狂吐槽 MAUI 以及 MAUI 入坑知识点
-originallink: https://www.cnblogs.com/whuanle/p/17060473.html
+originalTitle: 疯狂吐槽 MAUI 以及 MAUI 入坑知识点
+originalLink: https://www.cnblogs.com/whuanle/p/17060473.html
 draft: false
 cover: https://img1.dotnet9.com/2023/01/cover_06.jpg
 categories: .NET
@@ -25,7 +25,7 @@ tags: MAUI
 
 MAUI 不知道跟 UWP 有啥关系，但是 MAUI 很多东西感觉都是在延续 UWP 的设计，而且 MAUI 也很可能是下一个 UWP。
 
-如果是 Windows 或者 Linux 桌面开发，建议 WPF 或 Avalonia， MAUI 真上不来台面，在 WPF 下面可以找到 好多 API ，但是 MAUI 都没有。。。 
+如果是 Windows 或者 Linux 桌面开发，建议 WPF 或 Avalonia， MAUI 真上不来台面，在 WPF 下面可以找到 好多 API ，但是 MAUI 都没有。。。
 
 MAUI Windows 基于 WINUI 开发的，但是你按照 WINUI 去找资料，找到的东西 MAUI 又用不了。。。
 
@@ -77,7 +77,7 @@ MASA 是真的用心在做生态，吸引了很多开发者和粉丝活跃参与
 
 ![](https://img1.dotnet9.com/2023/01/0601.png)
 
-MauiProgram.cs 中，有个  `Microsoft.UI.Xaml.Window` ,然后在 Windows 下   `Microsoft.UI.Xaml.Window` 是 ` Microsoft.Maui.MauiWinUIWindow`， `Microsoft.UI.Xaml.Window` 多种平台统一的抽象。
+MauiProgram.cs 中，有个 `Microsoft.UI.Xaml.Window` ,然后在 Windows 下 `Microsoft.UI.Xaml.Window` 是 ` Microsoft.Maui.MauiWinUIWindow`， `Microsoft.UI.Xaml.Window` 多种平台统一的抽象。
 
 ![](https://img1.dotnet9.com/2023/01/0602.png)
 
@@ -146,7 +146,7 @@ await Application.Current!.Dispatcher.DispatchAsync(async () =>
 });
 ```
 
-虽然你获得了  `Microsoft.Maui.Controls.Window` ，但是不能直接管理这个 Window，而是应该通过 `Microsoft.UI.Xaml.Window` 或 `Microsoft.UI.Windowing.AppWindow` 管理。
+虽然你获得了 `Microsoft.Maui.Controls.Window` ，但是不能直接管理这个 Window，而是应该通过 `Microsoft.UI.Xaml.Window` 或 `Microsoft.UI.Windowing.AppWindow` 管理。
 
 也就是在依赖注入里面的窗口生命周期管理里面写。
 
@@ -203,7 +203,7 @@ private static void MainWindowCreated(MauiWinUIWindow nativeWindow)
     appWindow.Changed += (w, e) =>
     {
         // 位置发生变化
-        if (e.DidPositionChange) 
+        if (e.DidPositionChange)
         {
         }
         if (e.DidPresenterChange) { }
@@ -297,7 +297,7 @@ public class WindowService : IWindowService
         _appWindow = appWindow;
         _window = window;
     }
-    
+
     // 检查当前窗口是否全屏
     public bool FullScreenState
     {
@@ -357,7 +357,7 @@ public class WindowService : IWindowService
     {
         _appWindow.Show(true);
     }
-    
+
     // 关闭窗口
     public void Exit()
     {
@@ -419,11 +419,11 @@ IntPtr windowHandle = WinRT.Interop.WindowNative.GetWindowHandle(nativeWindow);
 PInvoke.User32.ShowWindow(windowHandle, PInvoke.User32.WindowShowStyle.SW_MINIMIZE);
 ```
 
-> 此时  `Microsoft.UI.Xaml.Window`，或 `Microsoft.UI.Windowing.AppWindow`  就用不上了。
+> 此时 `Microsoft.UI.Xaml.Window`，或 `Microsoft.UI.Windowing.AppWindow` 就用不上了。
 
 前面提到，要使用 `Microsoft.UI.Xaml.Window`，或 `Microsoft.UI.Windowing.AppWindow` ，例如在 MauiProgram.cs 里面记录了窗口的事件，创建窗口时控制大小。
 
-但是，窗口运行中，要设置窗口大小或限制大小，则是要通过  `Microsoft.Maui.Controls.Windows`。
+但是，窗口运行中，要设置窗口大小或限制大小，则是要通过 `Microsoft.Maui.Controls.Windows`。
 
 例如，控制主窗口大小不能太小，不能被无限缩小，要在 APP.cs 中这样写：
 
@@ -454,7 +454,7 @@ protected override Window CreateWindow(IActivationState? activationState)
     //};
 
     return window;
-    
+
     (int MinWidth, int MinHeight) GetMinSize()
     {
         // 获取当前屏幕的长宽，用 X、Y 表示。
@@ -473,7 +473,7 @@ PS，在 AppWindow 里面的事件做大小限制，是做不到的，这里主�
 appWindow.Changed += (w, e) =>
 {
     // 位置发生变化
-    if (e.DidPositionChange) 
+    if (e.DidPositionChange)
     {
 
     }
@@ -487,7 +487,7 @@ appWindow.Changed += (w, e) =>
 
 ### 如何限制一次只能打开一个程序
 
-场景，如果程序D 已被运行 进程 A，那么再次启动程序D 运行进程 B，B 会识别到已有相同的进程，此时 B 会将 A 窗口激活弹出来，然后 B 再退出。
+场景，如果程序 D 已被运行 进程 A，那么再次启动程序 D 运行进程 B，B 会识别到已有相同的进程，此时 B 会将 A 窗口激活弹出来，然后 B 再退出。
 
 这样不仅可以限制只能运行一个进程，而且可以让用户体验更加好。
 
@@ -543,7 +543,7 @@ internal static class ProcessManager
             HasLock = false;
         }
     }
-    
+
     // 将另一个窗口激活放到前台。
     // Win32 API
     [DllImport("user32.dll")]
@@ -750,7 +750,7 @@ public static class MauiProgram
 但是在 MAUI 应用中，是加不上去的，如果加上去，就会出现报错。
 
 ```bash
-Platforms\Windows\app.manifest : manifest authoring error c1010001: Values of attribute "level" not equal in different manifest snippets. 
+Platforms\Windows\app.manifest : manifest authoring error c1010001: Values of attribute "level" not equal in different manifest snippets.
 ```
 
 因为 .NET 编译器中，已经默认为程序生成一个 `app.manifest` 文件，其文件内容中已经包含了 `trustInfo` 配置。
@@ -808,8 +808,6 @@ MSBuild 编译使用到的步骤可以参考官方文档：https://learn.microso
 ` BeforeTargets="GenerateManifests"` 表明在 GenerateManifests 之前，执行里面的自定义命令。
 
 `Condition="'$(PublishDir)' != ''"` 表示触发条件，在 MAUI 中，只有发布的时候才会有这个变量，也可以改成 `Condition="'$(Release)' != ''"`。
-
-
 
 注意，有些情况下 `_DeploymentManifestFiles` 目录会不存在，因此可以多次测试一下。
 
@@ -892,61 +890,63 @@ An application manifest specifies declarative application identity, dependency a
 
 ```css
 #blazor-error-ui {
-    background: lightyellow;
-    bottom: 0;
-    box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.2);
-    display: none;
-    left: 0;
-    padding: 0.6rem 1.25rem 0.7rem 1.25rem;
-    position: fixed;
-    width: 100%;
-    z-index: 1000;
+  background: lightyellow;
+  bottom: 0;
+  box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.2);
+  display: none;
+  left: 0;
+  padding: 0.6rem 1.25rem 0.7rem 1.25rem;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
 }
 
 #blazor-error-ui .dismiss {
-    cursor: pointer;
-    position: absolute;
-    right: 0.75rem;
-    top: 0.5rem;
+  cursor: pointer;
+  position: absolute;
+  right: 0.75rem;
+  top: 0.5rem;
 }
 
 .blazor-error-boundary {
-    background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTYiIGhlaWdodD0iNDkiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIG92ZXJmbG93PSJoaWRkZW4iPjxkZWZzPjxjbGlwUGF0aCBpZD0iY2xpcDAiPjxyZWN0IHg9IjIzNSIgeT0iNTEiIHdpZHRoPSI1NiIgaGVpZ2h0PSI0OSIvPjwvY2xpcFBhdGg+PC9kZWZzPjxnIGNsaXAtcGF0aD0idXJsKCNjbGlwMCkiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0yMzUgLTUxKSI+PHBhdGggZD0iTTI2My41MDYgNTFDMjY0LjcxNyA1MSAyNjUuODEzIDUxLjQ4MzcgMjY2LjYwNiA1Mi4yNjU4TDI2Ny4wNTIgNTIuNzk4NyAyNjcuNTM5IDUzLjYyODMgMjkwLjE4NSA5Mi4xODMxIDI5MC41NDUgOTIuNzk1IDI5MC42NTYgOTIuOTk2QzI5MC44NzcgOTMuNTEzIDI5MSA5NC4wODE1IDI5MSA5NC42NzgyIDI5MSA5Ny4wNjUxIDI4OS4wMzggOTkgMjg2LjYxNyA5OUwyNDAuMzgzIDk5QzIzNy45NjMgOTkgMjM2IDk3LjA2NTEgMjM2IDk0LjY3ODIgMjM2IDk0LjM3OTkgMjM2LjAzMSA5NC4wODg2IDIzNi4wODkgOTMuODA3MkwyMzYuMzM4IDkzLjAxNjIgMjM2Ljg1OCA5Mi4xMzE0IDI1OS40NzMgNTMuNjI5NCAyNTkuOTYxIDUyLjc5ODUgMjYwLjQwNyA1Mi4yNjU4QzI2MS4yIDUxLjQ4MzcgMjYyLjI5NiA1MSAyNjMuNTA2IDUxWk0yNjMuNTg2IDY2LjAxODNDMjYwLjczNyA2Ni4wMTgzIDI1OS4zMTMgNjcuMTI0NSAyNTkuMzEzIDY5LjMzNyAyNTkuMzEzIDY5LjYxMDIgMjU5LjMzMiA2OS44NjA4IDI1OS4zNzEgNzAuMDg4N0wyNjEuNzk1IDg0LjAxNjEgMjY1LjM4IDg0LjAxNjEgMjY3LjgyMSA2OS43NDc1QzI2Ny44NiA2OS43MzA5IDI2Ny44NzkgNjkuNTg3NyAyNjcuODc5IDY5LjMxNzkgMjY3Ljg3OSA2Ny4xMTgyIDI2Ni40NDggNjYuMDE4MyAyNjMuNTg2IDY2LjAxODNaTTI2My41NzYgODYuMDU0N0MyNjEuMDQ5IDg2LjA1NDcgMjU5Ljc4NiA4Ny4zMDA1IDI1OS43ODYgODkuNzkyMSAyNTkuNzg2IDkyLjI4MzcgMjYxLjA0OSA5My41Mjk1IDI2My41NzYgOTMuNTI5NSAyNjYuMTE2IDkzLjUyOTUgMjY3LjM4NyA5Mi4yODM3IDI2Ny4zODcgODkuNzkyMSAyNjcuMzg3IDg3LjMwMDUgMjY2LjExNiA4Ni4wNTQ3IDI2My41NzYgODYuMDU0N1oiIGZpbGw9IiNGRkU1MDAiIGZpbGwtcnVsZT0iZXZlbm9kZCIvPjwvZz48L3N2Zz4=) no-repeat 1rem/1.8rem, #b32121;
-    padding: 1rem 1rem 1rem 3.7rem;
-    color: white;
+  background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTYiIGhlaWdodD0iNDkiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIG92ZXJmbG93PSJoaWRkZW4iPjxkZWZzPjxjbGlwUGF0aCBpZD0iY2xpcDAiPjxyZWN0IHg9IjIzNSIgeT0iNTEiIHdpZHRoPSI1NiIgaGVpZ2h0PSI0OSIvPjwvY2xpcFBhdGg+PC9kZWZzPjxnIGNsaXAtcGF0aD0idXJsKCNjbGlwMCkiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0yMzUgLTUxKSI+PHBhdGggZD0iTTI2My41MDYgNTFDMjY0LjcxNyA1MSAyNjUuODEzIDUxLjQ4MzcgMjY2LjYwNiA1Mi4yNjU4TDI2Ny4wNTIgNTIuNzk4NyAyNjcuNTM5IDUzLjYyODMgMjkwLjE4NSA5Mi4xODMxIDI5MC41NDUgOTIuNzk1IDI5MC42NTYgOTIuOTk2QzI5MC44NzcgOTMuNTEzIDI5MSA5NC4wODE1IDI5MSA5NC42NzgyIDI5MSA5Ny4wNjUxIDI4OS4wMzggOTkgMjg2LjYxNyA5OUwyNDAuMzgzIDk5QzIzNy45NjMgOTkgMjM2IDk3LjA2NTEgMjM2IDk0LjY3ODIgMjM2IDk0LjM3OTkgMjM2LjAzMSA5NC4wODg2IDIzNi4wODkgOTMuODA3MkwyMzYuMzM4IDkzLjAxNjIgMjM2Ljg1OCA5Mi4xMzE0IDI1OS40NzMgNTMuNjI5NCAyNTkuOTYxIDUyLjc5ODUgMjYwLjQwNyA1Mi4yNjU4QzI2MS4yIDUxLjQ4MzcgMjYyLjI5NiA1MSAyNjMuNTA2IDUxWk0yNjMuNTg2IDY2LjAxODNDMjYwLjczNyA2Ni4wMTgzIDI1OS4zMTMgNjcuMTI0NSAyNTkuMzEzIDY5LjMzNyAyNTkuMzEzIDY5LjYxMDIgMjU5LjMzMiA2OS44NjA4IDI1OS4zNzEgNzAuMDg4N0wyNjEuNzk1IDg0LjAxNjEgMjY1LjM4IDg0LjAxNjEgMjY3LjgyMSA2OS43NDc1QzI2Ny44NiA2OS43MzA5IDI2Ny44NzkgNjkuNTg3NyAyNjcuODc5IDY5LjMxNzkgMjY3Ljg3OSA2Ny4xMTgyIDI2Ni40NDggNjYuMDE4MyAyNjMuNTg2IDY2LjAxODNaTTI2My41NzYgODYuMDU0N0MyNjEuMDQ5IDg2LjA1NDcgMjU5Ljc4NiA4Ny4zMDA1IDI1OS43ODYgODkuNzkyMSAyNTkuNzg2IDkyLjI4MzcgMjYxLjA0OSA5My41Mjk1IDI2My41NzYgOTMuNTI5NSAyNjYuMTE2IDkzLjUyOTUgMjY3LjM4NyA5Mi4yODM3IDI2Ny4zODcgODkuNzkyMSAyNjcuMzg3IDg3LjMwMDUgMjY2LjExNiA4Ni4wNTQ3IDI2My41NzYgODYuMDU0N1oiIGZpbGw9IiNGRkU1MDAiIGZpbGwtcnVsZT0iZXZlbm9kZCIvPjwvZz48L3N2Zz4=)
+      no-repeat 1rem/1.8rem, #b32121;
+  padding: 1rem 1rem 1rem 3.7rem;
+  color: white;
 }
 
 .blazor-error-boundary::after {
-    content: "An error has occurred."
+  content: "An error has occurred.";
 }
 
 .status-bar-safe-area {
-    display: none;
+  display: none;
 }
 
 @supports (-webkit-touch-callout: none) {
-    .status-bar-safe-area {
-        display: flex;
-        position: sticky;
-        top: 0;
-        height: env(safe-area-inset-top);
-        background-color: #f7f7f7;
-        width: 100%;
-        z-index: 1;
-    }
+  .status-bar-safe-area {
+    display: flex;
+    position: sticky;
+    top: 0;
+    height: env(safe-area-inset-top);
+    background-color: #f7f7f7;
+    width: 100%;
+    z-index: 1;
+  }
 
-	.flex-column, .navbar-brand {
-		padding-left: env(safe-area-inset-left);
-	}
+  .flex-column,
+  .navbar-brand {
+    padding-left: env(safe-area-inset-left);
+  }
 }
-
 ```
 
 接着，将以下代码放到 `app.js` 中，用于动态导入前端生成的 css 文件。
 
 ```js
 function InitializeCss(name) {
-    document.getElementById("app-css").innerHTML = '<link rel="stylesheet" href="' + name + '">';
+  document.getElementById("app-css").innerHTML =
+    '<link rel="stylesheet" href="' + name + '">';
 }
 ```
 
@@ -961,29 +961,30 @@ function InitializeCss(name) {
 ```html
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
-	<title>MauiApp3</title>
-	<base href="/" />
-	<link href="/app.css" rel="stylesheet" />
-</head>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"
+    />
+    <title>MauiApp3</title>
+    <base href="/" />
+    <link href="/app.css" rel="stylesheet" />
+  </head>
 
-<body>
-	<div id="app-css"></div>
-	<div class="status-bar-safe-area"></div>
-	<div id="app">Loading...</div>
+  <body>
+    <div id="app-css"></div>
+    <div class="status-bar-safe-area"></div>
+    <div id="app">Loading...</div>
 
-	<div id="blazor-error-ui">
-		An unhandled error has occurred.
-		<a href="" class="reload">Reload</a>
-		<a class="dismiss">🗙</a>
-	</div>
-	<script src="app.js"></script>
-	<script src="_framework/blazor.webview.js" autostart="false"></script>
-
-</body>
-
+    <div id="blazor-error-ui">
+      An unhandled error has occurred.
+      <a href="" class="reload">Reload</a>
+      <a class="dismiss">🗙</a>
+    </div>
+    <script src="app.js"></script>
+    <script src="_framework/blazor.webview.js" autostart="false"></script>
+  </body>
 </html>
 ```
 
@@ -1109,7 +1110,6 @@ using System.Text;
 
 生成证书的方法参考 [https://github.com/dotnetcore/FastGithub](https://github.com/dotnetcore/FastGithub) 项目。
 
-
 第一步是编写一个证书生成器，其中，代码直接从这里复制： https://github.com/dotnetcore/FastGithub/blob/9f9cbce624310c207b01699de2a5818a742e11ca/FastGithub.HttpServer/Certs/CertGenerator.cs
 
 然后，定义管理生成证书的服务，原版作者使用的是 .NET 7，而且当前稳定版本是 .NET 6，很多 API 不能使用，因此需要对其改造。原版地址：
@@ -1169,7 +1169,7 @@ public string CaKeyFilePath { get; } = $"{CACERT_PATH}/https.key";
 
         /// <summary>
         /// 生成 CA 证书
-        /// </summary> 
+        /// </summary>
         public bool CreateCaCertIfNotExists()
         {
             if (!Directory.Exists(CACERT_PATH)) Directory.CreateDirectory(CACERT_PATH);
@@ -1199,7 +1199,7 @@ public string CaKeyFilePath { get; } = $"{CACERT_PATH}/https.key";
         /// <summary>
         /// 获取颁发给指定域名的证书
         /// </summary>
-        /// <param name="domain"></param> 
+        /// <param name="domain"></param>
         /// <returns></returns>
         public X509Certificate2 GetOrCreateServerCert(string? domain)
         {
@@ -1318,5 +1318,5 @@ var webhost =  WebHost.CreateDefaultBuilder()
             });
     })
     .Build();
-await webhost.RunAsync();  
+await webhost.RunAsync();
 ```

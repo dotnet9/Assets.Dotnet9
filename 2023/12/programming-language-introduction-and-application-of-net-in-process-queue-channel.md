@@ -6,8 +6,8 @@ date: 2023-12-23 19:14:17
 lastmod: 2023-12-23 20:12:41
 copyright: Reprinted
 author: 素履独行
-originaltitle: .NET 进程内队列 Channel 的入门与应用
-originallink: https://blog.yuanpei.me/posts/getting-started-with-the-.net-in-process-queue-channel/
+originalTitle: .NET 进程内队列 Channel 的入门与应用
+originalLink: https://blog.yuanpei.me/posts/getting-started-with-the-.net-in-process-queue-channel/
 draft: false
 cover: https://img1.dotnet9.com/2023/12/cover_04.jpg
 categories: .NET
@@ -22,11 +22,7 @@ tags: .NET
 
 [Channel](https://docs.microsoft.com/zh-cn/dotnet/api/system.threading.channels.channel?view=net-6.0) 是微软在 `.NET Core 3.0` 以后推出的新的集合类型，该类型位于 `System.Threading.Channels` 命名空间下，具有异步 API 、高性能、线程安全等等的特点。目前，`Channel` 最主要的应用场景是生产者-消费者模型。如下图所示，生产者负责向队列中写入数据，消费者负责从队列中读出数据。在此基础上，通过增加生产者或者消费者的数目，对这个模型做进一步的扩展。我们平时使用到的 `RabbitMQ` 或者 `Kafka`，都可以认为是生产者-消费者模型在特定领域内的一种应用，甚至于我们还能从中读出一点广义上的读写分离的味道。
 
-
-
 [![生产者-消费者模型示意图](https://img1.dotnet9.com/2023/12/0401.png)](https://blog.yuanpei.me/posts/NET-进程内队列-Channel-的入门与应用/Producer-Consumer-Pattern.drawio.png)生产者-消费者模型示意图
-
-
 
 罗曼·罗兰曾说过，**世界上只有一种真正的英雄主义，那就是在认清生活的真相后，依然热爱生活**。此时此刻，看着眼前的这幅示意图若有所思，你也许会想到下面的做法：
 
@@ -72,11 +68,7 @@ await Task.WhenAll(producer, consumer);
 
 可以注意到，现在我们再去实现一个生产者-消费者模型，其难度基本为零。与此同时，`BlockingCollection<T>` 和 `BufferBlock<T>` 都是线程安全的集合，这可以让我们在多线程环境下更加得心应手。回想我过去的种种经历，每当我需要使用那些线程信号量进行线程同步的时候，我都不得不小心翼翼地在 Bug 边缘游走。那么，你也许会问，既然我们已经有 `BlockingCollection<T>` 和 `BufferBlock<T>` 这样的数据结构，为什么我们还需要 `Channel` 呢？作为一名最普通不过的程序员，有无数多个 Bug 随着时间的推移都慢慢消失了，而那些曾经令我们殚精竭虑的问题，同样在被不停地刷新着答案。
 
-
-
 [![BlockingCollection、BufferBlock、Channel 的性能对比](https://img1.dotnet9.com/2023/12/0402.jpg)](https://blog.yuanpei.me/posts/NET-进程内队列-Channel-的入门与应用/BlockingCollection-BufferBlock-Channel.jpg)BlockingCollection、BufferBlock、Channel 的性能对比
-
-
 
 如图所示，我们测试了读写 10000 条数据的场景下，三种数据结构各自的性能表现，显而易见 `Channel` 的性能是最好的，所以，你告诉我，这到底算不算一个理由，难道还有什么东西比性能更令人兴奋的吗？当你的电脑显卡不能带你领略刺客信条的“神话三部曲”，甚至连在本机部署 Stable Diffusion 都变成一种奢望的时候，你不得不承认，这一点点微不足道的性能优化，是这个预言摩尔定律将会失效的时代里，所剩无几的匠心独运。
 
@@ -149,8 +141,6 @@ OK，在对 Channel 有了一个基本的印象后，我们来看看它在具体
 
 ![FakeRPC如何支持WebSocket协议](https://img1.dotnet9.com/2023/12/0403.png)FakeRPC 如何支持 WebSocket 协议
 
-
-
 在这个方案中，CallInvoker 是真正负责处理请求的核心组件，对于客户端来说，这个工作主要是按照请求的方法和参数组装为 `FakeRpcRequest`，然后再调用 `ClientWebSocket` 实例的 `SendAsync()` 方法发送消息给服务器端。除此之外，它还需要从服务器端接收消息，因为每一条消息都携带着 `Id` ，因此，我们可以非常容易地分辨出哪一条消息是回复给自己的。在此基础上，博主使用了一个后台线程从 `Channel` 中读取消息，这样，发送消息和接收消息实际上是工作在两个不同的线程上。对于服务器端来说，在消息的处理上是相似的，不同的是，服务器端从 `Channel` 中读取消息是为了发送给客户端，而客户端从 `Channel` 读取消息则是为了传递结果给代理类。下面的代码，展示了上面提到的一部分客户端的实现细节：
 
 ```csharp
@@ -212,8 +202,6 @@ var result = calculatorProxy.Random();
 
 ![FakeRPC 不同通讯协议、消息协议性能对比](https://img1.dotnet9.com/2023/12/0404.png)FakeRPC 不同通讯协议、消息协议性能对比
 
-
-
 我们可以看到，`MessagePack` 不论是在 HTTP 协议下还是 WebSocket 协议下，始终都有着不俗的表现，这让我开始期待，它能否在 TCP/IP 协议上继续书写这个传奇，就在几天前，我刚刚完成了 TCP/IP 协议下的二进制消息定义，自从序列化和反序列化被抽象到 `IMessageSerializer` 接口以后，我们将会有更多的机会去支持更多的消息协议，随着育碧官方官宣了新作，刺客信条：幻景，我对 FakeRPC 的这个名字的理解，已经延续到了刺客兄弟会的理念，即：Nothing is true，或者说，万物皆虚。因为，从某种意义上来讲，RPC 不过是隐藏了那些蜿蜒曲折的中间过程，让你产生了可以像调用本地方法一样调用远程方法的错觉，甚至在设计二进制消息协议的时候，我突然意识到，我不过是再一次发明了 HTTP 协议。那么，这一切还有意义吗？当然有！做人嘛，开心就好了呀！
 
 ```csharp
@@ -224,7 +212,7 @@ async static Task Producer(IEnumerable<int> values) {
     foreach (var value in values) {
         await buffer.SendAsync(value);
     }
-        
+
     buffer.Complete();
 }
 
@@ -315,11 +303,7 @@ while (await mergedChannel.Reader.WaitToReadAsync()) {
 
 OK，这三个方法做了一件什么样的事情呢？我个人以为，这其实就是我们上面提到的数据流，首先，我们通过 `GetFiles()` 方法获得指定目录内的文件信息；然后，这些信息交给 `Analyse()` 方法去做处理，这里做的事情是统计出 `markdown` 格式文件的字符串，以及筛选出那些非 `markdown` 格式的文件或者子目录；最后，通过 `Merge()` 函数，我们将上一步的结果进行汇总输出。如果用一幅图来表示的话，它应该是下面这样的流程：
 
-
-
 [![利用 Channel 实现数据流模式](https://img1.dotnet9.com/2023/12/0405.png)](https://blog.yuanpei.me/posts/NET-进程内队列-Channel-的入门与应用/Data-Pipelines-With-Channel.drawio.png)利用 Channel 实现数据流模式
-
-
 
 从某种意义上来讲，这是一种“分治”策略，即：把一个大任务分解为若干个小任务，再将这些小任务的结果合并起来。很多年前，我曾在一本讲并行编程的书上见过类似的代码片段，那个时候我已经对 Google 的 MapReduce 略有耳闻，后来又接触到了 [Parallel](https://learn.microsoft.com/zh-cn/dotnet/standard/parallel-programming/) ，我突然意识到，如果 `Map()` 和 `Reduce()` 两个函数运行在一台远程服务器上，那么这个过程可以认为是 RPC，而运行在远程服务器上的这些函数，其实是在并行地执行着某种运算，那么这个过程可以认为是并行计算。当这些并行计算，使用的是世界各地的可伸缩计算资源时，那么这个过程其实就是云计算。所以说，写作这个过程还是挺有意思的，对不对？
 

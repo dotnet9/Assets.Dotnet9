@@ -5,8 +5,8 @@ description: 开源免费的redis包
 date: 2021-04-11 09:50:47
 copyright: Reprinted
 author: FreeSql & CSRedis
-originaltitle: .NET Core 简单且高级的库 csredis
-originallink: https://www.cnblogs.com/kellynic/p/9803314.html
+originalTitle: .NET Core 简单且高级的库 csredis
+originalLink: https://www.cnblogs.com/kellynic/p/9803314.html
 draft: False
 cover: https://img1.dotnet9.com/2021/04/cover_05.png
 categories: .NET
@@ -15,19 +15,19 @@ tags: .NET,Redis,csredis
 
 ## 1 前言
 
-.NET Core 从1.0发布历经坎坷，一开始各种库缺失到现在的部分完善，走到今天实属不易。
+.NET Core 从 1.0 发布历经坎坷，一开始各种库缺失到现在的部分完善，走到今天实属不易。
 
 比如 redis-cli SDK 简直是坑出不穷。
 
 过去 .net 最有名望的 `ServiceStack.Redis` 早已沦为商业用途，在 .NETCore 中使用只能充值；后来居上的 `StackExchange.Redis` 虽然能用，但线上各种 Timeout 错误把人坑到没脾气，两年多都不解决，最近发布的 2.0 版本不知道是否彻底解决了底层。
 
-## 2 csredis v3.0.0更新
+## 2 csredis v3.0.0 更新
 
-1. 所有方法名与redis-cli保持一持；
+1. 所有方法名与 redis-cli 保持一持；
 
 据了解，java/python/go/nodejs/php SDK 方法名基本都与 redis-cli 一致，反对二次命名的库
 
-2. 增加反序列对象获取，如：Get<byte[]>、HGet<byte[]>，所有获取方法都重载了，默认获取仍然是string；
+2. 增加反序列对象获取，如：Get<byte[]>、HGet<byte[]>，所有获取方法都重载了，默认获取仍然是 string；
 
 3. SafeObjectPool 的引入使用；
 
@@ -48,13 +48,13 @@ rds.Get("test1");
 
 现实多个服务节点共同分担存储，与官方的分区、集群、高可用方案不同。
 
->例如：缓存数据达到500G，如果使用一台redis-server服务器光靠内存存储将非常吃力，使用硬盘又影响性能。
+> 例如：缓存数据达到 500G，如果使用一台 redis-server 服务器光靠内存存储将非常吃力，使用硬盘又影响性能。
 >
->可以使用此功能自动管理N台redis-server服务器分担存储，每台服务器只需约 (500/N)G 内存，且每台服务器匀可以配置官方高可用架构。
+> 可以使用此功能自动管理 N 台 redis-server 服务器分担存储，每台服务器只需约 (500/N)G 内存，且每台服务器匀可以配置官方高可用架构。
 
 ```C#
 var rds = new CSRedis.CSRedisClient(null,
-  "127.0.0.1:6371,password=123,defaultDatabase=11,poolsize=10,ssl=false,writeBuffer=10240,prefix=key前辍", 
+  "127.0.0.1:6371,password=123,defaultDatabase=11,poolsize=10,ssl=false,writeBuffer=10240,prefix=key前辍",
   "127.0.0.1:6372,password=123,defaultDatabase=12,poolsize=11,ssl=false,writeBuffer=10240,prefix=key前辍",
   "127.0.0.1:6373,password=123,defaultDatabase=13,poolsize=12,ssl=false,writeBuffer=10240,prefix=key前辍",
   "127.0.0.1:6374,password=123,defaultDatabase=14,poolsize=13,ssl=false,writeBuffer=10240,prefix=key前辍");
@@ -150,12 +150,12 @@ redis[1].Get("test1");
 
 csredis 源码地址： https://github.com/2881099/csredis
 
->***本文作者***：FreeSql & CSRedis
+> **_本文作者_**：FreeSql & CSRedis
 >
->***本文链接***：https://www.cnblogs.com/kellynic/p/9803314.html
+> **_本文链接_**：https://www.cnblogs.com/kellynic/p/9803314.html
 >
->***关于博主***：评论和私信会在第一时间回复。或者直接私信我。
+> **_关于博主_**：评论和私信会在第一时间回复。或者直接私信我。
 >
->***版权声明***：本博客所有文章除特别声明外，均采用 BY-NC-SA 许可协议。转载请注明出处！
+> **_版权声明_**：本博客所有文章除特别声明外，均采用 BY-NC-SA 许可协议。转载请注明出处！
 >
->***声援博主***：如果您觉得文章对您有帮助，可以点击文章右下角【推荐】一下。您的鼓励是博主的最大动力！
+> **_声援博主_**：如果您觉得文章对您有帮助，可以点击文章右下角【推荐】一下。您的鼓励是博主的最大动力！

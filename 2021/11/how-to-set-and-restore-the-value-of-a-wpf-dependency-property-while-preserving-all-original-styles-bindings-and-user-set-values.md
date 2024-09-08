@@ -5,8 +5,8 @@ description: WPF 备份某控件的一些属性，做一些神奇的操作，然
 date: 2021-11-09 10:08:39
 copyright: Reprinted
 author: 吕毅
-originaltitle: 如何在保留原本所有样式/绑定和用户设置值的情况下，设置和还原 WPF 依赖项属性的值
-originallink: https://blog.walterlv.com/post/change-and-restore-wpf-dependency-value-without-disabling-the-declared-use-of-the-property.html
+originalTitle: 如何在保留原本所有样式/绑定和用户设置值的情况下，设置和还原 WPF 依赖项属性的值
+originalLink: https://blog.walterlv.com/post/change-and-restore-wpf-dependency-value-without-disabling-the-declared-use-of-the-property.html
 draft: False
 cover: https://img1.dotnet9.com/2021/11/cover_02.jpeg
 categories: .NET
@@ -17,7 +17,8 @@ tags: WPF
 
 WPF 备份某控件的一些属性，做一些神奇的操作，然后再还原这些属性。多么司空见惯的操作呀！然而怎么备份却是值得研究的问题。直接赋值？那一定是因为你没踩到一些坑。
 
-*本文内容*
+_本文内容_
+
 - 场景和问题
 - 解决方法和原理
 - 延伸
@@ -55,7 +56,7 @@ private void OnExitFullScreen()
 
 ## 解决方法和原理
 
-因为各大 WPF 入门书籍都说到了 WPF 依赖项属性的优先级机制，所以大家应该基本都知道这个。不了解的，可以立刻去这里看看：[依赖项属性值优先级 - WPF	Microsoft Docs](https://docs.microsoft.com/zh-cn/dotnet/framework/wpf/advanced/dependency-property-value-precedence#dependency-property-setting-precedence-list)。
+因为各大 WPF 入门书籍都说到了 WPF 依赖项属性的优先级机制，所以大家应该基本都知道这个。不了解的，可以立刻去这里看看：[依赖项属性值优先级 - WPF Microsoft Docs](https://docs.microsoft.com/zh-cn/dotnet/framework/wpf/advanced/dependency-property-value-precedence#dependency-property-setting-precedence-list)。
 
 是这样的优先级：强制 > 动画 > 本地值 > 模板 > 隐式样式 > 样式触发器 > 模板触发器 > 样式 > 默认样式 > 属性继承 > 元数据默认值。
 

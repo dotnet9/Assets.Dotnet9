@@ -5,8 +5,8 @@ description: 前面说过`ASP.NET Core Identity` 是基于`Claim` 的验证，�
 date: 2021-12-25 11:08:26
 copyright: Reprinted
 author: StrayaWorker
-originaltitle: (27/30)大家一起学Blazor：添加用户和Claim功能
-originallink: https://ithelp.ithome.com.tw/articles/10273602
+originalTitle: (27/30)大家一起学Blazor：添加用户和Claim功能
+originalLink: https://ithelp.ithome.com.tw/articles/10273602
 draft: False
 cover: https://img1.dotnet9.com/2021/12/cover_05.png
 categories: .NET
@@ -109,7 +109,7 @@ public interface IUserRepository
 }
 ```
 
-实现`UserRepository`，如果还记得`RoleRepository.EditUsersInRoleAsyncPost` 方法的话，当时是用两个变量分开存储`Role.Id`及`List<CustomUserRoleViewModel> model`，这边编辑`User` 下`Claim` 的`Post` 方法跟`Role` 不同，是再用一个ViewModel `CustomUserClaimsViewModel` 去承载数据，本质上并无差别。
+实现`UserRepository`，如果还记得`RoleRepository.EditUsersInRoleAsyncPost` 方法的话，当时是用两个变量分开存储`Role.Id`及`List<CustomUserRoleViewModel> model`，这边编辑`User` 下`Claim` 的`Post` 方法跟`Role` 不同，是再用一个 ViewModel `CustomUserClaimsViewModel` 去承载数据，本质上并无差别。
 
 ```C#
 using System.Security.Claims;
@@ -354,47 +354,52 @@ public partial class UserManagement
 
 <h1>所有用户</h1>
 
-@if (Users.Any())
-{
-    <NavLink class="btn btn-primary mb-3" href="Identity/Account/Register" Match="NavLinkMatch.All">
-        新增用户
-    </NavLink>
+@if (Users.Any()) {
+<NavLink
+  class="btn btn-primary mb-3"
+  href="Identity/Account/Register"
+  Match="NavLinkMatch.All"
+>
+  新增用户
+</NavLink>
 
-    foreach (var user in Users)
-    {
-        <div class="card mb-3 w-25">
-            <div class="card-header">
-                User Id : @user.UserId
-            </div>
-            <div class="card-body">
-                <h5 class="card-title">@user.UserName</h5>
-            </div>
-            <div class="card-footer">
-                <button type="button" class="btn btn-primary" @onclick="() => EditUser(user.UserId)">
-                    编辑用户
-                </button>
-                <button type="button" class="btn btn-danger" @onclick="() => DeleteUser(user.UserId)">
-                    刪除用户
-                </button>
-            </div>
-        </div>
-    }
-}
-else
-{
-    <div class="card w-25">
-        <div class="card-header">
-            还沒有用户
-        </div>
-        <div class="card-body">
-            <h5 class="card-title">
-                点击底下的按钮新增用户
-            </h5>
-            <NavLink class="btn btn-primary" href="Identity/Account/Register" Match="NavLinkMatch.All">
-                新增用户
-            </NavLink>
-        </div>
-    </div>
+foreach (var user in Users) {
+<div class="card mb-3 w-25">
+  <div class="card-header">User Id : @user.UserId</div>
+  <div class="card-body">
+    <h5 class="card-title">@user.UserName</h5>
+  </div>
+  <div class="card-footer">
+    <button
+      type="button"
+      class="btn btn-primary"
+      @onclick="() => EditUser(user.UserId)"
+    >
+      编辑用户
+    </button>
+    <button
+      type="button"
+      class="btn btn-danger"
+      @onclick="() => DeleteUser(user.UserId)"
+    >
+      刪除用户
+    </button>
+  </div>
+</div>
+} } else {
+<div class="card w-25">
+  <div class="card-header">还沒有用户</div>
+  <div class="card-body">
+    <h5 class="card-title">点击底下的按钮新增用户</h5>
+    <NavLink
+      class="btn btn-primary"
+      href="Identity/Account/Register"
+      Match="NavLinkMatch.All"
+    >
+      新增用户
+    </NavLink>
+  </div>
+</div>
 }
 ```
 
@@ -449,39 +454,41 @@ public partial class EditUser
 @page "/UserManagement/EditUser/{UserId}"
 
 <EditForm class="mt-3" Model="User" OnValidSubmit="EditRole">
-    <DataAnnotationsValidator/>
-    <ValidationSummary/>
-    <div class="form-group row">
-        <label for="RoleName" class="col-sm-1 col-form-label">用户名称</label>
-        <div class="col-sm-3">
-            <InputText @bind-Value="User.UserName" id="RoleName" class="form-control" placeholder="用户名称"></InputText>
-        </div>
+  <DataAnnotationsValidator />
+  <ValidationSummary />
+  <div class="form-group row">
+    <label for="RoleName" class="col-sm-1 col-form-label">用户名称</label>
+    <div class="col-sm-3">
+      <InputText
+        @bind-Value="User.UserName"
+        id="RoleName"
+        class="form-control"
+        placeholder="用户名称"
+      ></InputText>
     </div>
+  </div>
 
-    <div class="card mb-3 w-50">
-        <div class="card-header">
-            <h3>用户底下的 Claim</h3>
-        </div>
-        <div class="card-body">
-            @if (User.Claims.Any())
-            {
-                foreach (var claim in User.Claims)
-                {
-                    <h5 class="card-title">@claim</h5>
-                }
-            }
-            else
-            {
-                <h5 class="card-title">目前该用户沒有任何 Claim</h5>
-            }
-        </div>
-        <div class="card-footer">
-            <button type="submit" class="btn btn-primary">更新用户</button>
-            <button type="button" class="btn btn-info" @onclick="EditUsersInRole">新增或移除该用户底下的 Claim</button>
-            <button type="button" class="btn btn-danger" @onclick="Cancel">取消</button>
-        </div>
+  <div class="card mb-3 w-50">
+    <div class="card-header">
+      <h3>用户底下的 Claim</h3>
     </div>
-
+    <div class="card-body">
+      @if (User.Claims.Any()) { foreach (var claim in User.Claims) {
+      <h5 class="card-title">@claim</h5>
+      } } else {
+      <h5 class="card-title">目前该用户沒有任何 Claim</h5>
+      }
+    </div>
+    <div class="card-footer">
+      <button type="submit" class="btn btn-primary">更新用户</button>
+      <button type="button" class="btn btn-info" @onclick="EditUsersInRole">
+        新增或移除该用户底下的 Claim
+      </button>
+      <button type="button" class="btn btn-danger" @onclick="Cancel">
+        取消
+      </button>
+    </div>
+  </div>
 </EditForm>
 ```
 
@@ -544,28 +551,29 @@ public partial class EditClaimsInUser
 @page "/UserManagement/EditClaimsInUser/{UserId}"
 
 <EditForm Model="UserClaimViewModel" OnValidSubmit="HandleValidSubmit">
-    <DataAnnotationsValidator/>
-    <ValidationSummary/>
-    <div class="card">
-        <div class="card-header">
-            <h2>从用户新增或移除 Claim</h2>
-        </div>
-        <div class="card-body">
-            @foreach (var claim in UserClaimViewModel.Claims)
-            {
-                <div class="form-check m-1">
-                    <label class="form-check-label">
-                        <InputCheckbox @bind-Value="@claim.IsSelected"></InputCheckbox>
-                        @claim.ClaimType
-                    </label>
-                </div>
-            }
-        </div>
-        <div class="card-footer">
-            <button type="submit" class="btn btn-primary">更新</button>
-            <button type="button" class="btn btn-danger" @onclick="@Cancel">取消</button>
-        </div>
+  <DataAnnotationsValidator />
+  <ValidationSummary />
+  <div class="card">
+    <div class="card-header">
+      <h2>从用户新增或移除 Claim</h2>
     </div>
+    <div class="card-body">
+      @foreach (var claim in UserClaimViewModel.Claims) {
+      <div class="form-check m-1">
+        <label class="form-check-label">
+          <InputCheckbox @bind-Value="@claim.IsSelected"></InputCheckbox>
+          @claim.ClaimType
+        </label>
+      </div>
+      }
+    </div>
+    <div class="card-footer">
+      <button type="submit" class="btn btn-primary">更新</button>
+      <button type="button" class="btn btn-danger" @onclick="@Cancel">
+        取消
+      </button>
+    </div>
+  </div>
 </EditForm>
 ```
 
@@ -573,9 +581,13 @@ public partial class EditClaimsInUser
 
 ```html
 <li class="nav-item px-3">
-	<NavLink class="nav-link" href="UserManagement/UserList" Match="NavLinkMatch.All">
-		<span class="bi bi-people h4 p-2 mb-0" aria-hidden="true"></span> Users
-	</NavLink>
+  <NavLink
+    class="nav-link"
+    href="UserManagement/UserList"
+    Match="NavLinkMatch.All"
+  >
+    <span class="bi bi-people h4 p-2 mb-0" aria-hidden="true"></span> Users
+  </NavLink>
 </li>
 ```
 
@@ -586,4 +598,4 @@ public partial class EditClaimsInUser
 1. [Manage user claims in asp net core](https://www.youtube.com/watch?v=5XA4Z-SOif8&list=PL6n9fhu94yhVkdrusLaQsfERmL_Jh4XmU&index=93)
 2. [Claim type and claim value in claims policy based authorization in asp net core](https://www.youtube.com/watch?v=I2wgxzLbESA&list=PL6n9fhu94yhVkdrusLaQsfERmL_Jh4XmU&index=98)
 
-**注：本文代码通过 .NET 6 + Visual Studio 2022重构，可点击原文链接与重构后代码比较学习，谢谢阅读，支持原作者**
+**注：本文代码通过 .NET 6 + Visual Studio 2022 重构，可点击原文链接与重构后代码比较学习，谢谢阅读，支持原作者**

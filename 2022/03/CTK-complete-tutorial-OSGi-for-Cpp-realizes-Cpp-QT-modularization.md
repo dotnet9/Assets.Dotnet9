@@ -5,19 +5,19 @@ description: Qt模块化开发框架介绍
 date: 2022-03-24 00:32:33
 copyright: Reprinted
 author: 来唧唧歪歪
-originaltitle: CTK完整教程(OSGI for C++ 实现 C++ Qt 模块化)
-originallink: https://www.ljjyy.com/archives/2021/03/100645.html
+originalTitle: CTK完整教程(OSGI for C++ 实现 C++ Qt 模块化)
+originalLink: https://www.ljjyy.com/archives/2021/03/100645.html
 draft: False
 cover: https://img1.dotnet9.com/2022/03/cover_23.png
 categories: 前端
 tags: Qt,CTK,OSGI,模块化,插件化
 ---
 
-CTK框架实际应用比较可靠，但网上资料很少。本教程围绕 CTK Plugin Framework，探索 C++ 中的模块化技术，并能够基于 CTK 快速搭建 C++ 组件化框架，避免后来的人走弯路。本教程的源码下载地址：[项目源代码](https://github.com/myhhub/CTK-project)。
+CTK 框架实际应用比较可靠，但网上资料很少。本教程围绕 CTK Plugin Framework，探索 C++ 中的模块化技术，并能够基于 CTK 快速搭建 C++ 组件化框架，避免后来的人走弯路。本教程的源码下载地址：[项目源代码](https://github.com/myhhub/CTK-project)。
 
-## CTK介绍
+## CTK 介绍
 
-[CTK](http://www.commontk.org/) 为支持生物医学图像计算的公共开发包，其全称为 Common Toolkit。CTK插件框架的设计有很大的灵感来自OSGi并且使得应用程序由许多不同的组件组合成一个可扩展模型。这个模型允许通过那些组件间共享对象的服务通信。
+[CTK](http://www.commontk.org/) 为支持生物医学图像计算的公共开发包，其全称为 Common Toolkit。CTK 插件框架的设计有很大的灵感来自 OSGi 并且使得应用程序由许多不同的组件组合成一个可扩展模型。这个模型允许通过那些组件间共享对象的服务通信。
 
 当前，CTK 工作的主要范围包括：
 
@@ -50,10 +50,10 @@ Qt Plugin System 提供了两套用于创建插件的 API，高级 API 用于扩
 
 CTK Plugin Framework 是基于 Qt Plugin System 和 Qt Service Framework 实现的，并且它还添加了以下特性来增强这两个系统：
 
-  - 插件元数据（由 MANIFEST.MF 文件提供）；
-  - 一个定义良好的插件生命周期和上下文；
-  - 综合服务发现和注册；
-  - ……
+- 插件元数据（由 MANIFEST.MF 文件提供）；
+- 一个定义良好的插件生命周期和上下文；
+- 综合服务发现和注册；
+- ……
 
 **注意： 在 Qt Plugin System 中，插件的元数据由 JSON 文件提供。**
 
@@ -121,13 +121,13 @@ CTK Plugin Framework 不会接管整个应用程序，你可以选择性地将�
 
 在一个 CTK 插件环境中，不同插件均有自己的环境。它们可以使用任何设施，框架对此并无限制。CTK 服务没有特殊的接口需求，每个 QObject 都可以作为一个服务，每个类（也包括非 QObject）都可以作为一个接口。
 
-## CTK编译
+## CTK 编译
 
-使用cmake编译出与系统版本相应的动态库。参见[CTK编译教程(64位环境 Windows + Qt + MinGW或MSVC + CMake)](https://www.ljjyy.com/archives/2021/02/100643.html)。
+使用 cmake 编译出与系统版本相应的动态库。参见[CTK 编译教程(64 位环境 Windows + Qt + MinGW 或 MSVC + CMake)](https://www.ljjyy.com/archives/2021/02/100643.html)。
 
 ## 使用 CTKWidgets
 
-新项目-Application(Qt)-Qt Console Application，项目名称为UseCTKWidgets，pro文件的代码：
+新项目-Application(Qt)-Qt Console Application，项目名称为 UseCTKWidgets，pro 文件的代码：
 
 ```C++
 QT += core gui widgets
@@ -150,7 +150,7 @@ LIBS += -L$$CTK_LIB_PATH -lCTKCore -lCTKWidgets
 INCLUDEPATH += $$CTK_INCLUDE_PATH
 ```
 
-主函数main加载部件，代码如下：main.cpp
+主函数 main 加载部件，代码如下：main.cpp
 
 ```C++
 #include <QApplication>
@@ -208,7 +208,7 @@ int main(int argc, char* argv[])
 
 ### 项目结构
 
-由于每一个插件都要建一个子项目，本项目刚开始创建时在QtCreator中选择新建-其他项目-子目录项目，新建项目名称为[SampleCTK](https://github.com/myhhub/CTK-project/tree/main/SampleCTK)，然后建立主程序入口项目，这里建立一个控制台项目，取名叫App。
+由于每一个插件都要建一个子项目，本项目刚开始创建时在 QtCreator 中选择新建-其他项目-子目录项目，新建项目名称为[SampleCTK](https://github.com/myhhub/CTK-project/tree/main/SampleCTK)，然后建立主程序入口项目，这里建立一个控制台项目，取名叫 App。
 
 更改项目输出路径：app.pro
 
@@ -243,15 +243,15 @@ int main(int argc, char *argv[])
 }
 ```
 
-如果想把CTK初始化、插件安装启动、获取等操作封装成一个类，那么要注意：需要把CTK相关的变量定义成类属性，不能是局部变量，否则会出现各种问题如获取不了服务、服务引用为空等。
+如果想把 CTK 初始化、插件安装启动、获取等操作封装成一个类，那么要注意：需要把 CTK 相关的变量定义成类属性，不能是局部变量，否则会出现各种问题如获取不了服务、服务引用为空等。
 
 没有报错的话及表示插件加载成功！
 
-其中QSharedPointer framework这个对象比较有意思，既可以作为对象也可以作为对象指针，但要作为插件框架使用必须要用指针方法调用，所以代码里使用“->”。
+其中 QSharedPointer framework 这个对象比较有意思，既可以作为对象也可以作为对象指针，但要作为插件框架使用必须要用指针方法调用，所以代码里使用“->”。
 
-### 项目加载CTK框架插件
+### 项目加载 CTK 框架插件
 
-项目SampleCTK新建文本文件CTK，然后更改扩展名为pri。文件加载CTK安装目录及源代码目录，编译出的动态库就可以当普通动态库使用加载了，CTK.pri里面加载代码为：
+项目 SampleCTK 新建文本文件 CTK，然后更改扩展名为 pri。文件加载 CTK 安装目录及源代码目录，编译出的动态库就可以当普通动态库使用加载了，CTK.pri 里面加载代码为：
 
 ```shell
 # CTK 安装路径
@@ -272,21 +272,21 @@ INCLUDEPATH += $$CTK_INCLUDE_PATH \
                $$CTK_INCLUDE_FRAMEWORK_PATH
 ```
 
-将CTK.pri文件的内容引入 pro 文件：app.pro
+将 CTK.pri 文件的内容引入 pro 文件：app.pro
 
 ```shell
 include($$PWD/../CTK.pri)
 ```
 
-### CTK插件的接口处理
+### CTK 插件的接口处理
 
-CTK框架由一个一个可分离的插件组成，框架对插件识别有一定要求，目前网上很多一整块扔出来对新人不太友好，博主这里讲解是尽量拆。单个插件最基本的格式要求分成Activator，qrc文件，以及MANIFEST.MF，以say Hello模块HelloCTK为例。
+CTK 框架由一个一个可分离的插件组成，框架对插件识别有一定要求，目前网上很多一整块扔出来对新人不太友好，博主这里讲解是尽量拆。单个插件最基本的格式要求分成 Activator，qrc 文件，以及 MANIFEST.MF，以 say Hello 模块 HelloCTK 为例。
 
-#### Activator注册器
+#### Activator 注册器
 
-每个插件都有自己的注册器Activator。
+每个插件都有自己的注册器 Activator。
 
-右键项目选择新建子项目-其他项目-Empty qmake Project，项目名称为HelloCTK，pro文件中添加代码：
+右键项目选择新建子项目-其他项目-Empty qmake Project，项目名称为 HelloCTK，pro 文件中添加代码：
 
 ```shell
 QT += core
@@ -300,9 +300,9 @@ DESTDIR = $$OUT_PWD/../bin/plugins
 include($$PWD/../CTK.pri)
 ```
 
-**生成的插件名(TARGET)不要有下划线，因为CTK会默认将插件名中的下划线替换成点号，最后后就导致找不到插件。**
+**生成的插件名(TARGET)不要有下划线，因为 CTK 会默认将插件名中的下划线替换成点号，最后后就导致找不到插件。**
 
-项目中添加C++类HelloActivator，代码如下：
+项目中添加 C++类 HelloActivator，代码如下：
 
 hello_activator.h
 
@@ -348,9 +348,9 @@ void HelloActivator::stop(ctkPluginContext* context)
 }
 ```
 
-activator是标准的Qt插件类，它实现ctkPluginActivator的start、stop函数并对外提供接口。我这里是Qt5的版本，所以使用Q_PLUGIN_METADATA申明插件，Qt4需要用自己的方法实现插件。
+activator 是标准的 Qt 插件类，它实现 ctkPluginActivator 的 start、stop 函数并对外提供接口。我这里是 Qt5 的版本，所以使用 Q_PLUGIN_METADATA 申明插件，Qt4 需要用自己的方法实现插件。
 
-#### qrc文件
+#### qrc 文件
 
 创建插件的资源文件，格式如下：
 
@@ -362,11 +362,11 @@ activator是标准的Qt插件类，它实现ctkPluginActivator的start、stop函
 </RCC>
 ```
 
-插件加载后会寻找同名前缀/META-INF，所以前缀格式固定，将MANIFEST.MF文件添加进来
+插件加载后会寻找同名前缀/META-INF，所以前缀格式固定，将 MANIFEST.MF 文件添加进来
 
-MENIFEST.MF文件内容如下：
+MENIFEST.MF 文件内容如下：
 
-可直接在MF文件里添加自己特有的元数据
+可直接在 MF 文件里添加自己特有的元数据
 
 ```shell
 Plugin-SymbolicName:HelloCTK
@@ -374,9 +374,9 @@ Plugin-Version:1.0.0
 Plugin-Number:100 #元数据
 ```
 
-**注意：Plugin-SymbolicName要满足这里的前缀是：TARGET/META-INF格式。TARGET的名字最好和工程名一致，不然可能出现device not open错误。**
+**注意：Plugin-SymbolicName 要满足这里的前缀是：TARGET/META-INF 格式。TARGET 的名字最好和工程名一致，不然可能出现 device not open 错误。**
 
-文件包含ctk插件的基本信息，只要ctk框架正常识别到文件中Plugin-SymbolicName等信息，则判定它是一个ctk插件，能够正常调用activator中的start、stop函数。这个文件需要拷到插件生成路径下，pro文件中添加代码：
+文件包含 ctk 插件的基本信息，只要 ctk 框架正常识别到文件中 Plugin-SymbolicName 等信息，则判定它是一个 ctk 插件，能够正常调用 activator 中的 start、stop 函数。这个文件需要拷到插件生成路径下，pro 文件中添加代码：
 
 ```shell
 file.path = $$DESTDIR
@@ -384,9 +384,9 @@ file.files = MANIFEST.MF
 INSTALLS += file
 ```
 
-### CTK插件启用
+### CTK 插件启用
 
-根据以上步骤，一个CTK插件接口定义基本完成，我们在App项目下调用观察插件是否能够正常加载。main函数中框架启动成功后添加以下代码：
+根据以上步骤，一个 CTK 插件接口定义基本完成，我们在 App 项目下调用观察插件是否能够正常加载。main 函数中框架启动成功后添加以下代码：
 
 ```C++
 QString dir = QCoreApplication::applicationDirPath();
@@ -414,13 +414,13 @@ QString dir = QCoreApplication::applicationDirPath();
  HelloCTK start
 ```
 
-成功调用HelloCTK中start内打印输出，则表明ctk插件接口正常定义并能成功加载。其中start(ctkPlugin::START_TRANSIENT)表示立即启用插件，不设置参数的话加载后也不会立即打印输出。
+成功调用 HelloCTK 中 start 内打印输出，则表明 ctk 插件接口正常定义并能成功加载。其中 start(ctkPlugin::START_TRANSIENT)表示立即启用插件，不设置参数的话加载后也不会立即打印输出。
 
 ## 基本使用 CTK Plugin Framework
 
-### CTK插件间通信
+### CTK 插件间通信
 
-CTK框架插件化开发实现功能的隔离，插件通信需要参照固定标准，这里介绍两种插件间通信的方法。
+CTK 框架插件化开发实现功能的隔离，插件通信需要参照固定标准，这里介绍两种插件间通信的方法。
 
 #### 通信方法一. 注册接口调用
 
@@ -451,7 +451,7 @@ Q_DECLARE_INTERFACE(HelloService, HelloService_iid)
 #endif // HELLO_SERVICE_H
 ```
 
-Q_DECLARE_INTERFACE将接口类向Qt系统申明，然后添加它的实现对象：
+Q_DECLARE_INTERFACE 将接口类向 Qt 系统申明，然后添加它的实现对象：
 
 ###### 接口的实现
 
@@ -476,7 +476,7 @@ class HelloImpl : public QObject, public HelloService
     此宏与Q_DECLARE_INTERFACE宏配合使用。
     Q_DECLARE_INTERFACE：声明一个接口类
     Q_INTERFACES：当一个类继承这个接口类，表明需要实现这个接口类
-    */    
+    */
 
 public:
     HelloImpl(ctkPluginContext* context);
@@ -504,13 +504,13 @@ void HelloImpl::sayHello()
 }
 ```
 
-这仍是Qt的插件定义格式，但是不会作为插件导出，外部功能接口可以自定义。
+这仍是 Qt 的插件定义格式，但是不会作为插件导出，外部功能接口可以自定义。
 
-###### 服务注册(Activator注册服务)
+###### 服务注册(Activator 注册服务)
 
-激活类里有一个独占智能指针，指向接口类【使用多态，指针都指向父类】，然后在start里new一个实现类，注册这个实现类为服务，功能是实现接口类的接口，然后将智能指针指向这个实现类。可以理解为以后向框架索取这个服务的时候，实际获取的就是这个new出来的实现类。如果不用智能指针，就需要在stop里手动delete这个实现类。
+激活类里有一个独占智能指针，指向接口类【使用多态，指针都指向父类】，然后在 start 里 new 一个实现类，注册这个实现类为服务，功能是实现接口类的接口，然后将智能指针指向这个实现类。可以理解为以后向框架索取这个服务的时候，实际获取的就是这个 new 出来的实现类。如果不用智能指针，就需要在 stop 里手动 delete 这个实现类。
 
-每个插件都有自己的注册器Activator，功能节接口完成后，在插件启动时注册到ctk框架的服务中，代码如下：hello_activator.cpp
+每个插件都有自己的注册器 Activator，功能节接口完成后，在插件启动时注册到 ctk 框架的服务中，代码如下：hello_activator.cpp
 
 ```C++
 #include "hello_activator.h"
@@ -525,13 +525,13 @@ void HelloActivator::start(ctkPluginContext* context)
 
 ###### 接口调用
 
-**CTK插件启用后，就可以调用接口。**
+**CTK 插件启用后，就可以调用接口。**
 
 主函数框架及插件加载完成后，即可调用插件接口，代码如下：main.cpp
 
 ```C++
 #include "../HelloCTK/hello_service.h"
-    
+
 // 获取服务引用
 ctkServiceReference reference = context->getServiceReference<HelloService>();
 if (reference) {
@@ -551,13 +551,13 @@ if (reference) {
 2、HelloService* service = qobject_cast<HelloService*>(context->getService(reference));
 ```
 
-**服务就是根据接口的实例，每生成一个服务就会调用一次注册器的start。把接口当做类，服务是根据类new出的对象，插件就是动态库dll。**
+**服务就是根据接口的实例，每生成一个服务就会调用一次注册器的 start。把接口当做类，服务是根据类 new 出的对象，插件就是动态库 dll。**
 
 项目代码：[SampleCTK](https://github.com/myhhub/CTK-project/tree/main/SampleCTK)
 
 ##### **优化解耦(实现类和激活类分离)**
 
-编写插件主要有3个步骤：接口类、实现类、激活类。不在实现类的构造函数里注册服务，降低耦合性，接口类就只做接口声明，实现类就只实现接口，激活类就负责将服务整合到ctk框架中。
+编写插件主要有 3 个步骤：接口类、实现类、激活类。不在实现类的构造函数里注册服务，降低耦合性，接口类就只做接口声明，实现类就只实现接口，激活类就负责将服务整合到 ctk 框架中。
 
 接口类没有什么变化，实现类少了注册的代码，构造函数也无参数，注册的过程放在了激活类里。
 
@@ -593,15 +593,15 @@ void HelloActivator::start(ctkPluginContext* context)
 
 ##### 接口、插件、服务的关系
 
-1、1对1
+1、1 对 1
 
-1个接口类由1个类实现，输出1个服务和1个插件。
+1 个接口类由 1 个类实现，输出 1 个服务和 1 个插件。
 
-上面项目为典型1对1关系。
+上面项目为典型 1 对 1 关系。
 
-2、多对1
+2、多对 1
 
-1个类实现了多个接口类，输出多个服务和1个插件，无论想使用哪个服务最终都通过这同一个插件来实现。
+1 个类实现了多个接口类，输出多个服务和 1 个插件，无论想使用哪个服务最终都通过这同一个插件来实现。
 
 实现类，实现多个接口。
 
@@ -646,15 +646,15 @@ if (ref) {
 
 具体实现参见项目：[PluginAndService/MultipleInterfaces](https://github.com/myhhub/CTK-project/tree/main/PluginAndService/MultipleInterfaces)
 
-3、1对多
+3、1 对多
 
-1接口由多个个类实现，也就是某一个问题提供了多种解决思路，输出1个服务和多个插件，通过ctkPluginConstants::SERVICE_RANKING和ctkPluginConstants::SERVICE_ID来调用不同的插件。这里虽然有两个插件，但都是被编译到同一个dll中的。服务的获取策略如下：容器会返回排行最低的服务，返回注册时SERVICE_RANKING属性值最小的服务。如果有多个服务的排行值相等，那么容器将返回PID值最小的那个服务。
+1 接口由多个个类实现，也就是某一个问题提供了多种解决思路，输出 1 个服务和多个插件，通过 ctkPluginConstants::SERVICE_RANKING 和 ctkPluginConstants::SERVICE_ID 来调用不同的插件。这里虽然有两个插件，但都是被编译到同一个 dll 中的。服务的获取策略如下：容器会返回排行最低的服务，返回注册时 SERVICE_RANKING 属性值最小的服务。如果有多个服务的排行值相等，那么容器将返回 PID 值最小的那个服务。
 
 某插件每次调用另一个插件的时候，只会生成一个实例，然后把实例存到内存当中，不会因为多次调用而生成多个服务实例。
 
-在使用1接口2插件的时候，虽然是两个插件，也会有两个激活类【从原理上来讲1个激活类就行了，但是在start里注册两次】，其中的IID只能有一个。从Qt插件基础上来说，一个dll只能有一个IID。
+在使用 1 接口 2 插件的时候，虽然是两个插件，也会有两个激活类【从原理上来讲 1 个激活类就行了，但是在 start 里注册两次】，其中的 IID 只能有一个。从 Qt 插件基础上来说，一个 dll 只能有一个 IID。
 
-`多个实现类`，实现1个接口。
+`多个实现类`，实现 1 个接口。
 
 welcome_ctk_impl.cpp
 
@@ -781,11 +781,11 @@ if (ref) {
 
 #### 通信方法二. 事件监听
 
-CTK框架中的事件监听，即观察者模式流程上是这样：接收者注册监听事件->发送者发送事件->接收者接收到事件并响应；相比调用插件接口，监听事件插件间依赖关系更弱，不用指定事件的接收方和发送方是谁。
+CTK 框架中的事件监听，即观察者模式流程上是这样：接收者注册监听事件->发送者发送事件->接收者接收到事件并响应；相比调用插件接口，监听事件插件间依赖关系更弱，不用指定事件的接收方和发送方是谁。
 
-要使用CTK框架的事件服务，准备工作应该从cmake开始，编译出支持事件监听的动态库，名称为liborg_commontk_eventadmin.dll。现在要完成的内容是，从上面生成的主窗体中，以事件监听的方式调用一个子窗体。
+要使用 CTK 框架的事件服务，准备工作应该从 cmake 开始，编译出支持事件监听的动态库，名称为 liborg_commontk_eventadmin.dll。现在要完成的内容是，从上面生成的主窗体中，以事件监听的方式调用一个子窗体。
 
-1、通信主要用到了ctkEventAdmin结构体，主要定义了如下接口：
+1、通信主要用到了 ctkEventAdmin 结构体，主要定义了如下接口：
 
 postEvent：类通信形式异步发送事件
 
@@ -795,22 +795,23 @@ publishSignal：信号与槽通信形式发送事件
 
 unpublishSignal：取消发送事件
 
-subscribeSlot：信号与槽通信形式订阅时间，返回订阅的ID
+subscribeSlot：信号与槽通信形式订阅时间，返回订阅的 ID
 
 unsubscribeSlot：取消订阅事件
 
-updateProperties：更新某个订阅ID的主题
+updateProperties：更新某个订阅 ID 的主题
 
 2、通信的数据是：ctkDictionary
 
-其实就是个hash表：typedef QHash<QString,QVariant> ctkDictionary
+其实就是个 hash 表：typedef QHash<QString,QVariant> ctkDictionary
 
 ##### 事件监听
 
 具体项目：EventAdmin/SendEvent
 
-###### 加载EventAdmin动态库
-添加动态库可以使用ctkPluginFrameworkLauncher，代码如下：main.cpp
+###### 加载 EventAdmin 动态库
+
+添加动态库可以使用 ctkPluginFrameworkLauncher，代码如下：main.cpp
 
 ```C++
 // 获取插件所在位置
@@ -825,7 +826,7 @@ ctkPluginFrameworkLauncher::stop();
 
 ###### 事件注册监听(接收插件)
 
-首先编写我们需要的接收者模块，并注册监听事件，这里我们新建一个模块BlogEventHandler，模块的接口处理参见上面“CTK插件的接口处理”。插件部分代码如下：
+首先编写我们需要的接收者模块，并注册监听事件，这里我们新建一个模块 BlogEventHandler，模块的接口处理参见上面“CTK 插件的接口处理”。插件部分代码如下：
 
 blog_event_handler.h
 
@@ -858,7 +859,7 @@ public:
 #endif // BLOG_EVENT_HANDLER_H
 ```
 
-与上面自定义接口不同，这里我们实例化ctkEventHandler对象，并实现handleEvent接口。构造函数中注册的服务对象是ctkEventHandler，在注册时指定触发的事件，当事件触发时调用该对象的handleEvent实现指定操作。
+与上面自定义接口不同，这里我们实例化 ctkEventHandler 对象，并实现 handleEvent 接口。构造函数中注册的服务对象是 ctkEventHandler，在注册时指定触发的事件，当事件触发时调用该对象的 handleEvent 实现指定操作。
 
 ###### 事件发送(发送插件)
 
@@ -901,13 +902,13 @@ void BlogManager::publishBlog(const Blog& blog)
 
 ###### 1、类通信
 
-原理就是直接将信息使用CTK的eventAdmin接口send/post出去。
+原理就是直接将信息使用 CTK 的 eventAdmin 接口 send/post 出去。
 
 上面项目为典型类通信。
 
 ###### 2、信号槽通信
 
-原理是将Qt自己的信号与CTK的发送事件绑定、槽与事件订阅绑定。
+原理是将 Qt 自己的信号与 CTK 的发送事件绑定、槽与事件订阅绑定。
 
 接收槽
 
@@ -944,21 +945,21 @@ BlogManagerUsingSignals::BlogManagerUsingSignals(ctkPluginContext *context)
 
 ###### 二者的区别
 
-1、通过event事件通信，是直接调用CTK的接口，把数据发送到CTK框架；通过信号槽方式，会先在Qt的信号槽机制中转一次，再发送到CTK框架。故效率上来讲，event方式性能高于信号槽方式。
+1、通过 event 事件通信，是直接调用 CTK 的接口，把数据发送到 CTK 框架；通过信号槽方式，会先在 Qt 的信号槽机制中转一次，再发送到 CTK 框架。故效率上来讲，event 方式性能高于信号槽方式。
 
-2、两种方式发送数据到CTK框架，这个数据包含：主题+属性。主题就是topic，属性就是ctkDictionary。 一定要注意signal方式的信号定义，参数不能是自定义的，一定要是ctkDictionary，不然会报信号槽参数异常错误。
+2、两种方式发送数据到 CTK 框架，这个数据包含：主题+属性。主题就是 topic，属性就是 ctkDictionary。 一定要注意 signal 方式的信号定义，参数不能是自定义的，一定要是 ctkDictionary，不然会报信号槽参数异常错误。
 
-3、两种方式可以混用，如发送event事件，再通过槽去接收；发送signal事件，再通过event是接收。
+3、两种方式可以混用，如发送 event 事件，再通过槽去接收；发送 signal 事件，再通过 event 是接收。
 
 4、同步：sendEvent、Qt::DirectConnection；异步：postEvent、Qt::QueuedConnection
 
 这里的同步是指：发送事件之后，订阅了这个主题的数据便会处理数据【handleEvent、slot】，处理的过程是在发送者的线程完成的。可以理解为在发送了某个事件之后，会立即执行所有订阅此事件的回调函数。
 
-异步：发送事件之后，发送者便会返回不管，订阅了此事件的所有插件会根据自己的消息循环，轮到了处理事件后才会去处理。不过如果长时间没处理，CTK也有自己的超时机制。如果事件处理程序花费的时间比配置的超时时间长，那么就会被列入黑名单。一旦处理程序被列入黑名单，它就不会再被发送任何事件。
+异步：发送事件之后，发送者便会返回不管，订阅了此事件的所有插件会根据自己的消息循环，轮到了处理事件后才会去处理。不过如果长时间没处理，CTK 也有自己的超时机制。如果事件处理程序花费的时间比配置的超时时间长，那么就会被列入黑名单。一旦处理程序被列入黑名单，它就不会再被发送任何事件。
 
 ### 插件依赖
 
-插件加载时一般根据首字母大小自动加载，所以在插件启用时，某个插件还没有被调用，所以发送事件没有接收方，这样就要考虑到插件依赖关系，在MANIFEST.MF中添加依赖：
+插件加载时一般根据首字母大小自动加载，所以在插件启用时，某个插件还没有被调用，所以发送事件没有接收方，这样就要考虑到插件依赖关系，在 MANIFEST.MF 中添加依赖：
 
 ```shell
 Plugin-SymbolicName:Plugin-xxx-1
@@ -966,23 +967,23 @@ Plugin-Version:1.0.0
 Require-Plugin:Plugin-xxx-2; plugin-version="[1.0,2.0)"; resolution:="mandatory"
 ```
 
-Plugin-xxx-2：为需要依赖的插件名【就是另一个插件在MANIFEST.MF里的Plugin-SymbolicName】；
+Plugin-xxx-2：为需要依赖的插件名【就是另一个插件在 MANIFEST.MF 里的 Plugin-SymbolicName】；
 
-[1.0,2.0)：为Plugin-xxx-2的版本，这里是左闭右开区间，默认是1.0,；
+[1.0,2.0)：为 Plugin-xxx-2 的版本，这里是左闭右开区间，默认是 1.0,；
 
-resolution：有两个选择，optional、mandatory。前者是弱依赖，就算依赖的插件没有，当前插件也能正常使用，后者是强依赖，如果没有依赖的插件，就当前插件就不能被start。
+resolution：有两个选择，optional、mandatory。前者是弱依赖，就算依赖的插件没有，当前插件也能正常使用，后者是强依赖，如果没有依赖的插件，就当前插件就不能被 start。
 
-这样就向框架申明了，该插件加载时需要先加载Plugin-xxx-2插件，所有用户插件都应该有这样一份申明。
+这样就向框架申明了，该插件加载时需要先加载 Plugin-xxx-2 插件，所有用户插件都应该有这样一份申明。
 
 具体实现参见项目：[RequirePlugin](https://github.com/myhhub/CTK-project/tree/main/RequirePlugin)
 
 ### 插件元数据
 
-获取MANIFEST.MF中的数据
+获取 MANIFEST.MF 中的数据
 
 ```C++
 QHash<QString, QString> headers = plugin->getHeaders();
-ctkVersion version = ctkVersion::parseVersion(headers.value(ctkPluginConstants::PLUGIN_VERSION)); 
+ctkVersion version = ctkVersion::parseVersion(headers.value(ctkPluginConstants::PLUGIN_VERSION));
 QString name = headers.value(ctkPluginConstants::PLUGIN_NAME);
 ```
 
@@ -993,13 +994,13 @@ QString name = headers.value(ctkPluginConstants::PLUGIN_NAME);
 ### CTK 服务工厂
 
 注册服务的时候能够用服务工厂来注册，访问服务
-getService中的plugin参数是执行ctkPluginContext::getService(const ctkServiceReference&)的插件,从而这里工厂根据执行的不同插件名称返回了不同的服务实现。
+getService 中的 plugin 参数是执行 ctkPluginContext::getService(const ctkServiceReference&)的插件,从而这里工厂根据执行的不同插件名称返回了不同的服务实现。
 
 服务工厂的作用：
 
 1. 在服务中可以知道是哪个其他插件在使用它；
 
-2. 懒汉式使用服务，需要的时候才new；
+2. 懒汉式使用服务，需要的时候才 new；
 
 3. 其他插件使用有服务工厂和使用无服务工的服务，没有任何区别，代码都一样；
 
@@ -1126,7 +1127,7 @@ private:
 #endif // SERVICE_FACTORY_H
 ```
 
-可以根据插件，获取不同的服务。若主框架【main.cpp】的symbolicName是system.plugin
+可以根据插件，获取不同的服务。若主框架【main.cpp】的 symbolicName 是 system.plugin
 
 #### 激活类
 
@@ -1177,7 +1178,7 @@ if (reference) {
 
 ### CTK 事件监听
 
-CTK一共有三种事件可以监听：框架事件、插件事件、服务事件。但是这些事件只有再变化时才能监听到，如果已经变化过后，进入一个稳定的状态，这时才去监听，那么是无法监听到的。
+CTK 一共有三种事件可以监听：框架事件、插件事件、服务事件。但是这些事件只有再变化时才能监听到，如果已经变化过后，进入一个稳定的状态，这时才去监听，那么是无法监听到的。
 
 #### 框架事件
 
@@ -1319,13 +1320,13 @@ context->connectServiceListener(&listener, "onServiceEvent"); //, filter);
 
 ### CTK 服务追踪
 
-服务追踪：如果想在B插件里使用A服务，可以专门写一个类继承ctkServiceTracker，在这个类里完成对A服务的底层操作，然后在B插件里通过这个类提供的接口来使用回收A服务。
+服务追踪：如果想在 B 插件里使用 A 服务，可以专门写一个类继承 ctkServiceTracker，在这个类里完成对 A 服务的底层操作，然后在 B 插件里通过这个类提供的接口来使用回收 A 服务。
 
-理论上ctkServiceTracker和A服务应该是一起的，这里有点像服务工厂。优点就是获取服务的代码简单，不用各种判断空指针。
+理论上 ctkServiceTracker 和 A 服务应该是一起的，这里有点像服务工厂。优点就是获取服务的代码简单，不用各种判断空指针。
 
-#### 服务A
+#### 服务 A
 
-服务A实现类，log_impl.cpp
+服务 A 实现类，log_impl.cpp
 
 ```C++
 #include "log_impl.h"
@@ -1342,7 +1343,7 @@ void LogImpl::debug(QString msg)
 }
 ```
 
-服务A激活类，log_activator.cpp
+服务 A 激活类，log_activator.cpp
 
 ```C++
 #include "log_impl.h"
@@ -1365,17 +1366,17 @@ void LogActivator::stop(ctkPluginContext* context)
 }
 ```
 
-#### 服务A的服务追踪类
+#### 服务 A 的服务追踪类
 
 追踪类，建立时机：
 
-1、可以在封装A服务的时候就建立，作为一种工具向外提供，但是不应该被编译进插件中，它并不是插件的功能而是访问插件的工具；
+1、可以在封装 A 服务的时候就建立，作为一种工具向外提供，但是不应该被编译进插件中，它并不是插件的功能而是访问插件的工具；
 
-2、也可以在B插件中建立，完全和A服务独立开，作为访问A服务的一种手段；
+2、也可以在 B 插件中建立，完全和 A 服务独立开，作为访问 A 服务的一种手段；
 
 3、单独建立一个空工程，为项目中的所有服务建立对应的追踪类，然后放在同一个文件夹中，其他想要的自己使用就行。
 
-注意：B插件如果想要使用A服务，需要service_tracker.h、service_tracker.cpp、A服务的接口类。
+注意：B 插件如果想要使用 A 服务，需要 service_tracker.h、service_tracker.cpp、A 服务的接口类。
 
 本例采用第二种。
 
@@ -1423,9 +1424,9 @@ protected:
 #endif // SERVICE_TRACKER_H
 ```
 
-#### 插件B
+#### 插件 B
 
-插件B实现类, login_impl.cpp
+插件 B 实现类, login_impl.cpp
 
 ```C++
 #include "login_impl.h"
@@ -1438,7 +1439,7 @@ LoginImpl::LoginImpl(ServiceTracker *tracker)
 }
 
 bool LoginImpl::login(const QString& username, const QString& password)
-{ 
+{
     LogService* service = (LogService*)(m_pTracker->getService());
 
     if (QString::compare(username, "root") == 0 && QString::compare(password, "123456") == 0) {
@@ -1453,7 +1454,7 @@ bool LoginImpl::login(const QString& username, const QString& password)
 }
 ```
 
-插件B激活类，login_activator.cpp
+插件 B 激活类，login_activator.cpp
 
 ```C++
 #include "login_impl.h"
@@ -1486,7 +1487,7 @@ void LoginActivator::stop(ctkPluginContext* context)
 }
 ```
 
-#### 使用插件B
+#### 使用插件 B
 
 ```C++
 // 获取插件所在位置

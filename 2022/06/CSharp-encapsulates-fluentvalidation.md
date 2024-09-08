@@ -5,8 +5,8 @@ description: FluentValidation是一个非常强大的用于构建强类型验证
 date: 2022-06-09 22:12:35
 copyright: Reprinted
 author: 黑哥聊dotNet
-originaltitle: C#封装FluentValidation,用了之后通篇还是AbstractValidator，真的看不下去了
-originallink: https://mp.weixin.qq.com/s/u9xXyFxvpSpPBAMNhfR5Og
+originalTitle: C#封装FluentValidation,用了之后通篇还是AbstractValidator，真的看不下去了
+originalLink: https://mp.weixin.qq.com/s/u9xXyFxvpSpPBAMNhfR5Og
 draft: False
 cover: https://img1.dotnet9.com/2022/06/cover_08.jpeg
 categories: .NET
@@ -28,8 +28,8 @@ public class UserInformationValidator : AbstractValidator<UserInformation>
      RuleFor(o => o.Email).EmailAddress().WithMessage("邮箱输入错误");
   }
 }
-  
-  
+
+
 static void Main(string[] args)
 {
 
@@ -49,7 +49,7 @@ static void Main(string[] args)
 ```
 
 我们每验证一个对象,就要新建一个类型的验证器 ，如上的`UserInformationValidator` ，虽然这样写逻辑上没有任何问题，但我有洁癖哈，接下来我们试着封装一下，嘿嘿，用更少的代码做更多的事情。
-  
+
 ## 安装
 
 在创建任何验证器之前，您需要在项目中添加对 `FluentValidation.dll` 的引用。最简单的方法是使用 `NuGet 包管理器`或 `dotnet CLI`。
@@ -71,7 +71,7 @@ public class CommonVaildator<T> : AbstractValidator<T>
 
 真正的业务逻辑是写在`UserInformationValidator`验证器里面的，而这块代码中只需要拿到`RuleFor`即可，其它的统一封装到父类中，对不对，我们按照这个思路代码，封装一个**长度验证器规则**。
 
-首先让我们看看RuleFor的原型
+首先让我们看看 RuleFor 的原型
 
 ```csharp
 public IRuleBuilderInitial<T, TProperty> RuleFor<TProperty>(Expression<Func<T, TProperty>> expression)
@@ -80,10 +80,10 @@ public IRuleBuilderInitial<T, TProperty> RuleFor<TProperty>(Expression<Func<T, T
 它的参数是一个`Func`委托，那么`Expression`是什么呢？
 
 `Experssion`是一种`表达式树`！
-  
+
 `表达式树`是一种允许`将lambda表达式表示为树状数据结构`而不是可执行逻辑的代码。
-  
-在C#中是`Expression`来定义的，它是一种语法树，或者说是一种数据结构。其主要用于存储需要计算、运算的一种结构，它只提供存储功能，不进行运算。通常`Expression`是配合`Lambda`一起使用，这里就不做过多的解释了！
+
+在 C#中是`Expression`来定义的，它是一种语法树，或者说是一种数据结构。其主要用于存储需要计算、运算的一种结构，它只提供存储功能，不进行运算。通常`Expression`是配合`Lambda`一起使用，这里就不做过多的解释了！
 
 那么我们就能很轻易的封装出长度验证器规则了！
 
@@ -109,7 +109,7 @@ public void EmailAddressVaildator(Expression<Func<T, string>> expression, string
 
 ### 封装验证方法
 
-上面我们把验证器封装好了，那么将  `var result=   validationRules.Validate(userInformation);`这种验证方法封装一下不是手到擒来,代码如下:
+上面我们把验证器封装好了，那么将 `var result=   validationRules.Validate(userInformation);`这种验证方法封装一下不是手到擒来,代码如下:
 
 ```csharp
 public static string ModelValidator<T>(T source, AbstractValidator<T> sourceValidator) where T : class
@@ -122,7 +122,7 @@ public static string ModelValidator<T>(T source, AbstractValidator<T> sourceVali
 
 }
 ```
-  
+
 ### 测试封装后的代码
 
 ```csharp
@@ -140,4 +140,3 @@ Console.WriteLine(msg);
 ## 总结
 
 文章来源于工作中的点点滴滴，这也是我的即兴封装，大家要是有更好的封装代码，欢迎交流，独乐乐不如众乐乐，本篇就说到这里啦，希望对您有帮助。
-  

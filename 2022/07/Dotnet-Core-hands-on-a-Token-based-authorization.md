@@ -5,8 +5,8 @@ description: 权限认证是确定用户身份的过程, 可确定用户是否�
 date: 2022-07-09 21:18:32
 copyright: Reprinted
 author: 黑哥聊dotNet
-originaltitle: .NET Core手撸一个基于Token的权限认证
-originallink: https://mp.weixin.qq.com/s/eZBDEqJaayjhJvyYI53qIA
+originalTitle: .NET Core手撸一个基于Token的权限认证
+originalLink: https://mp.weixin.qq.com/s/eZBDEqJaayjhJvyYI53qIA
 draft: False
 cover: https://img1.dotnet9.com/2022/07/cover_11.jpeg
 categories: .NET
@@ -15,25 +15,25 @@ tags: .NET
 
 ## 说明
 
->权限认证是确定用户身份的过程, 可确定用户是否有访问资源的权力。
+> 权限认证是确定用户身份的过程, 可确定用户是否有访问资源的权力。
 
-今天给大家分享一下类似JWT这种基于token的鉴权机制
+今天给大家分享一下类似 JWT 这种基于 token 的鉴权机制
 
->基于token的鉴权机制，它不需要在服务端去保留用户的认证信息或者会话信息。这就意味着基于token认证机制的应用,不需要去考虑用户在哪一台服务器登录了，这就为应用的扩展提供了便利。
+> 基于 token 的鉴权机制，它不需要在服务端去保留用户的认证信息或者会话信息。这就意味着基于 token 认证机制的应用,不需要去考虑用户在哪一台服务器登录了，这就为应用的扩展提供了便利。
 
 流程上是这样的：
 
 1. 用户使用用户名密码来请求服务器
 2. 服务器进行验证用户的信息
-3. 服务器通过验证发送给用户一个token
-4. 客户端存储token，并在每次请求时附送上这个token值
-5. 服务端验证token值，并返回数据
+3. 服务器通过验证发送给用户一个 token
+4. 客户端存储 token，并在每次请求时附送上这个 token 值
+5. 服务端验证 token 值，并返回数据
 
-那我今天给大家手撸一个类似Jwt的权限认证
+那我今天给大家手撸一个类似 Jwt 的权限认证
 
 ## 演示
 
-### 新建一个授权筛选器继承IAuthorizationFilter
+### 新建一个授权筛选器继承 IAuthorizationFilter
 
 ```csharp
 public class ApiAuthorize : IAuthorizationFilter
@@ -52,7 +52,7 @@ public class MyNoAuthentication : Attribute, IFilterMetadata
 }
 ```
 
-我们需要在我们的授权过滤器判断请求头是否带有应用授权的特性和允许未通过身份验证也可以访问的特性，如果有允许未通过身份验证也可以访问的特性就直接进入下一个管道 ，如果带有应用授权的特性则进行token判断
+我们需要在我们的授权过滤器判断请求头是否带有应用授权的特性和允许未通过身份验证也可以访问的特性，如果有允许未通过身份验证也可以访问的特性就直接进入下一个管道 ，如果带有应用授权的特性则进行 token 判断
 
 ```csharp
 public class ApiAuthorize : IAuthorizationFilter
@@ -78,9 +78,9 @@ public class ApiAuthorize : IAuthorizationFilter
 }
 ```
 
-可能有的小伙伴发现了，那我们Token怎么去存取呢，一般的方案是使用Cache来处理，这里就不做过多讨论了，有想了解的小伙伴可以看我上一篇文章！
+可能有的小伙伴发现了，那我们 Token 怎么去存取呢，一般的方案是使用 Cache 来处理，这里就不做过多讨论了，有想了解的小伙伴可以看我上一篇文章！
 
-### CacheHelper代码
+### CacheHelper 代码
 
 ```csharp
 public class MemoryCacheHelper
@@ -136,7 +136,7 @@ public class MemoryCacheHelper
         {
             throw new ArgumentNullException(nameof(value));
         }
-        
+
         _cache.Set(key, value,
         new MemoryCacheEntryOptions()
         {
@@ -151,9 +151,9 @@ public class MemoryCacheHelper
 
 权限认证代码基本完成了，我们回到刚刚的流程
 
-### 用户使用用户名密码来请求服务器， 服务器进行验证用户的信息，服务器通过验证发送给用户一个token
+### 用户使用用户名密码来请求服务器， 服务器进行验证用户的信息，服务器通过验证发送给用户一个 token
 
-对于一个商用软件来说绝大多数接口都需要应用授权后才能使用，所以我们注册到全局， 在StartUp类里面注册
+对于一个商用软件来说绝大多数接口都需要应用授权后才能使用，所以我们注册到全局， 在 StartUp 类里面注册
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
@@ -166,7 +166,7 @@ public void ConfigureServices(IServiceCollection services)
 }
 ```
 
-Token生成原理我这里就不做过多解读了，本例子使用AES加密生成Token 在我们服务端的请求token接口加上允许未通过身份验证也可以访问的特性，然后颁发一个Token
+Token 生成原理我这里就不做过多解读了，本例子使用 AES 加密生成 Token 在我们服务端的请求 token 接口加上允许未通过身份验证也可以访问的特性，然后颁发一个 Token
 
 ```csharp
 [HttpGet("GetToken")]
@@ -179,7 +179,7 @@ public IActionResult GetToken(string UserCode)
 }
 ```
 
-使用Postman请求生成token，如图所示
+使用 Postman 请求生成 token，如图所示
 
 ![](https://img1.dotnet9.com/2022/07/1101.jpg)
 
@@ -193,14 +193,14 @@ public IActionResult GetUserInformation()
 }
 ```
 
-不带token使用postman请求该接口，如图所示
+不带 token 使用 postman 请求该接口，如图所示
 
 ![](https://img1.dotnet9.com/2022/07/1102.jpg)
 
-带上token使用postman请求该接口，如图所示
+带上 token 使用 postman 请求该接口，如图所示
 
 ![](https://img1.dotnet9.com/2022/07/1103.jpg)
 
 通过刚才的例子我们清楚了解了权限认证的过程，今天的介绍就到此结束了！
 
-最后大家如果喜欢我的文章，还麻烦给个关注并点个赞, 希望net生态圈越来越好！
+最后大家如果喜欢我的文章，还麻烦给个关注并点个赞, 希望 net 生态圈越来越好！

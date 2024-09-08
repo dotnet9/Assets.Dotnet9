@@ -5,8 +5,8 @@ description: 当 WPF 客户端需要实现插件系统的时候，一般可以�
 date: 2021-09-22 22:10:21
 copyright: Reprinted
 author: 鹅群中的鸭霸
-originaltitle: WPF 通过多进程实现异常隔离的客户端
-originallink: https://www.cnblogs.com/wengzp/archive/2021/09/17/15305896.html
+originalTitle: WPF 通过多进程实现异常隔离的客户端
+originalLink: https://www.cnblogs.com/wengzp/archive/2021/09/17/15305896.html
 draft: False
 cover: https://img1.dotnet9.com/2021/09/cover_01.jpeg
 categories: .NET
@@ -123,7 +123,7 @@ static void Main(string[] args)
     var startupType = dll.GetType($"{dll.GetName().Name}.PluginStartup");
     var startup = Activator.CreateInstance(startupType);
     var view =(FrameworkElement)  startupType.GetMethod("CreateView").Invoke(startup, null);
-  
+
     using (var pipeCline = new AnonymousPipeClientStream(PipeDirection.Out, serverHandle))
     {
         using (var writer = new StreamWriter(pipeCline))
@@ -142,6 +142,7 @@ static void Main(string[] args)
 ![](https://img1.dotnet9.com/2021/09/0101.gif)
 
 参考资料和备注
+
 - [示例源码](https://github.com/yijidao/blog/tree/master/WPF/MultipleProcessClient)
 - win32 和 WPF 混合开发，不可避免会涉及空域问题。
 - 如果不需要异常隔离，使用 mef 或者 prism 已经可以实现良好的插件功能。

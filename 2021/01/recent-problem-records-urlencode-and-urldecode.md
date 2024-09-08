@@ -4,16 +4,16 @@ slug: recent-problem-records-urlencode-and-urldecode
 description: 简单分享
 date: 2021-01-09 17:03:26
 copyright: Original
-originaltitle: 最近遇到的问题记录：UrlEncode、UrlDecode
+originalTitle: 最近遇到的问题记录：UrlEncode、UrlDecode
 draft: False
 cover: https://img1.dotnet9.com/2021/01/cover_01.jpeg
 categories: .NET
 tags: Web API,UrlEncode,UrlDecode
 ---
 
-本文阅读前了解知识：[什么时候需要使用UrlEncode和UrlDecode函数](https://blog.csdn.net/l754539910/article/details/79640925)
+本文阅读前了解知识：[什么时候需要使用 UrlEncode 和 UrlDecode 函数](https://blog.csdn.net/l754539910/article/details/79640925)
 
-作者使用谷歌浏览器，通过按下F12对第三方网站http协议的接口抓包进行分析操作。
+作者使用谷歌浏览器，通过按下 F12 对第三方网站 http 协议的接口抓包进行分析操作。
 
 ## 场景
 
@@ -21,18 +21,18 @@ tags: Web API,UrlEncode,UrlDecode
 
 ![录入设备信息](https://img1.dotnet9.com/2021/01/0101.png)
 
-1. 录入设备基本信息，有7、8个字段需要输入，然后点击保存按钮；
+1. 录入设备基本信息，有 7、8 个字段需要输入，然后点击保存按钮；
 2. 基本信息保存成功，进入设备类型选择操作，然后点击生成设备标识按钮；
-3. 设备标识生成成功，录入设备关联的模块信息，简单设备只需要录入2条模块，复杂的设备有6条模块，每个模块有3、4个字段需要输入，最后点击保存。
+3. 设备标识生成成功，录入设备关联的模块信息，简单设备只需要录入 2 条模块，复杂的设备有 6 条模块，每个模块有 3、4 个字段需要输入，最后点击保存。
 
 一条设备录入成功，单身多年的手速可能也花不了几分钟，其实这也没啥。
 
-突然领导说有1000个设备需要搞？运维小哥哥哭了😂，这时就该开发人员上场了：
+突然领导说有 1000 个设备需要搞？运维小哥哥哭了 😂，这时就该开发人员上场了：
 
-1. 运维准备一个Excel模板，输入需要录入的1000个设备基本信息、设备类型信息，这个工作量不大，就半天吧，最多一天工作量；
-2. 开发做个C/S客户端小工具，程序中按业务要求配置模块录入规则；
+1. 运维准备一个 Excel 模板，输入需要录入的 1000 个设备基本信息、设备类型信息，这个工作量不大，就半天吧，最多一天工作量；
+2. 开发做个 C/S 客户端小工具，程序中按业务要求配置模块录入规则；
 3. 程序执行过程中录入一个设备就把生成的设备标识与设备关联；
-4. 全部录入完成，提供一个Excel导出，可将设备基本信息、生成的设备标识全部关联导出，工作完成。
+4. 全部录入完成，提供一个 Excel 导出，可将设备基本信息、生成的设备标识全部关联导出，工作完成。
 
 经过几天的开发工作，开发哥哥将精心打磨的小工具交给运维小哥，运维小哥哥使用后投来了赞许的目光...
 
@@ -40,7 +40,7 @@ tags: Web API,UrlEncode,UrlDecode
 
 前面铺垫的话有点啰嗦了，开发这个小工具时，开发小哥遇到一个问题：
 
-xxx接口
+xxx 接口
 
 ![xxx接口](https://img1.dotnet9.com/2021/01/0102.jpg)
 
@@ -50,13 +50,13 @@ xxx接口
 "Content":"{"AP_Name":"HK_7889","IP":"192.168.0.1"}"
 ```
 
-编码后(可以使用这个[在线URL编码解码工具](http://www.jsons.cn/urlencode/)验证)：
+编码后(可以使用这个[在线 URL 编码解码工具](http://www.jsons.cn/urlencode/)验证)：
 
 ```json
 "Content":"%7B%22AP_Name%22%3A%22HK_7889%22%2C%22IP%22%3A%2292.168.0.1%22%7D"
 ```
 
-使用`Postman`测试时，未对参数使用`UrlEncode`，接口测试成功,开发这个小工具时，有3个接口都是类似的，未进行`UrlEncode`操作：
+使用`Postman`测试时，未对参数使用`UrlEncode`，接口测试成功,开发这个小工具时，有 3 个接口都是类似的，未进行`UrlEncode`操作：
 
 ```C#
 var client = new RestClient("http://admin.lqclass.com/api/device");
@@ -106,9 +106,10 @@ Console.WriteLine(response.Content);
 "Content":"%7B%22AP_Name%22%3A%22HK_7889%22%2C%22IP%22%3A%22192.168.0.1%22%2C%22Module%22%3A%22%255B%257B%2522M_Name%2522%253A%2522cameri0%2522%252C%2522Desc%2522%253A%2522cameri0%2522%252C%2522AP_PUID%2522%253A%252254632325461320320%2522%257D%252C%257B%2522M_Name%2522%253A%2522cameri1%2522%252C%2522Desc%2522%253A%2522cameri1%2522%252C%2522AP_PUID%2522%253A%252254636325461320320%2522%257D%252C%257B%2522M_Name%2522%253A%2522cameri2%2522%252C%2522Desc%2522%253A%2522cameri2%2522%252C%2522AP_PUID%2522%253A%252254632325421320320%2522%257D%255D%22%7D"
 ```
 
-本来一般接口，如上面成功执行的C#代码那般直接未`UrlEncode`调用是没问题的。
+本来一般接口，如上面成功执行的 C#代码那般直接未`UrlEncode`调用是没问题的。
 
-但这个接口调用，服务器返回错误信息：“xxx解析失败”，调用代码如下：
+但这个接口调用，服务器返回错误信息：“xxx 解析失败”，调用代码如下：
+
 ```C#
 var client = new RestClient("http://admin.lqclass.com/api/device");
 client.Timeout = -1;
@@ -119,7 +120,7 @@ IRestResponse response = client.Execute(request);
 Console.WriteLine(response.Content);
 ```
 
-两处调用代码哪里不同？只是Content值不一样，最后怀疑是不是需要手动进行`UrlEncode`？又不是url参数，为啥需要编码呢？不管啦，先编码了再说。
+两处调用代码哪里不同？只是 Content 值不一样，最后怀疑是不是需要手动进行`UrlEncode`？又不是 url 参数，为啥需要编码呢？不管啦，先编码了再说。
 
 ## 问题解决
 

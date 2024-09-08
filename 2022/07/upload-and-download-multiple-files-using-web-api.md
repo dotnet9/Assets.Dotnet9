@@ -5,40 +5,40 @@ description: 通过一个简单的过程介绍使用 ASP.Net Core 6.0 Web API �
 date: 2022-07-23 09:37:47
 copyright: Reprinted
 author: Jay Krishna Reddy
-originaltitle: 使用 Web API 上传和下载多个文件
-originallink: https://www.c-sharpcorner.com/article/upload-and-download-multiple-files-using-web-api/
+originalTitle: 使用 Web API 上传和下载多个文件
+originalLink: https://www.c-sharpcorner.com/article/upload-and-download-multiple-files-using-web-api/
 draft: False
 cover: https://img1.dotnet9.com/2022/07/cover_21.png
 categories: .NET
 tags: .NET
 ---
 
->原文作者：Jay Krishna Reddy
+> 原文作者：Jay Krishna Reddy
 >
->原文链接：https://www.c-sharpcorner.com/article/upload-and-download-multiple-files-using-web-api/
+> 原文链接：https://www.c-sharpcorner.com/article/upload-and-download-multiple-files-using-web-api/
 >
->翻译：沙漠尽头的狼（谷歌翻译加持，文中版本使用.NET 6升级）
+> 翻译：沙漠尽头的狼（谷歌翻译加持，文中版本使用.NET 6 升级）
 
 ---正文开始---
 
 今天，我们将通过一个简单的过程介绍使用 ASP.Net Core 6.0 Web API 上传和下载多个文件。
- 
+
 ## 步骤
- 
+
 首先在 Visual Studio 中创建一个空的 Web API 项目，目标框架选择`.Net 6.0`。
- 
+
 此项目中没有使用外部包。
- 
+
 创建一个 `Services` 文件夹，并在其中创建一个 `FileService` 类和 `IFileService` 接口。
- 
-我们在这个 `FileService.cs` 中使用了三个方法 
+
+我们在这个 `FileService.cs` 中使用了三个方法
 
 - UploadFile
 - DownloadFile
 - SizeConverter
 
 由于我们需要一个文件夹来存储这些上传文件，因此我们在这里添加了一个参数来将文件夹名称作为字符串传递，它将存储所有上传的这些文件。
- 
+
 **FileService.cs**
 
 ```csharp
@@ -134,7 +134,7 @@ public class FileService : IFileService
 ```
 
 `SizeConverter` 函数用于获取我们上传文件到服务器的实际大小。
- 
+
 **IFileService.cs**
 
 ```csharp
@@ -149,7 +149,7 @@ public interface IFileService
 ```
 
 让我们在 `Program.cs` 文件中添加这个服务依赖项
- 
+
 **Program.cs**
 
 ```csharp
@@ -186,7 +186,7 @@ app.Run();
 ```
 
 创建一个 `FileController`，并 `FileController` 中的构造函数注入 `IFileService`。
- 
+
 **FileController.cs**
 
 ```csharp
@@ -242,23 +242,23 @@ public class FileController : ControllerBase
 我们可以在 `swagger` 和 `postman` 中测试我们的 API。
 
 ![](https://img1.dotnet9.com/2022/07/2101.png)
- 
+
 在这里，我们看到了我们创建的用于上传和下载的两个 API，因此让我们分别测试它们中的每一个。
- 
+
 ![](https://img1.dotnet9.com/2022/07/2102.png)
- 
+
 在 `subDirectory`字段中 输入文件保存的文件夹名称，并在下面添加文件用于保存在服务器对应的子文件夹名称下。作为响应，我们会看到文件的总数和所有上传文件的总实际大小。
 
 ![](https://img1.dotnet9.com/2022/07/2103.png)
- 
+
 现在将检查下载 API。由于我们的文件夹中有多个文件，它将作为`Zip` 文件下载，我们需要将其解压缩以检查文件。
- 
+
 ![](https://img1.dotnet9.com/2022/07/2104.png)
- 
+
 ## 总结
 
-使用Web API接口的方式上传和下载文件，适用于Blazor Server、Blazor Client、MAUI、Winform、WPF等客户端程序，后面有空写写客户端怎么调用这些接口。
+使用 Web API 接口的方式上传和下载文件，适用于 Blazor Server、Blazor Client、MAUI、Winform、WPF 等客户端程序，后面有空写写客户端怎么调用这些接口。
 
 - 本文源码：[FileUploadAndDownload](https://github.com/dotnet9/ASP.NET-Core-Test/tree/master/src/FileUploadAndDownload)
- 
+
 .... 保持学习 ！！！

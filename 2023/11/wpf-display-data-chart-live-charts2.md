@@ -6,8 +6,8 @@ date: 2023-11-15 08:20:13
 lastmod: 2023-11-15 09:58:46
 copyright: Reprinted
 author: 奔跑的皮卡峰
-originaltitle: WPF显示数据图表(LiveCharts2)
-originallink: https://mp.weixin.qq.com/s/l3fmYcPlEryS6idnd9urXA
+originalTitle: WPF显示数据图表(LiveCharts2)
+originalLink: https://mp.weixin.qq.com/s/l3fmYcPlEryS6idnd9urXA
 draft: false
 cover: https://img1.dotnet9.com/2023/11/0618.gif
 categories: .NET
@@ -18,7 +18,7 @@ tags: LiveChart
 
 ![作者实际项目](https://img1.dotnet9.com/2023/11/0601.png)
 
-数据都是假的，只是做出一个效果。显示这种数据图，使用的是[LiveCharts2](https://github.com/beto-rodriguez/LiveCharts2)。这是一个非常漂亮的Charts模块。官网如下：
+数据都是假的，只是做出一个效果。显示这种数据图，使用的是[LiveCharts2](https://github.com/beto-rodriguez/LiveCharts2)。这是一个非常漂亮的 Charts 模块。官网如下：
 
 - https://www.lvcharts.com/
 
@@ -87,16 +87,16 @@ xmlns:lvc="clr-namespace:LiveChartsCore.SkiaSharpView.WPF;assembly=LiveChartsCor
 ```
 
 ```xml
-<Window.DataContext>        
-	<local:MainViewModel />    
+<Window.DataContext>
+	<local:MainViewModel />
 </Window.DataContext>
 ```
 
 然后增加`CartesianChart`
 
 ```xml
-<Grid>        
-	<lvc:CartesianChart Series="{Binding Series}" />    
+<Grid>
+	<lvc:CartesianChart Series="{Binding Series}" />
 </Grid>
 ```
 
@@ -122,7 +122,7 @@ public ISeries[] Series { get; set; }
 
 ![图片](https://img1.dotnet9.com/2023/11/0608.png)
 
-还可以增加Title，用于说明图标的作用。
+还可以增加 Title，用于说明图标的作用。
 
 ```csharp
 
@@ -141,7 +141,7 @@ public LabelVisual Title { get; set; }
 
 ![图片](https://img1.dotnet9.com/2023/11/0609.png)
 
-这里就有个问题，如果你的Title设置为中文，
+这里就有个问题，如果你的 Title 设置为中文，
 
 ```csharp
 public LabelVisual Title { get; set; }
@@ -179,28 +179,28 @@ public LabelVisual Title { get; set; }
 
 - [gallery - LiveCharts2](https://livecharts.dev/docs/WPF/2.0.0-rc2/gallery)
 
-**部分效果1：**
+**部分效果 1：**
 
 ![图片](https://img1.dotnet9.com/2023/11/0612.gif)
 
-**部分效果2：**
+**部分效果 2：**
 
 ![图片](https://img1.dotnet9.com/2023/11/0615.gif)
 
-**部分效果3：**
+**部分效果 3：**
 
 ![图片](https://img1.dotnet9.com/2023/11/0616.gif)
 
-**部分效果4：**
+**部分效果 4：**
 
 ![图片](https://img1.dotnet9.com/2023/11/0617.gif)
 
-**部分效果5：**
+**部分效果 5：**
 
 ![图片](https://img1.dotnet9.com/2023/11/0613.gif)
 
-**部分效果6：**
+**部分效果 6：**
 
 ![图片](https://img1.dotnet9.com/2023/11/0618.gif)
 
-据说免费的`LiveCharts`在数据量超过10000渲染效果会不好，需要使用付费版。这个我还没有验证，读者可以自行尝试一下。
+据说免费的`LiveCharts`在数据量超过 10000 渲染效果会不好，需要使用付费版。这个我还没有验证，读者可以自行尝试一下。

@@ -5,15 +5,15 @@ description: WPF的一大特性就的动画系统，使用动画能够实现很�
 date: 2023-01-15 12:46:26
 copyright: Reprinted
 author: ludewig
-originaltitle: WPF随笔（九）--使用路径动画模拟管道流体流向
-originallink: https://blog.csdn.net/lordwish/article/details/85007867
+originalTitle: WPF随笔（九）--使用路径动画模拟管道流体流向
+originalLink: https://blog.csdn.net/lordwish/article/details/85007867
 draft: false
 cover: https://img1.dotnet9.com/2023/01/0403.gif
 categories: .NET
 tags: .NET,WPF
 ---
 
-WPF的一大特性就的动画系统，使用动画能够实现很多在WinForm很难实现的效果。最近在网上偶然看到大神用WPF动画实现对象沿特定路径正向或反向移动的效果，就想参考着自己试一试。
+WPF 的一大特性就的动画系统，使用动画能够实现很多在 WinForm 很难实现的效果。最近在网上偶然看到大神用 WPF 动画实现对象沿特定路径正向或反向移动的效果，就想参考着自己试一试。
 
 ## 1. 简单路径动画
 
@@ -21,18 +21,26 @@ WPF的一大特性就的动画系统，使用动画能够实现很多在WinForm�
 
 ```html
 <Grid>
-    <Grid.RowDefinitions>
-        <RowDefinition Height="80"></RowDefinition>
-        <RowDefinition></RowDefinition>
-    </Grid.RowDefinitions>
-    <WrapPanel VerticalAlignment="Center" HorizontalAlignment="Center">
-        <Button x:Name="btnAnimo" Click="btnAnimo_Click" Margin="0,0,10,0">开始</Button>
-    </WrapPanel>
-    <Grid Grid.Row="1">
-        <Canvas x:Name="cvsMain">
-            <Path x:Name="path1" Data="M100,100 L300,100 400,200 500,200" Stroke="LightGreen" StrokeThickness="20" StrokeLineJoin="Round"></Path>
-        </Canvas>
-    </Grid>
+  <Grid.RowDefinitions>
+    <RowDefinition Height="80"></RowDefinition>
+    <RowDefinition></RowDefinition>
+  </Grid.RowDefinitions>
+  <WrapPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+    <button x:Name="btnAnimo" Click="btnAnimo_Click" Margin="0,0,10,0">
+      开始
+    </button>
+  </WrapPanel>
+  <Grid Grid.Row="1">
+    <canvas x:Name="cvsMain">
+      <Path
+        x:Name="path1"
+        Data="M100,100 L300,100 400,200 500,200"
+        Stroke="LightGreen"
+        StrokeThickness="20"
+        StrokeLineJoin="Round"
+      ></Path>
+    </canvas>
+  </Grid>
 </Grid>
 ```
 
@@ -61,7 +69,7 @@ private void AnimationByPath(Canvas cvs, Path path,double targetWidth, int durat
     cvs.Children.Add(target);
     Canvas.SetLeft(target, -targetWidth / 2);
     Canvas.SetTop(target, -targetWidth / 2);
-    target.RenderTransformOrigin = new Point(0.5, 0.5); 
+    target.RenderTransformOrigin = new Point(0.5, 0.5);
     #endregion
 
     MatrixTransform matrix = new MatrixTransform();
@@ -116,7 +124,7 @@ private string ConvertPathData(string data)
             tmps.Add(new Tuple<string, string>(str, match.Value));
         }
         index = match.Index + match.Length;
-        if (i + 1 == mc.Count)//last 
+        if (i + 1 == mc.Count)//last
         {
             tmps.Add(new Tuple<string, string>(data.Substring(index), match.Value));
         }
@@ -266,23 +274,59 @@ private void AnimationByPath(Canvas cvs, Path path, double targetWidth, bool isI
 
 ```html
 <Grid>
-    <Grid.RowDefinitions>
-        <RowDefinition Height="80"></RowDefinition>
-        <RowDefinition></RowDefinition>
-    </Grid.RowDefinitions>
-    <WrapPanel VerticalAlignment="Center" HorizontalAlignment="Center">
-        <Button x:Name="btnAnimo" Click="btnAnimo_Click" Margin="0,0,10,0">正转</Button>
-        <Button x:Name="btnReback" Click="btnReback_Click" Margin="0,0,10,0">反转</Button>
-    </WrapPanel>
-    <Grid Grid.Row="1">
-        <Canvas x:Name="cvsMain">
-            <Path x:Name="path1" Data="M100,100 L300,100 300,200 400,200" Stroke="LightGreen" StrokeThickness="20" StrokeLineJoin="Round"></Path>
-            <Path x:Name="path2" Data="M200,300 L350,300 350,200" Stroke="LightGreen" StrokeThickness="12" StrokeLineJoin="Round"></Path>
-            <Path x:Name="path3" Data="M450,223 L550,223 650,100 750,100 800,150" Stroke="LightGreen" StrokeThickness="16" StrokeLineJoin="Round"></Path>
-            <Image Source="fan.png" Width="50" Height="50" Canvas.Left="400" Canvas.Top="185"></Image>
-            <Image x:Name="imgFan" Source="fan-inner.png" Width="24" Height="24" Canvas.Left="410" Canvas.Top="197" RenderTransformOrigin="0.5,0.5"></Image>
-        </Canvas>
-    </Grid>
+  <Grid.RowDefinitions>
+    <RowDefinition Height="80"></RowDefinition>
+    <RowDefinition></RowDefinition>
+  </Grid.RowDefinitions>
+  <WrapPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+    <button x:Name="btnAnimo" Click="btnAnimo_Click" Margin="0,0,10,0">
+      正转
+    </button>
+    <button x:Name="btnReback" Click="btnReback_Click" Margin="0,0,10,0">
+      反转
+    </button>
+  </WrapPanel>
+  <Grid Grid.Row="1">
+    <canvas x:Name="cvsMain">
+      <Path
+        x:Name="path1"
+        Data="M100,100 L300,100 300,200 400,200"
+        Stroke="LightGreen"
+        StrokeThickness="20"
+        StrokeLineJoin="Round"
+      ></Path>
+      <Path
+        x:Name="path2"
+        Data="M200,300 L350,300 350,200"
+        Stroke="LightGreen"
+        StrokeThickness="12"
+        StrokeLineJoin="Round"
+      ></Path>
+      <Path
+        x:Name="path3"
+        Data="M450,223 L550,223 650,100 750,100 800,150"
+        Stroke="LightGreen"
+        StrokeThickness="16"
+        StrokeLineJoin="Round"
+      ></Path>
+      <image
+        Source="fan.png"
+        Width="50"
+        Height="50"
+        Canvas.Left="400"
+        Canvas.Top="185"
+      ></image>
+      <image
+        x:Name="imgFan"
+        Source="fan-inner.png"
+        Width="24"
+        Height="24"
+        Canvas.Left="410"
+        Canvas.Top="197"
+        RenderTransformOrigin="0.5,0.5"
+      ></image>
+    </canvas>
+  </Grid>
 </Grid>
 ```
 
@@ -357,7 +401,7 @@ new PropertyPath("RenderTransform.Angle"));//给动画指定依赖的属性
 
 还挺像那么回事的。
 
->注：第三个案例代码缺少图片，站长根据原文Gif图截取了部分并设置了参数，能运行出上图效果：https://github.com/dotnet9/TerminalMACS.ManagerForWPF/tree/master/src/Demo/PathAnimationDemo
+> 注：第三个案例代码缺少图片，站长根据原文 Gif 图截取了部分并设置了参数，能运行出上图效果：https://github.com/dotnet9/TerminalMACS.ManagerForWPF/tree/master/src/Demo/PathAnimationDemo
 
 编程很有趣，一刻不放弃。
 
@@ -365,6 +409,6 @@ new PropertyPath("RenderTransform.Angle"));//给动画指定依赖的属性
 >
 > 作者：ludewig
 >
-> 原文标题：WPF随笔（九）--使用路径动画模拟管道流体流向
+> 原文标题：WPF 随笔（九）--使用路径动画模拟管道流体流向
 >
 > 原文链接：https://blog.csdn.net/lordwish/article/details/85007867

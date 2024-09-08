@@ -5,15 +5,15 @@ description: EasyNetQ 的目标是提供一个库，用于在 .NET 中使用 Rab
 date: 2022-07-26 06:32:24
 copyright: Reprinted
 author: 黑哥聊dotNet
-originaltitle: EasyNetQ-用于使用 RabbitMQ 的 .NET API开源的工具库
-originallink: https://mp.weixin.qq.com/s/hBDvEe9E8k2M0cv_8Y9h2w
+originalTitle: EasyNetQ-用于使用 RabbitMQ 的 .NET API开源的工具库
+originalLink: https://mp.weixin.qq.com/s/hBDvEe9E8k2M0cv_8Y9h2w
 draft: False
 cover: https://img1.dotnet9.com/2022/07/cover_24.png
 categories: .NET
 tags: .NET
 ---
 
-## Part1介绍
+## Part1 介绍
 
 ![](https://img1.dotnet9.com/2022/07/2403.png)
 
@@ -39,7 +39,7 @@ public class MyMessage
 
 默认情况下，`EasyNetQ` 使用 `Newtonsoft.Json` 库将 `.NET` 类型序列化为 `JSON`。 这样做的好处是消息是人类可读的，因此您可以使用 `RabbitMQ` 管理应用程序等工具来调试消息问题。
 
-## Part2 API设计
+## Part2 API 设计
 
 ![](https://img1.dotnet9.com/2022/07/2401.png)
 
@@ -53,7 +53,7 @@ public class MyMessage
 
 `IBus` 旨在为 80% 的用户、80% 的时间工作。这并不详尽。如果您要实现的模式不是由 `IBus` 提供的，那么您应该使用 `IAdvancedBus`。这样做没有问题，`EasyNetQ` 就是这样设计的。
 
-## Part3为什么我需要 EasyNetQ？
+## Part3 为什么我需要 EasyNetQ？
 
 `RabbitMQ` 不是已经有 `.NET` 客户端了吗？
 
@@ -73,7 +73,7 @@ public class MyMessage
 
 EasyNetQ 旨在将所有这些问题封装在一个简单易用的库中，该库位于现有 AMQP 客户端之上。它是 RabbitMQ 在大容量商业环境中几年使用经验的结晶。
 
-## Part4简单使用
+## Part4 简单使用
 
 接到 RabbitMQ 代理
 
@@ -87,7 +87,7 @@ var bus = RabbitHutch.CreateBus("host=localhost");
 await bus.PubSub.PublishAsync(message);
 ```
 
-发布一条延迟5秒的消息
+发布一条延迟 5 秒的消息
 
 ```csharp
 await bus.Scheduler.FuturePublishAsync(message, TimeSpan.FromSeconds(5));
@@ -109,7 +109,7 @@ await bus.Rpc.RespondAsync<TestRequestMessage, TestResponseMessage>(request =>
 );
 ```
 
-## Part5地址
+## Part5 地址
 
 - 原文链接：https://github.com/EasyNetQ/EasyNetQ/wiki/Introduction
 - 仓库链接：https://github.com/EasyNetQ/EasyNetQ

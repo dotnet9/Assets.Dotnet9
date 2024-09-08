@@ -5,8 +5,8 @@ description: Known是基于C#和Blazor开发的前后端分离快速开发框架
 date: 2023-07-07 00:58:32
 copyright: Reprinted
 author: Known
-originaltitle: 开箱即用，基于 C# 和 Blazor 开发的前后端分离快速开发框架
-originallink: https://mp.weixin.qq.com/s/149wzCSfADo2IloXipQq9w
+originalTitle: 开箱即用，基于 C# 和 Blazor 开发的前后端分离快速开发框架
+originalLink: https://mp.weixin.qq.com/s/149wzCSfADo2IloXipQq9w
 draft: false
 cover: https://img1.dotnet9.com/2023/07/0207.png
 categories: .NET
@@ -15,11 +15,11 @@ tags: .NET,Blazor
 
 ## 开箱即用
 
-Known是基于C#和Blazor开发的前后端分离快速开发框架，开箱即用，跨平台，一处代码，多处运行。
+Known 是基于 C#和 Blazor 开发的前后端分离快速开发框架，开箱即用，跨平台，一处代码，多处运行。
 
-基于C#和Blazor实现的快速开发框架，前后端分离，开箱即用。
+基于 C#和 Blazor 实现的快速开发框架，前后端分离，开箱即用。
 
-跨平台，单页应用，混合桌面应用，Web和桌面共享一处代码。
+跨平台，单页应用，混合桌面应用，Web 和桌面共享一处代码。
 
 包含模块、字典、组织、角色、用户、日志、消息、工作流、定时任务等功能。
 

@@ -4,7 +4,7 @@ slug: How-to-Design-Beautiful-Social-Media-Information-Dashboards-in-WPF
 description: 设计一个漂亮的WPF社交媒体信息仪表板
 date: 2022-05-12 22:03:17
 copyright: Original
-originaltitle: WPF|如何在 WPF 中设计漂亮的社交媒体信息仪表板
+originalTitle: WPF|如何在 WPF 中设计漂亮的社交媒体信息仪表板
 draft: False
 cover: https://img1.dotnet9.com/2022/05/cover_38.png
 categories: .NET
@@ -19,7 +19,7 @@ tags: WPF,WPF Design
 
 ## 2. 准备
 
-创建一个WPF工程，比如站长使用 [.NET 7](https://dotnet.microsoft.com/zh-cn/) 创建名为 **Dashboard3** 的WPF项目，添加一些图片资源，项目目录如下：
+创建一个 WPF 工程，比如站长使用 [.NET 7](https://dotnet.microsoft.com/zh-cn/) 创建名为 **Dashboard3** 的 WPF 项目，添加一些图片资源，项目目录如下：
 
 ![](https://img1.dotnet9.com/2022/05/3804.png)
 
@@ -33,7 +33,7 @@ tags: WPF,WPF Design
 
 ![](https://img1.dotnet9.com/2022/05/3805.gif)
 
-### 2.2 字体图标Nuget包：FontAwesome.WPF，该包提供一些图标字体：
+### 2.2 字体图标 Nuget 包：FontAwesome.WPF，该包提供一些图标字体：
 
 ```xml
 <PackageReference Include="FontAwesome.WPF" Version="4.7.0.9" />
@@ -47,7 +47,7 @@ tags: WPF,WPF Design
 已使用“.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8”而不是项目目标框架“net7.0-windows7.0”还原包“FontAwesome.WPF 4.7.0.9”。此包可能与项目不完全兼容。
 ```
 
-有.NET Core版本的字体图标库推荐吗？可在下面留言，谢谢，这里不影响使用。
+有.NET Core 版本的字体图标库推荐吗？可在下面留言，谢谢，这里不影响使用。
 
 ## 3. 简单介绍
 
@@ -59,7 +59,7 @@ tags: WPF,WPF Design
 
 ![](https://img1.dotnet9.com/2022/05/3807.gif)
 
-如上图，水平菜单是几个TextBlox标签，默认设置了字体的透明度为0.7，鼠标悬浮时设置为1：
+如上图，水平菜单是几个 TextBlox 标签，默认设置了字体的透明度为 0.7，鼠标悬浮时设置为 1：
 
 ```xml
 <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">

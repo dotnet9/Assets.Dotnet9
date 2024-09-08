@@ -5,8 +5,8 @@ description: 在这篇文章中，你将看到 EF Core 6 中的十个新功能�
 date: 2022-06-02 21:41:47
 copyright: Reprinted
 author: liamwang 精致码农
-originaltitle: EF Core 6 新功能汇总（一）
-originallink: https://mp.weixin.qq.com/s/VpqEWQPdEJUw_HHNeqBPdg
+originalTitle: EF Core 6 新功能汇总（一）
+originalLink: https://mp.weixin.qq.com/s/VpqEWQPdEJUw_HHNeqBPdg
 draft: False
 cover: https://img1.dotnet9.com/2022/06/cover_04.jpg
 categories: .NET
@@ -526,8 +526,8 @@ https://docs.microsoft.com/en-us/ef/core/what-is-new/ef-core-6.0/whatsnew#limita
 
 你可以在我的 GitHub 找到本文所有示例代码：[https://github.com/okyrylchuk/dotnet6_features/tree/main/EF%20Core%206#miscellaneous-enhancements](https://github.com/okyrylchuk/dotnet6_features/tree/main/EF%20Core%206#miscellaneous-enhancements)
 
->原文：https://blog.okyrylchuk.dev/entity-framework-core-6-features-part-1
+> 原文：https://blog.okyrylchuk.dev/entity-framework-core-6-features-part-1
 >
->作者：Oleg Kyrylchuk
+> 作者：Oleg Kyrylchuk
 >
->翻译：精致码农
+> 翻译：精致码农

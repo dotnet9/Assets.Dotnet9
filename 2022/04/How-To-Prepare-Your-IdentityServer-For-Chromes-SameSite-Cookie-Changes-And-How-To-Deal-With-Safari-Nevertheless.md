@@ -5,25 +5,25 @@ description: 如果您为 Web 应用程序和身份验证服务器使用单独�
 date: 2022-04-28 06:47:21
 copyright: Reprinted
 author: Sebastian Gingter
-originaltitle: 使用IdentityServer出现过SameSite Cookie这个问题吗？
-originallink: https://www.thinktecture.com/en/identityserver/prepare-your-identityserver/
+originalTitle: 使用IdentityServer出现过SameSite Cookie这个问题吗？
+originalLink: https://www.thinktecture.com/en/identityserver/prepare-your-identityserver/
 draft: False
 cover: https://img1.dotnet9.com/2022/04/cover_41.jpg
 categories: .NET
 tags: 同源
 ---
 
->原文作者：Sebastian Gingter
+> 原文作者：Sebastian Gingter
 >
->原文链接：https://www.thinktecture.com/en/identityserver/prepare-your-identityserver/
+> 原文链接：https://www.thinktecture.com/en/identityserver/prepare-your-identityserver/
 >
->译者：沙漠尽头的狼
+> 译者：沙漠尽头的狼
 >
->译文链接：https://dotnet9.com/2022/04/How-To-Prepare-Your-IdentityServer-For-Chromes-SameSite-Cookie-Changes-And-How-To-Deal-With-Safari-Nevertheless
+> 译文链接：https://dotnet9.com/2022/04/How-To-Prepare-Your-IdentityServer-For-Chromes-SameSite-Cookie-Changes-And-How-To-Deal-With-Safari-Nevertheless
 
->本文是作者2019年的一篇分享，里面的一些观点和使用的技术，对我们现在的开发依然有效，建议查看原文阅读，对本文翻译如有疑问，欢迎[提PR](https://github.com/dotnet9/Assets.Dotnet9/pulls)。
+> 本文是作者 2019 年的一篇分享，里面的一些观点和使用的技术，对我们现在的开发依然有效，建议查看原文阅读，对本文翻译如有疑问，欢迎[提 PR](https://github.com/dotnet9/Assets.Dotnet9/pulls)。
 
-首先，好消息：Google 将在 2020 年 2 月发布 Chrome 80时，包括 Google 实施的“渐进式更好的 Cookie”(Incrementally better Cookies)，这将使网络成为一个更安全的地方，并有助于确保用户获得更好的隐私（站长注：现在是2022年4月28号，Chrome已经发布了多个更新版本）。
+首先，好消息：Google 将在 2020 年 2 月发布 Chrome 80 时，包括 Google 实施的“渐进式更好的 Cookie”(Incrementally better Cookies)，这将使网络成为一个更安全的地方，并有助于确保用户获得更好的隐私（站长注：现在是 2022 年 4 月 28 号，Chrome 已经发布了多个更新版本）。
 
 坏消息是，这个新实现是浏览器决定如何向服务器发送 cookie 的重大变化。首先，如果您为 Web 应用程序和身份验证服务器使用单独的域，那么 Chrome 中的这种更改很可能会破坏部分用户的会话体验。第二个问题是它还可能使您的部分用户无法再次正确注销您的系统。
 
@@ -31,9 +31,9 @@ tags: 同源
 
 Web 是一个非常开放的平台：Cookie 是在大约 20 年前设计的，以及 2011 年在 [RFC 6265](https://tools.ietf.org/html/rfc6265/)中重新审视该设计时，跨站请求伪造 (CSRF) 攻击和过度用户跟踪还不是什么大事。
 
-简而言之，正常的 Cookie 规范说，如果为特定域设置了 Cookie，它将在浏览器发出的每个请求时带上Cookie发送到该域。无论您是否直接导航到该域，如果浏览器只是从该域加载资源（即图像），向其发送 POST 请求或将其中的一部分嵌入到 iframe 中。但也许对于后一种可能性，您不希望浏览器自动将用户会话 Cookie 发送到您的服务器，因为这将允许任何网站在该用户的上下文中执行针对您的服务器的请求的 JavaScript，而不会引起他们的注意。
+简而言之，正常的 Cookie 规范说，如果为特定域设置了 Cookie，它将在浏览器发出的每个请求时带上 Cookie 发送到该域。无论您是否直接导航到该域，如果浏览器只是从该域加载资源（即图像），向其发送 POST 请求或将其中的一部分嵌入到 iframe 中。但也许对于后一种可能性，您不希望浏览器自动将用户会话 Cookie 发送到您的服务器，因为这将允许任何网站在该用户的上下文中执行针对您的服务器的请求的 JavaScript，而不会引起他们的注意。
 
-为了防止这种情况发生，  [SameSite cookie 规范](https://tools.ietf.org/html/draft-west-first-party-cookies-07/) 是在 2016 年起草的。它让您可以更好地控制何时应该或不应该发送 cookie：当您设置 cookie 时，您现在可以为每个 cookie 明确指定浏览器何时应将其添加到请求。为此，当浏览器位于您自己的域中时，它引入了同站点 cookie 的概念，而当浏览器在不同域中导航但向您的域发送请求时，它引入了跨站点 cookie 的概念。
+为了防止这种情况发生， [SameSite cookie 规范](https://tools.ietf.org/html/draft-west-first-party-cookies-07/) 是在 2016 年起草的。它让您可以更好地控制何时应该或不应该发送 cookie：当您设置 cookie 时，您现在可以为每个 cookie 明确指定浏览器何时应将其添加到请求。为此，当浏览器位于您自己的域中时，它引入了同站点 cookie 的概念，而当浏览器在不同域中导航但向您的域发送请求时，它引入了跨站点 cookie 的概念。
 
 为了向后兼容，相同站点 cookie 的默认设置并没有改变以前的行为。您必须选择加入该新功能并明确设置您的 cookie `SameSite=Lax` 或 `SameSite=Strict` 使其更安全。这已在 .NET Framework(包括.NET CORE) 和所有常见浏览器中实现。 Lax 意味着，cookie 将在初始导航时发送到服务器， Strict 意味着 cookie 只会在您已经在该域上时发送（即初始导航后的第二个请求）。
 
@@ -41,9 +41,9 @@ Web 是一个非常开放的平台：Cookie 是在大约 20 年前设计的，�
 
 谷歌决定推动采用该功能。为了强制执行，他们决定更改世界上最常用的浏览器的默认设置：Chrome 80 将 `必须` 指定一个新的设置 `SameSite=None` 来保留处理 cookie 的旧方式，如果您像旧规范建议的那样省略 SameSite 字段，它将 cookie 视为使用 `SameSite=Lax`.
 
-*请注意： 该设置 `SameSite=None` 仅在 cookie 也被标记为 `Secure` 并需要 HTTPS 连接时才有效。*
+_请注意： 该设置 `SameSite=None` 仅在 cookie 也被标记为 `Secure` 并需要 HTTPS 连接时才有效。_
 
-*更新：* 如果您想了解有关 SameSite cookie 的更多背景信息，有一篇包含 [所有细节的新文章](https://www.thinktecture.com/en/identityserver/samesite-cookies-in-a-nutshell/)。
+_更新：_ 如果您想了解有关 SameSite cookie 的更多背景信息，有一篇包含 [所有细节的新文章](https://www.thinktecture.com/en/identityserver/samesite-cookies-in-a-nutshell/)。
 
 ## 2. 这对我有影响吗？如果是，怎么做？
 
@@ -57,7 +57,7 @@ Web 是一个非常开放的平台：Cookie 是在大约 20 年前设计的，�
 
 还有其他情况可能会给您带来问题：首先，如果您在 Web 应用程序或网站中嵌入源自另一个域的元素，例如视频的自动播放设置，并且这些需要 cookie 才能正常运行，这些也会需要设置 SameSite 策略。如果您的应用程序需要从依赖于 cookie 身份验证的浏览器请求第 3 方 API，这同样适用。
 
-*注意：* 显然您只能更改您自己的服务器关于cookie设置的cookie 行为。如果您碰巧使用了不受您控制的其他域中的元素，您需要联系第 3 方，并在出现问题时要求他们更改 cookie。
+_注意：_ 显然您只能更改您自己的服务器关于 cookie 设置的 cookie 行为。如果您碰巧使用了不受您控制的其他域中的元素，您需要联系第 3 方，并在出现问题时要求他们更改 cookie。
 
 ## 3. 好的，我将更改我的代码并将 SameSite 设置为 None。我现在可以了，对吧？
 
@@ -90,17 +90,16 @@ see more details at https://www.chromestatus.com/feature/5633521622188032.
 
 ## 5. 那么，我该如何真正解决这个问题？我需要 Chrome 和 Safari 正常使用。
 
-我们，也就是我的同事 Boris Wilhelms 和我自己，对该主题进行了一些研究，并找到且验证了解决方案。微软的 Barry Dorrans也有一篇 [关于这个问题的好博文](https://devblogs.microsoft.com/aspnet/upcoming-samesite-cookie-changes-in-asp-net-and-asp-net-core/)。该解决方案并不美观，遗憾的是需要在服务器端进行浏览器嗅探，但这是一个简单的解决方案，在过去的几周里，我们已经在我们的几个客户项目中成功实现了这一点。
+我们，也就是我的同事 Boris Wilhelms 和我自己，对该主题进行了一些研究，并找到且验证了解决方案。微软的 Barry Dorrans 也有一篇 [关于这个问题的好博文](https://devblogs.microsoft.com/aspnet/upcoming-samesite-cookie-changes-in-asp-net-and-asp-net-core/)。该解决方案并不美观，遗憾的是需要在服务器端进行浏览器嗅探，但这是一个简单的解决方案，在过去的几周里，我们已经在我们的几个客户项目中成功实现了这一点。
 
 要解决这个问题，我们首先需要确保需要通过跨站点请求传输的 cookie（例如我们的会话 cookie）设置为 `SameSite=None` 和 `Secure`。我们需要在项目代码中找到该 cookie 的选项并进行相应调整。这解决了 Chrome 的问题并引入了 Safari 问题。
 
 然后我们将以下类和代码片段添加到项目中。这会在 ASP.NET Core Web 应用程序中添加和配置 cookie 策略。此策略将检查是否设置了 cookie 为 `SameSite=None` 。如果是这种情况，它将检查浏览器的用户代理，并确定这是否是一个浏览器的设置有问题，比如我们受影响的 Safari 版本。如果也是这种情况，它会将 cookies SameSite 值设置为`unspecified`(未指定)，这反过来将完全阻止设置 SameSite，从而为这些浏览器重新创建当前默认行为。
 
-*请注意*： 此处提供的解决方案适用于 `.NET Core`。对于完整的基于 `.NET Framework` 的项目，您需要查看[Barry Dorran 的帖子](https://devblogs.microsoft.com/aspnet/upcoming-samesite-cookie-changes-in-asp-net-and-asp-net-core/)中指定的版本之一 。
-
+_请注意_： 此处提供的解决方案适用于 `.NET Core`。对于完整的基于 `.NET Framework` 的项目，您需要查看[Barry Dorran 的帖子](https://devblogs.microsoft.com/aspnet/upcoming-samesite-cookie-changes-in-asp-net-and-asp-net-core/)中指定的版本之一 。
 
 ### 5.1 要添加到项目中的类
- 
+
 ```csharp
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;

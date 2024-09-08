@@ -5,8 +5,8 @@ description: 这一次要和大家分享的一个Tips是在字符串拼接场景
 date: 2022-05-11 07:13:26
 copyright: Reprinted
 author: InCerry
-originaltitle: .NET性能优化-使用ValueStringBuilder拼接字符串
-originallink: https://www.cnblogs.com/InCerry/p/Dotnet-Perf-Opt-Use-ValueStringBuilder.html
+originalTitle: .NET性能优化-使用ValueStringBuilder拼接字符串
+originalLink: https://www.cnblogs.com/InCerry/p/Dotnet-Perf-Opt-Use-ValueStringBuilder.html
 draft: False
 cover: https://img1.dotnet9.com/2022/05/cover_32.jpg
 categories: .NET
@@ -15,15 +15,15 @@ tags: .NET
 
 ## 前言
 
-这一次要和大家分享的一个Tips是在字符串拼接场景使用的，我们经常会遇到有很多短小的字符串需要拼接的场景，在这种场景下及其的不推荐使用`String.Concat`也就是使用`+=`运算符。
+这一次要和大家分享的一个 Tips 是在字符串拼接场景使用的，我们经常会遇到有很多短小的字符串需要拼接的场景，在这种场景下及其的不推荐使用`String.Concat`也就是使用`+=`运算符。
 
 目前来说官方最推荐的方案就是使用`StringBuilder`来构建这些字符串，那么有什么更快内存占用更低的方式吗？那就是今天要和大家介绍的`ValueStringBuilder`。
 
 ## ValueStringBuilder
 
-`ValueStringBuilder`不是一个公开的API，但是它被大量用于.NET的基础类库中，由于它是值类型的，所以它本身不会在堆上分配，不会有GC的压力。
+`ValueStringBuilder`不是一个公开的 API，但是它被大量用于.NET 的基础类库中，由于它是值类型的，所以它本身不会在堆上分配，不会有 GC 的压力。
 
-微软提供的`ValueStringBuilder`有两种使用方式，一种是自己已经有了一块内存空间可供字符串构建使用。这意味着你可以使用栈空间，也可以使用堆空间甚至非托管堆的空间，这对于GC来说是非常友好的，在高并发情况下能大大降低GC压力。
+微软提供的`ValueStringBuilder`有两种使用方式，一种是自己已经有了一块内存空间可供字符串构建使用。这意味着你可以使用栈空间，也可以使用堆空间甚至非托管堆的空间，这对于 GC 来说是非常友好的，在高并发情况下能大大降低 GC 压力。
 
 ```csharp
 // 构造函数：传入一个Span的Buffer数组
@@ -43,14 +43,14 @@ var vsb = new ValueStringBuilder(span);
 NativeMemory.Free(ptr); // 非托管堆用完一定要Free
 ```
 
-另外一种方式是指定一个容量，它会从默认的`ArrayPool`的`char`对象池中获取缓冲空间，因为使用的是对象池，所以对于GC来说也是比较友好的，千万需要注意，池中的对象一定要记得归还。
+另外一种方式是指定一个容量，它会从默认的`ArrayPool`的`char`对象池中获取缓冲空间，因为使用的是对象池，所以对于 GC 来说也是比较友好的，千万需要注意，池中的对象一定要记得归还。
 
 ```csharp
 // 传入预计的容量
-public ValueStringBuilder(int initialCapacity)  
-{  
+public ValueStringBuilder(int initialCapacity)
+{
     // 从对象池中获取缓冲区
-    _arrayToReturnToPool = ArrayPool<char>.Shared.Rent(initialCapacity);  
+    _arrayToReturnToPool = ArrayPool<char>.Shared.Rent(initialCapacity);
     ......
 }
 ```
@@ -59,194 +59,194 @@ public ValueStringBuilder(int initialCapacity)
 
 ```csharp
 // 一个简单的类
-public class SomeClass  
-{  
-    public int Value1; public int Value2; public float Value3;  
-    public double Value4; public string? Value5; public decimal Value6;  
-    public DateTime Value7; public TimeOnly Value8; public DateOnly Value9;  
-    public int[]? Value10;  
+public class SomeClass
+{
+    public int Value1; public int Value2; public float Value3;
+    public double Value4; public string? Value5; public decimal Value6;
+    public DateTime Value7; public TimeOnly Value8; public DateOnly Value9;
+    public int[]? Value10;
 }
 // Benchmark类
-[MemoryDiagnoser]  
-[HtmlExporter]  
-[Orderer(SummaryOrderPolicy.FastestToSlowest)]  
-public class StringBuilderBenchmark  
-{  
-    private static readonly SomeClass Data;  
-    static StringBuilderBenchmark()  
-    {  
-        var baseTime = DateTime.Now;  
-        Data = new SomeClass  
-        {  
-            Value1 = 100, Value2 = 200, Value3 = 333,  
-            Value4 = 400, Value5 = string.Join('-', Enumerable.Range(0, 10000).Select(i => i.ToString())),  
-            Value6 = 655, Value7 = baseTime.AddHours(12),  
-            Value8 = TimeOnly.MinValue, Value9 = DateOnly.MaxValue,  
-            Value10 = Enumerable.Range(0, 5).ToArray()  
-        };  
+[MemoryDiagnoser]
+[HtmlExporter]
+[Orderer(SummaryOrderPolicy.FastestToSlowest)]
+public class StringBuilderBenchmark
+{
+    private static readonly SomeClass Data;
+    static StringBuilderBenchmark()
+    {
+        var baseTime = DateTime.Now;
+        Data = new SomeClass
+        {
+            Value1 = 100, Value2 = 200, Value3 = 333,
+            Value4 = 400, Value5 = string.Join('-', Enumerable.Range(0, 10000).Select(i => i.ToString())),
+            Value6 = 655, Value7 = baseTime.AddHours(12),
+            Value8 = TimeOnly.MinValue, Value9 = DateOnly.MaxValue,
+            Value10 = Enumerable.Range(0, 5).ToArray()
+        };
     }
 
     // 使用我们熟悉的StringBuilder
-    [Benchmark(Baseline = true)]  
-    public string StringBuilder()  
-    {  
-        var data = Data;  
-        var sb = new StringBuilder();  
-        sb.Append("Value1:"); sb.Append(data.Value1);  
-        if (data.Value2 > 10)  
-        {  
-            sb.Append(" ,Value2:"); sb.Append(data.Value2);  
-        }  
-        sb.Append(" ,Value3:"); sb.Append(data.Value3);  
-        sb.Append(" ,Value4:"); sb.Append(data.Value4);  
-        sb.Append(" ,Value5:"); sb.Append(data.Value5);  
-        if (data.Value6 > 20)  
-        {  
-            sb.Append(" ,Value6:"); sb.AppendFormat("{0:F2}", data.Value6);  
-        }  
-        sb.Append(" ,Value7:"); sb.AppendFormat("{0:yyyy-MM-dd HH:mm:ss}", data.Value7);  
-        sb.Append(" ,Value8:"); sb.AppendFormat("{0:HH:mm:ss}", data.Value8);  
-        sb.Append(" ,Value9:"); sb.AppendFormat("{0:yyyy-MM-dd}", data.Value9);  
-        sb.Append(" ,Value10:");  
-        if (data.Value10 is null or {Length: 0}) return sb.ToString();  
-        for (int i = 0; i < data.Value10.Length; i++)  
-        {  
-            sb.Append(data.Value10[i]);  
-        }  
-  
-        return sb.ToString();  
+    [Benchmark(Baseline = true)]
+    public string StringBuilder()
+    {
+        var data = Data;
+        var sb = new StringBuilder();
+        sb.Append("Value1:"); sb.Append(data.Value1);
+        if (data.Value2 > 10)
+        {
+            sb.Append(" ,Value2:"); sb.Append(data.Value2);
+        }
+        sb.Append(" ,Value3:"); sb.Append(data.Value3);
+        sb.Append(" ,Value4:"); sb.Append(data.Value4);
+        sb.Append(" ,Value5:"); sb.Append(data.Value5);
+        if (data.Value6 > 20)
+        {
+            sb.Append(" ,Value6:"); sb.AppendFormat("{0:F2}", data.Value6);
+        }
+        sb.Append(" ,Value7:"); sb.AppendFormat("{0:yyyy-MM-dd HH:mm:ss}", data.Value7);
+        sb.Append(" ,Value8:"); sb.AppendFormat("{0:HH:mm:ss}", data.Value8);
+        sb.Append(" ,Value9:"); sb.AppendFormat("{0:yyyy-MM-dd}", data.Value9);
+        sb.Append(" ,Value10:");
+        if (data.Value10 is null or {Length: 0}) return sb.ToString();
+        for (int i = 0; i < data.Value10.Length; i++)
+        {
+            sb.Append(data.Value10[i]);
+        }
+
+        return sb.ToString();
     }
 
     // StringBuilder使用Capacity
-    [Benchmark]  
-    public string StringBuilderCapacity()  
-    {  
-        var data = Data;  
-        var sb = new StringBuilder(20480);  
-        sb.Append("Value1:"); sb.Append(data.Value1);  
-        if (data.Value2 > 10)  
-        {  
-            sb.Append(" ,Value2:"); sb.Append(data.Value2);  
-        }  
-        sb.Append(" ,Value3:"); sb.Append(data.Value3);  
-        sb.Append(" ,Value4:"); sb.Append(data.Value4);  
-        sb.Append(" ,Value5:"); sb.Append(data.Value5);  
-        if (data.Value6 > 20)  
-        {  
-            sb.Append(" ,Value6:"); sb.AppendFormat("{0:F2}", data.Value6);  
-        }  
-        sb.Append(" ,Value7:"); sb.AppendFormat("{0:yyyy-MM-dd HH:mm:ss}", data.Value7);  
-        sb.Append(" ,Value8:"); sb.AppendFormat("{0:HH:mm:ss}", data.Value8);  
-        sb.Append(" ,Value9:"); sb.AppendFormat("{0:yyyy-MM-dd}", data.Value9);  
-        sb.Append(" ,Value10:");  
-        if (data.Value10 is null or {Length: 0}) return sb.ToString();  
-        for (int i = 0; i < data.Value10.Length; i++)  
-        {  
-            sb.Append(data.Value10[i]);  
-        }  
-  
-        return sb.ToString();  
-    }  
+    [Benchmark]
+    public string StringBuilderCapacity()
+    {
+        var data = Data;
+        var sb = new StringBuilder(20480);
+        sb.Append("Value1:"); sb.Append(data.Value1);
+        if (data.Value2 > 10)
+        {
+            sb.Append(" ,Value2:"); sb.Append(data.Value2);
+        }
+        sb.Append(" ,Value3:"); sb.Append(data.Value3);
+        sb.Append(" ,Value4:"); sb.Append(data.Value4);
+        sb.Append(" ,Value5:"); sb.Append(data.Value5);
+        if (data.Value6 > 20)
+        {
+            sb.Append(" ,Value6:"); sb.AppendFormat("{0:F2}", data.Value6);
+        }
+        sb.Append(" ,Value7:"); sb.AppendFormat("{0:yyyy-MM-dd HH:mm:ss}", data.Value7);
+        sb.Append(" ,Value8:"); sb.AppendFormat("{0:HH:mm:ss}", data.Value8);
+        sb.Append(" ,Value9:"); sb.AppendFormat("{0:yyyy-MM-dd}", data.Value9);
+        sb.Append(" ,Value10:");
+        if (data.Value10 is null or {Length: 0}) return sb.ToString();
+        for (int i = 0; i < data.Value10.Length; i++)
+        {
+            sb.Append(data.Value10[i]);
+        }
+
+        return sb.ToString();
+    }
 
     // 直接使用+=拼接字符串
-    [Benchmark]  
-    public string StringConcat()  
-    {  
-        var str = "";  
-        var data = Data;  
-        str += ("Value1:"); str += (data.Value1);  
-        if (data.Value2 > 10)  
-        {  
-            str += " ,Value2:"; str += data.Value2;  
-        }  
-        str += " ,Value3:"; str += (data.Value3);  
-        str += " ,Value4:"; str += (data.Value4);  
-        str += " ,Value5:"; str += (data.Value5);  
-        if (data.Value6 > 20)  
-        {  
-            str += " ,Value6:"; str += data.Value6.ToString("F2");  
-        }  
-        str += " ,Value7:"; str += data.Value7.ToString("yyyy-MM-dd HH:mm:ss");  
-        str += " ,Value8:"; str += data.Value8.ToString("HH:mm:ss");  
-        str += " ,Value9:"; str += data.Value9.ToString("yyyy-MM-dd");  
-        str += " ,Value10:";  
-        if (data.Value10 is not null && data.Value10.Length > 0)  
-        {  
-            for (int i = 0; i < data.Value10.Length; i++)  
-            {  
-                str += (data.Value10[i]);  
-            }     
-        }  
-  
-        return str;  
-    }  
-  
+    [Benchmark]
+    public string StringConcat()
+    {
+        var str = "";
+        var data = Data;
+        str += ("Value1:"); str += (data.Value1);
+        if (data.Value2 > 10)
+        {
+            str += " ,Value2:"; str += data.Value2;
+        }
+        str += " ,Value3:"; str += (data.Value3);
+        str += " ,Value4:"; str += (data.Value4);
+        str += " ,Value5:"; str += (data.Value5);
+        if (data.Value6 > 20)
+        {
+            str += " ,Value6:"; str += data.Value6.ToString("F2");
+        }
+        str += " ,Value7:"; str += data.Value7.ToString("yyyy-MM-dd HH:mm:ss");
+        str += " ,Value8:"; str += data.Value8.ToString("HH:mm:ss");
+        str += " ,Value9:"; str += data.Value9.ToString("yyyy-MM-dd");
+        str += " ,Value10:";
+        if (data.Value10 is not null && data.Value10.Length > 0)
+        {
+            for (int i = 0; i < data.Value10.Length; i++)
+            {
+                str += (data.Value10[i]);
+            }
+        }
+
+        return str;
+    }
+
     // 使用栈上分配的ValueStringBuilder
-    [Benchmark]  
-    public string ValueStringBuilderOnStack()  
-    {  
-        var data = Data;  
-        Span<char> buffer = stackalloc char[20480];  
-        var sb = new ValueStringBuilder(buffer);  
-        sb.Append("Value1:"); sb.AppendSpanFormattable(data.Value1);  
-        if (data.Value2 > 10)  
-        {  
-            sb.Append(" ,Value2:"); sb.AppendSpanFormattable(data.Value2);  
-        }  
-        sb.Append(" ,Value3:"); sb.AppendSpanFormattable(data.Value3);  
-        sb.Append(" ,Value4:"); sb.AppendSpanFormattable(data.Value4);  
-        sb.Append(" ,Value5:"); sb.Append(data.Value5);  
-        if (data.Value6 > 20)  
-        {  
-            sb.Append(" ,Value6:"); sb.AppendSpanFormattable(data.Value6, "F2");  
-        }  
-        sb.Append(" ,Value7:"); sb.AppendSpanFormattable(data.Value7, "yyyy-MM-dd HH:mm:ss");  
-        sb.Append(" ,Value8:"); sb.AppendSpanFormattable(data.Value8, "HH:mm:ss");  
-        sb.Append(" ,Value9:"); sb.AppendSpanFormattable(data.Value9, "yyyy-MM-dd");  
-        sb.Append(" ,Value10:");  
-        if (data.Value10 is not null && data.Value10.Length > 0)  
-        {  
-            for (int i = 0; i < data.Value10.Length; i++)  
-            {  
-                sb.AppendSpanFormattable(data.Value10[i]);  
-            }     
-        }  
-  
-        return sb.ToString();  
+    [Benchmark]
+    public string ValueStringBuilderOnStack()
+    {
+        var data = Data;
+        Span<char> buffer = stackalloc char[20480];
+        var sb = new ValueStringBuilder(buffer);
+        sb.Append("Value1:"); sb.AppendSpanFormattable(data.Value1);
+        if (data.Value2 > 10)
+        {
+            sb.Append(" ,Value2:"); sb.AppendSpanFormattable(data.Value2);
+        }
+        sb.Append(" ,Value3:"); sb.AppendSpanFormattable(data.Value3);
+        sb.Append(" ,Value4:"); sb.AppendSpanFormattable(data.Value4);
+        sb.Append(" ,Value5:"); sb.Append(data.Value5);
+        if (data.Value6 > 20)
+        {
+            sb.Append(" ,Value6:"); sb.AppendSpanFormattable(data.Value6, "F2");
+        }
+        sb.Append(" ,Value7:"); sb.AppendSpanFormattable(data.Value7, "yyyy-MM-dd HH:mm:ss");
+        sb.Append(" ,Value8:"); sb.AppendSpanFormattable(data.Value8, "HH:mm:ss");
+        sb.Append(" ,Value9:"); sb.AppendSpanFormattable(data.Value9, "yyyy-MM-dd");
+        sb.Append(" ,Value10:");
+        if (data.Value10 is not null && data.Value10.Length > 0)
+        {
+            for (int i = 0; i < data.Value10.Length; i++)
+            {
+                sb.AppendSpanFormattable(data.Value10[i]);
+            }
+        }
+
+        return sb.ToString();
     }
     // 使用ArrayPool 堆上分配的StringBuilder
-    [Benchmark]  
-    public string ValueStringBuilderOnHeap()  
-    {  
-        var data = Data;  
-        var sb = new ValueStringBuilder(20480);  
-        sb.Append("Value1:"); sb.AppendSpanFormattable(data.Value1);  
-        if (data.Value2 > 10)  
-        {  
-            sb.Append(" ,Value2:"); sb.AppendSpanFormattable(data.Value2);  
-        }  
-        sb.Append(" ,Value3:"); sb.AppendSpanFormattable(data.Value3);  
-        sb.Append(" ,Value4:"); sb.AppendSpanFormattable(data.Value4);  
-        sb.Append(" ,Value5:"); sb.Append(data.Value5);  
-        if (data.Value6 > 20)  
-        {  
-            sb.Append(" ,Value6:"); sb.AppendSpanFormattable(data.Value6, "F2");  
-        }  
-        sb.Append(" ,Value7:"); sb.AppendSpanFormattable(data.Value7, "yyyy-MM-dd HH:mm:ss");  
-        sb.Append(" ,Value8:"); sb.AppendSpanFormattable(data.Value8, "HH:mm:ss");  
-        sb.Append(" ,Value9:"); sb.AppendSpanFormattable(data.Value9, "yyyy-MM-dd");  
-        sb.Append(" ,Value10:");  
-        if (data.Value10 is not null && data.Value10.Length > 0)  
-        {  
-            for (int i = 0; i < data.Value10.Length; i++)  
-            {  
-                sb.AppendSpanFormattable(data.Value10[i]);  
-            }     
+    [Benchmark]
+    public string ValueStringBuilderOnHeap()
+    {
+        var data = Data;
+        var sb = new ValueStringBuilder(20480);
+        sb.Append("Value1:"); sb.AppendSpanFormattable(data.Value1);
+        if (data.Value2 > 10)
+        {
+            sb.Append(" ,Value2:"); sb.AppendSpanFormattable(data.Value2);
         }
-  
-        return sb.ToString();  
+        sb.Append(" ,Value3:"); sb.AppendSpanFormattable(data.Value3);
+        sb.Append(" ,Value4:"); sb.AppendSpanFormattable(data.Value4);
+        sb.Append(" ,Value5:"); sb.Append(data.Value5);
+        if (data.Value6 > 20)
+        {
+            sb.Append(" ,Value6:"); sb.AppendSpanFormattable(data.Value6, "F2");
+        }
+        sb.Append(" ,Value7:"); sb.AppendSpanFormattable(data.Value7, "yyyy-MM-dd HH:mm:ss");
+        sb.Append(" ,Value8:"); sb.AppendSpanFormattable(data.Value8, "HH:mm:ss");
+        sb.Append(" ,Value9:"); sb.AppendSpanFormattable(data.Value9, "yyyy-MM-dd");
+        sb.Append(" ,Value10:");
+        if (data.Value10 is not null && data.Value10.Length > 0)
+        {
+            for (int i = 0; i < data.Value10.Length; i++)
+            {
+                sb.AppendSpanFormattable(data.Value10[i]);
+            }
+        }
+
+        return sb.ToString();
     }
-      
+
 }
 ```
 
@@ -257,12 +257,12 @@ public class StringBuilderBenchmark
 从上图的结果中，我们可以得出如下的结论。
 
 - 使用`StringConcat`是最慢的，这种方式是无论如何都不推荐的。
-- 使用`StringBuilder`要比使用`StringConcat`快6.5倍，这是推荐的方法。
-- 设置了初始容量的`StringBuilder`要比直接使用`StringBuilder`快25%，正如我在[你应该为集合类型设置初始大小](https://www.cnblogs.com/InCerry/p/Dotnet-Opt-Perf-You-Should-Set-Capacity-For-Collection.html)一样，设置初始大小绝对是`相当推荐`的做法。
-- 栈上分配的`ValueStringBuilder`比`StringBuilder`要快50%，比设置了初始容量的`StringBuilder`还快25%，另外它的GC次数是最低的。
-- 堆上分配的`ValueStringBuilder`比`StringBuilder`要快55%，他的GC次数稍高与栈上分配。
+- 使用`StringBuilder`要比使用`StringConcat`快 6.5 倍，这是推荐的方法。
+- 设置了初始容量的`StringBuilder`要比直接使用`StringBuilder`快 25%，正如我在[你应该为集合类型设置初始大小](https://www.cnblogs.com/InCerry/p/Dotnet-Opt-Perf-You-Should-Set-Capacity-For-Collection.html)一样，设置初始大小绝对是`相当推荐`的做法。
+- 栈上分配的`ValueStringBuilder`比`StringBuilder`要快 50%，比设置了初始容量的`StringBuilder`还快 25%，另外它的 GC 次数是最低的。
+- 堆上分配的`ValueStringBuilder`比`StringBuilder`要快 55%，他的 GC 次数稍高与栈上分配。
 
-从上面的结论中，我们可以发现`ValueStringBuilder`的性能非常好，就算是在栈上分配缓冲区，性能也比`StringBuilder`快25%。
+从上面的结论中，我们可以发现`ValueStringBuilder`的性能非常好，就算是在栈上分配缓冲区，性能也比`StringBuilder`快 25%。
 
 ## 源码解析
 
@@ -417,7 +417,7 @@ public ref struct ValueStringBuilder
         }
     }
 
-    // 
+    //
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public void Dispose()
     {
@@ -444,15 +444,15 @@ public ref struct ValueStringBuilder
 
 1. 非常高频次的字符串拼接的场景，并且字符串长度较小，此时可以使用栈上分配的`ValueStringBuilder`。
 
-大家都知道现在ASP.NET Core性能非常好，在其依赖的内部库[UrlBuilder](https://github.com/dotnet/runtime/blob/57bfe474518ab5b7cfe6bf7424a79ce3af9d6657/src/libraries/System.Private.Uri/src/System/UriBuilder.cs#L284-L362)中，就使用栈上分配，因为栈上分配在当前方法结束后内存就会回收，所以不会造成任何GC压力。
+大家都知道现在 ASP.NET Core 性能非常好，在其依赖的内部库[UrlBuilder](https://github.com/dotnet/runtime/blob/57bfe474518ab5b7cfe6bf7424a79ce3af9d6657/src/libraries/System.Private.Uri/src/System/UriBuilder.cs#L284-L362)中，就使用栈上分配，因为栈上分配在当前方法结束后内存就会回收，所以不会造成任何 GC 压力。
 
 ![](https://img1.dotnet9.com/2022/05/3202.png)
 
-2. 非常高频次的字符串拼接场景，但是字符串长度不可控，此时使用ArrayPool指定容量的`ValueStringBuilder`。比如在.NET BCL库中有很多场景使用，比如动态方法的[ToString](https://github.com/dotnet/runtime/blob/43dd0a74ab524278620d8c6a9d33a9b73b2d2228/src/coreclr/System.Private.CoreLib/src/System/Reflection/RuntimeMethodInfo.CoreCLR.cs#L137)实现。从池中分配虽然没有栈上分配那么高效，但是一样的能降低内存占用和GC压力。
+2. 非常高频次的字符串拼接场景，但是字符串长度不可控，此时使用 ArrayPool 指定容量的`ValueStringBuilder`。比如在.NET BCL 库中有很多场景使用，比如动态方法的[ToString](https://github.com/dotnet/runtime/blob/43dd0a74ab524278620d8c6a9d33a9b73b2d2228/src/coreclr/System.Private.CoreLib/src/System/Reflection/RuntimeMethodInfo.CoreCLR.cs#L137)实现。从池中分配虽然没有栈上分配那么高效，但是一样的能降低内存占用和 GC 压力。
 
 ![](https://img1.dotnet9.com/2022/05/3203.png)
 
-3. 非常高频次的字符串拼接场景，但是字符串长度可控，此时可以栈上分配和ArrayPool分配联合使用，比如[正则表达式](https://github.com/dotnet/runtime/blob/43dd0a74ab524278620d8c6a9d33a9b73b2d2228/src/libraries/System.Text.RegularExpressions/src/System/Text/RegularExpressions/RegexParser.cs#L150)解析类中，如果字符串长度较小那么使用栈空间，较大那么使用ArrayPool。
+3. 非常高频次的字符串拼接场景，但是字符串长度可控，此时可以栈上分配和 ArrayPool 分配联合使用，比如[正则表达式](https://github.com/dotnet/runtime/blob/43dd0a74ab524278620d8c6a9d33a9b73b2d2228/src/libraries/System.Text.RegularExpressions/src/System/Text/RegularExpressions/RegexParser.cs#L150)解析类中，如果字符串长度较小那么使用栈空间，较大那么使用 ArrayPool。
 
 ![](https://img1.dotnet9.com/2022/05/3204.png)
 
@@ -470,10 +470,10 @@ public ref struct ValueStringBuilder
 
 ![](https://img1.dotnet9.com/2022/05/3207.png)
 
-4. 如果使用栈上分配，那么Buffer大小控制在5KB内比较稳妥，至于为什么需要这样，后面有机会在讲一讲。
+4. 如果使用栈上分配，那么 Buffer 大小控制在 5KB 内比较稳妥，至于为什么需要这样，后面有机会在讲一讲。
 
 ## 总结
 
-今天和大家分享了一下高性能几乎无内存占用的字符串拼接结构体`ValueStringBuilder`，在大多数的场景还是推荐大家使用。但是要非常注意[上面提到的](https://www.cnblogs.com/InCerry/p/Dotnet-Perf-Opt-Use-ValueStringBuilder.html#%E9%9C%80%E8%A6%81%E6%B3%A8%E6%84%8F%E7%9A%84%E5%9C%BA%E6%99%AF)的几个场景，如果不符合条件，那么大家还是可以使用高效的StringBuilder来进行字符串拼接。
+今天和大家分享了一下高性能几乎无内存占用的字符串拼接结构体`ValueStringBuilder`，在大多数的场景还是推荐大家使用。但是要非常注意[上面提到的](https://www.cnblogs.com/InCerry/p/Dotnet-Perf-Opt-Use-ValueStringBuilder.html#%E9%9C%80%E8%A6%81%E6%B3%A8%E6%84%8F%E7%9A%84%E5%9C%BA%E6%99%AF)的几个场景，如果不符合条件，那么大家还是可以使用高效的 StringBuilder 来进行字符串拼接。
 
 本文源码链接: [https://github.com/InCerryGit/BlogCode-Use-ValueStringBuilder](https://github.com/InCerryGit/BlogCode-Use-ValueStringBuilder)

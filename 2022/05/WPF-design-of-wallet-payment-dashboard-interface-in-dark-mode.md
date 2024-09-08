@@ -4,7 +4,7 @@ slug: WPF-design-of-wallet-payment-dashboard-interface-in-dark-mode
 description: 黑暗模式的钱包支付仪表盘界面设计
 date: 2022-05-14 21:15:26
 copyright: Original
-originaltitle: WPF|黑暗模式的钱包支付仪表盘界面设计
+originalTitle: WPF|黑暗模式的钱包支付仪表盘界面设计
 draft: False
 cover: https://img1.dotnet9.com/2022/05/cover_41.png
 categories: .NET
@@ -26,20 +26,19 @@ tags: WPF,WPF Design
 
 ## 2. 准备
 
-创建一个WPF工程，比如站长使用 [.NET 7](https://dotnet.microsoft.com/zh-cn/) 创建名为 **WalletPayment** 的WPF项目。
+创建一个 WPF 工程，比如站长使用 [.NET 7](https://dotnet.microsoft.com/zh-cn/) 创建名为 **WalletPayment** 的 WPF 项目。
 
 ![](https://img1.dotnet9.com/2022/05/4102.png)
 
-这次我们不添加任何图片，只添加了一个Nuget包 [MaterialDesignThemes](https://dotnet9.com/2020/12/Material-designinxaml-an-open-source-csharp-WPF-Control-Library)：
-
+这次我们不添加任何图片，只添加了一个 Nuget 包 [MaterialDesignThemes](https://dotnet9.com/2020/12/Material-designinxaml-an-open-source-csharp-WPF-Control-Library)：
 
 ```xml
 <PackageReference Include="MaterialDesignThemes" Version="4.6.0-ci176" />
 ```
 
->原文作者使用的`FontAwesome.WPF`做为图标库，但该库自17年起就没升级了，对.NET 5\6\7编译有不兼容提示
+> 原文作者使用的`FontAwesome.WPF`做为图标库，但该库自 17 年起就没升级了，对.NET 5\6\7 编译有不兼容提示
 
-*已使用“.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8”而不是项目目标框架“net7.0-windows7.0”还原包“FontAwesome.WPF 4.7.0.9”。此包可能与项目不完全兼容。*
+_已使用“.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8”而不是项目目标框架“net7.0-windows7.0”还原包“FontAwesome.WPF 4.7.0.9”。此包可能与项目不完全兼容。_
 
 对于上文 《[WPF|如何在 WPF 中设计漂亮的社交媒体信息仪表板](https://dotnet9.com/2022/05/How-to-Design-Beautiful-Social-Media-Information-Dashboards-in-WPF)》 使用到的该图标库站长也做了修改([仓库链接](https://github.com/dotnet9/TerminalMACS.ManagerForWPF/tree/master/src/WPFDesignDemos/Dashboard3))。
 

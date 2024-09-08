@@ -5,17 +5,17 @@ description: 创建一个Blazor TabControl组件，有两个目标知识点
 date: 2021-12-06 22:01:36
 copyright: Reprinted
 author: Blazor University
-originaltitle: Blazor创建TabControl组件
-originallink: https://blazor-university.com/templating-components-with-renderfragements/creating-a-tabcontrol/
+originalTitle: Blazor创建TabControl组件
+originalLink: https://blazor-university.com/templating-components-with-renderfragements/creating-a-tabcontrol/
 draft: False
 cover: https://img1.dotnet9.com/2021/12/cover_03.jpeg
 categories: .NET
 tags: 前端,Blazor
 ---
 
->不是全文翻译，部分翻译自认为可能不准确，就原文照搬了。
+> 不是全文翻译，部分翻译自认为可能不准确，就原文照搬了。
 
-创建一个Blazor TabControl组件，有两个目标知识点：
+创建一个 Blazor TabControl 组件，有两个目标知识点：
 
 1. Pass data into a RenderFragment to give it context.
 2. Use a CascadingParameter to pass the parent TabControl component into its child TabPage components.
@@ -26,52 +26,38 @@ tags: 前端,Blazor
 
 ## 实操开始：
 
-请先创建一个Blazor项目（Blazor Client或者Server皆可，我们以Blazor Server为例），
+请先创建一个 Blazor 项目（Blazor Client 或者 Server 皆可，我们以 Blazor Server 为例），
 
 第一步，创建两个组件：`TabControl`和`TabPage`。`TabPage`组件有一个父`TabControl`属性引用（属性名`Parent`，添加`CascadingParameter`特性）。
 
-**TabControl组件：**
+**TabControl 组件：**
 
 文件路径：./Shared/TabControl.razor
 
 ```html
 <div>这是一个TabControl</div>
-<CascadingValue Value="this">
-    @ChildContent
-</CascadingValue>
+<CascadingValue Value="this"> @ChildContent </CascadingValue>
 
-@code {
-    // 如果我们想以<TabPage>标签的形式使用TabPage,那么下面的代码是必须的
-    [Parameter]
-    public RenderFragment? ChildContent { get; set; }
-}
+@code { // 如果我们想以<TabPage
+  >标签的形式使用TabPage,那么下面的代码是必须的 [Parameter] public
+  RenderFragment? ChildContent { get; set; } }</TabPage
+>
 ```
 
-**TabPage组件：**
+**TabPage 组件：**
 
 文件路径：./Shared/TabPage.razor
 
 ```html
 <div>这是一个TabPage</div>
-@ChildContent
-
-@code {
-    [CascadingParameter]
-    private TabControl? Parent { get; set; }
-
-    [Parameter]
-    public RenderFragment? ChildContent { get; set; }
-
-    protected override void OnInitialized()
-    {
-        if (Parent == null)
-            throw new ArgumentNullException(nameof(Parent), "TabPage必须包含TabControl引用");
-        base.OnInitialized();
-    }
-}
+@ChildContent @code { [CascadingParameter] private TabControl? Parent { get;
+set; } [Parameter] public RenderFragment? ChildContent { get; set; } protected
+override void OnInitialized() { if (Parent == null) throw new
+ArgumentNullException(nameof(Parent), "TabPage必须包含TabControl引用");
+base.OnInitialized(); } }
 ```
 
-## TabControl关联TabPage
+## TabControl 关联 TabPage
 
 在`TabPage`的`OnInitialized`方法中添加下面这一行代码，使`TabPage`关联上`TabControl`：
 
@@ -116,12 +102,12 @@ public string? Text { get; set; }
 </div>
 ```
 
-上面这些标签会创建标准的Bootstrap按钮组，每个`TabPage`会创建一个有以下特征的按钮：
+上面这些标签会创建标准的 Bootstrap 按钮组，每个`TabPage`会创建一个有以下特征的按钮：
 
-1. CSS类设置为"btn"，并通过`GetButtonClass`方法追加CSS类名，如果当前`TabPage`为`ActivePage`，添加CSS类`btn-primary`，否则添加`btn-secondary`。
+1. CSS 类设置为"btn"，并通过`GetButtonClass`方法追加 CSS 类名，如果当前`TabPage`为`ActivePage`，添加 CSS 类`btn-primary`，否则添加`btn-secondary`。
 2. 当点击按钮时会激活点击的`TabPage`。
 
-**注意**：`@onclick`需要关联一个无参的方法，所以lambda表达式用一个内联的`@( )`来设置点击的`TabPage`为`ActivatePage`。
+**注意**：`@onclick`需要关联一个无参的方法，所以 lambda 表达式用一个内联的`@( )`来设置点击的`TabPage`为`ActivatePage`。
 
 3. 按钮的文字通过`TabPage`的`Text`属性设置。
 
@@ -148,30 +134,28 @@ void ActivatePage(TabPage page)
 @page "/tabcontroltest"
 
 <TabControl>
-    <TabPage Text="Tab 1">
-        <h1>The first tab</h1>
-    </TabPage>
-    <TabPage Text="Tab 2">
-        <h1>The second tab</h1>
-    </TabPage>
-    <TabPage Text="Tab 3">
-        <h1>The third tab</h1>
-    </TabPage>
+  <TabPage Text="Tab 1">
+    <h1>The first tab</h1>
+  </TabPage>
+  <TabPage Text="Tab 2">
+    <h1>The second tab</h1>
+  </TabPage>
+  <TabPage Text="Tab 3">
+    <h1>The third tab</h1>
+  </TabPage>
 </TabControl>
 
-@code {
-
-}
+@code { }
 ```
 
-在./Shared/NavMenu中添加`TabControlTest`路由
+在./Shared/NavMenu 中添加`TabControlTest`路由
 
 ```html
 省略部分代码
 <div class="nav-item px-3">
-    <NavLink class="nav-link" href="tabcontroltest">
-        <span class="oi oi-plus" aria-hidden="true"></span> TabControl Test
-    </NavLink>
+  <NavLink class="nav-link" href="tabcontroltest">
+    <span class="oi oi-plus" aria-hidden="true"></span> TabControl Test
+  </NavLink>
 </div>
 省略部分代码
 ```
@@ -189,6 +173,6 @@ void ActivatePage(TabPage page)
 }
 ```
 
-OK代码完，效果见本文开头。
+OK 代码完，效果见本文开头。
 
->文中代码已放:[Github](https://github.com/dotnet9/BlazorDemo)
+> 文中代码已放:[Github](https://github.com/dotnet9/BlazorDemo)

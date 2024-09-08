@@ -5,8 +5,8 @@ description: 多对多关系不像其他关系那么简单，在这篇文章中�
 date: 2021-11-02 20:47:54
 copyright: Reprinted
 author: Zbigniew
-originaltitle: 如何处理EF Core的多对多关系？
-originallink: https://softdevpractice.com/blog/many-to-many-ef-core/
+originalTitle: 如何处理EF Core的多对多关系？
+originalLink: https://softdevpractice.com/blog/many-to-many-ef-core/
 draft: False
 cover: https://img1.dotnet9.com/2021/11/cover_05.jpeg
 categories: .NET
@@ -43,11 +43,11 @@ public class Item
 }
 ```
 
-这看起来不错，但它不起作用。在本文发表时，EF Core 无法处理这种情况。看起来EF Core不知道如何处理这种关系，当您尝试添加迁移时，您会得到以下结果：
+这看起来不错，但它不起作用。在本文发表时，EF Core 无法处理这种情况。看起来 EF Core 不知道如何处理这种关系，当您尝试添加迁移时，您会得到以下结果：
 
->>Unable to determine the relationship represented by navigation property ‘Cart.Items’ of type ‘ICollection<Item>’. Either manually configure the relationship, or ignore this property using the ‘[NotMapped]’ attribute or by using ‘EntityTypeBuilder.Ignore’ in ‘OnModelCreating’.
->>
->>【无法确定类型为“ICollection&lt;Item&gt;”的导航属性“Cart.Items”表示的关系。手动配置关系，或使用“[NotMapped]”属性或使用“OnModelCreating”中的“EntityTypeBuilder.Ignore”忽略此属性。】
+> > Unable to determine the relationship represented by navigation property ‘Cart.Items’ of type ‘ICollection<Item>’. Either manually configure the relationship, or ignore this property using the ‘[NotMapped]’ attribute or by using ‘EntityTypeBuilder.Ignore’ in ‘OnModelCreating’.
+> >
+> > 【无法确定类型为“ICollection&lt;Item&gt;”的导航属性“Cart.Items”表示的关系。手动配置关系，或使用“[NotMapped]”属性或使用“OnModelCreating”中的“EntityTypeBuilder.Ignore”忽略此属性。】
 
 我们需要做的第一件事是手动创建另一个“中间”类（表），它将建立`Cart`和`Item`的多对多关系,让我们创建这个类：
 
@@ -88,9 +88,9 @@ public class Item
 
 如果您现在尝试添加迁移，则会出现另一个错误：
 
->>The entity type ‘CartItem’ requires a primary key to be defined.
->>
->>【实体类型“CartItem”需要定义一个主键。】
+> > The entity type ‘CartItem’ requires a primary key to be defined.
+> >
+> > 【实体类型“CartItem”需要定义一个主键。】
 
 对，`CartItem`没有主键, 由于它是多对多关系，因此它应该具有复合主键。复合主键类似于常规主键，但它由两个属性（列）而不是一个属性组成。目前，创建复合键的唯一方法是在`OnModelCreating`.
 
@@ -107,7 +107,7 @@ protected override void OnModelCreating(ModelBuilder builder)
 
 ## 插入多对多
 
-假设我们已经有`Cart`和`Item`在我们的数据库中,现在我们想将特定商品(`Item`)添加到特定购物车(`Cart`)，为了做到这一点，我们需要创建新的CartItem并保存它。
+假设我们已经有`Cart`和`Item`在我们的数据库中,现在我们想将特定商品(`Item`)添加到特定购物车(`Cart`)，为了做到这一点，我们需要创建新的 CartItem 并保存它。
 
 ```C#
 var cart = db.Carts.First(i => i.Id == 256);
@@ -133,7 +133,7 @@ db.SaveChanges();
 
 ## 在多对多中检索相关数据
 
-从数据库中获取数据相当简单，注意使用`Include`关联检索相关数据。这里总共涉及3个表：`Cart`, `Item`, `CartItem`(将商品`Item`与购物车`Cart`关联起来)。
+从数据库中获取数据相当简单，注意使用`Include`关联检索相关数据。这里总共涉及 3 个表：`Cart`, `Item`, `CartItem`(将商品`Item`与购物车`Cart`关联起来)。
 
 ```C#
 // 获取关联所有商品的指定购物车
@@ -142,7 +142,7 @@ var cartIncludingItems = db.Carts.Include(cart => cart.Items).ThenInclude(row =>
 var cartItems = cartIncludingItems.Items.Select(row => row.Item);
 ```
 
-另外，有些操作可以不使用关系来执行。例如，如果您有购物车ID，则可以使用以下 Linq 一次获取所有商品：
+另外，有些操作可以不使用关系来执行。例如，如果您有购物车 ID，则可以使用以下 Linq 一次获取所有商品：
 
 ```C#
 var cartId = 1;
@@ -177,11 +177,10 @@ db.SaveChanges();
 
 ---
 
+> 原文作者：Zbigniew
 >
->原文作者：Zbigniew
+> 原文标题：How to handle Many-To-Many in Entity Framework Core
 >
->原文标题：How to handle Many-To-Many in Entity Framework Core
+> 原文链接：https://softdevpractice.com/blog/many-to-many-ef-core/
 >
->原文链接：https://softdevpractice.com/blog/many-to-many-ef-core/
->
->翻译：沙漠尽头的狼
+> 翻译：沙漠尽头的狼

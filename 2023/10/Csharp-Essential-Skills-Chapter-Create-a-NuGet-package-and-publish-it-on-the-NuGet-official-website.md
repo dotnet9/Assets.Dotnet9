@@ -6,15 +6,15 @@ date: 2023-10-10 12:45:06
 lastmod: 2023-10-10 13:28:23
 copyright: Reprinted
 author: 明如正午
-originaltitle: C#【必备技能篇】制作NuGet程序包，并发布到NuGet官网
-originallink: https://blog.csdn.net/sinat_40003796/article/details/130407108
+originalTitle: C#【必备技能篇】制作NuGet程序包，并发布到NuGet官网
+originalLink: https://blog.csdn.net/sinat_40003796/article/details/130407108
 draft: false
 cover: https://img1.dotnet9.com/2023/10/cover_01.jpg
 categories: .NET
 tags: .NET
 ---
 
-## 1. 准备工作：在NuGet上创建并获取API Keys
+## 1. 准备工作：在 NuGet 上创建并获取 API Keys
 
 网址：https://www.nuget.org/
 
@@ -22,20 +22,21 @@ tags: .NET
 
 ![](https://img1.dotnet9.com/2023/10/0101.png)
 
-### 1.2. 点击右上角菜单API Keys，创建Key
+### 1.2. 点击右上角菜单 API Keys，创建 Key
 
 ![](https://img1.dotnet9.com/2023/10/0102.png)
 
 ### 1.3. 填写信息并创建
-这里写你要上传NuGet程序包的名称 **【每个NuGet程序包（对应一个名称）可以上传多个版本】**
+
+这里写你要上传 NuGet 程序包的名称 **【每个 NuGet 程序包（对应一个名称）可以上传多个版本】**
 
 ![](https://img1.dotnet9.com/2023/10/0103.png)
 
-### 1.4. 复制API Key
+### 1.4. 复制 API Key
 
 ![](https://img1.dotnet9.com/2023/10/0104.png)
 
-## 2. 制作一个简单的dll
+## 2. 制作一个简单的 dll
 
 新建一个“库”项目，代码如下：
 
@@ -66,7 +67,7 @@ namespace ClassLibrary1
 
 ![](https://img1.dotnet9.com/2023/10/0105.png)
 
-生成如下dll：
+生成如下 dll：
 
 ![](https://img1.dotnet9.com/2023/10/0106.png)
 
@@ -76,27 +77,27 @@ namespace ClassLibrary1
 
 ![](https://img1.dotnet9.com/2023/10/0107.png)
 
-## 4. 上传NuGet程序包并发布
+## 4. 上传 NuGet 程序包并发布
 
 ### 4.1. 方法一：使用命令行上传，需要下载`nuget.exe`
 
-#### 4.1.1.  到https://www.nuget.org/downloads下载`nuget.exe`
+#### 4.1.1. 到https://www.nuget.org/downloads下载`nuget.exe`
 
 ![](https://img1.dotnet9.com/2023/10/0108.png)
 
-#### 4.1.2.  配置nuget环境变量
+#### 4.1.2. 配置 nuget 环境变量
 
-- 把下载的nuget.exe放到`E:\nuget`
+- 把下载的 nuget.exe 放到`E:\nuget`
 
-- 打开电脑属性–高级系统设置–环境变量–系统变量，选择Path–编辑–新建–填写`E:\nuget`，确定
+- 打开电脑属性–高级系统设置–环境变量–系统变量，选择 Path–编辑–新建–填写`E:\nuget`，确定
 
 ![](https://img1.dotnet9.com/2023/10/0109.png)
 
-环境变量配置好，就可以使用nuget指令了
+环境变量配置好，就可以使用 nuget 指令了
 
-#### 4.1.3. 生成nuspec文件
+#### 4.1.3. 生成 nuspec 文件
 
-使用nuget spec命令生产.nuspec 文件
+使用 nuget spec 命令生产.nuspec 文件
 
 ![](https://img1.dotnet9.com/2023/10/0110.png)
 
@@ -132,18 +133,17 @@ namespace ClassLibrary1
 </package>
 ```
 
-#### 4.1.4. 生成nupkg文件
+#### 4.1.4. 生成 nupkg 文件
 
-使用`nuget pack`命令生产.nupkg文件
+使用`nuget pack`命令生产.nupkg 文件
 
 ![](https://img1.dotnet9.com/2023/10/0113.png)
 
 ![](https://img1.dotnet9.com/2023/10/0114.png)
 
-#### 4.1.5.  复制1.4的API Key，上传到NuGet
+#### 4.1.5. 复制 1.4 的 API Key，上传到 NuGet
 
 ![](https://img1.dotnet9.com/2023/10/0115.png)
-
 
 运行如下指令：
 
@@ -155,17 +155,17 @@ nuget push PackageTest.1.0.0.nupkg xxxkey -Source https://api.nuget.org/v3/index
 
 ![](https://img1.dotnet9.com/2023/10/0116.png)
 
-### 4.2. 方法二：使用界面工具上传，需要下载NuGet Package Explorer【推荐！】
+### 4.2. 方法二：使用界面工具上传，需要下载 NuGet Package Explorer【推荐！】
 
-#### 4.2.1. 下载NuGet Package Explorer
+#### 4.2.1. 下载 NuGet Package Explorer
 
 https://www.microsoft.com/zh-cn/p/nuget-package-explorer/9wzdncrdmdm3?activetab=pivot:overviewtab
 
-#### 4.2.2. 创建新Package
+#### 4.2.2. 创建新 Package
 
 ![](https://img1.dotnet9.com/2023/10/0117.png)
 
-#### 4.2.3. 新增lib文件夹、新增net461文件夹、添加已有文件
+#### 4.2.3. 新增 lib 文件夹、新增 net461 文件夹、添加已有文件
 
 ![](https://img1.dotnet9.com/2023/10/0118.png)
 
@@ -175,7 +175,7 @@ https://www.microsoft.com/zh-cn/p/nuget-package-explorer/9wzdncrdmdm3?activetab=
 
 #### 4.2.4. 编辑上传数据
 
-这里选择`Edit Metadata`，Edit Metadata Source则是xml文件格式的
+这里选择`Edit Metadata`，Edit Metadata Source 则是 xml 文件格式的
 
 ![](https://img1.dotnet9.com/2023/10/0121.png)
 
@@ -183,7 +183,7 @@ https://www.microsoft.com/zh-cn/p/nuget-package-explorer/9wzdncrdmdm3?activetab=
 
 ![](https://img1.dotnet9.com/2023/10/0122.png)
 
-添加项目依赖，即依赖哪些框架。比如.NETFramework，.NETStandard等
+添加项目依赖，即依赖哪些框架。比如.NETFramework，.NETStandard 等
 
 ![](https://img1.dotnet9.com/2023/10/0123.png)
 
@@ -197,19 +197,19 @@ https://www.microsoft.com/zh-cn/p/nuget-package-explorer/9wzdncrdmdm3?activetab=
 
 ![](https://img1.dotnet9.com/2023/10/0126.png)
 
-看一下Metadata Source对应的内容，其实和刚刚编辑的信息是一致的。
+看一下 Metadata Source 对应的内容，其实和刚刚编辑的信息是一致的。
 
 ![](https://img1.dotnet9.com/2023/10/0127.png)
 
 ![](https://img1.dotnet9.com/2023/10/0128.png)
 
-#### 4.2.5. 保存nupkg文件
+#### 4.2.5. 保存 nupkg 文件
 
 ![](https://img1.dotnet9.com/2023/10/0129.png)
 
 ![](https://img1.dotnet9.com/2023/10/01292.png)
 
-### 4.2.6. 发布到NuGet
+### 4.2.6. 发布到 NuGet
 
 ![](https://img1.dotnet9.com/2023/10/0130.png)
 
@@ -219,11 +219,11 @@ https://www.microsoft.com/zh-cn/p/nuget-package-explorer/9wzdncrdmdm3?activetab=
 
 ![](https://img1.dotnet9.com/2023/10/0132.png)
 
-在Visual Stuido中查看：
+在 Visual Stuido 中查看：
 
 ![](https://img1.dotnet9.com/2023/10/0133.png)
 
-## 5. NuGet包的管理
+## 5. NuGet 包的管理
 
 自己到https://www.nuget.org/探索一下就好，很简单的。
 
@@ -239,6 +239,6 @@ https://www.microsoft.com/zh-cn/p/nuget-package-explorer/9wzdncrdmdm3?activetab=
 
 参考：https://blog.csdn.net/weixin_38211198/article/details/118438071
 
->版权声明：本文为CSDN博主「明如正午」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。
+> 版权声明：本文为 CSDN 博主「明如正午」的原创文章，遵循 CC 4.0 BY-SA 版权协议，转载请附上原文出处链接及本声明。
 >
->原文链接：https://blog.csdn.net/sinat_40003796/article/details/130407108
+> 原文链接：https://blog.csdn.net/sinat_40003796/article/details/130407108

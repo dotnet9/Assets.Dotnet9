@@ -4,7 +4,7 @@ slug: Introducing-this-library-Displaying-Markdown-files-in-csharp-Blazor
 description: 我的想法是，除了提供工具免费使用外，也能让大家了解这个工具是如果开发的，这样应该更方便
 date: 2022-02-26 22:15:26
 copyright: Original
-originaltitle: 介绍这个库：C# Blazor中显示Markdown文件
+originalTitle: 介绍这个库：C# Blazor中显示Markdown文件
 draft: False
 cover: https://img1.dotnet9.com/2022/02/cover_14.jpg
 categories: .NET
@@ -13,9 +13,9 @@ tags: Blazor,Markdown
 
 ## 1 讲目的
 
-前几天上线了一个[在线Icon转换工具](https://tool.dotnet9.com/ico)，为了让大家使用放心，改了点代码，在转换下载Icon图标后立即删除临时文件，并在工具下面贴上了工具的开发步骤和代码，大家看这样改是否合适，见[Issue 1](https://github.com/dotnet9/dotnet9.com/issues/1)。
+前几天上线了一个[在线 Icon 转换工具](https://tool.dotnet9.com/ico)，为了让大家使用放心，改了点代码，在转换下载 Icon 图标后立即删除临时文件，并在工具下面贴上了工具的开发步骤和代码，大家看这样改是否合适，见[Issue 1](https://github.com/dotnet9/dotnet9.com/issues/1)。
 
-这篇不讲代码修改过程(因为[工具](https://tool.dotnet9.com/ico)和网站[博文](https://dotnet9.com/1715)已经同步更新)，本文讲讲在工具下方展示Markdown文件的实现方式，先看效果：
+这篇不讲代码修改过程(因为[工具](https://tool.dotnet9.com/ico)和网站[博文](https://dotnet9.com/1715)已经同步更新)，本文讲讲在工具下方展示 Markdown 文件的实现方式，先看效果：
 
 ![Blazor中显示Markdown](https://img1.dotnet9.com/2022/02/1401.gif)
 
@@ -27,9 +27,9 @@ tags: Blazor,Markdown
 2. 评论功能目前没有（不排除后面加上），需要点击`我要建议（吐槽）`按钮跳转到[Dotnet9](https://dotnet9.com)网站同篇[博文](https://dotnet9.com/2022/02/Introducing-this-library-Displaying-Markdown-files-in-csharp-Blazor)留言。
 3. 旁边有个按钮`我要浏览源码`可以点击浏览工具源码。
 
-下面说说在Blazor中怎么展示Markdown文件，先说明目前完成的功能：
+下面说说在 Blazor 中怎么展示 Markdown 文件，先说明目前完成的功能：
 
-1. 只是将Markdown文件展示为html。
+1. 只是将 Markdown 文件展示为 html。
 2. 高亮目前未加。
 
 ## 2 开发步骤
@@ -68,21 +68,21 @@ builder.Services.AddScoped<IHtmlSanitizer, HtmlSanitizer>(x =>
 
 4. 使用
 
-准备好Markdown文件，比如我放wwwroot下：
+准备好 Markdown 文件，比如我放 wwwroot 下：
 
 ![Markdown文件](https://img1.dotnet9.com/2022/02/1402.png)
 
 在[IcoTool.razor](https://github.com/dotnet9/dotnet9.com/blob/develop/src/Dotnet9.Tools.Web/Pages/Public/ImageTools/IcoTool.razor)中就可以直接使用了：
 
 ```html
-<Markdown FilePath="wwwroot/2022/02/2022-02-22_02.md"/>
+<Markdown FilePath="wwwroot/2022/02/2022-02-22_02.md" />
 ```
 
 ## 总结
 
 完了，就是这么简单，效果见文章开头，今天不啰嗦。
 
-忘了，markdown中有图片等多媒体文件，记得加上这些样式实现自适应：
+忘了，markdown 中有图片等多媒体文件，记得加上这些样式实现自适应：
 
 ```css
 <style>

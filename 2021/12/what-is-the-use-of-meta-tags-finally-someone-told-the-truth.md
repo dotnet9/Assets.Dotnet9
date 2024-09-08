@@ -5,8 +5,8 @@ description: 最近部门在推微前端，需要按功能拆分多个子应用�
 date: 2021-12-23 21:02:21
 copyright: Reprinted
 author: 隐冬
-originaltitle: meta 标签到底有什么用？终于有人说出了真相
-originallink: https://juejin.cn/post/6987919006468407309
+originalTitle: meta 标签到底有什么用？终于有人说出了真相
+originalLink: https://juejin.cn/post/6987919006468407309
 draft: False
 cover: https://img1.dotnet9.com/2021/12/cover_34.png
 categories: 前端
@@ -15,7 +15,7 @@ tags: HTML,Meta
 
 ## 1. 起因
 
-最近部门在推微前端，需要按功能拆分多个子应用，主应用在加载的过程中经常出现加载失败的问题。因为https地址中，如果加载了http资源，浏览器将认为这是不安全的资源，将会默认阻止。后来在文档中添加了`<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">`完美解决。
+最近部门在推微前端，需要按功能拆分多个子应用，主应用在加载的过程中经常出现加载失败的问题。因为 https 地址中，如果加载了 http 资源，浏览器将认为这是不安全的资源，将会默认阻止。后来在文档中添加了`<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">`完美解决。
 
 此时我才发现自己对`meta`简直一无所知，本文主要介绍`meta`，顺带也会提一提`head`中的其它标签。如有不对请指出，最后欢迎点赞 + 收藏。
 
@@ -61,7 +61,7 @@ tags: HTML,Meta
 
 #### 4.1.1. content-type
 
-比如：`<meta http-equiv="content-type" content="text/html charset=utf8">`可以用来声明文档类型、设字符集，目前`content-type`只能在html文档中使用。
+比如：`<meta http-equiv="content-type" content="text/html charset=utf8">`可以用来声明文档类型、设字符集，目前`content-type`只能在 html 文档中使用。
 
 这样设置浏览器的头信息就会包含:
 
@@ -71,10 +71,10 @@ content-type: text/html charset=utf8
 
 #### 4.1.2. expires
 
-用于设置浏览器的过期时间, 其实就是响应头中的expires属性。
+用于设置浏览器的过期时间, 其实就是响应头中的 expires 属性。
 
 ```html
-<meta http-equiv="expires" content="31 Dec 2021">
+<meta http-equiv="expires" content="31 Dec 2021" />
 ```
 
 ```shell
@@ -83,10 +83,10 @@ expires:31 Dec 2008
 
 #### 4.1.3. refresh
 
-该种设定表示5秒自动刷新并且跳转到指定的网页。如果不设置url的值那么浏览器则刷新本网页。
+该种设定表示 5 秒自动刷新并且跳转到指定的网页。如果不设置 url 的值那么浏览器则刷新本网页。
 
 ```html
-<meta http-equiv="refresh" content="5 url=http://www.zhiqianduan.com">
+<meta http-equiv="refresh" content="5 url=http://www.zhiqianduan.com" />
 ```
 
 #### 4.1.4. window-target
@@ -102,7 +102,7 @@ expires:31 Dec 2008
 禁止浏览器从本地计算机的缓存中访问页面的内容
 
 ```html
-<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="pragma" content="no-cache" />
 ```
 
 ### 4.2. name 属性
@@ -114,7 +114,7 @@ expires:31 Dec 2008
 `author`用来标注网页的作者
 
 ```html
-<meta name="author" content="aaa@mail.abc.com">
+<meta name="author" content="aaa@mail.abc.com" />
 ```
 
 #### 4.2.2. description
@@ -122,7 +122,7 @@ expires:31 Dec 2008
 `description`用来告诉搜素引擎当前网页的主要内容，是关于网站的一段描述信息。
 
 ```html
-<meta name="description" content="这是我的HTML">
+<meta name="description" content="这是我的HTML" />
 ```
 
 #### 4.2.3. keywords
@@ -130,15 +130,15 @@ expires:31 Dec 2008
 `keywords`设置网页的关键字，来告诉浏览器关键字是什么。是一个经常被用到的名称。它为文档定义了一组关键字。某些搜索引擎在遇到这些关键字时，会用这些关键字对文档进行分类。
 
 ```html
-<meta name="keywords" content="Hello world">
+<meta name="keywords" content="Hello world" />
 ```
 
 #### 4.2.4. generator
 
-表示当前html是用什么工具编写生成的，并没有实际作用，一般是编辑器自动创建的。
+表示当前 html 是用什么工具编写生成的，并没有实际作用，一般是编辑器自动创建的。
 
 ```html
-<meta name="generator" content="vscode">
+<meta name="generator" content="vscode" />
 ```
 
 #### 4.2.5. revised
@@ -146,7 +146,7 @@ expires:31 Dec 2008
 指定页面的最新版本
 
 ```html
-<meta name="revised" content="V2，2015/10/1">
+<meta name="revised" content="V2，2015/10/1" />
 ```
 
 #### 4.2.6. robots
@@ -154,7 +154,7 @@ expires:31 Dec 2008
 告诉搜索引擎机器人抓取哪些页面，`all / none / index / noindex / follow / nofollow`。
 
 ```html
-<meta name="robots" content="all">
+<meta name="robots" content="all" />
 ```
 
 - `all`：文件将被检索，且页面上的链接可以被查询；
@@ -176,7 +176,7 @@ expires:31 Dec 2008
 <base href="http://www.w3school.com.cn/i/" target="_blank" />
 ```
 
-base标签包含的属性。
+base 标签包含的属性。
 
 ### 5.1. href
 
@@ -191,7 +191,7 @@ base标签包含的属性。
 `link`用于引入外部样式表，在`html`的头部可以包含任意数量的`link`，`link`标签有以下常用属性。
 
 ```html
-<link type="text/css" rel="stylesheet" href="github-markdown.css">
+<link type="text/css" rel="stylesheet" href="github-markdown.css" />
 ```
 
 ### 6.1. type
@@ -212,9 +212,9 @@ base标签包含的属性。
 
 ```html
 <style>
-    body {
-        background: #f3f5f9;
-    }
+  body {
+    background: #f3f5f9;
+  }
 </style>
 ```
 
@@ -275,7 +275,7 @@ base标签包含的属性。
 网站背景音乐。
 
 ```html
-<bgsound src="music.mp4" autostart="true" loop="5">
+<bgsound src="music.mp4" autostart="true" loop="5"></bgsound>
 ```
 
 ### 9.1. src
@@ -295,8 +295,8 @@ base标签包含的属性。
 1. [w3c](https://www.w3school.com.cn/tags/tag_head.asp)
 2. [Wangkiwa](https://blog.csdn.net/qq_46580571/article/details/106035249)
 
->作者：隐冬
+> 作者：隐冬
 >
->链接：https://juejin.cn/post/6987919006468407309
+> 链接：https://juejin.cn/post/6987919006468407309
 >
->来源：稀土掘金
+> 来源：稀土掘金

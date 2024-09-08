@@ -5,17 +5,17 @@ description: 有些情况下，需要在程序运行期间动态执行C#代码�
 date: 2021-12-24 22:46:51
 copyright: Reprinted
 author: 寻找无名的特质
-originaltitle: C# 脚本
-originallink: https://www.cnblogs.com/zhenl/p/15714453.html
+originalTitle: C# 脚本
+originalLink: https://www.cnblogs.com/zhenl/p/15714453.html
 draft: False
 cover: https://img1.dotnet9.com/2021/12/cover_38.png
 categories: .NET
 tags: C#,脚本
 ---
 
-有些情况下，需要在程序运行期间动态执行C#代码，比如，将某些经常改变的算法保存在配置文件中，在运行期间从配置文件中读取并执行运算。这时可以使用C#脚本来完成这些工作。
+有些情况下，需要在程序运行期间动态执行 C#代码，比如，将某些经常改变的算法保存在配置文件中，在运行期间从配置文件中读取并执行运算。这时可以使用 C#脚本来完成这些工作。
 
-使用C#脚本需要引用库`Microsoft.CodeAnalysis.CSharp.Scripting`，下面是一些示例：
+使用 C#脚本需要引用库`Microsoft.CodeAnalysis.CSharp.Scripting`，下面是一些示例：
 
 最基本的用法是计算算数表达式：
 
@@ -104,6 +104,6 @@ script =  script.ContinueWith("return x+y;");
 Console.WriteLine((await script.RunAsync()).ReturnValue);
 ```
 
-完整的实例可以从github下载：https://github.com/zhenl/CSharpScriptDemo
+完整的实例可以从 github 下载：https://github.com/zhenl/CSharpScriptDemo
 
 本文来自博客园，作者：寻找无名的特质，转载请注明原文链接：https://www.cnblogs.com/zhenl/p/15714453.html

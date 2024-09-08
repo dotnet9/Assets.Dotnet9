@@ -5,19 +5,19 @@ description: 今天我们宣布 .NET 7 候选版本 1。这是生产中支持的
 date: 2022-09-15 09:01:26
 copyright: Reprinted
 author: Jeremy Likness，Angelos Petropoulos，Jon Douglas
-originaltitle: Announcing .NET 7 Release Candidate 1
-originallink: https://devblogs.microsoft.com/dotnet/announcing-dotnet-7-rc-1/
+originalTitle: Announcing .NET 7 Release Candidate 1
+originalLink: https://devblogs.microsoft.com/dotnet/announcing-dotnet-7-rc-1/
 draft: false
 cover: https://img1.dotnet9.com/2022/09/What_s_New_in_Net_7_85586957c5.jpg
 categories: .NET
 tags: .NET
 ---
 
->原文链接：[https://devblogs.microsoft.com/dotnet/announcing-dotnet-7-rc-1/](https://devblogs.microsoft.com/dotnet/announcing-dotnet-7-rc-1/)
+> 原文链接：[https://devblogs.microsoft.com/dotnet/announcing-dotnet-7-rc-1/](https://devblogs.microsoft.com/dotnet/announcing-dotnet-7-rc-1/)
 >
->原文作者：Jeremy Likness，Angelos Petropoulos，Jon Douglas
+> 原文作者：Jeremy Likness，Angelos Petropoulos，Jon Douglas
 >
->翻译：沙漠尽头的狼(谷歌翻译加持)
+> 翻译：沙漠尽头的狼(谷歌翻译加持)
 
 今天我们宣布 .NET 7 候选版本 1。这是生产中支持的 .NET 7 的两个候选版本 (RC) 中的第一个。
 
@@ -71,7 +71,7 @@ tags: .NET
 
 ## ARM64
 
-ARM提供了小尺寸、卓越性能和高功率效率。
+ARM 提供了小尺寸、卓越性能和高功率效率。
 
 .NET 可帮助您构建在 ARM 设备上运行的应用程序。有关 .NET 7 在 ARM64 上运行速度的更多信息，请查看以下资源：
 

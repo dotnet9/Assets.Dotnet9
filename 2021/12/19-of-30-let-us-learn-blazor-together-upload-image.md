@@ -5,8 +5,8 @@ description: 在大部分的网站中，上传图片也是很重要的功能，�
 date: 2021-12-21 22:04:11
 copyright: Reprinted
 author: StrayaWorker
-originaltitle: (19/30)大家一起学Blazor：图片上传
-originallink: https://ithelp.ithome.com.tw/articles/10267909
+originalTitle: (19/30)大家一起学Blazor：图片上传
+originalLink: https://ithelp.ithome.com.tw/articles/10267909
 draft: False
 cover: https://img1.dotnet9.com/2021/12/cover_05.png
 categories: .NET
@@ -15,11 +15,11 @@ tags: Blazor Server,学Blazor
 
 在大部分的网站中，上传图片也是很重要的功能，今天我们就来操作下。
 
-**(注：这是用Blazor Server 的方式，但最好不要上传太多文件，所以限制上传4张照片的话就会提示，毕竟这些事都是在服务器上做，负担太大，微软也建议用.NET Core Web API 的方式操作)**
+**(注：这是用 Blazor Server 的方式，但最好不要上传太多文件，所以限制上传 4 张照片的话就会提示，毕竟这些事都是在服务器上做，负担太大，微软也建议用.NET Core Web API 的方式操作)**
 
-我们先建立一个Component `FileUpload`。
+我们先建立一个 Component `FileUpload`。
 
-下面代码为`FileUpload.razor`，使用Blazor 提供的Component `<InputFile>`，`multiple`代表可以上传多个文件
+下面代码为`FileUpload.razor`，使用 Blazor 提供的 Component `<InputFile>`，`multiple`代表可以上传多个文件
 
 ```C#
 @page "/FileUpload"
@@ -147,13 +147,14 @@ public partial class FileUpload
 }
 ```
 
-为了方便，`NavMenu.razor`加上路由可跳转这个Component
+为了方便，`NavMenu.razor`加上路由可跳转这个 Component
 
 ```html
 <div class="nav-item px-3">
-    <NavLink class="nav-link" href="FileUpload" Match="NavLinkMatch.All">
-        <span class="bi bi-card-image h4 p-2 mb-0" aria-hidden="true"></span> File Upload
-    </NavLink>
+  <NavLink class="nav-link" href="FileUpload" Match="NavLinkMatch.All">
+    <span class="bi bi-card-image h4 p-2 mb-0" aria-hidden="true"></span> File
+    Upload
+  </NavLink>
 </div>
 ```
 
@@ -197,7 +198,7 @@ function SweetConfirm(jsonString) {
     });
 }
 ```
-        
+
 既然这边改了，`PostBase.razor.cs`的`DeletePost`也要修改
 
 ```C#
@@ -223,8 +224,8 @@ protected async Task DeletePost()
     }
 }
 ```
-        
-`JsInteropClasses.cs`的`Confirm()`改成JSON 字串
+
+`JsInteropClasses.cs`的`Confirm()`改成 JSON 字串
 
 ```C#
 public async ValueTask<bool> Confirm(string jsonString)
@@ -248,4 +249,4 @@ public async ValueTask<bool> Confirm(string jsonString)
 4. [BrowserFileExtensions.RequestImageFileAsync(IBrowserFile, String, Int32, Int32) 方法](https://docs.microsoft.com/zh-tw/dotnet/api/microsoft.aspnetcore.components.forms.browserfileextensions.requestimagefileasync?view=aspnetcore-5.0)
 5. [Day 26：Blazor WebAssembly 上传文件](https://ithelp.ithome.com.tw/articles/10251852)
 
-**注：本文代码通过 .NET 6 + Visual Studio 2022重构，可点击原文链接与重构后代码比较学习，谢谢阅读，支持原作者**
+**注：本文代码通过 .NET 6 + Visual Studio 2022 重构，可点击原文链接与重构后代码比较学习，谢谢阅读，支持原作者**

@@ -7,8 +7,8 @@ lastmod: 2024-01-14 06:19:24
 copyright: Reprinted
 banner: false
 author: tokengo
-originaltitle: 微软用它取代了Nginx吞吐量提升了百分之八十！
-originallink: https://mp.weixin.qq.com/s/PSG4HrJzhybfr2oZWgNuNg
+originalTitle: 微软用它取代了Nginx吞吐量提升了百分之八十！
+originalLink: https://mp.weixin.qq.com/s/PSG4HrJzhybfr2oZWgNuNg
 draft: false
 cover: https://img1.dotnet9.com/2024/01/cover_06.png
 categories: .NET
@@ -17,34 +17,34 @@ tags: 技术更新
 
 ![大佬消息截图](https://img1.dotnet9.com/2024/01/0601.png)
 
-Azure应用服务用YARP取代了Nginx，获得了80%以上的吞吐量。他们每天处理160B多个请求(1.9 m RPS)。这是微软的一项了不起的技术创新。
+Azure 应用服务用 YARP 取代了 Nginx，获得了 80%以上的吞吐量。他们每天处理 160B 多个请求(1.9 m RPS)。这是微软的一项了不起的技术创新。
 
-首先我们来介绍一下什么是Yarp
+首先我们来介绍一下什么是 Yarp
 
-## Yarp是什么？
+## Yarp 是什么？
 
-YARP（Yet Another Reverse Proxy）是一个开源的、高性能的反向代理库，由Microsoft开发，使用C#语言编写。它旨在作为.NET平台上构建反向代理服务器的基础。YARP主要针对.NET 5及以上版本，允许开发者在.NET应用程序中轻松地实现反向代理的功能。
+YARP（Yet Another Reverse Proxy）是一个开源的、高性能的反向代理库，由 Microsoft 开发，使用 C#语言编写。它旨在作为.NET 平台上构建反向代理服务器的基础。YARP 主要针对.NET 5 及以上版本，允许开发者在.NET 应用程序中轻松地实现反向代理的功能。
 
-### YARP的主要特点和功能：
+### YARP 的主要特点和功能：
 
-1. **模块化和可扩展性：** YARP设计成高度模块化的，这意味着可以根据需要替换或扩展内部组件，如HTTP请求路由、负载均衡、健康检查等。
-2. **性能：** YARP针对高性能进行了优化，利用了.NET的异步编程模型和高效的IO操作，以处理大量并发连接。
-3. **配置驱动：** YARP的行为可以通过配置来控制，支持从文件、数据库或其他来源动态加载配置。
+1. **模块化和可扩展性：** YARP 设计成高度模块化的，这意味着可以根据需要替换或扩展内部组件，如 HTTP 请求路由、负载均衡、健康检查等。
+2. **性能：** YARP 针对高性能进行了优化，利用了.NET 的异步编程模型和高效的 IO 操作，以处理大量并发连接。
+3. **配置驱动：** YARP 的行为可以通过配置来控制，支持从文件、数据库或其他来源动态加载配置。
 4. **路由：** 可以基于各种参数（如路径、头部、查询参数）配置请求路由规则。
 5. **负载均衡：** 内置多种负载均衡策略，如轮询、最少连接、随机选择等，并且可以自定义负载均衡策略。
 6. **健康检查：** 支持后端服务的健康检查，以确保请求只会被转发到健康的后端服务实例。
 7. **转换器：** 允许对请求和响应进行转换，如修改头部、路径或查询参数。
 8. **会话亲和性：** 支持会话亲和性（Session Affinity），确保来自同一客户端的请求被发送到相同的后端服务实例。
 
-### 使用YARP的一些场景：
+### 使用 YARP 的一些场景：
 
 - **反向代理：** 在客户端和后端服务之间提供一个中间层，用于请求转发和负载均衡。
-- **API网关：** 作为微服务架构中的API网关，提供路由、鉴权、监控等功能。
-- **边缘服务：** 在应用程序和外部世界之间提供安全层，处理SSL终止、请求限制等任务。
+- **API 网关：** 作为微服务架构中的 API 网关，提供路由、鉴权、监控等功能。
+- **边缘服务：** 在应用程序和外部世界之间提供安全层，处理 SSL 终止、请求限制等任务。
 
-## Yarp简单的使用
+## Yarp 简单的使用
 
-创建一个WebApi的项目
+创建一个 WebApi 的项目
 
 安装`Nuget`包
 
@@ -58,33 +58,33 @@ YARP（Yet Another Reverse Proxy）是一个开源的、高性能的反向代理
 
 ```json
 {
- "Logging": {
-   "LogLevel": {
-     "Default": "Information",
-     "Microsoft": "Warning",
-     "Microsoft.Hosting.Lifetime": "Information"
-   }
- },
- "AllowedHosts": "*",
- "ReverseProxy": {
-   "Routes": {
-     "route1" : {
-       "ClusterId": "cluster1",
-       "Match": {
-         "Path": "{**catch-all}"
-       }
-     }
-   },
-   "Clusters": {
-     "cluster1": {
-       "Destinations": {
-         "destination1": {
-           "Address": "https://cn.bing.com/"
-         }
-       }
-     }
-   }
- }
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft": "Warning",
+      "Microsoft.Hosting.Lifetime": "Information"
+    }
+  },
+  "AllowedHosts": "*",
+  "ReverseProxy": {
+    "Routes": {
+      "route1": {
+        "ClusterId": "cluster1",
+        "Match": {
+          "Path": "{**catch-all}"
+        }
+      }
+    },
+    "Clusters": {
+      "cluster1": {
+        "Destinations": {
+          "destination1": {
+            "Address": "https://cn.bing.com/"
+          }
+        }
+      }
+    }
+  }
 }
 ```
 
@@ -99,23 +99,23 @@ app.MapReverseProxy();
 app.Run();
 ```
 
-然后启动项目，访问我们的api就会被代理转发到`bing`上
+然后启动项目，访问我们的 api 就会被代理转发到`bing`上
 
 ![成功代理到必应](https://img1.dotnet9.com/2024/01/0602.png)
 
-## Yarp工具代理使用
+## Yarp 工具代理使用
 
-下面我们在提供一个在中间件使用yarp的方式
+下面我们在提供一个在中间件使用 yarp 的方式
 
 我们需要用到`IHttpForwarder`
 
-先修改`Program.cs` 在这里我们注入了`HttpForwarder`，然后提供一个Run中间件，在中间件中手动指定了端点的地址`https://cn.bing.com/` 然后我们启动一下项目。
+先修改`Program.cs` 在这里我们注入了`HttpForwarder`，然后提供一个 Run 中间件，在中间件中手动指定了端点的地址`https://cn.bing.com/` 然后我们启动一下项目。
 
 ```csharp
 using Yarp.ReverseProxy.Forwarder;
 
 var builder = WebApplication.CreateBuilder(args);
-builder.Services.AddHttpForwarder(); // 注入IHttpForwarder 
+builder.Services.AddHttpForwarder(); // 注入IHttpForwarder
 var app = builder.Build();
 
 var httpMessage = new HttpMessageInvoker(new HttpClientHandler());
@@ -135,15 +135,15 @@ app.Run();
 
 ![代码控制反代效果一样](https://img1.dotnet9.com/2024/01/0603.png)
 
-## 使用yarp修改Bing的响应内容
+## 使用 yarp 修改 Bing 的响应内容
 
-我们继续基于上面的代理使用进行修改bing的相应内容！
+我们继续基于上面的代理使用进行修改 bing 的相应内容！
 
 打开`Program.cs`
 
 ```csharp
 var builder = WebApplication.CreateBuilder(args);
-builder.Services.AddHttpForwarder(); // 注入IHttpForwarder 
+builder.Services.AddHttpForwarder(); // 注入IHttpForwarder
 var app = builder.Build();
 
 var httpMessage = new HttpMessageInvoker(new HttpClientHandler()
@@ -299,10 +299,10 @@ public class BingTransformer : HttpTransformer
 
 ![修改响应内容结果](https://img1.dotnet9.com/2024/01/0604.png)
 
-## Yarp相关资料
+## Yarp 相关资料
 
 技术交流群：737776595
 
 官方文档：https://microsoft.github.io/reverse-proxy/articles/getting-started.html
 
-来着token的分享
+来着 token 的分享

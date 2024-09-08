@@ -5,15 +5,15 @@ description: 关于依赖注入是什么？依赖注入是一种具体的编码�
 date: 2022-04-22 07:21:26
 copyright: Reprinted
 author: AZRNG 鹏祥
-originaltitle: 来，WinForm使用依赖注入！
-originallink: https://mp.weixin.qq.com/s/murWKgo5KFMmMOJ4UQJWBQ
+originalTitle: 来，WinForm使用依赖注入！
+originalLink: https://mp.weixin.qq.com/s/murWKgo5KFMmMOJ4UQJWBQ
 draft: False
 cover: https://img1.dotnet9.com/2022/04/cover_29.jpg
 categories: .NET
 tags: Winform,依赖注入,IOC
 ---
 
->站长：Winform的分享文章不多，这个技术相对来说已经十分稳定了，该有的都有了，今天分享其他号写的Winform依赖注入一文，希望做相关开发的朋友能有新的体会。
+> 站长：Winform 的分享文章不多，这个技术相对来说已经十分稳定了，该有的都有了，今天分享其他号写的 Winform 依赖注入一文，希望做相关开发的朋友能有新的体会。
 
 ## 1. 介绍
 
@@ -21,13 +21,13 @@ tags: Winform,依赖注入,IOC
 
 ## 2. 目的
 
-ASP.NetCore中本身容器容器已经创建好了，只需要往容器添加服务即可，但是在Winform中默认还是通过new的方式来进行操作的(虽然我已经升级成了.Net6)，最近在把一个开源项目进行增加自用的功能，然后我顺带将原来的NetF升级为NetCore，然后就想用依赖注入方式去试试了。
+ASP.NetCore 中本身容器容器已经创建好了，只需要往容器添加服务即可，但是在 Winform 中默认还是通过 new 的方式来进行操作的(虽然我已经升级成了.Net6)，最近在把一个开源项目进行增加自用的功能，然后我顺带将原来的 NetF 升级为 NetCore，然后就想用依赖注入方式去试试了。
 
->C/S代码写的少，如有不对，麻烦指正。
+> C/S 代码写的少，如有不对，麻烦指正。
 
 ## 3. 操作
 
-本文示例环境：VS2022、.Net6、Windows窗体应用
+本文示例环境：VS2022、.Net6、Windows 窗体应用
 
 ## 4. 准备
 
@@ -67,7 +67,7 @@ public class OrderService : IOrderService
 
 ## 5. 场景
 
-在Form1通过构造函数注入IUserservice，并且在Load事件里面调用IUserservice的获取名称方法，点击页面按钮后让Form2显示，Form2中通过依赖注入了IOrderService在Load事件里面调用IOrderService的获取名称方法。如果可以多次操作不报错就是成功。
+在 Form1 通过构造函数注入 IUserservice，并且在 Load 事件里面调用 IUserservice 的获取名称方法，点击页面按钮后让 Form2 显示，Form2 中通过依赖注入了 IOrderService 在 Load 事件里面调用 IOrderService 的获取名称方法。如果可以多次操作不报错就是成功。
 
 ## 6. 开始
 
@@ -77,7 +77,7 @@ public class OrderService : IOrderService
 <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="6.0.0" />
 ```
 
-增加了一个ServiceProviderHelper的操作类
+增加了一个 ServiceProviderHelper 的操作类
 
 ```csharp
 public static class ServiceProviderHelper
@@ -131,7 +131,7 @@ public static class ServiceProviderHelper
 }
 ```
 
-修改Program方法
+修改 Program 方法
 
 ```csharp
 internal static class Program
@@ -175,7 +175,7 @@ internal static class Program
 }
 ```
 
-分别在Form1和Form2进行注入
+分别在 Form1 和 Form2 进行注入
 
 ```csharp
 private readonly IUserservice _userservice;
@@ -194,7 +194,7 @@ public Form2(IOrderService orderService) : this()
 }
 ```
 
-点击Form1窗体按钮让Form2窗体显示
+点击 Form1 窗体按钮让 Form2 窗体显示
 
 ```csharp
 private void button1_Click(object sender, EventArgs e)
@@ -208,4 +208,4 @@ private void button1_Click(object sender, EventArgs e)
 
 ## 7. 资料
 
-在.NetCore3.1上基于Winform实现依赖注入实例：http://www.ty2y.com/study/znetcore3.1sjywinformsxylzrsl.html
+在.NetCore3.1 上基于 Winform 实现依赖注入实例：http://www.ty2y.com/study/znetcore3.1sjywinformsxylzrsl.html

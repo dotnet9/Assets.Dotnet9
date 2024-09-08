@@ -5,19 +5,19 @@ description: 在MAUI Blazor中无法直接读取外部文件显示 ，但是可�
 date: 2023-01-10 21:59:39
 copyright: Reprinted
 author: dotnet-simple
-originaltitle: Maui 读取外部文件显示到Blazor中
-originallink: https://www.cnblogs.com/hejiale010426/p/17040997.html
+originalTitle: Maui 读取外部文件显示到Blazor中
+originalLink: https://www.cnblogs.com/hejiale010426/p/17040997.html
 draft: false
 cover: https://img1.dotnet9.com/2023/01/cover_01.png
 categories: .NET
 tags: .NET,MAUI,Blazor
 ---
 
->本文示例代码可用于动态加载本地图片，为了便于演示文中代码文件路径写死的。
+> 本文示例代码可用于动态加载本地图片，为了便于演示文中代码文件路径写死的。
 
-首先在MAUI Blazor中无法直接读取外部文件显示 ，但是可以通过base64去显示，但是由于base64太长可能影响界面卡顿...
+首先在 MAUI Blazor 中无法直接读取外部文件显示 ，但是可以通过 base64 去显示，但是由于 base64 太长可能影响界面卡顿...
 
-这个时候我们可以使用blob链接去加载外部图片，它不需要`copy`文件到`wwwroot`中，它会将`byte`转换一个`url`供`Blazor`去读取。
+这个时候我们可以使用 blob 链接去加载外部图片，它不需要`copy`文件到`wwwroot`中，它会将`byte`转换一个`url`供`Blazor`去读取。
 
 **来看实现 ：**
 
@@ -79,7 +79,7 @@ function imgToLink(blob) {
 - gitee：https://gitee.com/hejiale010426/img-to-blob
 - github：https://github.com/239573049/ImgToBlob
 
-来自token的分享
+来自 token 的分享
 
 技术交流群：737776595
 
@@ -87,6 +87,6 @@ function imgToLink(blob) {
 >
 > 作者：dotnet-simple
 >
-> 原文标题：Maui 读取外部文件显示到Blazor中
+> 原文标题：Maui 读取外部文件显示到 Blazor 中
 >
 > 原文链接：https://www.cnblogs.com/hejiale010426/p/17040997.html

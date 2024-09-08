@@ -5,15 +5,15 @@ description: 如果您一直紧跟 .NET 世界的最新发展趋势，那么现�
 date: 2021-12-09 21:25:22
 copyright: Reprinted
 author: 技术译民
-originaltitle: Blazor Server 和 WebAssembly 应用程序入门指南
-originallink: https://www.cnblogs.com/ittranslator/p/a-beginners-guide-to-blazor-server-and-webassembly-applications.html
+originalTitle: Blazor Server 和 WebAssembly 应用程序入门指南
+originalLink: https://www.cnblogs.com/ittranslator/p/a-beginners-guide-to-blazor-server-and-webassembly-applications.html
 draft: False
 cover: https://img1.dotnet9.com/2021/12/cover_04.png
 categories: .NET
 tags: Blazor
 ---
 
->翻译自 Waqas Anwar 2021年3月12日的文章 [《A Beginner’s Guide To Blazor Server and WebAssembly Applications》](https://www.ezzylearning.net/tutorial/a-beginners-guide-to-blazor-server-and-webassembly-applications)
+> 翻译自 Waqas Anwar 2021 年 3 月 12 日的文章 [《A Beginner’s Guide To Blazor Server and WebAssembly Applications》](https://www.ezzylearning.net/tutorial/a-beginners-guide-to-blazor-server-and-webassembly-applications)
 
 ![A-Beginner-Guide-To-Blazor-Server-and-WebAssembly-Applications](https://img1.dotnet9.com/2021/12/cover_04.png)
 
@@ -114,7 +114,7 @@ public class Program
     {
         CreateHostBuilder(args).Build().Run();
     }
- 
+
     public static IHostBuilder CreateHostBuilder(string[] args) =>
         Host.CreateDefaultBuilder(args)
             .ConfigureWebHostDefaults(webBuilder =>
@@ -137,7 +137,7 @@ public void ConfigureServices(IServiceCollection services)
 }
 ```
 
-在此文件的 `Configure` 方法中我们还有以下两行重要的代码。`MapBlazorHub` 方法配置 Blazor Server App 所需的 SignalR Hub Endpoints。`MapFallbackToPage` 方法会将所有未与任何控制器、razor 页面等匹配的请求映射到 **_Host** 页面，这将允许所有动态内容请求路由到 SPA 框架，而不是抛出 404 Not Found。
+在此文件的 `Configure` 方法中我们还有以下两行重要的代码。`MapBlazorHub` 方法配置 Blazor Server App 所需的 SignalR Hub Endpoints。`MapFallbackToPage` 方法会将所有未与任何控制器、razor 页面等匹配的请求映射到 **\_Host** 页面，这将允许所有动态内容请求路由到 SPA 框架，而不是抛出 404 Not Found。
 
 ```C#
 app.UseEndpoints(endpoints =>
@@ -147,12 +147,12 @@ app.UseEndpoints(endpoints =>
 });
 ```
 
-### §_Host.cshtml
+### §\_Host.cshtml
 
 这是应用程序的根页面，每个 Razor 组件/页面都将在此 host 页面中呈现。它具有基本的 HTML 元素，例如 html、head 和 body，以及一些特殊元素。请注意，Blazor 是一个基于组件的框架，Blazor 中的每一内容都是一个组件。`<component>` 指定了我们想让应用程序根组件呈现的位置。
 
 ```html
-<component type="typeof(App)" render-mode="ServerPrerendered">
+<component type="typeof(App)" render-mode="ServerPrerendered"></component>
 ```
 
 该文件还在末尾注入了 **blazor.server.js** 文件，此 JavaScript 文件包含设置 SignalR 连接到服务端的代码。此连接在浏览器加载应用程序后立即建立，然后被用于服务端和客户端浏览器之间的实时通信。如果您想了解有关 SignalR 的更多知识，请阅读我的文章 [Display Live Sports Updates using ASP.NET Core SignalR](https://www.ezzylearning.net/tutorial/display-live-sports-updates-using-asp-net-core-signalr)。
@@ -167,14 +167,14 @@ app.UseEndpoints(endpoints =>
 
 ```html
 <Router AppAssembly="@typeof(Program).Assembly" PreferExactMatches="@true">
-    <Found Context="routeData">
-        <RouteView RouteData="@routeData" DefaultLayout="@typeof(MainLayout)" />
-    </Found>
-    <NotFound>
-        <LayoutView Layout="@typeof(MainLayout)">
-            <p>Sorry, there's nothing at this address.</p>
-        </LayoutView>
-    </NotFound>
+  <Found Context="routeData">
+    <RouteView RouteData="@routeData" DefaultLayout="@typeof(MainLayout)" />
+  </Found>
+  <NotFound>
+    <LayoutView Layout="@typeof(MainLayout)">
+      <p>Sorry, there's nothing at this address.</p>
+    </LayoutView>
+  </NotFound>
 </Router>
 ```
 
@@ -184,21 +184,19 @@ MainLayout 文件包含应用程序的主布局，其标记可以被多个 Razor
 
 ```html
 @inherits LayoutComponentBase
- 
+
 <div class="page">
-    <div class="sidebar">
-        <NavMenu />
+  <div class="sidebar">
+    <NavMenu />
+  </div>
+
+  <div class="main">
+    <div class="top-row px-4">
+      <a href="https://docs.microsoft.com/aspnet/" target="_blank">About</a>
     </div>
- 
-    <div class="main">
-        <div class="top-row px-4">
-            <a href="https://docs.microsoft.com/aspnet/" target="_blank">About</a>
-        </div>
- 
-        <div class="content px-4">
-            @Body
-        </div>
-    </div>
+
+    <div class="content px-4">@Body</div>
+  </div>
 </div>
 ```
 
@@ -208,17 +206,17 @@ MainLayout 文件包含应用程序的主布局，其标记可以被多个 Razor
 
 ### §Pages 和 Shared 文件夹
 
-该文件夹包含我们之前讨论过的 _Host.cshtml 文件以及一些 Razor 组件。Blazor 应用程序是具有 .razor 扩展名的 Razor 组件的集合。其中一些组件称为可路由组件，因为可以使用其路由访问它们。例如，当我们导航到应用程序根 URL 时，将呈现下面的 **Index.razor** 组件。该 URL 是使用 **Index.razor** 组件顶部的 **@page** 指令指定的。
+该文件夹包含我们之前讨论过的 \_Host.cshtml 文件以及一些 Razor 组件。Blazor 应用程序是具有 .razor 扩展名的 Razor 组件的集合。其中一些组件称为可路由组件，因为可以使用其路由访问它们。例如，当我们导航到应用程序根 URL 时，将呈现下面的 **Index.razor** 组件。该 URL 是使用 **Index.razor** 组件顶部的 **@page** 指令指定的。
 
 ### §Index.razor
 
 ```html
 @page "/"
- 
+
 <h1>Hello, world!</h1>
- 
+
 Welcome to your new app.
- 
+
 <SurveyPrompt Title="How is Blazor working for you?" />
 ```
 
@@ -228,19 +226,17 @@ Pages 文件夹中还有一些其他的 razor 组件，这些组件都可以使�
 
 Razor Server 应用程序还有一个包含共享组件的 Shared 文件夹。这些组件可以被整个应用程序中的任何组件使用，就像我们上面看到的 SurveyPrompt 组件一样。Shared 文件夹中另一个有趣的共享组件是 NavMenu 组件，它呈现 Blazor Server 应用程序的顶部导航栏。
 
-### §_Imports.razor
+### §\_Imports.razor
 
-该文件类似于我们在 ASP.NET MVC Web 应用程序中的 _ViewImports.cshtml 文件，它包含我们可以在不同 razor 组件中使用的命名空间列表。在 _Imports.razor 文件中声明所有这些命名空间的好处是我们不需要在每个 razor 组件中重复引入它们。
+该文件类似于我们在 ASP.NET MVC Web 应用程序中的 \_ViewImports.cshtml 文件，它包含我们可以在不同 razor 组件中使用的命名空间列表。在 \_Imports.razor 文件中声明所有这些命名空间的好处是我们不需要在每个 razor 组件中重复引入它们。
 
 ```html
-@using System.Net.Http
-@using Microsoft.AspNetCore.Authorization
-@using Microsoft.AspNetCore.Components.Authorization
-@using Microsoft.AspNetCore.Components.Forms
-@using Microsoft.AspNetCore.Components.Routing
-@using Microsoft.AspNetCore.Components.Web
-@using Microsoft.AspNetCore.Components.Web.Virtualization
-@using Microsoft.JSInterop 
+@using System.Net.Http @using Microsoft.AspNetCore.Authorization @using
+Microsoft.AspNetCore.Components.Authorization @using
+Microsoft.AspNetCore.Components.Forms @using
+Microsoft.AspNetCore.Components.Routing @using
+Microsoft.AspNetCore.Components.Web @using
+Microsoft.AspNetCore.Components.Web.Virtualization @using Microsoft.JSInterop
 ```
 
 现在是时候运行我们的 Blazor Server 应用程序并在浏览器中查看它的运行情况了。在 Visual Studio 中按 `F5`，您将看到一个漂亮的默认 Blazor Server 应用程序。试试从侧边栏导航到不同的页面，并尝试在 Counter 页面上使用计数器，您会注意到没有页面刷新或回传到服务器。一切都像经典的 SPA 那样流畅和快速，浏览器和服务端的所有通信都是使用 SignalR 连接进行的。
@@ -263,7 +259,7 @@ Visual Studio 将为我们创建一个 Blazor WebAssembly 应用程序，其中�
 
 您可以轻松发现这两种类型的应用程序之间的一些差异。例如，在 Blazor WebAssembly 应用程序中没有以下文件：
 
-1. _Host.cshtml
+1. \_Host.cshtml
 2. Error.cshtml
 3. Startup.cs
 4. appsettings.json
@@ -283,9 +279,9 @@ public class Program
     {
         var builder = WebAssemblyHostBuilder.CreateDefault(args);
         builder.RootComponents.Add<app>("#app");
- 
+
         builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
- 
+
         await builder.Build().RunAsync();
     }
 }
@@ -307,8 +303,8 @@ public class Program
 
 在本文中，我试图为您介绍 Blazor SPA 框架的基本概念，我们看到了两个 Blazor 应用程序使用两种不同的托管模型进行托管。因为 Blazor 框架严重依赖于 razor 组件，所以两个项目中的大部分代码和文件都是相同的。这些组件是 Blazor 应用程序的构建块，无论使用哪种托管模型，我们都可以以相似的方式构建这些组件。如果您喜欢本文，请分享它并传播知识。
 
->作者： Waqas Anwar
+> 作者： Waqas Anwar
 >
->翻译： [技术译站](https://ittranslator.cn/)
+> 翻译： [技术译站](https://ittranslator.cn/)
 >
->链接： [英文原文](https://www.ezzylearning.net/tutorial/a-beginners-guide-to-blazor-server-and-webassembly-applications)
+> 链接： [英文原文](https://www.ezzylearning.net/tutorial/a-beginners-guide-to-blazor-server-and-webassembly-applications)

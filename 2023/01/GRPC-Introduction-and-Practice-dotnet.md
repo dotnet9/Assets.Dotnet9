@@ -1,12 +1,12 @@
 ---
-title: gRPC入门与实操(.NET篇) 
+title: gRPC入门与实操(.NET篇)
 slug: GRPC-Introduction-and-Practice-dotnet
 description: 长久以来，我们在前后端交互时使用WebApi + JSON方式，后端服务之间调用同样如此
 date: 2023-01-11 20:47:14
 copyright: Reprinted
 author: 莱布尼茨
-originaltitle: gRPC入门与实操(.NET篇) 
-originallink: https://www.cnblogs.com/newton/archive/2023/01/10/17033789.html
+originalTitle: gRPC入门与实操(.NET篇)
+originalLink: https://www.cnblogs.com/newton/archive/2023/01/10/17033789.html
 draft: false
 cover: https://img1.dotnet9.com/2023/01/cover_02.png
 categories: .NET
@@ -29,11 +29,11 @@ tags: .NET
 
 另一个大厂 Google，内部也在长期使用自研的`Stubby`框架，与 Dubbo 不同的是，Studdy 是跨平台的，但是 Google 认为 Studdy 不基于任何标准，而且与其内部基础设施紧密耦合，并不适合公开发布。
 
-同时 Google 也在对 Http1.1 协议进行增强，该项目是 2012 年提出的 SPDY 方案，其优化了 Http 协议层，新增的功能包括数据流的多路复用、请求优先级以及HTTP报头压缩。Google 表示，引入 SPDY 协议后，在实验室测试中页面加载速度比原先快 64%。巨大的提升让大家开始从正面看待和解决老版本 Http 协议的问题，这也直接加速了 Http2.0 的诞生。实际上，Http2.0 是以 SPDY 为原型进行讨论和标准化的，当然也做了更多的改进和调整。
+同时 Google 也在对 Http1.1 协议进行增强，该项目是 2012 年提出的 SPDY 方案，其优化了 Http 协议层，新增的功能包括数据流的多路复用、请求优先级以及 HTTP 报头压缩。Google 表示，引入 SPDY 协议后，在实验室测试中页面加载速度比原先快 64%。巨大的提升让大家开始从正面看待和解决老版本 Http 协议的问题，这也直接加速了 Http2.0 的诞生。实际上，Http2.0 是以 SPDY 为原型进行讨论和标准化的，当然也做了更多的改进和调整。
 
 随着 Http2.0 的出现和普及，许多与 Stubby 相同的功能已经出现在公共标准中，包括 Stubby 未提供的其他功能。很明显，是时候重做 Stubby 以利用这种标准化，并将其适用范围扩展到分布式计算的最后一英里，支持移动设备(如安卓)、物联网(IOT)、和浏览器连接到后端服务。
 
-2015 年 3 月，Google决定在公开场合构建下一版 Stubby，以便与业界分享经验，并进行相关合作，也就是本文的主角`gRPC`。
+2015 年 3 月，Google 决定在公开场合构建下一版 Stubby，以便与业界分享经验，并进行相关合作，也就是本文的主角`gRPC`。
 
 ### 1.3. 高效编码-protobuf
 
@@ -46,6 +46,7 @@ protobuf 采用 `varint` 和 处理负数的 `ZigZag` 两种编码方式使得�
 第 2 个问题呢，其实需要的就是[每个平台]一套代码生成工具。生成的代码需要覆盖类的定义、对象的序列化/反序列化、服务接口的暴露和远程调用等等必要的模板代码，如此，开发人员只需要负责接口文档的维护和业务代码的实现（很自然的面向接口编程：））。此时，采用 protobuf 的`gRPC`自然而然的映入眼帘，因为对于目前所有主要的编程语言和平台，都有 gRPC 工具和库，包括 .NET、Java、Python、Go、C++、Node.js、Swift、Dart、Ruby 以及 PHP。可以说，这些工具和库的提供，使得 gRPC 可以跨多种语言和平台一致地工作，成为一个全面的 RPC 解决方案。
 
 ## 2. gRPC 在 .NET 中的使用
+
 ASP.NET Core 3.0 开始，支持`gRPC`作为 .NET 平台中的“一等公民”。
 
 ### 2.1. 服务端
@@ -53,7 +54,7 @@ ASP.NET Core 3.0 开始，支持`gRPC`作为 .NET 平台中的“一等公民”
 在 VS 中新建`ASP.NET Core gRPC 服务`，会发现在项目文件中自动引入了`Microsoft.NET.Sdk.Web`类库，很明显，gRPC 服务仍然是 Web 服务，毕竟它走的是 Http 协议。同时还引入了`Grpc.AspNetCore`类库，该类库引用了几个子类库需要了解下：
 
 - `Google.Protobuf`：包含 protobuf 预定义 message 类型在 C# 中的实现；
-- `Grpc.Tools`：上面讲到的代码生成工具，编译时使用，运行时不需要，因此依赖项标记为PrivateAssets="All"；
+- `Grpc.Tools`：上面讲到的代码生成工具，编译时使用，运行时不需要，因此依赖项标记为 PrivateAssets="All"；
 - `Grpc.AspNetCore.Server`：服务端专用；
 - `Grpc.Net.ClientFactory`：客户端专用，如果只是提供服务的话，那么该类库可以移除。
 
@@ -212,7 +213,7 @@ public class GrpcGlobalExceptionInterceptor : Interceptor
         catch (Exception ex)
         {
             _logger.LogError(new EventId(ex.HResult), ex, ex.Message);
-            
+
             // do something
 
             // then you can choose throw the exception again
@@ -231,7 +232,7 @@ catch(Exception ex)
 {
     var httpContext = context.GetHttpContext();
     httpContext.Response.StatusCode = StatusCodes.Status400BadRequest;
-             
+
     // 注意，RpcException 的 StatusCode 和 Http 的 StatusCode 不是一一对应的
     throw new RpcException(new Status(StatusCode.XXX, "some messages"));
 }
@@ -282,7 +283,7 @@ if (env.IsDevelopment())
 将服务端提供的 .proto 文件添加到项目中，并在项目文件中包含：
 
 ```xml
-<ItemGroup>  
+<ItemGroup>
   <Protobuf Include="Protos\greeter.proto" GrpcServices="Client" />
 </ItemGroup>
 ```
@@ -330,16 +331,16 @@ builder.Services
 
 ## 3. 参考资料
 
-- [HTTP 2.0的前世今生](https://www.sohu.com/a/117358761_472885)
-- [.NET性能优化-是时候换个序列化协议了](https://www.cnblogs.com/InCerry/p/Dotnet-Perf-Opt-Serialization-Protocol.html)
-- [MessagePack简析](https://www.cnblogs.com/sunzhenchao/p/8448929.html)
-- [Varint编码](http://wjhsh.net/jacksu-tencent-p-3389843.html)
+- [HTTP 2.0 的前世今生](https://www.sohu.com/a/117358761_472885)
+- [.NET 性能优化-是时候换个序列化协议了](https://www.cnblogs.com/InCerry/p/Dotnet-Perf-Opt-Serialization-Protocol.html)
+- [MessagePack 简析](https://www.cnblogs.com/sunzhenchao/p/8448929.html)
+- [Varint 编码](http://wjhsh.net/jacksu-tencent-p-3389843.html)
 - [Protobuf 标量数据类型](https://learn.microsoft.com/zh-cn/dotnet/architecture/grpc-for-wcf-developers/protobuf-data-types)
 
 > 本文来自转载。
 >
 > 作者：莱布尼茨
 >
-> 原文标题：gRPC入门与实操(.NET篇) 
+> 原文标题：gRPC 入门与实操(.NET 篇)
 >
 > 原文链接：https://www.cnblogs.com/newton/archive/2023/01/10/17033789.html

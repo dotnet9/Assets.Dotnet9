@@ -4,9 +4,9 @@ slug: 6-dotNET-Myths-Dispelled-Celebrating-21-Years-of-dotNET
 description: 本文章介绍的是NV显卡训练。CPU训练 仅供参考，部分不同的地方请前往官方网站获取信息。
 date: 2022-03-30 11:11:24
 copyright: Reprinted
-author:  全球技术精选
-originaltitle: .NET 很好，你可能对它有一些误解
-originallink: https://mp.weixin.qq.com/s/Ri4RbyNKhb5z7IdUGetvPw
+author: 全球技术精选
+originalTitle: .NET 很好，你可能对它有一些误解
+originalLink: https://mp.weixin.qq.com/s/Ri4RbyNKhb5z7IdUGetvPw
 draft: False
 cover: https://img1.dotnet9.com/2022/03/cover_29.png
 categories: .NET
@@ -27,7 +27,7 @@ tags: .NET
 
 直到微软在 2016 年认真对待 .NET Core，他们才开始解决 Mono 中的一些问题， 以及对 Win32 API 的挥之不去的依赖。但是在早期，.NET Core 、.NET Framework 、 .NET Standard 这些也让开发人员感到混乱，不过值得庆幸的是，在 .NET 5 和现在的 .NET 6 中，这一切都已成为过去。
 
-如今，.NET 6（最新的 .NET）可以在Windows、Linux和macOS上运行，并支持 x86、x64、Arm32和 Arm64。
+如今，.NET 6（最新的 .NET）可以在 Windows、Linux 和 macOS 上运行，并支持 x86、x64、Arm32 和 Arm64。
 
 ![](https://img1.dotnet9.com/2022/03/2901.png)
 
@@ -45,17 +45,17 @@ Microsoft 为多个平台提供 SDK 和运行时。
 
 而 Task Parallel Library 和 Span 为构建吞吐量和性能提供了更高的上限。
 
-根据 TechEmpower Benchmarks 提供的Web 框架测试报告, 在 Round 15 from February 14, 2018 中，您可以看到 ASP.NET 实际上落后于 Node.js：
+根据 TechEmpower Benchmarks 提供的 Web 框架测试报告, 在 Round 15 from February 14, 2018 中，您可以看到 ASP.NET 实际上落后于 Node.js：
 
 ![](https://img1.dotnet9.com/2022/03/2903.png)
 
-2018 年：Node.js 第 8位， ASP.NET Core 13 位 ，Express 在 28 位，Flask 57位， Django 61 位。
+2018 年：Node.js 第 8 位， ASP.NET Core 13 位 ，Express 在 28 位，Flask 57 位， Django 61 位。
 
 在 Round 20 in February 8, 2021 中，仅仅三年后，.NET 绝对压倒了 Node 和 Python，并且仅次于基于 Rust 的服务。
 
 ![](https://img1.dotnet9.com/2022/03/2904.png)
 
-2021 年: .NET Core 在第8位, Node.js 56 位, Express 94 位, Flask 111 位, Django 118位.
+2021 年: .NET Core 在第 8 位, Node.js 56 位, Express 94 位, Flask 111 位, Django 118 位.
 
 在 gRPC 基准测试中，.NET 的表现也非常出色。
 
@@ -83,19 +83,19 @@ Microsoft 为多个平台提供 SDK 和运行时。
 
 - JetBrains Rider
 - 适用于 macOS 的 Visual Studio
-- 当然还有VS Code
+- 当然还有 VS Code
 
 最近，我在 MacBook Pro M1 上使用 VS Code 完成了我的大部分 C#/.NET 开发：
 
 ![](https://img1.dotnet9.com/2022/03/2908.gif)
 
-## 误解5：.NET 对开源不友好 ？
+## 误解 5：.NET 对开源不友好 ？
 
 早期的 .NET 确实是这样的，但是自从 Satya Nadella 掌权以来，微软在开源方面的整个轨迹已经发生了巨大的转变。不过微软在这方面的转型和成长仍然还有很长的路要走。
 
-.NET 本身由.NET Foundation管理，.NET 编译器 (Roslyn) 和很多其他内部组件都在 GitHub ，并且自 2015 年以来，它已通过 Red Hat Enterprise Linux 认证。
+.NET 本身由.NET Foundation 管理，.NET 编译器 (Roslyn) 和很多其他内部组件都在 GitHub ，并且自 2015 年以来，它已通过 Red Hat Enterprise Linux 认证。
 
-## 误解6：.NET 只能开发企业管理系统 ？
+## 误解 6：.NET 只能开发企业管理系统 ？
 
 实际上，.NET 现在已经发展成一个统一平台，你可以用它开发各种各样的应用，包括桌面软件，Web 服务，3D 游戏等等。
 
@@ -105,9 +105,9 @@ Microsoft 为多个平台提供 SDK 和运行时。
 - Uno Platform
 - Avalonia
 
-全文完... 
+全文完...
 
-> 原文作者：Charles Chen 
+> 原文作者：Charles Chen
 >
 > 原文标题：6 .NET Myths Dispelled — Celebrating 21 Years of .NET
 >

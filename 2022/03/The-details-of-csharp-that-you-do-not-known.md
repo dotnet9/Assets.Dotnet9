@@ -5,8 +5,8 @@ description: 有一个东西叫做鸭子类型，所谓鸭子类型就是，只�
 date: 2022-03-29 08:23:33
 copyright: Reprinted
 author: hez2010
-originaltitle: 你所不知道的 C# 中的细节
-originallink: https://www.cnblogs.com/hez2010/p/12606419.html
+originalTitle: 你所不知道的 C# 中的细节
+originalLink: https://www.cnblogs.com/hez2010/p/12606419.html
 draft: False
 cover: https://img1.dotnet9.com/2022/03/cover_26.png
 categories: .NET
@@ -89,7 +89,7 @@ class MyEnumerator<T>
         throw new NotImplementedException();
     }
 }
-    
+
 class MyEnumerable<T>
 {
     public MyEnumerator<T> GetEnumerator()
@@ -126,7 +126,7 @@ class MyAsyncEnumerator<T>
         throw new NotImplementedException();
     }
 }
-    
+
 class MyAsyncEnumerable<T>
 {
     public MyAsyncEnumerator<T> GetAsyncEnumerator()

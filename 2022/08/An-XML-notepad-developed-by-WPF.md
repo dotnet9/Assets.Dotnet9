@@ -4,14 +4,14 @@ slug: An-XML-notepad-developed-by-WPF
 description: WPF开发的XML记事本
 date: 2022-08-18 20:36:17
 copyright: Original
-originaltitle: 【开源】一个WPF开发的XML记事本
+originalTitle: 【开源】一个WPF开发的XML记事本
 draft: False
 cover: https://img1.dotnet9.com/2022/08/cover_01.png
 categories: .NET
 tags: .NET,开源WPF
 ---
 
-今天推荐一个WPF开源项目：[XmlNotepad](https://github.com/microsoft/XmlNotepad)。此仓库由 [WPF开发者](https://github.com/WPFDevelopersOrg/WPFDevelopers) 推荐，站长简单翻译分享。
+今天推荐一个 WPF 开源项目：[XmlNotepad](https://github.com/microsoft/XmlNotepad)。此仓库由 [WPF 开发者](https://github.com/WPFDevelopersOrg/WPFDevelopers) 推荐，站长简单翻译分享。
 
 ## 介绍
 
@@ -19,7 +19,7 @@ tags: .NET,开源WPF
 
 1. [ClickOnce® 安装程序](https://lovettsoftwarestorage.blob.core.windows.net/downloads/XmlNotepad/XmlNotepad.application): 这是最方便的，直接从 Web 浏览器安装。
 
-这里站长推荐大家尝试ClickOnce安装：
+这里站长推荐大家尝试 ClickOnce 安装：
 
 ![](https://img1.dotnet9.com/2022/08/0102.png)
 

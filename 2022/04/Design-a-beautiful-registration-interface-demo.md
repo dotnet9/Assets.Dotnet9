@@ -5,8 +5,8 @@ description: 设计一个优美的注册界面 Demo
 date: 2022-04-15 19:58:12
 copyright: Reprinted
 author: 小何小何冲啊
-originaltitle: C# Wpf 个人初学小案例---09设计一个优美的注册界面 Demo
-originallink: https://blog.csdn.net/weixin_48239221/article/details/123968073
+originalTitle: C# Wpf 个人初学小案例---09设计一个优美的注册界面 Demo
+originalLink: https://blog.csdn.net/weixin_48239221/article/details/123968073
 draft: False
 cover: https://img1.dotnet9.com/2022/04/1501.png
 categories: .NET
@@ -31,7 +31,7 @@ tags: WPF Design
 
 ![](https://img1.dotnet9.com/2022/04/1503.png)
 
-### 2.2 MainWindow.xaml代码
+### 2.2 MainWindow.xaml 代码
 
 ```xml
 <Window x:Class="RegisterPage.MainWindow"
@@ -50,7 +50,7 @@ tags: WPF Design
             <ColumnDefinition Width="350"/>
             <ColumnDefinition Width="1*"/><!--使用*号就表示启用百分比方式来设置高宽-->
         </Grid.ColumnDefinitions>
-        
+
         <!--左边部分-->
         <Border Grid.Column="0" Background="#ffd500" Padding="30" CornerRadius="25 0 0 25"> <!--CornerRadius设置的是圆角属性，四个参数的顺序是：左上、右上、右下、左下-->
             <StackPanel VerticalAlignment="Center">
@@ -62,7 +62,7 @@ tags: WPF Design
                 </Button>
             </StackPanel>
         </Border>
-        
+
         <!--输入部分-->
         <Border Grid.Column="1" Padding="20" Background="#ffffff" CornerRadius="0 25 25 0" MouseDown="Border_MouseDown">
             <Grid>
@@ -124,7 +124,7 @@ tags: WPF Design
 </Window>
 ```
 
-### 2.3 MainWindow.xaml.cs代码
+### 2.3 MainWindow.xaml.cs 代码
 
 ```csharp
 using System.Windows;
@@ -153,7 +153,7 @@ namespace RegisterPage
 }
 ```
 
-### 2.4 App.xaml代码
+### 2.4 App.xaml 代码
 
 ```xml
 <Application x:Class="RegisterPage.App"
@@ -220,7 +220,7 @@ namespace RegisterPage
             <Setter Property="VerticalAlignment" Value="Center"/>
             <Setter Property="Template">
                 <Setter.Value>
-                    <ControlTemplate TargetType="{x:Type TextBoxBase}"> 
+                    <ControlTemplate TargetType="{x:Type TextBoxBase}">
                         <Border x:Name="border" CornerRadius="3" Background="{TemplateBinding Background}" BorderThickness="{TemplateBinding BorderThickness}" BorderBrush="{TemplateBinding BorderBrush}" SnapsToDevicePixels="True">
                             <ScrollViewer x:Name="PART_ContentHost" Focusable="False" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden"/>
                         </Border>
@@ -296,12 +296,12 @@ namespace RegisterPage
                 </Trigger>
             </Style.Triggers>
         </Style>
-        
+
     </Application.Resources>
 </Application>
 ```
 
-### 2.5 App.xaml.cs代码
+### 2.5 App.xaml.cs 代码
 
 ```csharp
 using System;
@@ -323,14 +323,14 @@ namespace RegisterPage
 }
 ```
 
-### 2.6 MyOption.xaml代码
+### 2.6 MyOption.xaml 代码
 
 ```xml
 <UserControl x:Class="RegisterPage.UserControls.MyOption"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:fa="http://schemas.fontawesome.io/icons/"
              mc:Ignorable="d" Name="myOption">
     <StackPanel Orientation="Horizontal">
@@ -342,7 +342,7 @@ namespace RegisterPage
 </UserControl>
 ```
 
-### 2.7 MyOption.xaml.cs代码
+### 2.7 MyOption.xaml.cs 代码
 
 ```csharp
 using System.Windows;
@@ -363,7 +363,7 @@ namespace RegisterPage.UserControls
 
         public string Text
         {
-            get { return (string)GetValue(TextProperty); }  
+            get { return (string)GetValue(TextProperty); }
             set { SetValue(TextProperty, value); }
         }
         //DependencyProperty.Register方法：第一个参数是依赖属性的名字；第二个参数是依赖属性的类型；第三个参数是依赖属性所属的类名，也就是所有者类名；第四个参数是该属性的默认值
@@ -381,21 +381,21 @@ namespace RegisterPage.UserControls
 }
 ```
 
-### 2.8 MyTextBox.xaml代码
+### 2.8 MyTextBox.xaml 代码
 
 ```xml
 <UserControl x:Class="RegisterPage.UserControls.MyTextBox"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             mc:Ignorable="d" 
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             mc:Ignorable="d"
              Name="myTextBox">
     <UserControl.Resources>
         <BooleanToVisibilityConverter x:Key="boolToVis"/>
     </UserControl.Resources>
     <Grid>
-        <TextBlock  Foreground="#868686" Margin="10 0" VerticalAlignment="Center" Panel.ZIndex="1" IsHitTestVisible="False" 
+        <TextBlock  Foreground="#868686" Margin="10 0" VerticalAlignment="Center" Panel.ZIndex="1" IsHitTestVisible="False"
                     Text="{Binding Path=Hint,ElementName=myTextBox}"
                     Visibility="{Binding ElementName=textBox,Path=Text.IsEmpty,Converter={StaticResource boolToVis}}"/>
         <TextBox x:Name="textBox"/><!--IsHitTestVisible表示设置/获取控件是否接受输入事件，Visibility表示设置/获取控件是否可见-->
@@ -403,7 +403,7 @@ namespace RegisterPage.UserControls
 </UserControl>
 ```
 
-### 2.9 MyTextBox.xaml.cs代码
+### 2.9 MyTextBox.xaml.cs 代码
 
 ```csharp
 using System.Windows;

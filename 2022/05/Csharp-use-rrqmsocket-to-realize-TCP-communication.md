@@ -5,8 +5,8 @@ description: 经过RRQM封装后，将高连接、高并发，数据处理等一
 date: 2022-05-26 21:11:14
 copyright: Reprinted
 author: 黑哥聊dotNet
-originaltitle: C# 使用 RRQMSocket 实现 TCP 通信
-originallink: https://mp.weixin.qq.com/s/2Nha9GVAnOox-K5_Vf-SZg
+originalTitle: C# 使用 RRQMSocket 实现 TCP 通信
+originalLink: https://mp.weixin.qq.com/s/2Nha9GVAnOox-K5_Vf-SZg
 draft: False
 cover: https://img1.dotnet9.com/2022/05/cover_56.jpeg
 categories: .NET
@@ -15,33 +15,33 @@ tags: C#,RRQMSocket,TCP
 
 ## 介绍
 
-- TCP 组件是基于TCP协议的最基础组件，其基础功能和Socket一致，只是经过RRQM封装后，将高连接、高并发，数据处理等一系列基础功能打包，让使用者不再关心基础架构建设，专心于业务。
-- 理论上TCP组件可用于任何基于TCP协议的产品，例如：HTTP、FTP、WebSocket、Telnet、PLC通信、上位机通信等。
+- TCP 组件是基于 TCP 协议的最基础组件，其基础功能和 Socket 一致，只是经过 RRQM 封装后，将高连接、高并发，数据处理等一系列基础功能打包，让使用者不再关心基础架构建设，专心于业务。
+- 理论上 TCP 组件可用于任何基于 TCP 协议的产品，例如：HTTP、FTP、WebSocket、Telnet、PLC 通信、上位机通信等。
 
 ## 产品特点
 
 - 简单易用。
 - 多线程。
 - 内存池
-- 高性能（服务器每秒可接收200w条信息，接收数据流量可达2.5GB/s）
+- 高性能（服务器每秒可接收 200w 条信息，接收数据流量可达 2.5GB/s）
 - 多种数据接收模式（IOCP，BIO，Select）。
-- 多地址监听（可以一次性监听多个IP及端口）
-- 适配器预处理，一键式解决分包、粘包、对象解析(如HTTP，Json)等。
+- 多地址监听（可以一次性监听多个 IP 及端口）
+- 适配器预处理，一键式解决分包、粘包、对象解析(如 HTTP，Json)等。
 - 超简单的同步发送、异步发送、接收等操作。
 - 基于事件驱动，让每一步操作尽在掌握。
 
 ## 产品应用场景
 
-- TCP基础使用场景：可跨平台、跨语言使用。
-- 自定义协议解析场景：可解析任意数据格式的TCP数据报文。
+- TCP 基础使用场景：可跨平台、跨语言使用。
+- 自定义协议解析场景：可解析任意数据格式的 TCP 数据报文。
 
 ## 下面演示我们的系统 :
 
-### 创建TcpService
+### 创建 TcpService
 
-TcpService是TCP系服务器基类，但是不参与实际的数据交互，实际的数据交互由SocketClient完成，所以TcpService的功能只是配置、激活、管理、注销、
+TcpService 是 TCP 系服务器基类，但是不参与实际的数据交互，实际的数据交互由 SocketClient 完成，所以 TcpService 的功能只是配置、激活、管理、注销、
 
-重建SocketClient类实例，所以在TcpService中，须指定其SocketClient派生的泛型类型，然后必须实现HandleReceivedData方法，该方法指示如何处理已接收数据或经过适配器转换的对象。
+重建 SocketClient 类实例，所以在 TcpService 中，须指定其 SocketClient 派生的泛型类型，然后必须实现 HandleReceivedData 方法，该方法指示如何处理已接收数据或经过适配器转换的对象。
 
 所以具体创建过程如下。
 
@@ -59,14 +59,14 @@ service.Received += (client, byteBlock ,requestInfo) =>
 //声明配置
 var config = new TcpServiceConfig();
 config.ListenIPHosts = new IPHost[] { new IPHost("127.0.0.1:7789"), new IPHost(7790) };//同时监听两个地址
-//载入配置                                                       
+//载入配置
 service.Setup(config);
 service.Start();
 ```
 
-### 创建TcpClient
+### 创建 TcpClient
 
-TcpClient是TCP客户端的基类，为抽象类，不可创建实例，须通过继承实现HandleReceivedData方法，该方法指示如何处理接收到的数据。
+TcpClient 是 TCP 客户端的基类，为抽象类，不可创建实例，须通过继承实现 HandleReceivedData 方法，该方法指示如何处理接收到的数据。
 
 ```csharp
 SimpleTcpClient tcpClient = new SimpleTcpClient();
@@ -84,7 +84,7 @@ tcpClient.Connect();
 tcpClient.Send(Encoding.UTF8.GetBytes("RRQM"));
 ```
 
-客户端 服务端发送都是封装了send方法，TcpClient和TcpService已经内置了多种发送方法，直接调用就可以发送。如果发送失败，则会立即抛出异常。
+客户端 服务端发送都是封装了 send 方法，TcpClient 和 TcpService 已经内置了多种发送方法，直接调用就可以发送。如果发送失败，则会立即抛出异常。
 
 ```csharp
 service.Send(“”);
@@ -92,4 +92,4 @@ service.Send(“”);
 
 ![](https://img1.dotnet9.com/2022/05/5601.png)
 
-最后大家如果喜欢我的文章，还麻烦给个关注, 希望net生态圈越来越好！
+最后大家如果喜欢我的文章，还麻烦给个关注, 希望 net 生态圈越来越好！

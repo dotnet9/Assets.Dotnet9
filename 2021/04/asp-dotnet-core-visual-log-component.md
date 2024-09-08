@@ -4,7 +4,7 @@ slug: asp-dotnet-core-visual-log-component
 description: 今天站长推荐一款日志可视化组件`LogDashboard`，可以不用安装第三方进程，只需要在项目中安装相应的**Nuget**包，添加数行代码，就可以实现拥有带Web页面的日志管理面板，十分nice哦。
 date: 2021-04-17 20:41:31
 copyright: Original
-originaltitle: ASP.NET Core可视化日志组件使用
+originalTitle: ASP.NET Core可视化日志组件使用
 draft: False
 cover: https://img1.dotnet9.com/2021/04/cover_02.jpg
 categories: .NET
@@ -17,25 +17,25 @@ tags: 日志面板,LogDashboard
 
 ## 前言
 
-今天站长推荐一款日志可视化组件`LogDashboard`，可以不用安装第三方进程，只需要在项目中安装相应的**Nuget**包，添加数行代码，就可以实现拥有带Web页面的日志管理面板，十分nice哦。
+今天站长推荐一款日志可视化组件`LogDashboard`，可以不用安装第三方进程，只需要在项目中安装相应的**Nuget**包，添加数行代码，就可以实现拥有带 Web 页面的日志管理面板，十分 nice 哦。
 
 下面是官方介绍：
 
 官方文档地址：https://doc.logdashboard.net/
 
->`LogDashboard`是在github上开源的aspnetcore项目, 它旨在帮助开发人员排查项目运行中出现错误时快速查看日志排查问题
+> `LogDashboard`是在 github 上开源的 aspnetcore 项目, 它旨在帮助开发人员排查项目运行中出现错误时快速查看日志排查问题
 >
->通常我们会在项目中使用nlog、log4net等日志组件,它们用于记录日志的功能非常强大和完整,常见情况会将日志写到txt或数据库中, 但通过记事本和sql查看日志并不简单方便. `LogDashboard`提供了一个可以简单快速查看日志的面板.
+> 通常我们会在项目中使用 nlog、log4net 等日志组件,它们用于记录日志的功能非常强大和完整,常见情况会将日志写到 txt 或数据库中, 但通过记事本和 sql 查看日志并不简单方便. `LogDashboard`提供了一个可以简单快速查看日志的面板.
 >
->`LogDashboard`适用于aspnetcore 2.x - aspnetcore3.x 项目, 采用aspnetcore中间件技术开发. 轻量快速
+> `LogDashboard`适用于 aspnetcore 2.x - aspnetcore3.x 项目, 采用 aspnetcore 中间件技术开发. 轻量快速
 
-OK，本文带大家从0创建一个`ASP.NET Core Web API`新项目，然后添加日志组件`Serilog`，最后搭配使用`LogDashboard`完成此项目。
+OK，本文带大家从 0 创建一个`ASP.NET Core Web API`新项目，然后添加日志组件`Serilog`，最后搭配使用`LogDashboard`完成此项目。
 
 相信使用`LogDashboard`能极大提高你平时工作中的问题排查速度。
 
 步骤：
 
-1. 创建一个ASP.NET Core Web API项目
+1. 创建一个 ASP.NET Core Web API 项目
 2. 添加`Serilog`日志组件
 3. 添加`LogDashboard`
 4. 可视化日志演示
@@ -44,9 +44,9 @@ OK，本文带大家从0创建一个`ASP.NET Core Web API`新项目，然后添�
 
 **本文实战开始**
 
-## 1. 创建一个ASP.NET Core Web API项目
+## 1. 创建一个 ASP.NET Core Web API 项目
 
-这一步很简单，使用VS 2019，创建一个`ASP.NET Core Web API`项目，命名为**LogDashboardDemo**。
+这一步很简单，使用 VS 2019，创建一个`ASP.NET Core Web API`项目，命名为**LogDashboardDemo**。
 
 ## 2. 添加 Serilog 日志组件
 
@@ -108,27 +108,25 @@ public void ConfigureServices(IServiceCollection services)
 输出目录下产生日志文件：\LogDashboardDemo\bin\Debug\net6.0\Logs\Dotnet920210417.log
 
 ```shell
-08:37:27.884 +08:00 || Information ||  || ConfigureServices ||  ||end 
-08:37:27.964 +08:00 || Error ||  || 测试Serilog添加异常日志 ||  ||end 
-08:37:27.965 +08:00 || Fatal ||  || 测试Serilog添加严重日志 ||  ||end 
-08:37:28.154 +08:00 || Information ||  || Configure ||  ||end 
-08:37:28.423 +08:00 || Information || Microsoft.Hosting.Lifetime || Now listening on: "http://localhost:5000" ||  ||end 
-08:37:28.427 +08:00 || Information || Microsoft.Hosting.Lifetime || Application started. Press Ctrl+C to shut down. ||  ||end 
-08:37:28.427 +08:00 || Information || Microsoft.Hosting.Lifetime || Hosting environment: "Development" ||  ||end 
-08:37:28.428 +08:00 || Information || Microsoft.Hosting.Lifetime || Content root path: "C:\Users\Administrator\Desktop\LogDashboardDemo" ||  ||end 
+08:37:27.884 +08:00 || Information ||  || ConfigureServices ||  ||end
+08:37:27.964 +08:00 || Error ||  || 测试Serilog添加异常日志 ||  ||end
+08:37:27.965 +08:00 || Fatal ||  || 测试Serilog添加严重日志 ||  ||end
+08:37:28.154 +08:00 || Information ||  || Configure ||  ||end
+08:37:28.423 +08:00 || Information || Microsoft.Hosting.Lifetime || Now listening on: "http://localhost:5000" ||  ||end
+08:37:28.427 +08:00 || Information || Microsoft.Hosting.Lifetime || Application started. Press Ctrl+C to shut down. ||  ||end
+08:37:28.427 +08:00 || Information || Microsoft.Hosting.Lifetime || Hosting environment: "Development" ||  ||end
+08:37:28.428 +08:00 || Information || Microsoft.Hosting.Lifetime || Content root path: "C:\Users\Administrator\Desktop\LogDashboardDemo" ||  ||end
 ```
 
 控制台输出：
 
-
 ![控制台日志输出](https://img1.dotnet9.com/2021/04/0302.png)
-
 
 好了，日志组件已经添加成功，进入下一步。
 
 ## 3. 添加 LogDashboard
 
-### 3.1 Nuget安装 LogDashboard 包
+### 3.1 Nuget 安装 LogDashboard 包
 
 ```shell
 Install-Package LogDashboard

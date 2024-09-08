@@ -1,5 +1,5 @@
 ---
-title: 基于 .NET 的 FluentValidation 验证教程 
+title: 基于 .NET 的 FluentValidation 验证教程
 slug: Based-on-FluentValidation-Verification-Tutorial-for-dotNET
 description: FluentValidation 是一个基于 .NET 开发的验证框架，开源免费，而且优雅，支持链式操作，易于理解，功能完善，还是可与 MVC5、WebApi2 和 ASP.NET CORE 深度集成，组件内提供十几种常用验证器，可扩展性好，支持自定义验证器，支持本地化多语言。
 date: 2024-01-19 05:26:49
@@ -7,8 +7,8 @@ lastmod: 2024-01-19 05:41:34
 copyright: Reprinted
 banner: false
 author: 零度
-originaltitle: 基于 .NET 的 FluentValidation 验证教程
-originallink: https://www.xcode.me/post/5849
+originalTitle: 基于 .NET 的 FluentValidation 验证教程
+originalLink: https://www.xcode.me/post/5849
 draft: false
 cover: https://img1.dotnet9.com/2024/01/cover_07.png
 categories: .NET
@@ -40,7 +40,7 @@ Install-Package FluentValidation.WebApi
 
 ## 创建第一个验证程序
 
-若要为特定对象定义一组验证规则, 您需要创建一个从 `AbstractValidator<T>` 继承的类, 其中泛型T参数是要验证的类的类型。假设您有一个客户类别:
+若要为特定对象定义一组验证规则, 您需要创建一个从 `AbstractValidator<T>` 继承的类, 其中泛型 T 参数是要验证的类的类型。假设您有一个客户类别:
 
 ```csharp
 public class Customer {
@@ -73,7 +73,7 @@ CustomerValidator validator = new CustomerValidator();
 ValidationResult result = validator.Validate(customer);
 ```
 
-该验证方法返回一个 ValidationResult 对象，表示验证结果，ValidationResult 包含两个属性：IsValid属性是布尔值, 它表示验证是否成功，Errors属性包含验证失败的详细信息。
+该验证方法返回一个 ValidationResult 对象，表示验证结果，ValidationResult 包含两个属性：IsValid 属性是布尔值, 它表示验证是否成功，Errors 属性包含验证失败的详细信息。
 
 下面的代码演示向控制台输出验证失败的详细信息:
 
@@ -92,7 +92,7 @@ if(! results.IsValid) {
 
 ## 链接规则写法
 
-您可以将对象的同一属性用多个验证程序链在一起，以下代码将验证 Surname 属性不为 Null 的同时且不等于foo字符串。
+您可以将对象的同一属性用多个验证程序链在一起，以下代码将验证 Surname 属性不为 Null 的同时且不等于 foo 字符串。
 
 ```csharp
 using FluentValidation;
@@ -170,7 +170,7 @@ public class CustomerValidator : AbstractValidator<Customer> {
     RuleFor(customer => customer.Name).NotNull();
     RuleFor(customer => customer.Address).SetValidator(new AddressValidator());
   }
-} 
+}
 ```
 
 另外，还可以在集合属性上使用验证程序，假设客户对象包含订单集合属性：
@@ -188,7 +188,7 @@ public class Order {
 var customer = new Customer();
 customer.Orders = new List<Order> {
   new Order { ProductName = "Foo" },
-  new Order { Cost = 5 } 
+  new Order { Cost = 5 }
 };
 ```
 
@@ -240,7 +240,7 @@ Error: 'Product Name' must not be empty.
 
 ## 支持规则集
 
-规则集允许您将验证规则组合在一起, 作为一个组一起执行, 同时忽略其他规则，假如：Person 类有3个属性分别是 Id、Surname 和 Forename，我们将 Id 单独验证， Surname 和 Forename 作为一组 Names 规则集进行验证。
+规则集允许您将验证规则组合在一起, 作为一个组一起执行, 同时忽略其他规则，假如：Person 类有 3 个属性分别是 Id、Surname 和 Forename，我们将 Id 单独验证， Surname 和 Forename 作为一组 Names 规则集进行验证。
 
 ```csharp
 public class PersonValidator : AbstractValidator<Person> {
@@ -249,7 +249,7 @@ public class PersonValidator : AbstractValidator<Person> {
         RuleFor(x => x.Surname).NotNull();
         RuleFor(x => x.Forename).NotNull();
      });
- 
+
      RuleFor(x => x.Id).NotEqual(0);
   }
 }
@@ -269,7 +269,7 @@ var result = validator.Validate(person, ruleSet: "Names");
 validator.Validate(person, ruleSet: "Names,MyRuleSet,SomeOtherRuleSet")
 ```
 
-通过*号匹配所有规则, 可以强制执行所有规则, 不管它们是否在规则集中:
+通过\*号匹配所有规则, 可以强制执行所有规则, 不管它们是否在规则集中:
 
 ```csharp
 validator.Validate(person, ruleSet: "*")
@@ -365,12 +365,12 @@ ValidatorOptions.CascadeMode = CascadeMode.StopOnFirstFailure;
 ```csharp
 public class PersonValidator : AbstractValidator<Person> {
   public PersonValidator() {
-    
+
     // First set the cascade mode
     CascadeMode = CascadeMode.StopOnFirstFailure;
-    
+
     // Rule definitions follow
-    RuleFor(...) 
+    RuleFor(...)
     RuleFor(...)
 
    }
@@ -390,7 +390,7 @@ RuleFor(x => x.Surname).NotNull().DependentRules(() => {
 ```csharp
 var instanceToValidate = new Person();
 var context = new ValidationContext(person);
-context.RootContextData["MyCustomData"] = "Test"; 
+context.RootContextData["MyCustomData"] = "Test";
 var validator = new PersonValidator();
 validator.Validate(context);
 ```
@@ -650,7 +650,7 @@ public class Person {
 }
 ```
 
-为了确保列表中至少包含10个元素, 我们可以这样做:
+为了确保列表中至少包含 10 个元素, 我们可以这样做:
 
 ```csharp
 public class PersonValidator:AbstractValidator<Person> {
@@ -789,7 +789,7 @@ ValidatorOptions.LanguageManager = new CustomLanguageManager();
 您可以完全禁用 FluentValidation 对本地化的支持, 这将强制使用默认的英文语言, 而不考虑线程的 CurrentUICulture。这可以通过静态类 ValidatorOptions 在应用程序的启动例程中完成。
 
 ```csharp
-ValidatorOptions.LanguageManager.Enabled = false; 
+ValidatorOptions.LanguageManager.Enabled = false;
 ```
 
 还可以强制指定默认语言，始终以特定语言显示:
@@ -905,7 +905,7 @@ public class PeopleController : Controller {
 
 ### 与 ASP.NET Core 内置验证的兼容性
 
-默认情况下, 在执行 FluentValidation 验证之后, MVC原生内置的 DataAnnotations 验证方式也可能执行，这意味着您可以将 FluentValidation 与 DataAnnotations 验证混合在一起使用。如果要禁用此行为, 将 FluentValidation 设为唯一的验证库, 可以将 RunDefaultMvcValidationAfterFluentValidationExecutes 属性设为 false 值：
+默认情况下, 在执行 FluentValidation 验证之后, MVC 原生内置的 DataAnnotations 验证方式也可能执行，这意味着您可以将 FluentValidation 与 DataAnnotations 验证混合在一起使用。如果要禁用此行为, 将 FluentValidation 设为唯一的验证库, 可以将 RunDefaultMvcValidationAfterFluentValidationExecutes 属性设为 false 值：
 
 ```csharp
 services.AddMvc().AddFluentValidation(fv => {
@@ -1050,7 +1050,7 @@ protected void Application_Start() {
 }
 ```
 
-在MVC内部, FluentValidation 利用验证器工厂为特定类型创建验证程序，默认情况下使用 AttributedValidatorFactory 工厂，通过特性的方式，允许您为指定的模型设置验证程序：
+在 MVC 内部, FluentValidation 利用验证器工厂为特定类型创建验证程序，默认情况下使用 AttributedValidatorFactory 工厂，通过特性的方式，允许您为指定的模型设置验证程序：
 
 ```csharp
 [Validator(typeof(PersonValidator))]
@@ -1060,7 +1060,7 @@ public class Person {
 	public string Email { get; set; }
 	public int Age { get; set; }
 }
- 
+
 public class PersonValidator : AbstractValidator<Person> {
 	public PersonValidator() {
 		RuleFor(x => x.Id).NotNull();
@@ -1071,7 +1071,7 @@ public class PersonValidator : AbstractValidator<Person> {
 }
 ```
 
-您还可以使用MVC自带的 IoC 依赖注入容器实现自定义的验证器工厂, 而不是使用上述特性标记的方法。
+您还可以使用 MVC 自带的 IoC 依赖注入容器实现自定义的验证器工厂, 而不是使用上述特性标记的方法。
 
 ```csharp
 FluentValidationModelValidatorProvider.Configure(provider => {
@@ -1086,17 +1086,17 @@ public class PeopleController : Controller {
 	public ActionResult Create() {
 		return View();
 	}
- 
+
 	[HttpPost]
 	public ActionResult Create(Person person) {
- 
+
 		if(! ModelState.IsValid) { // re-render the view when validation failed.
 			return View("Create", person);
 		}
- 
+
 		TempData["notice"] = "Person successfully created";
 		return RedirectToAction("Index");
- 
+
 	}
 }
 ```
@@ -1104,20 +1104,18 @@ public class PeopleController : Controller {
 这是相应的视图代码：
 
 ```html
-@Html.ValidationSummary()
- 
-@using (Html.BeginForm()) {
-	Id: @Html.TextBoxFor(x => x.Id) @Html.ValidationMessageFor(x => x.Id)
-	<br />
-	Name: @Html.TextBoxFor(x => x.Name) @Html.ValidationMessageFor(x => x.Name) 		
-	<br />
-	Email: @Html.TextBoxFor(x => x.Email) @Html.ValidationMessageFor(x => x.Email)
-	<br />
-	Age: @Html.TextBoxFor(x => x.Age) @Html.ValidationMessageFor(x => x.Age)
- 
-	<br /><br />
- 
-	<input type="submit" value="submit" />
+@Html.ValidationSummary() @using (Html.BeginForm()) { Id: @Html.TextBoxFor(x =>
+x.Id) @Html.ValidationMessageFor(x => x.Id)
+<br />
+Name: @Html.TextBoxFor(x => x.Name) @Html.ValidationMessageFor(x => x.Name)
+<br />
+Email: @Html.TextBoxFor(x => x.Email) @Html.ValidationMessageFor(x => x.Email)
+<br />
+Age: @Html.TextBoxFor(x => x.Age) @Html.ValidationMessageFor(x => x.Age)
+
+<br /><br />
+
+<input type="submit" value="submit" />
 }
 ```
 
@@ -1131,5 +1129,4 @@ public class PeopleController : Controller {
 
 FluentValidation 的 WebApi 的集成 与 MVC 5 集成 (上面) 相同, 但您需要通过 NuGet 引用 FluentValidation.WebApi 程序包。
 
- 出处：https://www.xcode.me/post/5849（站长注：该链接已失败，可在博客园浏览转载文章：https://www.cnblogs.com/mq0036/p/14548370.html）
-
+出处：https://www.xcode.me/post/5849（站长注：该链接已失败，可在博客园浏览转载文章：https://www.cnblogs.com/mq0036/p/14548370.html）

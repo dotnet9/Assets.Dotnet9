@@ -5,8 +5,8 @@ description: 如题
 date: 2022-04-23 14:29:14
 copyright: Reprinted
 author: 一个小伙子
-originaltitle: .NET 6 中 LINQ 的改进
-originallink: https://www.cnblogs.com/paopaotang/p/16133578.html
+originalTitle: .NET 6 中 LINQ 的改进
+originalLink: https://www.cnblogs.com/paopaotang/p/16133578.html
 draft: False
 cover: https://img1.dotnet9.com/2022/04/cover_31.jpeg
 categories: .NET
@@ -57,7 +57,7 @@ record Product
     public decimal Price { get; set; }
 }
 ```
- 
+
 ## 3. 三向 Zip 方法
 
 `Enumerable.Zip` 扩展方法可以将两个序列进行结合产生产生一个二元组序列。在 .NET 6 中，它可以结合三个序列产生一个三元组序列。
@@ -79,7 +79,7 @@ foreach ((int, string, string) zipped in numbers.Zip(months, seasons))
 // 3 Mar Spring
 ```
 
- ## 4. Take 方法支持 Range
+## 4. Take 方法支持 Range
 
 .NET Core 3.0 中也引入了 `Range` 结构体，它被 C# 编译器用来支持一个范围操作符 `...`。在 .NET 6 中，`Enumerable.Take` 方法也支持 `Range`。
 

@@ -4,32 +4,32 @@ slug: Use-masa-blazor-in-maui-blazor
 description: 有一款漂亮、美观的组件库可以达到事半功倍的效果
 date: 2022-06-21 21:09:47
 copyright: Original
-originaltitle: MAUI使用Masa blazor组件库
+originalTitle: MAUI使用Masa blazor组件库
 draft: False
 cover: https://img1.dotnet9.com/2022/06/1309.png
 categories: .NET
 tags: MAUI,Blazor
 ---
 
-上一篇([点击阅读](https://dotnet9.com/2022/06/Share-razor-library-between-maui-and-blazor-server-or-client))我们实现了UI在Web端(Blazor Server/Wasm)和客户端(Windows/macOS/Android/iOS)共享，这篇我加上 [Masa Blazor](https://masa-blazor-docs-dev.lonsid.cn/)组件库的引用，并把前几个月写的[时间戳转换](https://dotnet9.com/2022/02/Use-Blazor-to-be-a-simple-online-timestamp-conversion-tool)工具加上。
+上一篇([点击阅读](https://dotnet9.com/2022/06/Share-razor-library-between-maui-and-blazor-server-or-client))我们实现了 UI 在 Web 端(Blazor Server/Wasm)和客户端(Windows/macOS/Android/iOS)共享，这篇我加上 [Masa Blazor](https://masa-blazor-docs-dev.lonsid.cn/)组件库的引用，并把前几个月写的[时间戳转换](https://dotnet9.com/2022/02/Use-Blazor-to-be-a-simple-online-timestamp-conversion-tool)工具加上。
 
 ![](https://img1.dotnet9.com/2022/06/1401.gif)
 
 ## 1. 前置知识
 
-关于Masa Blazor请点击[Masa Blazor官网](https://masa-blazor-docs-dev.lonsid.cn/)了解：
+关于 Masa Blazor 请点击[Masa Blazor 官网](https://masa-blazor-docs-dev.lonsid.cn/)了解：
 
->**MASA Blazor**
+> **MASA Blazor**
 >
->基于Material Design和BlazorComponent的交互能力提供标准的基础组件库。提供如布局、弹框标准、Loading、全局异常处理等标准场景的预置组件。
+> 基于 Material Design 和 BlazorComponent 的交互能力提供标准的基础组件库。提供如布局、弹框标准、Loading、全局异常处理等标准场景的预置组件。
 
 ## 2. 组件库的引用
 
-组件库的添加参考[Masa官网](https://masa-blazor-docs-dev.lonsid.cn/)，这里写下[Dotnet9后台](https://github.com/dotnet9/Dotnet9)添加记录：
+组件库的添加参考[Masa 官网](https://masa-blazor-docs-dev.lonsid.cn/)，这里写下[Dotnet9 后台](https://github.com/dotnet9/Dotnet9)添加记录：
 
-### 2.1 UI共享库的修改-`Dotnet9.WebApp`
+### 2.1 UI 共享库的修改-`Dotnet9.WebApp`
 
-1. UI共享库 `Dotnet9.WebApp` 添加`Maas.Blazor`包，刚好今天（21号）Masa发布了`0.5.0-preview.3`版本，我们下载使用：
+1. UI 共享库 `Dotnet9.WebApp` 添加`Maas.Blazor`包，刚好今天（21 号）Masa 发布了`0.5.0-preview.3`版本，我们下载使用：
 
 ```shell
 Install-Package Masa.Blazor -Version 0.5.0-preview.3
@@ -65,7 +65,7 @@ public static class MasaSetup
 @using Masa.Blazor
 ```
 
-就这3步对 `Dotnet9.WebApp`的修改。
+就这 3 步对 `Dotnet9.WebApp`的修改。
 
 ### 2.2 跨平台项目修改-Dotnet9.MAUI
 
@@ -104,14 +104,23 @@ public static class MauiProgram
 <link href="_content/Masa.Blazor/css/masa-blazor.css" rel="stylesheet" />
 <link href="_content/Masa.Blazor/css/masa-extend-blazor.css" rel="stylesheet" />
 
-<link href="https://cdn.masastack.com/npm/@mdi/font@5.x/css/materialdesignicons.min.css" rel="stylesheet">
-<link href="https://cdn.masastack.com/npm/materialicons/materialicons.css" rel="stylesheet">
-<link href="https://cdn.masastack.com/npm/fontawesome/v5.0.13/css/all.css" rel="stylesheet">
+<link
+  href="https://cdn.masastack.com/npm/@mdi/font@5.x/css/materialdesignicons.min.css"
+  rel="stylesheet"
+/>
+<link
+  href="https://cdn.masastack.com/npm/materialicons/materialicons.css"
+  rel="stylesheet"
+/>
+<link
+  href="https://cdn.masastack.com/npm/fontawesome/v5.0.13/css/all.css"
+  rel="stylesheet"
+/>
 
 <script src="_content/BlazorComponent/js/blazor-component.js"></script>
 ```
 
-### 2.3 Blazor WebAssembly项目修改-Dotnet9.Wasm
+### 2.3 Blazor WebAssembly 项目修改-Dotnet9.Wasm
 
 1. 修改`Program.cs`文件，添加上面封装的扩展方法`AddMasaSetup()`:
 
@@ -135,8 +144,7 @@ await builder.Build().RunAsync();
 
 同`Dotnet9.MAUI`
 
-
-### 2.4 Blazor Server项目修改-Dotnet9.Server
+### 2.4 Blazor Server 项目修改-Dotnet9.Server
 
 1. 修改`Program.cs`文件，添加上面封装的扩展方法`AddMasaSetup()`:
 
@@ -166,7 +174,7 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
-app.MapBlazorHub(); 
+app.MapBlazorHub();
 app.MapFallbackToPage("/_Host");
 
 app.Run();
@@ -182,32 +190,40 @@ app.Run();
 <link href="_content/Masa.Blazor/css/masa-extend-blazor.css" rel="stylesheet" />
 
 <!--icon file,import need to use-->
-<link href="https://cdn.masastack.com/npm/@("@mdi")/font@5.x/css/materialdesignicons.min.css" rel="stylesheet">
-<link href="https://cdn.masastack.com/npm/materialicons/materialicons.css" rel="stylesheet">
-<link href="https://cdn.masastack.com/npm/fontawesome/v5.0.13/css/all.css" rel="stylesheet">
+<link
+href="https://cdn.masastack.com/npm/@("@mdi")/font@5.x/css/materialdesignicons.min.css"
+rel="stylesheet">
+<link
+  href="https://cdn.masastack.com/npm/materialicons/materialicons.css"
+  rel="stylesheet"
+/>
+<link
+  href="https://cdn.masastack.com/npm/fontawesome/v5.0.13/css/all.css"
+  rel="stylesheet"
+/>
 
 <!--js(should lay the end of file)-->
 <script src="_content/BlazorComponent/js/blazor-component.js"></script>
 ```
 
-**注意**：MAUI Blazor和Blazor WebAssembly两个项目引入Masa Blazor资源文件的代码一样，Blazor Server和前两者主要区别是`materialdesignicons.min.css`文件：
+**注意**：MAUI Blazor 和 Blazor WebAssembly 两个项目引入 Masa Blazor 资源文件的代码一样，Blazor Server 和前两者主要区别是`materialdesignicons.min.css`文件：
 
 ![](https://img1.dotnet9.com/2022/06/1403.png)
 
 这里关于`Masa.Blazor`的引入就介绍完了，总结下关键三步：
 
-1. 添加`Masa.Blazor` Nuget包：`Install-Package Masa.Blazor`；
+1. 添加`Masa.Blazor` Nuget 包：`Install-Package Masa.Blazor`；
 2. `Masa.Blazor`组件注册使用：`services.AddMasaBlazor();`；
-3. 添加`Masa.Blazor`资源文件：Wasm是`wwwwroot/index.html`, blazor server是`_Layout.cshtml`，注意两者添加资源文件的区别。
+3. 添加`Masa.Blazor`资源文件：Wasm 是`wwwwroot/index.html`, blazor server 是`_Layout.cshtml`，注意两者添加资源文件的区别。
 
 ## 3. 时间戳功能的添加
 
-在做Blazor Server版本网站时，有过一次时间戳功能开发的介绍([点击阅读](https://dotnet9.com/2022/02/Use-Blazor-to-be-a-simple-online-timestamp-conversion-tool))，代码很简单，这里不再细说，不能再水了....
+在做 Blazor Server 版本网站时，有过一次时间戳功能开发的介绍([点击阅读](https://dotnet9.com/2022/02/Use-Blazor-to-be-a-simple-online-timestamp-conversion-tool))，代码很简单，这里不再细说，不能再水了....
 
 ## 4. 总结
 
 `Masa.Blazor`组件库已经添加，并恢复了时间戳功能，下一步，就是继续搭建网站后台了，使用`Masa.Blazor`搭建框架喽。
 
-- 本文Blazor Server站点预览：[https://server.dotnet9.com/](https://server.dotnet9.com/)
-- 本文Blazor Wasm站点预览：[https://wasm.dotnet9.com/](https://wasm.dotnet9.com/)
+- 本文 Blazor Server 站点预览：[https://server.dotnet9.com/](https://server.dotnet9.com/)
+- 本文 Blazor Wasm 站点预览：[https://wasm.dotnet9.com/](https://wasm.dotnet9.com/)
 - MAUI(Android\Windows\macOS\iOS)预览：https://github.com/dotnet9/Dotnet9/tree/develop/src/Dotnet9.MAUI（未做发布文件，需要您源码自行编译）

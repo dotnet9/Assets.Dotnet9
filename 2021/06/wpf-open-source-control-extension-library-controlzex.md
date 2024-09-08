@@ -4,7 +4,7 @@ slug: wpf-open-source-control-extension-library-controlzex
 description: 开源分享
 date: 2021-06-19 13:45:19
 copyright: Original
-originaltitle: WPF开源控件扩展库ControlzEx
+originalTitle: WPF开源控件扩展库ControlzEx
 draft: False
 cover: https://img1.dotnet9.com/2021/06/cover_04.jpg
 albums: 开源WPF
@@ -12,9 +12,8 @@ categories: .NET
 tags: C#,WPF,开源,开源WPF
 ---
 
->- 原文链接：https://github.com/ControlzEx/ControlzEx
->- 翻译：沙漠尽头的狼（谷歌及百度提供翻译支持）
-
+> - 原文链接：https://github.com/ControlzEx/ControlzEx
+> - 翻译：沙漠尽头的狼（谷歌及百度提供翻译支持）
 
 **Shared Controlz for WPF**
 
@@ -36,29 +35,21 @@ tags: C#,WPF,开源,开源WPF
 **注意：它只是一个掩码，不会验证您的文本。**
 
 ```html
-<TextBlock Grid.Row="0"
-           Grid.Column="0"
-           Margin="4"
-           Text="Datetime" />
-<TextBox Grid.Row="0"
-         Grid.Column="1"
-         Margin="4">
-    <behaviors:Interaction.Behaviors>
-        <controlzEx:TextBoxInputMaskBehavior InputMask="00/00/0000" />
-    </behaviors:Interaction.Behaviors>
+<TextBlock Grid.Row="0" Grid.Column="0" Margin="4" Text="Datetime" />
+<TextBox Grid.Row="0" Grid.Column="1" Margin="4">
+  <behaviors:Interaction.Behaviors>
+    <controlzEx:TextBoxInputMaskBehavior InputMask="00/00/0000" />
+  </behaviors:Interaction.Behaviors>
 </TextBox>
 
-<TextBlock Grid.Row="1"
-           Grid.Column="0"
-           Margin="4"
-           Text="Phone Number" />
-<TextBox Grid.Row="1"
-         Grid.Column="1"
-         Margin="4">
-    <behaviors:Interaction.Behaviors>
-        <controlzEx:TextBoxInputMaskBehavior InputMask="( 999 ) 000 000 - 00"
-                                             PromptChar="_" />
-    </behaviors:Interaction.Behaviors>
+<TextBlock Grid.Row="1" Grid.Column="0" Margin="4" Text="Phone Number" />
+<TextBox Grid.Row="1" Grid.Column="1" Margin="4">
+  <behaviors:Interaction.Behaviors>
+    <controlzEx:TextBoxInputMaskBehavior
+      InputMask="( 999 ) 000 000 - 00"
+      PromptChar="_"
+    />
+  </behaviors:Interaction.Behaviors>
 </TextBox>
 ```
 
@@ -93,43 +84,52 @@ public partial class MainWindow : Window
 或在 XAML 中：
 
 ```html
-<Button controlzex:KeyboardNavigationEx.AlwaysShowFocusVisual="True">Hey, I get the focus visual style on mouse click!</Button>
+<button controlzex:KeyboardNavigationEx.AlwaysShowFocusVisual="True">
+  Hey, I get the focus visual style on mouse click!
+</button>
 ```
+
 ![](https://img1.dotnet9.com/2021/06/0404.gif)
 
+## 自动移动 ToolTip
 
-## 自动移动ToolTip
-
-一个自动移动的ToolTip。更多[信息](https://jkarger.de/2014/11/02/how-to-make-the-tooltip-follow-the-mouse/)。
+一个自动移动的 ToolTip。更多[信息](https://jkarger.de/2014/11/02/how-to-make-the-tooltip-follow-the-mouse/)。
 
 ```html
-<Button Margin="5"
-        Padding="5"
-        Content="Test Button 2"
-        ToolTipService.ShowDuration="20000">
-    <Button.ToolTip>
-        <ToolTip local:ToolTipAssist.AutoMove="True">
-            <ToolTip.Template>
-                <ControlTemplate>
-                    <Grid>
-                        <Border Background="Gray"
-                                BorderBrush="Black"
-                                BorderThickness="1"
-                                Opacity="0.9"
-                                SnapsToDevicePixels="True" />
-                        <TextBlock Margin="5"
-                                    Foreground="WhiteSmoke"
-                                    FontSize="22"
-                                    Text="ToolTipHelper AutoMove sample"
-                                    TextOptions.TextFormattingMode="Display"
-                                    TextOptions.TextRenderingMode="ClearType" />
-                    </Grid>
-                </ControlTemplate>
-            </ToolTip.Template>
-        </ToolTip>
-    </Button.ToolTip>
-</Button>
+<button
+  Margin="5"
+  Padding="5"
+  Content="Test Button 2"
+  ToolTipService.ShowDuration="20000"
+>
+  <Button.ToolTip>
+    <ToolTip local:ToolTipAssist.AutoMove="True">
+      <ToolTip.Template>
+        <ControlTemplate>
+          <Grid>
+            <Border
+              Background="Gray"
+              BorderBrush="Black"
+              BorderThickness="1"
+              Opacity="0.9"
+              SnapsToDevicePixels="True"
+            />
+            <TextBlock
+              Margin="5"
+              Foreground="WhiteSmoke"
+              FontSize="22"
+              Text="ToolTipHelper AutoMove sample"
+              TextOptions.TextFormattingMode="Display"
+              TextOptions.TextRenderingMode="ClearType"
+            />
+          </Grid>
+        </ControlTemplate>
+      </ToolTip.Template>
+    </ToolTip>
+  </Button.ToolTip>
+</button>
 ```
+
 ![](https://img1.dotnet9.com/2021/06/0405.gif)
 
 ![](https://img1.dotnet9.com/2021/06/0406.png)
@@ -155,9 +155,9 @@ http://blogs.msdn.com/b/wpfsdk/archive/2008/09/08/custom-window-chrome-in-wpf.as
 
 ## PopupEx
 
-自定义的``Popup``窗口，可用于验证错误模板或其他类似[MaterialDesignInXamlToolkit](https://github.com/ButchersBoy/MaterialDesignInXamlToolkit)或[MahApps.Metro](https://github.com/MahApps/MahApps.Metro)中的其他内容。
+自定义的`Popup`窗口，可用于验证错误模板或其他类似[MaterialDesignInXamlToolkit](https://github.com/ButchersBoy/MaterialDesignInXamlToolkit)或[MahApps.Metro](https://github.com/MahApps/MahApps.Metro)中的其他内容。
 
-``PopupEx`` 提供了一些额外的不错的功能：
+`PopupEx` 提供了一些额外的不错的功能：
 
 - 如果主机窗口大小或位置发生变化，则重新定位
 - 如果主机窗口最大化，则重新定位，反之亦然
@@ -167,22 +167,26 @@ http://blogs.msdn.com/b/wpfsdk/archive/2008/09/08/custom-window-chrome-in-wpf.as
 
 ## TabControlEx
 
-自定义``TabControl``，在取消选择时将``TabItem``内容保留在VisualTree中，因此在再次选择``TabItem``后不会重新创建。visibility行为可以通过``ChildContentVisibility``依赖属性设置。
+自定义`TabControl`，在取消选择时将`TabItem`内容保留在 VisualTree 中，因此在再次选择`TabItem`后不会重新创建。visibility 行为可以通过`ChildContentVisibility`依赖属性设置。
 
 用法：
 
 ```html
 <controlz:TabControlEx>
-    <TabItem Header="Lorem">
-        <TextBlock Text="Lorem ipsum dolor sit amet, consetetur sadipscing"
-                   HorizontalAlignment="Center"
-                   FontSize="30" />
-    </TabItem>
-    <TabItem Header="ipsum">
-        <TextBox Text="Lorem ipsum dolor sit amet, consetetur sadipscing"
-                 HorizontalAlignment="Center"
-                 Margin="5" />
-    </TabItem>
+  <TabItem Header="Lorem">
+    <TextBlock
+      Text="Lorem ipsum dolor sit amet, consetetur sadipscing"
+      HorizontalAlignment="Center"
+      FontSize="30"
+    />
+  </TabItem>
+  <TabItem Header="ipsum">
+    <TextBox
+      Text="Lorem ipsum dolor sit amet, consetetur sadipscing"
+      HorizontalAlignment="Center"
+      Margin="5"
+    />
+  </TabItem>
 </controlz:TabControlEx>
 ```
 
@@ -202,10 +206,10 @@ public enum PackIconKind
 }
 ```
 
-子类``PackIconBase``，添加
+子类`PackIconBase`，添加
 
-- 默认style key
-- 为每个key提供Path数据的工厂
+- 默认 style key
+- 为每个 key 提供 Path 数据的工厂
 
 ```C#
 public class PackIcon : PackIconBase<PackIconKind>
@@ -232,27 +236,27 @@ public class PackIcon : PackIconBase<PackIconKind>
 提供默认样式（通常在您的 Generic.xaml 中，例如：
 
 ```html
-<Style TargetType="{x:Type local:PackIcon}">
-    <Setter Property="Height" Value="16" />
-    <Setter Property="Width" Value="16" />
-    <Setter Property="HorizontalAlignment" Value="Left" />
-    <Setter Property="VerticalAlignment" Value="Top" />
-    <Setter Property="IsTabStop" Value="False" />
-    <Setter Property="Template">
-        <Setter.Value>
-            <ControlTemplate TargetType="{x:Type local:PackIcon}">
-                <Viewbox>
-                    <Canvas Width="24" Height="24">
-                        <Path Data="{Binding Data, RelativeSource={RelativeSource TemplatedParent}}"
-                              Fill="{TemplateBinding Foreground}" />
-                    </Canvas>
-                </Viewbox>
-            </ControlTemplate>
-        </Setter.Value>
-    </Setter>
-</Style>
+<style TargetType="{x:Type local:PackIcon}">
+  <Setter Property="Height" Value="16" />
+  <Setter Property="Width" Value="16" />
+  <Setter Property="HorizontalAlignment" Value="Left" />
+  <Setter Property="VerticalAlignment" Value="Top" />
+  <Setter Property="IsTabStop" Value="False" />
+  <Setter Property="Template">
+      <Setter.Value>
+          <ControlTemplate TargetType="{x:Type local:PackIcon}">
+              <Viewbox>
+                  <Canvas Width="24" Height="24">
+                      <Path Data="{Binding Data, RelativeSource={RelativeSource TemplatedParent}}"
+                            Fill="{TemplateBinding Foreground}" />
+                  </Canvas>
+              </Viewbox>
+          </ControlTemplate>
+      </Setter.Value>
+  </Setter>
+</style>
 ```
-        
+
 您的用户现在应该可以通过一种简单的方式在他们的应用程序中使用您的图标包：
 
 ```html
@@ -261,7 +265,7 @@ public class PackIcon : PackIconBase<PackIconKind>
 
 ## Theming
 
-ControlzEx 提供``ThemeManager``帮助您为应用程序提供主题管理支持。有关更多信息，请参阅[该节](https://github.com/ControlzEx/ControlzEx/blob/develop/Wiki/ThemeManager.md)。
+ControlzEx 提供`ThemeManager`帮助您为应用程序提供主题管理支持。有关更多信息，请参阅[该节](https://github.com/ControlzEx/ControlzEx/blob/develop/Wiki/ThemeManager.md)。
 
 ## Licence
 

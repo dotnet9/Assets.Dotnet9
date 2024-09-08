@@ -6,8 +6,8 @@ date: 2022-04-21 20:13:49
 banner: false
 copyright: Reprinted
 author: iGaoWei
-originaltitle: 100套大数据可视化模板
-originallink: https://gitee.com/iGaoWei/big-data-view
+originalTitle: 100套大数据可视化模板
+originalLink: https://gitee.com/iGaoWei/big-data-view
 draft: False
 cover: https://img1.dotnet9.com/2022/04/2801.gif
 albums: 开源Web
@@ -15,8 +15,7 @@ categories: 前端
 tags: 大屏模板,在线浏览
 ---
 
-
->昨天介绍了一个大屏收集项目，今天发现一个可能更全的，还带gif动图，当然也能在线查看效果。
+> 昨天介绍了一个大屏收集项目，今天发现一个可能更全的，还带 gif 动图，当然也能在线查看效果。
 
 <p align="center"><h1 align="center">100套大数据可视化模板</h1></p>
 
@@ -31,16 +30,13 @@ tags: 大屏模板,在线浏览
   <a href='https://gitee.com/iGaoWei/big-data-view/members'><img src='https://gitee.com/iGaoWei/big-data-view/badge/fork.svg?theme=white' alt='fork'></img></a>
 </p>
 
-
 ## 项目背景
 
 由于自己公司项目里面用到一个数据可视化大屏页面，自己网上各种谷歌百度，发现资源良莠不齐，而且大多数都是收费的，甚至一个页面一收费的那种，前前后后自己不管是付费的还是免费的收集了不少，于是自己打算整理下，免费分享给大家，以免大家再走冤枉路。如果大家有珍藏的好模板，欢迎大家继续补充贡献！！！
 
-
 ```shell
 如果觉得对你有对您有帮助，您可以点右上角 💘Star💘支持,感谢支持！～
 ```
-
 
 </br></br>
 
@@ -58,22 +54,21 @@ tags: 大屏模板,在线浏览
 
 <p style="padding:10px;"  width="90%">
 
-1. Gitee直接克隆下载，使用浏览器访问静态页面即可。
+1. Gitee 直接克隆下载，使用浏览器访问静态页面即可。
 
 ```shell
 git clone https://gitee.com/iGaoWei/big-data-view.git
 ```
 
-2. GitHub直接克隆下载，使用浏览器访问静态页面即可。
+2. GitHub 直接克隆下载，使用浏览器访问静态页面即可。
 
 ```shell
 git clone https://github.com/iGaoWei/BigDataView.git
 ```
 
-
 ## 截图预览
 
->在线预览时，有可能因为GithubPages浏览器环境问题，导致页面不兼容，不能正常显示，请以截图为准，或下载到本地测试预览,感谢支持！～
+> 在线预览时，有可能因为 GithubPages 浏览器环境问题，导致页面不兼容，不能正常显示，请以截图为准，或下载到本地测试预览,感谢支持！～
 
 ### 001 服务大数据可视化监管平台 [在线预览](https://dotnet9.com/big-data-view/web/001服务大数据可视化监管平台/index.html)
 
@@ -150,19 +145,19 @@ git clone https://github.com/iGaoWei/BigDataView.git
 ### 019 大数据可视化系统数据分析通用模版 [在线预览](https://dotnet9.com/big-data-view/web/019大数据可视化系统数据分析通用模版/index.html)
 
 ![](https://dotnet9.com/2022/04/2819.png)
-   
+
 ### 020 大数据通用模版大标题样式 [在线预览](https://dotnet9.com/big-data-view/web/020大数据通用模版大标题样式/index.html)
 
 ![](https://dotnet9.com/2022/04/2820.png)
-   
+
 ### 021 大数据可视化系统数据分析通用模版 [在线预览](https://dotnet9.com/big-data-view/web/021大数据通用模版/index.html)
 
 ![](https://dotnet9.com/2022/04/2821.gif)
-   
+
 ### 022 全息档案平台中心 [在线预览](https://dotnet9.com/big-data-view/web/022全息档案平台中心/html/index.html)
 
 ![](https://dotnet9.com/2022/04/2822.gif)
-   
+
 ### 023 医院大数据展示 [在线预览](https://dotnet9.com/big-data-view/web/023医院大数据展示/views/index.html)
 
 ![](https://dotnet9.com/2022/04/2823.gif)
@@ -172,15 +167,15 @@ git clone https://github.com/iGaoWei/BigDataView.git
 ![](https://dotnet9.com/2022/04/28233.png)
 
 ![](https://dotnet9.com/2022/04/28234.png)
-   
+
 ### 024 智慧社区内网比对平台 [在线预览](https://dotnet9.com/big-data-view/web/024智慧社区内网比对平台/index.html)
 
 ![](https://dotnet9.com/2022/04/2824.gif)
-   
+
 ### 025 大数据可视化展板通用模板 [在线预览](https://dotnet9.com/big-data-view/web/025大数据可视化展板通用模板/index.html)
 
 ![](https://dotnet9.com/2022/04/2825.gif)
-  
+
 ### 026 设备环境监测平台 [在线预览](https://dotnet9.com/big-data-view/web/026设备环境监测平台/index.html)
 
 ![](https://dotnet9.com/2022/04/2826.gif)
@@ -237,7 +232,7 @@ git clone https://github.com/iGaoWei/BigDataView.git
 
 ![](https://dotnet9.com/2022/04/2839.gif)
 
-### 040 Echart图例使用 [在线预览](https://dotnet9.com/big-data-view/web/040Echart图例使用/index.html)
+### 040 Echart 图例使用 [在线预览](https://dotnet9.com/big-data-view/web/040Echart图例使用/index.html)
 
 ![](https://dotnet9.com/2022/04/2840.gif)
 
@@ -314,7 +309,7 @@ git clone https://github.com/iGaoWei/BigDataView.git
 ### 055 物流大数据服务平台 [在线预览](https://dotnet9.com/big-data-view/web/055物流大数据服务平台/index.html)
 
 ![](https://dotnet9.com/2022/04/2855.gif)
- 
+
 ### 056 大数据统计展示大屏 [在线预览](https://dotnet9.com/big-data-view/web/056大数据统计展示大屏/index.html)
 
 ![](https://dotnet9.com/2022/04/2856.gif)
@@ -359,7 +354,7 @@ git clone https://github.com/iGaoWei/BigDataView.git
 
 ![](https://dotnet9.com/2022/04/2866.gif)
 
-### 067 xx区智慧旅游综合服务平台 [在线预览](https://dotnet9.com/big-data-view/web/067xx区智慧旅游综合服务平台/index.html)
+### 067 xx 区智慧旅游综合服务平台 [在线预览](https://dotnet9.com/big-data-view/web/067xx区智慧旅游综合服务平台/index.html)
 
 ![](https://dotnet9.com/2022/04/28671.gif)
 
@@ -409,7 +404,7 @@ git clone https://github.com/iGaoWei/BigDataView.git
 
 ![](https://dotnet9.com/2022/04/28782.png)
 
-### 079 保税区A仓监控中心 [在线预览](https://dotnet9.com/big-data-view/web/079保税区A仓监控中心/index.html)
+### 079 保税区 A 仓监控中心 [在线预览](https://dotnet9.com/big-data-view/web/079保税区A仓监控中心/index.html)
 
 ![](https://dotnet9.com/2022/04/2879.gif)
 
@@ -445,11 +440,11 @@ git clone https://github.com/iGaoWei/BigDataView.git
 
 ![](https://dotnet9.com/2022/04/2887.gif)
 
-### 088 HTML大数据综合分析平台模板 [在线预览](https://dotnet9.com/big-data-view/web/088HTML大数据综合分析平台模板/index.html)
+### 088 HTML 大数据综合分析平台模板 [在线预览](https://dotnet9.com/big-data-view/web/088HTML大数据综合分析平台模板/index.html)
 
 ![](https://dotnet9.com/2022/04/2888.gif)
 
-### 089 警务综合监控管理平台HTML模板 [在线预览](https://dotnet9.com/big-data-view/web/089警务综合监控管理平台HTML模板/index.html)
+### 089 警务综合监控管理平台 HTML 模板 [在线预览](https://dotnet9.com/big-data-view/web/089警务综合监控管理平台HTML模板/index.html)
 
 ![](https://dotnet9.com/2022/04/2889.gif)
 
@@ -457,7 +452,7 @@ git clone https://github.com/iGaoWei/BigDataView.git
 
 ![](https://dotnet9.com/2022/04/2890.gif)
 
-### 091 ECharts扩展示例自定义视图 [在线预览](https://dotnet9.com/big-data-view/web/091ECharts扩展示例自定义视图/index.html)
+### 091 ECharts 扩展示例自定义视图 [在线预览](https://dotnet9.com/big-data-view/web/091ECharts扩展示例自定义视图/index.html)
 
 ![](https://dotnet9.com/2022/04/2891.gif)
 
@@ -489,7 +484,7 @@ git clone https://github.com/iGaoWei/BigDataView.git
 
 ![](https://dotnet9.com/2022/04/2898.gif)
 
-### 099 英雄联盟LPL比赛数据可视化 [在线预览](https://dotnet9.com/big-data-view/web/099英雄联盟LPL比赛数据可视化/index.html)
+### 099 英雄联盟 LPL 比赛数据可视化 [在线预览](https://dotnet9.com/big-data-view/web/099英雄联盟LPL比赛数据可视化/index.html)
 
 ![](https://dotnet9.com/2022/04/2899.gif)
 

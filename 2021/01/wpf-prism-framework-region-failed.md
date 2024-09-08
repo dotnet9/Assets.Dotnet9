@@ -4,14 +4,14 @@ slug: wpf-prism-framework-region-failed
 description: 一般客户端项目常规操作流程是：弹出登录窗口=》账号验证成功=》关闭登录窗口=》弹出主窗口=》在主窗口作业。
 date: 2021-01-07 10:53:07
 copyright: Original
-originaltitle: WPF Prism框架Region失效了？
+originalTitle: WPF Prism框架Region失效了？
 draft: False
 cover: https://img1.dotnet9.com/2021/01/cover_02.jpeg
 categories: .NET
 tags: WPF,Prism,Region
 ---
 
-站长15年开始使用`Prism 4`，去年（2020年😊）也使用`Prism 8`做开源项目，今天分享处理`Prism Region`的一个问题。
+站长 15 年开始使用`Prism 4`，去年（2020 年 😊）也使用`Prism 8`做开源项目，今天分享处理`Prism Region`的一个问题。
 
 ## 问题描述
 
@@ -21,11 +21,11 @@ tags: WPF,Prism,Region
 
 ![常规登录流程](https://img1.dotnet9.com/2021/01/0201.gif)
 
-像上面的gif图主窗体，左侧是一棵树，右侧是TabControl，使用Prism模块中注入视图代码：
+像上面的 gif 图主窗体，左侧是一棵树，右侧是 TabControl，使用 Prism 模块中注入视图代码：
 
 ```C#
 public class ModuleOfLogModule : IModule
-	{	
+	{
 
 		public void RegisterTypes(IContainerRegistry containerRegistry)
 		{
@@ -34,10 +34,12 @@ public class ModuleOfLogModule : IModule
 	}
 ```
 
-主工程TabControl为模块视图显示区域：
+主工程 TabControl 为模块视图显示区域：
 
 ```html
-<TabControl prism:RegionManager.RegionName="{x:Static inf:RegionNames.MainTabRegion}" />
+<TabControl
+  prism:RegionManager.RegionName="{x:Static inf:RegionNames.MainTabRegion}"
+/>
 ```
 
 点击左侧菜单树时，动态导航模块视图：
@@ -51,7 +53,7 @@ private void RaiseSelectedItemHandler(CustomMenuItem menuItem)
 }
 ```
 
-实际运行时发现导航没有起作用，原来的操作是登录成功，直接New的主窗体弹出，app.xaml.cs中注册的登录窗体视图：
+实际运行时发现导航没有起作用，原来的操作是登录成功，直接 New 的主窗体弹出，app.xaml.cs 中注册的登录窗体视图：
 
 ```C#
 protected override Window CreateShell()
@@ -62,7 +64,7 @@ protected override Window CreateShell()
 
 百度到也有人遇到这个问题：
 
-1. [WPF Prism框架下先登录窗体再打开主窗体](https://bbs.csdn.net/topics/392475855)
+1. [WPF Prism 框架下先登录窗体再打开主窗体](https://bbs.csdn.net/topics/392475855)
 
 讨论区很火，没看到想要的结果。
 
@@ -75,11 +77,12 @@ RegionManager.SetRegionName( theNameOfTheContentControlInsideThePopup, WellKnown
 RegionManager.SetRegionManager( theNameOfTheContentControlInsideThePopup, theRegionManagerInstanceFromUnity );
 ```
 
-3. [Prism MVVM应用 登陆后切换主窗体实现](https://www.iteye.com/resource/cxb2011-11142807)
+3. [Prism MVVM 应用 登陆后切换主窗体实现](https://www.iteye.com/resource/cxb2011-11142807)
 
-这个代码是将登录与主窗体做为用户控件，app.xaml.cs中注册shellview，shellview中设置一个区域，两个用户控件通过导航在这个区域切换，效果是没问题，主窗体内的区域能正常使用，但自定义的登录界面和主界面，一般标题栏啥的都不一样，这种做法比较麻烦，不推荐使用。
+这个代码是将登录与主窗体做为用户控件，app.xaml.cs 中注册 shellview，shellview 中设置一个区域，两个用户控件通过导航在这个区域切换，效果是没问题，主窗体内的区域能正常使用，但自定义的登录界面和主界面，一般标题栏啥的都不一样，这种做法比较麻烦，不推荐使用。
 
-看问题3类似的描述：[Prism MVVM应用 登陆后切换主窗体实现](https://download.csdn.net/download/cxb2011/11142807)
+看问题 3 类似的描述：[Prism MVVM 应用 登陆后切换主窗体实现](https://download.csdn.net/download/cxb2011/11142807)
+
 ```C#
 应用场景
     使用Prism7开发WPF程序，编码采用MVVM形式。当程序启动时，首先进入一个登陆界面，进行登陆认证，认证成功后转入程序布局主窗口。
@@ -91,13 +94,13 @@ RegionManager.SetRegionManager( theNameOfTheContentControlInsideThePopup, theReg
 
 ## 站长采用的解决方案
 
-baidu基本上没有找到比较合适的方案了，这个问题纠结了我几天（每天晚上搞2、3个小时，站长平时工作已经不做WPF了）。
+baidu 基本上没有找到比较合适的方案了，这个问题纠结了我几天（每天晚上搞 2、3 个小时，站长平时工作已经不做 WPF 了）。
 
-还好我有科学上网的方法，在YouTube上[Adding a Prism Login Screen](https://www.youtube.com/watch?v=pnG9CNfqZzA)找到一个答案。
+还好我有科学上网的方法，在 YouTube 上[Adding a Prism Login Screen](https://www.youtube.com/watch?v=pnG9CNfqZzA)找到一个答案。
 
 ![Adding a Prism Login Screen](https://img1.dotnet9.com/2021/01/0202.jpg)
 
-解决方案的代码很简单，在app.xaml.cs中添加如下代码，在初始化shell之前(`InitializeShell`,`shell`指`CreateShell()`注册的主窗体)，先弹出登录窗口，验证成功再初始化shell(`base.InitializeShell(shell)`)：
+解决方案的代码很简单，在 app.xaml.cs 中添加如下代码，在初始化 shell 之前(`InitializeShell`,`shell`指`CreateShell()`注册的主窗体)，先弹出登录窗口，验证成功再初始化 shell(`base.InitializeShell(shell)`)：
 
 ```C#
 protected override void InitializeShell(Window shell)

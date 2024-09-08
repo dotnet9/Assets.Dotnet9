@@ -5,8 +5,8 @@ description: 前几天我在做一个副业，意识到我需要使用一些 Jav
 date: 2022-05-11 06:51:42
 copyright: Reprinted
 author: liamwang 精致码农
-originaltitle: 在 .NET 应用程序中运行 JavaScript
-originallink: https://mp.weixin.qq.com/s/nBO53jDbvmi7tL-js0tz6w
+originalTitle: 在 .NET 应用程序中运行 JavaScript
+originalLink: https://mp.weixin.qq.com/s/nBO53jDbvmi7tL-js0tz6w
 draft: False
 cover: https://img1.dotnet9.com/2022/05/cover_31.png
 categories: .NET
@@ -45,7 +45,7 @@ tags: .NET
 
 [ChakraCore](https://github.com/chakra-core/ChakraCore) 是 Edge 转为基于 Chromium 引擎之前最初使用的 JavaScript 引擎。根据 GitHub 项目的介绍：
 
->`ChakraCore` 是一个带有 C 语言 API 的 JavaScript 引擎，你可以用它来为任何 C 语言或 C 语言兼容项目添加对 JavaScript 的支持。它可以在 Linux macOS 和 Windows 上针对 x64 处理器进行编译。而 x86 和 ARM 只适用于 Windows。
+> `ChakraCore` 是一个带有 C 语言 API 的 JavaScript 引擎，你可以用它来为任何 C 语言或 C 语言兼容项目添加对 JavaScript 的支持。它可以在 Linux macOS 和 Windows 上针对 x64 处理器进行编译。而 x86 和 ARM 只适用于 Windows。
 
 因此，ChakraCore 包括一个本地依赖，但由于 C# 可以 `P/Invoke` 到本地库，这本身并不是一个问题。但它会带来一些部署方面的挑战。
 
@@ -162,12 +162,32 @@ Console.WriteLine(result);
 当你把它们放在一起运行时，高亮的代码会被打印到控制台：
 
 ```html
-<span class="token keyword">using</span> <span class="token namespace">System</span><span class="token punctuation">;</span>
+<span class="token keyword">using</span>
+<span class="token namespace">System</span
+><span class="token punctuation">;</span>
 
-<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Test</span> <span class="token punctuation">:</span> <span class="token type-list"><span class="token class-name">ITest</span></span>
+<span class="token keyword">public</span>
+<span class="token keyword">class</span>
+<span class="token class-name">Test</span>
+<span class="token punctuation">:</span>
+<span class="token type-list"><span class="token class-name">ITest</span></span>
 <span class="token punctuation">{</span>
-    <span class="token keyword">public</span> <span class="token return-type class-name"><span class="token keyword">int</span></span> ID <span class="token punctuation">{</span> <span class="token keyword">get</span><span class="token punctuation">;</span> <span class="token keyword">set</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
-    <span class="token keyword">public</span> <span class="token return-type class-name"><span class="token keyword">string</span></span> Name <span class="token punctuation">{</span> <span class="token keyword">get</span><span class="token punctuation">;</span> <span class="token keyword">set</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+<span class="token keyword">public</span>
+<span class="token return-type class-name"
+  ><span class="token keyword">int</span></span
+>
+ID <span class="token punctuation">{</span>
+<span class="token keyword">get</span><span class="token punctuation">;</span>
+<span class="token keyword">set</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">public</span>
+<span class="token return-type class-name"
+  ><span class="token keyword">string</span></span
+>
+Name <span class="token punctuation">{</span>
+<span class="token keyword">get</span><span class="token punctuation">;</span>
+<span class="token keyword">set</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 ```
 
@@ -183,8 +203,8 @@ Console.WriteLine(result);
 
 在这篇文章中，我展示了如何使用 `JavaScriptEngineSwitcher` NuGet 包来在 .NET 应用程序中运行 JavaScript。这个包为许多不同的 JavaScript 引擎提供了一个一致的接口。其中一些引擎（如 `Chakra Core` 和 `V8`）需依赖一个本地组件，而其他引擎（如 `Jint` 和 `Jurassic`）只使用托管代码。最后，我展示了你如何使用 `JavaScriptEngineSwitcher` 在 .NET 应用程序内部运行 `Prims.js` 代码高亮库。
 
->原文：https://andrewlock.net/running-javascript-in-a-dotnet-app-with-javascriptengineswitcher/
+> 原文：https://andrewlock.net/running-javascript-in-a-dotnet-app-with-javascriptengineswitcher/
 >
->作者：Andrew Lock
+> 作者：Andrew Lock
 >
->翻译：精致码农
+> 翻译：精致码农

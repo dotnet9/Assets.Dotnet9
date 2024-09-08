@@ -5,8 +5,8 @@ description: 今天来实现身分验证的部分
 date: 2021-12-22 23:01:31
 copyright: Reprinted
 author: StrayaWorker
-originaltitle: (21/30)大家一起学Blazor：ASP.NET Core Identity(1)
-originallink: https://ithelp.ithome.com.tw/articles/10268982
+originalTitle: (21/30)大家一起学Blazor：ASP.NET Core Identity(1)
+originalLink: https://ithelp.ithome.com.tw/articles/10268982
 draft: False
 cover: https://img1.dotnet9.com/2021/12/cover_05.png
 categories: .NET
@@ -15,7 +15,7 @@ tags: Blazor Server,学Blazor
 
 今天来实现身分验证的部分，笔者此前是用`ASP.NET Core Web API` 搭配`Blazor`，用户第一次成功登录时，在后端将`Role`、`Claim` 等权限储存在`JWT`，将`JWT` 存在浏览器的`LocalStorage` 里面，前端再自己重写`AuthenticationStateProvider`，去检查`LocalStorage` 的`JWT`，接着将`AuthenticationState` 当作`CascadingParameter` 层层传递到各`Component`，这样就不需要不停跟后端交换数据，这是个很宝贵的经验，让笔者对身分验证有深入了解，这次笔者试试看`ASP.NET Core` 自己的`Identity`。
 
-首先去NeGet 下载3 个组件，分别为`Microsoft.AspNetCore.Identity.EntityFrameworkCore`、`Microsoft.AspNetCore.Identity.UI`、`Microsoft.VisualStudio.Web.CodeGeneration.Design`，第1 个是`Identity` 必备组件，如果想自己实现`JWT` 的话，只需要下载第一个组件，再下载`JWT` 相关组件(`Microsoft.AspNetCore.Authentication.JwtBearer`)即可，后面2 个都是让`ASP.NET Core Identity`帮我们生成预置`Identity` 页面的组件。
+首先去 NeGet 下载 3 个组件，分别为`Microsoft.AspNetCore.Identity.EntityFrameworkCore`、`Microsoft.AspNetCore.Identity.UI`、`Microsoft.VisualStudio.Web.CodeGeneration.Design`，第 1 个是`Identity` 必备组件，如果想自己实现`JWT` 的话，只需要下载第一个组件，再下载`JWT` 相关组件(`Microsoft.AspNetCore.Authentication.JwtBearer`)即可，后面 2 个都是让`ASP.NET Core Identity`帮我们生成预置`Identity` 页面的组件。
 
 接着去`BlazorServer.Models`的`AppDbContext`，将继承的`DbContext`改为`IdentityDbContext`，代表接下来用的`DB` 跟`Identity`有关系。
 
@@ -36,7 +36,7 @@ tags: Blazor Server,学Blazor
 
 ![](https://img1.dotnet9.com/2021/12/3206.png)
 
-接着去`Program.cs`加上身分验证的服务，Identity 预置将验证信息存在Cookie。
+接着去`Program.cs`加上身分验证的服务，Identity 预置将验证信息存在 Cookie。
 
 ![](https://img1.dotnet9.com/2021/12/3207.png)
 
@@ -58,7 +58,7 @@ tags: Blazor Server,学Blazor
 </div>
 ```
 
-启动网站后，从左边Nav 前往Login页面，可以看到已经有个完善的登录系统，包括注册、登录、忘记密码等等功能，就连注册密码的规则也有，我们照规则注册一个帐号，数据库也生成了刚刚注册的帐号。
+启动网站后，从左边 Nav 前往 Login 页面，可以看到已经有个完善的登录系统，包括注册、登录、忘记密码等等功能，就连注册密码的规则也有，我们照规则注册一个帐号，数据库也生成了刚刚注册的帐号。
 
 ![](https://img1.dotnet9.com/2021/12/3210.gif)
 
@@ -73,4 +73,4 @@ tags: Blazor Server,学Blazor
 3. [ASP NET Core Identity tutorial from scratch](https://www.youtube.com/watch?v=egITMrwMOPU&list=PL6n9fhu94yhVkdrusLaQsfERmL_Jh4XmU&index=65)
 4. [Unable to resolve service for type IEmailSender while attempting to activate RegisterModel](https://stackoverflow.com/questions/52089864/unable-to-resolve-service-for-type-iemailsender-while-attempting-to-activate-reg)
 
-**注：本文代码通过 .NET 6 + Visual Studio 2022重构，可点击原文链接与重构后代码比较学习，谢谢阅读，支持原作者**
+**注：本文代码通过 .NET 6 + Visual Studio 2022 重构，可点击原文链接与重构后代码比较学习，谢谢阅读，支持原作者**

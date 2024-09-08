@@ -5,8 +5,8 @@ description: 在使用MAUI框架时遇到新建的模板应用居然启动时直
 date: 2022-06-18 14:57:32
 copyright: Reprinted
 author: gui.h
-originaltitle: MAUI模板项目闪退问题
-originallink: https://www.cnblogs.com/springhgui/p/16381483.html
+originalTitle: MAUI模板项目闪退问题
+originalLink: https://www.cnblogs.com/springhgui/p/16381483.html
 draft: False
 cover: https://img1.dotnet9.com/2022/06/1306.jpg
 categories: .NET
@@ -17,11 +17,11 @@ tags: MAUI
 
 ## 创建项目
 
-演示创建项目过程，所有流程都是IDE默认，不做任何修改。
+演示创建项目过程，所有流程都是 IDE 默认，不做任何修改。
 
-### 新建MAUI模板项目
+### 新建 MAUI 模板项目
 
-用VS新建`MAUI`模板项目,如下
+用 VS 新建`MAUI`模板项目,如下
 
 ![](https://img1.dotnet9.com/2022/06/1301.jpg)
 
@@ -31,39 +31,39 @@ tags: MAUI
 
 ### 连接设备
 
-- 通过USB连接目标安卓设备
-- 目标设备开启开发者模式，然后开启usb调试（自行~~百度~~必应/谷歌）
-- 手机上切换usb调试的模式，一般会出现 仅充电，文件传输。。。，简单粗暴的切换各种选项，当VS列出了你的设备就可以了。
+- 通过 USB 连接目标安卓设备
+- 目标设备开启开发者模式，然后开启 usb 调试（自行~~百度~~必应/谷歌）
+- 手机上切换 usb 调试的模式，一般会出现 仅充电，文件传输。。。，简单粗暴的切换各种选项，当 VS 列出了你的设备就可以了。
 
 ![](https://img1.dotnet9.com/2022/06/1303.jpg)
 
 ### 调试项目
 
-完成上一步的设备连接，直接的debug模式下启动项目
+完成上一步的设备连接，直接的 debug 模式下启动项目
 
 ![](https://img1.dotnet9.com/2022/06/1304.jpg)
 
-等待一会，可以在设备上看到应用已经安装了，按说应该会被自动打开，等了好久也没动静，VS的输出窗口也不在有新的内容输出了
+等待一会，可以在设备上看到应用已经安装了，按说应该会被自动打开，等了好久也没动静，VS 的输出窗口也不在有新的内容输出了
 
 ![](https://img1.dotnet9.com/2022/06/1305.jpg)
 
-手动点击设备上的安装好的`MauiApp1`应用，然后刚看到启动页面一个大大的.NET标志，随后来了个 `Maui1已停止运行`
+手动点击设备上的安装好的`MauiApp1`应用，然后刚看到启动页面一个大大的.NET 标志，随后来了个 `Maui1已停止运行`
 
 ![](https://img1.dotnet9.com/2022/06/1306.jpg)
 
 ### 解决闪退问题
 
-以前也做过使用`android studio`开发过原生安卓应用，一般这种问题都能在IDE有错误输出，可以通过错误信息找到闪退原因。
+以前也做过使用`android studio`开发过原生安卓应用，一般这种问题都能在 IDE 有错误输出，可以通过错误信息找到闪退原因。
 
-回顾刚才这个问题，不知道去哪里查看日志，这该怎么去看闪退的原因呢，要是`VS`能像`android studio`那样可以查看详细的日志就好了，目前我还不知道是否有地方能看详细的debug日志。我选择了一种比较通用的排查错误的方式:`adb`工具。
+回顾刚才这个问题，不知道去哪里查看日志，这该怎么去看闪退的原因呢，要是`VS`能像`android studio`那样可以查看详细的日志就好了，目前我还不知道是否有地方能看详细的 debug 日志。我选择了一种比较通用的排查错误的方式:`adb`工具。
 
 有关`adb`不做介绍，读者如有疑问自行~~百度~~必应/谷歌，你只需要知道他是用来调试安卓应用的一个强大工具即可。
 
-下面的流程需要你将`adb`目录添加到环境变量PATH中，方可全局使用`adb`命令。
+下面的流程需要你将`adb`目录添加到环境变量 PATH 中，方可全局使用`adb`命令。
 
 #### 常用命令
 
-adb命令查看列出手机装的所有 app 的包名：
+adb 命令查看列出手机装的所有 app 的包名：
 
 ```shell
 adb shell pm list packages
@@ -96,7 +96,7 @@ adb shell pm clear 应用包名
 查看日志
 
 ```shell
-adb logcat 
+adb logcat
 ```
 
 - V：详细（最低优先级）
@@ -109,7 +109,7 @@ adb logcat
 
 ### 找到我们要看的日志
 
-确认adb能识别到你的设备
+确认 adb 能识别到你的设备
 
 ```shell
 $ adb devices
@@ -191,19 +191,18 @@ adb logcat | grep com.companyname.mauiapp1
 
 ![](https://img1.dotnet9.com/2022/06/1307.jpg)
 
-经过仔细查看属性配置文件，找到这个配置与`stackoverflow`上说的关闭 `Use Fast Deployment`极其相似，应该就是它了，关闭它再次使用`VS`以debug模式启动项目。
+经过仔细查看属性配置文件，找到这个配置与`stackoverflow`上说的关闭 `Use Fast Deployment`极其相似，应该就是它了，关闭它再次使用`VS`以 debug 模式启动项目。
 
 这次经过稍微漫长的过程，也执行到`Found device: 1234567890ABCDEF`不动了
 
 ![](https://img1.dotnet9.com/2022/06/1308.jpg)
 
-手动打开App，没任何效果。
+手动打开 App，没任何效果。
 
 #### 卸载`Mauiapp1`重试
 
-虽然上一步改了没效果，但我坚信应该就是这样，所以卸载app再试试，排除干扰因素。
+虽然上一步改了没效果，但我坚信应该就是这样，所以卸载 app 再试试，排除干扰因素。
 
 ![](https://img1.dotnet9.com/2022/06/1309.jpg)
 
 `Found device: 1234567890ABCDEF`之后不在卡住不动了，随后我的设备上也安装并自动打开了`Mauiapp1`，**并且没有闪退！**
-

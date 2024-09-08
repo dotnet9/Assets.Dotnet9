@@ -5,8 +5,8 @@ description: 它提供了一个布局引擎，设计时考虑到了完整的分�
 date: 2022-04-23 13:55:39
 copyright: Reprinted
 author: 黑哥聊dotNet
-originaltitle: C#/.Net 不要再使用Aspose和iTextSharp啦！QuestPDF操作生成PDF更快更高效！
-originallink: https://mp.weixin.qq.com/s/TZp2PwHd9VRZk6_sdW4cQw
+originalTitle: C#/.Net 不要再使用Aspose和iTextSharp啦！QuestPDF操作生成PDF更快更高效！
+originalLink: https://mp.weixin.qq.com/s/TZp2PwHd9VRZk6_sdW4cQw
 draft: False
 cover: https://img1.dotnet9.com/2022/04/cover_30.png
 categories: .NET
@@ -15,13 +15,13 @@ tags: C#,.NET,Aspose,iTextSharp,QuestPDF,生成PDF
 
 ![](https://img1.dotnet9.com/2022/04/cover_30.png)
 
-## 1. 关于QuestPDF
+## 1. 关于 QuestPDF
 
->QuestPDF是一个开源的工具库，可以在.NET或者.Net Core中生成pdf文档
+> QuestPDF 是一个开源的工具库，可以在.NET 或者.Net Core 中生成 pdf 文档
 
-它提供了一个布局引擎，设计时考虑到了完整的分页支持以及灵活性要求！比市面上常见的Aspose和iTextSharp好用太多了！
+它提供了一个布局引擎，设计时考虑到了完整的分页支持以及灵活性要求！比市面上常见的 Aspose 和 iTextSharp 好用太多了！
 
-- GitHub地址：[https://github.com/QuestPDF/QuestPDF](https://github.com/QuestPDF/QuestPDF)
+- GitHub 地址：[https://github.com/QuestPDF/QuestPDF](https://github.com/QuestPDF/QuestPDF)
 - 官网：[https://www.questpdf.com/](https://www.questpdf.com/)
 
 ![](https://img1.dotnet9.com/2022/04/3001.png)
@@ -38,7 +38,7 @@ Install-Package QuestPDF
 
 ### 3.1 简单例子
 
-生成Pdf文档一共分为三部分，Header(页眉)，Content（内容）,Footer（页脚），下面是例子代码：
+生成 Pdf 文档一共分为三部分，Header(页眉)，Content（内容）,Footer（页脚），下面是例子代码：
 
 ```csharp
 Document.Create(container =>
@@ -49,21 +49,21 @@ Document.Create(container =>
         page.Margin(2, Unit.Centimetre);
         page.Background(Colors.White);
         page.DefaultTextStyle(x => x.FontSize(20));
-        
+
         page.Header()
             .Text("Hello PDF!")
             .SemiBold().FontSize(36).FontColor(Colors.Blue.Medium);
-        
+
         page.Content()
             .PaddingVertical(1, Unit.Centimetre)
             .Column(x =>
             {
                 x.Spacing(20);
-                
+
                 x.Item().Text(Placeholders.LoremIpsum());
                 x.Item().Image(Placeholders.Image(200, 100));
             });
-        
+
         page.Footer()
             .AlignCenter()
             .Text(x =>
@@ -76,7 +76,7 @@ Document.Create(container =>
 .GeneratePdf("hello.pdf");
 ```
 
-上面代码生成的PDF结果：
+上面代码生成的 PDF 结果：
 
 ![](https://img1.dotnet9.com/2022/04/3003.png)
 
@@ -84,11 +84,11 @@ Document.Create(container =>
 
 使用模板生成一共设计三个应用层的工作:
 
-1. 文档Model(一组描述 PDF 文档内容的类)
+1. 文档 Model(一组描述 PDF 文档内容的类)
 2. 数据源(将域实体映射到文档模型的层)
 3. 模板(描述如何可视化信息并将其转换为 PDF 文件的表示层)
 
-比如我们设计一个基本的发票信息 要设计一个购物清单，一个卖家买家的地址，以及发票编号等等 我们设计这样的3个Model类：
+比如我们设计一个基本的发票信息 要设计一个购物清单，一个卖家买家的地址，以及发票编号等等 我们设计这样的 3 个 Model 类：
 
 ```csharp
 public class InvoiceModel
@@ -122,7 +122,7 @@ public class Address
 }
 ```
 
-Model定义好了之后我们就定义一些假数据来填充pdf：
+Model 定义好了之后我们就定义一些假数据来填充 pdf：
 
 ```csharp
 public static class InvoiceDocumentDataSource
@@ -175,7 +175,7 @@ public static class InvoiceDocumentDataSource
 }
 ```
 
-然后搭建我们的模板脚手架 我们要使用模板脚手架, 就要定义一个实现IDocument接口的新类开始。
+然后搭建我们的模板脚手架 我们要使用模板脚手架, 就要定义一个实现 IDocument 接口的新类开始。
 
 该接口包含两个方法：
 
@@ -205,7 +205,7 @@ public static class InvoiceDocumentDataSource
                 page.Size(PageSizes.A4);
                 page.Margin(10);//外边距
 
-    
+
                 page.Header().Height(100).Background(Colors.LightBlue.Lighten1);
                 page.Content().Background(Colors.Grey.Lighten3);
                 page.Footer().Height(50).Background(Colors.Grey.Lighten1);
@@ -214,13 +214,13 @@ public static class InvoiceDocumentDataSource
 }
 ```
 
-pdf的page页面总是有三个元素:页眉,页脚，内容。查看一下我们生成的文档：
+pdf 的 page 页面总是有三个元素:页眉,页脚，内容。查看一下我们生成的文档：
 
 ![](https://img1.dotnet9.com/2022/04/3004.png)
 
 到目前为止，我们已经搭建了一个非常简单的页面，其中每个部分都有不同的颜色或大小。
 
-接下来我们来填充他的页眉,我们把数据源整理好了之后，就可以调用Element方法填充：
+接下来我们来填充他的页眉,我们把数据源整理好了之后，就可以调用 Element 方法填充：
 
 ```csharp
 public void Compose(IDocumentContainer container)
@@ -364,8 +364,8 @@ void ComposeContent(IContainer container)
 
 }
 ```
-       
-在这些准备工作做完了之后我们就可以生成Pdf文档了：
+
+在这些准备工作做完了之后我们就可以生成 Pdf 文档了：
 
 ```csharp
 var filePath = "invoice.pdf";
@@ -379,4 +379,4 @@ document.GeneratePdf(filePath);
 
 ## 4. 总结
 
-当然还有很多好玩的功能，今天就给大家讲个概念，让大家对这个东西有个印象，后面我会继续输出该库的相关功能。如果你们对该库感兴趣，可以持续关注我！微信公众号【黑哥聊dotNet】
+当然还有很多好玩的功能，今天就给大家讲个概念，让大家对这个东西有个印象，后面我会继续输出该库的相关功能。如果你们对该库感兴趣，可以持续关注我！微信公众号【黑哥聊 dotNet】

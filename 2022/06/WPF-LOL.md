@@ -4,22 +4,22 @@ slug: WPF-LOL
 description: 您可以了解如何正确实施 WPF 项目
 date: 2022-06-09 23:11:27
 copyright: Reprinted
-author:  驚鏵 WPF开发者
-originaltitle: WPF 英雄联盟
-originallink: https://mp.weixin.qq.com/s/vgha1ZRGYU40zR6g7v_1uA
+author: 驚鏵 WPF开发者
+originalTitle: WPF 英雄联盟
+originalLink: https://mp.weixin.qq.com/s/vgha1ZRGYU40zR6g7v_1uA
 draft: False
 cover: https://img1.dotnet9.com/2022/06/1001.png
 categories: .NET
 tags: WPF
 ---
 
->WPF 英雄联盟
+> WPF 英雄联盟
 >
->作者：Devncore 组织 来自 韩国，首尔
+> 作者：Devncore 组织 来自 韩国，首尔
 >
->原文链接：https://github.com/devncore/leagueoflegends
+> 原文链接：https://github.com/devncore/leagueoflegends
 
-- 感谢分享者[晨晞gg](https://www.cnblogs.com/chenxigg/)；
+- 感谢分享者[晨晞 gg](https://www.cnblogs.com/chenxigg/)；
 - 框架使用`.NET6`；
 - `C# 10.0`;
 - `Visual Studio 2022`;
@@ -34,12 +34,13 @@ tags: WPF
 ![](https://img1.dotnet9.com/2022/06/1002.png)
 
 ### 预览原文
+
 ### WPF League of Legends
 
-WPF 기반으로 만든 **리그오브레전드**입니다. 
+WPF 기반으로 만든 **리그오브레전드**입니다.
 
 ![](https://img1.dotnet9.com/2022/06/1003.png)
-  
+
 ## 컨텐츠
 
 - [이 오픈소스의 특징](#이-오픈소스의-특징)
@@ -56,8 +57,8 @@ WPF 기반으로 만든 **리그오브레전드**입니다.
 
 ## 개발 정보
 
-- .NET 6.0  
-- C# 10.0  
+- .NET 6.0
+- C# 10.0
 - [Visual Studio 2022](https://visualstudio.microsoft.com/ko/vs/preview/vs2022/)
 
 ## Nuget Package (1.0.9)
@@ -70,22 +71,22 @@ WPF 기반으로 만든 **리그오브레전드**입니다.
 - [DevNcore.LayoutSupport.Leagueoflegends](https://github.com/devncore/devncore)
 
 ## 프로젝트 구조
- 
+
 - 📁 AppData
 - 📁 Based
 - 📁 Implement
 - 📁 Material
 - 📁 Presentation
 - **Leagueoflegends**
- 
+
 ## 데이터베이스
 
 **WPF League of Legends**는 클래식 **RDB** 대신 **YAML**을 데이터베이스로 사용하고 있습니다.
 
 > YAML은 JSON과 함께 널리 사용되는 데이터 양식입니다.  
-> 이 기술에 대한 내용은 **[Guide to Yaml](https://github.com/devncore/guide-to-yaml)** 에서 더 자세히 학습할 수 있습니다.  
+> 이 기술에 대한 내용은 **[Guide to Yaml](https://github.com/devncore/guide-to-yaml)** 에서 더 자세히 학습할 수 있습니다.
 
-## 스크린샷 
+## 스크린샷
 
 ### `Home`
 
@@ -135,13 +136,8 @@ WPF 기반으로 만든 **리그오브레전드**입니다.
 
 ![](https://img1.dotnet9.com/2022/06/1018.png)
 
-
 ### `Game`
 
 ![](https://img1.dotnet9.com/2022/06/1019.png)
 
 ![](https://img1.dotnet9.com/2022/06/1020.png)
-
-
-
-

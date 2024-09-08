@@ -5,33 +5,33 @@ description: 如题
 date: 2022-05-02 20:59:47
 copyright: Reprinted
 author: RyzenAdorer
-originaltitle: 【OpenXml】Pptx的边框虚线转为WPF的边框虚线
-originallink: https://www.cnblogs.com/ryzen/p/15740488.html
+originalTitle: 【OpenXml】Pptx的边框虚线转为WPF的边框虚线
+originalLink: https://www.cnblogs.com/ryzen/p/15740488.html
 draft: False
 cover: https://img1.dotnet9.com/2022/05/cover_04.jpeg
 categories: .NET
 tags: OpenXML
 ---
 
-## 1. 安装Openxml sdk
+## 1. 安装 Openxml sdk
 
-首先，我们先安装nuget的需要的有关的Openxml sdk，我们开源了解析pptx的[Openxml拍平层](https://github.com/dotnet-campus/DocumentFormat.OpenXml.Extensions)，下面两种方式都可以安装：
+首先，我们先安装 nuget 的需要的有关的 Openxml sdk，我们开源了解析 pptx 的[Openxml 拍平层](https://github.com/dotnet-campus/DocumentFormat.OpenXml.Extensions)，下面两种方式都可以安装：
 
-- nuget包管理器控制台：
+- nuget 包管理器控制台：
 
 ```shell
 Install-Package dotnetCampus.DocumentFormat.OpenXml.Flatten -Version 2.0.0
 ```
 
-- csproj引用：
+- csproj 引用：
 
 ```xml
 <PackageReference Include="dotnetCampus.DocumentFormat.OpenXml.Flatten" Version="2.0.0" />
 ```
 
-## 2. 解析Pptx
+## 2. 解析 Pptx
 
-我这里用PPTX的7种直线，分别设置7种能够设置的虚线类型,PPTX的显示效果是这样的：
+我这里用 PPTX 的 7 种直线，分别设置 7 种能够设置的虚线类型,PPTX 的显示效果是这样的：
 
 ![](https://img1.dotnet9.com/2022/05/0401.jpg)
 
@@ -75,7 +75,7 @@ private void PptxToGeometry(string filePath)
 
                         var presetDash = shapeProperties.GetFirstChild<Outline>()?.GetFirstChild<PresetDash>()?.Val;
                         var dashArray = GetDashArrayByPresetLineDashValues(presetDash);
-                        var line = ConverterToGeometry( width, height, dashArray); 
+                        var line = ConverterToGeometry( width, height, dashArray);
                         lines.Add(line);
                     }
                 }
@@ -87,7 +87,7 @@ private void PptxToGeometry(string filePath)
 }
 ```
 
-PPTX映射成WPF虚线的方法：
+PPTX 映射成 WPF 虚线的方法：
 
 ```csharp
 private DoubleCollection GetDashArrayByPresetLineDashValues(PresetLineDashValues presetLineDashValues)
@@ -138,11 +138,11 @@ private Line ConverterToGeometry(double width, double height, DoubleCollection d
 
 ## 3. 后话
 
-实际上，openxml文档是给出了PresetDash的值的,大致如下:
+实际上，openxml 文档是给出了 PresetDash 的值的,大致如下:
 
 ![](https://img1.dotnet9.com/2022/05/0403.jpg)
 
-但是其值跟WPF的设置Dash的DoubleCollection不对应，因此以上的映射值都是我自己微调的
+但是其值跟 WPF 的设置 Dash 的 DoubleCollection 不对应，因此以上的映射值都是我自己微调的
 
 ## 4. 源码
 

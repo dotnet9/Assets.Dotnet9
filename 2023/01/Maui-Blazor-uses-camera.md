@@ -5,8 +5,8 @@ description: 由于Maui Blazor中界面是由WebView渲染，所以再使用Andr
 date: 2023-01-12 20:51:15
 copyright: Contributes
 author: dotnet-simple
-originaltitle: Maui Blazor 使用摄像头实现
-originallink: https://www.cnblogs.com/hejiale010426/p/17045707.html
+originalTitle: Maui Blazor 使用摄像头实现
+originalLink: https://www.cnblogs.com/hejiale010426/p/17045707.html
 draft: false
 cover: https://img1.dotnet9.com/2023/01/cover_03.png
 categories: .NET
@@ -21,9 +21,9 @@ tags: .NET,Blazor,MAUI
 >
 > 原文链接：https://www.cnblogs.com/hejiale010426/p/17045707.html
 
-由于`Maui Blazor`中界面是由`WebView`渲染，所以在使用Android的摄像头时无法去获取：因为原生的摄像头需要绑定界面组件。我找到了其他的实现方式，通过`WebView`使用`js`调用设备摄像头，支持多平台兼容，目前测试了`Android` 和`PC`， 由于没有`ios`和`macOS`无法测试，大概率是兼容的，可能需要动态申请权限。
+由于`Maui Blazor`中界面是由`WebView`渲染，所以在使用 Android 的摄像头时无法去获取：因为原生的摄像头需要绑定界面组件。我找到了其他的实现方式，通过`WebView`使用`js`调用设备摄像头，支持多平台兼容，目前测试了`Android` 和`PC`， 由于没有`ios`和`macOS`无法测试，大概率是兼容的，可能需要动态申请权限。
 
-1. 添加js方法
+1. 添加 js 方法
 
 我们在`wwwroot`中创建一个`helper.js`的文件并且添加以下两个`js`函数。
 
@@ -38,43 +38,48 @@ tags: .NET,Blazor,MAUI
  * @param {any} widht 设置截图宽度
  * @param {any} height 设置截图高度
  */
-function setImgSrc(dest,videoId, srcId, widht, height) {
-    let video = document.getElementById(videoId);
-    let canvas = document.getElementById(canvasId);
-    console.log(video.clientHeight, video.clientWidth);
-   
-    canvas.getContext('2d').drawImage(video, 0, 0, widht, height);
+function setImgSrc(dest, videoId, srcId, widht, height) {
+  let video = document.getElementById(videoId);
+  let canvas = document.getElementById(canvasId);
+  console.log(video.clientHeight, video.clientWidth);
 
-    canvas.toBlob(function (blob) {
-        var src = document.getElementById(srcId);
-        src.setAttribute("height", height)
-        src.setAttribute("width", widht);
-        src.setAttribute("src", URL.createObjectURL(blob))
-    }, "image/jpeg", 0.95);
+  canvas.getContext("2d").drawImage(video, 0, 0, widht, height);
+
+  canvas.toBlob(
+    function (blob) {
+      var src = document.getElementById(srcId);
+      src.setAttribute("height", height);
+      src.setAttribute("width", widht);
+      src.setAttribute("src", URL.createObjectURL(blob));
+    },
+    "image/jpeg",
+    0.95
+  );
 }
-
 
 /**
  * 初始化摄像头
- * @param {any} src 
+ * @param {any} src
  */
 function startVideo(src) {
-    if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
-        navigator.mediaDevices.getUserMedia({ video: true }).then(function (stream) {
-            let video = document.getElementById(src);
-            if ("srcObject" in video) {
-                video.srcObject = stream;
-            } else {
-                video.src = window.URL.createObjectURL(stream);
-            }
-            video.onloadedmetadata = function (e) {
-                video.play();
-            };
-            //mirror image
-            video.style.webkitTransform = "scaleX(-1)";
-            video.style.transform = "scaleX(-1)";
-        });
-    }
+  if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+    navigator.mediaDevices
+      .getUserMedia({ video: true })
+      .then(function (stream) {
+        let video = document.getElementById(src);
+        if ("srcObject" in video) {
+          video.srcObject = stream;
+        } else {
+          video.src = window.URL.createObjectURL(stream);
+        }
+        video.onloadedmetadata = function (e) {
+          video.play();
+        };
+        //mirror image
+        video.style.webkitTransform = "scaleX(-1)";
+        video.style.transform = "scaleX(-1)";
+      });
+  }
 }
 ```
 
@@ -100,7 +105,7 @@ function startVideo(src) {
 	<uses-permission android:name="android.permission.RECORD_AUDIO" />
 	<!--位置权限-->
 	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-	
+
 	<!-- Needed only if your app targets Android 5.0 (API level 21) or higher. -->
 	<uses-feature android:name="android.hardware.location.gps" />
 
@@ -187,7 +192,7 @@ builder.ConfigureMauiHandlers(handlers =>
     <video id="@VideoId" width="@widht" height="@height" />
     <canvas class="d-none" id="@CanvasId" width="@widht" height="@height" />
 }
-<button @onclick="" style="margin:8px">打开摄像头</button> 
+<button @onclick="" style="margin:8px">打开摄像头</button>
 @*因为摄像头必须是用户手动触发如果界面是滑动进入无法直接调用方法打开摄像头所以添加按钮触发*@
 <button style="margin:8px">截图</button> @*对视频流截取一张图*@
 
@@ -237,6 +242,6 @@ builder.ConfigureMauiHandlers(handlers =>
 - gitee：https://gitee.com/hejiale010426/main-sample
 - github：https://github.com/239573049/main-sample
 
-来着token的分享
+来着 token 的分享
 
 技术交流群：737776595

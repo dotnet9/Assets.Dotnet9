@@ -5,8 +5,8 @@ description: 数据绑定
 date: 2023-06-10 23:30:18
 copyright: Reprinted
 author: RyzenAdorer
-originaltitle: .NET Core 3 WPF MVVM框架 Prism系列之数据绑定
-originallink: https://www.cnblogs.com/ryzen/p/11905866.html
+originalTitle: .NET Core 3 WPF MVVM框架 Prism系列之数据绑定
+originalLink: https://www.cnblogs.com/ryzen/p/11905866.html
 draft: false
 cover: https://img1.dotnet9.com/albums/album_wpf_prism.png
 categories: .NET
@@ -17,12 +17,12 @@ tags: WPF,Prism
 >
 > 原文作者：RyzenAdorer
 >
-> 原文标题：.NET Core 3 WPF MVVM框架 Prism系列之数据绑定
+> 原文标题：.NET Core 3 WPF MVVM 框架 Prism 系列之数据绑定
 >
 > 原文链接：https://www.cnblogs.com/ryzen/p/11905866.html
 
-## 一. 安装Prism
- 
+## 一. 安装 Prism
+
 1. 使用程序包管理控制台
 
 ```shell
@@ -31,45 +31,63 @@ Install-Package Prism.Unity -Version 7.2.0.1367
 
 也可以去掉‘-Version 7.2.0.1367’获取最新的版本
 
-2. 使用管理解决方案的Nuget包
+2. 使用管理解决方案的 Nuget 包
 
 ![](https://img1.dotnet9.com/2023/06/0201.jpg)
 
-在上面或许我们有个疑问？为啥安装prism会跟Prism.Unity有关系，我们知道Unity是个IOC容器, 而Prism本身就支持IOC, 且目前官方支持几种IOC容器：
+在上面或许我们有个疑问？为啥安装 prism 会跟 Prism.Unity 有关系，我们知道 Unity 是个 IOC 容器, 而 Prism 本身就支持 IOC, 且目前官方支持几种 IOC 容器：
 
 ![](https://img1.dotnet9.com/2023/06/0202.jpg)
 
-- 1. 且unity由于是微软官方的，且支持prism的组件化，由此我推荐使用prism.unity，在官方文档中prism7不支持prism.Mef，Prism 7.1将不支持prism.Autofac
-- 2. 安装完prism.unity就已经包含着所有prism的核心库了，架构如下：
+- 1. 且 unity 由于是微软官方的，且支持 prism 的组件化，由此我推荐使用 prism.unity，在官方文档中 prism7 不支持 prism.Mef，Prism 7.1 将不支持 prism.Autofac
+- 2. 安装完 prism.unity 就已经包含着所有 prism 的核心库了，架构如下：
 
 ![](https://img1.dotnet9.com/2023/06/0203.jpg)
 
 ## 二. 实现数据绑定
 
-我们先创建Views文件夹和ViewModels文件夹，将MainWindow放在Views文件夹下，再在ViewModels文件夹下面创建MainWindowViewModel类，如下：
+我们先创建 Views 文件夹和 ViewModels 文件夹，将 MainWindow 放在 Views 文件夹下，再在 ViewModels 文件夹下面创建 MainWindowViewModel 类，如下：
 
 ![](https://img1.dotnet9.com/2023/06/0204.jpg)
- 
-xaml代码如下：
+
+xaml 代码如下：
 
 ```html
-<Window x:Class="PrismSample.Views.MainWindow"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:prism="http://prismlibrary.com/"
-        xmlns:local="clr-namespace:PrismSample"
-        mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" prism:ViewModelLocator.AutoWireViewModel="True">
-    <StackPanel>
-        <TextBox Text="{Binding Text}" Margin="10" Height="100" FontSize="50" Foreground="Black" BorderBrush="Black"/>
-        <Button  Height="100" Width="300" Content="Click Me" FontSize="50" Command="{Binding ClickCommnd}"/>
-    </StackPanel>
+<Window
+  x:Class="PrismSample.Views.MainWindow"
+  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+  xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+  xmlns:prism="http://prismlibrary.com/"
+  xmlns:local="clr-namespace:PrismSample"
+  mc:Ignorable="d"
+  Title="MainWindow"
+  Height="450"
+  Width="800"
+  prism:ViewModelLocator.AutoWireViewModel="True"
+>
+  <StackPanel>
+    <TextBox
+      Text="{Binding Text}"
+      Margin="10"
+      Height="100"
+      FontSize="50"
+      Foreground="Black"
+      BorderBrush="Black"
+    />
+    <button
+      Height="100"
+      Width="300"
+      Content="Click Me"
+      FontSize="50"
+      Command="{Binding ClickCommnd}"
+    />
+  </StackPanel>
 </Window>
-``` 
+```
 
-ViewModel代码如下：
+ViewModel 代码如下：
 
 ```csharp
 using Prism.Commands;
@@ -101,19 +119,19 @@ namespace PrismSample.ViewModels
         }
     }
 }
-``` 
+```
 
 启动程序：
 
 ![](https://img1.dotnet9.com/2023/06/0205.jpg)
- 
+
 点击 click Me 按钮:
 
 ![](https://img1.dotnet9.com/2023/06/0206.jpg)
 
-可以看到，我们已经成功的用prism实现数据绑定了，且View和ViewModel完美的前后端分离
+可以看到，我们已经成功的用 prism 实现数据绑定了，且 View 和 ViewModel 完美的前后端分离
 
-但是现在我们又引出了另外一个问题,当我们不想按照prism的规定硬要将View和ViewModel放在Views和ViewModels里面，又或许自己的项目取名规则各不相同怎么办，这时候就要用到另外几种方法：
+但是现在我们又引出了另外一个问题,当我们不想按照 prism 的规定硬要将 View 和 ViewModel 放在 Views 和 ViewModels 里面，又或许自己的项目取名规则各不相同怎么办，这时候就要用到另外几种方法：
 
 1. 更改命名规则
 
@@ -121,23 +139,23 @@ namespace PrismSample.ViewModels
 
 ![](https://img1.dotnet9.com/2023/06/0207.jpg)
 
-首先我们在App需要引入prism，修改‘Application’为‘prism:PrismApplication’且删除StartupUri
+首先我们在 App 需要引入 prism，修改‘Application’为‘prism:PrismApplication’且删除 StartupUri
 
-xaml代码如下：
- 
+xaml 代码如下：
+
 ```html
-<prism:PrismApplication x:Class="PrismSample.App"
-             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:prism="http://prismlibrary.com/"
-             xmlns:local="clr-namespace:PrismSample">
-    <Application.Resources>
-         
-    </Application.Resources>
+<prism:PrismApplication
+  x:Class="PrismSample.App"
+  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+  xmlns:prism="http://prismlibrary.com/"
+  xmlns:local="clr-namespace:PrismSample"
+>
+  <Application.Resources> </Application.Resources>
 </prism:PrismApplication>
 ```
- 
-cs后台代码如下：
+
+cs 后台代码如下：
 
 ```csharp
 using Prism.Unity;
@@ -180,25 +198,25 @@ namespace PrismSample
         }
     }
 }
-``` 
+```
 
 上面这两句是关键：
 
-".Viewsb." 表示View所在文件夹namespace,".ViewModelsa.OhMyGod." 表示ViewModel所在namespace
+".Viewsb." 表示 View 所在文件夹 namespace,".ViewModelsa.OhMyGod." 表示 ViewModel 所在 namespace
 
 ```csharp
 var viewName = viewType.FullName.Replace(".Viewsb.", ".ViewModelsa.OhMyGod.");
 ```
 
-Test表示ViewModel后缀
+Test 表示 ViewModel 后缀
 
 ```csharp
 var viewModelName = $"{viewName}Test, {viewAssemblyName}";
- ```
+```
 
-2. 自定义ViewModel注册
+2. 自定义 ViewModel 注册
 
-我们新建一个Foo类作为自定义类，代码如下：
+我们新建一个 Foo 类作为自定义类，代码如下：
 
 ```csharp
 using Prism.Commands;
@@ -232,8 +250,8 @@ namespace PrismSample
     }
 }
 ```
- 
-修改App.cs代码:
+
+修改 App.cs 代码:
 
 ```csharp
 protected override void ConfigureViewModelLocator()
@@ -249,11 +267,11 @@ protected override void ConfigureViewModelLocator()
     //});
 }
 ```
-  
+
 运行：
 
 ![](https://img1.dotnet9.com/2023/06/0208.jpg)
- 
+
 点击按钮：
 
 ![](https://img1.dotnet9.com/2023/06/0209.jpg)
@@ -262,10 +280,10 @@ protected override void ConfigureViewModelLocator()
 
 这种直接的，不通过反射注册的自定义注册方式优先级会高点，在官方文档也说明这种方式效率会高点
 
-且官方提供4种方式，其余三种的注册方式如下：
+且官方提供 4 种方式，其余三种的注册方式如下：
 
 ```csharp
-ViewModelLocationProvider.Register(typeof(MainWindow).ToString(), typeof(MainWindowTest)); 
+ViewModelLocationProvider.Register(typeof(MainWindow).ToString(), typeof(MainWindowTest));
 ```
 
 ```csharp

@@ -7,8 +7,8 @@ lastmod: 2024-01-19 22:26:21
 copyright: Reprinted
 banner: false
 author: 丹枫无迹
-originaltitle: 【C#】CsvHelper 使用手册
-originallink: https://www.cnblogs.com/gl1573/p/12922857.html
+originalTitle: 【C#】CsvHelper 使用手册
+originalLink: https://www.cnblogs.com/gl1573/p/12922857.html
 draft: false
 cover: https://img1.dotnet9.com/2024/01/cover_08.png
 categories: .NET
@@ -19,7 +19,7 @@ tags: CSV
 
 ## 简介
 
-CsvHelper 是一个用于读写 CSV 文件的.NET库。极其快速，灵活且易于使用。
+CsvHelper 是一个用于读写 CSV 文件的.NET 库。极其快速，灵活且易于使用。
 
 CsvHelper 建立在.NET Standard 2.0 之上，几乎可以在任何地方运行。
 
@@ -188,7 +188,7 @@ public class Foo
     [Index(1)]
     public string Name { get; set; }
 }
-    
+
 using (var reader = new StreamReader("foo.csv"))
 {
     using (var csv = new CsvReader(reader, CultureInfo.InvariantCulture))

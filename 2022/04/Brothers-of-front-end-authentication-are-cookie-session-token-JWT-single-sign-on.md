@@ -5,8 +5,8 @@ description: 基于 HTTP 的前端鉴权背景，cookie 为什么是最方便的
 date: 2022-04-27 07:31:23
 copyright: Reprinted
 author: HenryLulu_几木
-originaltitle: 前端鉴权的兄弟们：cookie、session、token、jwt、单点登录
-originallink: https://juejin.cn/post/6898630134530752520
+originalTitle: 前端鉴权的兄弟们：cookie、session、token、jwt、单点登录
+originalLink: https://juejin.cn/post/6898630134530752520
 draft: False
 cover: https://img1.dotnet9.com/2022/04/cover_39.jpg
 categories: 前端
@@ -33,13 +33,13 @@ tags: 鉴权
 
 那解决办法是什么呢？::标记::。
 
->在学校或公司，入学入职那一天起，会录入你的身份、账户信息，然后给你发个卡，今后在园区内，你的门禁、打卡、消费都只需要刷这张卡。
+> 在学校或公司，入学入职那一天起，会录入你的身份、账户信息，然后给你发个卡，今后在园区内，你的门禁、打卡、消费都只需要刷这张卡。
 
 ### 1.3 前端存储
 
 这就涉及到一发、一存、一带，发好办，登陆接口直接返回给前端，存储就需要前端想办法了。
 
->前提是，你要把卡带在身上。
+> 前提是，你要把卡带在身上。
 
 前端的存储方式有很多。
 
@@ -65,31 +65,31 @@ cookie 也是前端存储的一种，但相比于 localStorage 等其他方式�
 
 ### 2.1 配置：Domain / Path
 
->你不能拿清华的校园卡进北大。
+> 你不能拿清华的校园卡进北大。
 
 cookie 是要限制::「空间范围」::的，通过 Domain（域）/ Path（路径）两级。
 
->Domain属性指定浏览器发出 HTTP 请求时，哪些域名要附带这个 Cookie。如果没有指定该属性，浏览器会默认将其设为当前 URL 的一级域名，比如 www.example.com 会设为 example.com，而且以后如果访问example.com的任何子域名，HTTP 请求也会带上这个 Cookie。如果服务器在Set-Cookie字段指定的域名，不属于当前域名，浏览器会拒绝这个 Cookie。
+> Domain 属性指定浏览器发出 HTTP 请求时，哪些域名要附带这个 Cookie。如果没有指定该属性，浏览器会默认将其设为当前 URL 的一级域名，比如 www.example.com 会设为 example.com，而且以后如果访问 example.com 的任何子域名，HTTP 请求也会带上这个 Cookie。如果服务器在 Set-Cookie 字段指定的域名，不属于当前域名，浏览器会拒绝这个 Cookie。
 >
->Path属性指定浏览器发出 HTTP 请求时，哪些路径要附带这个 Cookie。只要浏览器发现，Path属性是 HTTP 请求路径的开头一部分，就会在头信息里面带上这个 Cookie。比如，PATH属性是/，那么请求/docs路径也会包含该 Cookie。当然，前提是域名必须一致。
+> Path 属性指定浏览器发出 HTTP 请求时，哪些路径要附带这个 Cookie。只要浏览器发现，Path 属性是 HTTP 请求路径的开头一部分，就会在头信息里面带上这个 Cookie。比如，PATH 属性是/，那么请求/docs 路径也会包含该 Cookie。当然，前提是域名必须一致。
 >
->—— Cookie — [JavaScript 标准参考教程（alpha）](https://javascript.ruanyifeng.com/bom/cookie.html)
+> —— Cookie — [JavaScript 标准参考教程（alpha）](https://javascript.ruanyifeng.com/bom/cookie.html)
 
 ### 2.2 配置：Expires / Max-Age
 
->你毕业了卡就不好使了。
+> 你毕业了卡就不好使了。
 
 cookie 还可以限制::「时间范围」::，通过 Expires、Max-Age 中的一种。
 
->Expires属性指定一个具体的到期时间，到了指定时间以后，浏览器就不再保留这个 Cookie。它的值是 UTC 格式。如果不设置该属性，或者设为null，Cookie 只在当前会话（session）有效，浏览器窗口一旦关闭，当前 Session 结束，该 Cookie 就会被删除。另外，浏览器根据本地时间，决定 Cookie 是否过期，由于本地时间是不精确的，所以没有办法保证 Cookie 一定会在服务器指定的时间过期。
+> Expires 属性指定一个具体的到期时间，到了指定时间以后，浏览器就不再保留这个 Cookie。它的值是 UTC 格式。如果不设置该属性，或者设为 null，Cookie 只在当前会话（session）有效，浏览器窗口一旦关闭，当前 Session 结束，该 Cookie 就会被删除。另外，浏览器根据本地时间，决定 Cookie 是否过期，由于本地时间是不精确的，所以没有办法保证 Cookie 一定会在服务器指定的时间过期。
 >
->Max-Age属性指定从现在开始 Cookie 存在的秒数，比如60 * 60 * 24 * 365（即一年）。过了这个时间以后，浏览器就不再保留这个 Cookie。
+> Max-Age 属性指定从现在开始 Cookie 存在的秒数，比如 60 _ 60 _ 24 \* 365（即一年）。过了这个时间以后，浏览器就不再保留这个 Cookie。
 >
->如果同时指定了Expires和Max-Age，那么Max-Age的值将优先生效。
+> 如果同时指定了 Expires 和 Max-Age，那么 Max-Age 的值将优先生效。
 >
->如果Set-Cookie字段没有指定Expires或Max-Age属性，那么这个 Cookie 就是 Session Cookie，即它只在本次对话存在，一旦用户关闭浏览器，浏览器就不会再保留这个 Cookie。
+> 如果 Set-Cookie 字段没有指定 Expires 或 Max-Age 属性，那么这个 Cookie 就是 Session Cookie，即它只在本次对话存在，一旦用户关闭浏览器，浏览器就不会再保留这个 Cookie。
 >
->—— Cookie — [JavaScript 标准参考教程（alpha）](https://javascript.ruanyifeng.com/bom/cookie.html)
+> —— Cookie — [JavaScript 标准参考教程（alpha）](https://javascript.ruanyifeng.com/bom/cookie.html)
 
 ### 2.3 配置：Secure / HttpOnly
 
@@ -97,11 +97,11 @@ cookie 还可以限制::「时间范围」::，通过 Expires、Max-Age 中的�
 
 cookie 可以限制::「使用方式」::。
 
->Secure属性指定浏览器只有在加密协议 HTTPS 下，才能将这个 Cookie 发送到服务器。另一方面，如果当前协议是 HTTP，浏览器会自动忽略服务器发来的Secure属性。该属性只是一个开关，不需要指定值。如果通信是 HTTPS 协议，该开关自动打开。
+> Secure 属性指定浏览器只有在加密协议 HTTPS 下，才能将这个 Cookie 发送到服务器。另一方面，如果当前协议是 HTTP，浏览器会自动忽略服务器发来的 Secure 属性。该属性只是一个开关，不需要指定值。如果通信是 HTTPS 协议，该开关自动打开。
 >
->HttpOnly属性指定该 Cookie 无法通过 JavaScript 脚本拿到，主要是Document.cookie属性、XMLHttpRequest对象和 Request API 都拿不到该属性。这样就防止了该 Cookie 被脚本读到，只有浏览器发出 HTTP 请求时，才会带上该 Cookie。
+> HttpOnly 属性指定该 Cookie 无法通过 JavaScript 脚本拿到，主要是 Document.cookie 属性、XMLHttpRequest 对象和 Request API 都拿不到该属性。这样就防止了该 Cookie 被脚本读到，只有浏览器发出 HTTP 请求时，才会带上该 Cookie。
 >
->—— Cookie — [JavaScript 标准参考教程（alpha）](https://javascript.ruanyifeng.com/bom/cookie.html)
+> —— Cookie — [JavaScript 标准参考教程（alpha）](https://javascript.ruanyifeng.com/bom/cookie.html)
 
 ### 2.4 HTTP 头对 cookie 的读写
 
@@ -156,7 +156,7 @@ console.log(document.cookie);
 
 现在回想下，你刷卡的时候发生了什么？
 
->其实你的卡上只存了一个 id（可能是你的学号），刷的时候物业系统去查你的信息、账户，再决定「这个门你能不能进」「这个鸡腿去哪个账户扣钱」。
+> 其实你的卡上只存了一个 id（可能是你的学号），刷的时候物业系统去查你的信息、账户，再决定「这个门你能不能进」「这个鸡腿去哪个账户扣钱」。
 
 这种操作，在前后端鉴权系统中，叫 session。
 
@@ -175,7 +175,7 @@ console.log(document.cookie);
 
 显然，服务端只是给 cookie 一个 sessionId，而 session 的具体内容（可能包含用户信息、session 状态等），要自己存一下。存储的方式有几种：
 
-1. Redis（推荐）：内存型数据库，[redis中文官方网站](http://www.redis.cn/)。以 key-value 的形式存，正合 sessionId-sessionData 的场景；且访问快。
+1. Redis（推荐）：内存型数据库，[redis 中文官方网站](http://www.redis.cn/)。以 key-value 的形式存，正合 sessionId-sessionData 的场景；且访问快。
 2. 内存：直接放到变量里。一旦服务重启就没了
 3. 数据库：普通数据库。性能不高。
 
@@ -195,24 +195,23 @@ console.log(document.cookie);
 
 ### 3.4 node.js 下的 session 处理
 
-前面的图很清楚了，服务端要实现对 cookie 和 session 的存取，实现起来要做的事还是很多的。在`npm`中，已经有封装好的中间件，比如 [express-session  -  npm](https://www.npmjs.com/package/express-session)，用法就不贴了。
+前面的图很清楚了，服务端要实现对 cookie 和 session 的存取，实现起来要做的事还是很多的。在`npm`中，已经有封装好的中间件，比如 [express-session - npm](https://www.npmjs.com/package/express-session)，用法就不贴了。
 
 这是它种的 cookie：
 
 ![](https://img1.dotnet9.com/2022/04/3902.png)
 
-[express-session  -  npm](https://www.npmjs.com/package/express-session) 主要实现了：
+[express-session - npm](https://www.npmjs.com/package/express-session) 主要实现了：
 
-1. 封装了对cookie的读写操作，并提供配置项配置字段、加密方式、过期时间等。
-2. 封装了对session的存取操作，并提供配置项配置session存储方式（内存/redis）、存储规则等。
-3. 给req提供了session属性，控制属性的set/get并响应到cookie和session存取上，并给req.session提供了一些方法。
-
+1. 封装了对 cookie 的读写操作，并提供配置项配置字段、加密方式、过期时间等。
+2. 封装了对 session 的存取操作，并提供配置项配置 session 存储方式（内存/redis）、存储规则等。
+3. 给 req 提供了 session 属性，控制属性的 set/get 并响应到 cookie 和 session 存取上，并给 req.session 提供了一些方法。
 
 ## 4. 应用方案：token
 
 session 的维护给服务端造成很大困扰，我们必须找地方存放它，又要考虑分布式的问题，甚至要单独为了它启用一套 Redis 集群。有没有更好的办法？
 
->我又想到学校，在没有校园卡技术以前，我们都靠「学生证」。门卫小哥直接对照我和学生证上的脸，确认学生证有效期、年级等信息，就可以放行了。
+> 我又想到学校，在没有校园卡技术以前，我们都靠「学生证」。门卫小哥直接对照我和学生证上的脸，确认学生证有效期、年级等信息，就可以放行了。
 
 回过头来想想，一个登录场景，也不必往 session 存太多东西，那为什么不直接打包到 cookie 中呢？这样服务端不用存了，每次只要核验 cookie 带的「证件」有效性就可以了，也可以携带一些轻量的信息。
 
@@ -241,9 +240,9 @@ token 的流程是这样的：
 
 #### 4.3.1 base64
 
-比如 node 端的 [cookie-session  -  npm](https://www.npmjs.com/package/cookie-session) 库
+比如 node 端的 [cookie-session - npm](https://www.npmjs.com/package/cookie-session) 库
 
->不要纠结名字，其实是个 token 库，但保持了和 [express-session  -  npm](https://www.npmjs.com/package/express-session) 高度一致的用法，把要存的数据挂在 session 上
+> 不要纠结名字，其实是个 token 库，但保持了和 [express-session - npm](https://www.npmjs.com/package/express-session) 高度一致的用法，把要存的数据挂在 session 上
 
 默认配置下，当我给他一个 userid，他会存成这样：
 
@@ -253,11 +252,11 @@ token 的流程是这样的：
 
 #### 4.3.2 防篡改
 
->那问题来了，如果用户 cdd 拿`{"userid":"abb”}`转了个 base64，再手动修改了自己的 token 为 `eyJ1c2VyaWQiOiJhIn0=`，是不是就能直接访问到 abb 的数据了？
+> 那问题来了，如果用户 cdd 拿`{"userid":"abb”}`转了个 base64，再手动修改了自己的 token 为 `eyJ1c2VyaWQiOiJhIn0=`，是不是就能直接访问到 abb 的数据了？
 
 是的。所以看情况，如果 token 涉及到敏感权限，就要想办法避免 token 被篡改。
 
-解决方案就是给 token 加签名，来识别 token 是否被篡改过。例如在 [cookie-session  -  npm](https://www.npmjs.com/package/cookie-session) 库中，增加两项配置：
+解决方案就是给 token 加签名，来识别 token 是否被篡改过。例如在 [cookie-session - npm](https://www.npmjs.com/package/cookie-session) 库中，增加两项配置：
 
 ```shell
 secret: 'iAmSecret',
@@ -274,12 +273,12 @@ signed: true,
 
 但上面的做法额外增加了 cookie 数量，数据本身也没有规范的格式，所以 [JSON Web Token Introduction - jwt.io](https://jwt.io/introduction/) 横空出世了。
 
->JSON Web Token (JWT) 是一个开放标准，定义了一种传递 JSON 信息的方式。这些信息通过数字签名确保可信。
+> JSON Web Token (JWT) 是一个开放标准，定义了一种传递 JSON 信息的方式。这些信息通过数字签名确保可信。
 
 它是一种成熟的 token 字符串生成方案，包含了我们前面提到的数据、签名。不如直接看一下一个 JWT token 长什么样：
 
 ```shell
-eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyaWQiOiJhIiwiaWF0IjoxNTUxOTUxOTk4fQ.2jf3kl_uKWRkwjOP6uQRJFqMlwSABcgqqcJofFH5XCo 
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyaWQiOiJhIiwiaWF0IjoxNTUxOTUxOTk4fQ.2jf3kl_uKWRkwjOP6uQRJFqMlwSABcgqqcJofFH5XCo
 ```
 
 这串东西是怎么生成的呢？看图：
@@ -288,7 +287,7 @@ eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyaWQiOiJhIiwiaWF0IjoxNTUxOTUxOTk4fQ.
 
 类型、加密算法的选项，以及 JWT 标准数据字段，可以参考 [RFC 7519 - JSON Web Token (JWT)](https://tools.ietf.org/html/rfc7519#section-4.1)
 
-node 上同样有相关的库实现：[express-jwt  -  npm koa-jwt  -  npm](https://www.npmjs.com/package/express-jwt)
+node 上同样有相关的库实现：[express-jwt - npm koa-jwt - npm](https://www.npmjs.com/package/express-jwt)
 
 ### 4.5 refresh token
 
@@ -320,7 +319,7 @@ session 和 token 都是边界很模糊的概念，就像前面说的，refresh 
 存 cookie 固然方便不操心，但问题也很明显：
 
 - 在浏览器端，可以用 cookie（实际上 token 就常用 cookie），但出了浏览器端，没有 cookie 怎么办？
-- cookie 是浏览器在域下自动携带的，这就容易引发 CSRF 攻击（[前端安全系列（二）：如何防止CSRF攻击？ - 美团技术团队](https://tech.meituan.com/2018/10/11/fe-security-csrf.html)）
+- cookie 是浏览器在域下自动携带的，这就容易引发 CSRF 攻击（[前端安全系列（二）：如何防止 CSRF 攻击？ - 美团技术团队](https://tech.meituan.com/2018/10/11/fe-security-csrf.html)）
 
 存别的地方，可以解决没有 cookie 的场景；通过参数等方式手动带，可以避免 CSRF 攻击。
 
@@ -328,7 +327,6 @@ session 和 token 都是边界很模糊的概念，就像前面说的，refresh 
 
 - 存数据：请求只需携带 id，可以大幅缩短认证字符串长度，减小请求体积
 - 不存数据：不需要服务端整套的解决方案和分布式处理，降低硬件成本；避免查库带来的验证延迟
-
 
 ## 5. 单点登录
 
@@ -394,5 +392,5 @@ session 和 token 都是边界很模糊的概念，就像前面说的，refresh 
 4. token 是另一种状态管理方案，相比于 session 不需要后端存储，数据全部存在前端，解放后端，释放灵活性
 5. token 的编码技术，通常基于 base64，或增加加密算法防篡改，jwt 是一种成熟的编码方案
 6. 在复杂系统中，token 可通过 service token、refresh token 的分权，同时满足安全性和用户体验
-7. session 和 token 的对比就是「用不用cookie」和「后端存不存」的对比
+7. session 和 token 的对比就是「用不用 cookie」和「后端存不存」的对比
 8. 单点登录要求不同域下的系统「一次登录，全线通用」，通常由独立的 SSO 系统记录登录状态、下发 ticket，各业务系统配合存储和认证 ticket

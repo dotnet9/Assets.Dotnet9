@@ -5,8 +5,8 @@ description: Cake (C# Make) 是一个带有 C# DSL 的构建自动化系统，�
 date: 2022-07-12 20:13:27
 copyright: Reprinted
 author: 黑哥聊dotNet
-originaltitle: cake-build -.NET Core 跨平台构建自动化系统
-originallink: https://mp.weixin.qq.com/s/FWP4AskTvcK_6NpdFo4dQg
+originalTitle: cake-build -.NET Core 跨平台构建自动化系统
+originalLink: https://mp.weixin.qq.com/s/FWP4AskTvcK_6NpdFo4dQg
 draft: False
 cover: https://img1.dotnet9.com/2022/07/cover_13.png
 categories: .NET
@@ -21,11 +21,11 @@ Cake (C# Make) 是一个带有 C# DSL 的构建自动化系统，用于执行编
 
 ## 构建
 
-本教程使用Cake Frosting，它允许您将构建编写为标准控制台应用程序作为解决方案的一部分。有关如何运行 Cake 构建的其他可能性。
+本教程使用 Cake Frosting，它允许您将构建编写为标准控制台应用程序作为解决方案的一部分。有关如何运行 Cake 构建的其他可能性。
 
 以下说明需要在 .NET Core 3.1.301 或更高版本上运行 Cake Frosting 1.0.0 或更高版本。您可以在[https://dotnet.microsoft.com/download](https://dotnet.microsoft.com/download)找到 .NET SDK
 
-要创建一个新的Cake Frosting项目，您需要安装 Frosting 模板：
+要创建一个新的 Cake Frosting 项目，您需要安装 Frosting 模板：
 
 ```shell
 dotnet new --install Cake.Frosting.Template
@@ -41,7 +41,7 @@ dotnet new cakefrosting
 
 ### 初始构建项目
 
-该类Program包含配置和运行 Cake 的代码：
+该类 Program 包含配置和运行 Cake 的代码：
 
 ```csharp
 public static class Program
@@ -105,13 +105,14 @@ public class DefaultTask : FrostingTask
 {
 }
 ```
+
 `Default`任务对`World`有依赖性。该`World`任务是一个异步任务`Delay`，如果设置了属性，则等待一秒半。
 
 ### 示例构建管道
 
 以下示例创建了一个简单的构建管道，其中包含一个任务、一个编译 MsBuild 解决方案的任务和一个测试解决方案的任务。
 
-以下示例需要Visual Studio 解决方案的存储库根文件夹中的src/Example.s中。
+以下示例需要 Visual Studio 解决方案的存储库根文件夹中的 src/Example.s 中。
 
 添加所需的 using 语句：
 
@@ -153,7 +154,7 @@ public sealed class CleanTask : FrostingTask<BuildContext>
 }
 ```
 
-创建一个BuildTask用于构建解决方案的新类：
+创建一个 BuildTask 用于构建解决方案的新类：
 
 ```csharp
 [TaskName("Build")]
@@ -170,7 +171,7 @@ public sealed class BuildTask : FrostingTask<BuildContext>
 }
 ```
 
-创建一个TestTask用于测试解决方案的新类：
+创建一个 TestTask 用于测试解决方案的新类：
 
 ```csharp
 [TaskName("Test")]
@@ -205,6 +206,6 @@ public sealed class Default : FrostingTask
 ./build.ps1
 ```
 
-更多文档请前往cake-build官网：[https://cakebuild.net](https://cakebuild.net)。
+更多文档请前往 cake-build 官网：[https://cakebuild.net](https://cakebuild.net)。
 
-最后大家如果喜欢我的文章，还麻烦给个关注, 希望.NET生态圈越来越好！
+最后大家如果喜欢我的文章，还麻烦给个关注, 希望.NET 生态圈越来越好！

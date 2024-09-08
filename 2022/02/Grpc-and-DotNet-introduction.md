@@ -5,8 +5,8 @@ description: 从本质上来讲，API 就是服务器和客户端之间的一个
 date: 2022-02-18 21:55:31
 copyright: Reprinted
 author: Mohamad Lawand
-originaltitle: gRPC 与.NET 入门
-originallink: https://www.infoq.com/articles/getting-started-grpc-dotnet/、https://www.infoq.cn/article/VutWdcVAGpE5ugdar92q
+originalTitle: gRPC 与.NET 入门
+originalLink: https://www.infoq.com/articles/getting-started-grpc-dotnet/、https://www.infoq.cn/article/VutWdcVAGpE5ugdar92q
 draft: False
 cover: https://img1.dotnet9.com/2022/02/cover_01.jpg
 categories: .NET
@@ -15,7 +15,7 @@ tags: .NET,gRPC
 
 - 作者 | Mohamad Lawand
 - 译者 | 张卫滨
-- 策划 | 丁晓昀  
+- 策划 | 丁晓昀
 
 从本质上来讲，API 就是服务器和客户端之间的一个协议，指定了服务器如何基于客户端的请求提供特定的数据。
 
@@ -82,7 +82,7 @@ gRPC 有很多特征，所以不管是在微服务还是在 web/ 移动 API 通�
 
 - gRPC 代码会自动生成，我们则需要提供具体的实现。
 
-- 不管是在服务器端还是在客户端，.proto文件都能支持 12 种不同的语言。
+- 不管是在服务器端还是在客户端，.proto 文件都能支持 12 种不同的语言。
 
 默认情况下，gRPC 会使用谷歌开源的 Protocol Buffers 机制来进行结构化数据的序列化：
 
@@ -138,7 +138,7 @@ REST 是最流行的构建 API 的方案。但是，这个决策取决于很多�
 
 **gRPC**
 
-- 契约优先的 API 开发方式：契约（服务和消息）是在*.proto文件中定义的，它们是 gRPC 的核心。这是以一种语言中立的方式来定义 API。这些文件随后可以被其他编程语言用来生成代码（如强类型的客户端和消息类）。
+- 契约优先的 API 开发方式：契约（服务和消息）是在\*.proto 文件中定义的，它们是 gRPC 的核心。这是以一种语言中立的方式来定义 API。这些文件随后可以被其他编程语言用来生成代码（如强类型的客户端和消息类）。
 
 - 内容是二进制的：HTTP/2 和 Protobuf 是二进制的协议，内容是为计算机和高性能而设计的。
 
@@ -170,7 +170,7 @@ REST 是最流行的构建 API 的方案。但是，这个决策取决于很多�
 
 - [Visual Studio Code](https://code.visualstudio.com/)
 
-软件安装完成之后，我们需要创建项目结构（在本文中，我们将在终端 / 命令行中直接使用dotnet命令）：
+软件安装完成之后，我们需要创建项目结构（在本文中，我们将在终端 / 命令行中直接使用 dotnet 命令）：
 
 ```shell
 dotnet new grpc -n GrpcService
@@ -188,9 +188,9 @@ dotnet dev-certs https --trust
 
 - Services 文件夹
 
-在 Protos 文件夹中，我们有一个greet.proto文件。正如我们在前文中所提到的，.proto能够以 语言中立的方式 来定义 API。
+在 Protos 文件夹中，我们有一个 greet.proto 文件。正如我们在前文中所提到的，.proto 能够以 语言中立的方式 来定义 API。
 
-从这个文件中，我们可以看到，它包含一个Greeter服务和一个SayHello方法。我们可以将Greeter服务视为控制器，将SayHello方法视为一个动作。.proto文件的内容如下所示：
+从这个文件中，我们可以看到，它包含一个 Greeter 服务和一个 SayHello 方法。我们可以将 Greeter 服务视为控制器，将 SayHello 方法视为一个动作。.proto 文件的内容如下所示：
 
 ```C#
 // 声明我们可以使用的最新模式
@@ -219,13 +219,13 @@ message HelloReply {
 }
 ```
 
-SayHello方法接收一个HelloRequest（这是一个消息）并返回一个HelloReply（这也是一个消息）。
+SayHello 方法接收一个 HelloRequest（这是一个消息）并返回一个 HelloReply（这也是一个消息）。
 
-在GreeterService文件中，我们可以看到有一个GreeterService类，它继承自Greeter.GreeterBase，后者是由.proto文件自动生成的。
+在 GreeterService 文件中，我们可以看到有一个 GreeterService 类，它继承自 Greeter.GreeterBase，后者是由.proto 文件自动生成的。
 
-在SayHello方法中，我们会接收一个请求（HelloRequest）并返回一个响应（HelloReply）。它们也是由.proto文件自动为我们生成的。
+在 SayHello 方法中，我们会接收一个请求（HelloRequest）并返回一个响应（HelloReply）。它们也是由.proto 文件自动为我们生成的。
 
-代码自动生成会基于.proto文件定义为我们生成所需的文件。gRPC 在代码生成、路由和序列化方面为我们做了所有繁重的工作。我们所需要做的就是实现基类并覆盖方法的实现。
+代码自动生成会基于.proto 文件定义为我们生成所需的文件。gRPC 在代码生成、路由和序列化方面为我们做了所有繁重的工作。我们所需要做的就是实现基类并覆盖方法的实现。
 
 接下来，我们尝试运行 gRPC 服务：
 
@@ -233,9 +233,9 @@ SayHello方法接收一个HelloRequest（这是一个消息）并返回一个Hel
 dotnet run
 ```
 
-从自动生成的端点的结果中可以看到，我们不能像使用 web 浏览器作为 REST 的客户端那样使用 gRPC。在这种情况下，我们需要创建一个 gRPC 客户端与服务进行通信。对于我们的客户端来讲，gRPC 也需要.proto文件，因为它是一个 契约优先的 RPC 框架。目前，我们的 web 浏览器对客户端（我们并没有.proto文件）一无所知，所以它不知道如何处理请求。
+从自动生成的端点的结果中可以看到，我们不能像使用 web 浏览器作为 REST 的客户端那样使用 gRPC。在这种情况下，我们需要创建一个 gRPC 客户端与服务进行通信。对于我们的客户端来讲，gRPC 也需要.proto 文件，因为它是一个 契约优先的 RPC 框架。目前，我们的 web 浏览器对客户端（我们并没有.proto 文件）一无所知，所以它不知道如何处理请求。
 
-我们创建名为customers.proto的自定义.proto文件。这个文件必须要在 Protos 文件夹中创建，它的内容如下所示：
+我们创建名为 customers.proto 的自定义.proto 文件。这个文件必须要在 Protos 文件夹中创建，它的内容如下所示：
 
 ```shell
 syntax = "proto3";
@@ -258,7 +258,7 @@ message CustomerDataModel {
 }
 ```
 
-保存完上述文件之后，我们需要将它添加到.csproj文件中：
+保存完上述文件之后，我们需要将它添加到.csproj 文件中：
 
 ```xml
 <ItemGroup>
@@ -272,7 +272,7 @@ message CustomerDataModel {
 dotnet build
 ```
 
-下一步是添加我们的CustomerService类到 Services 文件夹中并更新其内容，如下所示：
+下一步是添加我们的 CustomerService 类到 Services 文件夹中并更新其内容，如下所示：
 
 ```C#
 public class CustomerService : Customer.CustomerBase
@@ -311,7 +311,7 @@ public class CustomerService : Customer.CustomerBase
 
 ![](https://img1.dotnet9.com/2022/02/0104.jpg)
 
-现在，我们需要更新Startup.cs类，以通知我们的应用程序，我们新创建的服务有了一个新的端点。为了实现这一点，在Configure方法（位于 app.UserEndpoints 中）里面，我们需要添加如下的代码：
+现在，我们需要更新 Startup.cs 类，以通知我们的应用程序，我们新创建的服务有了一个新的端点。为了实现这一点，在 Configure 方法（位于 app.UserEndpoints 中）里面，我们需要添加如下的代码：
 
 ```C#
 endpoints.MapGrpcService<CustomerService>();
@@ -319,13 +319,13 @@ endpoints.MapGrpcService<CustomerService>();
 
 MacOS 下的注意事项：
 
-因为 [MacOS 不支持 TLS 之上的 HTTP/2](https://docs.microsoft.com/en-gb/aspnet/core/grpc/troubleshoot?view=aspnetcore-5.0#unable-to-start-aspnet-core-grpc-app-on-macos)，所以我们需要采用如下的方案来更新Program.cs文件：
+因为 [MacOS 不支持 TLS 之上的 HTTP/2](https://docs.microsoft.com/en-gb/aspnet/core/grpc/troubleshoot?view=aspnetcore-5.0#unable-to-start-aspnet-core-grpc-app-on-macos)，所以我们需要采用如下的方案来更新 Program.cs 文件：
 
 ```C#
 webBuilder.ConfigureKestrel(options =>
 {
     // 设置无需 TLS 的 HTTP/2 端点
-    options.ListenLocalhost(5000, o => o.Protocols = 
+    options.ListenLocalhost(5000, o => o.Protocols =
         HttpProtocols.Http2);
 });
 ```
@@ -336,7 +336,7 @@ webBuilder.ConfigureKestrel(options =>
 dotnet new console -o GrpcGreeterClient
 ```
 
-现在，我们需要添加必要的包到客户端控制台应用中，使其能够识别 gRPC。这可以通过在GrpcGreeterClient类中实现：
+现在，我们需要添加必要的包到客户端控制台应用中，使其能够识别 gRPC。这可以通过在 GrpcGreeterClient 类中实现：
 
 ```shell
 dotnet add package Grpc.Net.Client
@@ -344,7 +344,7 @@ dotnet add package Google.Protobuf
 dotnet add package Grpc.Tools
 ```
 
-因为我们需要客户端具有和服务器端相同的契约，所以需要将前面步骤中创建的.proto文件添加到客户端应用中。为了实现这一点：
+因为我们需要客户端具有和服务器端相同的契约，所以需要将前面步骤中创建的.proto 文件添加到客户端应用中。为了实现这一点：
 
 1. 首先，我们需要添加一个名为 Protos 的文件夹到客户端项目中。
 
@@ -356,8 +356,7 @@ dotnet add package Grpc.Tools
 
 3. 在粘贴完文件之后，我们需要更新命名空间，使其与客户端应用相同：
 
-option csharp_namespace = "GrpcGreeterClient";
-4. 我们需要更新GrpcGreeterClient.csproj文件，以便让它知道我们新增加的.proto文件：
+option csharp_namespace = "GrpcGreeterClient"; 4. 我们需要更新 GrpcGreeterClient.csproj 文件，以便让它知道我们新增加的.proto 文件：
 
 ```xml
 <ItemGroup>
@@ -368,7 +367,7 @@ option csharp_namespace = "GrpcGreeterClient";
 </ItemGroup>
 ```
 
-这个Protobuf元素是代码自动生成特性了解.proto文件的方式。通过上面的改动，我们在这里表明，希望客户端使用我们新添加的.proto文件。
+这个 Protobuf 元素是代码自动生成特性了解.proto 文件的方式。通过上面的改动，我们在这里表明，希望客户端使用我们新添加的.proto 文件。
 
 我们需要构建客户端并确保所有内容都能构建成功：
 
@@ -376,7 +375,7 @@ option csharp_namespace = "GrpcGreeterClient";
 dotnet run
 ```
 
-现在，我们添加一些代码到控制台应用中，以便于调用服务器端。在Program.cs文件中，我们需要做如下的改动：
+现在，我们添加一些代码到控制台应用中，以便于调用服务器端。在 Program.cs 文件中，我们需要做如下的改动：
 
 ```C#
 // 我们创建一个通道，它代表了客户端到服务器的连接
@@ -405,7 +404,7 @@ Console.WriteLine($"First Name: {result.FirstName} - Last Name: {result.LastName
 
 现在，我们为应用添加流处理的功能。
 
-我们回到customers.proto文件并在Customer服务中添加一个流方法：
+我们回到 customers.proto 文件并在 Customer 服务中添加一个流方法：
 
 ```C#
 // 我们要返回一个消费者的列表
@@ -413,7 +412,7 @@ Console.WriteLine($"First Name: {result.FirstName} - Last Name: {result.LastName
 rpc GetAllCustomers (AllCustomerModel) returns (stream CustomerDataModel);
 ```
 
-正如我们所看到的，在返回中，我们添加了 stream 关键字，这意味着我们正在添加由“多个”回复所组成的stream。
+正如我们所看到的，在返回中，我们添加了 stream 关键字，这意味着我们正在添加由“多个”回复所组成的 stream。
 
 同时，我们还需要添加一个空消息
 
@@ -425,7 +424,7 @@ message AllCustomerModel {
 }
 ```
 
-要实现这个方法，我们需要到 Services 文件夹下并添加如下的代码到CustomerService类中：
+要实现这个方法，我们需要到 Services 文件夹下并添加如下的代码到 CustomerService 类中：
 
 ```C#
 public override async Task GetAllCustomers(AllCustomerModel request, IServerStreamWriter<CustomerDataModel> responseStream, ServerCallContext context)
@@ -459,7 +458,7 @@ public override async Task GetAllCustomers(AllCustomerModel request, IServerStre
 }
 ```
 
-现在，我们需要复制服务器端 customers.proto 文件的变化到客户端的customers.proto文件中：
+现在，我们需要复制服务器端 customers.proto 文件的变化到客户端的 customers.proto 文件中：
 
 ```C#
 service Customer {
@@ -483,7 +482,7 @@ message AllCustomerModel {
 dotnet build
 ```
 
-我们下一步需要更新 GrpcClientApp 中的Program.cs文件以处理新的流方法：
+我们下一步需要更新 GrpcClientApp 中的 Program.cs 文件以处理新的流方法：
 
 ```C#
 var customerCall = customerClient.GetAllCustomers(new AllCustomerModel());
@@ -494,20 +493,20 @@ await foreach(var customer in customerCall.ResponseStream.ReadAllAsync())
 }
 ```
 
-现在，我们回到GrpcGreeter并更新greet.proto文件，为其添加流方法：
+现在，我们回到 GrpcGreeter 并更新 greet.proto 文件，为其添加流方法：
 
 ```C#
 rpc SayHelloStream(HelloRequest) returns (stream HelloReply);
 ```
 
-可以看到，在返回中我们添加了关键字stream，这意味着我们正在添加由“多个”回复所组成的stream。要实现这个方法，我们需要到 Services 文件夹下，并在 GreeterService 中添加如下的内容：
+可以看到，在返回中我们添加了关键字 stream，这意味着我们正在添加由“多个”回复所组成的 stream。要实现这个方法，我们需要到 Services 文件夹下，并在 GreeterService 中添加如下的内容：
 
 ```C#
 public override async Task SayHelloStream(HelloRequest request, IServerStreamWriter<HelloReply> responseStream, ServerCallContext context)
 {
   for (int i = 0; i < 10; i ++)
   {
-    await responseStream.WriteAsync(new HelloReply 
+    await responseStream.WriteAsync(new HelloReply
     {
       Message = "Hello " + request.Name + " " + i
     });
@@ -517,19 +516,19 @@ public override async Task SayHelloStream(HelloRequest request, IServerStreamWri
 }
 ```
 
-现在，我们需要将greet.proto文件的变更从服务器端复制到客户端，并对其进行构建。在客户端应用的greet.proto文件中，我们添加如下这行代码：
+现在，我们需要将 greet.proto 文件的变更从服务器端复制到客户端，并对其进行构建。在客户端应用的 greet.proto 文件中，我们添加如下这行代码：
 
 ```C#
 rpc SayHelloStream(HelloRequest) returns (stream HelloReply);
 ```
 
-确保在保存.proto文件后，对应用进行构建。
+确保在保存.proto 文件后，对应用进行构建。
 
 ```shell
 dotnet build
 ```
 
-现在，我们可以打开Program.cs并使用新的方法：
+现在，我们可以打开 Program.cs 并使用新的方法：
 
 ```C#
 var call = client.SayHelloStream(new HelloRequest
@@ -545,7 +544,7 @@ await foreach(var item in call.ResponseStream.ReadAllAsync())
 
 该样例阐述了我们如何在.NET 5 中实现 gRPC 的客户端 - 服务器应用。
 
-## 总    结
+## 总 结
 
 我们可以看到 gRPC 在构建应用程序中的力量，但要发挥这种力量并不容易，因为构建 gRPC 服务需要更多的搭建时间以及客户端与服务器之间的协调。而使用 REST 的时候，我们几乎不需要任何搭建过程就可以直接开始消费端点。
 

@@ -5,17 +5,17 @@ description: 因为某些原因，github访问速度确实太慢了，图片经�
 date: 2022-04-15 20:23:24
 copyright: Reprinted
 author: 猪哥
-originaltitle: 提高国内访问 GitHub 的速度的 9 种方案
-originallink: https://urlify.cn/IFzQRb
+originalTitle: 提高国内访问 GitHub 的速度的 9 种方案
+originalLink: https://urlify.cn/IFzQRb
 draft: False
 cover: https://img1.dotnet9.com/2022/04/cover_16.png
 categories: 分享
 tags: Github
 ---
 
->来源｜https://urlify.cn/IFzQRb
+> 来源｜https://urlify.cn/IFzQRb
 
-因为某些原因，github访问速度确实太慢了，图片经常刷不出来，甚至会出现项目无法下载的情况。码云虽好，可目前还是无法代替github在编程界的地位，所以今天猪哥给大家推荐几种提高github访问速度的方案，挑自己喜欢的尝试就好！
+因为某些原因，github 访问速度确实太慢了，图片经常刷不出来，甚至会出现项目无法下载的情况。码云虽好，可目前还是无法代替 github 在编程界的地位，所以今天猪哥给大家推荐几种提高 github 访问速度的方案，挑自己喜欢的尝试就好！
 
 ## 1. GitHub 镜像访问
 
@@ -28,7 +28,7 @@ tags: Github
 
 ## 2. GitHub 文件加速
 
-利用 Cloudflare Workers 对 github release 、archive 以及项目文件进行加速，部署无需服务器且自带CDN.
+利用 Cloudflare Workers 对 github release 、archive 以及项目文件进行加速，部署无需服务器且自带 CDN.
 
 - https://gh.api.99988866.xyz
 - https://g.ioiox.com
@@ -75,7 +75,7 @@ jsdelivr 唯一美中不足的就是它不能获取 exe 文件以及 Release 处
 
 ![](https://img1.dotnet9.com/2022/04/1604.png)
 
-在导入页面中粘贴你的Github仓库地址，点击导入即可：
+在导入页面中粘贴你的 Github 仓库地址，点击导入即可：
 
 ![](https://img1.dotnet9.com/2022/04/1605.png)
 
@@ -85,17 +85,17 @@ jsdelivr 唯一美中不足的就是它不能获取 exe 文件以及 Release 处
 
 ## 9. 通过修改 HOSTS 文件进行加速
 
-手动把cdn和ip地址绑定。
+手动把 cdn 和 ip 地址绑定。
 
-第一步：获取 github 的 global.ssl.fastly 地址访问：http://github.global.ssl.fastly.net.ipaddress.com/#ipinfo 获取cdn和ip域名：
+第一步：获取 github 的 global.ssl.fastly 地址访问：http://github.global.ssl.fastly.net.ipaddress.com/#ipinfo 获取 cdn 和 ip 域名：
 
 ![](https://img1.dotnet9.com/2022/04/1607.png)
 
 得到：199.232.69.194 https://github.global.ssl.fastly.net
 
-第二步：获取github.com地址
+第二步：获取 github.com 地址
 
-访问：https://github.com.ipaddress.com/#ipinfo 获取cdn和ip：
+访问：https://github.com.ipaddress.com/#ipinfo 获取 cdn 和 ip：
 
 ![](https://img1.dotnet9.com/2022/04/1608.png)
 
@@ -103,9 +103,9 @@ jsdelivr 唯一美中不足的就是它不能获取 exe 文件以及 Release 处
 
 第三步：修改 host 文件映射上面查找到的 IP
 
-windows系统：
+windows 系统：
 
-1、修改C:\Windows\System32\drivers\etc\hosts文件的权限，指定可写入：右击->hosts->属性->安全->编辑->点击Users->在Users的权限“写入”后面打勾。如下：
+1、修改 C:\Windows\System32\drivers\etc\hosts 文件的权限，指定可写入：右击->hosts->属性->安全->编辑->点击 Users->在 Users 的权限“写入”后面打勾。如下：
 
 ![](https://img1.dotnet9.com/2022/04/1609.png)
 

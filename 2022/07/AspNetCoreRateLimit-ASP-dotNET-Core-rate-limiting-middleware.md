@@ -5,8 +5,8 @@ description: AspNetCoreRateLimit 是一种 ASP.NET Core 速率限制解决方案
 date: 2022-07-12 20:26:47
 copyright: Reprinted
 author: 黑哥聊dotNet
-originaltitle: AspNetCoreRateLimit - ASP.NET Core 速率限制中间件
-originallink: https://mp.weixin.qq.com/s/URLZCyrLWM-NEM8eMvnVhw
+originalTitle: AspNetCoreRateLimit - ASP.NET Core 速率限制中间件
+originalLink: https://mp.weixin.qq.com/s/URLZCyrLWM-NEM8eMvnVhw
 draft: False
 cover: https://img1.dotnet9.com/2022/07/cover_14.png
 categories: .NET
@@ -53,7 +53,7 @@ Install-Package AspNetCoreRateLimit
 Install-Package AspNetCoreRateLimit.Redis
 ```
 
-**Startup.cs代码：**
+**Startup.cs 代码：**
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
@@ -112,16 +112,16 @@ public void Configure(IApplicationBuilder app, IHostingEnvironment env)
   }
 ```
 
-如果EnableEndpointRateLimiting设置为false，则限制将在全局范围内应用，并且仅适用于端点的规则*。例如，如果您设置每秒 5 次调用的限制，则对任何端点的任何 HTTP 调用都将计入该限制。
+如果 EnableEndpointRateLimiting 设置为 false，则限制将在全局范围内应用，并且仅适用于端点的规则\*。例如，如果您设置每秒 5 次调用的限制，则对任何端点的任何 HTTP 调用都将计入该限制。
 
-如果EnableEndpointRateLimiting设置为true，则限制将适用于每个端点，如{HTTP_Verb}{PATH}。例如，如果您为*:/api/values客户端设置每秒调用 5 次的限制，则每秒可以调用GET /api/values5 次，但也可以调用 5 次PUT /api/values。
+如果 EnableEndpointRateLimiting 设置为 true，则限制将适用于每个端点，如{HTTP_Verb}{PATH}。例如，如果您为\*:/api/values 客户端设置每秒调用 5 次的限制，则每秒可以调用 GET /api/values5 次，但也可以调用 5 次 PUT /api/values。
 
-如果StackBlockedRequests设置为false，则拒绝的呼叫不会添加到节流计数器。如果客户端每秒发出 3 个请求，并且您设置了每秒一个呼叫的限制，则其他限制（例如每分钟或每天计数器）将仅记录第一个呼叫，即未被阻止的呼叫。如果您希望被拒绝的请求计入其他限制，您必须设置StackBlockedRequests为true.
+如果 StackBlockedRequests 设置为 false，则拒绝的呼叫不会添加到节流计数器。如果客户端每秒发出 3 个请求，并且您设置了每秒一个呼叫的限制，则其他限制（例如每分钟或每天计数器）将仅记录第一个呼叫，即未被阻止的呼叫。如果您希望被拒绝的请求计入其他限制，您必须设置 StackBlockedRequests 为 true.
 
-用于在您的RealIpHeaderKestrel 服务器位于反向代理之后时提取客户端 IP，如果您的代理使用不同的标头，则X-Real-IP使用此选项进行设置。
+用于在您的 RealIpHeaderKestrel 服务器位于反向代理之后时提取客户端 IP，如果您的代理使用不同的标头，则 X-Real-IP 使用此选项进行设置。
 
-ClientIdHeader用于提取白名单的客户端 ID 。如果此标头中存在客户端 ID 并且与 ClientWhitelist 中指定的值匹配，则不应用速率限制。
+ClientIdHeader 用于提取白名单的客户端 ID 。如果此标头中存在客户端 ID 并且与 ClientWhitelist 中指定的值匹配，则不应用速率限制。
 
-这里只写了基于客户端 IP 的速率限制，如果对此项目感兴趣，更多文档请前往AspNetCoreRateLimit官网。
+这里只写了基于客户端 IP 的速率限制，如果对此项目感兴趣，更多文档请前往 AspNetCoreRateLimit 官网。
 
-最后大家如果喜欢我的文章，还麻烦给个关注, 希望net生态圈越来越好！
+最后大家如果喜欢我的文章，还麻烦给个关注, 希望 net 生态圈越来越好！

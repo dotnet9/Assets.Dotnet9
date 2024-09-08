@@ -5,7 +5,7 @@ description: 一款简单漂亮的WPF UI，融合部分开源框架的组件，�
 date: 2020-02-02 13:45:56
 banner: false
 copyright: Original
-originaltitle: 开源C# WPF控件库《AduSkin–UI》
+originalTitle: 开源C# WPF控件库《AduSkin–UI》
 draft: False
 cover: https://img1.dotnet9.com/2020/02/0101.gif
 tags: 开源WPF
@@ -16,13 +16,13 @@ categories: .NET
 
 A Beautiful WPF Control UI
 
->一款简单漂亮的WPF UI，融合部分开源框架的组件，为个人定制的UI，可供学者参考。
+> 一款简单漂亮的 WPF UI，融合部分开源框架的组件，为个人定制的 UI，可供学者参考。
 >
->https://www.cnblogs.com/aduskin/p/12101712.html
+> https://www.cnblogs.com/aduskin/p/12101712.html
 
 ## 1. 关于《AduSkin》
 
-《AduSkin》融合了 [《HandyControl》](https://github.com/HandyOrg/HandyControl)(本站曾有介绍)、[《Arthas》](https://github.com/1217950746/Arthas-WPFUI)、[《WPF.UI》](https://github.com/zhidanfeng/WPF.UI)等开源C# WPF控件库开发而成，并且又添加了控件库作者自己的特色：
+《AduSkin》融合了 [《HandyControl》](https://github.com/HandyOrg/HandyControl)(本站曾有介绍)、[《Arthas》](https://github.com/1217950746/Arthas-WPFUI)、[《WPF.UI》](https://github.com/zhidanfeng/WPF.UI)等开源 C# WPF 控件库开发而成，并且又添加了控件库作者自己的特色：
 
 ### 1.1 控件库全貌
 
@@ -34,13 +34,13 @@ A Beautiful WPF Control UI
 
 ### 1.3 技术交流
 
-- 作者QQ：[1280429435](http://wpa.qq.com/msgrd?v=3&uin=1280429435&site=qq&menu=yes)
+- 作者 QQ：[1280429435](http://wpa.qq.com/msgrd?v=3&uin=1280429435&site=qq&menu=yes)
 
-- QQ技术交流群：[544471417](https://jq.qq.com/?_wv=1027&k=57GYQeb)
+- QQ 技术交流群：[544471417](https://jq.qq.com/?_wv=1027&k=57GYQeb)
 
 - 《AduSkin》源码：[AduSkin](https://github.com/aduskin)
 
-## 2. 基于《AduSkin》控件库衍生的Case案例
+## 2. 基于《AduSkin》控件库衍生的 Case 案例
 
 ### 2.1 AduShopping
 
@@ -50,7 +50,7 @@ A Beautiful WPF Control UI
 
 ![](https://img1.dotnet9.com/2020/02/0104.gif)
 
-### 2.3 心理FM
+### 2.3 心理 FM
 
 ![](https://img1.dotnet9.com/2020/02/0105.png)
 
@@ -64,11 +64,11 @@ A Beautiful WPF Control UI
 
 ## 3. 《AduSkin》的特色控件组合案例
 
-现有13个控件组合案例，见下图左侧案例菜单：
+现有 13 个控件组合案例，见下图左侧案例菜单：
 
 站长选择部分进行图片录制介绍：
 
-### 3.1 Win10菜单
+### 3.1 Win10 菜单
 
 ![](https://img1.dotnet9.com/2020/02/0108.gif)
 
@@ -76,7 +76,7 @@ A Beautiful WPF Control UI
 
 ![](https://img1.dotnet9.com/2020/02/0109.gif)
 
-### 3.3 多功能Tab
+### 3.3 多功能 Tab
 
 ![](https://img1.dotnet9.com/2020/02/0110.gif)
 
@@ -118,8 +118,8 @@ A Beautiful WPF Control UI
 
 ## 4. 写在最后的话
 
-下载源码后，需要将视频解析库 “libvlc.7z” 解压到Demo输出目录，视频播放功能才能正常使用。
+下载源码后，需要将视频解析库 “libvlc.7z” 解压到 Demo 输出目录，视频播放功能才能正常使用。
 
-欢迎使用《AduSkin》控件库，在控件使用过程中有什么问题，可添加作者QQ号或QQ技术交流群交流。
+欢迎使用《AduSkin》控件库，在控件使用过程中有什么问题，可添加作者 QQ 号或 QQ 技术交流群交流。
 
 ![](https://img1.dotnet9.com/2020/02/0119.png)

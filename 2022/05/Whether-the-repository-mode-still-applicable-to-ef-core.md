@@ -5,8 +5,8 @@ description: 昨天『.NET 大牛之路』群里的小伙伴们谈论了使用 E
 date: 2022-05-04 16:04:32
 copyright: Reprinted
 author: liamwang 精致码农
-originaltitle: 仓储模式是否依然适用于EF Core？
-originallink: https://mp.weixin.qq.com/s/DyzREfZbtZVOQ5MbIQ46cg
+originalTitle: 仓储模式是否依然适用于EF Core？
+originalLink: https://mp.weixin.qq.com/s/DyzREfZbtZVOQ5MbIQ46cg
 draft: False
 cover: https://img1.dotnet9.com/2022/05/cover_09.png
 categories: .NET
@@ -15,23 +15,23 @@ tags: .NET,ORM,EF Core
 
 昨天『.NET 大牛之路』群里的小伙伴们谈论了使用 EF Core 实现仓储模式的话题，我想起以前看过一篇一名国外大佬写的文章，觉得非常有参考价值，今天进行了翻译，供大家赏鉴。
 
->原文：https://www.thereformedprogrammer.net/is-the-repository-pattern-useful-with-entity-framework-core/
+> 原文：https://www.thereformedprogrammer.net/is-the-repository-pattern-useful-with-entity-framework-core/
 >
->作者：Jon P Smith
+> 作者：Jon P Smith
 >
->翻译：精致码农-王亮
+> 翻译：精致码农-王亮
 >
->说明：原文首次发布于 2018 年 2 月，最后更新于 2020 年 7 月。
+> 说明：原文首次发布于 2018 年 2 月，最后更新于 2020 年 7 月。
 
 正文：
 
 我在 2014 年写了第一篇关于仓储模式的文章，它仍然是一篇很受欢迎的文章。而这一篇文章是那篇文章的更新版，基于这几年 EF Core 新的发布和对 EF Core 数据库访问模式的进一步研究。
 
-1. Original: Analysing whether Repository pattern useful with Entity Framework (2014年5月).
+1. Original: Analysing whether Repository pattern useful with Entity Framework (2014 年 5 月).
 
    https://www.thereformedprogrammer.net/is-the-repository-pattern-useful-with-entity-framework/
 
-2. First solution: Four months on – my solution to replacing the Repository pattern (2014年10月).
+2. First solution: Four months on – my solution to replacing the Repository pattern (2014 年 10 月).
 
    https://www.thereformedprogrammer.net/is-the-repository-pattern-useful-with-entity-framework-part-2/
 
@@ -85,7 +85,7 @@ https://docs.microsoft.com/en-us/aspnet/mvc/overview/older-versions/getting-star
 
 让我试着以尽可能公平的方式回顾一下 Rep/UoW 模式的优点和缺点。以下是我的观点。
 
-### 5.1  Rep/UoW 模式的优点
+### 5.1 Rep/UoW 模式的优点
 
 1. 隔离你的数据库访问代码。仓库模式的最大优点是你知道你所有的数据库访问代码在哪里。另外，你通常会把你的仓储库分成几个部分，如目录库、订单处理库等，这使得你很容易找到有错误或需要性能调整的特定查询的代码。这无疑是一个很大的优点。
 
@@ -177,7 +177,7 @@ public IQueryable<BookListDto> SortFilterPage
 
 查询对象处理了 CRUD 的读取部分，但是新增、更新和删除部分呢，也就是你向数据库写入的部分？我将向你展示运行 CUD 操作的两种方法：直接使用 EF Core 命令，以及使用实体类中的 DDD 方法。让我们来看看非常简单的更新例子：在我的图书应用中添加一个评论（见`efcoreinaction.com`）。
 
->注：如果你想尝试添加评论，有一个与我的书配套的 GitHub repo（`github.com/JonPSmith/EfCoreInAction`）,选择分支 Chapter05（每章都有一个分支）并在本地运行该应用程序。你会看到每本书旁边都有一个管理按钮，有几个 CUD 命令。
+> 注：如果你想尝试添加评论，有一个与我的书配套的 GitHub repo（`github.com/JonPSmith/EfCoreInAction`）,选择分支 Chapter05（每章都有一个分支）并在本地运行该应用程序。你会看到每本书旁边都有一个管理按钮，有几个 CUD 命令。
 
 **方式一：直接使用 EF Core 命令**
 
@@ -196,7 +196,7 @@ public Book AddReviewToBook(ReviewDto dto)
 }
 ```
 
->`注：AddReviewToBook` 方法是在一个叫做 `AddReviewService` 的类中，这个类在我的 `ServiceLayer` 中。这个类被注册为一个服务，并且有一个构造函数，它接收应用程序的 `DbContext`，这个 `DbContext` 是通过 DI 注入的。注入的值被存储在私有字段 `_context` 中，`AddReviewToBook` 方法可以使用它来访问数据库。
+> `注：AddReviewToBook` 方法是在一个叫做 `AddReviewService` 的类中，这个类在我的 `ServiceLayer` 中。这个类被注册为一个服务，并且有一个构造函数，它接收应用程序的 `DbContext`，这个 `DbContext` 是通过 DI 注入的。注入的值被存储在私有字段 `_context` 中，`AddReviewToBook` 方法可以使用它来访问数据库。
 
 这将把新的评论添加到数据库中，这很有效，但还有另一种方法可以使用更多的 DDD 方法来构建。
 
@@ -257,7 +257,7 @@ public class Book
 
 因为访问方法的代码在实体类里面，如果需要的话可以更复杂，因为它将是你需要写的唯一版本的代码。在方式一中，你可以在不同的地方重复相同的代码，只要你需要更新 `Book` 的 `Review` 集合。
 
->注：我写了一篇名为“Creating Domain-Driven Design entity classes with Entity Framework Core”的文章，全部都是关于 DDD 风格的实体类。这篇文章对这个话题有更详细的介绍。我还更新了关于如何用 EF Core 编写业务逻辑的文章，以使用同样的 DDD 风格的实体类。
+> 注：我写了一篇名为“Creating Domain-Driven Design entity classes with Entity Framework Core”的文章，全部都是关于 DDD 风格的实体类。这篇文章对这个话题有更详细的介绍。我还更新了关于如何用 EF Core 编写业务逻辑的文章，以使用同样的 DDD 风格的实体类。
 
 为什么实体类中的方法不调用 `SaveChanges`？在方式一中，一个方法包含了所有的部分：a）加载实体，b）更新实体，c）调用 `SaveChanges` 来更新数据库。我可以这样做，因为我知道它是由一个网络请求调用的，而这就是我想做的全部。对于 DDD 实体方法，你不能在实体方法中调用 `SaveChanges`，因为你不能确定操作已经完成。例如，如果你从备份中加载一本书，你可能想创建这本书，添加作者，添加任何评论，然后调用 `SaveChanges`，这样所有的东西都在一起被提交到数据库。
 
@@ -293,7 +293,7 @@ Rep/UoW 模式的一个好处是，它将你所有的数据访问代码放在一
 
 ![](https://img1.dotnet9.com/2022/05/0901.png)
 
->注：前面提到的库 `GenericServices`（EF6.x）和 `EfCore.GenericServices`（EF Core）实际上是一个提供 `ServiceLayer` 功能的库，即在 `DataLayer` 和你的 Web/移动/桌面应用程序之间充当适配器模式和命令模式。
+> 注：前面提到的库 `GenericServices`（EF6.x）和 `EfCore.GenericServices`（EF Core）实际上是一个提供 `ServiceLayer` 功能的库，即在 `DataLayer` 和你的 Web/移动/桌面应用程序之间充当适配器模式和命令模式。
 
 从这个图中我想说的是，通过使用不同的程序集，一个简单的命名标准（见图中黑体字 `Book`）和文件夹，你可以建立一个应用程序，其中你的数据库代码是独立的，很容易找到。随着你的应用程序的增长，这可能是至关重要的。
 

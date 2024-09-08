@@ -5,8 +5,8 @@ description: 晚上回家吃饭溜娃打打帝国时代 4，突然想起我很�
 date: 2022-02-21 14:31:11
 copyright: Reprinted
 author: dino.c
-originaltitle: 3D 穿梭效果？使用 UWP 也能搞定
-originallink: https://www.cnblogs.com/T-ARF/p/15552980.html
+originalTitle: 3D 穿梭效果？使用 UWP 也能搞定
+originalLink: https://www.cnblogs.com/T-ARF/p/15552980.html
 draft: False
 cover: https://img1.dotnet9.com/2022/02/1002.gif
 categories: .NET
@@ -23,13 +23,13 @@ tags: UWP
 
 于是就把这动画效果造出来了。
 
-总的来说，实现 3D 穿梭的原理是靠改变 CSS 中的 perspective 产生透视效果。perspective指定了观察者与 z=0 平面的距离，使具有三维位置变换的元素产生透视效果。它的值越小，视角越深。
+总的来说，实现 3D 穿梭的原理是靠改变 CSS 中的 perspective 产生透视效果。perspective 指定了观察者与 z=0 平面的距离，使具有三维位置变换的元素产生透视效果。它的值越小，视角越深。
 
 ![](https://img1.dotnet9.com/2022/02/1001.png)
 
 perspective 的具体用法可见此文档：
 
-[perspective - CSS（层叠样式表） _ MDN](https://developer.mozilla.org/zh-CN/docs/Web/CSS/perspective)
+[perspective - CSS（层叠样式表） \_ MDN](https://developer.mozilla.org/zh-CN/docs/Web/CSS/perspective)
 
 与之对应，UWP 中提供了 PerspectiveTransform3D 类，它的 Depth 属性 也有类似的效果，当 Depth 越小，视觉越深，与平面相交的对象就越变形：
 
@@ -39,9 +39,9 @@ perspective 的具体用法可见此文档：
 
 ```html
 <Grid Height="300" Width="300">
-    <Grid.Transform3D>
-        <media3D:PerspectiveTransform3D Depth="2" />
-    </Grid.Transform3D>
+  <Grid.Transform3D>
+    <media3D:PerspectiveTransform3D Depth="2" />
+  </Grid.Transform3D>
 </Grid>
 ```
 
@@ -68,27 +68,85 @@ perspective 的具体用法可见此文档：
 搞定了一个方向后，所有方向都大致这样操作，只是改变 Rotation 和 Translate 还有中心点，就完成了一张静态的 3D 穿梭图：
 
 ```html
-<media3D:CompositeTransform3D x:Name="TransformLeft" x:Key="TransformLeft" RotationY="-90" TranslateZ="100" />
-<media3D:CompositeTransform3D x:Name="TransformUp" x:Key="TransformUp" RotationX="90" TranslateZ="50" />
-<media3D:CompositeTransform3D x:Name="TransformRight" x:Key="TransformRight" RotationY="90" CenterX="300" TranslateZ="50"/>
-<media3D:CompositeTransform3D x:Name="TransformDown" x:Key="TransformDown" RotationX="-90" CenterY="300" TranslateZ="50" />
+<media3D:CompositeTransform3D
+  x:Name="TransformLeft"
+  x:Key="TransformLeft"
+  RotationY="-90"
+  TranslateZ="100"
+/>
+<media3D:CompositeTransform3D
+  x:Name="TransformUp"
+  x:Key="TransformUp"
+  RotationX="90"
+  TranslateZ="50"
+/>
+<media3D:CompositeTransform3D
+  x:Name="TransformRight"
+  x:Key="TransformRight"
+  RotationY="90"
+  CenterX="300"
+  TranslateZ="50"
+/>
+<media3D:CompositeTransform3D
+  x:Name="TransformDown"
+  x:Key="TransformDown"
+  RotationX="-90"
+  CenterY="300"
+  TranslateZ="50"
+/>
 
-<Grid Background="{StaticResource ImageBackground}" Transform3D="{StaticResource TransformLeft}" />
-<Grid Background="{StaticResource ImageBackground}" Transform3D="{StaticResource TransformUp}" />
-<Grid Background="{StaticResource ImageBackground}" Transform3D="{StaticResource TransformRight}" />
-<Grid Background="{StaticResource ImageBackground}" Transform3D="{StaticResource TransformDown}" />
+<Grid
+  Background="{StaticResource ImageBackground}"
+  Transform3D="{StaticResource TransformLeft}"
+/>
+<Grid
+  Background="{StaticResource ImageBackground}"
+  Transform3D="{StaticResource TransformUp}"
+/>
+<Grid
+  Background="{StaticResource ImageBackground}"
+  Transform3D="{StaticResource TransformRight}"
+/>
+<Grid
+  Background="{StaticResource ImageBackground}"
+  Transform3D="{StaticResource TransformDown}"
+/>
 ```
 
 ![](https://img1.dotnet9.com/2022/02/1006.png)
 
-下一步就是要让这四张图片动起来。这简单，用最基本的 DoubleAnimation 操作TranslateZ 从 10 变到 200：
+下一步就是要让这四张图片动起来。这简单，用最基本的 DoubleAnimation 操作 TranslateZ 从 10 变到 200：
 
 ```html
 <Storyboard x:Name="Move" x:Key="Move" RepeatBehavior="Forever">
-    <DoubleAnimation Storyboard.TargetName="TransformLeft" Storyboard.TargetProperty="TranslateZ" From="10" To="200" Duration="0:0:8"/>
-    <DoubleAnimation Storyboard.TargetName="TransformUp" Storyboard.TargetProperty="TranslateZ" From="10" To="200" Duration="0:0:8"/>
-    <DoubleAnimation Storyboard.TargetName="TransformRight" Storyboard.TargetProperty="TranslateZ" From="10" To="200" Duration="0:0:8"/>
-    <DoubleAnimation Storyboard.TargetName="TransformDown" Storyboard.TargetProperty="TranslateZ" From="10" To="200" Duration="0:0:8"/>
+  <DoubleAnimation
+    Storyboard.TargetName="TransformLeft"
+    Storyboard.TargetProperty="TranslateZ"
+    From="10"
+    To="200"
+    Duration="0:0:8"
+  />
+  <DoubleAnimation
+    Storyboard.TargetName="TransformUp"
+    Storyboard.TargetProperty="TranslateZ"
+    From="10"
+    To="200"
+    Duration="0:0:8"
+  />
+  <DoubleAnimation
+    Storyboard.TargetName="TransformRight"
+    Storyboard.TargetProperty="TranslateZ"
+    From="10"
+    To="200"
+    Duration="0:0:8"
+  />
+  <DoubleAnimation
+    Storyboard.TargetName="TransformDown"
+    Storyboard.TargetProperty="TranslateZ"
+    From="10"
+    To="200"
+    Duration="0:0:8"
+  />
 </Storyboard>
 ```
 
@@ -98,12 +156,16 @@ perspective 的具体用法可见此文档：
 
 ```html
 <Storyboard x:Name="Fade" RepeatBehavior="Forever">
-    <DoubleAnimationUsingKeyFrames  Storyboard.TargetName="Root" Storyboard.TargetProperty="Opacity" Duration="0:0:8"  >
-        <LinearDoubleKeyFrame KeyTime="0:0:0" Value="0"/>
-        <LinearDoubleKeyFrame KeyTime="0:0:2" Value="1"/>
-        <LinearDoubleKeyFrame KeyTime="0:0:4.8" Value="1"/>
-        <LinearDoubleKeyFrame KeyTime="0:0:8" Value="0"/>
-    </DoubleAnimationUsingKeyFrames>
+  <DoubleAnimationUsingKeyFrames
+    Storyboard.TargetName="Root"
+    Storyboard.TargetProperty="Opacity"
+    Duration="0:0:8"
+  >
+    <LinearDoubleKeyFrame KeyTime="0:0:0" Value="0" />
+    <LinearDoubleKeyFrame KeyTime="0:0:2" Value="1" />
+    <LinearDoubleKeyFrame KeyTime="0:0:4.8" Value="1" />
+    <LinearDoubleKeyFrame KeyTime="0:0:8" Value="0" />
+  </DoubleAnimationUsingKeyFrames>
 </Storyboard>
 ```
 
@@ -127,7 +189,7 @@ private async void GalaxyShettleControl_Loaded(object sender, RoutedEventArgs e)
 
 这样 3D 穿梭效果就实现了。
 
-最后还差一点，ChokCoco 大佬的动画里加上了 hueRotate ，让颜色一直变化。UWP 里也可以使用 [HueRotationEffect](http://microsoft.github.io/Win2D/WinUI2/html/T_Microsoft_Graphics_Canvas_Effects_HueRotationEffect.htm) 实现这点，不过它的 Angle 的值范围是 0 到 2 * Math.Pi。要实现它的动画可以试试 Windows Community Toolkit 里的 [PipelineVisualFactory](https://docs.microsoft.com/zh-cn/windows/communitytoolkit/brushes/pipelinevisualfactory) 和 [AnimationSet](https://docs.microsoft.com/zh-cn/windows/communitytoolkit/animations/animationset)，这两个工具可以用来处理很复杂的效果和动画，用在这里反而大材小用：
+最后还差一点，ChokCoco 大佬的动画里加上了 hueRotate ，让颜色一直变化。UWP 里也可以使用 [HueRotationEffect](http://microsoft.github.io/Win2D/WinUI2/html/T_Microsoft_Graphics_Canvas_Effects_HueRotationEffect.htm) 实现这点，不过它的 Angle 的值范围是 0 到 2 \* Math.Pi。要实现它的动画可以试试 Windows Community Toolkit 里的 [PipelineVisualFactory](https://docs.microsoft.com/zh-cn/windows/communitytoolkit/brushes/pipelinevisualfactory) 和 [AnimationSet](https://docs.microsoft.com/zh-cn/windows/communitytoolkit/animations/animationset)，这两个工具可以用来处理很复杂的效果和动画，用在这里反而大材小用：
 
 ```xml
 <media:UIElementExtensions.VisualFactory>

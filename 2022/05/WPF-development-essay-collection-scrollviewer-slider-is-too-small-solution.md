@@ -5,8 +5,8 @@ description: 当ScrollViewer里面的内容太长时，滚动条的滑块就会�
 date: 2022-05-13 07:13:36
 copyright: Reprinted
 author: 流浪g
-originaltitle: WPF开发随笔收录-ScrollViewer滑块太小解决方案
-originallink: https://www.cnblogs.com/cong2312/p/16006433.html
+originalTitle: WPF开发随笔收录-ScrollViewer滑块太小解决方案
+originalLink: https://www.cnblogs.com/cong2312/p/16006433.html
 draft: False
 cover: https://img1.dotnet9.com/2022/05/cover_39.gif
 categories: .NET
@@ -15,7 +15,7 @@ tags: WPF
 
 ## 一、前言
 
-在WPF开发过程中，ScrollViewer是一个很常使用到的控件，在自己工作的项目中，收到一个反馈就是当ScrollViewer里面的内容太长时，滚动条的滑块就会变得很小，然后导致点击起来不太友好。一开始想着是通过在样式里面设置滑块的最小值，但都没法生效。最后换了一个思路来，通过把原有的滑块隐藏，然后自己加一个控件来充当滑块来间接控制ScrollViewer的滚动。
+在 WPF 开发过程中，ScrollViewer 是一个很常使用到的控件，在自己工作的项目中，收到一个反馈就是当 ScrollViewer 里面的内容太长时，滚动条的滑块就会变得很小，然后导致点击起来不太友好。一开始想着是通过在样式里面设置滑块的最小值，但都没法生效。最后换了一个思路来，通过把原有的滑块隐藏，然后自己加一个控件来充当滑块来间接控制 ScrollViewer 的滚动。
 
 ## 二、正文
 
@@ -23,7 +23,7 @@ tags: WPF
 
 ![](https://img1.dotnet9.com/2022/05/3901.png)
 
-2. 这里就直接在曲线图的顶层放置了一个Canvas，添加一个Border来充当滑块，注意这里将整个Canvas覆盖再曲线图上，是因为我还添加了可以直接点击曲线图拖拽移动的功能，然后将ScrollViewer的滑块隐藏，设置好滑块的最小宽度和高度，默认隐藏
+2. 这里就直接在曲线图的顶层放置了一个 Canvas，添加一个 Border 来充当滑块，注意这里将整个 Canvas 覆盖再曲线图上，是因为我还添加了可以直接点击曲线图拖拽移动的功能，然后将 ScrollViewer 的滑块隐藏，设置好滑块的最小宽度和高度，默认隐藏
 
 ```xml
 <Grid>

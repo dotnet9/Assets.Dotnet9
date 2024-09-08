@@ -5,8 +5,8 @@ description: 尽管我在公众号已经发了 130 多篇原创文章，而且�
 date: 2022-05-05 07:13:25
 copyright: Reprinted
 author: oec2003 不止dotNET
-originaltitle: 如何提升写作能力？
-originallink: https://mp.weixin.qq.com/s/XLNum8NuyK2DYd6sfNNZ5w
+originalTitle: 如何提升写作能力？
+originalLink: https://mp.weixin.qq.com/s/XLNum8NuyK2DYd6sfNNZ5w
 draft: False
 cover: https://img1.dotnet9.com/2022/05/cover_15.jpg
 categories: 分享

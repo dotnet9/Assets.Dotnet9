@@ -5,8 +5,8 @@ description: 分享一个WPF登录界面设计
 date: 2022-05-11 07:45:42
 copyright: Reprinted
 author: 沙漠尽头的狼
-originaltitle: WPF|分享一个登录界面设计
-originallink: https://mp.weixin.qq.com/s/seSaQkhkE7dpWqoiQ96fzQ
+originalTitle: WPF|分享一个登录界面设计
+originalLink: https://mp.weixin.qq.com/s/seSaQkhkE7dpWqoiQ96fzQ
 draft: False
 cover: https://img1.dotnet9.com/2022/05/cover_34.png
 categories: .NET
@@ -29,7 +29,7 @@ tags: WPF,WPF Design
 
 ## 代码简单说明
 
-请随手创建一个WPF项目（.NET Framework、.NET 5\6\7皆可），使用`tree /f`命令看看最终的文件结构，和上面的截图一致：
+请随手创建一个 WPF 项目（.NET Framework、.NET 5\6\7 皆可），使用`tree /f`命令看看最终的文件结构，和上面的截图一致：
 
 ```shell
 C:.
@@ -45,7 +45,7 @@ C:.
         wechat.png
 ```
 
-简单吧，一个图片目录存放前面下载的图标，一个`xaml`文件做登录界面设计，`xaml.cs`做界面按钮响应事件处理（实际项目建议使用Mvvm)。
+简单吧，一个图片目录存放前面下载的图标，一个`xaml`文件做登录界面设计，`xaml.cs`做界面按钮响应事件处理（实际项目建议使用 Mvvm)。
 
 ![](https://img1.dotnet9.com/2022/05/3404.png)
 
@@ -103,7 +103,7 @@ private void txtEmail_TextChanged(object sender, TextChangedEventArgs e)
 }
 ```
 
-代码比较简单，.cs文件代码：
+代码比较简单，.cs 文件代码：
 
 - 鼠标点击标签时，将账号文本框设置为焦点控件，提高用户体验
 - 文本框中输入账号信息时 显示|隐藏 标签

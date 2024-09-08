@@ -5,17 +5,17 @@ description: 很全的一套Qt学习视频
 date: 2022-03-24 00:12:23
 copyright: Reprinted
 author: 阿西拜-南昌
-originaltitle: B站视频：Qt 5.9 C++开发指南
-originallink: https://www.bilibili.com/video/BV1AX4y1w7Nt
+originalTitle: B站视频：Qt 5.9 C++开发指南
+originalLink: https://www.bilibili.com/video/BV1AX4y1w7Nt
 draft: False
 cover: https://img1.dotnet9.com/2022/03/cover_22.png
 categories: 前端,课程
 tags: Qt,视频教程
 ---
 
-今天分享一个B站的C++ Qt视频教程，2021年07月录制的，还是比较新，有需要的朋友可以去看看：[Qt 5.9 C++开发指南](https://www.bilibili.com/video/BV1AX4y1w7Nt)
+今天分享一个 B 站的 C++ Qt 视频教程，2021 年 07 月录制的，还是比较新，有需要的朋友可以去看看：[Qt 5.9 C++开发指南](https://www.bilibili.com/video/BV1AX4y1w7Nt)
 
->https://www.bilibili.com/video/BV1AX4y1w7Nt
+> https://www.bilibili.com/video/BV1AX4y1w7Nt
 
 就不截图了看视频目录吧，上面是链接：
 

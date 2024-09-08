@@ -5,17 +5,17 @@ description: 如题
 date: 2022-04-21 07:23:14
 copyright: Reprinted
 author: Vue社区
-originaltitle: 分享 27 个面向开发人员的最佳 Vue.js 开发工具
-originallink: https://javascript.plainenglish.io/best-27-vuejs-development-tools-for-developers-bd972bb5f573
+originalTitle: 分享 27 个面向开发人员的最佳 Vue.js 开发工具
+originalLink: https://javascript.plainenglish.io/best-27-vuejs-development-tools-for-developers-bd972bb5f573
 draft: False
 cover: https://img1.dotnet9.com/2022/04/2527.png
 categories: 前端
 tags: 前端技巧,Vue
 ---
 
->英文 | https://javascript.plainenglish.io/best-27-vuejs-development-tools-for-developers-bd972bb5f573
+> 英文 | https://javascript.plainenglish.io/best-27-vuejs-development-tools-for-developers-bd972bb5f573
 >
->来源：Vue社区
+> 来源：Vue 社区
 
 ## 01、BootstrapVue
 
@@ -71,7 +71,7 @@ Vue.js 开发人员更简单的标准工具。
 
 ![](https://img1.dotnet9.com/2022/04/2507.png)
 
-一个开源框架，使Web开发变得简单而强大。
+一个开源框架，使 Web 开发变得简单而强大。
 
 ## 08、Vue Element Admin
 
@@ -95,7 +95,7 @@ Vue.js 开发人员更简单的标准工具。
 
 ![](https://img1.dotnet9.com/2022/04/2510.png)
 
-用于Vue项目界面开发的UI库。
+用于 Vue 项目界面开发的 UI 库。
 
 ## 11、Quasar
 
@@ -235,6 +235,6 @@ Vue.js 接口开发中的示例集合。
 
 ## 总结
 
-我希望这篇文章能为你的 Vue项目开发提供有用的开发工具，如果您有任何问题，请在留言区给我留言，我会尽快回复。
+我希望这篇文章能为你的 Vue 项目开发提供有用的开发工具，如果您有任何问题，请在留言区给我留言，我会尽快回复。
 
 感谢您的阅读，祝你今天过得愉快！

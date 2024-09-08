@@ -5,23 +5,23 @@ description: ASP.NET Core中的授权方式有很多，我们一起了解一下�
 date: 2022-04-18 20:31:13
 copyright: Reprinted
 author: xiaoxiaotank
-originaltitle: 理解ASP.NET Core - 授权(Authorization)
-originallink: https://www.cnblogs.com/xiaoxiaotank/p/16157344.html
+originalTitle: 理解ASP.NET Core - 授权(Authorization)
+originalLink: https://www.cnblogs.com/xiaoxiaotank/p/16157344.html
 draft: False
 cover: https://img1.dotnet9.com/2022/04/2105.png
 categories: .NET
 tags: ASP.NET Core,授权,Authorization
 ---
 
->注：本文隶属于《理解ASP.NET Core》系列文章，请查看置顶博客或[点击此处查看全文目录](https://www.cnblogs.com/xiaoxiaotank/p/15185288.html)
+> 注：本文隶属于《理解 ASP.NET Core》系列文章，请查看置顶博客或[点击此处查看全文目录](https://www.cnblogs.com/xiaoxiaotank/p/15185288.html)
 
-之前，我们已经了解了ASP.NET Core中的身份认证，现在，我们来聊一下授权。
+之前，我们已经了解了 ASP.NET Core 中的身份认证，现在，我们来聊一下授权。
 
 老规矩，示例程序源码[XXTk.Auth.Samples](https://github.com/xiaoxiaotank/XXTk.Auth.Samples)已经提交了，需要的请自取。
 
 ## 1. 概述
 
-ASP.NET Core中的授权方式有很多，我们一起了解一下其中三种较为常见的方式：
+ASP.NET Core 中的授权方式有很多，我们一起了解一下其中三种较为常见的方式：
 
 1. 基于角色的授权
 2. 基于声明的授权
@@ -29,7 +29,7 @@ ASP.NET Core中的授权方式有很多，我们一起了解一下其中三种�
 
 其中，基于策略的授权是我们要了解的重点。
 
-在进入正文之前，我们要先认识一个很重要的特性——`AuthorizeAttribute`，通过它，我们可以很方便的针对Controller、Action等维度进行权限控制：
+在进入正文之前，我们要先认识一个很重要的特性——`AuthorizeAttribute`，通过它，我们可以很方便的针对 Controller、Action 等维度进行权限控制：
 
 ```csharp
 [AttributeUsage(AttributeTargets.Class | AttributeTargets.Method, AllowMultiple = true, Inherited = true)]
@@ -53,7 +53,7 @@ public class AuthorizeAttribute : Attribute, IAuthorizeData
 }
 ```
 
-另外，为了方便测试，我们先添加一下基于Cookie的身份认证：
+另外，为了方便测试，我们先添加一下基于 Cookie 的身份认证：
 
 ```csharp
 public class Startup
@@ -78,7 +78,7 @@ public class Startup
                 };
             });
     }
-    
+
     public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
     {
         app.UseRouting();
@@ -112,7 +112,7 @@ public string GetForAdmin()
 }
 ```
 
-这里，我们将`AuthorizeAttribute`特性的`Roles`属性设置为了`Admin`，也就是说，如果用户想要访问`GetForAdmin`接口，则必须拥有角色Admin。
+这里，我们将`AuthorizeAttribute`特性的`Roles`属性设置为了`Admin`，也就是说，如果用户想要访问`GetForAdmin`接口，则必须拥有角色 Admin。
 
 如果某个接口想要允许多个角色访问，该怎么做呢？很简单，通过英文逗号（,）分隔多个角色即可：
 
@@ -124,7 +124,7 @@ public string GetForDeveloperOrTester()
 }
 ```
 
-就像上面这样，通过逗号将`Developer`和`Tester`分隔开来，当接到请求时，若用户拥有角色Developer和Tester其一，就允许访问该接口。
+就像上面这样，通过逗号将`Developer`和`Tester`分隔开来，当接到请求时，若用户拥有角色 Developer 和 Tester 其一，就允许访问该接口。
 
 最后，如果某个接口要求用户必须同时拥有多个角色时才允许访问，那我们可以通过添加多个`AuthorizeAttribute`特性来达到目的：
 
@@ -190,16 +190,16 @@ public class Startup
 options.AddPolicy("RankClaim", policy => policy.RequireClaim("Rank"));
 ```
 
-该策略名称为`RankClaim`，要求用户具有声明`Rank`，具体Rank对应的值是多少，不关心，只要有这个声明就好了。
+该策略名称为`RankClaim`，要求用户具有声明`Rank`，具体 Rank 对应的值是多少，不关心，只要有这个声明就好了。
 
-当然，我们也可以将Rank的值限定一下：
+当然，我们也可以将 Rank 的值限定一下：
 
 ```csharp
 options.AddPolicy("RankClaimP3", policy => policy.RequireClaim("Rank", "P3"));
 options.AddPolicy("RankClaimM3", policy => policy.RequireClaim("Rank", "M3"));
 ```
 
-我们添加了两条策略：`RankClaimP3`和`RankClaimM3`，除了要求用户具有声明`Rank`外，还分别要求Rank的值为`P3`和`M3`。
+我们添加了两条策略：`RankClaimP3`和`RankClaimM3`，除了要求用户具有声明`Rank`外，还分别要求 Rank 的值为`P3`和`M3`。
 
 类似于基于角色的声明，我们也可以添加“Or”、“And”逻辑的策略：
 
@@ -274,7 +274,7 @@ options.AddPolicy("ComplexClaim", policy => policy.RequireAssertion(context =>
 
 在上面，我们制定策略时，使用了大量的`RequireXXX`，我们也希望能够将自定义策略封装一下，当然，你可以写一些扩展方法，不过我更加推荐使用`IAuthorizationRequirement`和`IAuthorizationHandler`。
 
-现在，我们虚构一个场景：网吧管理，未满18岁的人员不准入内，只允许年满18岁的成年人进入。为此，我们需要一个限定最小年龄的要求：
+现在，我们虚构一个场景：网吧管理，未满 18 岁的人员不准入内，只允许年满 18 岁的成年人进入。为此，我们需要一个限定最小年龄的要求：
 
 ```csharp
 public class MinimumAgeRequirement : IAuthorizationRequirement
@@ -322,11 +322,11 @@ public class MinimumAgeAuthorizationHandler : AuthorizationHandler<MinimumAgeReq
 
 当校验通过时，调用`context.Succeed`来指示授权通过。当校验不通过时，我们有两种处理方式：
 
-- 一种是直接返回`Task.CompletedTask`，这将允许后续的Handler继续进行校验，这些Handler中任意一个认证通过，都视为该用户授权通过。
+- 一种是直接返回`Task.CompletedTask`，这将允许后续的 Handler 继续进行校验，这些 Handler 中任意一个认证通过，都视为该用户授权通过。
 
-- 另一种是通过调用`context.Fail`来指示授权不通过，并且后续的Handler仍会执行（即使后续的Handler有授权通过的，也视为授权不通过）。如果你想在调用`context.Fail`后，立即返回而不再执行后续的Handler，可以将选项`AuthorizationOptions`的属性`InvokeHandlersAfterFailure`设置为`false`来达到目的，默认为`true`。
+- 另一种是通过调用`context.Fail`来指示授权不通过，并且后续的 Handler 仍会执行（即使后续的 Handler 有授权通过的，也视为授权不通过）。如果你想在调用`context.Fail`后，立即返回而不再执行后续的 Handler，可以将选项`AuthorizationOptions`的属性`InvokeHandlersAfterFailure`设置为`false`来达到目的，默认为`true`。
 
-现在，我们给虚构的场景增加一个授权逻辑：当用户未满18岁，但是其角色为网吧老板时，也允许其入内。
+现在，我们给虚构的场景增加一个授权逻辑：当用户未满 18 岁，但是其角色为网吧老板时，也允许其入内。
 
 为了实现这个逻辑，我们再增加一个授权处理器：
 
@@ -356,7 +356,7 @@ public class Startup
     {
         services.TryAddEnumerable(ServiceDescriptor.Transient<IAuthorizationHandler, MinimumAgeAuthorizationHandler>());
         services.TryAddEnumerable(ServiceDescriptor.Transient<IAuthorizationHandler, MinimumAgeAnotherAuthorizationHandler>());
-        
+
         services.AddAuthorization(options =>
         {
             options.AddPolicy("AtLeast18Age", policy => policy.Requirements.Add(new MinimumAgeRequirement(18)));
@@ -365,9 +365,9 @@ public class Startup
 }
 ```
 
-需要注意的是，我们可以将Handler注册为任意的生命周期，不过，当Handler中依赖其他服务时，一定要注意生命周期提升的问题。
+需要注意的是，我们可以将 Handler 注册为任意的生命周期，不过，当 Handler 中依赖其他服务时，一定要注意生命周期提升的问题。
 
-我们添加了一个名为`AtLeast18Age`的策略，该策略创建了一个`MinimumAgeRequirement`实例，要求最低年龄为18岁，并将其添加到了`policy`的`Requirements`属性中。
+我们添加了一个名为`AtLeast18Age`的策略，该策略创建了一个`MinimumAgeRequirement`实例，要求最低年龄为 18 岁，并将其添加到了`policy`的`Requirements`属性中。
 
 你可以写一个类似的接口进行测试：
 
@@ -379,7 +379,7 @@ public string GetForAtLeast18Age()
 }
 ```
 
-最后，多说一句，如果你想让一个Handler可以同时处理多个Requirement，可以这样做：
+最后，多说一句，如果你想让一个 Handler 可以同时处理多个 Requirement，可以这样做：
 
 ```csharp
 public class MultiRequirementsAuthorizationHandler : IAuthorizationHandler
@@ -419,7 +419,7 @@ public class Custom2Requirement : IAuthorizationRequirement
 
 ### 4.2 动态策略
 
-现在，问题又来了，如果我们的场景有多种年龄限制，比如有的要求18岁，有的要求20，还有的只要求10岁，我们总不能一个个的把这些策略都提前创建好吧，要搞死人...如果能够动态地创建策略就好了！
+现在，问题又来了，如果我们的场景有多种年龄限制，比如有的要求 18 岁，有的要求 20，还有的只要求 10 岁，我们总不能一个个的把这些策略都提前创建好吧，要搞死人...如果能够动态地创建策略就好了！
 
 下面我们尝试动态地创建多种最小年龄策略：
 
@@ -472,7 +472,7 @@ public class AppAuthorizationPolicyProvider : IAuthorizationPolicyProvider
         BackupPolicyProvider = new DefaultAuthorizationPolicyProvider(options);
         _authorizationOptions = options.Value;
     }
-    
+
     // 若不需要自定义实现，则均使用默认的
     private DefaultAuthorizationPolicyProvider BackupPolicyProvider { get; }
 
@@ -486,7 +486,7 @@ public class AppAuthorizationPolicyProvider : IAuthorizationPolicyProvider
         {
             return policy;
         }
-        
+
         using (await _mutex.LockAsync())
         {
             var policy = await BackupPolicyProvider.GetPolicyAsync(policyName);
@@ -494,8 +494,8 @@ public class AppAuthorizationPolicyProvider : IAuthorizationPolicyProvider
             {
                 return policy;
             }
-            
-            if (policyName.StartsWith(MinimumAgeAuthorizeAttribute.PolicyPrefix, StringComparison.OrdinalIgnoreCase) 
+
+            if (policyName.StartsWith(MinimumAgeAuthorizeAttribute.PolicyPrefix, StringComparison.OrdinalIgnoreCase)
                 && int.TryParse(policyName[MinimumAgeAuthorizeAttribute.PolicyPrefix.Length..], out var age))
             {
                 // 动态创建策略
@@ -505,7 +505,7 @@ public class AppAuthorizationPolicyProvider : IAuthorizationPolicyProvider
                 policy = builder.Build();
                 // 将策略添加到选项
                 _authorizationOptions.AddPolicy(policyName, policy);
-    
+
                 return policy;
             }
         }
@@ -531,7 +531,7 @@ public class AppAuthorizationPolicyProvider : IAuthorizationPolicyProvider
 services.AddTransient<IAuthorizationPolicyProvider, AppAuthorizationPolicyProvider>();
 ```
 
-现在你就可以使用`MinimumAgeAuthorizeAttribute`进行授权了，比如限制最小年龄20岁：
+现在你就可以使用`MinimumAgeAuthorizeAttribute`进行授权了，比如限制最小年龄 20 岁：
 
 ```csharp
 [MinimumAgeAuthorize(20)]
@@ -571,7 +571,7 @@ public class AuthorizeAttribute : Attribute, IAuthorizeData
     {
         Policy = policy;
     }
-    
+
     public string? Policy { get; set; }
     public string? Roles { get; set; }
     public string? AuthenticationSchemes { get; set; }
@@ -710,7 +710,7 @@ public class AuthorizationMiddleware
     private readonly RequestDelegate _next;
     private readonly IAuthorizationPolicyProvider _policyProvider;
 
-    public AuthorizationMiddleware(RequestDelegate next, IAuthorizationPolicyProvider policyProvider) 
+    public AuthorizationMiddleware(RequestDelegate next, IAuthorizationPolicyProvider policyProvider)
     {
         _next = next ?? throw new ArgumentNullException(nameof(next));
         _policyProvider = policyProvider ?? throw new ArgumentNullException(nameof(policyProvider));
@@ -756,7 +756,7 @@ public class AuthorizationMiddleware
         {
             resource = context;
         }
-        
+
         // 4. 授权
         var authorizeResult = await policyEvaluator.AuthorizeAsync(policy, authenticateResult, context, resource);
         // 5. 针对授权结果，进行不同的响应处理
@@ -768,7 +768,7 @@ public class AuthorizationMiddleware
 
 从这里可以看出，授权的所有方式，都是基于策略来实现的。
 
-下面我们一步步来分析它。先看第1步，了解它是如何将多种授权要求组装为一个策略的：
+下面我们一步步来分析它。先看第 1 步，了解它是如何将多种授权要求组装为一个策略的：
 
 ```csharp
 public class AuthorizationPolicy
@@ -776,7 +776,7 @@ public class AuthorizationPolicy
     public static async Task<AuthorizationPolicy?> CombineAsync(IAuthorizationPolicyProvider policyProvider, IEnumerable<IAuthorizeData> authorizeData)
     {
         // ... 省略部分代码
-        
+
         AuthorizationPolicyBuilder? policyBuilder = null;
 
         foreach (var authorizeDatum in authorizeData)
@@ -866,7 +866,7 @@ public interface IAuthorizationPolicyProvider
 
 1. `GetPolicyAsync`：根据策略名获取策略实例
 2. `GetDefaultPolicyAsync`：获取默认策略，当我们指明了要进行授权校验，但没有设定任何授权要求（如策略名、角色、身份认证方案等）时，会使用默认策略。
-3. `GetFallbackPolicyAsync`：获取回退策略，当我们没有指定任何授权校验时，会使用回退策略。如果回退策略为null，则跳过授权校验。
+3. `GetFallbackPolicyAsync`：获取回退策略，当我们没有指定任何授权校验时，会使用回退策略。如果回退策略为 null，则跳过授权校验。
 
 下面就看下该接口的默认实现`DefaultAuthorizationPolicyProvider`：
 
@@ -881,7 +881,7 @@ public class DefaultAuthorizationPolicyProvider : IAuthorizationPolicyProvider
     {
         _options = options.Value;
     }
-    
+
     public virtual Task<AuthorizationPolicy?> GetPolicyAsync(string policyName)
     {
         // 从 AuthorizationOptions 中查找已添加的策略实例
@@ -914,7 +914,7 @@ public class DefaultAuthorizationPolicyProvider : IAuthorizationPolicyProvider
 
 OK，`IAuthorizationPolicyProvider`我们就看到这。
 
-下面，我们回到`AuthorizationMiddleware`，继续往下来到第2步，出现了新接口`IPolicyEvaluator`：
+下面，我们回到`AuthorizationMiddleware`，继续往下来到第 2 步，出现了新接口`IPolicyEvaluator`：
 
 ```csharp
 public interface IPolicyEvaluator
@@ -1090,7 +1090,7 @@ public class DefaultAuthorizationHandlerContextFactory : IAuthorizationHandlerCo
 }
 ```
 
-然后，下面用到了`IAuthorizationHandlerProvider`，它用来提供Handler，这些Handler包括我们之前实现的`MinimumAgeAuthorizationHandler`等。
+然后，下面用到了`IAuthorizationHandlerProvider`，它用来提供 Handler，这些 Handler 包括我们之前实现的`MinimumAgeAuthorizationHandler`等。
 
 ```csharp
 public interface IAuthorizationHandlerProvider
@@ -1131,7 +1131,7 @@ public class DefaultAuthorizationEvaluator : IAuthorizationEvaluator
 }
 ```
 
-最后，获取到授权结果`AuthorizationResult`后，我们就来到了第5步，由`IAuthorizationMiddlewareResultHandler`针对不同的授权结果进行响应处理。
+最后，获取到授权结果`AuthorizationResult`后，我们就来到了第 5 步，由`IAuthorizationMiddlewareResultHandler`针对不同的授权结果进行响应处理。
 
 ```csharp
 public interface IAuthorizationMiddlewareResultHandler
@@ -1190,9 +1190,9 @@ public class AuthorizationMiddlewareResultHandler : IAuthorizationMiddlewareResu
 2. `IAuthorizationService`：默认实现为`DefaultAuthorizationService`，用于对用户进行授权（Authorize）。
 3. `IAuthorizationHandlerContextFactory`：默认实现为`DefaultAuthorizationHandlerContextFactory`，用于创建授权处理器上下文。
 4. `IAuthorizationHandlerProvider`：默认实现为`DefaultAuthorizationHandlerProvider`，用于提供用户授权的处理器（IAuthorizationHandler）
-5. `IAuthorizationHandler`：默认实现为`PassThroughAuthorizationHandler`（处理自身既是Requirement，又是Handler的类），用于提供Requirement的处理逻辑。
+5. `IAuthorizationHandler`：默认实现为`PassThroughAuthorizationHandler`（处理自身既是 Requirement，又是 Handler 的类），用于提供 Requirement 的处理逻辑。
 6. `IAuthorizationPolicyProvider`：默认实现为`DefaultAuthorizationPolicyProvider`，用于提供授权策略实例（AuthorizationPolicy）。
-7. `IAuthorizationEvaluator`：默认实现为`DefaultAuthorizationEvaluator`，用于评估授权结果是成功还是失败，并将结果构造为AuthorizationResult实例。
+7. `IAuthorizationEvaluator`：默认实现为`DefaultAuthorizationEvaluator`，用于评估授权结果是成功还是失败，并将结果构造为 AuthorizationResult 实例。
 8. `IPolicyEvaluator`：默认实现为`PolicyEvaluator`，用于评估身份认证和授权结果
 9. `IAuthorizationMiddlewareResultHandler`：默认实现为`AuthorizationMiddlewareResultHandler`，用于针对授权结果，进行不同的响应处理。
 
@@ -1202,8 +1202,8 @@ public class AuthorizationMiddlewareResultHandler : IAuthorizationMiddlewareResu
 
 ![](https://img1.dotnet9.com/2022/04/2105.png)
 
-最后，大家肯定知道还有一个可以控制权限的地方，就是`IAuthorizationFilter`过滤器。不过，如果没有必要，我并不推荐你使用它。因为它是mvc时代的旧产物，而且你要自己来实现一套完整的授权框架。
+最后，大家肯定知道还有一个可以控制权限的地方，就是`IAuthorizationFilter`过滤器。不过，如果没有必要，我并不推荐你使用它。因为它是 mvc 时代的旧产物，而且你要自己来实现一套完整的授权框架。
 
 ## 6. 补充
 
-根据我的经验，大家用的比较多的授权方案是基于权限Key的，为此，我也写了一个简单的示例程序，供大家参考：[XXTk.Auth.Samples.Permission.HttpApi](https://github.com/xiaoxiaotank/XXTk.Auth.Samples/tree/main/src/XXTk.Auth.Samples.Permission.HttpApi)
+根据我的经验，大家用的比较多的授权方案是基于权限 Key 的，为此，我也写了一个简单的示例程序，供大家参考：[XXTk.Auth.Samples.Permission.HttpApi](https://github.com/xiaoxiaotank/XXTk.Auth.Samples/tree/main/src/XXTk.Auth.Samples.Permission.HttpApi)

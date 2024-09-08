@@ -5,8 +5,8 @@ description: 我遇到的大多数 Windows 窗体应用程序都不存在或单�
 date: 2021-12-10 23:51:41
 copyright: Reprinted
 author: Mark Heath
-originaltitle: 创建可维护和可测试的 Windows 窗体应用程序的 10 种方法(译)
-originallink: https://markheath.net/post/maintainable-winforms
+originalTitle: 创建可维护和可测试的 Windows 窗体应用程序的 10 种方法(译)
+originalLink: https://markheath.net/post/maintainable-winforms
 draft: False
 cover: https://img1.dotnet9.com/2021/12/cover_09.jpeg
 categories: .NET
@@ -19,7 +19,7 @@ tags: Winform,单元测试
 
 首先，避免在一个表单上放置太多控件。通常，你的应用程序的主要形式可以分解为逻辑区域（我们可以称之为“视图”）。如果将这些区域中的每个区域的控件放入它们自己的容器中，那么你自己的生活就会变得更加轻松，而在 Windows 窗体中，最简单的方法是使用用户控件。因此，如果你有一个资源管理器样式的应用程序，左侧是树视图，右侧是详细信息视图，则将 TreeView 放入其自己的 UserControl，并为每个可能的右侧视图创建一个 UserControl。同样，如果你有选项卡控件，请为选项卡控件中的每个页面创建一个单独的 UserControl。
 
-这样做不仅可以防止你的类变得难以管理，而且还可以调整大小和设置Tab 键顺序等，使任务变得更加简单。它还允许你在必要时轻松地一次性禁用用户界面的整个部分。你还会发现，当你将用户界面分解为包含逻辑分组控件的较小 UserControl 时，重新设计应用程序的 UI 布局会变得更加容易。
+这样做不仅可以防止你的类变得难以管理，而且还可以调整大小和设置 Tab 键顺序等，使任务变得更加简单。它还允许你在必要时轻松地一次性禁用用户界面的整个部分。你还会发现，当你将用户界面分解为包含逻辑分组控件的较小 UserControl 时，重新设计应用程序的 UI 布局会变得更加容易。
 
 ## 2. 将非 UI 代码排除在后面的代码之外
 
@@ -42,7 +42,7 @@ interface INewUserView
 
 通过确保你的视图实现尽可能简单，你将能够最大程度地迁移到替代 UI 框架（如 WPF），因为你唯一需要做的就是在新技术中重新创建视图。所有其他代码都可以重复使用。
 
-## 4.使用presenters控制视图
+## 4.使用 presenters 控制视图
 
 因此，如果你已将所有视图设为被动并实现接口，则你需要一些能够实现应用程序业务逻辑并控制视图的东西。我们可以称这些为“presenter”类。这是称为“模型视图演示者”或 MVP 的模式。
 
@@ -62,7 +62,7 @@ interface INewUserView
 
 ## 7. 使用 IoC 容器管理依赖项
 
-如果你正在使用 Presenter 类和 Command 类，那么你可能会发现它们所依赖的类的数量随着时间的推移而增长。这是Unity或StructureMap等控制反转容器真正可以帮助你的地方。无论它们具有多少级别的依赖关系，它们都允许你轻松构建视图和演示器。
+如果你正在使用 Presenter 类和 Command 类，那么你可能会发现它们所依赖的类的数量随着时间的推移而增长。这是 Unity 或 StructureMap 等控制反转容器真正可以帮助你的地方。无论它们具有多少级别的依赖关系，它们都允许你轻松构建视图和演示器。
 
 ## 8. 使用事件聚合器模式
 
@@ -80,10 +80,10 @@ interface INewUserView
 
 可以将我上面描述的所有模式和技术改造为现有的 Windows 窗体应用程序，但我可以从痛苦的经验告诉你，这可能需要大量工作，尤其是当窗体背后的代码达到数千行时。如果你开始使用 MVP、事件聚合器和命令模式等模式构建应用程序，你会发现随着它们变得越来越大，维护起来会少很多痛苦。你还可以对`所有`业务逻辑进行单元测试，这对于持续的可维护性至关重要。
 
->原文作者：Mark Heath
+> 原文作者：Mark Heath
 >
->原文链接:https://markheath.net/post/maintainable-winforms
+> 原文链接:https://markheath.net/post/maintainable-winforms
 >
->转载自微信公众号： OneByOneDotNet
+> 转载自微信公众号： OneByOneDotNet
 >
->公众号文章链接：https://mp.weixin.qq.com/s/ks_ghCRxMmOQPYFib0cb3g
+> 公众号文章链接：https://mp.weixin.qq.com/s/ks_ghCRxMmOQPYFib0cb3g

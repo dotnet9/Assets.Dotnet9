@@ -5,8 +5,8 @@ description: 在这篇文章中，你将看到 EF Core 对 SQLite、In-memory �
 date: 2022-06-02 22:12:35
 copyright: Reprinted
 author: liamwang 精致码农
-originaltitle: EF Core 6 新功能汇总（四）
-originallink: https://mp.weixin.qq.com/s/BU8FKXS95WlvblVPBulC5g
+originalTitle: EF Core 6 新功能汇总（四）
+originalLink: https://mp.weixin.qq.com/s/BU8FKXS95WlvblVPBulC5g
 draft: False
 cover: https://img1.dotnet9.com/2022/06/cover_04.jpg
 categories: .NET
@@ -223,8 +223,8 @@ class ExampleContext : DbContext
 
 本文所有代码示例都可以在我的 GitHub 中找到：[https://github.com/okyrylchuk/dotnet6_features/tree/main/EF%20Core%206#miscellaneous-enhancements](https://github.com/okyrylchuk/dotnet6_features/tree/main/EF%20Core%206#miscellaneous-enhancements)
 
->原文：https://blog.okyrylchuk.dev/entity-framework-core-6-features-part-3
+> 原文：https://blog.okyrylchuk.dev/entity-framework-core-6-features-part-3
 >
->作者：Oleg Kyrylchuk
+> 作者：Oleg Kyrylchuk
 >
->翻译：精致码农
+> 翻译：精致码农

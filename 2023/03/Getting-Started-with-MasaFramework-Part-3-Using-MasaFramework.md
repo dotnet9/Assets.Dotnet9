@@ -4,32 +4,32 @@ slug: Getting-Started-with-MasaFramework-Part-3-Using-MasaFramework
 description: 使用MasaFramework
 date: 2023-03-26 10:54:17
 copyright: Reprinted
-author:  token的技术分享
-originaltitle: (3) MasaFramework 入门第三篇，使用MasaFramework
-originallink: https://www.cnblogs.com/hejiale010426/p/17227910.html
+author: token的技术分享
+originalTitle: (3) MasaFramework 入门第三篇，使用MasaFramework
+originalLink: https://www.cnblogs.com/hejiale010426/p/17227910.html
 draft: false
 cover: https://img1.dotnet9.com/2023/03/cover_09.png
 categories: .NET
 tags: MASA Framework
 ---
 
-首先我们需要创建一个MasaFramework模板的项目，项目名称TokenDemo，项目类型如图所示：
+首先我们需要创建一个 MasaFramework 模板的项目，项目名称 TokenDemo，项目类型如图所示：
 
 ![](https://img1.dotnet9.com/2023/03/1501.png)
 
-删除Web/TokenDemo.Admin项目，新建Masa Blazor Pro项目模板项目，项目位置在src/Web项目：
+删除 Web/TokenDemo.Admin 项目，新建 Masa Blazor Pro 项目模板项目，项目位置在 src/Web 项目：
 
 ![](https://img1.dotnet9.com/2023/03/1502.png)
 
-项目类型选择ServerAndWasm，为了让我们支持俩种模式：
+项目类型选择 ServerAndWasm，为了让我们支持俩种模式：
 
 ![](https://img1.dotnet9.com/2023/03/1503.png)
 
-创建完成以后的目录，然后在TokenDemo.Admin中添加项目引用TokenDemo.Caller。
+创建完成以后的目录，然后在 TokenDemo.Admin 中添加项目引用 TokenDemo.Caller。
 
-## 配置EntityFrameworkCore和Sqlite
+## 配置 EntityFrameworkCore 和 Sqlite
 
-修改TokenDemo.Service项目的包依赖为预览版
+修改 TokenDemo.Service 项目的包依赖为预览版
 
 ```xml
 <ItemGroup>
@@ -46,7 +46,8 @@ tags: MASA Framework
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
 </ItemGroup>
 ```
-Masa.Contrib.Data.Contracts提供了[数据过滤](https://docs.masastack.com/framework/building-blocks/data/data-filter)的能力, 但它不是必须的，然后会出现报错，`LogMiddleware`将代码修改为以下代码：
+
+Masa.Contrib.Data.Contracts 提供了[数据过滤](https://docs.masastack.com/framework/building-blocks/data/data-filter)的能力, 但它不是必须的，然后会出现报错，`LogMiddleware`将代码修改为以下代码：
 
 ```csharp
 namespace TokenDemo.Service.Infrastructure.Middleware;
@@ -72,7 +73,7 @@ public class LogMiddleware<TEvent> : EventMiddleware<TEvent>
 }
 ```
 
-ValidatorMiddleware将代码修改为以下代码：
+ValidatorMiddleware 将代码修改为以下代码：
 
 ```csharp
 namespace TokenDemo.Service.Infrastructure.Middleware;
@@ -113,7 +114,7 @@ public class ValidatorMiddleware<TEvent> : EventMiddleware<TEvent>
 }
 ```
 
-OrderEventHandler将代码修改为以下代码：
+OrderEventHandler 将代码修改为以下代码：
 
 ```csharp
 namespace TokenDemo.Service.Infrastructure.Handlers;
@@ -143,7 +144,7 @@ public class OrderEventAfterHandler : IEventHandler<QueryOrderListEvent>
 }
 ```
 
-修改appsettings.json 添加Sqlite地址：
+修改 appsettings.json 添加 Sqlite 地址：
 
 ```json
 {
@@ -161,7 +162,7 @@ public class OrderEventAfterHandler : IEventHandler<QueryOrderListEvent>
 }
 ```
 
-修改Program.cs代码：
+修改 Program.cs 代码：
 
 ```csharp
 using TokenDemo.Service.Infrastructure;
@@ -242,7 +243,7 @@ app.UseHttpsRedirection();
 app.Run();
 ```
 
-添加EFCore迁移依赖：
+添加 EFCore 迁移依赖：
 
 ```xml
 <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.15">
@@ -255,17 +256,17 @@ app.Run();
 </PackageReference>
 ```
 
-在程序包管理器控制台中输入 `Add-Migration Init`生成Init的迁移文件（如果出现 `error NETSDK1082: Microsoft.AspNetCore.App 没有运行时包可用于指定的 RuntimeIdentifier“browser-wasm”`这个错误的话就先把`TokenDemo.Admin.WebAssembly`项目移除）。
+在程序包管理器控制台中输入 `Add-Migration Init`生成 Init 的迁移文件（如果出现 `error NETSDK1082: Microsoft.AspNetCore.App 没有运行时包可用于指定的 RuntimeIdentifier“browser-wasm”`这个错误的话就先把`TokenDemo.Admin.WebAssembly`项目移除）。
 
 使用`Update-Database`生成`Sqlitem`。
 
 然后就可以看到项目中生成了`Catalog.db`文件。
 
-启动TokenDemo.Service.Order我们就可以看到Swagger的界面了。
+启动 TokenDemo.Service.Order 我们就可以看到 Swagger 的界面了。
 
 ## 如何对接接口
 
-打开TokenDemo.Caller项目中的`Callers\OrderCaller.cs`文件，修改`BaseAdderss`为`TokenDemo.Service.Order`的服务地址，打开`TokenDemo.Service.Order`项目的`Services\OrderService.cs`文件并且修改代码：
+打开 TokenDemo.Caller 项目中的`Callers\OrderCaller.cs`文件，修改`BaseAdderss`为`TokenDemo.Service.Order`的服务地址，打开`TokenDemo.Service.Order`项目的`Services\OrderService.cs`文件并且修改代码：
 
 ```csharp
 namespace TokenDemo.Service.Services;
@@ -317,7 +318,7 @@ public class OrderService : ServiceBase
 builder.Services.AddCaller(typeof(TokenDemo.Caller.Callers.OrderCaller).Assembly);
 ```
 
-然后启动TokenDemo.Admin.Server项目，进入断点:
+然后启动 TokenDemo.Admin.Server 项目，进入断点:
 
 ![](https://img1.dotnet9.com/2023/03/1505.png)
 
@@ -325,11 +326,11 @@ builder.Services.AddCaller(typeof(TokenDemo.Caller.Callers.OrderCaller).Assembly
 
 ## 结尾
 
-通过上文我们可以基本将MasaFramework的使用掌握，前端和后端的接口也掌握了。
+通过上文我们可以基本将 MasaFramework 的使用掌握，前端和后端的接口也掌握了。
 
-当前是MasaFramework的第三篇入门，我会继续学习MasaFramework并且分享给大家。
+当前是 MasaFramework 的第三篇入门，我会继续学习 MasaFramework 并且分享给大家。
 
-来自token的分享。
+来自 token 的分享。
 
 - [MASA Framework](https://docs.masastack.com/framework/getting-started/overview)
 - 学习交流：737776595

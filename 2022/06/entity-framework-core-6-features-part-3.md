@@ -5,8 +5,8 @@ description: 在这篇文章中，我将重点介绍 EF Core 6 中 LINQ 查询�
 date: 2022-06-02 22:02:35
 copyright: Reprinted
 author: liamwang 精致码农
-originaltitle: EF Core 6 新功能汇总（三）
-originallink: https://mp.weixin.qq.com/s/ZRNu1Lvx6ZYr0kStMjc_Ug
+originalTitle: EF Core 6 新功能汇总（三）
+originalLink: https://mp.weixin.qq.com/s/ZRNu1Lvx6ZYr0kStMjc_Ug
 draft: False
 cover: https://img1.dotnet9.com/2022/06/cover_04.jpg
 categories: .NET
@@ -622,8 +622,8 @@ class ExampleContext : DbContext
 
 本文所有代码示例都可以在我的 GitHub 中找到：[https://github.com/okyrylchuk/dotnet6_features/tree/main/EF%20Core%206#linq-query-enhancements](https://github.com/okyrylchuk/dotnet6_features/tree/main/EF%20Core%206#linq-query-enhancements)
 
->原文：https://blog.okyrylchuk.dev/linq-enhancements-in-entity-framework-core-6
+> 原文：https://blog.okyrylchuk.dev/linq-enhancements-in-entity-framework-core-6
 >
->作者：Oleg Kyrylchuk
+> 作者：Oleg Kyrylchuk
 >
->翻译：精致码农
+> 翻译：精致码农

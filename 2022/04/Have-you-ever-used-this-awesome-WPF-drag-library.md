@@ -4,7 +4,7 @@ slug: Have-you-ever-used-this-awesome-WPF-drag-library
 description: 一个使您能在WPF里更方便的使用拖拽功能的框架
 date: 2022-04-19 21:56:32
 copyright: Original
-originaltitle: 您用过这个牛逼的WPF拖拽库吗？
+originalTitle: 您用过这个牛逼的WPF拖拽库吗？
 draft: False
 cover: https://img1.dotnet9.com/2022/04/2201.png
 albums: 开源WPF
@@ -81,9 +81,9 @@ tags: WPF,拖拽
 
 ## 3. License
 
-版权由Jan Karger, Steven Kirk和其他贡献者所有.
+版权由 Jan Karger, Steven Kirk 和其他贡献者所有.
 
-[GongSolutions.WPF.DragDrop](https://github.com/punker76/gong-wpf-dragdrop) 基于BSD 3-Clause协议. 有关该协议请参考说明[LICENSE](https://github.com/punker76/gong-wpf-dragdrop/blob/develop/LICENSE).
+[GongSolutions.WPF.DragDrop](https://github.com/punker76/gong-wpf-dragdrop) 基于 BSD 3-Clause 协议. 有关该协议请参考说明[LICENSE](https://github.com/punker76/gong-wpf-dragdrop/blob/develop/LICENSE).
 
 ## 4. 部分操作截图
 
@@ -101,11 +101,10 @@ tags: WPF,拖拽
 
 ## 5. 仓库
 
->作者：Jan Karger, Steven Kirk
+> 作者：Jan Karger, Steven Kirk
 >
->License：[BSD 3-Clause License](https://github.com/punker76/gong-wpf-dragdrop/blob/develop/LICENSE)
+> License：[BSD 3-Clause License](https://github.com/punker76/gong-wpf-dragdrop/blob/develop/LICENSE)
 >
->仓库地址：[https://github.com/punker76/gong-wpf-dragdrop](https://github.com/punker76/gong-wpf-dragdrop)
->
+> 仓库地址：[https://github.com/punker76/gong-wpf-dragdrop](https://github.com/punker76/gong-wpf-dragdrop)
 
 ![screenshot04](https://img1.dotnet9.com/2022/04/2208.png)

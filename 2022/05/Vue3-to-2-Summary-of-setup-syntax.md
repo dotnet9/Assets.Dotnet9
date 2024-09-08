@@ -5,8 +5,8 @@ description: 在 Vue3.2 中只需要在 script 标签上加上 setup 属性，�
 date: 2022-05-19 06:47:26
 copyright: Reprinted
 author: 玲小叮当
-originaltitle: Vue3.2 setup语法糖总结
-originallink: https://segmentfault.com/a/1190000041849882
+originalTitle: Vue3.2 setup语法糖总结
+originalLink: https://segmentfault.com/a/1190000041849882
 draft: False
 cover: https://img1.dotnet9.com/2022/05/cover_48.jpg
 categories: 前端
@@ -21,7 +21,7 @@ tags: Vue
 
 `提示：以下是本篇文章正文内容，下面案例可供参考`
 
-## 一、如何使用setup语法糖
+## 一、如何使用 setup 语法糖
 
 只需在 `script` 标签上写上`setup`
 
@@ -36,7 +36,7 @@ tags: Vue
 </style>
 ```
 
-## 二、data数据的使用
+## 二、data 数据的使用
 
 由于 `setup` 不需写 `return`，所以直接声明数据即可
 
@@ -49,20 +49,20 @@ tags: Vue
       reactive,
       toRefs,
     } from 'vue'
-    
+
     const data = reactive({
       patternVisible: false,
       debugVisible: false,
       aboutExeVisible: false,
     })
-    
+
     const content = ref('content')
     //使用toRefs解构
     const { patternVisible, debugVisible, aboutExeVisible } = toRefs(data)
 </script>
 ```
 
-## 三、method方法的使用
+## 三、method 方法的使用
 
 代码如下（示例）：
 
@@ -84,7 +84,7 @@ const onClickHelp = () => {
 </script>
 ```
 
-## 四、watchEffect的使用
+## 四、watchEffect 的使用
 
 代码如下（示例）：
 
@@ -104,7 +104,7 @@ watchEffect(()=>{
 </script>
 ```
 
-## 五、watch的使用
+## 五、watch 的使用
 
 代码如下（示例）：
 
@@ -130,17 +130,17 @@ watchEffect(()=>{
     watch([sum,msg],(newValue,oldValue)=>{
             console.log('sum或msg变了',newValue,oldValue)
           },{immediate:true})
-          
+
      watch(()=>person.job,(newValue,oldValue)=>{
         console.log('person的job变化了',newValue,oldValue)
-     },{deep:true}) 
- 
+     },{deep:true})
+
 </script>
 ```
 
-## 六、computed计算属性的使用
+## 六、computed 计算属性的使用
 
-computed计算属性有两种写法(简写和考虑读写的完整写法)
+computed 计算属性有两种写法(简写和考虑读写的完整写法)
 
 代码如下（示例）：
 
@@ -159,7 +159,7 @@ computed计算属性有两种写法(简写和考虑读写的完整写法)
     // 计算属性简写
     person.fullName = computed(()=>{
         return person.firstName + '-' + person.lastName
-      }) 
+      })
     // 完整写法
     person.fullName = computed({
       get(){
@@ -174,7 +174,7 @@ computed计算属性有两种写法(简写和考虑读写的完整写法)
 </script>
 ```
 
-## 七、props父子传值的使用
+## 七、props 父子传值的使用
 
 子组件代码如下（示例）：
 
@@ -191,7 +191,7 @@ computed计算属性有两种写法(简写和考虑读写的完整写法)
       type: String,
       default: '11'
     }
-  })  
+  })
   // 或者
   //const props = defineProps(['name'])
 </script>
@@ -201,7 +201,7 @@ computed计算属性有两种写法(简写和考虑读写的完整写法)
 
 ```ts
 <template>
-  <child :name='name'/>  
+  <child :name='name'/>
 </template>
 
 <script setup>
@@ -212,7 +212,7 @@ computed计算属性有两种写法(简写和考虑读写的完整写法)
 </script>
 ```
 
-## 八、emit子父传值的使用
+## 八、emit 子父传值的使用
 
 子组件代码如下（示例）：
 
@@ -249,7 +249,7 @@ import {reactive} from 'vue'
 import AdoutExe from '../components/AdoutExeCom'
 
 const data = reactive({
-  aboutExeVisible: false, 
+  aboutExeVisible: false,
 })
 // content组件ref
 
@@ -262,9 +262,9 @@ const aboutExeHandleCancel = () => {
 </script>
 ```
 
-## 九、获取子组件ref变量和defineExpose暴露
+## 九、获取子组件 ref 变量和 defineExpose 暴露
 
-即vue2中的获取子组件的ref，直接在父组件中控制子组件方法和变量的方法
+即 vue2 中的获取子组件的 ref，直接在父组件中控制子组件方法和变量的方法
 
 子组件代码如下（示例）：
 
@@ -284,8 +284,8 @@ import {
  * */
 const data = reactive({
   modelVisible: false,
-  historyVisible: false, 
-  reportVisible: false, 
+  historyVisible: false,
+  reportVisible: false,
 })
 defineExpose({
   ...toRefs(data),
@@ -316,18 +316,18 @@ const onClickSetUp = ({ key }) => {
 </style>
 ```
 
-## 十、路由useRoute和useRouter的使用
+## 十、路由 useRoute 和 useRouter 的使用
 
 代码如下（示例）：
 
 ```ts
 <script setup>
   import { useRoute, useRouter } from 'vue-router'
-    
+
   // 声明
   const route = useRoute()
   const router = useRouter()
-    
+
   // 获取query
   console.log(route.query)
   // 获取params
@@ -340,27 +340,16 @@ const onClickSetUp = ({ key }) => {
 </script>
 ```
 
-## 十一、store仓库的使用
+## 十一、store 仓库的使用
 
 代码如下（示例）：
 
 ```ts
 <script setup>
-  import { useStore } from 'vuex'
-  import { num } from '../store/index'
-
-  const store = useStore(num)
-    
-  // 获取Vuex的state
-  console.log(store.state.number)
-  // 获取Vuex的getters
-  console.log(store.state.getNumber)
-  
-  // 提交mutations
-  store.commit('fnName')
-  
-  // 分发actions的方法
-  store.dispatch('fnName')
+  import {useStore} from 'vuex' import {num} from '../store/index' const store =
+  useStore(num) // 获取Vuex的state console.log(store.state.number) //
+  获取Vuex的getters console.log(store.state.getNumber) // 提交mutations
+  store.commit('fnName') // 分发actions的方法 store.dispatch('fnName')
 </script>
 ```
 
@@ -372,8 +361,7 @@ setup 语法糖中可直接使用 await，不需要写 async ， setup 会自动
 
 ```ts
 <script setup>
-  import Api from '../api/Api'
-  const data = await Api.getData()
+  import Api from '../api/Api' const data = await Api.getData()
   console.log(data)
 </script>
 ```
@@ -406,9 +394,7 @@ setup 语法糖中可直接使用 await，不需要写 async ， setup 会自动
 
 ```ts
 <script setup>
-  import { inject } from 'vue'
-  const provideState = inject('provideState')
-
+  import {inject} from 'vue' const provideState = inject('provideState')
   provideState.changeName()
 </script>
 ```
@@ -417,4 +403,4 @@ setup 语法糖中可直接使用 await，不需要写 async ， setup 会自动
 
 提示：这里对文章进行总结：
 
-例如：以上就是我自己找博客什么的学习setup语法糖进行的总结，在项目中都进行了使用是可以实现的，如果哪里我写错了或者我的方法使用不对大家告诉我，我会马上改哒！如果大家觉得我写的文章还可以很实用，欢迎大家点赞收藏关注呀关注博主不迷路哦！工作不忙的话会持续更新哒！欢迎大家看看小叮当的其它文章~
+例如：以上就是我自己找博客什么的学习 setup 语法糖进行的总结，在项目中都进行了使用是可以实现的，如果哪里我写错了或者我的方法使用不对大家告诉我，我会马上改哒！如果大家觉得我写的文章还可以很实用，欢迎大家点赞收藏关注呀关注博主不迷路哦！工作不忙的话会持续更新哒！欢迎大家看看小叮当的其它文章~

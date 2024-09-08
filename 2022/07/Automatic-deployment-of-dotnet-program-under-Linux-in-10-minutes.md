@@ -5,8 +5,8 @@ description: 一直以来，程序署都是非常麻烦且无聊的事情，在�
 date: 2022-07-02 21:57:29
 copyright: Reprinted
 author: xhznl
-originaltitle: 10分钟实现dotnet程序在linux下的自动部署
-originallink: https://www.cnblogs.com/xhznl/p/16438063.html
+originalTitle: 10分钟实现dotnet程序在linux下的自动部署
+originalLink: https://www.cnblogs.com/xhznl/p/16438063.html
 draft: False
 cover: https://img1.dotnet9.com/2022/07/0203.png
 categories: .NET
@@ -19,7 +19,7 @@ tags: .NET
 
 ## 代码准备
 
-随便准备个demo项目，并提交到 gitee
+随便准备个 demo 项目，并提交到 gitee
 
 ```shell
 ## 创建aspnetcore web项目
@@ -30,7 +30,7 @@ dotnet new web -o aspnetcoredemo
 
 ## 服务器环境
 
-首先去服务器安装下 dotnet 运行时，我这里是用centos。
+首先去服务器安装下 dotnet 运行时，我这里是用 centos。
 
 参考官方文档 [在 CentOS 上安装 .NET - .NET | Microsoft Docs](https://docs.microsoft.com/zh-cn/dotnet/core/install/linux-centos)
 
@@ -60,7 +60,7 @@ sudo yum install aspnetcore-runtime-6.0
 
 - 第一步是配置流水线源
 
-选择代码源：码云（当然你也可以选别的，github，自建git之类的）
+选择代码源：码云（当然你也可以选别的，github，自建 git 之类的）
 
 授权一下，然后选择你的代码仓库，默认分支名。下面的工作目录随便写一个，比如：demo
 
@@ -184,7 +184,7 @@ start_application() {
 
 stop_application() {
    checkdotnetpid=`ps -ef | grep dotnet | grep ${APP_NAME} | grep -v grep |grep -v 'deploy.sh'| awk '{print$2}'`
-   
+
    if [[ ! $checkdotnetpid ]];then
       echo -e "\rno dotnet process"
       return

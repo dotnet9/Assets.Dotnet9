@@ -5,27 +5,27 @@ description: 公司交给你一个任务让你写一个API接口,那么我们应
 date: 2021-10-21 10:34:33
 copyright: Reprinted
 author: 薛家明
-originaltitle: ASP.NET Core打造一个“最安全”的API接口
-originallink: https://www.cnblogs.com/xuejiaming/p/15384015.html
+originalTitle: ASP.NET Core打造一个“最安全”的API接口
+originalLink: https://www.cnblogs.com/xuejiaming/p/15384015.html
 draft: False
 cover: https://img1.dotnet9.com/2021/10/cover_01.jpeg
 categories: .NET
 tags: 安全,API
 ---
 
-如果公司交给你一个任务让你写一个api接口,那么我们应该如何设计这个api接口来保证这个接口是对外看起来“高大上”，“羡慕崇拜”,并且使用起来和普通api接口无感，并且可以完美接入aspnetcore的认证授权体系呢，而不是自定义签名来进行自定义过滤器实现呢(虽然也可以但是并不是最完美的),如何让小白羡慕一眼就知道你是老鸟。
+如果公司交给你一个任务让你写一个 api 接口,那么我们应该如何设计这个 api 接口来保证这个接口是对外看起来“高大上”，“羡慕崇拜”,并且使用起来和普通 api 接口无感，并且可以完美接入 aspnetcore 的认证授权体系呢，而不是自定义签名来进行自定义过滤器实现呢(虽然也可以但是并不是最完美的),如何让小白羡慕一眼就知道你是老鸟。
 
 接下来我将给大家分享你不知道的自定义认证授体系。
 
-我相信这可能是你面对aspnetcore下一个无论如何都要跨过去的坎，也是很多老鸟不熟悉的未知领域(**很多人说能用就行,那么你可以直接右上角或者左上角**)
+我相信这可能是你面对 aspnetcore 下一个无论如何都要跨过去的坎，也是很多老鸟不熟悉的未知领域(**很多人说能用就行,那么你可以直接右上角或者左上角**)
 
-## 如何打造一个最最最安全的api接口
+## 如何打造一个最最最安全的 api 接口
 
 ### 技术选型
 
-在不考虑性能的影响下我们选择非对称加密可以选择sm或者rsa加密,这边我们选择rsa2048位pkcs8密钥来进行，http传输可以分为两个一个是request一个是response两个交互模式。
+在不考虑性能的影响下我们选择非对称加密可以选择 sm 或者 rsa 加密,这边我们选择 rsa2048 位 pkcs8 密钥来进行，http 传输可以分为两个一个是 request 一个是 response 两个交互模式。
 
-安全的交互方式在不使用https的前提下那么就是我把明文信息加密并且签名后给你，你收到后自己解密然后把你响应给我的明文信息加密后签名在回给我，这样就可以保证数据交互的安全性。
+安全的交互方式在不使用 https 的前提下那么就是我把明文信息加密并且签名后给你，你收到后自己解密然后把你响应给我的明文信息加密后签名在回给我，这样就可以保证数据交互的安全性。
 
 非对称加密一般拥有两个密钥，一个被称作为公钥，一个被称作为私钥，公钥是可以公开的哪怕放到互联网上也是没关系的，私钥是自己保存的，一般而言永远不会用到自己的私钥。
 
@@ -33,17 +33,17 @@ tags: 安全,API
 
 ### 实现原理
 
-假设我们现在是两个系统间的交互，系统A，系统B。系统A有一对rsa密钥对我们称之为公钥APubKey,私钥APriKey,系统B有一对rsa密钥我们称之为公钥BPubKey,私钥BPriKey。
+假设我们现在是两个系统间的交互，系统 A，系统 B。系统 A 有一对 rsa 密钥对我们称之为公钥 APubKey,私钥 APriKey,系统 B 有一对 rsa 密钥我们称之为公钥 BPubKey,私钥 BPriKey。
 
 私钥是每个系统生成后自己内部保存的，私钥的作用就是告诉发送方收到的人一定是我，公钥的作用就是告诉接收到是不是我发送的，基于这两条定理我们来设计程序。
 
-首先我们系统A调用系统B的Api1接口假设我们传递一个hello，然后系统B会回复一个world。那么我们如何设计才可以保证安全呢。首先系统A发送消息如何让系统B知道是系统A发过来的而不是别的中间人共计呢。这里我们需要用到签名，就是说系统A用APriKey进行对hello的加密后那么如果发过去的数据如果签名是x内容是hello，系统B收到了就会对hello进行签名的校验，如果校验出来的结果是用私钥加密的那么你用哪个公钥进行的前面校验就可以保证系统是由哪个系统发送的。用APriKey进行签名的数据只有用APubKey进行签名校验才能通过，所以系统B就可以确保是有系统A发送的而不是别的系统，那么我们到现在还是传送的明文信息，所以我们还需要将数据进行加密，加密一般我们选择的是接收方的公钥,因为只有用接收方的公钥加密后才能由接收方的私钥解密出来。
+首先我们系统 A 调用系统 B 的 Api1 接口假设我们传递一个 hello，然后系统 B 会回复一个 world。那么我们如何设计才可以保证安全呢。首先系统 A 发送消息如何让系统 B 知道是系统 A 发过来的而不是别的中间人共计呢。这里我们需要用到签名，就是说系统 A 用 APriKey 进行对 hello 的加密后那么如果发过去的数据如果签名是 x 内容是 hello，系统 B 收到了就会对 hello 进行签名的校验，如果校验出来的结果是用私钥加密的那么你用哪个公钥进行的前面校验就可以保证系统是由哪个系统发送的。用 APriKey 进行签名的数据只有用 APubKey 进行签名校验才能通过，所以系统 B 就可以确保是有系统 A 发送的而不是别的系统，那么我们到现在还是传送的明文信息，所以我们还需要将数据进行加密，加密一般我们选择的是接收方的公钥,因为只有用接收方的公钥加密后才能由接收方的私钥解密出来。
 
 ![](https://img1.dotnet9.com/2021/10/0101.png)
 
 ## 项目创建
 
-首先我们创建一个简单的aspnetcore的webapi项目
+首先我们创建一个简单的 aspnetcore 的 webapi 项目
 
 ![](https://img1.dotnet9.com/2021/10/0102.png)
 
@@ -56,7 +56,7 @@ public class RsaOptions
 }
 ```
 
-创建一个Scheme选项类
+创建一个 Scheme 选项类
 
 ```C#
 public class AuthSecurityRsaOptions: AuthenticationSchemeOptions
@@ -166,7 +166,7 @@ public class AuthSecurityRsaAuthenticationHandler: AuthenticationHandler<AuthSec
     }
 }
 ```
-  
+
 第三步我们添加扩展方法
 
 ```C#
@@ -262,7 +262,7 @@ public class RsaBaseController : ControllerBase
 
 ## 模型解析
 
-首先我们要确保微软是如何通过request body的字符串到model的绑定的，通过源码解析我们可以发现aspnetcore是通过`IModelBinder`。
+首先我们要确保微软是如何通过 request body 的字符串到 model 的绑定的，通过源码解析我们可以发现 aspnetcore 是通过`IModelBinder`。
 
 首先实现模型绑定
 
@@ -299,8 +299,8 @@ public class EncryptBodyModelBinder : IModelBinder
     }
 }
 ```
-  
-添加attribute的特性解析
+
+添加 attribute 的特性解析
 
 ```C#
 [AttributeUsage(AttributeTargets.Class | AttributeTargets.Struct | AttributeTargets.Enum | AttributeTargets.Property | AttributeTargets.Parameter, AllowMultiple = false, Inherited = true)]
@@ -316,7 +316,7 @@ public class RsaModelParseAttribute : Attribute, IBinderTypeProviderMetadata, IB
 }
 ```
 
-添加测试dto
+添加测试 dto
 
 ```C#
 [RsaModelParse]
@@ -386,7 +386,7 @@ public class HttpGlobalExceptionFilter : IExceptionFilter
     }
 }
 ```
-  
+
 添加模型校验
 
 ```C#
@@ -412,14 +412,14 @@ public class ValidateModelStateFilter : ActionFilterAttribute
 }
 ```
 
-startup配置
+startup 配置
 
 ```C#
 public void ConfigureServices(IServiceCollection services)
 {
     services.Configure<ApiBehaviorOptions>(options =>
     {
-        //忽略系统自带校验你[ApiController] 
+        //忽略系统自带校验你[ApiController]
         options.SuppressModelStateInvalidFilter = true;
     });
     services.AddControllers(options =>
@@ -458,10 +458,10 @@ public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
     });
 }
 ```
-  
-到此为止我们服务端的所有api接口和配置都已经完成了接下来我们通过编写客户端接口和生成rsa密钥对就可以开始使用api了
 
-## 如何生成rsa秘钥首先我们下载openssl
+到此为止我们服务端的所有 api 接口和配置都已经完成了接下来我们通过编写客户端接口和生成 rsa 密钥对就可以开始使用 api 了
+
+## 如何生成 rsa 秘钥首先我们下载 openssl
 
 下载地址[openssl](https://slproweb.com/products/Win32OpenSSL.html)
 
@@ -487,9 +487,9 @@ openssl>pkcs8 -topk8 -inform PEM -in rsa_private_key.pem -outform PEM -nocrypt -
 
 ![](https://img1.dotnet9.com/2021/10/0105.png)
 
-公钥和私钥不是xml格式的C#使用rsa需要xml格式的秘钥，所以先转换对应的秘钥
+公钥和私钥不是 xml 格式的 C#使用 rsa 需要 xml 格式的秘钥，所以先转换对应的秘钥
 
-首先nuget下载公钥私钥转换工具
+首先 nuget 下载公钥私钥转换工具
 
 ```shell
 Install-Package BouncyCastle.NetCore -Version 1.8.8
@@ -575,7 +575,7 @@ public class RsaKeyConvert
 }
 ```
 
-## 编写好client后开始调用
+## 编写好 client 后开始调用
 
 ![](https://img1.dotnet9.com/2021/10/0106.png)
 
@@ -583,9 +583,9 @@ public class RsaKeyConvert
 
 依次启动两个项目就可以看到我们调用成功了，
 
-**本项目采用rsa双向签名和加密来接入aspnetcore的权限系统并且可以获取到系统调用方用户**
+**本项目采用 rsa 双向签名和加密来接入 aspnetcore 的权限系统并且可以获取到系统调用方用户**
 
-完美接入aspnetcore认证系统和权限系统(后续会出一篇如何设计权限)
+完美接入 aspnetcore 认证系统和权限系统(后续会出一篇如何设计权限)
 
 系统交互采用双向加密和签名认证
 
@@ -593,14 +593,14 @@ public class RsaKeyConvert
 
 完美处理响应结果
 
-**注意本项目仅仅只是是一个学习demo，而且根据实践得出的结论rsa加密仅仅是满足了最最最安全的api这个条件，但是性能上而言会随着body的变大性能急剧下降，所以并不是一个很好的抉择当然可以用在双方交互的时候设置秘钥提供api接口，实际情况下可以选择使用对称加密比如:AES或者DES进行body体的加密解密,但是在签名方面完全没问题可以选择rsa，本次使用的是rsa2(rsa 2048位的秘钥)秘钥位数越大加密等级越高但是解密性能越低**
+**注意本项目仅仅只是是一个学习 demo，而且根据实践得出的结论 rsa 加密仅仅是满足了最最最安全的 api 这个条件，但是性能上而言会随着 body 的变大性能急剧下降，所以并不是一个很好的抉择当然可以用在双方交互的时候设置秘钥提供 api 接口，实际情况下可以选择使用对称加密比如:AES 或者 DES 进行 body 体的加密解密,但是在签名方面完全没问题可以选择 rsa，本次使用的是 rsa2(rsa 2048 位的秘钥)秘钥位数越大加密等级越高但是解密性能越低**
 
-当然你可以直接上https，本文章也不是说一定要双向处理更多的是分享如何接入aspnetcore的认证体系中和模型校验，而不用帖一大堆的attribute
+当然你可以直接上 https，本文章也不是说一定要双向处理更多的是分享如何接入 aspnetcore 的认证体系中和模型校验，而不用帖一大堆的 attribute
 
 demo：[AspNetCoreSafeApi](https://github.com/xuejmnet/AspNetCoreSafeApi)
 
 ## 最后
 
-分享本人开发的efcore分表分库读写分离组件,希望为.net生态做一份共享,如果喜欢或者觉得有用请点下star或者赞让更多的人看到
+分享本人开发的 efcore 分表分库读写分离组件,希望为.net 生态做一份共享,如果喜欢或者觉得有用请点下 star 或者赞让更多的人看到
 
-[Gitee Star](https://gitee.com/dotnetchina/sharding-core) 助力dotnet 生态 [Github Star](https://github.com/xuejmnet/sharding-core)
+[Gitee Star](https://gitee.com/dotnetchina/sharding-core) 助力 dotnet 生态 [Github Star](https://github.com/xuejmnet/sharding-core)

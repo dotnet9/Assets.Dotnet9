@@ -4,14 +4,14 @@ slug: WPF-Food-Application-Login-UI-Design
 description: 一个UI设计
 date: 2020-06-12 13:45:56
 copyright: Original
-originaltitle: WPF-美食应用登录UI设计
+originalTitle: WPF-美食应用登录UI设计
 draft: False
 cover: https://img1.dotnet9.com/2020/06/0201.gif
 tags: WPF Design
 categories: .NET
 ---
 
-Demo演示：
+Demo 演示：
 
 ![](https://img1.dotnet9.com/2020/06/0201.gif)
 
@@ -21,7 +21,7 @@ Demo演示：
 
 站长开发环境：
 
-- VS 2019企业版 16.70
+- VS 2019 企业版 16.70
 - .NET 5 Preview 5
 
 .NET 5 WPF 项目模板和 .NET Core 3.1 WPF 项目模板没有区别，创建好项目后，NuGet 引入 MaterialDesignThemes 库：
@@ -30,7 +30,7 @@ Demo演示：
 
 ## 2.引入样式
 
-演示Demo就一个xaml文件和xaml.cs文件，为了方便后面收集WPF界面设计效果，统一放在了开源项目TerminalMACS.ManagerForWPF中，所以控件样式引用直接在FoodAppLoginView.xaml中添加：
+演示 Demo 就一个 xaml 文件和 xaml.cs 文件，为了方便后面收集 WPF 界面设计效果，统一放在了开源项目 TerminalMACS.ManagerForWPF 中，所以控件样式引用直接在 FoodAppLoginView.xaml 中添加：
 
 ```xml
 <Window.Resources>
@@ -47,7 +47,7 @@ Demo演示：
 
 ## 3.控件动画效果
 
-见上面GIF动画，登录窗口加载时，用户名输入框、密码输入框、记住密码、右侧背景图片等元素有动画效果，每个部分代码结构类似，比如下面的用户名输入框代码：
+见上面 GIF 动画，登录窗口加载时，用户名输入框、密码输入框、记住密码、右侧背景图片等元素有动画效果，每个部分代码结构类似，比如下面的用户名输入框代码：
 
 ```xml
 <!--#region User name textblox-->
@@ -65,7 +65,7 @@ Demo演示：
 <!--#endregion-->
 ```
 
-使用了开源控件MD的TransitioningContent组件，其中TransitionEffect的Kind属性设置控件动画方向。
+使用了开源控件 MD 的 TransitioningContent 组件，其中 TransitionEffect 的 Kind 属性设置控件动画方向。
 
 ## 4. 模拟登录
 
@@ -89,7 +89,7 @@ Demo演示：
 <!--#endregion-->
 ```
 
-点击登录时，打开等待对话框（点击时绑定了materialDesign:DialogHost.OpenDialogCommand），在等待对话框的打开与关闭事件中做登录逻辑处理。
+点击登录时，打开等待对话框（点击时绑定了 materialDesign:DialogHost.OpenDialogCommand），在等待对话框的打开与关闭事件中做登录逻辑处理。
 
 ```C#
 private async Task<bool> ValidateCreds()
@@ -152,7 +152,7 @@ private void ClosingCB_DialogClosing(object sender, MaterialDesignThemes.Wpf.Dia
 
 ## 5. 源码下载
 
-上面只贴了部分关键代码，源码已放Github中。
+上面只贴了部分关键代码，源码已放 Github 中。
 
 - 参考视频：[WPF Food App Login UI Material Design [Speed Design]](https://www.youtube.com/watch?v=1i5oWNvIYmo)
-- Demo源码：[FoodAppLoginUI](https://github.com/dotnet9/TerminalMACS.ManagerForWPF/tree/master/src/TerminalMACS.TestDemo/Views/FoodAppLoginUI)
+- Demo 源码：[FoodAppLoginUI](https://github.com/dotnet9/TerminalMACS.ManagerForWPF/tree/master/src/TerminalMACS.TestDemo/Views/FoodAppLoginUI)

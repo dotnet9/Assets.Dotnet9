@@ -6,8 +6,8 @@ date: 2021-11-30 16:57:37
 banner: false
 copyright: Reprinted
 author: He BianGu
-originaltitle: WPF开源项目：WPF-ControlBase
-originallink: https://github.com/HeBianGu/WPF-ControlBase
+originalTitle: WPF开源项目：WPF-ControlBase
+originalLink: https://github.com/HeBianGu/WPF-ControlBase
 draft: False
 cover: https://img1.dotnet9.com/2021/11/cover_09.png
 categories: .NET
@@ -16,7 +16,7 @@ tags: WPF,开源WPF
 
 ![仓库截图](https://img1.dotnet9.com/2021/11/0901.png)
 
-仓库README很素，但看作者README贴的几篇博文介绍，你会喜欢上它的，废话不多说，上介绍目录：
+仓库 README 很素，但看作者 README 贴的几篇博文介绍，你会喜欢上它的，废话不多说，上介绍目录：
 
 1. 动画封装
 
@@ -36,7 +36,7 @@ https://blog.csdn.net/u010975589/article/details/95970200
 https://blog.csdn.net/u010975589/article/details/95985190
 ```
 
-4. 在WPF中应用MVC
+4. 在 WPF 中应用 MVC
 
 ```shell
 https://blog.csdn.net/u010975589/article/details/100019431
@@ -57,13 +57,13 @@ https://blog.csdn.net/u010975589/article/details/103083605
 原文链接：https://blog.csdn.net/u010975589/article/details/95974854
 ```
 
-### 1.1 目的：通过对StoryBoard和Animation的封装来简化动画的编写
+### 1.1 目的：通过对 StoryBoard 和 Animation 的封装来简化动画的编写
 
 ### 1.2 示例
 
 ![](https://img1.dotnet9.com/2021/11/0902.gif)
 
-说明：渐隐藏是WPF中比较常用的动画，上图是通过StoryBoarService封装后的效果，在代码中只要执行如下代码即可：
+说明：渐隐藏是 WPF 中比较常用的动画，上图是通过 StoryBoarService 封装后的效果，在代码中只要执行如下代码即可：
 
 ```C#
 DoubleStoryboardEngine.Create(1, 0, 1, "Opacity").Start(element);
@@ -91,14 +91,15 @@ public class CollapsedOfOpacityCommand : ICommand
 }
 ```
 
-在Xaml中调用如下命令即可完成关闭渐隐藏的效果
+在 Xaml 中调用如下命令即可完成关闭渐隐藏的效果
 
 ```html
 Command="{x:Static base:CommandService.CollapsedOfOpacityCommand}"
-CommandParameter="{Binding RelativeSource={RelativeSource AncestorType=GroupBox}}"
+CommandParameter="{Binding RelativeSource={RelativeSource
+AncestorType=GroupBox}}"
 ```
 
-传入的CommandParmeter将会在执行命令时渐隐藏
+传入的 CommandParmeter 将会在执行命令时渐隐藏
 
 其中动画效果的代码只需一句代码即可，简化了动画在代码中繁琐的编码过程
 
@@ -108,7 +109,7 @@ DoubleStoryboardEngine.Create(1, 0, 1, "Opacity").Start(element);
 
 ### 1.3 代码：
 
-目前只实现DoubleAnimation的封装，后续将会对其他类型进行封装
+目前只实现 DoubleAnimation 的封装，后续将会对其他类型进行封装
 
 #### 1.3.1 封闭修改基类
 
@@ -161,7 +162,7 @@ public abstract class StoryboardEngineBase<T> : StoryboardEngineBase
 }
 ```
 
-#### 1.3.2 开放扩展DoubleStoryboardEngine
+#### 1.3.2 开放扩展 DoubleStoryboardEngine
 
 ```C#
 /// <summary> DoubleAnimation动画引擎 </summary>
@@ -253,7 +254,7 @@ public static class EasingFunctionFactroy
 /// <param name="to"> 结束值  </param>
 /// <param name="second"> 间隔时间秒 </param>
 /// <param name="property"> 修改属性名称 </param>
-/// 
+///
 public static DoubleStoryboardEngine Create(double from, double to, int second, string property)
 {
     return new DoubleStoryboardEngine(from, to, second, property);
@@ -274,7 +275,7 @@ public static DoubleStoryboardEngine Create(double from, double to, int second, 
 1. 绑定实体对象
 2. 通过特性显示属性名称
 3. 通过特性增加验证条件
-4. 已经实现String、Int、Double、DateTime、Bool几种简单类型的DataTemplate模板，其他模板支持扩展
+4. 已经实现 String、Int、Double、DateTime、Bool 几种简单类型的 DataTemplate 模板，其他模板支持扩展
 5. 其他后续更新...
 
 ### 2.3 示例
@@ -314,7 +315,7 @@ public class Student
     [Required]
     public int Age { get; set; }
 
-    [Display("平均分")] 
+    [Display("平均分")]
     public double Score { get; set; }
 
     [Display("电话号码")]
@@ -331,20 +332,30 @@ public class Student
 
 应用方式：
 
-```html                    
+```html
 <UserControl.Resources>
-    <local:Student x:Key="S.Student.HeBianGu" 
-                    Name="河边骨" 
-                    Address="四川省成都市高新区" 
-                    Class="四年级" 
-                    Emall="7777777777@QQ.com" Age="33" Score="99.99" IsEnbled="True" time="2019-09-09"/>
+  <local:Student
+    x:Key="S.Student.HeBianGu"
+    Name="河边骨"
+    Address="四川省成都市高新区"
+    Class="四年级"
+    Emall="7777777777@QQ.com"
+    Age="33"
+    Score="99.99"
+    IsEnbled="True"
+    time="2019-09-09"
+  />
 </UserControl.Resources>
- 
-<wpfcontrollib:ObjectPropertyForm Grid.Row="1" Title="学生信息"  SelectObject="{StaticResource S.Student.HeBianGu}" >
-    <base:Interaction.Behaviors>
-        <base:MouseDragElementBehavior ConstrainToParentBounds="True"/>
-        <base:SelectZIndexElementBehavior/>
-    </base:Interaction.Behaviors>
+
+<wpfcontrollib:ObjectPropertyForm
+  Grid.Row="1"
+  Title="学生信息"
+  SelectObject="{StaticResource S.Student.HeBianGu}"
+>
+  <base:Interaction.Behaviors>
+    <base:MouseDragElementBehavior ConstrainToParentBounds="True" />
+    <base:SelectZIndexElementBehavior /> </base:Interaction.Behaviors
+></wpfcontrollib:ObjectPropertyForm>
 ```
 
 ### 2.4 代码
@@ -435,12 +446,12 @@ public class ObjectPropertyItem<T> : ObjectPropertyItem
                 {
                     if (!item.IsValid(value))
                     {
-                        this.Message = item.ErrorMessage;  
+                        this.Message = item.ErrorMessage;
                     }
                 }
             }
 
-            _value = value; 
+            _value = value;
 
             RaisePropertyChanged("Value");
 
@@ -457,7 +468,7 @@ public class ObjectPropertyItem<T> : ObjectPropertyItem
 
     public ObjectPropertyItem(PropertyInfo property, object obj) : base(property, obj)
     {
-        Value = (T)property.GetValue(obj); 
+        Value = (T)property.GetValue(obj);
 
         Validations = property.GetCustomAttributes<ValidationAttribute>()?.ToList();
 
@@ -564,206 +575,318 @@ public class ObjectPropertyFactory
 
 ```html
 <DataTemplate DataType="{x:Type base:StringPropertyItem}">
-    <Grid Width="{Binding RelativeSource={RelativeSource AncestorType=local:ObjectPropertyForm},Path=Width-5}" 
-          Height="35" Margin="5,0">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="Auto"/>
-            <ColumnDefinition Width="2*"/>
-            <ColumnDefinition Width="30"/>
-        </Grid.ColumnDefinitions>
+  <Grid
+    Width="{Binding RelativeSource={RelativeSource AncestorType=local:ObjectPropertyForm},Path=Width-5}"
+    Height="35"
+    Margin="5,0"
+  >
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="*" />
+      <ColumnDefinition Width="Auto" />
+      <ColumnDefinition Width="2*" />
+      <ColumnDefinition Width="30" />
+    </Grid.ColumnDefinitions>
 
-        <TextBlock Text="{Binding Name}" 
-                    FontSize="14" 
-                    HorizontalAlignment="Center" 
-                    VerticalAlignment="Center"/>
+    <TextBlock
+      Text="{Binding Name}"
+      FontSize="14"
+      HorizontalAlignment="Center"
+      VerticalAlignment="Center"
+    />
 
-        <TextBlock Text="{Binding Flag}" 
-                    Grid.Column="1" Margin="5,0"
-                    FontSize="14"  Foreground="{DynamicResource S.Brush.Red.Notice}" 
-                    HorizontalAlignment="Right" 
-                    VerticalAlignment="Center"/>
+    <TextBlock
+      Text="{Binding Flag}"
+      Grid.Column="1"
+      Margin="5,0"
+      FontSize="14"
+      Foreground="{DynamicResource S.Brush.Red.Notice}"
+      HorizontalAlignment="Right"
+      VerticalAlignment="Center"
+    />
 
-        <local:FTextBox Text="{Binding Value,UpdateSourceTrigger=PropertyChanged}" Style="{DynamicResource DefaultTextBox}"
-                  FontSize="14" Width="Auto" CaretBrush="Black"
-                  Grid.Column="2" Height="30" base:ControlAttachProperty.FIcon=""
-                  VerticalContentAlignment="Center" 
-                  HorizontalAlignment="Stretch" VerticalAlignment="Center"/>
+    <local:FTextBox
+      Text="{Binding Value,UpdateSourceTrigger=PropertyChanged}"
+      Style="{DynamicResource DefaultTextBox}"
+      FontSize="14"
+      Width="Auto"
+      CaretBrush="Black"
+      Grid.Column="2"
+      Height="30"
+      base:ControlAttachProperty.FIcon=""
+      VerticalContentAlignment="Center"
+      HorizontalAlignment="Stretch"
+      VerticalAlignment="Center"
+    />
 
-        <TextBlock Text="&#xe626;" Grid.Column="3" Style="{DynamicResource FIcon }"
-                    Foreground="{DynamicResource S.Brush.Red.Notice}" 
-                    Visibility="{Binding Message,Converter={x:Static base:XConverter.VisibilityWithOutStringConverter},ConverterParameter={x:Null},Mode=TwoWay}"
-                    FontSize="14" TextTrimming="CharacterEllipsis" ToolTip="{Binding Message}"
-                    HorizontalAlignment="Center" 
-                    VerticalAlignment="Center"/>
-    </Grid>
+    <TextBlock
+      Text="&#xe626;"
+      Grid.Column="3"
+      Style="{DynamicResource FIcon }"
+      Foreground="{DynamicResource S.Brush.Red.Notice}"
+      Visibility="{Binding Message,Converter={x:Static base:XConverter.VisibilityWithOutStringConverter},ConverterParameter={x:Null},Mode=TwoWay}"
+      FontSize="14"
+      TextTrimming="CharacterEllipsis"
+      ToolTip="{Binding Message}"
+      HorizontalAlignment="Center"
+      VerticalAlignment="Center"
+    />
+  </Grid>
 </DataTemplate>
 
 <DataTemplate DataType="{x:Type base:BoolPropertyItem}">
-    <Grid Width="{Binding RelativeSource={RelativeSource AncestorType=local:ObjectPropertyForm},Path=Width-5}" Height="35" Margin="5,0">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="Auto"/>
-            <ColumnDefinition Width="2*"/>
-            <ColumnDefinition Width="30"/>
-        </Grid.ColumnDefinitions>
+  <Grid
+    Width="{Binding RelativeSource={RelativeSource AncestorType=local:ObjectPropertyForm},Path=Width-5}"
+    Height="35"
+    Margin="5,0"
+  >
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="*" />
+      <ColumnDefinition Width="Auto" />
+      <ColumnDefinition Width="2*" />
+      <ColumnDefinition Width="30" />
+    </Grid.ColumnDefinitions>
 
-        <TextBlock Text="{Binding Name}" 
-                    FontSize="14" 
-                    HorizontalAlignment="Center" 
-                    VerticalAlignment="Center"/>
+    <TextBlock
+      Text="{Binding Name}"
+      FontSize="14"
+      HorizontalAlignment="Center"
+      VerticalAlignment="Center"
+    />
 
-        <TextBlock Text="{Binding Flag}" 
-                    Grid.Column="1" Margin="5,0"
-                    FontSize="14"  Foreground="{DynamicResource S.Brush.Red.Notice}" 
-                    HorizontalAlignment="Right" 
-                    VerticalAlignment="Center"/>
-        <CheckBox IsChecked="{Binding Value}"  FontSize="14" Grid.Column="2" Height="30" 
-                  VerticalContentAlignment="Center"  
-                  HorizontalAlignment="Left" VerticalAlignment="Center"/>
+    <TextBlock
+      Text="{Binding Flag}"
+      Grid.Column="1"
+      Margin="5,0"
+      FontSize="14"
+      Foreground="{DynamicResource S.Brush.Red.Notice}"
+      HorizontalAlignment="Right"
+      VerticalAlignment="Center"
+    />
+    <CheckBox
+      IsChecked="{Binding Value}"
+      FontSize="14"
+      Grid.Column="2"
+      Height="30"
+      VerticalContentAlignment="Center"
+      HorizontalAlignment="Left"
+      VerticalAlignment="Center"
+    />
 
-
-        <TextBlock Text="&#xe626;" Grid.Column="3" Style="{DynamicResource FIcon }"
-                    Foreground="{DynamicResource S.Brush.Red.Notice}" Visibility="{Binding Message,Converter={x:Static base:XConverter.VisibilityWithOutStringConverter},ConverterParameter={x:Null}}"
-                    FontSize="14"   TextTrimming="CharacterEllipsis" ToolTip="{Binding Message}"
-                    HorizontalAlignment="Center" 
-                    VerticalAlignment="Center"/>
-    </Grid>
+    <TextBlock
+      Text="&#xe626;"
+      Grid.Column="3"
+      Style="{DynamicResource FIcon }"
+      Foreground="{DynamicResource S.Brush.Red.Notice}"
+      Visibility="{Binding Message,Converter={x:Static base:XConverter.VisibilityWithOutStringConverter},ConverterParameter={x:Null}}"
+      FontSize="14"
+      TextTrimming="CharacterEllipsis"
+      ToolTip="{Binding Message}"
+      HorizontalAlignment="Center"
+      VerticalAlignment="Center"
+    />
+  </Grid>
 </DataTemplate>
 
 <DataTemplate DataType="{x:Type base:DateTimePropertyItem}">
-    <Grid Width="{Binding RelativeSource={RelativeSource AncestorType=local:ObjectPropertyForm},Path=Width-5}" Height="35" Margin="5,0">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="Auto"/>
-            <ColumnDefinition Width="2*"/>
-            <ColumnDefinition Width="30"/>
-        </Grid.ColumnDefinitions>
+  <Grid
+    Width="{Binding RelativeSource={RelativeSource AncestorType=local:ObjectPropertyForm},Path=Width-5}"
+    Height="35"
+    Margin="5,0"
+  >
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="*" />
+      <ColumnDefinition Width="Auto" />
+      <ColumnDefinition Width="2*" />
+      <ColumnDefinition Width="30" />
+    </Grid.ColumnDefinitions>
 
-        <TextBlock Text="{Binding Name}" 
-                    FontSize="14" 
-                    HorizontalAlignment="Center" 
-                    VerticalAlignment="Center"/>
+    <TextBlock
+      Text="{Binding Name}"
+      FontSize="14"
+      HorizontalAlignment="Center"
+      VerticalAlignment="Center"
+    />
 
-        <TextBlock Text="{Binding Flag}" 
-                    Grid.Column="1" Margin="5,0"
-                    FontSize="14"  Foreground="{DynamicResource S.Brush.Red.Notice}" 
-                    HorizontalAlignment="Right" 
-                    VerticalAlignment="Center"/>
-        <DatePicker SelectedDate="{Binding Value}"  FontSize="14" Grid.Column="2" Height="30" 
-                  VerticalContentAlignment="Center"  Width="Auto"
-                  HorizontalAlignment="Stretch" VerticalAlignment="Center"/>
+    <TextBlock
+      Text="{Binding Flag}"
+      Grid.Column="1"
+      Margin="5,0"
+      FontSize="14"
+      Foreground="{DynamicResource S.Brush.Red.Notice}"
+      HorizontalAlignment="Right"
+      VerticalAlignment="Center"
+    />
+    <DatePicker
+      SelectedDate="{Binding Value}"
+      FontSize="14"
+      Grid.Column="2"
+      Height="30"
+      VerticalContentAlignment="Center"
+      Width="Auto"
+      HorizontalAlignment="Stretch"
+      VerticalAlignment="Center"
+    />
 
-
-        <TextBlock Text="&#xe626;" Grid.Column="3" Style="{DynamicResource FIcon }"
-                    Foreground="{DynamicResource S.Brush.Red.Notice}" Visibility="{Binding Message,Converter={x:Static base:XConverter.VisibilityWithOutStringConverter},ConverterParameter={x:Null}}"
-                    FontSize="14"   TextTrimming="CharacterEllipsis" ToolTip="{Binding Message}"
-                    HorizontalAlignment="Center" 
-                    VerticalAlignment="Center"/>
-    </Grid>
+    <TextBlock
+      Text="&#xe626;"
+      Grid.Column="3"
+      Style="{DynamicResource FIcon }"
+      Foreground="{DynamicResource S.Brush.Red.Notice}"
+      Visibility="{Binding Message,Converter={x:Static base:XConverter.VisibilityWithOutStringConverter},ConverterParameter={x:Null}}"
+      FontSize="14"
+      TextTrimming="CharacterEllipsis"
+      ToolTip="{Binding Message}"
+      HorizontalAlignment="Center"
+      VerticalAlignment="Center"
+    />
+  </Grid>
 </DataTemplate>
 
 <DataTemplate DataType="{x:Type base:IntPropertyItem}">
-    <Grid Width="{Binding RelativeSource={RelativeSource AncestorType=local:ObjectPropertyForm},Path=Width-5}" Height="35" Margin="5,0">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="Auto"/>
-            <ColumnDefinition Width="2*"/>
-            <ColumnDefinition Width="30"/>
-        </Grid.ColumnDefinitions>
+  <Grid
+    Width="{Binding RelativeSource={RelativeSource AncestorType=local:ObjectPropertyForm},Path=Width-5}"
+    Height="35"
+    Margin="5,0"
+  >
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="*" />
+      <ColumnDefinition Width="Auto" />
+      <ColumnDefinition Width="2*" />
+      <ColumnDefinition Width="30" />
+    </Grid.ColumnDefinitions>
 
-        <TextBlock Text="{Binding Name}" 
-                    FontSize="14" 
-                    HorizontalAlignment="Center" 
-                    VerticalAlignment="Center"/>
+    <TextBlock
+      Text="{Binding Name}"
+      FontSize="14"
+      HorizontalAlignment="Center"
+      VerticalAlignment="Center"
+    />
 
-        <TextBlock Text="{Binding Flag}" 
-                    Grid.Column="1" Margin="5,0"
-                    FontSize="14"  Foreground="{DynamicResource S.Brush.Red.Notice}" 
-                    HorizontalAlignment="Right" 
-                    VerticalAlignment="Center"/>
-        <Slider Value="{Binding Value}"  FontSize="14" Grid.Column="2" Height="30" 
-                  VerticalContentAlignment="Center"  
-                  HorizontalAlignment="Stretch" VerticalAlignment="Center"/>
+    <TextBlock
+      Text="{Binding Flag}"
+      Grid.Column="1"
+      Margin="5,0"
+      FontSize="14"
+      Foreground="{DynamicResource S.Brush.Red.Notice}"
+      HorizontalAlignment="Right"
+      VerticalAlignment="Center"
+    />
+    <Slider
+      Value="{Binding Value}"
+      FontSize="14"
+      Grid.Column="2"
+      Height="30"
+      VerticalContentAlignment="Center"
+      HorizontalAlignment="Stretch"
+      VerticalAlignment="Center"
+    />
 
-
-        <TextBlock Text="&#xe626;" Grid.Column="3" Style="{DynamicResource FIcon }"
-                    Foreground="{DynamicResource S.Brush.Red.Notice}" Visibility="{Binding Message,Converter={x:Static base:XConverter.VisibilityWithOutStringConverter},ConverterParameter={x:Null}}"
-                    FontSize="14"   TextTrimming="CharacterEllipsis" ToolTip="{Binding Message}"
-                    HorizontalAlignment="Center" 
-                    VerticalAlignment="Center"/>
-    </Grid>
+    <TextBlock
+      Text="&#xe626;"
+      Grid.Column="3"
+      Style="{DynamicResource FIcon }"
+      Foreground="{DynamicResource S.Brush.Red.Notice}"
+      Visibility="{Binding Message,Converter={x:Static base:XConverter.VisibilityWithOutStringConverter},ConverterParameter={x:Null}}"
+      FontSize="14"
+      TextTrimming="CharacterEllipsis"
+      ToolTip="{Binding Message}"
+      HorizontalAlignment="Center"
+      VerticalAlignment="Center"
+    />
+  </Grid>
 </DataTemplate>
 
 <DataTemplate DataType="{x:Type base:DoublePropertyItem}">
-    <Grid Width="{Binding RelativeSource={RelativeSource AncestorType=local:ObjectPropertyForm},Path=Width-5}" Height="35" Margin="5,0">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="Auto"/>
-            <ColumnDefinition Width="2*"/>
-            <ColumnDefinition Width="30"/>
-        </Grid.ColumnDefinitions>
+  <Grid
+    Width="{Binding RelativeSource={RelativeSource AncestorType=local:ObjectPropertyForm},Path=Width-5}"
+    Height="35"
+    Margin="5,0"
+  >
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="*" />
+      <ColumnDefinition Width="Auto" />
+      <ColumnDefinition Width="2*" />
+      <ColumnDefinition Width="30" />
+    </Grid.ColumnDefinitions>
 
-        <TextBlock Text="{Binding Name}" 
-                    FontSize="14" 
-                    HorizontalAlignment="Center" 
-                    VerticalAlignment="Center"/>
+    <TextBlock
+      Text="{Binding Name}"
+      FontSize="14"
+      HorizontalAlignment="Center"
+      VerticalAlignment="Center"
+    />
 
-        <TextBlock Text="{Binding Flag}" 
-                    Grid.Column="1" Margin="5,0"
-                    FontSize="14"  Foreground="{DynamicResource S.Brush.Red.Notice}" 
-                    HorizontalAlignment="Right" 
-                    VerticalAlignment="Center"/>
-        <Slider Value="{Binding Value}"  FontSize="14" Grid.Column="2" Height="30" 
-                  VerticalContentAlignment="Center"  
-                  HorizontalAlignment="Stretch" VerticalAlignment="Center"/>
+    <TextBlock
+      Text="{Binding Flag}"
+      Grid.Column="1"
+      Margin="5,0"
+      FontSize="14"
+      Foreground="{DynamicResource S.Brush.Red.Notice}"
+      HorizontalAlignment="Right"
+      VerticalAlignment="Center"
+    />
+    <Slider
+      Value="{Binding Value}"
+      FontSize="14"
+      Grid.Column="2"
+      Height="30"
+      VerticalContentAlignment="Center"
+      HorizontalAlignment="Stretch"
+      VerticalAlignment="Center"
+    />
 
-
-        <TextBlock Text="&#xe626;" Grid.Column="3" Style="{DynamicResource FIcon }"
-                    Foreground="{DynamicResource S.Brush.Red.Notice}" Visibility="{Binding Message,Converter={x:Static base:XConverter.VisibilityWithOutStringConverter},ConverterParameter={x:Null}}"
-                    FontSize="14"   TextTrimming="CharacterEllipsis" ToolTip="{Binding Message}"
-                    HorizontalAlignment="Center" 
-                    VerticalAlignment="Center"/>
-    </Grid>
+    <TextBlock
+      Text="&#xe626;"
+      Grid.Column="3"
+      Style="{DynamicResource FIcon }"
+      Foreground="{DynamicResource S.Brush.Red.Notice}"
+      Visibility="{Binding Message,Converter={x:Static base:XConverter.VisibilityWithOutStringConverter},ConverterParameter={x:Null}}"
+      FontSize="14"
+      TextTrimming="CharacterEllipsis"
+      ToolTip="{Binding Message}"
+      HorizontalAlignment="Center"
+      VerticalAlignment="Center"
+    />
+  </Grid>
 </DataTemplate>
 
-<Style TargetType="local:ObjectPropertyForm">
-    <Setter Property="Background" Value="{DynamicResource S.Brush.TextBackgroud.Default}"/>
-    <Setter Property="BorderThickness" Value="0"/>
-    <!--<Setter Property="BorderBrush" Value="{x:Null}"/>-->
-    <Setter Property="HorizontalAlignment" Value="Stretch"/>
-    <Setter Property="VerticalAlignment" Value="Center"/>
-    <Setter Property="HorizontalContentAlignment" Value="Center"/>
-    <Setter Property="VerticalContentAlignment" Value="Center"/>
-    <!--<Setter Property="FocusVisualStyle" Value="{x:Null}"/>-->
-    <Setter Property="Padding" Value="0" />
-    <Setter Property="Width" Value="500" />
-    <Setter Property="Height" Value="Auto" />
-    <Setter Property="ItemsSource" Value="{Binding PropertyItemSource,Mode=TwoWay}" />
-    <Setter Property="ItemsPanel">
-        <Setter.Value>
-            <ItemsPanelTemplate>
-                <StackPanel/>
+<style TargetType="local:ObjectPropertyForm">
+  <Setter Property="Background" Value="{DynamicResource S.Brush.TextBackgroud.Default}"/>
+  <Setter Property="BorderThickness" Value="0"/>
+  <!--<Setter Property="BorderBrush" Value="{x:Null}"/>-->
+  <Setter Property="HorizontalAlignment" Value="Stretch"/>
+  <Setter Property="VerticalAlignment" Value="Center"/>
+  <Setter Property="HorizontalContentAlignment" Value="Center"/>
+  <Setter Property="VerticalContentAlignment" Value="Center"/>
+  <!--<Setter Property="FocusVisualStyle" Value="{x:Null}"/>-->
+  <Setter Property="Padding" Value="0" />
+  <Setter Property="Width" Value="500" />
+  <Setter Property="Height" Value="Auto" />
+  <Setter Property="ItemsSource" Value="{Binding PropertyItemSource,Mode=TwoWay}" />
+  <Setter Property="ItemsPanel">
+      <Setter.Value>
+          <ItemsPanelTemplate>
+              <StackPanel/>
 
-            </ItemsPanelTemplate>
-        </Setter.Value>
-    </Setter>
-    <Setter Property="Template">
-        <Setter.Value>
-            <ControlTemplate TargetType="local:ObjectPropertyForm">
-                <GroupBox Header="{TemplateBinding Title}">
-                    <Border HorizontalAlignment="{TemplateBinding HorizontalAlignment}"
-                        VerticalAlignment="{TemplateBinding VerticalAlignment}"
-                        Background="{TemplateBinding Background}"
-                        BorderBrush="{TemplateBinding BorderBrush}"
-                        BorderThickness="{TemplateBinding BorderThickness}">
-                        <ItemsPresenter/>
-                    </Border>
-                </GroupBox>
-            </ControlTemplate>
-        </Setter.Value>
-    </Setter>
-</Style>
+          </ItemsPanelTemplate>
+      </Setter.Value>
+  </Setter>
+  <Setter Property="Template">
+      <Setter.Value>
+          <ControlTemplate TargetType="local:ObjectPropertyForm">
+              <GroupBox Header="{TemplateBinding Title}">
+                  <Border HorizontalAlignment="{TemplateBinding HorizontalAlignment}"
+                      VerticalAlignment="{TemplateBinding VerticalAlignment}"
+                      Background="{TemplateBinding Background}"
+                      BorderBrush="{TemplateBinding BorderBrush}"
+                      BorderThickness="{TemplateBinding BorderThickness}">
+                      <ItemsPresenter/>
+                  </Border>
+              </GroupBox>
+          </ControlTemplate>
+      </Setter.Value>
+  </Setter>
+</style>
 ```
 
 #### 2.4.4 开放扩展
@@ -780,43 +903,66 @@ public class StringPropertyItem : ObjectPropertyItem<string>
 }
 ```
 
-##### 2.4.4.2 再添加一个DataTmeplate，如：
+##### 2.4.4.2 再添加一个 DataTmeplate，如：
 
 ```html
 <DataTemplate DataType="{x:Type base:StringPropertyItem}">
-    <Grid Width="{Binding RelativeSource={RelativeSource AncestorType=local:ObjectPropertyForm},Path=Width-5}" 
-          Height="35" Margin="5,0">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="Auto"/>
-            <ColumnDefinition Width="2*"/>
-            <ColumnDefinition Width="30"/>
-        </Grid.ColumnDefinitions>
+  <Grid
+    Width="{Binding RelativeSource={RelativeSource AncestorType=local:ObjectPropertyForm},Path=Width-5}"
+    Height="35"
+    Margin="5,0"
+  >
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="*" />
+      <ColumnDefinition Width="Auto" />
+      <ColumnDefinition Width="2*" />
+      <ColumnDefinition Width="30" />
+    </Grid.ColumnDefinitions>
 
-        <TextBlock Text="{Binding Name}" 
-                    FontSize="14" 
-                    HorizontalAlignment="Center" 
-                    VerticalAlignment="Center"/>
+    <TextBlock
+      Text="{Binding Name}"
+      FontSize="14"
+      HorizontalAlignment="Center"
+      VerticalAlignment="Center"
+    />
 
-        <TextBlock Text="{Binding Flag}" 
-                    Grid.Column="1" Margin="5,0"
-                    FontSize="14"  Foreground="{DynamicResource S.Brush.Red.Notice}" 
-                    HorizontalAlignment="Right" 
-                    VerticalAlignment="Center"/>
+    <TextBlock
+      Text="{Binding Flag}"
+      Grid.Column="1"
+      Margin="5,0"
+      FontSize="14"
+      Foreground="{DynamicResource S.Brush.Red.Notice}"
+      HorizontalAlignment="Right"
+      VerticalAlignment="Center"
+    />
 
-        <local:FTextBox Text="{Binding Value,UpdateSourceTrigger=PropertyChanged}" Style="{DynamicResource DefaultTextBox}"
-                  FontSize="14" Width="Auto" CaretBrush="Black"
-                  Grid.Column="2" Height="30" base:ControlAttachProperty.FIcon=""
-                  VerticalContentAlignment="Center" 
-                  HorizontalAlignment="Stretch" VerticalAlignment="Center"/>
+    <local:FTextBox
+      Text="{Binding Value,UpdateSourceTrigger=PropertyChanged}"
+      Style="{DynamicResource DefaultTextBox}"
+      FontSize="14"
+      Width="Auto"
+      CaretBrush="Black"
+      Grid.Column="2"
+      Height="30"
+      base:ControlAttachProperty.FIcon=""
+      VerticalContentAlignment="Center"
+      HorizontalAlignment="Stretch"
+      VerticalAlignment="Center"
+    />
 
-        <TextBlock Text="&#xe626;" Grid.Column="3" Style="{DynamicResource FIcon }"
-                    Foreground="{DynamicResource S.Brush.Red.Notice}" 
-                    Visibility="{Binding Message,Converter={x:Static base:XConverter.VisibilityWithOutStringConverter},ConverterParameter={x:Null},Mode=TwoWay}"
-                    FontSize="14" TextTrimming="CharacterEllipsis" ToolTip="{Binding Message}"
-                    HorizontalAlignment="Center" 
-                    VerticalAlignment="Center"/>
-    </Grid>
+    <TextBlock
+      Text="&#xe626;"
+      Grid.Column="3"
+      Style="{DynamicResource FIcon }"
+      Foreground="{DynamicResource S.Brush.Red.Notice}"
+      Visibility="{Binding Message,Converter={x:Static base:XConverter.VisibilityWithOutStringConverter},ConverterParameter={x:Null},Mode=TwoWay}"
+      FontSize="14"
+      TextTrimming="CharacterEllipsis"
+      ToolTip="{Binding Message}"
+      HorizontalAlignment="Center"
+      VerticalAlignment="Center"
+    />
+  </Grid>
 </DataTemplate>
 ```
 
@@ -829,8 +975,8 @@ public class StringPropertyItem : ObjectPropertyItem<string>
 
 ### 3.1 目的
 
-不同交互场景需要提示不同的消息，不同的消息需要用不同的效果来展示，应用DialogHost（对话框）、NotifyIcon（消息提示）、Snackbar（气泡消息）显示各种场景提示消息，应用在ViewModel中
- 
+不同交互场景需要提示不同的消息，不同的消息需要用不同的效果来展示，应用 DialogHost（对话框）、NotifyIcon（消息提示）、Snackbar（气泡消息）显示各种场景提示消息，应用在 ViewModel 中
+
 ### 3.2 实现
 
 1. 等待对话框
@@ -850,7 +996,7 @@ public class StringPropertyItem : ObjectPropertyItem<string>
 
 （目前只封装如上这几种，自定义对话框只需创建用户控件调用通用加载方法即可，后续更新...）
 
-2. 提示消息：当进度保存成功是需要一个提示消息，显示2s自动隐藏即可（如图中友情提示部分分） ；
+2. 提示消息：当进度保存成功是需要一个提示消息，显示 2s 自动隐藏即可（如图中友情提示部分分） ；
 
 3. 气泡消息：当程序处于隐藏或某种状态时需要应用气泡提示消息；
 
@@ -861,7 +1007,7 @@ public class StringPropertyItem : ObjectPropertyItem<string>
 class LoyoutViewModel : MvcViewModelBase
 {
 
-    
+
     /// <summary> 命令通用方法 </summary>
     protected override async void RelayMethod(object obj)
 
@@ -943,7 +1089,7 @@ class LoyoutViewModel : MvcViewModelBase
         else if (command == "Button.ShowSnackMessage")
         {
             MessageService.ShowSnackMessageWithNotice("这是提示消息？");
-        } 
+        }
         //  Do：气泡消息
         else if (command == "Button.ShowNotifyMessage")
         {
@@ -953,7 +1099,7 @@ class LoyoutViewModel : MvcViewModelBase
 }
 ```
 
-## 4. 在WPF中应用MVC
+## 4. 在 WPF 中应用 MVC
 
 ```shell
 原文标题：封装：简要介绍自定义开发基于WPF的MVC框架
@@ -962,21 +1108,21 @@ class LoyoutViewModel : MvcViewModelBase
 
 ### 4.1 目的
 
-在使用Asp.net Core时，深感MVC框架作为页面跳转数据处理的方便，但WPF中似乎没有现成的MVC框架，由此自定义开发一套MVC的框架，在使用过程中也体会到框架的优势，下面简要介绍一下这套基于MVVM的MVC框架
- 
+在使用 Asp.net Core 时，深感 MVC 框架作为页面跳转数据处理的方便，但 WPF 中似乎没有现成的 MVC 框架，由此自定义开发一套 MVC 的框架，在使用过程中也体会到框架的优势，下面简要介绍一下这套基于 MVVM 的 MVC 框架
+
 ### 4.2 项目结构
 
 ![](https://img1.dotnet9.com/2021/11/0905.png)
 
 主要有三部分组成：`Controller`、`View`、`ViewModel`
 
-其中View和ViewModel就是传统WPF中的MVVM模式
+其中 View 和 ViewModel 就是传统 WPF 中的 MVVM 模式
 
-不同地方在于页面的跳转应用到了Controller做控制，如下示例Controller的定义
+不同地方在于页面的跳转应用到了 Controller 做控制，如下示例 Controller 的定义
 
-### 4.3 Controller的结构和定义
+### 4.3 Controller 的结构和定义
 
-#### 4.3.1 定义LoyoutController
+#### 4.3.1 定义 LoyoutController
 
 ```C#
 [Route("Loyout")]
@@ -1195,11 +1341,11 @@ class LoyoutController : Controller
 
 #### 4.3.2 前端的页面
 
-如下,其中红色部分对应Controller里面的要跳转的Route
+如下,其中红色部分对应 Controller 里面的要跳转的 Route
 
 ![](https://img1.dotnet9.com/2021/11/0906.png)
 
-如：选择了红色部分的Button，首先会调用`Button()`方法，跳转到当前Controller对应的View文件加下的`Button`Control.xaml页面
+如：选择了红色部分的 Button，首先会调用`Button()`方法，跳转到当前 Controller 对应的 View 文件加下的`Button`Control.xaml 页面
 
 ```C#
 [Route("OverView/Button")]
@@ -1214,88 +1360,198 @@ public async Task<IActionResult> Button()
 }
 ```
 
-可以在Button()方法中，写一些业务逻辑，如对当前ViewModel的增删改查等常规操作，其中当前Controller成员ViewModel是内部封装好的ViewModel，对应ViewModel文件下面的当前Controller的ViewModel
+可以在 Button()方法中，写一些业务逻辑，如对当前 ViewModel 的增删改查等常规操作，其中当前 Controller 成员 ViewModel 是内部封装好的 ViewModel，对应 ViewModel 文件下面的当前 Controller 的 ViewModel
 
 #### 4.3.3 示例
 
 ![](https://img1.dotnet9.com/2021/11/0907.gif)
 
-#### 4.3.4 左侧的Xaml列表可以定义成如下形式
+#### 4.3.4 左侧的 Xaml 列表可以定义成如下形式
 
 ```html
 <Grid>
-    <wpfcontrollib:LinkGroupExpander ScrollViewer.HorizontalScrollBarVisibility="Disabled" x:Name="selectloyout" 
-                                      SelectedLink="{Binding SelectLink,Mode=TwoWay}"
-                                      Command="{x:Static wpfcontrollib:DrawerHost.CloseDrawerCommand}"
-                                      CommandParameter="{x:Static Dock.Left}">
-        <wpfcontrollib:LinkActionGroup DisplayName="基础控件" Logo="&#xe69f;">
-            <wpfcontrollib:LinkActionGroup.Links>
-                <wpfcontrollib:LinkAction  DisplayName="Button" Logo="&#xe69f;"  Controller="Loyout" Action="Button" />
-                <wpfcontrollib:LinkAction  DisplayName="TextBox"  Logo="&#xe6a3;" Controller="Loyout"  Action="TextBox"/>
-                <wpfcontrollib:LinkAction  DisplayName="Combobox"  Logo="&#xe6a3;" Controller="Loyout" Action="Combobox"  />
-                <wpfcontrollib:LinkAction  DisplayName="Toggle"  Logo="&#xe6a3;" Controller="Loyout" Action="Toggle"/>
-                <wpfcontrollib:LinkAction  DisplayName="Evaluate" Logo="&#xe69f;" Controller="Loyout" Action="Evaluate"/>
-                <wpfcontrollib:LinkAction  DisplayName="Expander" Logo="&#xe69f;" Controller="Loyout" Action="Expander"/>
-                <wpfcontrollib:LinkAction  DisplayName="Gif" Logo="&#xe69f;" Controller="Loyout" Action="Gif"/>
-                <wpfcontrollib:LinkAction  DisplayName="ProgressBar" Logo="&#xe69f;" Controller="Loyout" Action="ProgressBar"/>
-                <wpfcontrollib:LinkAction  DisplayName="Slider" Logo="&#xe69f;" Controller="Loyout" Action="Slider"/>
-            </wpfcontrollib:LinkActionGroup.Links>
-        </wpfcontrollib:LinkActionGroup>
+  <wpfcontrollib:LinkGroupExpander
+    ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+    x:Name="selectloyout"
+    SelectedLink="{Binding SelectLink,Mode=TwoWay}"
+    Command="{x:Static wpfcontrollib:DrawerHost.CloseDrawerCommand}"
+    CommandParameter="{x:Static Dock.Left}"
+  >
+    <wpfcontrollib:LinkActionGroup DisplayName="基础控件" Logo="&#xe69f;">
+      <wpfcontrollib:LinkActionGroup.Links>
+        <wpfcontrollib:LinkAction
+          DisplayName="Button"
+          Logo="&#xe69f;"
+          Controller="Loyout"
+          Action="Button"
+        />
+        <wpfcontrollib:LinkAction
+          DisplayName="TextBox"
+          Logo="&#xe6a3;"
+          Controller="Loyout"
+          Action="TextBox"
+        />
+        <wpfcontrollib:LinkAction
+          DisplayName="Combobox"
+          Logo="&#xe6a3;"
+          Controller="Loyout"
+          Action="Combobox"
+        />
+        <wpfcontrollib:LinkAction
+          DisplayName="Toggle"
+          Logo="&#xe6a3;"
+          Controller="Loyout"
+          Action="Toggle"
+        />
+        <wpfcontrollib:LinkAction
+          DisplayName="Evaluate"
+          Logo="&#xe69f;"
+          Controller="Loyout"
+          Action="Evaluate"
+        />
+        <wpfcontrollib:LinkAction
+          DisplayName="Expander"
+          Logo="&#xe69f;"
+          Controller="Loyout"
+          Action="Expander"
+        />
+        <wpfcontrollib:LinkAction
+          DisplayName="Gif"
+          Logo="&#xe69f;"
+          Controller="Loyout"
+          Action="Gif"
+        />
+        <wpfcontrollib:LinkAction
+          DisplayName="ProgressBar"
+          Logo="&#xe69f;"
+          Controller="Loyout"
+          Action="ProgressBar"
+        />
+        <wpfcontrollib:LinkAction
+          DisplayName="Slider"
+          Logo="&#xe69f;"
+          Controller="Loyout"
+          Action="Slider"
+        />
+      </wpfcontrollib:LinkActionGroup.Links>
+    </wpfcontrollib:LinkActionGroup>
 
-        <wpfcontrollib:LinkActionGroup DisplayName="布局控件" Logo="&#xe69f;">
-            <wpfcontrollib:LinkActionGroup.Links>
-                <wpfcontrollib:LinkAction  DisplayName="MdiControl" Logo="&#xe69f;" Controller="Loyout" Action="Mdi"/>
-                <wpfcontrollib:LinkAction  DisplayName="Carouse" Logo="&#xe69e;" Controller="Loyout" Action="Carouse"/>
-                <wpfcontrollib:LinkAction  DisplayName="Tab" Logo="&#xe69f;" Controller="Loyout" Action="Tab"/>
-                <wpfcontrollib:LinkAction  DisplayName="Tree" Logo="&#xe69f;" Controller="Loyout" Action="Tree"/>
-                <wpfcontrollib:LinkAction  DisplayName="ObservableSource" Logo="&#xe69f;" Controller="Loyout" Action="Observable"/>
-                <wpfcontrollib:LinkAction  DisplayName="Property" Logo="&#xe69f;" Controller="Loyout" Action="Property"/>
-                <wpfcontrollib:LinkAction  DisplayName="Panel" Logo="&#xe69f;" Controller="Loyout" Action="Panel"/> 
-            </wpfcontrollib:LinkActionGroup.Links>
-        
-        </wpfcontrollib:LinkActionGroup>
+    <wpfcontrollib:LinkActionGroup DisplayName="布局控件" Logo="&#xe69f;">
+      <wpfcontrollib:LinkActionGroup.Links>
+        <wpfcontrollib:LinkAction
+          DisplayName="MdiControl"
+          Logo="&#xe69f;"
+          Controller="Loyout"
+          Action="Mdi"
+        />
+        <wpfcontrollib:LinkAction
+          DisplayName="Carouse"
+          Logo="&#xe69e;"
+          Controller="Loyout"
+          Action="Carouse"
+        />
+        <wpfcontrollib:LinkAction
+          DisplayName="Tab"
+          Logo="&#xe69f;"
+          Controller="Loyout"
+          Action="Tab"
+        />
+        <wpfcontrollib:LinkAction
+          DisplayName="Tree"
+          Logo="&#xe69f;"
+          Controller="Loyout"
+          Action="Tree"
+        />
+        <wpfcontrollib:LinkAction
+          DisplayName="ObservableSource"
+          Logo="&#xe69f;"
+          Controller="Loyout"
+          Action="Observable"
+        />
+        <wpfcontrollib:LinkAction
+          DisplayName="Property"
+          Logo="&#xe69f;"
+          Controller="Loyout"
+          Action="Property"
+        />
+        <wpfcontrollib:LinkAction
+          DisplayName="Panel"
+          Logo="&#xe69f;"
+          Controller="Loyout"
+          Action="Panel"
+        />
+      </wpfcontrollib:LinkActionGroup.Links>
+    </wpfcontrollib:LinkActionGroup>
 
-        <wpfcontrollib:LinkActionGroup DisplayName="全局控件" Logo="&#xe69f;">
-            <wpfcontrollib:LinkActionGroup.Links>
-                <wpfcontrollib:LinkAction  DisplayName="Message" Logo="&#xe69f;" Controller="Loyout" Action="Message"/>
-                <wpfcontrollib:LinkAction  DisplayName="Upgrade" Logo="&#xe69e;" Controller="Loyout" Action="Upgrade"/>
-                <wpfcontrollib:LinkAction  DisplayName="Drawer" Logo="&#xe69f;" Controller="Loyout" Action="Drawer"/> 
-            </wpfcontrollib:LinkActionGroup.Links>
-        </wpfcontrollib:LinkActionGroup>
+    <wpfcontrollib:LinkActionGroup DisplayName="全局控件" Logo="&#xe69f;">
+      <wpfcontrollib:LinkActionGroup.Links>
+        <wpfcontrollib:LinkAction
+          DisplayName="Message"
+          Logo="&#xe69f;"
+          Controller="Loyout"
+          Action="Message"
+        />
+        <wpfcontrollib:LinkAction
+          DisplayName="Upgrade"
+          Logo="&#xe69e;"
+          Controller="Loyout"
+          Action="Upgrade"
+        />
+        <wpfcontrollib:LinkAction
+          DisplayName="Drawer"
+          Logo="&#xe69f;"
+          Controller="Loyout"
+          Action="Drawer"
+        />
+      </wpfcontrollib:LinkActionGroup.Links>
+    </wpfcontrollib:LinkActionGroup>
 
-        <wpfcontrollib:LinkActionGroup DisplayName="全局样式" Logo="&#xe69f;">
-            <wpfcontrollib:LinkActionGroup.Links>
-                <wpfcontrollib:LinkAction  DisplayName="Brush" Logo="&#xe69f;" Controller="Loyout" Action="Brush"/>
-                <wpfcontrollib:LinkAction  DisplayName="Shadow" Logo="&#xe69f;" Controller="Loyout" Action="Shadow"/>
-                
-            </wpfcontrollib:LinkActionGroup.Links>
-        </wpfcontrollib:LinkActionGroup>
-
-    </wpfcontrollib:LinkGroupExpander>
+    <wpfcontrollib:LinkActionGroup DisplayName="全局样式" Logo="&#xe69f;">
+      <wpfcontrollib:LinkActionGroup.Links>
+        <wpfcontrollib:LinkAction
+          DisplayName="Brush"
+          Logo="&#xe69f;"
+          Controller="Loyout"
+          Action="Brush"
+        />
+        <wpfcontrollib:LinkAction
+          DisplayName="Shadow"
+          Logo="&#xe69f;"
+          Controller="Loyout"
+          Action="Shadow"
+        />
+      </wpfcontrollib:LinkActionGroup.Links>
+    </wpfcontrollib:LinkActionGroup>
+  </wpfcontrollib:LinkGroupExpander>
 </Grid>
 ```
 
-通过LinkGroupExpander控件，封装LinkAction去实现页面的跳转，其中只需要定义LinkAction的几个属性即可达到跳转到指定页面的效果，如：
+通过 LinkGroupExpander 控件，封装 LinkAction 去实现页面的跳转，其中只需要定义 LinkAction 的几个属性即可达到跳转到指定页面的效果，如：
 
-- Controller属性：用来指示要跳转到哪个Controller
-- Action属性：用来指示跳转到哪个方法
-- DisplayName属性：在UI中显示的名称
-- Logo属性：在UI中显示的图标 
+- Controller 属性：用来指示要跳转到哪个 Controller
+- Action 属性：用来指示跳转到哪个方法
+- DisplayName 属性：在 UI 中显示的名称
+- Logo 属性：在 UI 中显示的图标
 
-如下，Controller中的Button()方法对应的跳转配置如下
+如下，Controller 中的 Button()方法对应的跳转配置如下
 
 ```C#
 [Route("OverView/Button")]
 public async Task<IActionResult> Button()
 ```
- 
- ```html
-<wpfcontrollib:LinkAction DisplayName="Button" Logo="&#xe69f;"  Controller="Loyout" Action="Button" />
-```
- 
-#### 4.3.5 Controller基类的定义ControllerBase
 
-主要方法是`IActionResult View([CallerMemberName] string name = "")`，这个方法是MVC实现的核心功能，主要通过反射去动态加载程序集，加载项目结构中的View、ViewModel去生成IActionResult返回给主页面进行页面跳转，代码如下：
+```html
+<wpfcontrollib:LinkAction
+  DisplayName="Button"
+  Logo="&#xe69f;"
+  Controller="Loyout"
+  Action="Button"
+/>
+```
+
+#### 4.3.5 Controller 基类的定义 ControllerBase
+
+主要方法是`IActionResult View([CallerMemberName] string name = "")`，这个方法是 MVC 实现的核心功能，主要通过反射去动态加载程序集，加载项目结构中的 View、ViewModel 去生成 IActionResult 返回给主页面进行页面跳转，代码如下：
 
 ```C#
 public abstract class ControllerBase : IController
@@ -1393,35 +1649,35 @@ public abstract class ControllerBase : IController
 
 说明:
 
-1. 通过Application.LoadComponent(uri);来加载生成Control
-2. 通过反射ViewModel基类NotifyPropertyChanged去找到对应ViewModel，绑定到View中
-3. 将View和ViewModel封装到IActionResult中返回给主页面进行加载
+1. 通过 Application.LoadComponent(uri);来加载生成 Control
+2. 通过反射 ViewModel 基类 NotifyPropertyChanged 去找到对应 ViewModel，绑定到 View 中
+3. 将 View 和 ViewModel 封装到 IActionResult 中返回给主页面进行加载
 
-其中Controller中的方法返回类型是async Task<IActionResult>，也就是整个页面跳转都是在异步中进行的，可以有效的避免页面切换中的卡死效果
+其中 Controller 中的方法返回类型是 async Task<IActionResult>，也就是整个页面跳转都是在异步中进行的，可以有效的避免页面切换中的卡死效果
 
-### 4.4 View中的结构和定义
+### 4.4 View 中的结构和定义
 
-其中View在项目中的定义就是根据Controller中的方法对应，在MVC中要严格按照结构定义[View/Loyout]，好处是可以减少代码量，同时使格式统一代码整齐，结构如下：
+其中 View 在项目中的定义就是根据 Controller 中的方法对应，在 MVC 中要严格按照结构定义[View/Loyout]，好处是可以减少代码量，同时使格式统一代码整齐，结构如下：
 
 ![](https://img1.dotnet9.com/2021/11/0908.png)
 
-其中红色ButtonControl.xaml即是Controller中Button()方法要跳转的页面，其他页面同理
+其中红色 ButtonControl.xaml 即是 Controller 中 Button()方法要跳转的页面，其他页面同理
 
-### 4.5 ViewModel的结构和定义
+### 4.5 ViewModel 的结构和定义
 
-其中LoyoutViewModel即是LoyoutController和整个View/Loyout下所有页面对应的ViewModel
+其中 LoyoutViewModel 即是 LoyoutController 和整个 View/Loyout 下所有页面对应的 ViewModel
 
 ![](https://img1.dotnet9.com/2021/11/0909.png)
 
-### 4.6 整体MVC结构实现的效果如下
+### 4.6 整体 MVC 结构实现的效果如下
 
 ![](https://img1.dotnet9.com/2021/11/0910.gif)
 
-以上就是MVC应用在WPF中的简要示例，具体内容和示例可从如下链接中下载代码查看
+以上就是 MVC 应用在 WPF 中的简要示例，具体内容和示例可从如下链接中下载代码查看
 
 代码地址：https://github.com/HeBianGu/WPF-ControlBase.git
 
-另一个应用Sqlite数据库的示例如下
+另一个应用 Sqlite 数据库的示例如下
 
 代码地址：https://github.com/HeBianGu/WPF-ExplorerManager.git
 
@@ -1435,12 +1691,12 @@ public abstract class ControllerBase : IController
 ### 5.1 目的
 
 封装了一些控件到自定义的控件库中，方便快速开发
- 
+
 ### 5.2 实现功能
 
 - 基本实现常用基础控件，满足常规软件快速开发
 - 同时支持框架.Net Core 3.0 + ,.Net FrameWork 4.5+
- 
+
 ### 5.3 整体概况
 
 ![](https://img1.dotnet9.com/2021/11/0911.gif)
@@ -1449,23 +1705,23 @@ public abstract class ControllerBase : IController
 
 ![](https://img1.dotnet9.com/2021/11/0912.png)
 
-登录页面只需要继承LoginWindowBase基类，并且设置样式 Style="{StaticResource S.Window.Login.Default}"即可
+登录页面只需要继承 LoginWindowBase 基类，并且设置样式 Style="{StaticResource S.Window.Login.Default}"即可
 
 #### 5.3.2 主页面
 
 ![](https://img1.dotnet9.com/2021/11/0913.png)
 
-主页面只需继承LinkWindowBase基类，并且设置样式Style="{DynamicResource S.Window.Link.Default}"即可
+主页面只需继承 LinkWindowBase 基类，并且设置样式 Style="{DynamicResource S.Window.Link.Default}"即可
 
-整体主窗口采用ViewBox方式加载，当缩放窗口或应用到到其他分辨率设备都会兼容
+整体主窗口采用 ViewBox 方式加载，当缩放窗口或应用到到其他分辨率设备都会兼容
 
 #### 5.3.3 主题配置信息保存
 
 ![](https://img1.dotnet9.com/2021/11/0914.jpg)
 
-主题配置信息已经封装在ApplicationBase中，会自动在退出时保存设置好的配置信息(如：主题颜色、字体大小等)
+主题配置信息已经封装在 ApplicationBase 中，会自动在退出时保存设置好的配置信息(如：主题颜色、字体大小等)
 
-**总结：** 应用此模式可以达到复用的目的，将通用部分封装到底层，如需修改样式只需修改Style样式文件或修改依赖属性即可满足功能修改
+**总结：** 应用此模式可以达到复用的目的，将通用部分封装到底层，如需修改样式只需修改 Style 样式文件或修改依赖属性即可满足功能修改
 
 ### 5.4 主题设置
 
@@ -1491,7 +1747,7 @@ public abstract class ControllerBase : IController
 
 3. 设置字体大小
 
-字体大小目前内置两种，分别是Large和Small，其中这两种颜色采用注入的方式加载，即可以在程序加载时设置着两种字体的初始值
+字体大小目前内置两种，分别是 Large 和 Small，其中这两种颜色采用注入的方式加载，即可以在程序加载时设置着两种字体的初始值
 
 4. 其他配置
 
@@ -1500,7 +1756,7 @@ public abstract class ControllerBase : IController
 **总结：**这样设计的目的是审美因人而异，使用自定义配置的方式可以尽可能多的满足多变的需求
 
 ### 5.5 其他基础控件
- 
+
 #### 5.5.1 数据表格
 
 ![](https://img1.dotnet9.com/2021/11/0918.gif)
@@ -1524,7 +1780,7 @@ public abstract class ControllerBase : IController
 
 - f 两种风格的网格页面
 
-**总结：**以上功能封装在控件PagedDataGrid中，只需绑定数据源即可实现以上功能，其中打印、导出等功能暂时没有实现
+**总结：**以上功能封装在控件 PagedDataGrid 中，只需绑定数据源即可实现以上功能，其中打印、导出等功能暂时没有实现
 
 #### 5.5.2 树形列表
 
@@ -1538,7 +1794,7 @@ public abstract class ControllerBase : IController
 
 如上图、输入条件可以过滤指定条件
 
-**总结：**使用方式为绑定数据源到TreeListView控件中
+**总结：**使用方式为绑定数据源到 TreeListView 控件中
 
 #### 5.5.3 其他常用控件
 
@@ -1554,9 +1810,9 @@ public abstract class ControllerBase : IController
 
 相对系统对话窗口更美观，增加显示和隐藏效果，通过注入的方式可以自定义按钮个数和功能
 
-- c消息列表
+- c 消息列表
 
-目前有两种模式，分别是在窗口内显示和Window系统中显示，可以根据需求自定义显示方式，示例如下
+目前有两种模式，分别是在窗口内显示和 Window 系统中显示，可以根据需求自定义显示方式，示例如下
 
 ![](https://img1.dotnet9.com/2021/11/0922.png)
 
@@ -1574,13 +1830,13 @@ public abstract class ControllerBase : IController
 
 以上控件均已实现主题颜色、字体大小切换等，可以满足常用软件的功能
 
-其中整体结构使用的自定义Mvc方式加载，参考地址：https://blog.csdn.net/u010975589/article/details/100019431
+其中整体结构使用的自定义 Mvc 方式加载，参考地址：https://blog.csdn.net/u010975589/article/details/100019431
 
-`由于控件过多不做详细介绍，有兴趣的可以下载源码或加载nuget包` 
+`由于控件过多不做详细介绍，有兴趣的可以下载源码或加载nuget包`
 
 ### 5.6 使用方式
- 
-nuget包添加如下图
+
+nuget 包添加如下图
 
 ![](https://img1.dotnet9.com/2021/11/0925.png)
 
@@ -1588,21 +1844,21 @@ nuget包添加如下图
 
 应用此框架的其他示例：
 
-- [示例：应用WPF开发的仿制GitHub客户端UI布局_HeBianGu的博客-CSDN博客](https://blog.csdn.net/u010975589/article/details/109140094?spm=1001.2014.3001.5501)
-- [示例：应用WPF开发的仿制百度网盘客户端UI布局_HeBianGu的博客-CSDN博客_wpf 网盘](https://blog.csdn.net/u010975589/article/details/109140215?spm=1001.2014.3001.5501)
-- [示例：应用WPF绘制轻量Chart图表之组合图效果预览_HeBianGu的博客-CSDN博客](https://blog.csdn.net/u010975589/article/details/109139606?spm=1001.2014.3001.5501)
-- [封裝：WPF基于Vlc.DotNet.Wpf封装的视频播放器_HeBianGu的博客-CSDN博客](https://blog.csdn.net/u010975589/article/details/107312476?spm=1001.2014.3001.5501)
-- [示例：WPF开发的Image图片控件，支持鸟撖图、滚轮放大、放大镜、圈定范围以及圈定范围放大等（示例一）_HeBianGu的博客-CSDN博客](https://blog.csdn.net/u010975589/article/details/106331741?spm=1001.2014.3001.5501)
+- [示例：应用 WPF 开发的仿制 GitHub 客户端 UI 布局\_HeBianGu 的博客-CSDN 博客](https://blog.csdn.net/u010975589/article/details/109140094?spm=1001.2014.3001.5501)
+- [示例：应用 WPF 开发的仿制百度网盘客户端 UI 布局\_HeBianGu 的博客-CSDN 博客\_wpf 网盘](https://blog.csdn.net/u010975589/article/details/109140215?spm=1001.2014.3001.5501)
+- [示例：应用 WPF 绘制轻量 Chart 图表之组合图效果预览\_HeBianGu 的博客-CSDN 博客](https://blog.csdn.net/u010975589/article/details/109139606?spm=1001.2014.3001.5501)
+- [封裝：WPF 基于 Vlc.DotNet.Wpf 封装的视频播放器\_HeBianGu 的博客-CSDN 博客](https://blog.csdn.net/u010975589/article/details/107312476?spm=1001.2014.3001.5501)
+- [示例：WPF 开发的 Image 图片控件，支持鸟撖图、滚轮放大、放大镜、圈定范围以及圈定范围放大等（示例一）\_HeBianGu 的博客-CSDN 博客](https://blog.csdn.net/u010975589/article/details/106331741?spm=1001.2014.3001.5501)
 
 ### 5.7 下载地址
 
-GitHub下载地址:[GitHub - HeBianGu/WPF-ControlBase: Wpf封装的自定义控件资源库](https://github.com/HeBianGu/WPF-ControlBase.git)
+GitHub 下载地址:[GitHub - HeBianGu/WPF-ControlBase: Wpf 封装的自定义控件资源库](https://github.com/HeBianGu/WPF-ControlBase.git)
 
 安装包示例下载地址:
 
 - 链接：[https://pan.baidu.com/s/1y2UfDKIxoSOffj36gl7fOw](https://pan.baidu.com/s/1y2UfDKIxoSOffj36gl7fOw)
-- 提取码：l2ia 
+- 提取码：l2ia
 
-更新：2019.12.16  增加.Net Core 3.0
+更新：2019.12.16 增加.Net Core 3.0
 
-目前已支持Core3.0 和.net 4.5 如有解决方案程序集无法加载请安装这两个框架
+目前已支持 Core3.0 和.net 4.5 如有解决方案程序集无法加载请安装这两个框架

@@ -4,7 +4,7 @@ slug: A-WPF-developed-print-dialog-PrintDialogX
 description: 用于 C# 的自定义 PrintDialog，可实时预览。您可以选择打印机并设置份数、方向、颜色、质量、比例、每张页数、双面、纸张尺寸、纸张类型、纸张来源等。它也很优雅。
 date: 2022-05-01 21:48:14
 copyright: Original
-originaltitle: 一个WPF开发的打印对话框-PrintDialogX
+originalTitle: 一个WPF开发的打印对话框-PrintDialogX
 draft: False
 cover: https://img1.dotnet9.com/2022/05/0101.png
 categories: .NET
@@ -15,7 +15,7 @@ tags: 开源WPF
 
 ## 1. 介绍
 
-今天介绍一个WPF开发的打印对话框开源项目-[PrintDialogX](https://github.com/Fei-Sheng-Wu/PrintDialogX)，该开源项目由[《WPF开源项目：AIStudio.Wpf.AClient》](https://dotnet9.com/2021/07/wpf-open-source-project-aistudio-wpf-aclient)作者推荐。
+今天介绍一个 WPF 开发的打印对话框开源项目-[PrintDialogX](https://github.com/Fei-Sheng-Wu/PrintDialogX)，该开源项目由[《WPF 开源项目：AIStudio.Wpf.AClient》](https://dotnet9.com/2021/07/wpf-open-source-project-aistudio-wpf-aclient)作者推荐。
 
 [![Maintenance](https://img.shields.io/badge/Maintained-✖-red.svg?style=flat-square)](https://github.com/Fei-Sheng-Wu/PrintDialogX/)
 [![C#](https://img.shields.io/badge/C%23-100%25-blue.svg?style=flat-square)](https://docs.microsoft.com/en-us/dotnet/csharp/)
@@ -24,7 +24,7 @@ tags: 开源WPF
 
 欢迎使用 **[PrintDialogX](https://github.com/Fei-Sheng-Wu/PrintDialogX/)**, 这是一个开源项目。免费用于商业用途。
 
->用于 C# 的自定义打印对话框，可实时预览。您可以选择打印机并设置份数、方向、颜色、质量、比例、每页张数、双面、纸张尺寸、纸张类型、纸张来源等。它也很优雅。
+> 用于 C# 的自定义打印对话框，可实时预览。您可以选择打印机并设置份数、方向、颜色、质量、比例、每页张数、双面、纸张尺寸、纸张类型、纸张来源等。它也很优雅。
 
 ## 2. 你为什么使用
 
@@ -44,14 +44,14 @@ tags: 开源WPF
 
 项目基于 [MIT 协议](https://github.com/Fei-Sheng-Wu/PrintDialogX/blob/master/LICENSE.txt).
 
-参考：[MIT许可证](https://baike.baidu.com/item/MIT%E8%AE%B8%E5%8F%AF%E8%AF%81/6671281?fr=aladdin)
+参考：[MIT 许可证](https://baike.baidu.com/item/MIT%E8%AE%B8%E5%8F%AF%E8%AF%81/6671281?fr=aladdin)
 
->MIT许可证之名源自麻省理工学院（Massachusetts Institute of Technology, MIT），又称“X条款”（X License）或“X11条款”（X11 License）
+> MIT 许可证之名源自麻省理工学院（Massachusetts Institute of Technology, MIT），又称“X 条款”（X License）或“X11 条款”（X11 License）
 >
->MIT内容与三条款BSD许可证（3-clause BSD license）内容颇为近似，但是赋予软件被授权人更大的权利与更少的限制。
+> MIT 内容与三条款 BSD 许可证（3-clause BSD license）内容颇为近似，但是赋予软件被授权人更大的权利与更少的限制。
 
 ## 6. 项目信息
 
->仓库地址：[https://github.com/Fei-Sheng-Wu/PrintDialogX](https://github.com/Fei-Sheng-Wu/PrintDialogX)
+> 仓库地址：[https://github.com/Fei-Sheng-Wu/PrintDialogX](https://github.com/Fei-Sheng-Wu/PrintDialogX)
 
 ![](https://img1.dotnet9.com/2022/05/0103.png)

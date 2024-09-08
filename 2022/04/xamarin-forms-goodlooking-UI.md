@@ -5,16 +5,15 @@ description: 使用`Xamarin.Forms`开发的开源移动App介绍，感兴趣的�
 date: 2022-04-13 06:38:12
 copyright: Reprinted
 author: jsuarezruiz
-originaltitle: Xamarin Forms Goodlooking UI
-originallink: https://github.com/jsuarezruiz/xamarin-forms-goodlooking-UI
+originalTitle: Xamarin Forms Goodlooking UI
+originalLink: https://github.com/jsuarezruiz/xamarin-forms-goodlooking-UI
 draft: False
 cover: https://img1.dotnet9.com/2022/04/images/fishing.webp
 categories: .NET
 tags: .NET,Xamarin Forms,MAUI,开源MAUI
 ---
 
-
-站长英文太差就不翻译了，大家看效果图，都是使用`Xamarin.Forms`开发的开源移动App介绍，感兴趣的可以访问[Github](https://github.com/jsuarezruiz/xamarin-forms-goodlooking-UI)和[Gitee](https://gitee.com/dotnet9/xamarin-forms-goodlooking-UI)仓库看看，下载对应的App项目研究。
+站长英文太差就不翻译了，大家看效果图，都是使用`Xamarin.Forms`开发的开源移动 App 介绍，感兴趣的可以访问[Github](https://github.com/jsuarezruiz/xamarin-forms-goodlooking-UI)和[Gitee](https://gitee.com/dotnet9/xamarin-forms-goodlooking-UI)仓库看看，下载对应的 App 项目研究。
 
 - Github：[https://github.com/jsuarezruiz/xamarin-forms-goodlooking-UI](https://gitee.com/dotnet9/xamarin-forms-goodlooking-UI)
 
@@ -26,11 +25,11 @@ tags: .NET,Xamarin Forms,MAUI,开源MAUI
 
 A curated list of awesome **Xamarin.Forms** samples to show how to create **goodlooking UI** with Xamarin.Forms.
 
-*Work in progress*. Contributions are always welcome!
+_Work in progress_. Contributions are always welcome!
 
-*Would you like to see a [list](https://gist.github.com/davidortinau/5c9129e2bfaabafcb58df07325cb4a90) of published applications made with Xamarin.Forms?* Thank you [David Ortinau](https://twitter.com/davidortinau) for the list!
+_Would you like to see a [list](https://gist.github.com/davidortinau/5c9129e2bfaabafcb58df07325cb4a90) of published applications made with Xamarin.Forms?_ Thank you [David Ortinau](https://twitter.com/davidortinau) for the list!
 
-*Would you like to see more goodlooking UI samples?. Do you know **[Snppts](https://snppts.dev)**?*
+_Would you like to see more goodlooking UI samples?. Do you know **[Snppts](https://snppts.dev)**?_
 
 ## [Xamarin ToDo App](https://github.com/gheorghedarle/Xamarin-ToDoApp)
 
@@ -42,28 +41,30 @@ Todo App is a simple to do app developed with Xamarin and Firebase. The app allo
 
 Android, iOS.
 
-## Features: 
+## Features:
 
-* Xamarin.Forms 5.0.
-* MVVM (Prism).
-* Xamarin CommunityToolkit
-* Xamarin Firebase Auth (Firebase Authentication)
-* Reactive UI (Realtime)
-* Firebase Firestore (CRUD Operations)
+- Xamarin.Forms 5.0.
+- MVVM (Prism).
+- Xamarin CommunityToolkit
+- Xamarin Firebase Auth (Firebase Authentication)
+- Reactive UI (Realtime)
+- Firebase Firestore (CRUD Operations)
 
 ### More information:
+
 - Source code: [https://github.com/gheorghedarle/Xamarin-ToDoApp](https://github.com/gheorghedarle/Xamarin-ToDoApp)
-- Author: [Darle Gheorghe](https://github.com/gheorghedarle) 
+- Author: [Darle Gheorghe](https://github.com/gheorghedarle)
 
 ## [GamingStore](https://github.com/Altevir/xamarinforms-game-store)
 
-Replicate design: https://www.uplabs.com/posts/game-store-ui-concept 
+Replicate design: https://www.uplabs.com/posts/game-store-ui-concept
 
 Features:
-* Transition Effect (Fade) on title, description and background image.
-* Added icons to indicate which platform(s) are supported by the game.
-* Centered images on the Carousel.
-* Display  the amount of trophies per game through using a Badge.
+
+- Transition Effect (Fade) on title, description and background image.
+- Added icons to indicate which platform(s) are supported by the game.
+- Centered images on the Carousel.
+- Display the amount of trophies per game through using a Badge.
 
 <img src="https://img1.dotnet9.com/2022/04/images/gamingstore.gif" Width="200" />
 
@@ -71,40 +72,42 @@ Features:
 
 Android, iOS.
 
-## Features: 
+## Features:
 
-* Xamarin.Forms 5.0.
-* Embedded Fonts.
-* MVVM.
+- Xamarin.Forms 5.0.
+- Embedded Fonts.
+- MVVM.
 
 ### More information:
+
 - Source code: [https://github.com/Altevir/xamarinforms-game-store](https://github.com/Altevir/xamarinforms-game-store)
-- Author: [Altevir](https://github.com/Altevir) 
+- Author: [Altevir](https://github.com/Altevir)
 
 ## [ShapeAnimatedTransitions](https://github.com/FabriBertani/XFShapeAnimatedTransitions)
 
 Cool transition animations with Shapes in Xamarin.Forms.
 
-<img src="https://img1.dotnet9.com/2022/04/images/shapeanimatedtransitions01.gif" Width="200" />  <img src="https://img1.dotnet9.com/2022/04/images/shapeanimatedtransitions02.gif" Width="200" /> 
+<img src="https://img1.dotnet9.com/2022/04/images/shapeanimatedtransitions01.gif" Width="200" /> <img src="https://img1.dotnet9.com/2022/04/images/shapeanimatedtransitions02.gif" Width="200" />
 
 ### Platforms
 
 Android, iOS.
 
-## Features: 
+## Features:
 
-* Animations
-* Shapes
+- Animations
+- Shapes
 
 ### More information:
+
 - Source code: [https://github.com/FabriBertani/XFShapeAnimatedTransitions](https://github.com/FabriBertani/XFShapeAnimatedTransitions)
-- Author: [Fabricio Bertani](https://github.com/FabriBertani) 
+- Author: [Fabricio Bertani](https://github.com/FabriBertani)
 
 ## [Fishing](https://github.com/kphillpotts/Fishing)
 
 A Xamarin.Forms UI Challenge
 
-<img src="https://img1.dotnet9.com/2022/04/images/fishing.webp" Width="600" /> 
+<img src="https://img1.dotnet9.com/2022/04/images/fishing.webp" Width="600" />
 
 Original Design: https://dribbble.com/shots/15278108-Fisherman-s-Fishing-Mobile-Apps
 
@@ -112,73 +115,77 @@ Original Design: https://dribbble.com/shots/15278108-Fisherman-s-Fishing-Mobile-
 
 Android, iOS.
 
-## Features: 
+## Features:
 
-* CarouselView
-* Custom Fonts
-* Gradients
-* Layouts
+- CarouselView
+- Custom Fonts
+- Gradients
+- Layouts
 
 ### More information:
+
 - Source code: [https://github.com/kphillpotts/Fishing](https://github.com/kphillpotts/Fishing)
-- Author: [Kym Phillpotts](https://github.com/kphillpotts) 
-  
+- Author: [Kym Phillpotts](https://github.com/kphillpotts)
+
 ## [Facebook Mobile Login Clone](https://github.com/ShahrukhYousafzai/FacebookMobileAppLoginUIClone)
 
 Clone of Facebook Login UI Design in Xamarin Forms
 
-<img src="https://img1.dotnet9.com/2022/04/images/fb-login-clone.png" Width="220" /> 
+<img src="https://img1.dotnet9.com/2022/04/images/fb-login-clone.png" Width="220" />
 
 ### Platforms
 
 Android, iOS.
 
-## Features: 
+## Features:
 
-* Layouts
+- Layouts
 
 ### More information:
+
 - Source code: [https://github.com/ShahrukhYousafzai/FacebookMobileAppLoginUIClone](https://github.com/ShahrukhYousafzai/FacebookMobileAppLoginUIClone)
-- Author: [Shahrukh Yousafzai](https://github.com/ShahrukhYousafzai) 
+- Author: [Shahrukh Yousafzai](https://github.com/ShahrukhYousafzai)
 
 ## [Uvento](https://github.com/Altevir/xamarinforms-uvento)
 
 Replicating this [Dribbble](https://dribbble.com/shots/9519342-UVENTO-App-Event-app-Exploration) design in Xamarin.Forms.
 
-<img src="https://img1.dotnet9.com/2022/04/images/uvento.gif" Width="220" /> 
+<img src="https://img1.dotnet9.com/2022/04/images/uvento.gif" Width="220" />
 
 ### Platforms
 
 Android, iOS.
 
-## Features: 
+## Features:
 
-* MVVM
-* Embedded Fonts (https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/text/fonts)
-* CollectionView
-* Xamarin.Forms 5.0
-* Xamarin Community Toolkit
+- MVVM
+- Embedded Fonts (https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/text/fonts)
+- CollectionView
+- Xamarin.Forms 5.0
+- Xamarin Community Toolkit
 
 ### More information:
+
 - Source code: [https://github.com/Altevir/xamarinforms-uvento](https://github.com/Altevir/xamarinforms-uvento)
-- Author: [Altevir](https://github.com/Altevir) 
+- Author: [Altevir](https://github.com/Altevir)
 
 ## [MiniLauncher](https://github.com/mariusmuntean/MiniLauncher)
 
 Apple Watch launcher recreated with pure Xamarin.Forms.
 
-<img src="https://img1.dotnet9.com/2022/04/images/minilauncher.gif" Width="200" /> 
+<img src="https://img1.dotnet9.com/2022/04/images/minilauncher.gif" Width="200" />
 
 ### Platforms
 
 Android, iOS.
 
-## Features: 
+## Features:
 
 - Animations!.
 - Xamarin.Forms 5.
 
 ### More information:
+
 - Source code: [https://github.com/mariusmuntean/MiniLauncher](https://github.com/mariusmuntean/MiniLauncher)
 - Author: [Marius M.](https://github.com/mariusmuntean)
 
@@ -188,18 +195,19 @@ UI replicated in Xamarin Forms.
 
 ⚠ Design obtained from Dribble. -> https://dribbble.com/shots/14814593-Chirstmas-Shopping-App
 
-<img src="https://img1.dotnet9.com/2022/04/images/christmasshopping.png" Width="600" /> 
+<img src="https://img1.dotnet9.com/2022/04/images/christmasshopping.png" Width="600" />
 
 ### Platforms
 
 Android, iOS.
 
-## Features: 
+## Features:
 
 - Layouts.
 - PancakeView.
 
 ### More information:
+
 - Blog: [Replicating Christmas Shopping UI in Xamarin Forms](https://askxammy.com/replicating-christmas-shopping-ui-in-xamarin-forms/)
 - Source code: [https://github.com/LeomarisReyes/ChristmasShoppingUI](https://github.com/LeomarisReyes/ChristmasShoppingUI)
 - Author: [Leomaris Reyes](https://github.com/LeomarisReyes)
@@ -210,19 +218,20 @@ UI replicated in Xamarin Forms.
 
 ⚠ Design obtained from Dribble. -> https://dribbble.com/shots/14274577/attachments/5925600?mode=media
 
-<img src="https://img1.dotnet9.com/2022/04/images/billdetail.png" Width="600" /> 
+<img src="https://img1.dotnet9.com/2022/04/images/billdetail.png" Width="600" />
 
 ### Platforms
 
 Android, iOS.
 
-## Features: 
+## Features:
 
 - CollectionView.
 - Layouts.
 - PancakeView.
 
 ### More information:
+
 - Blog: [Replicating Bill Details UI in Xamarin Forms](https://askxammy.com/replicating-bill-details-ui-in-xamarin-forms/)
 - Source code: [https://github.com/LeomarisReyes/BillDetailSample](https://github.com/LeomarisReyes/BillDetailSample)
 - Author: [Leomaris Reyes](https://github.com/LeomarisReyes)
@@ -233,66 +242,69 @@ Border Gradient Animation in Xamarin Forms.
 
 You can watch the video here 👉 https://youtu.be/bS0N6U-Ei78
 
-<img src="https://img1.dotnet9.com/2022/04/images/bordergradientanimation.gif" Width="600" /> 
+<img src="https://img1.dotnet9.com/2022/04/images/bordergradientanimation.gif" Width="600" />
 
 ### Platforms
 
 Android, iOS.
 
-## Features: 
+## Features:
 
 - Brushes.
 - Shapes.
-  
+
 ### More information:
+
 - Source code: [https://github.com/devcrux/Border-Animation-in-Xamarin-Forms](https://github.com/devcrux/Border-Animation-in-Xamarin-Forms)
 - Author: [Oludayo Alli](https://github.com/devcrux)
-  
+
 ## [Restaurant App](https://github.com/devcrux/Beautiful-Restaurant-App-in-Xamarin-Forms)
 
 Building this beautiful Restaurant App in Xamarin Forms and spicing it up with some animations was made possible with Xamarin.Forms Shapes class and CarouselView.
 
 You can watch the video here 👉 https://youtu.be/6gb_iRj_BYU
 
-<img src="https://img1.dotnet9.com/2022/04/images/restaurantapp.gif" Width="600" /> 
+<img src="https://img1.dotnet9.com/2022/04/images/restaurantapp.gif" Width="600" />
 
 ### Platforms
 
 Android, iOS.
 
-## Features: 
+## Features:
 
 - Brushes.
 - BindableLayout.
 - CarouselView.
 - Shapes.
-  
+
 ### More information:
+
 - Source code: [https://github.com/devcrux/Beautiful-Restaurant-App-in-Xamarin-Forms](https://github.com/devcrux/Beautiful-Restaurant-App-in-Xamarin-Forms)
 - Author: [Oludayo Alli](https://github.com/devcrux)
-  
+
 ## [Cakes Mobile App](https://github.com/shawyunz/XampleUI)
 
 UI challenge in Xamarin.Forms. Original design from [Ghulam Rasool](https://dribbble.com/shots/14018398-Cakes-Mobile-App-UX-UI-Design/attachments/5634963?mode=media).
 
 https://youtu.be/Lq7-2PzsSpY
 
-<img src="https://img1.dotnet9.com/2022/04/images/cakesmobileapp.gif" Width="220" /> 
+<img src="https://img1.dotnet9.com/2022/04/images/cakesmobileapp.gif" Width="220" />
 
 ### Platforms
 
 Android, iOS.
 
-## Features: 
+## Features:
 
 - Shell.
 - Navigation.
 - SharedTransitions.
-  
+
 ### More information:
+
 - Source code: [https://github.com/shawyunz/XampleUI](https://github.com/shawyunz/XampleUI)
 - Author: [Shaw Yu](https://github.com/shawyunz)
-  
+
 ## [DevsDNA application](https://github.com/DevsDNA/DevsDNA-Application)
 
 Open Source Xamarin.Forms application with the company lastest news, social networks, team members, etc.
@@ -303,9 +315,10 @@ Open Source Xamarin.Forms application with the company lastest news, social netw
 
 Android, iOS.
 
-## Features: 
+## Features:
 
 The application has been developed with [**Xamarin Forms**](https://dotnet.microsoft.com/apps/xamarin/xamarin-forms), using controls like [CollectionView](https://docs.microsoft.com/xamarin/xamarin-forms/user-interface/collectionview/) or [CarouselView](https://docs.microsoft.com/xamarin/xamarin-forms/user-interface/carouselview/). Also, we use some community developed NuGet packages:
+
 - [ReactiveUI](https://github.com/reactiveui/ReactiveUI)
 - [Refit](https://github.com/reactiveui/refit)
 - [Html Agility Pack](https://github.com/zzzprojects/html-agility-pack)
@@ -316,8 +329,9 @@ The application has been developed with [**Xamarin Forms**](https://dotnet.micro
 - [Mobile.BuildTools](https://github.com/dansiegel/Mobile.BuildTools)
 
 ### More information:
+
 - Source code: [https://github.com/DevsDNA/DevsDNA-Application](https://github.com/DevsDNA/DevsDNA-Application)
-  
+
 ## [Sneakers UI](https://github.com/LeomarisReyes/SneakersUIApp)
 
 Replicate a Sneaker UI App obtained from Dribble. You can check the design [here](https://dribbble.com/shots/13980919-Candy-Sneakers).
@@ -328,7 +342,7 @@ Replicate a Sneaker UI App obtained from Dribble. You can check the design [here
 
 Android, iOS.
 
-## Features: 
+## Features:
 
 - CollectionView.
 - Layouts.
@@ -336,10 +350,11 @@ Android, iOS.
 - PancakeView.
 
 ### More information:
+
 - Blog: [Replicating Sneakers UI in Xamarin Forms](https://askxammy.com/replicating-sneakers-ui-in-xamarin-forms/)
 - Source code: [https://github.com/LeomarisReyes/SneakersUIApp](https://github.com/LeomarisReyes/SneakersUIApp)
 - Author: [Leomaris Reyes](https://github.com/LeomarisReyes)
-  
+
 ## [Streaming UI](https://github.com/LeomarisReyes/StreamingUIApp)
 
 Replicate a Streaming UI App obtained from Dribble. You can check the design [here](https://dribbble.com/shots/7015497-Streaming-App/attachments/18404?mode=media).
@@ -350,13 +365,14 @@ Replicate a Streaming UI App obtained from Dribble. You can check the design [he
 
 Android, iOS.
 
-## Features: 
+## Features:
 
 - CollectionView.
 - Layouts.
 - PancakeView.
 
 ### More information:
+
 - Blog: [Replicating Streaming UI App in Xamarin Forms](https://askxammy.com/replicating-streaming-ui-app-in-xamarin-forms/)
 - Source code: [https://github.com/LeomarisReyes/StreamingUIApp](https://github.com/LeomarisReyes/StreamingUIApp)
 - Author: [Leomaris Reyes](https://github.com/LeomarisReyes)
@@ -371,13 +387,14 @@ Replicate a Real Estate UI obtained from Dribble. You can check the design [here
 
 Android, iOS.
 
-## Features: 
+## Features:
 
 - CollectionView.
 - Layouts.
 - MVVM.
 
 ### More information:
+
 - Blog: [Replicating Real Estate Property details UI in Xamarin Forms](https://askxammy.com/replicating-real-estate-property-details-ui-in-xamarin-forms/)
 - Source code: [https://github.com/LeomarisReyes/RealStateUIApp](https://github.com/LeomarisReyes/RealStateUIApp)
 - Author: [Leomaris Reyes](https://github.com/LeomarisReyes)
@@ -390,14 +407,14 @@ The "Raw Rows" is a sliding puzzle that consists of a frame of numbered square t
 
 Download:
 
-* AppStore: https://apps.apple.com/zw/app/raw-rows/id1513966639
-* Google Play: https://play.google.com/store/apps/details?id=com.sourcesoft.rawrows&hl=en
+- AppStore: https://apps.apple.com/zw/app/raw-rows/id1513966639
+- Google Play: https://play.google.com/store/apps/details?id=com.sourcesoft.rawrows&hl=en
 
 ### Platforms
 
 Android, iOS.
 
-## Features: 
+## Features:
 
 - PancakeView.
 - TouchView.
@@ -405,6 +422,7 @@ Android, iOS.
 - Xamarin.Essentials.
 
 ### More information:
+
 - Source code: [https://github.com/AndreiMisiukevich/RawRows](https://github.com/AndreiMisiukevich/RawRows)
 - Author: [Andrei Misiukevich](https://twitter.com/andrik_just4fun)
 
@@ -420,15 +438,16 @@ You can watch the video here ➤ https://youtu.be/768kDDR-0BY
 
 Android, iOS.
 
-## Features: 
+## Features:
 
 - Animations.
 - BindableLayout.
 
 ### More information:
+
 - Source code: [https://github.com/devcrux/Menu-Transition-in-Xamarin-Forms](https://github.com/devcrux/Menu-Transition-in-Xamarin-Forms)
 - Author: [Oludayo Alli](https://github.com/devcrux)
-  
+
 ## [AnimatedText](https://github.com/devcrux/Animated-Text-in-Xamarin-Forms)
 
 Animations can add visual cues about what’s going on in your app and are especially useful when the state of your UI changes, such as when new content loads or new actions become available.
@@ -441,15 +460,16 @@ You can watch the video here ➤ https://youtu.be/ModuAWkv5K8
 
 Android, iOS.
 
-## Features: 
+## Features:
 
 - Animations.
 - BindableLayout.
 
 ### More information:
+
 - Source code: [https://github.com/devcrux/Animated-Text-in-Xamarin-Forms](https://github.com/devcrux/Animated-Text-in-Xamarin-Forms)
 - Author: [Oludayo Alli](https://github.com/devcrux)
-  
+
 ## [AnimatedGradient](https://github.com/devcrux/Xamarin.Forms-Brushes-Animated-Gradient-Background)
 
 Gradients have positive influence in modern designs. Xamarin.Forms 4.8 introduced the Xamarin.Forms Brushes that contain LinearGradientBrush, RadialGradientBrush and SolidColorBrush.
@@ -462,14 +482,15 @@ You can watch the video here ➤ https://youtu.be/ejDwwc1Iq1s
 
 Android, iOS.
 
-## Features: 
+## Features:
 
 - Brushes.
 
 ### More information:
+
 - Source code: [https://github.com/devcrux/Xamarin.Forms-Brushes-Animated-Gradient-Background](https://github.com/devcrux/Xamarin.Forms-Brushes-Animated-Gradient-Background)
 - Author: [Oludayo Alli](https://github.com/devcrux)
- 
+
 ## [Cinema App](https://github.com/devcrux/Cinema-App-Using-SkiaSharp-and-Xamarin-Fomrs-Shapes)
 
 Ever wondered how to replicate the cinema seats arrangements in Xamarin.Forms?
@@ -482,15 +503,16 @@ You can watch the video here ➤ https://youtu.be/j_nVou7lNz0
 
 Android, iOS.
 
-## Features: 
+## Features:
 
 - SkiaSharp.
 - Shapes.
 
 ### More information:
+
 - Source code: [https://github.com/devcrux/Cinema-App-Using-SkiaSharp-and-Xamarin-Fomrs-Shapes](https://github.com/devcrux/Cinema-App-Using-SkiaSharp-and-Xamarin-Fomrs-Shapes)
 - Author: [Oludayo Alli](https://github.com/devcrux)
-  
+
 ## [Furniture App](https://github.com/Altevir/xamarinforms-furniture)
 
 App concept developed with Xamarin.Forms.
@@ -501,14 +523,16 @@ App concept developed with Xamarin.Forms.
 
 Android, iOS.
 
-## Features: 
-- MVVM 
-- [PancakeView](https://github.com/sthewissen/Xamarin.Forms.PancakeView) 
+## Features:
+
+- MVVM
+- [PancakeView](https://github.com/sthewissen/Xamarin.Forms.PancakeView)
 - CollectionView
 - Embedded Fonts
 - Shapes
 
 ### More information:
+
 - Source code: [https://github.com/Altevir/xamarinforms-furniture](https://github.com/Altevir/xamarinforms-furniture)
 - Author: [Altevir](https://github.com/Altevir)
 
@@ -524,12 +548,13 @@ You can watch the video here ➤ https://youtu.be/pb-2bXWhuMo
 
 Android, iOS.
 
-## Features: 
+## Features:
 
 - [SharedTransitions](https://github.com/GiampaoloGabba/Xamarin.Plugin.SharedTransitions).
 - Shapes.
 
 ### More information:
+
 - Source code: [https://github.com/devcrux/Xamarin.Forms-Path---Watch-Shop](https://github.com/devcrux/Xamarin.Forms-Path---Watch-Shop)
 - Author: [Oludayo Alli](https://github.com/devcrux)
 
@@ -544,12 +569,14 @@ Xamarin Forms Dark Store UI Design.
 Android, iOS.
 
 ### Features:
-* CollectionView.
-* BindableLayouts.
-* MVVM.
-* Shapes.
+
+- CollectionView.
+- BindableLayouts.
+- MVVM.
+- Shapes.
 
 ### More information:
+
 - Source code: [https://github.com/ufukhawk/DarkStore](https://github.com/ufukhawk/DarkStore)
 - Author: [Ufuk Zimmerman](https://github.com/ufukhawk)
 
@@ -563,14 +590,16 @@ Xamarin.Forms App.
 
 Android, iOS.
 
-## Features: 
-- MVVM 
-- [PancakeView](https://github.com/sthewissen/Xamarin.Forms.PancakeView) 
-- [Embedded Fonts](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/text/fonts) 
+## Features:
+
+- MVVM
+- [PancakeView](https://github.com/sthewissen/Xamarin.Forms.PancakeView)
+- [Embedded Fonts](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/text/fonts)
 - CollectionView
 - Shapes
 
 ### More information:
+
 - Source code: [https://github.com/Altevir/xamarinforms-delivery](https://github.com/Altevir/xamarinforms-delivery)
 - Author: [Altevir](https://github.com/Altevir)
 
@@ -584,13 +613,15 @@ Xamarin.Forms App.
 
 Android, iOS.
 
-## Features: 
-- MVVM 
-- [PancakeView](https://github.com/sthewissen/Xamarin.Forms.PancakeView) 
-- [Embedded Fonts](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/text/fonts) 
+## Features:
+
+- MVVM
+- [PancakeView](https://github.com/sthewissen/Xamarin.Forms.PancakeView)
+- [Embedded Fonts](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/text/fonts)
 - CollectionView
 
 ### More information:
+
 - Source code: [https://github.com/Altevir/xamarinforms-kidzee-games](https://github.com/Altevir/xamarinforms-kidzee-games)
 - Author: [Altevir](https://github.com/Altevir)
 
@@ -604,14 +635,16 @@ Xamarin.Forms App.
 
 Android, iOS.
 
-## Features: 
-- MVVM 
-- [PancakeView](https://github.com/sthewissen/Xamarin.Forms.PancakeView) 
-- [Embedded Fonts](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/text/fonts) 
+## Features:
+
+- MVVM
+- [PancakeView](https://github.com/sthewissen/Xamarin.Forms.PancakeView)
+- [Embedded Fonts](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/text/fonts)
 - VisualStateManager
 - CollectionView
 
 ### More information:
+
 - Source code: [https://github.com/Altevir/xamarinforms-art-store](https://github.com/Altevir/xamarinforms-art-store)
 - Author: [Altevir](https://github.com/Altevir)
 
@@ -625,20 +658,22 @@ Xamarin.Forms App.
 
 Android, iOS.
 
-## Features: 
-- MVVM 
-- [PancakeView](https://github.com/sthewissen/Xamarin.Forms.PancakeView) 
+## Features:
+
+- MVVM
+- [PancakeView](https://github.com/sthewissen/Xamarin.Forms.PancakeView)
 - [Sharpnado.Shadows](https://github.com/roubachof/Sharpnado.Shadows)
-- [Embedded Fonts](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/text/fonts) 
+- [Embedded Fonts](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/text/fonts)
 - CollectionView
 
 ### More information:
+
 - Source code: [https://github.com/Altevir/xamarinforms-ecommerce-liquors](https://github.com/Altevir/xamarinforms-ecommerce-liquors)
 - Author: [Altevir](https://github.com/Altevir)
 
 ## [CalendarUI](https://github.com/LeomarisReyes/CalendarUI)
 
- Replicate a Calendar / Schedule UI obtained from Dribble. You can check the design  [here](https://dribbble.com/shots/12082951-FODMAP/attachments/3714005?mode=media)!
+Replicate a Calendar / Schedule UI obtained from Dribble. You can check the design [here](https://dribbble.com/shots/12082951-FODMAP/attachments/3714005?mode=media)!
 
 <img src="https://img1.dotnet9.com/2022/04/images/calendarui.png" Width="600" />
 
@@ -646,12 +681,13 @@ Android, iOS.
 
 Android, iOS.
 
-## Features: 
+## Features:
 
 - CollectionView.
 - Layouts.
 
 ### More information:
+
 - Blog: [Replicating Schedule UI in Xamarin Forms](https://askxammy.com/replicating-schedule-ui-in-xamarin-forms/)
 - Source code: [https://github.com/LeomarisReyes/CalendarUI](https://github.com/LeomarisReyes/CalendarUI)
 - Author: [Leomaris Reyes](https://github.com/LeomarisReyes)
@@ -668,12 +704,13 @@ You can watch the video here ➤ https://youtu.be/X3ZND30zI_A
 
 Android, iOS.
 
-## Features: 
+## Features:
 
 - MediaElement.
 - Shapes.
 
 ### More information:
+
 - Source code: [https://github.com/devcrux/Xamarin.Forms-Shapes](https://github.com/devcrux/Xamarin.Forms-Shapes)
 - Author: [Oludayo Alli](https://github.com/devcrux)
 
@@ -689,18 +726,19 @@ You can watch the video here ➤ https://youtu.be/ndF5we5_Ijw
 
 Android, iOS.
 
-## Features: 
+## Features:
 
 - Animations.
 - Expander.
 
 ### More information:
+
 - Source code: [https://github.com/devcrux/Animated-Xamarin.Forms-Expander](https://github.com/devcrux/Animated-Xamarin.Forms-Expander)
 - Author: [Oludayo Alli](https://github.com/devcrux)
 
 ## [E-commerce HeadPhones App](https://github.com/Altevir/xamarinforms-ecommerce-headphones)
 
-App concept developed with Xamarin.Forms. Design: https://www.uplabs.com/posts/ecommerce-app-ui-concept 
+App concept developed with Xamarin.Forms. Design: https://www.uplabs.com/posts/ecommerce-app-ui-concept
 
 <img src="https://img1.dotnet9.com/2022/04/images/ecommerce-headphones.gif" Width="240" />
 
@@ -708,12 +746,14 @@ App concept developed with Xamarin.Forms. Design: https://www.uplabs.com/posts/e
 
 Android, iOS.
 
-## Features: 
+## Features:
+
 - [Animations](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/animation/simple).
 - CollectionView.
 - [PancakeView](https://github.com/sthewissen/Xamarin.Forms.PancakeView).
 
 ### More information:
+
 - Source code: [https://github.com/Altevir/xamarinforms-ecommerce-headphones](https://github.com/Altevir/xamarinforms-ecommerce-headphones)
 - Author: [Altevir](https://github.com/Altevir)
 
@@ -727,12 +767,14 @@ A fancy UI sample for an app providing pancake recipes, based on: https://dribbb
 
 Android, iOS.
 
-## Features: 
+## Features:
+
 - [FFImageLoading](https://github.com/luberda-molinet/FFImageLoading) (Svg).
 - [PancakeView](https://github.com/sthewissen/Xamarin.Forms.PancakeView).
 - [Sharpnado.MaterialFrame](https://github.com/roubachof/Sharpnado.MaterialFrame).
 
 ### More information:
+
 - Source code: [https://github.com/sthewissen/iBakePancakes](https://github.com/sthewissen/iBakePancakes)
 - Author: [Steven Thewissen](https://twitter.com/devnl)
 
@@ -748,11 +790,13 @@ You can watch the video here ➤ https://www.youtube.com/watch?v=1Vs4T6pEi_
 
 Android, iOS.
 
-## Features: 
+## Features:
+
 - Animations.
 - SwipeView.
 
 ### More information:
+
 - Source code: [https://github.com/devcrux/Xamarin.Forms-SwipeView](https://github.com/devcrux/Xamarin.Forms-SwipeView)
 - Author: [Oludayo Alli](https://github.com/devcrux)
 
@@ -766,11 +810,13 @@ Replicate [Uplabs Nike App design](https://dribbble.com/shots/9009192-Uplabs-Nik
 
 Android, iOS.
 
-## Features: 
+## Features:
+
 - [FFImageLoading](https://github.com/luberda-molinet/FFImageLoading) by [Daniel Luberda](https://github.com/daniel-luberda)
 - Layouts.
 
 ### More information:
+
 - Blog: [Xamarin.Forms – XamNike UI](https://www.gokhandogru.net/xamarin-forms-xamnike-ui/)
 - Source code: [https://github.com/dgokhan/XamNike](https://github.com/dgokhan/XamNike)
 - Author: [Gökhan Doğru](https://github.com/dgokhan)
@@ -787,10 +833,12 @@ You can watch the video here ➤ https://youtu.be/VSNFLBGJEXs
 
 Android, iOS.
 
-## Features: 
+## Features:
+
 - Animations
 
 ### More information:
+
 - Source code: [https://github.com/devcrux/Flip-Animation-in-Xamarin.Forms](https://github.com/devcrux/Flip-Animation-in-Xamarin.Forms)
 - Author: [Oludayo Alli](https://github.com/devcrux)
 
@@ -808,11 +856,13 @@ You can watch the video here ➤ https://youtu.be/rT3LwzSsMmo
 
 Android, iOS.
 
-## Features: 
+## Features:
+
 - Expander
 - [PancakeView](https://github.com/sthewissen/Xamarin.Forms.PancakeView).
-  
+
 ### More information:
+
 - Source code: [https://github.com/devcrux/Xamarin.Forms-Expander](https://github.com/devcrux/Xamarin.Forms-Expander)
 - Author: [Oludayo Alli](https://github.com/devcrux)
 
@@ -826,11 +876,13 @@ Replicate a Flight UI obtained from Dribbble ([Gleb Kuznetsov](https://dribbble.
 
 Android, iOS.
 
-## Features: 
+## Features:
+
 - CollectionView.
 - [PancakeView](https://github.com/sthewissen/Xamarin.Forms.PancakeView).
 
 ### More information:
+
 - Blog: [Replicating Flight UI](https://askxammy.com/part-1-replicating-flight-ui-preparing-the-project-to-work-with-mvvm/)
 - Source code: [https://github.com/LeomarisReyes/FlightUISample](https://github.com/LeomarisReyes/FlightUISample)
 - Author: [Leomaris Reyes](https://github.com/LeomarisReyes)
@@ -845,18 +897,20 @@ Implementation of a [coffee shopping UI](https://dribbble.com/shots/11246934-Pro
 
 Android, iOS.
 
-## Features: 
+## Features:
+
 - CarouselView.
 - Custom Fonts.
 - SkiaSharp.
 
 ### More information:
+
 - Source code: [https://github.com/sthewissen/Coffeeffee](https://github.com/sthewissen/Coffeeffee)
 - Author: [Steven Thewissen](https://twitter.com/devnl)
 
 ## [Play Video in Xamarin.Forms](https://github.com/devcrux/Play-Video-in-Xamarin-Forms)
 
-Learn how to design a COMPLETE Video Player in Xamarin Forms. 
+Learn how to design a COMPLETE Video Player in Xamarin Forms.
 
 You can watch the video here ➤ https://youtu.be/mLJe5yxq_7o
 
@@ -866,14 +920,16 @@ You can watch the video here ➤ https://youtu.be/mLJe5yxq_7o
 
 Android, iOS.
 
-## Features: 
+## Features:
+
 - [PancakeView](https://github.com/sthewissen/Xamarin.Forms.PancakeView).
 - [Plugin.MediaManager.Forms](https://github.com/Baseflow/XamarinMediaManager).
-  
+
 ### More information:
+
 - Source code: [https://github.com/devcrux/Play-Video-in-Xamarin-Forms](https://github.com/devcrux/Play-Video-in-Xamarin-Forms)
 - Author: [Oludayo Alli](https://github.com/devcrux)
-  
+
 ## [Play Audio in Xamarin.Forms](https://github.com/devcrux/Play-Audio-in-Xamarin-Forms)
 
 Learn how to design a COMPLETE Music Player in Xamarin Forms. In this video, we will make use of the Media Manager Plugin to make a music player app in Xamarin Forms and at the end you will see that music player in xamarin forms in quite easy.
@@ -886,11 +942,13 @@ You can watch the video here ➤ https://youtu.be/7plenjrcloM
 
 Android, iOS.
 
-## Features: 
+## Features:
+
 - [PancakeView](https://github.com/sthewissen/Xamarin.Forms.PancakeView).
 - [Plugin.MediaManager.Forms](https://github.com/Baseflow/XamarinMediaManager).
 
 ### More information:
+
 - Source code: [https://github.com/devcrux/Play-Audio-in-Xamarin-Forms](https://github.com/devcrux/Play-Audio-in-Xamarin-Forms)
 - Author: [Oludayo Alli](https://github.com/devcrux)
 
@@ -904,7 +962,8 @@ Xamarin.Forms Wallet CreditCard.
 
 Android, iOS.
 
-## Features: 
+## Features:
+
 - [CardsView](https://github.com/AndreiMisiukevich/CardView).
 - CollectionView.
 - Fonts Embedded.
@@ -913,10 +972,11 @@ Android, iOS.
 - [Rg.Plugins.PopUp](https://github.com/rotorgames/Rg.Plugins.Popup).
 
 ### More information:
+
 - Source code: [https://github.com/Altevir/xamarinforms-wallet-creditcard](https://github.com/Altevir/xamarinforms-wallet-creditcard)
 - Author: [Altevir](https://github.com/Altevir)
 
-## [Nomadic](https://github.com/Elisha-Misoi/Nomadic) 
+## [Nomadic](https://github.com/Elisha-Misoi/Nomadic)
 
 [Microsoft News](https://play.google.com/store/apps/details?id=com.microsoft.amp.apps.bingnews&hl=en) is built with Xamarin. I wondered… can I build the same 🤔? So I set out on this journey, I called it Nomadic.
 
@@ -926,7 +986,8 @@ Android, iOS.
 
 Android, iOS.
 
-## Features: 
+## Features:
+
 - [Xamarin.Essentials](https://github.com/xamarin/Essentials) by Microsoft
 - [NewsAPI C# Client](https://newsapi.org/docs/client-libraries/csharp) by [newsapi.org](https://newsapi.org/)
 - [Xamarin.Auth](https://github.com/xamarin/Xamarin.Auth)
@@ -940,6 +1001,7 @@ Android, iOS.
 - [CurrentActivityPlugin](https://github.com/jamesmontemagno/CurrentActivityPlugin) by [James Montemagno](https://github.com/jamesmontemagno)
 
 ### Blog posts:
+
 - [Part 1:](https://link.medium.com/RF1k3lBN15) Setting Up
 - [Part 2:](https://link.medium.com/Hfp1tLHN15) Using Shell
 - [Part 3:](https://link.medium.com/82PjSwTN15) Using Custom Fonts
@@ -954,8 +1016,9 @@ Android, iOS.
 - [Part 12:](https://link.medium.com/Z7A83o3O15) Creating a Firebase Project
 - [Part 13:](https://link.medium.com/UsQv6t9O15) Google Authentication with Firebase
 - [Part 14:](https://link.medium.com/hCSlA6dP15) Using Xamarin.Essentials Preferences and SecureStorage .....aand Wrapping Up 🙃
-  
+
 ### More information:
+
 - Source code: [https://github.com/Elisha-Misoi/Nomadic](https://github.com/Elisha-Misoi/Nomadic)
 - Author: [Elisha Misoi](https://github.com/Elisha-Misoi)
 
@@ -971,15 +1034,17 @@ You can watch the video here ➤ https://youtu.be/JbpDyRfaOqM
 
 Android, iOS.
 
-## Features: 
-* SkiaSharp.
-* PancakeView.
-* Xamarin.Essentials.
+## Features:
+
+- SkiaSharp.
+- PancakeView.
+- Xamarin.Essentials.
 
 ### More information:
+
 - Source code: [https://github.com/devcrux/Clock-Animation-in-Xamarin-Forms](https://github.com/devcrux/Clock-Animation-in-Xamarin-Forms)
 - Author: [Oludayo Alli](https://github.com/devcrux)
-  
+
 ## [Burger Shop App](https://github.com/devcrux/CollectionView-and-CarouselView-in-Xamarin-Forms)
 
 Xamarin Forms has awesome tools and controls to create modern user interface suc as Collection View & Carousel View.
@@ -994,14 +1059,16 @@ You can watch the video here ➤ https://youtu.be/mbqzKf7HVcQ
 
 Android, iOS.
 
-## Features: 
-* CarouselView.
-* CollectionView.
+## Features:
+
+- CarouselView.
+- CollectionView.
 
 ### More information:
+
 - Source code: [https://github.com/devcrux/CollectionView-and-CarouselView-in-Xamarin-Forms](https://github.com/devcrux/CollectionView-and-CarouselView-in-Xamarin-Forms)
 - Author: [Oludayo Alli](https://github.com/devcrux)
-  
+
 ## [PropertyApp](https://github.com/devcrux/Animation-In-Xamarin-forms)
 
 The concept of animation in Xamarin Forms will be explained by designing a Real-Estate Property App, where I also explained how to work with embedded fonts, gradients, custom renderers and visual state manager.
@@ -1014,16 +1081,18 @@ You can watch the video here ➤ https://youtu.be/WDw9R8seqMo
 
 Android, iOS.
 
-## Features: 
-* Embeded Fonts.
-* Gradients.
-* Animations.
-* VisualState.
+## Features:
+
+- Embeded Fonts.
+- Gradients.
+- Animations.
+- VisualState.
 
 ### More information:
+
 - Source code: [https://github.com/devcrux/Animation-In-Xamarin-forms](https://github.com/devcrux/Animation-In-Xamarin-forms)
 - Author: [Oludayo Alli](https://github.com/devcrux)
-  
+
 ## [Free Chat](https://github.com/DamienDoumer/freechat)
 
 This is a sample Xamarin.Forms application demonstrating how to build a user interface for a chat app. Inspired by https://dribbble.com/shots/10446738-Direct-messaging-mobile-app-design.
@@ -1034,15 +1103,17 @@ This is a sample Xamarin.Forms application demonstrating how to build a user int
 
 Android, iOS.
 
-## Features: 
-* Shell.
-* CollectionView.
-* Lottie.
-* PancakeView.
-* XamEffects.
-* Xamarin.Essentials.
+## Features:
+
+- Shell.
+- CollectionView.
+- Lottie.
+- PancakeView.
+- XamEffects.
+- Xamarin.Essentials.
 
 ### More information:
+
 - Source code: [https://github.com/DamienDoumer/freechat](https://github.com/DamienDoumer/freechat)
 - Author: [Damien Doumer](https://github.com/DamienDoumer)
 
@@ -1056,11 +1127,13 @@ Ecommerce design with Xamarin Forms. Design based on https://www.uistore.design/
 
 Android, iOS.
 
-## Features: 
-* CollectionView.
-* SwipeView.
+## Features:
+
+- CollectionView.
+- SwipeView.
 
 ### More information:
+
 - Source code: [https://github.com/exendahal/ecommerceXF](https://github.com/exendahal/ecommerceXF)
 - Author: [Santosh Dahal](https://github.com/exendahal)
 
@@ -1074,30 +1147,34 @@ Mbongo means Money translating into Portuguese. Developed with the intention of 
 
 Android, iOS.
 
-## Features: 
-* CircleImage.
-* MVVM.
-* PancakeView.
-* Xamarin.Essentials.
+## Features:
+
+- CircleImage.
+- MVVM.
+- PancakeView.
+- Xamarin.Essentials.
 
 ### More information:
+
 - Source code: [https://github.com/Amaro96/Amaro96-MbongoUIApp](https://github.com/Amaro96/Amaro96-MbongoUIApp)
 - Author: [Amaro Manungu](https://github.com/Amaro96)
-  
+
 ## [NeomorphismSmartHomeApp](https://github.com/felipebaltazar/NeomorphismSmartHomeApp)
 
 Smart Home App UI by Amit kumar using Xamarin.Forms.NeoControls.
 
-<img src="https://img1.dotnet9.com/2022/04/images/neomorphismsmarthomeapp01.gif" Width="220" /> <img src="https://img1.dotnet9.com/2022/04/images/neomorphismsmarthomeapp02.gif" Width="220" /> 
+<img src="https://img1.dotnet9.com/2022/04/images/neomorphismsmarthomeapp01.gif" Width="220" /> <img src="https://img1.dotnet9.com/2022/04/images/neomorphismsmarthomeapp02.gif" Width="220" />
 
 ### Platforms
 
 Android, iOS.
 
-## Features: 
-* [Xamarin.Forms.NeoControls](https://github.com/felipebaltazar/Xamarin.Forms.NeoControls).
+## Features:
+
+- [Xamarin.Forms.NeoControls](https://github.com/felipebaltazar/Xamarin.Forms.NeoControls).
 
 ### More information:
+
 - Source code: [https://github.com/felipebaltazar/NeomorphismSmartHomeApp](https://github.com/felipebaltazar/NeomorphismSmartHomeApp)
 - Author: [Felipe Baltazar](https://github.com/felipebaltazar)
 
@@ -1105,18 +1182,20 @@ Android, iOS.
 
 Xamarin.Forms goodlooking UI sample using the new Expander Control. Based on [Shopping List design](https://dribbble.com/shots/2340386-Shopping-List) by Hila Peleg.
 
-<img src="https://img1.dotnet9.com/2022/04/images/shopinglist.gif" Width="600" /> 
+<img src="https://img1.dotnet9.com/2022/04/images/shopinglist.gif" Width="600" />
 
 ### Platforms
 
 Android, iOS.
 
-## Features: 
-* BindableLayout.
-* Expander.
-* Triggers.
+## Features:
+
+- BindableLayout.
+- Expander.
+- Triggers.
 
 ### More information:
+
 - Source code: [https://github.com/jsuarezruiz/ShoppingList](https://github.com/jsuarezruiz/ShoppingList)
 - Author: [Javier Suárez](https://twitter.com/jsuarezruiz)
 
@@ -1130,17 +1209,19 @@ Developed with the aim of tracking Covid-19 cases with data from affected countr
 
 Android, iOS.
 
-## Features: 
-* [Flurl](https://flurl.dev/) 
-* [PancakeView](https://github.com/sthewissen/Xamarin.Forms.PancakeView) 
-* LiteDB 
-* [Rg.Plugins.Popup](https://github.com/rotorgames/Rg.Plugins.Popup)
-* [PluginMultilingual](https://github.com/CrossGeeks/MultilingualPlugin) 
-* [Skeleton](https://github.com/HorusSoftwareUY/Xamarin.Forms.Skeleton) 
-* [FFImageLoading](https://github.com/luberda-molinet/FFImageLoading)
-* Xamarin.Essentials
+## Features:
+
+- [Flurl](https://flurl.dev/)
+- [PancakeView](https://github.com/sthewissen/Xamarin.Forms.PancakeView)
+- LiteDB
+- [Rg.Plugins.Popup](https://github.com/rotorgames/Rg.Plugins.Popup)
+- [PluginMultilingual](https://github.com/CrossGeeks/MultilingualPlugin)
+- [Skeleton](https://github.com/HorusSoftwareUY/Xamarin.Forms.Skeleton)
+- [FFImageLoading](https://github.com/luberda-molinet/FFImageLoading)
+- Xamarin.Essentials
 
 ### More information:
+
 - Source code: [https://github.com/Altevir/xamarinforms-covid19](https://github.com/Altevir/xamarinforms-covid19)
 - Author: [Altevir](https://github.com/Altevir)
 
@@ -1155,12 +1236,14 @@ Xamarin.Forms PhotoStock UI design.
 Android, iOS.
 
 ### Features:
-* Animations.
-* FlowListView.
-* PancakeView.
-* Shared Transitions.
+
+- Animations.
+- FlowListView.
+- PancakeView.
+- Shared Transitions.
 
 ### More information:
+
 - Source code: [https://github.com/ufukhawk/XamarinForms-PhotoStock-UI-Design](https://github.com/ufukhawk/XamarinForms-PhotoStock-UI-Design)
 - Author: [Ufuk Zimmerman](https://github.com/ufukhawk)
 
@@ -1175,12 +1258,14 @@ Animal Crossing Turnip Tracking Mobile App.
 Android, iOS.
 
 ### Features:
-* Custom Fonts.
-* [PancakeView](https://github.com/sthewissen/Xamarin.Forms.PancakeView).
-* SwipeView.
-* [Visual](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/visual/).
+
+- Custom Fonts.
+- [PancakeView](https://github.com/sthewissen/Xamarin.Forms.PancakeView).
+- SwipeView.
+- [Visual](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/visual/).
 
 ### More information:
+
 - Source code: [https://github.com/jamesmontemagno/app-ac-islandtracker](https://github.com/jamesmontemagno/app-ac-islandtracker)
 - Author: [James Montemagno](https://twitter.com/jamesmontemagno)
 
@@ -1195,14 +1280,16 @@ Xamarin.Forms Covid19 Tracker App
 Android, iOS.
 
 ### Features:
-* [Acr.UserDialogs](https://github.com/aritchie/userdialogs)
-* [Newtonsoft.Json](https://github.com/JamesNK/Newtonsoft.Json)
-* [Corcav.Behaviors](https://github.com/corradocavalli/Corcav.Behaviors)
-* [Xamarin.Essentials](https://docs.microsoft.com/xamarin/essentials)
-* [Xamarin.Forms](https://xamarin.com/forms)
-* [Xamarin.Forms Visual](https://docs.microsoft.com/xamarin/xamarin-forms/user-interface/visual/)
+
+- [Acr.UserDialogs](https://github.com/aritchie/userdialogs)
+- [Newtonsoft.Json](https://github.com/JamesNK/Newtonsoft.Json)
+- [Corcav.Behaviors](https://github.com/corradocavalli/Corcav.Behaviors)
+- [Xamarin.Essentials](https://docs.microsoft.com/xamarin/essentials)
+- [Xamarin.Forms](https://xamarin.com/forms)
+- [Xamarin.Forms Visual](https://docs.microsoft.com/xamarin/xamarin-forms/user-interface/visual/)
 
 ### More information:
+
 - Source code: [https://github.com/AnthonyLatty/Covid19.Forms](https://github.com/AnthonyLatty/Covid19.Forms)
 - Author: [Marc-Anthony Latty](https://twitter.com/gifted_byte)
 
@@ -1217,12 +1304,14 @@ Xamarin.Forms [fresh e-commerce](https://dribbble.com/shots/6861763-Fresh-e-comm
 Android, iOS.
 
 ### Features:
-* Animations.
-* Gestures.
-* [PancakeView](https://github.com/sthewissen/Xamarin.Forms.PancakeView).
-* [SharedTransitions](https://github.com/GiampaoloGabba/Xamarin.Plugin.SharedTransitions).
+
+- Animations.
+- Gestures.
+- [PancakeView](https://github.com/sthewissen/Xamarin.Forms.PancakeView).
+- [SharedTransitions](https://github.com/GiampaoloGabba/Xamarin.Plugin.SharedTransitions).
 
 ### More information:
+
 - Source code: [https://github.com/valentineg8/FreshApp](https://github.com/valentineg8/FreshApp)
 - Author: [Lorenzo Araujo](https://github.com/valentineg8)
 
@@ -1237,11 +1326,13 @@ Replicating Exotic Fruits App in Xamarin Forms.
 Android, iOS.
 
 ### Features:
-* CollectionView.
-* Layouts.
-* [PancakeView](https://github.com/sthewissen/Xamarin.Forms.PancakeView).
+
+- CollectionView.
+- Layouts.
+- [PancakeView](https://github.com/sthewissen/Xamarin.Forms.PancakeView).
 
 ### More information:
+
 - Blog: [Replicating Exotic Fruits App in Xamarin Forms](https://askxammy.com/replicating-exotic-fruits-app-in-xamarin-forms/)
 - Source code: [https://github.com/LeomarisReyes/ExoticFruitSample](https://github.com/LeomarisReyes/ExoticFruitSample)
 - Author: [Leomaris Reyes](https://github.com/LeomarisReyes)
@@ -1257,11 +1348,13 @@ Xamarin.Forms Profile Page.
 Android, iOS.
 
 ### Features:
-* [CardsView](https://github.com/AndreiMisiukevich/CardView).
-* [TouchView](https://github.com/AndreiMisiukevich/TouchEffect).
-* [ExpandableView](https://github.com/AndreiMisiukevich/ExpandableView).
+
+- [CardsView](https://github.com/AndreiMisiukevich/CardView).
+- [TouchView](https://github.com/AndreiMisiukevich/TouchEffect).
+- [ExpandableView](https://github.com/AndreiMisiukevich/ExpandableView).
 
 ### More information:
+
 - Source code: [https://github.com/AndreiMisiukevich/XamarinFormsProfilePage](https://github.com/AndreiMisiukevich/XamarinFormsProfilePage)
 - Author: [Andrei Misiukevich](https://twitter.com/andrik_just4fun)
 
@@ -1276,12 +1369,14 @@ Xamarin.Forms travel app UI.
 Android, iOS.
 
 ### Features:
-* Animations.
-* CarouselView.
-* [PancakeView](https://github.com/sthewissen/Xamarin.Forms.PancakeView).
-* [SharedTransitions](https://github.com/GiampaoloGabba/Xamarin.Plugin.SharedTransitions).
+
+- Animations.
+- CarouselView.
+- [PancakeView](https://github.com/sthewissen/Xamarin.Forms.PancakeView).
+- [SharedTransitions](https://github.com/GiampaoloGabba/Xamarin.Plugin.SharedTransitions).
 
 ### More information:
+
 - Source code: [https://github.com/valentineg8/PlacesApp](https://github.com/valentineg8/PlacesApp)
 - Author: [Lorenzo Araujo](https://github.com/valentineg8)
 
@@ -1296,11 +1391,13 @@ Modern UI using Xamarin Forms.
 Android, iOS.
 
 ### Features:
-* Layouts (Frame).
-* Shell.
-* Syncfusion.Xamarin.SfChart.
+
+- Layouts (Frame).
+- Shell.
+- Syncfusion.Xamarin.SfChart.
 
 ### More information:
+
 - Source code: [https://github.com/exendahal/ModernDesignXF](https://github.com/exendahal/ModernDesignXF)
 - Author: [Santosh Dahal](https://github.com/exendahal)
 
@@ -1315,13 +1412,15 @@ Xamarin.Forms Fashion Store UI.
 Android, iOS.
 
 ### Features:
-* Animations.
-* BindableLayout.
-* CarouselView.
-* [PancakeView](https://github.com/sthewissen/Xamarin.Forms.PancakeView).
-* [SharedTransitions](https://github.com/GiampaoloGabba/Xamarin.Plugin.SharedTransitions).
+
+- Animations.
+- BindableLayout.
+- CarouselView.
+- [PancakeView](https://github.com/sthewissen/Xamarin.Forms.PancakeView).
+- [SharedTransitions](https://github.com/GiampaoloGabba/Xamarin.Plugin.SharedTransitions).
 
 ### More information:
+
 - Source code: [https://github.com/valentineg8/FashionStore](https://github.com/valentineg8/FashionStore)
 - Author: [Lorenzo Araujo](https://github.com/valentineg8)
 
@@ -1336,11 +1435,13 @@ UI exercise using C# UI, Xplat Images and Fonts, and LiveSharp.
 Android, iOS and UWP.
 
 ### Features:
-* C# UI.
-* XPlat Images.
-* Xplat Fonts.
+
+- C# UI.
+- XPlat Images.
+- Xplat Fonts.
 
 ### More information:
+
 - Source code: [https://github.com/davidortinau/YogaUI](https://github.com/davidortinau/YogaUI)
 - Author: [David Ortinau](https://twitter.com/davidortinau)
 
@@ -1355,10 +1456,12 @@ Xamarin.Forms goodlooking UI sample.
 Android, iOS.
 
 ### Features:
-* Custom Entry.
-* [PancakeView](https://github.com/sthewissen/Xamarin.Forms.PancakeView).
+
+- Custom Entry.
+- [PancakeView](https://github.com/sthewissen/Xamarin.Forms.PancakeView).
 
 ### More information:
+
 - Source code: [https://github.com/ufukhawk/Chased-Home-UI-Design](https://github.com/ufukhawk/Chased-Home-UI-Design)
 - Author: [Ufuk Zimmerman](https://github.com/ufukhawk)
 
@@ -1373,11 +1476,13 @@ Xamarin.Forms goodlooking UI sample using SwipeView to create a custom Pull to R
 Android, iOS.
 
 ### Features:
-* CollectionView.
-* Lottie.
-* SwipeView.
+
+- CollectionView.
+- Lottie.
+- SwipeView.
 
 ### More information:
+
 - Source code: [https://github.com/jsuarezruiz/FlightBookingApp](https://github.com/jsuarezruiz/FlightBookingApp)
 - Author: [Javier Suárez](https://twitter.com/jsuarezruiz)
 
@@ -1393,10 +1498,12 @@ UI replicated in Xamarin Forms.
 Android, iOS.
 
 ### Features:
-* CollectionView.
-* Layouts.
+
+- CollectionView.
+- Layouts.
 
 ### More information:
+
 - Blog: [Let’s replicate a Travel App in Xamarin Forms](https://askxammy.com/lets-replicate-a-travel-app-in-xamarin-forms/)
 - Source code: [https://github.com/LeomarisReyes/TravelAppSample](https://github.com/LeomarisReyes/TravelAppSample)
 - Author: [Leomaris Reyes](https://github.com/LeomarisReyes)
@@ -1412,13 +1519,15 @@ Xamarin.Forms app demonstrating the dual-screen device capability for neo and du
 Android, UWP.
 
 ### Features:
-* BindableLayout.
-* CollectionView.
-* MediaElement.
-* Xamarin.Forms.DualScreen.
-* StateTriggers.
+
+- BindableLayout.
+- CollectionView.
+- MediaElement.
+- Xamarin.Forms.DualScreen.
+- StateTriggers.
 
 ### More information:
+
 - Source code: [https://github.com/xamarin/app-xamarintv](https://github.com/xamarin/app-xamarintv)
 
 ## [UserProfile UI](https://github.com/LeomarisReyes/UserProfileUISample)
@@ -1432,14 +1541,16 @@ UI replicated in Xamarin Forms. Design obteined from Dribble: https://dribbble.c
 Android, iOS.
 
 ### Features:
-* Layouts.
-* Styles.
+
+- Layouts.
+- Styles.
 
 ### More information:
+
 - Blog: [Replicating User Profile UI in Xamarin.Forms](https://askxammy.com/replicating-user-profile-ui-in-xamarin-forms/)
 - Source code: [https://github.com/LeomarisReyes/UserProfileUISample](https://github.com/LeomarisReyes/UserProfileUISample)
 - Author: [Leomaris Reyes](https://github.com/LeomarisReyes)
- 
+
 ## [FoodDeliveryAppDuo](https://github.com/jsuarezruiz/FoodDeliveryAppDuo)
 
 Xamarin.Forms good looking UI sample for Surface Duo.
@@ -1451,12 +1562,14 @@ Xamarin.Forms good looking UI sample for Surface Duo.
 Android.
 
 ### Features:
-* CarouselView.
-* CollectionView.
-* IndicatorView.
-* Using Xamarin.Duo SDK.
+
+- CarouselView.
+- CollectionView.
+- IndicatorView.
+- Using Xamarin.Duo SDK.
 
 ### More information:
+
 - Source code: [https://github.com/jsuarezruiz/FoodDeliveryAppDuo](https://github.com/jsuarezruiz/FoodDeliveryAppDuo)
 - Author: [Javier Suárez](https://twitter.com/jsuarezruiz)
 
@@ -1471,15 +1584,17 @@ A Xamarin.Forms sample based on the [dribble designs by Rajat](https://dribbble.
 Android, iOS.
 
 ### Features:
-* CollectionView.
-* Styles.
-* MVVM.
+
+- CollectionView.
+- Styles.
+- MVVM.
 
 ### More information:
+
 - Blog: [Replicating Food UI Sample](https://askxammy.com/replicating-food-ui-sample/)
 - Source code: [https://github.com/LeomarisReyes/FoodAppSample](https://github.com/LeomarisReyes/FoodAppSample)
 - Author: [Leomaris Reyes](https://github.com/LeomarisReyes)
- 
+
 ## [XamCall](https://github.com/ufukhawk/XamCall)
 
 Xamarin.Forms Call Screen UI.
@@ -1491,10 +1606,12 @@ Xamarin.Forms Call Screen UI.
 Android, iOS.
 
 ### Features:
-* Gradients.
-* [Shared Transitions](https://github.com/GiampaoloGabba/Xamarin.Plugin.SharedTransitions).
-  
+
+- Gradients.
+- [Shared Transitions](https://github.com/GiampaoloGabba/Xamarin.Plugin.SharedTransitions).
+
 ### More information:
+
 - Source code: [https://github.com/ufukhawk/XamCall](https://github.com/ufukhawk/XamCall)
 - Author: [Ufuk Zimmerman](https://github.com/ufukhawk)
 
@@ -1509,15 +1626,17 @@ Xamarin.Forms Login Screen UI.
 Android, iOS.
 
 ### Features:
-* Dynamic Design.
-* Animations.
-* Custom controls.
-* GradientView.
-  
+
+- Dynamic Design.
+- Animations.
+- Custom controls.
+- GradientView.
+
 ### More information:
+
 - Source code: [https://github.com/ufukhawk/XamUIDemo](https://github.com/ufukhawk/XamUIDemo)
 - Author: [Ufuk Zimmerman](https://github.com/ufukhawk)
-  
+
 ## [Cruise Mobile UI](https://www.andreasnesheim.no/xamarin-ui-challenge-cruise-mobile-ui-part-1/)
 
 A Xamarin.Forms UI Challenge based on the fantastic [dribble designs by Tamo Miqeladze](https://www.behance.net/tamo13).
@@ -1525,14 +1644,16 @@ A Xamarin.Forms UI Challenge based on the fantastic [dribble designs by Tamo Miq
 <img src="https://img1.dotnet9.com/2022/04/images/cruisemobileui-list.png" Width="220" /> <img src="https://img1.dotnet9.com/2022/04/images/cruisemobileui-detail.png" Width="220" />
 
 ### Features:
-* CarouselView.
-* Custom Fonts.
-* [PancakeView](https://github.com/sthewissen/Xamarin.Forms.PancakeView).
-  
+
+- CarouselView.
+- Custom Fonts.
+- [PancakeView](https://github.com/sthewissen/Xamarin.Forms.PancakeView).
+
 ### More information:
+
 - Blog: [Xamarin UI Challenge – Cruise Mobile UI](https://www.andreasnesheim.no/xamarin-ui-challenge-cruise-mobile-ui-part-1/)
 - Author: [Andreas Nesheim](https://twitter.com/AndreasNesheim)
-  
+
 ## [FurnitureStore](https://github.com/kphillpotts/FurnitureStore)
 
 A Xamarin.Forms UI Challenge based on the fantastic [dribble designs by UXIS](https://dribbble.com/shots/7126187-IKEA-Store-App).
@@ -1540,16 +1661,18 @@ A Xamarin.Forms UI Challenge based on the fantastic [dribble designs by UXIS](ht
 <img src="https://img1.dotnet9.com/2022/04/images/furniturestore.png" Width="600" />
 
 ### Features:
-* CarouselView.
-* [Shared Transitions](https://github.com/GiampaoloGabba/Xamarin.Plugin.SharedTransitions).
+
+- CarouselView.
+- [Shared Transitions](https://github.com/GiampaoloGabba/Xamarin.Plugin.SharedTransitions).
 
 ### More information:
+
 - Source code: [https://github.com/kphillpotts/FurnitureStore](https://github.com/kphillpotts/FurnitureStore)
 - Author: [Kym Phillpotts](https://twitter.com/kphillpotts)
 
 ## [MountainTripSample](https://github.com/LeomarisReyes/MountainTripSample)
 
- Super nice UI inspired by [Mountain Trip Design](https://dribbble.com/shots/8142497-Mountain-trip-time-iOS-app-design).
+Super nice UI inspired by [Mountain Trip Design](https://dribbble.com/shots/8142497-Mountain-trip-time-iOS-app-design).
 
 <img src="https://img1.dotnet9.com/2022/04/images/mountaintripsample.gif" Width="800" />
 
@@ -1558,11 +1681,13 @@ A Xamarin.Forms UI Challenge based on the fantastic [dribble designs by UXIS](ht
 Android, iOS.
 
 ### Features:
-* VisualStateManager.
-* Layouts.
-* Styles.
+
+- VisualStateManager.
+- Layouts.
+- Styles.
 
 ### More information:
+
 - Blog: [Replicating great UI in Xamarin Forms](https://askxammy.com/replicating-great-ui-in-xamarin-forms/)
 - Source code: [https://github.com/LeomarisReyes/MountainTripSample](https://github.com/LeomarisReyes/MountainTripSample)
 - Author: [Leomaris Reyes](https://github.com/LeomarisReyes)
@@ -1578,10 +1703,12 @@ Xamarin.Forms goodlooking UI sample using the new SwipeView.
 Android, iOS.
 
 ### Features:
-* CollectionView.
-* SwipeView.
+
+- CollectionView.
+- SwipeView.
 
 ### More information:
+
 - Source code: [https://github.com/jsuarezruiz/FavFighters](https://github.com/jsuarezruiz/FavFighters)
 - Author: [Javier Suárez](https://twitter.com/jsuarezruiz)
 
@@ -1596,12 +1723,14 @@ Replicate the Facebook profile page with Xamarin.Forms.
 Android, iOS.
 
 ### Features:
-* CollectionView.
-* Bindable Layouts.
-* [PancakeView](https://github.com/sthewissen/Xamarin.Forms.PancakeView).
-* FFImageLoading.
+
+- CollectionView.
+- Bindable Layouts.
+- [PancakeView](https://github.com/sthewissen/Xamarin.Forms.PancakeView).
+- FFImageLoading.
 
 ### More information:
+
 - Source code: [https://github.com/LeomarisReyes/FaceBookUISample](https://github.com/LeomarisReyes/FaceBookUISample)
 - Author: [Leomaris Reyes](https://github.com/LeomarisReyes)
 
@@ -1617,11 +1746,13 @@ Demo presented at Microsoft Ignite 2019.
 Android, iOS and UWP.
 
 ### Features:
-* CollectionView.
-* Shell.
-* Visual.
+
+- CollectionView.
+- Shell.
+- Visual.
 
 ### More information:
+
 - Source code: [https://github.com/davidortinau/FlyMe](https://github.com/davidortinau/FlyMe)
 - Author: [David Ortinau](https://twitter.com/davidortinau)
 
@@ -1636,12 +1767,14 @@ A Xamarin.Forms UI Challenge.
 Android, iOS.
 
 ### Features:
-* Bindable Layout (Staggered list).
+
+- Bindable Layout (Staggered list).
 
 ### More information:
+
 - Source code: [https://github.com/kphillpotts/IcelandMoss](https://github.com/kphillpotts/IcelandMoss)
 - Author: [Kym Phillpotts](https://twitter.com/kphillpotts)
-  
+
 ## [Credit Card Checkout](https://github.com/egbakou/CreditCardCheckout)
 
 This UI Challenge is based on the fantastic dribble designs by [Antra Sharma](https://dribbble.com/antra03).
@@ -1653,8 +1786,9 @@ This UI Challenge is based on the fantastic dribble designs by [Antra Sharma](ht
 Android, iOS.
 
 ### Features:
-* CardsView.
-* [PancakeView](https://github.com/sthewissen/Xamarin.Forms.PancakeView).
+
+- CardsView.
+- [PancakeView](https://github.com/sthewissen/Xamarin.Forms.PancakeView).
 
 ### More information:
 
@@ -1664,7 +1798,7 @@ Android, iOS.
 
 ## [DrinksGalleryApp](https://github.com/jsuarezruiz/DrinksGalleryApp)
 
-Xamarin.Forms goodlooking UI sample using the new CarouselView (Parallax). 
+Xamarin.Forms goodlooking UI sample using the new CarouselView (Parallax).
 
 <img src="https://img1.dotnet9.com/2022/04/images/drinkgalleryapp.gif" Width="250" />
 
@@ -1673,12 +1807,14 @@ Xamarin.Forms goodlooking UI sample using the new CarouselView (Parallax).
 Android, iOS.
 
 ### Features:
-* Animations.
-* CarouselView.
-* [PancakeView](https://github.com/sthewissen/Xamarin.Forms.PancakeView) (Corner Radius, Gradients).
-* Parallax.
+
+- Animations.
+- CarouselView.
+- [PancakeView](https://github.com/sthewissen/Xamarin.Forms.PancakeView) (Corner Radius, Gradients).
+- Parallax.
 
 ### More information:
+
 - Source code: [https://github.com/jsuarezruiz/DrinksGalleryApp](https://github.com/jsuarezruiz/DrinksGalleryApp)
 - Author: [Javier Suárez](https://twitter.com/jsuarezruiz)
 
@@ -1693,10 +1829,12 @@ A very pretty weather application built with Xamarin.Forms.
 Android, iOS.
 
 ### Features:
-* [Xamarin.Essentials](https://github.com/xamarin/Essentials).
-* [PancakeView](https://github.com/sthewissen/Xamarin.Forms.PancakeView) (Corner Radius, Gradients).
-  
+
+- [Xamarin.Essentials](https://github.com/xamarin/Essentials).
+- [PancakeView](https://github.com/sthewissen/Xamarin.Forms.PancakeView) (Corner Radius, Gradients).
+
 ### More information:
+
 - Source code: [https://github.com/jamesmontemagno/app-pretty-weather](https://github.com/jamesmontemagno/app-pretty-weather)
 - Author: [James Montemagno](https://twitter.com/jamesmontemagno)
 
@@ -1711,14 +1849,16 @@ Xamarin.Forms goodlooking UI sample using the new **CarouselView**.
 Android, iOS.
 
 ### Features:
-* Animations.
-* Xamarin.Forms CarouselView.
-* Custom Fonts.
-* Lottie.
-* Shell.
-* Video Player.
+
+- Animations.
+- Xamarin.Forms CarouselView.
+- Custom Fonts.
+- Lottie.
+- Shell.
+- Video Player.
 
 ### More information:
+
 - Source code: [https://github.com/jsuarezruiz/TravellingApp](https://github.com/jsuarezruiz/TravellingApp)
 - Author: [Javier Suárez](https://twitter.com/jsuarezruiz)
 
@@ -1733,11 +1873,13 @@ Beautiful WeatherApp UI in Xamarin.Forms.
 Android, iOS.
 
 ### Features
-* ImageButton.
-* ListView.
-* Styles.
+
+- ImageButton.
+- ListView.
+- Styles.
 
 ### More information:
+
 - Source code: [https://github.com/devcrux/WeatherApp](https://github.com/devcrux/WeatherApp)
 - Author: [Oludayo Alli](https://github.com/devcrux)
 
@@ -1754,10 +1896,12 @@ https://dribbble.com/shots/1551934-Unzone-Details-popup-animation
 Android, iOS.
 
 ### Features
-* Animations.
-* BindableLayout.
+
+- Animations.
+- BindableLayout.
 
 ### More information:
+
 - Source code: [https://github.com/kphillpotts/UnZone](https://github.com/kphillpotts/UnZone)
 - Author: [Kym Phillpotts](https://twitter.com/kphillpotts)
 
@@ -1772,12 +1916,14 @@ This UI Challenge is based on the fantastic dribble designs by [Tubik](https://d
 Android, iOS.
 
 ### Features
-* Animations.
-* ListView.
-* Custom ViewCell.
-* SkiaSharp.
+
+- Animations.
+- ListView.
+- Custom ViewCell.
+- SkiaSharp.
 
 ### More information:
+
 - Source code: [https://github.com/kphillpotts/BookSwap](https://github.com/kphillpotts/BookSwap)
 - Author: [Kym Phillpotts](https://twitter.com/kphillpotts)
 
@@ -1792,10 +1938,12 @@ Beautiful Fashion App Design Using Xamarin.Forms.
 Android, iOS.
 
 ### Features
-* CollectionView.
-* Shell.
+
+- CollectionView.
+- Shell.
 
 ### More information:
+
 - Source code: [https://github.com/devcrux/FashionApp](https://github.com/devcrux/FashionApp)
 - Author: [Oludayo Alli](https://github.com/devcrux)
 
@@ -1810,16 +1958,18 @@ A Xamarin.Forms UI Challenge based on https://dribbble.com/shots/5935613-Marvel-
 Android, iOS.
 
 ### Features
-* [CardsView](https://github.com/AndreiMisiukevich/CardView).
-* Animations.
+
+- [CardsView](https://github.com/AndreiMisiukevich/CardView).
+- Animations.
 
 ### More information:
+
 - Source code: [https://github.com/kphillpotts/MarvelCards](https://github.com/kphillpotts/MarvelCards)
 - Author: [Kym Phillpotts](https://twitter.com/kphillpotts)
 
 ## [SyncFusion Essential UI Kit for Xamarin.Forms](https://github.com/syncfusion/essential-ui-kit-for-xamarin.forms)
 
-Elegantly designed XAML templates for Xamarin.Forms apps. These templates follow the MVVM design pattern to provide hassle-free integration and are compatible with Android, iOS, and UWP platforms. 
+Elegantly designed XAML templates for Xamarin.Forms apps. These templates follow the MVVM design pattern to provide hassle-free integration and are compatible with Android, iOS, and UWP platforms.
 
 ![SyncFusion Essential UI Kit for Xamarin.Forms](https://img1.dotnet9.com/2022/04/images/xamarin-forms-ui-template.png)
 
@@ -1828,16 +1978,18 @@ Elegantly designed XAML templates for Xamarin.Forms apps. These templates follow
 Android, iOS and UWP.
 
 ### Features
-* Rich, elegant XAML layouts for most common scenarios.
-* Layouts optimized for phones, tablets, and desktop.
-* Based on the MVVM design pattern to work with any MVVM framework.
-* Easy integration.
-* Developer-friendly APIs.
-* Appearance customization using styles.
-* Optimized layouts to get the best possible performance.
-* Right-to-left rendering support.
+
+- Rich, elegant XAML layouts for most common scenarios.
+- Layouts optimized for phones, tablets, and desktop.
+- Based on the MVVM design pattern to work with any MVVM framework.
+- Easy integration.
+- Developer-friendly APIs.
+- Appearance customization using styles.
+- Optimized layouts to get the best possible performance.
+- Right-to-left rendering support.
 
 ### More information:
+
 - Source code: [https://github.com/syncfusion/essential-ui-kit-for-xamarin.forms](https://github.com/syncfusion/essential-ui-kit-for-xamarin.forms)
 
 ## [AirNZClone](https://github.com/rid00z/AirNZClone)
@@ -1851,10 +2003,12 @@ Air NZ app clone using Xamarin.Forms.
 Android, iOS.
 
 ### Features:
+
 - Animations.
 - Carousel.
 
 ### More information:
+
 - Source code: [https://github.com/rid00z/AirNZClone](https://github.com/rid00z/AirNZClone)
 - Author: [Michael Ridland](https://github.com/rid00z)
 
@@ -1869,11 +2023,13 @@ Xamarin Forms UI Challenge based on [Ballon Slider Control design](https://dribb
 Android, iOS.
 
 ### Features:
+
 - SkiaSharp.
 - Use Svg (FFImageLoading).
 - Gestures.
 
 ### More information:
+
 - Source code: [https://github.com/shanranm/Balloony](https://github.com/shanranm/Balloony)
 - Author: [Shanmukha Ranganath](https://github.com/shanranm)
 
@@ -1888,11 +2044,13 @@ Google Play Music app clone using Xamarin.Forms Shell.
 Android, iOS.
 
 ### Features:
+
 - Xamarin.Forms Shell.
 - CollectionView.
 - SearchHandler.
 
 ### More information:
+
 - Blog: [Xamarin.Forms 4 In Action: Rapid Prototyping](https://alejandroruizvarela.blogspot.com/2019/07/xamarinforms-4-in-action-rapid.html)
 - Source code: [https://github.com/AlejandroRuiz/PlayMusicXamarinClone](https://github.com/AlejandroRuiz/PlayMusicXamarinClone)
 - Author: [Alejandro Ruiz Varela](https://github.com/AlejandroRuiz)
@@ -1908,14 +2066,16 @@ A beautiful Xamarin Forms sample using Atomic Design, F# and Fabulous.
 Android, iOS.
 
 ### Features:
+
 - Carousel.
 - F# UI (using Fabulous).
 
 ### More information:
+
 - Blog: [Creating beautiful Xamarin Forms apps using Atomic Design, F# and Fabulous](https://mallibone.com/post/creating-beautiful-xamarin-forms-apps-using-atomic-design-f-and-fabulous)
 - Source code: [https://github.com/mallibone/FabulousTravel](https://github.com/mallibone/FabulousTravel)
 - Author: [Mark Allibone](https://github.com/mallibone)
-  
+
 ## [FicusUIChallenge](https://github.com/Pujolsluis/FicusUIChallenge)
 
 Xamarin.Forms UI Challenge Ficus IoT App.
@@ -1927,13 +2087,16 @@ Xamarin.Forms UI Challenge Ficus IoT App.
 Android, iOS.
 
 ### Features:
+
 - Custom ListView.
 - Corner Radius.
-  
+
 ### More information:
+
 - Source code: [https://github.com/Pujolsluis/FicusUIChallenge](https://github.com/Pujolsluis/FicusUIChallenge)
 - Author: [Luis Pujols](https://github.com/Pujolsluis)
-- 
+-
+
 ## [XamBookLibrary](https://github.com/shanranm/XamBookLibrary)
 
 Xamarin.Forms UI challenge from the [design](https://dribbble.com/shots/6603461-Library-App) by Victoria Sgarro.
@@ -1945,14 +2108,16 @@ Xamarin.Forms UI challenge from the [design](https://dribbble.com/shots/6603461-
 Android, iOS.
 
 ### Features:
+
 - Animations.
 - Circle Images.
 - PancakeView (Corners, etc.).
 
 ### More information:
+
 - Source code: [https://github.com/shanranm/XamBookLibrary](https://github.com/shanranm/XamBookLibrary)
 - Author: [Shanmukha Ranganath](https://github.com/shanranm)
-  
+
 ## [Art Plant Mall](https://github.com/jsuarezruiz/Art-Plant-Mall)
 
 A Xamarin.Forms UI challenge from the [design](https://dribbble.com/shots/6612746-Art-Plant-Mall) by [JIANGGM](https://dribbble.com/JIANGGM).
@@ -1964,6 +2129,7 @@ A Xamarin.Forms UI challenge from the [design](https://dribbble.com/shots/661274
 Android, iOS.
 
 ### Features:
+
 - Animations.
 - CollectionView.
 - VisualStateManager.
@@ -1971,25 +2137,28 @@ Android, iOS.
 - Parallax effect.
 
 ### More information:
+
 - Blog: [[Xamarin UI Challenge] Art Plant Mall](https://javiersuarezruiz.wordpress.com/2019/07/17/xamarin-ui-challenge-art-plant-mall-english-version/)
 - Source code: [https://github.com/jsuarezruiz/Art-Plant-Mall](https://github.com/jsuarezruiz/Art-Plant-Mall)
 - Author: [Javier Suárez](https://twitter.com/jsuarezruiz)
-  
+
 ## [Run Away!](https://github.com/roubachof/SkiaSharpnado)
 
 The Run Away! app: Drawing gradient lines on top of Maps with SkiaSharp.
 
-<img src="https://img1.dotnet9.com/2022/04/images/runaway01.jpg" Width="250" /> <img src="https://img1.dotnet9.com/2022/04/images/runaway02.jpg" Width="250" /> 
+<img src="https://img1.dotnet9.com/2022/04/images/runaway01.jpg" Width="250" /> <img src="https://img1.dotnet9.com/2022/04/images/runaway02.jpg" Width="250" />
 
 ### Platforms
 
 Android, iOS.
 
 ### Features:
+
 - Maps.
 - Paths in the map using SkiaSharp.
 
 ### More information:
+
 - Blog: [The Run Away! app: Drawing gradient lines on top of Maps with SkiaSharp](https://www.sharpnado.com/run-away-app/)
 - Source code: [https://github.com/roubachof/SkiaSharpnado](https://github.com/roubachof/SkiaSharpnado)
 - Author: [Jean-Marie Alfonsi](https://github.com/roubachof)
@@ -1998,36 +2167,40 @@ Android, iOS.
 
 A Xamarin.Forms UI Challenge.
 
-<img src="https://img1.dotnet9.com/2022/04/images/rottenui.png" Width="250" /> 
+<img src="https://img1.dotnet9.com/2022/04/images/rottenui.png" Width="250" />
 
 ### Platforms
 
 Android, iOS.
 
 ### Features:
+
 - SkiaSharp.
 - PancakeView.
 - Custom tabs.
 
 ### More information:
+
 - Source code: [https://github.com/kphillpotts/RottenUI](https://github.com/kphillpotts/RottenUI)
 - Author: [Kym Phillpotts](https://twitter.com/kphillpotts)
-  
+
 ## [Mountain Mobile](https://github.com/kphillpotts/MountainMobile)
 
 A Xamarin.Forms UI Challenge playing with SkiaSharp and animations.
 
-<img src="https://img1.dotnet9.com/2022/04/images/mountainmobile.gif" Width="250" /> 
+<img src="https://img1.dotnet9.com/2022/04/images/mountainmobile.gif" Width="250" />
 
 ### Platforms
 
 Android, iOS.
 
 ### Features:
+
 - SkiaSharp.
 - Animations.
 
 ### More information:
+
 - Source code: [https://github.com/kphillpotts/MountainMobile](https://github.com/kphillpotts/MountainMobile)
 - Author: [Kym Phillpotts](https://twitter.com/kphillpotts)
 
@@ -2035,37 +2208,41 @@ Android, iOS.
 
 A beautiful credit card payment UI, inspired by the following UI from [CVTemplates](https://cvtemplates.club/002-credit-card-checkout-screen-2x/).
 
-<img src="https://img1.dotnet9.com/2022/04/images/paymentuisample.gif" Width="250" /> 
+<img src="https://img1.dotnet9.com/2022/04/images/paymentuisample.gif" Width="250" />
 
 ### Platforms
 
 Android, iOS.
 
 ### Features:
+
 - Visual.
 - Behaviors.
 
 ### More information:
+
 - Blog: [Credit Card Payment UI in Xamarin Forms](https://xamgirl.com/credit-card-payment-ui-in-xamarin-forms/)
 - Source code: [https://github.com/CrossGeeks/PaymentUISample](https://github.com/CrossGeeks/PaymentUISample)
 - Author: [Charlin Agramonte](https://xamgirl.com)
-  
+
 ## [xUber](https://github.com/CrossGeeks/xUber)
 
 Uber Clone using Xamarin.Forms.
 
-<img src="https://img1.dotnet9.com/2022/04/images/xuber.png" Width="800" /> 
+<img src="https://img1.dotnet9.com/2022/04/images/xuber.png" Width="800" />
 
 ### Platforms
 
 Android, iOS.
 
 ### Features:
+
 - [Google Maps](https://github.com/amay077/Xamarin.Forms.GoogleMaps).
 - [Cards](https://github.com/AndreiMisiukevich/CardView).
 - Dialogs.
 
 ### More information:
+
 - Blog: [Introducing xUber – Uber clone using Xamarin Forms](https://www.xamboy.com/2019/07/03/introducing-xuber-uber-clone-using-xamarin-forms/)
 - Source code: [https://github.com/CrossGeeks/xUber](https://github.com/CrossGeeks/xUber)
 - Author: [Rendy del Rosario](https://github.com/CrossGeeks)
@@ -2074,25 +2251,27 @@ Android, iOS.
 
 A Xamarin.Forms version of a banking app concept, showing off how to use a base page.
 
-<img src="https://img1.dotnet9.com/2022/04/images/banking.jpg" Width="800" /> 
+<img src="https://img1.dotnet9.com/2022/04/images/banking.jpg" Width="800" />
 
 ### Platforms
 
 Android, iOS.
 
 ### Features:
+
 - BasePage.
 - Xamarin Essentials.
 - PancakeView.
 
 ### More information:
+
 - Blog: [Create a kickass banking app using a BasePage in Xamarin](https://www.thewissen.io/create-a-kickass-banking-app-using-a-basepage-in-xamarin/)
 - Source code: [https://github.com/sthewissen/KickassUI.Banking](https://github.com/sthewissen/KickassUI.Banking)
 - Author: [Steven Thewissen](https://twitter.com/devnl)
 
 ## [YellowClone](https://github.com/ionixjunior/YellowClone)
 
-A Yellow App clone made with Xamarin.Forms. 
+A Yellow App clone made with Xamarin.Forms.
 
 <img src="https://img1.dotnet9.com/2022/04/images/yellowclone01.png" Width="180" /> <img src="https://img1.dotnet9.com/2022/04/images/yellowclone02.png" Width="180" /> <img src="https://img1.dotnet9.com/2022/04/images/yellowclone03.png" Width="180" />
 
@@ -2106,6 +2285,7 @@ Android, iOS.
 - MasterDetailPage.
 
 ### More information:
+
 - Source code: [https://github.com/ionixjunior/YellowClone](https://github.com/ionixjunior/YellowClone)
 - Author: [Ione Souza Junior](https://github.com/ionixjunior)
 
@@ -2130,9 +2310,10 @@ Android, iOS.
 - Xamarin.Forms Shell.
 
 ### More information:
+
 - Source code: [https://github.com/o1298098/Xamarin-CloudMusic](https://github.com/o1298098/Xamarin-CloudMusic)
 - Author: [o1298098](https://github.com/o1298098)
-  
+
 ## [DayVsNight](https://github.com/kphillpotts/DayVsNight)
 
 A Xamarin.Forms UI Challenge.
@@ -2149,6 +2330,7 @@ Android, iOS.
 - PancakeView.
 
 ### More information:
+
 - Source code: [https://github.com/kphillpotts/DayVsNight](https://github.com/kphillpotts/DayVsNight)
 - Author: [Kym Phillpotts](https://twitter.com/kphillpotts)
 
@@ -2180,20 +2362,22 @@ The EMI (Equated Monthly Instalment) Calculator is an application developed usin
 ![Xamarin.Forms EMI Calculator](https://img1.dotnet9.com/2022/04/images/xamarin-forms-emi-calculator.png)
 
 ### Platform
+
 Android, iOS.
 
 ### Features:
-* XAML UI
-* Converters
-* Custom controls
-* Data binding
-* Behaviours
-* MVVM
-* Xamarin.Essentials 
-* Localization
-* Styles
-* AutoFac for dependency injection
-* Phone and tablet layout
+
+- XAML UI
+- Converters
+- Custom controls
+- Data binding
+- Behaviours
+- MVVM
+- Xamarin.Essentials
+- Localization
+- Styles
+- AutoFac for dependency injection
+- Phone and tablet layout
 
 ### More information:
 
@@ -2201,12 +2385,12 @@ Source code: https://github.com/syncfusion/xamarin-showcase-emi-calculator
 
 This project uses the following Syncfusion controls:
 
-* [SfNumericUpDown](https://www.syncfusion.com/xamarin-ui-controls/numericupdown)
-* [SfChart](https://www.syncfusion.com/xamarin-ui-controls/charts)
-* [SfDataGrid](https://www.syncfusion.com/xamarin-ui-controls/datagrid)
-* [SfTabView](https://www.syncfusion.com/xamarin-ui-controls/tabbed-view)
-* [XlsIO](https://www.syncfusion.com/excel-framework/xamarin)
-* [SfButton](https://www.syncfusion.com/xamarin-ui-controls/button)
+- [SfNumericUpDown](https://www.syncfusion.com/xamarin-ui-controls/numericupdown)
+- [SfChart](https://www.syncfusion.com/xamarin-ui-controls/charts)
+- [SfDataGrid](https://www.syncfusion.com/xamarin-ui-controls/datagrid)
+- [SfTabView](https://www.syncfusion.com/xamarin-ui-controls/tabbed-view)
+- [XlsIO](https://www.syncfusion.com/excel-framework/xamarin)
+- [SfButton](https://www.syncfusion.com/xamarin-ui-controls/button)
 
 ## [Timeline With Images](https://github.com/egbakou/Timeline)
 
@@ -2235,16 +2419,19 @@ Xamarin.Forms good looking UI sample. This sample is based on [Art News App](htt
 <img src="https://img1.dotnet9.com/2022/04/images/artnews.gif" Width="320" />
 
 ### Platforms
+
 Android, iOS.
 
 ### Features:
+
 - XAML Animations.
 - BindableLayout.
 - CollectionView
 - Page transitions.
-- Shared element transitions. 
+- Shared element transitions.
 
 ### More information:
+
 - Source code: [https://github.com/jsuarezruiz/ArtNews](https://github.com/jsuarezruiz/ArtNews)
 - Author: [Javier Suárez](https://twitter.com/jsuarezruiz)
 
@@ -2255,13 +2442,16 @@ A Xamarin.Forms Layout challenge. From the design found at: https://dribbble.com
 <img src="https://img1.dotnet9.com/2022/04/images/artauction.gif" Width="320" />
 
 ### Platforms
+
 Android, iOS, UWP.
 
 ### Features:
+
 - Animations.
 - BindableLayout.
 
 ### More information:
+
 - Blog: [Xamarin.Forms UI Challenges - Art Auction](https://kymphillpotts.com/xamarin-forms-ui-challenge-artauction.html)
 - Source code: [https://github.com/kphillpotts/ArtAuction](https://github.com/kphillpotts/ArtAuction)
 - Author: [Kym Phillpotts](https://twitter.com/kphillpotts)
@@ -2273,12 +2463,15 @@ Xamarin.Forms good looking UI sample. This sample is based on [Timeline Profile 
 <img src="https://img1.dotnet9.com/2022/04/images/timeline-pulse.gif" Width="320" />
 
 ### Platforms
+
 Android, iOS.
 
 ### Features:
+
 - SkiaSharp.
 
 ### More information:
+
 - Source code: [https://github.com/jsuarezruiz/TimelinePulse](https://github.com/jsuarezruiz/TimelinePulse)
 - Author: [Javier Suárez](https://twitter.com/jsuarezruiz)
 
@@ -2289,13 +2482,16 @@ A Xamarin.Forms version of the Traveler app to prove you can create good-looking
 <img src="https://img1.dotnet9.com/2022/04/images/traveler.png" Width="600" />
 
 ### Platforms
+
 Android, iOS.
 
 ### Features:
+
 - CollectionView.
 - [PancakeView](https://github.com/sthewissen/Xamarin.Forms.PancakeView).
 
 ### More information:
+
 - Blog: [Travel broadens the mind…](https://www.thewissen.io/travel-broadens-the-mind/)
 - Source code: [https://github.com/sthewissen/KickassUI.Traveler](https://github.com/sthewissen/KickassUI.Traveler)
 - Author: [Steven Thewissen](https://twitter.com/devnl)
@@ -2307,12 +2503,15 @@ A Xamarin.Forms application with form highlight animation using SkiaSharp and Xa
 <img src="https://img1.dotnet9.com/2022/04/images/animatedhighlightapp.gif" Width="320" />
 
 ### Platforms
+
 Android, iOS.
 
 ### Features:
+
 - SkiaSharp.
 
 ### More information:
+
 - [Blog: Xamarin.Forms + SkiaSharp: Create Awesome Cross-Platform Animations in Your Mobile App](https://www.telerik.com/blogs/xamarinforms-skiasharp-create-awesome-cross-platform-animations-in-your-mobile-app)
 - Source code: https://github.com/andreinitescu/AnimatedHighlightApp
 - Author: [Andrei Nitescu](https://github.com/andreinitescu)
@@ -2324,13 +2523,16 @@ A Xamarin.Forms version of the [Filter Menu](https://dribbble.com/shots/1956586-
 <img src="https://img1.dotnet9.com/2022/04/images/forms-tasks.gif" Width="320" />
 
 ### Platforms
+
 Android, iOS.
 
 ### Features:
+
 - Xamarin.Forms Animations.
 - SkiaSharp.
 
 ### More information:
+
 - Blog: [[Xamarin.Forms Challenge] My Tasks](https://javiersuarezruiz.wordpress.com/2019/02/28/xamarin-forms-challenge-my-tasks/)
 - Source code: https://github.com/jsuarezruiz/MyTasks
 - Author: [Javier Suárez](https://twitter.com/jsuarezruiz)
@@ -2346,10 +2548,12 @@ A Xamarin.Forms version of the Chameleon app to prove you can create goodlooking
 Android, iOS.
 
 ### Features:
+
 - Xamarin Essentials.
 - Lottie.
 
 ### More information:
+
 - Blog: [Creating an encyclopedia page in Xamarin.Forms](https://www.thewissen.io/creating-an-encyclopedia-page-in-xamarin-forms/)
 - Source code: https://github.com/sthewissen/KickassUI.Chameleon
 - Author: [Steven Thewissen](https://twitter.com/devnl)
@@ -2365,16 +2569,18 @@ A Xamarin.Forms sample to show how to use Bindable Layout. This sample is based 
 Android, iOS & UWP.
 
 ### Features:
+
 - Xamarin.Forms BindableLayout.
 - CSS.
 
 ### More information:
+
 - Source code: [https://github.com/jsuarezruiz/BindableLayoutPlayground](https://github.com/jsuarezruiz/BindableLayoutPlayground)
 - Author: [Javier Suárez](https://twitter.com/jsuarezruiz)
 
 ## [Tailwind Traders](https://github.com/Microsoft/TailwindTraders-Mobile)
 
- A fictitious retail company showcasing the future of intelligent mobile application experiences.
+A fictitious retail company showcasing the future of intelligent mobile application experiences.
 
 <img src="https://img1.dotnet9.com/2022/04/images/tailwindtraders.png" Width="800" />
 
@@ -2383,13 +2589,15 @@ Android, iOS & UWP.
 Android & iOS.
 
 ### Features:
+
 - Xamarin.Forms Shell.
 - SkiaSharp.
 
 ### More information:
+
 - Source code: [https://github.com/Microsoft/TailwindTraders-Mobile](https://github.com/Microsoft/TailwindTraders-Mobile)
 
-## [Posy](https://github.com/sthewissen/Posy) 
+## [Posy](https://github.com/sthewissen/Posy)
 
 A simple but good looking Xamarin.Forms UI screen.
 
@@ -2400,6 +2608,7 @@ A simple but good looking Xamarin.Forms UI screen.
 Android & iOS.
 
 ### Features:
+
 - Gradient background on the content page.
 - A randomly generated set of stars that rotates independently.
 - A small card with the result of your calculations.
@@ -2407,6 +2616,7 @@ Android & iOS.
 - Some entry animation of controls.
 
 ### More information:
+
 - Blog: [Xamarin.Forms in Space!](https://www.thewissen.io/xamarin-forms-in-space/)
 - Source code: [https://github.com/sthewissen/Posy](https://github.com/sthewissen/Posy)
 - Author: [Steven Thewissen](https://twitter.com/devnl)
@@ -2429,12 +2639,13 @@ Android & iOS.
 - Gradient Color animation
 
 ### More information:
+
 - Source code: [https://github.com/sthewissen/KickassUI.ParallaxCarousel](https://github.com/sthewissen/KickassUI.ParallaxCarousel)
 - Author: [Steven Thewissen](https://twitter.com/devnl)
 
 ## [PulseMusic](https://github.com/jsuarezruiz/PulseMusic)
 
-A Xamarin.Forms music player sample. 
+A Xamarin.Forms music player sample.
 
 <img src="https://img1.dotnet9.com/2022/04/images/pulsemusic.gif" Width="320" />
 
@@ -2477,7 +2688,7 @@ ASP.NET Core 2.1 for server API.
 
 ## [My Trip Countdown](https://github.com/jsuarezruiz/MyTripCountdown)
 
-A Xamarin.Forms timer until your next vacation. 
+A Xamarin.Forms timer until your next vacation.
 
 <img src="https://img1.dotnet9.com/2022/04/images/mytripcountdown.png" Width="800" />
 
@@ -2539,7 +2750,7 @@ Android, iOS & UWP.
 
 ### More information:
 
-- Source code:  [https://github.com/Microsoft/SmartHotel360-mobile-desktop-apps](https://github.com/Microsoft/SmartHotel360-mobile-desktop-apps)
+- Source code: [https://github.com/Microsoft/SmartHotel360-mobile-desktop-apps](https://github.com/Microsoft/SmartHotel360-mobile-desktop-apps)
 
 ## [BikeSharing](https://github.com/Microsoft/BikeSharing360_MobileApps)
 
@@ -2558,7 +2769,7 @@ Android, iOS & UWP.
 
 ### More information:
 
-- Source code:  [https://github.com/Microsoft/BikeSharing360_MobileApps](https://github.com/Microsoft/BikeSharing360_MobileApps)
+- Source code: [https://github.com/Microsoft/BikeSharing360_MobileApps](https://github.com/Microsoft/BikeSharing360_MobileApps)
 
 ## [Bikr](https://github.com/aloisdeniel/Microcharts.Samples)
 
@@ -2579,9 +2790,9 @@ Android, iOS & UWP.
 - Source code: [https://github.com/aloisdeniel/Microcharts.Samples](https://github.com/aloisdeniel/Microcharts.Samples)
 - Author: [Aloïs Deniel](https://github.com/aloisdeniel)
 
-## [Evolve](https://github.com/xamarinhq/app-evolve) 
+## [Evolve](https://github.com/xamarinhq/app-evolve)
 
-Xamarin Evolve 2016 Mobile App. 
+Xamarin Evolve 2016 Mobile App.
 
 <img src="https://img1.dotnet9.com/2022/04/images/evolve.png" Width="800" />
 
@@ -2629,7 +2840,7 @@ Android, iOS & UWP.
 
 ## [InAnger](https://github.com/awolf/Xamarin-Forms-InAnger)
 
-Samples to show that Xamarin.Forms is capable of creating something that  looks really good.
+Samples to show that Xamarin.Forms is capable of creating something that looks really good.
 
 <img src="https://img1.dotnet9.com/2022/04/images/inanger.png" Width="600" />
 
@@ -2655,7 +2866,7 @@ Android & iOS.
 
 ## [Instagram](https://github.com/adamped/Instagram)
 
-<img src="https://img1.dotnet9.com/2022/04/images/instagram-login.png" Width="210" /> <img src="https://img1.dotnet9.com/2022/04/images/instagram-feed.png" Width="210" /> <img src="https://img1.dotnet9.com/2022/04/images/instagram-feed-ios.png" Width="210" /> <img src="https://img1.dotnet9.com/2022/04/images/instagram-feed-droid.png" Width="210" /> 
+<img src="https://img1.dotnet9.com/2022/04/images/instagram-login.png" Width="210" /> <img src="https://img1.dotnet9.com/2022/04/images/instagram-feed.png" Width="210" /> <img src="https://img1.dotnet9.com/2022/04/images/instagram-feed-ios.png" Width="210" /> <img src="https://img1.dotnet9.com/2022/04/images/instagram-feed-droid.png" Width="210" />
 
 ### Platforms
 
@@ -2780,9 +2991,9 @@ Android & iOS.
 
 ## [Timeline](https://github.com/kphillpotts/XamarinFormsLayoutChallenges)
 
-A timeline of activities.  This is useful for things like transportation schedules or class times. 
+A timeline of activities. This is useful for things like transportation schedules or class times.
 
-<img src="https://img1.dotnet9.com/2022/04/images/timeline-android.png" Width="210" /> <img src="https://img1.dotnet9.com/2022/04/images/timeline-ios.png" Width="210" /> 
+<img src="https://img1.dotnet9.com/2022/04/images/timeline-android.png" Width="210" /> <img src="https://img1.dotnet9.com/2022/04/images/timeline-ios.png" Width="210" />
 
 ### Platforms
 
@@ -2870,7 +3081,7 @@ Android, iOS, Linux (GTK), macOS, UWP and Windows (WPF).
 
 WalkthroughApp is a Xamarin.Forms application that makes use of CarouselView and Lottie, to demonstrate the possibilities of creating a fluid and powerful Walkthrough without requiring Custom Renderers.
 
-<img src="https://img1.dotnet9.com/2022/04/images/walkthrough.gif" Width="250" /> 
+<img src="https://img1.dotnet9.com/2022/04/images/walkthrough.gif" Width="250" />
 
 ### Platforms
 

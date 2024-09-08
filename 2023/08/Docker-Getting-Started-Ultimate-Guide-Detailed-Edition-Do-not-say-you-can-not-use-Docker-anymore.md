@@ -5,8 +5,8 @@ description: 富 Web 时代，应用变得越来越强大，与此同时也越�
 date: 2023-08-15 20:39:23
 copyright: Reprinted
 author: Jartto's blog
-originaltitle: Docker 边学边用
-originallink: http://jartto.wang/2020/07/04/learn-docker/
+originalTitle: Docker 边学边用
+originalLink: http://jartto.wang/2020/07/04/learn-docker/
 draft: false
 cover: https://img1.dotnet9.com/2023/08/cover_02.png
 categories: 分享
@@ -48,7 +48,7 @@ tags: Docker
 
 是不是很神奇？对应到我们的项目中来，房子就是项目本身，镜像就是项目的复制，背包就是镜像仓库。如果要动态扩容，从仓库中取出项目镜像，随便复制就可以了。`Build once，Run anywhere!`
 
->不用再关注版本、兼容、部署等问题，彻底解决了「上线即崩，无休止构建」的尴尬。
+> 不用再关注版本、兼容、部署等问题，彻底解决了「上线即崩，无休止构建」的尴尬。
 
 ## 二、虚拟机与容器
 
@@ -76,21 +76,21 @@ tags: Docker
 
 我们来看一下对比数据：
 
-| 特性 | 虚拟机 | 容器 |
-| ---- | ---- | ---- |
-| 隔离级别 | 操作系统级 | 进程 |
-| 隔离策略 | Hypervisor（虚拟机监控器） | Cgroups（控制组群） |
-| 系统资源 | 5 ～ 15% | 0 ～ 5% |
-| 启动时间 | 分钟级 | 秒级 |
-| 镜像存储 | GB - TB | KB - MB |
-| 集群规模 | 上百 | 上万 |
-| 高可用策略 | 备份、容灾、迁移 | 弹性、负载、动态 |
+| 特性       | 虚拟机                     | 容器                |
+| ---------- | -------------------------- | ------------------- |
+| 隔离级别   | 操作系统级                 | 进程                |
+| 隔离策略   | Hypervisor（虚拟机监控器） | Cgroups（控制组群） |
+| 系统资源   | 5 ～ 15%                   | 0 ～ 5%             |
+| 启动时间   | 分钟级                     | 秒级                |
+| 镜像存储   | GB - TB                    | KB - MB             |
+| 集群规模   | 上百                       | 上万                |
+| 高可用策略 | 备份、容灾、迁移           | 弹性、负载、动态    |
 
 与虚拟机相比，容器更轻量且速度更快，因为它利用了 Linux 底层操作系统在隔离的环境中运行。虚拟机的 `Hypervisor` 创建了一个非常牢固的边界，以防止应用程序突破它，而容器的边界不那么强大。
 
 物理机部署不能充分利用资源，造成资源浪费。虚拟机方式部署，虚拟机本身会占用大量资源，导致资源浪费，另外虚拟机性能也很差。而容器化部署比较灵活，且轻量级，性能较好。
 
->虚拟机属于虚拟化技术，而 Docker 这样的容器技术，属于轻量级的虚拟化。
+> 虚拟机属于虚拟化技术，而 Docker 这样的容器技术，属于轻量级的虚拟化。
 
 ## 三、认识 Docker
 
@@ -108,7 +108,7 @@ Docker 是一个开源的应用容器引擎，让开发者可以打包他们的�
 
 当我们请求 `Docker` 运行容器时，`Docker` 会在计算机上设置一个资源隔离的环境。然后将打包的应用程序和关联的文件复制到 `Namespace` 内的文件系统中，此时环境的配置就完成了。之后 `Docker` 会执行我们预先指定的命令，运行应用程序。
 
->镜像不包含任何动态数据，其内容在构建之后也不会被改变。
+> 镜像不包含任何动态数据，其内容在构建之后也不会被改变。
 
 ## 四、核心概念
 
@@ -150,7 +150,7 @@ docker -v
     "http://hub-mirror.c.163.com/",
     "https://registry.docker-cn.com"
   ],
-  "insecure-registries":[],
+  "insecure-registries": [],
   "experimental": false,
   "debug": true
 }
@@ -175,23 +175,23 @@ docker -v
 
 1.首先需要大致了解一下我们将会用到的 11 个命令
 
-| 命令 | 描述 |
-| ---- | ---- |
-| FROM | 基于哪个镜像来实现 |
-| MAINTAINER | 镜像创建者 |
-| ENV | 声明环境变量 |
-| RUN | 执行命令 |
-| ADD | 添加宿主机文件到容器里，有需要解压的文件会自动解压 |
-| COPY | 添加宿住机文件到容器里 |
-| WORKDIR | 工作目录 |
-| EXPOSE | 容器内应用可使用的端口 |
-| CMD | 容器启动后所执行的程序，如果执行 docker run 后面跟启动命令会被覆盖掉 |
+| 命令       | 描述                                                                                 |
+| ---------- | ------------------------------------------------------------------------------------ |
+| FROM       | 基于哪个镜像来实现                                                                   |
+| MAINTAINER | 镜像创建者                                                                           |
+| ENV        | 声明环境变量                                                                         |
+| RUN        | 执行命令                                                                             |
+| ADD        | 添加宿主机文件到容器里，有需要解压的文件会自动解压                                   |
+| COPY       | 添加宿住机文件到容器里                                                               |
+| WORKDIR    | 工作目录                                                                             |
+| EXPOSE     | 容器内应用可使用的端口                                                               |
+| CMD        | 容器启动后所执行的程序，如果执行 docker run 后面跟启动命令会被覆盖掉                 |
 | ENTRYPOINT | 与 CMD 功能相同，但需 docker run 不会覆盖，如果需要覆盖可增加参数 -entrypoint 来覆盖 |
-| VOLUME | 数据卷，将宿主机的目录映射到容器中的目录 |
+| VOLUME     | 数据卷，将宿主机的目录映射到容器中的目录                                             |
 
 2. 新建项目
 
-为了快捷，我们直接使用Vue [脚手架](https://cli.vuejs.org/guide/creating-a-project.html#vue-create)构建项目：
+为了快捷，我们直接使用 Vue [脚手架](https://cli.vuejs.org/guide/creating-a-project.html#vue-create)构建项目：
 
 ```shell
 vue create docker-demo
@@ -350,7 +350,7 @@ docker image ls | grep jartto-docker-demo
 jartto-docker-demo latest 7df6efaf9592 About a minute ago 133MB
 ```
 
->镜像也有好坏之分，后续我们将介绍如何优化，这里可以先暂时忽略。
+> 镜像也有好坏之分，后续我们将介绍如何优化，这里可以先暂时忽略。
 
 7. 运行容器
 
@@ -396,11 +396,11 @@ curl -v -i localhost:3000
 
 9. 发布镜像
 
->如果你想为社区贡献力量，那么需要将镜像发布，方便其他开发者使用。
+> 如果你想为社区贡献力量，那么需要将镜像发布，方便其他开发者使用。
 
 发布镜像需要如下步骤：
 
-- 登录  [dockerhub](https://hub.docker.com)，注册账号；
+- 登录 [dockerhub](https://hub.docker.com)，注册账号；
 - 命令行执行 `docker login`，之后输入我们的账号密码，进行登录；
 - 推送镜像之前，需要打一个 Tag，执行 `docker tag <image> <username>/<repository>:<tag>`
 
@@ -477,10 +477,12 @@ curl -v -i localhost:3000
   - `VOLUME /var/data var/log` 指定容器中的 `var/log` 目录挂载到宿主机上的 `/var/data` 目录，这种形式可以手动指定宿主机上的目录
 
 - WORKDIR：设置工作目录，设置之后 ，RUN、CMD、COPY、ADD 的工作目录都会同步变更
+
   - `WORKDIR <path>`
   - 示例：`WORKDIR /app/test`
 
 - USER：指定运行命令时所使用的用户，为了安全和权限起见，根据要执行的命令选择不同用户
+
   - `USER <user>:[<group>]`
   - 示例：`USER test`
 
@@ -494,7 +496,7 @@ curl -v -i localhost:3000
 
 在掌握 Docker 常规操作之后，我们很容易就可以打出自己想要的项目镜像。然而不同的操作打出的镜像也是千差万别。
 
->究竟是什么原因导致镜像差异，我们不妨继续探索。
+> 究竟是什么原因导致镜像差异，我们不妨继续探索。
 
 以下是在应用 Docker 过程中整理的最佳实践，请尽量遵循如下准则：
 
@@ -514,5 +516,5 @@ curl -v -i localhost:3000
 
 赶快打开技能边界，为你的前端技术赋能吧！
 
->版权声明：
->文章首发于 [Jartto's Blog](http://jartto.wang/) ， 转载文章请务必以超链接形式标明文章出处、作者信息及本版权声明。
+> 版权声明：
+> 文章首发于 [Jartto's Blog](http://jartto.wang/) ， 转载文章请务必以超链接形式标明文章出处、作者信息及本版权声明。

@@ -5,8 +5,8 @@ description: 基于FlaUI自动化+chatGPT实现微信自动回复
 date: 2023-08-30 19:57:19
 copyright: Contributes
 author: 且听风吟
-originaltitle: 基于FlaUI自动化+chatGPT实现微信自动回复
-originallink: https://blog.csdn.net/ftfmatlab/article/details/132589169
+originalTitle: 基于FlaUI自动化+chatGPT实现微信自动回复
+originalLink: https://blog.csdn.net/ftfmatlab/article/details/132589169
 draft: false
 cover: https://img1.dotnet9.com/2023/08/0702.png
 categories: .NET
@@ -17,7 +17,7 @@ tags: .NET
 >
 > 作者：且听风吟
 >
-> 原文标题：基于FlaUI自动化+chatGPT实现微信自动回复
+> 原文标题：基于 FlaUI 自动化+chatGPT 实现微信自动回复
 >
 > 原文链接：https://blog.csdn.net/ftfmatlab/article/details/132589169
 
@@ -41,9 +41,9 @@ tags: .NET
 
 3. 当刷新到新的消息时，模拟鼠标点击到对应的会话人，此时判断是群聊还是人，如果是群聊则不回复。
 
-4. 获取消息后转发给chatGPT，同时等待chatGPT回复内容。
+4. 获取消息后转发给 chatGPT，同时等待 chatGPT 回复内容。
 
-5. 获取chatGPT的内容后将内容输入到微信聊天框，并模拟鼠标点击发送按钮。
+5. 获取 chatGPT 的内容后将内容输入到微信聊天框，并模拟鼠标点击发送按钮。
 
 6. 模拟鼠标点击文件传输助手，等待其它消息。。。。
 
@@ -462,7 +462,7 @@ internal static class SystemEx
 }
 ```
 
-**注：ChatAchieve是 IChat的实现，是对chatGPT的实现**
+**注：ChatAchieve 是 IChat 的实现，是对 chatGPT 的实现**
 
 ```csharp
 public interface IChat
@@ -474,7 +474,7 @@ public interface IChat
 
 作者懒，不愿意将代码放仓库，源码直接丢站长了，大家需要直接点击下载：https://img1.dotnet9.com/2023/08/WeChat.Automation.zip
 
-技术交流添加QQ群：771992300
+技术交流添加 QQ 群：771992300
 
 或扫站长微信(codewf，备注“加群”)加入微信技术交流群：
 
