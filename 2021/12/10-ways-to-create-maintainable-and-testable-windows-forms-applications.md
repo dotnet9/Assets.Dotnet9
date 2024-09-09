@@ -9,7 +9,8 @@ originalTitle: 创建可维护和可测试的 Windows 窗体应用程序的 10 �
 originalLink: https://markheath.net/post/maintainable-winforms
 draft: False
 cover: https://img1.dotnet9.com/2021/12/cover_09.jpeg
-categories: .NET
+categories: 
+    - .NET
 tags: 
     - Winform
     - 单元测试

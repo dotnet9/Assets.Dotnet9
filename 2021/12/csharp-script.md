@@ -9,7 +9,8 @@ originalTitle: C# 脚本
 originalLink: https://www.cnblogs.com/zhenl/p/15714453.html
 draft: False
 cover: https://img1.dotnet9.com/2021/12/cover_38.png
-categories: .NET
+categories: 
+    - .NET
 tags: 
     - C#
     - 脚本

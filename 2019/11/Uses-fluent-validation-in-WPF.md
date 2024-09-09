@@ -7,7 +7,8 @@ lastmod: 2024-01-25 05:17:26
 author: 沙漠尽头的狼
 draft: false
 cover: https://img1.dotnet9.com/2019/11/cover_01.png
-categories: .NET
+categories: 
+    - .NET
 copyright: Original
 tags: 
     - WPF

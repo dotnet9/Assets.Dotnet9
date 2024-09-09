@@ -11,8 +11,10 @@ originalTitle: 【WPF】自定义GridLineDecorator给ListView画网格
 originalLink: https://www.cnblogs.com/RMay/archive/2010/12/27/1918048.html
 draft: false
 cover: https://img1.dotnet9.com/2024/02/cover_02.png
-categories: .NET
-tags: ListView
+categories: 
+    - .NET
+tags: 
+    - ListView
 ---
 
 感谢 [rgqancy](http://www.cnblogs.com/rgqancy/) 指出的 Bug，已经修正

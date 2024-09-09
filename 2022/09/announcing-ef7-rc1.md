@@ -9,8 +9,10 @@ originalTitle: Announcing Entity Framework 7 Release Candidate 1
 originalLink: https://devblogs.microsoft.com/dotnet/announcing-ef7-rc1/
 draft: false
 cover: https://img1.dotnet9.com/2022/09/ef7.jpeg
-categories: .NET
-tags: .NET
+categories: 
+    - .NET
+tags: 
+    - .NET
 ---
 
 > 原文链接：[https://devblogs.microsoft.com/dotnet/announcing-ef7-rc1/](https://devblogs.microsoft.com/dotnet/announcing-ef7-rc1/)

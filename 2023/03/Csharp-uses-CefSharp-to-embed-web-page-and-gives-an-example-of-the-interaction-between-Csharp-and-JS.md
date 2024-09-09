@@ -5,8 +5,10 @@ description: 有在客户端内嵌网页的需求吗？CefSharp可能是个不�
 date: 2023-03-27 22:43:17
 copyright: Original
 cover: https://img1.dotnet9.com/2023/03/cover_14.png
-categories: .NET
-tags: CefSharp
+categories: 
+    - .NET
+tags: 
+    - CefSharp
 ---
 
 大家好，我是沙漠尽头的狼。

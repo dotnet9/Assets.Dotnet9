@@ -9,8 +9,10 @@ originalTitle: ASP.NET (Core)使用Markdown
 originalLink: https://www.cnblogs.com/jiyuwu/p/11791004.html
 draft: False
 cover: https://img1.dotnet9.com/2021/11/cover_04.jpeg
-categories: .NET
-tags: Markdown
+categories: 
+    - .NET
+tags: 
+    - Markdown
 ---
 
 **研究如何使用 Markdown 你们可能要花好几天才能搞定，但是看我的文章或者下载了源码，你搞定一般在 10 分钟之内。我先给各位介绍下它：**

@@ -11,8 +11,10 @@ originalTitle: Java vs. C#
 originalLink: https://www.kapresoft.com/java/2023/11/29/java-vs-c-sharp-dot-net.html
 draft: false
 cover: https://img1.dotnet9.com/2024/03/cover_08.png
-categories: .NET
-tags: Java
+categories: 
+    - .NET
+tags: 
+    - Java
 ---
 
 本文来自翻译：

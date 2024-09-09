@@ -7,8 +7,10 @@ lastmod: 2024-02-03 22:57:16
 copyright: Original
 draft: false
 cover: https://img1.dotnet9.com/2024/02/cover_01.png
-categories: .NET
-tags: 事件注册
+categories: 
+    - .NET
+tags: 
+    - 事件注册
 ---
 
 大家好，我是沙漠尽头的狼！

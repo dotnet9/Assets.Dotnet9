@@ -10,8 +10,10 @@ originalTitle: .NET8 正式发布， C#12 新变化
 originalLink: https://mp.weixin.qq.com/s/FwbdnbYXIrSxLFmd3_0rAA
 draft: false
 cover: https://img1.dotnet9.com/2023/11/cover_07.jpg
-categories: .NET
-tags: 技术更新
+categories: 
+    - .NET
+tags: 
+    - 技术更新
 ---
 
 > 虽然 8 又带来了很多方面的增强，比如：人工智能、云原生、性能、native AOT 等，但我还是最关注 C# 语言和一些框架层面的变化，下面介绍下 C# 12 和框架中的我认为比较实用的新增功能。

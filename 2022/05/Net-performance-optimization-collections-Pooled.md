@@ -9,8 +9,10 @@ originalTitle: .NET性能优化-推荐使用Collections.Pooled
 originalLink: https://www.cnblogs.com/InCerry/p/Recommand_Use_Collections_Pooled.html
 draft: False
 cover: https://img1.dotnet9.com/2022/05/5801.jpg
-categories: .NET
-tags: .NET
+categories: 
+    - .NET
+tags: 
+    - .NET
 ---
 
 ## 简介

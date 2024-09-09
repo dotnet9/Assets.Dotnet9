@@ -7,7 +7,8 @@ copyright: Original
 originalTitle: 如何在 C# 9 中使用record类型？
 draft: False
 cover: https://img1.dotnet9.com/2021/07/cover_03.jpg
-categories: .NET
+categories: 
+    - .NET
 tags: 
     - C#
     -Record

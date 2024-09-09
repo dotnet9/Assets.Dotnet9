@@ -9,8 +9,10 @@ originalTitle: Coravel是.NetCore中开源的工具库，可以让你使用定�
 originalLink: https://mp.weixin.qq.com/s/q6mNrmulYKnnhqLKxubz2A
 draft: False
 cover: https://img1.dotnet9.com/2022/07/cover_06.png
-categories: .NET
-tags: .NET
+categories: 
+    - .NET
+tags: 
+    - .NET
 ---
 
 ## Coravel

@@ -9,8 +9,10 @@ originalTitle: 劳动仲裁回忆录（一）：提交仲裁申请
 originalLink: https://mp.weixin.qq.com/s/jBIbbEU2FPhMJDg78uvioQ
 draft: False
 cover: https://img1.dotnet9.com/2022/03/cover_12.jpeg
-categories: 分享
-tags: 仲裁
+categories: 
+    - 分享
+tags: 
+    - 仲裁
 ---
 
 > 本文含劳动仲裁申请相关内容和附件，附件下载在文末。

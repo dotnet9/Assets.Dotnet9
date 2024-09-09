@@ -9,8 +9,10 @@ originalTitle: 使用 Web API 上传和下载多个文件
 originalLink: https://www.c-sharpcorner.com/article/upload-and-download-multiple-files-using-web-api/
 draft: False
 cover: https://img1.dotnet9.com/2022/07/cover_21.png
-categories: .NET
-tags: .NET
+categories: 
+    - .NET
+tags: 
+    - .NET
 ---
 
 > 原文作者：Jay Krishna Reddy

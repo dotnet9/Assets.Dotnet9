@@ -9,8 +9,10 @@ originalTitle: Maui学习之路(1)-Windows窗体设置
 originalLink: https://mp.weixin.qq.com/s/_wdRtzSAPkIa3-kK8nKGbQ
 draft: False
 cover: https://img1.dotnet9.com/2022/06/cover_01.png
-categories: .NET
-tags: MAUI
+categories:
+    - .NET
+tags: 
+    - MAUI
 ---
 
 作为 `Maui`的先行者，我有话要说，微软你为了让我成为牛 B 的程序员真的是煞费苦心，你一定是觉得我不够牛逼所以针对我，存心想气死我。

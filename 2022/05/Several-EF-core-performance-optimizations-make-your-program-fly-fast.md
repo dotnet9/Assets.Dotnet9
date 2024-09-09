@@ -9,7 +9,8 @@ originalTitle: 几条EF core性能优化，让你程序健步如飞
 originalLink: https://www.cnblogs.com/qingheshiguang/p/13559561.html
 draft: False
 cover: https://img1.dotnet9.com/2022/05/cover_07.png
-categories: .NET
+categories: 
+    - .NET
 tags: 
     - .NET
     - ORM

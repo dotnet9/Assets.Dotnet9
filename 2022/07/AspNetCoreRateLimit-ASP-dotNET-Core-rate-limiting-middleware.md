@@ -9,8 +9,10 @@ originalTitle: AspNetCoreRateLimit - ASP.NET Core 速率限制中间件
 originalLink: https://mp.weixin.qq.com/s/URLZCyrLWM-NEM8eMvnVhw
 draft: False
 cover: https://img1.dotnet9.com/2022/07/cover_14.png
-categories: .NET
-tags: .NET
+categories: 
+    - .NET
+tags: 
+    - .NET
 ---
 
 ## 介绍

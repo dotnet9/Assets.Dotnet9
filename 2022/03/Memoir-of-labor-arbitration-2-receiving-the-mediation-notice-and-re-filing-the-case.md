@@ -9,8 +9,10 @@ originalTitle: 劳动仲裁回忆录（二）：接到调解通知及重新立�
 originalLink: https://mp.weixin.qq.com/s/XIfN6M3abqdwdlq1A0ZYAQ
 draft: False
 cover: https://img1.dotnet9.com/2022/03/cover_12.jpeg
-categories: 分享
-tags: 仲裁
+categories: 
+    - 分享
+tags: 
+    - 仲裁
 ---
 
 > 本文介绍了劳动仲裁调解及因为一字之差需要撤销立案又重新立案的小插曲，并摘抄了一下与之相关的法律条文供参考。

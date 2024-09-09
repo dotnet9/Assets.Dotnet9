@@ -7,7 +7,8 @@ lastmod: 2024-08-02 00:14:26
 copyright: Original
 draft: false
 cover: https://img1.dotnet9.com/2024/07/cover_01.png
-categories: .NET
+categories: 
+    - .NET
 tags: 
     - .NET 9
 	- AOT

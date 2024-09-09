@@ -7,8 +7,10 @@ copyright: Original
 originalTitle: Flutter 3 发布了(文末推荐一个免费的在线Flutter学习教程)
 draft: False
 cover: https://img1.dotnet9.com/2022/05/cover_35.png
-categories: 前端
-tags: Flutter
+categories: 
+    - 前端
+tags: 
+    - Flutter
 ---
 
 > 翻译自 [Tim Sneath](https://medium.com/@timsneath) 2022 年 5 月 12 日的文章 [《Introducing Flutter 3》](https://medium.com/flutter/introducing-flutter-3-5eb69151622f)

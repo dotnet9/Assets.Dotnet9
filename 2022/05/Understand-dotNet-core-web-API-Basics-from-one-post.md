@@ -9,8 +9,10 @@ originalTitle: 一文了解.Net Core Web API基础知识
 originalLink: https://www.cnblogs.com/ang/p/13206871.html
 draft: False
 cover: https://img1.dotnet9.com/2022/05/cover_05.jpeg
-categories: .NET
-tags: Web API
+categories: 
+    - .NET
+tags: 
+    - Web API
 ---
 
 > 本文通过.NET Core 3.1 分享 Web API 基础知识，其他更新版本相差不离

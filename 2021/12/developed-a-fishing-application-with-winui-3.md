@@ -9,8 +9,10 @@ originalTitle: 用 WinUI 3 开发了一个摸鱼应用
 originalLink: https://www.cnblogs.com/dino623/archive/2021/12/15/developing_an_app_with_winui3.html
 draft: False
 cover: https://img1.dotnet9.com/2021/12/cover_20.png
-categories: .NET
-tags: WinUI 3
+categories: 
+    - .NET
+tags: 
+    - WinUI 3
 ---
 
 ## 1. 开发了一个摸鱼 App

@@ -7,7 +7,8 @@ lastmod: 2023-06-25 13:54:47
 copyright: Original
 draft: false
 cover: https://img1.dotnet9.com/2023/06/cover_12.png
-categories: .NET
+categories: 
+    - .NET
 tags: 
     - Dotnetools
     - WASM

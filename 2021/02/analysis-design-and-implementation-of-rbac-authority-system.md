@@ -9,8 +9,10 @@ originalTitle: RBAC权限系统分析、设计与实现
 originalLink: https://shuwoom.com/?p=3041
 draft: False
 cover: https://img1.dotnet9.com/2021/02/cover_01.jpeg
-categories: 分享
-tags: 架构设计
+categories: 
+    - 分享
+tags: 
+    - 架构设计
 ---
 
 最近，因为项目上需要设计实现一个权限管理模块，所以专门整理总结了 RBAC 的一些知识。

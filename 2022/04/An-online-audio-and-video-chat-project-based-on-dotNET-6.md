@@ -9,7 +9,8 @@ originalTitle: 基于 .NET 6 开发的在线音视频聊天项目
 originalLink: https://www.cnblogs.com/xymfblogs/archive/2022/04/02/16091037.html
 draft: False
 cover: https://img1.dotnet9.com/2022/04/0108.png
-categories: .NET
+categories: 
+    - .NET
 tags: 
     - .NET 6
     - WPF

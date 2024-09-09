@@ -9,7 +9,8 @@ originalTitle: 来，WinForm使用依赖注入！
 originalLink: https://mp.weixin.qq.com/s/murWKgo5KFMmMOJ4UQJWBQ
 draft: False
 cover: https://img1.dotnet9.com/2022/04/cover_29.jpg
-categories: .NET
+categories: 
+    - .NET
 tags: 
     - Winform
     - 依赖注入

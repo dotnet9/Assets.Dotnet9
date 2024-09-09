@@ -9,7 +9,8 @@ originalTitle: (10/30)大家一起学Blazor：Blog and Posts
 originalLink: https://ithelp.ithome.com.tw/articles/10262250
 draft: False
 cover: https://img1.dotnet9.com/2021/12/cover_05.png
-categories: .NET
+categories: 
+    - .NET
 tags: 
     - Blazor
     - ASP.NET Core

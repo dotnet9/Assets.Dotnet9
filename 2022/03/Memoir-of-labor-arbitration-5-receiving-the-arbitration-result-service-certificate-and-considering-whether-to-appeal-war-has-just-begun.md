@@ -9,8 +9,10 @@ originalTitle: 劳动仲裁回忆录（五）：领取仲裁结果、送达证�
 originalLink: https://mp.weixin.qq.com/s/PCL9kiuDgBYOmxk--A517w
 draft: False
 cover: https://img1.dotnet9.com/2022/03/cover_12.jpeg
-categories: 分享
-tags: 仲裁
+categories: 
+    - 分享
+tags: 
+    - 仲裁
 ---
 
 > 本篇介绍仲裁之后，领取裁决书及送达证明的过程，对裁决结果的思考，考虑是否上诉，以及得知事情并没完，而是刚刚开始。

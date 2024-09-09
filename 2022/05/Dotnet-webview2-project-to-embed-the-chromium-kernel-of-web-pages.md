@@ -9,7 +9,8 @@ originalTitle: .Net WebView2 项目，实现 嵌入 WEB 页面 Chromium内核
 originalLink: https://blog.csdn.net/i2blue/article/details/124820407
 draft: False
 cover: https://img1.dotnet9.com/2022/05/cover_45.png
-categories: .NET
+categories: 
+    - .NET
 tags: 
     - .NET
     - WebView2

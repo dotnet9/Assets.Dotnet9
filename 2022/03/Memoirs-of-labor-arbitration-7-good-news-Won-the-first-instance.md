@@ -9,8 +9,10 @@ originalTitle: 劳动仲裁回忆录（七）：喜讯！一审胜诉了！
 originalLink: https://mp.weixin.qq.com/s/56GER__3Jp1CgskI_1enLg
 draft: False
 cover: https://img1.dotnet9.com/2022/03/cover_12.jpeg
-categories: 分享
-tags: 仲裁
+categories: 
+    - 分享
+tags: 
+    - 仲裁
 ---
 
 > 在前面的篇幅中，我介绍了我于 2021 年 3 月 2 日立案开始劳动仲裁，后面经历了提交证据，仲裁开庭，领取裁决，领取法院传票等过程。本篇讲述一审之后，拿到了判决书方面内容。

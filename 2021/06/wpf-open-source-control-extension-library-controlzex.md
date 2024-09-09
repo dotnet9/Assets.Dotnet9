@@ -7,8 +7,10 @@ copyright: Original
 originalTitle: WPF开源控件扩展库ControlzEx
 draft: False
 cover: https://img1.dotnet9.com/2021/06/cover_04.jpg
-albums: 开源WPF
-categories: .NET
+albums: 
+    - 开源WPF
+categories: 
+    - .NET
 tags: 
     - C#
     - WPF

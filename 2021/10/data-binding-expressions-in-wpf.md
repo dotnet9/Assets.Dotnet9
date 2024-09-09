@@ -9,8 +9,10 @@ originalTitle: WPF中的数据绑定表达式
 originalLink: https://www.c-sharpcorner.com/article/data-binding-expression-in-wpf/
 draft: False
 cover: https://img1.dotnet9.com/2021/10/cover_03.png
-categories: .NET
-tags: Binding
+categories: 
+    - .NET
+tags: 
+    - Binding
 ---
 
 有很多文章讨论绑定的概念，并讲解如何使用 StaticResources 和 DynamicResources 绑定属性。这些概念使用 WPF 提供的数据绑定表达式。在本文中，让我们研究 WPF 提供的不同类型的数据绑定表达式。

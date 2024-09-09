@@ -7,8 +7,10 @@ lastmod: 2023-11-06 23:15:46
 copyright: Original
 draft: false
 cover: https://img1.dotnet9.com/2023/11/cover_02.png
-categories: .NET
-tags: 位运算
+categories: 
+    - .NET
+tags: 
+    - 位运算
 ---
 
 ## 1. 开头一问

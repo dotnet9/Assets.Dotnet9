@@ -9,8 +9,10 @@ originalTitle: 微服务 配置中心 Nacos .Net 5
 originalLink: https://blog.csdn.net/i2blue/article/details/124827269
 draft: False
 cover: https://img1.dotnet9.com/2022/05/cover_46.jpeg
-categories: .NET
-tags: Web API
+categories: 
+    - .NET
+tags: 
+    - Web API
 ---
 
 基于 Nacos 来一篇关于微服务的配置中心方案 Demo。

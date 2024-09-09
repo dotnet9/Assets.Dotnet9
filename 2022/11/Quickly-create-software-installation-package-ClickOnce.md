@@ -7,8 +7,10 @@ copyright: Original
 author: 沙漠尽头的狼
 draft: false
 cover: https://img1.dotnet9.com/2022/11/cover_02.png
-categories: .NET
-tags: .NET
+categories: 
+    - .NET
+tags: 
+    - .NET
 ---
 
 大家好，我是沙漠尽头的狼。

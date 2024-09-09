@@ -9,8 +9,10 @@ originalTitle: 对.NET系统架构改造的一点经验和教训
 originalLink: http://robbinfan.com/blog/43/rid-off-dotnet-experience
 draft: false
 cover: https://img1.dotnet9.com/2023/09/cover_01.png
-categories: .NET
-tags: .NET
+categories: 
+    - .NET
+tags: 
+    - .NET
 ---
 
 > 10 年前的一篇文章（2013 年，原文[robbinfan.com](http://robbinfan.com/blog/43/rid-off-dotnet-experience)已经无法访问，找到最早的还是在博客园[这篇](https://news.cnblogs.com/n/177636/)），现在读来还是感慨颇深。

@@ -11,8 +11,10 @@ originalTitle: 在大公司工作之后才真正领悟到它真的是宇宙级�
 originalLink: https://mp.weixin.qq.com/s/JbQ01MNZjKsO0aW7qcU6pQ
 draft: false
 cover: https://img1.dotnet9.com/2024/04/0201.gif
-categories: 分享
-tags: VS Code
+categories: 
+    - 分享
+tags: 
+    - VS Code
 ---
 
 ## 开胃菜

@@ -7,8 +7,10 @@ lastmod: 2023-06-23 23:50:47
 copyright: Original
 draft: false
 cover: https://img1.dotnet9.com/games/minesweeper.png
-categories: .NET
-tags: Dotnet9
+categories: 
+    - .NET
+tags: 
+    - Dotnet9
 ---
 
 大家好，我是沙漠尽头的狼。

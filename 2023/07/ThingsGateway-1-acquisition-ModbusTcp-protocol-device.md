@@ -7,8 +7,10 @@ copyright: Contributes
 author: Diego
 draft: false
 cover: https://img1.dotnet9.com/2023/05/cover_02.png
-categories: .NET
-tags: .NET
+categories: 
+    - .NET
+tags: 
+    - .NET
 ---
 
 > 本文由网友投稿，欢迎更多的朋友来分享。

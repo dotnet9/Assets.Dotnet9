@@ -11,8 +11,10 @@ originalTitle: 80后的程序员老鸟写给一些后起IT人的（仅代表本�
 originalLink: https://blog.csdn.net/xtgmd168/article/details/107144401
 draft: false
 cover: https://img1.dotnet9.com/2024/04/cover_03.png
-categories: 分享
-tags: IT人生
+categories: 
+    - 分享
+tags: 
+    - IT人生
 ---
 
 ## 1. 自我简介

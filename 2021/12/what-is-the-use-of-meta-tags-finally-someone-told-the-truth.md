@@ -9,7 +9,8 @@ originalTitle: meta 标签到底有什么用？终于有人说出了真相
 originalLink: https://juejin.cn/post/6987919006468407309
 draft: False
 cover: https://img1.dotnet9.com/2021/12/cover_34.png
-categories: 前端
+categories: 
+    - 前端
 tags: 
     - HTML
     - Meta

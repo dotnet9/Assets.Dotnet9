@@ -9,8 +9,10 @@ originalTitle: gRPC入门与实操(.NET篇)
 originalLink: https://www.cnblogs.com/newton/archive/2023/01/10/17033789.html
 draft: false
 cover: https://img1.dotnet9.com/2023/01/cover_02.png
-categories: .NET
-tags: .NET
+categories: 
+    - .NET
+tags: 
+    - .NET
 ---
 
 ## 1. 为什么选择 gRPC

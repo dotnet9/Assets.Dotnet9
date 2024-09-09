@@ -9,7 +9,8 @@ originalTitle: EF Core实现dynamic动态查询和EF Core注入多个上下文�
 originalLink: https://www.cnblogs.com/CreateMyself/p/8921881.html
 draft: False
 cover: https://img1.dotnet9.com/2022/05/cover_11.jpg
-categories: .NET
+categories: 
+    - .NET
 tags: 
     - .NET
     - ORM

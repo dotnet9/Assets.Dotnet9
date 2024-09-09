@@ -9,8 +9,10 @@ originalTitle: Blazor Server 和 WebAssembly 应用程序入门指南
 originalLink: https://www.cnblogs.com/ittranslator/p/a-beginners-guide-to-blazor-server-and-webassembly-applications.html
 draft: False
 cover: https://img1.dotnet9.com/2021/12/cover_04.png
-categories: .NET
-tags: Blazor
+categories: 
+    - .NET
+tags: 
+    - Blazor
 ---
 
 > 翻译自 Waqas Anwar 2021 年 3 月 12 日的文章 [《A Beginner’s Guide To Blazor Server and WebAssembly Applications》](https://www.ezzylearning.net/tutorial/a-beginners-guide-to-blazor-server-and-webassembly-applications)

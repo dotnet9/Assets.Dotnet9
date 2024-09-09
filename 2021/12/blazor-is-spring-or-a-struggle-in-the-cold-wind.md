@@ -10,8 +10,10 @@ originalTitle: Blazor是春天还是寒风里的挣扎
 originalLink: https://www.cnblogs.com/doddgu/p/masa-blazor-0.html
 draft: False
 cover: https://img1.dotnet9.com/2021/12/cover_19.png
-categories: .NET
-tags: Blazor
+categories: 
+    - .NET
+tags: 
+    - Blazor
 ---
 
 ## 官方解释 Blazor

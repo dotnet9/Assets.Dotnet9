@@ -8,7 +8,8 @@ copyright: Original
 originalTitle: 开源C# WPF控件库《MaterialDesignInXAML》
 draft: False
 cover: https://img1.dotnet9.com/2020/12/0502.jpg
-categories: .NET
+categories: 
+    - .NET
 tags: 
     - WPF
     - WPF控件库

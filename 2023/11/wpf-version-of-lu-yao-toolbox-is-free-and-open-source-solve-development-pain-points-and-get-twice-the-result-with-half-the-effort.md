@@ -7,8 +7,10 @@ lastmod: 2023-11-14 15:25:41
 copyright: Original
 draft: false
 cover: https://img1.dotnet9.com/2023/11/cover_05.png
-categories: .NET
-tags: 工具箱
+categories: 
+    - .NET
+tags: 
+    - 工具箱
 ---
 
 路遥工具箱是一款基于C# WPF开发的开源工具箱软件，旨在解决开发过程中常见的功能性需求，并将其自动化。目前已经拥有十数项实用功能，让你的开发工作事半功倍！

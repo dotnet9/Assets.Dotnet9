@@ -9,7 +9,8 @@ originalTitle: Blazor 状态管理
 originalLink: https://blog.csdn.net/mzl87/article/details/104642025
 draft: False
 cover: https://img1.dotnet9.com/2022/04/2102.png
-categories: .NET
+categories: 
+    - .NET
 tags: 
     - Blazor
     - 状态管理

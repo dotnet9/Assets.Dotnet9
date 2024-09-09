@@ -7,8 +7,10 @@ copyright: Original
 originalTitle: 分享PC微信多开的方法
 draft: False
 cover: https://img1.dotnet9.com/2022/03/cover_21.png
-categories: 分享
-tags: 微信多开
+categories: 
+    - 分享
+tags: 
+    - 微信多开
 ---
 
 很简单，创建一个 bat 文件，比如`openwechat.bat`，然后复制以下内容到该文件：

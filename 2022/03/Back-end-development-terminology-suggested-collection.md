@@ -9,8 +9,10 @@ originalTitle: 后端开发术语大全【建议收藏】
 originalLink: https://mp.weixin.qq.com/s/i4MAVUnDbP1tsdxaQpkjAQ
 draft: False
 cover: https://img1.dotnet9.com/2022/03/cover_31.jpeg
-categories: 分享
-tags: 后端
+categories: 
+    - 分享
+tags: 
+    - 后端
 ---
 
 > `导语` 工欲善其事，必先利其器；士欲宣其义，必先读其书。后台开发作为互联网技术领域的掌上明珠，一直都是开发者们的追逐的高峰。本文将从后台开发所涉及到的技术术语出发，基于系统开发、架构设计、网络通信等几个方面让大家对后台来发有一个清晰的了解，讲解全面易懂。（作者：willlv）

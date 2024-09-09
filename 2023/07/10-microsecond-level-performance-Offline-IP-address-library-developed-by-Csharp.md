@@ -9,8 +9,10 @@ originalTitle: 10 微秒级别性能！C# 开发的离线IP地址库
 originalLink: https://mp.weixin.qq.com/s/h3yG5tod1Cs-KNRZQo1xNA
 draft: false
 cover: https://img1.dotnet9.com/2023/07/cover_03.png
-categories: .NET
-tags: .NET
+categories: 
+    - .NET
+tags: 
+    - .NET
 ---
 
 ![](https://img1.dotnet9.com/2023/07/cover_03.png)

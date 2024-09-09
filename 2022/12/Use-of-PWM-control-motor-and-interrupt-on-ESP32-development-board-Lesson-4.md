@@ -9,8 +9,10 @@ originalTitle: 2022年底C# 解压zip文件遇到的一个bug
 originalLink: https://jhrs.com/2022/46060.html
 draft: false
 cover: https://img1.dotnet9.com/2022/12/cover_01.png
-categories: .NET
-tags: .NET
+categories: 
+    - .NET
+tags: 
+    - .NET
 ---
 
 > 本文由网友投稿。

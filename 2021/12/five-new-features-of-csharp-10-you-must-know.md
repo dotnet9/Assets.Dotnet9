@@ -9,8 +9,10 @@ originalTitle: C# 10 必知的五大新功能
 originalLink: https://medium.com/young-coder/a-closer-look-at-5-new-features-in-c-10-f99738b0158e
 draft: False
 cover: https://img1.dotnet9.com/2021/12/cover_11.png
-categories: .NET
-tags: C# 10
+categories: 
+    - .NET
+tags: 
+    - C# 10
 ---
 
 C# 的 GitHub 页面上记载了一长串诱人的想法，其中一些令人头疼的问题仍在讨论中。如果你想知道 C# 10 中究竟包含了哪些新功能，可以等待 11 月新版本的发布。或者，你也可以关注 C# 团队展示的他们最喜欢的功能。在最近的微软 Build 大会上，C# 的首席设计师 Mads Torgersen 透漏了一些目前正在进行的工作。以下是该语言的下一个版本将会提供的五大新功能。

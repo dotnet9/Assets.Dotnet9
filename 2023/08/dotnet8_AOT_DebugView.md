@@ -9,8 +9,10 @@ originalTitle: .NET8 AOT DebugView
 originalLink: https://mp.weixin.qq.com/s/lrQK4fdo_TTbXNNyJTY9Yg
 draft: false
 cover: https://img1.dotnet9.com/2023/08/debugview.gif
-categories: .NET
-tags: .NET
+categories: 
+    - .NET
+tags: 
+    - .NET
 ---
 
 ## 1. 概要

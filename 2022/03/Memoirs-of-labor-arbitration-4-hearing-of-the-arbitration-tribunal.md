@@ -9,8 +9,10 @@ originalTitle: 劳动仲裁回忆录（四）：仲裁庭开庭审理
 originalLink: https://mp.weixin.qq.com/s/JLoj3bCrU3HJFZdyPHuMZQ
 draft: False
 cover: https://img1.dotnet9.com/2022/03/cover_12.jpeg
-categories: 分享
-tags: 仲裁
+categories: 
+    - 分享
+tags: 
+    - 仲裁
 ---
 
 > 本篇介绍了仲裁开庭的过程。

@@ -11,8 +11,10 @@ originalTitle: 基于Ado.Net多个关系型数据库DbHelper封装
 originalLink: https://blog.csdn.net/ftfmatlab/article/details/135655836
 draft: false
 cover: https://img1.dotnet9.com/2024/01/cover_09.png
-categories: .NET
-tags: 技术更新
+categories: 
+    - .NET
+tags: 
+    - 技术更新
 ---
 
 ## 引言

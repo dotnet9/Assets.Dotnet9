@@ -9,8 +9,10 @@ originalTitle: WPF 通用权限开发框架 (ABP)
 originalLink: https://www.cnblogs.com/zh7791/p/16321843.html
 draft: False
 cover: https://img1.dotnet9.com/2022/05/6001.png
-categories: 课程
-tags: .NET课程
+categories: 
+    - 课程
+tags: 
+    - .NET课程
 ---
 
 ## 前言

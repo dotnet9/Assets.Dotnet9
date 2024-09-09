@@ -9,8 +9,10 @@ originalTitle: 【实用技巧】教你Markdown 转 PDF、PNG、JPEG
 originalLink: https://mp.weixin.qq.com/s/keaj9WXM280F74lfQtPEQw
 draft: False
 cover: https://img1.dotnet9.com/2022/05/cover_24.jpg
-categories: 分享
-tags: Markdown
+categories: 
+    - 分享
+tags: 
+    - Markdown
 ---
 
 **目录**

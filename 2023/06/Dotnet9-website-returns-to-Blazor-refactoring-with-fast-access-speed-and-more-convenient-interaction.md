@@ -7,8 +7,10 @@ lastmod: 2023-06-23 09:10:41
 copyright: Original
 draft: false
 cover: https://img1.dotnet9.com/2023/06/cover_11.png
-categories: .NET
-tags: Dotnet9
+categories: 
+    - .NET
+tags: 
+    - Dotnet9
 ---
 
 大家好，我是沙漠尽头的狼。

@@ -10,8 +10,10 @@ originalTitle: .NET 进程内队列 Channel 的入门与应用
 originalLink: https://blog.yuanpei.me/posts/getting-started-with-the-.net-in-process-queue-channel/
 draft: false
 cover: https://img1.dotnet9.com/2023/12/cover_04.jpg
-categories: .NET
-tags: .NET
+categories: 
+    - .NET
+tags: 
+    - .NET
 ---
 
 ![](https://img1.dotnet9.com/2023/12/cover_04.jpg)

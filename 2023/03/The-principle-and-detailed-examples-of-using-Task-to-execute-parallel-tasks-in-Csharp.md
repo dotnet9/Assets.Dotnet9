@@ -5,8 +5,10 @@ description: 在C#中，使用Task可以很方便地执行并行任务。
 date: 2023-03-28 20:17:14
 copyright: Original
 cover: https://img1.dotnet9.com/2023/03/cover_17.png
-categories: .NET
-tags: .NET
+categories: 
+    - .NET
+tags: 
+    - .NET
 ---
 
 >本文通过与ChatGPT的连续对话完成，代码都经过验证。

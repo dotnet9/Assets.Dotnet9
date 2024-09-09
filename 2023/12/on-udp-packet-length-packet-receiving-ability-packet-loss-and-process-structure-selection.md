@@ -10,8 +10,10 @@ originalTitle: 浅谈UDP(数据包长度，收包能力，丢包及进程结构�
 originalLink: https://zhuanlan.zhihu.com/p/301276548
 draft: false
 cover: https://img1.dotnet9.com/2023/12/cover_02.png
-categories: 分享
-tags: 技术更新
+categories: 
+    - 分享
+tags: 
+    - 技术更新
 ---
 
 ### UDP 数据包长度，UDP 数据包的理论长度

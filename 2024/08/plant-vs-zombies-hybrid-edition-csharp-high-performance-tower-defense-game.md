@@ -7,7 +7,8 @@ lastmod: 2024-08-04 22:35:13
 copyright: Original
 draft: false
 cover: https://img1.dotnet9.com/2024/08/cover_01.png
-categories: .NET
+categories: 
+    - .NET
 tags: 
     - C#
     - Winform

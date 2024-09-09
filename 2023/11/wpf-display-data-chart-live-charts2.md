@@ -10,8 +10,10 @@ originalTitle: WPF显示数据图表(LiveCharts2)
 originalLink: https://mp.weixin.qq.com/s/l3fmYcPlEryS6idnd9urXA
 draft: false
 cover: https://img1.dotnet9.com/2023/11/0618.gif
-categories: .NET
-tags: LiveChart
+categories: 
+    - .NET
+tags: 
+    - LiveChart
 ---
 
 最近接手一个小项目，需要做一个数据显示大屏，要能显示曲线，显示进出量，重点是要好看，我哪知道什么是好看，就随便做做呗。

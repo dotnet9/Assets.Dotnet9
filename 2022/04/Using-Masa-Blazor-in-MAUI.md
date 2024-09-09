@@ -9,8 +9,10 @@ originalTitle: 在MAUI中使用Masa Blazor
 originalLink: https://mp.weixin.qq.com/s/NmnHD0fUz8q0R1JJBSQbIg
 draft: False
 cover: https://img1.dotnet9.com/2022/04/3601.png
-categories: .NET
-tags: Blazor
+categories: 
+    - .NET
+tags: 
+    - Blazor
 ---
 
 ## 1. Masa Blazor 是什么

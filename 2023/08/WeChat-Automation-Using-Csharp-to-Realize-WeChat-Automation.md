@@ -9,8 +9,10 @@ originalTitle: 【微信自动化】使用c#实现微信自动化
 originalLink: https://www.cnblogs.com/1996-Chinese-Chen/p/17663064.html
 draft: false
 cover: https://img1.dotnet9.com/2023/08/cover_06.png
-categories: .NET
-tags: .NET
+categories: 
+    - .NET
+tags: 
+    - .NET
 ---
 
 > 本文由网友投稿

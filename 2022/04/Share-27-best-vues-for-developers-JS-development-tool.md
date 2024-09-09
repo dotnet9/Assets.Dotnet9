@@ -9,7 +9,8 @@ originalTitle: 分享 27 个面向开发人员的最佳 Vue.js 开发工具
 originalLink: https://javascript.plainenglish.io/best-27-vuejs-development-tools-for-developers-bd972bb5f573
 draft: False
 cover: https://img1.dotnet9.com/2022/04/2527.png
-categories: 前端
+categories: 
+    - 前端
 tags: 
     - 前端技巧
     - Vue

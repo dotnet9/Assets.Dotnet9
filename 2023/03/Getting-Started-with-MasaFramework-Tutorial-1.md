@@ -9,8 +9,10 @@ originalTitle: （1）入门MasaFramework教程
 originalLink: https://www.cnblogs.com/hejiale010426/p/17209926.html
 draft: false
 cover: https://img1.dotnet9.com/2023/03/cover_09.png
-categories: .NET
-tags: MASA Framework
+categories: 
+    - .NET
+tags: 
+    - MASA Framework
 ---
 
 ## 首先了解一下 MasaFramework 是什么?

@@ -9,8 +9,10 @@ originalTitle: 大家有没有觉得今年找工作特别特别难？
 originalLink: https://www.zhihu.com/question/520706669/answer/2483330222
 draft: False
 cover: https://img1.dotnet9.com/2022/05/4303.jpg
-categories: 分享
-tags: 职场生活
+categories: 
+    - 分享
+tags: 
+    - 职场生活
 ---
 
 > 从 2019 年 12 月疫情开始到现在，已经过去了 2 年多，当时觉得 2020 年被居家隔离的日子应该是最差的时候了，现在才知道 2020 年可能是未来十年内最好的一年。

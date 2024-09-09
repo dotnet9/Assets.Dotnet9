@@ -9,7 +9,8 @@ originalTitle: .NET MAUI 中结合 Vue 实现混合开发
 originalLink: https://www.cnblogs.com/jevonsflash/p/15806237.html
 draft: False
 cover: https://img1.dotnet9.com/2022/01/cover_05.png
-categories: .NET
+categories: 
+    - .NET
 tags: 
     - .NET
     - MAUI

@@ -9,8 +9,10 @@ originalTitle: 基于FlaUI自动化+chatGPT实现微信自动回复
 originalLink: https://blog.csdn.net/ftfmatlab/article/details/132589169
 draft: false
 cover: https://img1.dotnet9.com/2023/08/0702.png
-categories: .NET
-tags: .NET
+categories: 
+    - .NET
+tags: 
+    - .NET
 ---
 
 > 本文由网友投稿

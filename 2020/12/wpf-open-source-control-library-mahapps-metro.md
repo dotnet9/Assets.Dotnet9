@@ -8,7 +8,8 @@ copyright: Original
 originalTitle: WPF开源控件库：MahApps.Metro
 draft: False
 cover: https://img1.dotnet9.com/2020/12/cover_01.jpg
-categories: .NET
+categories: 
+    - .NET
 tags: 
     - WPF
     - MahApps.Metro

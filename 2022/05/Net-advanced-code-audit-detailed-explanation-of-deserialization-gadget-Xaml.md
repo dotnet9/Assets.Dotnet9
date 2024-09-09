@@ -9,8 +9,10 @@ originalTitle: .NET高级代码审计-反序列化 Gadget之详解XAML
 originalLink: https://mp.weixin.qq.com/s/8fQNU7i6nqB1kHuL_hhUDw
 draft: False
 cover: https://img1.dotnet9.com/2022/05/5909.png
-categories: .NET
-tags: XAML
+categories: 
+    - .NET
+tags: 
+    - XAML
 ---
 
 ## 0x01 背景

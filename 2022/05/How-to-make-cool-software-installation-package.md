@@ -7,8 +7,10 @@ copyright: Original
 originalTitle: 怎么制作炫酷软件安装包
 draft: False
 cover: https://img1.dotnet9.com/2022/05/cover_21.png
-categories: 分享
-tags: 软件安装包
+categories: 
+    - 分享
+tags: 
+    - 软件安装包
 ---
 
 > 本文不是广告，刚开始写这篇分享时，以为有免费体验的，普通用户可以使用，最多就是特殊功能需要付费，没想到`所有功能都是付费的`。

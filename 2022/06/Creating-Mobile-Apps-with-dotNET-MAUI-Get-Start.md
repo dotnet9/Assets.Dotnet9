@@ -9,8 +9,10 @@ originalTitle: 使用 .NET MAUI 创建移动应用——Get Start
 originalLink: https://www.cnblogs.com/jackyfei/p/16349599.html
 draft: False
 cover: https://img1.dotnet9.com/2022/06/1224.png
-categories: .NET
-tags: MAUI
+categories: 
+    - .NET
+tags: 
+    - MAUI
 ---
 
 ## 1、IDE 下载安装

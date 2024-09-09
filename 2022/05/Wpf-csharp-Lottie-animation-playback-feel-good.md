@@ -9,7 +9,8 @@ originalTitle: WPF|C# Lottie 动画播放【感觉好牛】
 originalLink: https://www.cnblogs.com/8u7tgyjire7890/p/15881159.html
 draft: False
 cover: https://img1.dotnet9.com/2022/05/cover_49.jpg
-categories: .NET
+categories: 
+    - .NET
 tags: 
     - WPF
     - 动画

@@ -9,8 +9,10 @@ originalTitle: ASP.NET Core WebAPI实现本地化（单资源文件）
 originalLink: https://www.cnblogs.com/yyfh/archive/2020/05/30/12995208.html
 draft: False
 cover: https://img1.dotnet9.com/2022/06/cover_15.jpeg
-categories: .NET
-tags: Web API
+categories: 
+    - .NET
+tags: 
+    - Web API
 ---
 
 在 Startup `ConfigureServices` 注册本地化所需要的服务`AddLocalization`和 `Configure<RequestLocalizationOptions>`

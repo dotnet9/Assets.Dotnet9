@@ -10,7 +10,8 @@ originalTitle: 轻松使用aspire rabbitmq
 originalLink: https://www.cnblogs.com/SkyDuan/p/18169087
 draft: False
 cover: https://img1.dotnet9.com/2024/05/cover_01.png
-categories: .NET
+categories: 
+    - .NET
 tags: 
     - Aspire
     - RabbitMQ

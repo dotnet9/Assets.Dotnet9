@@ -7,7 +7,8 @@ lastmod: 2024-06-28 22:26:47
 copyright: Original
 draft: false
 cover: https://img1.dotnet9.com/2024/06/cover_02.png
-categories: .NET
+categories: 
+    - .NET
 tags: 
     - .NET
 	- NuGet

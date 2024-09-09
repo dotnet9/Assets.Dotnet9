@@ -9,7 +9,8 @@ originalTitle: (3/30)大家一起学Blazor：Blazor Server和Blazor WebAssembly�
 originalLink: https://ithelp.ithome.com.tw/articles/10259814
 draft: False
 cover: https://img1.dotnet9.com/2021/12/cover_05.png
-categories: .NET
+categories: 
+    - .NET
 tags: 
     - Blazor Server
     - Blazor WebAssembly

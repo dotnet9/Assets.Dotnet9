@@ -9,8 +9,10 @@ originalTitle: 工作很压抑痛苦，每天都想辞职，又怕辞职后难�
 originalLink: https://mp.weixin.qq.com/s/c6SWiemFEHkg7HK2I78ECQ
 draft: false
 cover: https://img1.dotnet9.com/2023/06/cover_09.png
-categories: 分享
-tags: 生活
+categories: 
+    - 分享
+tags: 
+    - 生活
 ---
 
 > 本文来自转载

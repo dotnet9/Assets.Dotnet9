@@ -11,8 +11,10 @@ originalTitle: 各版本操作系统对.NET支持情况（1124更新）
 originalLink: https://newlifex.com/tech/os_net
 draft: false
 cover: https://img1.dotnet9.com/2024/01/cover_02.png
-categories: .NET
-tags: 技术更新
+categories: 
+    - .NET
+tags: 
+    - 技术更新
 ---
 
 借助虚拟机和测试机，检测各版本操作系统对.NET 的支持情况。

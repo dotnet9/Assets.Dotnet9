@@ -9,8 +9,10 @@ originalTitle: C#使用读写锁三行代码简单解决多线程并发写入文
 originalLink: https://blog.csdn.net/zdhlwt2008/article/details/80702605
 draft: False
 cover: https://img1.dotnet9.com/2022/04/cover_35.jpeg
-categories: .NET
-tags: C#
+categories: 
+    - .NET
+tags: 
+    - C#
 ---
 
 ## 1. 知识储备

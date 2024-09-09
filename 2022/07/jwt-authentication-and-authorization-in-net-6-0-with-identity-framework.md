@@ -9,8 +9,10 @@ originalTitle: .NET 6.0中使用Identity框架实现JWT身份认证与授权
 originalLink: https://www.c-sharpcorner.com/article/jwt-authentication-and-authorization-in-net-6-0-with-identity-framework/
 draft: False
 cover: https://img1.dotnet9.com/2022/07/cover_22.jpg
-categories: .NET
-tags: .NET
+categories: 
+    - .NET
+tags: 
+    - .NET
 ---
 
 > 原文作者：Sarathlal Saseendran

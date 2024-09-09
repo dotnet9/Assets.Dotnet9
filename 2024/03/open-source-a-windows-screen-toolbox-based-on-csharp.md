@@ -11,7 +11,8 @@ originalTitle: 基于 C# 开源一个 Windows 屏幕工具箱
 originalLink: https://mp.weixin.qq.com/s/OZcpGBaDddsXFDBajosxEw
 draft: false
 cover: https://img1.dotnet9.com/2024/03/0205.gif
-categories: .NET
+categories: 
+    - .NET
 tags: 
     - .NET
     - 工具箱

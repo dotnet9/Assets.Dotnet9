@@ -9,7 +9,8 @@ originalTitle: ASP.NET Core 5种异常处理方案
 originalLink: https://ut32.com/post/handle-exception
 draft: False
 cover: https://img1.dotnet9.com/2021/04/cover_01.jpg
-categories: .NET
+categories: 
+    - .NET
 tags: 
     - ASP.NET Core
     - 异常

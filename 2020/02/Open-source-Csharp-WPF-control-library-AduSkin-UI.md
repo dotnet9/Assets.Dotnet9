@@ -8,8 +8,10 @@ copyright: Original
 originalTitle: 开源C# WPF控件库《AduSkin–UI》
 draft: False
 cover: https://img1.dotnet9.com/2020/02/0101.gif
-tags: 开源WPF
-categories: .NET
+tags: 
+    - 开源WPF
+categories: 
+    - .NET
 ---
 
 追求极致，永臻完美

@@ -9,7 +9,8 @@ originalTitle: 大佬用 WinUI 3 和 WPF 做了一个开源的动态壁纸软件
 originalLink: https://mp.weixin.qq.com/s/ACihOXY8v2l2qZmUxKw-ow
 draft: False
 cover: https://img1.dotnet9.com/2022/04/0301.gif
-categories: .NET
+categories: 
+    - .NET
 tags: 
     - C#
     - Winform

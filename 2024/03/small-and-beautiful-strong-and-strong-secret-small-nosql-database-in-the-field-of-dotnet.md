@@ -11,7 +11,8 @@ originalTitle: 小而美，强而劲：揭秘.NET领域下的小体积NoSQL数�
 originalLink: https://mp.weixin.qq.com/s/ruI56wabnMnnrc5wWenKqg
 draft: false
 cover: https://img1.dotnet9.com/2024/03/0301.png
-categories: .NET
+categories: 
+    - .NET
 tags: 
     - NoSQL
     - 数据库

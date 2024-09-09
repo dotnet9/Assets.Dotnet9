@@ -7,7 +7,8 @@ copyright: Original
 originalTitle: 最近遇到的问题记录：UrlEncode、UrlDecode
 draft: False
 cover: https://img1.dotnet9.com/2021/01/cover_01.jpeg
-categories: .NET
+categories: 
+    - .NET
 tags: 
     - Web API
     - UrlEncode

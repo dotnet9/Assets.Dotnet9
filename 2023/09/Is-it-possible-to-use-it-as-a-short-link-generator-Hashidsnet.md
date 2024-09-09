@@ -9,8 +9,10 @@ originalTitle: 分享.NET/.NET 5轻量级开源的将数字编码成字符串的
 originalLink: https://codedefault.com/p/lightweight-open-source-project-hashids-net-for-generating-short-ids-from-numbers
 draft: false
 cover: https://img1.dotnet9.com/2023/09/cover_05.png
-categories: .NET
-tags: .NET
+categories: 
+    - .NET
+tags: 
+    - .NET
 ---
 
 ## 概述

@@ -9,7 +9,8 @@ originalTitle: 这是Blazor上传文件的最佳方式吗？
 originalLink: https://masuit.org/1676
 draft: False
 cover: https://img1.dotnet9.com/2022/03/cover_09.gif
-categories: .NET
+categories: 
+    - .NET
 tags: 
     - Blazor Server
     - 上传文件

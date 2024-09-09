@@ -9,8 +9,10 @@ originalTitle: WPF中XAML中使用String.Format格式化字符串示例
 originalLink: https://www.cnblogs.com/ZXdeveloper/p/15513657.html
 draft: False
 cover: https://img1.dotnet9.com/2022/05/cover_51.jpeg
-categories: .NET
-tags: WPF
+categories: 
+    - .NET
+tags: 
+    - WPF
 ---
 
 1. 货币格式

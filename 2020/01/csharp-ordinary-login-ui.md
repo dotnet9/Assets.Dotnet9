@@ -9,7 +9,8 @@ originalTitle: C# WPF 普通登录界面
 originalLink: https://www.youtube.com/watch?v=2Nu5zpT6Ezw
 draft: False
 cover: https://img1.dotnet9.com/2020/01/cover_01.png
-categories: .NET
+categories: 
+    - .NET
 tags: 
     - WPF Design
     - Login Window

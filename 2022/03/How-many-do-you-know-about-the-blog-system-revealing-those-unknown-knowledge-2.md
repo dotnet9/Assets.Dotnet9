@@ -9,8 +9,10 @@ originalTitle: 博客系统知多少：揭秘那些不为人知的学问（二�
 originalLink: https://mp.weixin.qq.com/s/FX3t75q0BMtb3hOsfM1-VQ
 draft: False
 cover: https://img1.dotnet9.com/2022/03/cover_03.png
-categories: 分享
-tags: 博客
+categories: 
+    - 分享
+tags: 
+    - 博客
 ---
 
 上篇[《博客系统知多少：揭秘那些不为人知的学问（一）》](https://mp.weixin.qq.com/s/TVFS98aMuXViBNiCWtQ9Aw)介绍了博客的历史、我的博客故事及博客的受众来源。本篇精彩继续，介绍博客基本功能设计要点。

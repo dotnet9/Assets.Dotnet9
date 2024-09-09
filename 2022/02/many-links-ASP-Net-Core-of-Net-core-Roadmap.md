@@ -9,7 +9,8 @@ originalTitle: 【链接很多】.NET 7 的 ASP.NET Core 路线图
 originalLink: https://zhuanlan.zhihu.com/p/469359820
 draft: False
 cover: https://img1.dotnet9.com/2022/02/cover_05.png
-categories: .NET
+categories: 
+    - .NET
 tags: 
     - .NET
     - ASP.NET Core

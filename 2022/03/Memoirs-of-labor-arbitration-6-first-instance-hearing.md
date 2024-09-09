@@ -9,8 +9,10 @@ originalTitle: 劳动仲裁回忆录（六）：一审开庭
 originalLink: https://mp.weixin.qq.com/s/O9oOq5MHXbfmiKUa3e74fQ
 draft: False
 cover: https://img1.dotnet9.com/2022/03/cover_12.jpeg
-categories: 分享
-tags: 仲裁
+categories: 
+    - 分享
+tags: 
+    - 仲裁
 ---
 
 > 免责声明：本篇只记录了我个人劳动仲裁一审的过程，所陈述的内容及对话全凭记录回忆而书写，不保证内容与实际对话是一字不差。所描述的内容及场景有个人的感受在里边，也不能保证与现实客观情况一致，所述观点皆为个人感受，不代表我对任何人和任何单位的评价，对后果不负责。请选择性浏览相关内容。

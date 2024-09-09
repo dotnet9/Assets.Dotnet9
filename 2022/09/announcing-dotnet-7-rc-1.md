@@ -9,8 +9,10 @@ originalTitle: Announcing .NET 7 Release Candidate 1
 originalLink: https://devblogs.microsoft.com/dotnet/announcing-dotnet-7-rc-1/
 draft: false
 cover: https://img1.dotnet9.com/2022/09/What_s_New_in_Net_7_85586957c5.jpg
-categories: .NET
-tags: .NET
+categories: 
+    - .NET
+tags: 
+    - .NET
 ---
 
 > 原文链接：[https://devblogs.microsoft.com/dotnet/announcing-dotnet-7-rc-1/](https://devblogs.microsoft.com/dotnet/announcing-dotnet-7-rc-1/)

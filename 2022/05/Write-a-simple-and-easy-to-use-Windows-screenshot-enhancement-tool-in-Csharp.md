@@ -9,7 +9,8 @@ originalTitle: C# 编写简单易用的 Windows 截屏增强工具
 originalLink: https://mp.weixin.qq.com/s/eyz995VWcIEMLBQP7PL0FQ
 draft: False
 cover: https://img1.dotnet9.com/2022/05/3701.gif
-categories: 数据库
+categories: 
+    - 数据库
 tags: 
     - MySQL
     - C#

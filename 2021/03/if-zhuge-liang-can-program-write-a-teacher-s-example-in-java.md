@@ -7,7 +7,8 @@ copyright: Original
 originalTitle: 如果诸葛亮会编程，用Java写出师表...
 draft: False
 cover: https://img1.dotnet9.com/2021/03/cover_01.jpeg
-categories: 更多语言
+categories: 
+    - 更多语言
 tags: 
     - Java
     - 出师表

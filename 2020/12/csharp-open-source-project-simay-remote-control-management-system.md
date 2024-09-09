@@ -9,7 +9,8 @@ originalTitle: C#开源项目：SiMay远程控制管理系统
 originalLink: https://gitee.com/dotnetchina/SiMayRemoteMonitorOS
 draft: False
 cover: https://img1.dotnet9.com/2020/12/cover_02.jpg
-categories: .NET
+categories: 
+    - .NET
 tags: 
     - Winform
     - SiMay

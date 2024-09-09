@@ -9,7 +9,8 @@ originalTitle: ASP.NET Core打造一个“最安全”的API接口
 originalLink: https://www.cnblogs.com/xuejiaming/p/15384015.html
 draft: False
 cover: https://img1.dotnet9.com/2021/10/cover_01.jpeg
-categories: .NET
+categories: 
+    - .NET
 tags: 
     - 安全
     - API

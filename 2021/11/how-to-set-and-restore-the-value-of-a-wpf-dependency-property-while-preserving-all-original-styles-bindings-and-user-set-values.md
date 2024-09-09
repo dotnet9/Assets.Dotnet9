@@ -9,8 +9,10 @@ originalTitle: 如何在保留原本所有样式/绑定和用户设置值的情�
 originalLink: https://blog.walterlv.com/post/change-and-restore-wpf-dependency-value-without-disabling-the-declared-use-of-the-property.html
 draft: False
 cover: https://img1.dotnet9.com/2021/11/cover_02.jpeg
-categories: .NET
-tags: WPF
+categories: 
+    - .NET
+tags: 
+    - WPF
 ---
 
 ![](https://img1.dotnet9.com/2021/11/cover_02.jpeg)

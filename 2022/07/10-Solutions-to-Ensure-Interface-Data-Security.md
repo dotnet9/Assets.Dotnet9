@@ -9,8 +9,10 @@ originalTitle: 保证接口数据安全的10种方案
 originalLink: https://mp.weixin.qq.com/s/xcKXtB6Ck-phhua2fY4aYw
 draft: False
 cover: https://img1.dotnet9.com/2022/07/cover_19.png
-categories: 分享
-tags: 架构设计
+categories: 
+    - 分享
+tags: 
+    - 架构设计
 ---
 
 ## 前言

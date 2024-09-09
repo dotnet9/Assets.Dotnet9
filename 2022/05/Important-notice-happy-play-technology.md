@@ -9,8 +9,10 @@ originalTitle: 重要通知：快乐玩转技术
 originalLink: https://dotnet9.com/2022/05/%e9%87%8d%e8%a6%81%e9%80%9a%e7%9f%a5%ef%bc%9a%e5%bf%ab%e4%b9%90%e7%8e%a9%e8%bd%ac%e6%8a%80%e6%9c%af/
 draft: False
 cover: https://img1.dotnet9.com/2022/05/cover_29.jpg
-categories: 分享
-tags: 微信公众号
+categories: 
+    - 分享
+tags: 
+    - 微信公众号
 ---
 
 # 通知通知！！！

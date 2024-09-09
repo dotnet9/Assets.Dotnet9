@@ -9,7 +9,8 @@ originalTitle: 要开始使用Bootstrap 4 前，我们先了解几个它的通�
 originalLink: https://ithelp.ithome.com.tw/articles/10228808
 draft: False
 cover: https://img1.dotnet9.com/2021/12/cover_02.jpg
-categories: 前端
+categories: 
+    - 前端
 tags: 
     - 前端
     - Bootstrap 4

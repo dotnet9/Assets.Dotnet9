@@ -9,8 +9,10 @@ originalTitle: WPF值得注意的IsHitTestVisible
 originalLink: https://www.cnblogs.com/tsliwei/p/5923107.html
 draft: False
 cover: https://img1.dotnet9.com/2021/10/cover_02.jpg
-categories: .NET
-tags: HitTest
+categories: 
+    - .NET
+tags: 
+    - HitTest
 ---
 
 这个属性我们平时可能并不怎么用，先来看下 MSDN 上的解释:

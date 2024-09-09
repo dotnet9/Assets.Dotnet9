@@ -9,7 +9,8 @@ originalTitle: 你在 Docker 中跑 MySQL？恭喜你，好下岗了！
 originalLink: https://www.toutiao.com/i6675622107390411276?wid=1640184427889
 draft: False
 cover: https://img1.dotnet9.com/2021/12/cover_31.png
-categories: 数据库
+categories: 
+    - 数据库
 tags: 
     - Docker
     - MySQL

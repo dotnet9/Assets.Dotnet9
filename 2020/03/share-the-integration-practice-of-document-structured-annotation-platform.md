@@ -10,8 +10,10 @@ author: 佚名
 originalTitle: 谈谈C# 以管理员方式启动实现过程
 draft: False
 cover: https://img1.dotnet9.com/2022/04/2.png
-categories: 分享
-tags: 架构设计
+categories: 
+    - 分享
+tags: 
+    - 架构设计
 ---
 
 # 概述

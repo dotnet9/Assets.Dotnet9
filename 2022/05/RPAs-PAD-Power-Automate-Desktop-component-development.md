@@ -9,8 +9,10 @@ originalTitle: RPA之PAD(Power Automate Desktop)组件开发
 originalLink: https://blog.csdn.net/i2blue/article/details/125040323
 draft: False
 cover: https://img1.dotnet9.com/2022/05/6227.gif
-categories: .NET
-tags: RPA
+categories: 
+    - .NET
+tags: 
+    - RPA
 ---
 
 > 本文由网友`蓝创精英团队`投稿，欢迎转载、分享

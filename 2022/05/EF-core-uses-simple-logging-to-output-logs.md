@@ -9,7 +9,8 @@ originalTitle: EF Core使用Simple Logging输出日志
 originalLink: https://mp.weixin.qq.com/s/QXBhG_ayoeCcE9dGsgbNKw
 draft: False
 cover: https://img1.dotnet9.com/2022/05/cover_08.jpg
-categories: .NET
+categories: 
+    - .NET
 tags: 
     - .NET
     - ORM

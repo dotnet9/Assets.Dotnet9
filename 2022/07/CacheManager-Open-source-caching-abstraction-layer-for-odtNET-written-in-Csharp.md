@@ -9,8 +9,10 @@ originalTitle: CacheManager - 用 C# 编写的 .NET 的开源缓存抽象层
 originalLink: https://mp.weixin.qq.com/s/k5u-JpLOUsjh__8mZTDNww
 draft: False
 cover: https://img1.dotnet9.com/2022/07/cover_09.png
-categories: .NET
-tags: .NET
+categories: 
+    - .NET
+tags: 
+    - .NET
 ---
 
 ## 简介

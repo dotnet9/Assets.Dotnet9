@@ -6,8 +6,10 @@ date: 2023-04-25 11:36:26
 copyright: Original
 draft: false
 cover: https://img1.dotnet9.com/2023/03/cover_14.png
-categories: .NET
-tags: CefSharp
+categories: 
+    - .NET
+tags: 
+    - CefSharp
 ---
 
 大家好，我是沙漠尽头的狼。

@@ -7,7 +7,8 @@ copyright: Original
 originalTitle: .NET 7 预览版来啦，我升级体验了
 draft: False
 cover: https://img1.dotnet9.com/2022/01/cover_02.png
-categories: .NET
+categories: 
+    - .NET
 tags: .NET
 ---
 

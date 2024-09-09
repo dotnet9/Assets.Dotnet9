@@ -11,8 +11,10 @@ originalTitle: TIOBE Index for January 2024
 originalLink: https://www.tiobe.com/tiobe-index/
 draft: false
 cover: https://img1.dotnet9.com/2024/01/cover_02.png
-categories: .NET
-tags: 技术更新
+categories: 
+    - .NET
+tags: 
+    - 技术更新
 ---
 
 大家好，我是沙漠尽头的狼。在朋友圈看到桂素伟大佬发的喜讯截图，站长赶紧翻译向大家报喜，确定了-C#是 2023 年度的编程语言！

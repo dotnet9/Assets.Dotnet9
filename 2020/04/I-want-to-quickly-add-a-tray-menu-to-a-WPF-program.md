@@ -7,7 +7,8 @@ copyright: Original
 originalTitle: 我想快速给WPF程序添加托盘菜单
 draft: False
 cover: https://img1.dotnet9.com/2020/04/0101.jpg
-categories: .NET
+categories: 
+    - .NET
 tags: 
     - WPF
     - 托盘菜单

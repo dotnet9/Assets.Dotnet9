@@ -7,7 +7,8 @@ copyright: Original
 originalTitle: 怎么做一个专业的软件安装包？
 draft: False
 cover: https://img1.dotnet9.com/2021/02/cover_04.jpeg
-categories: 分享
+categories: 
+    - 分享
 tags: 
     - C#
     - Winform

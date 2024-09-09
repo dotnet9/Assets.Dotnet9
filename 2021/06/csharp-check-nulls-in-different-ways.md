@@ -7,8 +7,10 @@ copyright: Original
 originalTitle: C# 不同的方式检查Null
 draft: False
 cover: https://img1.dotnet9.com/2021/06/cover_03.jpg
-categories: .NET
-tags: C#
+categories: 
+    - .NET
+tags: 
+    - C#
 ---
 
 > - 原文链接：https://www.thomasclaudiushuber.com/2020/03/12/c-different-ways-to-check-for-null/

@@ -9,8 +9,10 @@ originalTitle: 工作6年，失业19天
 originalLink: https://mp.weixin.qq.com/s/q0avLE1dl-yPheDiT2illg
 draft: False
 cover: https://img1.dotnet9.com/2022/03/cover_11.jpeg
-categories: 分享
-tags: 工作和生活
+categories: 
+    - 分享
+tags: 
+    - 工作和生活
 ---
 
 我是一名 Java 程序员，在北京工作了 6 年，此篇文章记录了我 2019 年 11 月，在这个寒冷的冬天被裁员之后，心态变化及重新找工作的心路历程。(PS:本文发布 15 小时之后浏览量 6458，评论过百，着实惊喜)

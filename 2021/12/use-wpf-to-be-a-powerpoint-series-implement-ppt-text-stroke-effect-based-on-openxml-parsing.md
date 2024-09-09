@@ -9,7 +9,8 @@ originalTitle: 使用 WPF 做个 PowerPoint 系列 基于 OpenXML 解析实现 P
 originalLink: https://blog.lindexi.com/post/dotnet-OpenXML-WPF-%E8%A7%A3%E6%9E%90%E5%AE%9E%E7%8E%B0-PPT-%E6%96%87%E6%9C%AC%E6%8F%8F%E8%BE%B9%E6%95%88%E6%9E%9C.html
 draft: False
 cover: https://img1.dotnet9.com/2021/12/cover_23.jpg
-categories: .NET
+categories: 
+    - .NET
 tags: 
     - WPF
     - OpenXML

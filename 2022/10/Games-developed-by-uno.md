@@ -7,8 +7,10 @@ copyright: Original
 author: 沙漠尽头的狼
 draft: false
 cover: https://img1.dotnet9.com/2022/10/0701.png
-categories: .NET
-tags: Uno
+categories: 
+    - .NET
+tags: 
+    - Uno
 ---
 
 大家好，我是沙漠尽头的狼。

@@ -9,7 +9,8 @@ originalTitle: 开源项目《Vue.NetCore》
 originalLink: https://gitee.com/x_discoverer/Vue.NetCore
 draft: False
 cover: https://img1.dotnet9.com/2022/04/h5.jpg
-categories: .NET
+categories: 
+    - .NET
 tags: 
     - 开源项目
     - 开源Web

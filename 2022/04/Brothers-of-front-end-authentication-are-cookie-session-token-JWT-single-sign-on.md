@@ -9,8 +9,10 @@ originalTitle: 前端鉴权的兄弟们：cookie、session、token、jwt、单�
 originalLink: https://juejin.cn/post/6898630134530752520
 draft: False
 cover: https://img1.dotnet9.com/2022/04/cover_39.jpg
-categories: 前端
-tags: 鉴权
+categories: 
+    - 前端
+tags: 
+    - 鉴权
 ---
 
 本文你将看到：

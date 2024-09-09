@@ -9,8 +9,10 @@ originalTitle: MYSQL优化技巧：5 大步骤 + 10 个案例
 originalLink: https://mp.weixin.qq.com/s/eyz995VWcIEMLBQP7PL0FQ
 draft: False
 cover: https://img1.dotnet9.com/2022/05/cover_36.jpg
-categories: 数据库
-tags: MySQL
+categories: 
+    - 数据库
+tags: 
+    - MySQL
 ---
 
 ![](https://img1.dotnet9.com/2022/05/cover_36.jpg)

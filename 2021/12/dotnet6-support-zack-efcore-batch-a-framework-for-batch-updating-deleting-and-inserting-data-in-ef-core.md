@@ -9,7 +9,8 @@ originalTitle: 支持.NET6！EF Core中批量执行更新、删除、插入数�
 originalLink: https://mp.weixin.qq.com/s/MYxVGxa_DQnn4XMIDryd9Q
 draft: False
 cover: https://img1.dotnet9.com/2021/12/cover_40.jpeg
-categories: .NET
+categories: 
+    - .NET
 tags: 
     - C#
     - EF Core

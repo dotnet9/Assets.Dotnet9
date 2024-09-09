@@ -9,8 +9,10 @@ originalTitle: WPF 3D穿梭效果，用WPF也凑凑热闹
 originalLink: https://www.cnblogs.com/T-ARF/p/15552980.html
 draft: False
 cover: https://img1.dotnet9.com/2022/02/0901.gif
-categories: .NET
-tags: WPF
+categories: 
+    - .NET
+tags: 
+    - WPF
 ---
 
 CSS 效果博客地址：

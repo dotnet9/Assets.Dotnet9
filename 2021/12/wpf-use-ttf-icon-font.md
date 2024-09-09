@@ -9,8 +9,10 @@ originalTitle: WPF使用ttf图标字体
 originalLink: https://www.cnblogs.com/choumengqizhigou/p/15550133.html
 draft: False
 cover: https://img1.dotnet9.com/2021/12/cover_27.jpeg
-categories: .NET
-tags: WPF
+categories: 
+    - .NET
+tags: 
+    - WPF
 ---
 
 ## 什么是图标

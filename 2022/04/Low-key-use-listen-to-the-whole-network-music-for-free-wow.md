@@ -7,7 +7,8 @@ copyright: Original
 originalTitle: 低调使用：全网音乐免费听，WOW！
 draft: False
 cover: https://img1.dotnet9.com/2022/04/0601.png
-categories: .NET
+categories: 
+    - .NET
 tags: 
     - .NET
     - App

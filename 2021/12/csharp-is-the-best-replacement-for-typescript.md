@@ -9,7 +9,8 @@ originalTitle: C# 是 TypeScript 的最佳替补？
 originalLink: https://mp.weixin.qq.com/s/yXShXwe9O7uzOBTRqMPd7Q
 draft: False
 cover: https://img1.dotnet9.com/2021/12/cover_44.jpg
-categories: .NET
+categories: 
+    - .NET
 tags: 
     - C#
     - TypeScript

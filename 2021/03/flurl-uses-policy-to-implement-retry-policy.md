@@ -9,7 +9,8 @@ originalTitle: Flurl使用Polly实现重试Policy
 originalLink: https://www.cnblogs.com/linxmouse/p/14533151.html
 draft: False
 cover: https://img1.dotnet9.com/2021/03/cover_03.jpg
-categories: .NET
+categories: 
+    - .NET
 tags: 
     - C#
     - Flurl

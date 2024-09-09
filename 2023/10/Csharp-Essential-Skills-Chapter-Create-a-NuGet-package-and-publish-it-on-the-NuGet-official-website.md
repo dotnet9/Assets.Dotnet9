@@ -10,8 +10,10 @@ originalTitle: C#【必备技能篇】制作NuGet程序包，并发布到NuGet�
 originalLink: https://blog.csdn.net/sinat_40003796/article/details/130407108
 draft: false
 cover: https://img1.dotnet9.com/2023/10/cover_01.jpg
-categories: .NET
-tags: .NET
+categories: 
+    - .NET
+tags: 
+    - .NET
 ---
 
 ## 1. 准备工作：在 NuGet 上创建并获取 API Keys

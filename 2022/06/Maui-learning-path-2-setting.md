@@ -9,8 +9,10 @@ originalTitle: Maui的学习之路（二）--设置
 originalLink: https://mp.weixin.qq.com/s/kX-dZFW64331A47i3G0IoQ
 draft: False
 cover: https://img1.dotnet9.com/2022/06/1701.png
-categories: .NET
-tags: MAUI
+categories: 
+    - .NET
+tags: 
+    - MAUI
 ---
 
 上一篇我们做了 Maui 的基本介绍，理论上这一篇应该会创建第一个 Maui 的应用，以便对此进行详细的评估，并逐步深入。

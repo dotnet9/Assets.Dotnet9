@@ -9,8 +9,10 @@ originalTitle: .NET 7 预览版 1 发布
 originalLink: https://mp.weixin.qq.com/s/m7pl_JOerkKU8CqWIoDtRw
 draft: False
 cover: https://img1.dotnet9.com/2022/01/cover_02.png
-categories: .NET
-tags: .NET
+categories: 
+    - .NET
+tags: 
+    - .NET
 ---
 
 今天，我们很高兴地宣布 .NET 历史上的下一个里程碑。[在庆祝社区和 20 年创新的同时](https://dotnet.microsoft.com/)，.NET 7 Preview 1 标志着迈向 .NET 下一个 20 年的第一步。

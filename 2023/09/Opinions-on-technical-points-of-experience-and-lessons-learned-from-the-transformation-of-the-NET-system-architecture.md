@@ -9,8 +9,10 @@ originalTitle: 【对.NET系统架构改造的一点经验和教训】的技术�
 originalLink: https://www.cnblogs.com/ac1985482/archive/2013/05/14/3077473.html
 draft: false
 cover: https://img1.dotnet9.com/2023/09/cover_01.png
-categories: .NET
-tags: .NET
+categories: 
+    - .NET
+tags: 
+    - .NET
 ---
 
 > 也 10 年前的一篇文章，针对《[对.NET 系统架构改造的一点经验和教训](https://news.cnblogs.com/n/177636/)》一文的技术要点看法。

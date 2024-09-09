@@ -9,7 +9,8 @@ originalTitle: .NET Core 3 WPF MVVM框架 Prism系列之对话框服务
 originalLink: https://www.cnblogs.com/ryzen/p/12771986.html
 draft: false
 cover: https://img1.dotnet9.com/albums/album_wpf_prism.png
-categories: .NET
+categories: 
+    - .NET
 tags: 
     - WPF
     - Prism

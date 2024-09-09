@@ -9,7 +9,8 @@ originalTitle: 正确姿势？EF Core 中这样使用枚举类型？
 originalLink: https://blog.csdn.net/waitaction/article/details/88639152
 draft: False
 cover: https://img1.dotnet9.com/2021/11/cover_03.jpeg
-categories: .NET
+categories: 
+    - .NET
 tags: 
     - .NET CORE
     - ORM

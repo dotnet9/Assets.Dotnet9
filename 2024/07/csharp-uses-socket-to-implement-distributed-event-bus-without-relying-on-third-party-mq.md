@@ -7,7 +7,8 @@ lastmod: 2024-07-28 10:25:27
 copyright: Original
 draft: false
 cover: https://img1.dotnet9.com/2024/07/cover_02.png
-categories: .NET
+categories: 
+    - .NET
 tags: 
     - C#
     - EventBus

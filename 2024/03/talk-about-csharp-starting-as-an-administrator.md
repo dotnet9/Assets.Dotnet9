@@ -10,8 +10,10 @@ author: nobody
 originalTitle: 谈谈C# 以管理员方式启动实现过程
 draft: False
 cover: https://img1.dotnet9.com/2024/03/cover_05.png
-categories: .NET
-tags: 管理员
+categories: 
+    - .NET
+tags: 
+    - 管理员
 ---
 
 ## 前言

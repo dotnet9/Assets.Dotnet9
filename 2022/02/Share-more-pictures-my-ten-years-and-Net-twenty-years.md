@@ -9,8 +9,10 @@ originalTitle: 多图分享：我的十年与.NET的二十年
 originalLink: https://mp.weixin.qq.com/s/bKIyQnOQFQsqbN8y6bgTFA
 draft: False
 cover: https://img1.dotnet9.com/2022/02/cover_06.jpg
-categories: .NET
-tags: .NET
+categories: 
+    - .NET
+tags: 
+    - .NET
 ---
 
 ![大学琴湖](https://img1.dotnet9.com/2022/02/cover_06.jpg)

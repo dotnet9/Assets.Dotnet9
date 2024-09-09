@@ -7,7 +7,8 @@ lastmod: 2023-04-30 08:40:13
 copyright: Original
 draft: false
 cover: https://img1.dotnet9.com/2023/04/cover_03.jpg
-categories: .NET
+categories: 
+    - .NET
 tags: 
     - Dotnet9
     - MASA Framework

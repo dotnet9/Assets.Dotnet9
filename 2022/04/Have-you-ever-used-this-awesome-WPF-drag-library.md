@@ -7,8 +7,10 @@ copyright: Original
 originalTitle: 您用过这个牛逼的WPF拖拽库吗？
 draft: False
 cover: https://img1.dotnet9.com/2022/04/2201.png
-albums: 开源WPF
-categories: .NET
+albums: 
+    - 开源WPF
+categories: 
+    - .NET
 tags: 
     - WPF
     - 拖拽

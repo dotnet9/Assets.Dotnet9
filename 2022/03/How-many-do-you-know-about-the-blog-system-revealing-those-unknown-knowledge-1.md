@@ -9,8 +9,10 @@ originalTitle: 博客系统知多少：揭秘那些不为人知的学问（一�
 originalLink: https://mp.weixin.qq.com/s/TVFS98aMuXViBNiCWtQ9Aw
 draft: False
 cover: https://img1.dotnet9.com/2022/03/cover_03.png
-categories: 分享
-tags: 博客
+categories: 
+    - 分享
+tags: 
+    - 博客
 ---
 
 > 导语

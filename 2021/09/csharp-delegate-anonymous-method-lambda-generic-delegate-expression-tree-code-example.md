@@ -9,7 +9,8 @@ originalTitle: C#委托，匿名方法，Lambda，泛型委托，表达式树代
 originalLink: https://www.cnblogs.com/QueryWord/archive/2019/08/05/11302125.html
 draft: False
 cover: https://img1.dotnet9.com/2021/09/cover_02.jpeg
-categories: .NET
+categories: 
+    - .NET
 tags: 
     - C#
     - 委托

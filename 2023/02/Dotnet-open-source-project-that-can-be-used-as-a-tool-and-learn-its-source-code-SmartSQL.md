@@ -7,7 +7,8 @@ copyright: Original
 author: 沙漠尽头的狼
 draft: false
 cover: https://img1.dotnet9.com/2023/02/cover_04.png
-categories: .NET
+categories: 
+    - .NET
 tags: 
     - WPF
     - 数据库管理工具

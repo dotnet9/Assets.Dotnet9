@@ -9,7 +9,8 @@ originalTitle: RPA之基于FlaUI的微信发送消息给某人
 originalLink: https://kesshei.blog.csdn.net/article/details/124955177
 draft: False
 cover: https://img1.dotnet9.com/2022/05/cover_54.png
-categories: .NET
+categories: 
+    - .NET
 tags: 
     - .NET
 	- RPA

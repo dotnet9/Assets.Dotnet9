@@ -9,7 +9,8 @@ originalTitle: 有几十个WPF设计和动画的项目
 originalLink: https://github.com/DinoChan/wpf_design_and_animation_lab
 draft: False
 cover: https://img1.dotnet9.com/2022/04/2001.png
-categories: .NET
+categories: 
+    - .NET
 tags: 
     - WPF
     - 动画

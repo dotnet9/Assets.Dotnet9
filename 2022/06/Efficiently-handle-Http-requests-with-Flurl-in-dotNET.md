@@ -9,8 +9,10 @@ originalTitle: 在 .NET 中使用 Flurl 高效处理Http请求
 originalLink: https://www.cnblogs.com/myshowtime/p/14512563.html
 draft: False
 cover: https://img1.dotnet9.com/2022/06/cover_17.jpg
-categories: .NET
-tags: Flurl
+categories: 
+    - .NET
+tags: 
+    - Flurl
 ---
 
 ## 简介

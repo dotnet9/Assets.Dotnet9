@@ -7,7 +7,8 @@ copyright: Original
 originalTitle: 一套Flutter代码多端运行
 draft: False
 cover: https://img1.dotnet9.com/2021/07/cover_02.png
-categories: 前端
+categories: 
+    - 前端
 tags: 
     - Flutter
     - Mac

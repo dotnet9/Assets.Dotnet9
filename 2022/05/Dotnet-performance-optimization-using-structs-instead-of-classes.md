@@ -9,8 +9,10 @@ originalTitle: .NET性能优化-使用结构体替代类
 originalLink: https://www.cnblogs.com/InCerry/archive/2022/05/05/Dotnet-Opt-Perf-Use-Struct-Instead-Of-Class.html
 draft: False
 cover: https://img1.dotnet9.com/2022/05/cover_16.jpg
-categories: .NET
-tags: .NET
+categories: 
+    - .NET
+tags: 
+    - .NET
 ---
 
 > 作者：InCerry

@@ -9,8 +9,10 @@ originalTitle: 如何提升写作能力？
 originalLink: https://mp.weixin.qq.com/s/XLNum8NuyK2DYd6sfNNZ5w
 draft: False
 cover: https://img1.dotnet9.com/2022/05/cover_15.jpg
-categories: 分享
-tags: 写作技巧
+categories: 
+    - 分享
+tags: 
+    - 写作技巧
 ---
 
 ![](https://img1.dotnet9.com/2022/05/cover_15.jpg)

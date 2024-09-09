@@ -11,7 +11,8 @@ originalTitle: 可用于智能客服的完全开源免费商用的知识库项�
 originalLink: https://mp.weixin.qq.com/s/ANqHugTR1-rpQEaz2XF6qg
 draft: false
 cover: https://img1.dotnet9.com/2024/02/0311.png
-categories: .NET
+categories: 
+    - .NET
 tags: 
     - .NET
     - Blazor

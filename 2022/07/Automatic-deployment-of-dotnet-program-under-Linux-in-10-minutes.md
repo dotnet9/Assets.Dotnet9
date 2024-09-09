@@ -9,8 +9,10 @@ originalTitle: 10分钟实现dotnet程序在linux下的自动部署
 originalLink: https://www.cnblogs.com/xhznl/p/16438063.html
 draft: False
 cover: https://img1.dotnet9.com/2022/07/0203.png
-categories: .NET
-tags: .NET
+categories: 
+    - .NET
+tags: 
+    - .NET
 ---
 
 ## 背景

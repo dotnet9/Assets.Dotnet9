@@ -9,7 +9,8 @@ originalTitle: 1. N+1和2N的计算方法及法律依据是什么？
 originalLink: https://mp.weixin.qq.com/s/QIsePgO1PPRgXyNpruog9A
 draft: False
 cover: https://img1.dotnet9.com/2022/03/cover_12.jpeg
-categories: 分享
+categories: 
+    - 分享
 tags: 
     - 法律
     - 仲裁

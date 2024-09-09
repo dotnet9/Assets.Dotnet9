@@ -9,7 +9,8 @@ originalTitle: C# 10的新特性
 originalLink: https://mp.weixin.qq.com/s/zLwo05uQOTXg_f2dwgRP-w
 draft: False
 cover: https://img1.dotnet9.com/2022/02/cover_03.jpg
-categories: .NET
+categories: 
+    - .NET
 tags: 
     - .NET 6
     - C# 10

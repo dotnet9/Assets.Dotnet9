@@ -7,8 +7,10 @@ copyright: Original
 originalTitle: WPF-美食应用登录UI设计
 draft: False
 cover: https://img1.dotnet9.com/2020/06/0201.gif
-tags: WPF Design
-categories: .NET
+tags: 
+    - WPF Design
+categories: 
+    - .NET
 ---
 
 Demo 演示：

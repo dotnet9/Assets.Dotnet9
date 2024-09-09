@@ -9,8 +9,10 @@ originalTitle: 3D 穿梭效果？使用 UWP 也能搞定
 originalLink: https://www.cnblogs.com/T-ARF/p/15552980.html
 draft: False
 cover: https://img1.dotnet9.com/2022/02/1002.gif
-categories: .NET
-tags: UWP
+categories: 
+    - .NET
+tags: 
+    - UWP
 ---
 
 昨天 ChokCoco 大佬搞了个 3D 穿梭效果出来，具体可见这里：

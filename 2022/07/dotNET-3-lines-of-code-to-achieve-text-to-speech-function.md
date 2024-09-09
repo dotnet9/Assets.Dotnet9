@@ -9,8 +9,10 @@ originalTitle: .NET 3行代码实现文字转语音功能
 originalLink: https://mp.weixin.qq.com/s/dz5LsedViYkPJ3FoD3a1rQ
 draft: False
 cover: https://img1.dotnet9.com/2022/07/cover_23.jpg
-categories: .NET
-tags: .NET
+categories: 
+    - .NET
+tags: 
+    - .NET
 ---
 
 在人工智能时代，文字转语音是现在人工智能比较热门的功能，各大公司都有这方面的业务，可以可以通过接口对各种文字转语音，甚至能模拟真人，非常的强大,.NET 东家微软其实也有这方面的服务。如果大家对语言转文字的要求不高，可以用微软自己的语音转换类库，而且实现很简单，只需要 5 行代码实现，本文将介绍如何使用

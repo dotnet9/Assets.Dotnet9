@@ -9,8 +9,10 @@ originalTitle: WPF版本问题排坑记录
 originalLink: https://zhuanlan.zhihu.com/p/622610149
 draft: false
 cover: https://img1.dotnet9.com/2023/04/cover_02.png
-categories: .NET
-tags: WPF
+categories: 
+    - .NET
+tags: 
+    - WPF
 ---
 
 > 本文由网友投稿。

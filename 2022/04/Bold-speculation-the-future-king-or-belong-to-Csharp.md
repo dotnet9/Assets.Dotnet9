@@ -9,8 +9,10 @@ originalTitle: 大胆推测：未来的王者，或属于C#
 originalLink: https://zhuanlan.zhihu.com/p/499713602
 draft: False
 cover: https://img1.dotnet9.com/2022/04/cover_19.jpeg
-categories: .NET
-tags: .NET
+categories: 
+    - .NET
+tags: 
+    - .NET
 ---
 
 **这个世界，自古是用户驱动资本，资本驱动变革，变革造就生态。**

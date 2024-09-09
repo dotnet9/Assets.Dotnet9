@@ -9,8 +9,10 @@ originalTitle: 【中间件】C#/.NET使用GZY.Quartz.MUI搭建可视化的定�
 originalLink: https://mp.weixin.qq.com/s/6Ik5Igi2ei7QTQxanVayCQ
 draft: False
 cover: https://img1.dotnet9.com/2022/05/5502.png
-categories: .NET
-tags: .NET
+categories: 
+    - .NET
+tags: 
+    - .NET
 ---
 
 ## 前言

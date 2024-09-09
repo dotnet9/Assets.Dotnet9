@@ -7,7 +7,8 @@ copyright: Original
 originalTitle: MAUI使用Masa blazor组件库
 draft: False
 cover: https://img1.dotnet9.com/2022/06/1309.png
-categories: .NET
+categories: 
+    - .NET
 tags: 
     - MAUI
     - Blazor

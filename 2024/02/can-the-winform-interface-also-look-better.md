@@ -11,7 +11,8 @@ originalTitle: winform的界面也可以变好看？
 originalLink: https://mp.weixin.qq.com/s/QCAlQNqDW-sicae2ybELkw
 draft: false
 cover: https://img1.dotnet9.com/2024/02/0401.gif
-categories: .NET
+categories: 
+    - .NET
 tags: 
     - .NET
     - Blazor

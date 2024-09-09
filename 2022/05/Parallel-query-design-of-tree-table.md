@@ -9,8 +9,10 @@ originalTitle: 树形表的平行查询设计
 originalLink: https://www.cnblogs.com/gtxck/articles/16293295.html
 draft: False
 cover: https://img1.dotnet9.com/2022/05/cover_53.png
-categories: 分享
-tags: 架构设计
+categories: 
+    - 分享
+tags: 
+    - 架构设计
 ---
 
 > 本文由网友`长空X`投稿，欢迎转载、分享

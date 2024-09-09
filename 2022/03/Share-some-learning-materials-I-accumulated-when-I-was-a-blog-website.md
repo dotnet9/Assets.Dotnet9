@@ -8,7 +8,8 @@ copyright: Original
 originalTitle: 分享我做Dotnet9博客网站时积累的一些资料
 draft: False
 cover: https://img1.dotnet9.com/2022/03/cover_01.png
-categories: 课程
+categories: 
+    - 课程
 tags: 
     - Dotnet9
     - 开源博客

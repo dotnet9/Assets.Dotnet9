@@ -6,8 +6,10 @@ date: 2023-03-18 22:05:18
 copyright: Original
 draft: false
 cover: https://img1.dotnet9.com/2023/03/cover_12.png
-categories: .NET
-tags: 开源WPF
+categories: 
+    - .NET
+tags: 
+    - 开源WPF
 ---
 
 大家好，我是沙漠尽头的狼，今天介绍一个WPF开源项目-NodeNetwork，它可以帮助我们快速构建和定制网络拓扑图。

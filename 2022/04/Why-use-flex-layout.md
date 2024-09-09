@@ -9,8 +9,10 @@ originalTitle: 为什么要使用flex布局?
 originalLink: https://juejin.cn/post/7063823914136256543
 draft: False
 cover: https://img1.dotnet9.com/2022/04/cover_43.jpeg
-categories: 前端
-tags: CSS
+categories: 
+    - 前端
+tags: 
+    - CSS
 ---
 
 > 这是我参与 2022 首次更文挑战的第 6 天，活动详情查看：[2022 首次更文挑战](https://juejin.cn/post/7052884569032392740?utm_source=feed_1&utm_medium=feed&utm_campaign=gengwen202201_yq)

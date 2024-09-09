@@ -10,8 +10,10 @@ originalTitle: 热心网友收集的.NET实战面试题1和2
 originalLink: https://mp.weixin.qq.com/s/M5U5JhDs-k6bnV6yckYzqw
 draft: false
 cover: https://img1.dotnet9.com/2023/11/cover_03.png
-categories: .NET
-tags: 面试题
+categories: 
+    - .NET
+tags: 
+    - 面试题
 ---
 
 在[DotNet 开发跳槽]公众号中，号主为大家准备了一批.NET 实战面试题：

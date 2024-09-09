@@ -7,7 +7,8 @@ copyright: Original
 originalTitle: 如果诸葛亮用C#写出师表...
 draft: False
 cover: https://img1.dotnet9.com/2021/03/cover_02.jpeg
-categories: .NET
+categories: 
+    - .NET
 tags: 
     - C#
     - 出师表

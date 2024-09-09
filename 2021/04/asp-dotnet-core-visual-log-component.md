@@ -7,7 +7,8 @@ copyright: Original
 originalTitle: ASP.NET Core可视化日志组件使用
 draft: False
 cover: https://img1.dotnet9.com/2021/04/cover_02.jpg
-categories: .NET
+categories: 
+    - .NET
 tags: 
     - 日志面板
     - LogDashboard

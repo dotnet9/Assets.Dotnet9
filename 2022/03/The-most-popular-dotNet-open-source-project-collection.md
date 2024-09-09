@@ -9,8 +9,10 @@ originalTitle: 最流行的 .NET 开源项目合集
 originalLink: https://mp.weixin.qq.com/s/VJAKv-c8l7Oiubc0qHHRXw
 draft: False
 cover: https://img1.dotnet9.com/2022/03/cover_30.png
-categories: .NET
-tags: .NET
+categories: 
+    - .NET
+tags: 
+    - .NET
 ---
 
 ![](https://img1.dotnet9.com/2022/03/cover_30.png)

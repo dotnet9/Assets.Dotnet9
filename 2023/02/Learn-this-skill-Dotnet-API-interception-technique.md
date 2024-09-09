@@ -6,7 +6,8 @@ date: 2023-02-13 20:21:19
 copyright: Original
 draft: False
 cover: https://img1.dotnet9.com/2023/02/cover_05.png
-categories: .NET
+categories: 
+    - .NET
 tags: 
     - hook
     - harmony

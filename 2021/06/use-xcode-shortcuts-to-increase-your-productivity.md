@@ -7,8 +7,10 @@ copyright: Original
 originalTitle: 善用Xcode快捷键，提高您的生产力
 draft: False
 cover: https://img1.dotnet9.com/2021/06/cover_02.jpg
-categories: 分享
-tags: Xcode
+categories: 
+    - 分享
+tags: 
+    - Xcode
 ---
 
 > - 原文标题：13 Xcode Shortcuts to Boost Your Productivity

@@ -11,7 +11,8 @@ originalTitle: WPF开源的一款免费、开箱即用的翻译、OCR工具
 originalLink: https://mp.weixin.qq.com/s/WTopCglS2ELPWaa5wAMyTQ
 draft: false
 cover: https://img1.dotnet9.com/2024/03/0407.png
-categories: .NET
+categories: 
+    - .NET
 tags: 
     - 翻译
     - OCR工具

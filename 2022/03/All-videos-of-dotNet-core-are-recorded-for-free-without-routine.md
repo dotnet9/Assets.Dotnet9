@@ -10,7 +10,8 @@ originalTitle: .NET Core全部视频录完了，全免费，无套路
 originalLink: https://mp.weixin.qq.com/s/SbidWHbMmNDtknD4HuAmNg
 draft: False
 cover: https://img1.dotnet9.com/2022/03/cover_07.png
-categories: 课程
+categories: 
+    - 课程
 tags: 
     - .NET Core
     - 全免费

@@ -9,8 +9,10 @@ originalTitle: .NET Core中如何限制接口请求次数
 originalLink: https://mp.weixin.qq.com/s/bNbdqfP4W8Xx7PfWaeNTpA
 draft: False
 cover: https://img1.dotnet9.com/2022/07/cover_08.png
-categories: .NET
-tags: .NET
+categories: 
+    - .NET
+tags: 
+    - .NET
 ---
 
 像`AspNetCoreRateLimit`这种轮子我前面有给大家介绍过，今天就不说了，我们来聊聊背后的原理，欢迎各位大佬指正！

@@ -9,7 +9,8 @@ originalTitle: WinForm和WPF有什么区别?
 originalLink: https://mp.weixin.qq.com/s/IXpv_mNtR5gjO1IlUXAtpg
 draft: False
 cover: https://img1.dotnet9.com/2022/04/0501.jpg
-categories: .NET
+categories: 
+    - .NET
 tags: 
     - Winform
     - WPF

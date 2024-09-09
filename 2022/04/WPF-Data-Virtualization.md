@@ -9,7 +9,8 @@ originalTitle: WPF：数据虚拟化
 originalLink: https://www.codeproject.com/Articles/34405/WPF-Data-Virtualization
 draft: False
 cover: https://img1.dotnet9.com/2022/04/cover_14.png
-categories: .NET
+categories: 
+    - .NET
 tags: 
     - UI虚拟化
     - 数据虚拟化

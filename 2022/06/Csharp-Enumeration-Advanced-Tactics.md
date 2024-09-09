@@ -9,8 +9,10 @@ originalTitle: C# 枚举高级战术
 originalLink: https://mp.weixin.qq.com/s/gKUIEVoG4aW69x6ExIMvYg
 draft: False
 cover: https://img1.dotnet9.com/2022/06/cover_03.jpg
-categories: .NET
-tags: C#
+categories: 
+    - .NET
+tags: 
+    - C#
 ---
 
 ![](https://img1.dotnet9.com/2022/06/cover_03.jpg)

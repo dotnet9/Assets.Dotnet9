@@ -9,8 +9,10 @@ originalTitle: 如何在 2022 年开发桌面
 originalLink: https://www.bilibili.com/read/cv13119608/
 draft: False
 cover: https://img1.dotnet9.com/2022/05/cover_20.jpg
-categories: 前端
-tags: Flutter
+categories: 
+    - 前端
+tags: 
+    - Flutter
 ---
 
 > 原文网址：[https://www.telerik.com/blogs/how-to-desktop-2022](https://www.telerik.com/blogs/how-to-desktop-2022)

@@ -9,7 +9,8 @@ originalTitle: Blazor创建TabControl组件
 originalLink: https://blazor-university.com/templating-components-with-renderfragements/creating-a-tabcontrol/
 draft: False
 cover: https://img1.dotnet9.com/2021/12/cover_03.jpeg
-categories: .NET
+categories: 
+    - .NET
 tags: 
     - 前端
     - Blazor

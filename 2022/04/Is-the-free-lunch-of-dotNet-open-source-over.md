@@ -9,7 +9,8 @@ originalTitle: .NET 开源的免费午餐结束了？
 originalLink: https://www.sohu.com/a/472062543_115128
 draft: False
 cover: https://img1.dotnet9.com/2022/04/cover_25.jpeg
-categories: .NET
+categories: 
+    - .NET
 tags: 
     - C#
     - 开源

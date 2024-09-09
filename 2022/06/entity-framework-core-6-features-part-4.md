@@ -9,7 +9,8 @@ originalTitle: EF Core 6 新功能汇总（四）
 originalLink: https://mp.weixin.qq.com/s/BU8FKXS95WlvblVPBulC5g
 draft: False
 cover: https://img1.dotnet9.com/2022/06/cover_04.jpg
-categories: .NET
+categories: 
+    - .NET
 tags: 
     - .NET
     - ORM

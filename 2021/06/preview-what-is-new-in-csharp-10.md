@@ -9,8 +9,10 @@ originalTitle: 预览 C# 10 的新东西
 originalLink: https://www.cnblogs.com/Rwing/p/introducing-csharp-10.html
 draft: False
 cover: https://img1.dotnet9.com/2021/06/cover_05.png
-categories: .NET
-tags: C#
+categories: 
+    - .NET
+tags: 
+    - C#
 ---
 
 - 原文: [Introducing C# 10](https://kenbonny.net/introducing-csharp-10)

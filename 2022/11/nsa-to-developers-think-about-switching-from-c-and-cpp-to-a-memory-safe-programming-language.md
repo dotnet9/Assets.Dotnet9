@@ -6,8 +6,10 @@ date: 2022-11-16 07:31:26
 copyright: Original
 draft: False
 cover: https://img1.dotnet9.com/2022/11/cover_03.png
-categories: 分享
-tags: 科技生活
+categories: 
+    - 分享
+tags: 
+    - 科技生活
 ---
 
 先丢出美国国家安全局的一篇文章：[NSA Releases Guidance on How to Protect Against Software Memory Safety Issues](https://www.nsa.gov/Press-Room/News-Highlights/Article/Article/3215760/nsa-releases-guidance-on-how-to-protect-against-software-memory-safety-issues/)：

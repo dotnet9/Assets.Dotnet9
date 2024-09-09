@@ -11,8 +11,10 @@ originalTitle: 【C#】CsvHelper 使用手册
 originalLink: https://www.cnblogs.com/gl1573/p/12922857.html
 draft: false
 cover: https://img1.dotnet9.com/2024/01/cover_08.png
-categories: .NET
-tags: CSV
+categories: 
+    - .NET
+tags: 
+    - CSV
 ---
 
 > **本文代码基于 CsvHelper 15.0.5**

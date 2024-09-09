@@ -9,8 +9,10 @@ originalTitle: SQL经典面试10题讲解
 originalLink: https://mp.weixin.qq.com/s/xMTMlsetqIv5lj2wH2SPlA
 draft: False
 cover: https://img1.dotnet9.com/2022/05/cover_03.png
-categories: 数据库
-tags: 数据库
+categories: 
+    - 数据库
+tags: 
+    - 数据库
 ---
 
 ## 一、提要

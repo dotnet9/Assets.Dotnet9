@@ -7,7 +7,8 @@ copyright: Original
 originalTitle: WPF：播放GIF很伤神！
 draft: False
 cover: https://img1.dotnet9.com/2021/07/cover_04.gif
-categories: .NET
+categories: 
+    - .NET
 tags: 
     - WPF
     - GIF

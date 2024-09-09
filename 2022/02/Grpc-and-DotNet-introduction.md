@@ -9,7 +9,8 @@ originalTitle: gRPC 与.NET 入门
 originalLink: https://www.infoq.com/articles/getting-started-grpc-dotnet/、https://www.infoq.cn/article/VutWdcVAGpE5ugdar92q
 draft: False
 cover: https://img1.dotnet9.com/2022/02/cover_01.jpg
-categories: .NET
+categories: 
+    - .NET
 tags: 
     - .NET
     - gRPC

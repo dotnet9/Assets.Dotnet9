@@ -11,7 +11,8 @@ originalTitle: winform中也可以这样做数据展示
 originalLink: https://mp.weixin.qq.com/s/fmW8S-dP_3uZWROzl3q9WA
 draft: false
 cover: https://img1.dotnet9.com/2024/02/0501.gif
-categories: .NET
+categories: 
+    - .NET
 tags: 
     - .NET
     - Blazor

@@ -9,7 +9,8 @@ originalTitle: .NET Core 简单且高级的库 csredis
 originalLink: https://www.cnblogs.com/kellynic/p/9803314.html
 draft: False
 cover: https://img1.dotnet9.com/2021/04/cover_05.png
-categories: .NET
+categories: 
+    - .NET
 tags: 
     - .NET
     - Redis

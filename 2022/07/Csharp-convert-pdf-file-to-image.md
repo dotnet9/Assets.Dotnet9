@@ -9,8 +9,10 @@ originalTitle: C#将PDF文件转成图片
 originalLink: https://mp.weixin.qq.com/s/_Zduaj6_hsQy3c4HvSDLEg
 draft: False
 cover: https://img1.dotnet9.com/2022/07/cover_18.png
-categories: .NET
-tags: .NET
+categories: 
+    - .NET
+tags: 
+    - .NET
 ---
 
 ![](https://img1.dotnet9.com/2022/07/cover_18.png)

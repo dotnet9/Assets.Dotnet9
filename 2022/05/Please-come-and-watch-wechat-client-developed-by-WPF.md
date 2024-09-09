@@ -9,8 +9,10 @@ originalTitle: 请来围观：WPF开发的微信客户端
 originalLink: https://www.cnblogs.com/ZXdeveloper/p/6058206.html
 draft: False
 cover: https://img1.dotnet9.com/2022/05/5108.png
-categories: .NET
-tags: WPF
+categories: 
+    - .NET
+tags: 
+    - WPF
 ---
 
 > 本文经原作者授权以原创方式二次分享，欢迎转载、分享。

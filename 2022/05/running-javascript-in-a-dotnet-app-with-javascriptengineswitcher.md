@@ -9,8 +9,10 @@ originalTitle: 在 .NET 应用程序中运行 JavaScript
 originalLink: https://mp.weixin.qq.com/s/nBO53jDbvmi7tL-js0tz6w
 draft: False
 cover: https://img1.dotnet9.com/2022/05/cover_31.png
-categories: .NET
-tags: .NET
+categories: 
+    - .NET
+tags: 
+    - .NET
 ---
 
 前几天我在做一个副业，意识到我需要使用一些 JavaScript 功能。一想到要再次处理 Node.js 和 npm，我就完全放弃了，所以我决定研究一下在 .NET 应用程序中运行 JavaScript 的可能性。很疯狂吧？实际上，这出乎意料的简单。

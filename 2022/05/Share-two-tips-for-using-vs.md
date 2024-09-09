@@ -9,8 +9,10 @@ originalTitle: 分享VS的两个技巧
 originalLink: https://www.youtube.com/watch?v=h5vbk9H0luE
 draft: False
 cover: https://img1.dotnet9.com/2022/05/2506.gif
-categories: 分享
-tags: IDE
+categories: 
+    - 分享
+tags: 
+    - IDE
 ---
 
 ## 1. 垂直滚动条的缩略图模式

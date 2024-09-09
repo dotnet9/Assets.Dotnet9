@@ -9,7 +9,8 @@ originalTitle: WPF随笔（九）--使用路径动画模拟管道流体流向
 originalLink: https://blog.csdn.net/lordwish/article/details/85007867
 draft: false
 cover: https://img1.dotnet9.com/2023/01/0403.gif
-categories: .NET
+categories: 
+    - .NET
 tags: 
     - .NET
     - WPF

@@ -6,7 +6,8 @@ date: 2023-03-14 22:03:14
 copyright: Original
 draft: false
 cover: https://img1.dotnet9.com/2023/03/cover_04.png
-categories: .NET
+categories: 
+    - .NET
 tags: 
     - JavaScript
     - C#与JS互操作

@@ -8,7 +8,8 @@ author: 闫金华（闫驚鏵）
 originalTitle: WPF开发的实用小工具 - 快捷悬浮菜单
 draft: False
 cover: https://img1.dotnet9.com/2020/11/cover_01.png
-categories: .NET
+categories: 
+    - .NET
 tags: 
     - WPF
     - 开源WPF

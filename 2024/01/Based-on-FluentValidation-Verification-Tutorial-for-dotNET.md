@@ -11,8 +11,10 @@ originalTitle: 基于 .NET 的 FluentValidation 验证教程
 originalLink: https://www.xcode.me/post/5849
 draft: false
 cover: https://img1.dotnet9.com/2024/01/cover_07.png
-categories: .NET
-tags: 技术更新
+categories: 
+    - .NET
+tags: 
+    - 技术更新
 ---
 
 FluentValidation 是一个基于 .NET 开发的验证框架，开源免费，而且优雅，支持链式操作，易于理解，功能完善，还是可与 MVC5、WebApi2 和 ASP.NET CORE 深度集成，组件内提供十几种常用验证器，可扩展性好，支持自定义验证器，支持本地化多语言。

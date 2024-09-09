@@ -9,7 +9,8 @@ originalTitle: .NET Core程序瘦身器发布，压缩程序尺寸到1/3
 originalLink: https://mp.weixin.qq.com/s/U5mwB9Mxjkw1aRfcdO60uQ
 draft: False
 cover: https://img1.dotnet9.com/2022/03/cover_08.jpg
-categories: .NET
+categories: 
+    - .NET
 tags: 
     - .NET Core
     - 瘦身

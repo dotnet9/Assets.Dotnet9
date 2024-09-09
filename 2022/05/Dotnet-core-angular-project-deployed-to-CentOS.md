@@ -9,8 +9,10 @@ originalTitle: .NET Core + Angular 项目 部署到CentOS
 originalLink: https://www.cnblogs.com/cwsheng/p/14129063.html
 draft: False
 cover: https://img1.dotnet9.com/2022/05/3002.png
-categories: .NET
-tags: Web API
+categories: 
+    - .NET
+tags: 
+    - Web API
 ---
 
 ## 前言

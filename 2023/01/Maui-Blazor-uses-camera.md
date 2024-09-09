@@ -9,7 +9,8 @@ originalTitle: Maui Blazor 使用摄像头实现
 originalLink: https://www.cnblogs.com/hejiale010426/p/17045707.html
 draft: false
 cover: https://img1.dotnet9.com/2023/01/cover_03.png
-categories: .NET
+categories: 
+    - .NET
 tags: 
     - .NET
     - Blazor

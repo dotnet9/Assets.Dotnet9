@@ -9,7 +9,8 @@ originalTitle: tauri-vue3-admin后台管理exe程序模板
 originalLink: https://mp.weixin.qq.com/s/m-KeC1qRQYm57wU4WynBgA
 draft: false
 cover: https://img1.dotnet9.com/2023/07/cover_11.png
-categories: 前端
+categories: 
+    - 前端
 tags: 
     - Vue
     - Tauri

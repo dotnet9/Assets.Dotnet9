@@ -10,7 +10,8 @@ lastModifyUser: Linluz
 originalTitle: WPF牛逼的动画库：XamlFlair
 draft: False
 cover: https://img1.dotnet9.com/2021/07/cover_05.jpg
-categories: .NET
+categories: 
+    - .NET
 tags: 
     - WPF
     - 动画库

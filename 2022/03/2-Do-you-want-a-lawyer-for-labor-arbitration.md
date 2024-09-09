@@ -9,7 +9,8 @@ originalTitle: 2. 劳动仲裁要不要请律师？
 originalLink: https://mp.weixin.qq.com/s/TYWH_m6xEg7mK-17CNerGA
 draft: False
 cover: https://img1.dotnet9.com/2022/03/cover_12.jpeg
-categories: 分享
+categories: 
+    - 分享
 tags: 
     - 仲裁
     - 律师

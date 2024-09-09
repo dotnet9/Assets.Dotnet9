@@ -9,8 +9,10 @@ originalTitle: 干货满满！10 分钟看懂 Docker 和 K8S
 originalLink: https://my.oschina.net/jamesview/blog/2994112
 draft: false
 cover: https://img1.dotnet9.com/2023/08/0401.png
-categories: 分享
-tags: Docker
+categories: 
+    - 分享
+tags: 
+    - Docker
 ---
 
 本文来源微信号：鲜枣课堂

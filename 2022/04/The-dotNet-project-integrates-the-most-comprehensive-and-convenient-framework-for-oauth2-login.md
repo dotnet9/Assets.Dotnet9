@@ -9,7 +9,8 @@ originalTitle: .NET 项目集成 OAuth2 登录最全面的、最方便的框架
 originalLink: https://github.com/mrhuo/MrHuo.OAuth
 draft: False
 cover: https://img1.dotnet9.com/2022/04/1001.png
-categories: .NET
+categories: 
+    - .NET
 tags: 
     - .NET
     - OAuth2

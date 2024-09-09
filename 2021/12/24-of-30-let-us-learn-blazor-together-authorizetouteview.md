@@ -9,7 +9,8 @@ originalTitle: (24/30)大家一起学Blazor：<AuthorizeRouteView>运用
 originalLink: https://ithelp.ithome.com.tw/articles/10271129
 draft: False
 cover: https://img1.dotnet9.com/2021/12/cover_05.png
-categories: .NET
+categories: 
+    - .NET
 tags: 
     - Blazor
     - ASP.NET Core

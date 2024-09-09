@@ -7,8 +7,10 @@ author: 沙漠尽头的狼
 banner: false
 draft: false
 cover: https://img1.dotnet9.com/2019/12/0402.gif
-tags: 开源WPF
-categories: .NET
+tags: 
+    - 开源WPF
+categories: 
+    - .NET
 copyright: Original
 ---
 

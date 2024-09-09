@@ -11,7 +11,8 @@ originalTitle: 微软开抢年收入上亿美元的 Redis 饭碗？开源性能�
 originalLink: https://www.infoq.cn/article/ppO8VZPtH59mqj8Np0HN
 draft: false
 cover: https://img1.dotnet9.com/2024/03/cover_09.png
-categories: .NET
+categories: 
+    - .NET
 tags: 
     - Redis
     - Garnet

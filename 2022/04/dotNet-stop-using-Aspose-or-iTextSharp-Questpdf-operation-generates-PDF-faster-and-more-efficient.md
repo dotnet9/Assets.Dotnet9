@@ -9,7 +9,8 @@ originalTitle: C#/.Net 不要再使用Aspose和iTextSharp啦！QuestPDF操作生
 originalLink: https://mp.weixin.qq.com/s/TZp2PwHd9VRZk6_sdW4cQw
 draft: False
 cover: https://img1.dotnet9.com/2022/04/cover_30.png
-categories: .NET
+categories: 
+    - .NET
 tags: 
     - C#
     - .NET

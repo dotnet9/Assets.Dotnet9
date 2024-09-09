@@ -9,8 +9,10 @@ originalTitle: 基于.NET动态编译技术实现任意代码执行
 originalLink: https://mp.weixin.qq.com/s/eZgnxEihQu-KULLeLJatCw
 draft: False
 cover: https://img1.dotnet9.com/2022/05/cover44.gif
-categories: .NET
-tags: 动态编译
+categories: 
+    - .NET
+tags: 
+    - 动态编译
 ---
 
 ![](https://img1.dotnet9.com/2022/05/cover44.gif)

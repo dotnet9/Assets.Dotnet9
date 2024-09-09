@@ -7,7 +7,8 @@ lastmod: 2024-03-12 05:14:49
 copyright: Original
 draft: false
 cover: https://img1.dotnet9.com/2024/03/cover_06.png
-categories: .NET
+categories: 
+    - .NET
 tags: 
     - NetBeauty2
     - 输出目录

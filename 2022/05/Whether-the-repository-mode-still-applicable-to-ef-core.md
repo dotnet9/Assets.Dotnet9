@@ -9,7 +9,8 @@ originalTitle: 仓储模式是否依然适用于EF Core？
 originalLink: https://mp.weixin.qq.com/s/DyzREfZbtZVOQ5MbIQ46cg
 draft: false
 cover: https://img1.dotnet9.com/2022/05/cover_09.png
-categories: .NET
+categories: 
+    - .NET
 tags: 
     - .NET
     - ORM

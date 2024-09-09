@@ -10,7 +10,8 @@ originalTitle: 开源C# Winform控件库《SunnyUI》
 originalLink: https://gitee.com/yhuse/SunnyUI
 draft: False
 cover: https://img1.dotnet9.com/2020/12/0407.png
-categories: .NET
+categories: 
+    - .NET
 tags: 
     - Winform
     - SunnyUI

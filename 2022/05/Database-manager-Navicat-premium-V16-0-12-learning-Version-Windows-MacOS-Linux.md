@@ -9,8 +9,10 @@ originalTitle: 数据库管理利器——Navicat Premium v16.0.12学习版(Wind
 originalLink: https://ldqk.xyz/37?t=uptjw5h2j0n4
 draft: False
 cover: https://img1.dotnet9.com/2022/05/cover_22.png
-categories: 分享
-tags: 软件分享
+categories: 
+    - 分享
+tags: 
+    - 软件分享
 ---
 
 ![](https://img1.dotnet9.com/2022/05/cover_22.png)

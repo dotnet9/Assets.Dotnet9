@@ -9,7 +9,8 @@ originalTitle: MAUI 跨平台播客应用程序(Conf 2021)
 originalLink: https://mp.weixin.qq.com/s/SqcrRomZyn7bzlNzeWZdrQ
 draft: False
 cover: https://img1.dotnet9.com/2021/12/cover_01.png
-categories: .NET
+categories: 
+    - .NET
 tags: 
     - MAUI
     - 开源MAUI

@@ -7,7 +7,8 @@ copyright: Original
 originalTitle: 如何在 Prism 的 Module 中弹出对话框？
 draft: False
 cover: https://img1.dotnet9.com/2021/04/cover_04.jpg
-categories: .NET
+categories: 
+    - .NET
 tags: 
     - WPF
     - Prism

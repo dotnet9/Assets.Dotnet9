@@ -9,7 +9,8 @@ originalTitle: CTK完整教程(OSGI for C++ 实现 C++ Qt 模块化)
 originalLink: https://www.ljjyy.com/archives/2021/03/100645.html
 draft: False
 cover: https://img1.dotnet9.com/2022/03/cover_23.png
-categories: 前端
+categories: 
+    - 前端
 tags: 
     - Qt
     - CTK

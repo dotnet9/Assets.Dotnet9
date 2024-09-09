@@ -9,8 +9,10 @@ originalTitle: 单片机入门第二课----点灯大师
 originalLink: https://www.cnblogs.com/1996-Chinese-Chen/p/16814553.html
 draft: false
 cover: https://img1.dotnet9.com/2022/10/0601.jpg
-categories: 分享
-tags: 硬件相关
+categories: 
+    - 分享
+tags: 
+    - 硬件相关
 ---
 
 > 本文由网友投稿，站长是一点都不懂硬件。

@@ -7,7 +7,8 @@ copyright: Original
 originalTitle: 【开源】一个WPF开发的XML记事本
 draft: False
 cover: https://img1.dotnet9.com/2022/08/cover_01.png
-categories: .NET
+categories: 
+    - .NET
 tags: 
     - .NET
     - 开源WPF
