@@ -8,7 +8,10 @@ originalTitle: 怎样实现WPF Prism Module的国际化和本地化？
 draft: False
 cover: https://img1.dotnet9.com/2020/04/0201.png
 categories: .NET
-tags: WPF,国际化,本地化
+tags: 
+    - WPF
+    - 国际化
+    - 本地化
 ---
 
 > 上一篇有简单介绍主工程的国际化，使用的资源字典(XAML)实现的。这几天我添加了几个 Prism 模块(Module)，发现子模块使用资源字典的方式实现国际化和本地化不好做，没有找到比较好的参考文章，所以换了一种方式，使用资源文件实现了。

@@ -9,7 +9,9 @@ draft: false
 cover: https://img1.dotnet9.com/2019/11/cover_01.png
 categories: .NET
 copyright: Original
-tags: WPF,FluentValiatoin
+tags: 
+    - WPF
+    - FluentValiatoin
 ---
 
 ## 1. 引言
