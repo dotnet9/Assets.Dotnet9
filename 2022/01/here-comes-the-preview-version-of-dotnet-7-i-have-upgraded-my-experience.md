@@ -9,7 +9,8 @@ draft: False
 cover: https://img1.dotnet9.com/2022/01/cover_02.png
 categories: 
     - .NET
-tags: .NET
+tags: 
+    - .NET
 ---
 
 听说`.NET 7` 来了，站长怎能不尝鲜呢，在除夕当天将体验情况简单汇报下，然后迎新春喽：

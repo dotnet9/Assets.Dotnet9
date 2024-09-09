@@ -11,9 +11,9 @@ categories:
     - .NET
 tags: 
     - Winform
-	- WPF
-	- 日志面板
-	- LogDashboard
+    - WPF
+    - 日志面板
+    - LogDashboard
 ---
 
 继昨天发文`ASP.NET Core 可视化日志组件使用(`[阅读文章](https://mp.weixin.qq.com/s/BSt2hL32_vBMliu9-Fs1zg)，[查看视频](https://mp.weixin.qq.com/s/rbOeuS5PDEZRSHeRR9r8wA))后，视频下有朋友留言 **“Winform 客户端的程序能用它不?”**，微信也有朋友问能否嫁接到`WPF`上，站长今早尝试了，是可以的！

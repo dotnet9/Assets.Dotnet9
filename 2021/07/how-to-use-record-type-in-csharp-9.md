@@ -11,7 +11,7 @@ categories:
     - .NET
 tags: 
     - C#
-    -Record
+    - Record
 ---
 
 > 原文链接：[https://www.infoworld.com/article/3607372/how-to-work-with-record-types-in-csharp-9.html](https://www.infoworld.com/article/3607372/how-to-work-with-record-types-in-csharp-9.html)

@@ -11,12 +11,12 @@ categories:
     - .NET
 tags: 
     - .NET 9
-	- AOT
-	- X86
-	- X64
-	- Win7
-	- XP
-	- SP1
+    - AOT
+    - X86
+    - X64
+    - Win7
+    - XP
+    - SP1
 ---
 
 ![](https://img1.dotnet9.com/2024/07/0701.png)

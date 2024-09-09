@@ -11,8 +11,8 @@ categories:
     - .NET
 tags: 
     - .NET
-	- NuGet
-	- AvaloniaUI
+    - NuGet
+    - AvaloniaUI
 ---
 
 ## 1. 引言

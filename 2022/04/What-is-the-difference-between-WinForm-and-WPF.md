@@ -1,13 +1,13 @@
 ---
 title: WinForm和WPF有什么区别?
 slug: What-is-the-difference-between-WinForm-and-WPF
-description: 总有小伙伴问: WinForm和WPF有什么区别? 细想这个问题好像很简单回答,但是总是没有系统的分析过,今天抽空特地写一篇仅代表个人观点的文章记录总结。
+description: 总有小伙伴问“WinForm和WPF有什么区别?” 细想这个问题好像很简单回答,但是总是没有系统的分析过,今天抽空特地写一篇仅代表个人观点的文章记录总结。
 date: 2022-04-07 19:56:46
 copyright: Reprinted
 author: DotNetOneByOne
 originalTitle: WinForm和WPF有什么区别?
 originalLink: https://mp.weixin.qq.com/s/IXpv_mNtR5gjO1IlUXAtpg
-draft: False
+draft: false
 cover: https://img1.dotnet9.com/2022/04/0501.jpg
 categories: 
     - .NET

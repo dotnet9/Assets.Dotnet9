@@ -7,7 +7,8 @@ copyright: Original
 originalTitle: .NET类库“Vanara”：简单易用的Windows API封装库
 draft: False
 cover: https://img1.dotnet9.com/2021/06/cover_01.png
-albums: 开源C#
+albums: 
+    - 开源C#
 categories: 
     - .NET
 tags: 
