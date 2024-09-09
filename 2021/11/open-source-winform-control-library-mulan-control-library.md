@@ -9,7 +9,10 @@ originalTitle: 开源Winform控件库：花木兰控件库
 draft: False
 cover: https://img1.dotnet9.com/2021/11/cover_07.gif
 categories: .NET
-tags: C#,Winform,开源Winform
+tags: 
+    - C#
+    - Winform
+    - 开源Winform
 ---
 
 微信好友推荐，挺好看的 Winfrom 控件库，下面来看看。

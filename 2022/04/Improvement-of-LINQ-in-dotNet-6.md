@@ -10,7 +10,10 @@ originalLink: https://www.cnblogs.com/paopaotang/p/16133578.html
 draft: False
 cover: https://img1.dotnet9.com/2022/04/cover_31.jpeg
 categories: .NET
-tags: C#,.NET,LINQ
+tags: 
+    - C#
+    - .NET
+    - LINQ
 ---
 
 ## 1. OrDefault 方法的默认值

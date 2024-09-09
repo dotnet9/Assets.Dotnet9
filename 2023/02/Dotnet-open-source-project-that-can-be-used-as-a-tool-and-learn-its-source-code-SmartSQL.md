@@ -8,7 +8,11 @@ author: 沙漠尽头的狼
 draft: false
 cover: https://img1.dotnet9.com/2023/02/cover_04.png
 categories: .NET
-tags: WPF,数据库管理工具,开源项目,开源WPF
+tags: 
+    - WPF
+    - 数据库管理工具
+    - 开源项目
+    - 开源WPF
 ---
 
 ![项目宣传图](https://img1.dotnet9.com/2023/02/cover_04.png)

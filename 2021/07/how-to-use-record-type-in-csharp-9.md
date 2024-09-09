@@ -8,7 +8,9 @@ originalTitle: 如何在 C# 9 中使用record类型？
 draft: False
 cover: https://img1.dotnet9.com/2021/07/cover_03.jpg
 categories: .NET
-tags: C#,Record
+tags: 
+    - C#
+    -Record
 ---
 
 > 原文链接：[https://www.infoworld.com/article/3607372/how-to-work-with-record-types-in-csharp-9.html](https://www.infoworld.com/article/3607372/how-to-work-with-record-types-in-csharp-9.html)

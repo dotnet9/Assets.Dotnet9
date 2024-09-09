@@ -10,7 +10,10 @@ originalLink: https://ithelp.ithome.com.tw/articles/10265408
 draft: False
 cover: https://img1.dotnet9.com/2021/12/cover_05.png
 categories: .NET
-tags: Blazor Server,学Blazor
+tags: 
+    - Blazor
+    - ASP.NET Core
+    - 学Blazor
 ---
 
 我们现在有了基本的日志，但是每次输入完重新加载页面数据都会重置，因为这些数据都只存在于浏览器，没有真正储存到数据库，为了保存下来，我们要跟数据库连接。

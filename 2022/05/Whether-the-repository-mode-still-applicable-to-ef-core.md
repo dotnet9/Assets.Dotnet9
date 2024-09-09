@@ -7,10 +7,13 @@ copyright: Reprinted
 author: liamwang 精致码农
 originalTitle: 仓储模式是否依然适用于EF Core？
 originalLink: https://mp.weixin.qq.com/s/DyzREfZbtZVOQ5MbIQ46cg
-draft: False
+draft: false
 cover: https://img1.dotnet9.com/2022/05/cover_09.png
 categories: .NET
-tags: .NET,ORM,EF Core
+tags: 
+    - .NET
+    - ORM
+    - EF Core
 ---
 
 昨天『.NET 大牛之路』群里的小伙伴们谈论了使用 EF Core 实现仓储模式的话题，我想起以前看过一篇一名国外大佬写的文章，觉得非常有参考价值，今天进行了翻译，供大家赏鉴。

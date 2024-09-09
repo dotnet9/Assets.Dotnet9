@@ -10,7 +10,11 @@ originalLink: https://www.cnblogs.com/jevonsflash/p/15806237.html
 draft: False
 cover: https://img1.dotnet9.com/2022/01/cover_05.png
 categories: .NET
-tags: .NET,MAUI,Vue,混合开发
+tags: 
+    - .NET
+    - MAUI
+    - Vue
+    - 混合开发
 ---
 
 在 MAUI 微软的官方方案是使用 Blazor 开发，但是当前市场大多数的 Web 项目使用 Vue，React 等技术构建，如果我们没法绕过已经积累的技术，用 Blazor 重写整个项目并不现实。

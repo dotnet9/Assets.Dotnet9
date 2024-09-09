@@ -10,7 +10,9 @@ originalLink: https://blog.lindexi.com/post/dotnet-OpenXML-WPF-%E8%A7%A3%E6%9E%9
 draft: False
 cover: https://img1.dotnet9.com/2021/12/cover_23.jpg
 categories: .NET
-tags: WPF,OpenXML
+tags: 
+    - WPF
+    - OpenXML
 ---
 
 本文是使用 WPF 做个 PowerPoint 系列的博客，本文来告诉大家如何解析 PPT 里面的文本描边效果，在 WPF 应用中绘制出来，实现像素级相同

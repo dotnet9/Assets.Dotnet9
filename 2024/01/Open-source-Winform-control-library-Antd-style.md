@@ -9,7 +9,9 @@ draft: false
 cover: https://img1.dotnet9.com/2024/01/1101.png
 albums: 开源Winform
 categories: .NET
-tags: 开源,Winform控件
+tags: 
+    - 开源
+    - Winform控件
 ---
 
 ![横幅](https://img1.dotnet9.com/2024/01/1101.png)

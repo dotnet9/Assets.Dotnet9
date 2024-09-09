@@ -10,7 +10,11 @@ originalLink: https://segmentfault.com/a/1190000041728567
 draft: False
 cover: https://img1.dotnet9.com/2022/04/2702.png
 categories: 分享
-tags: 经常使用,工作效率,美化图片,绘制流程图
+tags: 
+    - 经常使用
+    - 工作效率
+    - 美化图片
+    - 绘制流程图
 ---
 
 也许你我素未谋面，但很可能相见恨晚，我是前端胖头鱼

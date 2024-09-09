@@ -12,7 +12,16 @@ originalLink: https://mp.weixin.qq.com/s/OZcpGBaDddsXFDBajosxEw
 draft: false
 cover: https://img1.dotnet9.com/2024/03/0205.gif
 categories: .NET
-tags: .NET,工具箱,屏幕截图,贴图,屏幕取色,截图文字,表格识别,截图翻译,划词翻译
+tags: 
+    - .NET
+    - 工具箱
+    - 屏幕截图
+    - 贴图
+    - 屏幕取色
+    - 截图文字
+    - 表格识别
+    - 截图翻译
+    - 划词翻译
 ---
 
 ## **屏幕工具箱**

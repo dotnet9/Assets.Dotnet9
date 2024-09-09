@@ -10,7 +10,10 @@ originalLink: https://ithelp.ithome.com.tw/articles/10264484
 draft: False
 cover: https://img1.dotnet9.com/2021/12/cover_05.png
 categories: .NET
-tags: Blazor Server,学Blazor
+tags: 
+    - Blazor
+    - ASP.NET Core
+    - 学Blazor
 ---
 
 ## CSS isolation 介绍

@@ -8,7 +8,9 @@ originalTitle: 【开源】一个WPF开发的XML记事本
 draft: False
 cover: https://img1.dotnet9.com/2022/08/cover_01.png
 categories: .NET
-tags: .NET,开源WPF
+tags: 
+    - .NET
+    - 开源WPF
 ---
 
 今天推荐一个 WPF 开源项目：[XmlNotepad](https://github.com/microsoft/XmlNotepad)。此仓库由 [WPF 开发者](https://github.com/WPFDevelopersOrg/WPFDevelopers) 推荐，站长简单翻译分享。

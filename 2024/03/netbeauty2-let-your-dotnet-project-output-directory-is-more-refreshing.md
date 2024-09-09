@@ -8,7 +8,11 @@ copyright: Original
 draft: false
 cover: https://img1.dotnet9.com/2024/03/cover_06.png
 categories: .NET
-tags: NetBeauty2,输出目录,干净,清爽
+tags: 
+    - NetBeauty2
+    - 输出目录
+    - 干净
+    - 清爽
 ---
 
 > 在.NET项目开发中，随着项目复杂性的增加，依赖的dll文件也会逐渐增多。这往往导致输出目录混乱，不便于管理和部署。而NetBeauty2开源项目正是为了解决这一问题而生，它能够帮助开发者在独立发布.NET项目时，将.NET运行时和依赖的dll文件移动到指定的目录，从而让输出目录更加干净、清爽。

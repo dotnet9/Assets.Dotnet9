@@ -11,7 +11,9 @@ originalLink: https://www.cnblogs.com/SkyDuan/p/18169087
 draft: False
 cover: https://img1.dotnet9.com/2024/05/cover_01.png
 categories: .NET
-tags: Aspire,RabbitMQ
+tags: 
+    - Aspire
+    - RabbitMQ
 ---
 
 > 本文由网友【Sky.楚子航】投稿

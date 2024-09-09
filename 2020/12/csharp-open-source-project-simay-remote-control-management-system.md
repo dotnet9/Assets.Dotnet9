@@ -10,7 +10,13 @@ originalLink: https://gitee.com/dotnetchina/SiMayRemoteMonitorOS
 draft: False
 cover: https://img1.dotnet9.com/2020/12/cover_02.jpg
 categories: .NET
-tags: Winform,SiMay,开源Winform,远程控制,IOCP,异步通信
+tags: 
+    - Winform
+    - SiMay
+    - 开源Winform
+    - 远程控制
+    - IOCP
+    - 异步通信
 ---
 
 > 本项目是一个 Windows 远程控制系统，项目完全采用 C#.NET 开发，实现了基于逐行扫描算法远程桌面，桌面视图墙，文件管理，实时语音、视频监控，注册表管理，实时进程管理等功能，各模块采用独立连接，支持异常情况重连。实现了中间会话服务器，支持多主控端同时监控，支持 Web 端，欢迎点 Start 关注，项目不定时更新，源代码仅供参考，不得用于非法用途，否则一切后果自负。

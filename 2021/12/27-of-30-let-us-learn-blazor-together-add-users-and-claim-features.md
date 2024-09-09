@@ -10,7 +10,10 @@ originalLink: https://ithelp.ithome.com.tw/articles/10273602
 draft: False
 cover: https://img1.dotnet9.com/2021/12/cover_05.png
 categories: .NET
-tags: Blazor Server,学Blazor
+tags: 
+    - Blazor
+    - ASP.NET Core
+    - 学Blazor
 ---
 
 前面说过`ASP.NET Core Identity` 是基于`Claim` 的验证，而`Role` 就是类型为`Role` 的`Claim`，`ASP.NET Framework Identity` 时代只有`Role` 验证，`Claim` 是`ASP.NET Core Identity` 才出现的，目的是为了取得外部程序如`Facebook`、`Twitter` 等等`第三方的授权`，如此一来用户就不用在不同平台注册重复帐号。

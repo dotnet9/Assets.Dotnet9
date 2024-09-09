@@ -12,7 +12,9 @@ originalLink: https://mp.weixin.qq.com/s/j7PIlfScHtzUZHB8ouT4lw
 draft: false
 cover: https://img1.dotnet9.com/2024/05/0202.png
 categories: .NET
-tags: 插件系统,MSF
+tags: 
+    - 插件系统
+    - MSF
 ---
 
 > 插件化的需求主要源于对软件架构灵活性的追求，特别是在开发大型、复杂或需要不断更新的软件系统时，插件化可以提高软件系统的可扩展性、可定制性、隔离性、安全性、可维护性、模块化、易于升级和更新以及支持第三方开发等方面的能力，从而满足不断变化的业务需求和技术挑战。

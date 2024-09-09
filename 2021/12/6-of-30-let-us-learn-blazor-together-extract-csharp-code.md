@@ -10,7 +10,10 @@ originalLink: https://ithelp.ithome.com.tw/articles/10260867
 draft: False
 cover: https://img1.dotnet9.com/2021/12/cover_05.png
 categories: .NET
-tags: Blazor Server,学Blazor
+tags: 
+    - Blazor
+    - ASP.NET Core
+    - 学Blazor
 ---
 
 昨天看到`FetchData.razor`的代码太长了，为求方便，我们把`@code`的部分抽取出来另成一个文件。

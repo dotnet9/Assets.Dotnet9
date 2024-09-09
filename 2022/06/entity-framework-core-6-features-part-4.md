@@ -10,7 +10,10 @@ originalLink: https://mp.weixin.qq.com/s/BU8FKXS95WlvblVPBulC5g
 draft: False
 cover: https://img1.dotnet9.com/2022/06/cover_04.jpg
 categories: .NET
-tags: .NET,ORM,EF Core
+tags: 
+    - .NET
+    - ORM
+    - EF Core
 ---
 
 在这篇文章中，你将看到 EF Core 对 SQLite、In-memory 提供者和 EF.Functions.Contains 方法的改进。

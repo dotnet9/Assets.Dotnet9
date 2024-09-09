@@ -10,7 +10,11 @@ originalLink: https://github.com/jsuarezruiz/xamarin-forms-goodlooking-UI
 draft: False
 cover: https://img1.dotnet9.com/2022/04/images/fishing.webp
 categories: .NET
-tags: .NET,Xamarin Forms,MAUI,开源MAUI
+tags: 
+    - .NET
+    - Xamarin Forms
+    - MAUI
+    - 开源MAUI
 ---
 
 站长英文太差就不翻译了，大家看效果图，都是使用`Xamarin.Forms`开发的开源移动 App 介绍，感兴趣的可以访问[Github](https://github.com/jsuarezruiz/xamarin-forms-goodlooking-UI)和[Gitee](https://gitee.com/dotnet9/xamarin-forms-goodlooking-UI)仓库看看，下载对应的 App 项目研究。

@@ -10,7 +10,9 @@ originalLink: https://www.cnblogs.com/zhenl/p/15714453.html
 draft: False
 cover: https://img1.dotnet9.com/2021/12/cover_38.png
 categories: .NET
-tags: C#,脚本
+tags: 
+    - C#
+    - 脚本
 ---
 
 有些情况下，需要在程序运行期间动态执行 C#代码，比如，将某些经常改变的算法保存在配置文件中，在运行期间从配置文件中读取并执行运算。这时可以使用 C#脚本来完成这些工作。

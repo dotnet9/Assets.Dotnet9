@@ -10,7 +10,12 @@ originalLink: https://blog.csdn.net/qbc12345678/article/details/120758144
 draft: False
 cover: https://img1.dotnet9.com/2021/10/cover_05.jpg
 categories: .NET
-tags: Web API,Mac,Identity,JWT,Visual Studio Code
+tags: 
+    - Web API
+    - Mac
+    - Identity
+    - JWT
+    - Visual Studio Code
 ---
 
 分享一下之前学习的一个登录小案例，代码有不足之处欢迎指正！！！

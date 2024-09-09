@@ -10,7 +10,9 @@ originalLink: https://mp.weixin.qq.com/s/149wzCSfADo2IloXipQq9w
 draft: false
 cover: https://img1.dotnet9.com/2023/07/0207.png
 categories: .NET
-tags: .NET,Blazor
+tags: 
+    - .NET
+    - Blazor
 ---
 
 ## 开箱即用

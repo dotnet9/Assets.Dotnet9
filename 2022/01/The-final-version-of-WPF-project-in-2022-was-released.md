@@ -10,7 +10,9 @@ originalLink: https://www.cnblogs.com/zh7791/p/15754663.html
 draft: False
 cover: https://img1.dotnet9.com/2022/01/0601.jpg
 categories: 课程
-tags: C#,WPF
+tags: 
+    - C#
+    - WPF
 ---
 
 ## 前言

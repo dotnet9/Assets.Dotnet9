@@ -8,7 +8,10 @@ originalTitle: WPF Prism框架Region失效了？
 draft: False
 cover: https://img1.dotnet9.com/2021/01/cover_02.jpeg
 categories: .NET
-tags: WPF,Prism,Region
+tags: 
+    - WPF
+    - Prism
+    - Region
 ---
 
 站长 15 年开始使用`Prism 4`，去年（2020 年 😊）也使用`Prism 8`做开源项目，今天分享处理`Prism Region`的一个问题。

@@ -8,7 +8,13 @@ copyright: Original
 draft: false
 cover: https://img1.dotnet9.com/2024/06/cover_01.png
 categories: .NET
-tags: C#,事件总线,EventBus,CQRS,Command,Query
+tags: 
+    - C#
+    - 事件总线
+    - EventBus
+    - CQRS
+    - Command
+    - Query
 ---
 
 ## 1. 前言

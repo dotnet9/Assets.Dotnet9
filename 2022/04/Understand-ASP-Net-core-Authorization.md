@@ -10,7 +10,10 @@ originalLink: https://www.cnblogs.com/xiaoxiaotank/p/16157344.html
 draft: False
 cover: https://img1.dotnet9.com/2022/04/2105.png
 categories: .NET
-tags: ASP.NET Core,授权,Authorization
+tags: 
+    - ASP.NET Core
+    - 授权
+    - Authorization
 ---
 
 > 注：本文隶属于《理解 ASP.NET Core》系列文章，请查看置顶博客或[点击此处查看全文目录](https://www.cnblogs.com/xiaoxiaotank/p/15185288.html)

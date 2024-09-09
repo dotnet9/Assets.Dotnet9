@@ -8,7 +8,11 @@ copyright: Original
 draft: false
 cover: https://img1.dotnet9.com/2023/06/cover_12.png
 categories: .NET
-tags: Dotnetools,WASM,Blazor WebAssembly,Client
+tags: 
+    - Dotnetools
+    - WASM
+    - Blazor WebAssembly
+    - Client
 ---
 
 大家好，我是沙漠尽头的狼。

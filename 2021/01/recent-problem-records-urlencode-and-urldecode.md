@@ -8,7 +8,10 @@ originalTitle: 最近遇到的问题记录：UrlEncode、UrlDecode
 draft: False
 cover: https://img1.dotnet9.com/2021/01/cover_01.jpeg
 categories: .NET
-tags: Web API,UrlEncode,UrlDecode
+tags: 
+    - Web API
+    - UrlEncode
+    - UrlDecode
 ---
 
 本文阅读前了解知识：[什么时候需要使用 UrlEncode 和 UrlDecode 函数](https://blog.csdn.net/l754539910/article/details/79640925)

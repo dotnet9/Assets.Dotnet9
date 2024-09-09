@@ -8,7 +8,9 @@ originalTitle: C# WPF：这次把文件拖出去！
 draft: False
 cover: https://img1.dotnet9.com/2020/12/cover_03.jpg
 categories: .NET
-tags: WPF,文件拖拽
+tags: 
+    - WPF
+    - 文件拖拽
 ---
 
 回顾上篇文章：[C# WPF：把文件给我拖进来！！！](https://mp.weixin.qq.com/s/d8dWW-ss82GK1H-YmGKBzQ)

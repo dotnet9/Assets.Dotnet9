@@ -10,7 +10,10 @@ originalLink: https://github.com/mrhuo/MrHuo.OAuth
 draft: False
 cover: https://img1.dotnet9.com/2022/04/1001.png
 categories: .NET
-tags: .NET,OAuth2,开源C#
+tags: 
+    - .NET
+    - OAuth2
+    - 开源C#
 ---
 
 <h1 align="center">MrHuo.OAuth</h1>

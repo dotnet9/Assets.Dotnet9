@@ -10,7 +10,10 @@ originalLink: https://ithelp.ithome.com.tw/articles/10260278
 draft: False
 cover: https://img1.dotnet9.com/2021/12/cover_05.png
 categories: .NET
-tags: Blazor Server,学Blazor
+tags: 
+    - Blazor
+    - ASP.NET Core
+    - 学Blazor
 ---
 
 问题来了，为什么 Blazor 会知道 WeatherForecastService 在这里可以调用？

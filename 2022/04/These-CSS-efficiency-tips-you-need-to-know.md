@@ -10,7 +10,9 @@ originalLink: https://dev.to/devsyedmohsin/css-tips-and-tricks-you-will-add-to-c
 draft: False
 cover: https://img1.dotnet9.com/2022/04/cover_42.png
 categories: 前端
-tags: 样式,CSS
+tags: 
+    - 样式
+    - CSS
 ---
 
 > 原文作者：knaagar

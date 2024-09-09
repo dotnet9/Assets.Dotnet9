@@ -7,7 +7,12 @@ copyright: Original
 draft: false
 cover: https://img1.dotnet9.com/2023/03/suki_photo.jpg
 categories: .NET
-tags: .NET,跨平台,桌面,移动端,Avalonia UI
+tags: 
+    - .NET
+    - 跨平台
+    - 桌面
+    - 移动端
+    - Avalonia UI
 ---
 
 <div id="header" align="center">

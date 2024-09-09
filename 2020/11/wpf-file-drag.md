@@ -8,7 +8,9 @@ originalTitle: WPF文件拖拽
 draft: False
 cover: https://img1.dotnet9.com/2020/11/cover_02.png
 categories: .NET
-tags: WPF,文件手拽
+tags: 
+    - WPF
+    - 文件手拽
 ---
 
 ## 一、本文开始之前

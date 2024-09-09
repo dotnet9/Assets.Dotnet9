@@ -10,7 +10,10 @@ originalLink: https://www.cnblogs.com/kellynic/p/9803314.html
 draft: False
 cover: https://img1.dotnet9.com/2021/04/cover_05.png
 categories: .NET
-tags: .NET,Redis,csredis
+tags: 
+    - .NET
+    - Redis
+    - csredis
 ---
 
 ## 1 前言

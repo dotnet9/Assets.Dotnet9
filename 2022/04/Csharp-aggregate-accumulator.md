@@ -10,7 +10,9 @@ originalLink: https://blog.csdn.net/weixin_42117950/article/details/121985075
 draft: False
 cover: https://img1.dotnet9.com/2022/04/cover_23.jpg
 categories: .NET
-tags: C#,Aggregate
+tags: 
+    - C#
+    - Aggregate
 ---
 
 ## 1. 需求

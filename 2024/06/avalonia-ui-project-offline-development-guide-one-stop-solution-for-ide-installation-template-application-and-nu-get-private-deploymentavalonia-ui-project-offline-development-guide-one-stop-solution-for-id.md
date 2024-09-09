@@ -8,7 +8,10 @@ copyright: Original
 draft: false
 cover: https://img1.dotnet9.com/2024/06/cover_02.png
 categories: .NET
-tags: .NET,NuGet,AvaloniaUI
+tags: 
+    - .NET
+	- NuGet
+	- AvaloniaUI
 ---
 
 ## 1. 引言

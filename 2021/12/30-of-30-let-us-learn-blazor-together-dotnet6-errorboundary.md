@@ -10,7 +10,10 @@ originalLink: https://ithelp.ithome.com.tw/articles/10275330
 draft: False
 cover: https://img1.dotnet9.com/2021/12/cover_05.png
 categories: .NET
-tags: Blazor Server,学Blazor
+tags: 
+    - Blazor
+    - ASP.NET Core
+    - 学Blazor
 ---
 
 昨天说到单元测试，但有些时候可能由于时间关系没办法完整测试，就可能因为`某个Component 出错`导致`整个系统崩溃`(如下图)，因为`Blazor Server` 是在 Server 建立一个`circuit(流程)`，一旦有未处理的错误 Server 就会将 circuit 终止以避免安全问题。

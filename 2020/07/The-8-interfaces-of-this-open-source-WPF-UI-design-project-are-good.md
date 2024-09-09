@@ -8,7 +8,9 @@ originalTitle: 这个开源WPF UI设计项目的8个界面不错
 draft: False
 cover: https://img1.dotnet9.com/2020/07/0104.png
 categories: .NET
-tags: WPF,开源WPF
+tags: 
+    - WPF
+    - 开源WPF
 ---
 
 Github 仓库信息

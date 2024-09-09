@@ -11,7 +11,9 @@ originalLink: https://blog.csdn.net/Iron_Ye/article/details/80044242
 draft: false
 cover: https://img1.dotnet9.com/2024/03/cover_07.png
 categories: Python
-tags: 菜鸟,入口函数
+tags: 
+    - 菜鸟
+	- 入口函数
 ---
 
 ## 前言

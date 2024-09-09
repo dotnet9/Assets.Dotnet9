@@ -11,7 +11,9 @@ originalLink: https://github.com/HeBianGu/WPF-ControlBase
 draft: False
 cover: https://img1.dotnet9.com/2021/11/cover_09.png
 categories: .NET
-tags: WPF,开源WPF
+tags: 
+    - WPF
+    - 开源WPF
 ---
 
 ![仓库截图](https://img1.dotnet9.com/2021/11/0901.png)

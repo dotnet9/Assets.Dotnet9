@@ -10,7 +10,9 @@ originalLink: https://mp.weixin.qq.com/s/VM5L4cTnSljU-Z7rL5EgDA
 draft: False
 cover: https://img1.dotnet9.com/2022/01/cover_03.jpeg
 categories: .NET
-tags: C#,人脸比对
+tags: 
+    - C#
+    - 人脸比对
 ---
 
 ## 前言

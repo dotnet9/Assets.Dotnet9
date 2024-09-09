@@ -10,7 +10,9 @@ originalLink: https://www.cnblogs.com/ZXdeveloper/p/8391864.html
 draft: False
 cover: https://img1.dotnet9.com/2022/05/cover_50.png
 categories: .NET
-tags: WPF,新手引导
+tags: 
+    - WPF
+    - 新手引导
 ---
 
 > 本文经原作者授权以原创方式二次分享，欢迎转载、分享。

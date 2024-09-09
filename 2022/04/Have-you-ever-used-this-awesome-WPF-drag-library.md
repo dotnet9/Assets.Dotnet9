@@ -9,7 +9,9 @@ draft: False
 cover: https://img1.dotnet9.com/2022/04/2201.png
 albums: 开源WPF
 categories: .NET
-tags: WPF,拖拽
+tags: 
+    - WPF
+    - 拖拽
 ---
 
 <div align="center">

@@ -10,7 +10,9 @@ originalLink: https://github.com/jsuarezruiz/figma-to-maui-graphics
 draft: false
 cover: https://img1.dotnet9.com/2022/09/figma-to-maui-graphics-01.png
 categories: .NET
-tags: Figma,MAUI
+tags: 
+    - Figma
+    - MAUI
 ---
 
 > 原文链接：[https://github.com/jsuarezruiz/figma-to-maui-graphics](https://github.com/jsuarezruiz/figma-to-maui-graphics)

@@ -10,7 +10,10 @@ originalLink: https://ithelp.ithome.com.tw/articles/10271129
 draft: False
 cover: https://img1.dotnet9.com/2021/12/cover_05.png
 categories: .NET
-tags: Blazor Server,学Blazor
+tags: 
+    - Blazor
+    - ASP.NET Core
+    - 学Blazor
 ---
 
 前天有在`Blog.razor`加入通过验证及未通过的显示内容，但如果系统要呈现的未通过验证内容都一样，在每个 Component 都这样写就太浪费时间了，可以利用`App.razor`帮我们做统一呈现的事。

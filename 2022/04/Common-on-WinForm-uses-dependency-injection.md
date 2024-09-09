@@ -10,7 +10,10 @@ originalLink: https://mp.weixin.qq.com/s/murWKgo5KFMmMOJ4UQJWBQ
 draft: False
 cover: https://img1.dotnet9.com/2022/04/cover_29.jpg
 categories: .NET
-tags: Winform,依赖注入,IOC
+tags: 
+    - Winform
+    - 依赖注入
+    - IOC
 ---
 
 > 站长：Winform 的分享文章不多，这个技术相对来说已经十分稳定了，该有的都有了，今天分享其他号写的 Winform 依赖注入一文，希望做相关开发的朋友能有新的体会。

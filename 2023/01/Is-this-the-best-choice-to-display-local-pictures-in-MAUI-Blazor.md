@@ -10,7 +10,10 @@ originalLink: https://www.cnblogs.com/hejiale010426/p/17040997.html
 draft: false
 cover: https://img1.dotnet9.com/2023/01/cover_01.png
 categories: .NET
-tags: .NET,MAUI,Blazor
+tags: 
+    - .NET
+    - MAUI
+    - Blazor
 ---
 
 > 本文示例代码可用于动态加载本地图片，为了便于演示文中代码文件路径写死的。

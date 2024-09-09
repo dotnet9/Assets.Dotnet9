@@ -12,7 +12,17 @@ originalLink: https://mp.weixin.qq.com/s/ANqHugTR1-rpQEaz2XF6qg
 draft: false
 cover: https://img1.dotnet9.com/2024/02/0311.png
 categories: .NET
-tags: .NET,Blazor,Web API,FastWiki,Semantic Kernel,MasaFramework,MasaBlazor,HttpClient,MiniApis,PostgreSQL
+tags: 
+    - .NET
+    - Blazor
+    - Web API
+    - FastWiki
+    - Semantic Kernel
+    - MasaFramework
+    - MasaBlazor
+    - HttpClient
+    - MiniApis
+    - PostgreSQL
 ---
 
 ## **介绍**

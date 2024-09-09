@@ -10,7 +10,10 @@ originalLink: https://ithelp.ithome.com.tw/articles/10273858
 draft: False
 cover: https://img1.dotnet9.com/2021/12/cover_05.png
 categories: .NET
-tags: Blazor Server,学Blazor
+tags: 
+    - Blazor
+    - ASP.NET Core
+    - 学Blazor
 ---
 
 之前有说到`ASP.NET Core Identity` 使用的是基于`Claim` 的验证，其实`ASP.NET Core Identity` 有不同类型的授权方式，最简单的`登录授权`、`角色授权`、`Claim 授权`，但上述几种都是以一种方式实现：原则授权(`Policy-based authorization`)。

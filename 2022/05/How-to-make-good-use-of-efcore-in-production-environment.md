@@ -10,7 +10,10 @@ originalLink: https://mp.weixin.qq.com/s/GDo6_6YpmH4r0tkHXf0yAg
 draft: False
 cover: https://img1.dotnet9.com/2022/05/cover_10.png
 categories: .NET
-tags: .NET,ORM,EF Core
+tags: 
+    - .NET
+    - ORM
+    - EF Core
 ---
 
 > 原文链接：https://www.thereformedprogrammer.net/handling-entity-framework-core-database-migrations-in-production-part-2/

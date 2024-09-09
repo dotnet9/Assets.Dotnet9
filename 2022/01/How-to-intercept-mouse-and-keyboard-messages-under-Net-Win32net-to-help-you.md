@@ -10,7 +10,9 @@ originalLink: https://mp.weixin.qq.com/s/_c4T7R_HeVLVg6sqvLoABw
 draft: False
 cover: https://img1.dotnet9.com/2022/01/cover_04.jpeg
 categories: .NET
-tags: 拦截鼠标,拦截键盘
+tags: 
+    - 拦截鼠标
+    - 拦截键盘
 ---
 
 Win32NET 是一个 Win32API 的.NET 下封装的类库，包含：

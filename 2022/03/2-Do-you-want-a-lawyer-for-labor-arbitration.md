@@ -10,7 +10,9 @@ originalLink: https://mp.weixin.qq.com/s/TYWH_m6xEg7mK-17CNerGA
 draft: False
 cover: https://img1.dotnet9.com/2022/03/cover_12.jpeg
 categories: 分享
-tags: 仲裁,律师
+tags: 
+    - 仲裁
+    - 律师
 ---
 
 自从我发了《劳动仲裁回忆录》之后，不少网友都曾问过我：你有没有找律师？以及”我遭遇了 XX 情况的裁员“要不要找律师？

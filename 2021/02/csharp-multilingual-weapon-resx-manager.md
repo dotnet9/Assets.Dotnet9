@@ -8,7 +8,11 @@ originalTitle: C# 多语言利器 - ResX Manager
 draft: False
 cover: https://img1.dotnet9.com/2021/02/cover_03.jpeg
 categories: .NET
-tags: C#,WPF,资源文件,ResX Manager
+tags: 
+    - C#
+    - WPF
+    - 资源文件
+    - ResX Manager
 ---
 
 WPF 国际化实现方式很多:

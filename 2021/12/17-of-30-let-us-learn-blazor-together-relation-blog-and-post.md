@@ -10,7 +10,10 @@ originalLink: https://ithelp.ithome.com.tw/articles/10266555
 draft: False
 cover: https://img1.dotnet9.com/2021/12/cover_05.png
 categories: .NET
-tags: Blazor Server,学Blazor
+tags: 
+    - Blazor
+    - ASP.NET Core
+    - 学Blazor
 ---
 
 接下来就是讲跟数据库关联的内容了，会着重说明 ASP.NET Core 跟 EF Core，如果有需要改页面才会说到 Blazor，这边会花比较多篇幅着墨。

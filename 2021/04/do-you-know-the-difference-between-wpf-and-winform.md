@@ -8,7 +8,10 @@ originalTitle: 你知道WPF与WinForms的区别吗？
 draft: False
 cover: https://img1.dotnet9.com/2021/04/cover_06.jpg
 categories: .NET
-tags: .NET,Winform,WPF
+tags: 
+    - .NET
+    - Winform
+    - WPF
 ---
 
 ## 介绍

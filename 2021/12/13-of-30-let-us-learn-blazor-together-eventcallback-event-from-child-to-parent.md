@@ -10,7 +10,10 @@ originalLink: https://ithelp.ithome.com.tw/articles/10262982
 draft: False
 cover: https://img1.dotnet9.com/2021/12/cover_05.png
 categories: .NET
-tags: Blazor Server,学Blazor
+tags: 
+    - Blazor
+    - ASP.NET Core
+    - 学Blazor
 ---
 
 目前的 4 篇日志是来自我们写好的假数据，但正常来说不会这样做，而是有个按钮让用户点击了之后，增加或减少日志的数量。

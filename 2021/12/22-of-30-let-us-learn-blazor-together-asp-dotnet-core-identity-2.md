@@ -10,7 +10,10 @@ originalLink: https://ithelp.ithome.com.tw/articles/10269706
 draft: False
 cover: https://img1.dotnet9.com/2021/12/cover_05.png
 categories: .NET
-tags: Blazor Server,学Blazor
+tags: 
+    - Blazor
+    - ASP.NET Core
+    - 学Blazor
 ---
 
 昨天做的验证只针对`Identity` 系统，没有包含到我们的日志，如果在未登录状态下于地址栏输入`https://localhost:5018/Blog`，还是可以看到博客，让我们整合验证。

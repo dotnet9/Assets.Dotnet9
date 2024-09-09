@@ -10,7 +10,10 @@ originalLink: https://mp.weixin.qq.com/s/eyz995VWcIEMLBQP7PL0FQ
 draft: False
 cover: https://img1.dotnet9.com/2022/05/3701.gif
 categories: 数据库
-tags: MySQL,C#,截屏
+tags: 
+    - MySQL
+    - C#
+    - 截屏
 ---
 
 半年前我开源了 [DreamScene2](https://github.com/he55/DreamScene2) 一个小而快并且功能强大的 Windows 动态桌面软件。有很多的人喜欢，这使我有了继续做开源的信心。这是我的第二个开源作品 [ScreenshotEx](https://github.com/he55/ScreenshotEx) 一个简单易用的 Windows 截屏增强工具。

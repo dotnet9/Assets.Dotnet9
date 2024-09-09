@@ -10,7 +10,9 @@ originalLink: https://blog.csdn.net/mzl87/article/details/104642025
 draft: False
 cover: https://img1.dotnet9.com/2022/04/2102.png
 categories: .NET
-tags: Blazor,状态管理
+tags: 
+    - Blazor
+    - 状态管理
 ---
 
 想象一下，您正在填写世界上最长的表格。您已经花了 30 分钟时间输入详细信息，从地址到您的生日，再到最近访问过的七个国家/地区的列表。您单击“提交”按钮，将立即获得“连接已丢失”消息。不用担心，对吧？只需单击“后退”按钮，… 哦，不！表格是空的。这看起来很野蛮，并且你保证不再再次访问该站点了。

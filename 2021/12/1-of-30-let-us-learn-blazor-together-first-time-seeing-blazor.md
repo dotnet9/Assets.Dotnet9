@@ -10,7 +10,10 @@ originalLink: https://ithelp.ithome.com.tw/articles/10258944
 draft: False
 cover: https://img1.dotnet9.com/2021/12/cover_05.png
 categories: .NET
-tags: Blazor,ASP.NET Core,学Blazor
+tags: 
+    - Blazor
+    - ASP.NET Core
+    - 学Blazor
 ---
 
 笔者接触软件行业的时间不长，先后接触三种架构，分别为 ASP.NET MVC、ASP.NET Core & Blazor、ASP.NET Core & Angular，由于 ASP.NET MVC 是笔者初入软件行业的新人时期，迷迷糊糊地就在前辈的带领下完成了项目，所以没什么感悟，只是大概了解前后端的差别，前端以 HTTP Request 发送向后端取数据，后端回传数据，前端再将结果呈现在页面上。

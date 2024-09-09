@@ -8,7 +8,10 @@ originalTitle: Blazor系列终结！
 draft: False
 cover: https://img1.dotnet9.com/2021/12/cover_45.jpeg
 categories: .NET
-tags: C#,前端,Blazor
+tags: 
+    - C#
+    - 前端
+    - Blazor
 ---
 
 ![开心](https://img1.dotnet9.com/2021/12/cover_45.jpeg)

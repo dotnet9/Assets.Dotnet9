@@ -10,7 +10,10 @@ originalLink: https://ithelp.ithome.com.tw/articles/10262250
 draft: False
 cover: https://img1.dotnet9.com/2021/12/cover_05.png
 categories: .NET
-tags: Blazor Server,学Blazor
+tags: 
+    - Blazor
+    - ASP.NET Core
+    - 学Blazor
 ---
 
 现在我们有一个可以输入日志的界面了，但日志就是每天都要写的意思，只有一篇怎么够呢？我们来加上 blog。

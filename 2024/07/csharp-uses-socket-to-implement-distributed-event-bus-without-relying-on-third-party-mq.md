@@ -8,7 +8,12 @@ copyright: Original
 draft: false
 cover: https://img1.dotnet9.com/2024/07/cover_02.png
 categories: .NET
-tags: C#,EventBus,Distributed,Socket,MQ
+tags: 
+    - C#
+    - EventBus
+    - Distributed
+    - Socket
+    - MQ
 ---
 
 **使用Socket实现的分布式事件总线，支持CQRS，不依赖第三方MQ。**

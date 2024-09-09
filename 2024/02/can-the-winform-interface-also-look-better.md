@@ -12,7 +12,11 @@ originalLink: https://mp.weixin.qq.com/s/QCAlQNqDW-sicae2ybELkw
 draft: false
 cover: https://img1.dotnet9.com/2024/02/0401.gif
 categories: .NET
-tags: .NET,Blazor,Winform,混合应用
+tags: 
+    - .NET
+    - Blazor
+    - Winform
+    - 混合应用
 ---
 
 ## 在 winform blazor hybrid 中绘图

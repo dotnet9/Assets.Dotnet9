@@ -10,7 +10,10 @@ originalLink: https://ithelp.ithome.com.tw/articles/10261943
 draft: False
 cover: https://img1.dotnet9.com/2021/12/cover_05.png
 categories: .NET
-tags: Blazor Server,学Blazor
+tags: 
+    - Blazor
+    - ASP.NET Core
+    - 学Blazor
 ---
 
 假如我们想增加的按钮用来清除`form`（表单）的数据，最快的方式是增加一个`type=”reset”`的按钮，这时候就用到两个按钮了，可以用到 Blazor 的核心概念：组件封装。

@@ -10,7 +10,9 @@ originalLink: https://www.cnblogs.com/xuejiaming/p/15384015.html
 draft: False
 cover: https://img1.dotnet9.com/2021/10/cover_01.jpeg
 categories: .NET
-tags: 安全,API
+tags: 
+    - 安全
+    - API
 ---
 
 如果公司交给你一个任务让你写一个 api 接口,那么我们应该如何设计这个 api 接口来保证这个接口是对外看起来“高大上”，“羡慕崇拜”,并且使用起来和普通 api 接口无感，并且可以完美接入 aspnetcore 的认证授权体系呢，而不是自定义签名来进行自定义过滤器实现呢(虽然也可以但是并不是最完美的),如何让小白羡慕一眼就知道你是老鸟。

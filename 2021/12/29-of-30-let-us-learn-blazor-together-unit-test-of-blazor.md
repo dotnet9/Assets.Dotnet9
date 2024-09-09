@@ -10,7 +10,10 @@ originalLink: https://ithelp.ithome.com.tw/articles/10274629
 draft: False
 cover: https://img1.dotnet9.com/2021/12/cover_05.png
 categories: .NET
-tags: Blazor Server,学Blazor
+tags: 
+    - Blazor
+    - ASP.NET Core
+    - 学Blazor
 ---
 
 开发一个系统最无聊的过程大概就是解决 BUG 了，尤其是那种尝试对 null 对象取值的错误(`Object reference not set to an instance of an object.`)，这应该是大部分人刚踏入编程领域最常碰到的问题，为了从枯燥的解决 BUG 过程解脱，这篇就来介绍`单元测试`。

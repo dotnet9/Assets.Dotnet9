@@ -10,7 +10,9 @@ originalLink: https://zhuanlan.zhihu.com/p/469359820
 draft: False
 cover: https://img1.dotnet9.com/2022/02/cover_05.png
 categories: .NET
-tags: .NET,ASP.NET Core
+tags: 
+    - .NET
+    - ASP.NET Core
 ---
 
 文章来源：[https://github.com/dotnet/aspnetcore/issues/39504](https://github.com/dotnet/aspnetcore/issues/39504)

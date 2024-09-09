@@ -9,7 +9,10 @@ originalTitle: 分享我做Dotnet9博客网站时积累的一些资料
 draft: False
 cover: https://img1.dotnet9.com/2022/03/cover_01.png
 categories: 课程
-tags: Dotnet9,开源博客,博客
+tags: 
+    - Dotnet9
+    - 开源博客
+    - 博客
 ---
 
 从 2019 年使用[WordPress](https://wordpress.com/zh-cn/)搭建[Dotnet9 网站](https://dotnet9.com/)，到现在手撸代码开发，介绍中间使用的一些资源，绝无保留，希望对大家有用。

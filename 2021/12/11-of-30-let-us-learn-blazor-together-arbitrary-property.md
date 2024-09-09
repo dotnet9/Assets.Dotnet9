@@ -10,7 +10,10 @@ originalLink: https://ithelp.ithome.com.tw/articles/10262490
 draft: False
 cover: https://img1.dotnet9.com/2021/12/cover_05.png
 categories: .NET
-tags: Blazor Server,学Blazor
+tags: 
+    - Blazor
+    - ASP.NET Core
+    - 学Blazor
 ---
 
 目前`MyButton`有 3 个`[Parameter]`，如果再增加的话，又要再定义新的`[Parameter]`，为了避免不断更新这个 Component，我们来用 Blazor 提供的`@attribute`。

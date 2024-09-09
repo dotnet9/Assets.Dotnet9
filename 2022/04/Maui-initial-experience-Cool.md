@@ -8,7 +8,10 @@ originalTitle: MAUI初体验：爽
 draft: False
 cover: https://img1.dotnet9.com/2022/04/cover_18.png
 categories: .NET
-tags: C#开发移动端,多端开发,极致开发体验
+tags: 
+    - C#开发移动端
+    - 多端开发
+    - 极致开发体验
 ---
 
 > 只是记录，只是 Hello World 体验，别期望太高。

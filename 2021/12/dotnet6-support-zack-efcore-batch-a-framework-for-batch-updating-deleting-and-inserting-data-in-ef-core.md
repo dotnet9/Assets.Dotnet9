@@ -10,7 +10,12 @@ originalLink: https://mp.weixin.qq.com/s/MYxVGxa_DQnn4XMIDryd9Q
 draft: False
 cover: https://img1.dotnet9.com/2021/12/cover_40.jpeg
 categories: .NET
-tags: C#,EF Core,批量更新,批量删除,批量插入
+tags: 
+    - C#
+    - EF Core
+    - 批量更新
+    - 批量删除
+    - 批量插入
 ---
 
 我开发的在`EF Core`中`批量`执行`更新`、`删除`、`插入`数据的框架`Zack.EFCore.Batch`已经发布新版，新版增加了对`.NET 6`的支持，数据批量插入的时候支持`ValueConverter`，彻底解决了`“更新数据的时候，当两列的表达式等价时候出现的The count of columns should be even异常”`。

@@ -12,7 +12,9 @@ draft: False
 cover: https://img1.dotnet9.com/2022/04/2801.gif
 albums: 开源Web
 categories: 前端
-tags: 大屏模板,在线浏览
+tags: 
+    - 大屏模板
+    - 在线浏览
 ---
 
 > 昨天介绍了一个大屏收集项目，今天发现一个可能更全的，还带 gif 动图，当然也能在线查看效果。

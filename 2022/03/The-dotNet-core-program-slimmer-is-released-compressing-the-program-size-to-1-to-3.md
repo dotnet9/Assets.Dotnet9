@@ -10,7 +10,10 @@ originalLink: https://mp.weixin.qq.com/s/U5mwB9Mxjkw1aRfcdO60uQ
 draft: False
 cover: https://img1.dotnet9.com/2022/03/cover_08.jpg
 categories: .NET
-tags: .NET Core,瘦身,裁剪
+tags: 
+    - .NET Core
+    - 瘦身
+    - 裁剪
 ---
 
 .NET Core 具有【剪裁未使用的代码】的功能，但是由于它是使用静态分析来实现的，因此它的剪裁效果并不是最优的。它有如下两个缺点：

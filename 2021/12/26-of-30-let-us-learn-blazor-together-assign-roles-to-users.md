@@ -10,7 +10,10 @@ originalLink: https://ithelp.ithome.com.tw/articles/10272459
 draft: False
 cover: https://img1.dotnet9.com/2021/12/cover_05.png
 categories: .NET
-tags: Blazor Server,学Blazor
+tags: 
+    - Blazor
+    - ASP.NET Core
+    - 学Blazor
 ---
 
 昨天角色的`CRUD` 功能都完成了，接着就是要把角色分配给用户了，先建立一个 ViewModel `CustomUserRoleViewModel`，这是用来呈现角色底下用户的 ViewModel。

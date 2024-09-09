@@ -10,7 +10,9 @@ originalLink: https://masuit.org/1676
 draft: False
 cover: https://img1.dotnet9.com/2022/03/cover_09.gif
 categories: .NET
-tags: Blazor Server,上传文件
+tags: 
+    - Blazor Server
+    - 上传文件
 ---
 
 Blazor 不得不说真是好东西，极大的提升了开发效率，很多的页面交互功能基本上只需要写很少的代码就能实现了，而且还是无 js 实现，你也绝对没有想到过，Blazor 实现文件上传是有多么简单！

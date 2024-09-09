@@ -10,7 +10,11 @@ originalLink: https://gitee.com/x_discoverer/Vue.NetCore
 draft: False
 cover: https://img1.dotnet9.com/2022/04/h5.jpg
 categories: .NET
-tags: 开源项目,开源Web,Vue,Web API
+tags: 
+    - 开源项目
+    - 开源Web
+    - Vue
+    - Web API
 ---
 
 ## Vue + .NetCore 前后端分离，不一样的快速发开框架(提供 Vue2/Vue3 版本)

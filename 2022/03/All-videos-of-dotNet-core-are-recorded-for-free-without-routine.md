@@ -11,7 +11,10 @@ originalLink: https://mp.weixin.qq.com/s/SbidWHbMmNDtknD4HuAmNg
 draft: False
 cover: https://img1.dotnet9.com/2022/03/cover_07.png
 categories: 课程
-tags: .NET Core,全免费,无套路
+tags: 
+    - .NET Core
+    - 全免费
+    - 无套路
 ---
 
 我一直在更新的.NET Core 视频终于录完了，203 节，内容涉及.NET Core 基础类、Entity Framework Core、ASP.NET Core WebAPI、DDD（领域驱动设计）、实战项目。

@@ -10,7 +10,10 @@ originalLink: https://www.cnblogs.com/qingheshiguang/p/13559561.html
 draft: False
 cover: https://img1.dotnet9.com/2022/05/cover_07.png
 categories: .NET
-tags: .NET,ORM,EF Core
+tags: 
+    - .NET
+    - ORM
+    - EF Core
 ---
 
 ## 1. 使用 EF.Functions.xxx 进行查询

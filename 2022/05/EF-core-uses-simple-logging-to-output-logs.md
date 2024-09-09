@@ -10,7 +10,10 @@ originalLink: https://mp.weixin.qq.com/s/QXBhG_ayoeCcE9dGsgbNKw
 draft: False
 cover: https://img1.dotnet9.com/2022/05/cover_08.jpg
 categories: .NET
-tags: .NET, ORM, EF Core
+tags: 
+    - .NET
+    - ORM
+    - EF Core
 ---
 
 在使用 EF Core 的时候，很多时候需要知道 EF Core 实际执行的 SQL 语句是什么。

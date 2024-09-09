@@ -10,7 +10,9 @@ originalLink: https://www.cnblogs.com/InCerry/p/Single-File-And-AOT-Publish.html
 draft: False
 cover: https://img1.dotnet9.com/2022/04/cover_24.jpg
 categories: .NET
-tags: C#,AOT
+tags: 
+    - C#
+    - AOT
 ---
 
 ## 1. 前言

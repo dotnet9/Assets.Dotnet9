@@ -8,7 +8,14 @@ copyright: Original
 draft: false
 cover: https://img1.dotnet9.com/2024/07/cover_01.png
 categories: .NET
-tags: .NET 9,AOT,X86,X64,Win7,XP,SP1
+tags: 
+    - .NET 9
+	- AOT
+	- X86
+	- X64
+	- Win7
+	- XP
+	- SP1
 ---
 
 ![](https://img1.dotnet9.com/2024/07/0701.png)

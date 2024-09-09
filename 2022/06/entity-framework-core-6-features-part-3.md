@@ -10,7 +10,10 @@ originalLink: https://mp.weixin.qq.com/s/ZRNu1Lvx6ZYr0kStMjc_Ug
 draft: False
 cover: https://img1.dotnet9.com/2022/06/cover_04.jpg
 categories: .NET
-tags: .NET,ORM,EF Core
+tags: 
+    - .NET
+    - ORM
+    - EF Core
 ---
 
 在这篇文章中，我将重点介绍 EF Core 6 中 LINQ 查询功能的增强。

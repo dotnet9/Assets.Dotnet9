@@ -9,7 +9,11 @@ originalTitle: 开源C# WPF控件库《MaterialDesignInXAML》
 draft: False
 cover: https://img1.dotnet9.com/2020/12/0502.jpg
 categories: .NET
-tags: WPF,WPF控件库,开源WPF,开源WPF控件库
+tags: 
+    - WPF
+    - WPF控件库
+    - 开源WPF
+    - 开源WPF控件库
 ---
 
 今天介绍一个开源的 C# WPF 开源控件库，非常漂亮，重点是开源哦

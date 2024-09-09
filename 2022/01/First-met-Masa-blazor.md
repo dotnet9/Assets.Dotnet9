@@ -10,7 +10,9 @@ originalLink: https://www.cnblogs.com/MASA/p/15766886.html
 draft: False
 cover: https://img1.dotnet9.com/2022/01/0711.png
 categories: .NET
-tags: C#,Blazor
+tags: 
+    - C#
+    - Blazor
 ---
 
 MASA Blazor 是一个 Blazor 的 UI 组件库。就像大家写前端熟知的 Bootstrap, Ant Design 一样。

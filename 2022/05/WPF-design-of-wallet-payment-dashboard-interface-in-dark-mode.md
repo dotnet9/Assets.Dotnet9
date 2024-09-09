@@ -8,7 +8,9 @@ originalTitle: WPF|黑暗模式的钱包支付仪表盘界面设计
 draft: False
 cover: https://img1.dotnet9.com/2022/05/cover_41.png
 categories: .NET
-tags: WPF,WPF Design
+tags: 
+    - WPF
+    - WPF Design
 ---
 
 **阅读目录**

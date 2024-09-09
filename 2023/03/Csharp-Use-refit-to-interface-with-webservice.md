@@ -7,7 +7,9 @@ copyright: Original
 draft: false
 cover: https://img1.dotnet9.com/2023/03/cover_07.jpg
 categories: .NET
-tags: Refit,WebService
+tags: 
+    - Refit
+    - WebService
 ---
 
 Refit 是一款强大的类型安全的 RESTful HTTP 客户端库，它能够帮助我们轻松地与 Web API 进行通信。不过在本问题中，我们需要使用 Refit 与 Web Service 进行通信，因此需要对 Refit 进行一些特定的配置。

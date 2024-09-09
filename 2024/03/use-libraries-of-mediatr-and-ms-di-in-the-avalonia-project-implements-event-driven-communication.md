@@ -8,7 +8,9 @@ copyright: Original
 draft: false
 cover: https://img1.dotnet9.com/2024/03/cover_01.png
 categories: .NET
-tags: AvaloniaUI,MediatR
+tags: 
+    - AvaloniaUI
+    - MediatR
 ---
 
 大家好，我是沙漠尽头的狼！

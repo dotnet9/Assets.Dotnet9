@@ -10,7 +10,10 @@ originalLink: https://ithelp.ithome.com.tw/articles/10261579
 draft: False
 cover: https://img1.dotnet9.com/2021/12/cover_05.png
 categories: .NET
-tags: Blazor Server,学Blazor
+tags: 
+    - Blazor
+    - ASP.NET Core
+    - 学Blazor
 ---
 
 现在每次启动项目，预设路径都会是`/`，但我们目前没有 Component 套用这个路由，要自己切换到`Post`实在有些麻烦，另外 Menu 的图案也跟名称不符，我们来调整一下。

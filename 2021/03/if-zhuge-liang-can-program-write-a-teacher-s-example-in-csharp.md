@@ -8,7 +8,9 @@ originalTitle: 如果诸葛亮用C#写出师表...
 draft: False
 cover: https://img1.dotnet9.com/2021/03/cover_02.jpeg
 categories: .NET
-tags: C#,出师表
+tags: 
+    - C#
+    - 出师表
 ---
 
 > 看到一篇 18 年的文章 "[C++版《出师表》](https://mp.weixin.qq.com/s/7EE9kW6MiQXNB2XkLjoZDg)"，站长觉得挺有意思的，就用 C# 控制台也实现了一遍，技术上没啥难度，但复制代码费了 1、2 个小时，纯粹无聊写着玩，看者别在意枚举、类名、变量中文命名，纯粹为了娱乐。

@@ -10,7 +10,13 @@ originalLink: https://www.cnblogs.com/xymfblogs/archive/2022/04/02/16091037.html
 draft: False
 cover: https://img1.dotnet9.com/2022/04/0108.png
 categories: .NET
-tags: .NET 6,WPF,.NET Core Web API,音视频,聊天,开源WPF
+tags: 
+    - .NET 6
+    - WPF
+    - .NET Core Web API
+    - 音视频
+    - 聊天
+    - 开源WPF
 ---
 
 > 一个基于`.NET 6`开发的在线音视频聊天项目，客户端使用`WPF`开发，后端使用`.NET Core Web API`。

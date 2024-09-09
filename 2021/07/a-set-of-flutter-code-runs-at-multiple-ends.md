@@ -8,7 +8,13 @@ originalTitle: 一套Flutter代码多端运行
 draft: False
 cover: https://img1.dotnet9.com/2021/07/cover_02.png
 categories: 前端
-tags: Flutter,Mac,iOS,Android,Web,Desktop
+tags: 
+    - Flutter
+    - Mac
+    - iOS
+    - Android
+    - Web
+    - Desktop
 ---
 
 > 参考视频：[https://www.youtube.com/watch?v=\_uOgXpEHNbc](https://www.youtube.com/watch?v=_uOgXpEHNbc)

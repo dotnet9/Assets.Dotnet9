@@ -10,7 +10,10 @@ originalLink: https://ithelp.ithome.com.tw/articles/10270593
 draft: False
 cover: https://img1.dotnet9.com/2021/12/cover_05.png
 categories: .NET
-tags: Blazor Server,学Blazor
+tags: 
+    - Blazor
+    - ASP.NET Core
+    - 学Blazor
 ---
 
 前面有说到`UserAuthentication()`跟`UserAuthorization()`，这两个的差别在于：前者用于验证登录者是谁，后者则决定登录者可以做什么。

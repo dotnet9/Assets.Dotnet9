@@ -10,7 +10,9 @@ originalLink: https://www.bilibili.com/video/BV1AX4y1w7Nt
 draft: False
 cover: https://img1.dotnet9.com/2022/03/cover_22.png
 categories: 前端,课程
-tags: Qt,视频教程
+tags: 
+    - Qt
+    - 视频教程
 ---
 
 今天分享一个 B 站的 C++ Qt 视频教程，2021 年 07 月录制的，还是比较新，有需要的朋友可以去看看：[Qt 5.9 C++开发指南](https://www.bilibili.com/video/BV1AX4y1w7Nt)

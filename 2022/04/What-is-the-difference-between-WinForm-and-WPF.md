@@ -10,7 +10,9 @@ originalLink: https://mp.weixin.qq.com/s/IXpv_mNtR5gjO1IlUXAtpg
 draft: False
 cover: https://img1.dotnet9.com/2022/04/0501.jpg
 categories: .NET
-tags: Winform, WPF
+tags: 
+    - Winform
+    - WPF
 ---
 
 总有小伙伴问: “WinForm 和 WPF 有什么区别?”

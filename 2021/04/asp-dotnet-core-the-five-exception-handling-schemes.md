@@ -10,7 +10,9 @@ originalLink: https://ut32.com/post/handle-exception
 draft: False
 cover: https://img1.dotnet9.com/2021/04/cover_01.jpg
 categories: .NET
-tags: ASP.NET Core,异常
+tags: 
+    - ASP.NET Core
+    - 异常
 ---
 
 异常处理在编程中非常重要，一来可以给用户友好提示，二来也是为了程序安全。在 Asp.Net Core 中，默认已经为我们了提供很多解决方案，下面就来总结一下。

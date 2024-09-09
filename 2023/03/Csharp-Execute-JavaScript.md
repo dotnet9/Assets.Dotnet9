@@ -7,7 +7,9 @@ copyright: Original
 draft: false
 cover: https://img1.dotnet9.com/2023/03/cover_04.png
 categories: .NET
-tags: JavaScript,C#与JS互操作
+tags: 
+    - JavaScript
+    - C#与JS互操作
 ---
 
 ClearScript 是一个 .NET 平台下的开源库，用于在 C# 和其他 .NET 语言中执行脚本代码。它提供了一种方便和安全的方法来将脚本与应用程序集成，并允许将应用程序暴露给脚本以进行更高级别的自定义和交互。本篇文章将深入介绍 ClearScript 的使用方法和特点，包括如何在 C# 中执行 JavaScript 脚本、如何与脚本交互、如何调用 C# 方法等方面的内容。

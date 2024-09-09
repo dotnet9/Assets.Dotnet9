@@ -10,7 +10,10 @@ originalLink: https://www.cnblogs.com/linxmouse/p/14533151.html
 draft: False
 cover: https://img1.dotnet9.com/2021/03/cover_03.jpg
 categories: .NET
-tags: C#,Flurl,Policy
+tags: 
+    - C#
+    - Flurl
+    - Policy
 ---
 
 > 在使用 Flurl 作为 HttpClient 向 Server 请求时，由于网络或者其它一些原因导致请求会有失败的情况，比如`HttpStatusCode.NotFound`、`HttpStatusCode.ServiceUnavailable`、HttpStatusCode.RequestTimeout 等；网络上有比较多的 HttpClientFactory 使用 Polly 来实现重试的内容，奈何已经习惯使用 Flurl 的人，要全部换回到 IHttpClient 的确有不方便的地方，因为本文使用 Flurl 的 Polly 来实现重试机制做一个整理；

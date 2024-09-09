@@ -10,7 +10,9 @@ originalLink: https://www.cnblogs.com/8u7tgyjire7890/p/15881159.html
 draft: False
 cover: https://img1.dotnet9.com/2022/05/cover_49.jpg
 categories: .NET
-tags: WPF,动画
+tags: 
+    - WPF
+    - 动画
 ---
 
 [Lottie](https://lottiefiles.com/) 动画是一种以 json 文件保存的动画文件。 相比 gif 在文件体积和动画流畅度上有很大的优势，而且是图形是矢量的，放大不会糊。

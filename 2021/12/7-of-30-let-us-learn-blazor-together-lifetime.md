@@ -10,7 +10,10 @@ originalLink: https://ithelp.ithome.com.tw/articles/10261219
 draft: False
 cover: https://img1.dotnet9.com/2021/12/cover_05.png
 categories: .NET
-tags: Blazor Server,学Blazor
+tags: 
+    - Blazor
+    - ASP.NET Core
+    - 学Blazor
 ---
 
 前面说过自己建立的 Service 都必须在`Program.cs`注册，但有些基本 Service 就不用自己做了。

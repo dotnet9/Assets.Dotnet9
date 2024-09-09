@@ -10,7 +10,9 @@ originalLink: https://www.cnblogs.com/s0611163/archive/2021/09/09/15245412.html
 draft: False
 cover: https://img1.dotnet9.com/2021/09/cover_04.jpg
 categories: .NET
-tags: WPF,水印
+tags: 
+    - WPF
+    - 水印
 ---
 
 水印装饰器 WatermarkAdorner 类代码：

@@ -8,7 +8,10 @@ originalTitle: SwiftUI图片处理(缩放、拼图)
 draft: False
 cover: https://img1.dotnet9.com/2021/08/cover_01.jpeg
 categories: 前端
-tags: SwiftUI,缩放,拼图
+tags: 
+    - SwiftUI
+    - 缩放
+    - 拼图
 ---
 
 采用 SwiftUI Core Graphics 技术，与 C#的 GDI+绘图类似，具体概念不多说，毕竟我也是新手，本文主要展示效果图及代码，本文示例代码需要请拉到文末自取。

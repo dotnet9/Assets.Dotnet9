@@ -10,7 +10,10 @@ originalLink: https://www.jianshu.com/p/e589181b14db
 draft: False
 cover: https://img1.dotnet9.com/2021/10/cover_04.jpeg
 categories: 前端
-tags: State,Published,ObservedObject
+tags: 
+    - State
+    - Published
+    - ObservedObject
 ---
 
 > 1.SwiftUI 是 Apple 新出面向未来、跨多端解决方案、声明式编程

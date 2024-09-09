@@ -11,7 +11,10 @@ draft: False
 cover: https://img1.dotnet9.com/2022/04/0201.png
 albums: 开源C#
 categories: .NET
-tags: C#,控制台,酷炫的控制台
+tags: 
+    - C#
+    - 控制台
+    - 酷炫的控制台
 ---
 
 ![](https://img1.dotnet9.com/2022/04/0201.png)

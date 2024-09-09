@@ -10,7 +10,10 @@ originalLink: https://ithelp.ithome.com.tw/articles/10267015
 draft: False
 cover: https://img1.dotnet9.com/2021/12/cover_05.png
 categories: .NET
-tags: Blazor Server,学Blazor
+tags: 
+    - Blazor
+    - ASP.NET Core
+    - 学Blazor
 ---
 
 假设今天有个状况是这样：有一条日志，新增第二条但还没提交前，想将第一条删除，这时会发生什么事呢？

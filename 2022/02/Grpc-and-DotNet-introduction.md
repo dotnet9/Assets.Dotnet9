@@ -10,7 +10,9 @@ originalLink: https://www.infoq.com/articles/getting-started-grpc-dotnet/、http
 draft: False
 cover: https://img1.dotnet9.com/2022/02/cover_01.jpg
 categories: .NET
-tags: .NET,gRPC
+tags: 
+    - .NET
+    - gRPC
 ---
 
 - 作者 | Mohamad Lawand

@@ -10,7 +10,14 @@ originalLink: https://mp.weixin.qq.com/s/ACihOXY8v2l2qZmUxKw-ow
 draft: False
 cover: https://img1.dotnet9.com/2022/04/0301.gif
 categories: .NET
-tags: C#,Winform,WPF,UWP,WinUI,动态壁纸,开源WPF
+tags: 
+    - C#
+    - Winform
+    - WPF
+    - UWP
+    - WinUI
+    - 动态壁纸
+    - 开源WPF
 ---
 
 说到动态壁纸软件，相信很多人都听说过或用过 `Wallpaper Engine`, 这是 Steam Store 一个好评如潮的壁纸软件，售价为 `18` 元。我之前也一直在使用，当然今天介绍的是另外一个壁纸软件 `Lively Wallpaper`。

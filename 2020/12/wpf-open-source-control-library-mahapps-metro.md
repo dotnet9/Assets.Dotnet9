@@ -9,7 +9,13 @@ originalTitle: WPF开源控件库：MahApps.Metro
 draft: False
 cover: https://img1.dotnet9.com/2020/12/cover_01.jpg
 categories: .NET
-tags: WPF,MahApps.Metro,开源WPF,控件库,WPF控件库,开源WPF控件库
+tags: 
+    - WPF
+    - MahApps.Metro
+    - 开源WPF
+    - 控件库
+    - WPF控件库
+    - 开源WPF控件库
 ---
 
 > 其实站长很久之前就知道这个开源 WPF 控件库了，只是一直欣赏不了这种风格，但也 star 了该项目。每次浏览该仓库时，发现 star 越来越多，也看到很多网友对它的褒奖，所以今天就向大家推荐这款 WPF 控件库。

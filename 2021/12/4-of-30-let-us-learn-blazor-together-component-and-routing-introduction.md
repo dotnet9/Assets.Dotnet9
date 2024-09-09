@@ -10,7 +10,10 @@ originalLink: https://ithelp.ithome.com.tw/articles/10260047
 draft: False
 cover: https://img1.dotnet9.com/2021/12/cover_05.png
 categories: .NET
-tags: Blazor Server,学Blazor
+tags: 
+    - Blazor
+    - ASP.NET Core
+    - 学Blazor
 ---
 
 由于笔者当初是用 ASP.NET Core API + Blazor Server，所以会以 Blazor Server 示范，日后研究完 Blazor WebAssembly 会再将心得补上。

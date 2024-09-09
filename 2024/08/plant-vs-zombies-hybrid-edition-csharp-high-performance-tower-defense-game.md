@@ -8,7 +8,12 @@ copyright: Original
 draft: false
 cover: https://img1.dotnet9.com/2024/08/cover_01.png
 categories: .NET
-tags: C#,Winform,游戏,植物大战僵尸,杂交
+tags: 
+    - C#
+    - Winform
+    - 游戏
+    - 植物大战僵尸
+    - 杂交
 ---
 
 > 探索《植物大战僵尸-杂交版》，一款基于.Net Framework 4.0开发的创新塔防游戏！结合经典《植物大战僵尸》元素与独特杂交机制，种植多样植物与英雄，抵御僵尸入侵。高性能、流畅体验，挑战与乐趣并存。无论是游戏爱好者还是编程学习者，这款游戏都能带给你前所未有的体验。仅供娱乐与学习，快来体验吧！[源码地址](https://gitee.com/feng-cai/plants-v.s.-zombies)

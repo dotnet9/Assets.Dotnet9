@@ -10,7 +10,10 @@ originalLink: https://mp.weixin.qq.com/s/IJd0pwvQhCIohGR0dfekew
 draft: False
 cover: https://img1.dotnet9.com/2022/06/cover_04.jpg
 categories: .NET
-tags: .NET,ORM,EF Core
+tags: 
+    - .NET
+    - ORM
+    - EF Core
 ---
 
 继 [上一篇](https://mp.weixin.qq.com/s/VpqEWQPdEJUw_HHNeqBPdg) 之后，这一篇将给大家带来另外十个 EF Core 6 中的新功能特性，包括值转换器、脚手架和 `DbContext` 的改进等。

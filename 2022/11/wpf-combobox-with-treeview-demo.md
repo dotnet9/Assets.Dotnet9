@@ -10,7 +10,9 @@ originalLink: https://blog.csdn.net/qq_28149763/article/details/126539635
 draft: False
 cover: https://img1.dotnet9.com/2022/11/0103.gif
 categories: .NET
-tags: .NET,WPF
+tags: 
+    - .NET
+    - WPF
 ---
 
 > 本文来自转载。

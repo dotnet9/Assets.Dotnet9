@@ -9,7 +9,12 @@ originalTitle: WPF开源项目：AIStudio.Wpf.AClient
 draft: False
 cover: https://img1.dotnet9.com/2021/07/cover_01.png
 categories: .NET
-tags: WPF,Prism,MVVM,ASP.NET Core,开源WPF
+tags: 
+    - WPF
+    - Prism
+    - MVVM
+    - ASP.NET Core
+    - 开源WPF
 ---
 
 ## 介绍

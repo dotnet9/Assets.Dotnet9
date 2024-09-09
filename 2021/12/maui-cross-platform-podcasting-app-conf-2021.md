@@ -10,7 +10,10 @@ originalLink: https://mp.weixin.qq.com/s/SqcrRomZyn7bzlNzeWZdrQ
 draft: False
 cover: https://img1.dotnet9.com/2021/12/cover_01.png
 categories: .NET
-tags: MAUI,开源MAUI,Conf 2021
+tags: 
+    - MAUI
+    - 开源MAUI
+    - Conf 2021
 ---
 
 ## 介绍

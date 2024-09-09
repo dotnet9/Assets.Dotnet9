@@ -9,7 +9,11 @@ draft: False
 cover: https://img1.dotnet9.com/2021/06/cover_04.jpg
 albums: 开源WPF
 categories: .NET
-tags: C#,WPF,开源,开源WPF
+tags: 
+    - C#
+    - WPF
+    - 开源
+    - 开源WPF
 ---
 
 > - 原文链接：https://github.com/ControlzEx/ControlzEx

@@ -10,7 +10,10 @@ originalLink: https://www.zhihu.com/question/496204534/answer/2213155471
 draft: False
 cover: https://img1.dotnet9.com/2021/11/cover_01.jpeg
 categories: 分享
-tags: .NET CORE,Java,Go
+tags: 
+    - .NET CORE
+    - Java
+    - Go
 ---
 
 ![](https://img1.dotnet9.com/2021/11/cover_01.jpeg)

@@ -10,7 +10,10 @@ originalLink: https://ithelp.ithome.com.tw/articles/10272010
 draft: False
 cover: https://img1.dotnet9.com/2021/12/cover_05.png
 categories: .NET
-tags: Blazor Server,学Blazor
+tags: 
+    - Blazor
+    - ASP.NET Core
+    - 学Blazor
 ---
 
 首先添加承载角色数据的`ViewModel`，因为接下来的权限会以角色判断，`ASP.NET Core Identity` 承载角色的`Model` 为`IdentityRole`，里面有太多不该让用户看到的信息，通常会自己写新的`ViewModel` 以过滤多余信息，这边只呈现`Role`的`Id`、`Name` 跟`Role` 底下所有用户的名称。

@@ -10,7 +10,9 @@ originalLink: https://mp.weixin.qq.com/s/QIsePgO1PPRgXyNpruog9A
 draft: False
 cover: https://img1.dotnet9.com/2022/03/cover_12.jpeg
 categories: 分享
-tags: 法律,仲裁
+tags: 
+    - 法律
+    - 仲裁
 ---
 
 > 劳动赔偿中我们都听过，N+1,N+2,2N，其实他们的概念是不一样的。其实是可以拆开讲，N 是一回事，+1 又是另外一条规定，2N 又是别的规定。本文我结合法律条文一一讲解。

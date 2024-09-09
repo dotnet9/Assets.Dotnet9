@@ -10,7 +10,11 @@ originalLink: https://www.cnblogs.com/wengzp/archive/2021/09/17/15305896.html
 draft: False
 cover: https://img1.dotnet9.com/2021/09/cover_01.jpeg
 categories: .NET
-tags: WPF,插件系统,模块化,Win32
+tags: 
+    - WPF
+    - 插件系统
+    - 模块化
+    - Win32
 ---
 
 当 WPF 客户端需要实现插件系统的时候，一般可以基于容器或者进程来实现。如果需要对外部插件实现异常隔离，那么只能使用子进程来加载插件，这样插件如果抛出异常，也不会影响到主进程。WPF 元素无法跨进程传输，但是窗口句柄（HWND）可以，所以可以将 WPF 元素包装成 HWND，然后通过进程间通信将插件传输到客户端中，从而实现插件加载。

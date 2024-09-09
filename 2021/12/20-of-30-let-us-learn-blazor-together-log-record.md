@@ -10,7 +10,10 @@ originalLink: https://ithelp.ithome.com.tw/articles/10268616
 draft: False
 cover: https://img1.dotnet9.com/2021/12/cover_05.png
 categories: .NET
-tags: Blazor Server,学Blazor
+tags: 
+    - Blazor
+    - ASP.NET Core
+    - 学Blazor
 ---
 
 在开发系统时，记录是一件很重要的事，前面都没有提到，笔者在最近才想到这点，所以就来实现吧！

@@ -9,7 +9,9 @@ originalTitle: WPF开发的实用小工具 - 快捷悬浮菜单
 draft: False
 cover: https://img1.dotnet9.com/2020/11/cover_01.png
 categories: .NET
-tags: WPF,开源WPF
+tags: 
+    - WPF
+    - 开源WPF
 ---
 
 > 本文由网友投稿，Dotnet9 站长整理。站长觉得这小工具很实用，站长家里、公司也在尝试使用了。

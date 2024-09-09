@@ -10,7 +10,9 @@ originalLink: https://ithelp.ithome.com.tw/articles/10228808
 draft: False
 cover: https://img1.dotnet9.com/2021/12/cover_02.jpg
 categories: 前端
-tags: 前端,Bootstrap 4
+tags: 
+    - 前端
+    - Bootstrap 4
 ---
 
 > 前情提要：[让我们站在巨人的肩膀上，如何在专案中导入 Bootstrap 4 并客制它](https://ithelp.ithome.com.tw/articles/10228718)

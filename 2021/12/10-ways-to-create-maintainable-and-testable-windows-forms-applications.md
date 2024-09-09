@@ -10,7 +10,9 @@ originalLink: https://markheath.net/post/maintainable-winforms
 draft: False
 cover: https://img1.dotnet9.com/2021/12/cover_09.jpeg
 categories: .NET
-tags: Winform,单元测试
+tags: 
+    - Winform
+    - 单元测试
 ---
 
 我遇到的大多数 Windows 窗体应用程序都不存在或单元测试覆盖率极低。而且它们通常也很难维护，项目中各种 Form 类的代码背后有数百甚至数千行代码，但它不必是这样。仅仅因为 Windows 窗体是一项“遗留”技术，并不意味着你注定会造成无法维护的混乱。下面是创建可维护和可测试的 Windows 窗体应用程序的十个技巧。
