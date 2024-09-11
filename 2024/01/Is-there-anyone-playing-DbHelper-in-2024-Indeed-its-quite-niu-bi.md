@@ -4,7 +4,6 @@ slug: Is-there-anyone-playing-DbHelper-in-2024-Indeed-its-quite-niu-bi
 description: 2024年了，DbHelper永不过时，看看大佬写的DbHelper，你一定佩服！
 date: 2024-01-21 00:13:47
 lastmod: 2024-01-21 00:27:47
-banner: true
 copyright: Reprinted
 author: 游子吟i
 originalTitle: 基于Ado.Net多个关系型数据库DbHelper封装

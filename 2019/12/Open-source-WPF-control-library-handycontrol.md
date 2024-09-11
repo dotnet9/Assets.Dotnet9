@@ -2,7 +2,6 @@
 title: WPF开源控件库 - HandyControl
 slug: open-source-wpf-control-library-handycontrol
 description: 一个很多人参与贡献的WPF开源控件项目
-banner: true
 date: 2019-12-09 13:45:56
 author: 沙漠尽头的狼
 draft: false
