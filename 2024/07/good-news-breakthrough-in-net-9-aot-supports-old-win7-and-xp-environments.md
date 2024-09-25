@@ -3,7 +3,7 @@ title: .NET 9 AOT的突破 - 支持老旧Win7与XP环境
 slug: good-news-breakthrough-in-net-9-aot-supports-old-win7-and-xp-environments
 description: .NET 9开始，AOT支持Win7和XP，不仅仅只支持SP1版本
 date: 2024-07-16 05:24:47
-lastmod: 2024-08-02 00:14:26
+lastmod: 2024-09-25 23:29:34
 copyright: Original
 draft: false
 cover: https://img1.dotnet9.com/2024/07/cover_01.png
@@ -49,7 +49,7 @@ tags:
 - **部署简易**：无需用户安装.NET 运行时，简化了部署流程。
 - **维护成本降低**：对于依赖老旧系统的企业，避免了频繁升级运行时的困扰。
 
-本文只在分享网友实践的一个成果，如有更多发现，欢迎投稿。
+本文只在分享网友及站长实践的一个成果，如有更多发现，欢迎投稿或给本文PR。
 
 ## Windows 7 支持
 
@@ -63,7 +63,7 @@ tags:
 
 ![](https://img1.dotnet9.com/2024/07/0706.png)
 
-参考配置：
+为了便于读者代码拷贝，参考配置贴出如下：
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -78,6 +78,7 @@ tags:
 	</PropertyGroup>
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
 		<InvariantGlobalization>true</InvariantGlobalization>
+        <!--支持在Windows XP或更高版本的Windows操作系统上运行,XP下尝试Ava失败-->
 		<WindowsSupportedOSPlatformVersion>5.1</WindowsSupportedOSPlatformVersion>
 		<RuntimeIdentifier>win-x64</RuntimeIdentifier>
 		<TargetPlatformMinVersion>5.1</TargetPlatformMinVersion>
@@ -97,13 +98,31 @@ tags:
 </Project>
 ```
 
-Winform 都可以 x86 aot 运行..
+上面关键配置说明：
+
+1. `<PublishAot>true</PublishAot>`
+
+该开关用于支持AOT编译发布
+
+2. `<WindowsSupportedOSPlatformVersion>5.1</WindowsSupportedOSPlatformVersion>`
+
+支持在Windows XP或更高版本的Windows操作系统上运行
+
+3. `VC-LTL`
+
+VC-LTL是一个基于微软VC修改的开源运行时，有效减少应用程序体积并摆脱微软运行时DLL，比如msvcr120.dll、api-ms-win-crt-time-l1-1-0.dll等依赖。
+
+Win7及以上版本，可能AOT就能正常运行（不需要安装.NET运行时）。但也有可能在目标系统运行失败，可添加该库尝试重新AOT编译。详细原理参考该仓库：https://github.com/Chuyu-Team/VC-LTL
+
+经测试，Winform 可以.NET 9 x86 AOT发布后运行，效果截图如下：
 
 ![](https://img1.dotnet9.com/2024/07/0707.png)
 
 Winform 工程配置如下：
 
 ![](https://img1.dotnet9.com/2024/07/0710.png)
+
+可拷贝配置如下：
 
 ```bash
 <Project Sdk="Microsoft.NET.Sdk">
@@ -128,6 +147,8 @@ Winform 工程配置如下：
 	</ItemGroup>
 </Project>
 ```
+
+入口再加一句代码`ComWrappers.RegisterForMarshalling(WinFormsComInterop.WinFormsComWrappers.Instance);`：
 
 ```csharp
 using System.Runtime.InteropServices;
@@ -211,7 +232,7 @@ XP 需要链接 YY-Thunks，参考链接：https://github.com/Chuyu-Team/YY-Thun
 
 > **2024-08-02**
 >
-> 通过阅读开源Avalonia主题库 [Semi.Avalonia]([irihitech/Semi.Avalonia: Avalonia theme inspired by Semi Design (github.com)](https://github.com/irihitech/Semi.Avalonia)) 的源码及作者 `Rabbitism` 兔佬的PR已经解决Prism问题的，其它库问题使用方法应该类似，修改如果：
+> 通过阅读开源Avalonia主题库 [Semi.Avalonia]([irihitech/Semi.Avalonia: Avalonia theme inspired by Semi Design (github.com)](https://github.com/irihitech/Semi.Avalonia)) 的源码及作者 `Rabbitism` 兔佬的PR已经解决Prism问题的，其它库问题使用方法应该类似，修改如下：
 >
 > 主工程添加Roots.xml，内容如下：
 >
@@ -234,12 +255,14 @@ XP 需要链接 YY-Thunks，参考链接：https://github.com/Chuyu-Team/YY-Thun
 >     <TrimmerRootDescriptor Include="Roots.xml" />
 > </ItemGroup>
 > ```
+> 
+> HttpClient也是类似的处理方法，这里不赘述，需要你进行更多尝试。
 
-每个公司的不同项目都是极其不同、复杂的，实际发布还需要不断测试，为了支持Windows7、Windows XP可能不得不做出使用库替换、部分API使用取舍等操作，欢迎读者在使用过程中的心得体会进行分享。
+每个公司的不同项目都是极其不同、复杂的，实际发布还需要不断测试，为了支持Windows7、Windows XP可能不得不做出使用库替换、部分API使用取舍等操作，欢迎读者将使用过程中的心得体会进行分享。
 
 ## 结语
 
-.NET 9 的 X86 AOT 支持无疑拓宽了.NET 生态的应用范围，为那些需要在老旧平台上运行高性能应用的开发者提供了强大的工具。随着技术的发展，我们期待未来更多的.NET 版本能够进一步打破界限，让编程变得更加灵活和高效。
+.NET 9 的 AOT 支持无疑拓宽了.NET 生态的应用范围，为那些需要在老旧平台上运行高性能应用的开发者提供了强大的工具。随着技术的发展，我们期待未来更多的.NET 版本能够进一步打破界限，让编程变得更加灵活和高效。
 
 感谢网友`GSD`及`M$達`分享的这个好消息，大石头这篇文章《各版本操作系统对.NET 支持情况》推荐大家阅读：https://newlifex.com/tech/os_net
 
