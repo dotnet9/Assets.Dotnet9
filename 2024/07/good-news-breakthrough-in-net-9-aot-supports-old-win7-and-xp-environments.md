@@ -266,6 +266,8 @@ XP 需要链接 YY-Thunks，参考链接：https://github.com/Chuyu-Team/YY-Thun
 
 感谢网友`GSD`及`M$達`分享的这个好消息，大石头这篇文章《各版本操作系统对.NET 支持情况》推荐大家阅读：https://newlifex.com/tech/os_net
 
+参考AOT项目：https://github.com/dotnet9/CodeWF.Toolbox
+
 **技术交流**
 
 软件开发技术交流添加 QQ 群：771992300
