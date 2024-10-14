@@ -17,7 +17,22 @@ tags:
     - 自定义控件
 ---
 
+## Avalonia是什么？
+
+Avalonia是一个强大的框架，使开发人员能够使用.NET创建跨平台应用程序。它使用自己的渲染引擎绘制UI控件，确保在Windows、macOS、Linux、Android、iOS和WebAssembly等不同平台上具有一致的外观和行为。这意味着开发人员可以共享他们的UI代码，并在不同的目标平台上保持统一的外观和感觉。
+
+## MIT 协议普及
+
+MIT 协议（The MIT License）是一种简洁且宽松的开源软件许可协议。它允许使用者自由使用、复制、修改、合并、发布、分发、再许可和 / 或销售软件副本。使用者在软件和软件的所有副本中都必须包含版权声明和许可声明。MIT 协议对使用者的限制很少，基本上赋予了使用者极大的自由，适用于各种开源项目，鼓励代码的共享和重用，促进软件技术的快速发展。
+
+Dotnet和Avalonia都是MIT协议，相关的代码地址是：
+
+- Dotnet：https://github.com/microsoft/dotnet
+- Avalonia：https://github.com/AvaloniaUI/Avalonia
+
 ##  Semi.Avalonia和Ursa.Avalonia
+
+本文介绍重点来了：一个MIT协议的Avalonia主题库和一个MIT协议的自定义控件库-Semi.Avalonia和Ursa.Avalonia。
 
 [Semi.Avalonia](https://github.com/irihitech/Semi.Avalonia)是以MIT协议开源的Avalonia UI框架下的Semi Design主题风格实现：![](https://img1.dotnet9.com/2024/09/0101.jpg)
 
@@ -29,11 +44,21 @@ tags:
 
 仓库地址：https://github.com/irihitech/Ursa.Avalonia
 
+这两个库可放心用于信创及国产操作系统(来源微信公众号【铱泓科技】，文章链接：[点击阅读](https://mp.weixin.qq.com/s/bJhjnXtiG7zNXjFzhZb1Fg))：
+
+> 大熊Ursa和Semi两大Avalonia控件集已经完成与龙芯3A6000和龙架构（LoongArch™）的兼容互认证。这一重要的里程碑标志着我们在推进自主可控和国产化技术方面取得了新的进展。
+
+![](https://img1.dotnet9.com/2024/09/0113.png)
+
 ## 控件部分截图
 
 控件都大同小异，简单截几张图：
 
+Semi.Avalonia主题库一览：
+
 ![Semi.Avalonia截图](https://img1.dotnet9.com/2024/09/0103.gif)
+
+Ursa.Avalonia自定义控件库一览：
 
 ![Ursa.Avalonia](https://img1.dotnet9.com/2024/09/0104.gif)
 
@@ -66,7 +91,7 @@ YAML转Json工具：
 
 ![](https://img1.dotnet9.com/2024/09/0109.png)
 
-## 经验简单分享
+## 经验分享
 
 1. 控件怎么使用？
 
