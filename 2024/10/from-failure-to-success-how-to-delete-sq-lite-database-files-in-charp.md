@@ -37,7 +37,7 @@ using (var connection = new SqliteConnection(connectionString))
  System.IO.File.Delete("CodeWF.Toolbox.db");
 ```
 
-![](https://img1.dotnet9.com/2024/10/0101.jpg)
+![](https://img1.dotnet9.com/2024/10/0101.png)
 
 ## 查找资料与尝试
 
