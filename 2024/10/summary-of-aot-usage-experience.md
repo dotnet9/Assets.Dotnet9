@@ -3,7 +3,7 @@ title: AOT使用经验总结
 slug: summary-of-aot-usage-experience
 description: 从项目创建伊始，就应养成良好的习惯，即只要添加了新功能或使用了较新的语法，就及时进行 AOT 发布测试。
 date: 2024-10-14 17:04:18
-lastmod: 2024-10-14 21:29:17
+lastmod: 2024-10-15 20:46:47
 copyright: Original
 draft: false
 cover: https://img1.dotnet9.com/2024/10/cover_02.png
@@ -20,6 +20,8 @@ tags:
 ## 一、引言
 
 站长接触 AOT 已有 3 个月之久，此前在《[好消息：NET 9 X86 AOT的突破 - 支持老旧Win7与XP环境](https://mp.weixin.qq.com/s/k3xV7DmSzMcwdYzeonQXAQ)》一文中就有所提及。在这段时间里，站长使用 Avalonia 开发的项目也成功完成了 AOT 发布测试。然而，这一过程并非一帆风顺。站长在项目功能完成大半部分才开始进行 AOT 测试，期间遭遇了不少问题，可谓是 “踩坑无数”。为了方便日后回顾，也为了给广大读者提供参考，在此将这段经历进行总结。
+
+> .NET AOT是将.NET代码提前编译为本机代码的技术。其优势众多，启动速度快，减少运行时资源占用，还提高安全性。AOT发布后无需再安装.NET运行时等依赖。.NET 8、9 AOT发布后，可在XP、Win7非SP1操作系统下运行。这使得应用部署更便捷，能适应更多老旧系统环境，为开发者拓展了应用场景，在性能提升的同时，也增加了系统兼容性，让.NET应用的开发和部署更具灵活性和广泛性，给用户带来更好的体验。
 
 ## 二、经验之谈
 
