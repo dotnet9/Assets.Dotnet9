@@ -1,7 +1,7 @@
 ---
 title: 关于我创作WPF教学视频是因为“收了微软的钱”
 slug: i-created-a-wpf-tutorial-video-because-i-received-money-from-microsoft
-description: 最近昵称为`Dre***ine`的网友在我的WPF教程视频下留下了几条评论，虽然大部分的对话都是和其他几位网友发生的，但是我认为多样化的观点对技术发展很重要，因此我也想对此分享一下我的想法。 
+description: 多样化的观点会让技术社区更加丰富。然而，不尊重他人的表达方式和基于未经证实信息的言论并不利于建设性对话。
 date: 2024-10-15 21:07:26
 lastmod: 2024-10-15 22:17:26
 copyright: Contributes
@@ -20,6 +20,8 @@ tags:
 - https://www.bilibili.com/read/cv39399906/
 
 **正文如下**
+
+---
 
 大家好，我是Vicky。
 
@@ -122,7 +124,9 @@ https://www.bilibili.com/video/BV1w4421X7v3
 
 作者：小李趣味多 https://www.bilibili.com/read/cv39399906/ 出处：bilibili
 
-以下是节选原文部分评论，大家理性讨论：
+---
+
+以下是站长节选原文部分评论，大家理性讨论：
 
 ![](https://img1.dotnet9.com/2024/10/0303.png)
 
