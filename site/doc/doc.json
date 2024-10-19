@@ -1,0 +1,43 @@
+[
+    {
+        "Name": "介绍",
+        "Memo": "文档说明",
+        "Slug": "readme"
+    },
+    {
+        "Name": "事件总线",
+        "Memo": "事件总线",
+        "Slug": "eventbus",
+        "Children": 
+        [
+            {
+                "Name": "CodeWF.EventBus",
+                "Memo": "进程内事件总线",
+                "Slug": "codewf-eventbus"
+            },
+            {
+                "Name": "CodeWF.EventBus.Socket",
+                "Memo": "进程间事件总线",
+                "Slug": "codewf-eventbus-socket"
+            }
+        ]
+    },
+    {
+        "Name": "工具",
+        "Memo": "工具",
+        "Slug": "tool",
+        "Children": 
+        [
+            {
+                "Name": "CodeWF.Tools",
+                "Memo": "C#帮助类",
+                "Slug": "codewf-tools"
+            },
+            {
+                "Name": "CodeWF.Toolbox",
+                "Memo": "Avalonia开发的工具箱",
+                "Slug": "codewf-toolbox"
+            }
+        ]
+    }
+]
