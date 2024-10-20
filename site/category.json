@@ -1,44 +1,44 @@
 [
   {
     "Sort":10,
-    "DisplayName": ".NET",
-    "Note": ".NET相关文章",
+    "Name": ".NET",
+    "Memo": ".NET相关文章",
     "Slug": "dotnet" 
   },
   {
     "Sort":11,
-    "DisplayName": "Python",
-    "Note": "Python相关文章",
+    "Name": "Python",
+    "Memo": "Python相关文章",
     "Slug": "python" 
   },
   {
     "Sort":20,
-    "DisplayName": "前端",
-    "Note": "前端相关文章",
+    "Name": "前端",
+    "Memo": "前端相关文章",
     "Slug": "frontend"
   },
   {
     "Sort":30,
-    "DisplayName": "数据库",
-    "Note": "数据库相关文章",
+    "Name": "数据库",
+    "Memo": "数据库相关文章",
     "Slug": "database"
   },
   {
     "Sort":40,
-    "DisplayName": "更多语言",
-    "Note": "其他语言相关文章",
+    "Name": "更多语言",
+    "Memo": "其他语言相关文章",
     "Slug": "morelanguage"
   },
   {
     "Sort":50,
-    "DisplayName": "课程",
-    "Note": "站长推荐",
+    "Name": "课程",
+    "Memo": "站长推荐",
     "Slug": "course"
   },
   {
     "Sort":60,
-    "DisplayName": "分享",
-    "Note": "站长推荐文章或工具或在项目",
+    "Name": "分享",
+    "Memo": "站长推荐文章或工具或在项目",
     "Slug": "share"
   }
 ]
