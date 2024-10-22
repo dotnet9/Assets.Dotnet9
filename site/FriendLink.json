@@ -1,26 +1,5 @@
 [
     {
-        "Index": 1,
-        "Title": "铱泓科技",
-        "Description": "上海铱泓科技服务有限公司成立于2022年，是一家专注于开源跨平台UI框架及相关生态的技术服务公司。公司的使命是为全球开发者提供高质量、易用的跨平台UI开发工具和生态系统，帮助开发者快速实现跨平台应用的开发。",
-        "Link": "https://irihi.tech/",
-        "Logo":"https://irihi.tech/img/favicon.ico"
-    },
-    {
-        "Index": 2,
-        "Title": "Known",
-        "Description": "开源企业级开发框架，基于 Blazor 技术实现，低代码，跨平台，开箱即用，一处代码，多处运行。以高效、‌灵活为核心，‌重塑软件开发模式，‌助您轻松应对数字化转型挑战，‌开启业务增长新篇章。‌‌",
-        "Link": "http://known.org.cn/",
-        "Logo":"http://known.org.cn/favicon.png"
-    },
-    {
-        "Index": 3,
-        "Title": "Murat Yücedağ",
-        "Description": "油管一位大神，专注分享.NET Core技术，有条件可翻过去看看",
-        "Link": "https://www.youtube.com/channel/UCbkbOlw8snP93RJ2BhH44Qw",
-        "Logo":"https://img1.dotnet9.com/site/friendlinks/murat.jpg"
-    },
-    {
         "Index": 4,
         "Title": "老张的哲学",
         "Description": "博客园大佬，学习Vue + .NET CORE Web API的好地方",

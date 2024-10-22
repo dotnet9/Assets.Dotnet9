@@ -7,19 +7,19 @@ lastmod: 2024-07-28 10:25:27
 copyright: Original
 draft: false
 cover: https://img1.dotnet9.com/2024/07/cover_02.png
-categories: 
-    - .NET
-tags: 
-    - C#
-    - EventBus
-    - Distributed
-    - Socket
-    - MQ
+categories:
+  - .NET
+tags:
+  - C#
+  - EventBus
+  - Distributed
+  - Socket
+  - MQ
 ---
 
-**使用Socket实现的分布式事件总线，支持CQRS，不依赖第三方MQ。**
+**使用 Socket 实现的分布式事件总线，支持 CQRS，不依赖第三方 MQ。**
 
-`CodeWF.EventBus.Socket` 是一个轻量级的、基于Socket的分布式事件总线系统，旨在简化分布式架构中的事件通信。它允许进程之间通过发布/订阅模式进行通信，无需依赖外部消息队列服务。
+`CodeWF.EventBus.Socket` 是一个轻量级的、基于 Socket 的分布式事件总线系统，旨在简化分布式架构中的事件通信。它允许进程之间通过发布/订阅模式进行通信，无需依赖外部消息队列服务。
 
 **Command**
 
@@ -31,9 +31,9 @@ tags:
 
 ## 特性
 
-- **轻量级**：不依赖任何外部MQ服务，减少了系统复杂性和依赖。
+- **轻量级**：不依赖任何外部 MQ 服务，减少了系统复杂性和依赖。
 
-- **高性能**：基于Socket的直接通信，提供低延迟、高吞吐量的消息传递。
+- **高性能**：基于 Socket 的直接通信，提供低延迟、高吞吐量的消息传递。
 
 - **灵活性**：支持自定义事件类型和消息处理器，易于集成到现有系统中。
 
@@ -127,16 +127,16 @@ private void ReceiveEmailQuery(EmailQuery query)
 {
     // 执行查询请求，准备查询结果
     var response = new EmailQueryResponse { Emails = EmailManager.QueryEmail(request.Subject) };
-    
+
     // 以相同的主题，发布查询结果
     if (_eventClient!.Publish("event.email.query", response,
         out var errorMessage))
     {
-        LogFactory.Instance.Log.Info($"Response query result: {response}");
+        Logger.Info($"Response query result: {response}");
     }
     else
     {
-        LogFactory.Instance.Log.Error($"Response query failed: {errorMessage}");
+        Logger.Error($"Response query failed: {errorMessage}");
     }
 }
 ```
@@ -149,16 +149,14 @@ var response = _eventClient!.Query<EmailQuery, EmailQueryResponse>("event.email.
     out var errorMessage);
 if (string.IsNullOrWhiteSpace(errorMessage) && response != null)
 {
-    LogFactory.Instance.Log.Info($"Query event.email.query, result: {response}");
+    Logger.Info($"Query event.email.query, result: {response}");
 }
 else
 {
-    LogFactory.Instance.Log.Error(
+    Logger.Error(
         $"Query event.email.query failed: [{errorMessage}]");
 }
 ```
-
-
 
 ### 取消订阅事件
 
@@ -180,6 +178,6 @@ Console.WriteLine("断开与事件服务的连接");
 ## 注意事项
 
 - 确保服务端和客户端使用的地址和端口号一致，并且端口未被其他服务占用。
-- 在生产环境中，服务端应配置为监听公共IP地址或适当的网络接口。
+- 在生产环境中，服务端应配置为监听公共 IP 地址或适当的网络接口。
 - 考虑到网络异常和服务重启等情况，客户端可能需要实现重连逻辑。
 - 根据实际需求，可以扩展`EventServer`和`EventClient`类以支持更复杂的功能，如消息加密、认证授权等。
