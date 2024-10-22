@@ -3,7 +3,7 @@ title: .NET 9 AOT的突破 - 支持老旧Win7与XP环境
 slug: good-news-breakthrough-in-net-9-aot-supports-old-win7-and-xp-environments
 description: .NET 9开始，AOT支持Win7和XP，不仅仅只支持SP1版本
 date: 2024-07-16 05:24:47
-lastmod: 2024-09-25 23:29:34
+lastmod: 2024-10-22 15:24:26
 copyright: Original
 draft: false
 cover: https://img1.dotnet9.com/2024/07/cover_01.png
@@ -35,7 +35,7 @@ tags:
 
 2. 支持 Windows 7 与 Windows XP 的背景
 
-尽管 Windows 7 和 XP 已经不再是主流操作系统，但它们在某些特定领域，如企业遗留系统、嵌入式设备或者资源受限的环境中仍有广泛应用。.NET 9 的 AOT 编译器的这一扩展，旨在满足这些场景的兼容性和性能需求。
+尽管 Windows 7 和 XP 已经不再是主流操作系统，但它们在某些特定领域，如企业遗留系统、嵌入式设备或者资源受限的环境中仍有广泛应用。.NET 9 的 AOT 编译这一扩展，旨在满足这些场景的兼容性和性能需求。
 
 3. 如何实现
 
@@ -57,7 +57,7 @@ tags:
 
 ![](https://img1.dotnet9.com/2024/07/0702.png)
 
-左侧是程序运行界面，右侧是操作系统版本。
+如上图，左侧是程序运行界面，右侧是操作系统版本。
 
 ![](https://img1.dotnet9.com/2024/07/0705.png)
 
@@ -113,6 +113,16 @@ tags:
 VC-LTL是一个基于微软VC修改的开源运行时，有效减少应用程序体积并摆脱微软运行时DLL，比如msvcr120.dll、api-ms-win-crt-time-l1-1-0.dll等依赖。
 
 Win7及以上版本，可能AOT就能正常运行（不需要安装.NET运行时）。但也有可能在目标系统运行失败，可添加该库尝试重新AOT编译。详细原理参考该仓库：https://github.com/Chuyu-Team/VC-LTL
+
+**经站长实测：Windows7可能还需要添加YY-Thunks包引用：<PackageReference Include="YY-Thunks" Version="1.1.4-Beta3" />**
+
+关于YY-Thunks：[链接](https://github.com/Chuyu-Team/YY-Thunks)，说明：
+
+>众所周知，从 Windows 的每次更新又会新增大量 API，这使得兼容不同版本的 Windows 需要花费很大精力。导致现在大量开源项目已经不再兼容一些早期的 Windows 版本，比如 Windows XP RTM。
+
+> 难道就没有一种快速高效的方案解决无法定位程序输入点的问题吗？
+
+> YY-Thunks（鸭船），存在的目的就是抹平不同系统的差异，编译时单纯添加一个 obj 即可自动解决这些兼容性问题。让你兼容旧版本 Windows 更轻松！
 
 经测试，Winform 可以.NET 9 x86 AOT发布后运行，效果截图如下：
 
@@ -184,7 +194,7 @@ internal static class Program
 
 ![](https://img1.dotnet9.com/2024/07/0711.png)
 
-XP 需要链接 YY-Thunks，参考链接：https://github.com/Chuyu-Team/YY-Thunks
+XP 需要链接 YY-Thunks，参考链接：https://github.com/Chuyu-Team/YY-Thunks（前面有提及，Win7如果失败也可以添加该包引用尝试）
 
 ![](https://img1.dotnet9.com/2024/07/0704.png)
 
