@@ -5,6 +5,7 @@ description: .NET 9开始，AOT支持Win7和XP，不仅仅只支持SP1版本
 date: 2024-07-16 05:24:47
 lastmod: 2024-10-22 15:24:26
 copyright: Original
+banner: true
 draft: false
 cover: https://img1.dotnet9.com/2024/07/cover_01.png
 categories: 

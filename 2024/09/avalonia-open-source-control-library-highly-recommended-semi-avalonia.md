@@ -5,6 +5,7 @@ description: Semi.Avalonia是以MIT协议开源的Avalonia UI框架下的Semi De
 date: 2024-09-25 22:26:25
 lastmod: 2024-10-14 23:17:26
 copyright: Original
+banner: true
 draft: false
 cover: https://img1.dotnet9.com/2024/09/0101.jpg
 categories: 
