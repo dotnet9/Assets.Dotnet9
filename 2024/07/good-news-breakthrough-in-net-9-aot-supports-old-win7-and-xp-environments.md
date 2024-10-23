@@ -3,7 +3,7 @@ title: .NET 9 AOT的突破 - 支持老旧Win7与XP环境
 slug: good-news-breakthrough-in-net-9-aot-supports-old-win7-and-xp-environments
 description: .NET 9开始，AOT支持Win7和XP，不仅仅只支持SP1版本
 date: 2024-07-16 05:24:47
-lastmod: 2024-10-22 15:24:26
+lastmod: 2024-10-23 13:49:26
 copyright: Original
 banner: true
 draft: false
@@ -115,7 +115,11 @@ VC-LTL是一个基于微软VC修改的开源运行时，有效减少应用程序
 
 Win7及以上版本，可能AOT就能正常运行（不需要安装.NET运行时）。但也有可能在目标系统运行失败，可添加该库尝试重新AOT编译。详细原理参考该仓库：https://github.com/Chuyu-Team/VC-LTL
 
-**经站长实测：Windows7可能还需要添加YY-Thunks包引用：<PackageReference Include="YY-Thunks" Version="1.1.4-Beta3" />**
+**经站长实测：Windows7可能还需要添加YY-Thunks包引用：**
+
+```bash
+<PackageReference Include="YY-Thunks" Version="1.1.4-Beta3" />
+```
 
 关于YY-Thunks：[链接](https://github.com/Chuyu-Team/YY-Thunks)，说明：
 
