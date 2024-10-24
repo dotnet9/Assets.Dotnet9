@@ -13,12 +13,14 @@
             {
                 "Name": "CodeWF.EventBus",
                 "Memo": "进程内事件总线",
-                "Slug": "codewf-eventbus"
+                "Slug": "codewf-eventbus",
+                "Repository": "https://github.com/dotnet9/CodeWF.EventBus"
             },
             {
                 "Name": "CodeWF.EventBus.Socket",
                 "Memo": "进程间事件总线",
-                "Slug": "codewf-eventbus-socket"
+                "Slug": "codewf-eventbus-socket",
+                "Repository": "https://github.com/dotnet9/CodeWF.EventBus.Socket"
             }
         ]
     },
@@ -31,12 +33,14 @@
             {
                 "Name": "CodeWF.Tools",
                 "Memo": "C#帮助类",
-                "Slug": "codewf-tools"
+                "Slug": "codewf-tools",
+                "Repository": "https://github.com/dotnet9/CodeWF.Tools"
             },
             {
                 "Name": "CodeWF.Toolbox",
                 "Memo": "Avalonia开发的工具箱",
-                "Slug": "codewf-toolbox"
+                "Slug": "codewf-toolbox",
+                "Repository": "https://github.com/dotnet9/CodeWF.Toolbox"
             }
         ]
     }
