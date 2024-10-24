@@ -2,7 +2,7 @@
 
 <p align="center">
   <a href="https://codewf.com">
-    <img src="https://img1.dotnet9.com/site/logo.png" width="128" alt="Dotnet9">
+    <img src="https://img1.dotnet9.com/site/favicon/logo.png" width="128" alt="Dotnet9">
   </a>
 </p>
 <h1 align="center">码界工坊</h1>
@@ -19,14 +19,24 @@
 
 1. 添加站长个人微信(codewf)加入微信群。
 
-| ![站长微信号](https://img1.dotnet9.com/site/wechatowner.jpg) | ![公众号1](https://img1.dotnet9.com/site/wechatpublic.jpg) | ![公众号2](https://img1.dotnet9.com/site/wechatpublic1.jpg) |
+| ![站长微信号](https://img1.dotnet9.com/site/favicon/wechatowner.jpg) | ![公众号1](https://img1.dotnet9.com/site/favicon/wechatpublic.jpg) | ![公众号2](https://img1.dotnet9.com/site/favicon/wechatpublic1.jpg) |
 | ------------------------------------------------------------ | ---------------------------------------------------------- | ----------------------------------------------------------- |
 
 2. QQ群：771992300
 
-![Dotnet9技术交流QQ群](https://img1.dotnet9.com/site/qqgoup1.png)
+![Dotnet9技术交流QQ群](https://img1.dotnet9.com/site/favicon/qqgoup1.png)
 
 群规：
+
+**注意事项**
+1. 网络上勿轻信任何人，包括群主！！！
+2. 相互合作，有利益牵扯，注意保护自己，群友不保真、不保真、不保真！！！
+3. 本群只提供技术交流，其他“意外”无法保证！！！
+4. 保护好自己！保护好自己！保护好自己！
+
+群里提问请看：【提问的智慧，别像弱智一样提问】https://mp.weixin.qq.com/s/r3qFZwQiX6vQstFtzc3WZQ
+
+文件资料相关请转QQ群：771992300
 
 新人入群备注个人群昵称：[地区]-[昵称]，如群主：成都-沙漠尽头的狼。
 

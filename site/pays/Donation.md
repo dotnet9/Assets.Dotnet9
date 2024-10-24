@@ -2,8 +2,8 @@
 
 ## 1. 网站开源地址：
 
-- Github: [https://github.com/dotnet9/dotnet9](https://github.com/dotnet9/dotnet9)
-- Gitee: [https://gitee.com/dotnet9/Dotnet9](https://gitee.com/dotnet9/Dotnet9)
+- Github: [https://github.com/dotnet9/CodeWF](https://github.com/dotnet9/CodeWF)
+- Gitee: [https://gitee.com/dotnet9/CodeWF](https://gitee.com/dotnet9/CodeWF)
 
 ## 2. 赞助
 
@@ -11,9 +11,9 @@
 
 <table>
     <tr>
-        <td><img src="https://img1.dotnet9.com/pays/WeChatPay.jpg" alt="Wechat" style="max-height: 350px;"></td>
-        <td><img src="https://img1.Dotnet9.com/pays/AliPay.jpg" alt="Alipay" style="max-height: 350px;"></td>
-        <td><img src="https://img1.dotnet9.com/pays/QQPay.jpg" alt="QQpay" style="max-height: 350px;"></td>
+        <td><img src="https://img1.dotnet9.com/site/pays/WeChatPay.jpg" alt="Wechat" style="max-height: 350px;"></td>
+        <td><img src="https://img1.Dotnet9.com/site/pays/AliPay.jpg" alt="Alipay" style="max-height: 350px;"></td>
+        <td><img src="https://img1.dotnet9.com/site/pays/QQPay.jpg" alt="QQpay" style="max-height: 350px;"></td>
     </tr>
 </table>
 
