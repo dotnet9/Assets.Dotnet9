@@ -294,6 +294,22 @@ if (value is IDictionary dictionary)
 }
 ```
 
+#### 8. Windows 7支持
+
+如遇AOT后无法在`Windows 7`运行，请添加`YY-Thunks`包：
+
+```bash
+<PackageReference Include="YY-Thunks" Version="1.1.4-Beta3" />
+```
+
+并指定目标框架为`net9.0-windows`。
+
+#### 9. Winform\兼容XP
+
+如果第8条后还运行不了，请参考上一篇文章《[.NET 9 AOT的突破 - 支持老旧Win7与XP环境 - 码界工坊 (dotnet9.com)](https://dotnet9.com/bbs/post/2024/7/good-news-breakthrough-in-net-9-aot-supports-old-win7-and-xp-environments)》添加VC-LTL包，这里不赘述。
+
+#### 10. 其他
+
 还有许多其他需要注意的地方，后续想起来逐渐完善本文。
 
 ## 三、总结
