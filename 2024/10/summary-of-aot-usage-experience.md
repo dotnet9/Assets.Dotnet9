@@ -3,7 +3,7 @@ title: AOT使用经验总结
 slug: summary-of-aot-usage-experience
 description: 从项目创建伊始，就应养成良好的习惯，即只要添加了新功能或使用了较新的语法，就及时进行 AOT 发布测试。
 date: 2024-10-14 17:04:18
-lastmod: 2024-10-15 20:46:47
+lastmod: 2024-10-25 08:46:47
 copyright: Original
 draft: false
 cover: https://img1.dotnet9.com/2024/10/cover_02.png
