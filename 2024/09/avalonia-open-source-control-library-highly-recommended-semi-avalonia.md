@@ -92,7 +92,7 @@ Ursa.Avalonia自定义控件库一览：
 
 还实现了国际化功能，为全球用户提供便捷体验：
 
-![Ursa.Avalonia](https://img1.dotnet9.com/2024/09/0110.gif)
+![国际化](https://img1.dotnet9.com/2024/09/0110.gif)
 
 同时，包含实用的 Json 美化工具和 YAML 转 Json 工具，分别如下图所示：
 

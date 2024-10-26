@@ -17,3 +17,12 @@
 **国际化**
 
 ![](https://img1.dotnet9.com/site/doc/tool/imgs/0104.gif)
+同时，包含实用的 Json 美化工具和 YAML 转 Json 工具，分别如下图所示：
+
+**Json 美化工具**
+
+![](https://img1.dotnet9.com/2024/09/0108.png)
+
+**YAML转Json工具**
+
+![](https://img1.dotnet9.com/2024/09/0109.png)
