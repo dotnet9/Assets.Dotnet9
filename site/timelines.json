@@ -1,5 +1,15 @@
 [
   {
+    "Time": "2024-10-09",
+    "Title": "使用KnownCMS重构网站",
+    "Content": "感谢KnownCMS开源项目，前台是Antd风格，符合官网和博客网站，Blazor还是最顺手，目前10月26日基本完成改造，并部署上线"
+  },
+  {
+    "Time": "2024-08-12",
+    "Title": "尝试使用Fluent Blazor重构网站",
+    "Content": "使用Fluent Blazor风格重构"
+  },
+  {
     "Time": "2024-07-12",
     "Title": "又一轮使用Masa Blazor重构网站开始",
     "Content": "先使用了几天Ant Blazor，现在使用Masa Blazor文档站源码进行修改，老思路：集文章浏览和工具使用的一体站"
