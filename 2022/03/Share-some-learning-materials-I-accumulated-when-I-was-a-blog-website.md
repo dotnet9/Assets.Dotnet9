@@ -3,7 +3,7 @@ title: 分享我做Dotnet9博客网站时积累的一些资料
 slug: Share-some-learning-materials-I-accumulated-when-I-was-a-blog-website
 description: Dotnet9网站用WordPress搭建了两年，去年开始自学ASP.NET Core MVC，开始了独立开发网站之路，现在网站前台算是有模有样了，后台正在开发中
 date: 2022-03-02 07:57:36
-lastmod: 2023-03-11 16:26:14
+lastmod: 2024-10-26 10:12:05
 copyright: Original
 originalTitle: 分享我做Dotnet9博客网站时积累的一些资料
 draft: False
@@ -280,5 +280,14 @@ Dotnet9 网站的重构，不仅提高了网站的性能和用户体验，还采
 5. Dotnet9.Admin：后台前端暂定
 
 等网站开发完成，写个 Dotnet9 网站前后台开发系列教程分享，不是今年，就是明年....
+
+## 9. 2024年7月
+
+Ant Design风格重构，源码地址：htts://github.com/dotnet9/CodeWF：
+
+1. 采用Blazor静态SSR；
+2. 没有数据库，核心数据本地读取、加载内存使用，所以没有后台
+
+在线浏览：htts://dotnet9..com
 
 本文持续更新，欢迎关注。
