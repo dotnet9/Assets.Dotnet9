@@ -1,11 +1,11 @@
 ---
-title: 【单片机入门】(三)应用层软件开发的单片机学习之路-----UART串口通讯和c#交互
+title: 【单片机入门】(三)应用层软件开发的单片机学习之路-UART串口通讯和c#交互
 slug: UART-serial-communication-and-csharp-interaction-Lesson-3
 description: UART串口通讯和c#串口进行通讯的一个案例，以及什么是中断，中断的作用和实践
 date: 2022-10-25 21:58:32
 copyright: Contributes
 author: 陈显达
-originalTitle: 【单片机入门】(三)应用层软件开发的单片机学习之路-----UART串口通讯和c#交互
+originalTitle: 【单片机入门】(三)应用层软件开发的单片机学习之路-UART串口通讯和c#交互
 originalLink: https://www.cnblogs.com/1996-Chinese-Chen/p/16826558.html
 draft: false
 cover: https://img1.dotnet9.com/2022/10/0801.png

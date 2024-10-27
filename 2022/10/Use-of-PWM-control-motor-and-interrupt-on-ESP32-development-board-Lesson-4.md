@@ -1,11 +1,11 @@
 ---
-title: 【单片机入门】(四)应用层软件开发的单片机学习之路-----ESP32开发板PWM控制电机以及中断的使用
+title: 【单片机入门】(四)应用层软件开发的单片机学习之路-ESP32开发板PWM控制电机以及中断的使用
 slug: Use-of-PWM-control-motor-and-interrupt-on-ESP32-development-board-Lesson-4
 description: 本课程的最后是做一个红外遥控的智能小车
 date: 2022-10-31 22:49:26
 copyright: Contributes
 author: 陈显达
-originalTitle: 【单片机入门】(四)应用层软件开发的单片机学习之路-----ESP32开发板PWM控制电机以及中断的使用
+originalTitle: 【单片机入门】(四)应用层软件开发的单片机学习之路-ESP32开发板PWM控制电机以及中断的使用
 originalLink: https://www.cnblogs.com/1996-Chinese-Chen/p/16846218.html
 draft: false
 cover: https://img1.dotnet9.com/2022/10/0801.png

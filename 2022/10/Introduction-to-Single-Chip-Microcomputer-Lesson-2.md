@@ -1,11 +1,11 @@
 ---
-title: 单片机入门第二课----点灯大师
+title: 单片机入门第二课-点灯大师
 slug: Introduction-to-Single-Chip-Microcomputer-Lesson-2
 description: 正式进入控制硬件的第一课
 date: 2022-10-21 18:53:47
 copyright: Contributes
 author: 陈显达
-originalTitle: 单片机入门第二课----点灯大师
+originalTitle: 单片机入门第二课-点灯大师
 originalLink: https://www.cnblogs.com/1996-Chinese-Chen/p/16814553.html
 draft: false
 cover: https://img1.dotnet9.com/2022/10/0601.jpg
