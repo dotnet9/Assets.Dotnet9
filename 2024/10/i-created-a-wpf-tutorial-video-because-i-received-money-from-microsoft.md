@@ -4,7 +4,7 @@ slug: i-created-a-wpf-tutorial-video-because-i-received-money-from-microsoft
 description: 多样化的观点会让技术社区更加丰富。然而，不尊重他人的表达方式和基于未经证实信息的言论并不利于建设性对话。
 date: 2024-10-15 21:07:26
 lastmod: 2024-10-15 22:17:26
-copyright: Contributes
+copyright: Reprinted
 author: 小李趣味多
 originalTitle: 关于我创作WPF教学视频是因为“收了微软的钱”
 originalLink: https://www.bilibili.com/read/cv39399906/
