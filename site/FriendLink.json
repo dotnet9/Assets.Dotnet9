@@ -35,6 +35,13 @@
         "Logo": "https://wtmdoc.walkingtec.cn/favicon.ico"
     },
     {
+        "Index": 5,
+        "Title": "NuGet Next",
+        "Description": "使用NuGet Next 更快创建 .NET 程序。",
+        "Link": "https://nuget.token-ai.cn/",
+        "Logo": "https://registry.npmmirror.com/@lobehub/assets-logo/1.2.0/files/assets/logo-3d.webp"
+    },
+    {
         "Index": 6,
         "Title": "Vol开发框架",
         "Description": ".Net Core+Vue2/Vue3+Element plus+uniapp前后端分离，全自动生成PC与移动端代码；支持移动端(uniapp)ios/android/h5/微信小程序。http://www.volcore.xyz/",
