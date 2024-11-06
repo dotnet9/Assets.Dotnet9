@@ -6,6 +6,6 @@
 
 <h1 align="center">CodeWF Site Resource Repository</h1>
 
-- Site: https://codewf.com
+- Site: https://dotnet9.com,https://codewf.com,https://qtzu.com,https://dotnetools.com,https://dotnet.chat
 - Site GitHub Repository: https://github.com/dotnet9/CodeWF
 - Site Gitee Repository: https://gitee.com/dotnet9/CodeWF
