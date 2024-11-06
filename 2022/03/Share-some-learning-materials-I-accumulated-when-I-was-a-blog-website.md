@@ -147,7 +147,7 @@ Blazor 组件库使用的 Masa Blazor： https://masa-blazor-docs-dev.lonsid.cn/
 
 **小插曲：当时中间有用 .NET CORE Web API 搭配 Vue 开发网站，因为老张的新书上市了，站长上手买了一本，跟着做了后端和前台首页，尝了个鲜，前后端分离，前端 Vue 比较熟用起来也很爽，稍微有点麻烦，没有 MVC 利索。**
 
-## 6. 现在的开发版本
+## 6. 现在的开发版本（2022年5月）
 
 时间点：2022 年 03 月至今（2022 年 05 月 03 号）
 
@@ -289,5 +289,9 @@ Ant Design风格重构，源码地址：htts://github.com/dotnet9/CodeWF：
 2. 没有数据库，核心数据本地读取、加载内存使用，所以没有后台
 
 在线浏览：htts://dotnet9..com
+
+访问速度有没有飞一般的感觉：
+
+![](https://img1.dotnet9.com/2024/11/0207.gif)
 
 本文持续更新，欢迎关注。
