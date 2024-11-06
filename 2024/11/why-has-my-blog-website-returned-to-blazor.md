@@ -3,7 +3,7 @@ title: 我的博客网站为什么又回归Blazor了
 slug: why-has-my-blog-website-returned-to-blazor
 description: 博客网站开发历经艰辛，尝试过MVC、Vue、Go等近10个版本，如今回归Blazor并采用静态SSR，速度飞涨，已成功上线。
 date: 2024-11-06 07:14:26
-lastmod: 2024-11-06 22:45:51
+lastmod: 2024-11-06 23:19:29
 copyright: Original
 draft: false
 cover: https://img1.dotnet9.com/2024/11/0201.png
