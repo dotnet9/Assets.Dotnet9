@@ -184,14 +184,14 @@ CodeWF Toolbox 使用Avalonia开发的跨平台工具箱，使用了Prism做为�
 
 在网站的开发历程中，站长不断探索尝试，学习了大量的教程和开源项目，非常受用、非常感谢提供帮助的朋友和老师。
 
-另外，[VleaStwo]([VleaStwo (Lee)](https://github.com/VleaStwo))大佬开了一个 [Masa Blazor分支](https://github.com/VleaStwo/CodeWF)，欢迎有兴趣的朋友前来 PR 或交流：
+另外，[VleaStwo](https://github.com/VleaStwo)大佬开了一个 [Masa Blazor分支](https://github.com/VleaStwo/CodeWF)，欢迎有兴趣的朋友前来 PR 或交流：
 
 ![](https://img1.dotnet9.com/2024/11/0206.png)
 
 最后，贴上相关链接，大家可以了解、交流：
 
 - 本站源码(Ant Design风格)：https://github.com/dotnet9/codewf
-- [VleaStwo]([VleaStwo (Lee)](https://github.com/VleaStwo))大佬分支(Masa Blazor风格)：https://github.com/VleaStwo/CodeWF
+- [VleaStwo](https://github.com/VleaStwo)大佬分支(Masa Blazor风格)：https://github.com/VleaStwo/CodeWF
 - Known：https://known.org.cn
 - Ant Design Blazor：https://antblazor.com/
 - Masa Blazor：https://masastack.com/blazor
