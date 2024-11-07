@@ -1,6 +1,6 @@
 ---
 title: 我的博客网站为什么又回归Blazor了
-slug: why-has-my-blog-website-returned-to-blazor
+slug: why-my-blog-site-is-back-to-blazor
 description: 博客网站开发历经艰辛，尝试过MVC、Vue、Go等近10个版本，如今回归Blazor并采用静态SSR，速度飞涨，已成功上线。
 date: 2024-11-06 07:14:26
 lastmod: 2024-11-06 23:19:29
@@ -21,17 +21,52 @@ tags:
 
 在博客网站的开发征程中，站长可谓是一路披荆斩棘。从最初的构思到实践，先后涉足了多种开发技术，包括 [MVC]([ASP.NET Core MVC 概述 | Microsoft Learn](https://learn.microsoft.com/zh-cn/aspnet/core/mvc/overview?view=aspnetcore-9.0))、[Razor Pages]([ASP.NET Core 中的 Razor Pages 介绍 | Microsoft Learn](https://learn.microsoft.com/zh-cn/aspnet/core/razor-pages/?view=aspnetcore-9.0&tabs=visual-studio))、[Vue]([Vue.js - 渐进式 JavaScript 框架 | Vue.js (vuejs.org)](https://cn.vuejs.org/))、[Go]([The Go Programming Language (google.cn)](https://golang.google.cn/))、[Blazor]([ASP.NET Core Blazor | Microsoft Learn](https://learn.microsoft.com/zh-cn/aspnet/core/blazor/?view=aspnetcore-9.0)) 等。在这漫长的过程中，网站版本更迭近 10 次，每一个版本都凝聚着站长的心血与探索，这段充满挑战的历程详细记录于 [分享我做Dotnet9博客网站时积累的一些资料 - 码界工坊](https://dotnet9.com/bbs/post/2022/3/Share-some-learning-materials-I-accumulated-when-I-was-a-blog-website)。
 
-如今，经过深思熟虑与实践检验，博客网站再次回归 Blazor，并采用了静态 SSR 技术，同时融入了时尚且实用的 Ant Design 设计风格。这一系列的改进使得网站的访问速度得到了质的飞跃，如同给网站注入了新的活力，目前网站已经成功上线，迎接来自世界各地的用户。
+如今，经过深思熟虑与实践检验，博客网站再次回归 Blazor，并采用了静态 SSR 技术，同时融入了时尚且实用的 Ant Design 设计风格。这一系列的改进使得网站的访问速度得到了质的飞跃，如同给网站注入了新的活力，目前网站已经成功上线。
 
 - 网址：https://dotnet9.com
 
 ![](https://img1.dotnet9.com/2024/11/0207.gif)
+
+## 开源的力量
 
 在此，要感谢以下开源项目：
 
 - Known: https://known.org.cn/
 
 >这是一个开源企业级开发框架，基于 Blazor 技术精心打造。它以低代码、跨平台、开箱即用的卓越特性，打破了传统开发的局限，真正实现了一处代码，多处运行的高效模式。其核心价值在于高效与灵活，为软件开发模式带来了全新的变革，就像一把神奇的钥匙，帮助开发者轻松开启数字化转型的大门，从容应对各种挑战，助力业务实现蓬勃发展，开启崭新篇章。
+
+本站源码也是开源：
+
+- 仓库：https://github.com/dotnet9/CodeWF
+
+> 码界工坊是使用.NET 9 Blazor开发的一个网站，这里有技术文章，有开源项目介绍，有在线工具使用: 码界工坊—文章启智，工具助力
+
+## 网站技术
+
+网站是基于 [Known](https://known.org.cn/) 的开源项目 [KnownCMS](https://gitee.com/known/known-cms) 搭建：
+
+> KnownCMS是基于Blazor开发的一个内容管理系统，前台使用Blazor静态组件，后台使用Known框架。
+
+因为站长的网站只是一个博客文章展示、在线工具使用，平时文章编辑也是使用Typora及VS Code搭配使用，网站核心数据文件存储于 [Assets.Dotnet9](https://github.com/dotnet9/Assets.Dotnet9) 仓库，所以站长去除了暂时不使用的后台管理相关功能，项目源码只有3个工程：
+
+![](https://img1.dotnet9.com/2024/11/0209.png)
+
+- AntBlazor：站长基本没有改过该工程，基本是由Known提供的Ant Design风格Blazor静态组件封装，比如表单、标签、按钮之类的基本组件等。
+- CodeWF：Razor类库，主要实现网站文档、博文页面封装，目前有工具还未上线，后面会按此库架构另开一个库写在线工具；
+- WebSite：网站的入口工程，整合CodeWF和AntBlazor工程，当然也包括部分页面封装（首页、关于、时间线等）、Web API控制器等
+
+<table>
+    <tr>
+    	<td>AntBlazor</td>
+        <td>CodeWF</td>
+        <td>WebSite</td>
+    </tr>
+    <tr>
+        <td><img src="https://img1.dotnet9.com/2024/11/0210.png" alt="AntBlazor" style="max-height: 350px;"></td>
+        <td><img src="https://img1.dotnet9.com/2024/11/0211.png" alt="CodeWF" style="max-height: 350px;"></td>
+        <td><img src="https://img1.dotnet9.com/2024/11/0212.png" alt="WebSite" style="max-height: 350px;"></td>
+    </tr>
+</table>
 
 **小知识：什么是静态 SSR？**
 
@@ -79,7 +114,7 @@ tags:
 
 - 网址：https://dotnet9.com
 
-和大多数网站一样，先展示网站宣传语 **”码界工坊：使用.NET 9 Web API + Blazor开发。有技术文章、开源项目介绍和在线工具，助力高效编程。“**、特色文章、特色工具（正在开发中）、友情链接等：
+和大多数网站一样，先展示网站宣传语 **”码界工坊：使用.NET 9 Web API + Blazor开发。有技术文章、开源项目介绍和在线工具，助力高效编程。“**，然后展示特色文章块，后面会加上特色工具块（正在开发中），最后是友情链接、页尾等：
 
 ![](https://img1.dotnet9.com/2024/11/0202.gif)
 
@@ -129,7 +164,7 @@ CodeWF Toolbox 使用Avalonia开发的跨平台工具箱，使用了Prism做为�
 
 ![](https://img1.dotnet9.com/2024/11/0204.png)
 
-点击列表中的文章可浏览文章详细内容，在此要感谢[VleaStwo]([VleaStwo (Lee)](https://github.com/VleaStwo))大佬提供的TOC功能：这个功能就像一把神奇的目录钥匙，使用户能够快速定位文章的重点内容，提高阅读效率。
+点击列表中的文章可浏览文章详细内容，在此要感谢[VleaStwo]([VleaStwo (Lee)](https://github.com/VleaStwo))大佬提供的TOC功能：这个功能使用户能够快速定位文章的重点内容，提高阅读效率。
 
 ![](https://img1.dotnet9.com/2024/11/0205.gif)
 
@@ -137,9 +172,14 @@ CodeWF Toolbox 使用Avalonia开发的跨平台工具箱，使用了Prism做为�
 
 在网站的开发历程中，站长不断探索尝试，学习了大量的教程和开源项目，非常受用、非常感谢提供帮助的朋友和老师。
 
-[VleaStwo]([VleaStwo (Lee)](https://github.com/VleaStwo))大佬开了一个Masa Blazor分支，欢迎有兴趣的朋友前来 PR 或交流，相关链接如下：
-
-- 本站源码(Ant Design风格)：https://github.com/dotnet9/codewf
-- [VleaStwo]([VleaStwo (Lee)](https://github.com/VleaStwo))大佬的Masa Blazor风格：https://github.com/VleaStwo/CodeWF
+另外，[VleaStwo]([VleaStwo (Lee)](https://github.com/VleaStwo))大佬开了一个 [Masa Blazor分支](https://github.com/VleaStwo/CodeWF)，欢迎有兴趣的朋友前来 PR 或交流：
 
 ![](https://img1.dotnet9.com/2024/11/0206.png)
+
+最后，贴上相关链接，大家可以了解、交流：
+
+- 本站源码(Ant Design风格)：https://github.com/dotnet9/codewf
+- [VleaStwo]([VleaStwo (Lee)](https://github.com/VleaStwo))大佬分支(Masa Blazor风格)：https://github.com/VleaStwo/CodeWF
+- Known：https://known.org.cn
+- Ant Design Blazor：https://antblazor.com/
+- Masa Blazor：https://masastack.com/blazor
