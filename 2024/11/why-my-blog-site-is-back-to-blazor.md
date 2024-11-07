@@ -168,6 +168,18 @@ CodeWF Toolbox 使用Avalonia开发的跨平台工具箱，使用了Prism做为�
 
 ![](https://img1.dotnet9.com/2024/11/0205.gif)
 
+**所有文章您都可以修改**
+
+如果文章有错别字、语病，或有误导的地方，或您有什么补充，可点击页头右上角“我要编辑、留言”进行PR，十分感谢！
+
+![](https://img1.dotnet9.com/2024/11/0208.png)
+
+最新一个对文章  [. NET 跨平台客户端框架 - Avalonia UI](https://dotnet9.com/bbs/post/2022/11/one-of-the-best-choices-for-dotnet-cross-platform-frameworks-avalonia-ui) 的 [PR#4](https://github.com/dotnet9/Assets.Dotnet9/pull/4)：
+
+![](https://img1.dotnet9.com/2024/11/0213.png)
+
+感谢网友 [hjkl950217 (长空X)](https://github.com/hjkl950217)
+
 ## 总结
 
 在网站的开发历程中，站长不断探索尝试，学习了大量的教程和开源项目，非常受用、非常感谢提供帮助的朋友和老师。
