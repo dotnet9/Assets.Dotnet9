@@ -472,4 +472,4 @@ WPF技术和模式仍然强大，将其应用于跨平台开发可以提高开�
 - [实现智能日期](https://www.bilibili.com/video/BV1pE421L7c2 "实现智能日期")
 - [实现Cupertino TreeView](https://www.bilibili.com/video/BV1xz42187wV "实现Cupertino TreeView")
 
-![](https://img1.dotnet9.com/2024/11/030.png)
+![](https://img1.dotnet9.com/2024/11/0305.png)
