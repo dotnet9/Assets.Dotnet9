@@ -85,7 +85,7 @@ tags:
 
 值班编辑：谢辰阳
 
-![警民直通车上海](https://img1.dotnet9.com/2024/11/0608.png)
+![警民直通车上海](https://img1.dotnet9.com/2024/11/0609.png)
 
 更多重要警务资讯
 
