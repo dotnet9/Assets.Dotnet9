@@ -2,8 +2,8 @@
 title: .NET 9正式发布
 slug: announcing-dotnet-9
 description: .NET 9正式发布了！这是.NET迄今为止生产力最高、最现代化、最安全、最智能且性能最强的版本。
-date: 2024-11-03 01:14:36
-lastmod: 2024-11-03 02:47:19
+date: 2024-11-13 01:14:36
+lastmod: 2024-11-13 02:47:19
 copyright: Reprinted
 banner: false
 author: .NET Team
@@ -194,7 +194,7 @@ let matchNullableString(s: string | null) =
 ### 全球顶尖的开发者工具
 伴随.NET 9的发布，我们的开发者工具也进行了更新，这将使你的开发效率达到前所未有的高度。首先，[Visual Studio 2022 17.12版本](https://aka.ms/vs/v1712GA)的发布为开发者工作流程的各个方面都带来了一系列效率提升，包括显著的性能增强、更出色的调试与诊断体验、与.NET Aspire更紧密的集成、更深入的云集成、对C# 13的分析器支持、增强的Git支持等等！实际上，此次Visual Studio 2022版本所包含的用户期待功能比以往任何时候都要多。这个版本中总有适合你的功能，相信你一定会喜欢它的。
 
-<video class="wp-video-shortcode" id="video-54480-2_html5" width="1064" height="600" preload="metadata" src="https://devblogs.microsoft.com/dotnet/wp-content/uploads/sites/10/2024/11/vs20221712.mp4?_=2" style="box-sizing: border-box; font-family: Helvetica, Arial; max-width: 100%; display: inline-block; width: 995.281px; height: 561.249px;"></video>
+<video class="wp-video-shortcode" id="video-54480-2" width="1064" height="600" preload="metadata" controls="controls"><source type="video/mp4" src="https://devblogs.microsoft.com/dotnet/wp-content/uploads/sites/10/2024/11/vs20221712.mp4?_=2" /><a href="https://devblogs.microsoft.com/dotnet/wp-content/uploads/sites/10/2024/11/vs20221712.mp4">https://devblogs.microsoft.com/dotnet/wp-content/uploads/sites/10/2024/11/vs20221712.mp4</a></video>
 
 适用于Visual Studio Code的C#开发工具包也在持续演进，编辑可靠性得到了提高，NuGet包管理功能有所增强，测试适配器和代码覆盖率结果更优，对.NET MAUI开发的支持也得到了改进，项目启动/调试配置也进行了升级。立即下载最新版本的[Visual Studio 2022](https://visualstudio.microsoft.com/downloads/)和[适用于Visual Studio Code的C#开发工具包](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit)，让你的开发工作流程从中受益并得到改进吧。
 
