@@ -1,132 +1,132 @@
 [
   {
-    "Sort":10,
+    "Sort": 1,
     "Name": "Blazor",
     "Memo": "Blazor相关文章",
-    "Slug": "blazor" 
+    "Slug": "blazor"
   },
   {
-    "Sort":10,
+    "Sort": 2,
     "Name": "ASP.NET Core",
     "Memo": "相关文章",
-    "Slug": "asp-net-core" 
+    "Slug": "asp-net-core"
   },
   {
-    "Sort":10,
+    "Sort": 3,
     "Name": "Avalonia UI",
     "Memo": "相关文章",
-    "Slug": "avalonia" 
+    "Slug": "avalonia"
   },
   {
-    "Sort":10,
+    "Sort": 4,
     "Name": "WPF",
     "Memo": "WPF相关文章",
-    "Slug": "wpf" 
+    "Slug": "wpf"
   },
   {
-    "Sort":10,
+    "Sort": 5,
     "Name": "Winform",
     "Memo": "Winform相关文章",
-    "Slug": "winform" 
+    "Slug": "winform"
   },
   {
-    "Sort":10,
+    "Sort": 6,
     "Name": "MAUI",
     "Memo": "相关文章",
-    "Slug": "maui" 
+    "Slug": "maui"
   },
   {
-    "Sort":10,
+    "Sort": 7,
     "Name": "EF Core",
     "Memo": "相关文章",
-    "Slug": "ef-core" 
+    "Slug": "ef-core"
   },
   {
-    "Sort":10,
+    "Sort": 8,
     "Name": "Dapper",
     "Memo": "相关文章",
-    "Slug": "dapper" 
+    "Slug": "dapper"
   },
   {
-    "Sort":10,
+    "Sort": 9,
     "Name": ".NET",
     "Memo": ".NET其他相关文章",
-    "Slug": "dotnet" 
+    "Slug": "dotnet"
   },
   {
-    "Sort":11,
+    "Sort": 10,
     "Name": "Python",
     "Memo": "Python相关文章",
-    "Slug": "python" 
+    "Slug": "python"
   },
   {
-    "Sort":20,
+    "Sort": 11,
     "Name": "前端",
     "Memo": "前端相关文章",
     "Slug": "frontend"
   },
   {
-    "Sort":30,
+    "Sort": 12,
     "Name": "MySQL",
     "Memo": "数据库相关文章",
     "Slug": "mysql"
   },
   {
-    "Sort":30,
+    "Sort": 13,
     "Name": "数据库",
     "Memo": "数据库相关文章",
     "Slug": "database"
   },
   {
-    "Sort":40,
+    "Sort": 14,
     "Name": "Flutter",
     "Memo": "相关文章",
     "Slug": "flutter"
   },
   {
-    "Sort":40,
+    "Sort": 15,
     "Name": "Flutter",
     "Memo": "相关文章",
     "Slug": "flutter"
   },
   {
-    "Sort":40,
+    "Sort": 16,
     "Name": "Swift UI",
     "Memo": "相关文章",
     "Slug": "swift-ui"
   },
   {
-    "Sort":40,
+    "Sort": 17,
     "Name": "更多语言",
     "Memo": "其他语言相关文章",
     "Slug": "morelanguage"
   },
   {
-    "Sort":50,
+    "Sort": 18,
     "Name": "Docker",
     "Memo": "站长推荐",
     "Slug": "docker"
   },
   {
-    "Sort":50,
+    "Sort": 19,
     "Name": "课程",
     "Memo": "站长推荐",
     "Slug": "course"
   },
   {
-    "Sort":60,
+    "Sort": 20,
     "Name": "架构设计",
     "Memo": "站长推荐文章或工具或在项目",
     "Slug": "architecture-design"
   },
   {
-    "Sort":60,
+    "Sort": 21,
     "Name": "数字化转型",
     "Memo": "站长推荐文章或工具或在项目",
     "Slug": "digital-transformation"
   },
   {
-    "Sort":60,
+    "Sort": 22,
     "Name": "分享",
     "Memo": "站长推荐文章或工具或在项目",
     "Slug": "share"
