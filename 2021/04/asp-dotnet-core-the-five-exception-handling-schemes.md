@@ -10,7 +10,7 @@ originalLink: https://ut32.com/post/handle-exception
 draft: False
 cover: https://img1.dotnet9.com/2021/04/cover_01.jpg
 categories: 
-    - .NET
+    - ASP.NET Core
 tags: 
     - ASP.NET Core
     - 异常

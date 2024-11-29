@@ -8,7 +8,7 @@ originalTitle: Flutter 3 发布了(文末推荐一个免费的在线Flutter学�
 draft: False
 cover: https://img1.dotnet9.com/2022/05/cover_35.png
 categories: 
-    - 前端
+    - Flutter
 tags: 
     - Flutter
 ---

@@ -8,7 +8,7 @@ originalTitle: 免费开源Blazor在线Ico转换工具
 draft: False
 cover: https://img1.dotnet9.com/2022/02/cover_13.jpg
 categories: 
-    - .NET
+    - Blazor
 tags: 
     - .NET 7
     - Blazor

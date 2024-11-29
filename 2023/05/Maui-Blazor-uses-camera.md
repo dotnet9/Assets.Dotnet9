@@ -8,7 +8,7 @@ author: Diego
 draft: false
 cover: https://img1.dotnet9.com/2023/05/cover_02.png
 categories: 
-    - .NET
+    - Blazor
 tags: 
     - Blazor
 ---

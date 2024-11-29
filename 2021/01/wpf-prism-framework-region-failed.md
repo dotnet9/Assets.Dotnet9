@@ -8,7 +8,7 @@ originalTitle: WPF Prism框架Region失效了？
 draft: False
 cover: https://img1.dotnet9.com/2021/01/cover_02.jpeg
 categories: 
-    - .NET
+    - WPF
 tags: 
     - WPF
     - Prism

@@ -9,8 +9,10 @@ originalTitle: (9/30)大家一起学Blazor：Parameters
 originalLink: https://ithelp.ithome.com.tw/articles/10261943
 draft: False
 cover: https://img1.dotnet9.com/2021/12/cover_05.png
+albums:
+    - 一起学Blazor系列
 categories: 
-    - .NET
+    - Blazor
 tags: 
     - Blazor
     - ASP.NET Core

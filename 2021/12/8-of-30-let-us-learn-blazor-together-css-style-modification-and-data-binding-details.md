@@ -9,8 +9,10 @@ originalTitle: (8/30)大家一起学Blazor：CSS样式修改和数据绑定详�
 originalLink: https://ithelp.ithome.com.tw/articles/10261579
 draft: False
 cover: https://img1.dotnet9.com/2021/12/cover_05.png
+albums:
+    - 一起学Blazor系列
 categories: 
-    - .NET
+    - Blazor
 tags: 
     - Blazor
     - ASP.NET Core

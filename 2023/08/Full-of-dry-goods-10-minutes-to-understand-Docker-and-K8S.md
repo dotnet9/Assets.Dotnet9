@@ -10,7 +10,7 @@ originalLink: https://my.oschina.net/jamesview/blog/2994112
 draft: false
 cover: https://img1.dotnet9.com/2023/08/0401.png
 categories: 
-    - 分享
+    - Docker
 tags: 
     - Docker
 ---

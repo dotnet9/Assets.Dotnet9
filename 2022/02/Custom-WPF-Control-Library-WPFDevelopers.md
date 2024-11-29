@@ -11,7 +11,7 @@ originalLink: https://github.com/WPFDevelopersOrg/WPFDevelopers
 draft: False
 cover: https://img1.dotnet9.com/2022/02/cover_04.gif
 categories: 
-    - .NET
+    - WPF
 tags: 
     - WPF
     - 自定义控件

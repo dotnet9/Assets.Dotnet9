@@ -10,7 +10,7 @@ originalLink: cnblogs.com/ang/p/13620452.html
 draft: False
 cover: https://img1.dotnet9.com/2022/01/cover_08.jpg
 categories: 
-    - .NET
+    - Dapper
 tags: 
     - C#
     - .NET

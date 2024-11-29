@@ -10,7 +10,7 @@ originalLink: https://www.cnblogs.com/88223100/p/upgraded-dotnet-console-experie
 draft: False
 cover: https://img1.dotnet9.com/2022/04/0201.png
 albums: 
-    - 开源C#
+    - C#开源项目
 categories: 
     - .NET
 tags: 

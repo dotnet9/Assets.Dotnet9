@@ -8,7 +8,7 @@ copyright: Original
 draft: false
 cover: https://img1.dotnet9.com/games/minesweeper.png
 categories: 
-    - .NET
+    - Blazor
 tags: 
     - Dotnet9
 ---

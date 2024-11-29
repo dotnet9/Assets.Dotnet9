@@ -8,7 +8,8 @@ originalTitle: MAUI与Blazor共享一套UI，媲美Flutter，实现Windows、mac
 draft: False
 cover: https://img1.dotnet9.com/2022/06/1309.png
 categories: 
-    - .NET
+    - MAUI
+    - Blazor
 tags: 
     - MAUI
     - Blazor

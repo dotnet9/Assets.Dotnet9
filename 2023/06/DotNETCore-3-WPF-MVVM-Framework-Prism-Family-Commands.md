@@ -9,8 +9,10 @@ originalTitle: .NET Core 3 WPF MVVM框架 Prism系列之命令
 originalLink: https://www.cnblogs.com/ryzen/p/12143825.html
 draft: false
 cover: https://img1.dotnet9.com/albums/album_wpf_prism.png
+albums:
+    - WPF MVVM框架 Prism系列
 categories: 
-    - .NET
+    - Blazor
 tags: 
     - WPF
     - Prism

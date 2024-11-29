@@ -8,8 +8,10 @@ copyright: Original
 originalTitle: 开源Winform控件库：花木兰控件库
 draft: False
 cover: https://img1.dotnet9.com/2021/11/cover_07.gif
+albums:
+    - Winform控件库
 categories: 
-    - .NET
+    - Winform
 tags: 
     - C#
     - Winform

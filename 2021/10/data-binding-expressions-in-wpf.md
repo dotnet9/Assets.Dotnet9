@@ -10,7 +10,7 @@ originalLink: https://www.c-sharpcorner.com/article/data-binding-expression-in-w
 draft: False
 cover: https://img1.dotnet9.com/2021/10/cover_03.png
 categories: 
-    - .NET
+    - WPF
 tags: 
     - Binding
 ---

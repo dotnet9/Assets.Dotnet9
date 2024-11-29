@@ -7,6 +7,8 @@ lastmod: 2024-10-25 08:46:47
 copyright: Original
 draft: false
 cover: https://img1.dotnet9.com/2024/10/cover_02.png
+albums:
+    - C# AOT
 categories: 
     - .NET
 tags: 

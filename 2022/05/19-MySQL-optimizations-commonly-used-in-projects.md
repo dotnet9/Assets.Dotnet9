@@ -10,7 +10,7 @@ originalLink: https://segmentfault.com/a/1190000012155267
 draft: False
 cover: https://img1.dotnet9.com/2022/05/cover_02.png
 categories: 
-    - 数据库
+    - MySQL
 tags: 
     - MySQL
 ---

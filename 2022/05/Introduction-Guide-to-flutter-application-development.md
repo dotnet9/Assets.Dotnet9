@@ -10,7 +10,7 @@ originalLink: https://baijiahao.baidu.com/s?id=1727350760917736118&wfr=spider&fo
 draft: False
 cover: https://img1.dotnet9.com/2022/05/cover_18.jpeg
 categories: 
-    - 前端
+    - Flutter
 tags: 
     - Flutter
 ---

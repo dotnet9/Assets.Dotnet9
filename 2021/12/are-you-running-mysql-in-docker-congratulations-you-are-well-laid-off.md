@@ -10,7 +10,8 @@ originalLink: https://www.toutiao.com/i6675622107390411276?wid=1640184427889
 draft: False
 cover: https://img1.dotnet9.com/2021/12/cover_31.png
 categories: 
-    - 数据库
+    - Docker
+    - MySQL
 tags: 
     - Docker
     - MySQL

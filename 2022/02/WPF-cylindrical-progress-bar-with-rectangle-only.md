@@ -10,7 +10,7 @@ originalLink: https://www.cnblogs.com/dino623/p/wpf_column_progress_bar.html
 draft: false
 cover: https://img1.dotnet9.com/2022/02/1101.png
 categories: 
-    - .NET
+    - WPF
 tags: 
     - WPF
 ---

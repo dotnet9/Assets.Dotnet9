@@ -10,7 +10,7 @@ originalLink: https://www.cnblogs.com/xiaoxiaotank/p/16157344.html
 draft: False
 cover: https://img1.dotnet9.com/2022/04/2105.png
 categories: 
-    - .NET
+    - ASP.NET Core
 tags: 
     - ASP.NET Core
     - 授权

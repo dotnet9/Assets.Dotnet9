@@ -9,8 +9,10 @@ draft: false
 cover: https://img1.dotnet9.com/2019/12/0304.png
 tags: 
     - 开源WPF
+albums:
+    - WPF开源项目
 categories: 
-    - .NET
+    - WPF
 copyright: Original
 ---
 

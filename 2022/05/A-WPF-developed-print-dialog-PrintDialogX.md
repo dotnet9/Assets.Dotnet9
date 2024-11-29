@@ -8,7 +8,7 @@ originalTitle: 一个WPF开发的打印对话框-PrintDialogX
 draft: False
 cover: https://img1.dotnet9.com/2022/05/0101.png
 categories: 
-    - .NET
+    - WPF
 tags: 
     - 开源WPF
 ---

@@ -10,7 +10,7 @@ originalLink: https://www.cnblogs.com/wucy/p/16124449.html
 draft: False
 cover: https://img1.dotnet9.com/2022/04/cover_12.jpg
 categories: 
-    - .NET
+    - ASP.NET Core
 tags: 
     - Web API
 ---

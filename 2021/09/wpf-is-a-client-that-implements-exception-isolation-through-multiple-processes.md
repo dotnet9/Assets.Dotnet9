@@ -10,7 +10,7 @@ originalLink: https://www.cnblogs.com/wengzp/archive/2021/09/17/15305896.html
 draft: False
 cover: https://img1.dotnet9.com/2021/09/cover_01.jpeg
 categories: 
-    - .NET
+    - WPF
 tags: 
     - WPF
     - 插件系统

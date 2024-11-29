@@ -10,7 +10,7 @@ originalLink: https://blog.walterlv.com/post/change-and-restore-wpf-dependency-v
 draft: False
 cover: https://img1.dotnet9.com/2021/11/cover_02.jpeg
 categories: 
-    - .NET
+    - WPF
 tags: 
     - WPF
 ---

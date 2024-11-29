@@ -8,7 +8,7 @@ originalTitle: SwiftUI图片处理(缩放、拼图)
 draft: False
 cover: https://img1.dotnet9.com/2021/08/cover_01.jpeg
 categories: 
-    - 前端
+    - Swift UI
 tags: 
     - SwiftUI
     - 缩放

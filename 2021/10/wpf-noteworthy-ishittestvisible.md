@@ -10,7 +10,7 @@ originalLink: https://www.cnblogs.com/tsliwei/p/5923107.html
 draft: False
 cover: https://img1.dotnet9.com/2021/10/cover_02.jpg
 categories: 
-    - .NET
+    - WPF
 tags: 
     - HitTest
 ---

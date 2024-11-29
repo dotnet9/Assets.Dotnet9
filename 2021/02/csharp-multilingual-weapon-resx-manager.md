@@ -9,6 +9,7 @@ draft: False
 cover: https://img1.dotnet9.com/2021/02/cover_03.jpeg
 categories: 
     - .NET
+    - WPF
 tags: 
     - C#
     - WPF

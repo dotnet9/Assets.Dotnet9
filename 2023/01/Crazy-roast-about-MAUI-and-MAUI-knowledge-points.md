@@ -10,7 +10,7 @@ originalLink: https://www.cnblogs.com/whuanle/p/17060473.html
 draft: false
 cover: https://img1.dotnet9.com/2023/01/cover_06.jpg
 categories: 
-    - .NET
+    - MAUI
 tags: 
     - MAUI
 ---

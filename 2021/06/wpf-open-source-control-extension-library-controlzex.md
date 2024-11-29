@@ -8,9 +8,9 @@ originalTitle: WPF开源控件扩展库ControlzEx
 draft: False
 cover: https://img1.dotnet9.com/2021/06/cover_04.jpg
 albums: 
-    - 开源WPF
+    - WPF开源项目
 categories: 
-    - .NET
+    - WPF
 tags: 
     - C#
     - WPF

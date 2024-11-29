@@ -7,8 +7,10 @@ copyright: Original
 originalTitle: .NET进行客户端Web开发又一利器 - Ant Design Blazor
 draft: False
 cover: https://img1.dotnet9.com/2020/06/0109.jpg
+albums:
+    - Blazor组件库
 categories: 
-    - .NET
+    - Blazor
 tags: 
     - Blazor
     - 开源Blazor

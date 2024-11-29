@@ -10,7 +10,8 @@ originalLink: https://mp.weixin.qq.com/s/IXpv_mNtR5gjO1IlUXAtpg
 draft: false
 cover: https://img1.dotnet9.com/2022/04/0501.jpg
 categories: 
-    - .NET
+    - WPF
+    - Winform
 tags: 
     - Winform
     - WPF

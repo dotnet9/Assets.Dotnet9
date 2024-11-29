@@ -10,7 +10,7 @@ originalLink: https://juejin.cn/post/7095294020900880420/
 draft: False
 cover: https://img1.dotnet9.com/2022/05/cover_28.png
 categories: 
-    - 前端
+    - Flutter
 tags: 
     - Flutter
 ---

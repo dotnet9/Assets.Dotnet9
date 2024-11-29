@@ -10,8 +10,10 @@ originalTitle: “老坛泡新菜”:SOD MVVM框架，让WinForms焕发新春
 originalLink: https://cloud.tencent.com/developer/article/1045710
 draft: False
 cover: https://img1.dotnet9.com/2021/11/cover_08.png
+albums:
+    - Winform控件库
 categories: 
-    - .NET
+    - Winform
 tags: 
     - Winform
     - 开源Winform

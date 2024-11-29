@@ -10,7 +10,7 @@ originalLink: https://blog.lindexi.com/post/dotnet-OpenXML-WPF-%E8%A7%A3%E6%9E%9
 draft: False
 cover: https://img1.dotnet9.com/2021/12/cover_23.jpg
 categories: 
-    - .NET
+    - WPF
 tags: 
     - WPF
     - OpenXML

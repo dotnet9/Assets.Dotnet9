@@ -10,7 +10,7 @@ originalLink: https://www.cnblogs.com/ittranslator/p/a-beginners-guide-to-blazor
 draft: False
 cover: https://img1.dotnet9.com/2021/12/cover_04.png
 categories: 
-    - .NET
+    - Blazor
 tags: 
     - Blazor
 ---

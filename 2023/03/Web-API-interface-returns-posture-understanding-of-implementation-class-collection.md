@@ -8,7 +8,7 @@ copyright: Original
 draft: false
 cover: https://img1.dotnet9.com/2023/03/cover_08.jpeg
 categories: 
-    - .NET
+    - ASP.NET Core
 tags: 
     - .NET
 ---

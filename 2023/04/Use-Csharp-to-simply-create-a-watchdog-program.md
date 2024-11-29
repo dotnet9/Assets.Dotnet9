@@ -10,7 +10,7 @@ originalLink: https://www.cnblogs.com/akwkevin/p/17288814.html
 draft: false
 cover: https://img1.dotnet9.com/2023/04/0105.png
 categories: 
-    - .NET
+    - WPF
 tags: 
     - 开源WPF
 ---

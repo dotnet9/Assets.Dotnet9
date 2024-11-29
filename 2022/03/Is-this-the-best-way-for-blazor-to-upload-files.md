@@ -10,7 +10,7 @@ originalLink: https://masuit.org/1676
 draft: False
 cover: https://img1.dotnet9.com/2022/03/cover_09.gif
 categories: 
-    - .NET
+    - Blazor
 tags: 
     - Blazor Server
     - 上传文件

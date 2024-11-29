@@ -10,7 +10,7 @@ originalLink: https://mp.weixin.qq.com/s/nntus3fGCvx3FT_uZYERUQ
 draft: False
 cover: https://img1.dotnet9.com/2022/05/cover_12.jpg
 categories: 
-    - .NET
+    - EF Core
 tags: 
     - .NET
     - ORM

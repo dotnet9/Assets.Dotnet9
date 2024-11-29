@@ -10,7 +10,7 @@ originalLink: https://www.cnblogs.com/8u7tgyjire7890/p/15881159.html
 draft: False
 cover: https://img1.dotnet9.com/2022/05/cover_49.jpg
 categories: 
-    - .NET
+    - WPF
 tags: 
     - WPF
     - 动画

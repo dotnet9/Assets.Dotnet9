@@ -10,7 +10,7 @@ originalLink: https://www.cnblogs.com/hejiale010426/p/17498629.html
 draft: false
 cover: https://img1.dotnet9.com/2023/06/cover_10.png
 categories: 
-    - .NET
+    - Blazor
 tags: 
     - .NET
 ---

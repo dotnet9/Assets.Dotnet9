@@ -10,7 +10,7 @@ originalLink: https://blog.csdn.net/qbc12345678/article/details/120758144
 draft: False
 cover: https://img1.dotnet9.com/2021/10/cover_05.jpg
 categories: 
-    - .NET
+    - ASP.NET Core
 tags: 
     - Web API
     - Mac

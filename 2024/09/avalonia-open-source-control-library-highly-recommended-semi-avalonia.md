@@ -8,8 +8,10 @@ copyright: Original
 banner: true
 draft: false
 cover: https://img1.dotnet9.com/2024/09/0101.jpg
+albums:
+    - Avalonia UI控件库
 categories: 
-    - .NET
+    - Avalonia UI
 tags: 
     - C#
     - Avalonia UI

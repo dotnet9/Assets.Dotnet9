@@ -10,7 +10,7 @@ originalLink: https://mp.weixin.qq.com/s/URLZCyrLWM-NEM8eMvnVhw
 draft: False
 cover: https://img1.dotnet9.com/2022/07/cover_14.png
 categories: 
-    - .NET
+    - ASP.NET Core
 tags: 
     - .NET
 ---

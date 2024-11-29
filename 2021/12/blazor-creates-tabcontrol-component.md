@@ -10,7 +10,7 @@ originalLink: https://blazor-university.com/templating-components-with-renderfra
 draft: False
 cover: https://img1.dotnet9.com/2021/12/cover_03.jpeg
 categories: 
-    - .NET
+    - Blazor
 tags: 
     - 前端
     - Blazor

@@ -10,7 +10,7 @@ originalLink: https://www.codeproject.com/Tips/990854/WPF-WrapPanel-with-Fill
 draft: false
 cover: https://img1.dotnet9.com/2023/01/0501.png
 categories: 
-    - .NET
+    - WPF
 tags: 
     - .NET
     - WPF

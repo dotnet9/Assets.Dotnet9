@@ -9,7 +9,8 @@ author: 沙漠尽头的狼
 draft: false
 cover: https://img1.dotnet9.com/2022/10/2-chat-window.png
 categories: 
-    - .NET
+    - WPF
+    - Blazor
 tags: 
     - .NET
     - WPF

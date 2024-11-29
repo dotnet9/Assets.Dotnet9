@@ -9,8 +9,10 @@ originalTitle: .NET Core 3 WPF MVVM框架 Prism系列之导航系统
 originalLink: https://www.cnblogs.com/ryzen/p/12703914.html
 draft: false
 cover: https://img1.dotnet9.com/albums/album_wpf_prism.png
+albums:
+    - WPF MVVM框架 Prism系列
 categories: 
-    - .NET
+    - WPF
 tags: 
     - WPF
     - Prism

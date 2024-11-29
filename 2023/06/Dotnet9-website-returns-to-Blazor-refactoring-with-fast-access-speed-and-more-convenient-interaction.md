@@ -8,7 +8,7 @@ copyright: Original
 draft: false
 cover: https://img1.dotnet9.com/2023/06/cover_11.png
 categories: 
-    - .NET
+    - Blazor
 tags: 
     - Dotnet9
 ---

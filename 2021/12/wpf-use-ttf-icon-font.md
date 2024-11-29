@@ -10,7 +10,7 @@ originalLink: https://www.cnblogs.com/choumengqizhigou/p/15550133.html
 draft: False
 cover: https://img1.dotnet9.com/2021/12/cover_27.jpeg
 categories: 
-    - .NET
+    - WPF
 tags: 
     - WPF
 ---

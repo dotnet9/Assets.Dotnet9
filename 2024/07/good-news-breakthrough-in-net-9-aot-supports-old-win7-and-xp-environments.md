@@ -8,11 +8,18 @@ copyright: Original
 banner: true
 draft: false
 cover: https://img1.dotnet9.com/2024/07/cover_01.png
+albums:
+	- C# AOT
 categories: 
-    - .NET
+    - Avalonia UI
+	- Winform
+	- .NET
 tags: 
     - .NET 9
     - AOT
+	- Avalonia UI
+	- Winform
+	- 控制台
     - X86
     - X64
     - Win7

@@ -8,7 +8,7 @@ originalTitle: WPF|如何在 WPF 中设计漂亮的社交媒体信息仪表板
 draft: False
 cover: https://img1.dotnet9.com/2022/05/cover_38.png
 categories: 
-    - .NET
+    - WPF
 tags: 
     - WPF
     - WPF Design

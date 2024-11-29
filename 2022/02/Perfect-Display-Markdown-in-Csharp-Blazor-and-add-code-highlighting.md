@@ -8,7 +8,7 @@ originalTitle: 完美：C# Blazor中显示Markdown并添加代码高亮
 draft: False
 cover: https://img1.dotnet9.com/2022/02/cover_14.jpg
 categories: 
-    - .NET
+    - Blazor
 tags: 
     - Blazor
     - Markdown

@@ -8,7 +8,7 @@ originalTitle: 介绍这个库：C# Blazor中显示Markdown文件
 draft: False
 cover: https://img1.dotnet9.com/2022/02/cover_14.jpg
 categories: 
-    - .NET
+    - Blazor
 tags: 
     - Blazor
     - Markdown

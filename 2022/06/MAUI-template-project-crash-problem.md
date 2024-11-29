@@ -10,7 +10,7 @@ originalLink: https://www.cnblogs.com/springhgui/p/16381483.html
 draft: False
 cover: https://img1.dotnet9.com/2022/06/1306.jpg
 categories: 
-    - .NET
+    - MAUI
 tags: 
     - MAUI
 ---

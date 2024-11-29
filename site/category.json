@@ -1,8 +1,56 @@
 [
   {
     "Sort":10,
+    "Name": "Blazor",
+    "Memo": "Blazor相关文章",
+    "Slug": "blazor" 
+  },
+  {
+    "Sort":10,
+    "Name": "ASP.NET Core",
+    "Memo": "相关文章",
+    "Slug": "asp-net-core" 
+  },
+  {
+    "Sort":10,
+    "Name": "Avalonia UI",
+    "Memo": "相关文章",
+    "Slug": "avalonia" 
+  },
+  {
+    "Sort":10,
+    "Name": "WPF",
+    "Memo": "WPF相关文章",
+    "Slug": "wpf" 
+  },
+  {
+    "Sort":10,
+    "Name": "Winform",
+    "Memo": "Winform相关文章",
+    "Slug": "winform" 
+  },
+  {
+    "Sort":10,
+    "Name": "MAUI",
+    "Memo": "相关文章",
+    "Slug": "maui" 
+  },
+  {
+    "Sort":10,
+    "Name": "EF Core",
+    "Memo": "相关文章",
+    "Slug": "ef-core" 
+  },
+  {
+    "Sort":10,
+    "Name": "Dapper",
+    "Memo": "相关文章",
+    "Slug": "dapper" 
+  },
+  {
+    "Sort":10,
     "Name": ".NET",
-    "Memo": ".NET相关文章",
+    "Memo": ".NET其他相关文章",
     "Slug": "dotnet" 
   },
   {
@@ -19,9 +67,33 @@
   },
   {
     "Sort":30,
+    "Name": "MySQL",
+    "Memo": "数据库相关文章",
+    "Slug": "mysql"
+  },
+  {
+    "Sort":30,
     "Name": "数据库",
     "Memo": "数据库相关文章",
     "Slug": "database"
+  },
+  {
+    "Sort":40,
+    "Name": "Flutter",
+    "Memo": "相关文章",
+    "Slug": "flutter"
+  },
+  {
+    "Sort":40,
+    "Name": "Flutter",
+    "Memo": "相关文章",
+    "Slug": "flutter"
+  },
+  {
+    "Sort":40,
+    "Name": "Swift UI",
+    "Memo": "相关文章",
+    "Slug": "swift-ui"
   },
   {
     "Sort":40,
@@ -31,9 +103,27 @@
   },
   {
     "Sort":50,
+    "Name": "Docker",
+    "Memo": "站长推荐",
+    "Slug": "docker"
+  },
+  {
+    "Sort":50,
     "Name": "课程",
     "Memo": "站长推荐",
     "Slug": "course"
+  },
+  {
+    "Sort":60,
+    "Name": "架构设计",
+    "Memo": "站长推荐文章或工具或在项目",
+    "Slug": "architecture-design"
+  },
+  {
+    "Sort":60,
+    "Name": "数字化转型",
+    "Memo": "站长推荐文章或工具或在项目",
+    "Slug": "digital-transformation"
   },
   {
     "Sort":60,

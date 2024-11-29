@@ -10,7 +10,7 @@ originalLink: https://www.cnblogs.com/hejiale010426/p/17076817.html
 draft: false
 cover: https://img1.dotnet9.com/2023/01/0714.png
 categories: 
-    - .NET
+    - Blazor
 tags: 
     - Blazor
     - Wasm

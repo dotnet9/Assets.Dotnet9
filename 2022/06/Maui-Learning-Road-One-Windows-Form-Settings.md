@@ -10,7 +10,7 @@ originalLink: https://mp.weixin.qq.com/s/_wdRtzSAPkIa3-kK8nKGbQ
 draft: False
 cover: https://img1.dotnet9.com/2022/06/cover_01.png
 categories:
-    - .NET
+    - MAUI
 tags: 
     - MAUI
 ---

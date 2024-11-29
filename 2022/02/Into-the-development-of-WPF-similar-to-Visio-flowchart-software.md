@@ -10,7 +10,7 @@ originalLink: https://mp.weixin.qq.com/s/rR8kX7aZCXpgpULRu0ZYdg
 draft: False
 cover: https://img1.dotnet9.com/2022/02/cover_15.jpeg
 categories: 
-    - .NET
+    - WPF
 tags: 
     - WPF
     - Visio

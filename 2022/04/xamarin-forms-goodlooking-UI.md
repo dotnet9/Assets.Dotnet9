@@ -10,7 +10,7 @@ originalLink: https://github.com/jsuarezruiz/xamarin-forms-goodlooking-UI
 draft: False
 cover: https://img1.dotnet9.com/2022/04/images/fishing.webp
 categories: 
-    - .NET
+    - MAUI
 tags: 
     - .NET
     - Xamarin Forms

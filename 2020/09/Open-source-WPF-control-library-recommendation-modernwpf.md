@@ -10,6 +10,8 @@ draft: False
 cover: https://img1.dotnet9.com/2020/09/0103.png
 categories: 
     - .NET
+albums:
+    - WPF控件库
 tags: 
     - WPF
     - 开源WPF

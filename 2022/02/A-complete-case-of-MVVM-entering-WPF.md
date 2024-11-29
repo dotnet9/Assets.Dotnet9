@@ -10,7 +10,7 @@ originalLink: https://www.cnblogs.com/hsiang/archive/2021/11/22/15579839.html
 draft: False
 cover: https://img1.dotnet9.com/2022/02/0806.png
 categories: 
-    - .NET
+    - WPF
 tags: 
     - WPF
     - MVVM

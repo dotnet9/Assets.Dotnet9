@@ -10,7 +10,7 @@ originalLink: https://mp.weixin.qq.com/s/MYxVGxa_DQnn4XMIDryd9Q
 draft: False
 cover: https://img1.dotnet9.com/2021/12/cover_40.jpeg
 categories: 
-    - .NET
+    - EF Core
 tags: 
     - C#
     - EF Core

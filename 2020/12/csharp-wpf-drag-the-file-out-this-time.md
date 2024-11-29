@@ -8,7 +8,7 @@ originalTitle: C# WPF：这次把文件拖出去！
 draft: False
 cover: https://img1.dotnet9.com/2020/12/cover_03.jpg
 categories: 
-    - .NET
+    - WPF
 tags: 
     - WPF
     - 文件拖拽

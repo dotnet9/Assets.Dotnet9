@@ -12,7 +12,7 @@ originalLink: https://www.cnblogs.com/RMay/archive/2010/12/27/1918048.html
 draft: false
 cover: https://img1.dotnet9.com/2024/02/cover_02.png
 categories: 
-    - .NET
+    - WPF
 tags: 
     - ListView
 ---

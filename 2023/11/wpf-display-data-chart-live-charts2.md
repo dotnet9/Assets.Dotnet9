@@ -11,7 +11,7 @@ originalLink: https://mp.weixin.qq.com/s/l3fmYcPlEryS6idnd9urXA
 draft: false
 cover: https://img1.dotnet9.com/2023/11/0618.gif
 categories: 
-    - .NET
+    - WPF
 tags: 
     - LiveChart
 ---

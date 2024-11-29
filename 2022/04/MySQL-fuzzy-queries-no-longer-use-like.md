@@ -10,7 +10,7 @@ originalLink: https://juejin.cn/post/6989871497040887845
 draft: False
 cover: https://img1.dotnet9.com/2022/04/cover_17.jpeg
 categories: 
-    - 数据库
+    - MySQL
 tags: 
     - MySQL
     - 模拟查询

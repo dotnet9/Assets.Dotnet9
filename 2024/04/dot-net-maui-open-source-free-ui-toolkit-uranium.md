@@ -12,7 +12,7 @@ originalLink: https://mp.weixin.qq.com/s/UNhXBQePRmiBBG31jEt2Kg
 draft: false
 cover: https://img1.dotnet9.com/2024/04/cover_01.png
 categories: 
-    - .NET
+    - MAUI
 tags: 
     - MAUI
     - Uranium

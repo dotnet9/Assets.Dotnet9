@@ -12,7 +12,7 @@ originalLink: https://mp.weixin.qq.com/s/j7PIlfScHtzUZHB8ouT4lw
 draft: false
 cover: https://img1.dotnet9.com/2024/05/0202.png
 categories: 
-    - .NET
+    - WPF
 tags: 
     - 插件系统
     - MSF

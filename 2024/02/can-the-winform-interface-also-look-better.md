@@ -12,7 +12,8 @@ originalLink: https://mp.weixin.qq.com/s/QCAlQNqDW-sicae2ybELkw
 draft: false
 cover: https://img1.dotnet9.com/2024/02/0401.gif
 categories: 
-    - .NET
+    - Winform
+    - Blazor
 tags: 
     - .NET
     - Blazor

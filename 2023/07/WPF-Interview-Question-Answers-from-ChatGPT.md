@@ -7,7 +7,7 @@ copyright: Original
 draft: false
 cover: https://img1.dotnet9.com/2023/07/cover_08.png
 categories: 
-    - .NET
+    - WPF
 tags: 
     - WPF面试题
 ---

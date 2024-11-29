@@ -11,7 +11,7 @@ originalLink: https://www.bilibili.com/read/cv39399906/
 draft: False
 cover: https://img1.dotnet9.com/2024/10/cover_03.png
 categories: 
-    - .NET
+    - WPF
 tags: 
     - WPF
 ---

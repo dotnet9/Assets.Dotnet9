@@ -10,7 +10,7 @@ originalLink: https://mp.weixin.qq.com/s/SqcrRomZyn7bzlNzeWZdrQ
 draft: False
 cover: https://img1.dotnet9.com/2021/12/cover_01.png
 categories: 
-    - .NET
+    - MAUI
 tags: 
     - MAUI
     - 开源MAUI

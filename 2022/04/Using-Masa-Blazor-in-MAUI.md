@@ -10,7 +10,8 @@ originalLink: https://mp.weixin.qq.com/s/NmnHD0fUz8q0R1JJBSQbIg
 draft: False
 cover: https://img1.dotnet9.com/2022/04/3601.png
 categories: 
-    - .NET
+    - Blazor
+    - MAUI
 tags: 
     - Blazor
 ---

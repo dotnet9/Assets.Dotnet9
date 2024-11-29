@@ -10,7 +10,7 @@ originalLink: https://www.cnblogs.com/jackyfei/p/16063572.html
 draft: False
 cover: https://img1.dotnet9.com/2022/04/cover_34.jpg
 categories: 
-    - .NET
+    - ASP.NET Core
 tags: 
     - ABP
 ---

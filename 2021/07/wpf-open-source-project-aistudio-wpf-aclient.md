@@ -8,8 +8,10 @@ copyright: Original
 originalTitle: WPF开源项目：AIStudio.Wpf.AClient
 draft: False
 cover: https://img1.dotnet9.com/2021/07/cover_01.png
+albums:
+    - WPF控件库
 categories: 
-    - .NET
+    - WPF
 tags: 
     - WPF
     - Prism

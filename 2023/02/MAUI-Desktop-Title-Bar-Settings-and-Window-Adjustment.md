@@ -10,7 +10,7 @@ originalLink: https://blog.csdn.net/Sir_aligaduo/article/details/128880940
 draft: false
 cover: https://img1.dotnet9.com/2023/02/0302.png
 categories: 
-    - .NET
+    - MAUI
 tags: 
     - MAUI
 ---

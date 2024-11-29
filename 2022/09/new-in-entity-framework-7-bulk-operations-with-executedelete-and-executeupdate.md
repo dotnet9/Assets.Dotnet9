@@ -10,7 +10,7 @@ originalLink: https://timdeschryver.dev/blog/new-in-entity-framework-7-bulk-oper
 draft: false
 cover: https://img1.dotnet9.com/2022/09/cover_01.png
 categories: 
-    - .NET
+    - EF Core
 tags: 
     - .NET
 ---

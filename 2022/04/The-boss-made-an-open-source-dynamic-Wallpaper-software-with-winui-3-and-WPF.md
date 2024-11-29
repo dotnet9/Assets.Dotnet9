@@ -10,7 +10,7 @@ originalLink: https://mp.weixin.qq.com/s/ACihOXY8v2l2qZmUxKw-ow
 draft: False
 cover: https://img1.dotnet9.com/2022/04/0301.gif
 categories: 
-    - .NET
+    - WPF
 tags: 
     - C#
     - Winform

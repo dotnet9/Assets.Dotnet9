@@ -7,8 +7,10 @@ copyright: Original
 originalTitle: Blazor系列终结！
 draft: False
 cover: https://img1.dotnet9.com/2021/12/cover_45.jpeg
+albums:
+    - 一起学Blazor系列
 categories: 
-    - .NET
+    - Blazor
 tags: 
     - C#
     - 前端

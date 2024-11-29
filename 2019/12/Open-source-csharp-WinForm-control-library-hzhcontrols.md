@@ -9,8 +9,10 @@ draft: false
 cover: https://img1.dotnet9.com/2019/12/0105.gif
 tags: 
     - 开源Winform
+albums:
+    - Winform控件库
 categories: 
-    - .NET
+    - Winform
 copyright: Original
 ---
 

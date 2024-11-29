@@ -10,7 +10,7 @@ originalLink: https://blog.csdn.net/lordwish/article/details/85007867
 draft: false
 cover: https://img1.dotnet9.com/2023/01/0403.gif
 categories: 
-    - .NET
+    - WPF
 tags: 
     - .NET
     - WPF

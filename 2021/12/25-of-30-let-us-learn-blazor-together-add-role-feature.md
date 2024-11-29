@@ -9,8 +9,10 @@ originalTitle: (25/30)大家一起学Blazor：添加角色功能
 originalLink: https://ithelp.ithome.com.tw/articles/10272010
 draft: False
 cover: https://img1.dotnet9.com/2021/12/cover_05.png
+albums:
+    - 一起学Blazor系列
 categories: 
-    - .NET
+    - Blazor
 tags: 
     - Blazor
     - ASP.NET Core

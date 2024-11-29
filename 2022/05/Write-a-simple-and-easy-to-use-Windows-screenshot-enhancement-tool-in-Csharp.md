@@ -10,7 +10,7 @@ originalLink: https://mp.weixin.qq.com/s/eyz995VWcIEMLBQP7PL0FQ
 draft: False
 cover: https://img1.dotnet9.com/2022/05/3701.gif
 categories: 
-    - 数据库
+    - .NET
 tags: 
     - MySQL
     - C#

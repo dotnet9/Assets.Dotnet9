@@ -9,8 +9,10 @@ originalTitle: 一个WPF开发的、界面简洁漂亮的音频播放器
 originalLink: https://mp.weixin.qq.com/s/3nioR2zleQKWWAfkvgOxMg
 draft: false
 cover: https://img1.dotnet9.com/2023/07/0602.png
+albums:
+    - WPF UI设计
 categories: 
-    - .NET
+    - WPF
 tags: 
     - .NET
 ---

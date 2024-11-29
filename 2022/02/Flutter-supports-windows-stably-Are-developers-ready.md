@@ -10,7 +10,7 @@ originalLink: https://blog.csdn.net/csdndevelopers/article/details/122808516
 draft: False
 cover: https://img1.dotnet9.com/2022/02/0707.png
 categories: 
-    - 前端
+    - Flutter
 tags: 
     - Flutter
 ---

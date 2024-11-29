@@ -10,8 +10,10 @@ draft: False
 cover: https://img1.dotnet9.com/2020/02/0101.gif
 tags: 
     - 开源WPF
+albums:
+    - WPF控件库
 categories: 
-    - .NET
+    - WPF
 ---
 
 追求极致，永臻完美

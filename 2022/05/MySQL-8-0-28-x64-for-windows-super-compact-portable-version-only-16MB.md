@@ -10,7 +10,7 @@ originalLink: https://ldqk.xyz/1567?kw=mysql&t=uptl3b9wq874
 draft: False
 cover: https://img1.dotnet9.com/2022/05/cover_23.png
 categories: 
-    - 数据库
+    - MySQL
 tags: 
     - MySQL
 ---

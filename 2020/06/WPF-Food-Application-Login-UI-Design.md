@@ -10,7 +10,9 @@ cover: https://img1.dotnet9.com/2020/06/0201.gif
 tags: 
     - WPF Design
 categories: 
-    - .NET
+    - WPF
+albums:
+    - WPF UI设计
 ---
 
 Demo 演示：

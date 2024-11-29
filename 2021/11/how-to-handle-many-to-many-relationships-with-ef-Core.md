@@ -10,7 +10,7 @@ originalLink: https://softdevpractice.com/blog/many-to-many-ef-core/
 draft: False
 cover: https://img1.dotnet9.com/2021/11/cover_05.jpeg
 categories: 
-    - .NET
+    - EF Core
 tags: 
     - ORM
     - EF Core

@@ -10,7 +10,7 @@ originalLink: https://xuyisheng.top/flutter_app_check/
 draft: False
 cover: https://img1.dotnet9.com/2022/05/1301.png
 categories: 
-    - 前端
+    - Flutter
 tags: 
     - Flutter
 ---

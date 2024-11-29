@@ -10,8 +10,10 @@ originalTitle: WPF开源项目：WPF-ControlBase
 originalLink: https://github.com/HeBianGu/WPF-ControlBase
 draft: False
 cover: https://img1.dotnet9.com/2021/11/cover_09.png
+albums:
+    - WPF控件库
 categories: 
-    - .NET
+    - WPF
 tags: 
     - WPF
     - 开源WPF

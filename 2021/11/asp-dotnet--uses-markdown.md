@@ -10,7 +10,7 @@ originalLink: https://www.cnblogs.com/jiyuwu/p/11791004.html
 draft: False
 cover: https://img1.dotnet9.com/2021/11/cover_04.jpeg
 categories: 
-    - .NET
+    - ASP.NET Core
 tags: 
     - Markdown
 ---

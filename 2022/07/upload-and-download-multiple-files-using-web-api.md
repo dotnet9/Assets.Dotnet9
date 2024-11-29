@@ -10,7 +10,7 @@ originalLink: https://www.c-sharpcorner.com/article/upload-and-download-multiple
 draft: False
 cover: https://img1.dotnet9.com/2022/07/cover_21.png
 categories: 
-    - .NET
+    - ASP.NET Core
 tags: 
     - .NET
 ---

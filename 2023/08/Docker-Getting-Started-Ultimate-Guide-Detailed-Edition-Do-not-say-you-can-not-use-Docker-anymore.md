@@ -10,7 +10,7 @@ originalLink: http://jartto.wang/2020/07/04/learn-docker/
 draft: false
 cover: https://img1.dotnet9.com/2023/08/cover_02.png
 categories: 
-    - 分享
+    - Docker
 tags: 
     - Docker
 ---

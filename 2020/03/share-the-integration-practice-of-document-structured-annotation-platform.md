@@ -11,7 +11,8 @@ originalTitle: 谈谈C# 以管理员方式启动实现过程
 draft: False
 cover: https://img1.dotnet9.com/2022/04/2.png
 categories: 
-    - 分享
+    - 架构设计
+    - 数字化转型
 tags: 
     - 架构设计
 ---

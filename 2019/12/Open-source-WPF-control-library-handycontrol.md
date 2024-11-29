@@ -8,8 +8,10 @@ draft: false
 cover: https://img1.dotnet9.com/2019/12/0206.png
 tags: 
     - 开源WPF
+albums: 
+    - WPF控件库
 categories: 
-    - .NET
+    - WPF
 copyright: Original
 ---
 

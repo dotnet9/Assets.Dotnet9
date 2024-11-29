@@ -9,7 +9,7 @@ copyright: Original
 draft: False
 cover: https://img1.dotnet9.com/2022/11/0402.png
 categories: 
-    - .NET
+    - Avalonia UI
 tags: 
     - 跨平台
     - 桌面

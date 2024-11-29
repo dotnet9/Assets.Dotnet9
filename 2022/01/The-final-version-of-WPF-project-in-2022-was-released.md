@@ -11,6 +11,7 @@ draft: False
 cover: https://img1.dotnet9.com/2022/01/0601.jpg
 categories: 
     - 课程
+    - WPF
 tags: 
     - C#
     - WPF

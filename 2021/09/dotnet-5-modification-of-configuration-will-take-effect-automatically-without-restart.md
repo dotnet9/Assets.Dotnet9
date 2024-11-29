@@ -10,7 +10,7 @@ originalLink: https://www.cnblogs.com/wei325/p/15277177.html
 draft: False
 cover: https://img1.dotnet9.com/2021/09/cover_03.png
 categories: 
-    - .NET
+    - ASP.NET Core
 tags: 
     - 配置文件
 ---

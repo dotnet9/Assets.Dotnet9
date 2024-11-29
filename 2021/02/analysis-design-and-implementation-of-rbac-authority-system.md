@@ -10,7 +10,7 @@ originalLink: https://shuwoom.com/?p=3041
 draft: False
 cover: https://img1.dotnet9.com/2021/02/cover_01.jpeg
 categories: 
-    - 分享
+    - 架构设计
 tags: 
     - 架构设计
 ---
