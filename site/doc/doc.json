@@ -35,12 +35,26 @@
                 "Memo": "C#帮助类",
                 "Slug": "codewf-tools",
                 "Repository": "https://github.com/dotnet9/CodeWF.Tools"
-            },
+            }
+        ]
+    },
+    {
+        "Name": "Avalonia",
+        "Memo": "Avalonia扩展包或相关开源项目",
+        "Slug": "avalonia",
+        "Children": 
+        [
             {
                 "Name": "CodeWF.Toolbox",
                 "Memo": "Avalonia开发的工具箱",
                 "Slug": "codewf-toolbox",
                 "Repository": "https://github.com/dotnet9/CodeWF.Toolbox"
+            },
+            {
+                "Name": "AvaloniaExtensions.Axaml",
+                "Memo": "Avalonia标记扩展包，包含Resx国际化辅助功能",
+                "Slug": "avaloniaextensions-axaml",
+                "Repository": "https://github.com/dotnet9/AvaloniaExtensions/tree/main/src/AvaloniaExtensions.Axaml"
             }
         ]
     }
