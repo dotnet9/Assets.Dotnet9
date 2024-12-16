@@ -5,8 +5,8 @@ description: 本文深入探讨了 Avalonia 使用 XML 文件实现国际化的�
 date: 2024-12-05 21:47:17
 lastmod: 2024-12-17 01:01:12
 copyright: Original
-draft: true
-cover: https://img1.dotnet9.com/2024/12/cover_02.png
+draft: false
+cover: https://img1.dotnet9.com/2024/12/cover_01.png
 categories: 
     - .NET
 tags: 
