@@ -55,6 +55,12 @@
                 "Memo": "Avalonia标记扩展包，包含Resx国际化辅助功能",
                 "Slug": "avaloniaextensions-axaml",
                 "Repository": "https://github.com/dotnet9/AvaloniaExtensions/tree/main/src/AvaloniaExtensions.Axaml"
+            },
+            {
+                "Name": "AvaloniaXmlTranslator",
+                "Memo": "Avalonia 使用自定义 XML 文件实现国际化",
+                "Slug": "avalonia-xml-translator",
+                "Repository": "https://github.com/dotnet9/AvaloniaExtensions/tree/main/src/AvaloniaXmlTranslator"
             }
         ]
     }
