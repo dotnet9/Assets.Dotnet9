@@ -85,48 +85,42 @@
   },
   {
     "Sort": 15,
-    "Name": "Flutter",
-    "Memo": "相关文章",
-    "Slug": "flutter"
-  },
-  {
-    "Sort": 16,
     "Name": "Swift UI",
     "Memo": "相关文章",
     "Slug": "swift-ui"
   },
   {
-    "Sort": 17,
+    "Sort": 16,
     "Name": "更多语言",
     "Memo": "其他语言相关文章",
     "Slug": "morelanguage"
   },
   {
-    "Sort": 18,
+    "Sort": 17,
     "Name": "Docker",
     "Memo": "站长推荐",
     "Slug": "docker"
   },
   {
-    "Sort": 19,
+    "Sort": 18,
     "Name": "课程",
     "Memo": "站长推荐",
     "Slug": "course"
   },
   {
-    "Sort": 20,
+    "Sort": 19,
     "Name": "架构设计",
     "Memo": "站长推荐文章或工具或在项目",
     "Slug": "architecture-design"
   },
   {
-    "Sort": 21,
+    "Sort": 20,
     "Name": "数字化转型",
     "Memo": "站长推荐文章或工具或在项目",
     "Slug": "digital-transformation"
   },
   {
-    "Sort": 22,
+    "Sort": 21,
     "Name": "分享",
     "Memo": "站长推荐文章或工具或在项目",
     "Slug": "share"
