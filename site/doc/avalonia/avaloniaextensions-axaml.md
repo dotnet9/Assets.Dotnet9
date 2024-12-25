@@ -1,4 +1,4 @@
-# Avalonia 国际化之路：Resx 资源文件的深度应用与探索
+# Avalonia标记扩展-AvaloniaExtensions.Axaml
 
 ![](https://img1.dotnet9.com/2024/12/0104.gif)
 

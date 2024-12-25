@@ -1,4 +1,4 @@
-# Avalonia使用自定义XML文件实现国际化
+# Avalonia国际化包-AvaloniaXmlTranslator
 
 在软件开发日益全球化的今天，Avalonia 的国际化实现策略成为了众多开发者关注的焦点。继上一篇 [Avalonia 国际化之路：Resx 资源文件的深度应用与探索](https://dotnet9.com/bbs/post/2024/12/avalonia-internationalization-depth-application-and-exploration-of-resx-resource-files)之后，本文将引领大家深入探究如何运用自定义 XML 文件来达成 Avalonia 国际化的目标，开启一段全新的技术探索之旅。
 

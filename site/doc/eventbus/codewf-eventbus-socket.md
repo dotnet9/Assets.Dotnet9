@@ -1,4 +1,4 @@
-# CodeWF.EventBus.Socket
+# 进程间事件总线-CodeWF.EventBus.Socket
 
 **使用 Socket 实现的分布式事件总线，支持 CQRS，不依赖第三方 MQ。**
 
