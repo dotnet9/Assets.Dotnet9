@@ -7,7 +7,19 @@
                 "Name": "标题转URL",
                 "Memo": "文章标题转URL友好的别名",
                 "Slug": "slugify-string",
-                "Repository": "https://github.com/dotnet9/CodeWF.EventBus"
+                "Repository": "https://github.com/dotnet9/CodeWF/blob/main/src/CodeWF/Pages/Tool/Web/SlugifyString.razor"
+            }
+        ]
+    },
+    {
+        "Name": "转换器",
+        "Children": 
+        [
+            {
+                "Name": "在线ICO转换器",
+                "Memo": "在线ico图标生成",
+                "Slug": "ico",
+                "Repository": "https://github.com/dotnet9/CodeWF/blob/main/src/CodeWF/Pages/Tool/Converter/Icon.razor"
             }
         ]
     }
