@@ -65,6 +65,10 @@ Install-Package MarkdownAIRender
 接下来，在 `axaml` 中使用 `MarkdownRender` 元素将 Markdown 内容进行渲染：
 
 ```xaml
+xmlns:md="https://github.com/AIDotNet/Markdown.AIRender"
+```
+
+```xaml
 <md:MarkdownRender Value="{Binding Markdown}" />
 ```
 
