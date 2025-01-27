@@ -68,5 +68,19 @@
                 "Repository": "https://github.com/dotnet9/AvaloniaExtensions/tree/main/src/AvaloniaXmlTranslator"
             }
         ]
+    },
+    {
+        "Name": "WPF",
+        "Memo": "WPF扩展包或相关开源项目",
+        "Slug": "wpf",
+        "Children": 
+        [
+            {
+                "Name": "WPF国际化包",
+                "Memo": "WPF 使用自定义 XML 文件实现国际化",
+                "Slug": "wpf-xml-translator",
+                "Repository": "https://github.com/dotnet9/wpfxmltranslator"
+            }
+        ]
     }
 ]
