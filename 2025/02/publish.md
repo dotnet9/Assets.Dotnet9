@@ -46,3 +46,17 @@ Set-ExecutionPolicy RemoteSigned
 **验证修改结果**
 
 修改执行策略后，你可以再次使用 Get-ExecutionPolicy 命令来验证是否修改成功。之后，你应该就可以正常运行 .ps1 脚本了。
+
+## VS发布
+
+在预生成事件中添加
+
+```powershell
+powershell -ExecutionPolicy Bypass -File "UpdateAssemblyVersion.ps1" -AssemblyInfoFile "GlobalAssembly.cs" -Configuration "$(ConfigurationName)" -Platform "$(PlatformName)"
+```
+
+- ConfigurationName：活动解决方案配置，如Debug|Release
+- PlatformName：活动解决方案平台，如AnyCPU|x86|x64
+
+## 批处理文件发布
+.NET 8|9程序可使用
