@@ -6,7 +6,7 @@ date: 2025-02-25 05:01:14
 lastmod: 2025-02-25 06:21:12
 copyright: Original
 draft: false
-cover: https://img1.dotnet9.com/2025/02/cover_02.png
+cover: https://img1.dotnet9.com/2025/02/cover_06.jpg
 categories:
   - 分享
   - .NET
