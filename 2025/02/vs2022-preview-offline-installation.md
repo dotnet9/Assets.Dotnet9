@@ -71,16 +71,13 @@ VisualStudioSetup.exe --layout D:\2022
 VisualStudioSetup.exe --layout D:\2022 --useLatestInstaller
 ```
 
-### 2. 验证下载
+期间可能会遇到部分包下载失败：
 
-下载完成后，布局文件夹中会包含一个 `Certificate.zip` 文件。这个证书文件很重要，但通常情况下直接运行安装程序即可，无需手动安装证书。
+![](https://img1.dotnet9.com/2025/02/0701.png)
 
-如果在安装过程中遇到证书相关的问题，可以尝试手动安装证书：
-1. 解压 `Certificate.zip` 文件
-2. 双击证书文件，按提示完成安装
-3. 重新运行安装程序
+上面的Unity3d因为签名问题就下载失败了，但我不做相关开发，所以可以忽略，最后制作的安装包也能正常安装，如果需要对应的包可再研究。
 
-### 3. 离线安装
+### 2. 离线安装
 
 在目标机器上，直接双击目录下的"VisualStudioSetup.exe"进行安装即可。
 
