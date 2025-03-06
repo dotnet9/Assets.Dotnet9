@@ -1,35 +1,35 @@
 ---
-title: 码界工坊“文章标题URL别名生成器”上线
+title: 码坊“文章标题URL别名生成器”上线
 slug: code-world-workshop-article-title-url-alias-generator-launched
-description: 码界工坊是站长新开的一个提供网页在线工具、跨平台桌面和手机应用的开源项目。站长将终致力于为你带来更高效、更便捷的使用体验。今天，站长荣幸地推出“文章标题URL别名生成器”，帮助你轻松创建文章标题的URL别名，提升SEO效果和用户体验。快来码界工坊，探索更多实用工具吧！
+description: 码坊是站长新开的一个提供网页在线工具、跨平台桌面和手机应用的开源项目。站长将终致力于为你带来更高效、更便捷的使用体验。今天，站长荣幸地推出“文章标题URL别名生成器”，帮助你轻松创建文章标题的URL别名，提升SEO效果和用户体验。快来码坊，探索更多实用工具吧！
 date: 2024-01-06 22:42:19
 lastmod: 2024-01-07 00:12:17
 copyright: Original
 draft: false
 cover: https://img1.dotnet9.com/2024/01/cover_01.png
-categories: 
-    - Blazor
-tags: 
-    - 码界工坊
-    - 在线工具
-    - Avalonia UI
+categories:
+  - Blazor
+tags:
+  - 码坊
+  - 在线工具
+  - Avalonia UI
 ---
 
-大家好，我是沙漠尽头的狼。今天，我要向大家介绍一个非常实用的工具，码界工坊。
+大家好，我是沙漠尽头的狼。今天，我要向大家介绍一个非常实用的工具，码坊。
 
-码界工坊是站长新开发的一个开源项目，提供网页在线工具，同时提供跨平台桌面和手机App版本。我们的目标是为你带来更高效、更便捷的在线工具使用体验。今天，我非常荣幸地推出“文章标题URL别名生成器”，这个工具可以帮助你轻松创建文章标题的URL别名，提升SEO效果和用户体验。
+码坊是站长新开发的一个开源项目，提供网页在线工具，同时提供跨平台桌面和手机 App 版本。我们的目标是为你带来更高效、更便捷的在线工具使用体验。今天，我非常荣幸地推出“文章标题 URL 别名生成器”，这个工具可以帮助你轻松创建文章标题的 URL 别名，提升 SEO 效果和用户体验。
 
 ## 这是什么工具？
 
-你是否曾经遇到过这样的问题：你写了一篇很好的文章，但却因为标题过长或者包含特殊字符而导致URL看起来不美观，甚至影响SEO效果？现在，有了“文章标题URL别名生成器”，这些问题都将得到解决。
+你是否曾经遇到过这样的问题：你写了一篇很好的文章，但却因为标题过长或者包含特殊字符而导致 URL 看起来不美观，甚至影响 SEO 效果？现在，有了“文章标题 URL 别名生成器”，这些问题都将得到解决。
 
 这个工具提供了三大功能：
 
 1. 中英互译：将中文标题翻译成英文，或将英文标题翻译成中文。
-2. 英文转URL别名：将英文标题转换为简洁的URL别名，方便在网站上使用。
-3. 中文转URL别名：将中文标题转换为简洁的URL别名，方便在网站上使用。
+2. 英文转 URL 别名：将英文标题转换为简洁的 URL 别名，方便在网站上使用。
+3. 中文转 URL 别名：将中文标题转换为简洁的 URL 别名，方便在网站上使用。
 
-特别适合文章取好中文标题后，需要在网站发布取文章访问链接生成使用。比如将本文标题《`码界工坊“文章标题URL别名生成器”上线`》在工具中转换为`code-world-workshop-article-title-url-alias-generator-launched`，转换效果如下：
+特别适合文章取好中文标题后，需要在网站发布取文章访问链接生成使用。比如将本文标题《`码坊“文章标题URL别名生成器”上线`》在工具中转换为`code-world-workshop-article-title-url-alias-generator-launched`，转换效果如下：
 
 ![标题别名转换演示](https://img1.dotnet9.com/2024/01/0101.gif)
 
@@ -37,7 +37,7 @@ tags:
 
 ## 中英互译、别名转换实现
 
-这个工具的实现原理很简单。我们使用了`GTranslate`包的`YandexTranslator`类来进行中英互译，因为它使用了神经网络机器翻译技术，可以提供更高质量的翻译结果。对于URL别名的转换，我们使用了`Slugify.Core`包，用法简单，转换效果也很好。
+这个工具的实现原理很简单。我们使用了`GTranslate`包的`YandexTranslator`类来进行中英互译，因为它使用了神经网络机器翻译技术，可以提供更高质量的翻译结果。对于 URL 别名的转换，我们使用了`Slugify.Core`包，用法简单，转换效果也很好。
 
 来看看实现代码吧，我们先定义转换接口：
 
@@ -136,7 +136,7 @@ public class TranslationServiceUnitTest
 	[TestMethod]
 	public async Task Test_ChineseToEnglishAsync_SUCCESS()
 	{
-		const string chineseText = "码界工坊";
+		const string chineseText = "码坊";
 
 		var englishText = await _translationService.ChineseToEnglishAsync(chineseText);
 
@@ -166,7 +166,7 @@ public class TranslationServiceUnitTest
 	[TestMethod]
 	public async Task Test_ChineseToSlugAsync_SUCCESS()
 	{
-		const string chineseText = "码界工坊";
+		const string chineseText = "码坊";
 
 		var englishText = await _translationService.ChineseToEnglishAsync(chineseText);
 
@@ -185,6 +185,6 @@ public class TranslationServiceUnitTest
 
 ![工具效果图](https://img1.dotnet9.com/2024/01/0102.gif)
 
-如果你对这个工具感兴趣，可以访问码界工坊官网https://codewf.com，查看更多实用工具。码界工坊的源码也在[Github](https://github.com/dotnet9/CodeWF)开源，欢迎大家关注和贡献。
+如果你对这个工具感兴趣，可以访问码坊官网https://codewf.com，查看更多实用工具。码坊的源码也在[Github](https://github.com/dotnet9/CodeWF)开源，欢迎大家关注和贡献。
 
-感谢大家的支持，是你们的支持和鼓励让我不断前进。如果你有任何问题或建议，欢迎随时联系我们。让我们一起打造更美好的码界工坊！
+感谢大家的支持，是你们的支持和鼓励让我不断前进。如果你有任何问题或建议，欢迎随时联系我们。让我们一起打造更美好的码坊！

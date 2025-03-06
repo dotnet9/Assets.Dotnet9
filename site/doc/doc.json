@@ -1,86 +1,81 @@
 [
-    {
-        "Name": "欢迎",
-        "Children": 
-        [
-            {
-                "Name": "介绍",
-                "Slug": "readme"
-            },
-            {
-                "Name": "更新日志",
-                "Slug": "updatelog"
-            }
-        ]
-    },
-    {
-        "Name": "事件总线",
-        "Memo": "事件总线",
-        "Slug": "eventbus",
-        "Children": 
-        [
-            {
-                "Name": "进程内事件总线",
-                "Slug": "codewf-eventbus",
-                "Repository": "https://github.com/dotnet9/CodeWF.EventBus"
-            },
-            {
-                "Name": "进程间事件总线",
-                "Slug": "codewf-eventbus-socket",
-                "Repository": "https://github.com/dotnet9/CodeWF.EventBus.Socket"
-            }
-        ]
-    },
-    {
-        "Name": "工具",
-        "Slug": "tool",
-        "Children": 
-        [
-            {
-                "Name": "C#帮助类集",
-                "Slug": "codewf-tools",
-                "Repository": "https://github.com/dotnet9/CodeWF.Tools"
-            }
-        ]
-    },
-    {
-        "Name": "Avalonia",
-        "Memo": "Avalonia扩展包或相关开源项目",
-        "Slug": "avalonia",
-        "Children": 
-        [
-            {
-                "Name": "码界工坊工具箱",
-                "Memo": "Avalonia开发的工具箱",
-                "Slug": "codewf-toolbox",
-                "Repository": "https://github.com/dotnet9/CodeWF.Toolbox"
-            },
-            {
-                "Name": "Avalonia标记扩展",
-                "Memo": "Avalonia标记扩展包，包含Resx国际化辅助功能",
-                "Slug": "avaloniaextensions-axaml",
-                "Repository": "https://github.com/dotnet9/AvaloniaExtensions/tree/main/src/AvaloniaExtensions.Axaml"
-            },
-            {
-                "Name": "Avalonia国际化包",
-                "Memo": "Avalonia 使用自定义 XML 文件实现国际化",
-                "Slug": "avalonia-xml-translator",
-                "Repository": "https://github.com/dotnet9/AvaloniaExtensions/tree/main/src/AvaloniaXmlTranslator"
-            }
-        ]
-    },
-    {
-        "Name": "WPF",
-        "Memo": "WPF扩展包或相关开源项目",
-        "Slug": "wpf",
-        "Children": 
-        [
-            {
-                "Name": "WPF国际化包",
-                "Memo": "WPF 使用自定义 XML 文件实现国际化",
-                "Slug": "wpf-xml-translator",
-                "Repository": "https://github.com/dotnet9/wpfxmltranslator"
-            }
-        ]
-    }
+  {
+    "Name": "欢迎",
+    "Children": [
+      {
+        "Name": "介绍",
+        "Slug": "readme"
+      },
+      {
+        "Name": "更新日志",
+        "Slug": "updatelog"
+      }
+    ]
+  },
+  {
+    "Name": "事件总线",
+    "Memo": "事件总线",
+    "Slug": "eventbus",
+    "Children": [
+      {
+        "Name": "进程内事件总线",
+        "Slug": "codewf-eventbus",
+        "Repository": "https://github.com/dotnet9/CodeWF.EventBus"
+      },
+      {
+        "Name": "进程间事件总线",
+        "Slug": "codewf-eventbus-socket",
+        "Repository": "https://github.com/dotnet9/CodeWF.EventBus.Socket"
+      }
+    ]
+  },
+  {
+    "Name": "工具",
+    "Slug": "tool",
+    "Children": [
+      {
+        "Name": "C#帮助类集",
+        "Slug": "codewf-tools",
+        "Repository": "https://github.com/dotnet9/CodeWF.Tools"
+      }
+    ]
+  },
+  {
+    "Name": "Avalonia",
+    "Memo": "Avalonia扩展包或相关开源项目",
+    "Slug": "avalonia",
+    "Children": [
+      {
+        "Name": "码坊工具箱",
+        "Memo": "Avalonia开发的工具箱",
+        "Slug": "codewf-toolbox",
+        "Repository": "https://github.com/dotnet9/CodeWF.Toolbox"
+      },
+      {
+        "Name": "Avalonia标记扩展",
+        "Memo": "Avalonia标记扩展包，包含Resx国际化辅助功能",
+        "Slug": "avaloniaextensions-axaml",
+        "Repository": "https://github.com/dotnet9/AvaloniaExtensions/tree/main/src/AvaloniaExtensions.Axaml"
+      },
+      {
+        "Name": "Avalonia国际化包",
+        "Memo": "Avalonia 使用自定义 XML 文件实现国际化",
+        "Slug": "avalonia-xml-translator",
+        "Repository": "https://github.com/dotnet9/AvaloniaExtensions/tree/main/src/AvaloniaXmlTranslator"
+      }
+    ]
+  },
+  {
+    "Name": "WPF",
+    "Memo": "WPF扩展包或相关开源项目",
+    "Slug": "wpf",
+    "Children": [
+      {
+        "Name": "WPF国际化包",
+        "Memo": "WPF 使用自定义 XML 文件实现国际化",
+        "Slug": "wpf-xml-translator",
+        "Repository": "https://github.com/dotnet9/wpfxmltranslator"
+      }
+    ]
+  }
 ]

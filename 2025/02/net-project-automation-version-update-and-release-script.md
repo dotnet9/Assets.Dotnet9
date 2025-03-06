@@ -7,13 +7,13 @@ lastmod: 2025-02-21 22:30:23
 copyright: Original
 draft: false
 cover: https://img1.dotnet9.com/2025/02/cover_01.png
-categories: 
-    - Avalonia
-tags: 
-    - C#
-    - Avalonia
-    - 发布
-    - publish
+categories:
+  - Avalonia
+tags:
+  - C#
+  - Avalonia
+  - 发布
+  - publish
 ---
 
 在.NET 开发的旅程中，高效的版本管理和便捷的发布流程是提升开发效率和项目质量的关键环节。今天，我们就来深入探讨一下如何利用脚本实现.NET Avalonia UI 项目（当然，这些方法也适用于其他.NET 项目）的自动更新程序版本以及一键发布，让你的开发过程更加流畅和高效。
@@ -88,7 +88,7 @@ rem 设置发布路径
 set PUBLISH_PATH=publish\win-x64
 
 rem 定义项目信息数组，格式为 项目名称,项目路径（只写项目目录）,相对发布目录名
-set "projects=码界工坊工具箱,src\CodeWF.Toolbox.Desktop,codewf Avalonia发布测试,tests\AvaloniaAotDemo,AvaloniaAotDemo"
+set "projects=码坊工具箱,src\CodeWF.Toolbox.Desktop,codewf Avalonia发布测试,tests\AvaloniaAotDemo,AvaloniaAotDemo"
 
 rem 遍历项目数组
 for %%a in ("%projects: =","%") do (
@@ -257,4 +257,4 @@ Set-Content -Path $AssemblyInfoFile -Value $content -Encoding Unicode
 
 通过以上这些脚本和方法，我们可以极大地提高.NET 项目的开发效率，实现版本管理和发布流程的自动化。希望这些内容能对你的开发工作有所帮助，让你在.NET 开发的道路上更加得心应手。
 
-以上示例脚本可在开源项目找到：[dotnet9/CodeWF.Toolbox: CodeWF Toolbox 使用Avalonia开发的跨平台工具箱 Cross platform toolbox developed using Avalonia](https://github.com/dotnet9/CodeWF.Toolbox)
+以上示例脚本可在开源项目找到：[dotnet9/CodeWF.Toolbox: CodeWF Toolbox 使用 Avalonia 开发的跨平台工具箱 Cross platform toolbox developed using Avalonia](https://github.com/dotnet9/CodeWF.Toolbox)
