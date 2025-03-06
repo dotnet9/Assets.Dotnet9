@@ -1,5 +1,5 @@
 ---
-title: 从护士到C#开发者：我的学习之路2
+title: (2)从护士到C#开发者-C#入门基础：变量、运算符与类型转换
 slug: from-nurse-to-csharp-developer-my-learning-journey-2
 description: 身为护士的我毅然跨界投身 C# 编程学习，在此分享第二天学习内容，涵盖变量、运算符、转义符等关键知识要点 。
 date: 2025-02-22 09:24:47
@@ -10,6 +10,8 @@ draft: False
 cover: https://img1.dotnet9.com/2025/02/cover_02.png
 categories: 
     - 分享
+albums:
+    - 从护士到C#开发者
 tags: 
     - 护士
     - 编程

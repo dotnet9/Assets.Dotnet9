@@ -70,5 +70,11 @@
     "Name": "C#开源项目",
     "Memo": "相关文章",
     "Slug": "csharp-open-source-projects"
+  },
+  {
+    "Sort": 13,
+    "Name": "从护士到C#开发者",
+    "Memo": "文章讲述了一位护士因工作压力和家庭责任而辞职，在求职困难后，决定学习编程，特别是C#语言。",
+    "Slug": "from-nurse-to-csharp-developer"
   }
 ]

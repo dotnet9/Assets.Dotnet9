@@ -1,5 +1,5 @@
 ---
-title: 护士转行学.NET 开发能成功吗？
+title: (1)从护士到C#开发者-护士转行学.NET 开发能成功吗？
 slug: can-nurse-succeed-in-net-development
 description: 文章讲述了一位护士因工作压力和家庭责任而辞职，在求职困难后，决定学习编程，特别是C#语言。她详细描述了第一天学习的内容，包括.NET、.NET Framework框架、C#语言概念、C#开发软件类型、不同UI框架、交互模式以及Visual Studio的使用。她表达了对学习编程的信心和决心，并希望得到更多人的指导和帮助。
 date: 2025-02-21 10:11:24
@@ -10,6 +10,8 @@ draft: False
 cover: https://img1.dotnet9.com/2025/02/cover_02.png
 categories: 
     - 分享
+albums:
+    - 从护士到C#开发者
 tags: 
     - 护士
     - 编程
