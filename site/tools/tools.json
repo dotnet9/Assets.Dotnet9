@@ -26,6 +26,12 @@
                 "Memo": "在线ico图标生成",
                 "Slug": "ico",
                 "Repository": "https://github.com/dotnet9/CodeWF/blob/main/src/CodeWF/Pages/Tool/Converter/Icon.razor"
+            },
+            {
+                "Name": "挪车码在线生成器",
+                "Memo": "挪车码在线生成器",
+                "Slug": "nuoche",
+                "Repository": "https://github.com/dotnet9/CodeWF/blob/main/src/CodeWF/Pages/Tool/Converter/NuoChe.razor"
             }
         ]
     }
