@@ -3,7 +3,7 @@ title: 图片转Icon工具开发实战 - 从需求分析到代码实现
 slug: image-to-icon-converter-development
 description: 本文介绍了如何使用C#和Avalonia开发一个图片转Icon的工具，包括需求分析、核心代码实现、UI设计和MVVM模式的应用。
 date: 2025-03-06 21:35:14
-lastmod: 2025-03-06 22:24:36
+lastmod: 2025-03-10 06:14:21
 copyright: Original
 draft: False
 cover: https://img1.dotnet9.com/2025/03/0201.png
@@ -393,9 +393,40 @@ public class IconSizeItem(IconSize size) : ReactiveObject
 }
 ```
 
-## 六、总结与应用场景
+## 六、在线Icon转换功能
 
-通过本文，我们实现了一个功能完整的图片转 Icon 工具，它具有以下特点：
+除了桌面应用版本外，我还开发了一个基于Blazor的在线Icon转换工具，方便用户无需安装软件即可实现图片到Icon的转换。
+
+### 1. 在线转换器特点
+
+在线访问地址：https://dotnet9.com/tool/ico
+
+与桌面版相比，在线版本有以下特点：
+
+1. **无需安装**：直接通过浏览器访问使用
+2. **跨平台兼容**：支持任何现代浏览器，包括移动设备
+3. **临时文件存储**：转换后的文件会在服务器上临时保存，用户需要及时下载
+4. **简化界面**：针对网页使用体验优化，操作更加简洁
+
+![在线转换界面](https://img1.dotnet9.com/2025/03/0205.png)
+
+### 2. 转换流程
+
+在线转换工具的工作流程简单直观：
+
+1. 选择一个图片文件（支持PNG、JPG、JPEG、WEBP格式）
+2. 选择需要转换的图标尺寸
+3. 选择转换模式（合并生成或分别生成）
+4. 点击按钮后，系统将图片上传至服务器进行转换
+5. 转换完成后，点击"下载"按钮获取生成的文件
+
+在线版本同样使用了Magick.NET进行图像处理，核心转换逻辑与桌面版相同，但增加了文件上传处理、临时存储和清理等功能。有兴趣深入了解具体实现的读者，可以直接查看源代码：
+
+- [在线工具箱源码](https://github.com/dotnet9/CodeWF)
+
+## 七、总结与应用场景
+
+通过本文，我们实现了桌面版和在线版两种图片转Icon工具，满足了不同用户的需求。它们具有以下特点：
 
 1. **简洁的用户界面**：操作直观，支持拖拽操作
 2. **丰富的转换选项**：支持多种尺寸，满足不同应用场景需求
@@ -414,5 +445,6 @@ public class IconSizeItem(IconSize size) : ReactiveObject
 
 源码参考
 
-- [码坊工具箱源码](https://github.com/dotnet9/CodeWF.Toolbox)
+- [离线工具箱源码](https://github.com/dotnet9/CodeWF.Toolbox)
+- [在线工具箱源码](https://github.com/dotnet9/CodeWF)
 - [转换工具包](https://github.com/dotnet9/CodeWF.Tools)
