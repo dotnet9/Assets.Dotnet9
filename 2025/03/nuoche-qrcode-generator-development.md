@@ -3,7 +3,7 @@ title: 挪车二维码生成工具开发实战
 slug: nuoche-qrcode-generator-development
 description: 本文介绍了如何开发一个挪车二维码生成工具，包括C#和Avalonia实现的桌面版以及Blazor前端和.NET Web API实现的在线版，涵盖需求分析、核心代码实现、UI设计和MVVM模式的应用。
 date: 2025-03-09 09:14:24
-lastmod: 2025-03-10 06:24:36
+lastmod: 2025-03-10 19:54:50
 copyright: Original
 draft: False
 cover: https://img1.dotnet9.com/2025/03/cover_04.png
@@ -40,14 +40,15 @@ tags:
 
 与传统的直接展示电话号码不同，我们的挪车二维码工具采用了加密技术，确保车主的手机号不会直接暴露。同时，通过扫码跳转专门的挪车页面，不仅提升了使用体验，也降低了号码被滥用的风险。本文将详细介绍这两种实现方式：基于C#和Avalonia的桌面应用版本，以及基于Blazor前端和.NET Web API的在线网页版本。
 
-效果如下，扫码弹出详细页面：
+效果如下，微信扫码弹出详细页面：
 
  <table>
     <tr>
         <td><img src="https://img1.dotnet9.com/2025/03/cover_04.png"/></td>
-        <td><img src="https://img1.dotnet9.com/2025/03/0403.png"/></td>
+        <td><img src="https://img1.dotnet9.com/2025/03/0404.jpg"/></td>
     </tr>
  </table>
+
 
 在详细页面，可点击**拨打车主电话**或点击绿色超链接**去生成一个挪车码**：
 
@@ -394,7 +395,7 @@ public class NuoCheViewModel : ReactiveObject
 4. **拖拽支持**：允许用户直接拖拽二维码图像到其他应用
 5. **错误处理**：提供友好的错误提示
 
-值得一提的是，我们使用了`Hashids`库对手机号进行加密，提高了隐私保护。这样，即使二维码被公开展示，他人也无法直接获取车主的真实手机号。
+值得一提的是，我们使用了`Hashids`库对手机号进行编码，提高了隐私保护。这样，即使二维码被公开展示，他人也无法直接获取车主的真实手机号（当然最后一步进入拨号界面时会显示真实手机号，这里可考虑使用虚拟号码屏蔽真实手机号）。
 
 拖拽保存挪车二维码效果：
 
@@ -406,7 +407,13 @@ public class NuoCheViewModel : ReactiveObject
 
 在线访问地址：https://dotnet9.com/nuoche
 
-![在线版界面截图](https://img1.dotnet9.com/2025/03/0402.png)
+PC端创建挪车码：
+
+![在线PC端创建挪车码](https://img1.dotnet9.com/2025/03/0408.png)
+
+手机端创建挪车码：
+
+![在线手机端创建挪车码](https://img1.dotnet9.com/2025/03/0402.png)
 
 ### 1. 在线生成挪车码特点
 
