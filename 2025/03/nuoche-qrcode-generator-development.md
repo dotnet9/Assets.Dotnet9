@@ -1,5 +1,5 @@
 ---
-title: 挪车二维码生成工具开发实战 - 从需求分析到代码实现
+title: 挪车二维码生成工具开发实战
 slug: nuoche-qrcode-generator-development
 description: 本文介绍了如何使用C#和Avalonia开发一个挪车二维码生成工具，包括需求分析、核心代码实现、UI设计和MVVM模式的应用。
 date: 2025-03-09 09:14:24
@@ -46,7 +46,7 @@ tags:
 
 ## 二、核心二维码生成代码
 
-首先，让我们看一下核心的二维码生成逻辑。这部分代码封装在![CodeWF.Tools](https://github.com/dotnet9/CodeWF.Tools)项目的`QrCodeGenerator`类中：
+首先，让我们看一下核心的二维码生成逻辑。这部分代码封装在[CodeWF.Tools](https://github.com/dotnet9/CodeWF.Tools)项目的`QrCodeGenerator`类中：
 
 ```csharp
 using ImageMagick;
