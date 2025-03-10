@@ -40,18 +40,25 @@ tags:
 
 与传统的直接展示电话号码不同，我们的挪车二维码工具采用了加密技术，确保车主的手机号不会直接暴露。同时，通过扫码跳转专门的挪车页面，不仅提升了使用体验，也降低了号码被滥用的风险。本文将详细介绍这两种实现方式：基于C#和Avalonia的桌面应用版本，以及基于Blazor前端和.NET Web API的在线网页版本。
 
-效果如下，可扫码尝试：
-
-![挪车二维码](https://img1.dotnet9.com/2025/03/cover_04.png)
-
-![扫码显示界面](https://img1.dotnet9.com/2025/03/0403.png)
+效果如下，扫码弹出详细页面：
 
  <table>
     <tr>
-        <td><img src="https://img1.dotnet9.com/2025/03/0405.png"/></td>
-        <td><img src="https://img1.dotnet9.com/2025/03/0406.png"/></td>
+        <td><img src="https://img1.dotnet9.com/2025/03/cover_04.png"/></td>
+        <td><img src="https://img1.dotnet9.com/2025/03/0403.png"/></td>
     </tr>
  </table>
+
+在详细页面，可点击**拨打车主电话**或点击绿色超链接**去生成一个挪车码**：
+
+ <table>
+    <tr>
+        <td><img src="https://img1.dotnet9.com/2025/03/0404.jpg"/></td>
+        <td><img src="https://img1.dotnet9.com/2025/03/0405.jpg"/></td>
+        <td><img src="https://img1.dotnet9.com/2025/03/0406.jpg"/></td>
+    </tr>
+ </table>
+
 
 ## 二、核心二维码生成代码
 
@@ -401,7 +408,7 @@ public class NuoCheViewModel : ReactiveObject
 
 ![在线版界面截图](https://img1.dotnet9.com/2025/03/0402.png)
 
-### 1. 在线转换器特点
+### 1. 在线生成挪车码特点
 
 与桌面版相比，在线版本有以下特点：
 
@@ -412,7 +419,7 @@ public class NuoCheViewModel : ReactiveObject
 
 ### 2. 实现方式
 
-在线版本使用Blazor实现，核心代码结构如下：
+在线版本使用**Blazor**实现，核心代码结构如下：
 
 ```html
 @page "/NuoChe"
@@ -507,7 +514,7 @@ public class NuoCheViewModel : ReactiveObject
 
 通过这种设计，我们实现了二维码的完整生命周期：生成、扫描、联系，为用户提供了便捷的挪车解决方案。
 
-扫码后显示截图：
+前面截图扫码后显示详细信息页面：
 
 ![扫码后显示截图](https://img1.dotnet9.com/2025/03/0403.png)
 
