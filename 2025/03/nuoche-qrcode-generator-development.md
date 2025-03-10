@@ -3,7 +3,7 @@ title: 挪车二维码生成工具开发实战
 slug: nuoche-qrcode-generator-development
 description: 本文介绍了如何使用C#和Avalonia开发一个挪车二维码生成工具，包括需求分析、核心代码实现、UI设计和MVVM模式的应用。
 date: 2025-03-09 09:14:24
-lastmod: 2025-03-15 11:24:36
+lastmod: 2025-03-10 06:24:36
 copyright: Original
 draft: False
 cover: https://img1.dotnet9.com/2025/03/cover_04.png
@@ -44,6 +44,15 @@ tags:
 
 ![挪车二维码](https://img1.dotnet9.com/2025/03/cover_04.png)
 
+![扫码显示界面](https://img1.dotnet9.com/2025/03/0403.png)
+
+ <table>
+    <tr>
+        <td><img src="https://img1.dotnet9.com/2025/03/0405.png"/></td>
+        <td><img src="https://img1.dotnet9.com/2025/03/0406.png"/></td>
+    </tr>
+ </table>
+
 ## 二、核心二维码生成代码
 
 首先，让我们看一下核心的二维码生成逻辑。这部分代码封装在[CodeWF.Tools](https://github.com/dotnet9/CodeWF.Tools)项目的`QrCodeGenerator`类中：
@@ -58,7 +67,7 @@ namespace CodeWF.Tools.Image;
 
 public static class QrCodeGenerator
 {
-    public static void GenerateQrCode(string title, string content, string imagePath)
+    public static void GenerateQrCode(string title, string content, string imagePath, string? subTitle = "")
     {
         var qrCodeWriter = new BarcodeWriterPixelData
         {
@@ -80,20 +89,32 @@ public static class QrCodeGenerator
         var settings = new PixelReadSettings((uint)pixelData.Width, (uint)pixelData.Height, StorageType.Char, PixelMapping.RGBA);
         qrCodeImage.ReadPixels(pixelData.Pixels, settings);
 
-        using var background = new MagickImage(MagickColors.White, 500, 600);
+        var backgroundHeight = string.IsNullOrWhiteSpace(subTitle) ? 600u : 630u;
+        using var background = new MagickImage(MagickColors.White, 500, backgroundHeight);
 
         background.BorderColor = new MagickColor("#2888E2");
         background.Border(8);
 
         var titleText = new Drawables()
             .Font("SimHei")
-            .FontPointSize(90)
+            .FontPointSize(95)
             .FillColor(new MagickColor("#FF5722"))
             .TextAlignment(TextAlignment.Center)
             .Text(250, 120, title);
         background.Draw(titleText);
 
         background.Composite(qrCodeImage, 50, 170, CompositeOperator.Over);
+
+        if (!string.IsNullOrWhiteSpace(subTitle))
+        {
+            var subTitleText = new Drawables()
+                .Font("SimHei")
+                .FontPointSize(20)
+                .FillColor(new MagickColor("#333333"))
+                .TextAlignment(TextAlignment.Center)
+                .Text(250, 600, subTitle);
+            background.Draw(subTitleText);
+        }
 
         //using var logo = new MagickImage("logo.png");
         //logo.Resize(100, 100);
@@ -105,15 +126,18 @@ public static class QrCodeGenerator
 }
 ```
 
-上面代码使用了两个开源库：ZXing.NET和Magick.NET。ZXing.NET用于生成二维码矩阵数据，而Magick.NET则用于图像处理和合成，实现了以下功能：
+上面代码使用了NuGet包：ZXing.Net.Bindings.Magick。ZXing.NET用于生成二维码矩阵数据，而Magick.NET则用于图像处理和合成，实现了以下功能：
 
 1. 创建高质量的QR码，设置了较高的纠错级别(H级别)，即使二维码部分被遮挡也能正常识别
 2. 生成一个白底蓝边的背景图片
 3. 在顶部添加自定义的标题文本
 4. 将二维码图像合成到背景上
-5. 保存为高质量PNG图像
+5. 在顶部可添加自定义的小标题文本
+6. 保存为高质量PNG图像
 
 这种设计让最终生成的挪车二维码既美观又实用。
+
+![挪车二维码](https://img1.dotnet9.com/2025/03/cover_04.png)
 
 ## 三、离线桌面版实现
 
@@ -144,6 +168,10 @@ public static class QrCodeGenerator
                      u:FormItem.IsRequired="True" Text="{Binding PhoneNumber}" />
             <TextBox Width="300" u:FormItem.Label="{i18n:I18n {x:Static language:NuoCheView.InputTitle}}"
                      u:FormItem.IsRequired="True" Text="{Binding InputTitle}" />
+            <StackPanel Orientation="Horizontal" u:FormItem.Label="{i18n:I18n {x:Static language:NuoCheView.EnableSubTitle}}">
+                <CheckBox IsChecked="{Binding EnableSubTitle}" Command="{Binding EnableSubTitleHandler}" VerticalAlignment="Center" Content="显示" Margin="5 0" />
+                <TextBox Width="300" Text="{Binding SubTitle}" IsEnabled="{Binding EnableSubTitle}" VerticalAlignment="Center" />
+            </StackPanel>
         </u:Form>
 
         <StackPanel Orientation="Horizontal" Spacing="10" Margin="0,0,0,10">
@@ -169,7 +197,7 @@ public static class QrCodeGenerator
 
 界面布局简洁明了，主要包括：
 
-1. 两个输入框：手机号码和二维码标题
+1. 三个输入框：手机号码和二维码标题、可选二维码小标题
 2. 三个操作按钮：生成二维码、保存二维码和预览挪车页面
 3. 一个图像显示区域：展示生成的二维码，并支持拖拽操作
 
@@ -203,6 +231,8 @@ public class NuoCheViewModel : ReactiveObject
     private Bitmap? _qrCodeImage;
     private string _qrCodeImagePath;
     private string _generatedUrl;
+    private string _subTitle;
+    private bool _enableSubTitle;
 
     public NuoCheViewModel(INotificationService notificationService, IFileChooserService fileChooserService)
     {
@@ -211,6 +241,8 @@ public class NuoCheViewModel : ReactiveObject
 
         InputTitle = I18nManager.Instance.GetResource(Localization.NuoCheView.DefaultInputTitle);
         PhoneNumber = 16899999999;
+        SubTitle = $"{I18nManager.Instance.GetResource(Localization.NuoCheView.DefaultSubTitlePrefix)}: {PhoneNumber}";
+        EnableSubTitle = false;
     }
 
     public string InputTitle
@@ -243,6 +275,23 @@ public class NuoCheViewModel : ReactiveObject
         private set => this.RaiseAndSetIfChanged(ref _generatedUrl, value);
     }
 
+    public string SubTitle
+    {
+        get => _subTitle;
+        set => this.RaiseAndSetIfChanged(ref _subTitle, value);
+    }
+
+    public bool EnableSubTitle
+    {
+        get => _enableSubTitle;
+        set => this.RaiseAndSetIfChanged(ref _enableSubTitle, value);
+    }
+
+    public void EnableSubTitleHandler()
+    {
+        SubTitle = $"{I18nManager.Instance.GetResource(Localization.NuoCheView.DefaultSubTitlePrefix)}: {PhoneNumber}";
+    }
+
     public void GenerateQrCode()
     {
         if (string.IsNullOrWhiteSpace(InputTitle))
@@ -260,7 +309,8 @@ public class NuoCheViewModel : ReactiveObject
                 $"https://codewf.com/nuoche?p={encodedPhone}";
             QrCodeImagePath = Path.Combine(Path.GetTempPath(), "nuoche.png");
 
-            QrCodeGenerator.GenerateQrCode(InputTitle, GeneratedUrl, QrCodeImagePath);
+            QrCodeGenerator.GenerateQrCode(InputTitle, GeneratedUrl, QrCodeImagePath, 
+                EnableSubTitle ? SubTitle : null);
 
             QrCodeImage = new Bitmap(QrCodeImagePath);
         }
@@ -339,6 +389,10 @@ public class NuoCheViewModel : ReactiveObject
 
 值得一提的是，我们使用了`Hashids`库对手机号进行加密，提高了隐私保护。这样，即使二维码被公开展示，他人也无法直接获取车主的真实手机号。
 
+拖拽保存挪车二维码效果：
+
+![拖拽保存挪车二维码](https://img1.dotnet9.com/2025/03/0407.gif)
+
 ## 四、在线网页版实现
 
 除了桌面应用版本外，我们还开发了一个基于Blazor的在线挪车二维码生成工具，方便用户无需安装软件即可使用。
@@ -399,6 +453,13 @@ public class NuoCheViewModel : ReactiveObject
                 <label for="title">标题</label>
                 <input type="text" id="title" placeholder="扫码挪车" value="扫码挪车" />
             </div>
+            <div class="input-group">
+                <div class="checkbox-container">
+                    <input type="checkbox" id="enableSubtitle" />
+                    <label for="enableSubtitle">添加小标题</label>
+                </div>
+                <input type="text" id="subtitle" placeholder="扫码联系车主或拨打电话: 16800000000" disabled />
+            </div>
             <div class="button-group">
                 <button class="primary-button" onclick="generateQrCode()">
                     <i class="fas fa-qrcode"></i> 生成二维码
@@ -446,12 +507,26 @@ public class NuoCheViewModel : ReactiveObject
 
 通过这种设计，我们实现了二维码的完整生命周期：生成、扫描、联系，为用户提供了便捷的挪车解决方案。
 
+扫码后显示截图：
+
+![扫码后显示截图](https://img1.dotnet9.com/2025/03/0403.png)
+
 ### 3. 在线版本核心JavaScript交互
 
 ```javascript
 async function generateQrCode() {
     const title = document.getElementById('title').value;
     const phoneNumber = document.getElementById('phoneNumber').value;
+    const enableSubtitle = document.getElementById('enableSubtitle').checked;
+    let subtitle = null;
+    
+    if (enableSubtitle) {
+        subtitle = document.getElementById('subtitle').value.trim();
+        if (!subtitle) {
+            subtitle = `扫码联系车主或拨打电话: ${phoneNumber || "16800000000"}`;
+            document.getElementById('subtitle').value = subtitle;
+        }
+    }
 
     if (!title || !phoneNumber) {
         alert('请输入标题和手机号码');
@@ -466,7 +541,8 @@ async function generateQrCode() {
             },
             body: JSON.stringify({
                 title: title,
-                phoneNumber: phoneNumber
+                phoneNumber: phoneNumber,
+                subtitle: subtitle
             })
         });
 
@@ -477,7 +553,7 @@ async function generateQrCode() {
             img.src = data.qrCodeUrl;
             qrCodeContainer.querySelector('.preview-link').href = data.generatedUrl;
 
-            // 设置下载功能
+            // 添加下载功能
             const downloadLink = qrCodeContainer.querySelector('.download-link');
             downloadLink.onclick = () => {
                 const a = document.createElement('a');
@@ -497,9 +573,81 @@ async function generateQrCode() {
         alert('生成二维码失败，请稍后重试');
     }
 }
+
+// 添加小标题复选框的事件处理
+document.addEventListener('DOMContentLoaded', function() {
+    const enableSubtitleCheckbox = document.getElementById('enableSubtitle');
+    const subtitleInput = document.getElementById('subtitle');
+    const phoneInput = document.getElementById('phoneNumber');
+    
+    if (enableSubtitleCheckbox && subtitleInput) {
+        enableSubtitleCheckbox.addEventListener('change', function() {
+            subtitleInput.disabled = !this.checked;
+            if (this.checked) {
+                if (!subtitleInput.value.trim()) {
+                    const phoneNumber = phoneInput.value.trim() || "16800000000";
+                    subtitleInput.value = `扫码联系车主或拨打电话: ${phoneNumber}`;
+                }
+                subtitleInput.focus();
+            }
+        });
+        
+        // 当手机号码变化时，如果小标题已启用且使用的是默认格式，则更新小标题中的电话号码
+        phoneInput.addEventListener('input', function() {
+            if (enableSubtitleCheckbox.checked && subtitleInput.value.startsWith('扫码联系车主或拨打电话:')) {
+                const phoneNumber = this.value.trim() || "16800000000";
+                subtitleInput.value = `扫码联系车主或拨打电话: ${phoneNumber}`;
+            }
+        });
+    }
+});
 ```
 
-在线版本的后端API实现与离线版类似，都是使用相同的核心二维码生成逻辑，但增加了文件上传处理、临时存储和清理等功能，这里不再细述，[在线版源码](https://github.com/dotnet9/CodeWF)戳这。
+在线版本的后端API实现与离线版类似，都是使用相同的核心二维码生成逻辑，但增加了文件上传处理、临时存储和清理等功能，这里不再细述，[在线版源码](https://github.com/dotnet9/CodeWF)戳这，挪车二维码接口定义如下：
+
+```csharp
+[HttpPost("nuoche")]
+[AllowAnonymous]
+public async Task<IActionResult> NuoCheAsync([FromBody] NuoCheRequest request,
+    [FromServices] IWebHostEnvironment env,
+    [FromServices] IOptions<SiteOption> siteOption)
+{
+    try
+    {
+        if (string.IsNullOrWhiteSpace(request.Title) || string.IsNullOrWhiteSpace(request.PhoneNumber))
+        {
+            return BadRequest(new { success = false, message = "标题和手机号码不能为空" });
+        }
+
+        if (!long.TryParse(request.PhoneNumber, out long phoneNumberLong))
+        {
+            return BadRequest(new { success = false, message = "无效的手机号码" });
+        }
+
+        var encodedPhone = new Hashids("codewf").EncodeLong(phoneNumberLong);
+        var generatedUrl = $"{siteOption.Value.Domain}/nuoche?p={encodedPhone}";
+
+        var fileName = $"qrcode_{Guid.NewGuid():N}.png";
+        var qrCodePath = Path.Combine(env.WebRootPath, IconFolder, fileName);
+
+        Directory.CreateDirectory(Path.Combine(env.WebRootPath, IconFolder));
+
+        QrCodeGenerator.GenerateQrCode(request.Title, generatedUrl, qrCodePath, request.SubTitle);
+
+        var qrCodeUrl = $"/{IconFolder}/{fileName}";
+        return Ok(new
+        {
+            success = true,
+            qrCodeUrl,
+            generatedUrl
+        });
+    }
+    catch (Exception ex)
+    {
+        return BadRequest(new { success = false, message = ex.Message });
+    }
+}
+```
 
 ## 五、功能对比与应用场景
 
