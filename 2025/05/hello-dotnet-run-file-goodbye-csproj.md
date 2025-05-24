@@ -3,7 +3,7 @@ title: 你好 dotnet run file, 再见 csproj
 slug: hello-dotnet-run-file-goodbye-csproj
 description: .NET 正在不断进化，致力于让开发体验更加简单高效。最近，.NET CLI（命令行工具）提出了一项令人期待的新特性：可以直接运行 C# 源文件，无需创建项目文件。
 date: 2025-05-24 21:02:39
-lastmod: 2024-12-26 21:42:30
+lastmod: 2025-05-24 21:34:53
 copyright: Reprinted
 banner: false
 author: WeihanLi amazingdotnet
