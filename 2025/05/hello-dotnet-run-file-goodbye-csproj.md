@@ -1,7 +1,7 @@
 ---
 title: 你好 dotnet run file, 再见 csproj
 slug: hello-dotnet-run-file-goodbye-csproj
-description: .NET 正在不断进化，致力于让开发体验更加简单高效。最近，.NET CLI（命令行工具）提出了一项令人期待的新特性：可以直接运行 C# 源文件，无需创建项目文件。
+description: 这篇文章介绍了.NET CLI的文件式程序新特性，它允许开发者直接运行C#源文件而无需创建项目文件。该特性通过在内存中生成虚拟项目文件，并支持NuGet依赖包和项目属性设置，为开发脚本和简单应用提供了便捷。文章还展望了该特性的未来发展方向，包括目标路径扩展、统一命令行参数、性能提升和更多文件式程序命令支持等。
 date: 2025-05-24 21:02:39
 lastmod: 2025-05-24 21:34:53
 copyright: Reprinted
@@ -80,9 +80,9 @@ dotnet run hello.cs
   我们也可以引用 nuget package 和配置 property，示例如下：
 
   ```csharp
-#:sdk Microsoft.NET.Sdk.Web
+  #:sdk Microsoft.NET.Sdk.Web
   #:package WeihanLi.Web.Extensions@2.1.0
-#:property ManagePackageVersionsCentrally false
+  #:property ManagePackageVersionsCentrally false
   
   using WeihanLi.Web.Extensions;
   
