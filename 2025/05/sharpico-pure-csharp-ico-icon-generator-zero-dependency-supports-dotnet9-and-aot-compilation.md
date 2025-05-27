@@ -1,20 +1,20 @@
 ---
 title: SharpIco：用纯C#打造零依赖的.ico图标生成器，支持.NET9与AOT编译
 slug: sharpico-pure-csharp-ico-icon-generator-zero-dependency-supports-net9-and-aot-compilation
-description: 这篇文章介绍了.NET CLI的文件式程序新特性，它允许开发者直接运行C#源文件而无需创建项目文件。该特性通过在内存中生成虚拟项目文件，并支持NuGet依赖包和项目属性设置，为开发脚本和简单应用提供了便捷。文章还展望了该特性的未来发展方向，包括目标路径扩展、统一命令行参数、性能提升和更多文件式程序命令支持等。
+description: 网上搜到的很多 ICO 制作工具都是针对 favicon 的，其他的要不太重，要不就是收费，于是我把目光重新放在了开源工具上
 date: 2025-05-27 19:55:40
 lastmod: 2025-05-27 20:27:17
 copyright: Reprinted
 banner: false
-author: WeihanLi amazingdotnet
+author: 程序设计实验室
 originalTitle: SharpIco：用纯C#打造零依赖的.ico图标生成器，支持.NET9与AOT编译
-originalLink: https://www.cnblogs.com/deali/p/18896645
+originalLink: https://mp.weixin.qq.com/s/nDPbEESRN215DzimV12Lgw
 draft: false
 cover: https://img1.dotnet9.com/2025/05/cover_02.png
 categories:
   - .NET
 tags:
-  - .NET
+  - ICO
 ---
 
 ## 前言
