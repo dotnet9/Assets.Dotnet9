@@ -8,16 +8,7 @@ copyright: Reprinted
 banner: false
 author: JacksonChen_
 originalTitle: git 代码提交规范，feat，fix，chore都是什么意思?
-originalLink: https://blog.csdn.net/chenyajundd/article/details/139322838
-draft: false
-cover: https://img1.dotnet9.com/2025/06/0101.png
-categories:
-  - 分享
-tags:
-  - git
----
-
-## 写到前面
+originalLink: https://blog.csdn.net/chenyajundd/article/details/139322838## 写到前面
 
 经常看到别人提交的代码记录里面包含一些feat、fix、chore等等，而我在提交时也不会区分什么，直接写下提交信息，今天就来看一下怎么个事，就拿 element-plus 举例来看一下。
 
@@ -31,7 +22,7 @@ tags:
 
 commit message = subject + ：+ 空格 + message 主体
 
-**例如：**feat:：增加用户注册功能
+**例如：** feat:：增加用户注册功能
 
 常见的 subject 种类以及含义如下：
 
@@ -53,13 +44,13 @@ commit message = subject + ：+ 空格 + message 主体
 
 例如：docs: 更新README文件
 
-4. **style: **代码风格变动（不影响代码逻辑）
+4. **style:** 代码风格变动（不影响代码逻辑）
 
 用于提交仅格式化、标点符号、空白等不影响代码运行的变更。
 
 例如：style: 删除多余的空行
 
-5. **refactor: **代码重构（既不是新增功能也不是修复bug的代码更改）
+5. **refactor:** 代码重构（既不是新增功能也不是修复bug的代码更改）
 
 用于提交代码重构。
 
@@ -77,7 +68,7 @@ commit message = subject + ：+ 空格 + message 主体
 
 例如：test: 增加用户模块的单元测试
 
-8. **chore: **杂项（构建过程或辅助工具的变动）
+8. **chore:** 杂项（构建过程或辅助工具的变动）
 
 用于提交构建过程、辅助工具等相关的内容修改。
 
