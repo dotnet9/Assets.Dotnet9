@@ -33,6 +33,13 @@
                 "Slug": "nuoche",
                 "Repository": "https://github.com/dotnet9/CodeWF/blob/main/src/CodeWF/Pages/Tool/Converter/NuoChe.razor"
             }
+            ,
+            {
+                "Name": "复利计算器",
+                "Memo": "在线复利计算器",
+                "Slug": "fuli",
+                "Repository": "https://github.com/dotnet9/CodeWF/blob/main/src/CodeWF/Pages/Tool/Converter/FuLi.razor"
+            }
         ]
     }
 ]
