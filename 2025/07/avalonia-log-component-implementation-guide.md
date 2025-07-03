@@ -9,7 +9,7 @@ keywords:
 date: 2025-07-03T20:07:41+08:00
 lastmod: 2025-07-03T21:04:34+08:00
 draft: false
-cover: https://img1.dotnet9.com/2025/07/0101.gif
+cover: https://img1.dotnet9.com/2025/07/cover_01.png
 categories:
   - Avalonia UI
 tags:
@@ -168,7 +168,7 @@ public static class Logger
 
 **前提：这里不需要调用`Logger.RecordToFile()`方法**
 
-我们先看视图`LogView.axaml`视图，该部分使用`ScrollViewer`包裹`SelectableTextBlock`，以实现日志滚动查看及日志文本的可选择复制：
+我们先看视图`LogView.axaml`，该部分使用`ScrollViewer`包裹`SelectableTextBlock`，以实现日志滚动查看及日志文本的可选择复制：
 
 ```xml
 <ScrollViewer
