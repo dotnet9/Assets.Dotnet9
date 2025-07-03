@@ -2,12 +2,8 @@
 title: Avalonia日志组件实现与优化指南
 slug: avalonia-log-component-implementation-guide
 description: 深度解析基于Avalonia的日志组件实现方案，探讨界面与文件双输出机制，并提出可优化改进点
-keywords:
-  - Avalonia日志组件
-  - 可复制日志实现
-  - 开源贡献指南
-date: 2025-07-03T20:07:41+08:00
-lastmod: 2025-07-03T21:04:34+08:00
+date: 2025-07-03 20:07:41
+lastmod: 2025-07-03 22:24:34
 draft: false
 cover: https://img1.dotnet9.com/2025/07/cover_01.png
 categories:
