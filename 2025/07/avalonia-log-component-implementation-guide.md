@@ -1,24 +1,28 @@
 ---
-title: Avalonia日志组件-欢迎PR
-slug: welcome-pr-to-avalonia-log-component
-description: 介绍一个Avalonia日志组件的实现，并指出存在的问题
-date: 2025-07-03 20:07:41
-lastmod: 2025-07-03 21:04:34
-copyright: Original
-draft: False
-cover: https://img1.dotnet9.com/2025/07/0101.png
+title: Avalonia日志组件实现与优化指南
+slug: avalonia-log-component-implementation-guide
+description: 深度解析基于Avalonia的日志组件实现方案，探讨界面与文件双输出机制，并提出可优化改进点
+keywords:
+  - Avalonia日志组件
+  - 可复制日志实现
+  - 开源贡献指南
+date: 2025-07-03T20:07:41+08:00
+lastmod: 2025-07-03T21:04:34+08:00
+draft: false
+cover: https://img1.dotnet9.com/2025/07/0101.gif
 categories:
   - Avalonia UI
 tags:
   - C#
   - Avalonia
-  - 日志组件
-  - SelectableTextBlock
+  - 日志系统
+  - 开源项目
+  - UI组件
 ---
 
 ## 背景
 
-Avalonia目前没有富文本框可实现日志输出显示，但提供了SelectableTextBlock控件可以替换，这是站长实现的一个日志组件效果：
+Avalonia目前没有富文本框可实现日志输出显示，但提供了`SelectableTextBlock`控件可以替换，这是站长实现的一个日志组件效果：
 
 ![](https://img1.dotnet9.com/2025/07/0101.gif)
 
@@ -52,7 +56,7 @@ Logger.Fatal("致命日志");
 
 ## 实现
 
-只说关键部分代码，具体代码可通过[CodeWF.LogViewer](https://github.com/dotnet9/CodeWF.LogViewer)仓库浏览。
+只说关键部分代码，具体代码可浏览[CodeWF.LogViewer](https://github.com/dotnet9/CodeWF.LogViewer)仓库。
 
 程序通过`Logger`类输出日志，该类将日志信息缓存到`ConcurrentQueue<LogInfo> Logs`集合，`Logger`类定义如下：
 
@@ -299,17 +303,17 @@ partial class LogView : UserControl
 }
 ```
 
-上面省略了根据日志类型获取展示前景色、背景等等代码，这不重要。
+上面省略了根据日志类型获取展示前景色、背景色等等代码，这不重要。
 
 ## 存在的问题
 
-看上面的`GetLevelInline`方法，该方法生成日志级别块，使用的Border套文字，实现日志类型带边框效果，但复制存在问题：
+看上面的`GetLevelInline`方法，该方法生成日志级别块，使用的`Border`套日志级别描述(调试、错误等），实现日志类型带边框效果，但复制存在问题：
 
 ![](https://img1.dotnet9.com/2025/07/0102.gif)
 
 选择的`7:56 调试 模块`块并按`Ctrl + C`复制，再粘贴到记事本，复制出来是`调试】模块名称A-`，很明显的错位问题。
 
-复制的应该是文本内容，Border是不允许复制的，所以代码中`创建宽度为零的透明文本，用于复制使用`：
+复制的应该是文本内容，但`Border`是不允许复制的，所以代码中留了注释`创建宽度为零的透明文本，用于复制使用`：
 
 ```csharp
 // 创建宽度为零的透明文本，用于复制使用
@@ -320,7 +324,7 @@ var zeroWidthText = new Run($"【{content}】")
 };
 ```
 
-具体的不细说了，大家有什么解决方案吗？
+具体的不细说了，大家有什么解决方案吗？等待有缘人PR了，感谢。
 
 ## 总结
 
