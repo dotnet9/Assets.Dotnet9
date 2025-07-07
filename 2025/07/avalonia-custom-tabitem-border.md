@@ -5,7 +5,7 @@ description: 可作为参考，实现其他形式的TabItem边框
 date: 2025-07-07 21:46:07
 lastmod: 2025-07-07 22:28:04
 draft: false
-cover: https://img1.dotnet9.com/2025/07/0103.gif
+cover: https://img1.dotnet9.com/2025/07/0209.gif
 categories:
   - Avalonia UI
 tags:
@@ -24,7 +24,7 @@ tags:
 
 下图是按个性化要求修改效果：
 
-![](https://img1.dotnet9.com/2025/07/0103.gif)
+![](https://img1.dotnet9.com/2025/07/0209.gif)
 
 为了兼容[Semi.Avalonia](https://github.com/irihitech/Semi.Avalonia)主题风格，我们的TabControl控件主题从参考Semi的Card风格控件主题开始，Semi的效果如下：
 
@@ -33,6 +33,101 @@ tags:
 我们修改后，在各主题切换时，展示效果如下：
 
 ![](https://img1.dotnet9.com/2025/07/0204.gif)
+
+## 使用
+
+建议复制本文控件代码自行维护，本控件不一定更新及时。
+
+本控件是在Semi的基础上二次开发，所以需要安装以下NuGet包：
+
+```shell
+Install-Package Semi.Avalonia -Version 11.2.1.8
+Install-Package CodeWF.AvaloniaControls -Version 0.1.1.6
+```
+
+```xml
+<Application xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="CodeWF.AvaloniaControls.Demo.App"
+             xmlns:semi="https://irihi.tech/semi"
+             xmlns:codewf="https://codewf.com">
+    <Application.Styles>
+        <semi:SemiTheme Locale="zh-CN" />
+		<codewf:CodeWFTheme />
+    </Application.Styles>
+</Application>
+```
+
+使用参考：
+
+```xml
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="CodeWF.AvaloniaControls.Demo.Pages.TabControlDemo">
+
+    <Grid RowDefinitions="20 Auto 20 Auto" ColumnDefinitions="20 * 20">
+
+
+        <TabControl Grid.Row="1" Grid.Column="1" VerticalAlignment="Top"
+                    Theme="{StaticResource TrapezoidShapedTabControl}"
+                    CornerRadius="10 10 0 0" TabStripPlacement="Top">
+            <TabControl.Styles>
+                <Style Selector="TabItem">
+                    <Setter Property="CornerRadius" Value="10 10 0 0" />
+                    <Setter Property="Padding" Value="12 8" />
+                </Style>
+            </TabControl.Styles>
+            <TabItem Header="数据管理" />
+            <TabItem Header="系统设置" />
+            <TabItem Header="用户中心" />
+            <TabItem Header="日志记录" />
+            <TabItem Header="帮助文档" />
+        </TabControl>
+
+
+        <TabControl Grid.Row="3" Grid.Column="1" VerticalAlignment="Top"
+                    Theme="{StaticResource TrapezoidShapedTabControl}"
+                    CornerRadius="10 10 0 0" TabStripPlacement="Top">
+            <TabControl.Styles>
+                <Style Selector="TabControl">
+                    <Setter Property="Background" Value="#551890FF"></Setter>
+                </Style>
+                <Style Selector="TabItem">
+                    <Setter Property="CornerRadius" Value="10 10 0 0" />
+                    <Setter Property="Foreground" Value="#FFFFFF" />
+                    <Setter Property="Padding" Value="12 8" />
+                    <Setter Property="MinHeight" Value="40" />
+                    <Setter Property="BorderThickness" Value="1" />
+                    <Setter Property="VerticalContentAlignment" Value="Center" />
+                    <Setter Property="Background">
+                        <Setter.Value>
+                            <LinearGradientBrush StartPoint="50%, 0%"
+                                                 EndPoint="50%, 100%">
+                                <GradientStops>
+                                    <GradientStop Color="#BAE7FF" Offset="0" />
+                                    <GradientStop Color="#FFFFFF" Offset="1" />
+                                </GradientStops>
+                            </LinearGradientBrush>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </TabControl.Styles>
+            <TabControl.Resources>
+                <SolidColorBrush x:Key="TabItemLineHeaderPointeroverForeground">#1890FF</SolidColorBrush>
+                <SolidColorBrush x:Key="TabItemLineHeaderSelectedForeground">#1890FF</SolidColorBrush>
+            </TabControl.Resources>
+            <TabItem Header="数据管理" />
+            <TabItem Header="系统设置" />
+            <TabItem Header="用户中心" />
+            <TabItem Header="日志记录" />
+            <TabItem Header="帮助文档" />
+        </TabControl>
+    </Grid>
+</UserControl>
+```
 
 ## 实现
 
