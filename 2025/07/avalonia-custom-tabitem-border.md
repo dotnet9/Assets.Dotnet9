@@ -3,7 +3,7 @@ title: Avalonia自定义TabItem边框
 slug: avalonia-custom-tabitem-border
 description: 可作为参考，实现其他形式的TabItem边框
 date: 2025-07-07 21:46:07
-lastmod: 2025-07-07 22:28:04
+lastmod: 2025-07-07 22:36:33
 draft: false
 cover: https://img1.dotnet9.com/2025/07/0209.gif
 categories:
@@ -58,7 +58,7 @@ Install-Package CodeWF.AvaloniaControls -Version 0.1.1.6
 </Application>
 ```
 
-使用参考：
+使用参考，效果在前面已经展示，代码如下：
 
 ```xml
 <UserControl xmlns="https://github.com/avaloniaui"
@@ -137,7 +137,7 @@ Install-Package CodeWF.AvaloniaControls -Version 0.1.1.6
 
 ![](https://img1.dotnet9.com/2025/07/0205.png)
 
-我们主要是修改TabItem的边框风格，所以将Semi的这段代码直接复制粘贴，给ControlTheme换个Key，再把图中框选部分ItemContainerTheme的Value指向另一个TabItem主题，其他部分代码按需修改，我这没动其他代码，这是修改后代码截图：
+我们主要是修改TabItem的边框风格，所以将Semi的这段代码直接复制粘贴，给ControlTheme换个Key，再把图中框选部分ItemContainerTheme的Value指向另一个TabItem的控件主题，其他部分代码按需修改，我这没动其他代码，下图是修改后代码截图：
 
 ![](https://img1.dotnet9.com/2025/07/0206.png)
 
@@ -248,7 +248,20 @@ public partial class TrapezoidShapedTabItemBorder : Control
 }
 ```
 
-Render中，根据当前TabItem是TabControl的第一个、最后一个、中间部分，调用不同的方法绘制边框，比如绘制第一索引的TabItem方法：
+Render中，根据当前TabItem是TabControl的第一个、最后一个、中间部分，调用不同的方法绘制边框，比如绘制第一个TabItem，效果图如下：
+
+![](https://img1.dotnet9.com/2025/07/0210.png)
+
+先分析：
+
+1. 这是一个直接梯形
+2. 左边线是竖直直线
+3. 左上角是一个1/4内圆
+4. 右上角又是一个内圆(可按比例绘制)
+5. 右边线是带斜率的斜线
+6. 左下角和右下角可带外圆弧
+
+边框绘制代码如下：
 
 ```csharp
 private static void DrawTopFirstTabItemBorder(StreamGeometryContext ctx, Rect adjustedRect, CornerRadius radius,
@@ -327,11 +340,11 @@ private static void DrawTopFirstTabItemBorder(StreamGeometryContext ctx, Rect ad
 }
 ```
 
-通过StreamGeometryContext调用LineTo方法绘制直线，调用ArcTo方法绘制圆弧（内圆、外圆），各种风格的边框都能画了，比如Edge的TabItem效果：
+通过StreamGeometryContext调用LineTo方法绘制直线，调用ArcTo方法绘制圆弧（内圆、外圆），各种风格的边框都能画了，最后一个TabItem、中间的TabItem绘制方法类似了。
+
+Edge的TabItem效果好实现了吧？
 
 ![](https://img1.dotnet9.com/2025/07/0208.png)
-
-这种效果很好实现了吧？
 
 ## 总结
 
