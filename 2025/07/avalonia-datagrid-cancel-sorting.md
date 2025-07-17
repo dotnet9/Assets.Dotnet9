@@ -1,7 +1,7 @@
 ---
-title: Avalonia小窍门之DataGrid添加取消排序
+title: Avalonia进阶技巧：实现DataGrid可取消排序
 slug: avalonia-datagrid-cancel-sorting
-description: 默认点击列头只有升序、降序排序，无法取消
+description: 三击列头智能切换排序状态，完整实现方案详解
 date: 2025-07-17 22:40:43
 lastmod: 2025-07-17 22:57:14
 draft: false
@@ -12,18 +12,20 @@ tags:
   - C#
   - Avalonia
   - DataGrid
-  - 可取消排序
+  - 交互设计
 ---
 
-Avalonia的DataGrid列点击排序效果如下：
+## 需求背景
 
-![](https://img1.dotnet9.com/2025/07/0302.gif)
+默认DataGrid点击列头只能在升序(↑)、降序(↓)两种状态间切换：
 
-怎么取消排序呢？比如下面这样：
+![](https://img1.dotnet9.com/2025/07/0301.gif)
 
-![](https://img1.dotnet9.com/2025/07/0303.gif)
+但在实际业务场景中，用户可能需要快速恢复默认数据排序。
 
-这是同事贡献的代码，大家可以直接拿去用：
+## 实现方案
+
+方法已经封装好，有更好的实现方式欢迎留言：
 
 ```csharp
 public static class DataGridExtension
@@ -50,4 +52,9 @@ public static class DataGridExtension
 }
 ```
 
-本号不定时分享Avalonia相关技术，欢迎关注
+## 效果演示
+
+![](https://img1.dotnet9.com/2025/07/0302.gif)
+
+本号持续分享Avalonia实战技巧，欢迎关注 ↓↓↓
+
