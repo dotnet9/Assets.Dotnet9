@@ -56,5 +56,5 @@ public static class DataGridExtension
 
 ![](https://img1.dotnet9.com/2025/07/0302.gif)
 
-本号持续分享Avalonia实战技巧，欢迎关注 ↓↓↓
+本号持续分享Avalonia实战技巧，欢迎关注，保持交流，共同进步。
 
