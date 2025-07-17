@@ -1,7 +1,7 @@
 ---
-title: Avalonia进阶技巧：实现DataGrid可取消排序
+title: Avalonia小窍门之DataGrid添加取消排序
 slug: avalonia-datagrid-cancel-sorting
-description: 三击列头智能切换排序状态，完整实现方案详解
+description: 默认点击列头只有升序、降序排序，无法取消
 date: 2025-07-17 22:40:43
 lastmod: 2025-07-17 22:57:14
 draft: false
@@ -25,7 +25,7 @@ tags:
 
 ## 实现方案
 
-方法已经封装好，有更好的实现方式欢迎留言：
+可爱的同事提供的方法，有更好的实现方式欢迎留言：
 
 ```csharp
 public static class DataGridExtension
