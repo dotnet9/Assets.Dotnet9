@@ -1,14 +1,17 @@
 ---
 title: Lang.Avalonia：Avalonia多语言解决方案，无缝支持Resx/XML/JSON三种格式
 slug: lang-avalonia-avalonia-multilingual-solution-seamless-support-resx-xml-json-three-formats
-description: 在实际开发中，一款应用可能有多个应用程序组成，那这款应用各个组成部分之间的数据交互就成了关键，如何才能快速高效的进行数据交互呢？
+description: 这是一款专为Avalonia框架设计的多语言管理库，通过插件化架构重构了多语言支持逻辑，不仅兼容传统Resx资源文件，还新增XML和JSON格式支持，同时提供类型安全的资源引用、动态语言切换等能力，让多语言开发更简单、更高效。
 date: 2025-08-09 12:15:17
-lastmod: 2025-08-03 16:23:24
-copyright: Reprinted
-banner: false
+lastmod: 2025-08-09 19:58:31
 cover: https://img1.dotnet9.com/2025/08/cover_02.png
 categories:
-  - 分享
+  - Avalonia UI
+tags:
+  - C#
+  - Avalonia
+  - Language
+  - i18n
 ---
 
 ![](https://img1.dotnet9.com/2025/08/cover_02.png)
@@ -103,9 +106,9 @@ public override void Initialize()
     base.Initialize();
     // 初始化Resx格式（其他格式替换为XmlLangPlugin/JsonLangPlugin）
     I18nManager.Instance.Register(
-        new ResxLangPlugin(),  // 格式插件
-        new CultureInfo("zh-CN"),  // 默认语言
-        out var error  // 错误信息（可选）
+        plugin: new ResxLangPlugin(),  // 格式插件
+        defaultCulture: new CultureInfo("zh-CN"),  // 默认语言
+        error: out var error  // 错误信息（可选）
     );
     if (!string.IsNullOrEmpty(error))
     {
@@ -154,7 +157,7 @@ var titleEnUS = I18nManager.Instance.GetResource(MainView.Title, "en-US");
 
 
 ### 进阶技巧：动态切换语言
-运行时切换语言只需调用`I18nManager.Instance.ChangeCulture`方法，界面会自动更新：
+运行时切换语言只需设置属性`I18nManager.Instance.Culture`，界面会自动更新：
 
 ```csharp
 // 切换为英语
