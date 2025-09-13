@@ -15,6 +15,8 @@ categories:
   - Avalonia UI
 ---
 
+![](https://img1.dotnet9.com/2025/09/cover_02.png)
+
 在过去几年里，我们的上位机软件主要是用  WPF  和  WinForm  开发的。这些技术在 Windows 平台上确实很好用，也陪伴我们走过了从小规模试产到如今规模化交付的阶段。 但是，随着业务发展和客户需求的变化，单一的 Windows 技术栈逐渐成为了我们必须跨越的一道坎。
 
 于是，我开始认真考虑把现有的 WPF 程序迁移到  Avalonia。
