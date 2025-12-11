@@ -52,7 +52,7 @@
 6. 本群的目的是为实现技能的长期沉淀！
 7. 为了保护群主和其他管理员的安全。请在国家法律允许范围内聊天。违禁词包括色情、政治，宗教信仰，地方歧视，语言歧视，棋牌，和其他一切与现行法律法规不符的地方。
 
-## 5. 站长其他平台链接：
+## 3. 站长其他平台链接：
 
 - QQ 邮箱：[632871194@qq.com](https://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=632871194@qq.com)
 - YouTube：[https://www.youtube.com/channel/UCYVJHthYAcGQgOHNFQC0ylQ](https://www.youtube.com/channel/UCYVJHthYAcGQgOHNFQC0ylQ)
