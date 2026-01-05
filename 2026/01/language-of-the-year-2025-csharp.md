@@ -5,6 +5,7 @@ description: 2025年度语言C#当选，是三年里第二次获此称号
 date: 2026-01-05 19:33:24
 lastmod: 2026-01-05 19:47:21
 cover: https://img1.dotnet9.com/2026/01/cover_02.png
+banner: true
 categories:
   - .NET
 ---
