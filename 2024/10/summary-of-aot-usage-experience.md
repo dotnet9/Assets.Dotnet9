@@ -249,7 +249,7 @@ internal partial class ProjectJsonSerializerContext : JsonSerializerContext
 >
 >传统的 JsonSerializer.Serialize(project) 底层依赖运行时反射来解析 Project 类的属性、特性等信息，但 AOT 编译会在编译期裁剪掉未被显式引用的反射元数据，导致序列化失败（抛出 NotSupportedException 或无法序列化 / 反序列化某些属性）。
 >
->而 ProjectJsonSerializerContext 是通过编译期生成静态元数据的方式工作：
+>而 ProjectJsonSerializerContext 是通过编译期生成静态元数据的方式工作。
 
 
 #### 7. 反射问题
