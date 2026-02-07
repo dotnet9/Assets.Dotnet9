@@ -3,7 +3,7 @@ title: AOT使用经验总结
 slug: summary-of-aot-usage-experience
 description: 从项目创建伊始，就应养成良好的习惯，即只要添加了新功能或使用了较新的语法，就及时进行 AOT 发布测试。
 date: 2024-10-14 17:04:18
-lastmod: 2024-10-25 08:46:47
+lastmod: 2026-02-07 14:26:27
 copyright: Original
 draft: false
 cover: https://img1.dotnet9.com/2024/10/cover_02.png
@@ -78,6 +78,8 @@ tags:
 <assembly fullname="Prism.DryIoc.Avalonia" preserve="All" />
 ```
 
+8.1.97.11073版本为最后一个开源版本，9.X及后面的为收费版本
+
 #### 3. App.config 读写
 
 在.NET Core 中使用`System.Configuration.ConfigurationManager`包操作 App.config 文件，`rd.xml`需添加如下内容：
@@ -94,6 +96,12 @@ tags:
 
 ```xml
 <assembly fullname="System.Net.Http" preserve="All" />
+```
+
+一般不直接使用HttpClient，可尝试[Refit](https://www.nuget.org/packages/Refit)之类的三方库用作Http请求更便捷：
+
+```xml
+<assembly fullname="Refit" preserve="All" />
 ```
 
 #### 5. Dapper 支持
@@ -139,7 +147,7 @@ public static bool EnsureTableIsCreated()
 序列化
 
 ```csharp
-public static bool ToJson<T>(this T obj, out string? json, out string? errorMsg)
+public static bool ToJson<T>(this T obj, JsonSerializerOptions? options,  out string? json, out string? errorMsg)
 {
     if (obj == null)
     {
@@ -148,12 +156,16 @@ public static bool ToJson<T>(this T obj, out string? json, out string? errorMsg)
         return false;
     }
 
-    var options = new JsonSerializerOptions()
+    if (options == null)
     {
-        WriteIndented = true,
-        Encoder = JavaScriptEncoder.UnsafeRelaxedJsonEscaping,
-        TypeInfoResolver = new DefaultJsonTypeInfoResolver()
-    };
+        options = new JsonSerializerOptions()
+        {
+            WriteIndented = true,
+            Encoder = JavaScriptEncoder.UnsafeRelaxedJsonEscaping,
+            TypeInfoResolver = new DefaultJsonTypeInfoResolver(),
+        };
+    }
+
     try
     {
         json = JsonSerializer.Serialize(obj, options);
@@ -172,7 +184,7 @@ public static bool ToJson<T>(this T obj, out string? json, out string? errorMsg)
 反序列化
 
 ```csharp
-public static bool FromJson<T>(this string? json, out T? obj, out string? errorMsg)
+public static bool FromJson<T>(this string? json, JsonSerializerOptions? options, out T? obj, out string? errorMsg)
 {
     if (string.IsNullOrWhiteSpace(json))
     {
@@ -183,11 +195,16 @@ public static bool FromJson<T>(this string? json, out T? obj, out string? errorM
 
     try
     {
-        var options = new JsonSerializerOptions()
+        if (options == null)
         {
-            Encoder = JavaScriptEncoder.UnsafeRelaxedJsonEscaping,
-            TypeInfoResolver = new DefaultJsonTypeInfoResolver()
-        };
+            options = new JsonSerializerOptions()
+            {
+                Encoder = JavaScriptEncoder.UnsafeRelaxedJsonEscaping,
+                TypeInfoResolver = new DefaultJsonTypeInfoResolver(),
+                Converters = { new NullableDateTimeConverter() }
+            };
+        }
+
         obj = JsonSerializer.Deserialize<T>(json!, options);
         errorMsg = default;
         return true;
@@ -200,6 +217,40 @@ public static bool FromJson<T>(this string? json, out T? obj, out string? errorM
     }
 }
 ```
+
+上面配置简单类序列化与反序列化正常用，如果类中存在`int?`、`double?`之类的可空类型：
+
+```csharp
+public class Project
+{
+    public int? Id { get; set; }
+
+    public string Name { get; set; }
+
+    public int Record { get; set; }
+
+    [XmlArray(ElementName = "Members")]
+    [XmlArrayItem(typeof(Member))]
+    public List<Member> Members { get; set; }
+}
+```
+
+则创建一个`JsonSerializerContext`的子类即可解决：
+
+```csharp
+[JsonSerializable(typeof(Project))]
+[JsonSerializable(typeof(List<Member>))]
+internal partial class ProjectJsonSerializerContext : JsonSerializerContext
+{
+}
+```
+
+>**注意：创建好即可，不需要主动调用**
+>
+>传统的 JsonSerializer.Serialize(project) 底层依赖运行时反射来解析 Project 类的属性、特性等信息，但 AOT 编译会在编译期裁剪掉未被显式引用的反射元数据，导致序列化失败（抛出 NotSupportedException 或无法序列化 / 反序列化某些属性）。
+>
+>而 ProjectJsonSerializerContext 是通过编译期生成静态元数据的方式工作：
+
 
 #### 7. 反射问题
 
