@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
+  <defs>
+    <linearGradient id="reqGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#FF7043;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FF5722;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="pageGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#66BB6A;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#43A047;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="svcGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#AB47BC;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#8E24AA;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow2" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <rect width="800" height="400" fill="#f8f9fa"/>
+
+  <rect x="15" y="15" width="770" height="370" rx="10" fill="white" filter="url(#shadow2)"/>
+
+  <rect x="30" y="30" width="740" height="40" rx="6" fill="url(#reqGrad)"/>
+  <text x="400" y="55" text-anchor="middle" fill="white" font-size="18" font-weight="bold">页面请求处理流程</text>
+
+  <rect x="80" y="100" width="120" height="60" rx="8" fill="#FFECB3" stroke="#FFC107" stroke-width="2" filter="url(#shadow2)"/>
+  <text x="140" y="130" text-anchor="middle" fill="#333" font-size="13" font-weight="bold">用户请求</text>
+  <text x="140" y="148" text-anchor="middle" fill="#666" font-size="11">/Timestamp</text>
+
+  <path d="M200 130 L250 130" stroke="#455A64" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+
+  <rect x="250" y="100" width="120" height="60" rx="8" fill="#B3E5FC" stroke="#03A9F4" stroke-width="2" filter="url(#shadow2)"/>
+  <text x="310" y="130" text-anchor="middle" fill="#333" font-size="13" font-weight="bold">路由匹配</text>
+  <text x="310" y="148" text-anchor="middle" fill="#666" font-size="11">@page "/Timestamp"</text>
+
+  <path d="M370 130 L420 130" stroke="#455A64" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+
+  <rect x="420" y="100" width="120" height="60" rx="8" fill="#C8E6C9" stroke="#4CAF50" stroke-width="2" filter="url(#shadow2)"/>
+  <text x="480" y="130" text-anchor="middle" fill="#333" font-size="13" font-weight="bold">PageModel</text>
+  <text x="480" y="148" text-anchor="middle" fill="#666" font-size="11">OnGetAsync()</text>
+
+  <path d="M540 130 L590 130" stroke="#455A64" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+
+  <rect x="590" y="100" width="120" height="60" rx="8" fill="#E1BEE7" stroke="#9C27B0" stroke-width="2" filter="url(#shadow2)"/>
+  <text x="650" y="130" text-anchor="middle" fill="#333" font-size="13" font-weight="bold">AppService</text>
+  <text x="650" y="148" text-anchor="middle" fill="#666" font-size="11">业务逻辑处理</text>
+
+  <path d="M650 160 L650 200" stroke="#455A64" stroke-width="2" fill="none"/>
+  <path d="M650 200 L480 200 L480 170" stroke="#455A64" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+
+  <rect x="180" y="240" width="440" height="100" rx="8" fill="white" stroke="#1976D2" stroke-width="2"/>
+  <text x="400" y="265" text-anchor="middle" fill="#1976D2" font-size="14" font-weight="bold">Razor Pages 页面模型 (Code Behind)</text>
+
+  <rect x="200" y="280" width="180" height="50" rx="6" fill="#E3F2FD"/>
+  <text x="290" y="305" text-anchor="middle" fill="#1565C0" font-size="12">📄 Index.cshtml.cs</text>
+  <text x="290" y="322" text-anchor="middle" fill="#666" font-size="10">public async Task OnGetAsync()</text>
+
+  <rect x="400" y="280" width="200" height="50" rx="6" fill="#E8F5E9"/>
+  <text x="500" y="305" text-anchor="middle" fill="#2E7D32" font-size="12">📄 Timestamp.cshtml</text>
+  <text x="500" y="322" text-anchor="middle" fill="#666" font-size="10">@page "/Timestamp"</text>
+
+  <path d="M310 280 L310 255" stroke="#455A64" stroke-width="1.5" fill="none"/>
+  <path d="M480 280 L480 255" stroke="#455A64" stroke-width="1.5" fill="none"/>
+
+  <rect x="80" y="240" width="80" height="100" rx="6" fill="#FCE4EC" stroke="#E91E63" stroke-width="2"/>
+  <text x="120" y="270" text-anchor="middle" fill="#C2185B" font-size="11" font-weight="bold">静态</text>
+  <text x="120" y="288" text-anchor="middle" fill="#C2185B" font-size="11" font-weight="bold">资源</text>
+  <text x="120" y="305" text-anchor="middle" fill="#666" font-size="10">CSS</text>
+  <text x="120" y="320" text-anchor="middle" fill="#666" font-size="10">JS</text>
+  <text x="120" y="335" text-anchor="middle" fill="#666" font-size="10">Images</text>
+
+  <path d="M160 290 L200 290" stroke="#455A64" stroke-width="1.5" fill="none" marker-end="url(#arrow)"/>
+
+  <rect x="640" y="240" width="80" height="100" rx="6" fill="#FFF3E0" stroke="#FF9800" stroke-width="2"/>
+  <text x="680" y="270" text-anchor="middle" fill="#E65100" font-size="11" font-weight="bold">View</text>
+  <text x="680" y="288" text-anchor="middle" fill="#E65100" font-size="11" font-weight="bold">Component</text>
+  <text x="680" y="310" text-anchor="middle" fill="#666" font-size="10">导航</text>
+  <text x="680" y="325" text-anchor="middle" fill="#666" font-size="10">友链</text>
+
+  <path d="M620 290 L640 290" stroke="#455A64" stroke-width="1.5" fill="none"/>
+  <path d="M620 290 L560 290" stroke="#455A64" stroke-width="1.5" fill="none"/>
+  <path d="M560 290 L560 260" stroke="#455A64" stroke-width="1.5" fill="none"/>
+  <path d="M560 260 L540 260 L540 130" stroke="#455A64" stroke-width="1.5" fill="none"/>
+</svg>

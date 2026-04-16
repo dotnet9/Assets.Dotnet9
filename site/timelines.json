@@ -1,5 +1,10 @@
 [
   {
+    "Time": "2026-04-16",
+    "Title": "使用Razor Pages重构网站",
+    "Content": "AI辅助开发，网站回归传统Razor Pages，觉得更适合内容展示型网站"
+  },
+  {
     "Time": "2024-10-09",
     "Title": "使用KnownCMS重构网站",
     "Content": "感谢KnownCMS开源项目，前台是Antd风格，符合官网和博客网站，Blazor还是最顺手，目前10月26日基本完成改造，并部署上线"

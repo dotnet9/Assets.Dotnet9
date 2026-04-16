@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#16213e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0f3460;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="blazorGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#7B1FA2;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#4A148C;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="razorGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1976D2;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0D47A1;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="arrowGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00BCD4;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#4CAF50;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="shadow">
+      <feDropShadow dx="3" dy="3" stdDeviation="4" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bgGrad)"/>
+
+  <rect x="50" y="50" width="1100" height="530" rx="20" fill="none" stroke="#00BCD4" stroke-width="2" stroke-opacity="0.3"/>
+
+  <circle cx="200" cy="315" r="120" fill="none" stroke="#7B1FA2" stroke-width="3" stroke-dasharray="10,5" opacity="0.6">
+    <animateTransform attributeName="transform" type="rotate" from="0 200 315" to="360 200 315" dur="20s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="200" cy="315" r="80" fill="url(#blazorGrad)" filter="url(#shadow)"/>
+  <text x="200" y="305" text-anchor="middle" fill="white" font-size="22" font-weight="bold">Blazor</text>
+  <text x="200" y="335" text-anchor="middle" fill="white" font-size="14">Server</text>
+
+  <path d="M340 315 L520 315" stroke="url(#arrowGrad)" stroke-width="4" fill="none" marker-end="url(#arrowhead)"/>
+  <polygon points="520,305 540,315 520,325" fill="#4CAF50" filter="url(#glow)"/>
+  <text x="430" y="290" text-anchor="middle" fill="#00BCD4" font-size="14">AI 辅助</text>
+
+  <rect x="540" y="195" width="400" height="240" rx="15" fill="#0a1628" stroke="#1976D2" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="560" y="215" width="360" height="25" rx="4" fill="#1a1a2e"/>
+  <circle cx="575" cy="227" r="6" fill="#ff5f56"/>
+  <circle cx="595" cy="227" r="6" fill="#ffbd2e"/>
+  <circle cx="615" cy="227" r="6" fill="#27ca40"/>
+  <text x="580" y="260" fill="#00BCD4" font-size="12" font-family="Consolas, monospace">&lt;page&gt;</text>
+  <text x="580" y="285" fill="#4FC3F7" font-size="12" font-family="Consolas, monospace">  @@page "/"</text>
+  <text x="580" y="310" fill="#4FC3F7" font-size="12" font-family="Consolas, monospace">  @@model IndexModel</text>
+  <text x="580" y="350" fill="#4FC3F7" font-size="12" font-family="Consolas, monospace">  &lt;h1&gt;首页&lt;/h1&gt;</text>
+  <text x="580" y="390" fill="#4FC3F7" font-size="12" font-family="Consolas, monospace">&lt;/page&gt;</text>
+  <text x="740" y="260" fill="#00BCD4" font-size="12" font-family="Consolas, monospace">Razor Pages</text>
+
+  <circle cx="1000" cy="315" r="80" fill="url(#razorGrad)" filter="url(#shadow)"/>
+  <text x="1000" y="305" text-anchor="middle" fill="white" font-size="22" font-weight="bold">Razor</text>
+  <text x="1000" y="335" text-anchor="middle" fill="white" font-size="14">Pages</text>
+
+  <text x="600" y="520" text-anchor="middle" fill="white" font-size="36" font-weight="bold">网站重构</text>
+  <text x="600" y="565" text-anchor="middle" fill="#00BCD4" font-size="20">从 Blazor 回归 Razor Pages</text>
+
+  <g transform="translate(100, 100)" opacity="0.5">
+    <circle cx="0" cy="0" r="3" fill="#00BCD4">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="50" cy="30" r="2" fill="#4CAF50">
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="100" cy="10" r="2.5" fill="#7B1FA2">
+      <animate attributeName="opacity" values="0.4;1;0.4" dur="2.5s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  <g transform="translate(1050, 500)" opacity="0.5">
+    <circle cx="0" cy="0" r="2" fill="#ffbd2e">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="1.8s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="-40" cy="20" r="3" fill="#00BCD4">
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="2.2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="30" cy="-30" r="2" fill="#ff5f56">
+      <animate attributeName="opacity" values="0.4;1;0.4" dur="2.8s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <text x="1180" y="620" text-anchor="end" fill="#546E7A" font-size="12">CodeWF</text>
+</svg>
