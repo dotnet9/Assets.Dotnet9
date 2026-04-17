@@ -83,7 +83,7 @@ public static extern void SendStart(int id);
 
 ### 方案一：NativeLibrary 动态绑定（⚠️ 部分成功）
 
-使用 `NativeLibrary` API 动态加载库，可以通过 `SetDllImportResolver` 拦截库加载过程：
+使用 `NativeLibrary` API 动态加载库：
 
 ```csharp
 try
@@ -121,6 +121,41 @@ catch (Exception ex)
 | `SetDllImportResolver(Assembly, DllImportResolver)` | 设置库解析回调 |
 | `TryGetExport(IntPtr, String, IntPtr)` | 尝试获取导出符号 |
 | `TryLoad(String, ...)` | 尝试加载库 |
+
+使用 `SetDllImportResolver` 可以拦截库加载过程，自定义库路径解析逻辑：
+
+```csharp
+static class NativeLibraryHelper
+{
+    private static readonly string LibPath = GetLibPath();
+
+    static NativeLibraryHelper()
+    {
+        NativeLibrary.SetDllImportResolver(
+            Assembly.GetExecutingAssembly(),
+            (libraryName, assembly, searchPath) =>
+            {
+                string libPath = Path.Combine(LibPath, libraryName);
+                return NativeLibrary.Load(libPath);
+            });
+    }
+
+    private static string GetLibPath()
+    {
+        if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
+        {
+            return RuntimeInformation.ProcessArchitecture == Architecture.X64
+                ? "./Lib/x64/"
+                : "./Lib/x86/";
+        }
+        return RuntimeInformation.ProcessArchitecture == Architecture.X64
+            ? "./Lib/x64/"
+            : "./Lib/arm64/";
+    }
+}
+```
+
+将此类在程序入口处初始化，即可根据平台和架构自动选择对应目录加载库文件。
 
 **结果**：在大部分操作系统上测试可行，但在部分 Windows 7 环境下因缺少系统库补丁（KB3063858 等）可能导致加载失败。如果你的目标环境不包含 Windows 7，可以考虑此方案。
 
@@ -166,7 +201,7 @@ public static extern void SendStart(int id);
 
 这是最终采用的方案，核心原理很简单：
 
-> **Windows 下 `DllImport("StudentUtilApi")` 自动查找 `StudentUtilApi.dll`，Linux 下自动查找 `libStudentUtilApi.so`**，只需要在代码中写库名即可。
+> **Windows 下 `DllImport("StudentUtilApi")` 自动查找 `StudentUtilApi.dll`，Linux 下自动查找 `libStudentUtilApi.so`**，只需要在代码中写库名即可。Linux 下还会尝试查找带 `lib` 前缀的多种变体，如 `libStudentUtilApi.so.1`、`libStudentUtilApi.so.1.0` 等版本后缀。
 
 #### 代码实现
 
@@ -227,6 +262,8 @@ output/
 ├── StudentUtilApi.dll       # Windows 下
 └── libStudentUtilApi.so     # Linux 下
 ```
+
+补充：该方案的缺点是不能使用子目录，第三方库需要和可执行程序放在同一目录下。
 
 ## 4. 总结
 
