@@ -1,62 +1,55 @@
 <svg height="320" viewbox="0 0 700 320" width="700" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
   <defs>
-    <lineargradient id="bgGrad" x1="0%" x2="100%" y1="0%" y2="100%">
-      <stop offset="0%" stop-color="#1e3a5f"></stop>
-      <stop offset="100%" stop-color="#0d1b2a"></stop>
+    <lineargradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e8f4fc"></stop>
+      <stop offset="50%" stop-color="#d4e9f7"></stop>
+      <stop offset="100%" stop-color="#c5dff0"></stop>
     </lineargradient>
-    <lineargradient id="successGrad" x1="0%" x2="0%" y1="0%" y2="100%">
+    <lineargradient id="successGrad" x1="0%" y1="0%" x2="0%" y2="100%">
       <stop offset="0%" stop-color="#4caf50"></stop>
       <stop offset="100%" stop-color="#388e3c"></stop>
     </lineargradient>
-    <lineargradient id="partialGrad" x1="0%" x2="0%" y1="0%" y2="100%">
+    <lineargradient id="partialGrad" x1="0%" y1="0%" x2="0%" y2="100%">
       <stop offset="0%" stop-color="#ff9800"></stop>
       <stop offset="100%" stop-color="#f57c00"></stop>
     </lineargradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <fedropshadow dx="2" dy="2" flood-opacity="0.15" stddeviation="3"></fedropshadow>
+    </filter>
   </defs>
 
-  <!-- 背景 -->
   <rect fill="url(#bgGrad)" width="700" height="320"></rect>
 
-  <!-- 装饰元素 -->
-  <circle fill="#667eea" opacity="0.1" r="150" x="650" y="-30"></circle>
-  <circle fill="#764ba2" opacity="0.1" r="100" x="-30" y="280"></circle>
+  <rect fill="white" filter="url(#shadow)" rx="10" ry="10" x="20" y="15" width="660" height="290"></rect>
 
-  <!-- 标题 -->
-  <text fill="white" font-family="Microsoft YaHei" font-size="20" font-weight="bold" text-anchor="middle" x="350" y="30">三种方案对比</text>
+  <text fill="#1a1a2e" font-family="Microsoft YaHei" font-size="18" font-weight="bold" text-anchor="middle" x="350" y="45">三种方案对比</text>
 
-  <!-- 表头 -->
-  <rect fill="rgba(255,255,255,0.1)" x="30" y="50" width="640" height="35" rx="4"></rect>
-  <text fill="white" font-family="Microsoft YaHei" font-size="13" font-weight="bold" text-anchor="middle" x="120" y="73">方案</text>
-  <text fill="white" font-family="Microsoft YaHei" font-size="13" font-weight="bold" text-anchor="middle" x="300" y="73">做法</text>
-  <text fill="white" font-family="Microsoft YaHei" font-size="13" font-weight="bold" text-anchor="middle" x="500" y="73">结果</text>
+  <rect fill="#f0f4f8" x="40" y="60" width="620" height="35" rx="4"></rect>
+  <text fill="#333" font-family="Microsoft YaHei" font-size="13" font-weight="bold" text-anchor="middle" x="120" y="82">方案</text>
+  <text fill="#333" font-family="Microsoft YaHei" font-size="13" font-weight="bold" text-anchor="middle" x="320" y="82">做法</text>
+  <text fill="#333" font-family="Microsoft YaHei" font-size="13" font-weight="bold" text-anchor="middle" x="520" y="82">结果</text>
 
-  <!-- 方案一：部分成功 -->
-  <rect fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.1)" stroke-width="1" x="30" y="85" width="640" height="70" rx="4"></rect>
-  <rect fill="url(#partialGrad)" rx="4" ry="4" x="50" y="100" width="140" height="40"></rect>
-  <text fill="white" font-family="Microsoft YaHei" font-size="13" font-weight="bold" text-anchor="middle" x="120" y="125">方案一</text>
-  <text fill="#a0a0a0" font-family="Microsoft YaHei" font-size="12" text-anchor="middle" x="300" y="115">NativeLibrary</text>
-  <text fill="#a0a0a0" font-family="Microsoft YaHei" font-size="12" text-anchor="middle" x="300" y="135">动态绑定</text>
-  <text fill="#ff9800" font-family="Microsoft YaHei" font-size="12" font-weight="bold" text-anchor="middle" x="500" y="125">⚠️ 部分成功</text>
-  <text fill="#ff9800" font-family="Microsoft YaHei" font-size="11" text-anchor="middle" x="500" y="143">部分Win7系统不兼容</text>
+  <rect fill="#fff8f0" stroke="#ff9800" stroke-width="1" x="40" y="95" width="620" height="65" rx="4"></rect>
+  <rect fill="url(#partialGrad)" rx="4" ry="4" x="55" y="108" width="120" height="38" filter="url(#shadow)"></rect>
+  <text fill="#1a1a2e" font-family="Microsoft YaHei" font-size="13" font-weight="bold" text-anchor="middle" x="115" y="133">方案一</text>
+  <text fill="#333" font-family="Microsoft YaHei" font-size="12" text-anchor="middle" x="320" y="118">NativeLibrary</text>
+  <text fill="#333" font-family="Microsoft YaHei" font-size="12" text-anchor="middle" x="320" y="138">动态绑定</text>
+  <text fill="#e65100" font-family="Microsoft YaHei" font-size="12" font-weight="bold" text-anchor="middle" x="520" y="125">⚠️ 部分成功</text>
+  <text fill="#666" font-family="Microsoft YaHei" font-size="11" text-anchor="middle" x="520" y="145">部分Win7系统不兼容</text>
 
-  <!-- 方案二：部分成功 -->
-  <rect fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.1)" stroke-width="1" x="30" y="155" width="640" height="70" rx="4"></rect>
-  <rect fill="url(#partialGrad)" rx="4" ry="4" x="50" y="170" width="140" height="40"></rect>
-  <text fill="white" font-family="Microsoft YaHei" font-size="13" font-weight="bold" text-anchor="middle" x="120" y="195">方案二</text>
-  <text fill="#a0a0a0" font-family="Microsoft YaHei" font-size="12" text-anchor="middle" x="300" y="185">平台宏定义</text>
-  <text fill="#a0a0a0" font-family="Microsoft YaHei" font-size="12" text-anchor="middle" x="300" y="205">#if WIN_X64</text>
-  <text fill="#ff9800" font-family="Microsoft YaHei" font-size="12" font-weight="bold" text-anchor="middle" x="500" y="185">⚠️ 部分成功</text>
-  <text fill="#ff9800" font-family="Microsoft YaHei" font-size="11" text-anchor="middle" x="500" y="205">NuGet包不继承宏</text>
+  <rect fill="#fff8f0" stroke="#ff9800" stroke-width="1" x="40" y="160" width="620" height="65" rx="4"></rect>
+  <rect fill="url(#partialGrad)" rx="4" ry="4" x="55" y="173" width="120" height="38" filter="url(#shadow)"></rect>
+  <text fill="#1a1a2e" font-family="Microsoft YaHei" font-size="13" font-weight="bold" text-anchor="middle" x="115" y="198">方案二</text>
+  <text fill="#333" font-family="Microsoft YaHei" font-size="12" text-anchor="middle" x="320" y="183">平台宏定义</text>
+  <text fill="#333" font-family="Microsoft YaHei" font-size="12" text-anchor="middle" x="320" y="203">#if WIN_X64</text>
+  <text fill="#e65100" font-family="Microsoft YaHei" font-size="12" font-weight="bold" text-anchor="middle" x="520" y="190">⚠️ 部分成功</text>
+  <text fill="#666" font-family="Microsoft YaHei" font-size="11" text-anchor="middle" x="520" y="210">NuGet包不继承宏</text>
 
-  <!-- 方案三：成功 -->
-  <rect fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.1)" stroke-width="1" x="30" y="225" width="640" height="70" rx="4"></rect>
-  <rect fill="url(#successGrad)" rx="4" ry="4" x="50" y="240" width="140" height="40"></rect>
-  <text fill="white" font-family="Microsoft YaHei" font-size="13" font-weight="bold" text-anchor="middle" x="120" y="265">方案三</text>
-  <text fill="#a0a0a0" font-family="Microsoft YaHei" font-size="12" text-anchor="middle" x="300" y="250">DllImport</text>
-  <text fill="#a0a0a0" font-family="Microsoft YaHei" font-size="12" text-anchor="middle" x="300" y="270">常量库名 + csproj复制</text>
-  <text fill="#4caf50" font-family="Microsoft YaHei" font-size="12" font-weight="bold" text-anchor="middle" x="500" y="265">✅ 跨平台成功</text>
-
-  <!-- 推荐标签 -->
-  <rect fill="#1b5e20" rx="8" ry="8" x="600" y="240" width="60" height="25"></rect>
-  <text fill="white" font-family="Microsoft YaHei" font-size="11" font-weight="bold" text-anchor="middle" x="630" y="257">推荐</text>
+  <rect fill="#f0fff0" stroke="#4caf50" stroke-width="1" x="40" y="225" width="620" height="65" rx="4"></rect>
+  <rect fill="url(#successGrad)" rx="4" ry="4" x="55" y="238" width="120" height="38" filter="url(#shadow)"></rect>
+  <text fill="#1a1a2e" font-family="Microsoft YaHei" font-size="13" font-weight="bold" text-anchor="middle" x="115" y="263">方案三</text>
+  <text fill="#333" font-family="Microsoft YaHei" font-size="12" text-anchor="middle" x="320" y="248">DllImport</text>
+  <text fill="#333" font-family="Microsoft YaHei" font-size="12" text-anchor="middle" x="320" y="268">常量库名 + csproj复制</text>
+  <text fill="#2e7d32" font-family="Microsoft YaHei" font-size="12" font-weight="bold" text-anchor="middle" x="520" y="255">✅ 成功</text>
+  <text fill="#666" font-family="Microsoft YaHei" font-size="11" text-anchor="middle" x="520" y="275">跨平台完美兼容</text>
 </svg>
