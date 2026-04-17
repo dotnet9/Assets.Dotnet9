@@ -1,0 +1,85 @@
+<svg height="383" viewbox="0 0 900 383" width="900" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <lineargradient id="bgGrad" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#1a1a2e"></stop>
+      <stop offset="50%" stop-color="#16213e"></stop>
+      <stop offset="100%" stop-color="#0f3460"></stop>
+    </lineargradient>
+    <lineargradient id="accentGrad" x1="0%" x2="100%" y1="0%" y2="0%">
+      <stop offset="0%" stop-color="#667eea"></stop>
+      <stop offset="100%" stop-color="#764ba2"></stop>
+    </lineargradient>
+    <lineargradient id="dotnetGrad" x1="0%" x2="0%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#512bd4"></stop>
+      <stop offset="100%" stop-color="#68217a"></stop>
+    </lineargradient>
+    <lineargradient id="codeGrad" x1="0%" x2="100%" y1="0%" y2="0%">
+      <stop offset="0%" stop-color="#00d9ff"></stop>
+      <stop offset="100%" stop-color="#667eea"></stop>
+    </lineargradient>
+  </defs>
+
+  <!-- 背景 -->
+  <rect fill="url(#bgGrad)" width="900" height="383"></rect>
+
+  <!-- 装饰圆形 -->
+  <circle fill="#667eea" opacity="0.15" r="200" x="750" y="-80"></circle>
+  <circle fill="#764ba2" opacity="0.1" r="150" x="50" y="280"></circle>
+  <circle fill="#00d9ff" opacity="0.05" r="100" x="800" y="350"></circle>
+
+  <!-- 装饰线条 -->
+  <line stroke="#667eea" stroke-width="1" x1="0" x2="300" y1="50" y2="150" opacity="0.3"></line>
+  <line stroke="#764ba2" stroke-width="1" x1="900" x2="600" y1="350" y2="250" opacity="0.3"></line>
+
+  <!-- 顶部装饰线 -->
+  <rect fill="url(#accentGrad)" height="4" width="900" y="0"></rect>
+
+  <!-- .NET 标志区域 -->
+  <g transform="translate(60, 140)">
+    <!-- 蓝色方块 -->
+    <rect fill="#512bd4" rx="8" ry="8" width="60" height="60"></rect>
+    <!-- 白色网格图案 -->
+    <path d="M10,20 L50,20 M10,35 L50,35 M10,50 L50,50 M20,10 L20,50 M35,10 L35,50" stroke="white" stroke-width="3"></path>
+    <!-- 灰色方块 -->
+    <rect fill="#68217a" rx="8" ry="8" x="70" y="10" width="50" height="50"></rect>
+  </g>
+
+  <!-- 主标题 -->
+  <text fill="white" font-family="Microsoft YaHei" font-size="48" font-weight="bold" text-anchor="middle" x="450" y="150">.NET跨平台本地库引入实战</text>
+
+  <!-- 副标题 -->
+  <text fill="#a0a0a0" font-family="Microsoft YaHei" font-size="20" text-anchor="middle" x="450" y="195">深入解析 DllImport 与 NativeLibrary 的正确用法</text>
+
+  <!-- 分隔线 -->
+  <rect fill="url(#accentGrad)" height="3" rx="1.5" ry="1.5" width="200" x="350" y="220"></rect>
+
+  <!-- 平台图标：Windows -->
+  <g transform="translate(280, 260)">
+    <rect fill="#0078d4" rx="6" ry="6" width="50" height="50"></rect>
+    <text fill="white" font-family="Segoe UI" font-size="24" font-weight="bold" text-anchor="middle" x="25" y="35">W</text>
+    <text fill="#666" font-family="Microsoft YaHei" font-size="14" text-anchor="middle" x="25" y="70">Windows</text>
+  </g>
+
+  <!-- 加号 -->
+  <text fill="#667eea" font-family="Arial" font-size="30" font-weight="bold" text-anchor="middle" x="370" y="290">+</text>
+
+  <!-- 平台图标：Linux -->
+  <g transform="translate(395, 260)">
+    <rect fill="#e95420" rx="6" ry="6" width="50" height="50"></rect>
+    <text fill="white" font-family="Segoe UI" font-size="24" font-weight="bold" text-anchor="middle" x="25" y="35">L</text>
+    <text fill="#666" font-family="Microsoft YaHei" font-size="14" text-anchor="middle" x="25" y="70">Linux</text>
+  </g>
+
+  <!-- 等号 -->
+  <text fill="#667eea" font-family="Arial" font-size="30" font-weight="bold" text-anchor="middle" x="485" y="290">=</text>
+
+  <!-- 目标：统一代码 -->
+  <g transform="translate(520, 260)">
+    <rect fill="url(#accentGrad)" rx="6" ry="6" width="100" height="50"></rect>
+    <text fill="white" font-family="Microsoft YaHei" font-size="14" font-weight="bold" text-anchor="middle" x="50" y="32">统一代码</text>
+  </g>
+
+  <!-- 底部标签 -->
+  <rect fill="rgba(255,255,255,0.1)" rx="20" ry="20" x="320" y="350" width="260" height="28"></rect>
+  <text fill="#888" font-family="Microsoft YaHei" font-size="12" text-anchor="middle" x="450" y="370">dotnet9.com</text>
+</svg>
