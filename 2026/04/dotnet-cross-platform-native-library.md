@@ -109,6 +109,18 @@ var platform = "Unknown";
 
 ![](four-solutions-architecture.svg)
 
+### VC-LTL 和 YY-Thunks（所有示例通用）
+
+所有 4 个示例程序都引入了以下两个 NuGet 包，目前测试的示例都支持Win7及以上Windows版本，以及Linux平台：
+
+```xml
+<PackageReference Include="VC-LTL" Version="5.3.1" />
+<PackageReference Include="YY-Thunks" Version="1.2.1-Beta.4" />
+```
+
+- **VC-LTL**：使用开源的 VC 运行时库，无需安装系统补丁
+- **YY-Thunks**：为旧版 Windows 提供新 API 的兼容层
+
 ## 3. 方案一：动态加载（✅ 成功）
 
 使用 `NativeLibrary` API 动态加载库，适用于需要灵活控制库路径的场景。
@@ -207,15 +219,12 @@ internal static class TimeMeaningNative
 
 ### 关键点说明
 
-1. **VC-LTL 和 YY-Thunks**：这两个NuGet包让程序在Windows 7等旧系统上也能正常运行
-   - VC-LTL：使用开源的VC运行时库，无需安装系统补丁
-   - YY-Thunks：为旧版Windows提供新API的兼容层
+**动态加载流程**：
 
-2. **动态加载流程**：
-   - 运行时根据操作系统判断库文件名
-   - 拼接完整路径加载库
-   - 获取导出函数地址
-   - 转换为委托调用
+- 运行时根据操作系统判断库文件名
+- 拼接完整路径加载库
+- 获取导出函数地址
+- 转换为委托调用
 
 ## 4. 方案二：静态加载
 
@@ -225,7 +234,7 @@ internal static class TimeMeaningNative
 
 直接在主工程中使用 `DllImport`，通过条件编译宏设置库路径，适合不封装为类库的场景。
 
-**静态加载使用条件编译宏的优势**：可以灵活处理不同平台库名完全不同的情况，比如 Windows 用 `TimeMeaning.dll`，Linux 用 `libTimeMeaning.so`。
+**静态加载使用条件编译宏的优势**：可以灵活处理不同平台库名完全不同的情况，当然也包括不同目录（实际场景有可能），比如 Windows 用 `TimeMeaning.dll`，Linux 用 `libTimeMeaning.so`。
 
 #### 代码实现
 
@@ -266,6 +275,8 @@ const string DLL = "Lib/libTimeMeaning.so";
 
 #### 类库代码（TimeMeaningNative.csproj）
 
+封装库代码和情况1相同，只是提取到类库了。
+
 ```csharp
 using System.Runtime.InteropServices;
 
@@ -293,13 +304,13 @@ const string DLL = "Lib/libTimeMeaning.so";
 
 #### 失败原因
 
-❌ **失败**：在Linux下编译发布时，类库工程不会继承主工程的 `RuntimeIdentifier`，导致条件编译宏不生效，最终执行到 `#else` 分支，尝试查找 `Lib/TimeMeaning.dll` 而不是 `Lib/libTimeMeaning.so`，加载失败。
+❌ **失败**：在Linux下运行时，类库工程由于不会继承主工程的 `RuntimeIdentifier`（按测试效果推测出来的，如果不对，欢迎讨论），导致条件编译宏不生效，最终执行到 `#else` 分支，尝试查找 `Lib/TimeMeaning.dll` 而不是 `Lib/libTimeMeaning.so`，加载失败。
 
 ---
 
 ### 情况3：多工程 + 仅库名（✅ 推荐）
 
-这是**最推荐**的方案，类库中不使用条件编译宏，只指定库名（不加扩展名），解决跨平台库引用问题。
+这是**最推荐**的方案，也有相较动态加载方式，减小了使用难度，类库中不使用条件编译宏，只指定库名（不加扩展名），解决跨平台库引用问题。
 
 #### 类库代码（TimeMeaningNative.csproj）
 
@@ -324,7 +335,7 @@ public static class TimeMeaningApi
 
 #### 主工程配置（csproj）
 
-这里有一个**关键技巧**：Linux下复制时去掉 `lib` 前缀！
+这里有一个**关键技巧**：如果Linux库有lib等前缀，需要去掉，和Windows dll改为相同文件名，Linux下复制时去掉 `lib` 前缀！
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -386,16 +397,16 @@ public static class TimeMeaningApi
 
 ![](solution-comparison.svg)
 
-| 类别     | 方案                   | 做法                           | 结果                                     | 适用场景                        |
-| -------- | ---------------------- | ------------------------------ | ---------------------------------------- | ------------------------------- |
-| 动态加载 | NativeLibrary 动态加载 | 代码中手动加载库路径           | ✅ 全平台可用（配合 VC-LTL + YY-Thunks） | 需要灵活控制加载路径，支持 Win7 |
-| 静态加载 | 单工程 + 条件编译      | `#if WIN_X64` 条件编译         | ✅ 仅单工程成功                          | 仅主工程使用，不封装类库        |
-| 静态加载 | 多工程 + 条件编译      | 类库中使用条件编译             | ❌ 类库不继承宏，Linux失败               | **不推荐**                      |
-| 静态加载 | 多工程 + 仅库名        | 类库只写库名 + csproj 条件复制 | ✅ **跨平台完美成功**                    | **推荐**，绝大多数场景          |
+| 类别     | 方案                   | 做法                           | 结果                       | 适用场景                                 |
+| -------- | ---------------------- | ------------------------------ | -------------------------- | ---------------------------------------- |
+| 动态加载 | NativeLibrary 动态加载 | 代码中手动加载库路径           | ✅ 全平台可用              | 需要灵活控制加载路径                     |
+| 静态加载 | 单工程 + 条件编译      | `#if WIN_X64` 条件编译         | ✅ 仅单工程成功            | 仅主工程使用，不封装类库，支持不同路径库 |
+| 静态加载 | 多工程 + 条件编译      | 类库中使用条件编译             | ❌ 类库不继承宏，Linux失败 | **不推荐**                               |
+| 静态加载 | 多工程 + 仅库名        | 类库只写库名 + csproj 条件复制 | ✅ **跨平台完美成功**      | **推荐**，绝大多数场景（需要库名统一）   |
 
 ## 6. 核心经验
 
-1. **尽量使用 DllImport 常量库名（不加扩展名）**，这是最稳定可靠的方案
+1. **尽量使用 DllImport 常量库名（不加扩展名）**，这是最稳定可靠的方案，重点是简单好理解
 2. **静态加载使用条件编译宏能处理库名不同的情况**，但仅适用于单工程
 3. **不要依赖条件编译宏处理多工程下的平台差异**，宏在类库和 NuGet 包中不继承
 4. **Linux 下注意去掉 lib 前缀**，通过 csproj 的 `<Link>` 机制重命名
@@ -435,3 +446,5 @@ public static class TimeMeaningApi
 ---
 
 > 以上内容基于实际 Demo 项目整理，包含四大方案的完整代码示例，如有错误或更好的方案，欢迎在评论区留言指正！
+>
+> 开源项目地址：https://github.com/dotnet9/DotnetCrossPlatformNativeLibrary/

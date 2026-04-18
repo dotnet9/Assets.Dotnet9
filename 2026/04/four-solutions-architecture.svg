@@ -37,7 +37,7 @@
     <text fill="#475569" font-family="Microsoft YaHei, sans-serif" font-size="12" x="40" y="85">特点：</text>
     <text fill="#475569" font-family="Microsoft YaHei, sans-serif" font-size="11" x="60" y="105">• 运行时判断操作系统</text>
     <text fill="#475569" font-family="Microsoft YaHei, sans-serif" font-size="11" x="60" y="125">• 动态拼接库路径</text>
-    <text fill="#475569" font-family="Microsoft YaHei, sans-serif" font-size="11" x="60" y="145">• 支持 VC-LTL + YY-Thunks</text>
+    <text fill="#475569" font-family="Microsoft YaHei, sans-serif" font-size="11" x="60" y="145">• 完全灵活的加载控制</text>
     <text fill="#475569" font-family="Microsoft YaHei, sans-serif" font-size="12" x="40" y="170">适用场景：需要灵活控制库加载</text>
   </g>
 
