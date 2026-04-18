@@ -3,7 +3,7 @@ title: .NET跨平台本地库引入实战
 slug: dotnet-cross-platform-native-library
 description: 深入解析 .NET 项目如何优雅引入第三方本地库，支持 Windows、Linux 多平台，避坑指南
 date: 2026-04-17 05:24:16
-lastmod: 2026-04-19 08:00:00
+lastmod: 2026-04-19 01:46:12
 cover: https://img1.dotnet9.com/2026/04/cross-platform-library-cover.svg
 banner: false
 categories:
