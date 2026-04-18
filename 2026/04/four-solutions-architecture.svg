@@ -1,0 +1,81 @@
+<svg height="520" viewBox="0 0 880 520" width="880" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="100%" stop-color="#f1f5f9"/>
+    </linearGradient>
+    <linearGradient id="primaryGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#6366f1"/>
+      <stop offset="100%" stop-color="#4f46e5"/>
+    </linearGradient>
+    <linearGradient id="successGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#22c55e"/>
+      <stop offset="100%" stop-color="#16a34a"/>
+    </linearGradient>
+    <linearGradient id="warningGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#d97706"/>
+    </linearGradient>
+    <linearGradient id="failGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ef4444"/>
+      <stop offset="100%" stop-color="#dc2626"/>
+    </linearGradient>
+    <filter id="cardShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="3" stdDeviation="5" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <rect fill="url(#bgGrad)" width="880" height="520"/>
+
+  <text fill="#1e293b" font-family="Microsoft YaHei, sans-serif" font-size="22" font-weight="bold" text-anchor="middle" x="440" y="35">四种方案架构对比</text>
+
+  <g transform="translate(20, 55)" filter="url(#cardShadow)">
+    <rect fill="#fff" rx="12" width="410" height="200"/>
+    <text fill="#1e293b" font-family="Microsoft YaHei, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" x="205" y="28">方案一：NativeLibrary 动态加载</text>
+    <text fill="#16a34a" font-family="Microsoft YaHei, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" x="205" y="52">✅ 成功</text>
+    <rect fill="#f0fdf4" x="25" y="65" width="360" height="120" rx="8"/>
+    <text fill="#475569" font-family="Microsoft YaHei, sans-serif" font-size="12" x="40" y="85">特点：</text>
+    <text fill="#475569" font-family="Microsoft YaHei, sans-serif" font-size="11" x="60" y="105">• 运行时判断操作系统</text>
+    <text fill="#475569" font-family="Microsoft YaHei, sans-serif" font-size="11" x="60" y="125">• 动态拼接库路径</text>
+    <text fill="#475569" font-family="Microsoft YaHei, sans-serif" font-size="11" x="60" y="145">• 支持 VC-LTL + YY-Thunks</text>
+    <text fill="#475569" font-family="Microsoft YaHei, sans-serif" font-size="12" x="40" y="170">适用场景：需要灵活控制库加载</text>
+  </g>
+
+  <g transform="translate(450, 55)" filter="url(#cardShadow)">
+    <rect fill="#fff" rx="12" width="410" height="200"/>
+    <text fill="#1e293b" font-family="Microsoft YaHei, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" x="205" y="28">方案二：静态引用-单工程</text>
+    <text fill="#16a34a" font-family="Microsoft YaHei, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" x="205" y="52">✅ 成功</text>
+    <rect fill="#f0fdf4" x="25" y="65" width="360" height="120" rx="8"/>
+    <text fill="#475569" font-family="Microsoft YaHei, sans-serif" font-size="12" x="40" y="85">特点：</text>
+    <text fill="#475569" font-family="Microsoft YaHei, sans-serif" font-size="11" x="60" y="105">• 条件编译宏 #if WIN_X64</text>
+    <text fill="#475569" font-family="Microsoft YaHei, sans-serif" font-size="11" x="60" y="125">• 单工程内正常工作</text>
+    <text fill="#475569" font-family="Microsoft YaHei, sans-serif" font-size="11" x="60" y="145">• 代码直观易懂</text>
+    <text fill="#475569" font-family="Microsoft YaHei, sans-serif" font-size="12" x="40" y="170">适用场景：仅主工程使用</text>
+  </g>
+
+  <g transform="translate(20, 275)" filter="url(#cardShadow)">
+    <rect fill="#fff" rx="12" width="410" height="220"/>
+    <text fill="#1e293b" font-family="Microsoft YaHei, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" x="205" y="28">方案三：静态引用-多工程</text>
+    <text fill="#dc2626" font-family="Microsoft YaHei, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" x="205" y="52">❌ 失败</text>
+    <rect fill="#fef2f2" x="25" y="65" width="360" height="140" rx="8"/>
+    <text fill="#475569" font-family="Microsoft YaHei, sans-serif" font-size="12" x="40" y="85">特点：</text>
+    <text fill="#475569" font-family="Microsoft YaHei, sans-serif" font-size="11" x="60" y="105">• 类库中使用条件编译</text>
+    <text fill="#dc2626" font-family="Microsoft YaHei, sans-serif" font-size="11" x="60" y="125">• 类库不继承 RuntimeIdentifier</text>
+    <text fill="#dc2626" font-family="Microsoft YaHei, sans-serif" font-size="11" x="60" y="145">• Linux 下查找错误的文件</text>
+    <text fill="#475569" font-family="Microsoft YaHei, sans-serif" font-size="12" x="40" y="170">问题：类库无法获取平台信息</text>
+    <text fill="#78716c" font-family="Microsoft YaHei, sans-serif" font-size="10" x="40" y="190">不推荐使用</text>
+  </g>
+
+  <g transform="translate(450, 275)" filter="url(#cardShadow)">
+    <rect fill="#fff" rx="12" width="410" height="220"/>
+    <text fill="#1e293b" font-family="Microsoft YaHei, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" x="205" y="28">方案四：静态引用-多工程</text>
+    <text fill="#16a34a" font-family="Microsoft YaHei, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" x="205" y="52">✅ 推荐</text>
+    <rect fill="#f0fdf4" x="25" y="65" width="360" height="140" rx="8"/>
+    <text fill="#475569" font-family="Microsoft YaHei, sans-serif" font-size="12" x="40" y="85">特点：</text>
+    <text fill="#16a34a" font-family="Microsoft YaHei, sans-serif" font-size="11" x="60" y="105">• 仅指定库名（无扩展名）</text>
+    <text fill="#16a34a" font-family="Microsoft YaHei, sans-serif" font-size="11" x="60" y="125">• csproj 条件复制 + 重命名</text>
+    <text fill="#16a34a" font-family="Microsoft YaHei, sans-serif" font-size="11" x="60" y="145">• Linux 去掉 lib 前缀</text>
+    <text fill="#475569" font-family="Microsoft YaHei, sans-serif" font-size="12" x="40" y="170">适用场景：绝大多数场景推荐</text>
+    <text fill="#16a34a" font-family="Microsoft YaHei, sans-serif" font-size="10" font-weight="bold" x="40" y="190">跨平台完美解决方案</text>
+  </g>
+</svg>
