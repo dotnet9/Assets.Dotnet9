@@ -2,8 +2,8 @@
 title: .NET跨平台本地库引入实战
 slug: dotnet-cross-platform-native-library
 description: 深入解析 .NET 项目如何优雅引入第三方本地库，支持 Windows、Linux 多平台，避坑指南
-date: 2026-04-17 00:30:00
-lastmod: 2026-04-17 00:30:00
+date: 2026-04-17 05:24:16
+lastmod: 2026-04-18 18:45:26
 cover: https://img1.dotnet9.com/2026/04/cross-platform-library-cover.svg
 banner: false
 categories:
@@ -31,6 +31,7 @@ Lib/
 ```
 
 我们希望：
+
 - **代码保持统一**：不需要针对每个平台写不同的调用代码
 - **自动适配**：编译或发布时自动选择对应平台的库文件
 
@@ -53,9 +54,7 @@ Lib/
 public static extern void SendStart(int id);
 ```
 
-这个方案看起来很美好，但实际使用时遇到了一个致命问题：**将此代码封装到类库并通过 NuGet 包分发时，宏不会生效**，因为类库工程不继承主工程的 `RuntimeIdentifier`。如果你有更好的解决方案，欢迎在评论区留言讨论！
-
-> 📝 **补充说明**：如果代码只用于主工程，不封装为类库或 NuGet 包分发，那么方案一的条件编译宏方式是可行的，能够正常工作。
+这个方案看起来很美好，但实际使用时遇到了一个致命问题：**将此代码封装到类库并通过 NuGet 包分发时，宏不会生效**，因为类库工程不继承主工程的 `RuntimeIdentifier`。
 
 ## 2. 跨平台库加载原理
 
@@ -64,11 +63,13 @@ public static extern void SendStart(int id);
 ![跨平台本地库加载架构](https://img1.dotnet9.com/2026/04/cross-platform-library-architecture.svg)
 
 **Windows** 使用 `LoadLibrary` 加载 DLL，搜索路径顺序为：
+
 1. 系统目录
 2. 当前工作目录
 3. PATH 环境变量中的目录
 
 **Linux** 使用 `dlopen` 加载 .so 文件，搜索路径顺序为：
+
 1. LD_LIBRARY_PATH 环境变量指定的目录
 2. /etc/ld.so.cache 缓存的目录
 3. /lib 和 /usr/lib 标准目录
@@ -112,15 +113,15 @@ catch (Exception ex)
 
 `NativeLibrary` 提供的 API 包括：
 
-| API | 说明 |
-|-----|------|
-| `Load(String)` | 加载本机库 |
-| `Free(IntPtr)` | 释放已加载的库 |
-| `GetExport(IntPtr, String)` | 获取导出符号地址 |
-| `GetMainProgramHandle()` | 获取主程序句柄 |
-| `SetDllImportResolver(Assembly, DllImportResolver)` | 设置库解析回调 |
-| `TryGetExport(IntPtr, String, IntPtr)` | 尝试获取导出符号 |
-| `TryLoad(String, ...)` | 尝试加载库 |
+| API                                                 | 说明             |
+| --------------------------------------------------- | ---------------- |
+| `Load(String)`                                      | 加载本机库       |
+| `Free(IntPtr)`                                      | 释放已加载的库   |
+| `GetExport(IntPtr, String)`                         | 获取导出符号地址 |
+| `GetMainProgramHandle()`                            | 获取主程序句柄   |
+| `SetDllImportResolver(Assembly, DllImportResolver)` | 设置库解析回调   |
+| `TryGetExport(IntPtr, String, IntPtr)`              | 尝试获取导出符号 |
+| `TryLoad(String, ...)`                              | 尝试加载库       |
 
 使用 `SetDllImportResolver` 可以拦截库加载过程，自定义库路径解析逻辑：
 
@@ -164,6 +165,7 @@ static class NativeLibraryHelper
 通过 `RuntimeIdentifier` 定义目标平台，在 `Directory.Build.props` 中根据其值定义平台宏：
 
 **发布配置方式**（如 `Properties/PublishProfiles/FolderProfile_win-x64.pubxml`）：
+
 ```xml
 <PropertyGroup>
     <RuntimeIdentifier>win-x64</RuntimeIdentifier>
@@ -171,11 +173,13 @@ static class NativeLibraryHelper
 ```
 
 **命令行指定方式**：
+
 ```bash
 dotnet publish ScheduleCmdDemo.csproj -c Release -f net11.0-windows -r win-x64 --self-contained true
 ```
 
 **全局配置定义宏**（`Directory.Build.props`）：
+
 ```xml
 <PropertyGroup Condition="'$(RuntimeIdentifier)' == 'win-x64'">
     <DefineConstants>$(DefineConstants);WIN_X64</DefineConstants>
@@ -186,6 +190,7 @@ dotnet publish ScheduleCmdDemo.csproj -c Release -f net11.0-windows -r win-x64 -
 ```
 
 代码中使用条件编译：
+
 ```csharp
 #if WIN_X64
     [DllImport("./Lib/x64/StudentUtilApi.dll")]
@@ -197,9 +202,13 @@ public static extern void SendStart(int id);
 
 **失败原因**：此配置仅对主工程生效，引用的类库工程或安装的 NuGet 包不会继承 `RuntimeIdentifier`，导致依赖方编译失败。经测试、网络资料查询、技术群交流，均未找到解决方案。
 
+> 📝 **补充说明**：如果代码只用于主工程，不封装为类库或 NuGet 包分发，那么这个条件编译宏方式是可行的，能够正常工作。
+
 ### 方案三：DllImport 常量库名（✅ 成功）
 
 这是最终采用的方案，核心原理很简单：
+
+![方案三工作流程](https://img1.dotnet9.com/2026/04/solution-three-workflow.svg)
 
 > **Windows 下 `DllImport("StudentUtilApi")` 自动查找 `StudentUtilApi.dll`，Linux 下自动查找 `libStudentUtilApi.so`**，只需要在代码中写库名即可。Linux 下还会尝试查找带 `lib` 前缀的多种变体，如 `libStudentUtilApi.so.1`、`libStudentUtilApi.so.1.0` 等版本后缀。
 
@@ -219,7 +228,7 @@ public static extern void SendStop(int id);
 
 ```xml
 <ItemGroup>
-    <!-- 调试模式：VS 中自动复制 -->
+    <!-- 调试模式：默认复制 Windows x64 版本用于本地开发 -->
     <None Update="Lib\x64\StudentUtilApi.dll" Condition="'$(Configuration)' == 'Debug'">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
         <Link>StudentUtilApi.dll</Link>
@@ -240,6 +249,10 @@ public static extern void SendStop(int id);
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
         <Link>libStudentUtilApi.so</Link>
     </None>
+    <None Update="Lib\arm64\libStudentUtilApi.so" Condition="'$(RuntimeIdentifier)' == 'linux-arm64'">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        <Link>libStudentUtilApi.so</Link>
+    </None>
 </ItemGroup>
 ```
 
@@ -249,8 +262,14 @@ public static extern void SendStop(int id);
 # Windows 64位
 dotnet publish -c Release -f net11.0-windows -r win-x64 --self-contained true
 
+# Windows 32位
+dotnet publish -c Release -f net11.0-windows -r win-x86 --self-contained true
+
 # Linux 64位
 dotnet publish -c Release -f net11.0 -r linux-x64 --self-contained true
+
+# Linux ARM64
+dotnet publish -c Release -f net11.0 -r linux-arm64 --self-contained true
 ```
 
 发布后，库文件与可执行文件位于同一目录：
@@ -267,20 +286,53 @@ output/
 
 ## 4. 总结
 
-| 方案 | 做法 | 结果 |
-|------|------|------|
-| NativeLibrary 动态绑定 | 代码中手动加载库路径 | ⚠️ 大部分系统可用，部分 Win7 不兼容 |
-| 平台宏定义 | `#if WIN_X64` 等条件编译 | ⚠️ NuGet 包不继承宏 |
-| DllImport 常量库名 | 代码只写库名 + csproj 条件复制 | ✅ 跨平台成功 |
+### 方案对比总结
 
-**经验教训**：
+| 方案                   | 做法                           | 结果                                | 适用场景                          |
+| ---------------------- | ------------------------------ | ----------------------------------- | --------------------------------- |
+| NativeLibrary 动态绑定 | 代码中手动加载库路径           | ⚠️ 大部分系统可用，部分 Win7 不兼容 | 不考虑 Win7，需要灵活控制加载路径 |
+| 平台宏定义             | `#if WIN_X64` 等条件编译       | ⚠️ NuGet 包不继承宏                 | 仅主工程使用，不封装类库          |
+| DllImport 常量库名     | 代码只写库名 + csproj 条件复制 | ✅ 跨平台成功                       | **推荐**，绝大多数场景            |
+
+### 核心经验
 
 1. **尽量使用 DllImport 常量库名**，这是最稳定可靠的方案
 2. **不要依赖条件编译宏处理平台差异**，宏在类库和 NuGet 包中不继承
 3. **通过 csproj 的 `Link` 机制**，可以根据平台将不同目录的库文件复制到输出根目录
 4. **如果必须支持 Windows 7**，需注意 NativeLibrary 动态绑定在部分 Win7 系统上可能不兼容
 
+## 5. 常见问题 Q&A
+
+### Q1: 为什么不直接把库文件都放在根目录？
+
+**A:** 这样会导致多个平台的库文件同时存在于输出目录，虽然不会影响功能，但会增加发布包的体积，且不够整洁。通过 csproj 的条件复制，可以确保只包含目标平台需要的库文件。
+
+### Q2: CallingConvention 是什么意思？需要设置吗？
+
+**A:** `CallingConvention` 定义了函数调用时参数传递和栈清理的方式。常见的有：
+
+- `Cdecl`：C 语言默认约定，调用者清理栈（Linux 常用）
+- `StdCall`：Windows API 常用，被调用者清理栈
+- `Winapi`：平台默认（Windows 下是 StdCall，Linux 下是 Cdecl）
+
+如果本地库文档中有说明，按文档设置；如果没有，可以先尝试不设置，或使用 `Cdecl`。
+
+### Q3: 如何处理依赖的其他本地库？
+
+**A:** 如果本地库还依赖其他库，需要将这些依赖库也复制到输出目录。同样通过 csproj 配置条件复制即可。
+
+### Q4: macOS 支持吗？
+
+**A:** 支持！macOS 使用 `.dylib` 后缀，同样可以用 `DllImport("StudentUtilApi")`，系统会自动查找 `libStudentUtilApi.dylib`。csproj 配置中增加 `osx-x64` 和 `osx-arm64` 的配置即可。
+
+### Q5: 调试时如何知道库文件是否正确加载？
+
+**A:** 可以通过以下方式：
+
+1. 检查输出目录是否有正确的库文件
+2. 使用 Process Monitor（Windows）或 lsof（Linux）监视库文件加载
+3. 在代码中调用 `NativeLibrary.TryLoad` 测试加载是否成功
+
 ---
 
 > 以上内容基于个人项目实践经验整理，难免有疏漏之处，如有错误或更好的方案，欢迎在评论区留言指正！
-
