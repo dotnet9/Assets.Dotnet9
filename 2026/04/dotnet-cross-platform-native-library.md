@@ -447,4 +447,4 @@ public static class TimeMeaningApi
 
 > 以上内容基于实际 Demo 项目整理，包含四大方案的完整代码示例，如有错误或更好的方案，欢迎在评论区留言指正！
 >
-> 开源项目地址：https://github.com/dotnet9/DotnetCrossPlatformNativeLibrary/
+> 开源项目地址：https://github.com/dotnet9/DotnetCrossPlatformNativeLibrary
