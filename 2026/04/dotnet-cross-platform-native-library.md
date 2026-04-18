@@ -22,8 +22,9 @@ categories:
 
 ```
 Lib/
-├── x64/                          # 64位 Windows
-│   └── StudentUtilApi.dll
+├── x64/
+│   └── StudentUtilApi.dll        # 64位 Windows
+│   └── libStudentUtilApi.so      # 64位 Linux
 ├── x86/                          # 32位 Windows
 │   └── StudentUtilApi.dll
 └── arm64/                        # ARM64 Linux
@@ -74,7 +75,7 @@ public static extern void SendStart(int id);
 2. /etc/ld.so.cache 缓存的目录
 3. /lib 和 /usr/lib 标准目录
 
-> 💡 **小提示**：`DllImport` 的常量参数支持直接指定子目录路径（如 `"./Lib/x64/StudentUtilApi.dll"`），也可以通过 `SetDllDirectory`（Windows）或 `dlopen`（Linux）设置额外的搜索路径，或使用 `NativeLibrary.SetDllImportResolver`（Windows 7 因系统库缺失可能导致问题）拦截库加载过程来指定任意路径。
+> 💡 **小提示**：`DllImport` 的常量参数支持直接指定子目录路径（如 `"./Lib/x64/StudentUtilApi.dll"`），也可以通过 `SetDllDirectory`（Windows）或 `dlopen`（Linux）设置额外的搜索路径，或使用 `NativeLibrary.SetDllImportResolver` 拦截库加载过程来指定任意路径。
 
 ## 3. 方案对比
 
@@ -158,7 +159,12 @@ static class NativeLibraryHelper
 
 将此类在程序入口处初始化，即可根据平台和架构自动选择对应目录加载库文件。
 
-**结果**：在大部分操作系统上测试可行，但在部分 Windows 7 环境下因缺少系统库补丁（KB3063858 等）可能导致加载失败。如果你的目标环境不包含 Windows 7，可以考虑此方案。
+**结果**：在大部分操作系统上测试可行。
+
+> 📝 **重要更新**：1年前测试时，部分 Windows 7 环境因缺少系统库补丁（KB3063858 等）可能导致加载失败。但通过安装最新的 **VC-LTL** 和 **YY-Thunks** NuGet 包后，站长当前在 Windows 7 环境下测试已完全正常！
+>
+> - **VC-LTL**：使用开源的 VC 运行时库，无需安装系统补丁，大幅降低体积
+> - **YY-Thunks**：为旧版 Windows 提供新 API 的兼容层，让新 API 能在 WinXP/Win7 上运行
 
 ### 方案二：平台宏定义（⚠️ 部分成功）
 
@@ -288,18 +294,18 @@ output/
 
 ### 方案对比总结
 
-| 方案                   | 做法                           | 结果                                | 适用场景                          |
-| ---------------------- | ------------------------------ | ----------------------------------- | --------------------------------- |
-| NativeLibrary 动态绑定 | 代码中手动加载库路径           | ⚠️ 大部分系统可用，部分 Win7 不兼容 | 不考虑 Win7，需要灵活控制加载路径 |
-| 平台宏定义             | `#if WIN_X64` 等条件编译       | ⚠️ NuGet 包不继承宏                 | 仅主工程使用，不封装类库          |
-| DllImport 常量库名     | 代码只写库名 + csproj 条件复制 | ✅ 跨平台成功                       | **推荐**，绝大多数场景            |
+| 方案                   | 做法                           | 结果                                     | 适用场景                        |
+| ---------------------- | ------------------------------ | ---------------------------------------- | ------------------------------- |
+| NativeLibrary 动态绑定 | 代码中手动加载库路径           | ✅ 全平台可用（配合 VC-LTL + YY-Thunks） | 需要灵活控制加载路径，支持 Win7 |
+| 平台宏定义             | `#if WIN_X64` 等条件编译       | ⚠️ NuGet 包不继承宏                      | 仅主工程使用，不封装类库        |
+| DllImport 常量库名     | 代码只写库名 + csproj 条件复制 | ✅ 跨平台成功                            | **推荐**，绝大多数场景          |
 
 ### 核心经验
 
 1. **尽量使用 DllImport 常量库名**，这是最稳定可靠的方案
 2. **不要依赖条件编译宏处理平台差异**，宏在类库和 NuGet 包中不继承
 3. **通过 csproj 的 `Link` 机制**，可以根据平台将不同目录的库文件复制到输出根目录
-4. **如果必须支持 Windows 7**，需注意 NativeLibrary 动态绑定在部分 Win7 系统上可能不兼容
+4. **需要支持 Windows 7 时**，安装 VC-LTL 和 YY-Thunks NuGet 包，即可让 NativeLibrary 动态绑定正常工作
 
 ## 5. 常见问题 Q&A
 
@@ -332,6 +338,22 @@ output/
 1. 检查输出目录是否有正确的库文件
 2. 使用 Process Monitor（Windows）或 lsof（Linux）监视库文件加载
 3. 在代码中调用 `NativeLibrary.TryLoad` 测试加载是否成功
+
+### Q6: VC-LTL 和 YY-Thunks 是什么？如何使用？
+
+**A:** 这两个是非常实用的开源 NuGet 包，专门用于 Windows 平台兼容性：
+
+- **VC-LTL**：替代微软官方的 VC 运行时库
+  - 无需安装系统补丁
+  - 大幅减小程序体积
+  - 支持 XP/Win7/Win10/Win11 全平台
+
+- **YY-Thunks**：Windows API 兼容层
+  - 让新 API 能在旧版 Windows 上运行
+  - 自动适配，无需修改代码
+  - 支持 WinXP SP3 及以上系统
+
+**使用方法**：直接在项目中安装这两个 NuGet 包即可，无需额外配置。
 
 ---
 
