@@ -47,7 +47,7 @@
     <text fill="#16a34a" font-family="Microsoft YaHei, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" x="205" y="52">✅ 成功</text>
     <rect fill="#f0fdf4" x="25" y="65" width="360" height="120" rx="8"/>
     <text fill="#475569" font-family="Microsoft YaHei, sans-serif" font-size="12" x="40" y="85">特点：</text>
-    <text fill="#475569" font-family="Microsoft YaHei, sans-serif" font-size="11" x="60" y="105">• 条件编译宏 #if WIN_X64</text>
+    <text fill="#475569" font-family="Microsoft YaHei, sans-serif" font-size="11" x="60" y="105">• 条件编译宏 #if WIN_X64 #elif LINUX_X64</text>
     <text fill="#475569" font-family="Microsoft YaHei, sans-serif" font-size="11" x="60" y="125">• 单工程内正常工作</text>
     <text fill="#475569" font-family="Microsoft YaHei, sans-serif" font-size="11" x="60" y="145">• 代码直观易懂</text>
     <text fill="#475569" font-family="Microsoft YaHei, sans-serif" font-size="12" x="40" y="170">适用场景：仅主工程使用</text>
