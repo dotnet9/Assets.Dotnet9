@@ -3,7 +3,7 @@ title: .NET跨平台本地库引入实战
 slug: dotnet-cross-platform-native-library
 description: 深入解析 .NET 项目如何优雅引入第三方本地库，支持 Windows、Linux 多平台，避坑指南
 date: 2026-04-17 05:24:16
-lastmod: 2026-04-19 10:45:46
+lastmod: 2026-04-20 20:14:27
 cover: https://img1.dotnet9.com/2026/04/cross-platform-library-cover.svg
 banner: false
 categories:
@@ -16,7 +16,7 @@ categories:
 
 做 .NET 开发时，偶尔需要调用第三方提供的本地库（Native Library），比如硬件SDK、加密库或底层通信组件。这篇文章通过一个实际的Demo项目，分享我在引入跨平台本地库时的两大方案和避坑经验。
 
-## 1. 问题背景
+## 1. 项目准备
 
 Demo项目使用了一个简单的C++动态库 `TimeMeaning`，它提供了一个API：
 
@@ -50,11 +50,11 @@ static const char* TIME_MEANINGS[] = {
 Lib/
 ├── x64/
 │   ├── TimeMeaning.dll        # 64位 Windows
-│   └── libTimeMeaning.so      # 64位 Linux
+│   └── (lib)TimeMeaning.so    # 64位 Linux
 ├── x86/
 │   └── TimeMeaning.dll        # 32位 Windows
 └── arm64/
-    └── libTimeMeaning.so      # ARM64 Linux
+    └── (lib)TimeMeaning.so    # ARM64 Linux
 ```
 
 我们希望：
@@ -64,38 +64,40 @@ Lib/
 
 ### Directory.Build.props 全局宏定义
 
-首先，我们在解决方案根目录创建 `Directory.Build.props`，根据 `RuntimeIdentifier` 全局定义条件编译宏：
+首先，我们在解决方案根目录创建 `Directory.Build.props`，默认定义 `PLATFORM_WIN_X86` 条件编译宏：
 
 ```xml
 <Project>
-	<PropertyGroup Condition="'$(RuntimeIdentifier)' == 'linux-x64'">
-		<DefineConstants>$(DefineConstants);LINUX_X64</DefineConstants>
-	</PropertyGroup>
-
-	<PropertyGroup Condition="'$(RuntimeIdentifier)' == 'linux-arm64'">
-		<DefineConstants>$(DefineConstants);LINUX_ARM64</DefineConstants>
-	</PropertyGroup>
-
-	<PropertyGroup Condition="'$(RuntimeIdentifier)' == 'win-x64'">
-		<DefineConstants>$(DefineConstants);WIN_X64</DefineConstants>
-	</PropertyGroup>
-
-	<PropertyGroup Condition="'$(RuntimeIdentifier)' == 'win-x86'">
-		<DefineConstants>$(DefineConstants);WIN_X86</DefineConstants>
+	<PropertyGroup>
+		<DefineConstants>$(DefineConstants);PLATFORM_WIN_X86</DefineConstants>
 	</PropertyGroup>
 </Project>
+```
+
+然后通过 `publish.bat` 发布脚本调用 `SetPlatformMacro.ps1`，在发布前根据目标平台修改全局宏定义：
+
+```powershell
+# SetPlatformMacro.ps1
+$macro = ""
+switch ($Platform) {
+    "linux-x64" { $macro = "PLATFORM_LINUX_X64" }
+    "linux-arm64" { $macro = "PLATFORM_LINUX_ARM64" }
+    "win-x64" { $macro = "PLATFORM_WIN_X64" }
+    "win-x86" { $macro = "PLATFORM_WIN_X86" }
+}
+$content = $content -replace '<DefineConstants>.*?</DefineConstants>', "<DefineConstants>`$(DefineConstants);$macro</DefineConstants>"
 ```
 
 这样在代码中就可以方便地区分当前编译的平台版本：
 
 ```csharp
-#if WIN_X64
+#if PLATFORM_WIN_X64
 var platform = "Windows X64";
-#elif WIN_X86
+#elif PLATFORM_WIN_X86
 var platform = "Windows X86";
-#elif LINUX_X64
+#elif PLATFORM_LINUX_X64
 var platform = "Linux X64";
-#elif LINUX_ARM64
+#elif PLATFORM_LINUX_ARM64
 var platform = "Linux ARM64";
 #else
 var platform = "Unknown";
@@ -264,6 +266,48 @@ internal static class TimeMeaningNative
 
 静态加载使用 `DllImport` 特性声明，这是.NET中调用本地库的标准方式。我们做了**3种情况测试**：主要是测试三方库封装代码是直接放在主工程，还是提取出来通过NuGet分发时，使用条件编译宏是否可行、路径灵活度如何。
 
+### 条件编译宏的两种定义方式
+
+使用条件编译宏前，需要先定义 `PLATFORM_XXX` 宏，有两种方式：
+
+#### 方式1：在发布配置文件（pubxml）中定义
+
+在 `Properties/PublishProfiles/*.pubxml` 文件的 `<PropertyGroup>` 中添加：
+
+```xml
+<PropertyGroup>
+    <DefineConstants>$(DefineConstants);PLATFORM_WIN_X64</DefineConstants>
+</PropertyGroup>
+```
+
+#### 方式2：在项目文件（csproj）中定义
+
+在项目文件的 `<PropertyGroup>` 中添加：
+
+```xml
+<PropertyGroup Condition="'$(RuntimeIdentifier)' == 'linux-x64'">
+    <DefineConstants>$(DefineConstants);PLATFORM_LINUX_X64</DefineConstants>
+</PropertyGroup>
+
+<PropertyGroup Condition="'$(RuntimeIdentifier)' == 'linux-arm64'">
+    <DefineConstants>$(DefineConstants);PLATFORM_LINUX_ARM64</DefineConstants>
+</PropertyGroup>
+
+<PropertyGroup Condition="'$(RuntimeIdentifier)' == 'win-x64'">
+    <DefineConstants>$(DefineConstants);PLATFORM_WIN_X64</DefineConstants>
+</PropertyGroup>
+
+<PropertyGroup Condition="'$(RuntimeIdentifier)' == 'win-x86'">
+    <DefineConstants>$(DefineConstants);PLATFORM_WIN_X86</DefineConstants>
+</PropertyGroup>
+
+<PropertyGroup Condition="'$(RuntimeIdentifier)' == ''">
+    <DefineConstants>$(DefineConstants);PLATFORM_EMPTY</DefineConstants>
+</PropertyGroup>
+```
+
+**重要说明**：方式2在工程文件中添加的条件编译宏定义，仅对主工程有效。因为子工程编译时 `$(RuntimeIdentifier)` 是空的（不会继承主工程的 RID），所以子工程会匹配到 `$(RuntimeIdentifier) == ''` 条件，定义 `PLATFORM_EMPTY` 宏。这意味着在子工程中无法通过这种方式正确区分平台。如果需要在子工程中使用平台宏，需要配合发布脚本动态修改 `Directory.Build.props` 全局宏定义（见情况2）。
+
 ### 情况1：单工程 + 条件编译（✅ 成功）
 
 直接在主工程中使用 `DllImport`，通过条件编译宏设置库路径，适合不封装为类库的场景，比如小工具或者不需要复用率低的项目。
@@ -279,16 +323,14 @@ namespace csharp.test.static_;
 
 internal static class TimeMeaningNative
 {
-    // Windows平台使用dll
-#if WIN_X64 || WIN_X86
-const string DLL = "Lib/TimeMeaning.dll";
-    // Linux平台使用so
-#elif LINUX_X64 || LINUX_ARM64
-const string DLL = "Lib/libTimeMeaning.so";
-    // 默认回退到Windows dll
+#if PLATFORM_WIN_X64 || PLATFORM_WIN_X86
+    const string DLL = "Lib/TimeMeaning.dll";
+#elif PLATFORM_LINUX_X64 || PLATFORM_LINUX_ARM64
+    const string DLL = "Lib/libTimeMeaning.so";
 #else
     const string DLL = "Lib/TimeMeaning.dll";
 #endif
+
     [DllImport(DLL, CallingConvention = CallingConvention.Cdecl, CharSet = CharSet.Unicode)]
     private static extern IntPtr GetTimeMeaning(int timestampSecond);
 
@@ -306,13 +348,11 @@ const string DLL = "Lib/libTimeMeaning.so";
 
 ---
 
-### 情况2：多工程 + 条件编译（❌ 失败）
+### 情况2：多工程 + 条件编译（✅ 成功，推荐）
 
-将库调用封装到独立的类库工程，再由主工程引用，演示条件编译宏在类库中不继承的问题。
+将库调用封装到独立的类库工程，再由主工程引用。通过 `publish.bat` 发布脚本在发布前调用 `SetPlatformMacro.ps1` 修改全局宏定义，解决了类库不继承条件编译宏的问题。
 
 #### 类库代码（TimeMeaningNative.csproj）
-
-封装库代码和情况1相同，只是提取到类库了。
 
 ```csharp
 using System.Runtime.InteropServices;
@@ -321,13 +361,14 @@ namespace TimeMeaningNative;
 
 public static class TimeMeaningApi
 {
-#if WIN_X64 || WIN_X86
-const string DLL = "Lib/TimeMeaning.dll";
-#elif LINUX_X64 || LINUX_ARM64
-const string DLL = "Lib/libTimeMeaning.so";
+#if PLATFORM_WIN_X64 || PLATFORM_WIN_X86
+    const string DLL = "Lib/TimeMeaning.dll";
+#elif PLATFORM_LINUX_X64 || PLATFORM_LINUX_ARM64
+    const string DLL = "Lib/libTimeMeaning.so";
 #else
     const string DLL = "Lib/TimeMeaning.dll";
 #endif
+
     [DllImport(DLL, CallingConvention = CallingConvention.Cdecl, CharSet = CharSet.Unicode)]
     private static extern IntPtr GetTimeMeaning(int timestampSecond);
 
@@ -339,15 +380,35 @@ const string DLL = "Lib/libTimeMeaning.so";
 }
 ```
 
-#### 失败原因
+#### 发布脚本（publish.bat）
 
-❌ **失败**：在Linux下运行时，类库工程由于不会继承主工程的 `RuntimeIdentifier`（按测试效果推测出来的，如果不对，欢迎讨论），导致条件编译宏不生效，最终执行到 `#else` 分支，尝试查找 `Lib/TimeMeaning.dll` 而不是 `Lib/libTimeMeaning.so`，加载失败。
+```batch
+for %%p in (%platforms%) do (
+    set "tfm="
+    set "pubxml="
+
+    if "%%p"=="linux-x64" set "tfm=net10.0" & set "pubxml=FolderProfile_linux-x64.pubxml"
+    ...
+
+    powershell -ExecutionPolicy Bypass -File "SetPlatformMacro.ps1" -Platform "%%p"
+
+    for %%d in (%project_paths%) do (
+        dotnet publish "%%d" -f !tfm! /p:PublishProfile="%%d\Properties\PublishProfiles\!pubxml!"
+    )
+)
+```
+
+#### 成功原因
+
+✅ **成功**：`publish.bat` 发布前调用 `SetPlatformMacro.ps1` 脚本修改 `Directory.Build.props` 中的全局宏定义，使子工程也能正确获取平台宏定义（如 `PLATFORM_LINUX_X64`），而不是依赖编译时的 `RuntimeIdentifier`。
+
+**备注**：具体脚本可在测试仓库查看，仓库地址在文末。
 
 ---
 
 ### 情况3：多工程 + 仅库名（✅ 推荐）
 
-这是**最推荐**的方案，也有相较动态加载方式，减小了使用难度，类库中不使用条件编译宏，只指定库名（不加扩展名），解决跨平台库引用问题。
+这是**最推荐**的方案，相较动态加载方式，减小了使用难度。类库中不使用条件编译宏，只指定库名（不加扩展名），解决跨平台库引用问题。
 
 #### 类库代码（TimeMeaningNative.csproj）
 
@@ -358,8 +419,6 @@ namespace TimeMeaningNative;
 
 public static class TimeMeaningApi
 {
-    // 注意路径用法：指定目录+库名（不含扩展名），不同平台库名需要保持相同
-    // Windows会自动查找TimeMeaning.dll，Linux会自动查找TimeMeaning或TimeMeaning.so
     const string DLL = "Lib/TimeMeaning";
     [DllImport(DLL, CallingConvention = CallingConvention.Cdecl, CharSet = CharSet.Unicode)]
     private static extern IntPtr GetTimeMeaning(int timestampSecond);
@@ -377,82 +436,50 @@ public static class TimeMeaningApi
 这里有一个**关键技巧**：如果Linux库有lib等前缀，需要去掉，和Windows dll改为相同文件名，Linux下复制时去掉 `lib` 前缀！
 
 ```xml
-<Project Sdk="Microsoft.NET.Sdk">
-
-	<PropertyGroup>
-		<OutputType>Exe</OutputType>
-		<TargetFrameworks>net10.0;net10.0-windows</TargetFrameworks>
-		<ImplicitUsings>enable</ImplicitUsings>
-		<Nullable>enable</Nullable>
-
-		<WindowsSupportedOSPlatformVersion>6.1</WindowsSupportedOSPlatformVersion>
-		<TargetPlatformMinVersion>6.1</TargetPlatformMinVersion>
-	</PropertyGroup>
-
-	<ItemGroup>
-		<PackageReference Include="CodeWF.Log.Core" Version="11.3.14" />
-		<PackageReference Include="VC-LTL" Version="5.3.1" />
-		<PackageReference Include="YY-Thunks" Version="1.2.1-Beta.4" />
-	</ItemGroup>
-
-	<ItemGroup>
-	  <ProjectReference Include="..\TimeMeaningNative\TimeMeaningNative.csproj" />
-	</ItemGroup>
-
-	<ItemGroup>
-		<None Update="Lib\x64\TimeMeaning.dll" Condition="'$(Configuration)' == 'Debug'">
-			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-			<Link>Lib\TimeMeaning.dll</Link>
-		</None>
-	</ItemGroup>
-	<ItemGroup>
-		<!-- Linux 下关键：复制时去掉 lib 前缀！ -->
-		<None Update="Lib\x64\libTimeMeaning.so" Condition="'$(RuntimeIdentifier)' == 'linux-x64'">
-			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-			<Link>Lib\TimeMeaning.so</Link>
-		</None>
-		<None Update="Lib\x64\TimeMeaning.dll" Condition="'$(RuntimeIdentifier)' == 'win-x64'">
-			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-			<Link>Lib\TimeMeaning.dll</Link>
-		</None>
-		<None Update="Lib\x86\TimeMeaning.dll" Condition="'$(RuntimeIdentifier)' == 'win-x86'">
-			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-			<Link>Lib\TimeMeaning.dll</Link>
-		</None>
-	</ItemGroup>
-
-</Project>
+<ItemGroup>
+    <!-- Linux 下关键：复制时去掉 lib 前缀！ -->
+    <None Update="Lib\x64\libTimeMeaning.so" Condition="'$(RuntimeIdentifier)' == 'linux-x64'">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        <Link>Lib\TimeMeaning.so</Link>
+    </None>
+    ...
+</ItemGroup>
 ```
 
 #### 工作原理
-
-![](https://img1.dotnet9.com/2026/04/solution-three-workflow.svg)
 
 - **Windows**：`DllImport("Lib/TimeMeaning")` 自动查找 `Lib/TimeMeaning.dll`
 - **Linux**：`DllImport("Lib/TimeMeaning")` 会查找 `Lib/TimeMeaning` 或 `Lib/TimeMeaning.so`，**不会**查找 `Lib/libTimeMeaning.so`
 - 所以Linux下需要通过 `<Link>Lib\TimeMeaning.so</Link>` 将 `libTimeMeaning.so` 复制为 `TimeMeaning.so`
 
-## 5. 方案对比总结
+#### 结果
+
+✅ **成功**：这是最推荐的方案，简单可靠，懒得定义条件编译宏，只需要确保不同平台的库文件名统一（Linux下去掉lib前缀）。
+
+---
+
+### 方案对比总结
 
 ![](https://img1.dotnet9.com/2026/04/solution-comparison.svg)
 
-| 类别     | 方案                   | 做法                                     | 结果                       | 适用场景                                 |
-| -------- | ---------------------- | ---------------------------------------- | -------------------------- | ---------------------------------------- |
-| 动态加载 | NativeLibrary 动态加载 | 代码中手动加载库路径                     | ✅ 全平台可用              | 需要灵活控制加载路径                     |
-| 静态加载 | 单工程 + 条件编译      | `#if WIN_X64` `#elif LINUX_X64` 条件编译 | ✅ 仅单工程成功            | 仅主工程使用，不封装类库，支持不同路径库 |
-| 静态加载 | 多工程 + 条件编译      | 类库中使用条件编译                       | ❌ 类库不继承宏，Linux失败 | **不推荐**                               |
-| 静态加载 | 多工程 + 仅库名        | 类库只写库名 + csproj 条件复制           | ✅ **跨平台完美成功**      | **推荐**，绝大多数场景（需要库名统一）   |
+| 类别     | 方案                        | 做法                                               | 结果                          | 适用场景                                               |
+| -------- | --------------------------- | -------------------------------------------------- | ----------------------------- | ------------------------------------------------------ |
+| 动态加载 | NativeLibrary 动态加载      | 代码中手动判断操作系统并加载库                     | ✅ 全平台可用                 | 需要灵活控制加载路径                                   |
+| 静态加载 | 单工程 + 条件编译           | `#if PLATFORM_WIN_X64` 条件编译                    | ✅ 成功                       | 仅主工程使用，不封装类库，支持不同路径库               |
+| 静态加载 | 多工程 + 条件编译           | 发布前通过脚本全局设置宏                           | ✅ **成功（配合发布脚本）**   | 推荐，需要不同平台库路径不同        |
+| 静态加载 | 多工程 + 仅库名（无扩展名） | 类库只写库名 + csproj 条件复制（Linux去lib前缀）   | ✅ **跨平台完美成功**        | **最推荐**，简单可靠，希望统一库文件名                         |
 
 ## 6. 核心经验
 
 1. **推荐使用 DllImport 常量库名（不加扩展名）**，这是最稳定可靠的方案，重点是简单好理解。方案一动态加载也可行，只是使用上稍微麻烦一点
-2. **静态加载使用条件编译宏能处理库名不同的情况**，但仅适用于单工程
-3. **不要依赖条件编译宏处理多工程下的平台差异**，宏在类库和 NuGet 包中不继承（类库编译时没有 RuntimeIdentifier 上下文）
-4. **Linux 下注意去掉 lib 前缀**，通过 csproj 的 `<Link>` 机制重命名，让所有平台使用相同的库名
-5. **需要支持 Windows 7 时**，安装 VC-LTL 和 YY-Thunks NuGet 包，它们能让现代 .NET 程序在旧系统上运行
-6. **可以将库文件放在 Lib 子目录**，不一定非要在根目录，只要路径配置一致就行
+2. **静态加载使用条件编译宏能处理库名不同的情况**，适用于单工程和多工程（多工程需要配合发布脚本全局设置宏）
+3. **多工程场景下宏不继承的问题可以通过发布脚本解决**：使用 `publish.bat` + `SetPlatformMacro.ps1` 在发布前修改全局宏
+4. **不要依赖类库编译时的 RuntimeIdentifier**，因为类库编译时可能没有 RuntimeIdentifier 上下文，导致条件编译宏不生效
+5. **Linux 下注意去掉 lib 前缀**，通过 csproj 的 `<Link>` 机制重命名
+6. **需要支持 Windows 7 时**，安装 VC-LTL 和 YY-Thunks NuGet 包
+7. **可以将库文件放在 Lib 子目录**，不一定非要在根目录
 
-**补充说明**：对于初学者来说，先掌握方案三（多工程+仅库名）是最好的，这是最稳妥且容易理解的方式。如果确实需要灵活处理路径差异，再考虑方案一或方案二。
+**补充说明**：对于初学者来说，先掌握情况3（多工程+仅库名）是最好的，这是最稳妥且容易理解的方式。如果确实需要灵活处理路径差异，再考虑动态加载或情况2。
 
 ## 7. 常见问题 Q&A
 
@@ -489,6 +516,6 @@ public static class TimeMeaningApi
 
 ---
 
-> 以上内容基于实际 Demo 项目整理，包含四大方案的完整代码示例，如有错误或更好的方案，欢迎在评论区留言指正！
+> 以上内容基于实际 Demo 项目整理，包含C++库代码及四大方案的完整代码示例，如有错误或更好的方案，欢迎在评论区留言指正！
 >
 > 开源项目地址：https://github.com/dotnet9/DotnetCrossPlatformNativeLibrary

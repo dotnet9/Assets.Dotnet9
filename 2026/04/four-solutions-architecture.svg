@@ -1,4 +1,4 @@
-<svg height="520" viewBox="0 0 880 520" width="880" xmlns="http://www.w3.org/2000/svg">
+<svg height="620" viewBox="0 0 900 620" width="900" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#f8fafc"/>
@@ -25,57 +25,54 @@
     </filter>
   </defs>
 
-  <rect fill="url(#bgGrad)" width="880" height="520"/>
+  <rect fill="url(#bgGrad)" width="900" height="620"/>
 
-  <text fill="#1e293b" font-family="Microsoft YaHei, sans-serif" font-size="22" font-weight="bold" text-anchor="middle" x="440" y="35">四种方案架构对比</text>
+  <text fill="#1e293b" font-family="Microsoft YaHei, sans-serif" font-size="22" font-weight="bold" text-anchor="middle" x="450" y="35">四种成功方案架构对比</text>
 
-  <g transform="translate(20, 55)" filter="url(#cardShadow)">
-    <rect fill="#fff" rx="12" width="410" height="200"/>
+  <g transform="translate(245, 55)" filter="url(#cardShadow)">
+    <rect fill="#fff" rx="12" width="410" height="130"/>
     <text fill="#1e293b" font-family="Microsoft YaHei, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" x="205" y="28">方案一：NativeLibrary 动态加载</text>
     <text fill="#16a34a" font-family="Microsoft YaHei, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" x="205" y="52">✅ 成功</text>
-    <rect fill="#f0fdf4" x="25" y="65" width="360" height="120" rx="8"/>
-    <text fill="#475569" font-family="Microsoft YaHei, sans-serif" font-size="12" x="40" y="85">特点：</text>
-    <text fill="#475569" font-family="Microsoft YaHei, sans-serif" font-size="11" x="60" y="105">• 运行时判断操作系统</text>
-    <text fill="#475569" font-family="Microsoft YaHei, sans-serif" font-size="11" x="60" y="125">• 动态拼接库路径</text>
-    <text fill="#475569" font-family="Microsoft YaHei, sans-serif" font-size="11" x="60" y="145">• 完全灵活的加载控制</text>
-    <text fill="#475569" font-family="Microsoft YaHei, sans-serif" font-size="12" x="40" y="170">适用场景：需要灵活控制库加载</text>
+    <rect fill="#f0fdf4" x="25" y="65" width="360" height="50" rx="8"/>
+    <text fill="#475569" font-family="Microsoft YaHei, sans-serif" font-size="11" x="40" y="85">• 运行时判断操作系统，动态拼接库路径</text>
+    <text fill="#475569" font-family="Microsoft YaHei, sans-serif" font-size="12" x="40" y="108">适用场景：需要灵活控制库加载路径</text>
   </g>
 
-  <g transform="translate(450, 55)" filter="url(#cardShadow)">
+  <g transform="translate(20, 205)" filter="url(#cardShadow)">
+    <rect fill="#fff" rx="12" width="410" height="180"/>
+    <text fill="#1e293b" font-family="Microsoft YaHei, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" x="205" y="25">方案二：静态引用-单工程+条件编译</text>
+    <text fill="#16a34a" font-family="Microsoft YaHei, sans-serif" font-size="13" font-weight="bold" text-anchor="middle" x="205" y="48">✅ 成功</text>
+    <rect fill="#f0fdf4" x="20" y="60" width="370" height="100" rx="6"/>
+    <text fill="#475569" font-family="Microsoft YaHei, sans-serif" font-size="10" x="35" y="80">• #if PLATFORM_WIN_X64 || PLATFORM_WIN_X86</text>
+    <text fill="#475569" font-family="Microsoft YaHei, sans-serif" font-size="10" x="35" y="96">• #elif PLATFORM_LINUX_X64 || PLATFORM_LINUX_ARM64</text>
+    <text fill="#475569" font-family="Microsoft YaHei, sans-serif" font-size="10" x="35" y="112">• 单工程内正常工作</text>
+    <text fill="#475569" font-family="Microsoft YaHei, sans-serif" font-size="10" x="35" y="128">• 支持不同路径库（Windows用.dll，Linux用.so）</text>
+    <text fill="#475569" font-family="Microsoft YaHei, sans-serif" font-size="10" x="20" y="150">适用：仅主工程使用，不封装类库</text>
+  </g>
+
+  <g transform="translate(470, 205)" filter="url(#cardShadow)">
+    <rect fill="#fff" rx="12" width="410" height="180"/>
+    <text fill="#1e293b" font-family="Microsoft YaHei, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" x="205" y="25">方案三：静态引用-多工程+条件编译</text>
+    <text fill="#16a34a" font-family="Microsoft YaHei, sans-serif" font-size="13" font-weight="bold" text-anchor="middle" x="205" y="48">✅ 成功（配合发布脚本）</text>
+    <rect fill="#f0fdf4" x="20" y="60" width="370" height="100" rx="6"/>
+    <text fill="#16a34a" font-family="Microsoft YaHei, sans-serif" font-size="10" x="35" y="80">• publish.bat + SetPlatformMacro.ps1</text>
+    <text fill="#16a34a" font-family="Microsoft YaHei, sans-serif" font-size="10" x="35" y="96">• 发布前修改 Directory.Build.props 全局宏</text>
+    <text fill="#16a34a" font-family="Microsoft YaHei, sans-serif" font-size="10" x="35" y="112">• 子工程继承 PLATFORM_XXX 宏定义</text>
+    <text fill="#475569" font-family="Microsoft YaHei, sans-serif" font-size="10" x="35" y="128">• 支持不同路径库（Windows用.dll，Linux用.so）</text>
+    <text fill="#475569" font-family="Microsoft YaHei, sans-serif" font-size="10" x="20" y="150">适用：多工程，库文件名不同</text>
+  </g>
+
+  <g transform="translate(245, 405)" filter="url(#cardShadow)">
     <rect fill="#fff" rx="12" width="410" height="200"/>
-    <text fill="#1e293b" font-family="Microsoft YaHei, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" x="205" y="28">方案二：静态引用-单工程</text>
-    <text fill="#16a34a" font-family="Microsoft YaHei, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" x="205" y="52">✅ 成功</text>
-    <rect fill="#f0fdf4" x="25" y="65" width="360" height="120" rx="8"/>
-    <text fill="#475569" font-family="Microsoft YaHei, sans-serif" font-size="12" x="40" y="85">特点：</text>
-    <text fill="#475569" font-family="Microsoft YaHei, sans-serif" font-size="11" x="60" y="105">• 条件编译宏 #if WIN_X64 #elif LINUX_X64</text>
-    <text fill="#475569" font-family="Microsoft YaHei, sans-serif" font-size="11" x="60" y="125">• 单工程内正常工作</text>
-    <text fill="#475569" font-family="Microsoft YaHei, sans-serif" font-size="11" x="60" y="145">• 代码直观易懂</text>
-    <text fill="#475569" font-family="Microsoft YaHei, sans-serif" font-size="12" x="40" y="170">适用场景：仅主工程使用</text>
+    <text fill="#1e293b" font-family="Microsoft YaHei, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" x="205" y="25">方案四：静态引用-多工程+仅库名</text>
+    <text fill="#16a34a" font-family="Microsoft YaHei, sans-serif" font-size="13" font-weight="bold" text-anchor="middle" x="205" y="48">✅ 最推荐</text>
+    <rect fill="#f0fdf4" x="20" y="58" width="370" height="120" rx="6"/>
+    <text fill="#16a34a" font-family="Microsoft YaHei, sans-serif" font-size="10" x="35" y="78">• DllImport("Lib/TimeMeaning") - 不加扩展名</text>
+    <text fill="#16a34a" font-family="Microsoft YaHei, sans-serif" font-size="10" x="35" y="94">• Windows自动查找 TimeMeaning.dll</text>
+    <text fill="#16a34a" font-family="Microsoft YaHei, sans-serif" font-size="10" x="35" y="110">• Linux自动查找 TimeMeaning.so</text>
+    <text fill="#475569" font-family="Microsoft YaHei, sans-serif" font-size="10" x="35" y="126">• csproj条件复制 + 重命名（Linux去lib前缀）</text>
+    <text fill="#475569" font-family="Microsoft YaHei, sans-serif" font-size="10" x="35" y="142">• 要求：不同平台库文件名统一（仅扩展名不同）</text>
+    <text fill="#16a34a" font-family="Microsoft YaHei, sans-serif" font-size="10" x="20" y="165">适用：最简单可靠，推荐掌握</text>
   </g>
 
-  <g transform="translate(20, 275)" filter="url(#cardShadow)">
-    <rect fill="#fff" rx="12" width="410" height="220"/>
-    <text fill="#1e293b" font-family="Microsoft YaHei, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" x="205" y="28">方案三：静态引用-多工程</text>
-    <text fill="#dc2626" font-family="Microsoft YaHei, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" x="205" y="52">❌ 失败</text>
-    <rect fill="#fef2f2" x="25" y="65" width="360" height="140" rx="8"/>
-    <text fill="#475569" font-family="Microsoft YaHei, sans-serif" font-size="12" x="40" y="85">特点：</text>
-    <text fill="#475569" font-family="Microsoft YaHei, sans-serif" font-size="11" x="60" y="105">• 类库中使用条件编译</text>
-    <text fill="#dc2626" font-family="Microsoft YaHei, sans-serif" font-size="11" x="60" y="125">• 类库不继承 RuntimeIdentifier</text>
-    <text fill="#dc2626" font-family="Microsoft YaHei, sans-serif" font-size="11" x="60" y="145">• Linux 下查找错误的文件</text>
-    <text fill="#475569" font-family="Microsoft YaHei, sans-serif" font-size="12" x="40" y="170">问题：类库无法获取平台信息</text>
-    <text fill="#78716c" font-family="Microsoft YaHei, sans-serif" font-size="10" x="40" y="190">不推荐使用</text>
-  </g>
-
-  <g transform="translate(450, 275)" filter="url(#cardShadow)">
-    <rect fill="#fff" rx="12" width="410" height="220"/>
-    <text fill="#1e293b" font-family="Microsoft YaHei, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" x="205" y="28">方案四：静态引用-多工程</text>
-    <text fill="#16a34a" font-family="Microsoft YaHei, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" x="205" y="52">✅ 推荐</text>
-    <rect fill="#f0fdf4" x="25" y="65" width="360" height="140" rx="8"/>
-    <text fill="#475569" font-family="Microsoft YaHei, sans-serif" font-size="12" x="40" y="85">特点：</text>
-    <text fill="#16a34a" font-family="Microsoft YaHei, sans-serif" font-size="11" x="60" y="105">• 仅指定库名（无扩展名）</text>
-    <text fill="#16a34a" font-family="Microsoft YaHei, sans-serif" font-size="11" x="60" y="125">• csproj 条件复制 + 重命名</text>
-    <text fill="#16a34a" font-family="Microsoft YaHei, sans-serif" font-size="11" x="60" y="145">• Linux 去掉 lib 前缀</text>
-    <text fill="#475569" font-family="Microsoft YaHei, sans-serif" font-size="12" x="40" y="170">适用场景：绝大多数场景推荐</text>
-    <text fill="#16a34a" font-family="Microsoft YaHei, sans-serif" font-size="10" font-weight="bold" x="40" y="190">跨平台完美解决方案</text>
-  </g>
 </svg>
