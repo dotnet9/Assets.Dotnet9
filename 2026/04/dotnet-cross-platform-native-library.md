@@ -3,7 +3,7 @@ title: .NET跨平台本地库引入实战
 slug: dotnet-cross-platform-native-library
 description: 深入解析 .NET 项目如何优雅引入第三方本地库，支持 Windows、Linux 多平台，避坑指南
 date: 2026-04-17 05:24:16
-lastmod: 2026-04-20 20:14:27
+lastmod: 2026-04-20 23:18:24
 cover: https://img1.dotnet9.com/2026/04/cross-platform-library-cover.svg
 banner: false
 categories:
@@ -404,6 +404,16 @@ for %%p in (%platforms%) do (
 
 **备注**：具体脚本可在测试仓库查看，仓库地址在文末。
 
+#### ⚠️ 重要：NuGet 打包限制
+
+**注意**：此方案仅适用于同一源码仓库内的多工程引用。如果将此类库工程打包为 NuGet 包分发给其他项目使用，会存在以下问题：
+
+1. **Directory.Build.props 不会被打包**：NuGet 包中不会包含仓库根目录的 `Directory.Build.props`，上游用户无法继承宏定义
+2. **宏已在编译时固定**：打包时，代码已按当时的宏条件完成分支裁剪，生成的 dll 不再受上游宏影响
+3. **上游无法改变行为**：安装 NuGet 包的项目，即使定义了自己的 `PLATFORM_XXX` 宏，也无法改变已打包库的代码分支
+
+**解决方案**：如需通过 NuGet 分发跨平台库，推荐使用方案四（多工程+仅库名），或者使用 NuGet build props 机制（详见下方补充说明）。
+
 ---
 
 ### 情况3：多工程 + 仅库名（✅ 推荐）
@@ -462,12 +472,12 @@ public static class TimeMeaningApi
 
 ![](https://img1.dotnet9.com/2026/04/solution-comparison.svg)
 
-| 类别     | 方案                        | 做法                                               | 结果                          | 适用场景                                               |
-| -------- | --------------------------- | -------------------------------------------------- | ----------------------------- | ------------------------------------------------------ |
-| 动态加载 | NativeLibrary 动态加载      | 代码中手动判断操作系统并加载库                     | ✅ 全平台可用                 | 需要灵活控制加载路径                                   |
-| 静态加载 | 单工程 + 条件编译           | `#if PLATFORM_WIN_X64` 条件编译                    | ✅ 成功                       | 仅主工程使用，不封装类库，支持不同路径库               |
-| 静态加载 | 多工程 + 条件编译           | 发布前通过脚本全局设置宏                           | ✅ **成功（配合发布脚本）**   | 推荐，需要不同平台库路径不同        |
-| 静态加载 | 多工程 + 仅库名（无扩展名） | 类库只写库名 + csproj 条件复制（Linux去lib前缀）   | ✅ **跨平台完美成功**        | **最推荐**，简单可靠，希望统一库文件名                         |
+| 类别     | 方案                        | 做法                                             | 结果                        | 适用场景                                 |
+| -------- | --------------------------- | ------------------------------------------------ | --------------------------- | ---------------------------------------- |
+| 动态加载 | NativeLibrary 动态加载      | 代码中手动判断操作系统并加载库                   | ✅ 全平台可用               | 需要灵活控制加载路径                     |
+| 静态加载 | 单工程 + 条件编译           | `#if PLATFORM_WIN_X64` 条件编译                  | ✅ 成功                     | 仅主工程使用，不封装类库，支持不同路径库 |
+| 静态加载 | 多工程 + 条件编译           | 发布前通过脚本全局设置宏                         | ✅ **成功（配合发布脚本）** | 推荐，需要不同平台库路径不同             |
+| 静态加载 | 多工程 + 仅库名（无扩展名） | 类库只写库名 + csproj 条件复制（Linux去lib前缀） | ✅ **跨平台完美成功**       | **最推荐**，简单可靠，希望统一库文件名   |
 
 ## 6. 核心经验
 
@@ -478,10 +488,102 @@ public static class TimeMeaningApi
 5. **Linux 下注意去掉 lib 前缀**，通过 csproj 的 `<Link>` 机制重命名
 6. **需要支持 Windows 7 时**，安装 VC-LTL 和 YY-Thunks NuGet 包
 7. **可以将库文件放在 Lib 子目录**，不一定非要在根目录
+8. **⚠️ 重要：Directory.Build.props 全局宏不支持 NuGet 分发**：如果将使用条件编译宏的类库打包为 NuGet，上游项目完全继承不到该宏，且 NuGet 包内部代码也会在打包时就固定编译分支。如需通过 NuGet 分发，推荐使用方案四（仅库名，不依赖条件编译宏）
 
 **补充说明**：对于初学者来说，先掌握情况3（多工程+仅库名）是最好的，这是最稳妥且容易理解的方式。如果确实需要灵活处理路径差异，再考虑动态加载或情况2。
 
-## 7. 常见问题 Q&A
+## 7. 补充：NuGet 打包与条件编译宏
+
+### 7.1 Directory.Build.props 与 NuGet 的限制
+
+**结论**：`Directory.Build.props` 是源码仓库级别的构建配置，不属于项目本身，更不属于 NuGet 包。
+
+#### 生效范围
+
+| 场景                   | 是否生效 | 说明                                           |
+| ---------------------- | -------- | ---------------------------------------------- |
+| 本地多工程开发         | ✅ 是    | MSBuild 自动从项目目录向上遍历加载             |
+| 打包时编译             | ✅ 是    | 打包时编译阶段会应用宏，裁剪分支               |
+| NuGet 包内部（运行时） | ❌ 否    | 宏已在编译时消失，dll 分支已固定               |
+| 上游项目安装后         | ❌ 否    | NuGet 不包含 `Directory.Build.props`，无法继承 |
+
+#### 核心原因
+
+1. **NuGet 本质是编译产物**：包含 dll + 元数据，不包含构建配置
+2. **宏是编译时概念**：`#if` 在编译时已完成分支裁剪，运行时不再存在
+3. **Directory.Build.props 不打包**：只在本地仓库结构中生效
+
+### 7.2 NuGet 分发的替代方案
+
+#### 方案 A：使用 NuGet build props（向下游传递宏）
+
+如果确实需要通过 NuGet 向下游项目传递宏定义，可以在库项目中添加 `build/` 文件夹：
+
+```xml
+<!-- build/YourPackageName.props -->
+<Project>
+  <PropertyGroup>
+    <!-- 基于 RuntimeIdentifier 自动定义宏 -->
+    <DefineConstants Condition="'$(RuntimeIdentifier)'=='win-x86'">
+      $(DefineConstants);PLATFORM_WIN_X86
+    </DefineConstants>
+    <DefineConstants Condition="'$(RuntimeIdentifier)'=='win-x64'">
+      $(DefineConstants);PLATFORM_WIN_X64
+    </DefineConstants>
+    <DefineConstants Condition="'$(RuntimeIdentifier)'=='linux-x64'">
+      $(DefineConstants);PLATFORM_LINUX_X64
+    </DefineConstants>
+    <DefineConstants Condition="'$(RuntimeIdentifier)'=='linux-arm64'">
+      $(DefineConstants);PLATFORM_LINUX_ARM64
+    </DefineConstants>
+  </PropertyGroup>
+</Project>
+```
+
+然后在库项目的 csproj 中配置打包：
+
+```xml
+<ItemGroup>
+  <None Include="build\**" Pack="true" PackagePath="build\" />
+</ItemGroup>
+```
+
+**注意**：这只能让下游项目获得宏定义，但无法改变已打包库内部的代码分支（因为库 dll 已在编译时固定）。
+
+#### 方案 B：库内部不使用条件编译宏（推荐）
+
+最稳妥的 NuGet 分发方案是避免在库代码中使用条件编译宏，改用方案四（仅库名）或运行时判断：
+
+```csharp
+// 推荐：库内使用运行时判断或仅库名方式
+public static class TimeMeaningApi
+{
+    const string DLL = "Lib/TimeMeaning"; // 不加扩展名
+
+    [DllImport(DLL, CallingConvention = CallingConvention.Cdecl)]
+    private static extern IntPtr GetTimeMeaning(int timestampSecond);
+
+    // ...
+}
+```
+
+#### 方案 C：按 RID 分别打包 NuGet
+
+为每个平台单独打包 NuGet，使用不同的包 ID 或版本：
+
+- `YourLibrary.win-x64`
+- `YourLibrary.linux-x64`
+- 等等
+
+不过这会增加维护成本，通常不推荐。
+
+### 7.3 最终建议
+
+- **同一仓库内多工程**：可以使用 `Directory.Build.props` + 发布脚本（情况2）
+- **需要 NuGet 分发**：强烈推荐方案四（仅库名，不依赖条件编译宏）
+- **必须用条件编译 + NuGet**：考虑 NuGet build props + 运行时判断结合
+
+## 8. 常见问题 Q&A
 
 ### Q1: Linux 下为什么要去掉 lib 前缀？
 
