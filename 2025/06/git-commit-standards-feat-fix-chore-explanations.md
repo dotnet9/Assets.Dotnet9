@@ -8,6 +8,7 @@ copyright: Reprinted
 banner: false
 author: JacksonChen_
 originalTitle: git 代码提交规范，feat，fix，chore都是什么意思?
+cover: https://img1.dotnet9.com/2025/06/cover_01.png
 originalLink: https://blog.csdn.net/chenyajundd/article/details/139322838
 categories:
   - 分享

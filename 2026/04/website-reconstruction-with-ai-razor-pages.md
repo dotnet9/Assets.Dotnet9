@@ -4,7 +4,7 @@ slug: website-reconstruction-with-ai-razor-pages
 description: 从Blazor静态SSR回归Razor Pages，源码解读网站架构设计与核心实现
 date: 2026-04-16 22:45:00
 lastmod: 2026-04-16 23:00:00
-cover: https://img1.dotnet9.com/2026/04/cover_01.png
+cover: https://img1.dotnet9.com/2026/04/cover_01.svg
 banner: false
 categories:
   - .NET
