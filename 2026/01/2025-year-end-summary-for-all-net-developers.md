@@ -6,7 +6,6 @@ date: 2026-01-05 19:12:04
 lastmod: 2026-01-05 19:31:47
 cover: https://img1.dotnet9.com/2026/01/cover_01.png
 copyright: Reprinted
-banner: true
 author: 圣杰|向AI而行
 originalTitle: 写给所有 .NET 开发者的 2025 年度总结
 originalLink: https://mp.weixin.qq.com/s/kWLLt9duYSazGoSHXN-8bg
