@@ -1,11 +1,60 @@
-<p align="center">
-  <a href="https://codewf.com">
-    <img src="https://img1.dotnet9.com/site/logo.png" width="128" height="128" alt="码坊">
-  </a>
-</p>
+# Assets.Dotnet9
 
-<h1 align="center">码坊站点资源仓库</h1>
+CodeWF 站点资源与内容仓库。
 
-- 站点：https://dotnet9.com,https://codewf.com,https://qtzu.com,https://dotnetools.com,https://dotnet.chat
-- 站点 Github 仓库：https://github.com/dotnet9/CodeWF
-- 站点 Gitee 仓库：https://gitee.com/dotnet9/CodeWF
+English version: [README.md](./README.md)
+
+这个仓库不只是图片仓库，它实际上承担了网站“文件型内容库”的角色，保存并组织如下内容：
+
+- 博客文章
+- 文档页面
+- 工具元数据
+- 时间线数据
+- 友情链接
+- 站点级 markdown 页面
+- 文章配图和站点资源
+
+## 关联仓库
+
+- 网站源码仓库：[CodeWF](https://github.com/dotnet9/CodeWF)
+- 资源仓库：[Assets.Dotnet9](https://github.com/dotnet9/Assets.Dotnet9)
+
+## 目录说明
+
+```text
+2019/ ... 2026/      按年份、月份组织的文章与配图
+site/
+  about.md           关于页内容
+  Privacy.md         隐私页内容
+  album.json         专题元数据
+  category.json      分类元数据
+  FriendLink.json    友情链接元数据
+  timelines.json     时间线数据
+  doc/               文档导航与正文
+  tools/             工具元数据与预览图
+  pays/              打赏页资源
+  banners/           页面横幅资源
+  favicon/           站点图标资源
+```
+
+## 在线角色
+
+`CodeWF` 网站通过 `Site:LocalAssetsDir` 直接读取本仓库内容，因此这个仓库的维护标准应该接近一个轻量 CMS：
+
+- 路径稳定
+- 元数据完整
+- markdown 可审阅
+- 资源命名可复用
+- 结构规则可传递
+
+## 内容规范
+
+- 中文版：[CONTENT_GUIDE-zh_CN.md](./CONTENT_GUIDE-zh_CN.md)
+- English: [CONTENT_GUIDE.md](./CONTENT_GUIDE.md)
+
+## 维护建议
+
+- 文章统一放在 `YYYY/MM/slug.md`
+- 封面、配图尽量使用有语义的文件名
+- 新增分类、专题、文档、工具时同步维护 `site/*.json`
+- 不提交本地临时文件、导出缓存或无关桌面文件
