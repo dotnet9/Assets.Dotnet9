@@ -40,24 +40,6 @@ categories:
 - [ ] 🌱 **转型探索，蓄势待发** — 正在转型或探索新方向
 - [ ] 😎 **佛系躺平，岁月静好** — 稳定就好，不想卷了
 
-**👇****👇👇请投票给2025年的自己👇👇👇**
-
-2025年的我？ 
-
-📚 紧跟潮流，学以致用
-
-🚀 拥抱AI，效率翻倍
-
-🎉 收获满满，再上层楼
-
-😰 AI焦虑，何去何从
-
-😩 疲于奔命，原地踏步
-
-🌱 转型探索，蓄势待发
-
-😎 佛系躺平，岁月静好
-
 无论你是哪一种，这篇文章都希望能给你带来一些启发和方向。
 
 **可以的话，欢迎在评论区分享你的2025年感悟以及对2026年的期待**
@@ -187,7 +169,7 @@ Agent Skills能够实现：
 
 目前，Agent Skills已被众多主流AI工具采纳，包括：GitHub Copilot、VS Code、Claude Code、Cursor、OpenAI Codex、Amp、Goose等。
 
-值得注意的是，.NET 10新增的直接运行.cs文件能力，让编写Agent Skills中的脚本变得更加简单——你可以直接用C[#编写工具脚本](javascript:;)，无需创建完整的项目。
+值得注意的是，.NET 10新增的直接运行.cs文件能力，让编写Agent Skills中的脚本变得更加简单——你可以直接用 C# 编写工具脚本，无需创建完整的项目。
 
 ## **1.4 AI IDE卷到冒烟**
 
@@ -746,7 +728,7 @@ license: MIT
 dotnet scripts/split-pdf.cs input.pdf output-dir/
 ```
 
-**.NET 10的独特优势**：File-Based Apps让C[#成为Agent](javascript:;) Skills脚本的理想选择：
+**.NET 10的独特优势**：File-Based Apps让 C# 成为 Agent Skills 脚本的理想选择：
 
 ```csharp
 #!/usr/bin/env dotnet

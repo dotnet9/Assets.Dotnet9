@@ -36,7 +36,7 @@ System.Runtime.InteropServices.COMException:“尚未调用 CoInitialize。 (0x8
 
 ![](https://img1.dotnet9.com/2026/01/0302.png)
 
-将**async Task**改为**void**修复，Avalonia[文档]([Application Lifetimes | Avalonia Docs](https://docs.avaloniaui.net/docs/concepts/application-lifetimes))其实有说明：
+将**async Task**改为**void**修复，[Avalonia 文档：Application Lifetimes](https://docs.avaloniaui.net/docs/concepts/application-lifetimes) 其实有说明：
 
 ![](https://img1.dotnet9.com/2026/01/0303.png)
 

@@ -19,7 +19,7 @@ tags:
 
 ## 引言
 
-在博客网站的开发征程中，站长可谓是一路披荆斩棘。从最初的构思到实践，先后涉足了多种开发技术，包括 [MVC](https://learn.microsoft.com/zh-cn/aspnet/core/mvc/overview?view=aspnetcore-9.0)、[Razor Pages](https://learn.microsoft.com/zh-cn/aspnet/core/razor-pages/?view=aspnetcore-9.0&tabs=visual-studio)、[Vue](https://cn.vuejs.org/)、[Go](https://golang.google.cn/)、[Blazor](https://learn.microsoft.com/zh-cn/aspnet/core/blazor/?view=aspnetcore-9.0) 等。在这漫长的过程中，网站版本更迭近 10 次，每一个版本都凝聚着站长的心血与探索，这段充满挑战的历程详细记录于 [分享我做 Dotnet9 博客网站时积累的一些资料 - 码坊](https://dotnet9.com/bbs/post/2022/3/Share-some-learning-materials-I-accumulated-when-I-was-a-blog-website)。
+在博客网站的开发征程中，站长可谓是一路披荆斩棘。从最初的构思到实践，先后涉足了多种开发技术，包括 [MVC](https://learn.microsoft.com/zh-cn/aspnet/core/mvc/overview?view=aspnetcore-9.0)、[Razor Pages](https://learn.microsoft.com/zh-cn/aspnet/core/razor-pages/?view=aspnetcore-9.0&tabs=visual-studio)、[Vue](https://cn.vuejs.org/)、[Go](https://golang.google.cn/)、[Blazor](https://learn.microsoft.com/zh-cn/aspnet/core/blazor/?view=aspnetcore-9.0) 等。在这漫长的过程中，网站版本更迭近 10 次，每一个版本都凝聚着站长的心血与探索，这段充满挑战的历程详细记录于 [分享我做 Dotnet9 博客网站时积累的一些资料 - 码坊](https://dotnet9.com/2022/03/Share-some-learning-materials-I-accumulated-when-I-was-a-blog-website)。
 
 如今，经过深思熟虑与实践检验，博客网站再次回归 Blazor，并采用了静态 SSR 技术，同时融入了时尚且实用的 Ant Design 设计风格。这一系列的改进使得网站的访问速度得到了质的飞跃，如同给网站注入了新的活力，目前网站已经成功上线。
 
@@ -125,7 +125,7 @@ tags:
 
 这里介绍了站长部分开源项目：
 
-- 网址：https://dotnet9.com/doc
+- 网址：https://dotnet9.com/project
 
 ![](https://img1.dotnet9.com/2024/11/0203.gif)
 
@@ -161,13 +161,13 @@ CodeWF Toolbox 使用 Avalonia 开发的跨平台工具箱，使用了 Prism 做
 
 ### 博客
 
-- 网址：https://dotnet9.com/bbs/
+- 网址：https://dotnet9.com/post
 
 博客页面是标准的技术博客风格样式，分为左、中、右三栏。左边栏是文章分类列表，点击可在中间分页浏览文章列表，右侧则是网站统计、站长推荐等内容：
 
 ![](https://img1.dotnet9.com/2024/11/0204.png)
 
-点击列表中的文章可浏览文章详细内容，在此要感谢[VleaStwo]([VleaStwo (Lee)](https://github.com/VleaStwo))大佬提供的 TOC 功能：这个功能使用户能够快速定位文章的重点内容，提高阅读效率。
+点击列表中的文章可浏览文章详细内容，在此要感谢 [VleaStwo (Lee)](https://github.com/VleaStwo) 大佬提供的 TOC 功能：这个功能使用户能够快速定位文章的重点内容，提高阅读效率。
 
 ![](https://img1.dotnet9.com/2024/11/0205.gif)
 
@@ -177,7 +177,7 @@ CodeWF Toolbox 使用 Avalonia 开发的跨平台工具箱，使用了 Prism 做
 
 ![](https://img1.dotnet9.com/2024/11/0208.png)
 
-最新一个对文章 [. NET 跨平台客户端框架 - Avalonia UI](https://dotnet9.com/bbs/post/2022/11/one-of-the-best-choices-for-dotnet-cross-platform-frameworks-avalonia-ui) 的 [PR#4](https://github.com/dotnet9/Assets.Dotnet9/pull/4)：
+最新一个对文章 [. NET 跨平台客户端框架 - Avalonia UI](https://dotnet9.com/2022/11/one-of-the-best-choices-for-dotnet-cross-platform-frameworks-avalonia-ui) 的 [PR#4](https://github.com/dotnet9/Assets.Dotnet9/pull/4)：
 
 ![](https://img1.dotnet9.com/2024/11/0213.png)
 

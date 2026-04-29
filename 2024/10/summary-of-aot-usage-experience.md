@@ -359,7 +359,7 @@ if (value is IDictionary dictionary)
 
 #### 9. Winform\兼容 XP
 
-如果第 8 条后还运行不了，请参考上一篇文章《[.NET 9 AOT 的突破 - 支持老旧 Win7 与 XP 环境 - 码坊 (dotnet9.com)](https://dotnet9.com/bbs/post/2024/7/good-news-breakthrough-in-net-9-aot-supports-old-win7-and-xp-environments)》添加 VC-LTL 包，这里不赘述。
+如果第 8 条后还运行不了，请参考上一篇文章《[.NET 9 AOT 的突破 - 支持老旧 Win7 与 XP 环境 - 码坊 (dotnet9.com)](https://dotnet9.com/2024/07/good-news-breakthrough-in-net-9-aot-supports-old-win7-and-xp-environments)》添加 VC-LTL 包，这里不赘述。
 
 #### 10. 其他
 

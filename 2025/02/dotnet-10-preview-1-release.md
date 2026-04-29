@@ -67,7 +67,7 @@ tags:
 
 如果你也想尝试 .NET 10 Preview 1：
 1. 下载并安装 [.NET 10 SDK](https://dotnet.microsoft.com/zh-cn/download/dotnet/10.0)
-2. 如果使用 Visual Studio，建议安装最新的 [Visual Studio 2022 预览版]([Visual Studio Preview](https://visualstudio.microsoft.com/zh-hans/vs/preview/#download-preview)，[VS离线安装包制作](https://learn.microsoft.com/zh-cn/visualstudio/install/create-a-network-installation-of-visual-studio?view=vs-2022#download-the-visual-studio-bootstrapper-to-create-the-layout)教程点击
+2. 如果使用 Visual Studio，建议安装最新的 [Visual Studio 2022 预览版](https://visualstudio.microsoft.com/zh-hans/vs/preview/#download-preview)，如需离线安装可参考 [VS离线安装包制作](https://learn.microsoft.com/zh-cn/visualstudio/install/create-a-network-installation-of-visual-studio?view=vs-2022#download-the-visual-studio-bootstrapper-to-create-the-layout) 教程
 3. VS Code 用户可以安装 C# Dev Kit 扩展
 
 更多详细信息可以查看[官方博客公告](https://devblogs.microsoft.com/dotnet/dotnet-10-preview-1/)。

@@ -22,7 +22,7 @@ tags:
 
 ## 简介
 
-**ScottPlot是一个免费开源的数据可视化控件,使用C#语言编写**。 它可以轻松实现海量数据可视化交互. [**ScottPlot Cookbook**]([ScottPlot Cookbooks](https://scottplot.net/cookbook/)) 例程中，教我们如何用几行代码创建线条图，直方图，饼状图，散点图。
+**ScottPlot是一个免费开源的数据可视化控件,使用C#语言编写**。 它可以轻松实现海量数据可视化交互. **[ScottPlot Cookbook](https://scottplot.net/cookbook/)** 例程中，教我们如何用几行代码创建线条图，直方图，饼状图，散点图。
 
 - [ScottPlot Cookbooks](https://scottplot.net/cookbook/)学习如何使用ScottPlot。
 

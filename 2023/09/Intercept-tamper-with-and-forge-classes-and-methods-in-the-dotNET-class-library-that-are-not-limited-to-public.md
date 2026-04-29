@@ -26,7 +26,7 @@ tags:
 
 方法拦截是指在方法被调用之前或之后，通过插入自定义的代码来修改方法的行为。通过方法拦截，开发人员可以在不修改原始代码的情况下，对方法的输入参数进行验证、修改方法的返回值、记录方法的调用日志等操作。
 
-本文使用`Lib.Harmony`库实现第三方库方法的拦截，关于该库站长写过[快学会这个技能-.NET API拦截技法]([快学会这个技能-.NET API拦截技法 - Dotnet9](https://dotnet9.com/2023/02/Learn-this-skill-Dotnet-API-interception-technique))一文，大家可以再看看，但该篇文章未介绍非public类及方法如何拦截，本文会有所补充反过来 。
+本文使用`Lib.Harmony`库实现第三方库方法的拦截，关于该库站长写过[快学会这个技能-.NET API拦截技法](https://dotnet9.com/2023/02/Learn-this-skill-Dotnet-API-interception-technique)一文，大家可以再看看，但该篇文章未介绍非public类及方法如何拦截，本文会有所补充反过来 。
 
 ## 2. 示例程序拦截
 

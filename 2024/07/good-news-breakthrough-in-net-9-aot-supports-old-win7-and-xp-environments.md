@@ -254,7 +254,7 @@ XP 需要链接 YY-Thunks，参考链接：https://github.com/Chuyu-Team/YY-Thun
 
 > **2024-08-02**
 >
-> 通过阅读开源Avalonia主题库 [Semi.Avalonia]([irihitech/Semi.Avalonia: Avalonia theme inspired by Semi Design (github.com)](https://github.com/irihitech/Semi.Avalonia)) 的源码及作者 `Rabbitism` 兔佬的PR已经解决Prism问题的，其它库问题使用方法应该类似，修改如下：
+> 通过阅读开源Avalonia主题库 [Semi.Avalonia](https://github.com/irihitech/Semi.Avalonia) 的源码及作者 `Rabbitism` 兔佬的PR已经解决Prism问题的，其它库问题使用方法应该类似，修改如下：
 >
 > 主工程添加Roots.xml，内容如下：
 >

@@ -1,6 +1,6 @@
 # WPF国际化包-WPFXmlTranslator
 
-在当今全球化的软件开发环境中，应用程序的国际化变得越来越重要。它可以让你的软件适应不同地区和语言的用户，提升用户体验。本文和[《Avalonia使用XML文件实现国际化》](https://dotnet9.com/bbs/post/2024/12/avalonia-using-xml-files-for-internationalization)类似，今天介绍的包只用于WPF程序，下面我们将简单介绍其用法。
+在当今全球化的软件开发环境中，应用程序的国际化变得越来越重要。它可以让你的软件适应不同地区和语言的用户，提升用户体验。本文和 [《Avalonia使用XML文件实现国际化》](https://dotnet9.com/2024/12/avalonia-using-xml-files-for-internationalization) 类似，今天介绍的包只用于WPF程序，下面我们将简单介绍其用法。
 
 ## 安装必备 NuGet 包
 

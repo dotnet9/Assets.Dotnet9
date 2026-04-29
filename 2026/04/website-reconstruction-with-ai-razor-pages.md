@@ -114,7 +114,7 @@ public class IndexModel : PageModel
 文章详情页使用路由模板语法：
 
 ```cshtml
-@page "/Bbs/Post/{year:int}/{month:int}/{slug}"
+@page "/{year:int}/{month:int}/{slug}"
 @model WebApp.Pages.Bbs.Post.IndexModel
 ```
 
@@ -125,14 +125,9 @@ public class IndexModel : PageModel
 {
     public BlogPost? Post { get; set; }
 
-    public async Task<IActionResult> OnGetAsync(int year, int month, string slug)
+    public async Task OnGetAsync(int year, int month, string slug)
     {
-        Post = await _appService.GetPostAsync(year, month, slug);
-        if (Post == null)
-        {
-            return NotFound();
-        }
-        return Page();
+        Post = await _appService.GetPostBySlug(slug);
     }
 }
 ```
@@ -176,18 +171,11 @@ Layout文件定义全局页面结构：
 
 ### 4.1 AppService核心服务
 
-[AppService.cs](https://github.com/dotnet9/CodeWF/blob/main/src/CodeWF/Services/AppService.cs) 是整个应用的核心服务类：
+[AppService.cs](https://github.com/dotnet9/CodeWF/blob/main/src/WebApp/Services/AppService.cs) 是整个应用的核心服务类：
 
 ```csharp
 public class AppService(IOptions<SiteOption> siteOption)
 {
-    private static readonly JsonSerializerOptions JsonOptions = new()
-    {
-        PropertyNameCaseInsensitive = true,
-        AllowTrailingCommas = true,
-        ReadCommentHandling = JsonCommentHandling.Skip
-    };
-
     private List<BlogPost>? _blogPosts;
     private List<ToolItem>? _toolItems;
     private List<DocItem>? _docItems;
@@ -198,10 +186,29 @@ public class AppService(IOptions<SiteOption> siteOption)
     {
         if (_blogPosts?.Any() == true) return _blogPosts;
 
-        var filePath = Path.Combine(siteOption.Value.LocalAssetsDir,
-            "site", "blog", "posts.json");
-        var fileContent = await File.ReadAllTextAsync(filePath);
-        _blogPosts = JsonSerializer.Deserialize<List<BlogPost>>(fileContent, JsonOptions);
+        _blogPosts = [];
+        var endYear = DateTime.Now.Year;
+
+        for (var start = siteOption.Value.StartYear; start <= endYear; start++)
+        {
+            var postDir = Path.Combine(siteOption.Value.LocalAssetsDir, start.ToString());
+            if (!Directory.Exists(postDir)) continue;
+
+            var postFiles = Directory.GetFiles(postDir, "*.md", SearchOption.AllDirectories);
+            foreach (var postFile in postFiles)
+            {
+                var blogPost = await ReadBlogPostAsync(postFile);
+                if (!blogPost.Draft)
+                {
+                    _blogPosts.Add(blogPost);
+                }
+            }
+        }
+
+        _blogPosts = _blogPosts
+            .OrderByDescending(post => post.Lastmod ?? post.Date ?? DateTime.MinValue)
+            .ThenByDescending(post => post.Date ?? DateTime.MinValue)
+            .ToList();
         return _blogPosts;
     }
 
@@ -246,8 +253,8 @@ public class BlogPost : BlogPostBrief
 
 ![页面请求处理流程](https://img1.dotnet9.com/2026/04/razor-pages-request-flow.svg)
 
-1. 用户请求 `/Timestamp`
-2. 路由系统匹配到 `@page "/Timestamp"`
+1. 用户请求 `/timestamp`
+2. 路由系统匹配到 `@page "/timestamp"`
 3. 执行 `OnGetAsync()` 方法（若存在）
 4. 通过 `AppService` 获取业务数据
 5. 渲染视图并返回HTML
@@ -291,7 +298,7 @@ app.Run();
 以 [Timestamp.cshtml](https://github.com/dotnet9/CodeWF/blob/main/src/WebApp/Pages/Tool/Converter/Timestamp.cshtml) 为例展示前端交互：
 
 ```cshtml
-@page "/Timestamp"
+@page "/timestamp"
 @{ ViewData["Title"] = "时间戳转换工具"; }
 
 <div class="container">

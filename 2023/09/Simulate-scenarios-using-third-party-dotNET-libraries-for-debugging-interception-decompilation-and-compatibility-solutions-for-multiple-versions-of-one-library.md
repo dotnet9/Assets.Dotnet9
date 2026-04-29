@@ -55,7 +55,7 @@ tags:
 
 ### 2.1. 引入Dotnet9Games包
 
-我已经将制作好的（虚构的）游戏发布在[NuGet]([NuGet Gallery | Dotnet9Games 1.0.2](https://www.nuget.org/packages/Dotnet9Games/))上作为第三方包使用。为了模拟一个比较真实的场景，直接安装最新版本【本文基于1.0.3版本编写】即可：
+我已经将制作好的（虚构的）游戏发布在[NuGet](https://www.nuget.org/packages/Dotnet9Games/)上作为第三方包使用。为了模拟一个比较真实的场景，直接安装最新版本【本文基于1.0.3版本编写】即可：
 
 ![](https://img1.dotnet9.com/2023/09/0801.png)
 
@@ -179,7 +179,7 @@ public partial class MainWindow : Window
 
 ### 3.1. 分析
 
-输入`80`个气球后，我们点击`开始游戏`是调用了游戏的方法`StartGame()`, 我们打开[dnSpy]([Releases · dnSpyEx/dnSpy (github.com)](https://github.com/dnSpyEx/dnSpy/releases))（这个链接提供32位和64位下载链接），拖入`Dotnet9Games.dll`,找到该方法代码：
+输入`80`个气球后，我们点击`开始游戏`是调用了游戏的方法`StartGame()`, 我们打开[dnSpy](https://github.com/dnSpyEx/dnSpy/releases)（这个链接提供32位和64位下载链接），拖入`Dotnet9Games.dll`,找到该方法代码：
 
 ![](https://img1.dotnet9.com/2023/09/0804.png)
 
@@ -851,4 +851,4 @@ copy "$(ProjectDir)Lib\Lib.Harmony\2.2.2\0Harmony.ref" "$(ProjectDir)Lib\Lib.Har
 
 本文通过一个模拟实际案例，帮助大家应用前两篇文章中涉及的技能(`dnSpy`调试第三方库和`Lib.Harmony`拦截第三方库)，并且介绍一种支持多个版本的库的兼容性解决方案。
 
-通过本文介绍支持多个版本的库的兼容性解决方案，读者可以简单了解如何反编译第三方库，以及如何使用强签名技术来保证库的兼容性（和安全性，本文未展开说，可以阅读此文[浅谈.NET程序集安全签名]([浅谈.NET程序集安全签名 - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/26125837))）。希望本文提供的案例能帮助读者更好地理解和应用这些技能。
+通过本文介绍支持多个版本的库的兼容性解决方案，读者可以简单了解如何反编译第三方库，以及如何使用强签名技术来保证库的兼容性（和安全性，本文未展开说，可以阅读此文[浅谈.NET程序集安全签名](https://zhuanlan.zhihu.com/p/26125837)）。希望本文提供的案例能帮助读者更好地理解和应用这些技能。
