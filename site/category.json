@@ -2,127 +2,127 @@
   {
     "Sort": 1,
     "Name": "Blazor",
-    "Memo": "Blazor相关文章",
+    "Memo": "Blazor框架、组件开发与项目实践",
     "Slug": "blazor"
   },
   {
     "Sort": 2,
     "Name": "ASP.NET Core",
-    "Memo": "相关文章",
+    "Memo": "ASP.NET Core后端开发与架构实践",
     "Slug": "asp-net-core"
   },
   {
     "Sort": 3,
     "Name": "Avalonia UI",
-    "Memo": "相关文章",
+    "Memo": "Avalonia跨平台桌面开发与控件实践",
     "Slug": "avalonia"
   },
   {
     "Sort": 4,
     "Name": "WPF",
-    "Memo": "WPF相关文章",
+    "Memo": "WPF桌面开发、界面设计与框架实践",
     "Slug": "wpf"
   },
   {
     "Sort": 5,
     "Name": "Winform",
-    "Memo": "Winform相关文章",
+    "Memo": "Winform桌面应用开发与控件使用",
     "Slug": "winform"
   },
   {
     "Sort": 6,
     "Name": "MAUI",
-    "Memo": "相关文章",
+    "Memo": ".NET MAUI跨平台应用开发实践",
     "Slug": "maui"
   },
   {
     "Sort": 7,
     "Name": "EF Core",
-    "Memo": "相关文章",
+    "Memo": "EF Core数据访问、迁移与性能优化",
     "Slug": "ef-core"
   },
   {
     "Sort": 8,
     "Name": "Dapper",
-    "Memo": "相关文章",
+    "Memo": "Dapper轻量级数据访问与实战技巧",
     "Slug": "dapper"
   },
   {
     "Sort": 9,
     "Name": ".NET",
-    "Memo": ".NET其他相关文章",
+    "Memo": ".NET生态、运行时与工程经验沉淀",
     "Slug": "dotnet"
   },
   {
     "Sort": 10,
     "Name": "Python",
-    "Memo": "Python相关文章",
+    "Memo": "Python语言、工具脚本与项目实践",
     "Slug": "python"
   },
   {
     "Sort": 11,
     "Name": "前端",
-    "Memo": "前端相关文章",
+    "Memo": "前端开发、工程化与交互体验实践",
     "Slug": "frontend"
   },
   {
     "Sort": 12,
     "Name": "MySQL",
-    "Memo": "数据库相关文章",
+    "Memo": "MySQL数据库设计、查询与运维经验",
     "Slug": "mysql"
   },
   {
     "Sort": 13,
     "Name": "数据库",
-    "Memo": "数据库相关文章",
+    "Memo": "数据库建模、性能优化与实践总结",
     "Slug": "database"
   },
   {
     "Sort": 14,
     "Name": "Flutter",
-    "Memo": "相关文章",
+    "Memo": "Flutter跨平台应用开发与界面实践",
     "Slug": "flutter"
   },
   {
     "Sort": 15,
     "Name": "Swift UI",
-    "Memo": "相关文章",
+    "Memo": "Swift UI界面开发与苹果生态实践",
     "Slug": "swift-ui"
   },
   {
     "Sort": 16,
     "Name": "更多语言",
-    "Memo": "其他语言相关文章",
+    "Memo": "收录多语言开发经验与工具实践",
     "Slug": "morelanguage"
   },
   {
     "Sort": 17,
     "Name": "Docker",
-    "Memo": "站长推荐",
+    "Memo": "Docker容器化部署、镜像与运维实践",
     "Slug": "docker"
   },
   {
     "Sort": 18,
     "Name": "课程",
-    "Memo": "站长推荐",
+    "Memo": "精选技术课程、学习路线与成长资源",
     "Slug": "course"
   },
   {
     "Sort": 19,
     "Name": "架构设计",
-    "Memo": "站长推荐文章或工具或在项目",
+    "Memo": "系统架构、工程治理与设计经验",
     "Slug": "architecture-design"
   },
   {
     "Sort": 20,
     "Name": "数字化转型",
-    "Memo": "站长推荐文章或工具或在项目",
+    "Memo": "数字化转型案例、方法与落地实践",
     "Slug": "digital-transformation"
   },
   {
     "Sort": 21,
     "Name": "分享",
-    "Memo": "站长推荐文章或工具或在项目",
+    "Memo": "技术观察、经验复盘与实用资源分享",
     "Slug": "share"
   }
 ]

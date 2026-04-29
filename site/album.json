@@ -2,79 +2,79 @@
   {
     "Sort": 1,
     "Name": "一起学Blazor系列",
-    "Memo": "相关文章",
+    "Memo": "Blazor从基础到实战的系列学习文章",
     "Slug": "learn-blazor-series"
   },
   {
     "Sort": 2,
     "Name": "Blazor组件库",
-    "Memo": "相关文章",
+    "Memo": "收录Blazor组件库选型、使用与实践",
     "Slug": "blazor-component-library"
   },
   {
     "Sort": 3,
     "Name": "Avalonia UI开源项目",
-    "Memo": "相关文章",
+    "Memo": "精选Avalonia UI开源项目案例与解析",
     "Slug": "avalonia-ui-open-source-project"
   },
   {
     "Sort": 4,
     "Name": "Avalonia UI控件库",
-    "Memo": "相关文章",
+    "Memo": "整理Avalonia控件库使用与界面开发",
     "Slug": "avalonia-ui-control-library"
   },
   {
     "Sort": 5,
     "Name": "WPF MVVM框架 Prism系列",
-    "Memo": "相关文章",
+    "Memo": "Prism框架在WPF项目中的实践记录",
     "Slug": "wpf-mvvm-framework-prism-series"
   },
   {
     "Sort": 6,
     "Name": "WPF开源项目",
-    "Memo": "相关文章",
+    "Memo": "推荐WPF开源项目与源码学习资料",
     "Slug": "wpf-open-source-projects"
   },
   {
     "Sort": 7,
     "Name": "WPF UI设计",
-    "Memo": "WPF界面设计相关文章",
+    "Memo": "聚焦WPF界面设计、交互与视觉优化",
     "Slug": "wpf-ui-design"
   },
   {
     "Sort": 8,
     "Name": "WPF控件库",
-    "Memo": "相关文章",
+    "Memo": "汇总WPF控件库选型、使用与扩展",
     "Slug": "wpf-controls-library"
   },
   {
     "Sort": 9,
     "Name": "Winform开源项目",
-    "Memo": "相关文章",
+    "Memo": "收录Winform开源项目案例与实现思路",
     "Slug": "winform-open-source-projects"
   },
   {
     "Sort": 10,
     "Name": "Winform控件库",
-    "Memo": "相关文章",
+    "Memo": "整理Winform控件库资源与使用经验",
     "Slug": "winform-controls-library"
   },
   {
     "Sort": 11,
     "Name": "C# AOT",
-    "Memo": "相关文章",
+    "Memo": "记录C# AOT发布、优化与踩坑经验",
     "Slug": "csharp-aot"
   },
   {
     "Sort": 12,
     "Name": "C#开源项目",
-    "Memo": "相关文章",
+    "Memo": "精选C#开源项目、工具与源码实践",
     "Slug": "csharp-open-source-projects"
   },
   {
     "Sort": 13,
     "Name": "从护士到C#开发者",
-    "Memo": "文章讲述了一位护士因工作压力和家庭责任而辞职，在求职困难后，决定学习编程，特别是C#语言。",
+    "Memo": "记录从护理行业转向C#开发的成长故事",
     "Slug": "from-nurse-to-csharp-developer"
   }
 ]
