@@ -5,10 +5,6 @@
       {
         "Name": "介绍",
         "Slug": "readme"
-      },
-      {
-        "Name": "更新日志",
-        "Slug": "updatelog"
       }
     ]
   },
