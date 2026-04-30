@@ -1,18 +1,21 @@
 ---
 title: 在 .NET 中使用 Flurl 高效处理Http请求
-slug: Efficiently-handle-Http-requests-with-Flurl-in-dotNET
-description: Flurl是一个现代的，流利的，支持异步的，可测试的，可移植的，URL增强和Http客户端组件。
+slug: efficiently-handle-http-requests-with-flurl-in-dotnet
+description: "Flurl是一个现代的，流利的，支持异步的，可测试的，可移植的，URL增强和Http客户端组件。"
 date: 2022-06-24 21:45:29
-copyright: Reprinted
+lastmod: 2022-06-24 21:45:29
 author: SpringLeee
 originalTitle: 在 .NET 中使用 Flurl 高效处理Http请求
 originalLink: https://www.cnblogs.com/myshowtime/p/14512563.html
-draft: False
+copyright: Reprinted
+draft: false
 cover: https://img1.dotnet9.com/2022/06/cover_17.jpg
-categories: 
-    - .NET
-tags: 
-    - Flurl
+categories:
+  - .NET
+tags:
+  - .NET
+  - C#
+  - Flurl
 ---
 
 ## 简介

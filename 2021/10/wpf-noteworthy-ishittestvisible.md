@@ -1,18 +1,21 @@
 ---
 title: WPF值得注意的IsHitTestVisible
 slug: wpf-noteworthy-ishittestvisible
-description: 这个属性设置为false,看起来没有变化,但操作上已经把他完全忽视了,不触发事件,可以直接点到它下面的东西。
+description: "这个属性设置为false,看起来没有变化,但操作上已经把他完全忽视了,不触发事件,可以直接点到它下面的东西。"
 date: 2021-10-20 18:18:16
-copyright: Reprinted
+lastmod: 2021-10-20 18:18:16
 author: 普通的地球人
 originalTitle: WPF值得注意的IsHitTestVisible
 originalLink: https://www.cnblogs.com/tsliwei/p/5923107.html
-draft: False
+copyright: Reprinted
+draft: false
 cover: https://img1.dotnet9.com/2021/10/cover_02.jpg
-categories: 
-    - WPF
-tags: 
-    - HitTest
+categories:
+  - WPF
+tags:
+  - .NET
+  - WPF
+  - HitTest
 ---
 
 这个属性我们平时可能并不怎么用，先来看下 MSDN 上的解释:

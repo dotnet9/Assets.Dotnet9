@@ -1,18 +1,21 @@
 ---
 title: 利用Inno Setup在VS编译时自动构建安装包
-slug: Using-Inno-Setup-to-automatically-build-installation-packages-during-VS-compilation
-description: 很多C/S开发领域的同学或多或少都可能会遇到需要制作安装包的场景，打包的工具也是五花八门。
+slug: using-inno-setup-to-automatically-build-installation-packages-during-vs-compilation
+description: "很多C/S开发领域的同学或多或少都可能会遇到需要制作安装包的场景，打包的工具也是五花八门。"
 date: 2023-07-20 23:35:16
-copyright: Contributes
+lastmod: 2023-07-20 23:35:16
 author: 傲慢与偏见
 originalTitle: 利用Inno Setup在VS编译时自动构建安装包
 originalLink: https://www.cnblogs.com/chonglu/p/17566940.html
+copyright: Contributes
 draft: false
 cover: https://img1.dotnet9.com/2023/07/cover_09.png
-categories: 
-    - .NET
-tags: 
-    - .NET
+categories:
+  - .NET
+tags:
+  - .NET
+  - C#
+  - Visual Studio
 ---
 
 > 本文由网友投稿，.NET 是免费、开源、跨平台的。

@@ -1,21 +1,22 @@
 ---
 title: Dapper in .NET Core
-slug: Dapper-in-dotNET-Core
-description: 关于什么是Dapper（详细入口），在此不做赘述；本文仅对Dapper在.Net Core中的使用作扼要说明，所陈代码以示例讲解为主，乃抛砖引玉，开发者可根据自身需要进行扩展和调整
+slug: dapper-in-dotnet-core
+description: "关于什么是Dapper（详细入口），在此不做赘述；本文仅对Dapper在.Net Core中的使用作扼要说明，所陈代码以示例讲解为主，乃抛砖引玉，开发者可根据自身需要进行扩展和调整"
 date: 2022-01-10 22:12:04
-copyright: Reprinted
+lastmod: 2022-01-10 22:12:04
 author: 白云任去留
 originalTitle: Dapper in .NET Core
 originalLink: cnblogs.com/ang/p/13620452.html
-draft: False
+copyright: Reprinted
+draft: false
 cover: https://img1.dotnet9.com/2022/01/cover_08.jpg
-categories: 
-    - Dapper
-tags: 
-    - C#
-    - .NET
-    - Dapper
-    - ORM
+categories:
+  - Dapper
+tags:
+  - .NET
+  - C#
+  - Dapper
+  - ORM
 ---
 
 **目录**

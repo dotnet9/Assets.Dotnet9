@@ -1,22 +1,24 @@
 ---
-title: (20/30)大家一起学Blazor：日志记录
+title: "(20/30)大家一起学Blazor：日志记录"
 slug: 20-of-30-let-us-learn-blazor-together-log-record
-description: 在开发系统时，记录是一件很重要的事，前面都没有提到，笔者在最近才想到这点，所以就来实现吧！
+description: "在开发系统时，记录是一件很重要的事，前面都没有提到，笔者在最近才想到这点，所以就来实现吧！"
 date: 2021-12-21 23:36:29
-copyright: Reprinted
+lastmod: 2021-12-21 23:36:29
 author: StrayaWorker
-originalTitle: (20/30)大家一起学Blazor：日志记录
+originalTitle: "(20/30)大家一起学Blazor：日志记录"
 originalLink: https://ithelp.ithome.com.tw/articles/10268616
-draft: False
+copyright: Reprinted
+draft: false
 cover: https://img1.dotnet9.com/2021/12/cover_05.png
+categories:
+  - Blazor
 albums:
-    - 一起学Blazor系列
-categories: 
-    - Blazor
-tags: 
-    - Blazor
-    - ASP.NET Core
-    - 学Blazor
+  - 一起学Blazor系列
+tags:
+  - .NET
+  - C#
+  - ASP.NET Core
+  - Blazor
 ---
 
 在开发系统时，记录是一件很重要的事，前面都没有提到，笔者在最近才想到这点，所以就来实现吧！

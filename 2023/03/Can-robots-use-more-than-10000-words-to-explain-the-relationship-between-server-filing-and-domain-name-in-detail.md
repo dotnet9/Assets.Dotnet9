@@ -1,17 +1,18 @@
 ---
-title: "@机器人 能用10000字以上详细说明服务器备案与域名的关系吗？"
-slug: Can-robots-use-more-than-10000-words-to-explain-the-relationship-between-server-filing-and-domain-name-in-detail
-description: 不少人搞不懂网站备案，到底是服务器需要备案还是域名需要备案。
+title: "@机器人 能用10000字以上详细说明服务器备案与域名的关系吗？"
+slug: can-robots-use-more-than-10000-words-to-explain-the-relationship-between-server-filing-and-domain-name-in-detail
+description: "不少人搞不懂网站备案，到底是服务器需要备案还是域名需要备案。"
 date: 2023-03-12 10:09:27
-copyright: Original
+lastmod: 2023-03-12 10:09:27
 author: 机器人
+copyright: Original
 draft: false
 cover: https://img1.dotnet9.com/2023/03/cover_03.jpg
-categories: 
-    - 分享
-tags: 
-    - 服务器备案
-    - 域名
+categories:
+  - 分享
+tags:
+  - 服务器备案
+  - 域名
 ---
 
 ## 讲在前面

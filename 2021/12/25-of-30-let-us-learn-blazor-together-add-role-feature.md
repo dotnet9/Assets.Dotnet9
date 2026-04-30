@@ -1,22 +1,24 @@
 ---
-title: (25/30)大家一起学Blazor：添加角色功能
+title: "(25/30)大家一起学Blazor：添加角色功能"
 slug: 25-of-30-let-us-learn-blazor-together-add-role-feature
-description: 首先添加承载角色数据的`ViewModel`，因为接下来的权限会以角色判断
+description: "首先添加承载角色数据的`ViewModel`，因为接下来的权限会以角色判断"
 date: 2021-12-23 23:08:41
-copyright: Reprinted
+lastmod: 2021-12-23 23:08:41
 author: StrayaWorker
-originalTitle: (25/30)大家一起学Blazor：添加角色功能
+originalTitle: "(25/30)大家一起学Blazor：添加角色功能"
 originalLink: https://ithelp.ithome.com.tw/articles/10272010
-draft: False
+copyright: Reprinted
+draft: false
 cover: https://img1.dotnet9.com/2021/12/cover_05.png
+categories:
+  - Blazor
 albums:
-    - 一起学Blazor系列
-categories: 
-    - Blazor
-tags: 
-    - Blazor
-    - ASP.NET Core
-    - 学Blazor
+  - 一起学Blazor系列
+tags:
+  - .NET
+  - C#
+  - ASP.NET Core
+  - Blazor
 ---
 
 首先添加承载角色数据的`ViewModel`，因为接下来的权限会以角色判断，`ASP.NET Core Identity` 承载角色的`Model` 为`IdentityRole`，里面有太多不该让用户看到的信息，通常会自己写新的`ViewModel` 以过滤多余信息，这边只呈现`Role`的`Id`、`Name` 跟`Role` 底下所有用户的名称。

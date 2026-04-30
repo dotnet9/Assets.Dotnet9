@@ -1,18 +1,19 @@
 ---
 title: 如何在 2022 年开发桌面
-slug: How-to-develop-desktop-in-2022
-description: 恭喜，如果你在 2021 年读到这篇文章，那么你已经穿越到了明年。
+slug: how-to-develop-desktop-in-2022
+description: "恭喜，如果你在 2021 年读到这篇文章，那么你已经穿越到了明年。"
 date: 2022-05-06 06:39:14
-copyright: Reprinted
+lastmod: 2022-05-06 06:39:14
 author: 顾中民
 originalTitle: 如何在 2022 年开发桌面
 originalLink: https://www.bilibili.com/read/cv13119608/
-draft: False
+copyright: Reprinted
+draft: false
 cover: https://img1.dotnet9.com/2022/05/cover_20.jpg
-categories: 
-    - 前端
-tags: 
-    - Flutter
+categories:
+  - 前端
+tags:
+  - Flutter
 ---
 
 > 原文网址：[https://www.telerik.com/blogs/how-to-desktop-2022](https://www.telerik.com/blogs/how-to-desktop-2022)

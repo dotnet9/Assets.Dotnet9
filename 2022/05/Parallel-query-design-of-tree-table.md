@@ -1,18 +1,19 @@
 ---
 title: 树形表的平行查询设计
-slug: Parallel-query-design-of-tree-table
+slug: parallel-query-design-of-tree-table
 description: 树形表设计讨论
 date: 2022-05-24 18:53:47
-copyright: Contributes
+lastmod: 2022-05-24 18:53:47
 author: 长空X
 originalTitle: 树形表的平行查询设计
 originalLink: https://www.cnblogs.com/gtxck/articles/16293295.html
-draft: False
+copyright: Contributes
+draft: false
 cover: https://img1.dotnet9.com/2022/05/cover_53.png
-categories: 
-    - 分享
-tags: 
-    - 架构设计
+categories:
+  - 分享
+tags:
+  - 架构设计
 ---
 
 > 本文由网友`长空X`投稿，欢迎转载、分享

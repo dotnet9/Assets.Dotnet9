@@ -1,20 +1,21 @@
 ---
-title: C#使用Socket实现分布式事件总线，不依赖第三方MQ
+title: "C#使用Socket实现分布式事件总线，不依赖第三方MQ"
 slug: csharp-uses-socket-to-implement-distributed-event-bus-without-relying-on-third-party-mq
-description: CodeWF.EventBus.Socket 是一个轻量级的、基于Socket的分布式事件总线系统，旨在简化分布式架构中的事件通信。它允许进程之间通过发布/订阅模式进行通信，无需依赖外部消息队列服务。
+description: "CodeWF.EventBus.Socket 是一个轻量级的、基于Socket的分布式事件总线系统，旨在简化分布式架构中的事件通信。它允许进程之间通过发布/订阅模式进行通信，无需依赖外部消息队列服务。"
 date: 2024-07-26 09:54:16
 lastmod: 2024-07-28 10:25:27
+author: Dotnet9
 copyright: Original
 draft: false
 cover: https://img1.dotnet9.com/2024/07/cover_02.png
 categories:
   - .NET
 tags:
+  - .NET
   - C#
-  - EventBus
+  - 架构设计
   - Distributed
-  - Socket
-  - MQ
+  - EventBus
 ---
 
 **使用 Socket 实现的分布式事件总线，支持 CQRS，不依赖第三方 MQ。**

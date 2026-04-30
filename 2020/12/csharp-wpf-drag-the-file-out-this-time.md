@@ -1,17 +1,21 @@
 ---
-title: C# WPF：这次把文件拖出去！
+title: "C# WPF：这次把文件拖出去！"
 slug: csharp-wpf-drag-the-file-out-this-time
 description: 将文件从WPF窗体中拖出
 date: 2020-12-03 13:45:56
+lastmod: 2020-12-03 13:45:56
+author: Dotnet9
+originalTitle: "C# WPF：这次把文件拖出去！"
 copyright: Original
-originalTitle: C# WPF：这次把文件拖出去！
-draft: False
+draft: false
 cover: https://img1.dotnet9.com/2020/12/cover_03.jpg
-categories: 
-    - WPF
-tags: 
-    - WPF
-    - 文件拖拽
+categories:
+  - WPF
+tags:
+  - .NET
+  - C#
+  - WPF
+  - 文件拖拽
 ---
 
 回顾上篇文章：[C# WPF：把文件给我拖进来！！！](https://mp.weixin.qq.com/s/d8dWW-ss82GK1H-YmGKBzQ)

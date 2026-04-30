@@ -1,16 +1,18 @@
 ---
 title: 快速创建软件安装包-ClickOnce
-slug: Quickly-create-software-installation-package-ClickOnce
-description: ClickOnce 是一种部署技术，使用该技术可创建自行更新的基于 Windows 的应用程序，这些应用程序可以通过最低程度的用户交互来安装和运行。
+slug: quickly-create-software-installation-package-click-once
+description: "ClickOnce 是一种部署技术，使用该技术可创建自行更新的基于 Windows 的应用程序，这些应用程序可以通过最低程度的用户交互来安装和运行。"
 date: 2022-11-02 20:56:48
-copyright: Original
+lastmod: 2022-11-02 20:56:48
 author: 沙漠尽头的狼
+copyright: Original
 draft: false
 cover: https://img1.dotnet9.com/2022/11/cover_02.png
-categories: 
-    - .NET
-tags: 
-    - .NET
+categories:
+  - .NET
+tags:
+  - .NET
+  - C#
 ---
 
 大家好，我是沙漠尽头的狼。

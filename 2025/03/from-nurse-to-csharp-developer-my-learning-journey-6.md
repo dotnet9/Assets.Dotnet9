@@ -1,24 +1,24 @@
 ---
-title: (6)从护士到C#开发者--基础进阶：程序控制与数据结构
+title: "(6)从护士到C#开发者--基础进阶：程序控制与数据结构"
 slug: from-nurse-to-csharp-developer-my-learning-journey-6
-description: 在C#编程学习的第六天，我学习了循环控制、三元表达式、常量、枚举、结构、数组以及方法等内容。作为一名从护理行业转行的开发者，我将这些编程概念与护理工作经验相结合，帮助自己更好地理解和记忆。
+description: "在C#编程学习的第六天，我学习了循环控制、三元表达式、常量、枚举、结构、数组以及方法等内容。作为一名从护理行业转行的开发者，我将这些编程概念与护理工作经验相结合，帮助自己更好地理解和记忆。"
 date: 2025-03-05 10:01:14
 lastmod: 2025-03-09 20:49:21
-copyright: Contributes
 author: 勇敢的天使
-draft: False
+copyright: Contributes
+draft: false
 cover: https://img1.dotnet9.com/2025/02/cover_02.png
 categories:
   - 分享
-  - 编程学习
+  - 课程
 albums:
   - 从护士到C#开发者
 tags:
-  - 护士
-  - 编程
+  - .NET
   - C#
+  - 转行开发
+  - 编程
   - 程序控制
-  - 数据结构
 ---
 
 ## 前言

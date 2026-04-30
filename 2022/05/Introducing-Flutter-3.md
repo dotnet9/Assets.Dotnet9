@@ -1,16 +1,18 @@
 ---
-title: Flutter 3 发布了(文末推荐一个免费的在线Flutter学习教程)
-slug: Introducing-Flutter-3
-description: Flutter 3发布了，你还在等什么呢？一起来了解、学习吧！！！
+title: "Flutter 3 发布了(文末推荐一个免费的在线Flutter学习教程)"
+slug: introducing-flutter-3
+description: "Flutter 3发布了，你还在等什么呢？一起来了解、学习吧！！！"
 date: 2022-05-12 08:25:17
+lastmod: 2022-05-12 08:25:17
+author: Dotnet9
+originalTitle: "Flutter 3 发布了(文末推荐一个免费的在线Flutter学习教程)"
 copyright: Original
-originalTitle: Flutter 3 发布了(文末推荐一个免费的在线Flutter学习教程)
-draft: False
+draft: false
 cover: https://img1.dotnet9.com/2022/05/cover_35.png
-categories: 
-    - Flutter
-tags: 
-    - Flutter
+categories:
+  - Flutter
+tags:
+  - Flutter
 ---
 
 > 翻译自 [Tim Sneath](https://medium.com/@timsneath) 2022 年 5 月 12 日的文章 [《Introducing Flutter 3》](https://medium.com/flutter/introducing-flutter-3-5eb69151622f)

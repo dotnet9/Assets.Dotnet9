@@ -1,18 +1,19 @@
 ---
-title: mysql 8.0.28 x64 for Windows超级精简便携版，仅16MB
-slug: MySQL-8-0-28-x64-for-windows-super-compact-portable-version-only-16MB
-description: MySQL是一个关系型数据库管理系统，由瑞典MySQL AB 公司开发，目前属于 Oracle 旗下产品。
+title: "mysql 8.0.28 x64 for Windows超级精简便携版，仅16MB"
+slug: my-sql-8-0-28-x64-for-windows-super-compact-portable-version-only-16-mb
+description: "MySQL是一个关系型数据库管理系统，由瑞典MySQL AB 公司开发，目前属于 Oracle 旗下产品。"
 date: 2022-05-06 07:31:24
-copyright: Reprinted
+lastmod: 2022-05-06 07:31:24
 author: 懒得勤快
-originalTitle: mysql 8.0.28 x64 for Windows超级精简便携版，仅16MB
+originalTitle: "mysql 8.0.28 x64 for Windows超级精简便携版，仅16MB"
 originalLink: https://ldqk.xyz/1567?kw=mysql&t=uptl3b9wq874
-draft: False
+copyright: Reprinted
+draft: false
 cover: https://img1.dotnet9.com/2022/05/cover_23.png
-categories: 
-    - MySQL
-tags: 
-    - MySQL
+categories:
+  - MySQL
+tags:
+  - MySQL
 ---
 
 ![](https://img1.dotnet9.com/2022/05/cover_23.png)

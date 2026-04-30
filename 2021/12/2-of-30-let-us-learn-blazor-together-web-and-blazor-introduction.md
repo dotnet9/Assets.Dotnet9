@@ -1,22 +1,24 @@
 ---
-title: (2/30)大家一起学Blazor：网页和Blazor介绍
+title: "(2/30)大家一起学Blazor：网页和Blazor介绍"
 slug: 2-of-30-let-us-learn-blazor-together-web-and-blazor-introduction
-description: 笔者对网站的认知为前端、后端及数据库，使用者在浏览器页面按下按钮或是表单请求，触发前端事件，将收集起来的条件打包送往后端
+description: "笔者对网站的认知为前端、后端及数据库，使用者在浏览器页面按下按钮或是表单请求，触发前端事件，将收集起来的条件打包送往后端"
 date: 2021-12-09 23:04:23
-copyright: Reprinted
+lastmod: 2021-12-09 23:04:23
 author: StrayaWorker
-originalTitle: (2/30)大家一起学Blazor：网页和Blazor介绍
+originalTitle: "(2/30)大家一起学Blazor：网页和Blazor介绍"
 originalLink: https://ithelp.ithome.com.tw/articles/10258950
-draft: False
+copyright: Reprinted
+draft: false
 cover: https://img1.dotnet9.com/2021/12/cover_05.png
+categories:
+  - Blazor
 albums:
-    - 一起学Blazor系列
-categories: 
-    - Blazor
-tags: 
-    - Blazor
-    - ASP.NET Core
-    - 学Blazor
+  - 一起学Blazor系列
+tags:
+  - .NET
+  - C#
+  - ASP.NET Core
+  - Blazor
 ---
 
 笔者对网站的认知为前端、后端及数据库，使用者在浏览器页面按下按钮或是表单请求，触发前端事件，将收集起来的条件打包送往后端，后端接收条件后去数据库据此处理判断，捞出使用者想要的数据后，后端将页面、数据回传给前端，前端再将相应数据呈现在页面上，这就是最原始的前后端交流。

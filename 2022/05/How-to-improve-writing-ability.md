@@ -1,18 +1,19 @@
 ---
-title: 如何提升写作能力？
-slug: How-to-improve-writing-ability
-description: 尽管我在公众号已经发了 130 多篇原创文章，而且在写公众号之前，还写了十来年的博客，可我依然觉得我不会写作。
+title: "如何提升写作能力？"
+slug: how-to-improve-writing-ability
+description: "尽管我在公众号已经发了 130 多篇原创文章，而且在写公众号之前，还写了十来年的博客，可我依然觉得我不会写作。"
 date: 2022-05-05 07:13:25
-copyright: Reprinted
+lastmod: 2022-05-05 07:13:25
 author: oec2003 不止dotNET
-originalTitle: 如何提升写作能力？
+originalTitle: "如何提升写作能力？"
 originalLink: https://mp.weixin.qq.com/s/XLNum8NuyK2DYd6sfNNZ5w
-draft: False
+copyright: Reprinted
+draft: false
 cover: https://img1.dotnet9.com/2022/05/cover_15.jpg
-categories: 
-    - 分享
-tags: 
-    - 写作技巧
+categories:
+  - 分享
+tags:
+  - 写作技巧
 ---
 
 ![](https://img1.dotnet9.com/2022/05/cover_15.jpg)

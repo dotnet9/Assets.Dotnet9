@@ -1,22 +1,24 @@
 ---
-title: (18/30)大家一起学Blazor：修改Add()方法
+title: "(18/30)大家一起学Blazor：修改Add()方法"
 slug: 18-of-30-let-us-learn-blazor-together-modify-add-function
-description: 假设今天有个状况是这样：有一条日志，新增第二条但还没提交前，想将第一条删除，这时会发生什么事呢？
+description: "假设今天有个状况是这样：有一条日志，新增第二条但还没提交前，想将第一条删除，这时会发生什么事呢？"
 date: 2021-12-20 23:04:06
-copyright: Reprinted
+lastmod: 2021-12-20 23:04:06
 author: StrayaWorker
-originalTitle: (18/30)大家一起学Blazor：修改Add()方法
+originalTitle: "(18/30)大家一起学Blazor：修改Add()方法"
 originalLink: https://ithelp.ithome.com.tw/articles/10267015
-draft: False
+copyright: Reprinted
+draft: false
 cover: https://img1.dotnet9.com/2021/12/cover_05.png
+categories:
+  - Blazor
 albums:
-    - 一起学Blazor系列
-categories: 
-    - Blazor
-tags: 
-    - Blazor
-    - ASP.NET Core
-    - 学Blazor
+  - 一起学Blazor系列
+tags:
+  - .NET
+  - C#
+  - ASP.NET Core
+  - Blazor
 ---
 
 假设今天有个状况是这样：有一条日志，新增第二条但还没提交前，想将第一条删除，这时会发生什么事呢？

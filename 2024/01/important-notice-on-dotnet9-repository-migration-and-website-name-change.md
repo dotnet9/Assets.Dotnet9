@@ -1,18 +1,21 @@
 ---
 title: 关于Dotnet9仓库迁移及网站Logo和名称变更的重要通知
 slug: important-notice-on-dotnet9-repository-migration-and-website-name-change
-description: 为了避免可能出现的误解和混淆（虽然当初报着碰瓷儿的想法），站长决定将原有的Dotnet9仓库进行归档处理。
+description: "为了避免可能出现的误解和混淆（虽然当初报着碰瓷儿的想法），站长决定将原有的Dotnet9仓库进行归档处理。"
 date: 2024-01-14 05:12:49
 lastmod: 2024-01-14 05:37:27
+author: Dotnet9
 copyright: Original
 draft: false
 cover: https://img1.dotnet9.com/2024/01/cover_05.png
 categories:
   - .NET
 tags:
+  - .NET
+  - C#
+  - Avalonia UI
   - 码坊
   - 在线工具
-  - Avalonia UI
 ---
 
 **尊敬的各位关注者：**

@@ -1,16 +1,19 @@
 ---
-title: 经过一天一夜，网站又重构上线！
-slug: After-one-day-and-one-night-the-website-has-been-reconstructed-and-launched-again
-description: 一个晚上Razor Pages技术点学习，一个白天进行网站前台重构，累！
+title: "经过一天一夜，网站又重构上线！"
+slug: after-one-day-and-one-night-the-website-has-been-reconstructed-and-launched-again
+description: "一个晚上Razor Pages技术点学习，一个白天进行网站前台重构，累！"
 date: 2022-10-08 11:01:46
-copyright: Original
+lastmod: 2022-10-08 11:01:46
 author: 沙漠尽头的狼
+copyright: Original
 draft: false
 cover: https://img1.dotnet9.com/2022/10/razor-pages-blog-cover.png
-categories: 
-    - 更多语言
-tags: 
-    - Go
+categories:
+  - 更多语言
+tags:
+  - .NET
+  - Go
+  - Razor Pages
 ---
 
 大家好，我是沙漠尽头的狼。

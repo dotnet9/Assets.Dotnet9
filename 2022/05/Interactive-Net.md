@@ -1,18 +1,20 @@
 ---
 title: 交互式 .Net
-slug: Interactive-Net
-description: 交互式是指输入代码后可直接运行该代码，然后持续输入运行代码。
+slug: interactive-net
+description: "交互式是指输入代码后可直接运行该代码，然后持续输入运行代码。"
 date: 2022-05-09 06:25:35
-copyright: Reprinted
+lastmod: 2022-05-09 06:25:35
 author: Erik Xu 跬步之巅
 originalTitle: 交互式 .Net
 originalLink: https://mp.weixin.qq.com/s/diIvOonESreeKLgC_5u-vw
-draft: False
+copyright: Reprinted
+draft: false
 cover: https://img1.dotnet9.com/2022/05/cover_27.png
-categories: 
-    - .NET
-tags: 
-    - .NET
+categories:
+  - .NET
+tags:
+  - .NET
+  - C#
 ---
 
 ## 1. 名词解析

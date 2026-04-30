@@ -1,18 +1,20 @@
 ---
 title: 对象映射 - Mapping.Mapster
-slug: Object-Mapping-Mapping-Mapster
-description: 在项目中我们会经常遇到对象的映射，比如像Model和Dto之间的映射，或者是对象的深拷贝，这些都是需要我们自己实现的。
+slug: object-mapping-mapping-mapster
+description: "在项目中我们会经常遇到对象的映射，比如像Model和Dto之间的映射，或者是对象的深拷贝，这些都是需要我们自己实现的。"
 date: 2022-07-06 20:18:46
-copyright: Reprinted
+lastmod: 2022-07-06 20:18:46
 author: 磊_磊
 originalTitle: 对象映射 - Mapping.Mapster
 originalLink: https://www.cnblogs.com/zhenlei520/p/16324870.html
-draft: False
+copyright: Reprinted
+draft: false
 cover: https://img1.dotnet9.com/2022/07/cover_05.png
-categories: 
-    - .NET
-tags: 
-    - .NET
+categories:
+  - .NET
+tags:
+  - .NET
+  - C#
 ---
 
 ## 前言

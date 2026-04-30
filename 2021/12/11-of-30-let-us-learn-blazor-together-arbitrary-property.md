@@ -1,22 +1,24 @@
 ---
-title: (11/30)大家一起学Blazor：Arbitrary属性
+title: "(11/30)大家一起学Blazor：Arbitrary属性"
 slug: 11-of-30-let-us-learn-blazor-together-arbitrary-property
-description: 目前`MyButton`有3个`[Parameter]`，如果再增加的话，又要再定义新的`[Parameter]`，为了避免不断更新这个Component，我们来用Blazor提供的`@attribute`。
+description: "目前`MyButton`有3个`[Parameter]`，如果再增加的话，又要再定义新的`[Parameter]`，为了避免不断更新这个Component，我们来用Blazor提供的`@attribute`。"
 date: 2021-12-15 22:53:17
-copyright: Reprinted
+lastmod: 2021-12-15 22:53:17
 author: StrayaWorker
-originalTitle: (11/30)大家一起学Blazor：Arbitrary属性
+originalTitle: "(11/30)大家一起学Blazor：Arbitrary属性"
 originalLink: https://ithelp.ithome.com.tw/articles/10262490
-draft: False
+copyright: Reprinted
+draft: false
 cover: https://img1.dotnet9.com/2021/12/cover_05.png
+categories:
+  - Blazor
 albums:
-    - 一起学Blazor系列
-categories: 
-    - Blazor
-tags: 
-    - Blazor
-    - ASP.NET Core
-    - 学Blazor
+  - 一起学Blazor系列
+tags:
+  - .NET
+  - C#
+  - ASP.NET Core
+  - Blazor
 ---
 
 目前`MyButton`有 3 个`[Parameter]`，如果再增加的话，又要再定义新的`[Parameter]`，为了避免不断更新这个 Component，我们来用 Blazor 提供的`@attribute`。

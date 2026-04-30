@@ -1,19 +1,26 @@
 ---
 title: 开源C# WPF控件库 - Panuon.UI.Silver
-slug: Panuon-UI-Silver
-description: 国内优秀的WPF开源控件库，Panuon.UI的优化版本。一个漂亮的、使用样式与附加属性的WPF UI控件库，值得向大家推荐使用与学习。
+slug: panuon-ui-silver
+description: "国内优秀的WPF开源控件库，Panuon.UI的优化版本。一个漂亮的、使用样式与附加属性的WPF UI控件库，值得向大家推荐使用与学习。"
 date: 2019-12-04 13:45:56
+lastmod: 2019-12-04 13:45:56
 author: 沙漠尽头的狼
-banner: false
+copyright: Original
 draft: false
 cover: https://img1.dotnet9.com/2019/12/0402.gif
-tags: 
-    - 开源WPF
+banner: false
+categories:
+  - WPF
 albums:
-    - WPF控件库
-categories: 
-    - WPF
-copyright: Original
+  - WPF控件库
+  - WPF开源项目
+  - C#开源项目
+tags:
+  - .NET
+  - C#
+  - WPF
+  - 控件库
+  - WPF开源项目
 ---
 
 ## 前言

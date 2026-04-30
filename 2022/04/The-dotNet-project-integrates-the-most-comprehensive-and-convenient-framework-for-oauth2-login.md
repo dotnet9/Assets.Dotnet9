@@ -1,20 +1,25 @@
 ---
-title: .NET 项目集成 OAuth2 登录最全面的、最方便的框架
-slug: The-dotNet-project-integrates-the-most-comprehensive-and-convenient-framework-for-oauth2-login
-description: MrHuo.OAuth 是 .NET 项目集成 OAuth2 登录最全面的、最方便的框架
+title: ".NET 项目集成 OAuth2 登录最全面的、最方便的框架"
+slug: the-dotnet-project-integrates-the-most-comprehensive-and-convenient-framework-for-oauth2-login
+description: "MrHuo.OAuth 是 .NET 项目集成 OAuth2 登录最全面的、最方便的框架"
 date: 2022-04-12 22:48:23
-copyright: Reprinted
+lastmod: 2022-04-12 22:48:23
 author: mrhuo
-originalTitle: .NET 项目集成 OAuth2 登录最全面的、最方便的框架
+originalTitle: ".NET 项目集成 OAuth2 登录最全面的、最方便的框架"
 originalLink: https://github.com/mrhuo/MrHuo.OAuth
-draft: False
+copyright: Reprinted
+draft: false
 cover: https://img1.dotnet9.com/2022/04/1001.png
-categories: 
-    - .NET
-tags: 
-    - .NET
-    - OAuth2
-    - 开源C#
+categories:
+  - .NET
+albums:
+  - C#开源项目
+tags:
+  - .NET
+  - C#
+  - 开源
+  - 鉴权
+  - 开源C#
 ---
 
 <h1 align="center">MrHuo.OAuth</h1>

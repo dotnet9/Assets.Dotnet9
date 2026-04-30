@@ -1,21 +1,25 @@
 ---
-title: (4/7).NET Core 3 WPF MVVM框架 Prism系列之事件聚合器
-slug: DotNET-Core-3-WPF-MVVM-Framework-Prism-Series-Event-News-aggregator
+title: "(4/7).NET Core 3 WPF MVVM框架 Prism系列之事件聚合器"
+slug: dot-net-core-3-wpf-mvvm-framework-prism-series-event-news-aggregator
 description: 如何在.NET Core3环境下使用MVVM框架Prism的使用事件聚合器实现模块间的通信
 date: 2023-06-11 00:09:14
-copyright: Reprinted
+lastmod: 2023-06-11 00:09:14
 author: RyzenAdorer
 originalTitle: .NET Core 3 WPF MVVM框架 Prism系列之事件聚合器
 originalLink: https://www.cnblogs.com/ryzen/p/12196619.html
+copyright: Reprinted
 draft: false
 cover: https://img1.dotnet9.com/2023/06/cover_15.png
+categories:
+  - WPF
 albums:
-    - WPF MVVM框架 Prism系列
-categories: 
-    - WPF
-tags: 
-    - WPF
-    - Prism
+  - WPF MVVM框架 Prism系列
+tags:
+  - .NET
+  - C#
+  - WPF
+  - Prism
+  - MVVM
 ---
 
 > 本文来自转载

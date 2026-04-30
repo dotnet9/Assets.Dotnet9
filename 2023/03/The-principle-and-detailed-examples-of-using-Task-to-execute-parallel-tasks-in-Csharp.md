@@ -1,14 +1,17 @@
 ---
 title: C#使用Task执行并行任务的原理和详细举例
-slug: The-principle-and-detailed-examples-of-using-Task-to-execute-parallel-tasks-in-Csharp
-description: 在C#中，使用Task可以很方便地执行并行任务。
+slug: the-principle-and-detailed-examples-of-using-task-to-execute-parallel-tasks-in-csharp
+description: "在C#中，使用Task可以很方便地执行并行任务。"
 date: 2023-03-28 20:17:14
+lastmod: 2023-03-28 20:17:14
+author: Dotnet9
 copyright: Original
 cover: https://img1.dotnet9.com/2023/03/cover_17.png
-categories: 
-    - .NET
-tags: 
-    - .NET
+categories:
+  - .NET
+tags:
+  - .NET
+  - C#
 ---
 
 >本文通过与ChatGPT的连续对话完成，代码都经过验证。

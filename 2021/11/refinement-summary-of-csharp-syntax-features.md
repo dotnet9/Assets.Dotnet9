@@ -1,18 +1,20 @@
 ---
-title: 精：C#语法特性总结
+title: "精：C#语法特性总结"
 slug: refinement-summary-of-csharp-syntax-features
-description: C# 10已与.NET 6、VS2022一起发布，本文按照.NET的发布顺序，根据微软官方文档整理C#中一些有趣的语法特性。
+description: "C# 10已与.NET 6、VS2022一起发布，本文按照.NET的发布顺序，根据微软官方文档整理C#中一些有趣的语法特性。"
 date: 2021-11-19 17:38:15
-copyright: Reprinted
+lastmod: 2021-11-19 17:38:15
 author: louzixl
-originalTitle: 精：C#语法特性总结
+originalTitle: "精：C#语法特性总结"
 originalLink: https://www.cnblogs.com/louzixl/archive/2021/11/14/15553715.html
-draft: False
+copyright: Reprinted
+draft: false
 cover: https://img1.dotnet9.com/2021/11/cover_06.jpg
-categories: 
-    - .NET
-tags: 
-    - C#
+categories:
+  - .NET
+tags:
+  - .NET
+  - C#
 ---
 
 C# 10 已与 .NET 6、VS2022 一起发布，本文按照.NET 的发布顺序，根据[微软官方文档](https://docs.microsoft.com/zh-cn/dotnet/csharp/whats-new/csharp-version-history)整理 C#中一些有趣的语法特性。

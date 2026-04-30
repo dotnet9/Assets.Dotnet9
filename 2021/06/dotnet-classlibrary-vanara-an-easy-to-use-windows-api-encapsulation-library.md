@@ -1,20 +1,22 @@
 ---
-title: .NET类库“Vanara”：简单易用的Windows API封装库
+title: ".NET类库“Vanara”：简单易用的Windows API封装库"
 slug: dotnet-classlibrary-vanara-an-easy-to-use-windows-api-encapsulation-library
-description: 一系列非常简单易用，对Windows API做了极好封装的.NET类库，几乎不用再写繁琐的Windows API转换函数了。
+description: "一系列非常简单易用，对Windows API做了极好封装的.NET类库，几乎不用再写繁琐的Windows API转换函数了。"
 date: 2021-06-28 22:53:47
+lastmod: 2021-06-28 22:53:47
+author: Dotnet9
+originalTitle: ".NET类库“Vanara”：简单易用的Windows API封装库"
 copyright: Original
-originalTitle: .NET类库“Vanara”：简单易用的Windows API封装库
-draft: False
+draft: false
 cover: https://img1.dotnet9.com/2021/06/cover_01.png
-albums: 
-    - 开源C#
-categories: 
-    - .NET
-tags: 
-    - .NET
-    - C#
-    - Windows API
+categories:
+  - .NET
+albums:
+  - C#开源项目
+tags:
+  - .NET
+  - C#
+  - Windows API
 ---
 
 > 仓库地址：https://github.com/dahall/Vanara

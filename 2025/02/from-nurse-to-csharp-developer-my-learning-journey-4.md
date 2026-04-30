@@ -1,21 +1,23 @@
 ---
-title: (4)从护士到C#开发者-护士学Markdown
+title: "(4)从护士到C#开发者-护士学Markdown"
 slug: from-nurse-to-csharp-developer-my-learning-journey-4
-description: 在C#编程学习的第四天，我开始学习Markdown。作为一名护士转行开发者，记录下我对这门轻量级标记语言的学习心得。
+description: "在C#编程学习的第四天，我开始学习Markdown。作为一名护士转行开发者，记录下我对这门轻量级标记语言的学习心得。"
 date: 2025-02-26 10:11:24
 lastmod: 2025-02-26 13:24:31
-copyright: Contributes
 author: 勇敢的天使
-draft: False
+copyright: Contributes
+draft: false
 cover: https://img1.dotnet9.com/2025/02/cover_02.png
 categories:
-    - 分享
+  - 分享
 albums:
-    - 从护士到C#开发者
+  - 从护士到C#开发者
 tags:
-    - 护士
-    - 编程
-    - Markdown
+  - .NET
+  - C#
+  - Markdown
+  - 转行开发
+  - 编程
 ---
 
 今天是我学习编程的第四天。作为一名正在向C#开发者转型的护士，我开始接触了一个新的工具 —— Markdown。这让我想起了在医院工作时，我们也需要编写规范的护理记录。而现在，我将学习如何用Markdown来记录我的编程学习历程。

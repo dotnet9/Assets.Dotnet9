@@ -1,18 +1,22 @@
 ---
 title: 对.NET系统架构改造的一点经验和教训
-slug: Some-experiences-and-lessons-learned-from-the-transformation-of-the-NET-system-architecture
-description: 在互联网行业，基于 Unix/Linux 的网站系统架构毫无疑问是当今主流的架构解决方案，这不仅仅是因为 Linux 本身足够的开放性，更因为围绕传统 Unix/Linux 社区有大量的成熟开源解决方案，覆盖了网站应用扩展的方方面面。
+slug: some-experiences-and-lessons-learned-from-the-transformation-of-the-net-system-architecture
+description: "在互联网行业，基于 Unix/Linux 的网站系统架构毫无疑问是当今主流的架构解决方案，这不仅仅是因为 Linux 本身足够的开放性，更因为围绕传统 Unix/Linux 社区有大量的成熟开源解决方案，覆盖了网站应用扩展的方方面面。"
 date: 2023-09-03 21:36:47
-copyright: Reprinted
+lastmod: 2023-09-03 21:36:47
 author: 大佬
 originalTitle: 对.NET系统架构改造的一点经验和教训
 originalLink: http://robbinfan.com/blog/43/rid-off-dotnet-experience
+copyright: Reprinted
 draft: false
 cover: https://img1.dotnet9.com/2023/09/cover_01.png
-categories: 
-    - .NET
-tags: 
-    - .NET
+categories:
+  - .NET
+tags:
+  - .NET
+  - C#
+  - 开源
+  - 架构设计
 ---
 
 > 10 年前的一篇文章（2013 年，原文[robbinfan.com](http://robbinfan.com/blog/43/rid-off-dotnet-experience)已经无法访问，找到最早的还是在博客园[这篇](https://news.cnblogs.com/n/177636/)），现在读来还是感慨颇深。

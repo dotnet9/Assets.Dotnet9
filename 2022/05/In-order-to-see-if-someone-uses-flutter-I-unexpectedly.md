@@ -1,18 +1,19 @@
 ---
 title: 为了看Flutter到底有没有人用我竟然
-slug: In-order-to-see-if-someone-uses-flutter-I-unexpectedly
-description: 所以，整体在知乎上吵「Flutter被抛弃了」、「Flutter要崛起了」，有什么意义呢？所有的争论都抵不过数据来的真实。
+slug: in-order-to-see-if-someone-uses-flutter-i-unexpectedly
+description: "所以，整体在知乎上吵「Flutter被抛弃了」、「Flutter要崛起了」，有什么意义呢？所有的争论都抵不过数据来的真实。"
 date: 2022-05-04 16:59:14
-copyright: Reprinted
+lastmod: 2022-05-04 16:59:14
 author: 徐宜生 群英传
 originalTitle: 为了看Flutter到底有没有人用我竟然
 originalLink: https://xuyisheng.top/flutter_app_check/
-draft: False
+copyright: Reprinted
+draft: false
 cover: https://img1.dotnet9.com/2022/05/1301.png
-categories: 
-    - Flutter
-tags: 
-    - Flutter
+categories:
+  - Flutter
+tags:
+  - Flutter
 ---
 
 Flutter 这个东西出来这么久了，到底市场占有率怎么样呢？为了让大家了解这一真实数据，也为了让大家了解当前 Flutter 在各大 App 中的使用情况，我今天下载了几百个 App，占了手机将近 80G 空间，就为了得出一个结论——Flutter，到底有没有人用。

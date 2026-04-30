@@ -1,21 +1,21 @@
 ---
-title: git 代码提交规范，feat，fix，chore都是什么意思?
+title: "git 代码提交规范，feat，fix，chore都是什么意思?"
 slug: git-commit-standards-feat-fix-chore-explanations
-description: 经常看到别人提交的代码记录里面包含一些feat、fix、chore等等，而我在提交时也不会区分什么，直接写下提交信息，今天就来看一下怎么个事
+description: "经常看到别人提交的代码记录里面包含一些feat、fix、chore等等，而我在提交时也不会区分什么，直接写下提交信息，今天就来看一下怎么个事"
 date: 2025-06-02 22:14:25
 lastmod: 2025-06-02 22:24:14
-copyright: Reprinted
-banner: false
 author: JacksonChen_
-originalTitle: git 代码提交规范，feat，fix，chore都是什么意思?
-cover: https://img1.dotnet9.com/2025/06/cover_01.png
+originalTitle: "git 代码提交规范，feat，fix，chore都是什么意思?"
 originalLink: https://blog.csdn.net/chenyajundd/article/details/139322838
+copyright: Reprinted
+cover: https://img1.dotnet9.com/2025/06/cover_01.png
+banner: false
 categories:
   - 分享
 tags:
-  - Git
   - 代码规范
   - 工程实践
+  - Git
 ---
 
 ## 写到前面

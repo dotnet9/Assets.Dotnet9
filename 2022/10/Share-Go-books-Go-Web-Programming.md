@@ -1,16 +1,17 @@
 ---
-title: 分享Go书籍-《Go Web编程》
-slug: Share-Go-books-Go-Web-Programming
-description: 最近几天在看一本Go的书籍，看了100来页，感觉不错，分享给大家​。​
+title: "分享Go书籍-《Go Web编程》"
+slug: share-go-books-go-web-programming
+description: "最近几天在看一本Go的书籍，看了100来页，感觉不错，分享给大家​。​"
 date: 2022-10-03 09:24:39
-copyright: Original
+lastmod: 2022-10-03 09:24:39
 author: 沙漠尽头的狼
+copyright: Original
 draft: false
 cover: https://img1.dotnet9.com/2022/10/cover_go_web_programming.svg
-categories: 
-    - 更多语言
-tags: 
-    - Go
+categories:
+  - 更多语言
+tags:
+  - Go
 ---
 
 大家好，我是沙漠尽头的狼。

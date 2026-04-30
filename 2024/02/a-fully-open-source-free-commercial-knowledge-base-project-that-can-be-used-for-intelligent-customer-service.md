@@ -1,29 +1,26 @@
 ---
 title: 可用于智能客服的完全开源免费商用的知识库项目
 slug: a-fully-open-source-free-commercial-knowledge-base-project-that-can-be-used-for-intelligent-customer-service
-description: 我们的目标是提供一个能够理解和处理复杂查询的智能搜索解决方案，帮助用户快速准确地获取所需信息。
+description: "我们的目标是提供一个能够理解和处理复杂查询的智能搜索解决方案，帮助用户快速准确地获取所需信息。"
 date: 2024-02-29 04:57:13
 lastmod: 2024-02-29 05:18:43
-copyright: Reprinted
-banner: false
 author: token的技术分享
 originalTitle: 可用于智能客服的完全开源免费商用的知识库项目
 originalLink: https://mp.weixin.qq.com/s/ANqHugTR1-rpQEaz2XF6qg
+copyright: Reprinted
 draft: false
 cover: https://img1.dotnet9.com/2024/02/0311.png
-categories: 
-    - .NET
-tags: 
-    - .NET
-    - Blazor
-    - Web API
-    - FastWiki
-    - Semantic Kernel
-    - MasaFramework
-    - MasaBlazor
-    - HttpClient
-    - MiniApis
-    - PostgreSQL
+banner: false
+categories:
+  - .NET
+albums:
+  - Blazor组件库
+tags:
+  - .NET
+  - C#
+  - Blazor
+  - 开源
+  - Web API
 ---
 
 ## **介绍**

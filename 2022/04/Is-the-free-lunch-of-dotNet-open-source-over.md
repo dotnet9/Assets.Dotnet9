@@ -1,21 +1,23 @@
 ---
-title: .NET 开源的免费午餐结束了？
-slug: Is-the-free-lunch-of-dotNet-open-source-over
-description: 去年 10 月，IdentityServer 的两位创建者和维护者 Dominick Baier 和 Brock Allen 宣布，他们当前的商业模式本质上是不可持续的
+title: ".NET 开源的免费午餐结束了？"
+slug: is-the-free-lunch-of-dotnet-open-source-over
+description: "去年 10 月，IdentityServer 的两位创建者和维护者 Dominick Baier 和 Brock Allen 宣布，他们当前的商业模式本质上是不可持续的"
 date: 2022-04-20 07:51:25
-copyright: Reprinted
+lastmod: 2022-04-20 07:51:25
 author: Aaron Stannard
-originalTitle: .NET 开源的免费午餐结束了？
+originalTitle: ".NET 开源的免费午餐结束了？"
 originalLink: https://www.sohu.com/a/472062543_115128
-draft: False
+copyright: Reprinted
+draft: false
 cover: https://img1.dotnet9.com/2022/04/cover_25.jpeg
-categories: 
-    - .NET
-tags: 
-    - C#
-    - 开源
-    - 知识付费
-    - 开源协议
+categories:
+  - .NET
+tags:
+  - .NET
+  - C#
+  - 开源
+  - 鉴权
+  - 开源协议
 ---
 
 ![](https://img1.dotnet9.com/2022/04/cover_25.jpeg)

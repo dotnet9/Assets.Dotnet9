@@ -1,25 +1,26 @@
 ---
-title: C#开源项目：SiMay远程控制管理系统
+title: "C#开源项目：SiMay远程控制管理系统"
 slug: csharp-open-source-project-simay-remote-control-management-system
 description: 一个底层基于IOCP异步通信模型的Windows远程控制系统
 date: 2020-12-04 08:33:55
-copyright: Reprinted
+lastmod: 2020-12-04 08:33:55
 author: dWwwang
-originalTitle: C#开源项目：SiMay远程控制管理系统
+originalTitle: "C#开源项目：SiMay远程控制管理系统"
 originalLink: https://gitee.com/dotnetchina/SiMayRemoteMonitorOS
-draft: False
+copyright: Reprinted
+draft: false
 cover: https://img1.dotnet9.com/2020/12/cover_02.jpg
+categories:
+  - Winform
 albums:
-    - Winform开源项目
-categories: 
-    - Winform
-tags: 
-    - Winform
-    - SiMay
-    - 开源Winform
-    - 远程控制
-    - IOCP
-    - 异步通信
+  - Winform开源项目
+  - C#开源项目
+tags:
+  - .NET
+  - C#
+  - Winform
+  - Winform开源项目
+  - 开源项目
 ---
 
 > 本项目是一个 Windows 远程控制系统，项目完全采用 C#.NET 开发，实现了基于逐行扫描算法远程桌面，桌面视图墙，文件管理，实时语音、视频监控，注册表管理，实时进程管理等功能，各模块采用独立连接，支持异常情况重连。实现了中间会话服务器，支持多主控端同时监控，支持 Web 端，欢迎点 Start 关注，项目不定时更新，源代码仅供参考，不得用于非法用途，否则一切后果自负。

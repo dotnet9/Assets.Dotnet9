@@ -1,19 +1,21 @@
 ---
-title: C#封装FluentValidation,用了之后通篇还是AbstractValidator，真的看不下去了
-slug: CSharp-encapsulates-fluentvalidation
+title: "C#封装FluentValidation,用了之后通篇还是AbstractValidator，真的看不下去了"
+slug: csharp-encapsulates-fluentvalidation
 description: FluentValidation是一个非常强大的用于构建强类型验证规则的 .NET 框架
 date: 2022-06-09 22:12:35
-copyright: Reprinted
+lastmod: 2022-06-09 22:12:35
 author: 黑哥聊dotNet
-originalTitle: C#封装FluentValidation,用了之后通篇还是AbstractValidator，真的看不下去了
+originalTitle: "C#封装FluentValidation,用了之后通篇还是AbstractValidator，真的看不下去了"
 originalLink: https://mp.weixin.qq.com/s/u9xXyFxvpSpPBAMNhfR5Og
-draft: False
+copyright: Reprinted
+draft: false
 cover: https://img1.dotnet9.com/2022/06/cover_08.jpeg
-categories: 
-    - .NET
-tags: 
-    - C#
-    - FluentValidation
+categories:
+  - .NET
+tags:
+  - .NET
+  - C#
+  - FluentValidation
 ---
 
 ## 讲故事

@@ -1,18 +1,21 @@
 ---
-title: 请来围观：WPF开发的微信客户端
-slug: Please-come-and-watch-wechat-client-developed-by-WPF
-description: 做WPF微信DEMO，用到了转换器，转换颜色，转换显隐；重写了控件的样式，例如Button、RadioButton、ListBox；然后MVVM模式下，Bind的用法，感觉这个DEOM对于初学者来说应该会有很大的帮助。
+title: "请来围观：WPF开发的微信客户端"
+slug: please-come-and-watch-wechat-client-developed-by-wpf
+description: "做WPF微信DEMO，用到了转换器，转换颜色，转换显隐；重写了控件的样式，例如Button、RadioButton、ListBox；然后MVVM模式下，Bind的用法，感觉这个DEOM对于初学者来说应该会有很大的帮助。"
 date: 2022-05-20 07:14:27
-copyright: Reprinted
+lastmod: 2022-05-20 07:14:27
 author: 眾尋
-originalTitle: 请来围观：WPF开发的微信客户端
+originalTitle: "请来围观：WPF开发的微信客户端"
 originalLink: https://www.cnblogs.com/ZXdeveloper/p/6058206.html
-draft: False
+copyright: Reprinted
+draft: false
 cover: https://img1.dotnet9.com/2022/05/5108.png
-categories: 
-    - WPF
-tags: 
-    - WPF
+categories:
+  - WPF
+tags:
+  - .NET
+  - WPF
+  - MVVM
 ---
 
 > 本文经原作者授权以原创方式二次分享，欢迎转载、分享。

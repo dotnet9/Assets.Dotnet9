@@ -1,22 +1,23 @@
 ---
-title: 实现一个登录：Mac+.NET 5+Identity+JWT+VS Code
+title: "实现一个登录：Mac+.NET 5+Identity+JWT+VS Code"
 slug: implement-a-login-mac-dotnet-5-identity-jwt-vs-code
 description: 分享一下之前学习的一个登录小案例
 date: 2021-10-18 16:51:00
-copyright: Reprinted
+lastmod: 2021-10-18 16:51:00
 author: Jarry
-originalTitle: 实现一个登录：Mac+.NET 5+Identity+JWT+VS Code
+originalTitle: "实现一个登录：Mac+.NET 5+Identity+JWT+VS Code"
 originalLink: https://blog.csdn.net/qbc12345678/article/details/120758144
-draft: False
+copyright: Reprinted
+draft: false
 cover: https://img1.dotnet9.com/2021/10/cover_05.jpg
-categories: 
-    - ASP.NET Core
-tags: 
-    - Web API
-    - Mac
-    - Identity
-    - JWT
-    - Visual Studio Code
+categories:
+  - ASP.NET Core
+tags:
+  - .NET
+  - C#
+  - ASP.NET Core
+  - Web API
+  - 鉴权
 ---
 
 分享一下之前学习的一个登录小案例，代码有不足之处欢迎指正！！！

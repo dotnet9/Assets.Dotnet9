@@ -1,18 +1,20 @@
 ---
 title: C#使用读写锁三行代码简单解决多线程并发写入文件时线程同步的问题
-slug: Csharp-read-write-lock-solves-the-problem-of-multithreading-concurrency
-description: 读写锁是以 ReaderWriterLockSlim 对象作为锁管理资源的，不同的 ReaderWriterLockSlim 对象中锁定同一个文件也会被视为不同的锁进行管理
+slug: csharp-read-write-lock-solves-the-problem-of-multithreading-concurrency
+description: "读写锁是以 ReaderWriterLockSlim 对象作为锁管理资源的，不同的 ReaderWriterLockSlim 对象中锁定同一个文件也会被视为不同的锁进行管理"
 date: 2022-04-25 20:41:27
-copyright: Reprinted
+lastmod: 2022-04-25 20:41:27
 author: Walter_lee2008
 originalTitle: C#使用读写锁三行代码简单解决多线程并发写入文件时线程同步的问题
 originalLink: https://blog.csdn.net/zdhlwt2008/article/details/80702605
-draft: False
+copyright: Reprinted
+draft: false
 cover: https://img1.dotnet9.com/2022/04/cover_35.jpeg
-categories: 
-    - .NET
-tags: 
-    - C#
+categories:
+  - .NET
+tags:
+  - .NET
+  - C#
 ---
 
 ## 1. 知识储备

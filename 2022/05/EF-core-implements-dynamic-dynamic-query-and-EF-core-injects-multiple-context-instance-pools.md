@@ -1,20 +1,22 @@
 ---
 title: EF Core实现dynamic动态查询和EF Core注入多个上下文实例池
-slug: EF-core-implements-dynamic-dynamic-query-and-EF-core-injects-multiple-context-instance-pools
+slug: ef-core-implements-dynamic-dynamic-query-and-ef-core-injects-multiple-context-instance-pools
 description: 无论是在EF 6.x还是EF Core中对于原始查询的APi都比较鸡肋
 date: 2022-05-04 16:43:26
-copyright: Reprinted
+lastmod: 2022-05-04 16:43:26
 author: Jeffcky
 originalTitle: EF Core实现dynamic动态查询和EF Core注入多个上下文实例池
 originalLink: https://www.cnblogs.com/CreateMyself/p/8921881.html
-draft: False
+copyright: Reprinted
+draft: false
 cover: https://img1.dotnet9.com/2022/05/cover_11.jpg
-categories: 
-    - EF Core
-tags: 
-    - .NET
-    - ORM
-    - EF Core
+categories:
+  - EF Core
+tags:
+  - .NET
+  - C#
+  - EF Core
+  - ORM
 ---
 
 ## 前言

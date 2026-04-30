@@ -1,20 +1,22 @@
 ---
-title: 【C#】CsvHelper 使用手册
-slug: Csharp-CsvHelper-User-Manual
-description: CsvHelper 是一个用于读写 CSV 文件的.NET库。极其快速，灵活且易于使用。
+title: "【C#】CsvHelper 使用手册"
+slug: csharp-csv-helper-user-manual
+description: "CsvHelper 是一个用于读写 CSV 文件的.NET库。极其快速，灵活且易于使用。"
 date: 2024-01-19 22:15:11
 lastmod: 2024-01-19 22:26:21
-copyright: Reprinted
-banner: false
 author: 丹枫无迹
-originalTitle: 【C#】CsvHelper 使用手册
+originalTitle: "【C#】CsvHelper 使用手册"
 originalLink: https://www.cnblogs.com/gl1573/p/12922857.html
+copyright: Reprinted
 draft: false
 cover: https://img1.dotnet9.com/2024/01/cover_08.png
-categories: 
-    - .NET
-tags: 
-    - CSV
+banner: false
+categories:
+  - .NET
+tags:
+  - .NET
+  - C#
+  - CSV
 ---
 
 > **本文代码基于 CsvHelper 15.0.5**

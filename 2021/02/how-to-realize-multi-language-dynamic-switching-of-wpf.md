@@ -1,20 +1,22 @@
 ---
-title: 怎么实现WPF多语言动态切换？
+title: "怎么实现WPF多语言动态切换？"
 slug: how-to-realize-multi-language-dynamic-switching-of-wpf
-description: 有网友看了上一篇文章《C# 多语言利器 - ResX Manager》后，提出疑问：这个多语言切换不重启不能刷新，有没有方案？
+description: "有网友看了上一篇文章《C# 多语言利器 - ResX Manager》后，提出疑问：这个多语言切换不重启不能刷新，有没有方案？"
 date: 2021-02-17 09:28:39
+lastmod: 2021-02-17 09:28:39
+author: Dotnet9
+originalTitle: "怎么实现WPF多语言动态切换？"
 copyright: Original
-originalTitle: 怎么实现WPF多语言动态切换？
-draft: False
+draft: false
 cover: https://img1.dotnet9.com/2021/02/cover_02.jpeg
-categories: 
-    - WPF
-tags: 
-    - C#
-    - WPF
-    - 多语言
-    - 国际化
-    - 资源文件
+categories:
+  - WPF
+tags:
+  - .NET
+  - C#
+  - WPF
+  - 国际化
+  - 多语言
 ---
 
 有网友看了上一篇文章《[C# 多语言利器 - ResX Manager](https://mp.weixin.qq.com/s/cGxJE0HnhPJn9lhwGBIMUQ)》后，提出疑问：

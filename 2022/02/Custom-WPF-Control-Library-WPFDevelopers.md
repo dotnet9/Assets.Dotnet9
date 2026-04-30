@@ -1,21 +1,27 @@
 ---
-title: 开源WPF自定义控件库：WPFDevelopers
-slug: Custom-WPF-Control-Library-WPFDevelopers
-description: 这是一个WPF自定义控件开源项目，里面的一些控件很有意思
+title: "开源WPF自定义控件库：WPFDevelopers"
+slug: custom-wpf-control-library-wpfdevelopers
+description: "这是一个WPF自定义控件开源项目，里面的一些控件很有意思"
 date: 2022-02-09 10:23:14
-banner: false
-copyright: Reprinted
+lastmod: 2022-02-09 10:23:14
 author: WPFDevelopers
-originalTitle: 开源WPF自定义控件库：WPFDevelopers
+originalTitle: "开源WPF自定义控件库：WPFDevelopers"
 originalLink: https://github.com/WPFDevelopersOrg/WPFDevelopers
-draft: False
+copyright: Reprinted
+draft: false
 cover: https://img1.dotnet9.com/2022/02/cover_04.gif
-categories: 
-    - WPF
-tags: 
-    - WPF
-    - 自定义控件
-    - 开源WPF
+banner: false
+categories:
+  - WPF
+albums:
+  - WPF开源项目
+  - WPF控件库
+tags:
+  - .NET
+  - WPF
+  - 控件库
+  - WPF开源项目
+  - 开源项目
 ---
 
 ![Github仓库详情](https://img1.dotnet9.com/2022/02/0401.png)

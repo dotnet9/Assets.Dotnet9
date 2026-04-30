@@ -1,16 +1,20 @@
 ---
-title: Blazor开发小游戏？趁热打铁上！！！
-slug: Use-blazor-to-develop-mini-games-and-strike-while-the-iron-is-hot
-description: Blazor上线1天了，开发上手真舒服，再上一个工具+几个小游戏吧。
+title: "Blazor开发小游戏？趁热打铁上！！！"
+slug: use-blazor-to-develop-mini-games-and-strike-while-the-iron-is-hot
+description: "Blazor上线1天了，开发上手真舒服，再上一个工具+几个小游戏吧。"
 date: 2023-06-23 22:20:25
 lastmod: 2023-06-23 23:50:47
+author: Dotnet9
 copyright: Original
 draft: false
 cover: https://img1.dotnet9.com/2023/06/cover_blazor_mini_games.svg
-categories: 
-    - Blazor
-tags: 
-    - Dotnet9
+categories:
+  - Blazor
+tags:
+  - .NET
+  - C#
+  - Blazor
+  - Dotnet9
 ---
 
 大家好，我是沙漠尽头的狼。

@@ -1,20 +1,23 @@
 ---
-title: 几条EF core性能优化，让你程序健步如飞
-slug: Several-EF-core-performance-optimizations-make-your-program-fly-fast
+title: "几条EF core性能优化，让你程序健步如飞"
+slug: several-ef-core-performance-optimizations-make-your-program-fly-fast
 description: 数条建议
 date: 2022-05-04 15:41:07
-copyright: Reprinted
+lastmod: 2022-05-04 15:41:07
 author: 清和时光
-originalTitle: 几条EF core性能优化，让你程序健步如飞
+originalTitle: "几条EF core性能优化，让你程序健步如飞"
 originalLink: https://www.cnblogs.com/qingheshiguang/p/13559561.html
-draft: False
+copyright: Reprinted
+draft: false
 cover: https://img1.dotnet9.com/2022/05/cover_07.png
-categories: 
-    - EF Core
-tags: 
-    - .NET
-    - ORM
-    - EF Core
+categories:
+  - EF Core
+tags:
+  - .NET
+  - C#
+  - EF Core
+  - 性能优化
+  - ORM
 ---
 
 ## 1. 使用 EF.Functions.xxx 进行查询

@@ -1,19 +1,20 @@
 ---
 title: MySQL模糊查询再也不用like+%了
-slug: MySQL-fuzzy-queries-no-longer-use-like
-description: 我们都知道 InnoDB 在模糊查询数据时使用 '%xx' 会导致索引失效，但有时需求就是如此，类似这样的需求还有很多
+slug: my-sql-fuzzy-queries-no-longer-use-like
+description: "我们都知道 InnoDB 在模糊查询数据时使用 '%xx' 会导致索引失效，但有时需求就是如此，类似这样的需求还有很多"
 date: 2022-04-15 21:31:22
-copyright: Reprinted
+lastmod: 2022-04-15 21:31:22
 author: _沸羊羊_
 originalTitle: MySQL模糊查询再也不用like+%了
 originalLink: https://juejin.cn/post/6989871497040887845
-draft: False
+copyright: Reprinted
+draft: false
 cover: https://img1.dotnet9.com/2022/04/cover_17.jpeg
-categories: 
-    - MySQL
-tags: 
-    - MySQL
-    - 模拟查询
+categories:
+  - MySQL
+tags:
+  - MySQL
+  - 模拟查询
 ---
 
 ## 前言

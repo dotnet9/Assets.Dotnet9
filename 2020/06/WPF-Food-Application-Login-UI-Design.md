@@ -1,18 +1,23 @@
 ---
 title: WPF-美食应用登录UI设计
-slug: WPF-Food-Application-Login-UI-Design
+slug: wpf-food-application-login-ui-design
 description: 一个UI设计
 date: 2020-06-12 13:45:56
-copyright: Original
+lastmod: 2020-06-12 13:45:56
+author: Dotnet9
 originalTitle: WPF-美食应用登录UI设计
-draft: False
+copyright: Original
+draft: false
 cover: https://img1.dotnet9.com/2020/06/0201.gif
-tags: 
-    - WPF Design
-categories: 
-    - WPF
+categories:
+  - WPF
 albums:
-    - WPF UI设计
+  - WPF UI设计
+tags:
+  - .NET
+  - WPF
+  - UI设计
+  - WPF UI设计
 ---
 
 Demo 演示：

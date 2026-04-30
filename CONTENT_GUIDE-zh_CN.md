@@ -26,10 +26,10 @@ banner: false
 categories:
   - .NET
 albums:
-  - engineering-notes
+  - C#开源项目
 tags:
-  - native-library
-  - razor-pages
+  - Native AOT
+  - Razor Pages
 author: Dotnet9
 draft: false
 ---
@@ -58,6 +58,8 @@ draft: false
 - 文章发布后尽量不要修改 slug。
 - 单个 slug 内避免中英文混杂。
 - 优先使用可读名称，不要依赖纯编号文件名。
+- 文章 `categories` 和 `albums` 使用 `site/categories.json`、`site/albums.json` 中的展示名称。
+- 文章标签保持聚焦，每篇最多 5 个。
 
 ## 3. 封面与图片规则
 
@@ -72,11 +74,11 @@ draft: false
 
 常见文件：
 
-- `album.json`
-- `category.json`
-- `FriendLink.json`
+- `albums.json`
+- `categories.json`
+- `friend-links.json`
 - `timelines.json`
-- `doc/doc.json`
+- `doc/navigation.json`
 - `tools/tools.json`
 
 修改这些文件时建议遵守：
@@ -90,7 +92,7 @@ draft: false
 
 文档区由以下内容驱动：
 
-- `site/doc/doc.json`
+- `site/doc/navigation.json`
 - `site/doc/` 下的 markdown 文件
 
 建议规则：

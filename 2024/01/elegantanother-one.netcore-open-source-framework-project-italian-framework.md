@@ -1,18 +1,22 @@
 ---
-title: 优雅！又一个.NetCore开源框架项目-意框架
-slug: elegantanother-one.netcore-open-source-framework-project-italian-framework
-description: 一套以用户体验出发的.Net8 Web开源框架，支持Abp.vNext 版本原生版本、Furion版本，前端后台接入Ruoyi Vue3.0，内置Rbac权限管理+Bbs社区论坛模块，开箱即用
+title: "优雅！又一个.NetCore开源框架项目-意框架"
+slug: elegantanother-onedotnetcore-open-source-framework-project-italian-framework
+description: "一套以用户体验出发的.Net8 Web开源框架，支持Abp.vNext 版本原生版本、Furion版本，前端后台接入Ruoyi Vue3.0，内置Rbac权限管理+Bbs社区论坛模块，开箱即用"
 date: 2024-01-13 15:40:19
-copyright: Contributes
+lastmod: 2024-01-13 15:40:19
 author: ccnetcore
-originalTitle: 优雅！又一个.NetCore开源框架项目-意框架
+originalTitle: "优雅！又一个.NetCore开源框架项目-意框架"
 originalLink: https://mp.weixin.qq.com/s/SXOsBJUO23ct8x2QwJfhCQ
-draft: False
+copyright: Contributes
+draft: false
 cover: https://img1.dotnet9.com/2024/01/0301.png
-categories: 
-    - .NET
-tags: 
-    - .NET
+categories:
+  - .NET
+tags:
+  - .NET
+  - C#
+  - Vue
+  - 开源
 ---
 
 ![](https://img1.dotnet9.com/2024/01/0301.png)

@@ -1,22 +1,23 @@
 ---
-title: 相对于Go，哪些领域是.NET做不到或做不好的?
+title: "相对于Go，哪些领域是.NET做不到或做不好的?"
 slug: areas-where-dotnet-falls-short-compared-to-go
-description: 看到这个问题的时候，我瞬间有些恍惚，有哪些地方Go能做到？Net会不做到，C#不行呢？
+description: "看到这个问题的时候，我瞬间有些恍惚，有哪些地方Go能做到？Net会不做到，C#不行呢？"
 date: 2024-11-09 12:16:45
 lastmod: 2024-11-09 12:23:09
-copyright: Reprinted
-banner: false
 author: 明月三千
-originalTitle: 相对于Go，哪些领域是.NET做不到或做不好的?
+originalTitle: "相对于Go，哪些领域是.NET做不到或做不好的?"
 originalLink: https://mp.weixin.qq.com/s/PyXSFBphQtNWRA5_TJJIMQ
+copyright: Reprinted
 draft: false
 cover: https://img1.dotnet9.com/2024/11/cover_04.png
-categories: 
-    - .NET
-    - 更多语言
-tags: 
-    - .NET
-    - GO
+banner: false
+categories:
+  - .NET
+  - 更多语言
+tags:
+  - .NET
+  - C#
+  - GO
 ---
 
 ![图片](https://img1.dotnet9.com/2024/11/cover_04.png)

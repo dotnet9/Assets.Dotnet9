@@ -1,20 +1,22 @@
 ---
 title: C# 编写简单易用的 Windows 截屏增强工具
-slug: Write-a-simple-and-easy-to-use-Windows-screenshot-enhancement-tool-in-Csharp
+slug: write-a-simple-and-easy-to-use-windows-screenshot-enhancement-tool-in-csharp
 description: 一个简单易用的 Windows 截屏增强工具
 date: 2022-05-12 08:15:27
-copyright: Reprinted
+lastmod: 2022-05-12 08:15:27
 author: IT技术分享社区
 originalTitle: C# 编写简单易用的 Windows 截屏增强工具
 originalLink: https://mp.weixin.qq.com/s/eyz995VWcIEMLBQP7PL0FQ
-draft: False
+copyright: Reprinted
+draft: false
 cover: https://img1.dotnet9.com/2022/05/3701.gif
-categories: 
-    - .NET
-tags: 
-    - MySQL
-    - C#
-    - 截屏
+categories:
+  - .NET
+tags:
+  - .NET
+  - C#
+  - MySQL
+  - 截屏
 ---
 
 半年前我开源了 [DreamScene2](https://github.com/he55/DreamScene2) 一个小而快并且功能强大的 Windows 动态桌面软件。有很多的人喜欢，这使我有了继续做开源的信心。这是我的第二个开源作品 [ScreenshotEx](https://github.com/he55/ScreenshotEx) 一个简单易用的 Windows 截屏增强工具。

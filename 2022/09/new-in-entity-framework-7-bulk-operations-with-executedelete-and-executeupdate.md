@@ -1,18 +1,22 @@
 ---
 title: EF CORE 7 中的新功能-使用 ExecuteDelete 和 ExecuteUpdate 进行批量操作
 slug: new-in-entity-framework-7-bulk-operations-with-executedelete-and-executeupdate
-description: Entity Framework 7 包括一些已被要求的流行功能，其中之一是批量操作。
+description: "Entity Framework 7 包括一些已被要求的流行功能，其中之一是批量操作。"
 date: 2022-09-10 22:55:48
-copyright: Reprinted
+lastmod: 2022-09-10 22:55:48
 author: tim_deschryver
 originalTitle: New in Entity Framework 7:Bulk Operations with ExecuteDelete and ExecuteUpdate
 originalLink: https://timdeschryver.dev/blog/new-in-entity-framework-7-bulk-operations-with-executedelete-and-executeupdate
+copyright: Reprinted
 draft: false
 cover: https://img1.dotnet9.com/2022/09/cover_01.png
-categories: 
-    - EF Core
-tags: 
-    - .NET
+categories:
+  - EF Core
+tags:
+  - .NET
+  - C#
+  - EF Core
+  - ORM
 ---
 
 > 原文链接：[https://timdeschryver.dev/blog/new-in-entity-framework-7-bulk-operations-with-executedelete-and-executeupdate](https://timdeschryver.dev/blog/new-in-entity-framework-7-bulk-operations-with-executedelete-and-executeupdate)

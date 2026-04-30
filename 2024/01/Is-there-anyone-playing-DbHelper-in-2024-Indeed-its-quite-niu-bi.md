@@ -1,19 +1,21 @@
 ---
-title: 2024年了还有人玩DbHelper？- 确实很6
-slug: Is-there-anyone-playing-DbHelper-in-2024-Indeed-its-quite-niu-bi
-description: 2024年了，DbHelper永不过时，看看大佬写的DbHelper，你一定佩服！
+title: "2024年了还有人玩DbHelper？- 确实很6"
+slug: is-there-anyone-playing-db-helper-in-2024-indeed-its-quite-niu-bi
+description: "2024年了，DbHelper永不过时，看看大佬写的DbHelper，你一定佩服！"
 date: 2024-01-21 00:13:47
 lastmod: 2024-01-21 00:27:47
-copyright: Reprinted
 author: 游子吟i
 originalTitle: 基于Ado.Net多个关系型数据库DbHelper封装
 originalLink: https://blog.csdn.net/ftfmatlab/article/details/135655836
+copyright: Reprinted
 draft: false
 cover: https://img1.dotnet9.com/2024/01/cover_09.png
-categories: 
-    - .NET
-tags: 
-    - 技术更新
+categories:
+  - .NET
+tags:
+  - .NET
+  - C#
+  - 技术更新
 ---
 
 ## 引言

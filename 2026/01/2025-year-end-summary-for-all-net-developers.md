@@ -1,14 +1,14 @@
 ---
 title: 写给所有 .NET 开发者的 2025 年度总结
 slug: 2025-year-end-summary-for-all-net-developers
-description: 相信今年大家没少看到 《抱歉，C# 已经跌出第一梯队》类似的文章，.NET 生态到底如何，本文将为你系统梳理 2025 年 .NET 开发者最应该关注的技术趋势和重要事件，涵盖AI发展、.NET演进及两者融合的最新动态和趋势，以求帮助大家找准定位，迎接未来的挑战与机遇。
+description: "相信今年大家没少看到 《抱歉，C# 已经跌出第一梯队》类似的文章，.NET 生态到底如何，本文将为你系统梳理 2025 年 .NET 开发者最应该关注的技术趋势和重要事件，涵盖AI发展、.NET演进及两者融合的最新动态和趋势，以求帮助大家找准定位，迎接未来的挑战与机遇。"
 date: 2026-01-05 19:12:04
 lastmod: 2026-01-05 19:31:47
-cover: https://img1.dotnet9.com/2026/01/cover_01.png
-copyright: Reprinted
-author: 圣杰|向AI而行
+author: "圣杰|向AI而行"
 originalTitle: 写给所有 .NET 开发者的 2025 年度总结
 originalLink: https://mp.weixin.qq.com/s/kWLLt9duYSazGoSHXN-8bg
+copyright: Reprinted
+cover: https://img1.dotnet9.com/2026/01/cover_01.png
 categories:
   - .NET
 tags:

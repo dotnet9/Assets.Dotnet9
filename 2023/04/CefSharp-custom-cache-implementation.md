@@ -1,15 +1,19 @@
 ---
 title: CefSharp自定义缓存实现
-slug: CefSharp-custom-cache-implementation
-description: 使用好CefSharp的缓存功能，可以提高应用程序的性能和用户体验，减少网络流量和服务器负载，并支持离线访问，是一个非常有用的特性。
+slug: cef-sharp-custom-cache-implementation
+description: "使用好CefSharp的缓存功能，可以提高应用程序的性能和用户体验，减少网络流量和服务器负载，并支持离线访问，是一个非常有用的特性。"
 date: 2023-04-25 11:36:26
+lastmod: 2023-04-25 11:36:26
+author: Dotnet9
 copyright: Original
 draft: false
 cover: https://img1.dotnet9.com/2023/03/cover_14.png
-categories: 
-    - .NET
-tags: 
-    - CefSharp
+categories:
+  - .NET
+tags:
+  - .NET
+  - C#
+  - CefSharp
 ---
 
 大家好，我是沙漠尽头的狼。

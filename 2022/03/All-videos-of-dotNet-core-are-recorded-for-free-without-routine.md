@@ -1,21 +1,24 @@
 ---
-title: .NET Core全部视频录完了，全免费，无套路
-slug: All-videos-of-dotNet-core-are-recorded-for-free-without-routine
-description: 我一直在更新的.NET Core视频终于录完了，203节，内容涉及.NET Core基础类、Entity Framework Core、ASP.NET Core WebAPI、DDD（领域驱动设计）、实战项目。
+title: ".NET Core全部视频录完了，全免费，无套路"
+slug: all-videos-of-dotnet-core-are-recorded-for-free-without-routine
+description: "我一直在更新的.NET Core视频终于录完了，203节，内容涉及.NET Core基础类、Entity Framework Core、ASP.NET Core WebAPI、DDD（领域驱动设计）、实战项目。"
 date: 2022-03-09 07:19:26
-banner: false
-copyright: Reprinted
+lastmod: 2022-03-09 07:19:26
 author: 杨中科
-originalTitle: .NET Core全部视频录完了，全免费，无套路
+originalTitle: ".NET Core全部视频录完了，全免费，无套路"
 originalLink: https://mp.weixin.qq.com/s/SbidWHbMmNDtknD4HuAmNg
-draft: False
+copyright: Reprinted
+draft: false
 cover: https://img1.dotnet9.com/2022/03/cover_07.png
-categories: 
-    - 课程
-tags: 
-    - .NET Core
-    - 全免费
-    - 无套路
+banner: false
+categories:
+  - 课程
+tags:
+  - .NET
+  - C#
+  - ASP.NET Core
+  - Web API
+  - .NET Core
 ---
 
 我一直在更新的.NET Core 视频终于录完了，203 节，内容涉及.NET Core 基础类、Entity Framework Core、ASP.NET Core WebAPI、DDD（领域驱动设计）、实战项目。

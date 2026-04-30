@@ -1,22 +1,24 @@
 ---
-title: (5/30)大家一起学Blazor：依赖注入(Dependency Injection)
+title: "(5/30)大家一起学Blazor：依赖注入(Dependency Injection)"
 slug: 5-of-30-let-us-learn-blazor-together-dependency-injection
-description: 问题来了，为什么Blazor会知道WeatherForecastService在这里可以调用？
+description: "问题来了，为什么Blazor会知道WeatherForecastService在这里可以调用？"
 date: 2021-12-11 13:27:42
-copyright: Reprinted
+lastmod: 2021-12-11 13:27:42
 author: StrayaWorker
-originalTitle: (5/30)大家一起学Blazor：依赖注入(Dependency Injection)
+originalTitle: "(5/30)大家一起学Blazor：依赖注入(Dependency Injection)"
 originalLink: https://ithelp.ithome.com.tw/articles/10260278
-draft: False
+copyright: Reprinted
+draft: false
 cover: https://img1.dotnet9.com/2021/12/cover_05.png
+categories:
+  - Blazor
 albums:
-    - 一起学Blazor系列
-categories: 
-    - Blazor
-tags: 
-    - Blazor
-    - ASP.NET Core
-    - 学Blazor
+  - 一起学Blazor系列
+tags:
+  - .NET
+  - C#
+  - ASP.NET Core
+  - Blazor
 ---
 
 问题来了，为什么 Blazor 会知道 WeatherForecastService 在这里可以调用？

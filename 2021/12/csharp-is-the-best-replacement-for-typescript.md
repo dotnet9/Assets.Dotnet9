@@ -1,19 +1,21 @@
 ---
-title: C# 是 TypeScript 的最佳替补？
+title: "C# 是 TypeScript 的最佳替补？"
 slug: csharp-is-the-best-replacement-for-typescript
-description: TypeScript非常优秀。它完美地结合了强类型和快速开发，因此非常好用，我在许多情况下都会默认选择这个库。但是，世上没有完美的语言，有些情况下TypeScript并不是最合适的工具：
+description: "TypeScript非常优秀。它完美地结合了强类型和快速开发，因此非常好用，我在许多情况下都会默认选择这个库。但是，世上没有完美的语言，有些情况下TypeScript并不是最合适的工具："
 date: 2021-12-27 20:53:19
-copyright: Reprinted
+lastmod: 2021-12-27 20:53:19
 author: CSDN
-originalTitle: C# 是 TypeScript 的最佳替补？
+originalTitle: "C# 是 TypeScript 的最佳替补？"
 originalLink: https://mp.weixin.qq.com/s/yXShXwe9O7uzOBTRqMPd7Q
-draft: False
+copyright: Reprinted
+draft: false
 cover: https://img1.dotnet9.com/2021/12/cover_44.jpg
-categories: 
-    - .NET
-tags: 
-    - C#
-    - TypeScript
+categories:
+  - .NET
+tags:
+  - .NET
+  - C#
+  - TypeScript
 ---
 
 > 作者 | Nate Hill

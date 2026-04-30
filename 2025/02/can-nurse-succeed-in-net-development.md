@@ -1,20 +1,23 @@
 ---
-title: (1)从护士到C#开发者-护士转行学.NET 开发能成功吗？
+title: "(1)从护士到C#开发者-护士转行学.NET 开发能成功吗？"
 slug: can-nurse-succeed-in-net-development
-description: 文章讲述了一位护士因工作压力和家庭责任而辞职，在求职困难后，决定学习编程，特别是C#语言。她详细描述了第一天学习的内容，包括.NET、.NET Framework框架、C#语言概念、C#开发软件类型、不同UI框架、交互模式以及Visual Studio的使用。她表达了对学习编程的信心和决心，并希望得到更多人的指导和帮助。
+description: "文章讲述了一位护士因工作压力和家庭责任而辞职，在求职困难后，决定学习编程，特别是C#语言。她详细描述了第一天学习的内容，包括.NET、.NET Framework框架、C#语言概念、C#开发软件类型、不同UI框架、交互模式以及Visual Studio的使用。她表达了对学习编程的信心和决心，并希望得到更多人的指导和帮助。"
 date: 2025-02-21 10:11:24
 lastmod: 2025-02-21 21:18:56
-copyright: Contributes
 author: 勇敢的天使
-draft: False
+copyright: Contributes
+draft: false
 cover: https://img1.dotnet9.com/2025/02/cover_02.png
-categories: 
-    - 分享
+categories:
+  - 分享
 albums:
-    - 从护士到C#开发者
-tags: 
-    - 护士
-    - 编程
+  - 从护士到C#开发者
+tags:
+  - .NET
+  - C#
+  - Visual Studio
+  - 转行开发
+  - 编程
 ---
 
 我曾是一名护士，在医院临床一线坚守了十年。初入职场时，年轻的我觉得倒夜班也并无大碍，毕竟连着休几天假的安排还算不错。然而，当我成为两个孩子的母亲后，情况就大不一样了。高强度的工作压力让我有些难以承受，下班后还要全身心照顾孩子，这让我疲惫不堪，辞职的念头也随之悄然萌生。

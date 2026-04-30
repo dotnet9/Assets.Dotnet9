@@ -1,22 +1,24 @@
 ---
-title: (19/30)大家一起学Blazor：图片上传
+title: "(19/30)大家一起学Blazor：图片上传"
 slug: 19-of-30-let-us-learn-blazor-together-upload-image
-description: 在大部分的网站中，上传图片也是很重要的功能，今天我们就来操作下。
+description: "在大部分的网站中，上传图片也是很重要的功能，今天我们就来操作下。"
 date: 2021-12-21 22:04:11
-copyright: Reprinted
+lastmod: 2021-12-21 22:04:11
 author: StrayaWorker
-originalTitle: (19/30)大家一起学Blazor：图片上传
+originalTitle: "(19/30)大家一起学Blazor：图片上传"
 originalLink: https://ithelp.ithome.com.tw/articles/10267909
-draft: False
+copyright: Reprinted
+draft: false
 cover: https://img1.dotnet9.com/2021/12/cover_05.png
+categories:
+  - Blazor
 albums:
-    - 一起学Blazor系列
-categories: 
-    - Blazor
-tags: 
-    - Blazor
-    - ASP.NET Core
-    - 学Blazor
+  - 一起学Blazor系列
+tags:
+  - .NET
+  - C#
+  - ASP.NET Core
+  - Blazor
 ---
 
 在大部分的网站中，上传图片也是很重要的功能，今天我们就来操作下。

@@ -1,20 +1,25 @@
 ---
-title: 后续来啦：Winform/WPF中快速搭建日志面板
-slug: follow-up-quickly-build-the-log-panel-in-wWinForm-or-wpf
-description: 原理是将`Winform或WPF 应用程序，宿主到ASP.NET Core Web API`上
+title: "后续来啦：Winform/WPF中快速搭建日志面板"
+slug: follow-up-quickly-build-the-log-panel-in-wwinform-or-wpf
+description: "原理是将`Winform或WPF 应用程序，宿主到ASP.NET Core Web API`上"
 date: 2021-04-18 15:45:15
+lastmod: 2021-04-18 15:45:15
+author: Dotnet9
+originalTitle: "后续来啦：Winform/WPF中快速搭建日志面板"
 copyright: Original
-originalTitle: 后续来啦：Winform/WPF中快速搭建日志面板
-draft: False
+draft: false
 cover: https://img1.dotnet9.com/2021/04/cover_02.jpg
-categories: 
-    - WPF
-    - Winform
-tags: 
-    - Winform
-    - WPF
-    - 日志面板
-    - LogDashboard
+categories:
+  - WPF
+  - Winform
+albums:
+  - WPF UI设计
+tags:
+  - .NET
+  - C#
+  - ASP.NET Core
+  - WPF
+  - Winform
 ---
 
 继昨天发文`ASP.NET Core 可视化日志组件使用(`[阅读文章](https://mp.weixin.qq.com/s/BSt2hL32_vBMliu9-Fs1zg)，[查看视频](https://mp.weixin.qq.com/s/rbOeuS5PDEZRSHeRR9r8wA))后，视频下有朋友留言 **“Winform 客户端的程序能用它不?”**，微信也有朋友问能否嫁接到`WPF`上，站长今早尝试了，是可以的！

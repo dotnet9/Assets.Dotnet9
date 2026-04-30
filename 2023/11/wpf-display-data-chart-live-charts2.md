@@ -1,19 +1,22 @@
 ---
-title: WPF显示数据图表(LiveCharts2)
+title: "WPF显示数据图表(LiveCharts2)"
 slug: wpf-display-data-chart-live-charts2
-description: LiveCharts是一个适用于.Net的数据可视化库，可以跨多个设备和框架运行
+description: "LiveCharts是一个适用于.Net的数据可视化库，可以跨多个设备和框架运行"
 date: 2023-11-15 08:20:13
 lastmod: 2023-11-15 09:58:46
-copyright: Reprinted
 author: 奔跑的皮卡峰
-originalTitle: WPF显示数据图表(LiveCharts2)
+originalTitle: "WPF显示数据图表(LiveCharts2)"
 originalLink: https://mp.weixin.qq.com/s/l3fmYcPlEryS6idnd9urXA
+copyright: Reprinted
 draft: false
 cover: https://img1.dotnet9.com/2023/11/0618.gif
-categories: 
-    - WPF
-tags: 
-    - LiveChart
+categories:
+  - WPF
+tags:
+  - .NET
+  - C#
+  - WPF
+  - LiveChart
 ---
 
 最近接手一个小项目，需要做一个数据显示大屏，要能显示曲线，显示进出量，重点是要好看，我哪知道什么是好看，就随便做做呗。

@@ -1,21 +1,24 @@
 ---
 title: 基于XAML框架和跨平台项目架构设计的深入技术分析
 slug: deep-technical-analysis-of-xaml-framework-and-cross-platform-project-architecture
-description: 我们深入探讨了基于XAML的各种平台、跨平台战略以及为有效的项目架构设计所需的核心技术。
+description: "我们深入探讨了基于XAML的各种平台、跨平台战略以及为有效的项目架构设计所需的核心技术。"
 date: 2024-11-08 21:37:02
 lastmod: 2024-11-08 22:03:27
-copyright: Reprinted
-banner: false
 author: Vicky&James
 originalTitle: 基于XAML框架和跨平台项目架构设计的深入技术分析
 originalLink: https://jamesnet.dev/article/38/chinese
+copyright: Reprinted
 draft: false
 cover: https://img1.dotnet9.com/2024/11/cover_03.png
-categories: 
-    - .NET
-tags: 
-    - WPF
-    - 跨平台
+banner: false
+categories:
+  - .NET
+tags:
+  - .NET
+  - C#
+  - WPF
+  - 架构设计
+  - 跨平台
 ---
 
 本文基于Vicky&James 2024年10月22日在韩国Microsoft总部BMW meetup会议上的演讲内容重新整理而成。这次研讨会我们深入探讨了基于XAML的各种平台、跨平台战略以及为有效的项目架构设计所需的核心技术。

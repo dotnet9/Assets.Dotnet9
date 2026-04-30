@@ -1,18 +1,20 @@
 ---
-title: AvaloniaUI项目离线开发全攻略：IDE安装、模板应用与NuGet私有化部署一站式解决
+title: "AvaloniaUI项目离线开发全攻略：IDE安装、模板应用与NuGet私有化部署一站式解决"
 slug: avalonia-ui-project-offline-development-guide-one-stop-solution-for-ide-installation-template-application-and-nu-get-private-deployment
-description: 本文将指导您如何在本地网络环境中成功安装并配置AvaloniaUI所需的工具和模板。
+description: "本文将指导您如何在本地网络环境中成功安装并配置AvaloniaUI所需的工具和模板。"
 date: 2024-06-27 21:13:32
 lastmod: 2024-06-28 22:26:47
+author: Dotnet9
 copyright: Original
 draft: false
 cover: https://img1.dotnet9.com/2024/06/cover_02.png
-categories: 
-    - Avalonia UI
-tags: 
-    - .NET
-    - NuGet
-    - AvaloniaUI
+categories:
+  - Avalonia UI
+tags:
+  - .NET
+  - C#
+  - Avalonia UI
+  - NuGet
 ---
 
 ## 1. 引言

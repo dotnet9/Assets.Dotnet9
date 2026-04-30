@@ -1,18 +1,21 @@
 ---
-title: 使用 .NET MAUI 创建移动应用——Get Start
-slug: Creating-Mobile-Apps-with-dotNET-MAUI-Get-Start
+title: "使用 .NET MAUI 创建移动应用——Get Start"
+slug: creating-mobile-apps-with-dotnet-maui-get-start
 description: 一次MAUI简单使用之旅
 date: 2022-06-15 22:52:17
-copyright: Reprinted
-author: 张飞洪[厦门]
-originalTitle: 使用 .NET MAUI 创建移动应用——Get Start
+lastmod: 2022-06-15 22:52:17
+author: "张飞洪[厦门]"
+originalTitle: "使用 .NET MAUI 创建移动应用——Get Start"
 originalLink: https://www.cnblogs.com/jackyfei/p/16349599.html
-draft: False
+copyright: Reprinted
+draft: false
 cover: https://img1.dotnet9.com/2022/06/1224.png
-categories: 
-    - MAUI
-tags: 
-    - MAUI
+categories:
+  - MAUI
+tags:
+  - .NET
+  - C#
+  - MAUI
 ---
 
 ## 1、IDE 下载安装

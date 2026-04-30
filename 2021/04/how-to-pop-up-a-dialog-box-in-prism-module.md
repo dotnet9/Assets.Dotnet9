@@ -1,18 +1,23 @@
 ---
-title: 如何在 Prism 的 Module 中弹出对话框？
+title: "如何在 Prism 的 Module 中弹出对话框？"
 slug: how-to-pop-up-a-dialog-box-in-prism-module
-description: 有网友提出需求，在Prism的Module中如何弹出对话框？像主界面弹出关于对话框一样？
+description: "有网友提出需求，在Prism的Module中如何弹出对话框？像主界面弹出关于对话框一样？"
 date: 2021-04-14 17:32:16
+lastmod: 2021-04-14 17:32:16
+author: Dotnet9
+originalTitle: "如何在 Prism 的 Module 中弹出对话框？"
 copyright: Original
-originalTitle: 如何在 Prism 的 Module 中弹出对话框？
-draft: False
+draft: false
 cover: https://img1.dotnet9.com/2021/04/cover_04.jpg
-categories: 
-    - WPF
-tags: 
-    - WPF
-    - Prism
-    - Module
+categories:
+  - WPF
+albums:
+  - WPF MVVM框架 Prism系列
+tags:
+  - .NET
+  - WPF
+  - Prism
+  - Module
 ---
 
 > 有网友提出需求，在 Prism 的 Module 中如何弹出对话框？像主界面弹出关于对话框一样？

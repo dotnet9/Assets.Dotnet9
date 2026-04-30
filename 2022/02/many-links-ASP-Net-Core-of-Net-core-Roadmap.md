@@ -1,19 +1,21 @@
 ---
-title: 【链接很多】.NET 7 的 ASP.NET Core 路线图
-slug: many-links-ASP-Net-Core-of-Net-core-Roadmap
+title: "【链接很多】.NET 7 的 ASP.NET Core 路线图"
+slug: many-links-asp-net-core-of-net-core-roadmap
 description: 我们计划在 .NET 7 版本中添加到服务器的一些功能亮点
 date: 2022-02-19 18:05:34
-copyright: Reprinted
+lastmod: 2022-02-19 18:05:34
 author: 追逐时光者
-originalTitle: 【链接很多】.NET 7 的 ASP.NET Core 路线图
+originalTitle: "【链接很多】.NET 7 的 ASP.NET Core 路线图"
 originalLink: https://zhuanlan.zhihu.com/p/469359820
-draft: False
+copyright: Reprinted
+draft: false
 cover: https://img1.dotnet9.com/2022/02/cover_05.png
-categories: 
-    - ASP.NET Core
-tags: 
-    - .NET
-    - ASP.NET Core
+categories:
+  - ASP.NET Core
+tags:
+  - .NET
+  - C#
+  - ASP.NET Core
 ---
 
 文章来源：[https://github.com/dotnet/aspnetcore/issues/39504](https://github.com/dotnet/aspnetcore/issues/39504)

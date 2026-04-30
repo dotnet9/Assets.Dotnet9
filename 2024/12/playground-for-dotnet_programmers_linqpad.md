@@ -1,20 +1,21 @@
 ---
-title: .NET 程序员的 Playground ：LINQPad
-slug: playground-for-dotnet_programmers_linqpad
-description: LINQPad 的软件包很小只有二十兆左右，启动速度很快。使用时只需输入想要执行的 C# 语句，并按下 F5 即可
+title: ".NET 程序员的 Playground：LINQPad"
+slug: playground-for-dotnet-programmers-linqpad
+description: "LINQPad 的软件包很小只有二十兆左右，启动速度很快。使用时只需输入想要执行的 C# 语句，并按下 F5 即可"
 date: 2024-12-26 21:33:59
 lastmod: 2024-12-26 21:42:30
-copyright: Reprinted
-banner: false
 author: 码农很忙
-originalTitle: .NET 程序员的 Playground ：LINQPad
+originalTitle: ".NET 程序员的 Playground ：LINQPad"
 originalLink: https://www.coderbusy.com/archives/432.html
+copyright: Reprinted
 draft: false
 cover: https://img1.dotnet9.com/2024/12/0313.gif
+banner: false
 categories:
   - .NET
 tags:
   - .NET
+  - C#
   - LINQPad
 ---
 

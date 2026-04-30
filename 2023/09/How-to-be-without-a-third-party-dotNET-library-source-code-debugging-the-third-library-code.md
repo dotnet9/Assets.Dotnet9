@@ -1,15 +1,18 @@
 ---
-title: 如何在没有第三方.NET库源码的情况下调试第三库代码？
-slug: How-to-be-without-a-third-party-dotNET-library-source-code-debugging-the-third-library-code
+title: "如何在没有第三方.NET库源码的情况下调试第三库代码？"
+slug: how-to-be-without-a-third-party-dotnet-library-source-code-debugging-the-third-library-code
 description: 借助dnSpy调试第三方库代码
 date: 2023-09-21 22:00:19
+lastmod: 2023-09-21 22:00:19
+author: Dotnet9
 copyright: Original
 draft: false
 cover: https://img1.dotnet9.com/2023/09/cover_06.gif
-categories: 
-    - .NET
-tags: 
-    - .NET
+categories:
+  - .NET
+tags:
+  - .NET
+  - C#
 ---
 
 大家好，我是沙漠尽头的狼。

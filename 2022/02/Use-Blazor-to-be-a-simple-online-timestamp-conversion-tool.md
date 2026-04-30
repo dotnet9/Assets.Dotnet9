@@ -1,19 +1,22 @@
 ---
 title: 使用Blazor做个简单的时间戳在线转换工具
-slug: Use-Blazor-to-be-a-simple-online-timestamp-conversion-tool
-description: 时间戳转换，关键点在于双向绑定`@bind-Value`，就简单贴源码吧
+slug: use-blazor-to-be-a-simple-online-timestamp-conversion-tool
+description: "时间戳转换，关键点在于双向绑定`@bind-Value`，就简单贴源码吧"
 date: 2022-02-27 23:20:12
-copyright: Original
+lastmod: 2022-02-27 23:20:12
+author: Dotnet9
 originalTitle: 使用Blazor做个简单的时间戳在线转换工具
-draft: False
+copyright: Original
+draft: false
 cover: https://img1.dotnet9.com/2022/02/cover_17.jpeg
-categories: 
-    - Blazor
-tags: 
-    - .NET 7
-    - Blazor
-    - 时间戳转换
-    - 双向绑定
+categories:
+  - Blazor
+tags:
+  - .NET
+  - C#
+  - Blazor
+  - .NET 7
+  - 时间戳转换
 ---
 
 # 时间戳转换

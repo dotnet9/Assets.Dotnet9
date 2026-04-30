@@ -1,18 +1,20 @@
 ---
 title: C# 枚举高级战术
-slug: Csharp-Enumeration-Advanced-Tactics
-description: 阅读体验好，也不容易编错
+slug: csharp-enumeration-advanced-tactics
+description: "阅读体验好，也不容易编错"
 date: 2022-06-02 21:32:27
-copyright: Reprinted
+lastmod: 2022-06-02 21:32:27
 author: liamwang 精致码农
 originalTitle: C# 枚举高级战术
 originalLink: https://mp.weixin.qq.com/s/gKUIEVoG4aW69x6ExIMvYg
-draft: False
+copyright: Reprinted
+draft: false
 cover: https://img1.dotnet9.com/2022/06/cover_03.jpg
-categories: 
-    - .NET
-tags: 
-    - C#
+categories:
+  - .NET
+tags:
+  - .NET
+  - C#
 ---
 
 ![](https://img1.dotnet9.com/2022/06/cover_03.jpg)

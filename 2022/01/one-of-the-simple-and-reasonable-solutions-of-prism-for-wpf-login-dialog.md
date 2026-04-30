@@ -1,18 +1,23 @@
 ---
 title: Prism For WPF Login对话框又简单又合理的方案之一
 slug: one-of-the-simple-and-reasonable-solutions-of-prism-for-wpf-login-dialog
-description: 这是一篇极简的小短文。
+description: "这是一篇极简的小短文。"
 date: 2022-01-10 20:08:13
-copyright: Original
+lastmod: 2022-01-10 20:08:13
+author: Dotnet9
 originalTitle: Prism For WPF Login对话框又简单又合理的方案之一
-draft: False
+copyright: Original
+draft: false
 cover: https://img1.dotnet9.com/2022/01/cover_01.jpeg
-categories: 
-    - WPF
-tags: 
-    - C#
-    - WPF
-    - Prism
+categories:
+  - WPF
+albums:
+  - WPF MVVM框架 Prism系列
+tags:
+  - .NET
+  - C#
+  - WPF
+  - Prism
 ---
 
 ## 一、前言

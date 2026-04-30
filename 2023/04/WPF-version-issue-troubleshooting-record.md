@@ -1,18 +1,21 @@
 ---
 title: WPF版本问题排坑记录
-slug: WPF-version-issue-troubleshooting-record
-description: 珍爱生命，远离不明第三方组件库。
+slug: wpf-version-issue-troubleshooting-record
+description: "珍爱生命，远离不明第三方组件库。"
 date: 2023-04-17 20:00:29
-copyright: Contributes
+lastmod: 2023-04-17 20:00:29
 author: 一位极少露面的靓仔
 originalTitle: WPF版本问题排坑记录
 originalLink: https://zhuanlan.zhihu.com/p/622610149
+copyright: Contributes
 draft: false
 cover: https://img1.dotnet9.com/2023/04/cover_02.png
-categories: 
-    - .NET
-tags: 
-    - WPF
+categories:
+  - .NET
+tags:
+  - .NET
+  - C#
+  - WPF
 ---
 
 > 本文由网友投稿。

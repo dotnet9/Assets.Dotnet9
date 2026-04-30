@@ -1,21 +1,25 @@
 ---
-title: (6/7).NET Core 3 WPF MVVM框架 Prism系列之导航系统
-slug: Navigation-System-for-the-Prism-Series-of-the-dotNET-Core-3-WPF-MVVM-Framework
+title: "(6/7).NET Core 3 WPF MVVM框架 Prism系列之导航系统"
+slug: navigation-system-for-the-prism-series-of-the-dotnet-core-3-wpf-mvvm-framework
 description: 如何在.NET Core3环境下使用MVVM框架Prism基于区域Region的导航系统
 date: 2023-06-11 00:34:23
-copyright: Reprinted
+lastmod: 2023-06-11 00:34:23
 author: RyzenAdorer
 originalTitle: .NET Core 3 WPF MVVM框架 Prism系列之导航系统
 originalLink: https://www.cnblogs.com/ryzen/p/12703914.html
+copyright: Reprinted
 draft: false
 cover: https://img1.dotnet9.com/2023/06/cover_15.png
+categories:
+  - WPF
 albums:
-    - WPF MVVM框架 Prism系列
-categories: 
-    - WPF
-tags: 
-    - WPF
-    - Prism
+  - WPF MVVM框架 Prism系列
+tags:
+  - .NET
+  - C#
+  - WPF
+  - Prism
+  - MVVM
 ---
 
 > 本文来自转载

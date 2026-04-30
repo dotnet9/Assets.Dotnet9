@@ -1,18 +1,19 @@
 ---
-title: 劳动仲裁回忆录（八）：二审立案为何耗时5个月？
-slug: Memoir-of-labor-arbitration-8-Why-did-it-take-five-months-to-file-a-case-in-the-second-instance
-description: 本文回顾二审立案流程，看完你会明白为何能耗时5个月。
+title: "劳动仲裁回忆录（八）：二审立案为何耗时5个月？"
+slug: memoir-of-labor-arbitration-8-why-did-it-take-five-months-to-file-a-case-in-the-second-instance
+description: "本文回顾二审立案流程，看完你会明白为何能耗时5个月。"
 date: 2022-07-02 22:30:47
-copyright: Reprinted
+lastmod: 2022-07-02 22:30:47
 author: 逃离沙漠
-originalTitle: 劳动仲裁回忆录（八）：二审立案为何耗时5个月？
+originalTitle: "劳动仲裁回忆录（八）：二审立案为何耗时5个月？"
 originalLink: https://mp.weixin.qq.com/s/tnpDQT9shvw8WiQzvbXcmA
-draft: False
+copyright: Reprinted
+draft: false
 cover: https://img1.dotnet9.com/2022/03/cover_12.jpeg
-categories: 
-    - 分享
-tags: 
-    - 仲裁
+categories:
+  - 分享
+tags:
+  - 劳动仲裁
 ---
 
 > 在前面的篇幅中，我介绍了，自 2021 年 3 月 2 日立案开始劳动仲裁获胜，然后到一审继续获胜。一审之后，公司不服裁决继续上诉。然而二审的立案时间竟然花了近 5 个月。本文回顾二审立案流程，看完你会明白为何能耗时 5 个月。

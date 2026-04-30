@@ -1,17 +1,24 @@
 ---
-title: 【开源】一个WPF开发的XML记事本
-slug: An-XML-notepad-developed-by-WPF
+title: "【开源】一个WPF开发的XML记事本"
+slug: an-xml-notepad-developed-by-wpf
 description: WPF开发的XML记事本
 date: 2022-08-18 20:36:17
+lastmod: 2022-08-18 20:36:17
+author: Dotnet9
+originalTitle: "【开源】一个WPF开发的XML记事本"
 copyright: Original
-originalTitle: 【开源】一个WPF开发的XML记事本
-draft: False
+draft: false
 cover: https://img1.dotnet9.com/2022/08/cover_01.png
-categories: 
-    - WPF
-tags: 
-    - .NET
-    - 开源WPF
+categories:
+  - WPF
+albums:
+  - WPF开源项目
+tags:
+  - .NET
+  - C#
+  - WPF
+  - WPF开源项目
+  - 开源
 ---
 
 今天推荐一个 WPF 开源项目：[XmlNotepad](https://github.com/microsoft/XmlNotepad)。此仓库由 [WPF 开发者](https://github.com/WPFDevelopersOrg/WPFDevelopers) 推荐，站长简单翻译分享。

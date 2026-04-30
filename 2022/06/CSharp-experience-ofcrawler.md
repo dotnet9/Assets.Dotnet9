@@ -1,18 +1,22 @@
 ---
 title: C#基于.Net-HtmlAgilityPack库的爬虫初体验
-slug: CSharp-experience-ofcrawler
-description: 在github上看一些.Net的开源库，看到了关于爬虫相关的库
+slug: csharp-experience-ofcrawler
+description: "在github上看一些.Net的开源库，看到了关于爬虫相关的库"
 date: 2022-06-09 22:54:17
-copyright: Reprinted
+lastmod: 2022-06-09 22:54:17
 author: 黑哥聊dotNet
 originalTitle: C#基于.Net-HtmlAgilityPack库的爬虫初体验
 originalLink: https://mp.weixin.qq.com/s/o4YQVRtCKbckf0lmq7oT9w
-draft: False
+copyright: Reprinted
+draft: false
 cover: https://img1.dotnet9.com/2022/06/cover_09.jpeg
-categories: 
-    - .NET
-tags: 
-    - C#
+categories:
+  - .NET
+tags:
+  - .NET
+  - C#
+  - 开源
+  - GitHub
 ---
 
 ## 讲故事

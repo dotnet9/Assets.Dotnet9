@@ -1,18 +1,22 @@
 ---
 title: 微服务 配置中心 Nacos .Net 5
-slug: Micro-service-configuration-center-Nacos-dotNet-5
-description: 基于Nacos来一篇关于微服务的配置中心方案Demo。
+slug: micro-service-configuration-center-nacos-dotnet-5
+description: "基于Nacos来一篇关于微服务的配置中心方案Demo。"
 date: 2022-05-17 22:14:36
-copyright: Reprinted
+lastmod: 2022-05-17 22:14:36
 author: 蓝创精英团队
 originalTitle: 微服务 配置中心 Nacos .Net 5
 originalLink: https://blog.csdn.net/i2blue/article/details/124827269
-draft: False
+copyright: Reprinted
+draft: false
 cover: https://img1.dotnet9.com/2022/05/cover_46.jpeg
-categories: 
-    - .NET
-tags: 
-    - Web API
+categories:
+  - .NET
+tags:
+  - .NET
+  - C#
+  - 架构设计
+  - Web API
 ---
 
 基于 Nacos 来一篇关于微服务的配置中心方案 Demo。

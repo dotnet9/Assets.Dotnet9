@@ -1,21 +1,24 @@
 ---
 title: .NET 9正式发布
 slug: announcing-dotnet-9
-description: .NET 9正式发布了！这是.NET迄今为止生产力最高、最现代化、最安全、最智能且性能最强的版本。
+description: ".NET 9正式发布了！这是.NET迄今为止生产力最高、最现代化、最安全、最智能且性能最强的版本。"
 date: 2024-11-13 01:14:36
 lastmod: 2024-11-13 02:47:19
-copyright: Reprinted
-banner: false
 author: .NET Team
 originalTitle: Announcing .NET 9
 originalLink: https://devblogs.microsoft.com/dotnet/announcing-dotnet-9/
+copyright: Reprinted
 draft: false
 cover: https://img1.dotnet9.com/2024/11/0701.png
-categories: 
-    - .NET
-tags: 
-    - .NET 9
-    - 正式发布
+banner: false
+categories:
+  - .NET
+tags:
+  - .NET
+  - C#
+  - 安全
+  - .NET 9
+  - 正式发布
 ---
 
 > 本文由AI助力翻译，站长校验。

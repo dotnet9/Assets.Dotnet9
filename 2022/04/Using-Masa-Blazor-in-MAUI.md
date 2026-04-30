@@ -1,19 +1,25 @@
 ---
 title: 在MAUI中使用Masa Blazor
-slug: Using-Masa-Blazor-in-MAUI
-description: 使用 `.NET MAUI`，可以开发可在 `Android`、`iOS`、`macOS` 和 `Windows`、Linux(社区支持)从单个共享代码库运行的应用，一套代码多端运行。
+slug: using-masa-blazor-in-maui
+description: "使用 `.NET MAUI`，可以开发可在 `Android`、`iOS`、`macOS` 和 `Windows`、Linux(社区支持)从单个共享代码库运行的应用，一套代码多端运行。"
 date: 2022-04-26 12:45:19
-copyright: Reprinted
+lastmod: 2022-04-26 12:45:19
 author: MASA 技术团队
 originalTitle: 在MAUI中使用Masa Blazor
 originalLink: https://mp.weixin.qq.com/s/NmnHD0fUz8q0R1JJBSQbIg
-draft: False
+copyright: Reprinted
+draft: false
 cover: https://img1.dotnet9.com/2022/04/3601.png
-categories: 
-    - Blazor
-    - MAUI
-tags: 
-    - Blazor
+categories:
+  - Blazor
+  - MAUI
+albums:
+  - Blazor组件库
+tags:
+  - .NET
+  - C#
+  - Blazor
+  - MAUI
 ---
 
 ## 1. Masa Blazor 是什么

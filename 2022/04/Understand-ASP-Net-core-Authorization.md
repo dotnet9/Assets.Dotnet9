@@ -1,20 +1,23 @@
 ---
-title: 理解ASP.NET Core - 授权(Authorization)
-slug: Understand-ASP-Net-core-Authorization
-description: ASP.NET Core中的授权方式有很多，我们一起了解一下其中三种较为常见的方式
+title: "理解ASP.NET Core - 授权(Authorization)"
+slug: understand-asp-net-core-authorization
+description: "ASP.NET Core中的授权方式有很多，我们一起了解一下其中三种较为常见的方式"
 date: 2022-04-18 20:31:13
-copyright: Reprinted
+lastmod: 2022-04-18 20:31:13
 author: xiaoxiaotank
-originalTitle: 理解ASP.NET Core - 授权(Authorization)
+originalTitle: "理解ASP.NET Core - 授权(Authorization)"
 originalLink: https://www.cnblogs.com/xiaoxiaotank/p/16157344.html
-draft: False
+copyright: Reprinted
+draft: false
 cover: https://img1.dotnet9.com/2022/04/2105.png
-categories: 
-    - ASP.NET Core
-tags: 
-    - ASP.NET Core
-    - 授权
-    - Authorization
+categories:
+  - ASP.NET Core
+tags:
+  - .NET
+  - C#
+  - ASP.NET Core
+  - 鉴权
+  - 授权
 ---
 
 > 注：本文隶属于《理解 ASP.NET Core》系列文章，请查看置顶博客或[点击此处查看全文目录](https://www.cnblogs.com/xiaoxiaotank/p/15185288.html)

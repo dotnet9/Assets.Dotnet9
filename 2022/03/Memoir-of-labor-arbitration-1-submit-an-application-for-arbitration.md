@@ -1,18 +1,19 @@
 ---
-title: 劳动仲裁回忆录（一）：提交仲裁申请
-slug: Memoir-of-labor-arbitration-1-submit-an-application-for-arbitration
+title: "劳动仲裁回忆录（一）：提交仲裁申请"
+slug: memoir-of-labor-arbitration-1-submit-an-application-for-arbitration
 description: 个人全程劳动仲裁实录
 date: 2022-03-17 23:05:13
-copyright: Reprinted
+lastmod: 2022-03-17 23:05:13
 author: 逃离沙漠
-originalTitle: 劳动仲裁回忆录（一）：提交仲裁申请
+originalTitle: "劳动仲裁回忆录（一）：提交仲裁申请"
 originalLink: https://mp.weixin.qq.com/s/jBIbbEU2FPhMJDg78uvioQ
-draft: False
+copyright: Reprinted
+draft: false
 cover: https://img1.dotnet9.com/2022/03/cover_12.jpeg
-categories: 
-    - 分享
-tags: 
-    - 仲裁
+categories:
+  - 分享
+tags:
+  - 劳动仲裁
 ---
 
 > 本文含劳动仲裁申请相关内容和附件，附件下载在文末。

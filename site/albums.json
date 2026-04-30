@@ -76,5 +76,11 @@
     "Name": "从护士到C#开发者",
     "Memo": "记录从护理行业转向C#开发的成长故事",
     "Slug": "from-nurse-to-csharp-developer"
+  },
+  {
+    "Sort": 14,
+    "Name": "Web开源项目",
+    "Memo": "收录前端模板、Web工具与开源项目实践",
+    "Slug": "web-open-source-projects"
   }
 ]

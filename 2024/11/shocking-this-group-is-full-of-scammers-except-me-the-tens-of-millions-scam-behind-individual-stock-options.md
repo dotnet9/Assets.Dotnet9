@@ -1,22 +1,22 @@
 ---
-title: 震惊！这个群里除了我全是骗子——“个股期权”背后的千万骗局
+title: "震惊！这个群里除了我全是骗子——“个股期权”背后的千万骗局"
 slug: shocking-this-group-is-full-of-scammers-except-me-the-tens-of-millions-scam-behind-individual-stock-options
-description: 2018年12月5日，上海市公安局普陀分局长风新村派出所接到异地报警电话，报警人重金购买了位于长风地区的某资产管理公司“股票期权”产品后，在短短一个礼拜内，被莫名平仓，怀疑自己被骗。
+description: "2018年12月5日，上海市公安局普陀分局长风新村派出所接到异地报警电话，报警人重金购买了位于长风地区的某资产管理公司“股票期权”产品后，在短短一个礼拜内，被莫名平仓，怀疑自己被骗。"
 date: 2024-11-11 06:59:47
 lastmod: 2024-11-11 07:12:47
-copyright: Reprinted
-banner: false
 author: 警民直通车上海
-originalTitle: 震惊！这个群里除了我全是骗子——“个股期权”背后的千万骗局
+originalTitle: "震惊！这个群里除了我全是骗子——“个股期权”背后的千万骗局"
 originalLink: https://mp.weixin.qq.com/s/mGOYhrvlFQ5JmopQo70kxA
+copyright: Reprinted
 draft: false
 cover: https://img1.dotnet9.com/2024/11/cover_06.png
-categories: 
-    - 分享
-tags: 
-    - 骗子
-    - 个股期权
-    - 千万骗局
+banner: false
+categories:
+  - 分享
+tags:
+  - 个股期权
+  - 骗子
+  - 千万骗局
 ---
 
 ![](https://img1.dotnet9.com/2024/11/cover_06.png)

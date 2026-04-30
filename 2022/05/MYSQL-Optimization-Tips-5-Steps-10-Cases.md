@@ -1,18 +1,19 @@
 ---
-title: MYSQL优化技巧：5 大步骤 + 10 个案例
-slug: MYSQL-Optimization-Tips-5-Steps-10-Cases
+title: "MYSQL优化技巧：5 大步骤 + 10 个案例"
+slug: mysql-optimization-tips-5-steps-10-cases
 description: 希望对大家有用
 date: 2022-05-12 08:05:27
-copyright: Reprinted
+lastmod: 2022-05-12 08:05:27
 author: IT技术分享社区
-originalTitle: MYSQL优化技巧：5 大步骤 + 10 个案例
+originalTitle: "MYSQL优化技巧：5 大步骤 + 10 个案例"
 originalLink: https://mp.weixin.qq.com/s/eyz995VWcIEMLBQP7PL0FQ
-draft: False
+copyright: Reprinted
+draft: false
 cover: https://img1.dotnet9.com/2022/05/cover_36.jpg
-categories: 
-    - MySQL
-tags: 
-    - MySQL
+categories:
+  - MySQL
+tags:
+  - MySQL
 ---
 
 ![](https://img1.dotnet9.com/2022/05/cover_36.jpg)

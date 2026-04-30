@@ -1,17 +1,20 @@
 ---
-title: 如何在 C# 9 中使用record类型？
+title: "如何在 C# 9 中使用record类型？"
 slug: how-to-use-record-type-in-csharp-9
-description: 使用过record吗？
+description: "使用过record吗？"
 date: 2021-07-10 22:27:47
+lastmod: 2021-07-10 22:27:47
+author: Dotnet9
+originalTitle: "如何在 C# 9 中使用record类型？"
 copyright: Original
-originalTitle: 如何在 C# 9 中使用record类型？
-draft: False
+draft: false
 cover: https://img1.dotnet9.com/2021/07/cover_03.jpg
-categories: 
-    - .NET
-tags: 
-    - C#
-    - Record
+categories:
+  - .NET
+tags:
+  - .NET
+  - C#
+  - Record
 ---
 
 > 原文链接：[https://www.infoworld.com/article/3607372/how-to-work-with-record-types-in-csharp-9.html](https://www.infoworld.com/article/3607372/how-to-work-with-record-types-in-csharp-9.html)

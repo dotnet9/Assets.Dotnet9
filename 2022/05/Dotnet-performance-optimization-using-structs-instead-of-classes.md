@@ -1,18 +1,22 @@
 ---
 title: .NET性能优化-使用结构体替代类
-slug: Dotnet-performance-optimization-using-structs-instead-of-classes
-description: 我们知道在C#和Java明显的一个区别就是C#可以自定义值类型，也就是今天的主角struct，我们有了更加方便的class为什么微软还加入了struct呢？
+slug: dotnet-performance-optimization-using-structs-instead-of-classes
+description: "我们知道在C#和Java明显的一个区别就是C#可以自定义值类型，也就是今天的主角struct，我们有了更加方便的class为什么微软还加入了struct呢？"
 date: 2022-05-05 21:33:24
-copyright: Reprinted
+lastmod: 2022-05-05 21:33:24
 author: InCerry
 originalTitle: .NET性能优化-使用结构体替代类
 originalLink: https://www.cnblogs.com/InCerry/archive/2022/05/05/Dotnet-Opt-Perf-Use-Struct-Instead-Of-Class.html
-draft: False
+copyright: Reprinted
+draft: false
 cover: https://img1.dotnet9.com/2022/05/cover_16.jpg
-categories: 
-    - .NET
-tags: 
-    - .NET
+categories:
+  - .NET
+tags:
+  - .NET
+  - C#
+  - Java
+  - 性能优化
 ---
 
 > 作者：InCerry

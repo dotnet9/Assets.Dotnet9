@@ -1,21 +1,23 @@
 ---
-title: 从 WPF 到 Avalonia 的迁移系列：为什么我必须要把 WPF 程序迁移到 Avalonia
+title: "从 WPF 到 Avalonia 的迁移系列：为什么我必须要把 WPF 程序迁移到 Avalonia"
 slug: wpf-to-avalonia-migration-series-why-i-have-to-migrate-my-wpf-program-to-avalonia
-description: 在过去几年里，我们的上位机软件主要是用 WPF 和 WinForm 开发的。这些技术在 Windows 平台上确实很好用，也陪伴我们走过了从小规模试产到如今规模化交付的阶段。 但是，随着业务发展和客户需求的变化，单一的 Windows 技术栈逐渐成为了我们必须跨越的一道坎。
+description: "在过去几年里，我们的上位机软件主要是用 WPF 和 WinForm 开发的。这些技术在 Windows 平台上确实很好用，也陪伴我们走过了从小规模试产到如今规模化交付的阶段。 但是，随着业务发展和客户需求的变化，单一的 Windows 技术栈逐渐成为了我们必须跨越的一道坎。"
 date: 2025-09-13 19:45:27
 lastmod: 2025-09-13 19:54:17
-cover: https://img1.dotnet9.com/2025/09/cover_02.png
-copyright: Reprinted
-banner: false
 author: 西北飞虻
-originalTitle: 从 WPF 到 Avalonia 的迁移系列：为什么我必须要把 WPF 程序迁移到 Avalonia
+originalTitle: "从 WPF 到 Avalonia 的迁移系列：为什么我必须要把 WPF 程序迁移到 Avalonia"
 originalLink: https://mp.weixin.qq.com/s/4ap24kZPfcChjBuIHXU_QQ
+copyright: Reprinted
+cover: https://img1.dotnet9.com/2025/09/cover_02.png
+banner: false
 categories:
   - WPF
   - Avalonia UI
 tags:
+  - .NET
   - WPF
-  - Avalonia
+  - Avalonia UI
+  - Winform
   - 跨平台
 ---
 

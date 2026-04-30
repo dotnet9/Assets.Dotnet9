@@ -1,18 +1,19 @@
 ---
 title: 35岁失业程序员的现身说法
-slug: The-Experience-of-35-Year-Old-Unemployed-Programmers
-description: 35岁 + 程序员 + 失业，三个词组合在一起，很难不会给人以标题党的感觉，但此文并非如此。
+slug: the-experience-of-35-year-old-unemployed-programmers
+description: "35岁 + 程序员 + 失业，三个词组合在一起，很难不会给人以标题党的感觉，但此文并非如此。"
 date: 2023-08-01 20:11:34
-copyright: Reprinted
+lastmod: 2023-08-01 20:11:34
 author: 车骑
 originalTitle: 35岁失业程序员的现身说法
 originalLink: https://www.cnblogs.com/royzshare/p/17596403.html
+copyright: Reprinted
 draft: false
 cover: https://img1.dotnet9.com/2023/08/cover_01.png
-categories: 
-    - 分享
-tags: 
-    - 生活
+categories:
+  - 分享
+tags:
+  - 分享
 ---
 
 > 本文来自转载

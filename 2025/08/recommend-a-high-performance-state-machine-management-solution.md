@@ -1,22 +1,23 @@
 ---
 title: 推荐一款高性能状态机管理解决方案
 slug: recommend-a-high-performance-state-machine-management-solution
-description: 在实际软件开发中，尤其是工业软件，每一款设备都有复杂的状态以及状态之间的切换的功能需求，在这种情况下，如何管理状态以及状态之间切换，和对应状态下的功能控制，成为非常重要的一个问题。
+description: "在实际软件开发中，尤其是工业软件，每一款设备都有复杂的状态以及状态之间的切换的功能需求，在这种情况下，如何管理状态以及状态之间切换，和对应状态下的功能控制，成为非常重要的一个问题。"
 date: 2025-08-13 08:05:09
 lastmod: 2025-08-13 08:25:14
-cover: https://img1.dotnet9.com/2025/08/cover_03.png
-copyright: Reprinted
-banner: false
 author: 老码识途呀
 originalTitle: 推荐一款高性能状态机管理解决方案
 originalLink: https://mp.weixin.qq.com/s/UEd4s6cy0VMpl8u2Scbz3w
+copyright: Reprinted
+cover: https://img1.dotnet9.com/2025/08/cover_03.png
+banner: false
 categories:
   - 分享
   - .NET
 tags:
-  - 状态机
-  - 工业软件
   - .NET
+  - C#
+  - 工业软件
+  - 状态机
 ---
 
 在实际软件开发中，尤其是工业软件，每一款设备都有复杂的状态以及状态之间的切换的功能需求，在这种情况下，如何管理状态以及状态之间切换，和对应状态下的功能控制，成为非常重要的一个问题。如果处理不好，那这种繁复的状态将成为“像面条一样”缠绕耦合，一团乱麻，真的就是“剪不断，理还乱”。那如何解决这个问题呢？今天我们以一篇简单的小例子，简述如何通过Stateless组件，完成状态的管理和触发，仅供学习分享使用，如有不足之处，还请指正。

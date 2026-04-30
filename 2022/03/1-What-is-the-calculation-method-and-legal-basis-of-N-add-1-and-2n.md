@@ -1,19 +1,20 @@
 ---
-title: 1. N+1和2N的计算方法及法律依据是什么？
-slug: 1-What-is-the-calculation-method-and-legal-basis-of-N-add-1-and-2n
+title: "1. N+1和2N的计算方法及法律依据是什么？"
+slug: 1-what-is-the-calculation-method-and-legal-basis-of-n-add-1-and-2n
 description: 分享常识
 date: 2022-03-17 23:41:23
-copyright: Reprinted
+lastmod: 2022-03-17 23:41:23
 author: 逃离沙漠
-originalTitle: 1. N+1和2N的计算方法及法律依据是什么？
+originalTitle: "1. N+1和2N的计算方法及法律依据是什么？"
 originalLink: https://mp.weixin.qq.com/s/QIsePgO1PPRgXyNpruog9A
-draft: False
+copyright: Reprinted
+draft: false
 cover: https://img1.dotnet9.com/2022/03/cover_12.jpeg
-categories: 
-    - 分享
-tags: 
-    - 法律
-    - 仲裁
+categories:
+  - 分享
+tags:
+  - 劳动仲裁
+  - 法律
 ---
 
 > 劳动赔偿中我们都听过，N+1,N+2,2N，其实他们的概念是不一样的。其实是可以拆开讲，N 是一回事，+1 又是另外一条规定，2N 又是别的规定。本文我结合法律条文一一讲解。

@@ -1,19 +1,24 @@
 ---
-title: 既能做为工具使用，又能学习它源码的.NET开源项目-SmartSQL
-slug: Dotnet-open-source-project-that-can-be-used-as-a-tool-and-learn-its-source-code-SmartSQL
-description: 一款方便、快捷的数据库文档查询、生成工具，致力于成为帮助企业快速实现数字化转型的元数据管理工具。
+title: "既能做为工具使用，又能学习它源码的.NET开源项目-SmartSQL"
+slug: dotnet-open-source-project-that-can-be-used-as-a-tool-and-learn-its-source-code-smart-sql
+description: "一款方便、快捷的数据库文档查询、生成工具，致力于成为帮助企业快速实现数字化转型的元数据管理工具。"
 date: 2023-02-12 18:23:35
-copyright: Original
+lastmod: 2023-02-12 18:23:35
 author: 沙漠尽头的狼
+copyright: Original
 draft: false
 cover: https://img1.dotnet9.com/2023/02/cover_04.png
-categories: 
-    - .NET
-tags: 
-    - WPF
-    - 数据库管理工具
-    - 开源项目
-    - 开源WPF
+categories:
+  - .NET
+albums:
+  - WPF开源项目
+  - C#开源项目
+tags:
+  - .NET
+  - C#
+  - WPF
+  - WPF开源项目
+  - 开源项目
 ---
 
 ![项目宣传图](https://img1.dotnet9.com/2023/02/cover_04.png)

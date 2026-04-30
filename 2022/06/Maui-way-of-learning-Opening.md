@@ -1,18 +1,21 @@
 ---
 title: Maui的学习之路 -- 开篇
-slug: Maui-way-of-learning-Opening
+slug: maui-way-of-learning-opening
 description: 什么是.NET Maui
 date: 2022-06-23 23:08:32
-copyright: Reprinted
+lastmod: 2022-06-23 23:08:32
 author: 轩研 Maui开发者
 originalTitle: Maui的学习之路 -- 开篇
 originalLink: https://mp.weixin.qq.com/s/LkKUrldQb1jEyJN8GhaDqA
-draft: False
+copyright: Reprinted
+draft: false
 cover: https://img1.dotnet9.com/2022/06/1701.png
-categories: 
-    - MAUI
-tags: 
-    - MAUI
+categories:
+  - MAUI
+tags:
+  - .NET
+  - C#
+  - MAUI
 ---
 
 想了很久我决定发一个`Maui`介绍做为开篇，虽然这是老生常谈的话题，但是不能没有这样的探讨（请容我水一篇）。

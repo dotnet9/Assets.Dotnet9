@@ -1,19 +1,21 @@
 ---
-title: .NET 8.0 中有哪些新的变化？
+title: ".NET 8.0 中有哪些新的变化？"
 slug: what-are-the-new-changes-in-dotnet-8
 description: .NET 8在整个堆栈中带来了数千项性能改进
 date: 2023-11-17 17:42:17
 lastmod: 2023-11-17 16:03:17
-copyright: Reprinted
 author: 葡萄城技术团队
-originalTitle: .NET 8.0 中有哪些新的变化？
+originalTitle: ".NET 8.0 中有哪些新的变化？"
 originalLink: https://www.cnblogs.com/powertoolsteam/p/17833417.html
+copyright: Reprinted
 draft: false
 cover: https://img1.dotnet9.com/2023/11/0801.png
-categories: 
-    - .NET
-tags: 
-    - 技术更新
+categories:
+  - .NET
+tags:
+  - .NET
+  - C#
+  - 技术更新
 ---
 
 ## **1. 性能提升**

@@ -1,20 +1,22 @@
 ---
 title: 如何在生产环境下用好EFCore
-slug: How-to-make-good-use-of-efcore-in-production-environment
-description: 这是使用EF Core迁移数据库的系列文章中的第二篇。
+slug: how-to-make-good-use-of-efcore-in-production-environment
+description: "这是使用EF Core迁移数据库的系列文章中的第二篇。"
 date: 2022-05-04 16:19:32
-copyright: Reprinted
+lastmod: 2022-05-04 16:19:32
 author: Jon P Smith DotNET技术圈
 originalTitle: 如何在生产环境下用好EFCore
 originalLink: https://mp.weixin.qq.com/s/GDo6_6YpmH4r0tkHXf0yAg
-draft: False
+copyright: Reprinted
+draft: false
 cover: https://img1.dotnet9.com/2022/05/cover_10.png
-categories: 
-    - EF Core
-tags: 
-    - .NET
-    - ORM
-    - EF Core
+categories:
+  - EF Core
+tags:
+  - .NET
+  - C#
+  - EF Core
+  - ORM
 ---
 
 > 原文链接：https://www.thereformedprogrammer.net/handling-entity-framework-core-database-migrations-in-production-part-2/

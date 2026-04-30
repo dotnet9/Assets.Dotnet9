@@ -1,15 +1,21 @@
 ---
-title: 为了避免内存攻击，美国国家安全局提倡Rust、C#、Go、Java、Ruby 和 Swift，但将 C 和 C++ 置于一边
+title: "为了避免内存攻击，美国国家安全局提倡Rust、C#、Go、Java、Ruby 和 Swift，但将 C 和 C++ 置于一边"
 slug: nsa-to-developers-think-about-switching-from-c-and-cpp-to-a-memory-safe-programming-language
-description: 对于许多开发人员来说，这可能意味着转向 C#、Go、Java、Ruby、Rust 和 Swift。
+description: "对于许多开发人员来说，这可能意味着转向 C#、Go、Java、Ruby、Rust 和 Swift。"
 date: 2022-11-16 07:31:26
+lastmod: 2022-11-16 07:31:26
+author: Dotnet9
 copyright: Original
-draft: False
+draft: false
 cover: https://img1.dotnet9.com/2022/11/cover_03.png
-categories: 
-    - 分享
-tags: 
-    - 科技生活
+categories:
+  - 分享
+tags:
+  - .NET
+  - C#
+  - Java
+  - Go
+  - 安全
 ---
 
 先丢出美国国家安全局的一篇文章：[NSA Releases Guidance on How to Protect Against Software Memory Safety Issues](https://www.nsa.gov/Press-Room/News-Highlights/Article/Article/3215760/nsa-releases-guidance-on-how-to-protect-against-software-memory-safety-issues/)：

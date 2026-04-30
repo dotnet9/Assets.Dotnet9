@@ -1,19 +1,20 @@
 ---
 title: tauri-vue3-admin后台管理exe程序模板
-slug: Tauri-vue3-admin-Background-Management-Exe-Program-Template
-description: 基于tauri+vue3+pinia2+veplus跨桌面端通用后台管理系统应用模板TauriAdmin。
+slug: tauri-vue3-admin-background-management-exe-program-template
+description: "基于tauri+vue3+pinia2+veplus跨桌面端通用后台管理系统应用模板TauriAdmin。"
 date: 2023-07-27 22:14:19
-copyright: Reprinted
+lastmod: 2023-07-27 22:14:19
 author: 前端加油栈
 originalTitle: tauri-vue3-admin后台管理exe程序模板
 originalLink: https://mp.weixin.qq.com/s/m-KeC1qRQYm57wU4WynBgA
+copyright: Reprinted
 draft: false
 cover: https://img1.dotnet9.com/2023/07/cover_11.png
-categories: 
-    - 前端
-tags: 
-    - Vue
-    - Tauri
+categories:
+  - 前端
+tags:
+  - Vue
+  - Tauri
 ---
 
 ## 介绍

@@ -1,19 +1,20 @@
 ---
-title: 这些CSS提效技巧，你需要知道！
-slug: These-CSS-efficiency-tips-you-need-to-know
+title: "这些CSS提效技巧，你需要知道！"
+slug: these-css-efficiency-tips-you-need-to-know
 description: 技巧
 date: 2022-04-28 07:12:32
-copyright: Reprinted
+lastmod: 2022-04-28 07:12:32
 author: knaagar
-originalTitle: 这些CSS提效技巧，你需要知道！
+originalTitle: "这些CSS提效技巧，你需要知道！"
 originalLink: https://dev.to/devsyedmohsin/css-tips-and-tricks-you-will-add-to-cart-163p
-draft: False
+copyright: Reprinted
+draft: false
 cover: https://img1.dotnet9.com/2022/04/cover_42.png
-categories: 
-    - 前端
-tags: 
-    - 样式
-    - CSS
+categories:
+  - 前端
+tags:
+  - 样式
+  - CSS
 ---
 
 > 原文作者：knaagar

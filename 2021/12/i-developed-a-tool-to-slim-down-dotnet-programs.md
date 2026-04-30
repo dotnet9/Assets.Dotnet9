@@ -1,19 +1,21 @@
 ---
 title: 我开发了一个对.NET程序进行瘦身的工具
 slug: i-developed-a-tool-to-slim-down-dotnet-programs
-description: 我开发了一个对.Net程序瘦身的工具，可以把被引用但是没有被使用的程序集删除。我用它把一个.Net core程序从`147兆`瘦身到`59.5`兆。
+description: "我开发了一个对.Net程序瘦身的工具，可以把被引用但是没有被使用的程序集删除。我用它把一个.Net core程序从`147兆`瘦身到`59.5`兆。"
 date: 2021-12-26 21:56:27
-copyright: Reprinted
+lastmod: 2021-12-26 21:56:27
 author: 杨中科
 originalTitle: 我开发了一个对.NET程序进行瘦身的工具
 originalLink: https://mp.weixin.qq.com/s/B7QdVQWtgBKNKOEFj2Lg4g
-draft: False
+copyright: Reprinted
+draft: false
 cover: https://img1.dotnet9.com/2021/12/cover_43.png
-categories: 
-    - .NET
-tags: 
-    - .NET
-    - 瘦身
+categories:
+  - .NET
+tags:
+  - .NET
+  - C#
+  - 瘦身
 ---
 
 我开发了一个对.Net 程序瘦身的工具，可以把被引用但是没有被使用的程序集删除。我用它把一个.Net core 程序从`147兆`瘦身到`59.5`兆。

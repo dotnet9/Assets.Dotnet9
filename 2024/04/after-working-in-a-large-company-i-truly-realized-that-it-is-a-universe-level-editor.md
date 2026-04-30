@@ -4,17 +4,18 @@ slug: after-working-in-a-large-company-i-truly-realized-that-it-is-a-universe-le
 description: VS Code使用技巧分享
 date: 2024-04-17 07:23:47
 lastmod: 2024-04-17 07:39:48
-copyright: Reprinted
-banner: false
 author: React777
 originalTitle: 在大公司工作之后才真正领悟到它真的是宇宙级编辑器
 originalLink: https://mp.weixin.qq.com/s/JbQ01MNZjKsO0aW7qcU6pQ
+copyright: Reprinted
 draft: false
 cover: https://img1.dotnet9.com/2024/04/0201.gif
-categories: 
-    - 分享
-tags: 
-    - VS Code
+banner: false
+categories:
+  - 分享
+tags:
+  - Visual Studio
+  - VS Code
 ---
 
 ## 开胃菜

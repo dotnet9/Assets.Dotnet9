@@ -1,18 +1,21 @@
 ---
-title: 3D 穿梭效果？使用 UWP 也能搞定
-slug: 3D-shuttle-effect-It-can-also-be-done-with-uwp
-description: 晚上回家吃饭溜娃打打帝国时代 4，突然想起我很久没有宠幸 UWP 了。一股“吾有上将 UWP，可搞定 3D 穿梭效果”的豪气油然而生。
+title: "3D 穿梭效果？使用 UWP 也能搞定"
+slug: 3-d-shuttle-effect-it-can-also-be-done-with-uwp
+description: "晚上回家吃饭溜娃打打帝国时代 4，突然想起我很久没有宠幸 UWP 了。一股“吾有上将 UWP，可搞定 3D 穿梭效果”的豪气油然而生。"
 date: 2022-02-21 14:31:11
-copyright: Reprinted
+lastmod: 2022-02-21 14:31:11
 author: dino.c
-originalTitle: 3D 穿梭效果？使用 UWP 也能搞定
+originalTitle: "3D 穿梭效果？使用 UWP 也能搞定"
 originalLink: https://www.cnblogs.com/T-ARF/p/15552980.html
-draft: False
+copyright: Reprinted
+draft: false
 cover: https://img1.dotnet9.com/2022/02/1002.gif
-categories: 
-    - .NET
-tags: 
-    - UWP
+categories:
+  - .NET
+tags:
+  - .NET
+  - C#
+  - UWP
 ---
 
 昨天 ChokCoco 大佬搞了个 3D 穿梭效果出来，具体可见这里：

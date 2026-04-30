@@ -1,18 +1,23 @@
 ---
 title: ABP会臃肿吗
-slug: Will-ABP-be-bloated
-description: 我有时候在想在JAVA领域，Spring基本一统天下，新手也好，高手也罢都在学习、研究和项目实战。
+slug: will-abp-be-bloated
+description: "我有时候在想在JAVA领域，Spring基本一统天下，新手也好，高手也罢都在学习、研究和项目实战。"
 date: 2022-04-24 20:44:57
-copyright: Reprinted
-author: 张飞洪[厦门]
+lastmod: 2022-04-24 20:44:57
+author: "张飞洪[厦门]"
 originalTitle: ABP会臃肿吗
 originalLink: https://www.cnblogs.com/jackyfei/p/16063572.html
-draft: False
+copyright: Reprinted
+draft: false
 cover: https://img1.dotnet9.com/2022/04/cover_34.jpg
-categories: 
-    - ASP.NET Core
-tags: 
-    - ABP
+categories:
+  - ASP.NET Core
+tags:
+  - .NET
+  - C#
+  - ASP.NET Core
+  - Java
+  - ABP
 ---
 
 ## 1. 有了 ABP，还要学其他的框架？

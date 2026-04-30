@@ -1,18 +1,20 @@
 ---
 title: 20 个 .NET 6 新增的 API
-slug: 20-new-APIs-in-dotNET-6
+slug: 20-new-apis-in-dotnet-6
 description: 20 个
 date: 2022-04-24 20:15:29
-copyright: Reprinted
+lastmod: 2022-04-24 20:15:29
 author: Oleg Kyrylchuk 全球技术精选
 originalTitle: 20 个 .NET 6 新增的 API
 originalLink: https://mp.weixin.qq.com/s/LBNPyVAACUEc786QF_GMqg
-draft: False
+copyright: Reprinted
+draft: false
 cover: https://img1.dotnet9.com/2022/04/cover_32.png
-categories: 
-    - .NET
-tags: 
-    - .NET
+categories:
+  - .NET
+tags:
+  - .NET
+  - C#
 ---
 
 ![](https://img1.dotnet9.com/2022/04/cover_32.png)

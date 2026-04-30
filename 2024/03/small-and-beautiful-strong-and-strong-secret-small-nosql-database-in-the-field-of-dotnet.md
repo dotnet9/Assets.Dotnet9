@@ -1,22 +1,24 @@
 ---
-title: 小而美，强而劲：揭秘.NET领域下的小体积NoSQL数据库
+title: "小而美，强而劲：揭秘.NET领域下的小体积NoSQL数据库"
 slug: small-and-beautiful-strong-and-strong-secret-small-nosql-database-in-the-field-of-dotnet
-description: 在.NET的世界里，数据库选择至关重要。今天为大家揭秘一款轻量级NoSQL数据库——LiteDB，它小巧但功能强大，为你的项目提供快速、灵活的数据存储解决方案。无论你是初学者还是资深开发者，LiteDB都将是你的得力助手！
+description: "在.NET的世界里，数据库选择至关重要。今天为大家揭秘一款轻量级NoSQL数据库——LiteDB，它小巧但功能强大，为你的项目提供快速、灵活的数据存储解决方案。无论你是初学者还是资深开发者，LiteDB都将是你的得力助手！"
 date: 2024-03-08 05:05:14
 lastmod: 2024-03-08 05:14:24
-copyright: Reprinted
-banner: false
 author: 开源项目甄选
-originalTitle: 小而美，强而劲：揭秘.NET领域下的小体积NoSQL数据库
+originalTitle: "小而美，强而劲：揭秘.NET领域下的小体积NoSQL数据库"
 originalLink: https://mp.weixin.qq.com/s/ruI56wabnMnnrc5wWenKqg
+copyright: Reprinted
 draft: false
 cover: https://img1.dotnet9.com/2024/03/0301.png
-categories: 
-    - .NET
-tags: 
-    - NoSQL
-    - 数据库
-    - LiteDB
+banner: false
+categories:
+  - .NET
+tags:
+  - .NET
+  - C#
+  - 数据库
+  - LiteDB
+  - NoSQL
 ---
 
 ## 引言

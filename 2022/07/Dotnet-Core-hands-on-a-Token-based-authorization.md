@@ -1,18 +1,20 @@
 ---
 title: .NET Core手撸一个基于Token的权限认证
-slug: Dotnet-Core-hands-on-a-Token-based-authorization
-description: 权限认证是确定用户身份的过程, 可确定用户是否有访问资源的权力。
+slug: dotnet-core-hands-on-a-token-based-authorization
+description: "权限认证是确定用户身份的过程, 可确定用户是否有访问资源的权力。"
 date: 2022-07-09 21:18:32
-copyright: Reprinted
+lastmod: 2022-07-09 21:18:32
 author: 黑哥聊dotNet
 originalTitle: .NET Core手撸一个基于Token的权限认证
 originalLink: https://mp.weixin.qq.com/s/eZBDEqJaayjhJvyYI53qIA
-draft: False
+copyright: Reprinted
+draft: false
 cover: https://img1.dotnet9.com/2022/07/cover_11.jpeg
-categories: 
-    - .NET
-tags: 
-    - .NET
+categories:
+  - .NET
+tags:
+  - .NET
+  - C#
 ---
 
 ## 说明

@@ -3,16 +3,18 @@ title: 预览 C# 10 的新东西
 slug: preview-what-is-new-in-csharp-10
 description: 学习永不止步
 date: 2021-06-01 22:19:09
-copyright: Reprinted
+lastmod: 2021-06-01 22:19:09
 author: Ken Bonny&Rwing
 originalTitle: 预览 C# 10 的新东西
 originalLink: https://www.cnblogs.com/Rwing/p/introducing-csharp-10.html
-draft: False
+copyright: Reprinted
+draft: false
 cover: https://img1.dotnet9.com/2021/06/cover_05.png
-categories: 
-    - .NET
-tags: 
-    - C#
+categories:
+  - .NET
+tags:
+  - .NET
+  - C#
 ---
 
 - 原文: [Introducing C# 10](https://kenbonny.net/introducing-csharp-10)

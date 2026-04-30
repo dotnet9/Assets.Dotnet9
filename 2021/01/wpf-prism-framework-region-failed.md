@@ -1,18 +1,23 @@
 ---
-title: WPF Prism框架Region失效了？
+title: "WPF Prism框架Region失效了？"
 slug: wpf-prism-framework-region-failed
-description: 一般客户端项目常规操作流程是：弹出登录窗口=》账号验证成功=》关闭登录窗口=》弹出主窗口=》在主窗口作业。
+description: "一般客户端项目常规操作流程是：弹出登录窗口=》账号验证成功=》关闭登录窗口=》弹出主窗口=》在主窗口作业。"
 date: 2021-01-07 10:53:07
+lastmod: 2021-01-07 10:53:07
+author: Dotnet9
+originalTitle: "WPF Prism框架Region失效了？"
 copyright: Original
-originalTitle: WPF Prism框架Region失效了？
-draft: False
+draft: false
 cover: https://img1.dotnet9.com/2021/01/cover_02.jpeg
-categories: 
-    - WPF
-tags: 
-    - WPF
-    - Prism
-    - Region
+categories:
+  - WPF
+albums:
+  - WPF MVVM框架 Prism系列
+tags:
+  - .NET
+  - WPF
+  - Prism
+  - Region
 ---
 
 站长 15 年开始使用`Prism 4`，去年（2020 年 😊）也使用`Prism 8`做开源项目，今天分享处理`Prism Region`的一个问题。

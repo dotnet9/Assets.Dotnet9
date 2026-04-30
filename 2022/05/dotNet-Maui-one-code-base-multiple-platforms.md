@@ -1,18 +1,21 @@
 ---
-title: .NET MAUI – 一个代码库，多个平台
-slug: dotNet-Maui-one-code-base-multiple-platforms
-description: .NET 开发人员拥有了针对 Android、iOS、macOS 和 Windows 的一流跨平台 UI 堆栈
+title: ".NET MAUI – 一个代码库，多个平台"
+slug: dotnet-maui-one-code-base-multiple-platforms
+description: ".NET 开发人员拥有了针对 Android、iOS、macOS 和 Windows 的一流跨平台 UI 堆栈"
 date: 2022-05-26 21:19:14
-copyright: Reprinted
+lastmod: 2022-05-26 21:19:14
 author: gui.h
-originalTitle: .NET MAUI – 一个代码库，多个平台
+originalTitle: ".NET MAUI – 一个代码库，多个平台"
 originalLink: https://www.cnblogs.com/springhgui/p/16304492.html
-draft: False
+copyright: Reprinted
+draft: false
 cover: https://img1.dotnet9.com/2022/05/5706.png
-categories: 
-    - MAUI
-tags: 
-    - MAUI
+categories:
+  - MAUI
+tags:
+  - .NET
+  - C#
+  - MAUI
 ---
 
 欢迎使用 [.NET 多平台应用 UI](https://dot.net/maui)。此版本标志着我们统一 .NET 平台的[多年旅程](https://devblogs.microsoft.com/dotnet/introducing-net-multi-platform-app-ui/)中的新里程碑。现在，您和超过 500 万其他 .NET 开发人员拥有了针对 Android、iOS、macOS 和 Windows 的一流跨平台 UI 堆栈，以补充 .NET 工具链 （SDK） 和基类库 （BCL）。您可以使用 .NET 构建任何内容。

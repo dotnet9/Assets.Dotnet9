@@ -1,21 +1,25 @@
 ---
 title: C# WPF 普通登录界面
 slug: csharp-ordinary-login-ui
-description: 只是简单的登录界面布局，没有太重要的功能效果。
+description: "只是简单的登录界面布局，没有太重要的功能效果。"
 date: 2020-01-07 19:54:37
-copyright: Reprinted
+lastmod: 2020-01-07 19:54:37
 author: Design com WPF
 originalTitle: C# WPF 普通登录界面
 originalLink: https://www.youtube.com/watch?v=2Nu5zpT6Ezw
-draft: False
+copyright: Reprinted
+draft: false
 cover: https://img1.dotnet9.com/2020/01/cover_01.png
+categories:
+  - WPF
 albums:
-    - WPF UI设计
-categories: 
-    - WPF
-tags: 
-    - WPF Design
-    - Login Window
+  - WPF UI设计
+tags:
+  - .NET
+  - C#
+  - WPF
+  - UI设计
+  - WPF UI设计
 ---
 
 > 本文只是简单的登录界面布局，没有太重要的功能效果。

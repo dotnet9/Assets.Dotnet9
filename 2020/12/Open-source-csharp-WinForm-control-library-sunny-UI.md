@@ -1,23 +1,27 @@
 ---
 title: 开源C# Winform控件库 - SunnyUI
-slug: Open-source-csharp-WinForm-control-library-sunny-UI
-description: 基于.Net Framework 4.0+、.Net 5、.Net 6 框架的 C# WinForm 开源控件库、工具类库、扩展类库、多页面开发框架。
+slug: open-source-csharp-winform-control-library-sunny-ui
+description: "基于.Net Framework 4.0+、.Net 5、.Net 6 框架的 C# WinForm 开源控件库、工具类库、扩展类库、多页面开发框架。"
 date: 2020-12-05 13:21:25
-banner: false
-copyright: Reprinted
+lastmod: 2020-12-05 13:21:25
 author: Sunny
-originalTitle: 开源C# Winform控件库《SunnyUI》
+originalTitle: "开源C# Winform控件库《SunnyUI》"
 originalLink: https://gitee.com/yhuse/SunnyUI
-draft: False
+copyright: Reprinted
+draft: false
 cover: https://img1.dotnet9.com/2020/12/0407.png
+banner: false
+categories:
+  - Winform
 albums:
-    - Winform控件库
-categories: 
-    - Winform
-tags: 
-    - Winform
-    - SunnyUI
-    - 开源Winform
+  - Winform控件库
+  - C#开源项目
+tags:
+  - .NET
+  - C#
+  - Winform
+  - 控件库
+  - Winform开源项目
 ---
 
 ![SunnyUI](https://img1.dotnet9.com/2020/12/0401.png)

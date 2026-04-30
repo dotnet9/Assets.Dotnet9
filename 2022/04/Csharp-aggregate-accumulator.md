@@ -1,19 +1,21 @@
 ---
 title: C# Aggregate 累加器
-slug: Csharp-aggregate-accumulator
-description: 累加器是什么？累加器怎么用？别急，一项新技术的诞生，基本都是为了满足某种需求，从需求出发，更容易理解这个函数的特点。
+slug: csharp-aggregate-accumulator
+description: "累加器是什么？累加器怎么用？别急，一项新技术的诞生，基本都是为了满足某种需求，从需求出发，更容易理解这个函数的特点。"
 date: 2022-04-20 07:11:25
-copyright: Reprinted
+lastmod: 2022-04-20 07:11:25
 author: 遇水寒
 originalTitle: C# Aggregate 累加器
 originalLink: https://blog.csdn.net/weixin_42117950/article/details/121985075
-draft: False
+copyright: Reprinted
+draft: false
 cover: https://img1.dotnet9.com/2022/04/cover_23.jpg
-categories: 
-    - .NET
-tags: 
-    - C#
-    - Aggregate
+categories:
+  - .NET
+tags:
+  - .NET
+  - C#
+  - Aggregate
 ---
 
 ## 1. 需求

@@ -26,9 +26,9 @@ This repository is not only for images. It acts as the file-based content source
 site/
   about.md           About page
   Privacy.md         Privacy page content
-  album.json         Blog album metadata
-  category.json      Blog category metadata
-  FriendLink.json    Friend link metadata
+  albums.json        Blog album metadata
+  categories.json    Blog category metadata
+  friend-links.json  Friend link metadata
   timelines.json     Timeline data
   doc/               Documentation navigation and markdown content
   tools/             Tool metadata and preview images
@@ -59,5 +59,5 @@ That means this repository should be maintained with the same level of disciplin
 - Keep article markdown under `YYYY/MM/slug.md`.
 - Keep article media near the article or under a stable site folder.
 - Prefer descriptive filenames for covers and diagrams.
-- Update `site/*.json` when adding new navigation-level content.
+- Update the matching `site/*.json` or `site/**/navigation.json` file when adding new navigation-level content.
 - Avoid committing temporary exports, desktop files, or local-only helper files.

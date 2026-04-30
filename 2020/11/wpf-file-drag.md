@@ -1,17 +1,20 @@
 ---
 title: WPF文件拖拽
 slug: wpf-file-drag
-description: 上传文件时，一般是提供一个上传按钮，点击上传，弹出文件（或者目录选择对话框），选择文件（或者目录）后，从对话框对象中取得文件路径后，再进行上传操作。
+description: "上传文件时，一般是提供一个上传按钮，点击上传，弹出文件（或者目录选择对话框），选择文件（或者目录）后，从对话框对象中取得文件路径后，再进行上传操作。"
 date: 2020-11-27 11:10:09
-copyright: Original
+lastmod: 2020-11-27 11:10:09
+author: Dotnet9
 originalTitle: WPF文件拖拽
-draft: False
+copyright: Original
+draft: false
 cover: https://img1.dotnet9.com/2020/11/cover_02.png
-categories: 
-    - WPF
-tags: 
-    - WPF
-    - 文件手拽
+categories:
+  - WPF
+tags:
+  - .NET
+  - WPF
+  - 文件手拽
 ---
 
 ## 一、本文开始之前

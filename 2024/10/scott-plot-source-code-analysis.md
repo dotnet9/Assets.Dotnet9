@@ -1,23 +1,23 @@
 ---
 title: ScottPlot 源码分析
 slug: scott-plot-source-code-analysis
-description: ScottPlot是一个免费开源的数据可视化控件,使用C#语言编写。 它可以轻松实现海量数据可视化交互. 
+description: "ScottPlot是一个免费开源的数据可视化控件,使用C#语言编写。 它可以轻松实现海量数据可视化交互."
 date: 2024-10-31 05:04:15
 lastmod: 2024-10-31 05:29:46
-copyright: Reprinted
 author: 笨免牙
 originalTitle: ScottPlot 源码分析
 originalLink: https://zhuanlan.zhihu.com/p/591033699
-draft: False
+copyright: Reprinted
+draft: false
 cover: https://img1.dotnet9.com/2024/10/cover_04.png
-categories: 
-    - .NET
-tags: 
-    - ScottPlot
-    - 图表
-    - 折线
-    - 柱状图
-    - 性能
+categories:
+  - .NET
+tags:
+  - .NET
+  - C#
+  - 开源
+  - 图表
+  - 性能
 ---
 
 ## 简介

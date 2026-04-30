@@ -1,18 +1,19 @@
 ---
-title: 965七年我失去了什么？得到了什么？
-slug: What-did-I-lose-in-1967-What-did-you-get
-description: 你都不像一个程序员，程序员哪有下班这么早的？
+title: "965七年我失去了什么？得到了什么？"
+slug: what-did-i-lose-in-1967-what-did-you-get
+description: "你都不像一个程序员，程序员哪有下班这么早的？"
 date: 2022-03-17 22:33:49
-copyright: Reprinted
+lastmod: 2022-03-17 22:33:49
 author: 逃离沙漠
-originalTitle: 965七年我失去了什么？得到了什么？
+originalTitle: "965七年我失去了什么？得到了什么？"
 originalLink: https://mp.weixin.qq.com/s/noXd0xHpa-9ceWvIptl_cw
-draft: False
+copyright: Reprinted
+draft: false
 cover: https://img1.dotnet9.com/2022/03/cover_11.jpeg
-categories: 
-    - 分享
-tags: 
-    - 工作和生活
+categories:
+  - 分享
+tags:
+  - 分享
 ---
 
 近几年“996”的话题热度不断，或者说 996 话题在“互联网从业者”圈子中热度不断。然而每一次，我都感觉这个话题“跟我无关”，因为我真的 965 了七年。曾经有人这么说我：“你都不像一个程序员，程序员哪有下班这么早的？”。是的，我确实不像“主流程序员”那样，即没有有 996，也不像媒体口中描述的那样“黑色双肩包”，“格子衬衫”。

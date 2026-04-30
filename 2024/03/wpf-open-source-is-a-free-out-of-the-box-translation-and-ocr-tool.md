@@ -1,21 +1,24 @@
 ---
-title: WPF开源的一款免费、开箱即用的翻译、OCR工具
+title: "WPF开源的一款免费、开箱即用的翻译、OCR工具"
 slug: wpf-open-source-is-a-free-out-of-the-box-translation-and-ocr-tool
-description: 给大家分享一款由WPF开源的、免费的（MIT License）、即开即用、即用即走的翻译、OCR工具：STranslate。
+description: "给大家分享一款由WPF开源的、免费的（MIT License）、即开即用、即用即走的翻译、OCR工具：STranslate。"
 date: 2024-03-08 05:13:26
 lastmod: 2024-03-08 05:19:27
-copyright: Reprinted
-banner: false
 author: 追逐时光者
-originalTitle: WPF开源的一款免费、开箱即用的翻译、OCR工具
+originalTitle: "WPF开源的一款免费、开箱即用的翻译、OCR工具"
 originalLink: https://mp.weixin.qq.com/s/WTopCglS2ELPWaa5wAMyTQ
+copyright: Reprinted
 draft: false
 cover: https://img1.dotnet9.com/2024/03/0407.png
-categories: 
-    - WPF
-tags: 
-    - 翻译
-    - OCR工具
+banner: false
+categories:
+  - WPF
+tags:
+  - .NET
+  - WPF
+  - 开源
+  - 翻译
+  - OCR工具
 ---
 
 ## **前言**

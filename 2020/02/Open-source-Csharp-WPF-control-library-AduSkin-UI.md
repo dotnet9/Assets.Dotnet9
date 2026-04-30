@@ -1,19 +1,27 @@
 ---
-title: 开源C# WPF控件库 - AduSkin–UI
-slug: Open-source-Csharp-WPF-control-library-AduSkin-UI
-description: 一款简单漂亮的WPF UI，融合部分开源框架的组件，为个人定制的UI，可供学者参考。
+title: "开源C# WPF控件库 - AduSkin–UI"
+slug: open-source-csharp-wpf-control-library-adu-skin-ui
+description: "一款简单漂亮的WPF UI，融合部分开源框架的组件，为个人定制的UI，可供学者参考。"
 date: 2020-02-02 13:45:56
-banner: false
+lastmod: 2020-02-02 13:45:56
+author: Dotnet9
+originalTitle: "开源C# WPF控件库《AduSkin–UI》"
 copyright: Original
-originalTitle: 开源C# WPF控件库《AduSkin–UI》
-draft: False
+draft: false
 cover: https://img1.dotnet9.com/2020/02/0101.gif
-tags: 
-    - 开源WPF
+banner: false
+categories:
+  - WPF
 albums:
-    - WPF控件库
-categories: 
-    - WPF
+  - WPF控件库
+  - WPF开源项目
+  - C#开源项目
+tags:
+  - .NET
+  - C#
+  - WPF
+  - 控件库
+  - WPF开源项目
 ---
 
 追求极致，永臻完美

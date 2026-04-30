@@ -1,22 +1,24 @@
 ---
-title: (27/30)大家一起学Blazor：添加用户和Claim功能
+title: "(27/30)大家一起学Blazor：添加用户和Claim功能"
 slug: 27-of-30-let-us-learn-blazor-together-add-users-and-claim-features
-description: 前面说过`ASP.NET Core Identity` 是基于`Claim` 的验证，而`Role` 就是类型为`Role` 的`Claim`
+description: "前面说过`ASP.NET Core Identity` 是基于`Claim` 的验证，而`Role` 就是类型为`Role` 的`Claim`"
 date: 2021-12-25 11:08:26
-copyright: Reprinted
+lastmod: 2021-12-25 11:08:26
 author: StrayaWorker
-originalTitle: (27/30)大家一起学Blazor：添加用户和Claim功能
+originalTitle: "(27/30)大家一起学Blazor：添加用户和Claim功能"
 originalLink: https://ithelp.ithome.com.tw/articles/10273602
-draft: False
+copyright: Reprinted
+draft: false
 cover: https://img1.dotnet9.com/2021/12/cover_05.png
+categories:
+  - Blazor
 albums:
-    - 一起学Blazor系列
-categories: 
-    - Blazor
-tags: 
-    - Blazor
-    - ASP.NET Core
-    - 学Blazor
+  - 一起学Blazor系列
+tags:
+  - .NET
+  - C#
+  - ASP.NET Core
+  - Blazor
 ---
 
 前面说过`ASP.NET Core Identity` 是基于`Claim` 的验证，而`Role` 就是类型为`Role` 的`Claim`，`ASP.NET Framework Identity` 时代只有`Role` 验证，`Claim` 是`ASP.NET Core Identity` 才出现的，目的是为了取得外部程序如`Facebook`、`Twitter` 等等`第三方的授权`，如此一来用户就不用在不同平台注册重复帐号。

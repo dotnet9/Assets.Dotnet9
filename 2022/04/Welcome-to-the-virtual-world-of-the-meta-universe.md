@@ -1,18 +1,19 @@
 ---
 title: 欢迎来到元宇宙的虚拟世界
-slug: Welcome-to-the-virtual-world-of-the-meta-universe
-description: 本文介绍了元宇宙的基础知识, 并讨论了它的未来以及它的潜在问题， 当前元宇宙的应用主要表现在游戏、娱乐、企业办公等领域, 未来，伴随元宇宙技术和产业成熟度的持续提高，应用范围将逐步扩大，并不断深入。元宇宙能够对我们的生活产生多大的影响，我们拭目以待！
+slug: welcome-to-the-virtual-world-of-the-meta-universe
+description: "本文介绍了元宇宙的基础知识, 并讨论了它的未来以及它的潜在问题， 当前元宇宙的应用主要表现在游戏、娱乐、企业办公等领域, 未来，伴随元宇宙技术和产业成熟度的持续提高，应用范围将逐步扩大，并不断深入。元宇宙能够对我们的生活产生多大的影响，我们拭目以待！"
 date: 2022-04-06 20:16:29
-copyright: Reprinted
+lastmod: 2022-04-06 20:16:29
 author: SHUSWABHIT 全球技术精选
 originalTitle: 欢迎来到元宇宙的虚拟世界
 originalLink: https://mp.weixin.qq.com/s/fgL8WX3JXVYe8NuB7scDGA
-draft: False
+copyright: Reprinted
+draft: false
 cover: https://img1.dotnet9.com/2022/04/0402.png
-categories: 
-    - 分享
-tags: 
-    - 元宇宙
+categories:
+  - 分享
+tags:
+  - 元宇宙
 ---
 
 众所周知，由于这次疫情，给我们的生活造成了很多不便。现在，让我们进入未来科技世界, 我想很多人都听说过 `元宇宙` 这个词，大家可能对这个新的概念有很多疑问, 什么是元宇宙? 这是什么新技术? 在即将到来的未来会带来怎样的变化？

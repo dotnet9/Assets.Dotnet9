@@ -1,21 +1,26 @@
 ---
-title: 开源项目《Vue.NetCore》
-slug: Open-source-porject-Vue-NetCore
-description: .NetCore+Vue2/Vue3+Element plus+uniapp前后端分离，全自动生成PC与移动端代码；支持移动端(uniapp)ios/android/h5/微信小程序。http://www.volcore.xyz/
+title: "开源项目《Vue.NetCore》"
+slug: open-source-porject-vue-net-core
+description: ".NetCore+Vue2/Vue3+Element plus+uniapp前后端分离，全自动生成PC与移动端代码；支持移动端(uniapp)ios/android/h5/微信小程序。http://www.volcore.xyz/"
 date: 2022-04-11 20:22:16
-copyright: Reprinted
+lastmod: 2022-04-11 20:22:16
 author: x_discoverer
-originalTitle: 开源项目《Vue.NetCore》
+originalTitle: "开源项目《Vue.NetCore》"
 originalLink: https://gitee.com/x_discoverer/Vue.NetCore
-draft: False
+copyright: Reprinted
+draft: false
 cover: https://img1.dotnet9.com/2022/04/h5.jpg
-categories: 
-    - .NET
-tags: 
-    - 开源项目
-    - 开源Web
-    - Vue
-    - Web API
+categories:
+  - .NET
+albums:
+  - C#开源项目
+  - Web开源项目
+tags:
+  - .NET
+  - C#
+  - Vue
+  - 开源项目
+  - 开源
 ---
 
 ## Vue + .NetCore 前后端分离，不一样的快速发开框架(提供 Vue2/Vue3 版本)

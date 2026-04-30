@@ -1,18 +1,21 @@
 ---
 title: .NET高级代码审计-反序列化 Gadget之详解XAML
-slug: Net-advanced-code-audit-detailed-explanation-of-deserialization-gadget-Xaml
-description: .NET反序列化漏洞 XmlSerializer核心Gadget：XamlReader
+slug: net-advanced-code-audit-detailed-explanation-of-deserialization-gadget-xaml
+description: ".NET反序列化漏洞 XmlSerializer核心Gadget：XamlReader"
 date: 2022-05-29 09:38:47
-copyright: Reprinted
+lastmod: 2022-05-29 09:38:47
 author: Ivan1ee dotNet安全矩阵
 originalTitle: .NET高级代码审计-反序列化 Gadget之详解XAML
 originalLink: https://mp.weixin.qq.com/s/8fQNU7i6nqB1kHuL_hhUDw
-draft: False
+copyright: Reprinted
+draft: false
 cover: https://img1.dotnet9.com/2022/05/5909.png
-categories: 
-    - .NET
-tags: 
-    - XAML
+categories:
+  - .NET
+tags:
+  - .NET
+  - C#
+  - XAML
 ---
 
 ## 0x01 背景

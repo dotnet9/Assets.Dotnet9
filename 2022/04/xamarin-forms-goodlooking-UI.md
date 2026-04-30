@@ -1,21 +1,23 @@
 ---
 title: Xamarin Forms Goodlooking UI
-slug: xamarin-forms-goodlooking-UI
-description: 使用`Xamarin.Forms`开发的开源移动App介绍，感兴趣的可以访问[Github](https://github.com/jsuarezruiz/xamarin-forms-goodlooking-UI)和[Gitee](https://gitee.com/dotnet9/xamarin-forms-goodlooking-UI)仓库看看，下载对应的App项目研究。
+slug: xamarin-forms-goodlooking-ui
+description: "使用`Xamarin.Forms`开发的开源移动App介绍，感兴趣的可以访问[Github](https://github.com/jsuarezruiz/xamarin-forms-goodlooking-UI)和[Gitee](https://gitee.com/dotnet9/xamarin-forms-goodlooking-UI)仓库看看，下载对应的App项目研究。"
 date: 2022-04-13 06:38:12
-copyright: Reprinted
+lastmod: 2022-04-13 06:38:12
 author: jsuarezruiz
 originalTitle: Xamarin Forms Goodlooking UI
 originalLink: https://github.com/jsuarezruiz/xamarin-forms-goodlooking-UI
-draft: False
+copyright: Reprinted
+draft: false
 cover: https://img1.dotnet9.com/2022/04/images/fishing.webp
-categories: 
-    - MAUI
-tags: 
-    - .NET
-    - Xamarin Forms
-    - MAUI
-    - 开源MAUI
+categories:
+  - MAUI
+tags:
+  - .NET
+  - C#
+  - MAUI
+  - 开源
+  - GitHub
 ---
 
 站长英文太差就不翻译了，大家看效果图，都是使用`Xamarin.Forms`开发的开源移动 App 介绍，感兴趣的可以访问[Github](https://github.com/jsuarezruiz/xamarin-forms-goodlooking-UI)和[Gitee](https://gitee.com/dotnet9/xamarin-forms-goodlooking-UI)仓库看看，下载对应的 App 项目研究。

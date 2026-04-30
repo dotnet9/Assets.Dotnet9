@@ -1,18 +1,20 @@
 ---
-title: 一个适合于.NET Core的超轻量级工作流引擎：Workflow-Core
-slug: An-ultra-lightweight-workflow-engine-suitable-for-dotNET-Workflow-Core
-description: 听说有workflow的东西，没有搞明白到底能够用它做什么。
+title: "一个适合于.NET Core的超轻量级工作流引擎：Workflow-Core"
+slug: an-ultra-lightweight-workflow-engine-suitable-for-dotnet-workflow-core
+description: "听说有workflow的东西，没有搞明白到底能够用它做什么。"
 date: 2023-02-6 22:36:12
-copyright: Reprinted
+lastmod: 2023-02-6 22:36:12
 author: Jimmy.Tang
-originalTitle: 一个适合于.NET Core的超轻量级工作流引擎：Workflow-Core
+originalTitle: "一个适合于.NET Core的超轻量级工作流引擎：Workflow-Core"
 originalLink: https://www.cnblogs.com/keep-study-to-die/p/12001408.html
+copyright: Reprinted
 draft: false
 cover: https://img1.dotnet9.com/2023/02/cover_02.jpg
-categories: 
-    - .NET
-tags: 
-    - .NET
+categories:
+  - .NET
+tags:
+  - .NET
+  - C#
 ---
 
 > 站长工作中会使用到该技术，所以转载该篇文章，大家一起了解 workflow，能够用它做什么。

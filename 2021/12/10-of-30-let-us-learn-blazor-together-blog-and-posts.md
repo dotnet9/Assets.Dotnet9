@@ -1,22 +1,24 @@
 ---
-title: (10/30)大家一起学Blazor：Blog and Posts
+title: "(10/30)大家一起学Blazor：Blog and Posts"
 slug: 10-of-30-let-us-learn-blazor-together-blog-and-posts
-description: 现在我们有一个可以输入日志的界面了，但日志就是每天都要写的意思，只有一篇怎么够呢？我们来加上blog。
+description: "现在我们有一个可以输入日志的界面了，但日志就是每天都要写的意思，只有一篇怎么够呢？我们来加上blog。"
 date: 2021-12-14 23:31:22
-copyright: Reprinted
+lastmod: 2021-12-14 23:31:22
 author: StrayaWorker
-originalTitle: (10/30)大家一起学Blazor：Blog and Posts
+originalTitle: "(10/30)大家一起学Blazor：Blog and Posts"
 originalLink: https://ithelp.ithome.com.tw/articles/10262250
-draft: False
+copyright: Reprinted
+draft: false
 cover: https://img1.dotnet9.com/2021/12/cover_05.png
+categories:
+  - Blazor
 albums:
-    - 一起学Blazor系列
-categories: 
-    - Blazor
-tags: 
-    - Blazor
-    - ASP.NET Core
-    - 学Blazor
+  - 一起学Blazor系列
+tags:
+  - .NET
+  - C#
+  - ASP.NET Core
+  - Blazor
 ---
 
 现在我们有一个可以输入日志的界面了，但日志就是每天都要写的意思，只有一篇怎么够呢？我们来加上 blog。

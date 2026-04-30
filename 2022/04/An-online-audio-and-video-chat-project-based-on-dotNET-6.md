@@ -1,23 +1,25 @@
 ---
 title: 基于 .NET 6 开发的在线音视频聊天项目
-slug: An-online-audio-and-video-chat-project-based-on-dotNET-6
-description: 基于.NET 6开发的在线音视频聊天项目，客户端WPF，后端.NET API。
+slug: an-online-audio-and-video-chat-project-based-on-dotnet-6
+description: "基于.NET 6开发的在线音视频聊天项目，客户端WPF，后端.NET API。"
 date: 2022-04-03 17:34:24
-copyright: Reprinted
+lastmod: 2022-04-03 17:34:24
 author: 王_先_生
 originalTitle: 基于 .NET 6 开发的在线音视频聊天项目
 originalLink: https://www.cnblogs.com/xymfblogs/archive/2022/04/02/16091037.html
-draft: False
+copyright: Reprinted
+draft: false
 cover: https://img1.dotnet9.com/2022/04/0108.png
-categories: 
-    - .NET
-tags: 
-    - .NET 6
-    - WPF
-    - .NET Core Web API
-    - 音视频
-    - 聊天
-    - 开源WPF
+categories:
+  - .NET
+albums:
+  - WPF开源项目
+tags:
+  - .NET
+  - C#
+  - WPF
+  - WPF开源项目
+  - 开源
 ---
 
 > 一个基于`.NET 6`开发的在线音视频聊天项目，客户端使用`WPF`开发，后端使用`.NET Core Web API`。

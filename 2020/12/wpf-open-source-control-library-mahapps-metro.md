@@ -1,24 +1,26 @@
 ---
-title: WPF开源控件库：MahApps.Metro
+title: "WPF开源控件库：MahApps.Metro"
 slug: wpf-open-source-control-library-mahapps-metro
-description: 其实站长很久之前就知道这个开源WPF控件库了，只是一直欣赏不了这种风格，但也star了该项目。每次浏览该仓库时，发现star越来越多，也看到很多网友对它的褒奖，所以今天就向大家推荐这款WPF控件库。
+description: "其实站长很久之前就知道这个开源WPF控件库了，只是一直欣赏不了这种风格，但也star了该项目。每次浏览该仓库时，发现star越来越多，也看到很多网友对它的褒奖，所以今天就向大家推荐这款WPF控件库。"
 date: 2020-12-12 12:11:02
-banner: false
+lastmod: 2020-12-12 12:11:02
+author: Dotnet9
+originalTitle: "WPF开源控件库：MahApps.Metro"
 copyright: Original
-originalTitle: WPF开源控件库：MahApps.Metro
-draft: False
+draft: false
 cover: https://img1.dotnet9.com/2020/12/cover_01.jpg
+banner: false
+categories:
+  - WPF
 albums:
-    - WPF控件库
-categories: 
-    - WPF
-tags: 
-    - WPF
-    - MahApps.Metro
-    - 开源WPF
-    - 控件库
-    - WPF控件库
-    - 开源WPF控件库
+  - WPF控件库
+  - WPF开源项目
+tags:
+  - .NET
+  - WPF
+  - 控件库
+  - WPF控件库
+  - WPF开源项目
 ---
 
 > 其实站长很久之前就知道这个开源 WPF 控件库了，只是一直欣赏不了这种风格，但也 star 了该项目。每次浏览该仓库时，发现 star 越来越多，也看到很多网友对它的褒奖，所以今天就向大家推荐这款 WPF 控件库。

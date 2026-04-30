@@ -1,22 +1,24 @@
 ---
-title: (22/30)大家一起学Blazor：ASP.NET Core Identity(2)
+title: "(22/30)大家一起学Blazor：ASP.NET Core Identity(2)"
 slug: 22-of-30-let-us-learn-blazor-together-asp-dotnet-core-identity-2
-description: 昨天做的验证只针对`Identity` 系统，没有包含到我们的日志
+description: "昨天做的验证只针对`Identity` 系统，没有包含到我们的日志"
 date: 2021-12-22 23:59:48
-copyright: Reprinted
+lastmod: 2021-12-22 23:59:48
 author: StrayaWorker
-originalTitle: (22/30)大家一起学Blazor：ASP.NET Core Identity(2)
+originalTitle: "(22/30)大家一起学Blazor：ASP.NET Core Identity(2)"
 originalLink: https://ithelp.ithome.com.tw/articles/10269706
-draft: False
+copyright: Reprinted
+draft: false
 cover: https://img1.dotnet9.com/2021/12/cover_05.png
+categories:
+  - Blazor
 albums:
-    - 一起学Blazor系列
-categories: 
-    - Blazor
-tags: 
-    - Blazor
-    - ASP.NET Core
-    - 学Blazor
+  - 一起学Blazor系列
+tags:
+  - .NET
+  - C#
+  - ASP.NET Core
+  - Blazor
 ---
 
 昨天做的验证只针对`Identity` 系统，没有包含到我们的日志，如果在未登录状态下于地址栏输入`https://localhost:5018/Blog`，还是可以看到博客，让我们整合验证。

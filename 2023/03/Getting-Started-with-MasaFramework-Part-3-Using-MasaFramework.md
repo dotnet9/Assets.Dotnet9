@@ -1,18 +1,21 @@
 ---
-title: (3) MasaFramework 入门第三篇，使用MasaFramework
-slug: Getting-Started-with-MasaFramework-Part-3-Using-MasaFramework
+title: "(3) MasaFramework 入门第三篇，使用MasaFramework"
+slug: getting-started-with-masa-framework-part-3-using-masa-framework
 description: 使用MasaFramework
 date: 2023-03-26 10:54:17
-copyright: Reprinted
+lastmod: 2023-03-26 10:54:17
 author: token的技术分享
-originalTitle: (3) MasaFramework 入门第三篇，使用MasaFramework
+originalTitle: "(3) MasaFramework 入门第三篇，使用MasaFramework"
 originalLink: https://www.cnblogs.com/hejiale010426/p/17227910.html
+copyright: Reprinted
 draft: false
 cover: https://img1.dotnet9.com/2023/03/cover_09.png
-categories: 
-    - .NET
-tags: 
-    - MASA Framework
+categories:
+  - .NET
+tags:
+  - .NET
+  - C#
+  - MASA Framework
 ---
 
 首先我们需要创建一个 MasaFramework 模板的项目，项目名称 TokenDemo，项目类型如图所示：

@@ -1,20 +1,22 @@
 ---
-title: 各版本操作系统对.NET支持情况（250707更新）
+title: "各版本操作系统对.NET支持情况（250707更新）"
 slug: each-version-of-the-operating-system-is-correct-dotnet-support
-description: 借助虚拟机和测试机，检测各版本操作系统对.NET的支持情况。安装操作系统后，实测安装相应运行时并能够运行星尘代理为通过。
+description: "借助虚拟机和测试机，检测各版本操作系统对.NET的支持情况。安装操作系统后，实测安装相应运行时并能够运行星尘代理为通过。"
 date: 2024-01-13 15:51:26
 lastmod: 2026-04-22 08:18:14
-banner: true
-copyright: Reprinted
 author: 大石头
-originalTitle: 各版本操作系统对.NET支持情况（250707更新）
+originalTitle: "各版本操作系统对.NET支持情况（250707更新）"
 originalLink: https://newlifex.com/tech/os_net
+copyright: Reprinted
 draft: false
 cover: https://img1.dotnet9.com/2024/01/cover_02.png
-categories: 
-    - .NET
-tags: 
-    - 技术更新
+banner: true
+categories:
+  - .NET
+tags:
+  - .NET
+  - C#
+  - 技术更新
 ---
 
 借助虚拟机和测试机，检测各版本操作系统对.NET的支持情况。

@@ -1,18 +1,21 @@
 ---
-title: RPA之PAD(Power Automate Desktop) 产品介绍
-slug: Product-introduction-of-RPAs-PAD-Power-Automate-Desktop
-description: RPA之前我已经介绍了，它就是一个机器人流程自动化的概念。
+title: "RPA之PAD(Power Automate Desktop) 产品介绍"
+slug: product-introduction-of-rpas-pad-power-automate-desktop
+description: "RPA之前我已经介绍了，它就是一个机器人流程自动化的概念。"
 date: 2022-05-30 21:01:23
-copyright: Contributes
+lastmod: 2022-05-30 21:01:23
 author: 蓝创精英团队
-originalTitle: RPA之PAD(Power Automate Desktop) 产品介绍
+originalTitle: "RPA之PAD(Power Automate Desktop) 产品介绍"
 originalLink: https://blog.csdn.net/i2blue/article/details/125037626
-draft: False
+copyright: Contributes
+draft: false
 cover: https://img1.dotnet9.com/2022/05/6117.png
-categories: 
-    - .NET
-tags: 
-    - RPA
+categories:
+  - .NET
+tags:
+  - .NET
+  - C#
+  - RPA
 ---
 
 > 本文由网友`蓝创精英团队`投稿，欢迎转载、分享

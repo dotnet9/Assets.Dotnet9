@@ -1,18 +1,20 @@
 ---
-title: 离职时，要不要跟同事透露去向？
-slug: When-leaving-do-you-want-to-disclose-your-whereabouts-to-your-colleagues
-description: 前不久，在网上看到一则这样的信
+title: "离职时，要不要跟同事透露去向？"
+slug: when-leaving-do-you-want-to-disclose-your-whereabouts-to-your-colleagues
+description: "前不久，在网上看到一则这样的信"
 date: 2022-03-17 22:11:23
-copyright: Reprinted
+lastmod: 2022-03-17 22:11:23
 author: 棠雪 智联招聘服务号
-originalTitle: 离职时，要不要跟同事透露去向？
+originalTitle: "离职时，要不要跟同事透露去向？"
 originalLink: https://mp.weixin.qq.com/s/rCr0w4H_0pB-1B1L_-a4xA
-draft: False
+copyright: Reprinted
+draft: false
 cover: https://img1.dotnet9.com/2022/03/cover_10.jpeg
-categories: 
-    - 分享
-tags: 
-    - 离职
+categories:
+  - 分享
+tags:
+  - 劳动仲裁
+  - 离职
 ---
 
 前不久，在网上看到一则这样的信息：“收到心仪公司的 offer 后，却发现离职是件让人忧心的事。领导不愿意签字，还旁敲侧击问我离职去向，实在不知如何回答？实话实说，毕竟是去竞品公司，一不小心就会翻盘；若是不说，又显得不够真诚。”

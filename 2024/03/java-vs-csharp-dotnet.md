@@ -1,20 +1,22 @@
 ---
 title: C#与Java
 slug: java-vs-csharp-dotnet
-description: 在动态且不断发展的软件开发世界中，Java 和 C# 是两个巨头，每个都有自己独特的优势、理念和生态系统。本文深入比较了 Java 和 C#，探讨了它们的历史背景、语言特性、性能指标、跨平台功能等。
+description: "在动态且不断发展的软件开发世界中，Java 和 C# 是两个巨头，每个都有自己独特的优势、理念和生态系统。本文深入比较了 Java 和 C#，探讨了它们的历史背景、语言特性、性能指标、跨平台功能等。"
 date: 2024-03-14 04:36:47
 lastmod: 2024-03-14 05:07:26
-copyright: Reprinted
-banner: false
 author: kapresoft
 originalTitle: Java vs. C#
 originalLink: https://www.kapresoft.com/java/2023/11/29/java-vs-c-sharp-dot-net.html
+copyright: Reprinted
 draft: false
 cover: https://img1.dotnet9.com/2024/03/cover_08.png
-categories: 
-    - .NET
-tags: 
-    - Java
+banner: false
+categories:
+  - .NET
+tags:
+  - .NET
+  - C#
+  - Java
 ---
 
 本文来自翻译：

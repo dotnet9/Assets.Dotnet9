@@ -1,30 +1,26 @@
 ---
 title: .NET 9 AOT的突破 - 支持老旧Win7与XP环境
 slug: good-news-breakthrough-in-net-9-aot-supports-old-win7-and-xp-environments
-description: .NET 9开始，AOT支持Win7和XP，不仅仅只支持SP1版本
+description: ".NET 9开始，AOT支持Win7和XP，不仅仅只支持SP1版本"
 date: 2024-07-16 05:24:47
 lastmod: 2024-10-23 13:49:26
+author: Dotnet9
 copyright: Original
-banner: true
 draft: false
 cover: https://img1.dotnet9.com/2024/07/cover_01.png
+banner: true
+categories:
+  - Avalonia UI
+  - Winform
+  - .NET
 albums:
-    - C# AOT
-categories: 
-    - Avalonia UI
-    - Winform
-    - .NET
-tags: 
-    - .NET 9
-    - AOT
-    - Avalonia UI
-    - Winform
-    - 控制台
-    - X86
-    - X64
-    - Win7
-    - XP
-    - SP1
+  - C# AOT
+tags:
+  - .NET
+  - C#
+  - Avalonia UI
+  - Winform
+  - AOT
 ---
 
 ![](https://img1.dotnet9.com/2024/07/0701.png)

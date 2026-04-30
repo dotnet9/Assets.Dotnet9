@@ -1,20 +1,23 @@
 ---
 title: C# 多语言利器 - ResX Manager
 slug: csharp-multilingual-weapon-resx-manager
-description: 本文不是要介绍怎样实现项目国际化，主要是介绍一款`VS`扩展程序，可方便的管理通用的资源文件(*.resx)
+description: "本文不是要介绍怎样实现项目国际化，主要是介绍一款`VS`扩展程序，可方便的管理通用的资源文件(*.resx)"
 date: 2021-02-16 22:23:32
-copyright: Original
+lastmod: 2021-02-16 22:23:32
+author: Dotnet9
 originalTitle: C# 多语言利器 - ResX Manager
-draft: False
+copyright: Original
+draft: false
 cover: https://img1.dotnet9.com/2021/02/cover_03.jpeg
-categories: 
-    - .NET
-    - WPF
-tags: 
-    - C#
-    - WPF
-    - 资源文件
-    - ResX Manager
+categories:
+  - .NET
+  - WPF
+tags:
+  - .NET
+  - C#
+  - WPF
+  - 国际化
+  - Visual Studio
 ---
 
 WPF 国际化实现方式很多:

@@ -1,20 +1,22 @@
 ---
 title: 如何分析EFCore引发的内存泄漏
-slug: How-to-analyze-memory-leaks-caused-by-efcore
-description: 术语“内存泄漏”和“ .NET应用程序”不是经常一起使用。
+slug: how-to-analyze-memory-leaks-caused-by-efcore
+description: "术语“内存泄漏”和“ .NET应用程序”不是经常一起使用。"
 date: 2022-05-04 16:47:46
-copyright: Reprinted
+lastmod: 2022-05-04 16:47:46
 author: Richard Brown DotNET技术圈
 originalTitle: 如何分析EFCore引发的内存泄漏
 originalLink: https://mp.weixin.qq.com/s/nntus3fGCvx3FT_uZYERUQ
-draft: False
+copyright: Reprinted
+draft: false
 cover: https://img1.dotnet9.com/2022/05/cover_12.jpg
-categories: 
-    - EF Core
-tags: 
-    - .NET
-    - ORM
-    - EF Core
+categories:
+  - EF Core
+tags:
+  - .NET
+  - C#
+  - EF Core
+  - ORM
 ---
 
 ![不要让内存泄漏成为洪水](https://img1.dotnet9.com/2022/05/cover_12.jpg)

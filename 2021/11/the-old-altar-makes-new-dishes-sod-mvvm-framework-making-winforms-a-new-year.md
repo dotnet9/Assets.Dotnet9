@@ -1,22 +1,26 @@
 ---
-title: “老坛泡新菜”:SOD MVVM框架，让WinForms焕发新春
+title: "“老坛泡新菜”:SOD MVVM框架，让Winforms焕发新春"
 slug: the-old-altar-makes-new-dishes-sod-mvvm-framework-making-winforms-a-new-year
-description: WinForms上MVVM技术的必要性，发现要实现MVVM框架其实并不难，关键在于模型（Model）和视图（View）的双向绑定，即模型的改变引起视图内容的改变，而视图的改变也能够引起模型的改变。
+description: "WinForms上MVVM技术的必要性，发现要实现MVVM框架其实并不难，关键在于模型（Model）和视图（View）的双向绑定，即模型的改变引起视图内容的改变，而视图的改变也能够引起模型的改变。"
 date: 2021-11-23 21:13:07
-banner: false
-copyright: Reprinted
+lastmod: 2021-11-23 21:13:07
 author: 用户1177503
-originalTitle: “老坛泡新菜”:SOD MVVM框架，让WinForms焕发新春
+originalTitle: "“老坛泡新菜”:SOD MVVM框架，让WinForms焕发新春"
 originalLink: https://cloud.tencent.com/developer/article/1045710
-draft: False
+copyright: Reprinted
+draft: false
 cover: https://img1.dotnet9.com/2021/11/cover_08.png
+banner: false
+categories:
+  - Winform
 albums:
-    - Winform控件库
-categories: 
-    - Winform
-tags: 
-    - Winform
-    - 开源Winform
+  - Winform控件库
+tags:
+  - .NET
+  - Winform
+  - MVVM
+  - Winform开源项目
+  - 开源
 ---
 
 ## 1. 火热的 MVVM 框架

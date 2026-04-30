@@ -1,18 +1,20 @@
 ---
 title: Avalonia小窍门之DataGrid添加取消排序
 slug: avalonia-datagrid-cancel-sorting
-description: 默认点击列头只有升序、降序排序，无法取消
+description: "默认点击列头只有升序、降序排序，无法取消"
 date: 2025-07-17 22:40:43
 lastmod: 2025-07-17 22:57:14
+author: Dotnet9
 draft: false
 cover: https://img1.dotnet9.com/2025/07/0302.gif
 categories:
   - Avalonia UI
 tags:
+  - .NET
   - C#
-  - Avalonia
-  - DataGrid
+  - Avalonia UI
   - 交互设计
+  - Avalonia
 ---
 
 ## 需求背景

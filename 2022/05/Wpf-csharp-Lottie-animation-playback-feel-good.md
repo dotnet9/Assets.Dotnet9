@@ -1,19 +1,24 @@
 ---
-title: WPF|C# Lottie 动画播放【感觉好牛】
-slug: Wpf-csharp-Lottie-animation-playback-feel-good
-description: Lottie 动画是一种以 json 文件保存的动画文件。相比 gif 在文件体积和动画流畅度上有很大的优势，而且是图形是矢量的，放大不会糊。
+title: "WPF|C# Lottie 动画播放【感觉好牛】"
+slug: wpf-csharp-lottie-animation-playback-feel-good
+description: "Lottie 动画是一种以 json 文件保存的动画文件。相比 gif 在文件体积和动画流畅度上有很大的优势，而且是图形是矢量的，放大不会糊。"
 date: 2022-05-19 06:58:14
-copyright: Reprinted
+lastmod: 2022-05-19 06:58:14
 author: xiejiang
-originalTitle: WPF|C# Lottie 动画播放【感觉好牛】
+originalTitle: "WPF|C# Lottie 动画播放【感觉好牛】"
 originalLink: https://www.cnblogs.com/8u7tgyjire7890/p/15881159.html
-draft: False
+copyright: Reprinted
+draft: false
 cover: https://img1.dotnet9.com/2022/05/cover_49.jpg
-categories: 
-    - WPF
-tags: 
-    - WPF
-    - 动画
+categories:
+  - WPF
+albums:
+  - WPF UI设计
+tags:
+  - .NET
+  - C#
+  - WPF
+  - 动画
 ---
 
 [Lottie](https://lottiefiles.com/) 动画是一种以 json 文件保存的动画文件。 相比 gif 在文件体积和动画流畅度上有很大的优势，而且是图形是矢量的，放大不会糊。

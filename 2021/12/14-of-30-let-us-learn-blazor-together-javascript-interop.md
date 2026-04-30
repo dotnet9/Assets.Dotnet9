@@ -1,22 +1,24 @@
 ---
-title: (14/30)大家一起学Blazor：JavaScript interop(互操作)
+title: "(14/30)大家一起学Blazor：JavaScript interop(互操作)"
 slug: 14-of-30-let-us-learn-blazor-together-javascript-interop
-description: 虽然Blazor 不需要用到JavaScript，但某些已有的js库 还是很方便，不能因为不想用JavaScript 就全部舍弃，Blazor 就提供了调用JavaScript 的方法，这种情况称为JavaScript interoperability(简称JavaScript interop)。这篇就来实现Delete 按钮的提醒窗口，因为删除是很重要的功能，不能让使用者轻轻一按就轻易删除。
+description: "虽然Blazor 不需要用到JavaScript，但某些已有的js库 还是很方便，不能因为不想用JavaScript 就全部舍弃，Blazor 就提供了调用JavaScript 的方法，这种情况称为JavaScript interoperability(简称JavaScript interop)。这篇就来实现Delete 按钮的提醒窗口，因为删除是很重要的功能，不能让使用者轻轻一按就轻易删除。"
 date: 2021-12-16 21:02:26
-copyright: Reprinted
+lastmod: 2021-12-16 21:02:26
 author: StrayaWorker
-originalTitle: (14/30)大家一起学Blazor：JavaScript interop(互操作)
+originalTitle: "(14/30)大家一起学Blazor：JavaScript interop(互操作)"
 originalLink: https://ithelp.ithome.com.tw/articles/10263798
-draft: False
+copyright: Reprinted
+draft: false
 cover: https://img1.dotnet9.com/2021/12/cover_05.png
+categories:
+  - Blazor
 albums:
-    - 一起学Blazor系列
-categories: 
-    - Blazor
-tags: 
-    - Blazor
-    - ASP.NET Core
-    - 学Blazor
+  - 一起学Blazor系列
+tags:
+  - .NET
+  - C#
+  - ASP.NET Core
+  - Blazor
 ---
 
 虽然 Blazor 不需要用到 JavaScript，但某些已有的 js 库 还是很方便，不能因为不想用 JavaScript 就全部舍弃，Blazor 就提供了调用 JavaScript 的方法，这种情况称为 JavaScript interoperability(简称 JavaScript interop)。这篇就来实现 Delete 按钮的提醒窗口，因为删除是很重要的功能，不能让使用者轻轻一按就轻易删除。

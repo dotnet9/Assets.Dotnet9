@@ -1,19 +1,20 @@
 ---
-title: 关于我创作WPF教学视频是因为“收了微软的钱”
+title: "关于我创作WPF教学视频是因为“收了微软的钱”"
 slug: i-created-a-wpf-tutorial-video-because-i-received-money-from-microsoft
-description: 多样化的观点会让技术社区更加丰富。然而，不尊重他人的表达方式和基于未经证实信息的言论并不利于建设性对话。
+description: "多样化的观点会让技术社区更加丰富。然而，不尊重他人的表达方式和基于未经证实信息的言论并不利于建设性对话。"
 date: 2024-10-15 21:07:26
 lastmod: 2024-10-15 22:17:26
-copyright: Reprinted
 author: 小李趣味多
-originalTitle: 关于我创作WPF教学视频是因为“收了微软的钱”
+originalTitle: "关于我创作WPF教学视频是因为“收了微软的钱”"
 originalLink: https://www.bilibili.com/read/cv39399906/
-draft: False
+copyright: Reprinted
+draft: false
 cover: https://img1.dotnet9.com/2024/10/cover_03.png
-categories: 
-    - WPF
-tags: 
-    - WPF
+categories:
+  - WPF
+tags:
+  - .NET
+  - WPF
 ---
 
 本文转载自B站[小李趣味多](https://space.bilibili.com/688707261)，原文链接：

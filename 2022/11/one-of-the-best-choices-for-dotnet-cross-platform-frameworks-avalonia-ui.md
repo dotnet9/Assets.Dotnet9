@@ -1,19 +1,22 @@
 ---
 title: .NET跨平台客户端框架 - Avalonia UI
 slug: one-of-the-best-choices-for-dotnet-cross-platform-frameworks-avalonia-ui
-description: 这是一个基于WPF XAML的跨平台UI框架，并支持多种操作系统（Windows（.NET Core），Linux（GTK），MacOS，Android和iOS），Web（WebAssembly）
+description: "这是一个基于WPF XAML的跨平台UI框架，并支持多种操作系统（Windows（.NET Core），Linux（GTK），MacOS，Android和iOS），Web（WebAssembly）"
 date: 2022-11-19 21:24:26
 lastmod: 2024-10-24 10:32:29
-banner: true
+author: Dotnet9
 copyright: Original
-draft: False
+draft: false
 cover: https://img1.dotnet9.com/2022/11/0402.png
-categories: 
-    - Avalonia UI
-tags: 
-    - 跨平台
-    - 桌面
-    - Avalonia UI
+banner: true
+categories:
+  - Avalonia UI
+tags:
+  - .NET
+  - C#
+  - WPF
+  - Avalonia UI
+  - 跨平台
 ---
 
 ![](https://img1.dotnet9.com/2022/11/0402.png)

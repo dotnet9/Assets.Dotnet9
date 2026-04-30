@@ -1,18 +1,20 @@
 ---
 title: C#使用Objects Comparer进行对象比较
-slug: Csharp-use-objects-comparer-to-compare-objects
-description: Objects Comparer是用于对象比较的工具，C#常见的数据结构都是可以用这个三方库进行对比，比较复杂的对象也是可以比较的。
+slug: csharp-use-objects-comparer-to-compare-objects
+description: "Objects Comparer是用于对象比较的工具，C#常见的数据结构都是可以用这个三方库进行对比，比较复杂的对象也是可以比较的。"
 date: 2022-07-15 21:55:23
-copyright: Reprinted
+lastmod: 2022-07-15 21:55:23
 author: 黑哥聊dotNet
 originalTitle: C#使用Objects Comparer进行对象比较
 originalLink: https://mp.weixin.qq.com/s/gfPZ-yFtTzFky1Z3I-goUw
-draft: False
+copyright: Reprinted
+draft: false
 cover: https://img1.dotnet9.com/2022/07/cover_17.jpeg
-categories: 
-    - .NET
-tags: 
-    - .NET
+categories:
+  - .NET
+tags:
+  - .NET
+  - C#
 ---
 
 ## 介绍

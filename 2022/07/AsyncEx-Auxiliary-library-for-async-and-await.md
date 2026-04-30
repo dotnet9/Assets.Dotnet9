@@ -1,18 +1,20 @@
 ---
 title: AsyncEx - async/await 的辅助库
-slug: AsyncEx-Auxiliary-library-for-async-and-await
+slug: async-ex-auxiliary-library-for-async-and-await
 description: async/await 的辅助库
 date: 2022-07-08 07:21:19
-copyright: Reprinted
+lastmod: 2022-07-08 07:21:19
 author: 黑哥聊dotNet
 originalTitle: AsyncEx - async/await 的辅助库
 originalLink: https://mp.weixin.qq.com/s/WyGsouPOZ-85NQRqpfYZzQ
-draft: False
+copyright: Reprinted
+draft: false
 cover: https://img1.dotnet9.com/2022/07/cover_10.png
-categories: 
-    - .NET
-tags: 
-    - .NET
+categories:
+  - .NET
+tags:
+  - .NET
+  - C#
 ---
 
 ## 简介

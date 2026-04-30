@@ -1,22 +1,24 @@
 ---
-title: (21/30)大家一起学Blazor：ASP.NET Core Identity(1)
+title: "(21/30)大家一起学Blazor：ASP.NET Core Identity(1)"
 slug: 21-of-30-let-us-learn-blazor-together-asp-dotnet-core-identity-1
 description: 今天来实现身分验证的部分
 date: 2021-12-22 23:01:31
-copyright: Reprinted
+lastmod: 2021-12-22 23:01:31
 author: StrayaWorker
-originalTitle: (21/30)大家一起学Blazor：ASP.NET Core Identity(1)
+originalTitle: "(21/30)大家一起学Blazor：ASP.NET Core Identity(1)"
 originalLink: https://ithelp.ithome.com.tw/articles/10268982
-draft: False
+copyright: Reprinted
+draft: false
 cover: https://img1.dotnet9.com/2021/12/cover_05.png
+categories:
+  - Blazor
 albums:
-    - 一起学Blazor系列
-categories: 
-    - Blazor
-tags: 
-    - Blazor
-    - ASP.NET Core
-    - 学Blazor
+  - 一起学Blazor系列
+tags:
+  - .NET
+  - C#
+  - ASP.NET Core
+  - Blazor
 ---
 
 今天来实现身分验证的部分，笔者此前是用`ASP.NET Core Web API` 搭配`Blazor`，用户第一次成功登录时，在后端将`Role`、`Claim` 等权限储存在`JWT`，将`JWT` 存在浏览器的`LocalStorage` 里面，前端再自己重写`AuthenticationStateProvider`，去检查`LocalStorage` 的`JWT`，接着将`AuthenticationState` 当作`CascadingParameter` 层层传递到各`Component`，这样就不需要不停跟后端交换数据，这是个很宝贵的经验，让笔者对身分验证有深入了解，这次笔者试试看`ASP.NET Core` 自己的`Identity`。

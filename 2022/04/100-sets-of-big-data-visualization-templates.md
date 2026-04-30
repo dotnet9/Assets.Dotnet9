@@ -1,22 +1,23 @@
 ---
 title: 100套大数据可视化模板
 slug: 100-sets-of-big-data-visualization-templates
-description: 100套大数据可视化炫酷大屏Html5模板;包含行业:社区、物业、政务、交通、金融银行等，全网最新、最多，最全、最酷、最炫大数据可视化模板。陆续更新中
+description: "100套大数据可视化炫酷大屏Html5模板;包含行业:社区、物业、政务、交通、金融银行等，全网最新、最多，最全、最酷、最炫大数据可视化模板。陆续更新中"
 date: 2022-04-21 20:13:49
-banner: false
-copyright: Reprinted
+lastmod: 2022-04-21 20:13:49
 author: iGaoWei
 originalTitle: 100套大数据可视化模板
 originalLink: https://gitee.com/iGaoWei/big-data-view
-draft: False
+copyright: Reprinted
+draft: false
 cover: https://img1.dotnet9.com/2022/04/2801.gif
-albums: 
-    - 开源Web
-categories: 
-    - 前端
-tags: 
-    - 大屏模板
-    - 在线浏览
+banner: false
+categories:
+  - 前端
+albums:
+  - Web开源项目
+tags:
+  - 大屏模板
+  - 在线浏览
 ---
 
 > 昨天介绍了一个大屏收集项目，今天发现一个可能更全的，还带 gif 动图，当然也能在线查看效果。

@@ -24,10 +24,10 @@ banner: false
 categories:
   - .NET
 albums:
-  - engineering-notes
+  - C#开源项目
 tags:
-  - native-library
-  - razor-pages
+  - Native AOT
+  - Razor Pages
 author: Dotnet9
 draft: false
 ---
@@ -56,6 +56,8 @@ Strongly recommended:
 - Keep slugs stable after publishing.
 - Avoid language mixing inside a single slug.
 - Use human-readable names instead of numbered filenames.
+- Article `categories` and `albums` should use display names from `site/categories.json` and `site/albums.json`.
+- Keep article tags focused; use at most five tags per article.
 
 ## 3. Cover and Image Rules
 
@@ -70,11 +72,11 @@ Files under `site/` are treated as navigation or product-level data.
 
 Common files:
 
-- `album.json`
-- `category.json`
-- `FriendLink.json`
+- `albums.json`
+- `categories.json`
+- `friend-links.json`
 - `timelines.json`
-- `doc/doc.json`
+- `doc/navigation.json`
 - `tools/tools.json`
 
 When changing these files:
@@ -88,7 +90,7 @@ When changing these files:
 
 Docs are driven by:
 
-- `site/doc/doc.json`
+- `site/doc/navigation.json`
 - markdown files in `site/doc/`
 
 Rules:

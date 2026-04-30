@@ -1,20 +1,21 @@
 ---
 title: .NET 6 中 LINQ 的改进
-slug: Improvement-of-LINQ-in-dotNet-6
+slug: improvement-of-linq-in-dotnet-6
 description: 如题
 date: 2022-04-23 14:29:14
-copyright: Reprinted
+lastmod: 2022-04-23 14:29:14
 author: 一个小伙子
 originalTitle: .NET 6 中 LINQ 的改进
 originalLink: https://www.cnblogs.com/paopaotang/p/16133578.html
-draft: False
+copyright: Reprinted
+draft: false
 cover: https://img1.dotnet9.com/2022/04/cover_31.jpeg
-categories: 
-    - .NET
-tags: 
-    - C#
-    - .NET
-    - LINQ
+categories:
+  - .NET
+tags:
+  - .NET
+  - C#
+  - LINQ
 ---
 
 ## 1. OrDefault 方法的默认值

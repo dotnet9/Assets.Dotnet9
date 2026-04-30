@@ -1,18 +1,20 @@
 ---
 title: C#中缓存的使用
-slug: Use-of-cache-in-Csharp
-description: 缓存是指可以进行高速数据交换的存储器，它先于内存与CPU交换数据，因此速率很快。
+slug: use-of-cache-in-csharp
+description: "缓存是指可以进行高速数据交换的存储器，它先于内存与CPU交换数据，因此速率很快。"
 date: 2022-07-11 21:53:13
-copyright: Reprinted
+lastmod: 2022-07-11 21:53:13
 author: 黑哥聊dotNet
 originalTitle: C#中缓存的使用
 originalLink: https://mp.weixin.qq.com/s/0Nc9wXjDYPIa_ZrIOqOdNQ
-draft: False
+copyright: Reprinted
+draft: false
 cover: https://img1.dotnet9.com/2022/07/cover_12.png
-categories: 
-    - .NET
-tags: 
-    - .NET
+categories:
+  - .NET
+tags:
+  - .NET
+  - C#
 ---
 
 ## 简介

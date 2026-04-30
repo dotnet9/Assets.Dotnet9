@@ -1,18 +1,22 @@
 ---
-title: ASP.NET (Core)使用Markdown
-slug: asp-dotnet--uses-markdown
+title: "ASP.NET (Core)使用Markdown"
+slug: asp-dotnet-uses-markdown
 description: 分享一下之前学习的一个登录小案例
 date: 2021-11-02 21:57:48
-copyright: Reprinted
+lastmod: 2021-11-02 21:57:48
 author: 殷慈航
-originalTitle: ASP.NET (Core)使用Markdown
+originalTitle: "ASP.NET (Core)使用Markdown"
 originalLink: https://www.cnblogs.com/jiyuwu/p/11791004.html
-draft: False
+copyright: Reprinted
+draft: false
 cover: https://img1.dotnet9.com/2021/11/cover_04.jpeg
-categories: 
-    - ASP.NET Core
-tags: 
-    - Markdown
+categories:
+  - ASP.NET Core
+tags:
+  - .NET
+  - C#
+  - ASP.NET Core
+  - Markdown
 ---
 
 **研究如何使用 Markdown 你们可能要花好几天才能搞定，但是看我的文章或者下载了源码，你搞定一般在 10 分钟之内。我先给各位介绍下它：**

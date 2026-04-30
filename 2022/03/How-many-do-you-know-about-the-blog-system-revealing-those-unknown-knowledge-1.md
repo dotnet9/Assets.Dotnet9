@@ -1,18 +1,19 @@
 ---
-title: 博客系统知多少：揭秘那些不为人知的学问（一）
-slug: How-many-do-you-know-about-the-blog-system-revealing-those-unknown-knowledge-1
+title: "博客系统知多少：揭秘那些不为人知的学问（一）"
+slug: how-many-do-you-know-about-the-blog-system-revealing-those-unknown-knowledge-1
 description: 大佬说博客
 date: 2022-03-08 21:09:23
-copyright: Reprinted
+lastmod: 2022-03-08 21:09:23
 author: 汪宇杰博客
-originalTitle: 博客系统知多少：揭秘那些不为人知的学问（一）
+originalTitle: "博客系统知多少：揭秘那些不为人知的学问（一）"
 originalLink: https://mp.weixin.qq.com/s/TVFS98aMuXViBNiCWtQ9Aw
-draft: False
+copyright: Reprinted
+draft: false
 cover: https://img1.dotnet9.com/2022/03/cover_03.png
-categories: 
-    - 分享
-tags: 
-    - 博客
+categories:
+  - 分享
+tags:
+  - 分享
 ---
 
 > 导语

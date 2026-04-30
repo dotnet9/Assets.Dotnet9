@@ -1,18 +1,22 @@
 ---
-title: MAUI初体验：爽
-slug: Maui-initial-experience-Cool
-description: 几个小时折腾，Windows上、Mac上成功运行Hello World，后面开发桌面和移动端就选MAUI了
+title: "MAUI初体验：爽"
+slug: maui-initial-experience-cool
+description: "几个小时折腾，Windows上、Mac上成功运行Hello World，后面开发桌面和移动端就选MAUI了"
 date: 2022-04-16 09:16:25
+lastmod: 2022-04-16 09:16:25
+author: Dotnet9
+originalTitle: "MAUI初体验：爽"
 copyright: Original
-originalTitle: MAUI初体验：爽
-draft: False
+draft: false
 cover: https://img1.dotnet9.com/2022/04/cover_18.png
-categories: 
-    - MAUI
-tags: 
-    - C#开发移动端
-    - 多端开发
-    - 极致开发体验
+categories:
+  - MAUI
+tags:
+  - .NET
+  - C#
+  - MAUI
+  - 多端开发
+  - 极致开发体验
 ---
 
 > 只是记录，只是 Hello World 体验，别期望太高。

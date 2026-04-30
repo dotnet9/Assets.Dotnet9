@@ -1,18 +1,24 @@
 ---
-title: WPF：播放GIF很伤神！
+title: "WPF：播放GIF很伤神！"
 slug: wpf-it-hurts-to-play-gif
-description: 今天介绍一个用于在 WPF 中显示动态 GIF 图片的库，可在 XAML 或代码中使用：`WpfAnimatedGif`。
+description: "今天介绍一个用于在 WPF 中显示动态 GIF 图片的库，可在 XAML 或代码中使用：`WpfAnimatedGif`。"
 date: 2021-07-02 22:12:46
+lastmod: 2021-07-02 22:12:46
+author: Dotnet9
+originalTitle: "WPF：播放GIF很伤神！"
 copyright: Original
-originalTitle: WPF：播放GIF很伤神！
-draft: False
+draft: false
 cover: https://img1.dotnet9.com/2021/07/cover_04.gif
-categories: 
-    - WPF
-tags: 
-    - WPF
-    - GIF
-    - 开源WPF
+categories:
+  - WPF
+albums:
+  - WPF开源项目
+tags:
+  - .NET
+  - WPF
+  - WPF开源项目
+  - 开源
+  - GIF
 ---
 
 # 为 WPF 播放 GIF 伤神不？

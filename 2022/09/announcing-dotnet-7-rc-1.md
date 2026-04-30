@@ -1,18 +1,20 @@
 ---
 title: .NET 7 RC1 发布
 slug: announcing-dotnet-7-rc-1
-description: 今天我们宣布 .NET 7 候选版本 1。这是生产中支持的 .NET 7 的两个候选版本 (RC) 中的第一个。
+description: "今天我们宣布 .NET 7 候选版本 1。这是生产中支持的 .NET 7 的两个候选版本 (RC) 中的第一个。"
 date: 2022-09-15 09:01:26
-copyright: Reprinted
-author: Jeremy Likness，Angelos Petropoulos，Jon Douglas
+lastmod: 2022-09-15 09:01:26
+author: "Jeremy Likness，Angelos Petropoulos，Jon Douglas"
 originalTitle: Announcing .NET 7 Release Candidate 1
 originalLink: https://devblogs.microsoft.com/dotnet/announcing-dotnet-7-rc-1/
+copyright: Reprinted
 draft: false
 cover: https://img1.dotnet9.com/2022/09/What_s_New_in_Net_7_85586957c5.jpg
-categories: 
-    - .NET
-tags: 
-    - .NET
+categories:
+  - .NET
+tags:
+  - .NET
+  - C#
 ---
 
 > 原文链接：[https://devblogs.microsoft.com/dotnet/announcing-dotnet-7-rc-1/](https://devblogs.microsoft.com/dotnet/announcing-dotnet-7-rc-1/)

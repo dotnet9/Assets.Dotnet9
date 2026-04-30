@@ -1,18 +1,19 @@
 ---
 title: SQL经典面试10题讲解
-slug: Explanation-of-10-questions-in-SQL-classic-interview
-description: 以下题目均来与笔者经历&网上分享的中高难度SQL题。
+slug: explanation-of-10-questions-in-sql-classic-interview
+description: "以下题目均来与笔者经历&网上分享的中高难度SQL题。"
 date: 2022-05-02 18:23:23
-copyright: Reprinted
+lastmod: 2022-05-02 18:23:23
 author: 俊欣 关于数据分析与可视化
 originalTitle: SQL经典面试10题讲解
 originalLink: https://mp.weixin.qq.com/s/xMTMlsetqIv5lj2wH2SPlA
-draft: False
+copyright: Reprinted
+draft: false
 cover: https://img1.dotnet9.com/2022/05/cover_03.png
-categories: 
-    - 数据库
-tags: 
-    - 数据库
+categories:
+  - 数据库
+tags:
+  - 数据库
 ---
 
 ## 一、提要

@@ -1,19 +1,22 @@
 ---
 title: 将 Figma 设计转换为 .NET MAUI Graphics 代码
 slug: figma-to-maui-graphics
-description: 使用FigmaSharp.Maui.Graphics将Figma设计转换为 .NET MAUI Graphics代码。
+description: "使用FigmaSharp.Maui.Graphics将Figma设计转换为 .NET MAUI Graphics代码。"
 date: 2022-09-23 11:42:47
-copyright: Reprinted
+lastmod: 2022-09-23 11:42:47
 author: jsuarezruiz
 originalTitle: From Figma to .NET MAUI Graphics
 originalLink: https://github.com/jsuarezruiz/figma-to-maui-graphics
+copyright: Reprinted
 draft: false
 cover: https://img1.dotnet9.com/2022/09/figma-to-maui-graphics-01.png
-categories: 
-    - .NET
-tags: 
-    - Figma
-    - MAUI
+categories:
+  - .NET
+tags:
+  - .NET
+  - C#
+  - MAUI
+  - Figma
 ---
 
 > 原文链接：[https://github.com/jsuarezruiz/figma-to-maui-graphics](https://github.com/jsuarezruiz/figma-to-maui-graphics)

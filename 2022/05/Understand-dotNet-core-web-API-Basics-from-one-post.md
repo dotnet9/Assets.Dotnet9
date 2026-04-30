@@ -1,18 +1,22 @@
 ---
 title: 一文了解.Net Core Web API基础知识
-slug: Understand-dotNet-core-web-API-Basics-from-one-post
-description: 本文通过.NET Core 3.1分享Web API基础知识，其他更新版本相差不离
+slug: understand-dotnet-core-web-api-basics-from-one-post
+description: "本文通过.NET Core 3.1分享Web API基础知识，其他更新版本相差不离"
 date: 2022-05-04 14:43:22
-copyright: Reprinted
+lastmod: 2022-05-04 14:43:22
 author: 白云任去留
 originalTitle: 一文了解.Net Core Web API基础知识
 originalLink: https://www.cnblogs.com/ang/p/13206871.html
-draft: False
+copyright: Reprinted
+draft: false
 cover: https://img1.dotnet9.com/2022/05/cover_05.jpeg
-categories: 
-    - ASP.NET Core
-tags: 
-    - Web API
+categories:
+  - ASP.NET Core
+tags:
+  - .NET
+  - C#
+  - ASP.NET Core
+  - Web API
 ---
 
 > 本文通过.NET Core 3.1 分享 Web API 基础知识，其他更新版本相差不离

@@ -1,20 +1,23 @@
 ---
-title: EF Core 6 新功能汇总（四）
+title: "EF Core 6 新功能汇总（四）"
 slug: entity-framework-core-6-features-part-4
-description: 在这篇文章中，你将看到 EF Core 对 SQLite、In-memory 提供者和 EF.Functions.Contains 方法的改进。
+description: "在这篇文章中，你将看到 EF Core 对 SQLite、In-memory 提供者和 EF.Functions.Contains 方法的改进。"
 date: 2022-06-02 22:12:35
-copyright: Reprinted
+lastmod: 2022-06-02 22:12:35
 author: liamwang 精致码农
-originalTitle: EF Core 6 新功能汇总（四）
+originalTitle: "EF Core 6 新功能汇总（四）"
 originalLink: https://mp.weixin.qq.com/s/BU8FKXS95WlvblVPBulC5g
-draft: False
+copyright: Reprinted
+draft: false
 cover: https://img1.dotnet9.com/2022/06/cover_04.jpg
-categories: 
-    - EF Core
-tags: 
-    - .NET
-    - ORM
-    - EF Core
+categories:
+  - EF Core
+tags:
+  - .NET
+  - C#
+  - EF Core
+  - ORM
+  - SQLite
 ---
 
 在这篇文章中，你将看到 EF Core 对 SQLite、In-memory 提供者和 EF.Functions.Contains 方法的改进。

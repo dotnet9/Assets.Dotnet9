@@ -1,23 +1,28 @@
 ---
-title: WPF开源项目：AIStudio.Wpf.AClient
+title: "WPF开源项目：AIStudio.Wpf.AClient"
 slug: wpf-open-source-project-aistudio-wpf-aclient
-description: 使用Prism做MVVM，优点咱就不说了，主要用了容器注入，消息和DI，比自己写省很多事。网上有很多标准的MVVM的使用方法，但是没有形成一个系统级的框架。本框架从登录到具体业务的使用，还有自动升级都搭建完成
+description: "使用Prism做MVVM，优点咱就不说了，主要用了容器注入，消息和DI，比自己写省很多事。网上有很多标准的MVVM的使用方法，但是没有形成一个系统级的框架。本框架从登录到具体业务的使用，还有自动升级都搭建完成"
 date: 2021-07-25 12:06:07
-banner: false
+lastmod: 2021-07-25 12:06:07
+author: Dotnet9
+originalTitle: "WPF开源项目：AIStudio.Wpf.AClient"
 copyright: Original
-originalTitle: WPF开源项目：AIStudio.Wpf.AClient
-draft: False
+draft: false
 cover: https://img1.dotnet9.com/2021/07/cover_01.png
+banner: false
+categories:
+  - WPF
 albums:
-    - WPF控件库
-categories: 
-    - WPF
-tags: 
-    - WPF
-    - Prism
-    - MVVM
-    - ASP.NET Core
-    - 开源WPF
+  - WPF控件库
+  - WPF MVVM框架 Prism系列
+  - WPF开源项目
+  - C#开源项目
+tags:
+  - .NET
+  - C#
+  - ASP.NET Core
+  - WPF
+  - Prism
 ---
 
 ## 介绍

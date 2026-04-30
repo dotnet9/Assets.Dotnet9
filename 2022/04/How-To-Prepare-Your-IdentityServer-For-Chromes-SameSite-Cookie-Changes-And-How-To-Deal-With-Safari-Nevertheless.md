@@ -1,18 +1,22 @@
 ---
-title: 使用IdentityServer出现过SameSite Cookie这个问题吗？
-slug: How-To-Prepare-Your-IdentityServer-For-Chromes-SameSite-Cookie-Changes-And-How-To-Deal-With-Safari-Nevertheless
-description: 如果您为 Web 应用程序和身份验证服务器使用单独的域，那么 Chrome 中的这种更改很可能会破坏部分用户的会话体验
+title: "使用IdentityServer出现过SameSite Cookie这个问题吗？"
+slug: how-to-prepare-your-identity-server-for-chromes-same-site-cookie-changes-and-how-to-deal-with-safari-nevertheless
+description: "如果您为 Web 应用程序和身份验证服务器使用单独的域，那么 Chrome 中的这种更改很可能会破坏部分用户的会话体验"
 date: 2022-04-28 06:47:21
-copyright: Reprinted
+lastmod: 2022-04-28 06:47:21
 author: Sebastian Gingter
-originalTitle: 使用IdentityServer出现过SameSite Cookie这个问题吗？
+originalTitle: "使用IdentityServer出现过SameSite Cookie这个问题吗？"
 originalLink: https://www.thinktecture.com/en/identityserver/prepare-your-identityserver/
-draft: False
+copyright: Reprinted
+draft: false
 cover: https://img1.dotnet9.com/2022/04/cover_41.jpg
-categories: 
-    - .NET
-tags: 
-    - 同源
+categories:
+  - .NET
+tags:
+  - .NET
+  - C#
+  - 鉴权
+  - 同源
 ---
 
 > 原文作者：Sebastian Gingter

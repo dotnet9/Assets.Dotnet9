@@ -1,21 +1,21 @@
 ---
-title: 10个我经常逛的“小网站”，嘿嘿嘿！！！
-slug: 10-small-websites-I-often-visit-hey-hey
-description: 你的文件夹里有没有一些私人喜好的小网站？嘿嘿！！！必须有啊！分享10个我经常使用、能够提高工作效率、美化图片、绘制流程图的网站，你可能也用得上喔。
+title: "10个我经常逛的“小网站”，嘿嘿嘿！！！"
+slug: 10-small-websites-i-often-visit-hey-hey
+description: "你的文件夹里有没有一些私人喜好的小网站？嘿嘿！！！必须有啊！分享10个我经常使用、能够提高工作效率、美化图片、绘制流程图的网站，你可能也用得上喔。"
 date: 2022-04-21 07:51:26
-copyright: Reprinted
+lastmod: 2022-04-21 07:51:26
 author: 前端胖头鱼
-originalTitle: 10个我经常逛的“小网站”，嘿嘿嘿！！！
+originalTitle: "10个我经常逛的“小网站”，嘿嘿嘿！！！"
 originalLink: https://segmentfault.com/a/1190000041728567
-draft: False
+copyright: Reprinted
+draft: false
 cover: https://img1.dotnet9.com/2022/04/2702.png
-categories: 
-    - 分享
-tags: 
-    - 经常使用
-    - 工作效率
-    - 美化图片
-    - 绘制流程图
+categories:
+  - 分享
+tags:
+  - 工作效率
+  - 绘制流程图
+  - 美化图片
 ---
 
 也许你我素未谋面，但很可能相见恨晚，我是前端胖头鱼

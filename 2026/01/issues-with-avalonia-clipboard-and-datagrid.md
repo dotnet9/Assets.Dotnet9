@@ -1,18 +1,21 @@
 ---
 title: Avalonia剪贴板和DataGrid的问题
 slug: issues-with-avalonia-clipboard-and-datagrid
-description: 记录最近 Avalonia 桌面软件开发解决的两个问题：剪贴板复制崩溃、Tab 切换 DataGrid 卡顿，分析根因并给出解决方案
+description: "记录最近 Avalonia 桌面软件开发解决的两个问题：剪贴板复制崩溃、Tab 切换 DataGrid 卡顿，分析根因并给出解决方案"
 date: 2026-01-11 11:18:01
 lastmod: 2026-01-11 12:23:41
+author: Dotnet9
 cover: https://img1.dotnet9.com/2026/01/cover_03.png
 banner: false
 categories:
   - .NET
-  - Avalonia
+  - Avalonia UI
 tags:
-  - Avalonia
-  - DataGrid
+  - .NET
+  - C#
+  - Avalonia UI
   - 桌面开发
+  - Avalonia
 ---
 
 ![](https://img1.dotnet9.com/2026/01/cover_03.png)

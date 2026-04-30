@@ -1,21 +1,23 @@
 ---
 title: .NET MAUI 中结合 Vue 实现混合开发
-slug: dotnet-Maui-combined-with-Vue-to-realize-hybrid-development
-description: 在MAUI微软的官方方案是使用Blazor开发，但是当前市场大多数的Web项目使用Vue，React等技术构建，如果我们没法绕过已经积累的技术，用Blazor重写整个项目并不现实。
+slug: dotnet-maui-combined-with-vue-to-realize-hybrid-development
+description: "在MAUI微软的官方方案是使用Blazor开发，但是当前市场大多数的Web项目使用Vue，React等技术构建，如果我们没法绕过已经积累的技术，用Blazor重写整个项目并不现实。"
 date: 2022-01-18 22:11:31
-copyright: Reprinted
+lastmod: 2022-01-18 22:11:31
 author: 林 小
 originalTitle: .NET MAUI 中结合 Vue 实现混合开发
 originalLink: https://www.cnblogs.com/jevonsflash/p/15806237.html
-draft: False
+copyright: Reprinted
+draft: false
 cover: https://img1.dotnet9.com/2022/01/cover_05.png
-categories: 
-    - MAUI
-tags: 
-    - .NET
-    - MAUI
-    - Vue
-    - 混合开发
+categories:
+  - MAUI
+tags:
+  - .NET
+  - C#
+  - Blazor
+  - MAUI
+  - Vue
 ---
 
 在 MAUI 微软的官方方案是使用 Blazor 开发，但是当前市场大多数的 Web 项目使用 Vue，React 等技术构建，如果我们没法绕过已经积累的技术，用 Blazor 重写整个项目并不现实。

@@ -1,19 +1,21 @@
 ---
-title: WPF：使用AdornerDecorator装饰器实现水印
+title: "WPF：使用AdornerDecorator装饰器实现水印"
 slug: wpf-watermark-using-adornerdecorator-decorator
 description: 基本全是代码
 date: 2021-09-09 23:55:02
-copyright: Reprinted
+lastmod: 2021-09-09 23:55:02
 author: 秋荷雨翔
-originalTitle: WPF：使用AdornerDecorator装饰器实现水印
+originalTitle: "WPF：使用AdornerDecorator装饰器实现水印"
 originalLink: https://www.cnblogs.com/s0611163/archive/2021/09/09/15245412.html
-draft: False
+copyright: Reprinted
+draft: false
 cover: https://img1.dotnet9.com/2021/09/cover_04.jpg
-categories: 
-    - WPF
-tags: 
-    - WPF
-    - 水印
+categories:
+  - WPF
+tags:
+  - .NET
+  - WPF
+  - 水印
 ---
 
 水印装饰器 WatermarkAdorner 类代码：

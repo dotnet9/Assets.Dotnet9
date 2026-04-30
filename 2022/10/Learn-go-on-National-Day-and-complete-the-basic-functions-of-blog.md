@@ -1,16 +1,17 @@
 ---
-title: 国庆学go，完成了博客基本功能，迫不及待的发布上线了
-slug: Learn-go-on-National-Day-and-complete-the-basic-functions-of-blog
-description: 国庆7天，利用带娃之余的空闲时间学习了go，并做了一个不是很完善的博客前台。
+title: "国庆学go，完成了博客基本功能，迫不及待的发布上线了"
+slug: learn-go-on-national-day-and-complete-the-basic-functions-of-blog
+description: "国庆7天，利用带娃之余的空闲时间学习了go，并做了一个不是很完善的博客前台。"
 date: 2022-10-07 11:02:32
-copyright: Original
+lastmod: 2022-10-07 11:02:32
 author: 沙漠尽头的狼
+copyright: Original
 draft: false
 cover: https://img1.dotnet9.com/2022/10/go-blog-cover.png
-categories: 
-    - 更多语言
-tags: 
-    - Go
+categories:
+  - 更多语言
+tags:
+  - Go
 ---
 
 大家好，我是沙漠尽头的狼。

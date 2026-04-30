@@ -1,18 +1,21 @@
 ---
-title: 像JAVA一样流畅调试C#源代码？
-slug: How-to-debug-CSharp-source-code-as-smoothly-as-JAVA
-description: 有没有一种可能, C#也能像JAVA那样非常顺畅的调试源代码呢？
+title: "像JAVA一样流畅调试C#源代码？"
+slug: how-to-debug-csharp-source-code-as-smoothly-as-java
+description: "有没有一种可能, C#也能像JAVA那样非常顺畅的调试源代码呢？"
 date: 2022-06-29 21:03:38
-copyright: Reprinted
+lastmod: 2022-06-29 21:03:38
 author: 长空X
-originalTitle: 像JAVA一样流畅调试C#源代码？
+originalTitle: "像JAVA一样流畅调试C#源代码？"
 originalLink: https://www.cnblogs.com/gtxck/articles/16423094.html
-draft: False
+copyright: Reprinted
+draft: false
 cover: https://img1.dotnet9.com/2022/06/cover_21.png
-categories: 
-    - .NET
-tags: 
-    - Java
+categories:
+  - .NET
+tags:
+  - .NET
+  - C#
+  - Java
 ---
 
 ## 起因

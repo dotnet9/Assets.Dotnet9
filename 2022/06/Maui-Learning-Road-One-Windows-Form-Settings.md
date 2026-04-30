@@ -1,18 +1,20 @@
 ---
-title: Maui学习之路(1)-Windows窗体设置
-slug: Maui-Learning-Road-One-Windows-Form-Settings
-description: 终于一个简单的窗体指定窗体大小、最大化窗体、无边框的窗体终于完成了
+title: "Maui学习之路(1)-Windows窗体设置"
+slug: maui-learning-road-one-windows-form-settings
+description: "终于一个简单的窗体指定窗体大小、最大化窗体、无边框的窗体终于完成了"
 date: 2022-06-02 20:52:17
-copyright: Reprinted
+lastmod: 2022-06-02 20:52:17
 author: 轩研 WPF开发者
-originalTitle: Maui学习之路(1)-Windows窗体设置
+originalTitle: "Maui学习之路(1)-Windows窗体设置"
 originalLink: https://mp.weixin.qq.com/s/_wdRtzSAPkIa3-kK8nKGbQ
-draft: False
+copyright: Reprinted
+draft: false
 cover: https://img1.dotnet9.com/2022/06/cover_01.png
 categories:
-    - MAUI
-tags: 
-    - MAUI
+  - MAUI
+tags:
+  - .NET
+  - MAUI
 ---
 
 作为 `Maui`的先行者，我有话要说，微软你为了让我成为牛 B 的程序员真的是煞费苦心，你一定是觉得我不够牛逼所以针对我，存心想气死我。

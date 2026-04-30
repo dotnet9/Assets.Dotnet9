@@ -1,16 +1,21 @@
 ---
-title: ThingsGateway(一)采集ModbusTcp协议设备
-slug: ThingsGateway-1-acquisition-ModbusTcp-protocol-device
-description: ThingsGateway是国内新生开源项目,归属工业数据采集网关,经过近四个月的洗礼,已经趋于稳定。
+title: "ThingsGateway(一)采集ModbusTcp协议设备"
+slug: things-gateway-1-acquisition-modbus-tcp-protocol-device
+description: "ThingsGateway是国内新生开源项目,归属工业数据采集网关,经过近四个月的洗礼,已经趋于稳定。"
 date: 2023-07-16 15:55:27
-copyright: Contributes
+lastmod: 2023-07-16 15:55:27
 author: Diego
+copyright: Contributes
 draft: false
 cover: https://img1.dotnet9.com/2023/05/cover_02.png
-categories: 
-    - Blazor
-tags: 
-    - .NET
+categories:
+  - Blazor
+tags:
+  - .NET
+  - C#
+  - Blazor
+  - 开源项目
+  - 开源
 ---
 
 > 本文由网友投稿，欢迎更多的朋友来分享。

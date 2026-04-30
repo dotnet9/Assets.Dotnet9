@@ -1,19 +1,23 @@
 ---
-title: 【译】基于XAML的跨平台框架对比分析
-slug: Comparative-Analysis-of-Cross-Platform-Frameworks-Based-on-XAML
-description: 多年来，基于XAML的UI框架已经有了很大的发展。这些框架主要包含：支持跨平台应用的Avalonia UI, Uno Platform和 .NET MAUI。如果微软早点推出一个类似Flutter这样的跨平台UI框架，我们可能就不会有这么多的选择。
+title: "【译】基于XAML的跨平台框架对比分析"
+slug: comparative-analysis-of-cross-platform-frameworks-based-on-xaml
+description: "多年来，基于XAML的UI框架已经有了很大的发展。这些框架主要包含：支持跨平台应用的Avalonia UI, Uno Platform和 .NET MAUI。如果微软早点推出一个类似Flutter这样的跨平台UI框架，我们可能就不会有这么多的选择。"
 date: 2023-09-09 21:40:18
 lastmod: 2023-09-21 22:15:23
-copyright: Reprinted
 author: czwy
-originalTitle: 【译】基于XAML的跨平台框架对比分析
+originalTitle: "【译】基于XAML的跨平台框架对比分析"
 originalLink: https://www.cnblogs.com/czwy/p/17572226.html
+copyright: Reprinted
 draft: false
 cover: https://img1.dotnet9.com/2023/09/cover_04.png
-categories: 
-    - .NET
-tags: 
-    - .NET
+categories:
+  - .NET
+tags:
+  - .NET
+  - C#
+  - Avalonia UI
+  - MAUI
+  - Flutter
 ---
 
 多年来，基于 XAML 的 UI 框架已经有了很大的发展，下面的图表是最好的说明。这些框架主要包含：支持跨平台应用的 Avalonia UI, Uno Platform 和 .NET MAUI。事实上，除了 Avalonia UI 之外，对跨平台 XAML 的需求是其发展的主要驱动力。如果微软早点推出一个类似 Flutter 这样的跨平台 UI 框架，我们可能就不会有这么多的选择。这样有利有弊：好处在于我们有很多跨平台方案可以选择，坏处在于不同的框架有不同的对象模型以及各自的特有的 XAML 语法（dialect of XAML）。

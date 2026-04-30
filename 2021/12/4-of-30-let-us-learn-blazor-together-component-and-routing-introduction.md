@@ -1,22 +1,24 @@
 ---
-title: (4/30)大家一起学Blazor：Component及路由介绍
+title: "(4/30)大家一起学Blazor：Component及路由介绍"
 slug: 4-of-30-let-us-learn-blazor-together-component-and-routing-introduction
-description: 由于笔者当初是用ASP.NET Core API + Blazor Server，所以会以Blazor Server示范，日后研究完Blazor WebAssembly会再将心得补上。
+description: "由于笔者当初是用ASP.NET Core API + Blazor Server，所以会以Blazor Server示范，日后研究完Blazor WebAssembly会再将心得补上。"
 date: 2021-12-10 23:01:39
-copyright: Reprinted
+lastmod: 2021-12-10 23:01:39
 author: StrayaWorker
-originalTitle: (4/30)大家一起学Blazor：Component及路由介绍
+originalTitle: "(4/30)大家一起学Blazor：Component及路由介绍"
 originalLink: https://ithelp.ithome.com.tw/articles/10260047
-draft: False
+copyright: Reprinted
+draft: false
 cover: https://img1.dotnet9.com/2021/12/cover_05.png
+categories:
+  - Blazor
 albums:
-    - 一起学Blazor系列
-categories: 
-    - Blazor
-tags: 
-    - Blazor
-    - ASP.NET Core
-    - 学Blazor
+  - 一起学Blazor系列
+tags:
+  - .NET
+  - C#
+  - ASP.NET Core
+  - Blazor
 ---
 
 由于笔者当初是用 ASP.NET Core API + Blazor Server，所以会以 Blazor Server 示范，日后研究完 Blazor WebAssembly 会再将心得补上。

@@ -1,19 +1,21 @@
 ---
 title: WPF混合Blazor做个简易聊天小程序
 slug: wpf-with-blazor-chat-test
-description: 晚上花了4、5个小时，学习了下Wpf + Blazor混合模式开发，感觉不错
+description: "晚上花了4、5个小时，学习了下Wpf + Blazor混合模式开发，感觉不错"
 date: 2022-10-28 01:09:47
-copyright: Original
+lastmod: 2022-10-28 01:09:47
 author: 沙漠尽头的狼
+copyright: Original
 draft: false
 cover: https://img1.dotnet9.com/2022/10/2-chat-window.png
-categories: 
-    - WPF
-    - Blazor
-tags: 
-    - .NET
-    - WPF
-    - Blazor
+categories:
+  - WPF
+  - Blazor
+tags:
+  - .NET
+  - C#
+  - Blazor
+  - WPF
 ---
 
 大家好，我是沙漠尽头的狼。

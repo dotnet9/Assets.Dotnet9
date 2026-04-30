@@ -1,18 +1,21 @@
 ---
-title: RPA之PAD(Power Automate Desktop)组件开发
-slug: RPAs-PAD-Power-Automate-Desktop-component-development
-description: 只要有一扇门，就会有一个世界，现在已经有了一扇门
+title: "RPA之PAD(Power Automate Desktop)组件开发"
+slug: rpas-pad-power-automate-desktop-component-development
+description: "只要有一扇门，就会有一个世界，现在已经有了一扇门"
 date: 2022-05-30 21:24:17
-copyright: Contributes
+lastmod: 2022-05-30 21:24:17
 author: 蓝创精英团队
-originalTitle: RPA之PAD(Power Automate Desktop)组件开发
+originalTitle: "RPA之PAD(Power Automate Desktop)组件开发"
 originalLink: https://blog.csdn.net/i2blue/article/details/125040323
-draft: False
+copyright: Contributes
+draft: false
 cover: https://img1.dotnet9.com/2022/05/6227.gif
-categories: 
-    - .NET
-tags: 
-    - RPA
+categories:
+  - .NET
+tags:
+  - .NET
+  - C#
+  - RPA
 ---
 
 > 本文由网友`蓝创精英团队`投稿，欢迎转载、分享

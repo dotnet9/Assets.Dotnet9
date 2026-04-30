@@ -1,18 +1,21 @@
 ---
 title: FluentValidation在C# WPF中的应用
-slug: Uses-fluent-validation-in-WPF
-description: 本文将深入探讨如何在C# WPF项目中运用FluentValidation进行属性验证，并展示如何通过MVVM模式实现这一功能。
+slug: uses-fluent-validation-in-wpf
+description: "本文将深入探讨如何在C# WPF项目中运用FluentValidation进行属性验证，并展示如何通过MVVM模式实现这一功能。"
 date: 2019-11-19 03:43:13
 lastmod: 2024-01-25 05:17:26
 author: 沙漠尽头的狼
+copyright: Original
 draft: false
 cover: https://img1.dotnet9.com/2019/11/cover_01.png
-categories: 
-    - WPF
-copyright: Original
-tags: 
-    - WPF
-    - FluentValiatoin
+categories:
+  - WPF
+tags:
+  - .NET
+  - C#
+  - WPF
+  - MVVM
+  - FluentValidation
 ---
 
 ## 1. 引言

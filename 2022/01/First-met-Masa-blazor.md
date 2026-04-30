@@ -1,19 +1,24 @@
 ---
 title: 初识MASA Blazor
-slug: First-met-Masa-blazor
+slug: first-met-masa-blazor
 description: 一个Mateial风格的开源Blazor组件库
 date: 2022-01-12 22:12:04
-copyright: Reprinted
+lastmod: 2022-01-12 22:12:04
 author: MASA技术团队
 originalTitle: 初识MASA Blazor
 originalLink: https://www.cnblogs.com/MASA/p/15766886.html
-draft: False
+copyright: Reprinted
+draft: false
 cover: https://img1.dotnet9.com/2022/01/0711.png
-categories: 
-    - Blazor
-tags: 
-    - C#
-    - Blazor
+categories:
+  - Blazor
+albums:
+  - Blazor组件库
+tags:
+  - .NET
+  - C#
+  - Blazor
+  - 开源
 ---
 
 MASA Blazor 是一个 Blazor 的 UI 组件库。就像大家写前端熟知的 Bootstrap, Ant Design 一样。

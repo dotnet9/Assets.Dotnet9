@@ -1,18 +1,20 @@
 ---
 title: C#中的闭包和意想不到的坑
-slug: Closures-and-unexpected-pits-in-Csharp
-description: 使用委托或者lambda表达式，也可以在C#中使用闭包。
+slug: closures-and-unexpected-pits-in-csharp
+description: "使用委托或者lambda表达式，也可以在C#中使用闭包。"
 date: 2022-06-15 22:49:32
-copyright: Reprinted
+lastmod: 2022-06-15 22:49:32
 author: 老胡写代码
 originalTitle: C#中的闭包和意想不到的坑
 originalLink: https://www.cnblogs.com/deatharthas/p/13166987.html
-draft: False
+copyright: Reprinted
+draft: false
 cover: https://img1.dotnet9.com/2022/06/cover_11.jpeg
-categories: 
-    - .NET
-tags: 
-    - C#
+categories:
+  - .NET
+tags:
+  - .NET
+  - C#
 ---
 
 虽然闭包主要是函数式编程的玩意儿，而 C#的最主要特征是面向对象，但是利用委托或 lambda 表达式，C#也可以写出具有函数式编程风味的代码。同样的，使用委托或者 lambda 表达式，也可以在 C#中使用闭包。

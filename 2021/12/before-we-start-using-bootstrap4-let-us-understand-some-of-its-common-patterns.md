@@ -1,19 +1,20 @@
 ---
-title: 要开始使用Bootstrap 4 前，我们先了解几个它的通用模式吧
+title: "要开始使用Bootstrap 4 前，我们先了解几个它的通用模式吧"
 slug: before-we-start-using-bootstrap4-let-us-understand-some-of-its-common-patterns
-description: 简单来说，若是我们不使用Bootstrap 4，而是用手刻的方式来撰写网页，HTML 的内容我们得要自己写(废话)，CSS 我们也得要一个一个自己设定(又一个废话)，可是若是使用Bootstrap 4 的话，很多常用的CSS 他已经预先帮我们写好了，我们只要熟悉Bootstrap 4 的文件，知道他预写的CSS 是用哪一个class 名，届时只要直接套用到标签上就可以了
+description: "简单来说，若是我们不使用Bootstrap 4，而是用手刻的方式来撰写网页，HTML 的内容我们得要自己写(废话)，CSS 我们也得要一个一个自己设定(又一个废话)，可是若是使用Bootstrap 4 的话，很多常用的CSS 他已经预先帮我们写好了，我们只要熟悉Bootstrap 4 的文件，知道他预写的CSS 是用哪一个class 名，届时只要直接套用到标签上就可以了"
 date: 2021-12-06 14:16:59
-copyright: Reprinted
+lastmod: 2021-12-06 14:16:59
 author: Alec
-originalTitle: 要开始使用Bootstrap 4 前，我们先了解几个它的通用模式吧
+originalTitle: "要开始使用Bootstrap 4 前，我们先了解几个它的通用模式吧"
 originalLink: https://ithelp.ithome.com.tw/articles/10228808
-draft: False
+copyright: Reprinted
+draft: false
 cover: https://img1.dotnet9.com/2021/12/cover_02.jpg
-categories: 
-    - 前端
-tags: 
-    - 前端
-    - Bootstrap 4
+categories:
+  - 前端
+tags:
+  - 前端
+  - Bootstrap 4
 ---
 
 > 前情提要：[让我们站在巨人的肩膀上，如何在专案中导入 Bootstrap 4 并客制它](https://ithelp.ithome.com.tw/articles/10228718)

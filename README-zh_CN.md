@@ -26,9 +26,9 @@ English version: [README.md](./README.md)
 site/
   about.md           关于页内容
   Privacy.md         隐私页内容
-  album.json         专题元数据
-  category.json      分类元数据
-  FriendLink.json    友情链接元数据
+  albums.json        专题元数据
+  categories.json    分类元数据
+  friend-links.json  友情链接元数据
   timelines.json     时间线数据
   doc/               文档导航与正文
   tools/             工具元数据与预览图
@@ -56,5 +56,5 @@ site/
 
 - 文章统一放在 `YYYY/MM/slug.md`
 - 封面、配图尽量使用有语义的文件名
-- 新增分类、专题、文档、工具时同步维护 `site/*.json`
+- 新增分类、专题、文档、工具时同步维护对应的 `site/*.json` 或 `site/**/navigation.json`
 - 不提交本地临时文件、导出缓存或无关桌面文件

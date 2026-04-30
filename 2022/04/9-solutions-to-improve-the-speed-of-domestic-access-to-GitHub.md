@@ -1,18 +1,19 @@
 ---
 title: 提高国内访问 GitHub 的速度的 9 种方案
-slug: 9-solutions-to-improve-the-speed-of-domestic-access-to-GitHub
-description: 因为某些原因，github访问速度确实太慢了，图片经常刷不出来，甚至会出现项目无法下载的情况。码云虽好，可目前还是无法代替github在编程界的地位。
+slug: 9-solutions-to-improve-the-speed-of-domestic-access-to-git-hub
+description: "因为某些原因，github访问速度确实太慢了，图片经常刷不出来，甚至会出现项目无法下载的情况。码云虽好，可目前还是无法代替github在编程界的地位。"
 date: 2022-04-15 20:23:24
-copyright: Reprinted
+lastmod: 2022-04-15 20:23:24
 author: 猪哥
 originalTitle: 提高国内访问 GitHub 的速度的 9 种方案
 originalLink: https://urlify.cn/IFzQRb
-draft: False
+copyright: Reprinted
+draft: false
 cover: https://img1.dotnet9.com/2022/04/cover_16.png
-categories: 
-    - 分享
-tags: 
-    - Github
+categories:
+  - 分享
+tags:
+  - Github
 ---
 
 > 来源｜https://urlify.cn/IFzQRb
