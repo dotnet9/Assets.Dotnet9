@@ -4,7 +4,6 @@ slug: avalonia-ui-project-offline-development-guide-one-stop-solution-for-ide-in
 description: "本文将指导您如何在本地网络环境中成功安装并配置AvaloniaUI所需的工具和模板。"
 date: 2024-06-27 21:13:32
 lastmod: 2024-06-28 22:26:47
-author: Dotnet9
 copyright: Original
 draft: false
 cover: https://img1.dotnet9.com/2024/06/cover_02.png

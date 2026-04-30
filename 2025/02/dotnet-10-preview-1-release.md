@@ -4,7 +4,6 @@ slug: dotnet-10-preview-1-release
 description: "今天.NET 10 Preview 1发布了，我第一时间下载，升级了Avalonia UI项目和博客网站，前者功能测试及AOT发布正常，后者调试正常，Docker暂时未成功"
 date: 2025-02-25 05:01:14
 lastmod: 2025-02-25 06:21:12
-author: Dotnet9
 copyright: Original
 draft: false
 cover: https://img1.dotnet9.com/2025/02/cover_06.jpg

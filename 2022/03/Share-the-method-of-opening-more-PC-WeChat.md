@@ -4,7 +4,6 @@ slug: share-the-method-of-opening-more-pc-we-chat
 description: 多开微信
 date: 2022-03-18 07:32:16
 lastmod: 2022-03-18 07:32:16
-author: Dotnet9
 originalTitle: 分享PC微信多开的方法
 copyright: Original
 draft: false

@@ -4,7 +4,6 @@ slug: how-to-realize-the-internationalization-and-localization-of-wpf-prism-modu
 description: "上一篇有简单介绍主工程的国际化，使用的资源字典(XAML)实现的。这几天我添加了几个Prism模块(Module)，发现子模块使用资源字典的方式实现国际化和本地化不好做，没有找到比较好的参考文章，所以换了一种方式，使用资源文件实现了。"
 date: 2020-04-21 13:45:56
 lastmod: 2020-04-21 13:45:56
-author: Dotnet9
 originalTitle: "怎样实现WPF Prism Module的国际化和本地化？"
 copyright: Original
 draft: false
@@ -53,7 +52,7 @@ tags:
 
 ## 二. 添加三个 Prism 模块(Module)
 
-可安装 Prism 模板，快速创建模块工程，当然手工创建.Net Core 工程也是可以的，就是多了几个步骤而已（需要用 Nuget 安装 Prism.Wpf 包(7.2.0.1422)），我使用得的 Prism 模板快速创建的。
+可安装 Prism 模板，快速创建模块工程，当然手工创建.NET Core 工程也是可以的，就是多了几个步骤而已（需要用 NuGet 安装 Prism.Wpf 包(7.2.0.1422)），我使用得的 Prism 模板快速创建的。
 
 ### 2.1 创建模块之前的准备工作
 

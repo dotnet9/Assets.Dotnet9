@@ -4,7 +4,6 @@ slug: learn-this-skill-dotnet-api-interception-technique
 description: "怎么在不改变源码的情况下，篡改一个方法的入参？伪造返回结果？"
 date: 2023-02-13 20:21:19
 lastmod: 2023-02-13 20:21:19
-author: Dotnet9
 copyright: Original
 draft: false
 cover: https://img1.dotnet9.com/2023/02/cover_05.png
@@ -87,7 +86,7 @@ Console.WriteLine(student.GetDetails("沙漠尽头的狼"));
 
 1. 引入拦截包-Lib.Harmony
 
-我们使用`Lib.Harmony`包，API的拦截就靠它了，在`HelloHook`工程中添加如下Nuget包：
+我们使用`Lib.Harmony`包，API的拦截就靠它了，在`HelloHook`工程中添加如下NuGet包：
 
 ```xml
 <PackageReference Include="Lib.Harmony" Version="2.2.2" />

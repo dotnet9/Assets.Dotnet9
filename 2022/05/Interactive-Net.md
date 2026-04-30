@@ -29,11 +29,11 @@ tags:
 
 3. 交互式 .Net 的作用
 
-`交互式 .Net` 可以解析 `markdown`，执行本地指令，如 `powershell`，执行 .Net 代码，因此，非常适用于教案编写，或者关键代码记录。并且生成的 `ipynb` 文件可上传到 `Github` 等平台，非常方便查阅。
+`交互式 .Net` 可以解析 `markdown`，执行本地指令，如 `powershell`，执行 .Net 代码，因此，非常适用于教案编写，或者关键代码记录。并且生成的 `ipynb` 文件可上传到 `GitHub` 等平台，非常方便查阅。
 
 ## 2. 安装设置
 
-需要先安装 `Visual Studio Code` 和 `.Net 5 及以上`版本，然后在 Visual Studio Code 中安装 `.NET Interactive Notebooks` 插件，可以在 Visual Studio Code 中搜索 .NET Interactive Notebooks 进行安装：
+需要先安装 `Visual Studio Code` 和 `.NET 5 及以上`版本，然后在 Visual Studio Code 中安装 `.NET Interactive Notebooks` 插件，可以在 Visual Studio Code 中搜索 .NET Interactive Notebooks 进行安装：
 
 ![](https://img1.dotnet9.com/2022/05/2701.png)
 
@@ -87,13 +87,13 @@ tags:
 
 ![](https://img1.dotnet9.com/2022/05/2711.png)
 
-6. 保存 ipynb 文件并上传到 Github
+6. 保存 ipynb 文件并上传到 GitHub
 
 使用热键 `Ctrl+S` 把 `ipynb` 文件保存到本地，以后可以使用 `Visual Studio Code` 打开查看并重新运行代码
 
 ![](https://img1.dotnet9.com/2022/05/2712.png)
 
-然后把 `ipynb` 文件上传到 `Github`
+然后把 `ipynb` 文件上传到 `GitHub`
 
 ![](https://img1.dotnet9.com/2022/05/2713.png)
 
@@ -101,6 +101,6 @@ tags:
 
 ## 4. 参考总结
 
-以上就是本文希望分享的内容，其中 `interactive` 的 `Github` 地址为：[https://github.com/dotnet/interactive](https://github.com/dotnet/interactive)
+以上就是本文希望分享的内容，其中 `interactive` 的 `GitHub` 地址为：[https://github.com/dotnet/interactive](https://github.com/dotnet/interactive)
 
 如果大家有什么问题，欢迎在公众号 - 跬步之巅留言交流。

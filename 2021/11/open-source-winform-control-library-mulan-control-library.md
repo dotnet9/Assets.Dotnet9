@@ -4,7 +4,6 @@ slug: open-source-winform-control-library-mulan-control-library
 description: "可以编译该项目。整个控件控除了动画函数由Silverlight提取出来和ColorEditorExt.cs颜色面板视图设计器扩展器在网上例子修改而来，其他都是自己在原生控件基础上写的，没有使用任何第三方库，所以放心使用，没有侵犯他人著作权的问题。"
 date: 2021-11-21 19:48:23
 lastmod: 2021-11-21 19:48:23
-author: Dotnet9
 originalTitle: "开源Winform控件库：花木兰控件库"
 copyright: Original
 draft: false
@@ -56,7 +55,7 @@ tags:
 
 ![解决方案结构](https://img1.dotnet9.com/2021/11/0702.png)
 
-我们不看源码，你有兴趣可以研究，选择`WinfromDemo`工程做为启动项目，F5 运行，来介绍几个效果（**注：作者在仓库 readme 里已经介绍，控件运行过程中会有异常，使用请自行负责解决哟**）：
+我们不看源码，你有兴趣可以研究，选择`WinfromDemo`工程作为启动项目，F5 运行，来介绍几个效果（**注：作者在仓库 readme 里已经介绍，控件运行过程中会有异常，使用请自行负责解决哟**）：
 
 运行 WinformDemo 工程：
 

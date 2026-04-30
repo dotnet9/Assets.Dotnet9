@@ -4,7 +4,6 @@ slug: wpf-file-drag
 description: "上传文件时，一般是提供一个上传按钮，点击上传，弹出文件（或者目录选择对话框），选择文件（或者目录）后，从对话框对象中取得文件路径后，再进行上传操作。"
 date: 2020-11-27 11:10:09
 lastmod: 2020-11-27 11:10:09
-author: Dotnet9
 originalTitle: WPF文件拖拽
 copyright: Original
 draft: false

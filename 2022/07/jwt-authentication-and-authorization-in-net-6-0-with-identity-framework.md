@@ -1,7 +1,7 @@
 ---
 title: .NET 6.0中使用Identity框架实现JWT身份认证与授权
 slug: jwt-authentication-and-authorization-in-net-6-0-with-identity-framework
-description: "通过一个简单的过程介绍使用 ASP.Net Core 6.0 Web API 上传和下载多个文件。"
+description: "通过一个简单的过程介绍使用 ASP.NET Core 6.0 Web API 上传和下载多个文件。"
 date: 2022-07-25 20:43:14
 lastmod: 2022-07-25 20:43:14
 author: Sarathlal Saseendran
@@ -435,7 +435,7 @@ _update-database_
 
 在数据库迁移过程中，为 `User`、`Role` 和 `Claims` 创建了 7 张表。这是用于 `Identity`框架。
 
-`ASP.NET Core Identity` 是一个会员系统，允许您向应用程序添加登录功能。用户可以创建帐户并使用`用户名和密码`登录，也可以使用`外部登录提供程序`，例如 Facebook、Google、Microsoft Account、Twitter 等。
+`ASP.NET Core Identity` 是一个会员系统，允许您向应用程序添加登录功能。用户可以创建账户并使用`用户名和密码`登录，也可以使用`外部登录提供程序`，例如 Facebook、Google、Microsoft Account、Twitter 等。
 
 您可以将 `ASP.NET Core Identity` 配置为使用 `SQL Server` 数据库来存储用户名、密码和配置文件数据。或者，你可以使用自己的持久化存储将数据存储在另一个其他持久化存储中，例如 `Azure` 表存储。
 

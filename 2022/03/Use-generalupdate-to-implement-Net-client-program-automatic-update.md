@@ -26,7 +26,7 @@ tags:
 
 `GeneralUpdate`组件是微软的一位 MVP 负责开发和维护的，仓库地址及截图如下。作者提供的使用文档和视频有些过于简单，而且不同版本还存在一定的兼容性问题，这些都没有很好地解释，所以初次接触这个组件的开发人员可能会有点懵。笔者结合自己在项目中实际的使用情况，更加详细地介绍一下该组件的使用方式。
 
-Github：[https://github.com/WELL-E/AutoUpdater](https://github.com/WELL-E/AutoUpdater)
+GitHub：[https://github.com/WELL-E/AutoUpdater](https://github.com/WELL-E/AutoUpdater)
 
 ![](https://img1.dotnet9.com/2022/03/2504.png)
 
@@ -68,7 +68,7 @@ Gitee：[https://gitee.com/Juster-zhu/GeneralUpdate](https://gitee.com/Juster-zh
 
 ## 更新组件的控制台实现
 
-说明：本示例使用的是`GeneralUpdate.Core`的 2.1.6 版本。因为 Github 上的源码已升级到 3.x.x 版本，支持了.NET 6.0，但笔者电脑上的缺乏相关框架，无法编译通过，所以检出到了源码的某次提交，这样即使使用的时候出了问题也可以通过调试源码的方式来解决。如果大家充分理解了本文的意思，直接安装最新版本的 nuget 包也可以，直接参考最新版源码的相关示例。
+说明：本示例使用的是`GeneralUpdate.Core`的 2.1.6 版本。因为 GitHub 上的源码已升级到 3.x.x 版本，支持了.NET 6.0，但笔者电脑上的缺乏相关框架，无法编译通过，所以检出到了源码的某次提交，这样即使使用的时候出了问题也可以通过调试源码的方式来解决。如果大家充分理解了本文的意思，直接安装最新版本的 nuget 包也可以，直接参考最新版源码的相关示例。
 
 ```csharp
 using System;
@@ -194,6 +194,6 @@ private static void ExecuteAsAdmin(string fileName, string args)
 
 虽然`GeneralUpdate`组件有一些不足，但相信经过本文的介绍，大家已经知道如何避坑来使用该组件。总体来说，该组件的功能还是蛮好用的。考虑到该组件只有作者一个人维护，其实已经做得蛮好了，还是要感谢作者的付出的。
 
-> Github：[https://github.com/WELL-E/AutoUpdater](https://github.com/WELL-E/AutoUpdater)
+> GitHub：[https://github.com/WELL-E/AutoUpdater](https://github.com/WELL-E/AutoUpdater)
 >
 > Gitee：[https://gitee.com/Juster-zhu/GeneralUpdate](https://gitee.com/Juster-zhu/GeneralUpdate)

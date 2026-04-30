@@ -34,9 +34,9 @@ WebView2 项目得天独厚，有微软操作系统 win10 以及 win11 的加持
 
 具体地址: [https://go.microsoft.com/fwlink/p/?LinkId=2124703](https://go.microsoft.com/fwlink/p/?LinkId=2124703)
 
-2. Nuget 包
+2. NuGet 包
 
-需要引入以下 Nuget 包
+需要引入以下 NuGet 包
 
 ```shell
 Microsoft.Web.WebView2
@@ -139,5 +139,5 @@ private async void button1_Click(object sender, EventArgs e)
 
 下边是相应的代码地址:
 
-- Github：[https://github.com/kesshei/WebView2Demo](https://github.com/kesshei/WebView2Demo)
+- GitHub：[https://github.com/kesshei/WebView2Demo](https://github.com/kesshei/WebView2Demo)
 - Gitee：[https://gitee.com/kesshei/web-view2-demo](https://gitee.com/kesshei/web-view2-demo)

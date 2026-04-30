@@ -1,11 +1,11 @@
 ---
-title: "优雅！又一个.NetCore开源框架项目-意框架"
+title: "优雅！又一个 .NET Core 开源框架项目：意框架"
 slug: elegantanother-onedotnetcore-open-source-framework-project-italian-framework
-description: "一套以用户体验出发的.Net8 Web开源框架，支持Abp.vNext 版本原生版本、Furion版本，前端后台接入Ruoyi Vue3.0，内置Rbac权限管理+Bbs社区论坛模块，开箱即用"
+description: "一套从用户体验出发的 .NET 8 Web 开源框架，支持 ABP vNext 原生版本、Furion 版本，前端后台接入 RuoYi Vue 3.0，内置 RBAC 权限管理与现代社区模块，开箱即用。"
 date: 2024-01-13 15:40:19
 lastmod: 2024-01-13 15:40:19
 author: ccnetcore
-originalTitle: "优雅！又一个.NetCore开源框架项目-意框架"
+originalTitle: "优雅！又一个 .NET Core 开源框架项目：意框架"
 originalLink: https://mp.weixin.qq.com/s/SXOsBJUO23ct8x2QwJfhCQ
 copyright: Contributes
 draft: false
@@ -55,7 +55,7 @@ Yi.Admin : (https://gitee.com/ccnetcore/yi)
 - \- Abp.vNext 官网功能
 - \- SqlSugar 官网功能
 - \- Rbac 权限管理系统模块
-- \- Bbs 论坛社区系统模块
+- \- 现代社区系统模块
 
 ---
 

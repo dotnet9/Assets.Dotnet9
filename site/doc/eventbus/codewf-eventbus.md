@@ -167,7 +167,7 @@ namespace CodeWF.EventBus
 
 ### 2.2. 定义事件
 
-在这里我们使用 CQRS 来完成我们程序业务逻辑，在 CQRS 模式中我们的查询和其它业务操作是分开的。不了解 CQRS 的可以看看这篇文章：https://learn.microsoft.com/zh-cn/azure/architecture/patterns/cqrs
+在这里我们使用 CQRS 来完成我们程序业务逻辑，在 CQRS 模式中我们的查询和其他业务操作是分开的。不了解 CQRS 的可以看看这篇文章：https://learn.microsoft.com/zh-cn/azure/architecture/patterns/cqrs
 
 #### 2.2.1. 定义命令(Command)
 
@@ -297,10 +297,10 @@ public class CommandAndQueryHandler(IEventBus eventBus, IProductService productS
 }
 ```
 
-- 类`CommandAndQueryHandler`添加了`Event`特性，在 `IOC` 容器注入时标识为可以做为单例注入。
+- 类`CommandAndQueryHandler`添加了`Event`特性，在 `IOC` 容器注入时标识为可以作为单例注入。
 - 标注了`EventHandler`特性的方法拥有处理事件的能力，该方法只能有一个事件类型参数；如果方法支持异步，也只支持`Task`返回值，不能加泛型声明（加了无效）；支持静态事件处理方法。
 
-使用 IOC 容器的程序会自动将标注`Event`特性的类做为单例注入容器，事件总线收到事件通知时自动查找标注`EventHandler`特性的方法进行调用，达到事件通知的功能。
+使用 IOC 容器的程序会自动将标注`Event`特性的类作为单例注入容器，事件总线收到事件通知时自动查找标注`EventHandler`特性的方法进行调用，达到事件通知的功能。
 
 #### 2.3.2. 手动订阅
 
@@ -371,7 +371,7 @@ public class EventBusTestViewModel : ViewModelBase
 }
 ```
 
-`EventBus`是`IEventBus`接口的默认实现，`EventBus.Default`是单例引用，所有两者使用任选其一。`IOC`注入时默认将`IEventBus`和`EventBus`做为单例注入，所以与两者等价。
+`EventBus`是`IEventBus`接口的默认实现，`EventBus.Default`是单例引用，所有两者使用任选其一。`IOC`注入时默认将`IEventBus`和`EventBus`作为单例注入，所以与两者等价。
 
 手动订阅可以在 WPF 的 `XxxViewModel` 中使用（上面代码即是），也可以在 `IOC` 其他生命周期的服务中使用：
 

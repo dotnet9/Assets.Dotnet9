@@ -4,7 +4,6 @@ slug: an-xml-notepad-developed-by-wpf
 description: WPF开发的XML记事本
 date: 2022-08-18 20:36:17
 lastmod: 2022-08-18 20:36:17
-author: Dotnet9
 originalTitle: "【开源】一个WPF开发的XML记事本"
 copyright: Original
 draft: false

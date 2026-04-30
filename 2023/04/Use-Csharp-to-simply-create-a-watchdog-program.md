@@ -135,7 +135,7 @@ public interface IMindLayout
 }
 ```
 
-其中：UpdatedLayout 包括布局丈量 MeasureOverride 和摆放元素 ArrangeOverride，是不是感觉和重新 Panel 差不多，先计算每个节点占的大小，然后开始布局。下面为思维导图的源代码，其它导图的，如有兴趣请下载源代码查看。
+其中：UpdatedLayout 包括布局丈量 MeasureOverride 和摆放元素 ArrangeOverride，是不是感觉和重新 Panel 差不多，先计算每个节点占的大小，然后开始布局。下面为思维导图的源代码，其他导图的，如有兴趣请下载源代码查看。
 
 ```csharp
 public SizeBase MeasureOverride(MindNode mindNode, bool isExpanded = true)

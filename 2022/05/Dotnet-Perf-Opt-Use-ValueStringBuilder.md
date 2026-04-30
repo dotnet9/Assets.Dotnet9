@@ -471,7 +471,7 @@ public ref struct ValueStringBuilder
 
 ![](https://img1.dotnet9.com/2022/05/3206.png)
 
-3. 如果要将`ValueStringBuilder`传递给其它方法，那么必须使用`ref`传递，否则发生值拷贝会存在多个实例。这个编译器不会警告，但是你必须非常注意。
+3. 如果要将`ValueStringBuilder`传递给其他方法，那么必须使用`ref`传递，否则发生值拷贝会存在多个实例。这个编译器不会警告，但是你必须非常注意。
 
 ![](https://img1.dotnet9.com/2022/05/3207.png)
 

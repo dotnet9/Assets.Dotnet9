@@ -34,7 +34,7 @@ tags:
 
 ## 技术架构
 
-1. 平台：采用.Net Framework 4.7 开发，支持 Windows；
+1. 平台：采用.NET Framework 4.7 开发，支持 Windows；
 2. 依赖 Windows.winmd，支持 Win10+；更低的平台需要安装相关依赖、或者去除部分功能才能编译成功；
 3. 核心音频处理采用 FFmpeg 组件。
 

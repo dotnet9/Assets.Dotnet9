@@ -181,7 +181,7 @@ private void OnCounterClicked(object sender, EventArgs e)
 
 ![](https://img1.dotnet9.com/2022/06/1216.png)
 
-这会弹出用户帐户控制提示。选择是按钮，模拟器创建过程将开始。选择创建按钮以使用默认设置创建模拟器。
+这会弹出用户账户控制提示。选择是按钮，模拟器创建过程将开始。选择创建按钮以使用默认设置创建模拟器。
 
 ![](https://img1.dotnet9.com/2022/06/1215.png)
 

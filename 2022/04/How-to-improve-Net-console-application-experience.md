@@ -31,7 +31,7 @@ tags:
 
 ## 1. Colorful.Console
 
-`Colorful.Console`是一个 Nuget 包，它可以增强我们对控制台输出文字样式的控制。我们可以使用`System.Drawing.Color`中定义的颜色来定义控制台程序的配色方案。
+`Colorful.Console`是一个 NuGet 包，它可以增强我们对控制台输出文字样式的控制。我们可以使用`System.Drawing.Color`中定义的颜色来定义控制台程序的配色方案。
 
 ```csharp
 using System;

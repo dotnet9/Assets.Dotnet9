@@ -74,7 +74,7 @@ public class CommonVaildator<T> : AbstractValidator<T>
 
 ### 增加验证规则
 
-真正的业务逻辑是写在`UserInformationValidator`验证器里面的，而这块代码中只需要拿到`RuleFor`即可，其它的统一封装到父类中，对不对，我们按照这个思路代码，封装一个**长度验证器规则**。
+真正的业务逻辑是写在`UserInformationValidator`验证器里面的，而这块代码中只需要拿到`RuleFor`即可，其他的统一封装到父类中，对不对，我们按照这个思路代码，封装一个**长度验证器规则**。
 
 首先让我们看看 RuleFor 的原型
 
@@ -140,7 +140,7 @@ string msg= VaildatorHelper.ModelValidator(userInformation, commonUserInformatio
 Console.WriteLine(msg);
 ```
 
-这样代码看起来是不是就简洁多了，我这里就只封装了四种验证规则，其它的我就不在此封装了。
+这样代码看起来是不是就简洁多了，我这里就只封装了四种验证规则，其他的我就不在此封装了。
 
 ## 总结
 

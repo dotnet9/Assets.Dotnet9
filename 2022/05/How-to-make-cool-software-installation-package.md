@@ -4,7 +4,6 @@ slug: how-to-make-cool-software-installation-package
 description: 介绍一款非常棒的软件程序打包工具
 date: 2022-05-06 06:53:32
 lastmod: 2022-05-06 06:53:32
-author: Dotnet9
 originalTitle: 怎么制作炫酷软件安装包
 copyright: Original
 draft: false
@@ -44,7 +43,7 @@ tags:
 
 ### 1.2 准备项目
 
-站长依然使用[乐趣课堂](https://github.com/dotnet9/lqclass.com)项目做为测试，当然你可以使用其他类型的项目，不限于 C#（Winform\WPF），比如 C++(MFC、Qt)等等。
+站长依然使用[乐趣课堂](https://github.com/dotnet9/lqclass.com)项目作为测试，当然你可以使用其他类型的项目，不限于 C#（Winform\WPF），比如 C++(MFC、Qt)等等。
 
 ![](https://img1.dotnet9.com/2022/05/2101.png)
 

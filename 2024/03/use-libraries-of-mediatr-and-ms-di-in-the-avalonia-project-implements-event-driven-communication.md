@@ -4,7 +4,6 @@ slug: use-libraries-of-mediatr-and-ms-di-in-the-avalonia-project-implements-even
 description: "AvaloniaUI是一个强大的跨平台.NET客户端开发框架，让开发者能够针对Windows、Linux、macOS、Android和iOS等多个平台构建应用程序。在构建复杂的应用程序时，模块化和组件间的通信变得尤为重要。Prism框架提供了模块化的开发方式，支持插件的热拔插，而MediatR则是一个实现了中介者（Mediator）模式的事件订阅发布框架，非常适合用于模块之间以及模块与主程序之间的通信。"
 date: 2024-03-02 09:57:26
 lastmod: 2024-03-02 15:45:27
-author: Dotnet9
 copyright: Original
 draft: false
 cover: https://img1.dotnet9.com/2024/03/cover_01.png
@@ -342,4 +341,4 @@ CQRS 的好处包括：
 
 参考文章：[MediatR 在 .NET 应用中的实践](https://yimingzhi.net/2021/12/mediatr-zai-dotnet-ying-yong-zhong-de-shi-jian)
 
-本文源码：[Github](https://github.com/dotnet9/CodeWF/tree/main/src/CodeWF.Tools.Desktop)
+本文源码：[GitHub](https://github.com/dotnet9/CodeWF/tree/main/src/CodeWF.Tools.Desktop)

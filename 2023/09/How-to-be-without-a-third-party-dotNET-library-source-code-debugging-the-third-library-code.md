@@ -4,7 +4,6 @@ slug: how-to-be-without-a-third-party-dotnet-library-source-code-debugging-the-t
 description: 借助dnSpy调试第三方库代码
 date: 2023-09-21 22:00:19
 lastmod: 2023-09-21 22:00:19
-author: Dotnet9
 copyright: Original
 draft: false
 cover: https://img1.dotnet9.com/2023/09/cover_06.gif
@@ -29,7 +28,7 @@ tags:
 
 dnSpy是一款功能强大的.NET程序反编译工具，可以对.NET程序进行反编译，代替库文档的功能，代码丢失或者损坏可直接恢复，所以能在完全没有源码的情况下即时调试程序，甚至还能修改程序！
 
-Github有二进制可执行程序下载地址，也有源码可以自行编译，本文使用前者，Github地址是：https://github.com/dnSpy/dnSpy
+GitHub有二进制可执行程序下载地址，也有源码可以自行编译，本文使用前者，GitHub地址是：https://github.com/dnSpy/dnSpy
 
 ![](https://img1.dotnet9.com/2023/09/0601.png)
 

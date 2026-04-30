@@ -32,7 +32,7 @@ https://www.some-api.com/login?name=Lee&pwd=123456
 
 我们在处理这个地址的时候，会拼接 login, 然后拼接`?`号, 然后拼接参数，中间还要拼接`&` 得到最终的地址。
 
-使用 Flurl 构建，首先需要通过 Nuget 安装 `Flurl` 组件。
+使用 Flurl 构建，首先需要通过 NuGet 安装 `Flurl` 组件。
 
 ```csharp
 var url = "http://www.some-api.com"

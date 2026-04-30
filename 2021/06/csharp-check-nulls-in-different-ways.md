@@ -4,7 +4,6 @@ slug: csharp-check-nulls-in-different-ways
 description: 多了解点没错的
 date: 2021-06-19 14:24:28
 lastmod: 2021-06-19 14:24:28
-author: Dotnet9
 originalTitle: C# 不同的方式检查Null
 copyright: Original
 draft: false

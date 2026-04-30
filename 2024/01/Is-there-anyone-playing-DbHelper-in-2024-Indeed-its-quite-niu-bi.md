@@ -409,7 +409,7 @@ public class DbHelper
                 }
             }
 
-            throw new Exception("暂时不支持其它分页语法");
+            throw new Exception("暂时不支持其他分页语法");
         }
         public DbParameter CreateDbParameter(string parameterName, DbType dbType, object value)
         {

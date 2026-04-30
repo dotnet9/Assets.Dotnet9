@@ -30,7 +30,7 @@ tags:
   <a href="https://igaowei.github.io/BigDataView/"><img src="https://img.shields.io/badge/%E9%A2%84%E8%A7%88-Demo-green" alt="预览"></a>
   <a href="#公众号"><img src="https://img.shields.io/badge/%E5%85%AC%E4%BC%97%E5%8F%B7-DreamCoders-blue" alt="公众号"></a>
   <a href="https://blog.csdn.net/qq_31766533/article/details/119274641"><img src="https://img.shields.io/badge/CSDN-DreamCorders-orange" alt="CSDN"></a>
-  <img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/igaowei/bigdataview?label=Github&style=flat-square">
+  <img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/igaowei/bigdataview?label=GitHub&style=flat-square">
   <a href='https://gitee.com/iGaoWei/big-data-view/stargazers'><img src='https://gitee.com/iGaoWei/big-data-view/badge/star.svg?theme=white' alt='star'></img></a>
   <a href='https://gitee.com/iGaoWei/big-data-view/members'><img src='https://gitee.com/iGaoWei/big-data-view/badge/fork.svg?theme=white' alt='fork'></img></a>
 </p>
@@ -73,7 +73,7 @@ git clone https://github.com/iGaoWei/BigDataView.git
 
 ## 截图预览
 
-> 在线预览时，有可能因为 GithubPages 浏览器环境问题，导致页面不兼容，不能正常显示，请以截图为准，或下载到本地测试预览,感谢支持！～
+> 在线预览时，有可能因为 GitHubPages 浏览器环境问题，导致页面不兼容，不能正常显示，请以截图为准，或下载到本地测试预览,感谢支持！～
 
 ### 001 服务大数据可视化监管平台 [在线预览](https://dotnet9.com/big-data-view/web/001服务大数据可视化监管平台/index.html)
 

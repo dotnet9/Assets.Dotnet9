@@ -180,4 +180,4 @@ void ActivatePage(TabPage page)
 
 OK 代码完，效果见本文开头。
 
-> 文中代码已放:[Github](https://github.com/dotnet9/BlazorDemo)
+> 文中代码已放:[GitHub](https://github.com/dotnet9/BlazorDemo)

@@ -4,7 +4,6 @@ slug: introducing-flutter-3
 description: "Flutter 3发布了，你还在等什么呢？一起来了解、学习吧！！！"
 date: 2022-05-12 08:25:17
 lastmod: 2022-05-12 08:25:17
-author: Dotnet9
 originalTitle: "Flutter 3 发布了(文末推荐一个免费的在线Flutter学习教程)"
 copyright: Original
 draft: false

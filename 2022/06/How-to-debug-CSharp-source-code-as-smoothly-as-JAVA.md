@@ -40,7 +40,7 @@ tags:
 
 这块其实官方有说明，但漏了几个关键点导致我卡了非常久，下面会进行详细说明:
 
-- PS1： 以 Windows VS 为主，其它平台应该类似
+- PS1： 以 Windows VS 为主，其他平台应该类似
 
 - PS2: 我主要是查看 DI 的构建逻辑，这块在不同版本差异不大, 所以我直接获取了 6.0
 
@@ -102,9 +102,9 @@ Windows VS 平台是这样安装的：
 
 ### [可选]6.生成依赖库文件
 
-我这里是想调试`Microsoft.Extensions.DependencyInjection`，在 Nuget 上就能看到他还依赖一个抽象定义包`Microsoft.Extensions.DependencyInjection.Abstractions`，为了不在调试中卡壳，我把这个包一并如法炮制。
+我这里是想调试`Microsoft.Extensions.DependencyInjection`，在 NuGet 上就能看到他还依赖一个抽象定义包`Microsoft.Extensions.DependencyInjection.Abstractions`，为了不在调试中卡壳，我把这个包一并如法炮制。
 
-## 其它
+## 其他
 
 1. 在查阅资料时发现其实也可以用 VS 直接编译，但需要配置些东西，我没看明白就用这个办法了，我也不需要编译所有的。
 2. `VS Code`也可以，但我主要用 VS 就略过这部分了

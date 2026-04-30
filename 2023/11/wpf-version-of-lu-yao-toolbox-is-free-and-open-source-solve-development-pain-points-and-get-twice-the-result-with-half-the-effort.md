@@ -4,7 +4,6 @@ slug: wpf-version-of-lu-yao-toolbox-is-free-and-open-source-solve-development-pa
 description: "路遥工具箱是一款基于C# WPF开发的开源工具，旨在解决开发过程中常见的功能性需求，并将其自动化。目前已经拥有十数项实用功能，让你的开发工作事半功倍！"
 date: 2023-11-14 14:01:16
 lastmod: 2023-11-14 15:25:41
-author: Dotnet9
 copyright: Original
 draft: false
 cover: https://img1.dotnet9.com/2023/11/cover_05.png
@@ -150,7 +149,7 @@ private void Gen()
 
 ## 三、总结
 
-有兴趣可克隆源码或直接下载工具使用学习，地址还是在Github仓库中：https://github.com/landv/LuYao.Toolkit
+有兴趣可克隆源码或直接下载工具使用学习，地址还是在GitHub仓库中：https://github.com/landv/LuYao.Toolkit
 
 以上就是路遥工具箱的主要功能，每个功能都能帮助你提高开发效率，解决开发过程中的痛点，对功能实现感兴趣可打开源码查看。赶快下载体验吧！
 

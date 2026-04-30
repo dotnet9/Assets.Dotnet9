@@ -4,7 +4,6 @@ slug: one-of-the-simple-and-reasonable-solutions-of-prism-for-wpf-login-dialog
 description: "这是一篇极简的小短文。"
 date: 2022-01-10 20:08:13
 lastmod: 2022-01-10 20:08:13
-author: Dotnet9
 originalTitle: Prism For WPF Login对话框又简单又合理的方案之一
 copyright: Original
 draft: false

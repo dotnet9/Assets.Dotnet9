@@ -4,7 +4,6 @@ slug: wpf-design-of-wallet-payment-dashboard-interface-in-dark-mode
 description: 黑暗模式的钱包支付仪表盘界面设计
 date: 2022-05-14 21:15:26
 lastmod: 2022-05-14 21:15:26
-author: Dotnet9
 originalTitle: "WPF|黑暗模式的钱包支付仪表盘界面设计"
 copyright: Original
 draft: false
@@ -39,13 +38,13 @@ tags:
 
 ![](https://img1.dotnet9.com/2022/05/4102.png)
 
-这次我们不添加任何图片，只添加了一个 Nuget 包 [MaterialDesignThemes](https://dotnet9.com/2020/12/Material-designinxaml-an-open-source-csharp-WPF-Control-Library)：
+这次我们不添加任何图片，只添加了一个 NuGet 包 [MaterialDesignThemes](https://dotnet9.com/2020/12/Material-designinxaml-an-open-source-csharp-WPF-Control-Library)：
 
 ```xml
 <PackageReference Include="MaterialDesignThemes" Version="4.6.0-ci176" />
 ```
 
-> 原文作者使用的`FontAwesome.WPF`做为图标库，但该库自 17 年起就没升级了，对.NET 5\6\7 编译有不兼容提示
+> 原文作者使用的`FontAwesome.WPF`作为图标库，但该库自 17 年起就没升级了，对.NET 5\6\7 编译有不兼容提示
 
 _已使用“.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8”而不是项目目标框架“net7.0-windows7.0”还原包“FontAwesome.WPF 4.7.0.9”。此包可能与项目不完全兼容。_
 

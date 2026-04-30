@@ -2,7 +2,7 @@
 
 ## 1. 网站开源地址：
 
-- Github: [https://github.com/dotnet9/CodeWF](https://github.com/dotnet9/CodeWF)
+- GitHub: [https://github.com/dotnet9/CodeWF](https://github.com/dotnet9/CodeWF)
 - Gitee: [https://gitee.com/dotnet9/CodeWF](https://gitee.com/dotnet9/CodeWF)
 
 ## 2. 赞助

@@ -4,7 +4,6 @@ slug: code-world-workshop-article-title-url-alias-generator-launched
 description: "码坊是站长新开的一个提供网页在线工具、跨平台桌面和手机应用的开源项目。站长将终致力于为你带来更高效、更便捷的使用体验。今天，站长荣幸地推出“文章标题URL别名生成器”，帮助你轻松创建文章标题的URL别名，提升SEO效果和用户体验。快来码坊，探索更多实用工具吧！"
 date: 2024-01-06 22:42:19
 lastmod: 2024-01-07 00:12:17
-author: Dotnet9
 copyright: Original
 draft: false
 cover: https://img1.dotnet9.com/2024/01/cover_01.png
@@ -188,6 +187,6 @@ public class TranslationServiceUnitTest
 
 ![工具效果图](https://img1.dotnet9.com/2024/01/0102.gif)
 
-如果你对这个工具感兴趣，可以访问码坊官网https://codewf.com，查看更多实用工具。码坊的源码也在[Github](https://github.com/dotnet9/CodeWF)开源，欢迎大家关注和贡献。
+如果你对这个工具感兴趣，可以访问码坊官网https://codewf.com，查看更多实用工具。码坊的源码也在[GitHub](https://github.com/dotnet9/CodeWF)开源，欢迎大家关注和贡献。
 
 感谢大家的支持，是你们的支持和鼓励让我不断前进。如果你有任何问题或建议，欢迎随时联系我们。让我们一起打造更美好的码坊！

@@ -24,9 +24,9 @@ tags:
   - 开源项目
 ---
 
-![Github仓库详情](https://img1.dotnet9.com/2022/02/0401.png)
+![GitHub仓库详情](https://img1.dotnet9.com/2022/02/0401.png)
 
-这是一个 WPF 自定义控件开源项目，里面的一些控件很有意思，下面的效果展示直接抄的作者 Github Read，文末有仓库地址，我们先看看部分自定义控件效果：
+这是一个 WPF 自定义控件开源项目，里面的一些控件很有意思，下面的效果展示直接抄的作者 GitHub Read，文末有仓库地址，我们先看看部分自定义控件效果：
 
 ### DrawPrize（WPF 实现大转盘抽奖）
 
@@ -224,7 +224,7 @@ tags:
 
 仓库地址：
 
-- Github [https://github.com/WPFDevelopersOrg](https://github.com/WPFDevelopersOrg)
+- GitHub [https://github.com/WPFDevelopersOrg](https://github.com/WPFDevelopersOrg)
 - 码云 [https://gitee.com/WPFDevelopersOrg](https://gitee.com/WPFDevelopersOrg)
 - 基础控件 [https://github.com/WPFDevelopersOrg/WPFDevelopers.Minimal](https://github.com/WPFDevelopersOrg/WPFDevelopers.Minimal)
 

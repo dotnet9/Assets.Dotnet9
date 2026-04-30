@@ -82,7 +82,7 @@ https://www.cnblogs.com/zhaotianff/p/17222056.html
 
  **代码实现**
 
-这里以C#为例，其它语言实现方式都差不多，我这里是写入了一个opacity和strech的数据进去
+这里以C#为例，其他语言实现方式都差不多，我这里是写入了一个opacity和strech的数据进去
 
 ```csharp
 private void WriteImageInfoToFile(string filePath,double opacity,int stretch)

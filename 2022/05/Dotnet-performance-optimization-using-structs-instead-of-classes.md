@@ -217,7 +217,7 @@ public struct FlightPriceStruct
 
 另外结构体数组当中的数组，数组也是引用类型，所以它也有 24byte 的数据，它的对象占位符用来存放数组类型的第一个字段-数组大小。
 
-我们可以使用`ObjectLayoutInspector`这个 Nuget 包打印对象的布局信息，类定义的布局信息如下，可以看到除了数据存储需要的 88byte 以外，还有 16byte 额外空间。
+我们可以使用`ObjectLayoutInspector`这个 NuGet 包打印对象的布局信息，类定义的布局信息如下，可以看到除了数据存储需要的 88byte 以外，还有 16byte 额外空间。
 
 ![](https://img1.dotnet9.com/2022/05/1607.png)
 
@@ -398,7 +398,7 @@ public void GetStructStoreUnManageMemory()
 
 结果非常 Amazing 呀，没有在托管内存上分配空间，赋值的速度也比原来快了很多，后面发生 GC 的时候也无需扫描这一段内存，降低了 GC 压力。这样的结果基本就比较满意了。
 
-到现在的话存储 1 亿的数据差不多 6.3GB，如果使用上文中提高的其它方法，应该还能降低一些，比如像如下代码一样，使用枚举来替换字符串，金额使用'分'存储，只存时间戳。
+到现在的话存储 1 亿的数据差不多 6.3GB，如果使用上文中提高的其他方法，应该还能降低一些，比如像如下代码一样，使用枚举来替换字符串，金额使用'分'存储，只存时间戳。
 
 ```csharp
 [StructLayout(LayoutKind.Explicit, CharSet = CharSet.Unicode)]
@@ -674,7 +674,7 @@ public unsafe int GetStructStoreUnManageMemoryRef()
 
 第二个原因是因为引用类型在访问时，需要进行解引用操作，也就是说需要通过指针找到对应内存中的数据，而结构体不需要。
 
-那么如何验证我们的观点呢，其实`BenchmarkDotNet`提供了这样的指标展示，只需要引入`BenchmarkDotNet.Diagnostics.Windows` Nuget 包，然后在需要评测的类上面加入以下代码。
+那么如何验证我们的观点呢，其实`BenchmarkDotNet`提供了这样的指标展示，只需要引入`BenchmarkDotNet.Diagnostics.Windows` NuGet 包，然后在需要评测的类上面加入以下代码。
 
 ```csharp
 [HardwareCounters(

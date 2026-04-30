@@ -34,9 +34,9 @@ tags:
 
 ## 3. 编码实现
 
-### 3.1 添加 Nuget 库
+### 3.1 添加 NuGet 库
 
-使用 .Net Core 3.1 创建名为 “Login” 的 WPF 解决方案，添加 1 个 Nuget 库：`MaterialDesignThemes`。
+使用 .NET Core 3.1 创建名为 “Login” 的 WPF 解决方案，添加 1 个 NuGet 库：`MaterialDesignThemes`。
 
 ### 3.2 工程结构
 
@@ -160,4 +160,4 @@ tags:
 
 ## 5. 代码下载
 
-Github 源码下载：[HelloDotNetCore](https://github.com/Abel13/dotnetcore_login/blob/master/HelloDotNetCore)
+GitHub 源码下载：[HelloDotNetCore](https://github.com/Abel13/dotnetcore_login/blob/master/HelloDotNetCore)

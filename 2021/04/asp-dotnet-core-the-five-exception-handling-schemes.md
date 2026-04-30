@@ -20,7 +20,7 @@ tags:
   - 异常
 ---
 
-异常处理在编程中非常重要，一来可以给用户友好提示，二来也是为了程序安全。在 Asp.Net Core 中，默认已经为我们了提供很多解决方案，下面就来总结一下。
+异常处理在编程中非常重要，一来可以给用户友好提示，二来也是为了程序安全。在 ASP.NET Core 中，默认已经为我们了提供很多解决方案，下面就来总结一下。
 
 ## 1. 继承 Controller，重写 OnActionExecuted
 
@@ -95,7 +95,7 @@ services.AddControllersWithViews(options =>
 
 ## 3. 使用 IExceptionFilter
 
-我们知道, Asp.Net Core 提供了 5 类 filter, IExceptionFilter 是其中之一，顾名思义，这就是用来处理异常的。Asp.net Core 中 ExceptionFilterAttribute 已经实现了 IExceptionFilter，所以我们只需继承 ExceptionFilterAttribute，重写其中方法即可。 同样新建 CustomExceptionFilterAttribute 继承 ExceptionFilterAttribute，重写 OnException ，添加异常处理，完整代码如下
+我们知道, ASP.NET Core 提供了 5 类 filter, IExceptionFilter 是其中之一，顾名思义，这就是用来处理异常的。ASP.NET Core 中 ExceptionFilterAttribute 已经实现了 IExceptionFilter，所以我们只需继承 ExceptionFilterAttribute，重写其中方法即可。 同样新建 CustomExceptionFilterAttribute 继承 ExceptionFilterAttribute，重写 OnException ，添加异常处理，完整代码如下
 
 ```C#
 public class CustomExceptionFilterAttribute : ExceptionFilterAttribute

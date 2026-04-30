@@ -4,7 +4,6 @@ slug: why-my-blog-site-is-back-to-blazor
 description: "博客网站开发历经艰辛，尝试过MVC、Vue、Go等近10个版本，如今回归Blazor并采用静态SSR，速度飞涨，已成功上线。"
 date: 2024-11-06 07:14:26
 lastmod: 2024-11-06 23:19:29
-author: Dotnet9
 copyright: Original
 draft: false
 cover: https://img1.dotnet9.com/2024/11/0201.png
@@ -96,7 +95,7 @@ tags:
     @if (ShowEdit) {
     <span style="margin:0 5px;">|</span>
     <a
-      href="@ConstantUtil.GetPostGithubPath(SiteOption.Value.RemoteAssetsRepository, Post)"
+      href="@ConstantUtil.GetPostGitHubPath(SiteOption.Value.RemoteAssetsRepository, Post)"
       target="_blank"
       >我要编辑、留言</a
     >
@@ -150,7 +149,7 @@ CodeWF.NetWeaver 是一个简洁而强大的 C#库，支持 AOT，用于处理 T
 
 5. CodeWF.Toolbox
 
-CodeWF Toolbox 使用 Avalonia 开发的跨平台工具箱，使用了 Prism 做为模块化开发框架，支持 AOT 发布，可做为 Avalonia 项目学习。可点击[链接](https://github.com/dotnet9/CodeWF.Toolbox)查看。
+CodeWF Toolbox 使用 Avalonia 开发的跨平台工具箱，使用了 Prism 作为模块化开发框架，支持 AOT 发布，可作为 Avalonia 项目学习。可点击[链接](https://github.com/dotnet9/CodeWF.Toolbox)查看。
 
 6. CodeWF.Tools
 

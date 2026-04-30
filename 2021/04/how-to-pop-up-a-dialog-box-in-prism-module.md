@@ -4,7 +4,6 @@ slug: how-to-pop-up-a-dialog-box-in-prism-module
 description: "有网友提出需求，在Prism的Module中如何弹出对话框？像主界面弹出关于对话框一样？"
 date: 2021-04-14 17:32:16
 lastmod: 2021-04-14 17:32:16
-author: Dotnet9
 originalTitle: "如何在 Prism 的 Module 中弹出对话框？"
 copyright: Original
 draft: false

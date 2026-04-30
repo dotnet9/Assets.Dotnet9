@@ -4,7 +4,6 @@ slug: website-reconstruction-with-ai-razor-pages
 description: "从Blazor静态SSR回归Razor Pages，源码解读网站架构设计与核心实现"
 date: 2026-04-16 22:45:00
 lastmod: 2026-04-16 23:00:00
-author: Dotnet9
 cover: https://img1.dotnet9.com/2026/04/cover_01.svg
 banner: false
 categories:
@@ -121,10 +120,10 @@ public class IndexModel : PageModel
 
 ```cshtml
 @page "/{year:int}/{month:int}/{slug}"
-@model WebApp.Pages.Bbs.Post.IndexModel
+@model WebApp.Pages.Blog.Post.IndexModel
 ```
 
-对应代码后端 [Post/Index.cshtml.cs](https://github.com/dotnet9/CodeWF/blob/main/src/WebApp/Pages/Bbs/Post/Index.cshtml.cs)：
+对应代码后端 [Post/Index.cshtml.cs](https://github.com/dotnet9/CodeWF/blob/main/src/WebApp/Pages/Blog/Post/Index.cshtml.cs)：
 
 ```csharp
 public class IndexModel : PageModel

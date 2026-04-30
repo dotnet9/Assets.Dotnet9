@@ -1,7 +1,7 @@
 ---
 title: 使用 Web API 上传和下载多个文件
 slug: upload-and-download-multiple-files-using-web-api
-description: "通过一个简单的过程介绍使用 ASP.Net Core 6.0 Web API 上传和下载多个文件。"
+description: "通过一个简单的过程介绍使用 ASP.NET Core 6.0 Web API 上传和下载多个文件。"
 date: 2022-07-23 09:37:47
 lastmod: 2022-07-23 09:37:47
 author: Jay Krishna Reddy
@@ -27,11 +27,11 @@ tags:
 
 ---正文开始---
 
-今天，我们将通过一个简单的过程介绍使用 ASP.Net Core 6.0 Web API 上传和下载多个文件。
+今天，我们将通过一个简单的过程介绍使用 ASP.NET Core 6.0 Web API 上传和下载多个文件。
 
 ## 步骤
 
-首先在 Visual Studio 中创建一个空的 Web API 项目，目标框架选择`.Net 6.0`。
+首先在 Visual Studio 中创建一个空的 Web API 项目，目标框架选择`.NET 6.0`。
 
 此项目中没有使用外部包。
 

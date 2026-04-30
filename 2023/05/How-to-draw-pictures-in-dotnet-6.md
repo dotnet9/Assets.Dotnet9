@@ -43,9 +43,9 @@ tags:
 
 - 链接:
 
-Github链接: <https://github.com/manuelbl/QrCodeGenerator>
+GitHub链接: <https://github.com/manuelbl/QrCodeGenerator>
 
-Nuget链接: <https://www.nuget.org/packages/Net.Codecrete.QrCodeGenerator/2.0.3>
+NuGet链接: <https://www.nuget.org/packages/Net.Codecrete.QrCodeGenerator/2.0.3>
 
 这里没出现什么问题所以就不尝试其他方案了, 大同小异。
 
@@ -62,7 +62,7 @@ Nuget链接: <https://www.nuget.org/packages/Net.Codecrete.QrCodeGenerator/2.0.3
 - 我选择的是 **SkiaSharp v2.88.3**
 - 链接:
 
-Github链接: <https://github.com/mono/SkiaSharp>
+GitHub链接: <https://github.com/mono/SkiaSharp>
 
 Nutget链接: <https://www.nuget.org/packages/SkiaSharp/2.88.3>
 

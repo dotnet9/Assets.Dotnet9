@@ -4,7 +4,6 @@ slug: nsa-to-developers-think-about-switching-from-c-and-cpp-to-a-memory-safe-pr
 description: "对于许多开发人员来说，这可能意味着转向 C#、Go、Java、Ruby、Rust 和 Swift。"
 date: 2022-11-16 07:31:26
 lastmod: 2022-11-16 07:31:26
-author: Dotnet9
 copyright: Original
 draft: false
 cover: https://img1.dotnet9.com/2022/11/cover_03.png

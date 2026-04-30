@@ -4,7 +4,6 @@ slug: wpf-interview-question-answers-from-chat-gpt
 description: "面试题，答案主要由ChatGPT提供"
 date: 2023-07-17 22:16:29
 lastmod: 2023-07-17 22:16:29
-author: Dotnet9
 copyright: Original
 draft: false
 cover: https://img1.dotnet9.com/2023/07/cover_08.png

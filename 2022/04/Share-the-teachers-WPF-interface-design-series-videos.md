@@ -4,7 +4,6 @@ slug: share-the-teachers-wpf-interface-design-series-videos
 description: "对于玩WPF的同学，他的一些界面设计是可以学习的，甚至可以直接复制过来使用。"
 date: 2022-04-27 21:12:21
 lastmod: 2022-04-27 21:12:21
-author: Dotnet9
 originalTitle: 分享这位大神的WPF界面设计系列视频
 copyright: Original
 draft: false
@@ -52,7 +51,7 @@ tags:
 
 > 如果你熟悉 Blend，开发 WPF 的效率会更高，别听一些老程序员的话，做 WPF 不用设计器，光手敲代码才有逼格，这是他们不会用而已，提高效率的工具能用就用。
 
-- Github：[https://github.com/dotnet9/TerminalMACS.ManagerForWPF](https://github.com/dotnet9/TerminalMACS.ManagerForWPF)
+- GitHub：[https://github.com/dotnet9/TerminalMACS.ManagerForWPF](https://github.com/dotnet9/TerminalMACS.ManagerForWPF)
 - Gitee：[https://gitee.com/dotnet9/TerminalMACS.ManagerForWPF](https://gitee.com/dotnet9/TerminalMACS.ManagerForWPF)
 - 公众号：Dotnet9，19 年底、20 年初发的一些文章
 

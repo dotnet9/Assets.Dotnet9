@@ -49,7 +49,7 @@ public enum Days
 }
 ```
 
-C# 枚举成员的类型默认是 int 类型，通过继承可以声明枚举成员为其它类型，比如：
+C# 枚举成员的类型默认是 int 类型，通过继承可以声明枚举成员为其他类型，比如：
 
 ```csharp
 public enum Days : byte
@@ -64,7 +64,7 @@ public enum Days : byte
 }
 ```
 
-枚举类型一定是继承自 byte、sbyte、short、ushort、int、uint、long 和 ulong 中的一种，不能是其它类型。
+枚举类型一定是继承自 byte、sbyte、short、ushort、int、uint、long 和 ulong 中的一种，不能是其他类型。
 
 下面是几个枚举的常见用法（以上面的 Days 枚举为例）：
 

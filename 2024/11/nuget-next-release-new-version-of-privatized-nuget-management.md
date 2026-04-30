@@ -174,7 +174,7 @@ docker-compose up -d
 - 邮箱
 - QQ群
 
-Github： https://github.com/AIDotNet/NuGet.Next
+GitHub： https://github.com/AIDotNet/NuGet.Next
 
 Gitee： https://gitee.com/aidotnet/NuGet.Next
 

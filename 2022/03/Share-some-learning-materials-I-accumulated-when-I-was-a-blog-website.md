@@ -4,7 +4,6 @@ slug: share-some-learning-materials-i-accumulated-when-i-was-a-blog-website
 description: "Dotnet9网站用WordPress搭建了两年，去年开始自学ASP.NET Core MVC，开始了独立开发网站之路，现在网站前台算是有模有样了，后台正在开发中"
 date: 2022-03-02 07:57:36
 lastmod: 2024-10-26 10:12:05
-author: Dotnet9
 originalTitle: 分享我做Dotnet9博客网站时积累的一些资料
 copyright: Original
 draft: false
@@ -115,7 +114,7 @@ tags:
 
 Abp vNext 太重了，`Hello World`运行内存 400MB 左右，个人手撸 CRUD 比较费时，即使有代码生成器，也不应该选用这种方式做博客网站。
 
-但不妨碍大家使用 Abp vNext 开发企业级项目哈，社区有不少 Abp vNext 的开源项目，大家可关注这个 Github 账号：[
+但不妨碍大家使用 Abp vNext 开发企业级项目哈，社区有不少 Abp vNext 的开源项目，大家可关注这个 GitHub 账号：[
 EasyAbp Team](https://github.com/EasyAbp)
 
 - EasyAbp Team：https://github.com/EasyAbp

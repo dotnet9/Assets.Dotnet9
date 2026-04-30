@@ -4,7 +4,6 @@ slug: avalonia-custom-tabitem-border
 description: "可作为参考，实现其他形式的TabItem边框"
 date: 2025-07-07 21:46:07
 lastmod: 2025-07-07 22:36:33
-author: Dotnet9
 draft: false
 cover: https://img1.dotnet9.com/2025/07/0209.gif
 categories:

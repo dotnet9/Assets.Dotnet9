@@ -25,11 +25,11 @@ MASA Blazor 是一个 Blazor 的 UI 组件库。就像大家写前端熟知的 B
 
 > MASA Blazor 官网地址：[https://blazor.masastack.com](https://blazor.masastack.com)
 >
-> MASA Blazor Github 地址：[https://github.com/BlazorComponent/MASA.Blazor](https://github.com/BlazorComponent/MASA.Blazor)
+> MASA Blazor GitHub 地址：[https://github.com/BlazorComponent/MASA.Blazor](https://github.com/BlazorComponent/MASA.Blazor)
 >
 > MASA Blazor Pro 演示地址：[https://blazor-pro.masastack.com/dashboards/ecommerce](https://blazor-pro.masastack.com/dashboards/ecommerce)
 >
-> MASA Blazor Pro Github 地址：[https://github.com/BlazorComponent/MASA.Blazor.Pro](https://github.com/BlazorComponent/MASA.Blazor.Pro)
+> MASA Blazor Pro GitHub 地址：[https://github.com/BlazorComponent/MASA.Blazor.Pro](https://github.com/BlazorComponent/MASA.Blazor.Pro)
 
 ## 什么是 Blazor
 
@@ -81,7 +81,7 @@ dotnet new blazorserver -o BlazorServerApp
 
 - 添加 MASA.Blazor 包
 
-可以使用 Nuget 包管理工具搜索 MASA.Blazor 添加，也可以直接
+可以使用 NuGet 包管理工具搜索 MASA.Blazor 添加，也可以直接
 
 ```shell
 dotnet add package MASA.Blazor
@@ -197,11 +197,11 @@ MASA Blazor Pro 演示了大多数 MASA Blazor 组件的使用。而且是一个
 
 > MASA Blazor 官网地址：[https://blazor.masastack.com](https://blazor.masastack.com)
 >
-> MASA Blazor Github 地址：[https://github.com/BlazorComponent/MASA.Blazor](https://github.com/BlazorComponent/MASA.Blazor)
+> MASA Blazor GitHub 地址：[https://github.com/BlazorComponent/MASA.Blazor](https://github.com/BlazorComponent/MASA.Blazor)
 >
 > MASA Blazor Pro 演示地址：[https://blazor-pro.masastack.com/dashboards/ecommerce](https://blazor-pro.masastack.com/dashboards/ecommerce)
 >
-> MASA Blazor Pro Github 地址：[https://github.com/BlazorComponent/MASA.Blazor.Pro](https://github.com/BlazorComponent/MASA.Blazor.Pro)
+> MASA Blazor Pro GitHub 地址：[https://github.com/BlazorComponent/MASA.Blazor.Pro](https://github.com/BlazorComponent/MASA.Blazor.Pro)
 
 ## 我们正在行动，新的框架、新的生态
 
@@ -219,7 +219,7 @@ MASA Blazor Pro 演示了大多数 MASA Blazor 组件的使用。而且是一个
 
 经过几个月的生产项目实践，已完成 POC，目前正在把之前的积累重构到新的开源项目中
 
-目前源码已开始同步到 Github（文档站点在规划中，会慢慢完善起来）：
+目前源码已开始同步到 GitHub（文档站点在规划中，会慢慢完善起来）：
 
 - [MASA.BuildingBlocks](https://github.com/masastack/MASA.BuildingBlocks)
 - [MASA.Contrib](https://github.com/masastack/MASA.Contrib)

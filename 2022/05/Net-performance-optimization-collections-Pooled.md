@@ -42,7 +42,7 @@ tags:
 
 ## 如何使用
 
-通过 Nuget 就可以很简单的安装这个类库，[NuGet Version](https://www.nuget.org/packages/Collections.Pooled/) 。
+通过 NuGet 就可以很简单的安装这个类库，[NuGet Version](https://www.nuget.org/packages/Collections.Pooled/) 。
 
 ```shell
 Install-Package Collections.Pooled

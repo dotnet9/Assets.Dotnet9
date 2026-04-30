@@ -74,7 +74,7 @@ function btnSave() {
 
 相关推荐：
 
-1. 在 Asp.Net Core 中配置使用 MarkDown 富文本编辑器实现图片上传和截图上传（[开源代码.net core3.0](https://www.cnblogs.com/jiyuwu/p/11791198.html "开源代码.net core3.0")）
+1. 在 ASP.NET Core 中配置使用 MarkDown 富文本编辑器实现图片上传和截图上传（[开源代码.net core3.0](https://www.cnblogs.com/jiyuwu/p/11791198.html "开源代码.net core3.0")）
 
 2. MarkDown 富文本编辑器怎么加载模板文件:[链接](https://www.cnblogs.com/jiyuwu/p/11791101.html "链接")
 

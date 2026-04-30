@@ -4,7 +4,6 @@ slug: csharp-object-binary-serialization-optimization-implementing-extreme-compr
 description: "展示如何将C#对象转换为二进制形式，并进行优化以减少网络传输中的数据包大小。"
 date: 2024-01-21 21:43:19
 lastmod: 2024-01-22 00:33:28
-author: Dotnet9
 copyright: Original
 draft: false
 cover: https://img1.dotnet9.com/2024/01/cover_10.png
@@ -566,7 +565,7 @@ public partial class SerializeHelper
 
 本文通过一个示例案例，探讨了 C#对象二进制序列化的优化方法。通过使用位域技术，我们实现了对数据包大小的极限压缩，提高了网络传输的效率。这对于开发 C/S 程序来说是一种乐趣，也是追求极致性能的一种体现。
 
-最后，我们提供了本文测试源码的 Github 链接，供读者参考和学习。
+最后，我们提供了本文测试源码的 GitHub 链接，供读者参考和学习。
 
 - https://github.com/dotnet9/CsharpSocketTest
 

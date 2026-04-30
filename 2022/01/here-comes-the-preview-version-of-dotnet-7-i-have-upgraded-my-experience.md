@@ -4,7 +4,6 @@ slug: here-comes-the-preview-version-of-dotnet-7-i-have-upgraded-my-experience
 description: "听说`.NET 7` 来了，站长怎能不尝鲜呢，在除夕当天将体验情况简单汇报下，然后迎新春喽"
 date: 2022-01-31 10:35:27
 lastmod: 2022-01-31 10:35:27
-author: Dotnet9
 originalTitle: ".NET 7 预览版来啦，我升级体验了"
 copyright: Original
 draft: false
@@ -92,7 +91,7 @@ https://aka.ms/dotnet/7.0.1xx/daily/dotnet-sdk-win-x64.exe
 
 ### 3.3 个人网站（Dotnet9）拥抱.NET 7
 
-本站采用 [ABP vNext](https://abp.io/) + [MASA Blazor](https://masa-blazor-docs-dev.lonsid.cn/) 搭建，升级 `.NET 7` 及其他 Nuget 包后，无缝编译成功，现已成功上线运行：[https://dotnet9.com](https://dotnet9.com)。
+本站采用 [ABP vNext](https://abp.io/) + [MASA Blazor](https://masa-blazor-docs-dev.lonsid.cn/) 搭建，升级 `.NET 7` 及其他 NuGet 包后，无缝编译成功，现已成功上线运行：[https://dotnet9.com](https://dotnet9.com)。
 
 [Dotnet9 网站](https://dotnet9.com)无缝编译成功：
 

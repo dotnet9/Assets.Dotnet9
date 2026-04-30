@@ -26,7 +26,7 @@ tags:
 目前 Blazor 提供内建的 Service 有三个，分别为：
 
 1. `HttpClient`：处理 http 请求，生命周期为 Scoped(注意：只有 Blazor WebAssembly 有提供，Blazor Server 必须自己注册)
-2. `IJSRuntime`：提供 Javascript runtime 组件处理 JS 功能，Blazor WebAssembly 生命周期为`Singleton`，Blazor Server 生命周期为`Scoped`
+2. `IJSRuntime`：提供 JavaScript runtime 组件处理 JS 功能，Blazor WebAssembly 生命周期为`Singleton`，Blazor Server 生命周期为`Scoped`
 3. `NavigationManager`：处理路由导向和状态，Blazor WebAssembly 生命周期为`Singleton`，Blazor Server 生命周期为`Scoped`
 
 生命周期指的就是 Component 存活的时间，除了`Singleton`跟`Scoped`，还有一种`Transient`。

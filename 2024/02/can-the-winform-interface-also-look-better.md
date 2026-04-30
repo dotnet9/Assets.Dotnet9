@@ -44,7 +44,7 @@ tags:
 
 在本文中我只介绍绘图部分的实现，首先需要在项目中引入 ant design blazor。
 
-安装 Nuget 包引用，如下所示：
+安装 NuGet 包引用，如下所示：
 
 ![图片](https://img1.dotnet9.com/2024/02/0403.png)
 

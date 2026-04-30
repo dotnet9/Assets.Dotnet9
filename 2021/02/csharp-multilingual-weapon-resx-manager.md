@@ -4,7 +4,6 @@ slug: csharp-multilingual-weapon-resx-manager
 description: "本文不是要介绍怎样实现项目国际化，主要是介绍一款`VS`扩展程序，可方便的管理通用的资源文件(*.resx)"
 date: 2021-02-16 22:23:32
 lastmod: 2021-02-16 22:23:32
-author: Dotnet9
 originalTitle: C# 多语言利器 - ResX Manager
 copyright: Original
 draft: false
@@ -25,9 +24,9 @@ WPF 国际化实现方式很多:
 1. 可使用 xaml 资源文件(\*.xaml)存储各语言展示的内容,本人另一号有过介绍：
 
 - [WPF 国际化方式 1 之资源文件](https://mp.weixin.qq.com/s/49AZBiZoY1FPRWBlvxFUpg)
-- [C#/.Net Core/WPF 框架初建(国际化、主题色)](https://mp.weixin.qq.com/s/8vxbcBwr05a_-4tKEDB19w))
+- [C#/.NET Core/WPF 框架初建(国际化、主题色)](https://mp.weixin.qq.com/s/8vxbcBwr05a_-4tKEDB19w))
 
-2. 也可使用通用的资源文件(\*.resx)，该方式不受限于项目模板，可适用于其它项目类型，C/S、B/S、App(Xamarin)等皆可使用。
+2. 也可使用通用的资源文件(\*.resx)，该方式不受限于项目模板，可适用于其他项目类型，C/S、B/S、App(Xamarin)等皆可使用。
 
 本文不是要介绍怎样实现项目国际化，主要是介绍一款`VS`扩展程序，可方便的管理通用的资源文件(\*.resx)，比如下面这样：
 

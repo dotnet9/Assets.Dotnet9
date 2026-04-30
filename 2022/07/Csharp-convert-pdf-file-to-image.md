@@ -26,7 +26,7 @@ tags:
 
 ![](https://img1.dotnet9.com/2022/07/1801.png)
 
-首先我们打开 Nuget 安装`PdfiumViewer`和`ImageResizer.Plugins.PdfiumRenderer.Pdfium.Dll`。
+首先我们打开 NuGet 安装`PdfiumViewer`和`ImageResizer.Plugins.PdfiumRenderer.Pdfium.Dll`。
 
 ![](https://img1.dotnet9.com/2022/07/1802.jpg)
 

@@ -27,7 +27,7 @@ CsvHelper 是一个用于读写 CSV 文件的.NET 库。极其快速，灵活且
 
 CsvHelper 建立在.NET Standard 2.0 之上，几乎可以在任何地方运行。
 
-Github 地址：https://github.com/joshclose/csvhelper
+GitHub 地址：https://github.com/joshclose/csvhelper
 
 ### 模块
 

@@ -360,7 +360,7 @@ The project is released under MIT License.
 
 ![image](https://img1.dotnet9.com/2022/04/2017.gif)
 
-> 转载自 Github
+> 转载自 GitHub
 >
 > 作者：dino.c
 >

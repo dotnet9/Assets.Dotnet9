@@ -1,7 +1,7 @@
 ---
 title: 最流行的 .NET 开源项目合集
 slug: the-most-popular-dotnet-open-source-project-collection
-description: "Github 上有很多优秀的 .NET 开源项目，它们很适合用来学习 .NET 、设计模式和架构。"
+description: "GitHub 上有很多优秀的 .NET 开源项目，它们很适合用来学习 .NET 、设计模式和架构。"
 date: 2022-03-30 11:35:29
 lastmod: 2022-03-30 11:35:29
 author: 全球技术精选
@@ -24,7 +24,7 @@ tags:
 
 ![](https://img1.dotnet9.com/2022/03/cover_30.png)
 
-Github 上有很多优秀的 .NET 开源项目，它们很适合用来学习 .NET 、设计模式和架构。
+GitHub 上有很多优秀的 .NET 开源项目，它们很适合用来学习 .NET 、设计模式和架构。
 
 ## nopCommerce
 
@@ -130,7 +130,7 @@ ABP 基于领域驱动设计提供了一个 完整的、模块化、分层的架
 
 star: 207 ⭐
 
-在 .Net Core 中使用领域驱动设计和 CQRS 实现的大学应用程序。
+在 .NET Core 中使用领域驱动设计和 CQRS 实现的大学应用程序。
 
 技术栈：.NET 6、EF Core、CAP、FluentValidation、Swagger & Swagger UI、Serilog 、Opentelemetry-dotnet、Ocelot。
 

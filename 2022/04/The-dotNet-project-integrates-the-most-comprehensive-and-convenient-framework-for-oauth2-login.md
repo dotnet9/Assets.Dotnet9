@@ -47,7 +47,7 @@ tags:
 - [x] 微信公众号（可用）
 - [x] Gitlab（可用）
 - [x] Gitee（可用）
-- [x] Github（可用）
+- [x] GitHub（可用）
 - [x] 华为（可用）
 - [x] Coding.net（可用）
 - [x] 新浪微博（可用）
@@ -121,7 +121,7 @@ Install-Package MrHuo.OAuth.Coding -Version 1.1.1
 #### github.com
 
 ```shell
-Install-Package MrHuo.OAuth.Github -Version 1.1.1
+Install-Package MrHuo.OAuth.GitHub -Version 1.1.1
 ```
 
 #### alipay.com
@@ -479,6 +479,6 @@ public class WechatOAuth : OAuthLoginBase<WechatAccessTokenModel, WechatUserInfo
 
 - 框架名：`MrHuo.OAuth`
 - 作者：mrhuo
-- Github：[https://github.com/mrhuo/MrHuo.OAuth](https://github.com/mrhuo/MrHuo.OAuth)
+- GitHub：[https://github.com/mrhuo/MrHuo.OAuth](https://github.com/mrhuo/MrHuo.OAuth)
 
 ![MrHuo.OAuth](https://img1.dotnet9.com/2022/04/1002.png)

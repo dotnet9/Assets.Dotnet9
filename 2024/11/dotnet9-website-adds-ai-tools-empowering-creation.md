@@ -4,7 +4,6 @@ slug: dotnet9-website-adds-ai-tools-empowering-creation
 description: "在持续探索与创新的路上，[Dotnet9](https://dotnet9.com) 网站上新一个AI 小工具，专为文章标题生成 URL 别名，同时解锁文章内容 AI 总结功能，此刻，满心皆欢喜，与大家同分享这份成果！"
 date: 2024-11-27 23:27:16
 lastmod: 2024-11-28 07:41:37
-author: Dotnet9
 copyright: Original
 draft: false
 cover: https://img1.dotnet9.com/2024/11/cover_08.gif

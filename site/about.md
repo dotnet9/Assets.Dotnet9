@@ -9,7 +9,7 @@
 
 一个使用`Dotnet 9`开发的`博客`+`在线工具箱`系统，一直在开发中...
 
-![dotnet-version](https://img.shields.io/badge/.NET%209.0-blue) ![Visual Studio 2022](https://img.shields.io/badge/Visual%20Studio%20-2022-blueviolet) <a target="_blank" href="https://qm.qq.com/cgi-bin/qm/qr?k=iL6egdGSGCMPezcUyzMPEcs9qsllgwr-&jump_from=webapi"><img border="0" src="https://pub.idqqimg.com/wpa/images/group.png" alt="Dotnet9软件技术交流" title="Dotnet9软件技术交流"></a> [![码云](https://img.shields.io/badge/Gitee-%E7%A0%81%E4%BA%91-orange)](https://gitee.com/dotnet9/CodeWF) [![Github](https://img.shields.io/badge/%20-github-%2324292e)](https://github.com/dotnet9/CodeWF) [![Github stars](https://img.shields.io/github/stars/dotnet9/CodeWF)](https://github.com/dotnet9/CodeWF)
+![dotnet-version](https://img.shields.io/badge/.NET%209.0-blue) ![Visual Studio 2022](https://img.shields.io/badge/Visual%20Studio%20-2022-blueviolet) <a target="_blank" href="https://qm.qq.com/cgi-bin/qm/qr?k=iL6egdGSGCMPezcUyzMPEcs9qsllgwr-&jump_from=webapi"><img border="0" src="https://pub.idqqimg.com/wpa/images/group.png" alt="Dotnet9软件技术交流" title="Dotnet9软件技术交流"></a> [![码云](https://img.shields.io/badge/Gitee-%E7%A0%81%E4%BA%91-orange)](https://gitee.com/dotnet9/CodeWF) [![GitHub](https://img.shields.io/badge/%20-github-%2324292e)](https://github.com/dotnet9/CodeWF) [![GitHub stars](https://img.shields.io/github/stars/dotnet9/CodeWF)](https://github.com/dotnet9/CodeWF)
 
 建此站目的在于分享以 Dotnet 为主的技术类文章，希望以此平台与更多的程序员朋友交流技术，祝愿 Dotnet 社区发展越来越好。
 
@@ -64,11 +64,11 @@
 - CSDN：[https://me.csdn.net/HenryMoore](https://me.csdn.net/HenryMoore)
 - 掘金：[https://juejin.im/user/1732486058751934](https://juejin.im/user/1732486058751934)
 - Telegram：[https://t.me/dotnet9](https://t.me/dotnet9)
-- Github：[https://www.github.com/dotnet9](https://www.github.com/dotnet9)
+- GitHub：[https://www.github.com/dotnet9](https://www.github.com/dotnet9)
 - Gitee：[https://gitee.com/dotnet9](https://gitee.com/dotnet9)
 - 51CTO 博客：[https://blog.51cto.com/u_15469207](https://blog.51cto.com/u_15469207)
 - InfoQ：[https://www.infoq.cn/profile/A417E2BA797068/publish](https://www.infoq.cn/profile/A417E2BA797068/publish)
 - 腾讯云开发者社区：[https://cloud.tencent.com/developer/user/4880446](https://cloud.tencent.com/developer/user/4880446)
 - 阿里云开发者社区：[https://developer.aliyun.com/profile/xzbu4dxrupikc](https://developer.aliyun.com/profile/xzbu4dxrupikc)
-- 华为云开发者社区：[https://bbs.huaweicloud.com/community/usersnew/id_1676989516009343](https://bbs.huaweicloud.com/community/usersnew/id_1676989516009343)
+- 华为云开发者社区：可在华为云开发者社区搜索 Dotnet9。
 - Boss：[https://youle.zhipin.com/creator/home-page/index?\_=1695472309998](https://youle.zhipin.com/creator/home-page/index?_=1695472309998)

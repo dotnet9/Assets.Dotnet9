@@ -79,7 +79,7 @@ public class ResultViewModel
 }
 ```
 
-接着去`Program.cs`注册刚才写的`Repository`，有些人可能会问，上面的`GuidService`跟之前建立的`PostService`为什么叫`Service` 这边却叫`Repository`，这是笔者的习惯，笔者此前开发的 Blazor 项目是多层架构，分别为`后端API`、`中间Model`、`前端Blazor`，后端处理数据的文件都以`Repository`做为后缀词，前端取得数据的文件则以`Service` 做为后缀词，各端怎么分看不同公司的开发模式。后来笔者将`Service` 抽成另一个工程，再后来又将`DbContext` 抽成一个工程，都是为了方便日后有其他项目要参考`Model` 或是只是要调动`Service` 的话，不需要参考整个`Blazor` 或是`API` 项目。
+接着去`Program.cs`注册刚才写的`Repository`，有些人可能会问，上面的`GuidService`跟之前建立的`PostService`为什么叫`Service` 这边却叫`Repository`，这是笔者的习惯，笔者此前开发的 Blazor 项目是多层架构，分别为`后端API`、`中间Model`、`前端Blazor`，后端处理数据的文件都以`Repository`作为后缀词，前端取得数据的文件则以`Service` 作为后缀词，各端怎么分看不同公司的开发模式。后来笔者将`Service` 抽成另一个工程，再后来又将`DbContext` 抽成一个工程，都是为了方便日后有其他项目要参考`Model` 或是只是要调动`Service` 的话，不需要参考整个`Blazor` 或是`API` 项目。
 
 ![](https://img1.dotnet9.com/2021/12/2608.png)
 

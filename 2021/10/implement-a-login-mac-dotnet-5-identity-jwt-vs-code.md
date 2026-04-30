@@ -32,7 +32,7 @@ tags:
 
 ![原文是个动图，可点击原文查看](https://img1.dotnet9.com/2021/10/0503.jpg)
 
-## 二、利用插件下载项目所需要的 Nuget 包
+## 二、利用插件下载项目所需要的 NuGet 包
 
 ![](https://img1.dotnet9.com/2021/10/0504.png)
 
@@ -450,11 +450,11 @@ public async Task<object> AddRole(AddRoleModel model)
 }
 ```
 
-**_关于我们 token 权限在校验时出现失败怎么办？ 这里 Asp.Net Core 5.0 新增一个接口【IAuthorizationMiddlewareResultHandler】可以处理权限验证 看下文代码展示！_**
+**_关于我们 token 权限在校验时出现失败怎么办？ 这里 ASP.NET Core 5.0 新增一个接口【IAuthorizationMiddlewareResultHandler】可以处理权限验证 看下文代码展示！_**
 
 ```C#
 /// <summary>
-/// 这个是Asp.Net Core 5 新增的授权处理失败  可以直接暴露出请求上下文 省事很多啦！！！
+/// 这个是ASP.NET Core 5 新增的授权处理失败  可以直接暴露出请求上下文 省事很多啦！！！
 /// 作者 xxx
 /// </summary>
 public class AuthorizationHandleMiddleWare : IAuthorizationMiddlewareResultHandler

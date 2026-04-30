@@ -4,7 +4,6 @@ slug: avalonia-win7-custom-titlebar-solution
 description: "详解Avalonia应用在Windows 7系统下自定义标题栏时原生标题栏残留问题的根本原因与完美解决方案，包含完整代码示例与版本兼容性分析"
 date: 2025-07-23 22:31:27
 lastmod: 2025-07-23 23:45:22
-author: Dotnet9
 cover: https://img1.dotnet9.com/2025/07/cover_04.png
 categories:
   - Avalonia UI

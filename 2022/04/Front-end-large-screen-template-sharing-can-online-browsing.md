@@ -4,7 +4,6 @@ slug: front-end-large-screen-template-sharing-can-online-browsing
 description: "几十套大屏模板，可在线浏览，也可下载"
 date: 2022-04-21 07:41:42
 lastmod: 2022-04-21 07:41:42
-author: Dotnet9
 originalTitle: 前端大屏模板分享-可在线浏览
 copyright: Original
 draft: false

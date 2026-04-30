@@ -1,11 +1,11 @@
 ---
-title: 一文了解.Net Core Web API基础知识
+title: 一文了解.NET Core Web API基础知识
 slug: understand-dotnet-core-web-api-basics-from-one-post
 description: "本文通过.NET Core 3.1分享Web API基础知识，其他更新版本相差不离"
 date: 2022-05-04 14:43:22
 lastmod: 2022-05-04 14:43:22
 author: 白云任去留
-originalTitle: 一文了解.Net Core Web API基础知识
+originalTitle: 一文了解.NET Core Web API基础知识
 originalLink: https://www.cnblogs.com/ang/p/13206871.html
 copyright: Reprinted
 draft: false
@@ -23,7 +23,7 @@ tags:
 
 ## 一、前言
 
-随着近几年前后端分离、微服务等模式的兴起，.Net Core 也似有如火如荼之势 ，自 16 年发布第一个版本到 19 年底的 3.1 LTS 版本，以及将发布的.NET 5，.NET Core 一路更迭，在部署和开发工具上也都支持了跨平台应用。一直对.Net Core 有所关注，但未涉及太多实际应用，经过一番学习和了解后，于是分享出来。本文主要以.Net Core Web API 为例，讲述.Net Core 的基本应用及注意事项，对于想通过 WebAPI 搭建接口应用的开发者，应该能提供一个系统的轮廓和认识，同时和更多的.Net Core 开发者交流互动，探本勘误，加强对知识的理解，并帮助更多的人。本文以贴近基本的实际操作为主，部分概念或基础步骤不再赘述，文中如有疏漏，还望不吝斧正。
+随着近几年前后端分离、微服务等模式的兴起，.NET Core 也似有如火如荼之势 ，自 16 年发布第一个版本到 19 年底的 3.1 LTS 版本，以及将发布的.NET 5，.NET Core 一路更迭，在部署和开发工具上也都支持了跨平台应用。一直对.NET Core 有所关注，但未涉及太多实际应用，经过一番学习和了解后，于是分享出来。本文主要以.NET Core Web API 为例，讲述.NET Core 的基本应用及注意事项，对于想通过 WebAPI 搭建接口应用的开发者，应该能提供一个系统的轮廓和认识，同时和更多的.NET Core 开发者交流互动，探本勘误，加强对知识的理解，并帮助更多的人。本文以贴近基本的实际操作为主，部分概念或基础步骤不再赘述，文中如有疏漏，还望不吝斧正。
 
 ## 二、Swagger 调试 Web API
 
@@ -32,7 +32,7 @@ tags:
 为解决前后端苦于接口文档与实际不一致、维护和更新文档的耗时费力等问题，swagger 应运而生，同时也解决了接口测试问题。话不多说，直接说明应用步骤。
 
 1. 新建一个 ASP.NET Core Web API 应用程序，版本选择.ASP.NET Core 3.1；
-2. 通过 Nuget 安装包：Swashbuckle.AspNetCore，当前示例版本 5.5.0；
+2. 通过 NuGet 安装包：Swashbuckle.AspNetCore，当前示例版本 5.5.0；
 3. 在 Startup 类的 ConfigureServices 方法内添加以下注入代码：
 
 ```csharp
@@ -345,7 +345,7 @@ public Startup(IConfiguration configuration, IWebHostEnvironment env)
 
 ## 四、文件上传
 
-接口一般少不了文件上传，相比.net framework 框架下 webapi 通过 byte 数组对象等复杂方式进行文件上传，.Net Core WebApi 有了很大变化，其定义了新的 IFormFile 对象来接收上传文件，直接上 Controller 代码：
+接口一般少不了文件上传，相比.net framework 框架下 webapi 通过 byte 数组对象等复杂方式进行文件上传，.NET Core WebApi 有了很大变化，其定义了新的 IFormFile 对象来接收上传文件，直接上 Controller 代码：
 
 **后端代码**
 
@@ -564,7 +564,7 @@ public class ProductController : ControllerBase
 
 **解决 T 时间格式**
 
-.Net Core Web Api 默认以首字母小写的类驼峰式命名返回，但遇到 DateTime 类型的数据，会返回 T 格式时间，如要解决 T 时间格式，定义一个时间格式转换类如下：
+.NET Core Web Api 默认以首字母小写的类驼峰式命名返回，但遇到 DateTime 类型的数据，会返回 T 格式时间，如要解决 T 时间格式，定义一个时间格式转换类如下：
 
 ```csharp
 public class DatetimeJsonConverter : JsonConverter<DateTime>
@@ -696,7 +696,7 @@ public async Task<ApiResult> Register(RegisterEntity model)
 
 ## 七、日志使用
 
-虽然.Net Core WebApi 有自带的日志管理功能，但不一定能较容易地满足我们的需求，通常会采用第三方日志框架，典型的如：NLog、Log4Net，简单介绍 NLog 日志组件的使用；
+虽然.NET Core WebApi 有自带的日志管理功能，但不一定能较容易地满足我们的需求，通常会采用第三方日志框架，典型的如：NLog、Log4Net，简单介绍 NLog 日志组件的使用；
 
 **NLog 的使用**
 
@@ -812,7 +812,7 @@ public class WeatherForecastController : ControllerBase
 
 ## 八、依赖注入
 
-使用.Net Core 少不了和依赖注入打交道，这也是.Net Core 的设计思想之一，关于什么是依赖注入（DI），以及为什么要使用依赖注入，这里不再赘述，先来看一个简单示例的依赖注入。
+使用.NET Core 少不了和依赖注入打交道，这也是.NET Core 的设计思想之一，关于什么是依赖注入（DI），以及为什么要使用依赖注入，这里不再赘述，先来看一个简单示例的依赖注入。
 
 ```csharp
 public interface IProductRepository

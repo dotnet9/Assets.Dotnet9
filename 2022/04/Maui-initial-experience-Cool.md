@@ -4,7 +4,6 @@ slug: maui-initial-experience-cool
 description: "几个小时折腾，Windows上、Mac上成功运行Hello World，后面开发桌面和移动端就选MAUI了"
 date: 2022-04-16 09:16:25
 lastmod: 2022-04-16 09:16:25
-author: Dotnet9
 originalTitle: "MAUI初体验：爽"
 copyright: Original
 draft: false

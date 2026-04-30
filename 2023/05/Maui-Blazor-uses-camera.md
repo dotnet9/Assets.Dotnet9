@@ -95,7 +95,7 @@ http://120.24.62.140:5000/
 
 ## nuget
 
-网关项目也提供基础的通讯库Nuget包
+网关项目也提供基础的通讯库NuGet包
 
 - Modbus库，支持ModbusTcp、ModbusRtu、ModbusRtuOverTcp、ModbusUdp、ModbusServer等
 

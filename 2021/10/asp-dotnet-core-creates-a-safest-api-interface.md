@@ -499,7 +499,7 @@ openssl>pkcs8 -topk8 -inform PEM -in rsa_private_key.pem -outform PEM -nocrypt -
 首先 nuget 下载公钥私钥转换工具
 
 ```shell
-Install-Package BouncyCastle.NetCore -Version 1.8.8
+Install-Package BouncyCastle.NET Core -Version 1.8.8
 ```
 
 ```C#
@@ -610,4 +610,4 @@ demo：[AspNetCoreSafeApi](https://github.com/xuejmnet/AspNetCoreSafeApi)
 
 分享本人开发的 efcore 分表分库读写分离组件,希望为.net 生态做一份共享,如果喜欢或者觉得有用请点下 star 或者赞让更多的人看到
 
-[Gitee Star](https://gitee.com/dotnetchina/sharding-core) 助力 dotnet 生态 [Github Star](https://github.com/xuejmnet/sharding-core)
+[Gitee Star](https://gitee.com/dotnetchina/sharding-core) 助力 dotnet 生态 [GitHub Star](https://github.com/xuejmnet/sharding-core)

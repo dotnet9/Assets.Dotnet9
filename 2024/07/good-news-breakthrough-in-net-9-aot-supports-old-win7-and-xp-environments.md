@@ -4,7 +4,6 @@ slug: good-news-breakthrough-in-net-9-aot-supports-old-win7-and-xp-environments
 description: ".NET 9开始，AOT支持Win7和XP，不仅仅只支持SP1版本"
 date: 2024-07-16 05:24:47
 lastmod: 2024-10-23 13:49:26
-author: Dotnet9
 copyright: Original
 draft: false
 cover: https://img1.dotnet9.com/2024/07/cover_01.png
@@ -250,7 +249,7 @@ XP 需要链接 YY-Thunks，参考链接：https://github.com/Chuyu-Team/YY-Thun
 
 > **2024-08-02**
 >
-> 通过阅读开源Avalonia主题库 [Semi.Avalonia](https://github.com/irihitech/Semi.Avalonia) 的源码及作者 `Rabbitism` 兔佬的PR已经解决Prism问题的，其它库问题使用方法应该类似，修改如下：
+> 通过阅读开源Avalonia主题库 [Semi.Avalonia](https://github.com/irihitech/Semi.Avalonia) 的源码及作者 `Rabbitism` 兔佬的PR已经解决Prism问题的，其他库问题使用方法应该类似，修改如下：
 >
 > 主工程添加Roots.xml，内容如下：
 >

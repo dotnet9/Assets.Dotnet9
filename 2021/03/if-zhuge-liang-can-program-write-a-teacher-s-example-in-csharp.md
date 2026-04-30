@@ -4,7 +4,6 @@ slug: if-zhuge-liang-can-program-write-a-teacher-s-example-in-csharp
 description: "看到一篇18年的文章 [C++版《出师表》]，站长觉得挺有意思的，就用C# 控制台也实现了一遍"
 date: 2021-03-19 09:59:57
 lastmod: 2021-03-19 09:59:57
-author: Dotnet9
 originalTitle: 如果诸葛亮用C#写出师表...
 copyright: Original
 draft: false

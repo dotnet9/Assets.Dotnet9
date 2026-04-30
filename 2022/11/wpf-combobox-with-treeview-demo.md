@@ -278,6 +278,6 @@ public class TypeModel
 
 ## 站长尝试以上代码
 
-站长尝试过上面代码，能正常运行，完整代码托管[Github](https://github.com/dotnet9/TerminalMACS.ManagerForWPF/blob/master/src/Demo/WpfAppForZoomInAndZoomOut/Views/TestComboBoxWithDataGridView.xaml)
+站长尝试过上面代码，能正常运行，完整代码托管[GitHub](https://github.com/dotnet9/TerminalMACS.ManagerForWPF/blob/master/src/Demo/WpfAppForZoomInAndZoomOut/Views/TestComboBoxWithDataGridView.xaml)
 
 ![](https://img1.dotnet9.com/2022/11/0103.gif)

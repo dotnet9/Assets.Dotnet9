@@ -4,7 +4,6 @@ slug: i-created-a-blazor-tool-station-and-bought-the-domain-name-at-once-for-10-
 description: "网站使用Blazor Wasm开发，网站内容包括在线工具和在线小游戏两个种类，主要是体验Web Assembly到底好不好。"
 date: 2023-06-24 22:44:29
 lastmod: 2023-06-25 13:54:47
-author: Dotnet9
 copyright: Original
 draft: false
 cover: https://img1.dotnet9.com/2023/06/cover_12.png

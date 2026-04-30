@@ -4,7 +4,6 @@ slug: how-to-use-record-type-in-csharp-9
 description: "使用过record吗？"
 date: 2021-07-10 22:27:47
 lastmod: 2021-07-10 22:27:47
-author: Dotnet9
 originalTitle: "如何在 C# 9 中使用record类型？"
 copyright: Original
 draft: false

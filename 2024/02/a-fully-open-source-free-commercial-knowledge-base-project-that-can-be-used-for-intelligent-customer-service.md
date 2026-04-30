@@ -146,7 +146,7 @@ Token 是一个 01 年的.NET 程序员，热爱开源，Token 经常对于 Masa
 
 `FastWiki`采用 Apache-2.0，您也可以完全商用不会有任何版权纠纷
 
-Github: https://github.com/239573049/fast-wiki Gitee: https://gitee.com/hejiale010426/fast-wiki
+GitHub: https://github.com/239573049/fast-wiki Gitee: https://gitee.com/hejiale010426/fast-wiki
 
 `FastWiki`技术交流群：
 

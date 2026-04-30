@@ -4,7 +4,6 @@ slug: csharp-advanced-dynamic-registration-of-third-party-library-events-easy-to
 description: "在C#开发过程中，我们经常需要处理各种事件，有时候还需要动态地注册第三方库定义的事件。今天，我将为大家分享一个关于如何动态注册第三方库事件的Demo，并根据提供的代码和注释，详细讲解每一步骤。"
 date: 2024-02-03 22:14:14
 lastmod: 2024-02-03 22:57:16
-author: Dotnet9
 copyright: Original
 draft: false
 cover: https://img1.dotnet9.com/2024/02/cover_01.png

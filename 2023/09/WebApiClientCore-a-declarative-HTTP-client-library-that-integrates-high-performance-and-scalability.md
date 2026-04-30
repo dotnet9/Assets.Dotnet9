@@ -24,9 +24,9 @@ tags:
 
 [WebApiClient.JIT/AOT](https://github.com/dotnetcore/WebApiClient/tree/WebApiClient.JITAOT)的.NET Core 版本，集高性能高可扩展性于一体的声明式 http 客户端库，特别适用于微服务的 restful 资源请求，也适用于各种畸形 http 接口请求。
 
-### Nuget
+### NuGet
 
-| 包名                                       | 描述                                                                      | Nuget                                                                                                                                                          |
+| 包名                                       | 描述                                                                      | NuGet                                                                                                                                                          |
 | ------------------------------------------ | ------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | WebApiClientCore                           | 基础包                                                                    | [![NuGet](https://buildstats.info/nuget/WebApiClientCore)](https://buildstats.info/nuget/WebApiClientCore)                                                     |
 | WebApiClientCore.Extensions.OAuths         | OAuth 扩展包                                                              | [![NuGet](https://buildstats.info/nuget/WebApiClientCore.Extensions.OAuths)](https://buildstats.info/nuget/WebApiClientCore.Extensions.OAuths)                 |
@@ -620,7 +620,7 @@ public class CacheByAbsolutePathAttribute : ApiCacheAttribute
 
 #### 自定义缓存提供者
 
-默认的缓存提供者为内存缓存，如果希望将缓存保存到其它存储位置，则需要自定义 缓存提者，并注册替换默认的缓存提供者。
+默认的缓存提供者为内存缓存，如果希望将缓存保存到其他存储位置，则需要自定义 缓存提者，并注册替换默认的缓存提供者。
 
 ```csharp
 public class RedisResponseCacheProvider : IResponseCacheProvider
@@ -746,7 +746,7 @@ public interface IFaceApi
 
 ### 自定义请求内容与响应内容解析
 
-除了常见的 xml 或 json 响应内容要反序列化为强类型结果模型，你可能会遇到其它的二进制协议响应内容，比如 google 的 ProtoBuf 二进制内容。
+除了常见的 xml 或 json 响应内容要反序列化为强类型结果模型，你可能会遇到其他的二进制协议响应内容，比如 google 的 ProtoBuf 二进制内容。
 
 #### 1 编写相关自定义特性
 
@@ -1025,7 +1025,7 @@ public interface IUserApi
 }
 ```
 
-OAuthTokenAttribute 默认实现将 token 放到 Authorization 请求头，如果你的接口需要请 token 放到其它地方比如 uri 的 query，需要重写 OAuthTokenAttribute：
+OAuthTokenAttribute 默认实现将 token 放到 Authorization 请求头，如果你的接口需要请 token 放到其他地方比如 uri 的 query，需要重写 OAuthTokenAttribute：
 
 ```csharp
 class UriQueryTokenAttribute : OAuthTokenAttribute
@@ -1054,7 +1054,7 @@ services
     .AddOAuthTokenHandler();
 ```
 
-OAuthTokenHandler 默认实现将 token 放到 Authorization 请求头，如果你的接口需要请 token 放到其它地方比如 uri 的 query，需要重写 OAuthTokenHandler：
+OAuthTokenHandler 默认实现将 token 放到 Authorization 请求头，如果你的接口需要请 token 放到其他地方比如 uri 的 query，需要重写 OAuthTokenHandler：
 
 ```csharp
 class UriQueryOAuthTokenHandler : OAuthTokenHandler

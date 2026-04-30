@@ -54,7 +54,7 @@ tags:
 
 1. 在项目文件的顶部，将 SDK 更改为 `Microsoft.NET.Sdk.Razor`。
 2. 添加节点`<RootNameSpace>WPFBlazorChat</RootNameSpace>`，将项目命名空间 `WPFBlazorChat` 设置为应用的根命名空间。
-3. 添加`Nuget`包`Microsoft.AspNetCore.Components.WebView.Wpf`，版本看你选择的`.NET`版本而定。
+3. 添加`NuGet`包`Microsoft.AspNetCore.Components.WebView.Wpf`，版本看你选择的`.NET`版本而定。
 
 ### 2.2 添加`_Imports.razor`文件
 
@@ -187,7 +187,7 @@ a, .btn-link {
 
 如上代码，要点如下：
 
-1. 添加上面引入的`Nuget`包`Microsoft.AspNetCore.Components.WebView.Wpf`的命名空间，命名为`blazor`，主要是要使用`BlazorWebView`组件;
+1. 添加上面引入的`NuGet`包`Microsoft.AspNetCore.Components.WebView.Wpf`的命名空间，命名为`blazor`，主要是要使用`BlazorWebView`组件;
 2. `BlazorWebView`组件属性`HostPage`指定承载的html文件，`Services`指定razor组件的`Ioc`容器，看下面`MainWindow()`里标红的代码;
 3. `RootComponent`的`Selector="#app"`属性指示`Razor`组件渲染的位置，看`index.html`中id为`app`的html元素，`ComponentType`指示需要在`#app`中渲染的`Razor`组件类型。
 
@@ -465,7 +465,7 @@ public partial class MainWindow : Window
 
 **窗体拖动**
 
-首先添加`Nuget`包`Simplify.Windows.Forms`，用于获取鼠标光标的位置：
+首先添加`NuGet`包`Simplify.Windows.Forms`，用于获取鼠标光标的位置：
 
 ```xml
 <PackageReference Include="Simplify.Windows.Forms" Version="1.1.2" />
@@ -713,7 +713,7 @@ public class WindowService
 
 其实上面的代码可以当做学习，即使有不小瑕疵（哈哈），本小节我们还是使用第三包解决窗体圆角和最大化问题。
 
-首先添加`Nuget`包`ModernWpfUI`，该WPF控件库本站介绍链接[开源WPF控件库：ModernWpf](https://dotnet9.com/2020/09/Open-source-WPF-control-library-recommendation-modernwpf)：
+首先添加`NuGet`包`ModernWpfUI`，该WPF控件库本站介绍链接[开源WPF控件库：ModernWpf](https://dotnet9.com/2020/09/Open-source-WPF-control-library-recommendation-modernwpf)：
 
 ```xml
 <PackageReference Include="ModernWpfUI" Version="0.9.7-preview.2" />

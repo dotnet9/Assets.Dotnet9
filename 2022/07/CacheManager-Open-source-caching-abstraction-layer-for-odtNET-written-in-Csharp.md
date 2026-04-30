@@ -70,7 +70,7 @@ private static void EventsExample()
 }
 ```
 
-- Github 地址：[https://github.com/MichaCo/CacheManager](https://github.com/MichaCo/CacheManager)
+- GitHub 地址：[https://github.com/MichaCo/CacheManager](https://github.com/MichaCo/CacheManager)
 
 最后大家如果喜欢我的文章，还麻烦给个关注并点个赞, 希望 net 生态圈越来越好！
 

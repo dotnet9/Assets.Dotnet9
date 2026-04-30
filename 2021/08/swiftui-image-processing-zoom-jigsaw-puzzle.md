@@ -4,7 +4,6 @@ slug: swiftui-image-processing-zoom-jigsaw-puzzle
 description: "采用SwiftUI Core Graphics技术，与C#的GDI+绘图类似"
 date: 2021-08-21 23:44:11
 lastmod: 2021-08-21 23:44:11
-author: Dotnet9
 originalTitle: "SwiftUI图片处理(缩放、拼图)"
 copyright: Original
 draft: false
@@ -500,7 +499,7 @@ struct TestImageDemo_Previews: PreviewProvider {
 
 ## 5、结尾
 
-所有代码已贴，并且代码已上传 Github，见下面备注。
+所有代码已贴，并且代码已上传 GitHub，见下面备注。
 
 ---
 

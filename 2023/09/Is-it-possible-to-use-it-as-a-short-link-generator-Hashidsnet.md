@@ -1,5 +1,5 @@
 ---
-title: "使用它做为短链接生成可以吗？-Hashids.net"
+title: "使用它作为短链接生成可以吗？-Hashids.net"
 slug: is-it-possible-to-use-it-as-a-short-link-generator-hashidsnet
 description: "Hashids.net是一款轻量级开源的将数字编码成字符串的加密(短ID生成)工具类库，其实灵活用它将字符串生成短Id也是可以的，只是不可逆。"
 date: 2023-09-17 20:31:49
@@ -224,7 +224,7 @@ var hex = hashids.DecodeHex("kRNrpKlJ");
 
 > 以下为站长扩展长字符串转短字符串方法介绍
 
-其实很简单，将需要加密的原字符串做为盐，加密数字固定，这样就简单实现了：
+其实很简单，将需要加密的原字符串作为盐，加密数字固定，这样就简单实现了：
 
 ```csharp
 public static string GetHashids(this string sourceStr, int number = 9)

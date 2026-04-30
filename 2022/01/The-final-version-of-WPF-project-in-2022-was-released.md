@@ -1,7 +1,7 @@
 ---
 title: 2022年终结版WPF项目实战合集发布
 slug: the-final-version-of-wpf-project-in-2022-was-released
-description: "本次视频合集共58集, 包含了WPF的基础部分(布局、样式、资源、动画、模板、MVVM) 、Prism的概念(Region、Navigation、DialogService、Module..)、MaterialDesign集成、Asp.Net Core WebApi部分(Entityframework、发布部署)、客户端发布、部署等完整的开发流程。"
+description: "本次视频合集共58集, 包含了WPF的基础部分(布局、样式、资源、动画、模板、MVVM) 、Prism的概念(Region、Navigation、DialogService、Module..)、MaterialDesign集成、ASP.NET Core WebApi部分(Entityframework、发布部署)、客户端发布、部署等完整的开发流程。"
 date: 2022-01-14 23:12:04
 lastmod: 2022-01-14 23:12:04
 author: 痕迹
@@ -28,7 +28,7 @@ tags:
 
 ## 视频公开计划
 
-本次视频合集共 58 集, 包含了 WPF 的基础部分(布局、样式、资源、动画、模板、MVVM) 、Prism 的概念(Region、Navigation、DialogService、Module..)、MaterialDesign 集成、Asp.Net Core WebApi 部分(Entityframework、发布部署)、客户端发布、部署等完整的开发流程。
+本次视频合集共 58 集, 包含了 WPF 的基础部分(布局、样式、资源、动画、模板、MVVM) 、Prism 的概念(Region、Navigation、DialogService、Module..)、MaterialDesign 集成、ASP.NET Core WebApi 部分(Entityframework、发布部署)、客户端发布、部署等完整的开发流程。
 
 为了减少各位同学的学习压力, 本次的视频不会一次性发布只视频平台, 而是按照阶段性进行发布(例如每天 2 集的形式), 周期大概为 1 个月内发布完成.
 

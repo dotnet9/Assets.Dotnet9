@@ -96,7 +96,7 @@ private void ReceiveNewEmail(NewEmailCommand command)
 
 ```csharp
 // 发布新邮件通知事件
-eventClient.Publish("event.email.new", new NewEmailCommand { Subject = "恭喜您中Github一等奖", Content = "我们很开心，您在2024年7月...", SendTime = new DateTime(2024, 7, 27) });
+eventClient.Publish("event.email.new", new NewEmailCommand { Subject = "恭喜您中GitHub一等奖", Content = "我们很开心，您在2024年7月...", SendTime = new DateTime(2024, 7, 27) });
 ```
 
 ### 查询(Query)

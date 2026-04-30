@@ -1,7 +1,7 @@
 ---
 title: Dapper in .NET Core
 slug: dapper-in-dotnet-core
-description: "关于什么是Dapper（详细入口），在此不做赘述；本文仅对Dapper在.Net Core中的使用作扼要说明，所陈代码以示例讲解为主，乃抛砖引玉，开发者可根据自身需要进行扩展和调整"
+description: "关于什么是Dapper（详细入口），在此不做赘述；本文仅对Dapper在.NET Core中的使用作扼要说明，所陈代码以示例讲解为主，乃抛砖引玉，开发者可根据自身需要进行扩展和调整"
 date: 2022-01-10 22:12:04
 lastmod: 2022-01-10 22:12:04
 author: 白云任去留
@@ -33,11 +33,11 @@ tags:
 
 ## 一、前言
 
-关于什么是 Dapper（详细入口），在此不做赘述；本文仅对 Dapper 在.Net Core 中的使用作扼要说明，所陈代码以示例讲解为主，乃抛砖引玉，开发者可根据自身需要进行扩展和调整；其中如有疏漏之处，望不吝斧正。
+关于什么是 Dapper（详细入口），在此不做赘述；本文仅对 Dapper 在.NET Core 中的使用作扼要说明，所陈代码以示例讲解为主，乃抛砖引玉，开发者可根据自身需要进行扩展和调整；其中如有疏漏之处，望不吝斧正。
 
 ## 二、Dapper 环境搭建
 
-当前以.Net Core WebAPI 或 MVC 项目为例，框架版本为.NET 5.0，相关 NuGet 包引用如下：
+当前以.NET Core WebAPI 或 MVC 项目为例，框架版本为.NET 5.0，相关 NuGet 包引用如下：
 
 ```shell
 Install-Package Dapper
@@ -80,7 +80,7 @@ public class Product
 
 ## 三、Dapper 封装
 
-关于 Dapper 数据访问，这里参考 Github 上的某示例（入口：https://github.com/EloreTec/UnitOfWorkWithDapper），作修改调整封装如下：
+关于 Dapper 数据访问，这里参考 GitHub 上的某示例（入口：https://github.com/EloreTec/UnitOfWorkWithDapper），作修改调整封装如下：
 
 ### 定义 DapperDBContext 类
 

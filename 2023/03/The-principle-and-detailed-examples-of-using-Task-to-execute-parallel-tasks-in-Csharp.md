@@ -4,7 +4,6 @@ slug: the-principle-and-detailed-examples-of-using-task-to-execute-parallel-task
 description: "在C#中，使用Task可以很方便地执行并行任务。"
 date: 2023-03-28 20:17:14
 lastmod: 2023-03-28 20:17:14
-author: Dotnet9
 copyright: Original
 cover: https://img1.dotnet9.com/2023/03/cover_17.png
 categories:

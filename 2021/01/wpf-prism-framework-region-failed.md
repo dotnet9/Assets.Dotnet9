@@ -4,7 +4,6 @@ slug: wpf-prism-framework-region-failed
 description: "一般客户端项目常规操作流程是：弹出登录窗口=》账号验证成功=》关闭登录窗口=》弹出主窗口=》在主窗口作业。"
 date: 2021-01-07 10:53:07
 lastmod: 2021-01-07 10:53:07
-author: Dotnet9
 originalTitle: "WPF Prism框架Region失效了？"
 copyright: Original
 draft: false
@@ -73,7 +72,7 @@ protected override Window CreateShell()
 
 百度到也有人遇到这个问题：
 
-1. [WPF Prism 框架下先登录窗体再打开主窗体](https://bbs.csdn.net/topics/392475855)
+1. WPF Prism 框架下先登录窗体再打开主窗体（CSDN 讨论帖，原链接已不再维护）
 
 讨论区很火，没看到想要的结果。
 
@@ -86,18 +85,18 @@ RegionManager.SetRegionName( theNameOfTheContentControlInsideThePopup, WellKnown
 RegionManager.SetRegionManager( theNameOfTheContentControlInsideThePopup, theRegionManagerInstanceFromUnity );
 ```
 
-3. [Prism MVVM 应用 登陆后切换主窗体实现](https://www.iteye.com/resource/cxb2011-11142807)
+3. [Prism MVVM 应用 登录后切换主窗体实现](https://www.iteye.com/resource/cxb2011-11142807)
 
-这个代码是将登录与主窗体做为用户控件，app.xaml.cs 中注册 shellview，shellview 中设置一个区域，两个用户控件通过导航在这个区域切换，效果是没问题，主窗体内的区域能正常使用，但自定义的登录界面和主界面，一般标题栏啥的都不一样，这种做法比较麻烦，不推荐使用。
+这个代码是将登录与主窗体作为用户控件，app.xaml.cs 中注册 shellview，shellview 中设置一个区域，两个用户控件通过导航在这个区域切换，效果是没问题，主窗体内的区域能正常使用，但自定义的登录界面和主界面，一般标题栏啥的都不一样，这种做法比较麻烦，不推荐使用。
 
-看问题 3 类似的描述：[Prism MVVM 应用 登陆后切换主窗体实现](https://download.csdn.net/download/cxb2011/11142807)
+看问题 3 类似的描述：[Prism MVVM 应用 登录后切换主窗体实现](https://download.csdn.net/download/cxb2011/11142807)
 
 ```C#
 应用场景
-    使用Prism7开发WPF程序，编码采用MVVM形式。当程序启动时，首先进入一个登陆界面，进行登陆认证，认证成功后转入程序布局主窗口。
+    使用Prism7开发WPF程序，编码采用MVVM形式。当程序启动时，首先进入一个登录界面，进行登录认证，认证成功后转入程序布局主窗口。
 
 设计思路
-    WPF程序框架搭建后，程序中存一个Shell.xaml，相当于表演者的唯一舞台。登陆窗体（以下简称 LoginView)和程序布局主窗体（以下简称 MainView）,分别利用IRegionManager进行管理，根据需要在不同时机相继出场表演。所有操作均由各自ViewModel（简称VM）代码完成。
+    WPF程序框架搭建后，程序中存一个Shell.xaml，相当于表演者的唯一舞台。登录窗体（以下简称 LoginView)和程序布局主窗体（以下简称 MainView）,分别利用IRegionManager进行管理，根据需要在不同时机相继出场表演。所有操作均由各自ViewModel（简称VM）代码完成。
     1.当程序启动后，Shell通过VM，使用RegionManager的Add方法激活LoginView，(注：站长补充描述=登录验证成功，注销LoginView，再通过Add方法激活MainView)
 ```
 

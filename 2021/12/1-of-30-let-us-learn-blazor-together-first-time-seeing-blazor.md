@@ -24,7 +24,7 @@ tags:
 
 笔者接触软件行业的时间不长，先后接触三种架构，分别为 ASP.NET MVC、ASP.NET Core & Blazor、ASP.NET Core & Angular，由于 ASP.NET MVC 是笔者初入软件行业的新人时期，迷迷糊糊地就在前辈的带领下完成了项目，所以没什么感悟，只是大概了解前后端的差别，前端以 HTTP Request 发送向后端取数据，后端回传数据，前端再将结果呈现在页面上。
 
-待到项目收尾，在主管力推转型之下改用 ASP.NET Core & Blazor 并指派笔者做出模板，笔者搜寻网路资源东拼西凑摸索出了一套堪用的架构，当时只觉得 Blazor 跟 ASP.NET MVC 差距甚大，前端不需要弱类型的 Javascript，前后端都是强类型的世界，对笔者的懒人个性起到莫大帮助，可惜接下来由于客户需求，只能改用 ASP.NET Core & Angular，没办法深入研究 Blazor。
+待到项目收尾，在主管力推转型之下改用 ASP.NET Core & Blazor 并指派笔者做出模板，笔者搜寻网路资源东拼西凑摸索出了一套堪用的架构，当时只觉得 Blazor 跟 ASP.NET MVC 差距甚大，前端不需要弱类型的 JavaScript，前后端都是强类型的世界，对笔者的懒人个性起到莫大帮助，可惜接下来由于客户需求，只能改用 ASP.NET Core & Angular，没办法深入研究 Blazor。
 
 不过有失必有得，在新项目的高压强度及同事的指导下，笔者大致理解了 Angular 的 Module, Component 分层架构、Observable 类似 Ajax 的概念，虽然仍是一知半解，但笔者也对 Angular 大致熟悉了，发现 Component 的概念跟 Blazor 的相似，可说是殊途同归。
 
@@ -39,9 +39,9 @@ tags:
 5. EF Core
 6. 登录、授权
 
-Blazor 使用 C# 编写，虽然也可以用 VB、F# 编写，但笔者只熟习 C#，C# 属于.NET 框架，.NET 框架在 Visual Studio 开发较为方便，因此笔者会使用 Visual Studio 开发，版本为.NET 5。关于 ASP.NET, .NET Framework, NET Core 的差别，笔者此前看到有人详述，觉得非常有帮助，若时间允许，笔者会再分享出来。另外笔者过程会使用 git 做为版本控制工具，最终程序代码会放在 github 上。
+Blazor 使用 C# 编写，虽然也可以用 VB、F# 编写，但笔者只熟习 C#，C# 属于.NET 框架，.NET 框架在 Visual Studio 开发较为方便，因此笔者会使用 Visual Studio 开发，版本为.NET 5。关于 ASP.NET, .NET Framework, NET Core 的差别，笔者此前看到有人详述，觉得非常有帮助，若时间允许，笔者会再分享出来。另外笔者过程会使用 git 作为版本控制工具，最终程序代码会放在 github 上。
 
-[Github link](https://github.com/Tommy95271/BlazorPractice)
+[GitHub link](https://github.com/Tommy95271/BlazorPractice)
 
 [Visual Studio download Link](https://visualstudio.microsoft.com/zh-hant/vs/whatsnew/)
 

@@ -96,7 +96,7 @@ Promise 是前端避不掉的语法，有兴趣的人可以看笔者附上的链
 1. [Blazor JavaScript interoperability (JS interop)](https://docs.microsoft.com/en-us/aspnet/core/blazor/javascript-interoperability/?view=aspnetcore-5.0)
 2. [Call JavaScript functions from .NET methods in ASP.NET Core Blazor](https://docs.microsoft.com/en-us/aspnet/core/blazor/javascript-interoperability/call-javascript-from-dotnet?view=aspnetcore-5.0)
 3. [HANDLING BUTTONS (CONFIRM, DENY, CANCEL)](https://sweetalert2.github.io/#handling-buttons)
-4. [Day 20：Javascript interop](https://ithelp.ithome.com.tw/articles/10249044)
+4. [Day 20：JavaScript interop](https://ithelp.ithome.com.tw/articles/10249044)
 5. [JavaScript Promise 全介绍](https://wcc723.github.io/development/2020/02/16/all-new-promise/)
 6. [Support ObservableLike #1982](https://github.com/sweetalert2/sweetalert2/issues/1982)
 7. [Blazor - Making a Promise in JS - SweetAlert2 Confirmation Dialog](https://www.youtube.com/watch?v=P1nMiVpptGk)

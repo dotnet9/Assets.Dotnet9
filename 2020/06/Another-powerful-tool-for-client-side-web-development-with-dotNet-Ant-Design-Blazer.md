@@ -4,7 +4,6 @@ slug: another-powerful-tool-for-client-side-web-development-with-dotnet-ant-desi
 description: "继上篇介绍Bootstrap风格的BlazorUI组件库后，今天我来介绍另一款Blazor UI组件库：一套基于 Ant Design 和 Blazor 的企业级组件库。"
 date: 2020-06-21 13:45:56
 lastmod: 2020-06-21 13:45:56
-author: Dotnet9
 originalTitle: .NET进行客户端Web开发又一利器 - Ant Design Blazor
 copyright: Original
 draft: false
@@ -87,7 +86,7 @@ tags:
 
 ### 2.1 项目关注度
 
-作者将库发布在 Github 上，README 支持中英文，日常代码提交使用英文，让全球的.Neter 参与其中，使得更多的社区成员开始关注 Ant Design Blazor，也使得更多的社区成员开始关注 Blazor 的发展了。
+作者将库发布在 GitHub 上，README 支持中英文，日常代码提交使用英文，让全球的.Neter 参与其中，使得更多的社区成员开始关注 Ant Design Blazor，也使得更多的社区成员开始关注 Blazor 的发展了。
 
 库作者发文时 star 统计（2020 年 03 月 21 日）
 

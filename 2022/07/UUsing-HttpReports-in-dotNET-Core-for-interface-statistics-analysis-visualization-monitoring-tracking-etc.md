@@ -41,7 +41,7 @@ tags:
 
 ## 第二步
 
-使用`Nuget`安装`MHttpReports.Dashboard`包和`HttpReports.SqlServer`
+使用`NuGet`安装`MHttpReports.Dashboard`包和`HttpReports.SqlServer`
 
 ![](https://img1.dotnet9.com/2022/07/0701.png)
 
@@ -104,7 +104,7 @@ public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
 }
 ```
 
-把 Dashboard 程序启动起来，如果没有问题的话，会跳转到 Dashboard 的登陆页面
+把 Dashboard 程序启动起来，如果没有问题的话，会跳转到 Dashboard 的登录页面
 
 ![](https://img1.dotnet9.com/2022/07/0702.png)
 

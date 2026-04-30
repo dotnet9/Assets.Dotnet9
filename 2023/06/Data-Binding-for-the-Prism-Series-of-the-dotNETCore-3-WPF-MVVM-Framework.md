@@ -40,7 +40,7 @@ Install-Package Prism.Unity -Version 7.2.0.1367
 
 也可以去掉‘-Version 7.2.0.1367’获取最新的版本
 
-2. 使用管理解决方案的 Nuget 包
+2. 使用管理解决方案的 NuGet 包
 
 ![](https://img1.dotnet9.com/2023/06/0201.jpg)
 

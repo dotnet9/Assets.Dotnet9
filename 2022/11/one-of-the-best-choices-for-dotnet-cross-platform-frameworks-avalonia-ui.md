@@ -4,7 +4,6 @@ slug: one-of-the-best-choices-for-dotnet-cross-platform-frameworks-avalonia-ui
 description: "这是一个基于WPF XAML的跨平台UI框架，并支持多种操作系统（Windows（.NET Core），Linux（GTK），MacOS，Android和iOS），Web（WebAssembly）"
 date: 2022-11-19 21:24:26
 lastmod: 2024-10-24 10:32:29
-author: Dotnet9
 copyright: Original
 draft: false
 cover: https://img1.dotnet9.com/2022/11/0402.png
@@ -37,7 +36,7 @@ Avalonia UI文档教程：https://docs.avaloniaui.net/docs/getting-started
 
 ## 2. Avalonia UI桌面三大平台演示
 
-这是[Avalonia UI官方网站](https://avaloniaui.net/)的一个Demo，站长对部分`Nuget`包进行了升级，网友【小飞机MLA】对`Linux`版本修复了字体Bug得以正常运行、演示。
+这是[Avalonia UI官方网站](https://avaloniaui.net/)的一个Demo，站长对部分`NuGet`包进行了升级，网友【小飞机MLA】对`Linux`版本修复了字体Bug得以正常运行、演示。
 
 ### 2.1 本文案例
 

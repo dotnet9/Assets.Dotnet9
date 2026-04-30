@@ -84,11 +84,11 @@ public abstract class EntityBase : INotifyPropertyChanged, ICloneable, PWMIS.Com
             this.PropertyChanged(this, new PropertyChangedEventArgs(currPropName));
         }
     }
-    // 其它代码略… …
+    // 其他代码略… …
 }
 ```
 
-所以 SOD 框架的实体类可以直接用来作为 MVVM 上的 Model 提供给 View 做为被绑定对象，因此要我们只需要解决 WinForms 形式的 View 元素如何实现绑定操作，那么我们的 WinForms 应用即可实现 MVVM 功能了。在 WinForms 上，控件基本上都已经实现了绑定功能，它就是控件的 DataBindings，向它添加绑定即可，例如下面的例子：
+所以 SOD 框架的实体类可以直接用来作为 MVVM 上的 Model 提供给 View 作为被绑定对象，因此要我们只需要解决 WinForms 形式的 View 元素如何实现绑定操作，那么我们的 WinForms 应用即可实现 MVVM 功能了。在 WinForms 上，控件基本上都已经实现了绑定功能，它就是控件的 DataBindings，向它添加绑定即可，例如下面的例子：
 
 ```C#
 this.textbox1.DataBindings.Add("Text", userEntity, "Name");
@@ -122,7 +122,7 @@ public interface IDataControl
         get;
         set;
     }
-    // 其它接口方法内容略… …
+    // 其他接口方法内容略… …
 ```
 
 我们可以使用 LinkObject 来指定要绑定的实体类对象，而 LinkProperty 来指定要绑定的对象的属性，因此可以通过下面的代码实现 WinForms 控件与 SOD 实体类的双向绑定：
@@ -231,7 +231,7 @@ private void Form1_Load(object sender, EventArgs e)
 </configuration>
 ```
 
-如果你需要更低版本的 Access 数据库支持，或者换用其它数据库（比如 SqlServer)，请阅读参考下面步骤提供的信息：
+如果你需要更低版本的 Access 数据库支持，或者换用其他数据库（比如 SqlServer)，请阅读参考下面步骤提供的信息：
 
 1. 打开下面链接：
 
@@ -492,7 +492,7 @@ public class SubmitedUsersViewModel
 }
 ```
 
-### 4.5 添加 Nuget 包引用
+### 4.5 添加 NuGet 包引用
 
 对于整个解决方案，我们都需要添加 PDF.NET Core 包，但是对于我们的 WinForms 主程序，需要额外添加 2 个相关的包，一个 SOD WinForm 扩展和一个 SOD Access 扩展，下面是解决方案安装的全部包示意图：
 

@@ -13,7 +13,7 @@ cover: https://img1.dotnet9.com/2022/04/cover_16.png
 categories:
   - 分享
 tags:
-  - Github
+  - GitHub
 ---
 
 > 来源｜https://urlify.cn/IFzQRb
@@ -38,7 +38,7 @@ tags:
 
 以上网站为演示站点，如无法打开可以查看开源项目：gh-proxy-GitHub(https://hunsh.net/archives/23/) 文件加速自行部署。
 
-## 3. Github 加速下载
+## 3. GitHub 加速下载
 
 只需要复制当前 GitHub 地址粘贴到输入框中就可以代理加速下载！
 
@@ -46,11 +46,11 @@ tags:
 
 ![](https://img1.dotnet9.com/2022/04/1601.png)
 
-## 4. 加速你的 Github
+## 4. 加速你的 GitHub
 
 https://github.zhlh6.cn
 
-输入 Github 仓库地址，使用生成的地址进行 git ssh 等操作
+输入 GitHub 仓库地址，使用生成的地址进行 git ssh 等操作
 
 ## 5. 谷歌浏览器 GitHub 加速插件(推荐)
 
@@ -78,11 +78,11 @@ jsdelivr 唯一美中不足的就是它不能获取 exe 文件以及 Release 处
 
 ![](https://img1.dotnet9.com/2022/04/1604.png)
 
-在导入页面中粘贴你的 Github 仓库地址，点击导入即可：
+在导入页面中粘贴你的 GitHub 仓库地址，点击导入即可：
 
 ![](https://img1.dotnet9.com/2022/04/1605.png)
 
-等待导入操作完成，然后在导入的仓库中下载浏览对应的该 GitHub 仓库代码，你也可以点击仓库顶部的“刷新”按钮进行 Github 代码仓库的同步。
+等待导入操作完成，然后在导入的仓库中下载浏览对应的该 GitHub 仓库代码，你也可以点击仓库顶部的“刷新”按钮进行 GitHub 代码仓库的同步。
 
 ![](https://img1.dotnet9.com/2022/04/1606.png)
 

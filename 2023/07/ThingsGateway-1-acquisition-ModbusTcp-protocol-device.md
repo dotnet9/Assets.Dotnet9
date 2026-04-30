@@ -28,7 +28,7 @@ tags:
 
 Gitee源代码仓库：https://gitee.com/diego2098/ThingsGateway
 
-Github源代码仓库：https://github.com/kimdiego2098/ThingsGateway
+GitHub源代码仓库：https://github.com/kimdiego2098/ThingsGateway
 
 使用文档：https://diego2098.gitee.io/thingsgateway-docs/
 

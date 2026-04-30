@@ -22,15 +22,15 @@ tags:
 
 ## 前言
 
-在实际的项目开发中，我们会遇到许多需要通过程序发送邮件的场景，比如异常报警、消息、进度通知等等。一般情况下我们使用原生的 SmtpClient 类库居多，它能满足我们绝大多数场景。但是使用起来不够简洁，许多场景需要我们自行封装方法去实现，而且代码量非常可观。庆幸的是，我们有一款非常棒的组件，能满足我们绝大多数应用场景，而且使用简单功能强大，就是我们今天要说的 FluentEmail，这也是我们实际在项目中正在使用的邮件发送组件。如果你们在.Net Core 中有发送邮件的需求，也推荐去尝试一下。
+在实际的项目开发中，我们会遇到许多需要通过程序发送邮件的场景，比如异常报警、消息、进度通知等等。一般情况下我们使用原生的 SmtpClient 类库居多，它能满足我们绝大多数场景。但是使用起来不够简洁，许多场景需要我们自行封装方法去实现，而且代码量非常可观。庆幸的是，我们有一款非常棒的组件，能满足我们绝大多数应用场景，而且使用简单功能强大，就是我们今天要说的 FluentEmail，这也是我们实际在项目中正在使用的邮件发送组件。如果你们在.NET Core 中有发送邮件的需求，也推荐去尝试一下。
 
 ## FluentEmail
 
-FluentEmail 是一款在 GitHub 上开源免费的支持.Net 和.Net Core 邮件发送组件，目前已有 1K 多的 Star，而且近两年随着.Net Core 的日益成熟，它的 Star 增长趋势还是非常迅猛的。它在 GitHub 地址是https://github.com/lukencode/FluentEmail，它的功能非常强大而且非常实用，支持Razor的邮件模板和支持使用SendGrid，MailGun，SMTP发送邮件，而且使用也非常简单。
+FluentEmail 是一款在 GitHub 上开源免费的支持.Net 和.NET Core 邮件发送组件，目前已有 1K 多的 Star，而且近两年随着.NET Core 的日益成熟，它的 Star 增长趋势还是非常迅猛的。它在 GitHub 地址是https://github.com/lukencode/FluentEmail，它的功能非常强大而且非常实用，支持Razor的邮件模板和支持使用SendGrid，MailGun，SMTP发送邮件，而且使用也非常简单。
 
-## Nuget 组件
+## NuGet 组件
 
-FluentEmail 功能强大，而且对不同场景的支持都有独立的 Nuget 包，这种低耦合的拆分不仅使得依赖非常清晰，而且避免引入不需要的代码，具体功能包含在以下的组件包中
+FluentEmail 功能强大，而且对不同场景的支持都有独立的 NuGet 包，这种低耦合的拆分不仅使得依赖非常清晰，而且避免引入不需要的代码，具体功能包含在以下的组件包中
 
 - [FluentEmail.Core](https://github.com/lukencode/FluentEmail/tree/master/src/FluentEmail.Core) - 基础核心包，包含了基础的模型定义和默认的设置，而且以下的引用包都包含了这个核心包。
 - [FluentEmail.Smtp](https://github.com/lukencode/FluentEmail/blob/master/src/Senders/FluentEmail.Smtp) - 使用 SMTP 服务发送邮件的程序包。
@@ -146,9 +146,9 @@ var email = Email
         //抄送人
         .CC("admin@126.com")
         //邮件标题
-        .Subject("关于.Net Core怎么样")
+        .Subject("关于.NET Core怎么样")
         //邮件内容
-        .Body("<h1 align=\"center\">.NET Core</h1><p>.Net Core很优秀吗？是的,一点毛病都没有！！！</p>",true);
+        .Body("<h1 align=\"center\">.NET Core</h1><p>.NET Core很优秀吗？是的,一点毛病都没有！！！</p>",true);
 
 //构建附件
 var stream = new MemoryStream();
@@ -245,7 +245,7 @@ var email = Email
 var result = await email.SendAsync();
 ```
 
-FluentEmail.Razor 之所以能够支持强大的 Razor 模板引擎，主要是得益于它内部集成了 RazorLight，这是一款非常强大的 Razor 引擎，可以将 Razor 模板字符串或者 Razor 视图文件解析成具体的字符串结果，具体详情可参阅 RazorLight 官方 GitHub 地址https://github.com/toddams/RazorLight，目前正式版并不支持.Net Core，可以选择下载 beta 版本
+FluentEmail.Razor 之所以能够支持强大的 Razor 模板引擎，主要是得益于它内部集成了 RazorLight，这是一款非常强大的 Razor 引擎，可以将 Razor 模板字符串或者 Razor 视图文件解析成具体的字符串结果，具体详情可参阅 RazorLight 官方 GitHub 地址https://github.com/toddams/RazorLight，目前正式版并不支持.NET Core，可以选择下载 beta 版本
 
 ```shell
 Install-Package RazorLight -Version 2.0.0-beta10
@@ -282,7 +282,7 @@ string result = await engine.CompileRenderAsync("template.cshtml", model);
 
 **结合依赖注入使用**
 
-在使用.Net Core 的实际开发中，依赖注入已经成为了必不可少的开发模式。如果你正在使用.Net Core 开发项目，但是你还没有接触依赖注入，那么需要你先自行反省一下。FluentEmail 作为一款与时俱进的组件，也可以结合依赖注入使用，使用这种方式我们可以在注册的时候统一的配置一些默认的设置。这波操作就不需要额外引入一些别的包了，如果你需要使用 Smtp 就引入 FluentEmail.Smtp 包，如果你需要使用 Razor 模板就引入 FluentEmail.Razor 包，关于注入的这一部分的功能其实是包含在 FluentEmail.Core 包里面的
+在使用.NET Core 的实际开发中，依赖注入已经成为了必不可少的开发模式。如果你正在使用.NET Core 开发项目，但是你还没有接触依赖注入，那么需要你先自行反省一下。FluentEmail 作为一款与时俱进的组件，也可以结合依赖注入使用，使用这种方式我们可以在注册的时候统一的配置一些默认的设置。这波操作就不需要额外引入一些别的包了，如果你需要使用 Smtp 就引入 FluentEmail.Smtp 包，如果你需要使用 Razor 模板就引入 FluentEmail.Razor 包，关于注入的这一部分的功能其实是包含在 FluentEmail.Core 包里面的
 
 ```C#
 public void ConfigureServices(IServiceCollection services)
@@ -349,4 +349,4 @@ public async Task<IActionResult> SendEmail([FromServices]IFluentEmail email)
 
 ## 总结
 
-关于 FluentEmail 的基本使用方式我们就介绍到这里，我个人感觉它自身的功能还是非常强大的，而且使用起来非常的简单。说实话在之前我没接触到 FluentEmail 之前，我经常在园子里看到其他语言集成发送邮件的组件，确实非常强大，比如在 springboot 中集成 spring-boot-starter-mail 真的是非常的便捷。后来无意中接触到了 FluentEmail 心里还是蛮欣慰的，一是它强大的功能和易用性，其次是可以去结合.Net Core 进一步优化了它的使用方式，至少在.Net 和.Net Core 中我们也拥有一款非常便捷的邮件发送组件。FluentEmail 的作者也呼吁更多的开发者能够了解并参与到 FluentEmail 开发和实践中去，最后再次贴上它的 GitHub 地址https://github.com/lukencode/FluentEmail，有兴趣的可以去了解学习一下顺便别忘了给个Star。
+关于 FluentEmail 的基本使用方式我们就介绍到这里，我个人感觉它自身的功能还是非常强大的，而且使用起来非常的简单。说实话在之前我没接触到 FluentEmail 之前，我经常在园子里看到其他语言集成发送邮件的组件，确实非常强大，比如在 springboot 中集成 spring-boot-starter-mail 真的是非常的便捷。后来无意中接触到了 FluentEmail 心里还是蛮欣慰的，一是它强大的功能和易用性，其次是可以去结合.NET Core 进一步优化了它的使用方式，至少在.Net 和.NET Core 中我们也拥有一款非常便捷的邮件发送组件。FluentEmail 的作者也呼吁更多的开发者能够了解并参与到 FluentEmail 开发和实践中去，最后再次贴上它的 GitHub 地址https://github.com/lukencode/FluentEmail，有兴趣的可以去了解学习一下顺便别忘了给个Star。

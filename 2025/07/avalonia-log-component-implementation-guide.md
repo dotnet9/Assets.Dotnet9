@@ -4,7 +4,6 @@ slug: avalonia-log-component-implementation-guide
 description: "深度解析基于Avalonia的日志组件实现方案，探讨界面与文件双输出机制，并提出可优化改进点"
 date: 2025-07-03 20:07:41
 lastmod: 2025-07-03 22:24:34
-author: Dotnet9
 draft: false
 cover: https://img1.dotnet9.com/2025/07/cover_01.png
 categories:

@@ -4,7 +4,6 @@ slug: dotnet-classlibrary-vanara-an-easy-to-use-windows-api-encapsulation-librar
 description: "一系列非常简单易用，对Windows API做了极好封装的.NET类库，几乎不用再写繁琐的Windows API转换函数了。"
 date: 2021-06-28 22:53:47
 lastmod: 2021-06-28 22:53:47
-author: Dotnet9
 originalTitle: ".NET类库“Vanara”：简单易用的Windows API封装库"
 copyright: Original
 draft: false
@@ -31,7 +30,7 @@ tags:
 
 所有程序集都可通过 NuGet 获得，并提供针对.NET 2.0、3.5、4.0、4.5、Core 3.0、Core 3.1 和.NET 5.0（v3.2.20 中新增）的版本，并支持[SourceLink](https://docs.microsoft.com/en-us/dotnet/standard/library-guidance/sourcelink)。在依赖项不允许的所有情况下，.NET Standard 2.0、.NET Core 2.0 和 2.1 版本也包含在 UWP 和其他.NET Core 及标准项目中。
 
-在充分测试之后，这个项目每隔几周发布一次新版本。新的版本和发行说明一起被编目在[Releases](https://github.com/dahall/Vanara/releases)部分，所有 NuGet 包都发布到[nuget.org](https://www.nuget.org/packages?q=dahall+Vanara)。每个 GitHub 推送都会触发[AppVeyor](https://ci.appveyor.com/project/dahall/vanara)构建。所有者感谢他们的免费开源帐户！文章开头显示了项目构建状态信息。[AppVeyor 源](https://ci.appveyor.com/nuget/vanara-prerelease)用于构建 NuGet 包。
+在充分测试之后，这个项目每隔几周发布一次新版本。新的版本和发行说明一起被编目在[Releases](https://github.com/dahall/Vanara/releases)部分，所有 NuGet 包都发布到[nuget.org](https://www.nuget.org/packages?q=dahall+Vanara)。每个 GitHub 推送都会触发[AppVeyor](https://ci.appveyor.com/project/dahall/vanara)构建。所有者感谢他们的免费开源账户！文章开头显示了项目构建状态信息。[AppVeyor 源](https://ci.appveyor.com/nuget/vanara-prerelease)用于构建 NuGet 包。
 
 ## 怎么用？
 

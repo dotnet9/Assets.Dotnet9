@@ -83,7 +83,7 @@ github 地址：[https://github.com/HandyOrg/HandyControl](https://github.com/Ha
 
 软件名：phpEnv，浏览地址：https://www.phpenv.cn/ 。
 
-软件简介：phpEnv 是运行在 Windows 系统上的完全绿色的 PHP 集成环境，集成了 Apache、Nginx 等 Web 组件，支持不同 PHP 版本共存，支持自定义 PHP 版本，自定义 MySQL 版本。主打开发环境，也可以用作服务器环境。拥有清除 PHP 环境阻碍、解除端口占用、支持切换 MySQL 版本、修改 MySQL 密码，兼容其他集成环境，内置 Redis、MemCache 等其它服务，内置 Composer 和功能强大的 CMD 命令行、TCP 端口进程列表等工具和实用功能。
+软件简介：phpEnv 是运行在 Windows 系统上的完全绿色的 PHP 集成环境，集成了 Apache、Nginx 等 Web 组件，支持不同 PHP 版本共存，支持自定义 PHP 版本，自定义 MySQL 版本。主打开发环境，也可以用作服务器环境。拥有清除 PHP 环境阻碍、解除端口占用、支持切换 MySQL 版本、修改 MySQL 密码，兼容其他集成环境，内置 Redis、MemCache 等其他服务，内置 Composer 和功能强大的 CMD 命令行、TCP 端口进程列表等工具和实用功能。
 
 ### 3.2 Case 案例 2
 

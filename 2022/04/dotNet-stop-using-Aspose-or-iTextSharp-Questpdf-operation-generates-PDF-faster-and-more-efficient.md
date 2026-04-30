@@ -24,7 +24,7 @@ tags:
 
 ## 1. 关于 QuestPDF
 
-> QuestPDF 是一个开源的工具库，可以在.NET 或者.Net Core 中生成 pdf 文档
+> QuestPDF 是一个开源的工具库，可以在.NET 或者.NET Core 中生成 pdf 文档
 
 它提供了一个布局引擎，设计时考虑到了完整的分页支持以及灵活性要求！比市面上常见的 Aspose 和 iTextSharp 好用太多了！
 

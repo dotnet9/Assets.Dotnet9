@@ -1,11 +1,11 @@
 ---
-title: "Coravel是.NetCore中开源的工具库，可以让你使用定时任务，缓存，队列，事件，广播等高级应用程序变得轻而易举！"
+title: "Coravel是.NET Core中开源的工具库，可以让你使用定时任务，缓存，队列，事件，广播等高级应用程序变得轻而易举！"
 slug: using-cron-tasks-caches-queues-events-broadcasts-and-more-is-a-breeze-with-coravel
 description: "Coravel 帮助开发人员在不影响代码质量的情况下快速启动和运行他们的 .NET Core 应用程序。"
 date: 2022-07-07 07:34:12
 lastmod: 2022-07-07 07:34:12
 author: 黑哥聊dotNet
-originalTitle: "Coravel是.NetCore中开源的工具库，可以让你使用定时任务，缓存，队列，事件，广播等高级应用程序变得轻而易举！"
+originalTitle: "Coravel是.NET Core中开源的工具库，可以让你使用定时任务，缓存，队列，事件，广播等高级应用程序变得轻而易举！"
 originalLink: https://mp.weixin.qq.com/s/q6mNrmulYKnnhqLKxubz2A
 copyright: Reprinted
 draft: false
@@ -20,13 +20,13 @@ tags:
 
 ## Coravel
 
-Coravel 是.NetCore 中开源的工具库，可以让你使用定时任务，缓存，队列，事件，广播等高级应用程序变得轻而易举！
+Coravel 是.NET Core 中开源的工具库，可以让你使用定时任务，缓存，队列，事件，广播等高级应用程序变得轻而易举！
 
 Coravel 帮助开发人员在不影响代码质量的情况下快速启动和运行他们的 .NET Core 应用程序。
 
 它通过为您提供简单、富有表现力和直接的语法，使高级应用程序功能易于访问和使用。
 
-Github 地址: [https://github.com/jamesmh/coravel](https://github.com/jamesmh/coravel)
+GitHub 地址: [https://github.com/jamesmh/coravel](https://github.com/jamesmh/coravel)
 
 ## 安装
 
@@ -202,7 +202,7 @@ public class TweetNewPost : IListener<BlogPostCreated>
 
 **配置**
 
-安装 Nuget 包`Coravel.Mailer`，搭建一些基本文件：
+安装 NuGet 包`Coravel.Mailer`，搭建一些基本文件：
 
 - ~/Views/Mail/\_ViewStart.cshtml- 配置邮件视图以使用 Coravel 的电子邮件模板
 - ~/Views/Mail/\_ViewImports.cshtml- 允许您使用 Coravel 的视图组件

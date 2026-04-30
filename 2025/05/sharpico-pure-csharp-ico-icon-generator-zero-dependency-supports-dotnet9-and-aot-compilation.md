@@ -386,8 +386,8 @@ SharpIco 采用了完整的 GitHub Actions CI/CD 流水线，做到**一次打 t
 
 我之前已经写过关于如何发布 nuget 的文章了，详见：
 
-- [开发现代化的.NetCore控制台程序 (3) 将nuget包发布到GitHubPackages](https://blog.deali.cn/Blog/Post/977b511be1ca5f43)
-- [开发现代化的.NetCore控制台程序 (4) 使用GithubAction自动构建以及发布nuget包](https://blog.deali.cn/Blog/Post/36dc21f5652f8ff4)
+- [开发现代化的.NET Core控制台程序 (3) 将nuget包发布到GitHubPackages](https://blog.deali.cn/Blog/Post/977b511be1ca5f43)
+- [开发现代化的.NET Core控制台程序 (4) 使用GitHubAction自动构建以及发布nuget包](https://blog.deali.cn/Blog/Post/36dc21f5652f8ff4)
 
 这部分问题不大
 
@@ -466,11 +466,11 @@ jobs:
         run: dotnet nuget push ./nupkg/*.nupkg --api-key ${{ secrets.NUGET_GALLERY_TOKEN }} --source https://api.nuget.org/v3/index.json --skip-duplicate
 ```
 
-## 自动发布到 Github Release
+## 自动发布到 GitHub Release
 
 这个是最折腾的，我反复调试了十几次才成功😂
 
-不得不说 Github Action 的调试太不友好了
+不得不说 GitHub Action 的调试太不友好了
 
 直接贴上我最后成功的配置吧
 

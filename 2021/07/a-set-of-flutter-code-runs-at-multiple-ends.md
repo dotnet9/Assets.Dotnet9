@@ -4,7 +4,6 @@ slug: a-set-of-flutter-code-runs-at-multiple-ends
 description: "本文不打算介绍功能代码，分享一个油管关于Flutter的分享视频"
 date: 2021-07-10 23:29:38
 lastmod: 2021-07-10 23:29:38
-author: Dotnet9
 originalTitle: 一套Flutter代码多端运行
 copyright: Original
 draft: false

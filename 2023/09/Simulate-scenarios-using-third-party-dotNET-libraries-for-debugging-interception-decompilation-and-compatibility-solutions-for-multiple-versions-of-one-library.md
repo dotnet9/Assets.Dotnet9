@@ -4,7 +4,6 @@ slug: simulate-scenarios-using-third-party-dotnet-libraries-for-debugging-interc
 description: "模拟.NET实际应用场景，综合应用三个主要知识点：一是使用dnSpy反编译第三库及调试，二是使用Lib.Harmony库实现第三库拦截、伪造，三是实现同一个库支持多版本同时引用。"
 date: 2023-09-23 14:43:19
 lastmod: 2023-09-26 00:16:17
-author: Dotnet9
 copyright: Original
 draft: false
 cover: https://img1.dotnet9.com/2023/09/cover_08.png
@@ -538,7 +537,7 @@ public class HookBallgameMeasureOverride
 }
 ```
 
-区别如下图，`Harmony`实例获取代码有变化，其它不变：
+区别如下图，`Harmony`实例获取代码有变化，其他不变：
 
 ![](https://img1.dotnet9.com/2023/09/0816.png)
 
@@ -688,7 +687,7 @@ namespace Dotnet9Playground
 
 ![](https://img1.dotnet9.com/2023/09/0826.png)
 
-做为对比，查看NuGet下载的`Lib.Harmony`是没做签名的：
+作为对比，查看NuGet下载的`Lib.Harmony`是没做签名的：
 
 ![](https://img1.dotnet9.com/2023/09/0825.png)
 

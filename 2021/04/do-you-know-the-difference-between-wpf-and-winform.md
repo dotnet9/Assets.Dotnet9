@@ -4,7 +4,6 @@ slug: do-you-know-the-difference-between-wpf-and-winform
 description: "介绍两种开发Windows桌面应用程序的方法之间的主要区别，这些方法可以在现代系统开发中发挥更好的作用。"
 date: 2021-04-07 23:59:02
 lastmod: 2021-04-07 23:59:02
-author: Dotnet9
 originalTitle: "你知道WPF与WinForms的区别吗？"
 copyright: Original
 draft: false
@@ -25,7 +24,7 @@ WPF 的缩写指微软的 Windows Presentation Foundation，而 WinForms 是 Win
 
 ## Windows Forms
 
-WinForms 于 2002 年 2 月作为.Net Framework 的一部分引入。在很大程度上，WinForms 允许开发人员在 Windows 窗体上拖放控件，并允许开发人员使用可以具有 C＃，VB.NET 或任何其他.NET 语言的代码隐藏文件来操纵这些控件。每个 WinForms 控件都是一个类的实例，因为 WinForms 作为具有一组 C++类的包装器存在。Microsoft 的 Visual Studio 使 WinForms 的开发更容易，因为开发人员可以轻松地从工具箱中拖放控件。
+WinForms 于 2002 年 2 月作为.NET Framework 的一部分引入。在很大程度上，WinForms 允许开发人员在 Windows 窗体上拖放控件，并允许开发人员使用可以具有 C＃，VB.NET 或任何其他.NET 语言的代码隐藏文件来操纵这些控件。每个 WinForms 控件都是一个类的实例，因为 WinForms 作为具有一组 C++类的包装器存在。Microsoft 的 Visual Studio 使 WinForms 的开发更容易，因为开发人员可以轻松地从工具箱中拖放控件。
 
 WinForms 工具箱中的控件：
 
@@ -35,7 +34,7 @@ WinForms 工具箱中的控件：
 
 ## WPF 桌面应用程序
 
-与 WinForms 不同，WPF 的体系结构包含三个主要组件：a presentation framework, presentation core, and mallcore。WPF 并不完全依赖于标准 Windows 控件，因此是一种独立方式。2007 年，Microsoft 引入了 Windows Presentation Foundation（WPF），以交替 WinForms 来进行.Net Framework 桌面应用程序开发。这一交替带来了桌面应用程序开发中的许多变化。首先，WPF 将设计人员和程序员分开，可以使用 Visual Studio 或 Blend 分别设计 UI，而开发人员可以使用代码隐藏文件来操纵控件事件。
+与 WinForms 不同，WPF 的体系结构包含三个主要组件：a presentation framework, presentation core, and mallcore。WPF 并不完全依赖于标准 Windows 控件，因此是一种独立方式。2007 年，Microsoft 引入了 Windows Presentation Foundation（WPF），以交替 WinForms 来进行.NET Framework 桌面应用程序开发。这一交替带来了桌面应用程序开发中的许多变化。首先，WPF 将设计人员和程序员分开，可以使用 Visual Studio 或 Blend 分别设计 UI，而开发人员可以使用代码隐藏文件来操纵控件事件。
 
 WPF 使用 XAML 创建控件，其文件结构更像 ASP.NET，您可以自由使用设计器或编写 XAML 代码来创建控件。使用 Canvas Panel 的设计师仍然可以像在 WinForms 中一样在 Windows 页面上拖放控件。WPF 带来的主要区别是 XAML 文件和对 XAML 文件附带的可见设计器的访问。
 

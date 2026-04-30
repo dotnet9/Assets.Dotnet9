@@ -4,7 +4,6 @@ slug: open-source-csharp-wpf-control-library-adu-skin-ui
 description: "一款简单漂亮的WPF UI，融合部分开源框架的组件，为个人定制的UI，可供学者参考。"
 date: 2020-02-02 13:45:56
 lastmod: 2020-02-02 13:45:56
-author: Dotnet9
 originalTitle: "开源C# WPF控件库《AduSkin–UI》"
 copyright: Original
 draft: false

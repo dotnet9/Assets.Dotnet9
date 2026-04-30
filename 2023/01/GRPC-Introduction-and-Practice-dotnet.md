@@ -190,7 +190,7 @@ public interface IGreeterService
 
 写完实现类后，在 Program.cs 中注册即可，此处不再赘述。
 
-使用 protobuf-net.Grpc，我们不需要写 .proto 文件，但是调用方特别是其它平台的调用方，需要 .proto 文件来生成相应的客户端，难道我们还要另外再写一份吗？别急，我们可以引入`protobuf-net.Grpc.AspNetCore.Reflection`，它引用的`protobuf-net.Grpc.Reflection`提供了根据 C# 接口生成 .proto 文件的方法；同时使用它还便于客户端测试，同`Grpc.AspNetCore.Server.Reflection`的作用一样，下文会讲到。
+使用 protobuf-net.Grpc，我们不需要写 .proto 文件，但是调用方特别是其他平台的调用方，需要 .proto 文件来生成相应的客户端，难道我们还要另外再写一份吗？别急，我们可以引入`protobuf-net.Grpc.AspNetCore.Reflection`，它引用的`protobuf-net.Grpc.Reflection`提供了根据 C# 接口生成 .proto 文件的方法；同时使用它还便于客户端测试，同`Grpc.AspNetCore.Server.Reflection`的作用一样，下文会讲到。
 
 #### 2.1.2. 异常处理
 
@@ -297,7 +297,7 @@ if (env.IsDevelopment())
 
 我们还可以更改 .proto 文件中 message 的字段名（只要不改动字段类型和顺序），不会影响服务的调用。这也直接反映了 protobuf 不是按字段名而是事先定义的字段标识编码的。
 
-由此，假如我们有多个 .proto 文件，使用到了相同结构的 message，无所谓字段名是否相同，我们都可以将这些 message 抽离为单独的一个 .proto 文件，然后其它的 .proto 文件使用`import "Protos/xxx.proto";`引入它。
+由此，假如我们有多个 .proto 文件，使用到了相同结构的 message，无所谓字段名是否相同，我们都可以将这些 message 抽离为单独的一个 .proto 文件，然后其他的 .proto 文件使用`import "Protos/xxx.proto";`引入它。
 
 编译一下，然后在 Program.cs 中注册服务客户端：
 
@@ -312,7 +312,7 @@ builder.Services.AddGrpcClient<Greeter.GreeterClient>(o =>
 });
 ```
 
-如此，其它地方就可以愉快地使用客户端调用远程服务了。
+如此，其他地方就可以愉快地使用客户端调用远程服务了。
 
 同服务端一样，我们可以给客户端配置统一的拦截器。如果服务端返回上文提到的 RpcException，客户端得到后是直接抛出的（就像是本地异常），我们可以新建一个专门的异常拦截器处理 RpcException 异常。
 

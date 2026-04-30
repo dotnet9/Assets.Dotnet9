@@ -19,7 +19,7 @@ tags:
 
 ## 前言
 
-从 2017 年 11 月 11 号在 Github 创建[EasyCaching](https://github.com/dotnetcore/EasyCaching)这个仓库，到现在也已经将近一年半的时间了，基本都是在下班之后和假期在完善这个项目。
+从 2017 年 11 月 11 号在 GitHub 创建[EasyCaching](https://github.com/dotnetcore/EasyCaching)这个仓库，到现在也已经将近一年半的时间了，基本都是在下班之后和假期在完善这个项目。
 
 由于 EasyCaching 目前只有英文的[文档](https://easycaching.readthedocs.io/en/latest/)托管在 Read the Docs 上面，当初选的 MkDocs 现在还不支持多语言，所以这个中文的要等它支持之后才会有计划。
 
@@ -218,7 +218,7 @@ public class ValuesController : Controller
 
 对于分布式缓存的操作，我们不可避免的会遇到序列化的问题.
 
-目前这个主要是针对 redis 和 memcached 的。当然，对于序列化，都会有一个默认的实现是基于**BinaryFormatter**，因为这个不依赖于第三方的类库，如果没有指定其它的，就会使用这个去进行序列化的操作了。
+目前这个主要是针对 redis 和 memcached 的。当然，对于序列化，都会有一个默认的实现是基于**BinaryFormatter**，因为这个不依赖于第三方的类库，如果没有指定其他的，就会使用这个去进行序列化的操作了。
 
 除了这个默认的实现，还提供了三种额外的选择。Newtonsoft.Json，MessagePack 和 Protobuf。下面以在 Redis 的 provider 使用 MessagePack 为例，来看看它的用法。
 
@@ -544,7 +544,7 @@ public class MultiRedisController : Controller
 
 以上就是 EasyCaching 目前支持的一些功能特性，如果大家在使用的过程中有遇到问题的话，希望可以积极的反馈，帮助 EasyCaching 变得越来越好。
 
-如果您对这个项目有兴趣，可以在 Github 上点个 Star，也可以加入我们一起进行开发和维护。
+如果您对这个项目有兴趣，可以在 GitHub 上点个 Star，也可以加入我们一起进行开发和维护。
 
 前段时间开了一个[Issue](https://github.com/dotnetcore/EasyCaching/issues/108)用来记录正在使用 EasyCaching 的相关用户和案例，如果您正在使用 EasyCaching，并且不介意透露您的相关信息，可以在这个 Issue 上面回复。
 

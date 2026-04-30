@@ -4,7 +4,6 @@ slug: csharp-uses-socket-to-implement-distributed-event-bus-without-relying-on-t
 description: "CodeWF.EventBus.Socket 是一个轻量级的、基于Socket的分布式事件总线系统，旨在简化分布式架构中的事件通信。它允许进程之间通过发布/订阅模式进行通信，无需依赖外部消息队列服务。"
 date: 2024-07-26 09:54:16
 lastmod: 2024-07-28 10:25:27
-author: Dotnet9
 copyright: Original
 draft: false
 cover: https://img1.dotnet9.com/2024/07/cover_02.png
@@ -114,7 +113,7 @@ private void ReceiveNewEmail(NewEmailCommand command)
 
 ```csharp
 // 发布新邮件通知事件
-eventClient.Publish("event.email.new", new NewEmailCommand { Subject = "恭喜您中Github一等奖", Content = "我们很开心，您在2024年7月...", SendTime = new DateTime(2024, 7, 27) });
+eventClient.Publish("event.email.new", new NewEmailCommand { Subject = "恭喜您中GitHub一等奖", Content = "我们很开心，您在2024年7月...", SendTime = new DateTime(2024, 7, 27) });
 ```
 
 ### 查询(Query)

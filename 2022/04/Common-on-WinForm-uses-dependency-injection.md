@@ -27,7 +27,7 @@ tags:
 
 ## 2. 目的
 
-ASP.NetCore 中本身容器容器已经创建好了，只需要往容器添加服务即可，但是在 Winform 中默认还是通过 new 的方式来进行操作的(虽然我已经升级成了.Net6)，最近在把一个开源项目进行增加自用的功能，然后我顺带将原来的 NetF 升级为 NetCore，然后就想用依赖注入方式去试试了。
+ASP.NET Core 中本身容器容器已经创建好了，只需要往容器添加服务即可，但是在 Winform 中默认还是通过 new 的方式来进行操作的(虽然我已经升级成了.Net6)，最近在把一个开源项目进行增加自用的功能，然后我顺带将原来的 NetF 升级为 NetCore，然后就想用依赖注入方式去试试了。
 
 > C/S 代码写的少，如有不对，麻烦指正。
 
@@ -214,4 +214,4 @@ private void button1_Click(object sender, EventArgs e)
 
 ## 7. 资料
 
-在.NetCore3.1 上基于 Winform 实现依赖注入实例：http://www.ty2y.com/study/znetcore3.1sjywinformsxylzrsl.html
+在.NET Core3.1 上基于 Winform 实现依赖注入实例：http://www.ty2y.com/study/znetcore3.1sjywinformsxylzrsl.html

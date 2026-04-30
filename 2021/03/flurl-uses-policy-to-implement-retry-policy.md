@@ -1,7 +1,7 @@
 ---
 title: Flurl使用Polly实现重试Policy
 slug: flurl-uses-policy-to-implement-retry-policy
-description: "在使用Flurl作为HttpClient向Server请求时，由于网络或者其它一些原因导致请求会有失败的情况"
+description: "在使用Flurl作为HttpClient向Server请求时，由于网络或者其他一些原因导致请求会有失败的情况"
 date: 2021-03-15 11:57:53
 lastmod: 2021-03-15 11:57:53
 author: 非法关键字
@@ -19,7 +19,7 @@ tags:
   - Policy
 ---
 
-> 在使用 Flurl 作为 HttpClient 向 Server 请求时，由于网络或者其它一些原因导致请求会有失败的情况，比如`HttpStatusCode.NotFound`、`HttpStatusCode.ServiceUnavailable`、HttpStatusCode.RequestTimeout 等；网络上有比较多的 HttpClientFactory 使用 Polly 来实现重试的内容，奈何已经习惯使用 Flurl 的人，要全部换回到 IHttpClient 的确有不方便的地方，因为本文使用 Flurl 的 Polly 来实现重试机制做一个整理；
+> 在使用 Flurl 作为 HttpClient 向 Server 请求时，由于网络或者其他一些原因导致请求会有失败的情况，比如`HttpStatusCode.NotFound`、`HttpStatusCode.ServiceUnavailable`、HttpStatusCode.RequestTimeout 等；网络上有比较多的 HttpClientFactory 使用 Polly 来实现重试的内容，奈何已经习惯使用 Flurl 的人，要全部换回到 IHttpClient 的确有不方便的地方，因为本文使用 Flurl 的 Polly 来实现重试机制做一个整理；
 
 ## 不使用 Polly 来测试
 
@@ -130,7 +130,7 @@ info: SuppertRcsInterfaceTest.Controllers.PollyController[0]
 >
 > 重试（Retry）：出现故障自动重试，这个是常见的场景
 >
-> 断路（Circuit-breaker）：当系统遇到严重的问题时，快速回馈失败比让用户/调用者等待要好，限制系统出错的消耗，有助于系统恢复，比如，当我们去调用一个第三方的 API，有很长一段时间 API 都没有响应，可能对方服务器瘫痪了，如果我们的系统还不停地重试，不仅会加重系统的负担，还有可能导致系统其它任务受影响，因此，当系统出错的次数超过了指定的阈值，就得中断当前线程，等待一段时间后再继续；比如: `Policy.Handle<SomeException>().CircuitBreaker(2, TimeSpan.FromMinutes(1));`表示当系统出现两次某个异常时就停下来，等待 1 分钟后再继续，还可以在断路时定义中断的回调和重启的回调。
+> 断路（Circuit-breaker）：当系统遇到严重的问题时，快速回馈失败比让用户/调用者等待要好，限制系统出错的消耗，有助于系统恢复，比如，当我们去调用一个第三方的 API，有很长一段时间 API 都没有响应，可能对方服务器瘫痪了，如果我们的系统还不停地重试，不仅会加重系统的负担，还有可能导致系统其他任务受影响，因此，当系统出错的次数超过了指定的阈值，就得中断当前线程，等待一段时间后再继续；比如: `Policy.Handle<SomeException>().CircuitBreaker(2, TimeSpan.FromMinutes(1));`表示当系统出现两次某个异常时就停下来，等待 1 分钟后再继续，还可以在断路时定义中断的回调和重启的回调。
 >
 > 超时（Timeout）：当系统超过一定时间的等待，就可以判断不可能会有成功的结果；比如平时一个网络请求瞬间就完成了，如果有一次网络请求超过了 30 秒还没有完成，我们就可以判定不可能会返回成功的结果了，因此，我们需要设置系统的超时时间，避免系统长时间无谓的等待；比如：`Policy.Timeout(30, (context, span, task) => {// do something});`表示设置了超时时间不能超过 30 秒，否则就认为是错误的结果，并执行回调。
 >
@@ -287,7 +287,7 @@ WithPollyClient.Controllers.HomeController: Information: App: success - 2021/3/1
 
 #### 富客户端中使用的情况
 
-> 有时候呢，例如在`WPF`或者是其它的富客户端上面也会经常使用到 Flurl 的情况，如下
+> 有时候呢，例如在`WPF`或者是其他的富客户端上面也会经常使用到 Flurl 的情况，如下
 
 ```c#
 var time = await Policy

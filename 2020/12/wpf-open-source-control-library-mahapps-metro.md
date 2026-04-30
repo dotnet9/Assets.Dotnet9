@@ -4,7 +4,6 @@ slug: wpf-open-source-control-library-mahapps-metro
 description: "其实站长很久之前就知道这个开源WPF控件库了，只是一直欣赏不了这种风格，但也star了该项目。每次浏览该仓库时，发现star越来越多，也看到很多网友对它的褒奖，所以今天就向大家推荐这款WPF控件库。"
 date: 2020-12-12 12:11:02
 lastmod: 2020-12-12 12:11:02
-author: Dotnet9
 originalTitle: "WPF开源控件库：MahApps.Metro"
 copyright: Original
 draft: false
@@ -27,9 +26,9 @@ tags:
 
 ## 1. 具体有多优秀，看仓库截图吧：
 
-Github 上的 MahApps.Metro 仓库截图
+GitHub 上的 MahApps.Metro 仓库截图
 
-![Github上的MahApps.Metro仓库截图](https://img1.dotnet9.com/2020/12/0101.png)
+![GitHub上的MahApps.Metro仓库截图](https://img1.dotnet9.com/2020/12/0101.png)
 
 - 目前支持.NET Framework (4.5+) 和 .NET Core (3.0 and 3.1)。
 

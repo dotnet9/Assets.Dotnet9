@@ -750,7 +750,7 @@ private void Validate(object sender, PropertyChangedEventArgs e)
 
 ## 6. 源码分享
 
-为了方便读者学习和交流，本文将所有代码同步到了Gitee和Github平台上。欢迎感兴趣的开发者访问以下链接获取源码：
+为了方便读者学习和交流，本文将所有代码同步到了Gitee和GitHub平台上。欢迎感兴趣的开发者访问以下链接获取源码：
 
 - gitee: https://gitee.com/dotnet9/FluentValidationForWpf
 - github： https://github.com/dotnet9/FluentValidationForWPF

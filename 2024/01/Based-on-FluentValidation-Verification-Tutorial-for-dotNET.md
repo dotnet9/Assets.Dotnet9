@@ -978,7 +978,7 @@ public ActionResult Save([CustomizeValidator(Properties="Surname,Forename")] Cus
 }
 ```
 
-这相当于对验证程序指定特定属性，其它属性将不被验证：
+这相当于对验证程序指定特定属性，其他属性将不被验证：
 
 ```csharp
 var validator = new CustomerValidator();

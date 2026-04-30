@@ -4,7 +4,6 @@ slug: wpf-food-application-login-ui-design
 description: 一个UI设计
 date: 2020-06-12 13:45:56
 lastmod: 2020-06-12 13:45:56
-author: Dotnet9
 originalTitle: WPF-美食应用登录UI设计
 copyright: Original
 draft: false
@@ -161,7 +160,7 @@ private void ClosingCB_DialogClosing(object sender, MaterialDesignThemes.Wpf.Dia
 
 ## 5. 源码下载
 
-上面只贴了部分关键代码，源码已放 Github 中。
+上面只贴了部分关键代码，源码已放 GitHub 中。
 
 - 参考视频：[WPF Food App Login UI Material Design [Speed Design]](https://www.youtube.com/watch?v=1i5oWNvIYmo)
 - Demo 源码：[FoodAppLoginUI](https://github.com/dotnet9/TerminalMACS.ManagerForWPF/tree/master/src/TerminalMACS.TestDemo/Views/FoodAppLoginUI)

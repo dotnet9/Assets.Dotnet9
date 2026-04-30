@@ -35,7 +35,7 @@ workflow core 的 GitHub 主页：https://github.com/danielgerlag/workflow-core
 
 - 插播.Net Standard 2.0 简介
 
-开始的时候不了解什么是.Net Standard 2.0，这篇文章讲得比较清楚，[.Net Standard 与 .Net Framework 关系](https://www.jianshu.com/p/750b532c0e11)，还有这个[.NET Core 2.0 是您的最好选择吗](https://www.jianshu.com/p/63b30e0f1b5b)，原来微软为了统一.Net 的各种平台，出了一个.Net Standard 标准库，基于这个库开发的，可以应用于.net framework 4.6.1 以上版本，也可以应用于.net core 2.0 以上。
+开始的时候不了解什么是.Net Standard 2.0，这篇文章讲得比较清楚，[.Net Standard 与 .NET Framework 关系](https://www.jianshu.com/p/750b532c0e11)，还有这个[.NET Core 2.0 是您的最好选择吗](https://www.jianshu.com/p/63b30e0f1b5b)，原来微软为了统一.Net 的各种平台，出了一个.Net Standard 标准库，基于这个库开发的，可以应用于.net framework 4.6.1 以上版本，也可以应用于.net core 2.0 以上。
 
 了解了相关内容后，直接打开说明，照着例子走一遭了。
 

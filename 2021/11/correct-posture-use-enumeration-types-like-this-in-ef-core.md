@@ -40,7 +40,7 @@ public partial class MsgInfo
 
 这里新增一个字段**SendStateEnum**设置为枚举类型，并使用 `[NotMapped]` 为不映射到数据库，为了防止输出 HTTP 时被序列化，也可以添加 `[Newtonsoft.Json.JsonIgnore]` 标记
 
-> 需添加 Nuget 包 Newtonsoft.Json
+> 需添加 NuGet 包 Newtonsoft.Json
 
 修改完的实体代码如下
 

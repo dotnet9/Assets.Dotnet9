@@ -4,7 +4,6 @@ slug: follow-up-quickly-build-the-log-panel-in-wwinform-or-wpf
 description: "原理是将`Winform或WPF 应用程序，宿主到ASP.NET Core Web API`上"
 date: 2021-04-18 15:45:15
 lastmod: 2021-04-18 15:45:15
-author: Dotnet9
 originalTitle: "后续来啦：Winform/WPF中快速搭建日志面板"
 copyright: Original
 draft: false
@@ -49,7 +48,7 @@ tags:
 
 ## 2. 添加`ASP.NET Core`、`Serilog`支持
 
-### 2.1 Nuget 安装相关 Nuget 包
+### 2.1 NuGet 安装相关 NuGet 包
 
 `Microsoft.Extensions.Hosting`要指定版本，不能高于 2.2.0:
 

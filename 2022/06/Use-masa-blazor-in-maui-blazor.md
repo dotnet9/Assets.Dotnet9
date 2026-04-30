@@ -4,7 +4,6 @@ slug: use-masa-blazor-in-maui-blazor
 description: "有一款漂亮、美观的组件库可以达到事半功倍的效果"
 date: 2022-06-21 21:09:47
 lastmod: 2022-06-21 21:09:47
-author: Dotnet9
 originalTitle: MAUI使用Masa blazor组件库
 copyright: Original
 draft: false
@@ -221,7 +220,7 @@ rel="stylesheet">
 
 这里关于`Masa.Blazor`的引入就介绍完了，总结下关键三步：
 
-1. 添加`Masa.Blazor` Nuget 包：`Install-Package Masa.Blazor`；
+1. 添加`Masa.Blazor` NuGet 包：`Install-Package Masa.Blazor`；
 2. `Masa.Blazor`组件注册使用：`services.AddMasaBlazor();`；
 3. 添加`Masa.Blazor`资源文件：Wasm 是`wwwwroot/index.html`, blazor server 是`_Layout.cshtml`，注意两者添加资源文件的区别。
 

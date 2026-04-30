@@ -207,4 +207,4 @@ xmlns:b="clr-namespace:Microsoft.AspNetCore.Components.WebView.Maui;assembly=Mic
 
 ## 总结
 
-项目已在 Github 发布, [https://github.com/microsoft/dotnet-podcasts](https://github.com/microsoft/dotnet-podcasts), 更多特性探索源代码。
+项目已在 GitHub 发布, [https://github.com/microsoft/dotnet-podcasts](https://github.com/microsoft/dotnet-podcasts), 更多特性探索源代码。

@@ -4,7 +4,6 @@ slug: csharp-execute-java-script
 description: "ClearScript 是一个 .NET 平台下的开源库，用于在 C# 和其他 .NET 语言中执行脚本代码。"
 date: 2023-03-14 22:03:14
 lastmod: 2023-03-14 22:03:14
-author: Dotnet9
 copyright: Original
 draft: false
 cover: https://img1.dotnet9.com/2023/03/cover_04.png

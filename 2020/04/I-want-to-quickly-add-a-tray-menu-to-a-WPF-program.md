@@ -4,7 +4,6 @@ slug: i-want-to-quickly-add-a-tray-menu-to-a-wpf-program
 description: "常用的托盘效果应该都能满足了吧？而实现这些效果，我们自己要码的代码真的不多"
 date: 2020-04-25 13:45:56
 lastmod: 2020-04-25 13:45:56
-author: Dotnet9
 originalTitle: 我想快速给WPF程序添加托盘菜单
 copyright: Original
 draft: false

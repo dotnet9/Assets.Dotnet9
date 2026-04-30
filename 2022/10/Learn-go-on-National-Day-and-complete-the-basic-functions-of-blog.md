@@ -24,7 +24,7 @@ tags:
 
 ## 源码
 
-边做边上传Github，原生Go语言博客前台，练手级项目源码：
+边做边上传GitHub，原生Go语言博客前台，练手级项目源码：
 
 仓库地址：https://github.com/dotnet9/Dotnet9/tree/develop/src/Dotnet9.Web.Go
 

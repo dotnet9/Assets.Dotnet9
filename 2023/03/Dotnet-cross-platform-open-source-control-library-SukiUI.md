@@ -4,7 +4,6 @@ slug: dotnet-cross-platform-open-source-control-library-suki-ui
 description: 作者以他的宠物狗命名的控件库
 date: 2023-03-13 22:16:47
 lastmod: 2023-03-13 22:16:47
-author: Dotnet9
 copyright: Original
 draft: false
 cover: https://img1.dotnet9.com/2023/03/suki_photo.jpg

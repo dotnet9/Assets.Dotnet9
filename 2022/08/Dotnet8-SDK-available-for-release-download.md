@@ -29,7 +29,7 @@ tags:
 
 ![](https://img1.dotnet9.com/2022/08/0201.png)
 
-`Github下载`
+`GitHub下载`
 
 - [https://github.com/dotnet/installer](https://github.com/dotnet/installer)
 

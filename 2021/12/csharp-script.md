@@ -38,7 +38,7 @@ res = await CSharpScript.EvaluateAsync("Sqrt(2)", ScriptOptions.Default.WithImpo
 Console.WriteLine(res);
 ```
 
-不仅是计算函数，其它函数比如`IO`，也是可以的：
+不仅是计算函数，其他函数比如`IO`，也是可以的：
 
 ```C#
 Console.WriteLine(@"测试输入输出函数:Directory.GetCurrentDirectory()");

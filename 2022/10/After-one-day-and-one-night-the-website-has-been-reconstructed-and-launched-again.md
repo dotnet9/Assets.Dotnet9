@@ -25,7 +25,7 @@ tags:
 
 昨天(10月7号)将 [Go版本](https://go.dotnet9.com) 网站上线后，站长迫不及待投入了 [Razor Pages](https://learn.microsoft.com/zh-cn/aspnet/core/razor-pages/?WT.mc_id=dotnet-35129-website&view=aspnetcore-7.0&tabs=visual-studio) 学习，因为有前期后端和前面几版前台代码储备，外加B站 [码神之路](https://www.bilibili.com/video/BV1VS4y1F7NM) 大佬提供的前台模板，前台几乎是只有查询功能，所以完成的比较快。
 
-- 源码：[Github](https://github.com/dotnet9/Dotnet9/tree/develop/src/Dotnet9.Web.RazorPages)
+- 源码：[GitHub](https://github.com/dotnet9/Dotnet9/tree/develop/src/Dotnet9.Web.RazorPages)
 
 ![](https://img1.dotnet9.com/2022/10/dotnet-blog-repository.png)
 

@@ -49,7 +49,7 @@ tags:
 
 操作系统：Windows 10 1903 及以上版本  
 开发工具：VisualStudio2019 v16.5 及以上版本  
-SDK：.Net Core 2.1.0 及以上所有版本
+SDK：.NET Core 2.1.0 及以上所有版本
 
 ## 安装程序包
 
@@ -1168,7 +1168,7 @@ detector.FormatCategories;//格式类别
 |     Z      |                          Z Compressed                           |
 |    ZIP     |                           ZIP Package                           |
 
-# Asp.Net MVC 和 Asp.Net Core 的支持断点续传和多线程下载的 ResumeFileResult
+# Asp.Net MVC 和 ASP.NET Core 的支持断点续传和多线程下载的 ResumeFileResult
 
 在 ASP.NET Core 中通过 MVC/WebAPI 应用程序传输文件数据时使用断点续传以及多线程下载支持。
 
@@ -1209,7 +1209,7 @@ public ActionResult ResumePhysicalFile()
 }
 ```
 
-### Asp.Net Core
+### ASP.NET Core
 
 要使用 ResumeFileResults，必须在`Startup.cs`的`ConfigureServices`方法调用中配置服务：
 

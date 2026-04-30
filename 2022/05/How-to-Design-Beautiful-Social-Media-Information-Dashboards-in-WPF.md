@@ -4,7 +4,6 @@ slug: how-to-design-beautiful-social-media-information-dashboards-in-wpf
 description: 设计一个漂亮的WPF社交媒体信息仪表板
 date: 2022-05-12 22:03:17
 lastmod: 2022-05-12 22:03:17
-author: Dotnet9
 originalTitle: "WPF|如何在 WPF 中设计漂亮的社交媒体信息仪表板"
 copyright: Original
 draft: false
@@ -39,7 +38,7 @@ tags:
 
 ![](https://img1.dotnet9.com/2022/05/3805.gif)
 
-### 2.2 字体图标 Nuget 包：FontAwesome.WPF，该包提供一些图标字体：
+### 2.2 字体图标 NuGet 包：FontAwesome.WPF，该包提供一些图标字体：
 
 ```xml
 <PackageReference Include="FontAwesome.WPF" Version="4.7.0.9" />

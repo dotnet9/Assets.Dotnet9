@@ -23,7 +23,7 @@ tags:
 
 前面有说到`UserAuthentication()`跟`UserAuthorization()`，这两个的差别在于：前者用于验证登录者是谁，后者则决定登录者可以做什么。
 
-举例来说，一个员工要登录员工系统，他必须输入帐号(如员工 ID、姓名或是 email)、密码，系统才能知道是谁登录了，这就是`Authentication(验证)`，处理`Authentication` 的方式有`Cookie`、`Token`、`第三方验证(OAuth 或API-token)`、`OpenId`及`SAML`。
+举例来说，一个员工要登录员工系统，他必须输入账号(如员工 ID、姓名或是 email)、密码，系统才能知道是谁登录了，这就是`Authentication(验证)`，处理`Authentication` 的方式有`Cookie`、`Token`、`第三方验证(OAuth 或API-token)`、`OpenId`及`SAML`。
 
 而当员工登录系统后，一般员工通常不会有跨部门或是管理权限，他只能看到他自己或所属部门的信息，例如生产部员工看不到会计部的财务，不过会计部为了计算成本却看得到生产部的原料价格，这就是`Authorization (授权)`。
 

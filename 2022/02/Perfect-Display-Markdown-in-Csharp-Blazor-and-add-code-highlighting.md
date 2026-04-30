@@ -4,7 +4,6 @@ slug: perfect-display-markdown-in-csharp-blazor-and-add-code-highlighting
 description: "自认为应该是比较完美了，下面说说怎么做的。"
 date: 2022-02-27 17:46:36
 lastmod: 2022-02-27 17:46:36
-author: Dotnet9
 originalTitle: "完美：C# Blazor中显示Markdown并添加代码高亮"
 copyright: Original
 draft: false

@@ -1,7 +1,7 @@
 ---
 title: 开源Winform控件库 - HZHControls
 slug: open-source-csharp-winform-control-library-hzhcontrols
-description: "一个基于.Net Framework 4.0，扁平化的、漂亮的、开源的C# Winform控件库。"
+description: "一个基于.NET Framework 4.0，扁平化的、漂亮的、开源的C# Winform控件库。"
 date: 2019-12-15 13:45:56
 lastmod: 2019-12-15 13:45:56
 author: 沙漠尽头的狼
@@ -90,9 +90,9 @@ tags:
 
 ![](https://img1.dotnet9.com/2019/12/0102.png)
 
-在机缘巧合的情况下，某个WPF群群友发了Winform控件库《HZHControls》的全球同性交友网站Gayhub地址（下载该控件库请点击[Github地址](https://github.com/kwwwvagaa/NetWinformControl)），小编当然毫不犹豫的点开欣赏啦，所以本篇文章由此而来。
+在机缘巧合的情况下，某个WPF群群友发了Winform控件库《HZHControls》的全球同性交友网站Gayhub地址（下载该控件库请点击[GitHub地址](https://github.com/kwwwvagaa/NetWinformControl)），小编当然毫不犹豫的点开欣赏啦，所以本篇文章由此而来。
 
-**《HZHControls》Github仓库**
+**《HZHControls》GitHub仓库**
 
 ![](https://img1.dotnet9.com/2019/12/0103.png)
 
@@ -102,7 +102,7 @@ tags:
 
 小编推荐《HZHControls》控件库理由如下：
 
-1. 一个基于.Net Framework 4.0，扁平化的、漂亮的、开源的C# Winform控件库。
+1. 一个基于.NET Framework 4.0，扁平化的、漂亮的、开源的C# Winform控件库。
 2. 纯原生开发，不包含第三方插件和类库。包含了常用窗体和常用控件，以及工业工具，类Web控件，使用该控件库可以快速的搭建一个漂亮的应用程序。
 3. 漂亮：控件UI以漂亮的Web控件为范本，让你做出来的应用更有WEB感觉，更加扁平化，更加漂亮。
 4. 开源： 控件完全开源，你可以高度自由的根据自己的需求来扩展或修改控件。

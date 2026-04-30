@@ -197,7 +197,7 @@ K8S 的架构，略微有一点复杂，我们简单来看一下。
 
 Master 节点包括 API Server、Scheduler、Controller manager、etcd。
 
-- API Server 是整个系统的对外接口，供客户端和其它组件调用，相当于 “营业厅”。
+- API Server 是整个系统的对外接口，供客户端和其他组件调用，相当于 “营业厅”。
 - Scheduler 负责对集群内部的资源进行调度，相当于 “调度室”。
 - Controller manager 负责管理控制器，相当于 “大总管”。
 

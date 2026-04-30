@@ -47,12 +47,12 @@ git clone https://github.com/Layui-WPF-Team/Layui-WPF.git
 
 看了几个工程目标框架默认是 .NET Framework 4.5.2，兼容大部分平台了，有其他.NET版本需求的可以自己编译尝试。
 
-另解决方案中引用了log4net库做为日志记录组件，Prism做为MVVM框架，解决方案直接编译没有错误：
+另解决方案中引用了log4net库作为日志记录组件，Prism作为MVVM框架，解决方案直接编译没有错误：
 
 ![成功编译](https://img1.dotnet9.com/2022/09/layui-wpf-compile-success.png)
 
 
-将`LayuiApp`工程做为启动项目，成功运行，下面对部分控件进行截图预览。
+将`LayuiApp`工程作为启动项目，成功运行，下面对部分控件进行截图预览。
 
 ## 控件效果预览
 

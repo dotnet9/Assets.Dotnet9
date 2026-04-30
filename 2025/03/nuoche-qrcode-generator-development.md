@@ -4,7 +4,6 @@ slug: nuoche-qrcode-generator-development
 description: "本文介绍了如何开发一个挪车二维码生成工具，包括C#和Avalonia实现的桌面版以及Blazor前端和.NET Web API实现的在线版，涵盖需求分析、核心代码实现、UI设计和MVVM模式的应用。"
 date: 2025-03-09 09:14:24
 lastmod: 2025-03-10 19:54:50
-author: Dotnet9
 copyright: Original
 draft: false
 cover: https://img1.dotnet9.com/2025/03/cover_04.png

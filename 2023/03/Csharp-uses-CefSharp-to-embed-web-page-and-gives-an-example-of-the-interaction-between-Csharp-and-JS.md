@@ -4,7 +4,6 @@ slug: csharp-uses-cef-sharp-to-embed-web-page-and-gives-an-example-of-the-intera
 description: "有在客户端内嵌网页的需求吗？CefSharp可能是个不错的选择！"
 date: 2023-03-27 22:43:17
 lastmod: 2023-03-27 22:43:17
-author: Dotnet9
 copyright: Original
 cover: https://img1.dotnet9.com/2023/03/cover_14.png
 categories:
@@ -139,11 +138,11 @@ namespace WpfWithCefSharpDemo
             InitializeComponent();
 
             // 允许以同步的方式注册C#的对象到JS中
-            Browser.JavascriptObjectRepository.Settings.LegacyBindingEnabled = true;
+            Browser.JavaScriptObjectRepository.Settings.LegacyBindingEnabled = true;
             CefSharpSettings.WcfEnabled = true;
 
             // 注册C#的对象到JS中的代码必须在Cef的Browser加载之前调用
-            Browser.JavascriptObjectRepository.Register("cefSharpExample", new CefSharpExample(), false,
+            Browser.JavaScriptObjectRepository.Register("cefSharpExample", new CefSharpExample(), false,
                 options: BindingOptions.DefaultBinder);
         }
 

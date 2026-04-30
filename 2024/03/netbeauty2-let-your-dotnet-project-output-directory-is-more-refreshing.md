@@ -4,7 +4,6 @@ slug: netbeauty2-let-your-dotnet-project-output-directory-is-more-refreshing
 description: "在.NET项目开发中，随着项目复杂性的增加，依赖的dll文件也会逐渐增多。这往往导致输出目录混乱，不便于管理和部署。"
 date: 2024-03-11 21:24:16
 lastmod: 2024-03-12 05:14:49
-author: Dotnet9
 copyright: Original
 draft: false
 cover: https://img1.dotnet9.com/2024/03/cover_06.png
@@ -41,7 +40,7 @@ NetBeauty2是一个开源的.NET依赖库整理工具，它的主要作用是在
 
 |                      | [ NetBeauty 2](https://github.com/nulastudio/NetBeauty2)     | [NetCoreBeauty](https://github.com/nulastudio/NetBeauty2/tree/v1) |
 | -------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| 支持框架             | `.Net Framework` `.Net Core 3.0+`                            | `.Net Core 2.0+`                                             |
+| 支持框架             | `.NET Framework` `.NET Core 3.0+`                            | `.NET Core 2.0+`                                             |
 | 支持部署模式         | Framework-dependent deployment (`FDD`) Self-contained deployment (`SCD`) Framework-dependent executables (`FDE`) | Self-contained deployment (`SCD`)                            |
 | 支持操作系统         | All                                                          | `win-x64` `win-x86` `win-arm64`(.NET 6+) `linux-x64` `linux-arm` `linux-arm64` `osx-x64` `osx-arm64`(.NET 6+) |
 | Need Patched HostFXR | No Yes(if use patch)                                         | Yes                                                          |
@@ -53,7 +52,7 @@ NetBeauty2是一个开源的.NET依赖库整理工具，它的主要作用是在
 
 ### 3.1. 准备工作
 
-在你的.NET Core工程（需要发布的主工程）添加Nuget包：
+在你的.NET Core工程（需要发布的主工程）添加NuGet包：
 
 ```shell
 dotnet add package nulastudio.NetBeauty
@@ -117,7 +116,7 @@ dotnet add package nulastudio.NetBeauty
 
 ### 3.2. 如果应用已经发布？
 
-如果你的应用程序已经发布，可以这样使用（站长没试过，这可以做为发布后补偿措施）：
+如果你的应用程序已经发布，可以这样使用（站长没试过，这可以作为发布后补偿措施）：
 
 ```shell
 Usage:

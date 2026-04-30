@@ -25,7 +25,7 @@ async/await 的辅助库。
 
 ## 安装
 
-安装 Nuget 包 [Nito.AsyncEx](http://www.nuget.org/packages/Nito.AsyncEx)
+安装 NuGet 包 [Nito.AsyncEx](http://www.nuget.org/packages/Nito.AsyncEx)
 
 ```shell
 Install-Package Nito.AsyncEx -Version 5.1.2
@@ -114,6 +114,6 @@ class Program
 
 ![](https://img1.dotnet9.com/2022/07/1001.png)
 
-- Github 地址：[https://github.com/StephenCleary/AsyncEx](https://github.com/StephenCleary/AsyncEx)
+- GitHub 地址：[https://github.com/StephenCleary/AsyncEx](https://github.com/StephenCleary/AsyncEx)
 
 最后大家如果喜欢我的文章，还麻烦给个关注并点个赞, 希望 net 生态圈越来越好！

@@ -65,7 +65,7 @@ WPF 기반으로 만든 **리그오브레전드**입니다.
 - C# 10.0
 - [Visual Studio 2022](https://visualstudio.microsoft.com/ko/vs/preview/vs2022/)
 
-## Nuget Package (1.0.9)
+## NuGet Package (1.0.9)
 
 - [DevNcore.WPF](https://github.com/devncore/devncore)
 - [DevNcore.UI.Foundation](https://github.com/devncore/devncore)

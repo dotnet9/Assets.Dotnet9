@@ -4,7 +4,6 @@ slug: the-8-interfaces-of-this-open-source-wpf-ui-design-project-are-good
 description: "根据网友分享的一篇博文，找到的这个开源项目。这个开源项目有8个界面设计，效果都还不错，可以作为WPF开发时的一个参考。"
 date: 2020-07-01 13:45:56
 lastmod: 2020-07-01 13:45:56
-author: Dotnet9
 originalTitle: 这个开源WPF UI设计项目的8个界面不错
 copyright: Original
 draft: false
@@ -22,7 +21,7 @@ tags:
   - 开源
 ---
 
-Github 仓库信息
+GitHub 仓库信息
 
 ![](https://img1.dotnet9.com/2020/07/0101.png)
 

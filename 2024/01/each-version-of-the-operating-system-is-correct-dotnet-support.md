@@ -108,11 +108,11 @@ AOT版幸运草基于.NET9.0运行时独立发布，支持.NET版幸运草所有
 | Win2008 R2 SP1        | .NET4.0 | 支持 | 支持    | 支持    | 支持 | 支持 | 完整支持 |
 
 - win7打上sp1以后，可以安装vc++2019，然后就能跑AOT应用了。
-- net9应用引入Nuget包VC-LTL，再发布AOT，可以直接运行在win7上，无需sp1。
+- net9应用引入NuGet包VC-LTL，再发布AOT，可以直接运行在win7上，无需sp1。
 - win7能够安装net7，但是占用内存很大，空白应用启动起码占500M内存，官方直接说net7不支持win7。
 - win7sp1安装net48时，需要KB3063858，clover自动支持
 - win7和win2008r2安装net48时，可能需要更新证书链，clover自动支持
-- win7无法支持net6/net8，主要是因为缺少 api-ms-win-crt-runtime-l1-1-0.dll，vc运行时需要vc2022，而最新vc运行时又依赖sp1。net应用引入Nuget包VC-LTL可以绕开这些依赖。
+- win7无法支持net6/net8，主要是因为缺少 api-ms-win-crt-runtime-l1-1-0.dll，vc运行时需要vc2022，而最新vc运行时又依赖sp1。net应用引入NuGet包VC-LTL可以绕开这些依赖。
 
 # Win8系列
 

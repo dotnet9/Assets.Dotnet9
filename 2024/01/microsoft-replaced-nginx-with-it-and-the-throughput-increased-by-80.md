@@ -50,7 +50,7 @@ YARP（Yet Another Reverse Proxy）是一个开源的、高性能的反向代理
 
 创建一个 WebApi 的项目
 
-安装`Nuget`包
+安装`NuGet`包
 
 ```xml
 <ItemGroup>

@@ -4,7 +4,6 @@ slug: image-to-icon-converter-development
 description: "本文介绍了如何使用C#和Avalonia开发一个图片转Icon的工具，包括需求分析、核心代码实现、UI设计和MVVM模式的应用。"
 date: 2025-03-06 21:35:14
 lastmod: 2025-03-10 06:14:21
-author: Dotnet9
 copyright: Original
 draft: false
 cover: https://img1.dotnet9.com/2025/03/0201.png

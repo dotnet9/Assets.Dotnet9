@@ -4,7 +4,6 @@ slug: vs2022-preview-offline-installation
 description: "离线开发环境搭建是最麻烦的，本文详细介绍如何制作VS 2022预览版的离线安装包，包括完整的下载、安装步骤和注意事项"
 date: 2025-02-26 13:05:24
 lastmod: 2025-02-27 09:18:12
-author: Dotnet9
 copyright: Original
 draft: false
 cover: https://img1.dotnet9.com/2025/02/cover_07.png
