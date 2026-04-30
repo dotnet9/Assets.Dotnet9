@@ -6,7 +6,7 @@ date: 2022-10-03 09:24:39
 copyright: Original
 author: 沙漠尽头的狼
 draft: false
-cover: https://img1.dotnet9.com/cats/cat_go.jpeg
+cover: https://img1.dotnet9.com/2022/10/cover_go_web_programming.svg
 categories: 
     - 更多语言
 tags: 

@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Go Web Programming book cover</title>
+  <desc id="desc">A book and web routing themed cover for a Go Web Programming article.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#042f3d"/>
+      <stop offset="0.55" stop-color="#0e7490"/>
+      <stop offset="1" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="book" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#e0f2fe"/>
+      <stop offset="1" stop-color="#67e8f9"/>
+    </linearGradient>
+    <pattern id="dots" width="34" height="34" patternUnits="userSpaceOnUse">
+      <circle cx="4" cy="4" r="2" fill="#ecfeff" fill-opacity="0.16"/>
+    </pattern>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="22" flood-color="#020617" flood-opacity="0.32"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#dots)"/>
+  <g transform="translate(122 126)" filter="url(#soft)">
+    <path d="M48 0h286c35 0 64 29 64 64v358H78c-43 0-78-35-78-78V48C0 21 21 0 48 0Z" fill="url(#book)"/>
+    <path d="M72 48h258c13 0 24 11 24 24v282H78c-22 0-40-18-40-40V82c0-19 15-34 34-34Z" fill="#0f172a" opacity="0.9"/>
+    <path d="M78 422c-22 0-40-18-40-40s18-40 40-40h320v80H78Z" fill="#f8fafc"/>
+    <path d="M92 366h250M92 392h238" stroke="#94a3b8" stroke-width="8" stroke-linecap="round"/>
+    <text x="96" y="155" font-family="Segoe UI, Arial, sans-serif" font-size="80" font-weight="800" fill="#67e8f9">Go</text>
+    <text x="96" y="222" font-family="Segoe UI, Arial, sans-serif" font-size="35" font-weight="700" fill="#e0f2fe">WEB</text>
+    <path d="M96 266h178M96 306h134" stroke="#a7f3d0" stroke-width="14" stroke-linecap="round"/>
+  </g>
+  <g transform="translate(610 152)" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="0" y="0" width="354" height="236" rx="28" fill="#082f49" stroke="#bae6fd" stroke-opacity="0.55" stroke-width="3"/>
+    <path d="M44 72h266M44 120h156M44 168h214" stroke="#67e8f9" stroke-width="16"/>
+    <path d="M54 300h260M184 236v64" stroke="#bae6fd" stroke-width="12"/>
+    <path d="M354 88h88c36 0 65 29 65 65v68" stroke="#a7f3d0" stroke-width="10"/>
+    <circle cx="514" cy="246" r="42" fill="#0f766e" stroke="#99f6e4" stroke-width="5"/>
+    <path d="M498 246h32M514 230v32" stroke="#ecfeff" stroke-width="8"/>
+  </g>
+  <g font-family="Segoe UI, Arial, sans-serif" fill="#f8fafc">
+    <text x="610" y="486" font-size="34" font-weight="700" letter-spacing="4">READING NOTES</text>
+    <text x="610" y="546" font-size="58" font-weight="800">Go Web Programming</text>
+    <text x="610" y="594" font-size="32" font-weight="600" fill="#ccfbf1">HTTP, templates, routing, practice</text>
+  </g>
+</svg>

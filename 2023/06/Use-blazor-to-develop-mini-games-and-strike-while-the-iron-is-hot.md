@@ -6,7 +6,7 @@ date: 2023-06-23 22:20:25
 lastmod: 2023-06-23 23:50:47
 copyright: Original
 draft: false
-cover: https://img1.dotnet9.com/games/minesweeper.png
+cover: https://img1.dotnet9.com/2023/06/cover_blazor_mini_games.svg
 categories: 
     - Blazor
 tags: 

@@ -1,0 +1,116 @@
+[
+  {
+    "Sort": 1,
+    "Name": "赌博博彩",
+    "Memo": "过滤赌博、博彩、投注平台等不适宜搜索词",
+    "Keywords": [
+      "赌博",
+      "博彩",
+      "网赌",
+      "体育投注",
+      "betting",
+      "gambling",
+      "casino",
+      "sports betting"
+    ]
+  },
+  {
+    "Sort": 2,
+    "Name": "色情成人",
+    "Memo": "过滤色情、成人内容及相关交易词",
+    "Keywords": [
+      "色情",
+      "成人视频",
+      "约炮",
+      "裸聊",
+      "adult video",
+      "porn",
+      "pornography",
+      "escort"
+    ]
+  },
+  {
+    "Sort": 3,
+    "Name": "毒品违禁品",
+    "Memo": "过滤毒品、违禁药物与相关交易词",
+    "Keywords": [
+      "毒品",
+      "冰毒",
+      "大麻",
+      "摇头丸",
+      "drug trafficking",
+      "narcotics",
+      "meth",
+      "heroin",
+      "cocaine"
+    ]
+  },
+  {
+    "Sort": 4,
+    "Name": "武器爆炸物",
+    "Memo": "过滤枪支、爆炸物和暴力袭击相关词",
+    "Keywords": [
+      "枪支",
+      "炸药",
+      "爆炸物",
+      "自制炸弹",
+      "weapon",
+      "firearm",
+      "gun",
+      "explosive",
+      "bomb making"
+    ]
+  },
+  {
+    "Sort": 5,
+    "Name": "暴恐极端",
+    "Memo": "过滤恐怖主义和暴力极端内容",
+    "Keywords": [
+      "恐怖主义",
+      "暴恐",
+      "极端组织",
+      "恐袭",
+      "terrorism",
+      "terrorist attack",
+      "violent extremism"
+    ]
+  },
+  {
+    "Sort": 6,
+    "Name": "诈骗洗钱",
+    "Memo": "过滤诈骗、钓鱼、洗钱、发票黑产等违法词",
+    "Keywords": [
+      "诈骗",
+      "钓鱼",
+      "洗钱",
+      "代开发票",
+      "黑产",
+      "scam",
+      "phishing",
+      "money laundering",
+      "fake invoice",
+      "fraud"
+    ]
+  },
+  {
+    "Sort": 7,
+    "Name": "账号与网络滥用",
+    "Memo": "过滤盗号、撞库、恶意软件和绕过安全防护相关词",
+    "Keywords": [
+      "木马",
+      "免杀",
+      "盗号",
+      "撞库",
+      "外挂",
+      "破解软件",
+      "malware",
+      "trojan",
+      "keylogger",
+      "credential stuffing",
+      "password cracking",
+      "exploit kit",
+      "cracked software",
+      "game cheat"
+    ]
+  }
+]
