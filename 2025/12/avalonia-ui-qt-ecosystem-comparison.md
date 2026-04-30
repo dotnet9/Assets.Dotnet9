@@ -13,6 +13,10 @@ originalLink: https://mp.weixin.qq.com/s/SyhLR8ic-_g-uDEakqCmKw
 categories:
   - WPF
   - Avalonia UI
+tags:
+  - Avalonia
+  - Qt
+  - 跨平台 GUI
 ---
 
 ![](https://img1.dotnet9.com/2025/12/cover_01.png)

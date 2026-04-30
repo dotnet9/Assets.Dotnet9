@@ -9,6 +9,10 @@ banner: false
 categories:
   - .NET
   - Avalonia
+tags:
+  - Avalonia
+  - DataGrid
+  - 桌面开发
 ---
 
 ![](https://img1.dotnet9.com/2026/01/cover_03.png)

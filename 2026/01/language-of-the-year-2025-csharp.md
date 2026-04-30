@@ -8,6 +8,10 @@ cover: https://img1.dotnet9.com/2026/01/cover_02.png
 banner: true
 categories:
   - .NET
+tags:
+  - C#
+  - .NET
+  - TIOBE
 ---
 
 ![](https://img1.dotnet9.com/2026/01/cover_02.png)

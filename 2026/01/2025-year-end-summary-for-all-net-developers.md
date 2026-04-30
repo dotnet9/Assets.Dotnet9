@@ -11,6 +11,10 @@ originalTitle: 写给所有 .NET 开发者的 2025 年度总结
 originalLink: https://mp.weixin.qq.com/s/kWLLt9duYSazGoSHXN-8bg
 categories:
   - .NET
+tags:
+  - .NET
+  - C#
+  - AI
 ---
 
 ![图片](https://img1.dotnet9.com/2026/01/cover_01.png)

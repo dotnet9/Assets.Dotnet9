@@ -10,6 +10,10 @@ categories:
   - .NET
   - Web开发
   - AI辅助开发
+tags:
+  - Razor Pages
+  - ASP.NET Core
+  - AI辅助开发
 ---
 
 ![](https://img1.dotnet9.com/2026/04/cover_01.svg)

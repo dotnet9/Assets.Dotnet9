@@ -10,6 +10,10 @@ categories:
   - .NET
   - 跨平台开发
   - C#高级特性
+tags:
+  - .NET
+  - Native Library
+  - 跨平台
 ---
 
 ![](https://img1.dotnet9.com/2026/04/cross-platform-library-cover.svg)
