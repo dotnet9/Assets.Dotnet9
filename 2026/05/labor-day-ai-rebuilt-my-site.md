@@ -3,9 +3,9 @@ title: 我宣布：这个网站，终于被我用 AI 重构成了
 slug: labor-day-ai-rebuilt-my-site
 description: 五一把 CodeWF 用 AI 重构完了：Razor Pages、SEO、搜索非法关键词过滤、加载优化、内容热更新、最小测试集，以及网站仓库的使用方式。
 date: 2026-05-01 10:30:00
-lastmod: 2026-05-01 20:36:30
+lastmod: 2026-05-01 21:32:31
 cover: https://img1.dotnet9.com/2026/05/codewf-ai-rebuilt-cover.svg
-banner: true
+banner: false
 categories:
   - .NET
   - AI
