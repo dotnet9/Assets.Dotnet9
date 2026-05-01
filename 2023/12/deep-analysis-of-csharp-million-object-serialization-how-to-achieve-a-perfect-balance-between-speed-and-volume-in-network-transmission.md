@@ -700,7 +700,7 @@ public class MessagePackSerializeHelper : ISerializeHelper
 最后修改Test方法：
 
 ```csharp
-    public static void Test(List<ISerializeHelper>? moreHelpers = null)
+   public static void Test(List<ISerializeHelper>? moreHelpers = null)
     {
         var serializeHelpers = new List<ISerializeHelper>
         {

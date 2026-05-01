@@ -65,7 +65,7 @@ Install-Package Serilog.AspNetCore
 
 ### 2.2 Program.cs 中添加 Serilog 配置
 
-```C#
+```csharp
 public class Program
 {
   public static void Main(string[] args)
@@ -100,7 +100,7 @@ public class Program
 
 在**Startup.cs**中添加测试日志
 
-```C#
+```csharp
 public void ConfigureServices(IServiceCollection services)
 {
   Log.Information("ConfigureServices");
@@ -143,7 +143,7 @@ Install-Package LogDashboard
 
 这一步很简单，真的很简单，打开**Startup.cs**，添加如下代码：
 
-```C#
+```csharp
 public void ConfigureServices(IServiceCollection services)
 {
   services.AddLogDashboard();

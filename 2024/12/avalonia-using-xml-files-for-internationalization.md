@@ -358,7 +358,7 @@ var titleEnUS = I18nManager.Instance.GetResource(Localization.Main.MainView.Titl
 
 在 Axaml 界面中使用 XML 翻译文件也非常便捷。首先，需要引入相应的命名空间：
 
-```xaml
+```xml
 xmlns:language="clr-namespace:Localization"
 xmlns:markup="https://codewf.com"
 ```
@@ -367,7 +367,7 @@ xmlns:markup="https://codewf.com"
 
 以下是在控件中使用翻译文本的示例：
 
-```xaml
+```xml
 <Button
     Grid.Row="3"
     Grid.Column="1"
@@ -382,7 +382,7 @@ xmlns:markup="https://codewf.com"
 
 当然也支持指定语言：
 
-```xaml
+```xml
 <SelectableTextBlock u:FormItem.Label="Current Thread" Text="{markup:I18n {x:Static developModuleLanguage:Title2SlugView.Title}}" />
 <SelectableTextBlock u:FormItem.Label="en-US" Text="{markup:I18n {x:Static developModuleLanguage:Title2SlugView.Title}, CultureName=en-US}" />
 <SelectableTextBlock u:FormItem.Label="ja-JP" Text="{markup:I18n {x:Static developModuleLanguage:Title2SlugView.Title}, CultureName=ja-JP}" />
@@ -392,7 +392,7 @@ xmlns:markup="https://codewf.com"
 
 此外，Axaml 界面还支持动态 Key 的绑定，例如：
 
-```xaml
+```xml
 <u:Banner
     Classes.Bordered="{Binding Bordered}"
     Content="{markup:I18n {Binding SelectedMenuItem.Description}}"

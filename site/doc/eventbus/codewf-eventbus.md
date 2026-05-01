@@ -173,7 +173,7 @@ namespace CodeWF.EventBus
 
 在CQRS模式中，命令代表写操作。定义命令类，这些类继承自`Command`类
 
-```CSharp
+```csharp
 public class CreateProductCommand : Command
 {
     public string Name { get; set; }

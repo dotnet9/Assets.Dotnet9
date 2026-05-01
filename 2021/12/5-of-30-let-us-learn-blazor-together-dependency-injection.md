@@ -25,7 +25,7 @@ tags:
 
 点开 Program.cs，可以找到一行代码：
 
-```C#
+```csharp
 builder.Services.AddSingleton<WeatherForecastService>();
 ```
 
@@ -45,7 +45,7 @@ Cannot provide a value for property 'ForecastService' on type 'BlazorServer.Page
 
 这时候就是依赖注入发挥功能的时候了，先定义一个接口：`interface IWeatherForecastService`
 
-```C#
+```csharp
 namespace BlazorServer.Data;
 
 public interface IWeatherForecastService

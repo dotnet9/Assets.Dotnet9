@@ -130,7 +130,6 @@ public ISeries[] Series { get; set; }
 还可以增加 Title，用于说明图标的作用。
 
 ```csharp
-
 public LabelVisual Title { get; set; }
             = new LabelVisual
             {
@@ -165,7 +164,6 @@ public LabelVisual Title { get; set; }
 我们需要修改一下设定，以便支持中文显示。
 
 ```csharp
-
 public LabelVisual Title { get; set; }
             = new LabelVisual
             {

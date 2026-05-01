@@ -197,7 +197,7 @@ dotnet dev-certs https --trust
 
 从这个文件中，我们可以看到，它包含一个 Greeter 服务和一个 SayHello 方法。我们可以将 Greeter 服务视为控制器，将 SayHello 方法视为一个动作。.proto 文件的内容如下所示：
 
-```C#
+```csharp
 // 声明我们可以使用的最新模式
 syntax = "proto3";
 
@@ -279,7 +279,7 @@ dotnet build
 
 下一步是添加我们的 CustomerService 类到 Services 文件夹中并更新其内容，如下所示：
 
-```C#
+```csharp
 public class CustomerService : Customer.CustomerBase
 {
     private readonly ILogger<CustomerService> _logger;
@@ -318,7 +318,7 @@ public class CustomerService : Customer.CustomerBase
 
 现在，我们需要更新 Startup.cs 类，以通知我们的应用程序，我们新创建的服务有了一个新的端点。为了实现这一点，在 Configure 方法（位于 app.UserEndpoints 中）里面，我们需要添加如下的代码：
 
-```C#
+```csharp
 endpoints.MapGrpcService<CustomerService>();
 ```
 
@@ -326,7 +326,7 @@ MacOS 下的注意事项：
 
 因为 [MacOS 不支持 TLS 之上的 HTTP/2](https://docs.microsoft.com/en-gb/aspnet/core/grpc/troubleshoot?view=aspnetcore-5.0#unable-to-start-aspnet-core-grpc-app-on-macos)，所以我们需要采用如下的方案来更新 Program.cs 文件：
 
-```C#
+```csharp
 webBuilder.ConfigureKestrel(options =>
 {
     // 设置无需 TLS 的 HTTP/2 端点
@@ -382,7 +382,7 @@ dotnet run
 
 现在，我们添加一些代码到控制台应用中，以便于调用服务器端。在 Program.cs 文件中，我们需要做如下的改动：
 
-```C#
+```csharp
 // 我们创建一个通道，它代表了客户端到服务器的连接
 // 我们在这里添加的 URL 是由服务器的 Kestrel 所提供的
 var channel = GrcpChannel.ForAddress("<https://localhost:5001>");
@@ -411,7 +411,7 @@ Console.WriteLine($"First Name: {result.FirstName} - Last Name: {result.LastName
 
 我们回到 customers.proto 文件并在 Customer 服务中添加一个流方法：
 
-```C#
+```csharp
 // 我们要返回一个消费者的列表
 // 但是在 gRPC 中我们不能返回列表，而是需要返回一个流
 rpc GetAllCustomers (AllCustomerModel) returns (stream CustomerDataModel);
@@ -421,7 +421,7 @@ rpc GetAllCustomers (AllCustomerModel) returns (stream CustomerDataModel);
 
 同时，我们还需要添加一个空消息
 
-```C#
+```csharp
 // 在 gRPC 中，我们不能定义具有空参数的方法
 // 所以，我们定义一个空消息
 message AllCustomerModel {
@@ -431,7 +431,7 @@ message AllCustomerModel {
 
 要实现这个方法，我们需要到 Services 文件夹下并添加如下的代码到 CustomerService 类中：
 
-```C#
+```csharp
 public override async Task GetAllCustomers(AllCustomerModel request, IServerStreamWriter<CustomerDataModel> responseStream, ServerCallContext context)
 {
     var allCustomers = new List<CustomerDataModel>();
@@ -465,7 +465,7 @@ public override async Task GetAllCustomers(AllCustomerModel request, IServerStre
 
 现在，我们需要复制服务器端 customers.proto 文件的变化到客户端的 customers.proto 文件中：
 
-```C#
+```csharp
 service Customer {
     rpc GetCustomerInfo (CustomerFindModel) returns (CustomerDataModel);
 
@@ -489,7 +489,7 @@ dotnet build
 
 我们下一步需要更新 GrpcClientApp 中的 Program.cs 文件以处理新的流方法：
 
-```C#
+```csharp
 var customerCall = customerClient.GetAllCustomers(new AllCustomerModel());
 
 await foreach(var customer in customerCall.ResponseStream.ReadAllAsync())
@@ -500,13 +500,13 @@ await foreach(var customer in customerCall.ResponseStream.ReadAllAsync())
 
 现在，我们回到 GrpcGreeter 并更新 greet.proto 文件，为其添加流方法：
 
-```C#
+```csharp
 rpc SayHelloStream(HelloRequest) returns (stream HelloReply);
 ```
 
 可以看到，在返回中我们添加了关键字 stream，这意味着我们正在添加由“多个”回复所组成的 stream。要实现这个方法，我们需要到 Services 文件夹下，并在 GreeterService 中添加如下的内容：
 
-```C#
+```csharp
 public override async Task SayHelloStream(HelloRequest request, IServerStreamWriter<HelloReply> responseStream, ServerCallContext context)
 {
   for (int i = 0; i < 10; i ++)
@@ -523,7 +523,7 @@ public override async Task SayHelloStream(HelloRequest request, IServerStreamWri
 
 现在，我们需要将 greet.proto 文件的变更从服务器端复制到客户端，并对其进行构建。在客户端应用的 greet.proto 文件中，我们添加如下这行代码：
 
-```C#
+```csharp
 rpc SayHelloStream(HelloRequest) returns (stream HelloReply);
 ```
 
@@ -535,7 +535,7 @@ dotnet build
 
 现在，我们可以打开 Program.cs 并使用新的方法：
 
-```C#
+```csharp
 var call = client.SayHelloStream(new HelloRequest
 {
     Name = "Mohamad"

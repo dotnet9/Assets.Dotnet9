@@ -29,7 +29,7 @@ tags:
 
 源码仓库：[CodeWF](https://github.com/dotnet9/CodeWF)，采用前后台分离架构：
 
-```
+```text
 CodeWF/src/
 ├── WebApp/                 # 前台站点（Razor Pages）
 │   ├── Pages/             # 页面文件
@@ -75,7 +75,7 @@ public class IndexModel : PageModel
 
 对应视图文件 [Pages/Tool/Index.cshtml](https://github.com/dotnet9/CodeWF/blob/main/src/WebApp/Pages/Tool/Index.cshtml)：
 
-```cshtml
+```html
 @page
 @model WebApp.Pages.Tool.IndexModel
 @{
@@ -118,7 +118,7 @@ public class IndexModel : PageModel
 
 文章详情页使用路由模板语法：
 
-```cshtml
+```html
 @page "/{year:int}/{month:int}/{slug}"
 @model WebApp.Pages.Blog.Post.IndexModel
 ```
@@ -141,7 +141,7 @@ public class IndexModel : PageModel
 
 Layout文件定义全局页面结构：
 
-```cshtml
+```html
 @inject CodeWF.Services.AppService AppService
 <!DOCTYPE html>
 <html lang="zh-CN">
@@ -302,7 +302,7 @@ app.Run();
 
 以 [Timestamp.cshtml](https://github.com/dotnet9/CodeWF/blob/main/src/WebApp/Pages/Tool/Converter/Timestamp.cshtml) 为例展示前端交互：
 
-```cshtml
+```html
 @page "/timestamp"
 @{ ViewData["Title"] = "时间戳转换工具"; }
 

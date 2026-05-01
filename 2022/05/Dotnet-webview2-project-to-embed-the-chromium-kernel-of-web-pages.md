@@ -59,38 +59,38 @@ Microsoft.Web.WebView2
 这个时候，我们添加一下的基础环境代码，就可以让页面启动了。
 
 ```csharp
- public partial class Form1 : Form
+public partial class Form1 : Form
+{
+    public Form1()
     {
-        public Form1()
-        {
-            InitializeComponent();
-            Resize += new EventHandler(Form_Resize);
-            webView21.CoreWebView2InitializationCompleted += WebView21_CoreWebView2InitializationCompleted;
-            Initialize();
-        }
-         /// <summary>
-         /// 实现自适应页面缩放
-         /// </summary>
-        private void Form_Resize(object sender, EventArgs e)
-        {
-            webView21.Size = ClientSize - new Size(webView21.Location);
-        }
-        /// <summary>
-        /// webview 加载完毕
-        /// </summary>
-        private void WebView21_CoreWebView2InitializationCompleted(object sender, CoreWebView2InitializationCompletedEventArgs e)
-        {
-            webView21.CoreWebView2.Navigate("https://www.baidu.com/");
-        }
-        /// <summary>
-        /// WebView2初始化
-        /// </summary>
-        async void Initialize()
-        {
-            var result = await CoreWebView2Environment.CreateAsync(null, Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "cache"), null);
-            await webView21.EnsureCoreWebView2Async(result);
-        }
+        InitializeComponent();
+        Resize += new EventHandler(Form_Resize);
+        webView21.CoreWebView2InitializationCompleted += WebView21_CoreWebView2InitializationCompleted;
+        Initialize();
     }
+        /// <summary>
+        /// 实现自适应页面缩放
+        /// </summary>
+    private void Form_Resize(object sender, EventArgs e)
+    {
+        webView21.Size = ClientSize - new Size(webView21.Location);
+    }
+    /// <summary>
+    /// webview 加载完毕
+    /// </summary>
+    private void WebView21_CoreWebView2InitializationCompleted(object sender, CoreWebView2InitializationCompletedEventArgs e)
+    {
+        webView21.CoreWebView2.Navigate("https://www.baidu.com/");
+    }
+    /// <summary>
+    /// WebView2初始化
+    /// </summary>
+    async void Initialize()
+    {
+        var result = await CoreWebView2Environment.CreateAsync(null, Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "cache"), null);
+        await webView21.EnsureCoreWebView2Async(result);
+    }
+}
 ```
 
 ![](https://img1.dotnet9.com/2022/05/4504.png)

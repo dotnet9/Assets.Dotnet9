@@ -37,7 +37,7 @@ tags:
 
 下面是一个用于新用户条目视图的视图接口示例。这个视图的实现应该是微不足道的。任何业务逻辑都不属于后面的代码（我们接下来将讨论它属于哪里）。
 
-```C#
+```csharp
 interface INewUserView
 {
     string FirstName { get; set; }

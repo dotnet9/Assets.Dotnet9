@@ -125,7 +125,7 @@ sudo yum install nginx
 通过命令进入配置文件编辑：
 
 ```shell
- vim appsettings.json
+vim appsettings.json
 ```
 
 编辑完成后采用以下命令退出
@@ -145,7 +145,7 @@ vim命令
 
 进入项目目录执行命令：
 
-```sehll
+```shell
 [root@Coder supervisor]# cd /home/www/publish
 [root@Coder publish]# dotnet ZLSoft.UnifiedDS.Web.Host.dll --urls http://*:8220
 ```

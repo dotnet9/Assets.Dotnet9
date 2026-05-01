@@ -74,7 +74,7 @@ tags:
 
 ![image](https://img1.dotnet9.com/2022/04/2004.png)
 
-```XML
+```xml
 <Grid.Resources>
    <Style TargetType="Rectangle">
        <Setter Property="Fill" Value="#36a8e2" />
@@ -94,7 +94,7 @@ tags:
 
 用 ItemsControl 拆分文字实现彩虹文字是一个很好玩的方案，因为可以对每个文字做不同的变形和动画，实现很多种玩法。首先，因为 string 是个集合，其实它可以用作 ItemsControl 的 ItemsSource。但在 Xaml 上直接写 <CODE>ItemsSource="somestring"`</CODE> 会报错，可以用 ContentControl 包装一下，写成这样：
 
-```XML
+```xml
 <ContentControl Content="ItemsControl" >
     <ContentControl.Template>
         <ControlTemplate TargetType="ContentControl">
@@ -107,7 +107,7 @@ tags:
 
 然后设置 ItemsControl 的 ItemsPanel，让内容横向排列；设置 DataTemplate，让拆分后的字符显示在 TextBlock 上：
 
-```XML
+```xml
 <ItemsControl ItemsSource="{TemplateBinding Content}" >
     <ItemsControl.ItemsPanel>
         <ItemsPanelTemplate>
@@ -124,7 +124,7 @@ tags:
 
 接下来，为了让每个字符显示不同的颜色，需要实现一个 Collection 类并在 Xaml 上实例化它，将用到的颜色放进去：
 
-```XML
+```xml
 <common:RepeatCollection x:Key="RepeatCollection">
     <SolidColorBrush>#4a0e68</SolidColorBrush>
     <SolidColorBrush>#b62223</SolidColorBrush>
@@ -138,7 +138,7 @@ tags:
 
 这个 RepeatCollection 的代码如下，它其实是个循环队列，每次调用 Next 的 getter 方法就拿下一个元素（叫 CircleCollection 会不会好些？）：
 
-```CS
+```csharp
 public class RepeatCollection : Collection<object>
 {
     private int _offset;
@@ -163,7 +163,7 @@ public class RepeatCollection : Collection<object>
 
 最后，TextBlock 的 Foreground 绑定到集合的 Next 属性，实现每一个 TextBlock 都使用不同的颜色：
 
-```XML
+```xml
 <TextBlock Foreground="{Binding Next, Source={StaticResource RepeatCollection}}" Text="{Binding}" />
 ```
 
@@ -177,7 +177,7 @@ public class RepeatCollection : Collection<object>
 
 将 LinearGradientBrush 应用在文字上，文字就变成了彩虹色。如果两个 GradientStop 之间 Color 相同就不会发生渐变，如果两个 GradientStop 之间 Offset 就会马上变。利用这种手法，再加上我使用了等宽字体，所以可以制造出每个字颜色不一样的彩虹文字：
 
-```XML
+```xml
 <LinearGradientBrush x:Name="RainbowBrush" StartPoint="0,0.5" EndPoint="1,.5">
     <GradientStop x:Name="G1" Offset="0" Color="#65b849" />
     <GradientStop x:Name="G2" Offset=".166" Color="#65b849" />
@@ -200,7 +200,7 @@ public class RepeatCollection : Collection<object>
 
 在 MouseOver 的 Storyboard 里控制 LinearGradientBrush 改变方向。有两种方式可以改变它的方向，其中一种是用 PointAnimation 改变 StartPoint 和 EndPoint，另一种是用 DoubleAnimation 直接改变 LinearGradientBrush.RelativeTransform。后一种的写法如下：
 
-```XML
+```xml
 <Storyboard>
     <DoubleAnimation Storyboard.TargetName="textBlock"
                      Storyboard.TargetProperty="(TextBlock.Foreground).(Brush.RelativeTransform).(RotateTransform.Angle)"
@@ -241,7 +241,7 @@ public class RepeatCollection : Collection<object>
 
 在 WPF 中，我们通常用 DropShadow 做阴影效果，但都是做外阴影。内阴影（Inner Shadow）的话其实也不是不可以，就是有些曲折。实现内阴影的方案有几种，其中我最喜欢用另一个元素的 VisualBrush 来做 OpacityMask 的方案。
 
-```XML
+```xml
 <Grid Width="100"
       Height="100"
       Margin="10">
@@ -265,7 +265,7 @@ public class RepeatCollection : Collection<object>
 
 但这样做出来的阴影都不会太粗，如果需要更大更粗的内阴影，可以使用一个负数的 Margin 配合同样粗细的 BorderThickness 实现。以 OpacityMask 的方案为例，用下面的代码可以做个又粗又大的内阴影：
 
-```CS
+```csharp
 private void Slider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
 {
     ShadowElement.Margin = new Thickness(-e.NewValue);
@@ -294,7 +294,7 @@ private void Slider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<d
 
 用一个 RadialGradientBrush 作为 OpacityMask 让 TextBlock 从中心点向外渐渐变得透明：
 
-```XML
+```xml
 <TextBlock HorizontalAlignment="Center"
            VerticalAlignment="Center"
            FontFamily="SegoeUI"
@@ -314,7 +314,7 @@ private void Slider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<d
 
 然后对 Center 和 GradientOrigin 做 PointAnimation，实现 OpacityMask 的水平移动，就可以模仿出 PointLight 扫过的效果：
 
-```XML
+```xml
 <PointAnimation RepeatBehavior="Forever"
                 Storyboard.TargetName="Brush"
                 Storyboard.TargetProperty="Center"

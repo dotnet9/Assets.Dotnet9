@@ -29,7 +29,7 @@ tags:
 
 下面代码为`FileUpload.razor`，使用 Blazor 提供的 Component `<InputFile>`，`multiple`代表可以上传多个文件
 
-```C#
+```csharp
 @page "/FileUpload"
 
 <div>
@@ -57,7 +57,7 @@ tags:
 
 下面代码为`FileUpload.razor.cs`，这里用`partial` class
 
-```C#
+```csharp
 using BlazorServer.ViewModels;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Forms;
@@ -168,7 +168,7 @@ public partial class FileUpload
 
 建立新的`ViewModel` 让`SweetConfirm`可以通用
 
-```C#
+```csharp
 namespace BlazorServer.ViewModels;
 
 public class SweetConfirmViewModel
@@ -185,7 +185,7 @@ public class SweetConfirmViewModel
 
 再把`_Layout.cshtml`的`SweetConfirm`修改一下
 
-```JavaScript
+```javascript
 function SweetConfirm(jsonString) {
     // 这里要parse才能正常传回来
     var arg = JSON.parse(jsonString);
@@ -209,7 +209,7 @@ function SweetConfirm(jsonString) {
 
 既然这边改了，`PostBase.razor.cs`的`DeletePost`也要修改
 
-```C#
+```csharp
 protected async Task DeletePost()
 {
     // 改成ViewModel
@@ -235,7 +235,7 @@ protected async Task DeletePost()
 
 `JsInteropClasses.cs`的`Confirm()`改成 JSON 字串
 
-```C#
+```csharp
 public async ValueTask<bool> Confirm(string jsonString)
 {
     var confirm = await _js.InvokeAsync<object?>("SweetConfirm", jsonString);

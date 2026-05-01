@@ -305,7 +305,7 @@ internal class UserA: IUser
 
 版本 8 中添加了注入关键字，可以很方便实现，看下面代码：
 
-```c#
+```csharp
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddKeyedSingleton<IUser, UserA>("A");

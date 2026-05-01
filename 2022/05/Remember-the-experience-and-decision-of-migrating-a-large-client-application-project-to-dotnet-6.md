@@ -234,8 +234,7 @@ tags:
 在入口程序集里面，加上对 定制部分的程序集 的引用逻辑，例如对定制的 WPF 的程序集，也就是放在 `Build\dotnet runtime\WpfLibraries\` 文件夹里面的 DLL 进行引用和拷贝输出:
 
 ```xml
-  <ItemGroup>
-    <Reference Include="$(SolutionDir)Build\dotnet runtime\WpfLibraries\*.dll"/>
+<ItemGroup>    <Reference Include="$(SolutionDir)Build\dotnet runtime\WpfLibraries\*.dll"/>
     <ReferenceCopyLocalPaths Include="$(SolutionDir)Build\dotnet runtime\WpfLibraries\*.dll"/>
   </ItemGroup>
 ```
@@ -249,8 +248,7 @@ tags:
 实现方法就是在服务器构建时，通过 msbuild 参数，设置属性，在项目文件判断属性了解是否服务器构建，如果是服务器构建就不进行引用程序集:
 
 ```xml
-  <ItemGroup Condition=" '$(TargetFrameworkIdentifier)' != '.NETFramework' And $(DisableCopyCustomWpfLibraries) != 'true'">
-    <Reference Include="$(SolutionDir)Build\dotnet runtime\WpfLibraries\*.dll"/>
+<ItemGroup Condition=" '$(TargetFrameworkIdentifier)' != '.NETFramework' And $(DisableCopyCustomWpfLibraries) != 'true'">    <Reference Include="$(SolutionDir)Build\dotnet runtime\WpfLibraries\*.dll"/>
     <ReferenceCopyLocalPaths Include="$(SolutionDir)Build\dotnet runtime\WpfLibraries\*.dll"/>
   </ItemGroup>
 ```
@@ -266,16 +264,16 @@ tags:
 然后在构建的时候，需要从 `Build\dotnet runtime\runtime\` 文件夹拷贝定制的运行时放入到输出文件夹里面。
 
 ```csharp
-    /// <summary>
-    /// 使用自己分发的运行时，需要从 Build\dotnet runtime\runtime 拷贝
-    /// </summary>
-    private void CopyDotNetRuntimeFolder()
-    {
-        var runtimeTargetFolder = Path.Combine(BuildConfiguration.OutputDirectory, "runtime");
-        var runtimeSourceFolder =
-            Path.Combine(BuildConfiguration.BuildConfigurationDirectory, @"dotnet runtime\runtime");
-        PackageDirectory.Copy(runtimeSourceFolder, runtimeTargetFolder);
-    }
+/// <summary>
+/// 使用自己分发的运行时，需要从 Build\dotnet runtime\runtime 拷贝
+/// </summary>
+private void CopyDotNetRuntimeFolder()
+{
+    var runtimeTargetFolder = Path.Combine(BuildConfiguration.OutputDirectory, "runtime");
+    var runtimeSourceFolder =
+        Path.Combine(BuildConfiguration.BuildConfigurationDirectory, @"dotnet runtime\runtime");
+    PackageDirectory.Copy(runtimeSourceFolder, runtimeTargetFolder);
+}
 ```
 
 也就是说不让入口程序集引用自定义版本的 WPF 框架，而是换成让应用运行去引用 runtime 文件夹里面的，从而减少重复的文件。
@@ -320,27 +318,27 @@ tags:
 在主应用入口 Program 启动给应用自己加上环境变量，根据 dotnet 的 Process 启动策略，被当前进程使用 Process 启动的进程，将会继承当前进程的环境变量。从而实现了在使用主应用启动的插件进程，可以拿到 `DOTNET_ROOT` 环境变量，从而使用主应用的运行时。
 
 ```csharp
-        /// <summary>
-        /// 加上环境变量，让调用的启动进程也自动能找到运行时
-        /// </summary>
-        static void AddEnvironmentVariable()
-        {
-            string key;
-            if (Environment.Is64BitOperatingSystem)
-            {
-                // https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-environment-variables
-                key = "DOTNET_ROOT(x86)";
-            }
-            else
-            {
-                key = "DOTNET_ROOT";
-            }
+/// <summary>
+/// 加上环境变量，让调用的启动进程也自动能找到运行时
+/// </summary>
+static void AddEnvironmentVariable()
+{
+    string key;
+    if (Environment.Is64BitOperatingSystem)
+    {
+        // https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-environment-variables
+        key = "DOTNET_ROOT(x86)";
+    }
+    else
+    {
+        key = "DOTNET_ROOT";
+    }
 
-            // 例如调用放在 AppData 的独立进程，如 CEF 进程，可以找到运行时
-            var runtimeFolder =
-                Path.Combine(AppDomain.CurrentDomain.SetupInformation.ApplicationBase!, "runtime");
-            Environment.SetEnvironmentVariable(key, runtimeFolder);
-        }
+    // 例如调用放在 AppData 的独立进程，如 CEF 进程，可以找到运行时
+    var runtimeFolder =
+        Path.Combine(AppDomain.CurrentDomain.SetupInformation.ApplicationBase!, "runtime");
+    Environment.SetEnvironmentVariable(key, runtimeFolder);
+}
 ```
 
 根据官方文档，对 x86 的应用，需要使用 `DOTNET_ROOT(x86)` 环境变量。
@@ -374,55 +372,55 @@ tags:
 以下是 deps.json 的配置引用程序集例子：
 
 ```json
- "PresentationFramework/6.0.2.0": {
-        "runtime": {
-          "PresentationFramework.dll": {
-            "assemblyVersion": "6.0.2.0",
-            "fileVersion": "42.42.42.42424"
-          }
-        },
-        "resources": {
-          "cs/PresentationFramework.resources.dll": {
-            "locale": "cs"
-          },
-          "de/PresentationFramework.resources.dll": {
-            "locale": "de"
-          },
-          "es/PresentationFramework.resources.dll": {
-            "locale": "es"
-          },
-          "fr/PresentationFramework.resources.dll": {
-            "locale": "fr"
-          },
-          "it/PresentationFramework.resources.dll": {
-            "locale": "it"
-          },
-          "ja/PresentationFramework.resources.dll": {
-            "locale": "ja"
-          },
-          "ko/PresentationFramework.resources.dll": {
-            "locale": "ko"
-          },
-          "pl/PresentationFramework.resources.dll": {
-            "locale": "pl"
-          },
-          "pt-BR/PresentationFramework.resources.dll": {
-            "locale": "pt-BR"
-          },
-          "ru/PresentationFramework.resources.dll": {
-            "locale": "ru"
-          },
-          "tr/PresentationFramework.resources.dll": {
-            "locale": "tr"
-          },
-          "zh-Hans/PresentationFramework.resources.dll": {
-            "locale": "zh-Hans"
-          },
-          "zh-Hant/PresentationFramework.resources.dll": {
-            "locale": "zh-Hant"
-          }
-        }
-      },
+"PresentationFramework/6.0.2.0": {
+  "runtime": {
+    "PresentationFramework.dll": {
+      "assemblyVersion": "6.0.2.0",
+      "fileVersion": "42.42.42.42424"
+    }
+  },
+  "resources": {
+    "cs/PresentationFramework.resources.dll": {
+      "locale": "cs"
+    },
+    "de/PresentationFramework.resources.dll": {
+      "locale": "de"
+    },
+    "es/PresentationFramework.resources.dll": {
+      "locale": "es"
+    },
+    "fr/PresentationFramework.resources.dll": {
+      "locale": "fr"
+    },
+    "it/PresentationFramework.resources.dll": {
+      "locale": "it"
+    },
+    "ja/PresentationFramework.resources.dll": {
+      "locale": "ja"
+    },
+    "ko/PresentationFramework.resources.dll": {
+      "locale": "ko"
+    },
+    "pl/PresentationFramework.resources.dll": {
+      "locale": "pl"
+    },
+    "pt-BR/PresentationFramework.resources.dll": {
+      "locale": "pt-BR"
+    },
+    "ru/PresentationFramework.resources.dll": {
+      "locale": "ru"
+    },
+    "tr/PresentationFramework.resources.dll": {
+      "locale": "tr"
+    },
+    "zh-Hans/PresentationFramework.resources.dll": {
+      "locale": "zh-Hans"
+    },
+    "zh-Hant/PresentationFramework.resources.dll": {
+      "locale": "zh-Hant"
+    }
+  }
+},
 ```
 
 解决以上问题的方法就是如上的处理方法的做法，在开发者构建和服务器构建使用不同的引用关系。

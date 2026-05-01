@@ -27,7 +27,7 @@ tags:
 
 这样配置文件修改的时候，程序就会监听到文件发生变化，自动重新加载了。
 
-```C#
+```csharp
 public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
             .ConfigureAppConfiguration((context, config) =>
@@ -45,7 +45,7 @@ public static IHostBuilder CreateHostBuilder(string[] args) =>
 
 appsettings.json 文件内容如下
 
-```JSOn
+```json
 {
   "TestSetting": "123",
   "AppOptions": {
@@ -56,7 +56,7 @@ appsettings.json 文件内容如下
 
 代码：
 
-```C#
+```csharp
 public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _logger;
@@ -84,7 +84,7 @@ public class HomeController : Controller
 
 把配置文件修改为：
 
-```JSON
+```json
 {
   "TestSetting": "abc",
   "AppOptions": {
@@ -101,7 +101,7 @@ public class HomeController : Controller
 
 新建 AppOptions.cs 类
 
-```C#
+```csharp
 /// <summary>
 /// 配置文件
 /// </summary>
@@ -113,7 +113,7 @@ public class AppOptions
 
 在 Startup.cs 处把配置加到 Options
 
-```C#
+```csharp
 public void ConfigureServices(IServiceCollection services)
 {
     services.AddControllersWithViews();
@@ -123,7 +123,7 @@ public void ConfigureServices(IServiceCollection services)
 
 使用：
 
-```C#
+```csharp
 public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _logger;
@@ -162,7 +162,7 @@ IOptions 有三种方式
 
 例：
 
-```C#
+```csharp
 public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _logger;
@@ -183,7 +183,7 @@ public class HomeController : Controller
 }
 ```
 
-```C#
+```csharp
 public class UserService
 {
     private IOptionsMonitor<AppOptions> _options;
@@ -201,7 +201,7 @@ public class UserService
 }
 ```
 
-```C#
+```csharp
 public void ConfigureServices(IServiceCollection services)
 {
     services.AddControllersWithViews();
@@ -220,7 +220,7 @@ public void ConfigureServices(IServiceCollection services)
 
 修改 Program.cs 处 CreateHostBuilder()，也是加载时加上 reloadOnChange:true 就可以了。
 
-```C#
+```csharp
 public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
             .ConfigureAppConfiguration((context, config) =>
@@ -237,7 +237,7 @@ public static IHostBuilder CreateHostBuilder(string[] args) =>
 
 使用也是一样的：
 
-```C#
+```csharp
 public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _logger;

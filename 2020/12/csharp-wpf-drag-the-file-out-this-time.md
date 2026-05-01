@@ -29,13 +29,13 @@ tags:
 
 上面效果的代码很少，xaml 中只注册事件`PreviewMouseLeftButtonDown`即可：
 
-```HTML
+```html
 <Grid  MouseMove="Grid_MouseMove" AllowDrop="True" Drop="Grid_Drop" DragEnter="Grid_DragEnter" PreviewMouseLeftButtonDown="Grid_PreviewMouseLeftButtonDown">
 ```
 
 事件处理代码如下：
 
-```C#
+```csharp
 //处理文件拽出操作
 private void Grid_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
 {

@@ -207,7 +207,7 @@ ADMISSION_AGE = 16; // 编译错误：无法给常量赋值
 枚举可以规范我们的开发，语法如下：
 
 ```csharp
-    [public] enum 枚举名
+[public] enum 枚举名
 {
     值1,
     值2,

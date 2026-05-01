@@ -39,7 +39,7 @@ tags:
 
 ![图片](https://img1.dotnet9.com/2025/05/0301.png)
 
-```xaml
+```xml
 <Grid CacheMode="BitmapCache" ClipToBounds="True">    
     <Border Margin="-10" 
             BorderBrush="#FFFF"        
@@ -83,7 +83,7 @@ tags:
 
 代码如下：
 
-```xaml
+```xml
 <u:UrsaWindow xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"

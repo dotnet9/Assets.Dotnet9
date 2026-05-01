@@ -32,7 +32,7 @@ tags:
 
 同时，还允许向 record 添加运算符，两种 record 类型都可以。
 
-```C#
+```csharp
 record Person(string Name, string Email)
 {
   public static Person operator +(Person first, Person second)
@@ -46,7 +46,7 @@ record Person(string Name, string Email)
 
 C# 团队关注的目标之一是使对象的初始化变得更容易。这就是为什么可以对 class、struct、record 或 struct record 的属性添加 required 标记 。它使得这些属性必须填写。这可以通过构造函数来完成，也可以通过对象初始化来完成。下面的两个类的定义是等价的。如果你添加了 required 关键字，那么就无法在不设置 Name 属性的情况下将 Person 实例化。编译器会抛出错误，无法编译。
 
-```C#
+```csharp
 class Person
 {
   public required string Name { get; set; }
@@ -54,7 +54,7 @@ class Person
 }
 ```
 
-```C#
+```csharp
 class Person
 {
   public Person(string name) => Name = name;
@@ -68,7 +68,7 @@ class Person
 
 为了进一步的改善属性，将允许完全摆脱 backing field 。新的关键字 field 将提供对上述字段的访问。对 setter 和 init only 属性都可以使用。
 
-```C#
+```csharp
 class Person
 {
   public string Name { get; init => field = value.Trim(); }
@@ -80,7 +80,7 @@ class Person
 
 在下一个版本中还会有一些有趣的小改进。其实中一个是匿名类型也将支持 `with` 运算符。
 
-```C#
+```csharp
 var foo = new
 {
   Name = "Foo",
@@ -93,7 +93,7 @@ var bar = foo with {Name = "Bar"};
 
 现在可以创建一个带有命名空间导入的文件，然后在任何地方都可以使用这个导入。例如，如果有一个很常用的命名空间，几乎在每个文件中都使用例如 `Microsoft.Extensions.Logging.ILogger` ，那么就可以在任何.cs 文件（我建议在 Program.cs 或专门的 Imports.cs ）中添加一行 `global using Microsoft.Extensions.Logging.ILogger`，之后这个命名空间将可以在整个项目中使用。注意，这不适用于整个解决方案! 没有人能够预测哪些地方需要导入，所以它们被分组到每个项目中。
 
-```C#
+```csharp
 // 译注：原文并没有提供代码示例，为了更好方便大家理解私自添加了一个演示
 // Program.cs 文件
 global using System;
@@ -105,7 +105,7 @@ Console.WriteLine("foo");
 
 随后，还将对命名空间也会有一个优化。现在命名空间需要大括号 {} 来包起来代码，这就意味着所有代码至少要缩进一次。为了节省 tab（或四个空格）和屏幕空间，在文件的任何地方添加一个命名空间，将使所有代码都属于该命名空间。有研究表明绝大多数情况下，一个文件中所有的代码都属于同一个命名空间。使用这个方案后，文件大小随之减少，这对一个解决方案来说可能并不明显（即使它包含成千上万的文件），但在 GitHub/GitLab/BitBucket/... 的规模上，我认为这将为他们节省一些空间。如果有人仍想在一个文件中包含多个命名空间，使用大括号的选项仍然可用。
 
-```C#
+```csharp
 // 传统的方式 LegacyNamespace.cs
 namespace LegacyNamespace
 {
@@ -127,7 +127,7 @@ class Bar
 
 对 lambda 语句也会有一些很酷的更新。编译器将对推断 lambda 签名提供更好的支持，而且还可以添加特性。话可以显式指定返回类型，以帮助编译器理解 lambda。
 
-```C#
+```csharp
 var f = Console.WriteLine;
 var f = x => x; // 推断返回类型
 var f = (string x) => x; // 推断签名
@@ -146,7 +146,7 @@ var f = static void (_) => Console.Write("Help");
 
 最后，将有可能在接口上指定静态方法和属性。我知道这将是一个有争议的话题，就像给接口添加默认实现一样。我不喜欢它。然而，这可能非常有趣。想象一下，你可以指定一个接口的默认值或指定创建方法。
 
-```C#
+```csharp
 interface IFoo
 {
   static IFoo Empty { get; }

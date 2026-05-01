@@ -95,13 +95,13 @@ tags:
 
 2. XXXModule 中需要将资源文件的 ResourceManager 引用添加到另一个库中保存，待切换语言时需要使用，如在 HomeModule 的构造函数中添加代码如下，只添加这一句代码就好，模块的国际化及本地化就算完事了：
 
-```C#
+```csharp
 I18nManager.Instance.Add(TerminalMACS.Home.I18nResources.UiResource.ResourceManager);
 ```
 
 3. XXXModule 的 RegisterTypes 方法中注册视图"MainTabItem"到"RegionNames.MainTabRegion"，主窗体使用"RegionNames.MainTabRegion"关联模块视图显示加载。
 
-```C#
+```csharp
 _regionManager.RegisterViewWithRegion(RegionNames.MainTabRegion, typeof(MainTabItem));
 ```
 
@@ -121,7 +121,7 @@ _regionManager.RegisterViewWithRegion(RegionNames.MainTabRegion, typeof(MainTabI
 
 配置加载 3 个模块的关键代码在 App.xaml.cs 文件中，看上面的代码，我将三个模块输出到了 Modules 目录下，主工程直接加载此目录即可，其他加载方式还有使用配置文件等，可以参考 Prism 官方例子，文末给出链接：
 
-```C#
+```csharp
 protected override IModuleCatalog CreateModuleCatalog()
 {
     string modulePath = @".\Modules";
@@ -175,7 +175,7 @@ protected override IModuleCatalog CreateModuleCatalog()
 
 动态切换语言的关键代码改为：
 
-```C#
+```csharp
 public static void SetLanguage(string language = "")
 {
     if (string.IsNullOrWhiteSpace(language))
@@ -197,7 +197,7 @@ public static void SetLanguage(string language = "")
 
 核心的语言切换代码是最后一句，不详细说了，解决方案中有库、有源码：
 
-```C#
+```csharp
 I18nManager.Instance.CurrentUICulture = culture;
 ```
 

@@ -74,7 +74,7 @@ https://www.cnblogs.com/xiaoyan2017/p/16812092.html
 
 ![](https://img1.dotnet9.com/2023/07/1111.png)
 
-```js
+```javascript
 // 创建窗口配置
 export const windowConfig = {
   label: null, // 窗口唯一label
@@ -98,7 +98,7 @@ export const windowConfig = {
 
 通过 tauri 提供的 WebviewWindow 方法创建新窗口实例。由于 label 是窗口唯一标识，当需要切换设置为主窗口时，需要设置 label 包含 main 关键词。后续会检索是否有 main 关键词判断是否是主窗口。
 
-```js
+```javascript
 /**
  * @desc    窗口管理
  * @author: YXY  Q：282310962
@@ -243,7 +243,7 @@ class Windows {
 
 ![](https://img1.dotnet9.com/2023/07/1118.png)
 
-```js
+```javascript
 <script setup>
     import { computed } from 'vue'
     import { appStore } from '@/pinia/modules/app'
@@ -284,7 +284,7 @@ tauri 项目中使用 vue-router 进行路由跳转管理。
 
 ![](https://img1.dotnet9.com/2023/07/1123.png)
 
-```js
+```javascript
 /**
  * 路由配置 Router
  * @author YXY
@@ -390,7 +390,7 @@ export default router;
 
 ![](https://img1.dotnet9.com/2023/07/1124.png)
 
-```js
+```javascript
 /**
  * 状态管理配置 Pinia
  * @author YXY
@@ -424,7 +424,7 @@ tauri-admin 支持中英文/繁体三种语言配置。
 
 ![](https://img1.dotnet9.com/2023/07/1130.png)
 
-```js
+```javascript
 /**
  * 国际化配置 VueI18n
  * @author YXY

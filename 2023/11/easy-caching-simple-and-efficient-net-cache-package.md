@@ -103,7 +103,7 @@ dotnet add package EasyCaching.InMemory
 
 其次是添加配置
 
-```cs
+```csharp
 public void ConfigureServices(IServiceCollection services)
 {
     // 添加EasyCaching
@@ -166,7 +166,7 @@ public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerF
 
 最后的话就是使用了。
 
-```cs
+```csharp
 [Route("api/[controller]")]
 public class ValuesController : Controller
 {
@@ -222,7 +222,7 @@ public class ValuesController : Controller
 
 除了这个默认的实现，还提供了三种额外的选择。Newtonsoft.Json，MessagePack 和 Protobuf。下面以在 Redis 的 provider 使用 MessagePack 为例，来看看它的用法。
 
-```cs
+```csharp
 services.AddEasyCaching(option=>
 {
     // 使用redis
@@ -260,7 +260,7 @@ services.AddEasyCaching(option=>
 
 我们先添加两个不同名字的 InMemory 缓存
 
-```cs
+```csharp
 services.AddEasyCaching(option =>
 {
     // 指定当前provider的名字为m1
@@ -279,7 +279,7 @@ services.AddEasyCaching(option =>
 
 使用的时候
 
-```cs
+```csharp
 [Route("api/[controller]")]
 public class ValuesController : Controller
 {
@@ -320,7 +320,7 @@ public class ValuesController : Controller
 
 一般情况下，我们可能是这样操作缓存的。
 
-```cs
+```csharp
 public async Task<Product> GetProductAsync(int id)
 {
     string cacheKey = $"product:{id}";
@@ -343,7 +343,7 @@ public async Task<Product> GetProductAsync(int id)
 
 我们同样可以使用 AOP 来简化这一操作。
 
-```cs
+```csharp
 public interface IProductService
 {
     [EasyCachingAble(Expiration = 10)]
@@ -363,7 +363,7 @@ public class ProductService : IProductService
 
 当然，只加 Attribute，不加配置，它也是不会生效的。下面以`EasyCaching.Interceptor.AspectCore`为例，添加相应的配置。
 
-```cs
+```csharp
 public IServiceProvider ConfigureServices(IServiceCollection services)
 {
     services.AddScoped<IProductService, ProductService>();
@@ -440,7 +440,7 @@ dotnet add package EasyCaching.Bus.Redis
 
 其次是添加配置。
 
-```cs
+```csharp
 services.AddEasyCaching(option =>
 {
     // 添加两个基本的provider
@@ -474,7 +474,7 @@ services.AddEasyCaching(option =>
 
 最后就是使用了。
 
-```cs
+```csharp
 [Route("api/[controller]")]
 public class ValuesController : Controller
 {
@@ -511,7 +511,7 @@ public class ValuesController : Controller
 
 下面是一个简单的使用例子。
 
-```cs
+```csharp
 [Route("api/mredis")]
 public class MultiRedisController : Controller
 {

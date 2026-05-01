@@ -56,7 +56,7 @@ tags:
 
 创建一个配置选项用来存储私钥公钥
 
-```C#
+```csharp
 public class RsaOptions
 {
     public string PrivateKey { get; set; }
@@ -65,7 +65,7 @@ public class RsaOptions
 
 创建一个 Scheme 选项类
 
-```C#
+```csharp
 public class AuthSecurityRsaOptions: AuthenticationSchemeOptions
 {
 }
@@ -73,7 +73,7 @@ public class AuthSecurityRsaOptions: AuthenticationSchemeOptions
 
 定义一个常量
 
-```C#
+```csharp
 public class AuthSecurityRsaDefaults
 {
     public const string AuthenticationScheme = "SecurityRsaAuth";
@@ -82,7 +82,7 @@ public class AuthSecurityRsaDefaults
 
 创建我们的认证处理器 `AuthSecurityRsaAuthenticationHandler`
 
-```C#
+```csharp
 public class AuthSecurityRsaAuthenticationHandler: AuthenticationHandler<AuthSecurityRsaOptions>
 {
 //正式替换成redis
@@ -176,7 +176,7 @@ public class AuthSecurityRsaAuthenticationHandler: AuthenticationHandler<AuthSec
 
 第三步我们添加扩展方法
 
-```C#
+```csharp
 public static class AuthSecurityRsaExtension
 {
     public static AuthenticationBuilder AddAuthSecurityRsa(this AuthenticationBuilder builder)
@@ -197,7 +197,7 @@ public static class AuthSecurityRsaExtension
 
 添加返回结果加密解密 SafeResponseMiddleware
 
-```C#
+```csharp
 public class SafeResponseMiddleware
 {
     private readonly RequestDelegate _next;
@@ -258,7 +258,7 @@ public class SafeResponseMiddleware
 
 新增基础基类来实现认证
 
-```C#
+```csharp
 [Authorize(AuthenticationSchemes =AuthSecurityRsaDefaults.AuthenticationScheme )]
 public class RsaBaseController : ControllerBase
 {
@@ -273,7 +273,7 @@ public class RsaBaseController : ControllerBase
 
 首先实现模型绑定
 
-```C#
+```csharp
 public class EncryptBodyModelBinder : IModelBinder
 {
     public async Task BindModelAsync(ModelBindingContext bindingContext)
@@ -309,7 +309,7 @@ public class EncryptBodyModelBinder : IModelBinder
 
 添加 attribute 的特性解析
 
-```C#
+```csharp
 [AttributeUsage(AttributeTargets.Class | AttributeTargets.Struct | AttributeTargets.Enum | AttributeTargets.Property | AttributeTargets.Parameter, AllowMultiple = false, Inherited = true)]
 public class RsaModelParseAttribute : Attribute, IBinderTypeProviderMetadata, IBindingSourceMetadata, IModelNameProvider
 {
@@ -325,7 +325,7 @@ public class RsaModelParseAttribute : Attribute, IBinderTypeProviderMetadata, IB
 
 添加测试 dto
 
-```C#
+```csharp
 [RsaModelParse]
 public class TestModel
 {
@@ -336,7 +336,7 @@ public class TestModel
 
 创建模型控制器
 
-```C#
+```csharp
 [Route("api/[controller]/[action]")]
 [ApiController]
 public class TestController: RsaBaseController
@@ -372,7 +372,7 @@ public class TestController: RsaBaseController
 
 添加异常全局捕获
 
-```C#
+```csharp
 public class HttpGlobalExceptionFilter : IExceptionFilter
 {
     private readonly ILogger<HttpGlobalExceptionFilter> _logger;
@@ -396,7 +396,7 @@ public class HttpGlobalExceptionFilter : IExceptionFilter
 
 添加模型校验
 
-```C#
+```csharp
 public class ValidateModelStateFilter : ActionFilterAttribute
 {
     public override void OnActionExecuting(ActionExecutingContext context)
@@ -421,7 +421,7 @@ public class ValidateModelStateFilter : ActionFilterAttribute
 
 startup 配置
 
-```C#
+```csharp
 public void ConfigureServices(IServiceCollection services)
 {
     services.Configure<ApiBehaviorOptions>(options =>
@@ -502,7 +502,7 @@ openssl>pkcs8 -topk8 -inform PEM -in rsa_private_key.pem -outform PEM -nocrypt -
 Install-Package BouncyCastle.NET Core -Version 1.8.8
 ```
 
-```C#
+```csharp
 public class RsaKeyConvert
 {
     private RsaKeyConvert()

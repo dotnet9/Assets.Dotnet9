@@ -23,7 +23,7 @@ tags:
 
 首先添加承载角色数据的`ViewModel`，因为接下来的权限会以角色判断，`ASP.NET Core Identity` 承载角色的`Model` 为`IdentityRole`，里面有太多不该让用户看到的信息，通常会自己写新的`ViewModel` 以过滤多余信息，这边只呈现`Role`的`Id`、`Name` 跟`Role` 底下所有用户的名称。
 
-```C#
+```csharp
 using System.ComponentModel.DataAnnotations;
 
 namespace BlazorServer.ViewModels;
@@ -43,7 +43,7 @@ public class CustomRoleViewModel
 
 接口`IRolesRepository.cs`
 
-```C#
+```csharp
 using BlazorServer.Models;
 using BlazorServer.ViewModels;
 
@@ -65,7 +65,7 @@ public interface IRolesRepository
 
 ![](https://img1.dotnet9.com/2021/12/3701.png)
 
-```C#
+```csharp
 using BlazorServer.Models;
 using BlazorServer.ViewModels;
 using Microsoft.AspNetCore.Identity;
@@ -204,7 +204,7 @@ public class RolesRepository : IRolesRepository
 
 `Program.cs`添加注册
 
-```C#
+```csharp
 builder.Services.AddScoped<IRolesRepository, RolesRepository>();
 ```
 
@@ -212,7 +212,7 @@ builder.Services.AddScoped<IRolesRepository, RolesRepository>();
 
 `RolesManagement.razor.cs`
 
-```C#
+```csharp
 using BlazorServer.Repository;
 using BlazorServer.Shared;
 using BlazorServer.ViewModels;
@@ -349,7 +349,7 @@ foreach (var role in Roles) {
 
 `CreateRole.razor.cs`
 
-```C#
+```csharp
 using BlazorServer.Repository;
 using BlazorServer.ViewModels;
 using Microsoft.AspNetCore.Components;
@@ -404,7 +404,7 @@ public partial class CreateRole
 
 `EditRole.razor.cs`
 
-```C#
+```csharp
 using BlazorServer.Repository;
 using BlazorServer.ViewModels;
 using Microsoft.AspNetCore.Components;

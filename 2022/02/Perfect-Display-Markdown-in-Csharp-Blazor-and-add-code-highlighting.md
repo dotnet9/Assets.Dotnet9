@@ -87,7 +87,7 @@ tags:
 
 组件参数定义：
 
-```C#
+```csharp
 @code {
     [Parameter]
     public string LocalPostFilePath { get; set; } = null!;
@@ -102,7 +102,7 @@ tags:
 
 `Markdown`内容读取，`Markdown`格式转`html`在`OnInitializedAsync()`方法中定义：
 
-```C#
+```csharp
 protected override async Task OnInitializedAsync()
 {
     var markdownData = await File.ReadAllTextAsync(LocalPostFilePath);
@@ -126,7 +126,7 @@ protected override async Task OnInitializedAsync()
 
 最后一步，需要在组件完成后，调用`Prism`插件方法，写在方法`OnAfterRenderAsync(bool firstRender)`中，这是做代码高亮的关键代码：
 
-```C#
+```csharp
 protected override async Task OnAfterRenderAsync(bool firstRender)
 {
     await _jsRuntime.InvokeVoidAsync("Prism.highlightAll");

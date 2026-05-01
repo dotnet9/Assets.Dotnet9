@@ -77,7 +77,7 @@ tags:
 
 **AppDbContext.cs**
 
-```C#
+```csharp
 using Microsoft.EntityFrameworkCore;
 
 namespace BlazorServer.Models;

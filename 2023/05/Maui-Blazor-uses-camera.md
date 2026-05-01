@@ -100,23 +100,23 @@ http://120.24.62.140:5000/
 - Modbus库，支持ModbusTcp、ModbusRtu、ModbusRtuOverTcp、ModbusUdp、ModbusServer等
 
 ```powershell
- dotnet add package ThingsGateway.Foundation.Adapter.Modbus
+dotnet add package ThingsGateway.Foundation.Adapter.Modbus
 ```
 
 - OPCDA客户端库，支持X64，支持NetCore，支持检测重连
 
 ```powershell
- dotnet add package ThingsGateway.Foundation.Adapter.OPCDA
+dotnet add package ThingsGateway.Foundation.Adapter.OPCDA
 ```
 
 - OPCUA客户端库
 ```powershell
- dotnet add package ThingsGateway.Foundation.Adapter.OPCUA
+dotnet add package ThingsGateway.Foundation.Adapter.OPCUA
 ```
 
 - S7库
-``` powershell
- dotnet add package ThingsGateway.Foundation.Adapter.Siemens
+```powershell
+dotnet add package ThingsGateway.Foundation.Adapter.Siemens
 ```
 
 ##  效果图

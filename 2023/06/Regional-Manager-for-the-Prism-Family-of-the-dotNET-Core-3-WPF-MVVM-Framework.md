@@ -88,7 +88,7 @@ RegionManager.SetRegionName(ContentControl, "PatientListRegion");
 PatientModule.cs：
 
 ```csharp
- public class PatientModule : IModule
+public class PatientModule : IModule
  {
     public void OnInitialized(IContainerProvider containerProvider)
     {
@@ -114,8 +114,7 @@ PatientModule.cs：
 MainWindow.xaml：
 
 ```html
-  <i:Interaction.Triggers>
-      <i:EventTrigger EventName="Loaded">
+<i:Interaction.Triggers>      <i:EventTrigger EventName="Loaded">
           <i:InvokeCommandAction Command="{Binding LoadingCommand}"/>
        /i:EventTrigger>
   </i:Interaction.Triggers>
@@ -316,7 +315,7 @@ Prism 其中还支持监控视图的激活状态，是通过在 View 中继承 I
 MedicineMainContentViewModel.cs:
 
 ```csharp
- public class MedicineMainContentViewModel : BindableBase,IActiveAware
+public class MedicineMainContentViewModel : BindableBase,IActiveAware
  {
      public event EventHandler IsActiveChanged;
 
@@ -359,7 +358,7 @@ MainWindow.xaml:
 MainWindow.cs:
 
 ```csharp
- public MainWindow()
+public MainWindow()
  {
     InitializeComponent();
     var regionManager= ServiceLocator.Current.GetInstance<IRegionManager>();
@@ -593,7 +592,7 @@ MainWindow.xaml:
 MainWindowViewModel.cs
 
 ```csharp
-  void ExecuteLoadingCommand()
+void ExecuteLoadingCommand()
   {
          _regionManager = CommonServiceLocator.ServiceLocator.Current.GetInstance<IRegionManager>();
 

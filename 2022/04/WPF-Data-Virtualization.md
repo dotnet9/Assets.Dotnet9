@@ -390,7 +390,7 @@ The ubiquitous `Customer` object is used as the items in the collection.
 
 A simple WPF window with a `ListView` was created to allow the user to experiment the different list implementations.
 
-```XML
+```xml
 <Window x:Class="DataVirtualization.DemoWindow"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"

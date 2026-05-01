@@ -40,7 +40,7 @@ tags:
 
 ## 实现代码
 
-```C#
+```csharp
 //从官网下载AipSdk.dll引用到自己项目
 //API文档地址：https://cloud.baidu.com/doc/FACE/s/Lk37c1tpf
 

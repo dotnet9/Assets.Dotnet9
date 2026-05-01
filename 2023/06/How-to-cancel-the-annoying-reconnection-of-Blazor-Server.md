@@ -48,7 +48,7 @@ tags:
 
 `boot.js` 用于自定义重新连接的操作，并且接管重新连接的程序。
 
-```js
+```javascript
 (() => {
   // 重试次数
   const maximumRetryCount = 10000;
@@ -165,7 +165,7 @@ tags:
 
 然后在下面的脚本中自定义自动程序，在上面还引用了`  <script src="/boot.js"></script>`，然后下面的自定义处理启动`Blazor Server`程序。
 
-```js
+```java
    <script>
         Blazor.start({
             configureSignalR: function (builder) {

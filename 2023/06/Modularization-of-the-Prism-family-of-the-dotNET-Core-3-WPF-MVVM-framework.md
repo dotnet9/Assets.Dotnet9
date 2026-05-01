@@ -73,7 +73,7 @@ prism 注册模块有三种方式：
 MedicineModule.cs:
 
 ```csharp
- public class MedicineModule : IModule
+public class MedicineModule : IModule
  {
      public void OnInitialized(IContainerProvider containerProvider)
      {
@@ -100,7 +100,7 @@ MedicineModule.cs:
 PatientModule.cs:
 
 ```csharp
- public class PatientModule : IModule
+public class PatientModule : IModule
  {
      public void OnInitialized(IContainerProvider containerProvider)
      {
@@ -150,7 +150,7 @@ protected override void ConfigureModuleCatalog(IModuleCatalog moduleCatalog)
 首先我们先在 MedicineModule 加上特性,OnDemand 为 true 为"按需"加载，而 PatientModule 默认加载则可以不加
 
 ```csharp
- [Module(ModuleName = "MedicineModule", OnDemand =true)]
+[Module(ModuleName = "MedicineModule", OnDemand =true)]
  public class MedicineModule : IModule
 ```
 
@@ -206,7 +206,7 @@ App.config:
 App.xaml.cs：
 
 ```csharp
- protected override IModuleCatalog CreateModuleCatalog()
+protected override IModuleCatalog CreateModuleCatalog()
  {
     return new ConfigurationModuleCatalog();//加载配置文件模块目录
  }
@@ -226,7 +226,7 @@ prism 应用程序加载模块有两种方式：
 MainWindowViewModle.cs:
 
 ```csharp
- public class MainWindowViewModel : BindableBase
+public class MainWindowViewModel : BindableBase
  {
     IModuleManager _moduleManager;
     public MainWindowViewModel(IModuleManager moduleManager)
@@ -270,7 +270,7 @@ private void _moduleManager_LoadModuleCompleted(object sender, LoadModuleComplet
 加载模块后，模块就会进行初始化，我们以 MedicineModule 为例子,先来看看代码：
 
 ```csharp
- public class MedicineModule : IModule
+public class MedicineModule : IModule
  {
      public void OnInitialized(IContainerProvider containerProvider)
      {

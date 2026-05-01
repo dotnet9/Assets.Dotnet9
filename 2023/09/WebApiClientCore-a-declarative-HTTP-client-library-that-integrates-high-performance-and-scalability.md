@@ -90,7 +90,7 @@ public interface IUserApi : IHttpApi
 
 #### 在 IHttpClientBuilder 配置
 
-```x86asm
+```csharp
 services
     .AddHttpApi<IUserApi>()
     .ConfigureHttpApi(Configuration.GetSection(nameof(IUserApi)))
@@ -1216,7 +1216,7 @@ public interface IUserApi
 
 #### JsonRpc 声明
 
-```c#
+```csharp
 [HttpHost("http://localhost:5000/jsonrpc")]
 public interface IUserApi
 {

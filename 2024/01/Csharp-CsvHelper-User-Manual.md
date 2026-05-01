@@ -54,7 +54,7 @@ public class Foo
 
 **csv 文件数据**
 
-```mipsasm
+```csv
 ID,Name
 1,Tom
 2,Jerry

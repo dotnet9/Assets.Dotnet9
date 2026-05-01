@@ -215,7 +215,7 @@ remoteBatchQuery(param);
 
 如果在代码写死控制，可有类似以下代码：
 
-```Java
+```java
 if(duringChristmas){
    img = redPacketChristmasSkin;
 }else if(duringSpringFestival){

@@ -45,7 +45,7 @@ Thumb 控件是 WPF 提供的用于用户拖动的控件。默认情况下，Thu
 
 关于 Thumb 控件的简介，如下所示：
 
-```C#
+```csharp
 namespace System.Windows.Controls.Primitives
 {
     //
@@ -206,7 +206,7 @@ namespace System.Windows.Controls.Primitives
 
 然后在三个事件中添加代码，终点是 DragDelta 事件，如下所示：
 
-```C#
+```csharp
 namespace DemoVisio
 {
     /// <summary>
@@ -256,7 +256,7 @@ namespace DemoVisio
 
 在本示例中，流程图需要多种控件（如：圆形，矩形，线等），不能每一个控件都去实现那三个事件【DragStarted，DragDelta，DragCompleted】，所以需要定义一个基类 ThumbControl，统一实现方案。具体如下所示：
 
-```C#
+```csharp
 namespace DemoVisio
 {
     public class ThumbControl : Thumb
@@ -695,7 +695,7 @@ namespace DemoVisio
 
 当点击左边基础控件时，在右边容器中，生成新的控件。如下所示：
 
-```C#
+```csharp
 namespace DemoVisio
 {
     /// <summary>

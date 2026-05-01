@@ -42,7 +42,7 @@ Install-Package Win32Net -Version 1.2.0
 
 首先实例化一个鼠标钩子对象，然后定义鼠标事件回调方法，启动监听即可。当不需要继续监听鼠标信息，则可以取消监听。
 
-```C#
+```csharp
 win32.Hooks.MouseHook mouseHook = new Hooks.MouseHook();//实例化鼠标钩子对象
 mouseHook.LeftDown += MouseHook_LeftDown;//鼠标左键按下的事件监听回调方法
 mouseHook.Start();//开始监听
@@ -53,8 +53,8 @@ mouseHook.Stop();//停止监听
 
 键盘钩子与鼠标钩子使用类似，首先实例化一个键盘钩子对象，然后定义键盘事件回调方法，启动监听即可。当不需要继续监听键盘信息，则可以取消监听。
 
-```C#
- Win32.Hooks.KeyboardHook keyboardHook = new Win32.Hooks.KeyboardHook();
+```csharp
+Win32.Hooks.KeyboardHook keyboardHook = new Win32.Hooks.KeyboardHook();
   keyboardHook.OnKeyUp += KeyboardHook_OnKeyUp;
   keyboardHook.Start();
   keyboardHook.Stop();
@@ -62,7 +62,7 @@ mouseHook.Stop();//停止监听
 
 **如何注册全局快捷键**
 
-```C#
+```csharp
 //WPF 窗口句柄
 //IntPtr hwnd =   new WindowInteropHelper(WPFWindow对象).Handle;
 //winform 窗口句柄
@@ -89,7 +89,7 @@ systemHotKey.AddHotKey(hotKeyId, Win32.KeyModifiers.Alt, Keys.Q,
 
 如何获取系统硬件信息
 
-```C#
+```csharp
 SystemInfo systemInfo = new SystemInfo();
 richTextBox1.AppendText("操作系统：" + systemInfo.operatingSystem.Caption + "\n");
 richTextBox1.AppendText("系统ID：" + systemInfo.operatingSystem.SerialNumber + "\n");

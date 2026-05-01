@@ -26,7 +26,7 @@ tags:
 
 使用 vs 新建 controller 时，默认都会继承一个 Controller 类，重写 OnActionExecuted，添加上异常处理即可。一般情况下我们会新建一个 BaseController, 让所有 Controller 继承 BaseController。代码如下
 
-```C#
+```csharp
 public class BaseController : Controller
 {
     public override void OnActionExecuted(ActionExecutedContext context)
@@ -51,7 +51,7 @@ public class BaseController : Controller
 
 ActionFilterAttribute 是一个特性，本身实现了 IActionFilter 及 IResultFilter , 所以不管是 action 里抛错，还是 view 里抛错，理论上都可以捕获。我们新建一个 ExceptionActionFilterAttribute, 重写 OnActionExecuted 及 OnResultExecuted，添加上异常处理，完整代码如下。
 
-```C#
+```csharp
 public class ExceptionActionFilterAttribute:ActionFilterAttribute
 {
     public override void OnActionExecuted(ActionExecutedContext context)
@@ -86,7 +86,7 @@ public class ExceptionActionFilterAttribute:ActionFilterAttribute
 1. 在 controller 里打上 [TypeFilter(typeof(ExceptionActionFilter)] 标签。
 2. 在 Startup 里以 filter 方式全局注入。
 
-```C#
+```csharp
 services.AddControllersWithViews(options =>
 {
     options.Filters.Add<ExceptionActionFilterAttribute>();
@@ -97,7 +97,7 @@ services.AddControllersWithViews(options =>
 
 我们知道, ASP.NET Core 提供了 5 类 filter, IExceptionFilter 是其中之一，顾名思义，这就是用来处理异常的。ASP.NET Core 中 ExceptionFilterAttribute 已经实现了 IExceptionFilter，所以我们只需继承 ExceptionFilterAttribute，重写其中方法即可。 同样新建 CustomExceptionFilterAttribute 继承 ExceptionFilterAttribute，重写 OnException ，添加异常处理，完整代码如下
 
-```C#
+```csharp
 public class CustomExceptionFilterAttribute : ExceptionFilterAttribute
 {
     public override void OnException(ExceptionContext context)
@@ -116,7 +116,7 @@ public class CustomExceptionFilterAttribute : ExceptionFilterAttribute
 1. 在 controller 里打上 [CustomExceptionFilter] 标签。
 2. 在 Startup 里以 filter 方式全局注入。
 
-```C#
+```csharp
 services.AddControllersWithViews(options =>
 {
     options.Filters.Add<CustomExceptionFilterAttribute>();
@@ -127,7 +127,7 @@ services.AddControllersWithViews(options =>
 
 在 startup 里，vs 新建的项目会默认加上
 
-```C#
+```csharp
 if (env.IsDevelopment())
 {
     app.UseDeveloperExceptionPage();
@@ -144,7 +144,7 @@ UseDeveloperExceptionPage 会给出具体错误信息，具体包括 Stack trace
 
 注意：app.UseDeveloperExceptionPage(); 应该置于最前边。
 
-```C#
+```csharp
 if (!env.IsDevelopment())
  {
      app.UseDeveloperExceptionPage();
@@ -166,7 +166,7 @@ if (!env.IsDevelopment())
 
 通过 middleware 全局处理。
 
-```C#
+```csharp
 public class ErrorHandlingMiddleware
 {
    private readonly RequestDelegate next;

@@ -50,7 +50,7 @@ tags:
 
 #### Resx格式
 Resx文件需以基础文件名（如`Resources.resx`）+ 文化标识（可选）命名，基础文件默认为 fallback 语言，具体参考示例项目：
-```
+```text
 i18n/Resources.resx          // 默认语言（如英语）
 i18n/Resources.zh-CN.resx    // 简体中文
 i18n/Resources.zh-Hant.resx  // 繁体中文
@@ -61,7 +61,7 @@ i18n/Resources.ja-JP.resx    // 日语
 #### XML格式
 
 XML文件直接以文化标识命名，每个文件独立存储对应语言的资源：
-```
+```text
 i18n/en-US.xml    // 美式英语
 i18n/zh-CN.xml    // 简体中文
 i18n/zh-Hant.xml  // 繁体中文
@@ -71,7 +71,7 @@ i18n/ja-JP.xml    // 日语
 
 #### JSON格式示例
 JSON文件同样以文化标识命名，采用键值对结构存储资源：
-```
+```text
 i18n/en-US.json    // 美式英语
 i18n/zh-CN.json    // 简体中文
 i18n/zh-Hant.json  // 繁体中文

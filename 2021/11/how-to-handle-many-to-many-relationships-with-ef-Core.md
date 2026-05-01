@@ -26,7 +26,7 @@ tags:
 
 多对多的简单而实用的例子可能是某种数字电子商务商店。用户可以将商品放入购物车（一个购物车可以有多个商品），而商品属于多个购物车。让我们从创建`Cart`和`Item`类开始。
 
-```C#
+```csharp
 public class Cart
 {
     public int Id { get; set; }
@@ -35,7 +35,7 @@ public class Cart
 }
 ```
 
-```C#
+```csharp
 public class Item
 {
     public int Id { get; set; }
@@ -56,7 +56,7 @@ public class Item
 
 我们需要做的第一件事是手动创建另一个“中间”类（表），它将建立`Cart`和`Item`的多对多关系,让我们创建这个类：
 
-```C#
+```csharp
 public class CartItem
 {
     public int CartId { get; set; }
@@ -69,7 +69,7 @@ public class CartItem
 
 我们创建了关联`Cart`和`Item`的新类`CartItem`，我们还需要更改它们各自的导航属性：
 
-```C#
+```csharp
 public class Cart
 {
     public int Id { get; set; }
@@ -78,7 +78,7 @@ public class Cart
 }
 ```
 
-```C#
+```csharp
 public class Item
 {
     public int Id { get; set; }
@@ -99,7 +99,7 @@ public class Item
 
 对，`CartItem`没有主键, 由于它是多对多关系，因此它应该具有复合主键。复合主键类似于常规主键，但它由两个属性（列）而不是一个属性组成。目前，创建复合键的唯一方法是在`OnModelCreating`.
 
-```C#
+```csharp
 protected override void OnModelCreating(ModelBuilder builder)
 {
     base.OnModelCreating(builder);
@@ -114,7 +114,7 @@ protected override void OnModelCreating(ModelBuilder builder)
 
 假设我们已经有`Cart`和`Item`在我们的数据库中,现在我们想将特定商品(`Item`)添加到特定购物车(`Cart`)，为了做到这一点，我们需要创建新的 CartItem 并保存它。
 
-```C#
+```csharp
 var cart = db.Carts.First(i => i.Id == 256);
 var item = db.Items.First(i => i.Id == 1024);
 
@@ -140,7 +140,7 @@ db.SaveChanges();
 
 从数据库中获取数据相当简单，注意使用`Include`关联检索相关数据。这里总共涉及 3 个表：`Cart`, `Item`, `CartItem`(将商品`Item`与购物车`Cart`关联起来)。
 
-```C#
+```csharp
 // 获取关联所有商品的指定购物车
 var cartIncludingItems = db.Carts.Include(cart => cart.Items).ThenInclude(row => row.Item).First(cart => cart.Id == 1);
 // 获取指定购物车的所有商品
@@ -149,7 +149,7 @@ var cartItems = cartIncludingItems.Items.Select(row => row.Item);
 
 另外，有些操作可以不使用关系来执行。例如，如果您有购物车 ID，则可以使用以下 Linq 一次获取所有商品：
 
-```C#
+```csharp
 var cartId = 1;
 var cartItems = db.Items.Where(item => item.Carts.Any(j => j.CartId == cartId));
 ```
@@ -162,7 +162,7 @@ var cartItems = db.Items.Where(item => item.Carts.Any(j => j.CartId == cartId));
 
 让我们从购物车`Cart`中删除单个产品`Item`开始。
 
-```C#
+```csharp
 var cartId = 1;
 var itemId = 1;
 var cartItem = db.CartsItems.First(row => row.CartId == cartId && row.ItemId == itemId);
@@ -173,7 +173,7 @@ db.SaveChanges();
 
 然后，让我向您展示如何从购物车中删除所有项目。
 
-```C#
+```csharp
 var cart = db.Carts.Include(c=> c.Items).First(i => i.Id == 2);
 
 db.RemoveRange(cart.Items);

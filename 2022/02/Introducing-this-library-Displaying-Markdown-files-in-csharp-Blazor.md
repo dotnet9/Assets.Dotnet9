@@ -44,7 +44,7 @@ tags:
 
 1. 引入包
 
-```XML
+```xml
 <PackageReference Include="BlazorMarkdown" Version="1.0.0" />
 <PackageReference Include="HtmlSanitizer" Version="7.1.488" />
 ```
@@ -53,7 +53,7 @@ tags:
 
 `Program.cs`
 
-```C#
+```csharp
 builder.Services.AddScoped<IHtmlSanitizer, HtmlSanitizer>(x =>
 {
     // Configure sanitizer rules as needed here.

@@ -30,7 +30,7 @@ tags:
 
 定义的一些类、枚举
 
-```C#
+```csharp
 public enum 王道 { 明, 昏 };
 
 /// <summary>
@@ -307,7 +307,7 @@ class 丞相 : 侍卫之臣
 
 Main 方法
 
-```C#
+```csharp
 static void Main(string[] args)
 {
   君 先帝 = new 君();

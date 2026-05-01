@@ -79,7 +79,7 @@ tags:
 
 后台代码：
 
-```C#
+```csharp
 public partial class MainWindow : Window
 {
     public MainWindow()
@@ -207,7 +207,7 @@ http://blogs.msdn.com/b/wpfsdk/archive/2008/09/08/custom-window-chrome-in-wpf.as
 
 定义一个键（通常是一个枚举）：
 
-```C#
+```csharp
 public enum PackIconKind
 {
     Happy,
@@ -220,7 +220,7 @@ public enum PackIconKind
 - 默认 style key
 - 为每个 key 提供 Path 数据的工厂
 
-```C#
+```csharp
 public class PackIcon : PackIconBase<PackIconKind>
 {
     static PackIcon()

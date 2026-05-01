@@ -96,7 +96,7 @@ Microsoft.Flow.RPA.Desktop.Modules.System.Actions.dll
 下的这几个 DLL 包
 
 ```csharp
- Microsoft.Flow.RPA.Desktop.Modules.SDK.dll
+Microsoft.Flow.RPA.Desktop.Modules.SDK.dll
  Microsoft.Flow.RPA.Desktop.Modules.SDK.Extended.dll
 ```
 

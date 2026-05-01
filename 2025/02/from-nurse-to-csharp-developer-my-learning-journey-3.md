@@ -29,7 +29,7 @@ tags:
 
 需要特别注意的是：使用Convert进行类型转换时，数据必须要"面目可观"。就像我们在医院里输入的数据必须准确一样，转换时的数据也必须合理。
 
-```C#
+```csharp
 // 将体温数据从字符串转换为浮点数
 string temperature = "37.2";
 double tempValue = Convert.ToDouble(temperature);
@@ -49,7 +49,7 @@ int bedNo = Convert.ToInt32(bedNumber);
 
 就像在护理工作中，给病人服药的顺序会影响治疗效果一样，这两种形式在表达式中的位置也会影响最终的计算结果：
 
-```C#
+```csharp
 // 统计病房巡查次数
 int roundCount = 10;
 int result1 = 5 + ++roundCount; // 前++：先将roundCount加1，再参与计算
@@ -75,7 +75,7 @@ int oldStock = supplyStock--; // 先赋值再减1
 
 布尔（bool）类型在C#中只有两个值：true和false。这与我们在临床中的许多判断很相似，比如患者是否有特定症状，是否需要特殊护理等。
 
-```C#
+```csharp
 // 体温监测
 double bodyTemp = 37.5;
 bool hasFever = bodyTemp >= 37.3; // 判断是否发烧
@@ -98,7 +98,7 @@ bool isHypertension = systolic > 140 || diastolic > 90;
 2. ||（逻辑或）：只要满足任一条件，就像判断是否需要紧急处理时，任何一个危险指标都需要立即关注。
 3. !（逻辑非）：结果取反，就像我们判断患者是否不适合某项治疗。
 
-```C#
+```csharp
 // 1. 逻辑与(&&)示例：判断病人是否可以手术
 double bodyTemp = 36.8;
 int heartRate = 72;
@@ -138,7 +138,7 @@ Console.WriteLine("是否需要转入ICU: " + transferToICU);
 
 复合赋值运算符（+=、-=、*=、/=、%=）可以让我们的代码更简洁。在医疗数据处理中，这些运算符特别有用：
 
-```C#
+```csharp
 // 药品库存管理
 int medicineStock = 100;
 medicineStock += 50;    // 进货50件，等同于 medicineStock = medicineStock + 50
@@ -181,7 +181,7 @@ Console.WriteLine($"分组后剩余护士数: {remainingNurses}");  // 输出3
 
 ### 1. 基本顺序结构
 
-```C#
+```csharp
 // 患者入院登记流程
 Console.WriteLine("请输入患者姓名：");
 string patientName = Console.ReadLine();
@@ -203,7 +203,7 @@ Console.WriteLine($"体温：{temperature}");
 
 分支结构就像我们的临床决策路径，根据不同条件执行不同的操作：
 
-```C#
+```csharp
 // 体温监测和处理流程
 Console.WriteLine("请输入患者体温：");
 double bodyTemp = Convert.ToDouble(Console.ReadLine());
@@ -229,7 +229,7 @@ else
 
 在需要多条件判断时使用，比如根据患者的各项指标决定治疗方案：
 
-```C#
+```csharp
 // 使用if-else if进行分诊
 Console.WriteLine("请输入患者疼痛等级(0-10)：");
 int painLevel = Convert.ToInt32(Console.ReadLine());

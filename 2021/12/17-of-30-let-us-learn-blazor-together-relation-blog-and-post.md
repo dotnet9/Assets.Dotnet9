@@ -51,7 +51,7 @@ tags:
 
 接口(`IBlogRepository`)做的事情很简单，就是规范方法；实现(`BlogRepository`)的 8 到 13 行是依赖注入`AppDbContext`；29 到 33 行是取得第一条 Blog，31 行的`Include()` 就是昨天说的不用自己`join table`的方法，全名为`Eager loading`，只要建表的时候有建好关联，就可以节省时间，其他还有`Explicit loading`及`Lazy loading`，都是`Entity Framework Core` 提供的方便作法，如果是一对一的关联在 SQL 语句会被翻译成`Inner Join`，一对多则是`Left Join`。
 
-```C#
+```csharp
 using BlazorServer.Models;
 
 namespace BlazorServer.Repository;
@@ -68,7 +68,7 @@ public interface IBlogRepository
 
 正常来说 Blog 会跟登录用户(User) 绑定，可能有张 Table 记录`BlogId`跟`UserId`，但目前还没实现登录机制，所以就取第一条数据，如果没有第一条表示还没建立，回传空的 Blog；15 到 27 行则是建立 Blog 的方法，17 行先检查 Blog 是否存在，不存在则建立 Blog，而不论是否存在，都回传类型为`ResultViewModel`的实例，里面只有两个属性：`IsSuccess`、`Message`，前端收到后是否要根据`IsSuccess`做事，就是前端的事了。
 
-```C#
+```csharp
 namespace BlazorServer.Models;
 
 public class ResultViewModel

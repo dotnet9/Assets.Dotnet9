@@ -65,7 +65,7 @@ C#部分则加入`Add()`方法，原来`LoadData()`的日志删除。
 
 **BlogBase.razor.cs**
 
-```C#
+```csharp
 using BlazorServer.Models;
 using Microsoft.AspNetCore.Components;
 

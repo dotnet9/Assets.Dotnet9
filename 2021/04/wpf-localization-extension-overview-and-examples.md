@@ -147,7 +147,7 @@ WPF 中有两种类型的 WPF 本地化。
 
 代码
 
-```C#
+```csharp
 namespace WpfApp1Localization {
     public partial class App: Application {
         App() {
@@ -293,7 +293,7 @@ Resources.gr-Gr.resx
 
 代码
 
-```C#
+```csharp
 namespace WpfApp1Localization {
     public partial class App: Application {
         App() {

@@ -62,7 +62,7 @@ tags:
 
 学生类包含5个属性：名字、年龄、邮政编码、最小值和最大值，其中最小值和最大值涉及关联验证，即最小值变化后通知最大值验证，反之同理。
 
-```C#
+```csharp
 /// <summary>
 ///     学生实体
 ///     继承BindableBase,即继承属性变化接口INotifyPropertyChanged
@@ -260,7 +260,7 @@ public enum DataType
 
 这是学生验证器`StudentValidator`，需要继承`AbstractValidator`，泛型指定前面需要验证的实体类`Student`：
 
-```C#
+```csharp
 public class StudentValidator : AbstractValidator<Student>
 {
     public StudentValidator()
@@ -359,7 +359,7 @@ public class StudentViewModelValidator : AbstractValidator<StudentViewModel>
 
 `StudentViewModel`与`Student`实体类结构类似，都需要实现`IDataErrorInfo`接口，该类由一个简单的`string`属性(`Title`)和一个复杂的`Student`对象属性(`CurrentStudent`)、集合属性`ObservableCollection<Field> Fields`组成，代码如下：
 
-```C#
+```csharp
 /// <summary>
 ///     视图ViewModel
 ///     继承BindableBase,即继承属性变化接口INotifyPropertyChanged

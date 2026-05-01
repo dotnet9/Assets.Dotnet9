@@ -176,7 +176,7 @@ perspective 的具体用法可见此文档：
 
 通过叠加两个 GalaxyShuttleControl ，并且控制它们动画开始的时间，互相掩盖开头和结尾动画衔接不上的问题：
 
-```C#
+```csharp
 public TimeSpan Delay { get; set; }
 
 private async void GalaxyShettleControl_Loaded(object sender, RoutedEventArgs e)

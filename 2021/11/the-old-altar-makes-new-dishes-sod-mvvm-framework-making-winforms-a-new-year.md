@@ -49,7 +49,7 @@ INotifyPropertyChanged
 
 它的定义在 System.dll 中，早在 .NET 2.0 就已经支持。下面是该接口的具体定义：
 
-```C#
+```csharp
 namespace System.ComponentModel
 {
     // 摘要:
@@ -65,7 +65,7 @@ namespace System.ComponentModel
 
 SOD 框架的实体类基类 EntityBase 实现了此接口：
 
-```C#
+```csharp
 public abstract class EntityBase : INotifyPropertyChanged, ICloneable, PWMIS.Common.IEntity
 {
     /// <summary>
@@ -90,7 +90,7 @@ public abstract class EntityBase : INotifyPropertyChanged, ICloneable, PWMIS.Com
 
 所以 SOD 框架的实体类可以直接用来作为 MVVM 上的 Model 提供给 View 作为被绑定对象，因此要我们只需要解决 WinForms 形式的 View 元素如何实现绑定操作，那么我们的 WinForms 应用即可实现 MVVM 功能了。在 WinForms 上，控件基本上都已经实现了绑定功能，它就是控件的 DataBindings，向它添加绑定即可，例如下面的例子：
 
-```C#
+```csharp
 this.textbox1.DataBindings.Add("Text", userEntity, "Name");
 ```
 
@@ -98,7 +98,7 @@ this.textbox1.DataBindings.Add("Text", userEntity, "Name");
 
 SOD 框架的数据控件(WinForms,WebForms)都实现了 IDataControl 接口，它定义了几个重要的属性 LinkObject，LinkProperty ：
 
-```C#
+```csharp
 /// <summary>
 /// 数据映射控件接口
 /// </summary>
@@ -127,7 +127,7 @@ public interface IDataControl
 
 我们可以使用 LinkObject 来指定要绑定的实体类对象，而 LinkProperty 来指定要绑定的对象的属性，因此可以通过下面的代码实现 WinForms 控件与 SOD 实体类的双向绑定：
 
-```C#
+```csharp
 public void BindDataControls(Control.ControlCollection controls)
 {
     var dataControls = MyWinForm.GetIBControls(controls);
@@ -153,7 +153,7 @@ public void BindDataControls(Control.ControlCollection controls)
 
 另外，我们可能还需要将 一些命令绑定到视图上，而要实现此功能也比较简单：
 
-```C#
+```csharp
 private Dictionary<object, CommandMethod> dictCommand;
 public delegate void CommandMethod();
 
@@ -171,7 +171,7 @@ public void BindCommandControls(Control control,CommandMethod command)
 
 经过这样的过程后，我们仅需要在窗体加载事件上写下面的几行代码就行了：
 
-```C#
+```csharp
 SubmitedUsersViewModel DataContext{get;set;}
 
 private void Form1_Load(object sender, EventArgs e)
@@ -253,7 +253,7 @@ http://pwmis.codeplex.com/
 
 **注意我们不会给这三个按钮控件直接设置单击事件，而是通过命令绑定的形式。例如对应添加按钮，我们如下绑定命令（视图模型的一个方法）：**
 
-```C#
+```csharp
 base.BindCommandControls(this.button1, DataContext.SubmitCurrentUsers);
 ```
 
@@ -261,7 +261,7 @@ base.BindCommandControls(this.button1, DataContext.SubmitCurrentUsers);
 
 而对于数据控件的绑定，只需要下面的一行代码：
 
-```C#
+```csharp
 base.BindDataControls(this.Controls);
 ```
 
@@ -277,7 +277,7 @@ base.BindDataControls(this.Controls);
 
 我们的模型很简单，就是负责创建新用户，加载已有用户，添加，修改或者删除用户，并且这些操作都是针对数据库的，也就是我们通常的 CRUD 操作。由于是示例没有太多逻辑，我们直接看代码即可：
 
-```C#
+```csharp
 public class UserModel
 {
     private static int index = 0;
@@ -327,7 +327,7 @@ public class UserModel
 
 用户模型类会使用用户实体类，它也很简单，只有一个 ID 属性和一个 Name 属性，详细内容如下：
 
-```C#
+```csharp
 public class UserEntity:EntityBase
 {
     public UserEntity()
@@ -353,7 +353,7 @@ public class UserEntity:EntityBase
 
 接下来就是操作此用户实体类的数据上下文了，用户模型类展示了如何使用它，但是它的定义却很简单：
 
-```C#
+```csharp
 class LocalDbContext : DbContext
 {
     public LocalDbContext()
@@ -379,7 +379,7 @@ class LocalDbContext : DbContext
 
 在本例中，我们的用户视图模型的功能也很简单，就是提供视图需要的用户列表和响应视图的增加，修改，删除用户的命令，详细代码如下
 
-```C#
+```csharp
 public class SubmitedUsersViewModel
 {
 

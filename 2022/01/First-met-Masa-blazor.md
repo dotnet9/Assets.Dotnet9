@@ -91,7 +91,7 @@ dotnet add package MASA.Blazor
 
 - 在 Program.cs 里添加 Masa Blazor 相关服务。
 
-```C#
+```csharp
 builder.Services.AddMasaBlazor();
 ```
 

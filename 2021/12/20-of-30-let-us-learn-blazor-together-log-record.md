@@ -54,7 +54,7 @@ tags:
 
 我们切回`Blazor Server` 项目，在`JsInteropClasses`加入`ConsoleLog()`方法，里面做的事情就只有调用`console.log()`
 
-```C#
+```csharp
 public async Task ConsoleLog(string message)
 {
 	await _js.InvokeAsync<object?>("console.log", message);
@@ -63,7 +63,7 @@ public async Task ConsoleLog(string message)
 
 接着在`Blog.razor.cs`覆写`OnAfterRenderAsync()`，在里面调用`ConsoleLog()`。
 
-```C#
+```csharp
 protected override async Task OnAfterRenderAsync(bool firstRender)
 {
 	await _jsClass!.ConsoleLog("这是Blazor Server的console.log信息");

@@ -37,11 +37,11 @@ var data3 = dbContext.T_UserInfor.Where(u => u.userName.Contains("p")).ToList();
 B. EF.Functions.Like 语句生成的 sql 为：（Like 搭配 SQL 查询的通配符使用）
 
 ```csharp
-  var data1 = dbContext.T_UserInfor.Where(u => EF.Functions.Like(u.userName, "%p%")).ToList();
-  //或者
-  var data2 = (from p in dbContext.T_UserInfor
-               where EF.Functions.Like(p.userName, "%p%")
-               select p).ToList();
+var data1 = dbContext.T_UserInfor.Where(u => EF.Functions.Like(u.userName, "%p%")).ToList();
+//或者
+var data2 = (from p in dbContext.T_UserInfor
+              where EF.Functions.Like(p.userName, "%p%")
+              select p).ToList();
 ```
 
 用的是 Like

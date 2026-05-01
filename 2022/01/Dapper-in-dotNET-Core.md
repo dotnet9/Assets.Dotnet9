@@ -55,7 +55,7 @@ Install-Package System.Data.SqlClient
 
 对于 Dapper.Contrib 实体配置选项，以 Product 类为例，作扼要说明如下：
 
-```C#
+```csharp
 [Table("Product")]
 public class Product
 {
@@ -84,7 +84,7 @@ public class Product
 
 ### 定义 DapperDBContext 类
 
-```C#
+```csharp
 public abstract class DapperDBContext : IContext
     {
         private IDbConnection _connection;
@@ -286,7 +286,7 @@ public abstract class DapperDBContext : IContext
     }
 ```
 
-```C#
+```csharp
 public class DapperDBContextOptions : IOptions<DapperDBContextOptions>
     {
         public string Configuration { get; set; }
@@ -317,7 +317,7 @@ public class DapperDBContextOptions : IOptions<DapperDBContextOptions>
 
 至于具体如何构建的，这里参照某小型 ORM 工具 PetaPoco，抽取相关代码如下，有兴趣的同学也可以自行改造：
 
-```C#
+```csharp
 public class Page<T>
     {
         /// <summary>
@@ -450,7 +450,7 @@ public class Page<T>
 
 ### 定义工作单元与事务
 
-```C#
+```csharp
 public interface IUnitOfWork : IDisposable
     {
         void SaveChanges();
@@ -504,7 +504,7 @@ public class DapperUnitOfWorkFactory : IUnitOfWorkFactory
 
 ### 定义数据仓储
 
-```C#
+```csharp
 #region Product
     public partial interface IProductRepository
     {
@@ -689,7 +689,7 @@ public class DapperUnitOfWorkFactory : IUnitOfWorkFactory
 
 通过 Ioptions 模式读取配置文件 appsettings 中连接字符串
 
-```C#
+```csharp
 public class MyDBContext : DapperDBContext
     {
         public MyDBContext(IOptions<DapperDBContextOptions> optionsAccessor) : base(optionsAccessor)
@@ -722,7 +722,7 @@ Startup.cs 注入并读取数据库连接字符串
 }
 ```
 
-```C#
+```csharp
 services.AddDapperDBContext<MyDBContext>(options =>
             {
                 options.Configuration = Configuration["SQLConnString"];
@@ -731,7 +731,7 @@ services.AddDapperDBContext<MyDBContext>(options =>
 
 简单示例 WebAPI 或 Net Core MVC 下的调用示例：
 
-```C#
+```csharp
 public class ProductController : BaseController
 {
     private readonly IProductRepository _productRepository;
@@ -793,7 +793,7 @@ public class ProductController : BaseController
 }
 ```
 
-```C#
+```csharp
 public partial interface IProductService
     {
         Task<bool> AddProduct(Product productInfo, List<ProductStock> skuList);

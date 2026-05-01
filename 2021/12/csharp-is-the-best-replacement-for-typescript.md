@@ -56,7 +56,7 @@ C#能与 TypeScript 配合得很好，因为它们看上去就像是同一种语
 
 **TypeScript 中 async/await 的例子：**
 
-```TypeScript
+```typescript
 async function fetchAndWriteToFile(url: string, filePath:string): Promise<string> {
   // fetch() returns aPromise
   const response = awaitfetch(url);
@@ -69,7 +69,7 @@ async function fetchAndWriteToFile(url: string, filePath:string): Promise<string
 
 **C#中 async/await 的例子：**
 
-```C#
+```csharp
 using System.IO;
 using System.Net.Http;
 using System.Threading.Tasks;
@@ -99,7 +99,7 @@ async Task<string> FetchAndWriteToFile(string url, stringfilePath) {
 
 **TypeScript 中使用 lambda 表达式：**
 
-```TypeScript
+```typescript
 const months = ['January', 'February', 'March', 'April'];
 const shortMonthNames = months.filter(month => month.length< 6);
 const monthAbbreviations = months.map(month =>month.substr(0, 3));
@@ -110,8 +110,7 @@ const monthStartingWithF = months.find(month => {
 
 **C#中使用 lambda 表达式：**
 
-```C#
-
+```csharp
 using System.Collections.Generic;
 using System.Linq;
 
@@ -151,7 +150,7 @@ C#和 TypeScript 处理空的特性也一样：
 
 **TypeScript 中解构的例子：**
 
-```TypeScript
+```typescript
 const author = { firstName: 'Kurt', lastName: 'Vonnegut' };
 // Destructuring an object:
 const { firstName, lastName } = author;
@@ -163,8 +162,7 @@ const [city, country] = cityAndCountry;
 
 **C#中解构的例子：**
 
-```C#
-
+```csharp
 using System;
 
 var author = new Author("Kurt", "Vonnegut");
@@ -203,7 +201,7 @@ dotnet publish -c Release -r linux-x64
 
 **TypeScript 类的示例：**
 
-```TypeScript
+```typescript
 import { v4 as uuidv4 } from'https://deno.land/std/uuid/mod.ts';
 
 enum AccountType {
@@ -248,7 +246,7 @@ class AccountManager {
 
 **C#类的示例：**
 
-```C#
+```csharp
 using System;
 using System.Threading.Tasks;
 
@@ -300,9 +298,8 @@ class AccountManager {
 
 `C#`的最大优势之一就是它可以`深入原生代码`。本文开头提到，`TypeScript`并`不擅长与C/C++代码结合`。`Node.js`有一个`支持原生C/C++的插件`，名为`Node-API`，但是它需要为原生函数编写额外的`C++包裹器`，将原生类型转换成`JavaScript`对象，或相反，`类似于JNI`的工作方式。而`C#`可以直接调用`原生函数`，只需把库放到应用程序的 bin 目录下，然后将 API 定义为 C#中的外部函数即可。然后就能像`C#`函数一样使用外部函数，`.NET运行时`会处理好 C#数据类型与原生数据类型之间的转换。例如，如果原生库导出了下面的 C 函数：
 
-```C
-int countOccurrencesOfCharacter(char *string, char character) {
-    int count = 0;
+```c
+int countOccurrencesOfCharacter(char *string, char character) {    int count = 0;
     for (int i = 0;string[i] != '\0'; i++) {
         if (string[i] ==character) {
             count++;
@@ -314,7 +311,7 @@ int countOccurrencesOfCharacter(char *string, char character) {
 
 那么可像下面这样从 C#中调用：
 
-```C#
+```csharp
 using System;
 using System.Runtime.InteropServices;
 
@@ -340,7 +337,7 @@ class MyLib {
 
 `C#`的一个独特的特性是，提供了`一流的事件支持`。在`TypeScript`中，你可以实现`addEventListener()`方法，让客户端`监听事件`，而`C#`有`event关键字`，可以用来`定义事件`，并通过简单的语法将事件通知给所有监听者（而不需要像`TypeScript`那样手动遍历所有事件监听者并在`try/catch`块中执行）。例如，我们可以让`Connection`类定义一个`MessageReceived`事件，如下所示：
 
-```C#
+```csharp
 class Connection {
     // AnAction<string> is a callback that accepts a string parameter.
     public eventAction<string> MessageReceived;
@@ -349,7 +346,7 @@ class Connection {
 
 使用`Connection`代码可以通过`+=`操作符给`MessageReceived`添加一个处理函数，如下：
 
-```C#
+```csharp
 var connection = new Connection();
 connection.MessageReceived += (message) => {
    Console.WriteLine("Message was received: " + message);
@@ -358,7 +355,7 @@ connection.MessageReceived += (message) => {
 
 而`Connection`类可以在内部调用`MessageReceived`，为所有监听者触发`MessageReceived`事件：
 
-```C#
+```csharp
 // Raise the MessageReceived event
 MessageReceived?.Invoke(message);
 ```

@@ -26,7 +26,7 @@ tags:
 
 使用这个库，我们可以用如下的方式进行数据的批量更新、删除：
 
-```C#
+```csharp
 await ctx.DeleteRangeAsync<Book>(b => b.Price > n || b.AuthorName == "zack yang");
 
 await ctx.BatchUpdate<Book>()

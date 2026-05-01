@@ -24,7 +24,7 @@ tags:
 
 最基本的用法是计算算数表达式：
 
-```C#
+```csharp
 Console.Write("测试基本算数表达式:(1+2)*3/4");
 var res = await CSharpScript.EvaluateAsync("(1+2)*3/4");
 Console.WriteLine(res);
@@ -32,7 +32,7 @@ Console.WriteLine(res);
 
 如果需要使用比较复杂的函数，可以使用`WithImports`引入名称空间：
 
-```C#
+```csharp
 Console.WriteLine("测试Math函数:Sqrt(2)");
 res = await CSharpScript.EvaluateAsync("Sqrt(2)", ScriptOptions.Default.WithImports("System.Math"));
 Console.WriteLine(res);
@@ -40,7 +40,7 @@ Console.WriteLine(res);
 
 不仅是计算函数，其他函数比如`IO`，也是可以的：
 
-```C#
+```csharp
 Console.WriteLine(@"测试输入输出函数:Directory.GetCurrentDirectory()");
 res = await CSharpScript.EvaluateAsync("Directory.GetCurrentDirectory()",
      ScriptOptions.Default.WithImports("System.IO"));
@@ -49,7 +49,7 @@ Console.WriteLine(res);
 
 字符串函数可以直接调用：
 
-```C#
+```csharp
 Console.WriteLine(@"测试字符串函数:""Hello"".Length");
 res = await CSharpScript.EvaluateAsync(@"""Hello"".Length");
 Console.WriteLine(res);
@@ -57,7 +57,7 @@ Console.WriteLine(res);
 
 如果需要传递变量，可以将类的实例作为上下文进行传递，下面的例子中使用了`Student`类：
 
-```C#
+```csharp
 Console.WriteLine(@"测试变量:");
 var student = new Student { Height = 1.75M, Weight = 75 };
 await CSharpScript.RunAsync("BMI=Weight/Height/Height", globals: student);
@@ -66,7 +66,7 @@ Console.WriteLine(student.BMI);
 
 类`Student`:
 
-```C#
+```csharp
 public class Student
 {
     public Decimal Height { get; set; }
@@ -81,7 +81,7 @@ public class Student
 
 重复使用的脚本可以复用：
 
-```C#
+```csharp
 Console.WriteLine(@"测试脚本编译复用:");
 var scriptBMI = CSharpScript.Create<Decimal>("Weight/Height/Height", globalsType: typeof(Student));
 scriptBMI.Compile();
@@ -91,7 +91,7 @@ Console.WriteLine((await scriptBMI.RunAsync(new Student { Height = 1.72M, Weight
 
 在脚本中也可以定义函数：
 
-```C#
+```csharp
 Console.WriteLine(@"测试脚本中定义函数:");
 string script1 = "decimal Bmi(decimal w,decimal h) { return w/h/h; } return Bmi(Weight,Height);";
 
@@ -101,7 +101,7 @@ Console.WriteLine(result);
 
 在脚本中也可以定义变量：
 
-```C#
+```csharp
 Console.WriteLine(@"测试脚本中的变量:");
 var script =  CSharpScript.Create("int x=1;");
 script =  script.ContinueWith("int y=1;");

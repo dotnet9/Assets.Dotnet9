@@ -55,7 +55,7 @@ tags:
 
 最后上图片缩放、拼图代码：
 
-```TypeScript
+```typescript
 import SwiftUI
 
 struct ImageHelper {
@@ -319,7 +319,7 @@ struct ImageHelper {
 
 界面布局及效果展示代码
 
-```TypeScript
+```typescript
 import SwiftUI
 
 struct TestImageDemo: View {

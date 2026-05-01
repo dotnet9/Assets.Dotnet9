@@ -87,7 +87,7 @@ xmlns:hc="https://handyorg.github.io/handycontrol"
 
 添加了托盘菜单后，在关闭主窗体时，应该重写 OnClosing 事件，隐藏主窗体，而不是直接关闭它。
 
-```C#
+```csharp
 protected override void OnClosing(CancelEventArgs e)
 {
     this.Hide();

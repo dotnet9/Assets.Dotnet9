@@ -116,7 +116,7 @@ Blazor现在能够在运行时通过新的`RendererInfo`应用程序编程接口
 
 示例代码如下：
 
-```razor
+```html
 @if (RendererInfo.IsInteractive)
 {
     <button class="btn btn-primary" @onclick="IncrementCount">Click me</button>

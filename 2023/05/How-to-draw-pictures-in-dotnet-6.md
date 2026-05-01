@@ -76,7 +76,7 @@ Nutget链接: <https://www.nuget.org/packages/SkiaSharp/2.88.3>
 
 没什么需要讲解的就一行代码解决：
 
-```CSharp
+```csharp
 // 调用语句
 var qr = QrCode.EncodeText(mes, QrCode.Ecc.Quartile);
 
@@ -117,7 +117,7 @@ ImageSharp	Currently in beta state	SixLabors.ImageSharp.Drawing	QrCodeBitmapExte
 - 我这里采用的是**SkiaSharp**， 需要先把上面的qr转换成可以使用的**SKBitmap**, 方法的话直接从项目的github上可以直接下载对应的扩展类，我这里直接放对应源码链接 可以自行下载：
 [QrCode转SkiaSharp(SKBitmap)源码](https://github.com/manuelbl/QrCodeGenerator/blob/master/Demo-SkiaSharp/QrCodeBitmapExtensions.cs) 。
 
-```CSharp
+```csharp
 <param name="scale">The width and height, in pixels, of each module.(翻译: 宽度和高度,以像素为单位,每个模块)</param>
 <param name="border">The number of border modules to add to each of the four sides.(翻译: 边界模块的数量增加的四个方面)</param>
 var bmp = qr.ToBitmap(10, 2);
@@ -125,13 +125,13 @@ var bmp = qr.ToBitmap(10, 2);
 
 - 拿到bmp以后，根据我的布局设定，我以图片的尺寸作为基底，1/10即为字高
 
-```CSharp
+```csharp
 int h = bmp.Height / 10;
 ```
 
 - 创建画笔，参数比较常见就不解释了
 
-```CSharp
+```csharp
 var paint = new SKPaint
 {
     Color = SKColors.Black,
@@ -146,28 +146,28 @@ var paint = new SKPaint
 
 - 再创建一个两倍字号的画笔用于顶部区域
 
-```CSharp
+```csharp
 var tempPaint = paint.Clone();
 tempPaint.TextSize = 2 * h;
 ```
 
 - 创建画桌(板)
 
-```CSharp
+```csharp
 SKSurface sKSurface = SKSurface.Create(
     new SKImageInfo(bmp.Width * 3, bmp.Height * 2));
 ```
 
 - 创建画布并填充白色
 
-```CSharp
+```csharp
 var canvas = sKSurface.Canvas;
 canvas.DrawColor(SKColors.White);
 ```
 
 - 画顶部区域(正常来说应该是预先画好的一张顶部图案)
 
-```CSharp
+```csharp
 // 左边缩进一个单位 然后向下偏移四个单位
 canvas.DrawText(top,
     new SKPoint(01 * h, 04 * h),
@@ -179,7 +179,7 @@ canvas.DrawText(top,
 
 - 画标题区域
 
-```CSharp
+```csharp
 // 首先根据自己写的算法把string转换成 List<string>
 // 目的是为了文字过长的时候能够换行
 var titles = GetTextLines(title, 28).ToList();
@@ -194,7 +194,7 @@ for (int i = 0; i < titles.Count; i++)
 
 - 用的换行算法源码如下
 
-```CSharp
+```csharp
 /// <summary>
 /// 文字换行算法
 /// </summary>
@@ -233,14 +233,14 @@ private static IEnumerable<string> GetTextLines(
 
 - 左下角二维码
 
-```CSharp
+```csharp
 // 因为二维码自身就对周围做了缩进处理 所以不需要再缩进
 canvas.DrawBitmap(bmp, new SKPoint(00 * h, 10 * h));
 ```
 
 - 右下角文字备注
 
-```CSharp
+```csharp
 int row = 1;
 for (int i = 0; i < notes.Count; i++)
 {
@@ -260,7 +260,7 @@ for (int i = 0; i < notes.Count; i++)
 
 - 最后出图
 
-```CSharp
+```csharp
 // filename 要保存的文件名 记得是png文件
 using (var image = sKSurface.Snapshot())
 {
@@ -279,7 +279,7 @@ using (var image = sKSurface.Snapshot())
 
 - 测试代码
 
-```CSharp
+```csharp
 static void Main(string[] args)
 {
     // 二维码内容

@@ -28,7 +28,7 @@ tags:
 
 因为 SwiftUI View 采用的是结构体，当创建想要更改属性的结构体方法时，我们需要添加 mutating 关键字,例如：
 
-```Swift
+```swift
 mutating func doSomeWork()
 ```
 
@@ -47,7 +47,7 @@ mutating func doSomeWork()
 比如我们定义的数据结构 Model，前提是 @Published 要在 ObservableObject 下使用
 然后用 @ObservedObject 来引用这个对象，当然@State 不会报错，但是无法更新
 
-```Swift
+```swift
 class BaseModel: ObservableObject{
     @Published var name:String = ""
 }
@@ -70,7 +70,7 @@ struct ContentView: View{
 
 **先来看组案例**
 
-```Swift
+```swift
 //// MASK - 先定义两个Model 继承 ObservableObject
 class WorkModel: ObservableObject {
 
@@ -112,7 +112,7 @@ struct ContentView: View {
 
 不出意外上面代码点击按钮就会更新数据，但是如果我们有个包装类呢
 
-```Swift
+```swift
 class WrapperModel: ObservableObject{
 
     @ObservedObject var workModel:WorkModel = WorkModel()
@@ -159,7 +159,7 @@ struct ContentView: View {
 
 ## 4.总结以及解决方案
 
-```Swift
+```swift
 /// 既然我们知道View 跟 状态绑定的关系
 /// 是以第一继承ObservableObject 类 下的属性（字段）更新来更新视图的
 /// 那我们可以给 ObservableObject 加一个 无关紧要的字段，然后编写一个方法，来通知更新
@@ -190,7 +190,7 @@ class BaseobservableObject: ObservableObject {
 
 ## 5.其他知识
 
-```Swift
+```swift
 /// MASK - 实现一个基础Model类,其他Model继承该类
 class BaseModel: ObservableObject {
 

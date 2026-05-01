@@ -33,7 +33,7 @@ tags:
 
 `Claim` 就是关于使用者的一些信息，`Claim Type` 跟`Claim Value`(可以不用给)就组成一个`Claim`，`Claim` 可以是`姓名`、`电话`、`角色`、`Email`甚至是`角色`等等。`Authorization` 就是用`Claim` 判断使用者有无授权。
 
-```C#
+```csharp
 new System.Security.Claims.Claim(ClaimTypes.Role, role.Name)
 ```
 
@@ -49,7 +49,7 @@ new System.Security.Claims.Claim(ClaimTypes.Role, role.Name)
 
 `Authentication Handlers` 就是处理验证的方式，`ASP.NET Core Identity` 可以调用`AuthenticateAsync()`API 去验证使用者已登录，如验证失败就调用`ChallengeAsync()`将使用者导回`登录页面`，如授权失败则用`ForbidAsync()`禁止使用者访问，当然也可以自己实现这些行为。下面例子中用了`JWT` 跟`Cookie` 的验证方式，如果用了前者，就必须验证`JWT token` 并产生`ClaimsPrincipal` 回传到`HttpContext.User` 中；使用后者则会检查当前`request` 的`cookie`并产生`ClaimsPrincipal`。
 
-```C#
+```csharp
 builder.Services.AddAuthentication()
 	.AddJwtBearer()
 	.AddCookie();
@@ -59,7 +59,7 @@ builder.Services.AddAuthentication()
 
 用了任何一种方式注册`Authentication Handlers` 就称为`Authentication Scheme`，每个`Authentication Scheme` 都有一个独特的名字以识别，且可以自己设定`Authentication Handlers`，下面的程序结果跟上面会是一样，因为它们都有预设的`Scheme` Name。
 
-```C#
+```csharp
 builder.Services.AddAuthentication()
     .AddJwtBearer("Bearer")
     .AddCookie("Cookies");

@@ -66,13 +66,13 @@ base.OnInitialized(); } }
 
 在`TabPage`的`OnInitialized`方法中添加下面这一行代码，使`TabPage`关联上`TabControl`：
 
-```C#
+```csharp
 Parent.AddPage(this);
 ```
 
 `AddPage`方法见下面的代码，在`TabControl`调用`AddPage`方法保存引用后，我们在`TabControl`中添加`ActivePage`属性，同样看下面的代码：
 
-```C#
+```csharp
 public TabPage? ActivePage { get; set; }
 readonly List<TabPage> _pages = new();
 
@@ -87,7 +87,7 @@ internal void AddPage(TabPage tabPage)
 
 给`AddPage`组件添加一个`Text`属性用于展示。
 
-```C#
+```csharp
 [Parameter]
 public string? Text { get; set; }
 ```
@@ -118,7 +118,7 @@ public string? Text { get; set; }
 
 下面的代码添加到`TabControl`的代码区域。
 
-```C#
+```csharp
 string GetButtonClass(TabPage page)
 {
   return page == ActivePage ? "btn-primary" : "btn-secondary";
@@ -171,7 +171,7 @@ void ActivatePage(TabPage page)
 
 不对吧，三个`TabPage`的内容全部显示出来了，解决这个问题只需要在`TabPage`渲染`ChildContent`时判断当前`TabPage`是否为`TabControl`选中的页，选中项才进行渲染：
 
-```C#
+```csharp
 @if (Parent.ActivePage == this)
 {
   @ChildContent

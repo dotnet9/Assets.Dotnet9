@@ -26,7 +26,7 @@ tags:
 
 HwndSource 会生成一个可以嵌入 WPF 的 Win32 窗口，使用 HwndSource.RootVisual 添加一个 WPF 元素。
 
-```C#
+```csharp
 private static IntPtr ViewToHwnd(FrameworkElement element)
 {
     var p = new HwndSourceParameters()
@@ -48,7 +48,7 @@ private static IntPtr ViewToHwnd(FrameworkElement element)
 
 Win32 窗口是无法直接嵌入到 WPF 页面中的，所以 .Net 提供了一个 HwndHost 类来转换。 HwndHost 是一个抽象类，通过实现 BuildWindowCore 方法，可以将一个 Win32 窗口转换成 WPF 元素。
 
-```C#
+```csharp
 class ViewHost : HwndHost
 {
     private readonly IntPtr _handle;
@@ -74,7 +74,7 @@ class ViewHost : HwndHost
 
 可以通过多种方式返回插件的界面。我这里约定每个插件的 dll 都有一个 PluginStartup 类，PluginStartup.CreateView() 可以返回插件的界面。
 
-```C#
+```csharp
 namespace Plugin1
 {
     public class PluginStartup
@@ -90,7 +90,7 @@ namespace Plugin1
 
 - 客户端通过指定插件 dll 地址来加载插件。加载插件的时候，启动一个子进程，并且通过管道通信，传输包装插件的 Win32 窗口句柄。
 
-```C#
+```csharp
 private FrameworkElement LoadPlugin(string pluginDll)
 {
     using (var pipeServer = new AnonymousPipeServerStream(PipeDirection.In, HandleInheritability.Inheritable))
@@ -118,7 +118,7 @@ private FrameworkElement LoadPlugin(string pluginDll)
 
 - 通过控制台程序装载插件 dll 并将插件界面转换成 Win32 窗口，然后通过管道传输句柄。
 
-```C#
+```csharp
 [STAThread]
 [LoaderOptimization(LoaderOptimization.MultiDomain)]
 static void Main(string[] args)

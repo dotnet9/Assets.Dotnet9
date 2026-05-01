@@ -36,7 +36,7 @@ JS文件：[点这](https://sunpma.com/other/rgb/color_convert.js)
 
 JS代码
 
-```js
+```javascript
 function parseHEX(val) {
     let color = new Color();
     try {
@@ -86,7 +86,7 @@ public static Color? ParseHEX(string hexColor)
 
 JS代码
 
-```js
+```javascript
 function parseRGBA(val) {
     let color = new Color();
     try {

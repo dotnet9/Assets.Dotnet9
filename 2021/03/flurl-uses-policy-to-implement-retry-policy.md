@@ -25,7 +25,7 @@ tags:
 
 1. 提供一个接口以便做请求测试
 
-```C#
+```csharp
 [Route("api/[controller]")]
 [ApiController]
 public class PollyController : ControllerBase
@@ -68,7 +68,7 @@ public class PollyController : ControllerBase
 
 2. 创建一个请求客户端
 
-```C#
+```csharp
 public class HomeController : Controller
 {
    private readonly ILogger<HomeController> _logger;
@@ -144,7 +144,7 @@ info: SuppertRcsInterfaceTest.Controllers.PollyController[0]
 >
 > [更多...](https://github.com/App-vNext/Polly/wiki)
 
-```c#
+```csharp
 using System;
 using System.Linq;
 using System.Net;
@@ -248,7 +248,7 @@ namespace WithPollyClient.Services
 
 3. 接下来在`Starup`中对 Flurl 进行配置
 
-```c#
+```csharp
 public void ConfigureServices(IServiceCollection services)
 {
    services.AddControllersWithViews();
@@ -266,7 +266,7 @@ public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
 
 4. 再次尝试请求，可以看到结果非常之理想
 
-```c#
+```csharp
 WithPollyClient.Services.Policies: Information: Policy: Retry delegate fired, attempt 1
 WithPollyClient.Controllers.HomeController: Information: App: success - 2021/3/14 16:50:14
 WithPollyClient.Services.Policies: Information: Policy: Retry delegate fired, attempt 1
@@ -289,7 +289,7 @@ WithPollyClient.Controllers.HomeController: Information: App: success - 2021/3/1
 
 > 有时候呢，例如在`WPF`或者是其他的富客户端上面也会经常使用到 Flurl 的情况，如下
 
-```c#
+```csharp
 var time = await Policy
     .Handle<FlurlHttpException>()
     .OrResult<IFlurlResponse>(r => !r.ResponseMessage.IsSuccessStatusCode)

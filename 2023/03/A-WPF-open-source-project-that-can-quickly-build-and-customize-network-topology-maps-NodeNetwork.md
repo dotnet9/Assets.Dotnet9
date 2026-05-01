@@ -311,7 +311,7 @@ serializer.Serialize(writer, nodeNetwork);
 
 然后，我们可以将XML字符串保存到文件或数据库中。反序列化也非常简单。我们可以通过以下代码从XML字符串中反序列化节点和连接：
 
-```
+```csharp
 var serializer = new XmlSerializer(typeof(NodeNetworkViewModel));
 var reader = new StringReader(xmlString);
 var nodeNetwork = (NodeNetworkViewModel)serializer.Deserialize(reader);

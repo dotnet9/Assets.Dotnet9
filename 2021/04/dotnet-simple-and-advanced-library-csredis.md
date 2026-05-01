@@ -44,7 +44,7 @@ tags:
 nuget Install-Package CSRedisCore
 ```
 
-```C#
+```csharp
 var rds = new CSRedis.CSRedisClient("127.0.0.1:6379,password=123,defaultDatabase=13,poolsize=50,ssl=false,writeBuffer=10240,prefix=key前辍");
 rds.Set("test1", "123123", 60);
 rds.Get("test1");
@@ -59,7 +59,7 @@ rds.Get("test1");
 >
 > 可以使用此功能自动管理 N 台 redis-server 服务器分担存储，每台服务器只需约 (500/N)G 内存，且每台服务器匀可以配置官方高可用架构。
 
-```C#
+```csharp
 var rds = new CSRedis.CSRedisClient(null,
   "127.0.0.1:6371,password=123,defaultDatabase=11,poolsize=10,ssl=false,writeBuffer=10240,prefix=key前辍",
   "127.0.0.1:6372,password=123,defaultDatabase=12,poolsize=11,ssl=false,writeBuffer=10240,prefix=key前辍",
@@ -74,7 +74,7 @@ rds.MGet("key1", "key2", "key3", "key4");
 
 ## 5 高级玩法：发布订阅
 
-```C#
+```csharp
 //普通订阅
 rds.Subscribe(
   ("chan1", msg => Console.WriteLine(msg.Body)),
@@ -95,7 +95,7 @@ rds.Publish("chan1", "123123123");
 
 ## 6 高级玩法：缓存壳
 
-```C#
+```csharp
 //不加缓存的时候，要从数据库查询
 var t1 = Test.Select.WhereId(1).ToOne();
 
@@ -126,7 +126,7 @@ var t3 = rds.CacheShell("test", new [] { "1", "2" }, 10, notCacheFields => new [
 
 使用管道模式，打包多条命令一起执行，从而提高性能。
 
-```C#
+```csharp
 var ret1 = rds.StartPipe().Set("a", "1").Get("a").EndPipe();
 var ret2 = rds.StartPipe(p => p.Set("a", "1").Get("a"));
 
@@ -138,7 +138,7 @@ var ret3 = rds.StartPipe().Get("b").Get("a").Get("a").EndPipe();
 
 如果确定一定以及肯定非要有切换数据库的需求，请看以下代码：
 
-```C#
+```csharp
 var connectionString = "127.0.0.1:6379,password=123,poolsize=10,ssl=false,writeBuffer=10240,prefix=key前辍";
 var redis = new CSRedisClient[14]; //定义成单例
 for (var a = 0; a< redis.Length; a++) redis[a] = new CSRedisClient(connectionString + "; defualtDatabase=" + a);

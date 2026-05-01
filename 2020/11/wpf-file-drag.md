@@ -26,7 +26,7 @@ tags:
 
 选择对话框代码如下：
 
-```C#
+```csharp
 OpenFileDialog openFileDialog = new OpenFileDialog();
 openFileDialog.Title = "选择Exe文件";
 openFileDialog.Filter = "exe文件|*.exe";
@@ -77,7 +77,7 @@ string txtFile = openFileDialog.FileName;
 
 1. Grid_DragEnter 处理方法
 
-```C#
+```csharp
 private void Grid_DragEnter(object sender, DragEventArgs e)
 {
     if (e.Data.GetDataPresent(DataFormats.FileDrop))
@@ -97,7 +97,7 @@ DragDropEffects.Link：处理拖拽文件操作
 
 这是处理实际拖拽操作的方法，得到拖拽的文件路径（如果是操作系统文件快捷方式（扩展名为 lnk），则需要使用 com 组件(不是本文讲解重点，具体看本文[开源项目](https://github.com/dotnet9/QuickApp))取得实际文件路径）后，即可处理后续操作（比如文件上传）。
 
-```C#
+```csharp
 private void Grid_Drop(object sender, DragEventArgs e)
 {
     try

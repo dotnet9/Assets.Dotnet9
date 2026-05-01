@@ -80,7 +80,7 @@ tags:
 
 2. 并设置当前主窗体高度，设置窗体的 Left 与 Top 到最右侧。
 
-```C#
+```csharp
 private Rect desktopWorkingArea;　　　　　　　
 desktopWorkingArea = System.Windows.SystemParameters.WorkArea;
 this.Height = desktopWorkingArea.Height / 2;
@@ -90,7 +90,7 @@ this.Top = desktopWorkingArea.Height / 2 - (this.Height / 2);
 
 3. 移动窗体只允许 Y 轴 移动，调用 Win32 的 MoveWindow。
 
-```C#
+```csharp
 #region 移动窗体
 protected override void OnMouseLeftButtonDown(MouseButtonEventArgs e)
 {
@@ -137,7 +137,7 @@ protected override void OnMouseLeftButtonUp(MouseButtonEventArgs e)
 
 4. 在 Tab 键+Alt 键切换时隐藏当前窗体。
 
-```C#
+```csharp
 WindowInteropHelper wndHelper = new WindowInteropHelper(this);
 
 int exStyle = (int)Win32Api.GetWindowLong(wndHelper.Handle, (int)Win32Api.GetWindowLongFields.GWL_EXSTYLE);

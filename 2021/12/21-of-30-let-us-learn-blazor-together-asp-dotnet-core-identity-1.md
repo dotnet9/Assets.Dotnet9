@@ -58,7 +58,7 @@ tags:
 
 我们去`NavMenu.razor`加上通往`Login` 的`NavLink`，在相对路径中`Areas` 跟`Pages` 可以省略。
 
-```C#
+```csharp
 <div class="nav-item px-3">
     <NavLink class="nav-link" href="Identity/Account/Login" Match="NavLinkMatch.All">
         <span class="bi bi-file-earmark-lock2 h4 p-2 mb-0" aria-hidden="true"></span> Login

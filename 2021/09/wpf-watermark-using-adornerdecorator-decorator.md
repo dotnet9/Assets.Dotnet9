@@ -20,7 +20,7 @@ tags:
 
 水印装饰器 WatermarkAdorner 类代码：
 
-```C#
+```csharp
 using System;
 using System.Collections.Generic;
 using System.Globalization;
@@ -163,7 +163,7 @@ namespace WPF水印装饰器
 
 在窗体或控件的 Loaded 方法中，添加如下代码：
 
-```C#
+```csharp
 UIElement uiElement = (UIElement)this.Content;
 AdornerLayer adornerLayer = AdornerLayer.GetAdornerLayer(uiElement);
 adornerLayer.Add(new WatermarkAdorner(uiElement, _watermarkText));
@@ -247,7 +247,7 @@ adornerLayer.Add(new WatermarkAdorner(uiElement, _watermarkText));
 
 完整 MainWindow.xaml.cs 代码：
 
-```C#
+```csharp
 using System;
 using System.Collections.Generic;
 using System.Linq;

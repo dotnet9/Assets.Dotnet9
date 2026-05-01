@@ -49,7 +49,7 @@ tags:
 
 全局引用, 只需要在任何 using 语句之前添加 Global 关键字, 即可使该引用成为全局
 
-```C#
+```csharp
 global using Microsoft.Maui;
 ```
 
@@ -57,7 +57,7 @@ global using Microsoft.Maui;
 
 通过 UserAppTheme 修改基于不同平台的主题设置, Light/Dark
 
-```C#
+```csharp
 switch (Settings.Theme)
 {
     default:
@@ -74,7 +74,7 @@ switch (Settings.Theme)
 
 使用过类似 mvvmlight 中的 Messenger 类似, 可以通过 Subscribe/Send/Unsubscribe 来完成订阅、发布、取消订阅等功能。
 
-```C#
+```csharp
 //订阅
 MessagingCenter.Instance.Subscribe<string>("","",async (sender) =>
 				{
@@ -92,7 +92,7 @@ MessagingCenter.Instance.Send<string>("", "");
 
 MAUI 中提供的统一注册以及容器服务, 通过 MauiAppBuilder 添加自定服务以及通过 MauiWinUIApplication 获取对应服务。
 
-```C#
+```csharp
 //注册服务
 public static MauiAppBuilder ConfigureServices(this MauiAppBuilder builder)
 {
@@ -165,7 +165,7 @@ xmlns:res="clr-namespace:Microsoft.NetConf2021.Maui.Resources.Strings"
 
 内置的 Essentials 提供访问本机网络 WIFI、蓝牙等等。
 
-```C#
+```csharp
 //验证是否联网
 var current = Connectivity.NetworkAccess;
 if (current != NetworkAccess.Internet)

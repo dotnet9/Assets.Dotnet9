@@ -61,7 +61,7 @@ NuGet 包：[WpfAnimatedGif](https://nuget.org/packages/WpfAnimatedGif)。
 
 当然，您也可以在代码中设置 gif 图片：
 
-```C#
+```csharp
 var image = new BitmapImage();
 image.BeginInit();
 image.UriSource = new Uri(fileName);

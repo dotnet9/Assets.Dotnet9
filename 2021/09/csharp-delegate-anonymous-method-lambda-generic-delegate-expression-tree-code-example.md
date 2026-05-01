@@ -26,7 +26,7 @@ tags:
 
 下边的代码，完成了一个委托应用的演示。一个委托分三个步骤：
 
-```C#
+```csharp
 class Program
 {
     //step01：首先用delegate定义一个委托 。
@@ -59,7 +59,7 @@ class Program
 
 在上一分钟已经知道了，完成一个委托应用分三步走，缺一步都不行，如果要跨大步，当心步子大了扯着蛋。但是微软不怕扯着蛋，非要把三步做成两步来走啊！所以微软就用匿名方法来简化上边的三个步骤。匿名方法这个玩意儿怎么说呢，在 C#中完全是可有可无的东西，只是为 C#锦上添花，有人别出心裁给它取个名字叫语法糖。
 
-```C#
+```csharp
 class Program
 {
     //step01：首先用delegate定义一个委托 。
@@ -84,7 +84,7 @@ class Program
 
 原本很简单的程序，加上几个 delegate 关键字，这代码一下就变得深奥了，深奥的东西懂的人就变少了，所以这个还可以作为加薪的筹码。但是微软对 C#的设计理念是简单易用。微软就想方设法的来简化`delegate(int x, int y) { return x + y; }`这个匿名方法，Lambda 就出现了。下边我来看几种 lambda 表达式的写法：
 
-```C#
+```csharp
 class Program
 {
     public delegate int CalculatorAdd(int x, int y);
@@ -109,7 +109,7 @@ class Program
 
 随着.NET 版本的升级，新版本总要区别于旧版本吧，不然微软的工程师怎么向他们的老大交差呀？所以微软又来玩新花样了。
 
-```C#
+```csharp
 class Program
 {
     static void Main(string[] args)
@@ -137,7 +137,7 @@ class Program
 
 表达式树其实与委托已经没什么关系了，非要扯上关系，那就这么说吧，表达式树是存放委托的容器。如果非要说的更专业一些，表达式树是存取 Lambda 表达式的一种数据结构。要用 Lambda 表达式的时候，直接从表达式中获取出来，Compile()就可以直接用了, 如下代码：
 
-```C#
+```csharp
 class Program
 {
     static void Main(string[] args)

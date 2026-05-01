@@ -36,7 +36,7 @@ tags:
 
 开始之前，先进行读取文档，代码如下。以下代码和测试文件，都可以在本文末尾获取
 
-```C#
+```csharp
 var file = new FileInfo("Test.pptx");
 
 using var presentationDocument = PresentationDocument.Open(file.FullName, false);
@@ -47,7 +47,7 @@ var slide = presentationDocument.PresentationPart!.SlideParts.First().Slide;
 
 此测试文档在第一页只有一个元素，就是本文的加文本描边的元素，获取的代码如下
 
-```C#
+```csharp
 var shape = slide.CommonSlideData!.ShapeTree!.GetFirstChild<Shape>()!;
 ```
 
@@ -84,7 +84,7 @@ var shape = slide.CommonSlideData!.ShapeTree!.GetFirstChild<Shape>()!;
 
 在 PPT 里面的文本框也是形状，是默认的矩形
 
-```C#
+```csharp
 var shapeProperties = shape.ShapeProperties!;
 var presetGeometry = shapeProperties.GetFirstChild<PresetGeometry>()!;
 // 这是一个文本框
@@ -96,7 +96,7 @@ Debug.Assert(shapeProperties.GetFirstChild<NoFill>() is not null);
 
 获取文本框的文本，可以使用如下代码
 
-```C#
+```csharp
 var textBody = shape.TextBody!;
 Debug.Assert(textBody != null);
 ```
@@ -105,7 +105,7 @@ Debug.Assert(textBody != null);
 
 因此解析需要先遍历段落，再遍历 TextRun 元素
 
-```C#
+```csharp
 foreach (var paragraph in textBody.Elements<DocumentFormat.OpenXml.Drawing.Paragraph>())
 {
     // 这个文本段落是没有属性的，为了方便样式，就不写代码
@@ -119,27 +119,26 @@ foreach (var paragraph in textBody.Elements<DocumentFormat.OpenXml.Drawing.Parag
 
 获取 TextRun 的属性如下
 
-```C#
+```csharp
 var runProperties = run.RunProperties!;
 ```
 
 此属性上可以拿到当前文本的字号等信息，代码如下
 
-```C#
+```csharp
 var fontSize = new PoundHundredfold(runProperties.FontSize!.Value).ToPound();
 ```
 
 接下来是本文的核心，获取 Outline 属性，代码如下
 
-```C#
+```csharp
 var outline = runProperties.Outline!;
 ```
 
 对应的 OpenXML 代码如下
 
 ```xml
- <a:ln w="9525">
-   <a:solidFill>
+<a:ln w="9525">   <a:solidFill>
      <a:srgbClr val="00FF00" />
    </a:solidFill>
  </a:ln>
@@ -147,13 +146,13 @@ var outline = runProperties.Outline!;
 
 咱所关注基本只有粗细和颜色，获取方法分别如下
 
-```C#
+```csharp
 var outlineWidth = new Emu(outline.Width!.Value);
 ```
 
 获取颜色的代码如下
 
-```C#
+```csharp
 var solidFill = outline.GetFirstChild<SolidFill>()!;
 var rgbColorModelHex = solidFill.GetFirstChild<RgbColorModelHex>()!;
 var colorText = rgbColorModelHex.Val!;
@@ -163,7 +162,7 @@ var colorText = rgbColorModelHex.Val!;
 
 再获取文本内容，大概就完成了
 
-```C#
+```csharp
 // 默认字体前景色是黑色
 
 var text = run.Text!.Text;
@@ -177,7 +176,7 @@ var text = run.Text!.Text;
 
 代码如下
 
-```C#
+```csharp
 var formattedText = new FormattedText(text, CultureInfo.CurrentCulture,
 FlowDirection.LeftToRight,
 new Typeface
@@ -195,13 +194,13 @@ Brushes.Black, 96);
 
 通过 FormattedText 构建出 Geometry 对象代码如下
 
-```C#
+```csharp
 var geometry = formattedText.BuildGeometry(new ());
 ```
 
 接着通过 System.Windows.Shapes.Path 将 Geometry 绘制到界面上
 
-```C#
+```csharp
 var path = new System.Windows.Shapes.Path
 {
     Data = geometry,

@@ -84,7 +84,7 @@ LoginWindow.xaml：
 App.cs：
 
 ```csharp
-  protected override void RegisterTypes(IContainerRegistry containerRegistry)
+protected override void RegisterTypes(IContainerRegistry containerRegistry)
   {
         containerRegistry.Register<IMedicineSerivce, MedicineSerivce>();
         containerRegistry.Register<IPatientService, PatientService>();
@@ -171,14 +171,14 @@ public class LoginMainContentViewModel : BindableBase
 这里我们可以看到我们调用 RegionMannager 的 RequestNavigate 方法，其实这样看不能很好的说明是基于区域的做法，如果将换成下面的写法可能更好理解一点：
 
 ```csharp
-   //在LoginContentRegion区域导航到LoginMainContent
+//在LoginContentRegion区域导航到LoginMainContent
   _regionManager.RequestNavigate(RegionNames.LoginContentRegion, "LoginMainContent");
 ```
 
 换成
 
 ```csharp
- //在LoginContentRegion区域导航到LoginMainContent
+//在LoginContentRegion区域导航到LoginMainContent
  IRegion region = _regionManager.Regions[RegionNames.LoginContentRegion];
  region.RequestNavigate("LoginMainContent");
 ```
@@ -203,7 +203,7 @@ public interface INavigateAsync
 那么我们将上述加上回调方法：
 
 ```csharp
- //在LoginContentRegion区域导航到LoginMainContent
+//在LoginContentRegion区域导航到LoginMainContent
  IRegion region = _regionManager.Regions[RegionNames.LoginContentRegion];
  region.RequestNavigate("LoginMainContent", NavigationCompelted);
 
@@ -231,7 +231,7 @@ public interface INavigateAsync
 我们经常在两个页面之间导航需要处理一些逻辑，例如，LoginMainContent 页面导航到 CreateAccount 页面时候，LoginMainContent 退出页面的时刻要保存页面数据，导航到 CreateAccount 页面的时刻处理逻辑(例如获取从 LoginMainContent 页面的信息)，Prism 的导航系统通过一个 INavigationAware 接口：
 
 ```csharp
-    public interface INavigationAware : Object
+public interface INavigationAware : Object
     {
         Void OnNavigatedTo(NavigationContext navigationContext);
 
@@ -616,7 +616,7 @@ LoginMainContent.xaml(前进箭头代码部分):
 
 BoolToVisibilityConverter.cs:
 
-```
+```csharp
 public class BoolToVisibilityConverter : IValueConverter
 {
     public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
@@ -711,10 +711,10 @@ void ExecuteGoBackCommand()
 如果不打算将页面在导航过程中不加入导航日志，例如 LoginMainContent 页面，可以通过实现 IJournalAware 并从 PersistInHistory（）返回 false
 
 ```csharp
-    public class LoginMainContentViewModel : IJournalAware
-    {
-        public bool PersistInHistory() => false;
-    }
+public class LoginMainContentViewModel : IJournalAware
+{
+    public bool PersistInHistory() => false;
+}
 ```
 
 ## 5. 小结

@@ -56,7 +56,7 @@ dotnet run hello.cs
 - 通过文件顶部的特殊指令（如 `#:sdk Microsoft.NET.Sdk.Web`、`#:package`、`#:property`），你可以声明 NuGet 依赖包或项目属性。例如：
 
   ```csharp
-  #:sdk Microsoft.NET.Sdk.Web
+ #:sdk Microsoft.NET.Sdk.Web
   #:package System.CommandLine@2.0.0-*
   #:property TargetFramework net10.0
   ```
@@ -64,7 +64,7 @@ dotnet run hello.cs
   我们可以指定 `#:sdk Microsoft.NET.Sdk.Web` 来创建一个单文件的 WebApplication，
 
   ```csharp
-  #:sdk Microsoft.NET.Sdk.Web
+ #:sdk Microsoft.NET.Sdk.Web
   
   var app = WebApplication.Create(args);
   app.MapGet("/", () => "Hello World!");
@@ -82,7 +82,7 @@ dotnet run hello.cs
   我们也可以引用 nuget package 和配置 property，示例如下：
 
   ```csharp
-  #:sdk Microsoft.NET.Sdk.Web
+ #:sdk Microsoft.NET.Sdk.Web
   #:package WeihanLi.Web.Extensions@2.1.0
   #:property ManagePackageVersionsCentrally false
   
@@ -101,7 +101,7 @@ dotnet run hello.cs
 -  当你的脚本变复杂，需要更多自定义时不想使用文件程序时，只需一条命令即可将其转换为标准项目，CLI 会自动生成 `.csproj` 文件，并迁移相关配置，代码行为不会改变：
 
   ```bash
-  dotnet project convert webapi.cs
+dotnet project convert webapi.cs
   ```
 
   转换之后的项目如下，也可以直接使用 `dotnet run` 运行

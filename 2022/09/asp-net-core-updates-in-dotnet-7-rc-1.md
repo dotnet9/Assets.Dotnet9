@@ -151,7 +151,7 @@ var registration = NavigationManager.RegisterLocationChangingHandler(async conte
 
 新`NavigationLock`组件使处理位置变化事件的常见场景更容易。`NavigationLock`公开一个`OnBeforeInternalNavigation`回调，您可以使用它来拦截和处理内部位置更改事件。如果您希望用户也确认外部导航，您可以使用该`ConfirmExternalNavigations`属性，它将拦截`beforeunload`事件并触发浏览器特定提示。
 
-```HTML
+```html
 <EditForm EditContext="editContext" OnValidSubmit="Submit">
     ...
 </EditForm>
@@ -222,7 +222,7 @@ dotnet new wasmbrowser
 
 创建的示例项目中的 main.js 中的 JavaScript 模块演示了如何从 JavaScript 运行 .NET 代码。相关 API 是从 dotnet.js 导入的。这些 API 使您能够设置可以导入到 C# 代码中的命名模块，以及调用 .NET 代码公开的方法，包括`Program.Main`：
 
-```js
+```javascript
 import { dotnet } from "./dotnet.js";
 
 const is_browser = typeof window != "undefined";

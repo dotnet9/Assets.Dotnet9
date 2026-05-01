@@ -313,7 +313,7 @@ public interface IPlottable
 **/Plot/Plot.Render.cs**
 
 ```csharp
- private void RenderPlottables(Bitmap bmp, bool lowQuality, double scaleFactor)
+private void RenderPlottables(Bitmap bmp, bool lowQuality, double scaleFactor)
 {
     foreach (var plottable in settings.Plottables)
    {
@@ -490,7 +490,7 @@ public void MinMaxRangeQuery(int l, int r, out double lowestValue, out double hi
 **/Control/EventProcess/Events/IUIEvent.cs**
 
 ```csharp
- public interface IUIEvent
+public interface IUIEvent
 {
    public RenderType RenderType { get; }
    void ProcessEvent();

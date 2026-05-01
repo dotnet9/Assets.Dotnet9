@@ -27,7 +27,7 @@ tags:
 
 精髓就一句话，在主 App 这个类里重载`protected override void OnInitialized()`这个方法，然后`login.ShowDialog()`的逻辑写在里面就 ok 了，具体看以下代码：
 
-```cs
+```csharp
 namespace Wpf1
 {
     /// <summary>
@@ -64,7 +64,7 @@ namespace Wpf1
 
 然后再`Login.xaml.cs`里的“登录”和“退出”按钮的 Click 事件里这么写
 
-```cs
+```csharp
 private void Btn1_Click(object sender, RoutedEventArgs e)
 {
     //登录

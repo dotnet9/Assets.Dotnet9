@@ -856,12 +856,12 @@ An application manifest specifies declarative application identity, dependency a
 能够拿到参数：
 
 ```shell
-                $(_DeploymentBaseManifest);
-                @(ResolvedIsolatedComModules);
-                @(_DeploymentManifestDependencies);
-                @(_DeploymentResolvedManifestEntryPoint);
-                @(_DeploymentManifestFiles)
-				@(ApplicationManifest)
+$(_DeploymentBaseManifest);            
+@(ResolvedIsolatedComModules);
+@(_DeploymentManifestDependencies);
+@(_DeploymentResolvedManifestEntryPoint);
+@(_DeploymentManifestFiles)
+@(ApplicationManifest)
 ```
 
 ### MAUI 实现前后端分离开发
@@ -947,7 +947,7 @@ An application manifest specifies declarative application identity, dependency a
 
 接着，将以下代码放到 `app.js` 中，用于动态导入前端生成的 css 文件。
 
-```js
+```javascript
 function InitializeCss(name) {
   document.getElementById("app-css").innerHTML =
     '<link rel="stylesheet" href="' + name + '">';

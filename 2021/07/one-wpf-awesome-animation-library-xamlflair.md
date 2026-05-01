@@ -276,7 +276,7 @@ xmlns:xf="clr-namespace:XamlFlair;assembly=XamlFlair.WPF"
 
 如果需要全局更改默认动画值之一（例如，默认`Duration`为 750 而不是 500），则可以在应用程序的初始化代码中调用`OverrideDefaultSettings`函数。以下示例更改`Duration`和`Easing`的默认值：
 
-```cs
+```csharp
 XamlFlair.Animations.OverrideDefaultSettings(
     duration: 750,
     easing: EasingType.Quadratic);
@@ -357,7 +357,7 @@ XamlFlair.Animations.OverrideDefaultSettings(
 1. 顶部添加`XamlFlair.WPF`命名空间
 
 ```xml
-    xmlns:xf="clr-namespace:XamlFlair;assembly=XamlFlair.WPF"
+xmlns:xf="clr-namespace:XamlFlair;assembly=XamlFlair.WPF"
 ```
 
 2. 更新应用程序资源（Application Resources）:

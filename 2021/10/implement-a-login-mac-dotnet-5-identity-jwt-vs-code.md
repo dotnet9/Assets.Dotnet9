@@ -40,7 +40,7 @@ tags:
 
 ① 新建 User 实体
 
-```C#
+```csharp
 /// <summary>
 /// 登录用户实体类  继承Identiy框架提供的 IdentityUser类
 /// </summary>
@@ -56,7 +56,7 @@ public class AppUser:IdentityUser
 
 ② 新建一个上下文类
 
-```C#
+```csharp
 public class AppDBContext : IdentityDbContext<AppUser, IdentityRole, string>
 {
     public AppDBContext(DbContextOptions options) : base(options)
@@ -67,7 +67,7 @@ public class AppDBContext : IdentityDbContext<AppUser, IdentityRole, string>
 
 ③ 在 Startup 依赖注入上下文类
 
-```C#
+```csharp
 services.AddDbContext<AppDBContext>(options =>
 {
     options.UseMySql(Configuration.GetConnectionString("DefaultConnection"), MySqlServerVersion.LatestSupportedServerVersion);
@@ -89,7 +89,7 @@ dotnet ef  database update
 
 ConfigureServices 方法里面配置服务
 
-```C#
+```csharp
 services.AddAuthentication(x =>
 {
     x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
@@ -124,7 +124,7 @@ services.AddAuthorization(options =>
 
 Configure 方法里面使用服务
 
-```C#
+```csharp
 public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
 {
     if (env.IsDevelopment())
@@ -152,7 +152,7 @@ public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
 
 ConfigureServices 方法里面配置服务
 
-```C#
+```csharp
 services.AddSwaggerGen(c =>
 {
     c.SwaggerDoc("v1", new OpenApiInfo { Title = "SwaggerDemo", Version = "v1", Description = "Demo API for showing Swagger" });
@@ -189,7 +189,7 @@ services.AddSwaggerGen(c =>
 
 Configure 方法里面使用服务
 
-```C#
+```csharp
 public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
 {
     if (env.IsDevelopment())
@@ -217,7 +217,7 @@ public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
 
 ⑦ 创建 UserController,并通过构造函数注入登录服务
 
-```C#
+```csharp
 private readonly UserManager<AppUser> _userManger;  // 用户服务
 private readonly SignInManager<AppUser> _signInManger;  // 登录服务
 
@@ -236,7 +236,7 @@ public UserController(ILogger<UserController> logger, UserManager<AppUser> userM
 
 **_注册用户_**
 
-```C#
+```csharp
 /// <summary>
 /// 用户注册
 /// AddAndUpdateUserrRegisterModel 是一个Dto 接受对象
@@ -299,7 +299,7 @@ public async Task<Object> RegisterUser(AddAndUpdateUserrRegisterModel model)
 
 **_登录_**
 
-```C#
+```csharp
 /// <summary>
 /// 生成Token
 /// 作者 xxxx
@@ -348,7 +348,7 @@ private string GenarateToken(AppUser user, List<string> roles)
 }
 ```
 
-```C#
+```csharp
 /// <summary>
 /// 用户登录
 /// LoginModel 登录Dto接收
@@ -403,7 +403,7 @@ public async Task<object> Login(LoginModel model)
 
 先将上文用户登录产生的 token 设置到 swagger 里面，然后访问只有 Admin 角色可以访问的接口
 
-```C#
+```csharp
 /// <summary>
 /// 添加角色
 /// [Authorize(Roles ="Admin")]  只有Admin角色的用户可以访问
@@ -452,7 +452,7 @@ public async Task<object> AddRole(AddRoleModel model)
 
 **_关于我们 token 权限在校验时出现失败怎么办？ 这里 ASP.NET Core 5.0 新增一个接口【IAuthorizationMiddlewareResultHandler】可以处理权限验证 看下文代码展示！_**
 
-```C#
+```csharp
 /// <summary>
 /// 这个是ASP.NET Core 5 新增的授权处理失败  可以直接暴露出请求上下文 省事很多啦！！！
 /// 作者 xxx
@@ -485,7 +485,7 @@ public class AuthorizationHandleMiddleWare : IAuthorizationMiddlewareResultHandl
 
 另外还需要在 ConfigureService 里面注册下服务
 
-```C#
+```csharp
 // .net 5 新增的权限验证中间件  在此处依赖注入一下  详见 AuthorizationHandleMiddleWare.cs 文件
 services.AddSingleton<IAuthorizationMiddlewareResultHandler,AuthorizationHandleMiddleWare>();
 ```

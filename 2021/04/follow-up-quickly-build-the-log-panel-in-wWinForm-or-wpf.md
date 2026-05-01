@@ -62,7 +62,7 @@ Install-Package LogDashboard
 
 打开`App.xaml.cs`文件，添加如下代码。仔细看，如下配置和上一篇文章 `Program.cs` 文件中的配置都是差不多的，主要是配置`Serilog`，记得输出日志分割符使用 **||**。
 
-```C#
+```csharp
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
 using Serilog;
@@ -108,7 +108,7 @@ namespace WPFWithLogDashboard
 
 添加`Startup.cs`文件，代码如下：
 
-```C#
+```csharp
 using LogDashboard;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -207,7 +207,7 @@ http://localhost:5000/logdashboard
 
 `MainWindow.xaml.cs`中完成上面所说的功能：
 
-```C#
+```csharp
 using Serilog;
 using System.Diagnostics;
 using System.Windows;

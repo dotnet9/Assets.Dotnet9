@@ -99,7 +99,7 @@ Demo 演示：
 
 点击登录时，打开等待对话框（点击时绑定了 materialDesign:DialogHost.OpenDialogCommand），在等待对话框的打开与关闭事件中做登录逻辑处理。
 
-```C#
+```csharp
 private async Task<bool> ValidateCreds()
 {
     // 模拟登录

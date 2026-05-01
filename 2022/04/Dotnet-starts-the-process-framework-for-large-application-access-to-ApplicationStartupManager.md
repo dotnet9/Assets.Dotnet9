@@ -397,7 +397,7 @@ private static void StartStartupTasks(CommandLine commandLine)
 
 和 .NET 的其他库一样，为了接入预编译模块，就需要先安装 NuGet 库。通过 NuGet 安装 [dotnetCampus.Telescope](https://github.com/dotnet-campus/SourceFusion) 库，如果是新 SDK 风格的项目文件，可以编辑 csproj 项目文件，添加如下代码安装
 
-```XML
+```xml
 <ItemGroup>
     <PackageReference Include="dotnetCampus.TelescopeSource" Version="1.0.0-alpha02" />
 </ItemGroup>
@@ -478,7 +478,7 @@ namespace dotnetCampus.Telescope
 可以在启动框架模块里面，新建一个叫 AssemblyMetadataExporter 的类型来从 AttributedTypesExport.g.cs 拿到收集的类型。从 Telescope 拿到 `__AttributedTypesExport__` 生成类型的方法是调用 AttributedTypes 的 FromAssembly 方法，代码如下
 
 ```csharp
-    IEnumerable<AttributedTypeMetadata<StartupTask, StartupTaskAttribute>> collection = AttributedTypes.FromAssembly<StartupTask, StartupTaskAttribute>(_assemblies);
+IEnumerable<AttributedTypeMetadata<StartupTask, StartupTaskAttribute>> collection = AttributedTypes.FromAssembly<StartupTask, StartupTaskAttribute>(_assemblies);
 ```
 
 以上代码传入的 `_assemblies` 参数就是需要获取收集的启动任务项程序集列表，调用以上代码，将会从传入的各个程序集里获取预编译收集的类型

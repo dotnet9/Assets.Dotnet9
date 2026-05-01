@@ -56,7 +56,7 @@ public class LocalizationLanguage
 
 `LocalizationLanguage` 类包含了语言的基本信息，如语言名称、描述和文化名称。获取到语言列表后，我们可以将其用于界面绑定，例如在下拉菜单中显示可供用户选择的语言选项，或者在其他需要展示语言信息的界面元素中进行数据绑定。
 
-```xaml
+```xml
 <ComboBox ItemsSource="{Binding Languages}"
       SelectedItem="{Binding SelectLanguage}"
       DisplayMemberPath="Language" />
@@ -91,7 +91,7 @@ var titleEnUS = I18nManager.Instance.GetResource(Localization.Main.MainView.Titl
 
 在 xaml 界面中使用 XML 翻译文件也非常便捷。首先，需要引入相应的命名空间：
 
-```xaml
+```xml
 xmlns:language="clr-namespace:Localization"
 xmlns:markup="https://codewf.com"
 ```
@@ -100,7 +100,7 @@ xmlns:markup="https://codewf.com"
 
 以下是在控件中使用翻译文本的示例：
 
-```xaml
+```xml
 <Button Content="{markup:I18n {x:Static language:ChoiceLanguagesView.LanguageKey}}" />
 ```
 
@@ -108,9 +108,8 @@ xmlns:markup="https://codewf.com"
 
 当然也支持指定语言：
 
-```xaml
- <StackPanel>
-     <StackPanel Orientation="Horizontal">
+```xml
+<StackPanel>     <StackPanel Orientation="Horizontal">
          <TextBlock Text="Current Thread" />
          <TextBlock Text="{markup:I18n {x:Static language:DevelopModule.Title2SlugView.Title}}"></TextBlock>
      </StackPanel>
@@ -137,7 +136,7 @@ xmlns:markup="https://codewf.com"
 
 此外，xaml 界面还支持动态 Key 的绑定，例如：
 
-```xaml
+```xml
 <u:Banner
     Content="{markup:I18n {Binding SelectedMenuItem.Description}}"
     Header="{markup:I18n {Binding SelectedMenuItem.Name}}"

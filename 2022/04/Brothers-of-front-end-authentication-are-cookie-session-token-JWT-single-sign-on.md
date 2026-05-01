@@ -142,7 +142,7 @@ document.cookie = 'username=jimu; domain=jimu.com; path=/blog; Expires=Wed, 21 O
 
 调用`document.cookie`也可以读到 cookie，也和 HTTP 一样，能读到所有的非`HttpOnly` cookie。
 
-```js
+```javascript
 console.log(document.cookie);
 // username=jimu; height=180; weight=80
 ```

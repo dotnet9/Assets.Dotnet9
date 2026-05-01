@@ -819,7 +819,7 @@ public class StaffManager
 
 2. 处理转换异常：
    ```csharp
-   public decimal ParseTemperature(string temp)
+  public decimal ParseTemperature(string temp)
    {
        try
        {

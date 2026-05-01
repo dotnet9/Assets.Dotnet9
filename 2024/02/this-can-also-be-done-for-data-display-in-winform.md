@@ -103,13 +103,13 @@ public interface IData
 `datas`的定义如下：
 
 ```csharp
- WeatherData[] datas = Array.Empty<WeatherData>();
+WeatherData[] datas = Array.Empty<WeatherData>();
 ```
 
 `WeatherData`是自定义类，实现了`IData`接口：
 
 ```csharp
-    public class WeatherData : IData
+   public class WeatherData : IData
     {
         [SugarColumn(IsPrimaryKey = true, IsIdentity = true)]
         public int Id { get; set; }
@@ -177,7 +177,7 @@ The bird is flying.
 这里我在 Table 组件上添加了@ref="antTableRef"，在代码区域添加了：
 
 ```csharp
- Table<IData>? antTableRef;
+Table<IData>? antTableRef;
 ```
 
 就成功引用了 Table 组件实例。
@@ -293,7 +293,7 @@ Expression<Func<Person, string>> getNameExpression = person => person.Name;
 `@bind-Value`进行数据绑定，将日期选择组件的值与 Date1 和 Date2 绑定起来：
 
 ```csharp
- DateTime? Date1;
+DateTime? Date1;
  DateTime? Date2;
 ```
 
@@ -334,7 +334,7 @@ async void QueryButton_Clicked()
 当条件成立时，创建 Condition 类型，写入开始日期、结束日期和站名，Condition 类的定义如下：
 
 ```csharp
- public class Condition
+public class Condition
  {
      public DateTime StartDate{ get; set; }
      public DateTime EndDate { get; set; }
@@ -345,13 +345,13 @@ async void QueryButton_Clicked()
 然后调用业务逻辑层的 weatherServer 中的 GetDataByCondition 方法：
 
 ```csharp
- datas = weatherServer.GetDataByCondition(condition).ToArray();
+datas = weatherServer.GetDataByCondition(condition).ToArray();
 ```
 
 weatherServer 中的 GetDataByCondition 方法如下：
 
 ```csharp
- public List<WeatherData> GetDataByCondition(Condition condition)
+public List<WeatherData> GetDataByCondition(Condition condition)
  {
      return dataService.GetDataByCondition(condition);
  }
@@ -362,7 +362,7 @@ weatherServer 中的 GetDataByCondition 方法如下：
 数据库访问层中的 dataService 的 GetDataByCondition 方法如下：
 
 ```csharp
-  public List<WeatherData> GetDataByCondition(Condition condition)
+ public List<WeatherData> GetDataByCondition(Condition condition)
   {
       return db.Queryable<WeatherData>()
                .Where(x => x.Date >= condition.StartDate &&
@@ -374,13 +374,13 @@ weatherServer 中的 GetDataByCondition 方法如下：
 当重新查询时：
 
 ```csharp
- StateHasChanged();
+StateHasChanged();
 ```
 
 调用这个方法组件会进行更新。在 Blazor 中，`StateHasChanged` 是一个方法，用于通知 Blazor 框架重新渲染组件及其子组件。Blazor 组件的 UI 渲染是基于组件的状态（state）的，当组件的状态发生变化时，需要调用 `StateHasChanged` 方法来通知框架进行重新渲染。
 
 ```csharp
- var cofig = new MessageConfig()
+var cofig = new MessageConfig()
             {
                 Content = "正在更新中...",
                 Duration = 0

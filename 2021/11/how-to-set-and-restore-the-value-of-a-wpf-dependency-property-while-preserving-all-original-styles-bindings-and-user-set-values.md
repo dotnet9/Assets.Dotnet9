@@ -37,7 +37,7 @@ _本文内容_
 
 一般可能会这么写：
 
-```C#
+```csharp
 private Window _window;
 private WindowStyle _oldStyle;
 
@@ -72,13 +72,13 @@ private void OnExitFullScreen()
 
 `SetCurrentValue` 设计为在不改变依赖项属性任何已有值的情况下，设置属性当前的值。
 
-```C#
+```csharp
 _window.SetCurrentValue(Window.WindowStyleProperty, WindowStyle.None);
 ```
 
 那么，只需要还原 `SetCurrentValue` 所做的修改，就还原了此依赖项属性的一切设置的值：
 
-```C#
+```csharp
 _window.InvalidateProperty(Window.WindowStyleProperty);
 ```
 
@@ -86,13 +86,13 @@ _window.InvalidateProperty(Window.WindowStyleProperty);
 
 然而还差一点，绑定如果在你应用 `SetCurrentValue` 期间有改变，那么这次的赋值并不会让绑定立即生效，所以我们还需要手工再让绑定重新更新值：
 
-```C#
+```csharp
 BindingOperations.GetBindingExpression(_window, Window.WindowStyleProperty)?.UpdateTarget();
 ```
 
 那么，综合起来，本文一开始的代码将更新成如下形式：
 
-```C#
+```csharp
 private Window _window;
 
 private void OnEnterFullScreen()
@@ -111,7 +111,7 @@ private void OnExitFullScreen()
 
 将代码变得通用一点：
 
-```C#
+```csharp
 static void ApplyTempProperty(DependencyObject d, DependencyProperty dp, object tempValue)
 {
     d?.SetCurrentValue(dp, tempValue);

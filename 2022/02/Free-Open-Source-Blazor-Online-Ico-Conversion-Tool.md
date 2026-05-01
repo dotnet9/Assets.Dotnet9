@@ -118,7 +118,7 @@ tags:
 
 因为使用到`Bitmap`，vs 会提示只支持`Windows`平台（注意重点：**只是该包`System.Drawing.Common`不支持跨平台，不是.NET 6 不支持跨平台，.NET 6 支持跨平台**。），目前工具程序也部署在`Windows Server 2019`服务器上，如果有其他转换代码，支持跨平台欢迎技术讨论，下面给出我使用的其他图片转 Ico 的代码，代码路径在：[ImagingHelper.cs](https://github.com/dotnet9/dotnet9.com/blob/develop/src/Dotnet9.Tools/Images/ImagingHelper.cs)
 
-```C#
+```csharp
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Drawing.Imaging;
@@ -334,7 +334,7 @@ public enum ImageType
 
 简单的单元测试还是要有的，代码见：[ImageHelperTests.cs](https://github.com/dotnet9/dotnet9.com/blob/develop/src/test/Dotnet9.Tools.Tests/Images/ImageHelperTests.cs)
 
-```C#
+```csharp
 using Dotnet9.Tools.Images;
 
 namespace Dotnet9.Tools.Tests.Images;
@@ -423,7 +423,7 @@ File.Delete(filePath); } catch { // ignored } } }
 
 我把`JS`代码放[\_Layout.cshtml](https://github.com/dotnet9/dotnet9.com/blob/develop/src/Dotnet9.Tools.Web/Pages/_Layout.cshtml)：
 
-```JavaScript
+```javascript
 <script>
     // 省略部分代码
 

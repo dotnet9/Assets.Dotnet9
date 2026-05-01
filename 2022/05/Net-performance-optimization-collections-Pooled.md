@@ -286,7 +286,7 @@ public PooledList(int capacity, ClearMode clearMode, ArrayPool<T> customPool, bo
 另外在进行容量调整操作（扩容）时，会将旧的数组归还回线程池，新的数组也在池中获取。
 
 ```csharp
- public int Capacity
+public int Capacity
 {
     get => _items.Length;
     set

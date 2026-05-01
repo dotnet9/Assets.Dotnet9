@@ -169,7 +169,7 @@ protected virtual void OnCanExecuteChanged()
 其实上述 prism 还提供了一个更简洁优雅的写法：
 
 ```csharp
- private bool _isCanExcute;
+private bool _isCanExcute;
  public bool IsCanExcute
  {
     get { return _isCanExcute; }
@@ -371,7 +371,7 @@ private DelegateCommand _asyncCommand;
 也可以更简洁的写法：
 
 ```csharp
- private DelegateCommand _asyncCommand;
+private DelegateCommand _asyncCommand;
  public DelegateCommand AsyncCommand =>
     _asyncCommand ?? (_asyncCommand = new DelegateCommand( async()=>await ExecuteAsyncCommand()));
 
@@ -494,7 +494,7 @@ void ExecuteGetHourCommand()
 GetMonthDayTabViewModel.cs:
 
 ```csharp
- IApplicationCommands _applicationCommands;
+IApplicationCommands _applicationCommands;
 
  public GetMonthDayTabViewModel(IApplicationCommands applicationCommands)
  {

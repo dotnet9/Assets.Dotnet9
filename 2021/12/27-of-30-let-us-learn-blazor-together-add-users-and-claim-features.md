@@ -29,7 +29,7 @@ tags:
 
 `User` 的`ViewModel`。
 
-```C#
+```csharp
 namespace BlazorServer.ViewModels;
 
 public class CustomUserViewModel
@@ -51,7 +51,7 @@ public class CustomUserViewModel
 
 承载单一`Claim` 的`ViewModel`
 
-```C#
+```csharp
 namespace BlazorServer.ViewModels;
 
 public class CustomUserClaimViewModel
@@ -63,7 +63,7 @@ public class CustomUserClaimViewModel
 
 承载`User` 下`Claim` 的`ViewModel`
 
-```C#
+```csharp
 namespace BlazorServer.ViewModels;
 
 public class CustomUserClaimsViewModel
@@ -81,7 +81,7 @@ public class CustomUserClaimsViewModel
 
 因为`Claim` 不像`User` 本来就注册了，也不像`Role` 会让用户自己定义，所以这边先建立好几组跟`User` 权限有关的`Claim`。
 
-```C#
+```csharp
 using System.Security.Claims;
 
 namespace BlazorServer.Models;
@@ -100,7 +100,7 @@ public static class ClaimsStore
 
 页面`IUserRepository`
 
-```C#
+```csharp
 using BlazorServer.Models;
 using BlazorServer.ViewModels;
 
@@ -119,7 +119,7 @@ public interface IUserRepository
 
 实现`UserRepository`，如果还记得`RoleRepository.EditUsersInRoleAsyncPost` 方法的话，当时是用两个变量分开存储`Role.Id`及`List<CustomUserRoleViewModel> model`，这边编辑`User` 下`Claim` 的`Post` 方法跟`Role` 不同，是再用一个 ViewModel `CustomUserClaimsViewModel` 去承载数据，本质上并无差别。
 
-```C#
+```csharp
 using System.Security.Claims;
 using BlazorServer.Models;
 using BlazorServer.ViewModels;
@@ -285,7 +285,7 @@ public class UserRepository : IUserRepository
 
 再去`Program.cs`注册
 
-```C#
+```csharp
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 ```
 
@@ -293,7 +293,7 @@ builder.Services.AddScoped<IUserRepository, UserRepository>();
 
 `UserManagement.razor.cs`
 
-```C#
+```csharp
 using BlazorServer.Repository;
 using BlazorServer.Shared;
 using BlazorServer.ViewModels;
@@ -413,7 +413,7 @@ foreach (var user in Users) {
 
 `EditUser.razor.cs`
 
-```C#
+```csharp
 using BlazorServer.Repository;
 using BlazorServer.ViewModels;
 using Microsoft.AspNetCore.Components;
@@ -502,7 +502,7 @@ public partial class EditUser
 
 `EditClaimsInUser.razor.cs`
 
-```C#
+```csharp
 using BlazorServer.Repository;
 using BlazorServer.Shared;
 using BlazorServer.ViewModels;

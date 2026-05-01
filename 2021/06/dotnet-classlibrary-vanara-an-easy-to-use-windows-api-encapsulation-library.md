@@ -42,7 +42,7 @@ tags:
 - 1. 直接调用`var bret = Vanara.PInvoke.Kernel32.GetComputerName(sb, ref sbSz);`
 - 2. 在 C#6.0 及更高版本下，使用 static using 指令并调用它：
 
-```C#
+```csharp
 using static Vanara.PInvoke.Kernel32;
 
 var bret = GetComputerName(sb, ref sbSz);

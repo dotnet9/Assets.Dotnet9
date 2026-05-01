@@ -1,0 +1,78 @@
+<svg width="900" height="383" viewBox="0 0 900 383" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="44" y1="26" x2="842" y2="351" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0B1220"/>
+      <stop offset="0.52" stop-color="#14213D"/>
+      <stop offset="1" stop-color="#1F4E5F"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#F8FAFC" stop-opacity="0.96"/>
+      <stop offset="1" stop-color="#E2E8F0" stop-opacity="0.88"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="193" y1="70" x2="734" y2="311" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#38BDF8"/>
+      <stop offset="0.48" stop-color="#34D399"/>
+      <stop offset="1" stop-color="#F59E0B"/>
+    </linearGradient>
+    <filter id="shadow" x="306" y="53" width="566" height="279" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="10"/>
+      <feGaussianBlur stdDeviation="12"/>
+      <feComposite in2="hardAlpha" operator="out"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0.027451 0 0 0 0 0.0705882 0 0 0 0 0.133333 0 0 0 0.28 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1_1"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1_1" result="shape"/>
+    </filter>
+  </defs>
+  <rect width="900" height="383" rx="28" fill="url(#bg)"/>
+  <circle cx="789" cy="83" r="132" fill="#38BDF8" fill-opacity="0.08"/>
+  <circle cx="124" cy="332" r="118" fill="#34D399" fill-opacity="0.09"/>
+  <path d="M58 83C123 38 196 32 262 61" stroke="#7DD3FC" stroke-opacity="0.28" stroke-width="2" stroke-linecap="round" stroke-dasharray="7 8"/>
+  <path d="M674 300C725 256 787 246 850 266" stroke="#FCD34D" stroke-opacity="0.25" stroke-width="2" stroke-linecap="round" stroke-dasharray="7 8"/>
+
+  <rect x="45" y="48" width="100" height="30" rx="15" fill="#0F172A" fill-opacity="0.54" stroke="#7DD3FC" stroke-opacity="0.22"/>
+  <text x="95" y="67" text-anchor="middle" fill="#E0F2FE" font-size="13" font-family="'Microsoft YaHei','PingFang SC','Segoe UI',sans-serif" letter-spacing="0.5">五一记录</text>
+
+  <text x="49" y="126" fill="#F8FAFC" font-size="42" font-weight="800" font-family="'Microsoft YaHei','PingFang SC','Segoe UI',sans-serif">这个网站，</text>
+  <text x="49" y="176" fill="#F8FAFC" font-size="42" font-weight="800" font-family="'Microsoft YaHei','PingFang SC','Segoe UI',sans-serif">终于被我用 AI</text>
+  <text x="49" y="226" fill="#F8FAFC" font-size="42" font-weight="800" font-family="'Microsoft YaHei','PingFang SC','Segoe UI',sans-serif">重构成了</text>
+  <text x="51" y="270" fill="#BFDBFE" font-size="16" font-family="'Microsoft YaHei','PingFang SC','Segoe UI',sans-serif">加载速度这次也认真搞了，</text>
+  <text x="51" y="295" fill="#BFDBFE" font-size="16" font-family="'Microsoft YaHei','PingFang SC','Segoe UI',sans-serif">简单分享下怎么搞的细节；</text>
+
+  <g filter="url(#shadow)">
+    <rect x="330" y="67" width="518" height="231" rx="24" fill="url(#card)"/>
+    <rect x="330" y="67" width="518" height="31" rx="24" fill="#E2E8F0"/>
+    <circle cx="357" cy="83" r="5" fill="#FB7185"/>
+    <circle cx="376" cy="83" r="5" fill="#FBBF24"/>
+    <circle cx="395" cy="83" r="5" fill="#34D399"/>
+
+    <rect x="355" y="117" width="198" height="142" rx="18" fill="#FFFFFF"/>
+    <rect x="373" y="135" width="102" height="12" rx="6" fill="#0F172A" fill-opacity="0.88"/>
+    <rect x="373" y="155" width="152" height="8" rx="4" fill="#CBD5E1"/>
+    <rect x="373" y="173" width="164" height="8" rx="4" fill="#E2E8F0"/>
+    <rect x="373" y="199" width="148" height="20" rx="10" fill="url(#accent)"/>
+    <rect x="373" y="231" width="58" height="10" rx="5" fill="#94A3B8"/>
+    <rect x="439" y="231" width="72" height="10" rx="5" fill="#BFDBFE"/>
+    <rect x="519" y="231" width="18" height="10" rx="5" fill="#FCD34D"/>
+
+    <rect x="574" y="117" width="248" height="62" rx="18" fill="#0F172A"/>
+    <rect x="593" y="136" width="76" height="10" rx="5" fill="#7DD3FC"/>
+    <rect x="593" y="154" width="186" height="8" rx="4" fill="#475569"/>
+    <rect x="742" y="132" width="58" height="22" rx="11" fill="#22C55E" fill-opacity="0.2" stroke="#4ADE80" stroke-opacity="0.42"/>
+    <text x="771" y="147" text-anchor="middle" fill="#BBF7D0" font-size="11" font-family="'Segoe UI',sans-serif">AI</text>
+
+    <rect x="574" y="191" width="118" height="68" rx="16" fill="#FFFFFF"/>
+    <rect x="591" y="208" width="62" height="10" rx="5" fill="#0F172A"/>
+    <rect x="591" y="226" width="82" height="8" rx="4" fill="#CBD5E1"/>
+    <rect x="591" y="242" width="54" height="8" rx="4" fill="#E2E8F0"/>
+
+    <rect x="705" y="191" width="117" height="68" rx="16" fill="#FFFFFF"/>
+    <rect x="722" y="208" width="76" height="10" rx="5" fill="#0F172A"/>
+    <rect x="722" y="226" width="81" height="8" rx="4" fill="#CBD5E1"/>
+    <rect x="722" y="242" width="41" height="8" rx="4" fill="#E2E8F0"/>
+  </g>
+
+  <rect x="51" y="320" width="164" height="28" rx="14" fill="#F8FAFC" fill-opacity="0.1" stroke="#F8FAFC" stroke-opacity="0.14"/>
+  <text x="133" y="338" text-anchor="middle" fill="#E2E8F0" font-size="13" font-family="'Microsoft YaHei','PingFang SC','Segoe UI',sans-serif">https://codewf.com</text>
+</svg>

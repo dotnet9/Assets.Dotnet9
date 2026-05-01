@@ -51,7 +51,7 @@ https://jhrs.com/2020/37391.html
 
 App.xaml.cs
 
-```C#
+```csharp
 protected override void RegisterTypes(IContainerRegistry containerRegistry)
 {
   ...
@@ -66,7 +66,7 @@ protected override void RegisterTypes(IContainerRegistry containerRegistry)
 
 也是在 App.xaml.cs 文件中，下面的代码即为注册实际的对话框代码：`QQ群对话框`、`关于对话模式`、`推荐网站对话框`等，`括号中的字符串(如"About")`用于弹出对话框定位使用，**注：实际的对话框是基于`UserControl`编写的，只有这样才能套入是一个`Window`的`RegisterDialogWindow`内**。
 
-```C#
+```csharp
 protected override void RegisterTypes(IContainerRegistry containerRegistry)
 {
   ...
@@ -100,7 +100,7 @@ protected override void RegisterTypes(IContainerRegistry containerRegistry)
 
 `RaiseShowDialogCommand`在 VM 的基类`ViewModelBase`定义的，实际调用代码如下：
 
-```C#
+```csharp
 /// <summary>
 /// 显示对话框
 /// </summary>
@@ -125,7 +125,7 @@ private void RaiseShowDialogHandler(string dlgName)
 
 以`LQClass.ModuleOfLog`模块为例，我们在下面注册添加日志对话框：
 
-```C#
+```csharp
 public void RegisterTypes(IContainerRegistry containerRegistry)
 {
   ...
@@ -140,7 +140,7 @@ public void RegisterTypes(IContainerRegistry containerRegistry)
 
 调用方式同主窗口菜单一致，代码文件路径：`src\LQClass.AdminForWPF\Modules\LQClass.ModuleOfLog\Views`，`添加`按钮声明如下：
 
-```XAML
+```xml
 <Button
   Margin="10,15,10,0"
   Style="{StaticResource ButtonSuccess}"

@@ -91,8 +91,8 @@ C#方面的代码则简单很多，界面一个开启串口的按钮，一个发
 
 ![](https://img1.dotnet9.com/2022/10/0805.png)
 
-```dotnet
-      public partial class Form1 : Form
+```csharp
+public partial class Form1 : Form
     {
         private SerialPort serialPort = new SerialPort("COM6");
         public Form1()

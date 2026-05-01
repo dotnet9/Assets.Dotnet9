@@ -39,7 +39,7 @@ tags:
 
 定义的一些类、枚举
 
-```Java
+```java
 public enum 王道 {明, 昏}
 
 /*
@@ -274,7 +274,7 @@ static class 丞相 extends 侍卫之臣 {
 
 `Java`的`main`方法
 
-```Java
+```java
 public static void main(String[] args) {
     君 先帝 = new 君();
     先帝.名称 = "先帝";

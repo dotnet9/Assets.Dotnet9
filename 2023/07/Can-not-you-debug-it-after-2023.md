@@ -40,7 +40,7 @@ tags:
 
 普通日志输出，也是前端使用频次最高的打印方法
 
-```js
+```javascript
 function Person() {
   this.name = "jack";
   this.age = 30;
@@ -93,7 +93,7 @@ console.log("姓名：%s，年龄：%d", person.name, person.age);
 
 如果想要获取一段代码执行时间，可使用 `console.time()` 进行计时，使用 `console.timeEnd()` 结束计时。
 
-```js
+```javascript
 // 计时开始
 console.time();
 
@@ -115,7 +115,7 @@ console.timeEnd();
 
 如果想要获取代码执行次数，可使用 `console.count()`。
 
-```js
+```javascript
 for (let i = 0; i < 5; i++) {
   // 次数统计
   console.count();
@@ -135,7 +135,7 @@ for (let i = 0; i < 5; i++) {
 除了 `console` 日志打印外，比较常用的就是 `debugger` 了，当程序出错或者找不到问题时，我们需要在代码中直接定义 `debugger` 来暂停程序执行，进而分析问题。
 js 复制代码 let list = [{ name:'jack' , age: 30 , info:{ score: 70} },{ name:'tom' , age: 28 }]
 
-```js
+```javascript
 for (let item of list) {
   debugger;
   if (item.info.score > 60) {
@@ -258,7 +258,7 @@ for (let item of list) {
 
 有时候我们通过 `console.log` 打印了一个比较复杂的对象，但是需要一层一层展开进行查看，非常不方便，有什么好办法？
 
-```js
+```javascript
 function Person() {
   this.name = "jack";
   this.age = 30;

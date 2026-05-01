@@ -36,7 +36,7 @@ tags:
 
 在`index.html`中添加`<script src="helper.js"></script>`引入`js`。
 
-```js
+```javascript
 /**
  * 设置元素的src
  * @param {any} canvasId canvasId的dom id

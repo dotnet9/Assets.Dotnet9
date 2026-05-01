@@ -30,7 +30,7 @@ tags:
 
 代码如下（示例）：
 
-```ts
+```typescript
 <template>
 </template>
 <script setup>
@@ -45,7 +45,7 @@ tags:
 
 代码如下（示例）：
 
-```ts
+```typescript
 <script setup>
     import {
       ref,
@@ -69,7 +69,7 @@ tags:
 
 代码如下（示例）：
 
-```ts
+```typescript
 <template >
     <button @click="onClickHelp">系统帮助</button>
 </template>
@@ -91,7 +91,7 @@ const onClickHelp = () => {
 
 代码如下（示例）：
 
-```ts
+```typescript
 <script setup>
 import {
   ref,
@@ -111,7 +111,7 @@ watchEffect(()=>{
 
 代码如下（示例）：
 
-```ts
+```typescript
 <script setup>
     import {
       reactive,
@@ -147,7 +147,7 @@ computed 计算属性有两种写法(简写和考虑读写的完整写法)
 
 代码如下（示例）：
 
-```ts
+```typescript
 <script setup>
     import {
       reactive,
@@ -181,7 +181,7 @@ computed 计算属性有两种写法(简写和考虑读写的完整写法)
 
 子组件代码如下（示例）：
 
-```ts
+```typescript
 <template>
   <span>{{props.name}}</span>
 </template>
@@ -202,7 +202,7 @@ computed 计算属性有两种写法(简写和考虑读写的完整写法)
 
 父组件代码如下（示例）：
 
-```ts
+```typescript
 <template>
   <child :name='name'/>
 </template>
@@ -219,7 +219,7 @@ computed 计算属性有两种写法(简写和考虑读写的完整写法)
 
 子组件代码如下（示例）：
 
-```ts
+```typescript
 <template>
    <a-button @click="isOk">
      确定
@@ -242,7 +242,7 @@ const isOk = () => {
 
 父组件代码如下（示例）：
 
-```ts
+```typescript
 <template>
   <AdoutExe @aboutExeVisible="aboutExeHandleCancel" />
 </template>
@@ -271,7 +271,7 @@ const aboutExeHandleCancel = () => {
 
 子组件代码如下（示例）：
 
-```ts
+```typescript
 <template>
     <p>{{data }}</p>
 </template>
@@ -298,7 +298,7 @@ defineExpose({
 
 父组件代码如下（示例）：
 
-```ts
+```typescript
 <template>
     <button @click="onClickSetUp">点击</button>
     <Content ref="content" />
@@ -323,7 +323,7 @@ const onClickSetUp = ({ key }) => {
 
 代码如下（示例）：
 
-```ts
+```typescript
 <script setup>
   import { useRoute, useRouter } from 'vue-router'
 
@@ -347,7 +347,7 @@ const onClickSetUp = ({ key }) => {
 
 代码如下（示例）：
 
-```ts
+```typescript
 <script setup>
   import {useStore} from 'vuex' import {num} from '../store/index' const store =
   useStore(num) // 获取Vuex的state console.log(store.state.number) //
@@ -362,7 +362,7 @@ setup 语法糖中可直接使用 await，不需要写 async ， setup 会自动
 
 代码如下（示例）：
 
-```ts
+```typescript
 <script setup>
   import Api from '../api/Api' const data = await Api.getData()
   console.log(data)
@@ -373,7 +373,7 @@ setup 语法糖中可直接使用 await，不需要写 async ， setup 会自动
 
 父组件代码如下（示例）：
 
-```ts
+```typescript
 <template>
   <AdoutExe />
 </template>
@@ -395,7 +395,7 @@ setup 语法糖中可直接使用 await，不需要写 async ， setup 会自动
 
 子组件代码如下（示例）：
 
-```ts
+```typescript
 <script setup>
   import {inject} from 'vue' const provideState = inject('provideState')
   provideState.changeName()

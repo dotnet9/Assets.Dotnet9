@@ -48,7 +48,7 @@ GitHub 地址：[点击访问](https://github.com/DingpingZhang/WpfExtensions)
 
 添加资源文件引用
 
-```C#
+```csharp
 I18nManager.Instance.Add(LQClass.AdminForWPF.I18nResources.UiResource.ResourceManager);
 ```
 
@@ -56,7 +56,7 @@ I18nManager.Instance.Add(LQClass.AdminForWPF.I18nResources.UiResource.ResourceMa
 
 如果使用`Prism`实现模块化，也需要在模块构造函数中引用模块的资源文件
 
-```C#
+```csharp
 I18nManager.Instance.Add(LQClass.ModuleOfLog.I18nResources.UiResource.ResourceManager);
 ```
 
@@ -64,7 +64,7 @@ I18nManager.Instance.Add(LQClass.ModuleOfLog.I18nResources.UiResource.ResourceMa
 
 这里比较灵活了，切换语言时，保存语言标识到配置文件，程序启动时设置配置的语言即可，动态切换语言时也是相同的代码：
 
-```C#
+```csharp
 var culture = new System.Globalization.CultureInfo(language);
 I18nManager.Instance.CurrentUICulture = culture;
 ```

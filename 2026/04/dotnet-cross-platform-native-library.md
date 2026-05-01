@@ -49,7 +49,7 @@ static const char* TIME_MEANINGS[] = {
 
 ![](https://img1.dotnet9.com/2026/04/timemeaning-structure.svg)
 
-```
+```text
 Lib/
 ├── x64/
 │   ├── TimeMeaning.dll        # 64位 Windows

@@ -276,7 +276,7 @@ touch default.conf
 
 写入：
 
-```yml
+```yaml
 server {
     listen       80;
     server_name  localhost;

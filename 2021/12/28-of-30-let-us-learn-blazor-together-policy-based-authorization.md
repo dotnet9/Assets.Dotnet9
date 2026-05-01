@@ -30,7 +30,7 @@ tags:
 
 而在`ASP.NET Core` 定义 Policy 也不难，只要在`Program.cs`定义即可，下方的程序定义了一个 Policy 名为`"IsAdmin"`，这个 Policy 指定需要有`"ManageRole"`这个 Claim 才能通过授权。
 
-```C#
+```csharp
 builder.Services.AddAuthorization(options =>
 {
 	options.AddPolicy("IsAdmin", policy => { policy.RequireClaim("ManageRole"); });

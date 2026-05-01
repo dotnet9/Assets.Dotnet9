@@ -23,7 +23,7 @@ tags:
 
 昨天角色的`CRUD` 功能都完成了，接着就是要把角色分配给用户了，先建立一个 ViewModel `CustomUserRoleViewModel`，这是用来呈现角色底下用户的 ViewModel。
 
-```C#
+```csharp
 namespace BlazorServer.ViewModels;
 
 public class CustomUserRoleViewModel
@@ -40,7 +40,7 @@ public class CustomUserRoleViewModel
 
 `IRolesRepository.cs`
 
-```C#
+```csharp
 …
     Task<List<CustomUserRoleViewModel>> EditUsersInRoleAsync(string roleId);
 	Task<ResultViewModel> EditUsersInRoleAsync(List<CustomUserRoleViewModel> model, string roleId);
@@ -48,7 +48,7 @@ public class CustomUserRoleViewModel
 
 `RolesRepository.cs`
 
-```C#
+```csharp
 …
     public async Task<List<CustomUserRoleViewModel>> EditUsersInRoleAsync(string roleId)
 	{
@@ -117,7 +117,7 @@ public class CustomUserRoleViewModel
 
 `EditUsersInRole.razor.cs`
 
-```C#
+```csharp
 using BlazorServer.Repository;
 using BlazorServer.Shared;
 using BlazorServer.ViewModels;
@@ -202,7 +202,7 @@ public partial class EditUsersInRole
 
 `EditRole.razor.cs`新增一个方法，跳转`EditUsersInRole.razor`，可以编辑角色底下用户。
 
-```C#
+```csharp
 public void EditUsersInRole()
 {
     NavigationManager!.NavigateTo($"/RolesManagement/EditUsersInRole/{Id}");

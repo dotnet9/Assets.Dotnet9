@@ -257,7 +257,7 @@ from c in list where c.Id > 5 select c;
 
 但是上述代码中的 list 的类型不一定非得实现 IEnumerable，事实上，只要有对应名字的扩展方法就可以了，比如有了叫做 Select 的方法就能用 select，有了叫做 Where 的方法就能用 where。
 
-```C#
+```csharp
 class Just<T> : Maybe<T>
 {
     private readonly T value;

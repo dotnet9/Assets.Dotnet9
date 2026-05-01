@@ -33,7 +33,7 @@ Install-Package MarkdownAIRender
 
 在 Avalonia 的 `Application` 样式中引入 `Markdown.AIRender` 的样式文件是确保其正常工作的重要步骤。以下是具体的代码示例：
 
-```xaml
+```xml
 <Application
     ...>
     <Application.Styles>
@@ -64,11 +64,11 @@ Install-Package MarkdownAIRender
 
 接下来，在 `axaml` 中使用 `MarkdownRender` 元素将 Markdown 内容进行渲染：
 
-```xaml
+```xml
 xmlns:md="https://github.com/AIDotNet/Markdown.AIRender"
 ```
 
-```xaml
+```xml
 <md:MarkdownRender Value="{Binding Markdown}" />
 ```
 

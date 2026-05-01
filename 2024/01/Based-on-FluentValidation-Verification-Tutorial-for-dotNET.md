@@ -240,7 +240,7 @@ Error: 'Product Name' must not be empty.
 在编写验证规则时，可以通过 Where 关键字排除或者筛选不需要验证的对象。
 
 ```csharp
- RuleFor(x => x.Orders).SetCollectionValidator(new OrderValidator())
+RuleFor(x => x.Orders).SetCollectionValidator(new OrderValidator())
         .Where(x => x.Cost != null);
 ```
 

@@ -65,7 +65,7 @@ xxx 接口
 
 使用`Postman`测试时，未对参数使用`UrlEncode`，接口测试成功,开发这个小工具时，有 3 个接口都是类似的，未进行`UrlEncode`操作：
 
-```C#
+```csharp
 var client = new RestClient("http://admin.lqclass.com/api/device");
 client.Timeout = -1;
 var request = new RestRequest(Method.POST);
@@ -117,7 +117,7 @@ Console.WriteLine(response.Content);
 
 但这个接口调用，服务器返回错误信息：“xxx 解析失败”，调用代码如下：
 
-```C#
+```csharp
 var client = new RestClient("http://admin.lqclass.com/api/device");
 client.Timeout = -1;
 var request = new RestRequest(Method.POST);
@@ -133,7 +133,7 @@ Console.WriteLine(response.Content);
 
 参数编码后，调用：
 
-```C#
+```csharp
 var client = new RestClient("http://admin.lqclass.com/api/device");
 client.Timeout = -1;
 var request = new RestRequest(Method.POST);
@@ -167,7 +167,7 @@ Console.WriteLine(response.Content);
 
 本文使用的`UrlEncode` C# 代码：
 
-```C#
+```csharp
 public static string UrlEncode(string str)
 {
     StringBuilder sb = new StringBuilder();

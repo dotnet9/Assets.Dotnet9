@@ -25,7 +25,7 @@ tags:
 
 首先新增`BlogModel`类，里面很简单只有 4 个属性，分别为 Id、名称、日志列表及新增时间。
 
-```C#
+```csharp
 using System.ComponentModel.DataAnnotations;
 
 namespace BlazorServer.Models;
@@ -53,7 +53,7 @@ public class BlogModel
 
 最后新增`BlogBase.cs`跟`Blog.razor`，可以看到`BlogBase.cs`的`OnInitializedAsync`调用一个方法`LoadData`，实体化一个`Blog`，里面的`Posts`有 4 条数据。
 
-```C#
+```csharp
 using BlazorServer.Models;
 using Microsoft.AspNetCore.Components;
 

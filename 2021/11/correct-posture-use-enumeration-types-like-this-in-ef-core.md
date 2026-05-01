@@ -28,7 +28,7 @@ tags:
 
 ## 原来的实体
 
-```C#
+```csharp
 public partial class MsgInfo
 {
     public string Id { get; set; }
@@ -46,7 +46,7 @@ public partial class MsgInfo
 
 ## 修改实体
 
-```C#
+```csharp
 public partial class MsgInfo
 {
     public string Id { get; set; }
@@ -87,7 +87,7 @@ public enum SendStateEnum
 
 添加了**SendStateEnum**字段后，以后使用 ef core 操作或者读取**SendStateEnum** 代替了 SendState 字段（**注：站长实测与原文有出入，如下面的代码（原文代码）貌似应该使用 SendState 进行 EF Core 的操作，如有不同意见请留言指正。**）
 
-```C#
+```csharp
 using (var context = new FrameworkDbContext())
 {
     var result = context.MsgInfo.Where(m => m.SendStateEnum == SendStateEnum.Success);
@@ -98,7 +98,7 @@ using (var context = new FrameworkDbContext())
 
 ## 修改后的最终实体代码如下
 
-```C#
+```csharp
 public partial class MsgInfo
 {
     public string Id { get; set; }

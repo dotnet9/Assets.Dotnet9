@@ -42,7 +42,7 @@ tags:
 
 在 Blazor 的 `<script>` 标记之后和结束 `</body>` 标记之前，添加以下 JavaScript 代码 `<script>` 块：
 
-```js
+```javascript
 <script type="module">
   import { BrotliDecode } from './decode.min.js';
   Blazor.start({
@@ -349,7 +349,7 @@ server {
 
 在`Demand`项目文件中添加以下配置, 以下配置禁用了一些功能，比如全球化等
 
-```XML
+```xml
 <PublishTrimmed>true</PublishTrimmed>
 <InvariantGlobalization>true</InvariantGlobalization>
 <BlazorEnableTimeZoneSupport>false</BlazorEnableTimeZoneSupport>

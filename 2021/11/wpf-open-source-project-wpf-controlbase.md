@@ -75,13 +75,13 @@ https://blog.csdn.net/u010975589/article/details/103083605
 
 说明：渐隐藏是 WPF 中比较常用的动画，上图是通过 StoryBoarService 封装后的效果，在代码中只要执行如下代码即可：
 
-```C#
+```csharp
 DoubleStoryboardEngine.Create(1, 0, 1, "Opacity").Start(element);
 ```
 
 上面的关闭效果可以定义一个命令如下：
 
-```C#
+```csharp
 public class CollapsedOfOpacityCommand : ICommand
 {
 
@@ -113,7 +113,7 @@ AncestorType=GroupBox}}"
 
 其中动画效果的代码只需一句代码即可，简化了动画在代码中繁琐的编码过程
 
-```C#
+```csharp
 DoubleStoryboardEngine.Create(1, 0, 1, "Opacity").Start(element);
 ```
 
@@ -123,7 +123,7 @@ DoubleStoryboardEngine.Create(1, 0, 1, "Opacity").Start(element);
 
 #### 1.3.1 封闭修改基类
 
-```C#
+```csharp
 /// <summary> 动画引擎基类 </summary>
 public abstract class StoryboardEngineBase : IDisposable
 {
@@ -174,7 +174,7 @@ public abstract class StoryboardEngineBase<T> : StoryboardEngineBase
 
 #### 1.3.2 开放扩展 DoubleStoryboardEngine
 
-```C#
+```csharp
 /// <summary> DoubleAnimation动画引擎 </summary>
 public class DoubleStoryboardEngine : StoryboardEngineBase<double>
 {
@@ -222,7 +222,7 @@ public class DoubleStoryboardEngine : StoryboardEngineBase<double>
 
 #### 1.3.3 过度效果工厂
 
-```C#
+```csharp
 /// <summary> 说明：https://docs.microsoft.com/zh-cn/dotnet/framework/wpf/graphics-multimedia/easing-functions </summary>
 public static class EasingFunctionFactroy
 {
@@ -258,7 +258,7 @@ public static class EasingFunctionFactroy
 
 #### 1.3.4 使用方法
 
-```C#
+```csharp
 /// <summary> 构造方法 </summary>
 /// <param name="from"> 起始值</param>
 /// <param name="to"> 结束值  </param>
@@ -294,7 +294,7 @@ public static DoubleStoryboardEngine Create(double from, double to, int second, 
 
 实体定义如下：
 
-```C#
+```csharp
 public class Student
 {
     [Display("姓名")]
@@ -372,8 +372,8 @@ public class Student
 
 #### 2.4.1 通过反射获取属性和特性
 
-```C#
- ObservableCollection<ObjectPropertyItem> PropertyItemSource
+```csharp
+ObservableCollection<ObjectPropertyItem> PropertyItemSource
 {
     get { return (ObservableCollection<ObjectPropertyItem>)GetValue(PropertyItemSourceProperty); }
     set { SetValue(PropertyItemSourceProperty, value); }
@@ -413,7 +413,7 @@ void RefreshObject(object o)
 
 #### 2.4.2 定义类型基类、扩展之类和工厂方法
 
-```C#
+```csharp
 /// <summary> 类型基类 </summary>
 public class ObjectPropertyItem : NotifyPropertyChanged
 {
@@ -550,7 +550,7 @@ public class BoolPropertyItem : ObjectPropertyItem<bool>
 
 类型工厂：
 
-```C#
+```csharp
 public class ObjectPropertyFactory
 {
     public static ObjectPropertyItem Create(PropertyInfo info, object obj)
@@ -903,7 +903,7 @@ public class ObjectPropertyFactory
 
 ##### 2.4.4.1 只需定义一个扩展类型，如：
 
-```C#
+```csharp
 /// <summary> 字符串属性类型 </summary>
 public class StringPropertyItem : ObjectPropertyItem<string>
 {
@@ -1012,7 +1012,7 @@ public class StringPropertyItem : ObjectPropertyItem<string>
 
 ### 3.4 代码
 
-```C#
+```csharp
 [ViewModel("Loyout")]
 class LoyoutViewModel : MvcViewModelBase
 {
@@ -1134,7 +1134,7 @@ class LoyoutViewModel : MvcViewModelBase
 
 #### 4.3.1 定义 LoyoutController
 
-```C#
+```csharp
 [Route("Loyout")]
 class LoyoutController : Controller
 {
@@ -1357,7 +1357,7 @@ class LoyoutController : Controller
 
 如：选择了红色部分的 Button，首先会调用`Button()`方法，跳转到当前 Controller 对应的 View 文件加下的`Button`Control.xaml 页面
 
-```C#
+```csharp
 [Route("OverView/Button")]
 public async Task<IActionResult> Button()
 {
@@ -1545,7 +1545,7 @@ public async Task<IActionResult> Button()
 
 如下，Controller 中的 Button()方法对应的跳转配置如下
 
-```C#
+```csharp
 [Route("OverView/Button")]
 public async Task<IActionResult> Button()
 ```
@@ -1563,7 +1563,7 @@ public async Task<IActionResult> Button()
 
 主要方法是`IActionResult View([CallerMemberName] string name = "")`，这个方法是 MVC 实现的核心功能，主要通过反射去动态加载程序集，加载项目结构中的 View、ViewModel 去生成 IActionResult 返回给主页面进行页面跳转，代码如下：
 
-```C#
+```csharp
 public abstract class ControllerBase : IController
 {
     protected virtual IActionResult View([CallerMemberName] string name = "")
