@@ -1,13 +1,48 @@
 ﻿[
   {
     "Query": "dotnet",
-    "Count": 413,
-    "LastSearchedAt": "2026-05-01T10:56:50.4098683+00:00"
+    "Count": 746,
+    "LastSearchedAt": "2026-05-06T02:42:08.0700601+00:00"
+  },
+  {
+    "Query": "4K Video Downloader Plus",
+    "Count": 2,
+    "LastSearchedAt": "2026-05-04T16:46:22.4655319+00:00"
+  },
+  {
+    "Query": "ThingsGateway(一)采集ModbusTcp协议设备",
+    "Count": 2,
+    "LastSearchedAt": "2026-05-04T04:19:29.6913241+00:00"
   },
   {
     "Query": "大数据",
     "Count": 2,
     "LastSearchedAt": "2026-04-30T04:36:16.188368+00:00"
+  },
+  {
+    "Query": "解密",
+    "Count": 1,
+    "LastSearchedAt": "2026-05-05T10:46:39.4714594+00:00"
+  },
+  {
+    "Query": "it-tool",
+    "Count": 1,
+    "LastSearchedAt": "2026-05-05T10:46:22.3092019+00:00"
+  },
+  {
+    "Query": "文本哈希计算",
+    "Count": 1,
+    "LastSearchedAt": "2026-05-05T01:10:57.7969769+00:00"
+  },
+  {
+    "Query": "SHA",
+    "Count": 1,
+    "LastSearchedAt": "2026-05-05T01:06:28.0399528+00:00"
+  },
+  {
+    "Query": "视频下载 4K Video Downloader Plus",
+    "Count": 1,
+    "LastSearchedAt": "2026-05-04T16:46:05.3949028+00:00"
   },
   {
     "Query": "100套大数据可视化模板",
