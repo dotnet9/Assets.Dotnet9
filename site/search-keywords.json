@@ -1,8 +1,13 @@
 ﻿[
   {
     "Query": "dotnet",
-    "Count": 746,
-    "LastSearchedAt": "2026-05-06T02:42:08.0700601+00:00"
+    "Count": 1129,
+    "LastSearchedAt": "2026-05-09T09:11:13.8577072+00:00"
+  },
+  {
+    "Query": "WINUI入门",
+    "Count": 8,
+    "LastSearchedAt": "2026-05-09T02:31:16.5472287+00:00"
   },
   {
     "Query": "4K Video Downloader Plus",
@@ -18,6 +23,41 @@
     "Query": "大数据",
     "Count": 2,
     "LastSearchedAt": "2026-04-30T04:36:16.188368+00:00"
+  },
+  {
+    "Query": "aot",
+    "Count": 1,
+    "LastSearchedAt": "2026-05-09T08:24:05.0861159+00:00"
+  },
+  {
+    "Query": "log4net",
+    "Count": 1,
+    "LastSearchedAt": "2026-05-09T08:23:41.6099687+00:00"
+  },
+  {
+    "Query": "前端大屏模板分享-可在线浏览",
+    "Count": 1,
+    "LastSearchedAt": "2026-05-09T04:26:21.1161301+00:00"
+  },
+  {
+    "Query": "大屏",
+    "Count": 1,
+    "LastSearchedAt": "2026-05-09T04:26:19.3639314+00:00"
+  },
+  {
+    "Query": "傻子",
+    "Count": 1,
+    "LastSearchedAt": "2026-05-09T00:22:26.4584183+00:00"
+  },
+  {
+    "Query": "{search_term_string}",
+    "Count": 1,
+    "LastSearchedAt": "2026-05-08T03:28:44.3846199+00:00"
+  },
+  {
+    "Query": "Lang.Avalonia",
+    "Count": 1,
+    "LastSearchedAt": "2026-05-07T06:23:11.6383853+00:00"
   },
   {
     "Query": "解密",
