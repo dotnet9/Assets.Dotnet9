@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="360" viewBox="0 0 960 360" role="img" aria-labelledby="title desc">
+  <title id="title">CodeWF.NetWeaver project cover</title>
+  <desc id="desc">Cover card for the network packet serialization project.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0c0a09"/>
+      <stop offset="1" stop-color="#854d0e"/>
+    </linearGradient>
+    <pattern id="mesh" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M0 20h40M20 0v40" stroke="#ffffff" stroke-opacity=".07"/>
+    </pattern>
+  </defs>
+  <rect width="960" height="360" fill="url(#bg)"/>
+  <rect width="960" height="360" fill="url(#mesh)"/>
+  <rect x="72" y="64" width="12" height="232" rx="6" fill="#f59e0b"/>
+  <g transform="translate(628 70)" fill="none" stroke="#fde68a" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" opacity=".95">
+    <path d="M40 66h166v88H40z"/>
+    <path d="M40 66 18 110l22 44M206 66l22 44-22 44"/>
+    <path d="M76 100h94M76 122h56"/>
+    <path d="M56 196h134M88 172v48M158 172v48"/>
+  </g>
+  <text x="112" y="138" fill="#f8fafc" font-family="Segoe UI, Arial, sans-serif" font-size="48" font-weight="700" letter-spacing="0">CodeWF.NetWeaver</text>
+  <text x="112" y="190" fill="#fef3c7" font-family="Segoe UI, Arial, sans-serif" font-size="24" letter-spacing="0">Packet serialization core for TCP and UDP</text>
+  <text x="112" y="236" fill="#fffbeb" font-family="Segoe UI, Arial, sans-serif" font-size="20" letter-spacing="0">NetWrapper, commands, file transfer, managed roots</text>
+  <rect x="112" y="266" width="136" height="34" rx="6" fill="#d97706" opacity=".95"/>
+  <text x="132" y="289" fill="#ffffff" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="600" letter-spacing="0">Networking</text>
+</svg>

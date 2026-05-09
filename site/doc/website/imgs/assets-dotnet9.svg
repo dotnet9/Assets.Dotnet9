@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="360" viewBox="0 0 960 360" role="img" aria-labelledby="title desc">
+  <title id="title">Assets.Dotnet9 project cover</title>
+  <desc id="desc">Cover card for the Assets.Dotnet9 content repository.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#111827"/>
+      <stop offset="1" stop-color="#065f46"/>
+    </linearGradient>
+    <pattern id="dots" width="32" height="32" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="2" fill="#ffffff" opacity=".1"/>
+    </pattern>
+  </defs>
+  <rect width="960" height="360" fill="url(#bg)"/>
+  <rect width="960" height="360" fill="url(#dots)"/>
+  <rect x="72" y="64" width="12" height="232" rx="6" fill="#34d399"/>
+  <g transform="translate(650 72)" fill="none" stroke="#a7f3d0" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" opacity=".95">
+    <path d="M32 44h136a16 16 0 0 1 16 16v116a16 16 0 0 1-16 16H32a16 16 0 0 1-16-16V60a16 16 0 0 1 16-16z"/>
+    <path d="M16 82h168"/>
+    <path d="M52 122h96M52 154h72"/>
+    <path d="M54 44l18-24h54l18 24"/>
+  </g>
+  <text x="112" y="138" fill="#f8fafc" font-family="Segoe UI, Arial, sans-serif" font-size="52" font-weight="700" letter-spacing="0">Assets.Dotnet9</text>
+  <text x="112" y="188" fill="#d1fae5" font-family="Segoe UI, Arial, sans-serif" font-size="24" letter-spacing="0">File-based content and assets repository</text>
+  <text x="112" y="236" fill="#ecfdf5" font-family="Segoe UI, Arial, sans-serif" font-size="20" letter-spacing="0">Posts, docs, tools metadata, images, site data</text>
+  <rect x="112" y="266" width="150" height="34" rx="6" fill="#10b981" opacity=".95"/>
+  <text x="132" y="289" fill="#ffffff" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="600" letter-spacing="0">Content Store</text>
+</svg>

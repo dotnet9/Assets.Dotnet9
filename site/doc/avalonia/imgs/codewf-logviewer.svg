@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="360" viewBox="0 0 960 360" role="img" aria-labelledby="title desc">
+  <title id="title">CodeWF.LogViewer project cover</title>
+  <desc id="desc">Cover card for the log core and Avalonia log viewer project.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#172554"/>
+      <stop offset="1" stop-color="#0f766e"/>
+    </linearGradient>
+    <pattern id="scan" width="60" height="28" patternUnits="userSpaceOnUse">
+      <path d="M0 27h60" stroke="#ffffff" stroke-opacity=".07"/>
+    </pattern>
+  </defs>
+  <rect width="960" height="360" fill="url(#bg)"/>
+  <rect width="960" height="360" fill="url(#scan)"/>
+  <rect x="72" y="64" width="12" height="232" rx="6" fill="#2dd4bf"/>
+  <g transform="translate(628 70)" fill="none" stroke="#99f6e4" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" opacity=".95">
+    <rect x="22" y="28" width="194" height="176" rx="18"/>
+    <path d="M54 74h92M54 112h132M54 150h74"/>
+    <path d="M54 188h106"/>
+  </g>
+  <text x="112" y="138" fill="#f8fafc" font-family="Segoe UI, Arial, sans-serif" font-size="48" font-weight="700" letter-spacing="0">CodeWF.LogViewer</text>
+  <text x="112" y="190" fill="#ccfbf1" font-family="Segoe UI, Arial, sans-serif" font-size="24" letter-spacing="0">Lightweight logging core and Avalonia UI viewer</text>
+  <text x="112" y="236" fill="#f0fdfa" font-family="Segoe UI, Arial, sans-serif" font-size="20" letter-spacing="0">File, console, UI channels, batch refresh</text>
+  <rect x="112" y="266" width="126" height="34" rx="6" fill="#0d9488" opacity=".95"/>
+  <text x="132" y="289" fill="#ffffff" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="600" letter-spacing="0">Logging</text>
+</svg>

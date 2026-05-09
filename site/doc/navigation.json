@@ -4,73 +4,90 @@
     "Children": [
       {
         "Name": "介绍",
-        "Slug": "readme"
+        "Memo": "重点开源项目索引",
+        "Slug": "readme",
+        "Repository": "https://github.com/dotnet9"
       }
     ]
   },
   {
-    "Name": "事件总线",
-    "Memo": "事件总线",
-    "Slug": "eventbus",
+    "Name": "网站",
+    "Memo": "网站源码与资源内容仓库",
+    "Slug": "website",
     "Children": [
       {
-        "Name": "进程内事件总线",
+        "Name": "CodeWF",
+        "Memo": "dotnet9.com / codewf.com 的网站源码仓库",
+        "Slug": "codewf",
+        "Repository": "https://github.com/dotnet9/CodeWF"
+      },
+      {
+        "Name": "Assets.Dotnet9",
+        "Memo": "网站文章、文档、图片与站点配置的资源仓库",
+        "Slug": "assets-dotnet9",
+        "Repository": "https://github.com/dotnet9/Assets.Dotnet9"
+      }
+    ]
+  },
+  {
+    "Name": "C# 通用",
+    "Memo": "事件通信、网络协议与基础类库",
+    "Slug": "csharp",
+    "Children": [
+      {
+        "Name": "CodeWF.EventBus.Socket",
+        "Memo": "基于 TCP Socket 的轻量级进程间事件总线",
+        "Slug": "codewf-eventbus-socket",
+        "Repository": "https://github.com/dotnet9/CodeWF.EventBus.Socket"
+      },
+      {
+        "Name": "CodeWF.EventBus",
+        "Memo": "进程内事件总线，支持 Command、Query 和多种 IOC 场景",
         "Slug": "codewf-eventbus",
         "Repository": "https://github.com/dotnet9/CodeWF.EventBus"
       },
       {
-        "Name": "进程间事件总线",
-        "Slug": "codewf-eventbus-socket",
-        "Repository": "https://github.com/dotnet9/CodeWF.EventBus.Socket"
-      }
-    ]
-  },
-  {
-    "Name": "工具",
-    "Slug": "tool",
-    "Children": [
-      {
-        "Name": "C#帮助类集",
-        "Slug": "codewf-tools",
-        "Repository": "https://github.com/dotnet9/CodeWF.Tools"
+        "Name": "CodeWF.NetWeaver",
+        "Memo": "网络数据包序列化核心库与 TCP/UDP 封装基础",
+        "Slug": "codewf-netweaver",
+        "Repository": "https://github.com/dotnet9/CodeWF.NetWeaver"
       }
     ]
   },
   {
     "Name": "Avalonia",
-    "Memo": "Avalonia扩展包或相关开源项目",
+    "Memo": "Avalonia 控件、工具、日志、Markdown 和多语言生态",
     "Slug": "avalonia",
     "Children": [
       {
-        "Name": "码坊工具箱",
-        "Memo": "Avalonia开发的工具箱",
+        "Name": "CodeWF.AvaloniaControls",
+        "Memo": "面向 Avalonia 12 的通用控件与主题包",
+        "Slug": "codewf-avalonia-controls",
+        "Repository": "https://github.com/dotnet9/CodeWF.AvaloniaControls"
+      },
+      {
+        "Name": "CodeWF.LogViewer",
+        "Memo": "轻量日志库与 Avalonia 日志查看控件",
+        "Slug": "codewf-logviewer",
+        "Repository": "https://github.com/dotnet9/CodeWF.LogViewer"
+      },
+      {
+        "Name": "Lang.Avalonia",
+        "Memo": "Avalonia UI 插件化多语言库",
+        "Slug": "lang-avalonia",
+        "Repository": "https://github.com/dotnet9/Lang.Avalonia"
+      },
+      {
+        "Name": "CodeWF.Markdown",
+        "Memo": "Avalonia Markdown 渲染控件与排版主题",
+        "Slug": "codewf-markdown",
+        "Repository": "https://github.com/dotnet9/CodeWF.Markdown"
+      },
+      {
+        "Name": "CodeWF.Toolbox",
+        "Memo": "基于 Avalonia + Prism 的模块化跨平台桌面工具箱",
         "Slug": "codewf-toolbox",
         "Repository": "https://github.com/dotnet9/CodeWF.Toolbox"
-      },
-      {
-        "Name": "Avalonia标记扩展",
-        "Memo": "Avalonia标记扩展包，包含Resx国际化辅助功能",
-        "Slug": "avaloniaextensions-axaml",
-        "Repository": "https://github.com/dotnet9/AvaloniaExtensions/tree/main/src/AvaloniaExtensions.Axaml"
-      },
-      {
-        "Name": "Avalonia国际化包",
-        "Memo": "Avalonia 使用自定义 XML 文件实现国际化",
-        "Slug": "avalonia-xml-translator",
-        "Repository": "https://github.com/dotnet9/AvaloniaExtensions/tree/main/src/AvaloniaXmlTranslator"
-      }
-    ]
-  },
-  {
-    "Name": "WPF",
-    "Memo": "WPF扩展包或相关开源项目",
-    "Slug": "wpf",
-    "Children": [
-      {
-        "Name": "WPF国际化包",
-        "Memo": "WPF 使用自定义 XML 文件实现国际化",
-        "Slug": "wpf-xml-translator",
-        "Repository": "https://github.com/dotnet9/wpfxmltranslator"
       }
     ]
   }

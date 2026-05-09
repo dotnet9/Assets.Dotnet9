@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="360" viewBox="0 0 960 360" role="img" aria-labelledby="title desc">
+  <title id="title">CodeWF.Toolbox project cover</title>
+  <desc id="desc">Cover card for the modular Avalonia toolbox project.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f172a"/>
+      <stop offset="1" stop-color="#075985"/>
+    </linearGradient>
+    <pattern id="blocks" width="64" height="64" patternUnits="userSpaceOnUse">
+      <path d="M0 0h22v22H0zM42 42h22v22H42z" fill="#ffffff" opacity=".06"/>
+    </pattern>
+  </defs>
+  <rect width="960" height="360" fill="url(#bg)"/>
+  <rect width="960" height="360" fill="url(#blocks)"/>
+  <rect x="72" y="64" width="12" height="232" rx="6" fill="#22d3ee"/>
+  <g transform="translate(632 70)" fill="none" stroke="#a5f3fc" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" opacity=".95">
+    <rect x="18" y="30" width="194" height="158" rx="18"/>
+    <path d="M58 30v158M18 72h194"/>
+    <path d="M86 108h84M86 140h58"/>
+    <path d="M70 214h88"/>
+  </g>
+  <text x="112" y="138" fill="#f8fafc" font-family="Segoe UI, Arial, sans-serif" font-size="50" font-weight="700" letter-spacing="0">CodeWF.Toolbox</text>
+  <text x="112" y="190" fill="#cffafe" font-family="Segoe UI, Arial, sans-serif" font-size="24" letter-spacing="0">Modular desktop toolbox built with Avalonia and Prism</text>
+  <text x="112" y="236" fill="#ecfeff" font-family="Segoe UI, Arial, sans-serif" font-size="20" letter-spacing="0">AI, converters, log viewer, dev tools, i18n management</text>
+  <rect x="112" y="266" width="128" height="34" rx="6" fill="#0891b2" opacity=".95"/>
+  <text x="132" y="289" fill="#ffffff" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="600" letter-spacing="0">Toolbox</text>
+</svg>

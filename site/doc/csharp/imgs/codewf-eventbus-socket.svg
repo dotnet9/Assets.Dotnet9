@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="360" viewBox="0 0 960 360" role="img" aria-labelledby="title desc">
+  <title id="title">CodeWF.EventBus.Socket project cover</title>
+  <desc id="desc">Cover card for the socket event bus project.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#18181b"/>
+      <stop offset="1" stop-color="#7f1d1d"/>
+    </linearGradient>
+    <pattern id="lines" width="56" height="56" patternUnits="userSpaceOnUse">
+      <path d="M0 56 56 0" stroke="#ffffff" stroke-opacity=".07"/>
+    </pattern>
+  </defs>
+  <rect width="960" height="360" fill="url(#bg)"/>
+  <rect width="960" height="360" fill="url(#lines)"/>
+  <rect x="72" y="64" width="12" height="232" rx="6" fill="#fb7185"/>
+  <g transform="translate(635 68)" fill="none" stroke="#fecdd3" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" opacity=".95">
+    <rect x="18" y="42" width="74" height="74" rx="14"/>
+    <rect x="150" y="42" width="74" height="74" rx="14"/>
+    <rect x="84" y="152" width="74" height="74" rx="14"/>
+    <path d="M92 80h58M168 116l-32 36M74 116l32 36"/>
+  </g>
+  <text x="112" y="134" fill="#f8fafc" font-family="Segoe UI, Arial, sans-serif" font-size="42" font-weight="700" letter-spacing="0">CodeWF.EventBus.Socket</text>
+  <text x="112" y="188" fill="#ffe4e6" font-family="Segoe UI, Arial, sans-serif" font-size="24" letter-spacing="0">Lightweight TCP event bus for C# processes</text>
+  <text x="112" y="236" fill="#fff1f2" font-family="Segoe UI, Arial, sans-serif" font-size="20" letter-spacing="0">Publish/Subscribe, Query/Response, no external MQ</text>
+  <rect x="112" y="266" width="128" height="34" rx="6" fill="#e11d48" opacity=".95"/>
+  <text x="132" y="289" fill="#ffffff" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="600" letter-spacing="0">C# IPC</text>
+</svg>

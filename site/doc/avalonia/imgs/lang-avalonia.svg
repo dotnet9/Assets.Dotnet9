@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="360" viewBox="0 0 960 360" role="img" aria-labelledby="title desc">
+  <title id="title">Lang.Avalonia project cover</title>
+  <desc id="desc">Cover card for the Avalonia localization project.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1f2937"/>
+      <stop offset="1" stop-color="#7c2d12"/>
+    </linearGradient>
+    <pattern id="steps" width="52" height="52" patternUnits="userSpaceOnUse">
+      <path d="M0 52h52V0" fill="none" stroke="#ffffff" stroke-opacity=".08"/>
+    </pattern>
+  </defs>
+  <rect width="960" height="360" fill="url(#bg)"/>
+  <rect width="960" height="360" fill="url(#steps)"/>
+  <rect x="72" y="64" width="12" height="232" rx="6" fill="#fb923c"/>
+  <g transform="translate(632 70)" fill="none" stroke="#fed7aa" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" opacity=".95">
+    <path d="M26 52h118a18 18 0 0 1 18 18v68a18 18 0 0 1-18 18H84l-44 38v-38H26a18 18 0 0 1-18-18V70a18 18 0 0 1 18-18z"/>
+    <path d="M70 90h62M70 122h92"/>
+    <path d="M154 80h48a18 18 0 0 1 18 18v64"/>
+  </g>
+  <text x="112" y="138" fill="#f8fafc" font-family="Segoe UI, Arial, sans-serif" font-size="50" font-weight="700" letter-spacing="0">Lang.Avalonia</text>
+  <text x="112" y="190" fill="#ffedd5" font-family="Segoe UI, Arial, sans-serif" font-size="24" letter-spacing="0">Plugin-based localization for Avalonia UI</text>
+  <text x="112" y="236" fill="#fff7ed" font-family="Segoe UI, Arial, sans-serif" font-size="20" letter-spacing="0">JSON, XML, RESX, Source Generator, live culture switch</text>
+  <rect x="112" y="266" width="148" height="34" rx="6" fill="#ea580c" opacity=".95"/>
+  <text x="132" y="289" fill="#ffffff" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="600" letter-spacing="0">Localization</text>
+</svg>
