@@ -1,0 +1,128 @@
+[
+  {
+    "Sort": 1,
+    "Name": "Blazor",
+    "Memo": "Blazor框架、组件開發与專案實踐",
+    "Slug": "blazor"
+  },
+  {
+    "Sort": 2,
+    "Name": "ASP.NET Core",
+    "Memo": "ASP.NET Core後端開發与架构實踐",
+    "Slug": "asp-net-core"
+  },
+  {
+    "Sort": 3,
+    "Name": "Avalonia UI",
+    "Memo": "Avalonia跨平台桌面開發与控件實踐",
+    "Slug": "avalonia"
+  },
+  {
+    "Sort": 4,
+    "Name": "WPF",
+    "Memo": "WPF桌面開發、介面設計与框架實踐",
+    "Slug": "wpf"
+  },
+  {
+    "Sort": 5,
+    "Name": "Winform",
+    "Memo": "Winform桌面应用開發与控件使用",
+    "Slug": "winform"
+  },
+  {
+    "Sort": 6,
+    "Name": "MAUI",
+    "Memo": ".NET MAUI跨平台应用開發實踐",
+    "Slug": "maui"
+  },
+  {
+    "Sort": 7,
+    "Name": "EF Core",
+    "Memo": "EF Core資料存取、迁移与效能最佳化",
+    "Slug": "ef-core"
+  },
+  {
+    "Sort": 8,
+    "Name": "Dapper",
+    "Memo": "Dapper輕量級資料存取与實戰技巧",
+    "Slug": "dapper"
+  },
+  {
+    "Sort": 9,
+    "Name": ".NET",
+    "Memo": ".NET生态、執行階段与工程經驗沉淀",
+    "Slug": "dotnet"
+  },
+  {
+    "Sort": 10,
+    "Name": "Python",
+    "Memo": "Python语言、工具脚本与專案實踐",
+    "Slug": "python"
+  },
+  {
+    "Sort": 11,
+    "Name": "前端",
+    "Memo": "前端開發、工程化与交互體驗實踐",
+    "Slug": "frontend"
+  },
+  {
+    "Sort": 12,
+    "Name": "MySQL",
+    "Memo": "MySQL資料庫设计、查詢与維運经验",
+    "Slug": "mysql"
+  },
+  {
+    "Sort": 13,
+    "Name": "資料庫",
+    "Memo": "資料庫建模、效能最佳化与實踐总结",
+    "Slug": "database"
+  },
+  {
+    "Sort": 14,
+    "Name": "Flutter",
+    "Memo": "Flutter跨平台应用開發与界面實踐",
+    "Slug": "flutter"
+  },
+  {
+    "Sort": 15,
+    "Name": "Swift UI",
+    "Memo": "Swift UI介面開發与苹果生态實踐",
+    "Slug": "swift-ui"
+  },
+  {
+    "Sort": 16,
+    "Name": "更多語言",
+    "Memo": "收錄多語言開發经验与工具實踐",
+    "Slug": "morelanguage"
+  },
+  {
+    "Sort": 17,
+    "Name": "Docker",
+    "Memo": "Docker容器化部署、映像与維運實踐",
+    "Slug": "docker"
+  },
+  {
+    "Sort": 18,
+    "Name": "課程",
+    "Memo": "精選技術課程、学习路線与成長资源",
+    "Slug": "course"
+  },
+  {
+    "Sort": 19,
+    "Name": "架构设计",
+    "Memo": "系統架构、工程治理与设计经验",
+    "Slug": "architecture-design"
+  },
+  {
+    "Sort": 20,
+    "Name": "數位化轉型",
+    "Memo": "數位化轉型案例、方法与落地實踐",
+    "Slug": "digital-transformation"
+  },
+  {
+    "Sort": 21,
+    "Name": "分享",
+    "Memo": "技術观察、经验复盘与實用资源分享",
+    "Slug": "share"
+  }
+]

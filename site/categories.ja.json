@@ -1,0 +1,128 @@
+[
+  {
+    "Sort": 1,
+    "Name": "Blazor",
+    "Memo": "Blazor フレームワーク、コンポーネント開発、プロジェクト実践",
+    "Slug": "blazor"
+  },
+  {
+    "Sort": 2,
+    "Name": "ASP.NET Core",
+    "Memo": "ASP.NET Core バックエンド開発とアーキテクチャ実践",
+    "Slug": "asp-net-core"
+  },
+  {
+    "Sort": 3,
+    "Name": "Avalonia UI",
+    "Memo": "Avalonia クロスプラットフォームデスクトップ開発とコントロール実践",
+    "Slug": "avalonia"
+  },
+  {
+    "Sort": 4,
+    "Name": "WPF",
+    "Memo": "WPF デスクトップ開発、UI 設計、フレームワーク実践",
+    "Slug": "wpf"
+  },
+  {
+    "Sort": 5,
+    "Name": "Winform",
+    "Memo": "WinForms デスクトップアプリ開発とコントロール利用",
+    "Slug": "winform"
+  },
+  {
+    "Sort": 6,
+    "Name": "MAUI",
+    "Memo": ".NET MAUI クロスプラットフォームアプリ開発実践",
+    "Slug": "maui"
+  },
+  {
+    "Sort": 7,
+    "Name": "EF Core",
+    "Memo": "EF Core データアクセス、移行、性能最適化",
+    "Slug": "ef-core"
+  },
+  {
+    "Sort": 8,
+    "Name": "Dapper",
+    "Memo": "Dapper の軽量データアクセスと実践テクニック",
+    "Slug": "dapper"
+  },
+  {
+    "Sort": 9,
+    "Name": ".NET",
+    "Memo": ".NET エコシステム、ランタイム、工程経験の蓄積",
+    "Slug": "dotnet"
+  },
+  {
+    "Sort": 10,
+    "Name": "Python",
+    "Memo": "Python 言語、ツールスクリプト、プロジェクト実践",
+    "Slug": "python"
+  },
+  {
+    "Sort": 11,
+    "Name": "フロントエンド",
+    "Memo": "フロントエンド開発、工程化、インタラクション体験の実践",
+    "Slug": "frontend"
+  },
+  {
+    "Sort": 12,
+    "Name": "MySQL",
+    "Memo": "MySQL データベース設計、クエリ、運用経験",
+    "Slug": "mysql"
+  },
+  {
+    "Sort": 13,
+    "Name": "データベース",
+    "Memo": "データベースモデリング、性能最適化、実践まとめ",
+    "Slug": "database"
+  },
+  {
+    "Sort": 14,
+    "Name": "Flutter",
+    "Memo": "Flutter クロスプラットフォームアプリ開発と UI 実践",
+    "Slug": "flutter"
+  },
+  {
+    "Sort": 15,
+    "Name": "Swift UI",
+    "Memo": "SwiftUI の UI 開発と Apple エコシステム実践",
+    "Slug": "swift-ui"
+  },
+  {
+    "Sort": 16,
+    "Name": "その他の言語",
+    "Memo": "複数言語の開発経験とツール実践を収録",
+    "Slug": "morelanguage"
+  },
+  {
+    "Sort": 17,
+    "Name": "Docker",
+    "Memo": "Docker のコンテナ化デプロイ、イメージ、運用実践",
+    "Slug": "docker"
+  },
+  {
+    "Sort": 18,
+    "Name": "コース",
+    "Memo": "技術コース、学習ロードマップ、成長リソースを厳選",
+    "Slug": "course"
+  },
+  {
+    "Sort": 19,
+    "Name": "アーキテクチャ設計",
+    "Memo": "システムアーキテクチャ、工程ガバナンス、設計経験",
+    "Slug": "architecture-design"
+  },
+  {
+    "Sort": 20,
+    "Name": "デジタルトランスフォーメーション",
+    "Memo": "デジタルトランスフォーメーションの事例、方法、実践",
+    "Slug": "digital-transformation"
+  },
+  {
+    "Sort": 21,
+    "Name": "共有",
+    "Memo": "技術観察、経験の振り返り、実用リソースの共有",
+    "Slug": "share"
+  }
+]

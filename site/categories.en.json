@@ -1,0 +1,128 @@
+[
+  {
+    "Sort": 1,
+    "Name": "Blazor",
+    "Memo": "Blazor framework, component development, and project practice",
+    "Slug": "blazor"
+  },
+  {
+    "Sort": 2,
+    "Name": "ASP.NET Core",
+    "Memo": "ASP.NET Core backend development and architecture practice",
+    "Slug": "asp-net-core"
+  },
+  {
+    "Sort": 3,
+    "Name": "Avalonia UI",
+    "Memo": "Avalonia cross-platform desktop development and control practice",
+    "Slug": "avalonia"
+  },
+  {
+    "Sort": 4,
+    "Name": "WPF",
+    "Memo": "WPF desktop development, UI design, and framework practice",
+    "Slug": "wpf"
+  },
+  {
+    "Sort": 5,
+    "Name": "Winform",
+    "Memo": "WinForms desktop app development and control usage",
+    "Slug": "winform"
+  },
+  {
+    "Sort": 6,
+    "Name": "MAUI",
+    "Memo": ".NET MAUI cross-platform app development practice",
+    "Slug": "maui"
+  },
+  {
+    "Sort": 7,
+    "Name": "EF Core",
+    "Memo": "EF Core data access, migrations, and performance optimization",
+    "Slug": "ef-core"
+  },
+  {
+    "Sort": 8,
+    "Name": "Dapper",
+    "Memo": "Dapper lightweight data access and practical tips",
+    "Slug": "dapper"
+  },
+  {
+    "Sort": 9,
+    "Name": ".NET",
+    "Memo": ".NET ecosystem, runtime, and engineering experience",
+    "Slug": "dotnet"
+  },
+  {
+    "Sort": 10,
+    "Name": "Python",
+    "Memo": "Python language, tooling scripts, and project practice",
+    "Slug": "python"
+  },
+  {
+    "Sort": 11,
+    "Name": "Frontend",
+    "Memo": "Frontend development, engineering, and interaction experience",
+    "Slug": "frontend"
+  },
+  {
+    "Sort": 12,
+    "Name": "MySQL",
+    "Memo": "MySQL database design, queries, and operations experience",
+    "Slug": "mysql"
+  },
+  {
+    "Sort": 13,
+    "Name": "Databases",
+    "Memo": "Database modeling, performance optimization, and practice summaries",
+    "Slug": "database"
+  },
+  {
+    "Sort": 14,
+    "Name": "Flutter",
+    "Memo": "Flutter cross-platform app development and UI practice",
+    "Slug": "flutter"
+  },
+  {
+    "Sort": 15,
+    "Name": "Swift UI",
+    "Memo": "SwiftUI interface development and Apple ecosystem practice",
+    "Slug": "swift-ui"
+  },
+  {
+    "Sort": 16,
+    "Name": "More Languages",
+    "Memo": "Development experience and tooling practice across languages",
+    "Slug": "morelanguage"
+  },
+  {
+    "Sort": 17,
+    "Name": "Docker",
+    "Memo": "Docker containerized deployment, images, and operations practice",
+    "Slug": "docker"
+  },
+  {
+    "Sort": 18,
+    "Name": "Courses",
+    "Memo": "Selected technical courses, learning paths, and growth resources",
+    "Slug": "course"
+  },
+  {
+    "Sort": 19,
+    "Name": "Architecture Design",
+    "Memo": "System architecture, engineering governance, and design experience",
+    "Slug": "architecture-design"
+  },
+  {
+    "Sort": 20,
+    "Name": "Digital Transformation",
+    "Memo": "Digital transformation cases, methods, and implementation practice",
+    "Slug": "digital-transformation"
+  },
+  {
+    "Sort": 21,
+    "Name": "Sharing",
+    "Memo": "Technical observations, retrospectives, and useful resources",
+    "Slug": "share"
+  }
+]

@@ -1,0 +1,86 @@
+[
+  {
+    "Sort": 1,
+    "Name": "Blazor 学習シリーズ",
+    "Memo": "Blazor を基礎から実践まで学ぶシリーズ記事",
+    "Slug": "learn-blazor-series"
+  },
+  {
+    "Sort": 2,
+    "Name": "Blazor コンポーネントライブラリ",
+    "Memo": "Blazor コンポーネントライブラリの選定、利用、実践を収録",
+    "Slug": "blazor-component-library"
+  },
+  {
+    "Sort": 3,
+    "Name": "Avalonia UI オープンソースプロジェクト",
+    "Memo": "Avalonia UI オープンソースプロジェクトの事例と解説",
+    "Slug": "avalonia-ui-open-source-project"
+  },
+  {
+    "Sort": 4,
+    "Name": "Avalonia UI コントロールライブラリ",
+    "Memo": "Avalonia コントロールライブラリの利用と UI 開発を整理",
+    "Slug": "avalonia-ui-control-library"
+  },
+  {
+    "Sort": 5,
+    "Name": "WPF MVVM フレームワーク Prism シリーズ",
+    "Memo": "WPF プロジェクトでの Prism フレームワーク実践記録",
+    "Slug": "wpf-mvvm-framework-prism-series"
+  },
+  {
+    "Sort": 6,
+    "Name": "WPF オープンソースプロジェクト",
+    "Memo": "WPF オープンソースプロジェクトとソース学習資料の紹介",
+    "Slug": "wpf-open-source-projects"
+  },
+  {
+    "Sort": 7,
+    "Name": "WPF UI デザイン",
+    "Memo": "WPF の画面設計、インタラクション、視覚最適化に注目",
+    "Slug": "wpf-ui-design"
+  },
+  {
+    "Sort": 8,
+    "Name": "WPF コントロールライブラリ",
+    "Memo": "WPF コントロールライブラリの選定、利用、拡張を整理",
+    "Slug": "wpf-controls-library"
+  },
+  {
+    "Sort": 9,
+    "Name": "WinForms オープンソースプロジェクト",
+    "Memo": "WinForms オープンソースプロジェクトの事例と実装案を収録",
+    "Slug": "winform-open-source-projects"
+  },
+  {
+    "Sort": 10,
+    "Name": "WinForms コントロールライブラリ",
+    "Memo": "WinForms コントロールライブラリのリソースと利用経験を整理",
+    "Slug": "winform-controls-library"
+  },
+  {
+    "Sort": 11,
+    "Name": "C# AOT",
+    "Memo": "C# AOT の公開、最適化、つまずきの記録",
+    "Slug": "csharp-aot"
+  },
+  {
+    "Sort": 12,
+    "Name": "C# オープンソースプロジェクト",
+    "Memo": "C# オープンソースプロジェクト、ツール、ソース実践を厳選",
+    "Slug": "csharp-open-source-projects"
+  },
+  {
+    "Sort": 13,
+    "Name": "看護師から C# 開発者へ",
+    "Memo": "看護業界から C# 開発へ転身した成長記録",
+    "Slug": "from-nurse-to-csharp-developer"
+  },
+  {
+    "Sort": 14,
+    "Name": "Web オープンソースプロジェクト",
+    "Memo": "フロントエンドテンプレート、Web ツール、オープンソース実践を収録",
+    "Slug": "web-open-source-projects"
+  }
+]

@@ -1,0 +1,157 @@
+[
+  {
+    "Time": "2026-04-16",
+    "Title": "Rebuilt the site with Razor Pages",
+    "Content": "With AI-assisted development, the site returned to traditional Razor Pages, which feels more suitable for content-focused websites."
+  },
+  {
+    "Time": "2024-10-09",
+    "Title": "Rebuilt the site with KnownCMS",
+    "Content": "Thanks to the KnownCMS open-source project. Its Ant Design-style frontend suits official and blog sites; Blazor still feels most comfortable. The rebuild was mostly completed and deployed by October 26."
+  },
+  {
+    "Time": "2024-08-12",
+    "Title": "Tried rebuilding the site with Fluent Blazor",
+    "Content": "Rebuilt with a Fluent Blazor style."
+  },
+  {
+    "Time": "2024-07-12",
+    "Title": "Started another site rebuild with Masa Blazor",
+    "Content": "After trying Ant Blazor for a few days, switched to modifying the Masa Blazor docs site source. Same idea: one site for reading articles and using tools."
+  },
+  {
+    "Time": "2023-11-01",
+    "Title": "Dotnet9 rebuild completed and launched",
+    "Content": "The Dotnet9 rebuild was completed and launched; it can now be optimized gradually."
+  },
+  {
+    "Time": "2023-10-21",
+    "Title": "Rebuilt the Dotnet9 blog site",
+    "Content": "Rebuilt the Dotnet9 blog site by referencing the easy-admin open-source project and its online blog site."
+  },
+  {
+    "Time": "2023-10-13",
+    "Title": "Reorganized and launched the Dotnet toolbox: dotnetools.com",
+    "Content": "Redeveloped the Dotnet toolbox with Vue 3, referencing the it-tools open-source project and its online tools site."
+  },
+  {
+    "Time": "2023-09-17",
+    "Title": "Returned to Razor Pages for site development",
+    "Content": "The Blazor frontend experience was still not ideal, so the site switched back to the previous version."
+  },
+  {
+    "Time": "2023-07-02",
+    "Title": "Organized the Blazor version of the Dotnet toolbox: dotnetools.com",
+    "Content": "Built Blazor online tools and games by referencing BlazorGames and common online tools."
+  },
+  {
+    "Time": "2023-06-22",
+    "Title": "Frontend returned to Blazor Server and launched",
+    "Content": "Tried Blazor Web App in .NET 8 Preview 5 and added Razor components to Razor Pages, but the timestamp tool lacked interactivity, so everything was switched to Blazor Server for launch."
+  },
+  {
+    "Time": "2023-04-22",
+    "Title": "Masa Framework + Razor Pages version launched",
+    "Content": "After a month of learning Masa Framework (DDD + CQRS), another rebuild was finished using a clean Yang Qingqing blog frontend static page and launched quickly."
+  },
+  {
+    "Time": "2022-10-16",
+    "Title": "Frontend mostly completed",
+    "Content": "After a few more days of improvements, albums, archives, tag cloud, timeline, sponsor page, RSS, sitemap, and other features were added. Frontend work paused while research and development began for a Vue admin frontend."
+  },
+  {
+    "Time": "2022-10-08",
+    "Title": "Rebuild completed in one day and one night",
+    "Content": "After studying Razor Pages on the night of the 7th, the site was rebuilt with Razor Pages on the 8th during lockdown and barely launched. Features would be added gradually."
+  },
+  {
+    "Time": "2022-10-07",
+    "Title": "Learned Go Web and built a simple blog system",
+    "Content": "During the seven-day National Day holiday, used spare time while taking care of the child to learn Go and build an imperfect blog frontend, then started another Razor Pages rebuild."
+  },
+  {
+    "Time": "2022-09-29",
+    "Title": "Admin frontend development phase",
+    "Content": "CRUD for the base tables was mostly finished, with blog post management still pending. A frontend friend joined the admin frontend work, and I went to learn Go Web to prepare for another frontend rebuild."
+  },
+  {
+    "Time": "2022-09-15",
+    "Title": "Admin backend completed; started admin frontend",
+    "Content": "The Web API was mostly completed and each endpoint was tested with Apifox. Admin frontend development began with Ant Design Pro."
+  },
+  {
+    "Time": "2022-08-31",
+    "Title": "Started a new round of site rebuild work",
+    "Content": "Bought Teacher Yang’s “ASP.NET Core Technical Internals and Project Practice” and began rebuilding the Web API using the accompanying source code as reference."
+  },
+  {
+    "Time": "2022-04-02",
+    "Title": "Launched the Dotnet9 website",
+    "Content": "Album and blog post display were completed, so the site was launched first: https://dotnet9.com"
+  },
+  {
+    "Time": "2022-03-07",
+    "Title": "Moved back to MVC for the website",
+    "Content": "The Blazor Server long-connection reconnection experience did not feel good, possibly due to my own implementation, so I reviewed MVC again and rebuilt the project."
+  },
+  {
+    "Time": "2022-03-07",
+    "Title": "Improved blog features for the tools site",
+    "Content": "From 2022-03-01 to 2022-03-07, since the tools site already had article-reading capabilities, collected articles were added too. After several nights, albums, categories, post details, tag cloud, and other features gradually appeared."
+  },
+  {
+    "Time": "2022-02-28",
+    "Title": "Launched timestamp conversion tool",
+    "Content": "This tool is simple but practical."
+  },
+  {
+    "Time": "2022-02-27",
+    "Title": "Added article introductions to tools",
+    "Content": "After one tool was ready, usage and development notes were placed together to make it transparent and trustworthy, with Markdown article loading added."
+  },
+  {
+    "Time": "2022-02-22",
+    "Title": "Launched icon conversion tool",
+    "Content": "After two nights of building the site, an icon conversion tool was created."
+  },
+  {
+    "Time": "2022-02-21",
+    "Title": "Cleared the dotnet9.com develop branch",
+    "Content": "Frontend-backend separation is good and Vue is excellent, but I still missed Blazor. I cleared all files from the develop branch and started rebuilding the site again."
+  },
+  {
+    "Time": "2022-02-13",
+    "Title": ".NET 6 Web API + Vue 3.0",
+    "Content": "From 2022-02-04 to 2022-02-13, bought Lao Zhang’s new book, paused the Blazor site work, studied for a week, and built a demo. The book overlaps with his CNBlogs content but is more systematic. The code is not as powerful as Blog.Core, but good for beginners."
+  },
+  {
+    "Time": "2022-02-02",
+    "Title": "Built the site as a Blazor Server monolith",
+    "Content": "ABP felt too heavy, and Blazor Server felt good, so an empty Blazor project was created to experiment with. Masa was chosen as the component library."
+  },
+  {
+    "Time": "2022-01-21",
+    "Title": "Built the site with ABP vNext + Blazor Server",
+    "Content": "From 2021-12-25 to 2022-01-21, learned ABP vNext and Blazor Server for work. The features matched the previous version and looked decent, but an empty ABP vNext project used about 400 MB of memory and CRUD took too much time, so it was abandoned."
+  },
+  {
+    "Time": "2021-12-03",
+    "Title": "Built the site with ASP.NET Core MVC",
+    "Content": "From 2021-11-22 to 2021-12-03, learned MVC from a Turkish developer on YouTube and followed along to build a blog site. It had basic features but was later abandoned because the code was average."
+  },
+  {
+    "Time": "2021-11-09",
+    "Title": "Built the site with Flutter Web",
+    "Content": "From 2021-10-17 to 2021-11-09, Flutter is powerful and cross-platform, and I wanted it to cover web, desktop, and app. But it was not suitable for this website: Flutter JS alone was nearly 2 MB and the homepage took about half a minute to load, so the Flutter site was abandoned."
+  },
+  {
+    "Time": "2021-10-07",
+    "Title": "Started the personal hand-built website journey",
+    "Content": "Dotnet9 was good to have, but I always wanted to build a site myself, so I created the repository."
+  },
+  {
+    "Time": "2019-11-12",
+    "Title": "Created the Dotnet9 website",
+    "Content": "Registered the 'dotnet9.com' domain. I searched from 'dotnet1' upward until 'dotnet9' was available. With the domain ready, the first personal site was built with WordPress."
+  }
+]

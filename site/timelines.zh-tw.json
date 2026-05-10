@@ -1,0 +1,157 @@
+[
+  {
+    "Time": "2026-04-16",
+    "Title": "使用Razor Pages重構網站",
+    "Content": "AI辅助開發，網站回归传统Razor Pages，觉得更适合內容展示型網站"
+  },
+  {
+    "Time": "2024-10-09",
+    "Title": "使用KnownCMS重構網站",
+    "Content": "感谢KnownCMS開源專案，前台是Antd风格，符合官网和部落格網站，Blazor还是最顺手，目前10月26日基本完成改造，并部署上線"
+  },
+  {
+    "Time": "2024-08-12",
+    "Title": "嘗試使用Fluent Blazor重構網站",
+    "Content": "使用Fluent Blazor风格重構"
+  },
+  {
+    "Time": "2024-07-12",
+    "Title": "又一轮使用Masa Blazor重構網站開始",
+    "Content": "先使用了几天Ant Blazor，现在使用Masa Blazor文档站原始碼进行修改，老思路：集文章瀏覽和工具使用的一体站"
+  },
+  {
+    "Time": "2023-11-01",
+    "Title": "Dotnet9重構完成上線",
+    "Content": "Dotnet9重構完成上線，可以在此基礎上慢慢优化了"
+  },
+  {
+    "Time": "2023-10-21",
+    "Title": "重構Dotnet9部落格網站",
+    "Content": "参考開源專案（https://gitee.com/miss_you/easy-admin）和它的在线部落格網站（https://gitee.com/miss_you/easy-admin)重構Dotnet9部落格網站"
+  },
+  {
+    "Time": "2023-10-13",
+    "Title": "重新整理上線Dotnet工具箱：dotnetools.com",
+    "Content": "参考開源專案（https://github.com/CorentinTh/it-tools）和它的線上工具網站（https://it-tools.tech)重新開發Dotnet工具箱，使用Vue3重構"
+  },
+  {
+    "Time": "2023-09-17",
+    "Title": "挽回Razor Pages開發網站",
+    "Content": "Blazor開發前台體驗还是差强人意，换回原来的版本"
+  },
+  {
+    "Time": "2023-07-02",
+    "Title": "整理Blazor版Dotnet工具箱：dotnetools.com",
+    "Content": "参考国外的Blazor游戏（https://blazorgames.net/）和网上常用的線上工具開發Blazor版本的線上工具和游戏"
+  },
+  {
+    "Time": "2023-06-22",
+    "Title": "前台回归Blazor Server版本上線",
+    "Content": ".NET 8 Preview 5體驗Blazor Web App，在Razor Pages中添加Razor组件，但添加的時間戳工具无交互能力，索性全部改为Blazor Server上線了"
+  },
+  {
+    "Time": "2023-04-22",
+    "Title": "Masa Framework + Razor Pages版本上線",
+    "Content": "历经一个月，学习Masa Framework(DDD + CQRS), 使用一个清爽的杨青青部落格前台静态页面完成又一轮重構，着急的上線了"
+  },
+  {
+    "Time": "2022-10-16",
+    "Title": "前台基本完善",
+    "Content": "又经过几天的功能完善，加了专辑、归档、标签云、時間线、赞助、Rss、站点地图等功能，前台暂时告一段落，又投入開發Vue版本的后台前端调研、開發中"
+  },
+  {
+    "Time": "2022-10-08",
+    "Title": "一天一夜重構完成",
+    "Content": "7号一晚上的Razor Pages学习，因为疫情封控，8号一天进行網站Razor Pages重構，勉强上線了，慢慢加功能吧"
+  },
+  {
+    "Time": "2022-10-07",
+    "Title": "学习Go Web，開發了一版简易的部落格系統",
+    "Content": "国庆7天，利用带娃之余的空闲時間学习了go，并做了一个不是很完善的部落格前台，開始用Razor Pages再次重構喽。"
+  },
+  {
+    "Time": "2022-09-29",
+    "Title": "后台前端開發部分",
+    "Content": "基礎表的CRUD算是開發完了，部落格文章的管理还差些工作，此时加入一个前端网友一起開發后台前端，非常开心，我去学习go web了，准备重構前台。"
+  },
+  {
+    "Time": "2022-09-15",
+    "Title": "后台後端開發完成，開始后台前端開發",
+    "Content": "基本Web API開發完成，并使用Apifox測試了每个接口，開始后台前端開發：Ant Design Pro"
+  },
+  {
+    "Time": "2022-08-31",
+    "Title": "開發新一轮網站重構操作",
+    "Content": "買了楊老師的《ASP.NET Core 技術內幕與專案實戰》一書，並參考楊老師隨書配套的原始碼：[github.com/yangzhongke/NETBookMaterials/tree/main/最後大專案程式碼]，開始了 Web API 重構工作。"
+  },
+  {
+    "Time": "2022-04-02",
+    "Title": "上線Dotnet9網站",
+    "Content": "专辑和博文展示開發完成，先上線再说：https://dotnet9.com"
+  },
+  {
+    "Time": "2022-03-07",
+    "Title": "折腾回MVC做網站",
+    "Content": "个人感觉Blazor Server长链接断连體驗不是很好，可能是由于个人開發问题，遂还是重新回顾MVC相关知识点，重構專案"
+  },
+  {
+    "Time": "2022-03-07",
+    "Title": "完善工具站部落格功能",
+    "Content": "2022-03-01 ~ 2022-03-07，既然工具有了文章阅读功能，為什麼不把收集的文章做进来呢？经过几个晚上的折腾，文章专辑、文章分類、文章详情、标签云等已逐渐添加"
+  },
+  {
+    "Time": "2022-02-28",
+    "Title": "上線時間戳轉換工具",
+    "Content": "这个工具比较簡單，但也比较實用"
+  },
+  {
+    "Time": "2022-02-27",
+    "Title": "工具加上文章介绍",
+    "Content": "工具有了一个，想到把工具使用和開發說明放一块，可以让其他人放心使用，完全透明，加了文章Markdown加载展示"
+  },
+  {
+    "Time": "2022-02-22",
+    "Title": "上線Icon轉換工具",
+    "Content": "经过2天晚上的網站建置，做了一个Icon轉換工具"
+  },
+  {
+    "Time": "2022-02-21",
+    "Title": "清空dotnet9.com開發分支(develop)",
+    "Content": "前后分离固然好，Vue也優秀，我还是懷念我的Blazor，这时我清空了開發分支所有文件，重新開始撸網站了，地址：https://github.com/dotnet9/dotnet9.com/tree/develop"
+  },
+  {
+    "Time": "2022-02-13",
+    "Title": ".NET 6 Web API + Vue 3.0",
+    "Content": "2022-02-04 ~ 2022-02-13，老张的书上市了，入了一本，Blazor做站的事先放一放，看了一周，跟着做了个demo，书的內容和部落格园差不多，要系統一点，程式碼没有Blog.Core强大，但很适合初學，地址：https://github.com/dotnet9/dotnet9.com/tree/refactor-v1"
+  },
+  {
+    "Time": "2022-02-02",
+    "Title": "使用Blazor Server单体建置網站",
+    "Content": "Abp太重，个人又觉得Blazor Server不错，開始建置空的Blazor專案玩，元件庫選擇的Masa：https://masa-blazor-docs-dev.lonsid.cn/"
+  },
+  {
+    "Time": "2022-01-21",
+    "Title": "使用Abp vNext + Blazor Server建置網站",
+    "Content": "2021-12-25 ~ 2022-01-21，工作需要，学习的Abp vNext和Blazor Server，功能就和上一版一样，有模样了，但Abp vNext空專案就占用400MB左右的執行記憶體，做个CRUD比较费时，放棄，地址：https://github.com/dotnet9/dotnet9.com/commits/abp-blazor-server"
+  },
+  {
+    "Time": "2021-12-03",
+    "Title": "使用ASP.NET Core MVC建置網站",
+    "Content": "2021-11-22 ~ 2021-12-03，从Youtube一个土耳其大佬的视频学习的MVC，并跟着做了一版部落格網站，功能还是初具模样，后面也放棄这个版本，程式碼写的一般，地址：https://github.com/dotnet9/lequ/tree/main/src/dotnet_blog"
+  },
+  {
+    "Time": "2021-11-09",
+    "Title": "使用Flutter Web建置網站",
+    "Content": "2021-10-17 ~ 2021-11-09，Flutter多牛逼，跨多平台，我的想法是即能做Web，后面连桌面、App一起做了，但做網站是真不行，光Flutter JS就将近2MB，首页加载都要半分钟左右，所以用Flutter建置網站放棄了，只做了首页和一个加载markdown的文章详情页，地址：https://github.com/dotnet9/lequ/tree/main/src/flutter_blog"
+  },
+  {
+    "Time": "2021-10-07",
+    "Title": "開始个人手撸建站之旅",
+    "Content": "有了Dotnet9(https://dotnet9.com)这个網站固然好，但我总有个梦想，想自己做一个出来，所以创建了这个倉庫：https://github.com/dotnet9/lequ"
+  },
+  {
+    "Time": "2019-11-12",
+    "Title": "创建Dotnet9網站",
+    "Content": "申請了'dotnet9.com'網域，網域是从'dotnet1'開始查詢，直到'dotnet9'才未被註冊，没错，網域就是这样註冊的。有了網域，然后使用WordPress建置了第一个个人網站..."
+  }
+]

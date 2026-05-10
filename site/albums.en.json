@@ -1,0 +1,86 @@
+[
+  {
+    "Sort": 1,
+    "Name": "Learn Blazor Series",
+    "Memo": "A Blazor learning series from fundamentals to hands-on practice",
+    "Slug": "learn-blazor-series"
+  },
+  {
+    "Sort": 2,
+    "Name": "Blazor Component Libraries",
+    "Memo": "Blazor component library selection, usage, and practice",
+    "Slug": "blazor-component-library"
+  },
+  {
+    "Sort": 3,
+    "Name": "Avalonia UI Open Source Projects",
+    "Memo": "Selected Avalonia UI open-source project cases and analysis",
+    "Slug": "avalonia-ui-open-source-project"
+  },
+  {
+    "Sort": 4,
+    "Name": "Avalonia UI Control Libraries",
+    "Memo": "Avalonia control library usage and UI development notes",
+    "Slug": "avalonia-ui-control-library"
+  },
+  {
+    "Sort": 5,
+    "Name": "WPF MVVM Framework Prism Series",
+    "Memo": "Prism framework practice notes in WPF projects",
+    "Slug": "wpf-mvvm-framework-prism-series"
+  },
+  {
+    "Sort": 6,
+    "Name": "WPF Open Source Projects",
+    "Memo": "Recommended WPF open-source projects and source-learning resources",
+    "Slug": "wpf-open-source-projects"
+  },
+  {
+    "Sort": 7,
+    "Name": "WPF UI Design",
+    "Memo": "WPF interface design, interaction, and visual optimization",
+    "Slug": "wpf-ui-design"
+  },
+  {
+    "Sort": 8,
+    "Name": "WPF Control Libraries",
+    "Memo": "WPF control library selection, usage, and extension notes",
+    "Slug": "wpf-controls-library"
+  },
+  {
+    "Sort": 9,
+    "Name": "WinForms Open Source Projects",
+    "Memo": "WinForms open-source project cases and implementation ideas",
+    "Slug": "winform-open-source-projects"
+  },
+  {
+    "Sort": 10,
+    "Name": "WinForms Control Libraries",
+    "Memo": "WinForms control library resources and usage experience",
+    "Slug": "winform-controls-library"
+  },
+  {
+    "Sort": 11,
+    "Name": "C# AOT",
+    "Memo": "C# AOT publishing, optimization, and troubleshooting notes",
+    "Slug": "csharp-aot"
+  },
+  {
+    "Sort": 12,
+    "Name": "C# Open Source Projects",
+    "Memo": "Selected C# open-source projects, tools, and source-code practice",
+    "Slug": "csharp-open-source-projects"
+  },
+  {
+    "Sort": 13,
+    "Name": "From Nurse to C# Developer",
+    "Memo": "Growth stories from nursing to C# development",
+    "Slug": "from-nurse-to-csharp-developer"
+  },
+  {
+    "Sort": 14,
+    "Name": "Web Open Source Projects",
+    "Memo": "Frontend templates, web tools, and open-source project practice",
+    "Slug": "web-open-source-projects"
+  }
+]

@@ -1,0 +1,100 @@
+[
+  {
+    "Index": 1,
+    "Title": "林德熙",
+    "Description": "WPF expert",
+    "Link": "https://blog.lindexi.com/",
+    "Logo": "https://blog.lindexi.com/img/avatar.png"
+  },
+  {
+    "Index": 2,
+    "Title": "YouZack",
+    "Description": "YouZack - intensive English listening practice and vocabulary memorization",
+    "Link": "https://www.youzack.com/",
+    "Logo": "https://www.youzack.com/favicon.ico"
+  },
+  {
+    "Index": 3,
+    "Title": "WTM",
+    "Description": "WTM structures routine coding and automates repetitive work. It is more than a framework: it is a strong productivity tool.",
+    "Link": "https://wtmdoc.walkingtec.cn/",
+    "Logo": "https://wtmdoc.walkingtec.cn/favicon.ico"
+  },
+  {
+    "Index": 4,
+    "Title": "NuGet Next",
+    "Description": "Use NuGet Next to create .NET applications faster.",
+    "Link": "https://nuget.token-ai.cn/",
+    "Logo": "https://registry.npmmirror.com/@lobehub/assets-logo/1.2.0/files/assets/logo-3d.webp"
+  },
+  {
+    "Index": 5,
+    "Title": "可乐不加冰",
+    "Description": "Welcome to the Cola Without Ice blog, focused on .NET development with news, tips, and practical guides.",
+    "Link": "https://www.okay123.top/",
+    "Logo": "https://www.okay123.top/favicon.ico"
+  },
+  {
+    "Index": 6,
+    "Title": "加菲的博客",
+    "Description": "Focused on IT and the internet: original writing only, no reposts, and articles come from practice.",
+    "Link": "http://randyfield.cn/",
+    "Logo": "http://randyfield.cn/favicon.ico"
+  },
+  {
+    "Index": 7,
+    "Title": "Furion",
+    "Description": "Make .NET development simpler, more universal, and more popular.",
+    "Link": "https://furion.net/",
+    "Logo": "https://furion.net/img/favicon.ico"
+  },
+  {
+    "Index": 8,
+    "Title": "懒得勤快",
+    "Description": "A site with both scarce resources and .NET technical articles",
+    "Link": "https://masuit.org/",
+    "Logo": "https://masuit.org/favicon.png"
+  },
+  {
+    "Index": 9,
+    "Title": "迷恋自留地",
+    "Description": "Not seeking immortality, only waiting for your return in the mortal world.",
+    "Link": "https://hunji.xyz/",
+    "Logo": "https://hunji.xyz/favicon.ico"
+  },
+  {
+    "Index": 10,
+    "Title": "52ABP",
+    "Description": "Official website of the 52ABP framework",
+    "Link": "https://www.52abp.com/",
+    "Logo": "https://www.52abp.com/favicon.ico"
+  },
+  {
+    "Index": 11,
+    "Title": "dotnet全栈开发",
+    "Description": "A blogger sharing .NET technology",
+    "Link": "https://blog.csdn.net/kebi007",
+    "Logo": "https://blog.csdn.net/favicon.ico"
+  },
+  {
+    "Index": 12,
+    "Title": "程序设计实验室",
+    "Description": "A platform for technical exploration and sharing, covering web frontend and backend, mobile development, machine learning, data analysis, algorithms, Linux, and agile team practice.",
+    "Link": "http://blog.deali.cn",
+    "Logo": "https://blog.sblt.deali.cn:9000/favicon.ico"
+  },
+  {
+    "Index": 13,
+    "Title": "江湖人士",
+    "Description": "A website sharing site-building techniques and other technical content",
+    "Link": "https://jhrs.com/",
+    "Logo": "https://jhrs.com/favicon.ico"
+  },
+  {
+    "Index": 14,
+    "Title": "King-AbpVnext-Pro",
+    "Description": "A ready-to-use admin system solution",
+    "Link": "https://menglou.github.io/king-abpvnext-pro",
+    "Logo": "https://menglou.github.io/king-abpvnext-pro/_media/icon.jpg"
+  }
+]

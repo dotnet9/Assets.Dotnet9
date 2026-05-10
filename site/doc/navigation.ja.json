@@ -1,0 +1,94 @@
+[
+  {
+    "Name": "ようこそ",
+    "Children": [
+      {
+        "Name": "概要",
+        "Memo": "主要オープンソースプロジェクトの索引",
+        "Slug": "readme",
+        "Repository": "https://github.com/dotnet9"
+      }
+    ]
+  },
+  {
+    "Name": "サイト",
+    "Memo": "サイトのソースコードとリソースリポジトリ",
+    "Slug": "website",
+    "Children": [
+      {
+        "Name": "CodeWF",
+        "Memo": "dotnet9.com / codewf.com のサイトソースリポジトリ",
+        "Slug": "codewf",
+        "Repository": "https://github.com/dotnet9/CodeWF"
+      },
+      {
+        "Name": "Assets.Dotnet9",
+        "Memo": "記事、文書、画像、サイト設定のリソースリポジトリ",
+        "Slug": "assets-dotnet9",
+        "Repository": "https://github.com/dotnet9/Assets.Dotnet9"
+      }
+    ]
+  },
+  {
+    "Name": "C# 汎用",
+    "Memo": "イベント通信、ネットワークプロトコル、基盤ライブラリ",
+    "Slug": "csharp",
+    "Children": [
+      {
+        "Name": "CodeWF.EventBus.Socket",
+        "Memo": "TCP Socket ベースの軽量プロセス間イベントバス",
+        "Slug": "codewf-eventbus-socket",
+        "Repository": "https://github.com/dotnet9/CodeWF.EventBus.Socket"
+      },
+      {
+        "Name": "CodeWF.EventBus",
+        "Memo": "Command、Query、複数の IOC シナリオに対応するプロセス内イベントバス",
+        "Slug": "codewf-eventbus",
+        "Repository": "https://github.com/dotnet9/CodeWF.EventBus"
+      },
+      {
+        "Name": "CodeWF.NetWeaver",
+        "Memo": "ネットワークパケット直列化コアライブラリと TCP/UDP ラッパー基盤",
+        "Slug": "codewf-netweaver",
+        "Repository": "https://github.com/dotnet9/CodeWF.NetWeaver"
+      }
+    ]
+  },
+  {
+    "Name": "Avalonia",
+    "Memo": "Avalonia のコントロール、ツール、ログ、Markdown、多言語エコシステム",
+    "Slug": "avalonia",
+    "Children": [
+      {
+        "Name": "CodeWF.AvaloniaControls",
+        "Memo": "Avalonia 12 向けの汎用コントロールとテーマパッケージ",
+        "Slug": "codewf-avalonia-controls",
+        "Repository": "https://github.com/dotnet9/CodeWF.AvaloniaControls"
+      },
+      {
+        "Name": "CodeWF.LogViewer",
+        "Memo": "軽量ログライブラリと Avalonia ログビューアコントロール",
+        "Slug": "codewf-logviewer",
+        "Repository": "https://github.com/dotnet9/CodeWF.LogViewer"
+      },
+      {
+        "Name": "Lang.Avalonia",
+        "Memo": "Avalonia UI 向けプラグイン型多言語ライブラリ",
+        "Slug": "lang-avalonia",
+        "Repository": "https://github.com/dotnet9/Lang.Avalonia"
+      },
+      {
+        "Name": "CodeWF.Markdown",
+        "Memo": "Avalonia Markdown 描画コントロールとタイポグラフィテーマ",
+        "Slug": "codewf-markdown",
+        "Repository": "https://github.com/dotnet9/CodeWF.Markdown"
+      },
+      {
+        "Name": "CodeWF.Toolbox",
+        "Memo": "Avalonia + Prism ベースのモジュール型クロスプラットフォームデスクトップツールボックス",
+        "Slug": "codewf-toolbox",
+        "Repository": "https://github.com/dotnet9/CodeWF.Toolbox"
+      }
+    ]
+  }
+]
