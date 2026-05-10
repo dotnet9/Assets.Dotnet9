@@ -1,27 +1,3 @@
----
-title: "(7)从护士到C#开发者--面向对象编程基础"
-slug: from-nurse-to-csharp-developer-my-learning-journey-7
-description: "作为一名从护理行业转行的程序员，我将分享如何通过医护工作经验来理解面向对象编程的概念。本文将介绍类、对象、属性、方法等面向对象的核心概念，并结合医疗保健领域的实例来加深理解。"
-date: 2025-03-14 09:54:12
-lastmod: 2025-03-18 21:15:23
-author: 勇敢的天使
-copyright: Contributes
-draft: false
-cover: https://img1.dotnet9.com/2025/02/cover_02.png
-categories:
-  - 分享
-  - 课程
-  - .NET
-albums:
-  - 从护士到C#开发者
-tags:
-  - .NET
-  - C#
-  - 转行开发
-  - 编程
-  - 面向对象
----
-
 ## 引言
 
 作为一名从护理行业转行到编程领域的新手，我发现面向对象编程（OOP）概念实际上与医疗实践有许多相似之处。在这篇文章中，我将分享我如何通过医护工作经验来理解面向对象编程的基本概念，希望能帮助其他正在学习编程的医护人员。

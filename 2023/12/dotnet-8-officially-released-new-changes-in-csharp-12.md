@@ -1,23 +1,3 @@
----
-title: .NET Core 3.1 升级到 .NET 8
-slug: upgrade-net-core-3-1-to-net-8
-description: ".NET Core 3.1 已经用了很长一段时间，其实在 2022 年的年底微软已经不提供支持了，后面的一个 LTS 版本 .NET 6 也会在 2024 年 11 月终止支持，所以直接升级到 .NET 8 是最好的选择。"
-date: 2023-12-08 05:12:14
-lastmod: 2023-12-08 05:27:41
-author: 不止dotNET
-originalTitle: .NET Core 3.1 升级到 .NET 8
-originalLink: https://mp.weixin.qq.com/s/2U4JfJPLa_53ybL2ETAMsw
-copyright: Reprinted
-draft: false
-cover: https://img1.dotnet9.com/2023/12/cover_01.jpg
-categories:
-  - .NET
-tags:
-  - .NET
-  - C#
-  - 技术更新
----
-
 .NET Core 3.1 已经用了很长一段时间，其实在 2022 年的年底微软已经不提供支持了，后面的一个 LTS 版本 .NET 6 也会在 2024 年 11 月终止支持，所以直接升级到 .NET 8 是最好的选择。
 
 微软官方推出了升级工具：[Upgrade Assistant](https://dotnet.microsoft.com/zh-cn/platform/upgrade-assistant/tutorial/intro) 。

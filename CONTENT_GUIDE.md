@@ -7,13 +7,13 @@ This repository is the content source for the CodeWF website.
 Recommended path:
 
 ```text
-YYYY/MM/slug.md
+YYYY/MM/slug.md   Article body
+YYYY/MM/slug.yml  Article metadata
 ```
 
-Recommended front matter:
+Recommended sidecar metadata (`YYYY/MM/slug.yml`):
 
 ```yaml
----
 title: Example title
 slug: example-slug
 description: One-sentence summary for list pages and SEO.
@@ -30,8 +30,9 @@ tags:
   - Razor Pages
 author: Dotnet9
 draft: false
----
 ```
+
+The matching `.md` file should contain only the article body. Keep metadata in `.yml` so article text and listing/SEO data can be reviewed independently.
 
 Required fields for publish-ready articles:
 

@@ -1,24 +1,3 @@
----
-title: Blazor开源组件库 - Ant Design Blazor
-slug: another-powerful-tool-for-client-side-web-development-with-dotnet-ant-design-blazer
-description: "继上篇介绍Bootstrap风格的BlazorUI组件库后，今天我来介绍另一款Blazor UI组件库：一套基于 Ant Design 和 Blazor 的企业级组件库。"
-date: 2020-06-21 13:45:56
-lastmod: 2020-06-21 13:45:56
-originalTitle: .NET进行客户端Web开发又一利器 - Ant Design Blazor
-copyright: Original
-draft: false
-cover: https://img1.dotnet9.com/2020/06/0109.jpg
-categories:
-  - Blazor
-albums:
-  - Blazor组件库
-tags:
-  - .NET
-  - Blazor
-  - 开源
-  - 开源Blazor
----
-
 你好，我是沙漠尽头的狼，继上篇介绍 Bootstrap 风格的 BlazorUI 组件库后，今天我来介绍另一款 Blazor UI 组件库：一套基于 Ant Design 和 Blazor 的企业级组件库。
 
 本文导航：

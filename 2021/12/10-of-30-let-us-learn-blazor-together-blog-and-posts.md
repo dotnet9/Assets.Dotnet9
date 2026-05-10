@@ -1,26 +1,3 @@
----
-title: "(10/30)大家一起学Blazor：Blog and Posts"
-slug: 10-of-30-let-us-learn-blazor-together-blog-and-posts
-description: "现在我们有一个可以输入日志的界面了，但日志就是每天都要写的意思，只有一篇怎么够呢？我们来加上blog。"
-date: 2021-12-14 23:31:22
-lastmod: 2021-12-14 23:31:22
-author: StrayaWorker
-originalTitle: "(10/30)大家一起学Blazor：Blog and Posts"
-originalLink: https://ithelp.ithome.com.tw/articles/10262250
-copyright: Reprinted
-draft: false
-cover: https://img1.dotnet9.com/2021/12/cover_05.png
-categories:
-  - Blazor
-albums:
-  - 一起学Blazor系列
-tags:
-  - .NET
-  - C#
-  - ASP.NET Core
-  - Blazor
----
-
 现在我们有一个可以输入日志的界面了，但日志就是每天都要写的意思，只有一篇怎么够呢？我们来加上 blog。
 
 首先新增`BlogModel`类，里面很简单只有 4 个属性，分别为 Id、名称、日志列表及新增时间。

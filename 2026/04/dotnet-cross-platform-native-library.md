@@ -1,20 +1,3 @@
----
-title: .NET跨平台本地库引入实战
-slug: dotnet-cross-platform-native-library
-description: "深入解析 .NET 项目如何优雅引入第三方本地库，支持 Windows、Linux 多平台，避坑指南"
-date: 2026-04-17 05:24:16
-lastmod: 2026-04-20 23:18:24
-cover: https://img1.dotnet9.com/2026/04/cross-platform-library-cover.svg
-banner: true
-categories:
-  - .NET
-tags:
-  - .NET
-  - C#
-  - 跨平台
-  - Native Library
----
-
 ![](https://img1.dotnet9.com/2026/04/cross-platform-library-cover.svg)
 
 做 .NET 开发时，偶尔需要调用第三方提供的本地库（Native Library），比如硬件SDK、加密库或底层通信组件。这篇文章通过一个实际的Demo项目，分享我在引入跨平台本地库时的两大方案和避坑经验。

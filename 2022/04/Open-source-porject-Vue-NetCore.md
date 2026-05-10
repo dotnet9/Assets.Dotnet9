@@ -1,28 +1,3 @@
----
-title: "开源项目《Vue.NET Core》"
-slug: open-source-porject-vue-net-core
-description: ".NET Core+Vue2/Vue3+Element plus+uniapp前后端分离，全自动生成PC与移动端代码；支持移动端(uniapp)ios/android/h5/微信小程序。http://www.volcore.xyz/"
-date: 2022-04-11 20:22:16
-lastmod: 2022-04-11 20:22:16
-author: x_discoverer
-originalTitle: "开源项目《Vue.NET Core》"
-originalLink: https://gitee.com/x_discoverer/Vue.NET Core
-copyright: Reprinted
-draft: false
-cover: https://img1.dotnet9.com/2022/04/h5.jpg
-categories:
-  - .NET
-albums:
-  - C#开源项目
-  - Web开源项目
-tags:
-  - .NET
-  - C#
-  - Vue
-  - 开源项目
-  - 开源
----
-
 ## Vue + .NET Core 前后端分离，不一样的快速发开框架(提供 Vue2/Vue3 版本)
 
 ## 框架核心

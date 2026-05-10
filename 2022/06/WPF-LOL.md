@@ -1,22 +1,3 @@
----
-title: WPF 英雄联盟
-slug: wpf-lol
-description: 您可以了解如何正确实施 WPF 项目
-date: 2022-06-09 23:11:27
-lastmod: 2022-06-09 23:11:27
-author: 驚鏵 WPF开发者
-originalTitle: WPF 英雄联盟
-originalLink: https://mp.weixin.qq.com/s/vgha1ZRGYU40zR6g7v_1uA
-copyright: Reprinted
-draft: false
-cover: https://img1.dotnet9.com/2022/06/1001.png
-categories:
-  - WPF
-tags:
-  - .NET
-  - WPF
----
-
 > WPF 英雄联盟
 >
 > 作者：Devncore 组织 来自 韩国，首尔

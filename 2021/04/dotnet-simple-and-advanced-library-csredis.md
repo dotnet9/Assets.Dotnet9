@@ -1,25 +1,3 @@
----
-title: .NET Core 简单且高级的库 csredis
-slug: dotnet-simple-and-advanced-library-csredis
-description: 开源免费的redis包
-date: 2021-04-11 09:50:47
-lastmod: 2021-04-11 09:50:47
-author: FreeSql & CSRedis
-originalTitle: .NET Core 简单且高级的库 csredis
-originalLink: https://www.cnblogs.com/kellynic/p/9803314.html
-copyright: Reprinted
-draft: false
-cover: https://img1.dotnet9.com/2021/04/cover_05.png
-categories:
-  - .NET
-tags:
-  - .NET
-  - C#
-  - 开源
-  - Redis
-  - csredis
----
-
 ## 1 前言
 
 .NET Core 从 1.0 发布历经坎坷，一开始各种库缺失到现在的部分完善，走到今天实属不易。

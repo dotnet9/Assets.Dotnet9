@@ -1,23 +1,3 @@
----
-title: 一套Flutter代码多端运行
-slug: a-set-of-flutter-code-runs-at-multiple-ends
-description: "本文不打算介绍功能代码，分享一个油管关于Flutter的分享视频"
-date: 2021-07-10 23:29:38
-lastmod: 2021-07-10 23:29:38
-originalTitle: 一套Flutter代码多端运行
-copyright: Original
-draft: false
-cover: https://img1.dotnet9.com/2021/07/cover_02.png
-categories:
-  - Flutter
-tags:
-  - Flutter
-  - Android
-  - Desktop
-  - iOS
-  - Mac
----
-
 > 参考视频：[https://www.youtube.com/watch?v=\_uOgXpEHNbc](https://www.youtube.com/watch?v=_uOgXpEHNbc)
 >
 > 视频配套源码：[https://github.com/abuanwar072/Flutter-Responsive-Admin-Panel-or-Dashboard](https://github.com/abuanwar072/Flutter-Responsive-Admin-Panel-or-Dashboard)

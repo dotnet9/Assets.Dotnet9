@@ -1,23 +1,3 @@
----
-title: ASP.NET Core可视化日志组件使用
-slug: asp-dotnet-core-visual-log-component
-description: "今天站长推荐一款日志可视化组件`LogDashboard`，可以不用安装第三方进程，只需要在项目中安装相应的**NuGet**包，添加数行代码，就可以实现拥有带Web页面的日志管理面板，十分nice哦。"
-date: 2021-04-17 20:41:31
-lastmod: 2021-04-17 20:41:31
-originalTitle: ASP.NET Core可视化日志组件使用
-copyright: Original
-draft: false
-cover: https://img1.dotnet9.com/2021/04/cover_02.jpg
-categories:
-  - ASP.NET Core
-tags:
-  - .NET
-  - C#
-  - ASP.NET Core
-  - UI设计
-  - NuGet
----
-
 可视化日志组件：LogDashboard：
 
 ![可视化日志组件：LogDashboard](https://img1.dotnet9.com/2021/04/0301.png)

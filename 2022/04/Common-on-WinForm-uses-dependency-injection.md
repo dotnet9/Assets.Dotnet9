@@ -1,24 +1,3 @@
----
-title: "来，Winform使用依赖注入！"
-slug: common-on-winform-uses-dependency-injection
-description: "关于依赖注入是什么？依赖注入是一种具体的编码技巧，对我来说最明显的就是解决代码的耦合性。"
-date: 2022-04-22 07:21:26
-lastmod: 2022-04-22 07:21:26
-author: AZRNG 鹏祥
-originalTitle: "来，WinForm使用依赖注入！"
-originalLink: https://mp.weixin.qq.com/s/murWKgo5KFMmMOJ4UQJWBQ
-copyright: Reprinted
-draft: false
-cover: https://img1.dotnet9.com/2022/04/cover_29.jpg
-categories:
-  - Winform
-tags:
-  - .NET
-  - Winform
-  - 依赖注入
-  - IOC
----
-
 > 站长：Winform 的分享文章不多，这个技术相对来说已经十分稳定了，该有的都有了，今天分享其他号写的 Winform 依赖注入一文，希望做相关开发的朋友能有新的体会。
 
 ## 1. 介绍

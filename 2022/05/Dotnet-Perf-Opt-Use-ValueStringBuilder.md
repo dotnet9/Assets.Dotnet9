@@ -1,23 +1,3 @@
----
-title: .NET性能优化-使用ValueStringBuilder拼接字符串
-slug: dotnet-perf-opt-use-value-string-builder
-description: 这一次要和大家分享的一个Tips是在字符串拼接场景使用的
-date: 2022-05-11 07:13:26
-lastmod: 2022-05-11 07:13:26
-author: InCerry
-originalTitle: .NET性能优化-使用ValueStringBuilder拼接字符串
-originalLink: https://www.cnblogs.com/InCerry/p/Dotnet-Perf-Opt-Use-ValueStringBuilder.html
-copyright: Reprinted
-draft: false
-cover: https://img1.dotnet9.com/2022/05/cover_32.jpg
-categories:
-  - .NET
-tags:
-  - .NET
-  - C#
-  - 性能优化
----
-
 ## 前言
 
 这一次要和大家分享的一个 Tips 是在字符串拼接场景使用的，我们经常会遇到有很多短小的字符串需要拼接的场景，在这种场景下及其的不推荐使用`String.Concat`也就是使用`+=`运算符。

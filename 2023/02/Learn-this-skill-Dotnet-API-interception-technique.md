@@ -1,22 +1,3 @@
----
-title: 快学会这个技能-.NET API拦截技法
-slug: learn-this-skill-dotnet-api-interception-technique
-description: "怎么在不改变源码的情况下，篡改一个方法的入参？伪造返回结果？"
-date: 2023-02-13 20:21:19
-lastmod: 2023-02-13 20:21:19
-copyright: Original
-draft: false
-cover: https://img1.dotnet9.com/2023/02/cover_05.png
-categories:
-  - .NET
-tags:
-  - .NET
-  - C#
-  - 拦截
-  - harmony
-  - hook
----
-
 大家好，我是沙漠尽头的狼。
 
 本文先抛出以下问题，请在文中寻找答案，可在评论区回答：

@@ -1,0 +1,14 @@
+title: "C#百万对象序列化深度剖析：如何在网络传输中实现速度与体积的完美平衡"
+slug: deep-analysis-of-csharp-million-object-serialization-how-to-achieve-a-perfect-balance-between-speed-and-volume-in-network-transmission
+description: "在网络通信中，数据序列化是将对象状态转换为可存储或可传输的形式的过程，这对于TCP网络传输尤为关键。在项目中，当需要处理几十万条数据的传输时，传统的JSON序列化方式由于其冗余的字段名和字符串格式，导致了二进制包体积庞大，且序列化与反序列化的效率低下。为了解决这些问题，我们考虑采用更加高效的序列化方法，以减少包大小并提升处理速度。"
+date: 2023-12-09 12:15:26
+lastmod: 2023-12-11 22:29:29
+copyright: Original
+draft: false
+cover: https://img1.dotnet9.com/2023/11/cover_03.png
+categories:
+  - .NET
+tags:
+  - .NET
+  - C#
+  - 优化

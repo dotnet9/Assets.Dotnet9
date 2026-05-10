@@ -1,21 +1,3 @@
----
-title: "大前端时代的乱流：带你了解最全面的 Flutter Web"
-slug: turbulence-in-the-era-of-big-front-end-take-you-to-know-the-most-comprehensive-fluent-web
-description: "Flutter Web 稳定版本发布至今也有一年多了，经过这一年多的发展，今天就让我们来看看作为大前端时代的乱流，Flutter Web 究竟有什么不同之处，本篇分享主要内容是目前 Flutter 下少有较为全面的 Web 内容。"
-date: 2022-05-09 07:12:27
-lastmod: 2022-05-09 07:12:27
-author: 恋猫de小郭
-originalTitle: "大前端时代的乱流：带你了解最全面的 Flutter Web"
-originalLink: https://juejin.cn/post/7095294020900880420/
-copyright: Reprinted
-draft: false
-cover: https://img1.dotnet9.com/2022/05/cover_28.png
-categories:
-  - Flutter
-tags:
-  - Flutter
----
-
 Flutter Web 稳定版本发布至今也有一年多了，经过这一年多的发展，今天就让我们来看看作为大前端时代的乱流，Flutter Web 究竟有什么不同之处，`本篇分享主要内容是目前  Flutter 下少有较为全面的  Web  内容`。
 
 本篇来自本人在《T 技术沙龙-大前端时代的挑战与机遇（深圳场）》的线下技术分享。

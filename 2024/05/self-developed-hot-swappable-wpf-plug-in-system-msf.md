@@ -1,26 +1,3 @@
----
-title: "自研可热插拔的WPF插件系统(MSF)"
-slug: self-developed-hot-swappable-wpf-plug-in-system-msf
-description: "插件化的需求主要源于对软件架构灵活性的追求，特别是在开发大型、复杂或需要不断更新的软件系统时，插件化可以提高软件系统的可扩展性、可定制性、隔离性、安全性、可维护性、模块化、易于升级和更新以及支持第三方开发等方面的能力，从而满足不断变化的业务需求和技术挑战。"
-date: 2024-05-07 22:30:45
-lastmod: 2024-05-07 23:15:26
-author: 趋时软件
-originalTitle: "自研可热插拔的WPF插件系统(MSF)"
-originalLink: https://mp.weixin.qq.com/s/j7PIlfScHtzUZHB8ouT4lw
-copyright: Reprinted
-draft: false
-cover: https://img1.dotnet9.com/2024/05/0202.png
-banner: false
-categories:
-  - WPF
-tags:
-  - .NET
-  - WPF
-  - 架构设计
-  - 安全
-  - 插件系统
----
-
 > 插件化的需求主要源于对软件架构灵活性的追求，特别是在开发大型、复杂或需要不断更新的软件系统时，插件化可以提高软件系统的可扩展性、可定制性、隔离性、安全性、可维护性、模块化、易于升级和更新以及支持第三方开发等方面的能力，从而满足不断变化的业务需求和技术挑战。
 
 ## 1. 插件化探索

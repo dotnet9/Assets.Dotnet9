@@ -1,24 +1,3 @@
----
-title: "ASP.NET (Core)使用Markdown"
-slug: asp-dotnet-uses-markdown
-description: 分享一下之前学习的一个登录小案例
-date: 2021-11-02 21:57:48
-lastmod: 2021-11-02 21:57:48
-author: 殷慈航
-originalTitle: "ASP.NET (Core)使用Markdown"
-originalLink: https://www.cnblogs.com/jiyuwu/p/11791004.html
-copyright: Reprinted
-draft: false
-cover: https://img1.dotnet9.com/2021/11/cover_04.jpeg
-categories:
-  - ASP.NET Core
-tags:
-  - .NET
-  - C#
-  - ASP.NET Core
-  - Markdown
----
-
 **研究如何使用 Markdown 你们可能要花好几天才能搞定，但是看我的文章或者下载了源码，你搞定一般在 10 分钟之内。我先给各位介绍下它：**
 
 Markdown 是一种轻量级标记语言，它允许人们使用易读易写的纯文本格式编写文档。Markdown 语言在 2004 由约翰·格鲁伯（英语：John Gruber）创建。Markdown 编写的文档可以导出 HTML 、Word、图像、PDF、Epub 等多种格式的文档。随着它的越来越流行我们的网站自然不能落后，那么我来教大家怎么配置使用吧！

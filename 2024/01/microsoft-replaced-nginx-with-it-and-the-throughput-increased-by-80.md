@@ -1,24 +1,3 @@
----
-title: "微软用它取代了Nginx吞吐量提升了百分之八十！"
-slug: microsoft-replaced-nginx-with-it-and-the-throughput-increased-by-80
-description: "Azure应用服务用YARP取代了Nginx，获得了80%以上的吞吐量。他们每天处理160B多个请求(1.9 m RPS)。这是微软的一项了不起的技术创新。"
-date: 2024-01-14 05:52:17
-lastmod: 2024-01-14 06:19:24
-author: tokengo
-originalTitle: "微软用它取代了Nginx吞吐量提升了百分之八十！"
-originalLink: https://mp.weixin.qq.com/s/PSG4HrJzhybfr2oZWgNuNg
-copyright: Reprinted
-draft: false
-cover: https://img1.dotnet9.com/2024/01/cover_06.png
-banner: false
-categories:
-  - .NET
-tags:
-  - .NET
-  - C#
-  - 技术更新
----
-
 ![大佬消息截图](https://img1.dotnet9.com/2024/01/0601.png)
 
 Azure 应用服务用 YARP 取代了 Nginx，获得了 80%以上的吞吐量。他们每天处理 160B 多个请求(1.9 m RPS)。这是微软的一项了不起的技术创新。

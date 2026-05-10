@@ -1,25 +1,3 @@
----
-title: "WPF 通用权限开发框架 (ABP)"
-slug: wpf-general-permission-development-framework-abp
-description: 对于大部分.NET 后端开发者来说, 都比较熟悉目前流行的ABP框架, 基于开源的ABP框架, 可以自己进行二次开发, 无需重新开发一些基础功能
-date: 2022-05-29 10:16:27
-lastmod: 2022-05-29 10:16:27
-author: 痕迹g
-originalTitle: "WPF 通用权限开发框架 (ABP)"
-originalLink: https://www.cnblogs.com/zh7791/p/16321843.html
-copyright: Reprinted
-draft: false
-cover: https://img1.dotnet9.com/2022/05/6001.png
-categories:
-  - 课程
-tags:
-  - .NET
-  - C#
-  - WPF
-  - 开源
-  - .NET课程
----
-
 ## 前言
 
 对于大部分.NET 后端开发者来说, 都比较熟悉目前流行的 ABP 框架, 基于开源的 ABP 框架, 可以自己进行二次开发, 无需重新开发一些基础功能, 例如: 用户角色管理、权限、组织、多租户等等。

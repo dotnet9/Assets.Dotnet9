@@ -1,27 +1,3 @@
----
-title: "(1/30)大家一起学Blazor：初见Blazor"
-slug: 1-of-30-let-us-learn-blazor-together-first-time-seeing-blazor
-description: "笔者接触软件行业的时间不长，先后接触三种架构"
-date: 2021-12-09 22:35:19
-lastmod: 2021-12-09 22:35:19
-author: StrayaWorker
-originalTitle: "(1/30)大家一起学Blazor：初见Blazor"
-originalLink: https://ithelp.ithome.com.tw/articles/10258944
-copyright: Reprinted
-draft: false
-cover: https://img1.dotnet9.com/2021/12/cover_05.png
-categories:
-  - Blazor
-albums:
-  - 一起学Blazor系列
-tags:
-  - .NET
-  - C#
-  - ASP.NET Core
-  - Blazor
-  - 架构设计
----
-
 笔者接触软件行业的时间不长，先后接触三种架构，分别为 ASP.NET MVC、ASP.NET Core & Blazor、ASP.NET Core & Angular，由于 ASP.NET MVC 是笔者初入软件行业的新人时期，迷迷糊糊地就在前辈的带领下完成了项目，所以没什么感悟，只是大概了解前后端的差别，前端以 HTTP Request 发送向后端取数据，后端回传数据，前端再将结果呈现在页面上。
 
 待到项目收尾，在主管力推转型之下改用 ASP.NET Core & Blazor 并指派笔者做出模板，笔者搜寻网路资源东拼西凑摸索出了一套堪用的架构，当时只觉得 Blazor 跟 ASP.NET MVC 差距甚大，前端不需要弱类型的 JavaScript，前后端都是强类型的世界，对笔者的懒人个性起到莫大帮助，可惜接下来由于客户需求，只能改用 ASP.NET Core & Angular，没办法深入研究 Blazor。

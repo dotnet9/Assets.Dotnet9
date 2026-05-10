@@ -1,23 +1,3 @@
----
-title: "（1）入门MasaFramework教程"
-slug: getting-started-with-masa-framework-tutorial-1
-description: 首先了解一下MasaFramework是什么
-date: 2023-03-16 22:50:32
-lastmod: 2023-03-16 22:50:32
-author: token的技术分享
-originalTitle: "（1）入门MasaFramework教程"
-originalLink: https://www.cnblogs.com/hejiale010426/p/17209926.html
-copyright: Reprinted
-draft: false
-cover: https://img1.dotnet9.com/2023/03/cover_09.png
-categories:
-  - .NET
-tags:
-  - .NET
-  - C#
-  - MASA Framework
----
-
 ## 首先了解一下 MasaFramework 是什么?
 
 MasaFramework 是一个基于.Net6.0 的后端框架, 可以被用于开发 Web 应用程序、WPF 项目、控制台项目。

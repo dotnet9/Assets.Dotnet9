@@ -1,23 +1,3 @@
----
-title: Blazor 状态管理
-slug: blazor-state-management
-description: "想象一下，您正在填写世界上最长的表格。您已经花了30分钟时间输入详细信息，从地址到您的生日，再到最近访问过的七个国家/地区的列表。您单击“提交”按钮，将立即获得“连接已丢失”消息。"
-date: 2022-04-18 19:53:36
-lastmod: 2022-04-18 19:53:36
-author: 寒冰屋
-originalTitle: Blazor 状态管理
-originalLink: https://blog.csdn.net/mzl87/article/details/104642025
-copyright: Reprinted
-draft: false
-cover: https://img1.dotnet9.com/2022/04/2102.png
-categories:
-  - Blazor
-tags:
-  - .NET
-  - Blazor
-  - 状态管理
----
-
 想象一下，您正在填写世界上最长的表格。您已经花了 30 分钟时间输入详细信息，从地址到您的生日，再到最近访问过的七个国家/地区的列表。您单击“提交”按钮，将立即获得“连接已丢失”消息。不用担心，对吧？只需单击“后退”按钮，… 哦，不！表格是空的。这看起来很野蛮，并且你保证不再再次访问该站点了。
 
 这不是您希望网站访问者获得的体验。因此，了解如何在 Blazor 应用程序中管理状态非常重要。在管理状态的同时尽量减少管理状态所必须编写的代码量？“是的，求你了！”

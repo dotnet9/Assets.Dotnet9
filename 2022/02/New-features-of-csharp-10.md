@@ -1,25 +1,3 @@
----
-title: C# 10的新特性
-slug: new-features-of-csharp-10
-description: "我们很高兴地宣布 C# 10 作为 .NET 6 和 Visual Studio 2022的一部分已经发布了。"
-date: 2022-02-12 10:14:31
-lastmod: 2022-02-12 10:14:31
-author: 微软中国MSDN
-originalTitle: C# 10的新特性
-originalLink: https://mp.weixin.qq.com/s/zLwo05uQOTXg_f2dwgRP-w
-copyright: Reprinted
-draft: false
-cover: https://img1.dotnet9.com/2022/02/cover_03.jpg
-categories:
-  - .NET
-tags:
-  - .NET
-  - C#
-  - Visual Studio
-  - .NET 6
-  - C# 10
----
-
 （本文阅读所需 15 分钟）
 
 我们很高兴地宣布 C# 10 作为 .NET 6 和 Visual Studio 2022 的一部分已经发布了。在这篇文章中，我们将介绍 C# 10 的许多新功能，这些功能使您的代码更漂亮、更具表现力、更快。

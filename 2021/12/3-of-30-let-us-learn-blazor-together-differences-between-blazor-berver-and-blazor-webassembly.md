@@ -1,27 +1,3 @@
----
-title: "(3/30)大家一起学Blazor：Blazor Server和Blazor WebAssembly的差异"
-slug: 3-of-30-let-us-learn-blazor-together-differences-between-blazor-berver-and-blazor-webassembly
-description: "下载Visual Studio后首先建立一个Blazor解决方案，里面建立Blazor Server项目，方案位置可以自己选择(注：新版Visual Studio将Blazor Server跟Blazor WebAssembly的新建项目模板拆分了，较为直观)"
-date: 2021-12-10 00:13:34
-lastmod: 2021-12-10 00:13:34
-author: StrayaWorker
-originalTitle: "(3/30)大家一起学Blazor：Blazor Server和Blazor WebAssembly的差异"
-originalLink: https://ithelp.ithome.com.tw/articles/10259814
-copyright: Reprinted
-draft: false
-cover: https://img1.dotnet9.com/2021/12/cover_05.png
-categories:
-  - Blazor
-albums:
-  - 一起学Blazor系列
-tags:
-  - .NET
-  - Blazor
-  - Visual Studio
-  - Blazor Server
-  - Blazor WebAssembly
----
-
 下载 Visual Studio 后首先建立一个 Blazor 解决方案，里面建立 Blazor Server 项目，方案位置可以自己选择(注：新版 Visual Studio 将 Blazor Server 跟 Blazor WebAssembly 的新建项目模板拆分了，较为直观)，先不管里面的程序，按下 F5 执行后在网页按下 F12 或是 Ctrl+Shift+I 开启开发人员工具(Dev tool)，切换到 Network 页签后重新加载网页，可以看到几个文件，其中 blazor.server.js 就是在服务器跟浏览器之间通过 SingalR 建立 WebSocket 通道的文件。
 
 ![创建解决](https://img1.dotnet9.com/2021/12/0701.png)

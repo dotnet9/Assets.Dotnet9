@@ -1,23 +1,3 @@
----
-title: .NET高级代码审计-反序列化 Gadget之详解XAML
-slug: net-advanced-code-audit-detailed-explanation-of-deserialization-gadget-xaml
-description: ".NET反序列化漏洞 XmlSerializer核心Gadget：XamlReader"
-date: 2022-05-29 09:38:47
-lastmod: 2022-05-29 09:38:47
-author: Ivan1ee dotNet安全矩阵
-originalTitle: .NET高级代码审计-反序列化 Gadget之详解XAML
-originalLink: https://mp.weixin.qq.com/s/8fQNU7i6nqB1kHuL_hhUDw
-copyright: Reprinted
-draft: false
-cover: https://img1.dotnet9.com/2022/05/5909.png
-categories:
-  - .NET
-tags:
-  - .NET
-  - C#
-  - XAML
----
-
 ## 0x01 背景
 
 .NET 反序列化漏洞 `XmlSerializer`核心 Gadget：`XamlReader`，封装于 WPF 核心程序集之一 PresentationFramework.dll，处于 System.Windows.Markup 命名空间下，提供了 XamlReader 和 XamlWriter 两个公开类，XamlReader 类提供的底层 Load 方法可解析 XAML 字符流数据实现创建的.NET 对象实例，还提供了上层封装方法 XamlReader.Parse 用于直接解析 XAML 字符串，XmlSerializer 反序列化链路就是基于此方法达成命令执行。既然脱离不了 XAML，那么就跟随笔者初步认识一下 XAML，学习相关的基本知识。

@@ -1,26 +1,3 @@
----
-title: "(22/30)大家一起学Blazor：ASP.NET Core Identity(2)"
-slug: 22-of-30-let-us-learn-blazor-together-asp-dotnet-core-identity-2
-description: "昨天做的验证只针对`Identity` 系统，没有包含到我们的日志"
-date: 2021-12-22 23:59:48
-lastmod: 2021-12-22 23:59:48
-author: StrayaWorker
-originalTitle: "(22/30)大家一起学Blazor：ASP.NET Core Identity(2)"
-originalLink: https://ithelp.ithome.com.tw/articles/10269706
-copyright: Reprinted
-draft: false
-cover: https://img1.dotnet9.com/2021/12/cover_05.png
-categories:
-  - Blazor
-albums:
-  - 一起学Blazor系列
-tags:
-  - .NET
-  - C#
-  - ASP.NET Core
-  - Blazor
----
-
 昨天做的验证只针对`Identity` 系统，没有包含到我们的日志，如果在未登录状态下于地址栏输入`https://localhost:5018/Blog`，还是可以看到博客，让我们整合验证。
 
 首先在`Blog.razor`外层加上`<AuthorizeView>`，这表示包在其中的内容呈现与否的条件为用户是否获得验证，接着在 Blog 内容外加上`<Authorized>`，顾名思义就是通过验证才能看到内容，另外新增一段未通过验证的`<NotAuthorized>`代码 。这边要记得加上`Context="IdentityContext"`，否则会跟 Blog 的`<EditForm>`本身的`context`产生冲突。

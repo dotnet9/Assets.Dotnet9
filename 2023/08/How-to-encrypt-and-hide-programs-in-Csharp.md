@@ -1,22 +1,3 @@
----
-title: "C# 如何将程序加密隐藏？"
-slug: how-to-encrypt-and-hide-programs-in-csharp
-description: "介绍如何通过LiteDB将自己的程序进行加密，实现介绍一下LiteDB。"
-date: 2023-08-15 20:23:53
-lastmod: 2023-08-15 20:23:53
-author: tokengo
-originalTitle: "c# 如何将程序加密隐藏？"
-originalLink: https://mp.weixin.qq.com/s/JPBwcTfTjFZrSa-iI8gqCQ
-copyright: Reprinted
-draft: false
-cover: https://img1.dotnet9.com/2023/08/cover_02.png
-categories:
-  - .NET
-tags:
-  - .NET
-  - C#
----
-
 下面将介绍如何通过 LiteDB 将自己的程序进行加密，实现介绍一下 LiteDB。
 
 ## LiteDB

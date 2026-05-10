@@ -1,22 +1,3 @@
----
-title: ".NET 项目自动化秘籍：一键更新版本与发布脚本全解析"
-slug: net-project-automation-version-update-and-release-script
-description: "文章详细介绍了如何利用 PowerShell 脚本和批处理文件在 .NET Avalonia UI 项目中实现自动更新程序版本和一键发布。首先，文章解释了 PowerShell 执行策略的设置和修改，以确保脚本能够正常执行。接着，介绍了在 Visual Studio 预生成事件中添加脚本来自动更新版本号的方法，以及如何使用批处理文件在多个平台发布应用程序。最后，提供了一个 PowerShell 脚本示例，该脚本可以根据 Git 标签自动更新程序的版本信息。这些方法能够提高 .NET项目的开发效率和发布流程的便捷性。"
-date: 2025-02-09 15:29:39
-lastmod: 2025-02-21 22:30:23
-copyright: Original
-draft: false
-cover: https://img1.dotnet9.com/2025/02/cover_01.png
-categories:
-  - Avalonia UI
-tags:
-  - .NET
-  - C#
-  - Avalonia UI
-  - Visual Studio
-  - 发布
----
-
 在.NET 开发的旅程中，高效的版本管理和便捷的发布流程是提升开发效率和项目质量的关键环节。今天，我们就来深入探讨一下如何利用脚本实现.NET Avalonia UI 项目（当然，这些方法也适用于其他.NET 项目）的自动更新程序版本以及一键发布，让你的开发过程更加流畅和高效。
 
 #### PowerShell 脚本执行权限检查

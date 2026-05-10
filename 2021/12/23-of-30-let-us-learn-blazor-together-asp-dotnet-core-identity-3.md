@@ -1,26 +1,3 @@
----
-title: "(23/30)大家一起学Blazor：ASP.NET Core Identity(3)"
-slug: 23-of-30-let-us-learn-blazor-together-asp-dotnet-core-identity-3
-description: "前面有说到`UserAuthentication()`跟`UserAuthorization()`，这两个的差别在于：前者用于验证登录者是谁，后者则决定登录者可以做什么。"
-date: 2021-12-23 22:19:53
-lastmod: 2021-12-23 22:19:53
-author: StrayaWorker
-originalTitle: "(23/30)大家一起学Blazor：ASP.NET Core Identity(3)"
-originalLink: https://ithelp.ithome.com.tw/articles/10270593
-copyright: Reprinted
-draft: false
-cover: https://img1.dotnet9.com/2021/12/cover_05.png
-categories:
-  - Blazor
-albums:
-  - 一起学Blazor系列
-tags:
-  - .NET
-  - C#
-  - ASP.NET Core
-  - Blazor
----
-
 前面有说到`UserAuthentication()`跟`UserAuthorization()`，这两个的差别在于：前者用于验证登录者是谁，后者则决定登录者可以做什么。
 
 举例来说，一个员工要登录员工系统，他必须输入账号(如员工 ID、姓名或是 email)、密码，系统才能知道是谁登录了，这就是`Authentication(验证)`，处理`Authentication` 的方式有`Cookie`、`Token`、`第三方验证(OAuth 或API-token)`、`OpenId`及`SAML`。

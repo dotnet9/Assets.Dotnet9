@@ -1,26 +1,3 @@
----
-title: "(13/30)大家一起学Blazor：EventCallback, event from child to parent"
-slug: 13-of-30-let-us-learn-blazor-together-eventcallback-event-from-child-to-parent
-description: "目前的4篇日志是来自我们写好的假数据，但正常来说不会这样做，而是有个按钮让用户点击了之后，增加或减少日志的数量。"
-date: 2021-12-16 20:48:19
-lastmod: 2021-12-16 20:48:19
-author: StrayaWorker
-originalTitle: "(13/30)大家一起学Blazor：EventCallback, event from child to parent"
-originalLink: https://ithelp.ithome.com.tw/articles/10262982
-copyright: Reprinted
-draft: false
-cover: https://img1.dotnet9.com/2021/12/cover_05.png
-categories:
-  - Blazor
-albums:
-  - 一起学Blazor系列
-tags:
-  - .NET
-  - C#
-  - ASP.NET Core
-  - Blazor
----
-
 目前的 4 篇日志是来自我们写好的假数据，但正常来说不会这样做，而是有个按钮让用户点击了之后，增加或减少日志的数量。
 
 增加的按钮会放在`<Blog>`，点击了「增加」按钮产生一条新的 Post 供用户输入，再让用户点击「确认」按钮储存日志。

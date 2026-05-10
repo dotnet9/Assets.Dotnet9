@@ -1,23 +1,3 @@
----
-title: "你知道WPF与Winforms的区别吗？"
-slug: do-you-know-the-difference-between-wpf-and-winform
-description: "介绍两种开发Windows桌面应用程序的方法之间的主要区别，这些方法可以在现代系统开发中发挥更好的作用。"
-date: 2021-04-07 23:59:02
-lastmod: 2021-04-07 23:59:02
-originalTitle: "你知道WPF与WinForms的区别吗？"
-copyright: Original
-draft: false
-cover: https://img1.dotnet9.com/2021/04/cover_06.jpg
-categories:
-  - WPF
-  - Winform
-tags:
-  - .NET
-  - C#
-  - WPF
-  - Winform
----
-
 ## 介绍
 
 WPF 的缩写指微软的 Windows Presentation Foundation，而 WinForms 是 Windows Forms Applications 的简单组合。这两个都是微软的 Windows 应用程序图形用户界面，开发人员可以使用它们来开发 Windows 桌面应用程序。本文重点介绍两种开发 Windows 桌面应用程序的方法之间的主要区别，这些方法可以在现代系统开发中发挥更好的作用。

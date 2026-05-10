@@ -1,22 +1,3 @@
----
-title: "Maui学习之路(2)-Mac窗体设置"
-slug: maui-learning-road-one-mac-form-settings
-description: "发现微软官网的`UIKit`官方文档居然比`Apple`提供的还要全面"
-date: 2022-06-02 21:21:27
-lastmod: 2022-06-02 21:21:27
-author: 轩研 WPF开发者
-originalTitle: "Maui学习之路(2)-Mac窗体设置"
-originalLink: https://mp.weixin.qq.com/s/G3hhhl4L3MYi_74_AV_ybg
-copyright: Reprinted
-draft: false
-cover: https://img1.dotnet9.com/2022/06/0208.png
-categories:
-  - MAUI
-tags:
-  - .NET
-  - MAUI
----
-
 今天是我开启`Maui`学习之路的第二天，我不是很高兴又能水一篇文章，我只能说这文章真好水。
 
 话不多说，我们进入正题，昨天解决了`Windows`下`TitleBar`以及窗体大小的问题，今天同样的问题，在`Mac`上又要解决一遍，这真的是让我又气又恨。

@@ -1,26 +1,3 @@
----
-title: "WPF|分享一个登录界面设计"
-slug: wpf-share-a-login-interface-design
-description: 分享一个WPF登录界面设计
-date: 2022-05-11 07:45:42
-lastmod: 2022-05-11 07:45:42
-author: 沙漠尽头的狼
-originalTitle: "WPF|分享一个登录界面设计"
-originalLink: https://mp.weixin.qq.com/s/seSaQkhkE7dpWqoiQ96fzQ
-copyright: Reprinted
-draft: false
-cover: https://img1.dotnet9.com/2022/05/cover_34.png
-categories:
-  - WPF
-albums:
-  - WPF UI设计
-tags:
-  - .NET
-  - WPF
-  - UI设计
-  - WPF UI设计
----
-
 分享一个登录界面，先看效果图：
 
 ![](https://img1.dotnet9.com/2022/05/3401.gif)

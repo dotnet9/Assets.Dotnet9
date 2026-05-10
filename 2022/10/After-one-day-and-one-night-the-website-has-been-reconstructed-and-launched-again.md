@@ -1,21 +1,3 @@
----
-title: "经过一天一夜，网站又重构上线！"
-slug: after-one-day-and-one-night-the-website-has-been-reconstructed-and-launched-again
-description: "一个晚上Razor Pages技术点学习，一个白天进行网站前台重构，累！"
-date: 2022-10-08 11:01:46
-lastmod: 2022-10-08 11:01:46
-author: 沙漠尽头的狼
-copyright: Original
-draft: false
-cover: https://img1.dotnet9.com/2022/10/razor-pages-blog-cover.png
-categories:
-  - 更多语言
-tags:
-  - .NET
-  - Go
-  - Razor Pages
----
-
 大家好，我是沙漠尽头的狼。
 
 今天因为疫情在家封控，将网站用 [Razor Pages](https://learn.microsoft.com/zh-cn/aspnet/core/razor-pages/?WT.mc_id=dotnet-35129-website&view=aspnetcore-7.0&tabs=visual-studio) 进行了重构：

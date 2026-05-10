@@ -1,20 +1,3 @@
----
-title: "如何在.NET 6里画图？"
-slug: how-to-draw-pictures-in-dotnet-6
-description: 查阅微软资料发现从.NET 6开始只能在只能在windows上使用, 不过好在官方也给了几条解决方案
-date: 2023-05-28 21:31:28
-lastmod: 2023-05-28 21:31:28
-author: VleaStwo
-copyright: Contributes
-draft: false
-cover: https://img1.dotnet9.com/2023/05/cover_03.png
-categories:
-  - .NET
-tags:
-  - .NET
-  - C#
----
-
 > 本文由网友投稿，欢迎更多的朋友来分享。
 >
 > 作者：VleaStwo

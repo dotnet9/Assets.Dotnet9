@@ -1,21 +1,3 @@
----
-title: C#使用Refit对接WebService接口
-slug: csharp-use-refit-to-interface-with-webservice
-description: "群友说.NET Core无法对接WebService，站长找了些资料，希望能帮助到他"
-date: 2023-03-15 20:33:14
-lastmod: 2023-03-15 20:33:14
-copyright: Original
-draft: false
-cover: https://img1.dotnet9.com/2023/03/cover_07.jpg
-categories:
-  - .NET
-tags:
-  - .NET
-  - C#
-  - Refit
-  - WebService
----
-
 Refit 是一款强大的类型安全的 RESTful HTTP 客户端库，它能够帮助我们轻松地与 Web API 进行通信。不过在本问题中，我们需要使用 Refit 与 Web Service 进行通信，因此需要对 Refit 进行一些特定的配置。
 
 下面是一个使用 Refit 调用 Web Service 接口的示例：

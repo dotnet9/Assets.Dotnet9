@@ -1,21 +1,3 @@
----
-title: "劳动仲裁回忆录（六）：一审开庭"
-slug: memoirs-of-labor-arbitration-6-first-instance-hearing
-description: 个人全程劳动仲裁实录
-date: 2022-03-17 23:31:23
-lastmod: 2022-03-17 23:31:23
-author: 逃离沙漠
-originalTitle: "劳动仲裁回忆录（六）：一审开庭"
-originalLink: https://mp.weixin.qq.com/s/O9oOq5MHXbfmiKUa3e74fQ
-copyright: Reprinted
-draft: false
-cover: https://img1.dotnet9.com/2022/03/cover_12.jpeg
-categories:
-  - 分享
-tags:
-  - 劳动仲裁
----
-
 > 免责声明：本篇只记录了我个人劳动仲裁一审的过程，所陈述的内容及对话全凭记录回忆而书写，不保证内容与实际对话是一字不差。所描述的内容及场景有个人的感受在里边，也不能保证与现实客观情况一致，所述观点皆为个人感受，不代表我对任何人和任何单位的评价，对后果不负责。请选择性浏览相关内容。
 
 前面的篇幅中，我介绍了我于 2021 年 3 月 2 日立案，5 月 21 提交证据，5 月 24 日开庭，7 月 12 日领取裁决书，并得知公司不服裁决而上诉等相关事情，然后等待我的将是一审。

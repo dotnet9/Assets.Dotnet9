@@ -1,26 +1,3 @@
----
-title: Avalonia UI的演进逻辑与Qt生态深度对比
-slug: avalonia-ui-qt-ecosystem-comparison
-description: "在软件工程的演进史中，跨平台图形用户界面（GUI）的开发始终是一个充满了妥协、权衡与技术博弈的领域。"
-date: 2025-12-11 07:26:17
-lastmod: 2025-12-11 08:14:35
-author: 张善友MVP dotNET跨平台
-originalTitle: Avalonia UI的演进逻辑与Qt生态深度对比
-originalLink: https://mp.weixin.qq.com/s/SyhLR8ic-_g-uDEakqCmKw
-copyright: Reprinted
-cover: https://img1.dotnet9.com/2025/12/cover_01.png
-banner: false
-categories:
-  - WPF
-  - Avalonia UI
-tags:
-  - .NET
-  - WPF
-  - Avalonia UI
-  - 跨平台 GUI
-  - Avalonia
----
-
 ![](https://img1.dotnet9.com/2025/12/cover_01.png)
 
 ## **一 引言：跨平台图形界面的历史张力与技术真空**

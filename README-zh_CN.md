@@ -22,7 +22,7 @@ English version: [README.md](./README.md)
 ## 目录说明
 
 ```text
-2019/ ... 2026/      按年份、月份组织的文章与配图
+2019/ ... 2026/      按年份、月份组织的文章正文、sidecar 元数据与配图
 site/
   about.md           关于页内容
   Privacy.md         隐私页内容
@@ -54,7 +54,8 @@ site/
 
 ## 维护建议
 
-- 文章统一放在 `YYYY/MM/slug.md`
+- 文章正文统一放在 `YYYY/MM/slug.md`
+- 文章元数据统一放在同名 `YYYY/MM/slug.yml`
 - 封面、配图尽量使用有语义的文件名
 - 新增分类、专题、文档、工具时同步维护对应的 `site/*.json` 或 `site/**/navigation.json`
 - 不提交本地临时文件、导出缓存或无关桌面文件

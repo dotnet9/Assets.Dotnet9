@@ -1,19 +1,3 @@
----
-title: 简单总结分享这次go博客前台开发
-slug: briefly-summarize-and-share-this-go-blog-front-end-development
-description: "有网友让分享，简单说说吧"
-date: 2022-10-10 09:41:26
-lastmod: 2022-10-10 09:41:26
-author: 沙漠尽头的狼
-copyright: Original
-draft: false
-cover: https://img1.dotnet9.com/2022/10/go-blog-new-cover.png
-categories:
-  - 更多语言
-tags:
-  - Go
----
-
 大家好，我是沙漠尽头的狼。
 
 ![本文写作由来](https://img1.dotnet9.com/2022/10/blog-post-write-reason.png)

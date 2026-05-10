@@ -1,19 +1,3 @@
----
-title: "善用Xcode快捷键，提高您的生产力"
-slug: use-xcode-shortcuts-to-increase-your-productivity
-description: "如果你是一个iOS、macOS、tvOS或watchOS的开发者，Xcode或许是你最常接触的IDE。"
-date: 2021-06-22 22:57:07
-lastmod: 2021-06-22 22:57:07
-originalTitle: "善用Xcode快捷键，提高您的生产力"
-copyright: Original
-draft: false
-cover: https://img1.dotnet9.com/2021/06/cover_02.jpg
-categories:
-  - 分享
-tags:
-  - Xcode
----
-
 > - 原文标题：13 Xcode Shortcuts to Boost Your Productivity
 > - 原文链接：https://betterprogramming.pub/13-xcode-shortcuts-to-boost-your-productivity-329c90512309
 > - 原文作者：Anupam Chugh

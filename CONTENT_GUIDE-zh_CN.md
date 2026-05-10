@@ -9,13 +9,13 @@ English version: [CONTENT_GUIDE.md](./CONTENT_GUIDE.md)
 推荐路径：
 
 ```text
-YYYY/MM/slug.md
+YYYY/MM/slug.md   文章正文
+YYYY/MM/slug.yml  文章元数据
 ```
 
-推荐 Front Matter：
+推荐 sidecar 元数据（`YYYY/MM/slug.yml`）：
 
 ```yaml
----
 title: 示例标题
 slug: example-slug
 description: 用于列表摘要和 SEO 的一句话简介。
@@ -32,8 +32,9 @@ tags:
   - Razor Pages
 author: Dotnet9
 draft: false
----
 ```
+
+同名 `.md` 文件只保留 Markdown 正文，标题、摘要、分类、专题、标签、封面等信息统一放到 `.yml`，方便单独维护和翻译。
 
 发布级文章建议至少包含：
 

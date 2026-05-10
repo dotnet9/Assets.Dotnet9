@@ -1,22 +1,3 @@
----
-title: 10分钟实现.NET程序在linux下的自动部署
-slug: automatic-deployment-of-dotnet-program-under-linux-in-10-minutes
-description: "一直以来，程序署都是非常麻烦且无聊的事情，在公司一般都会有 devops 方案，整个 cicd 过程涉及的工具还是挺多的，搭建起来比较麻烦。"
-date: 2022-07-02 21:57:29
-lastmod: 2022-07-02 21:57:29
-author: xhznl
-originalTitle: 10分钟实现dotnet程序在linux下的自动部署
-originalLink: https://www.cnblogs.com/xhznl/p/16438063.html
-copyright: Reprinted
-draft: false
-cover: https://img1.dotnet9.com/2022/07/0203.png
-categories:
-  - .NET
-tags:
-  - .NET
-  - C#
----
-
 ## 背景
 
 一直以来，程序部署都是非常麻烦且无聊的事情，在公司一般都会有 devops 方案，整个 ci/cd 过程涉及的工具还是挺多的，搭建起来比较麻烦。那么对于一些自己的小型项目，又不想搭建一套这样的环境，怎么办呢。。。前段时间尝试了一下 阿里云效 pipeline + gitee + ecs ，还是挺方便的，主要是免费^ ^，服务器也可以用自建的或者其他的，下面就分享一下如何使用。

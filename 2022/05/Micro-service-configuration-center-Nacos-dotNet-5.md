@@ -1,24 +1,3 @@
----
-title: 微服务 配置中心 Nacos .NET 5
-slug: micro-service-configuration-center-nacos-dotnet-5
-description: "基于Nacos来一篇关于微服务的配置中心方案Demo。"
-date: 2022-05-17 22:14:36
-lastmod: 2022-05-17 22:14:36
-author: 蓝创精英团队
-originalTitle: 微服务 配置中心 Nacos .NET 5
-originalLink: https://blog.csdn.net/i2blue/article/details/124827269
-copyright: Reprinted
-draft: false
-cover: https://img1.dotnet9.com/2022/05/cover_46.jpeg
-categories:
-  - .NET
-tags:
-  - .NET
-  - C#
-  - 架构设计
-  - Web API
----
-
 基于 Nacos 来一篇关于微服务的配置中心方案 Demo。
 
 Nacos 是开源的，同时，阿里云也有收费的关于它的服务，公司刚好是依托阿里云的服务体系，所以，使用它作为配置中心的可能性还是很大的，所以，基于它，来了一个示例。

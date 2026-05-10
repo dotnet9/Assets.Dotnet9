@@ -1,26 +1,3 @@
----
-title: "WPF ComboBox里嵌入TreeView的实现（MVVM）"
-slug: wpf-combobox-with-treeview-demo
-description: "因为项目需要，需要ComboBox控件里有树形结构"
-date: 2022-11-01 21:31:26
-lastmod: 2022-11-01 21:31:26
-author: hlpinghcg
-originalTitle: "WPF ComboBox里嵌入TreeView的实现（MVVM）"
-originalLink: https://blog.csdn.net/qq_28149763/article/details/126539635
-copyright: Reprinted
-draft: false
-cover: https://img1.dotnet9.com/2022/11/0103.gif
-categories:
-  - WPF
-albums:
-  - WPF MVVM框架 Prism系列
-tags:
-  - .NET
-  - C#
-  - WPF
-  - MVVM
----
-
 > 本文来自转载。
 >
 > 作者：hlpinghcg

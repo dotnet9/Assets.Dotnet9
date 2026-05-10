@@ -1,26 +1,3 @@
----
-title: "(9/30)大家一起学Blazor：Parameters"
-slug: 9-of-30-let-us-learn-blazor-together-parameters
-description: "假如我们想增加的按钮用来清除`form`（表单）的数据，最快的方式是增加一个`type=”reset”`的按钮，这时候就用到两个按钮了，可以用到Blazor的核心概念：组件封装。"
-date: 2021-12-14 22:18:54
-lastmod: 2021-12-14 22:18:54
-author: StrayaWorker
-originalTitle: "(9/30)大家一起学Blazor：Parameters"
-originalLink: https://ithelp.ithome.com.tw/articles/10261943
-copyright: Reprinted
-draft: false
-cover: https://img1.dotnet9.com/2021/12/cover_05.png
-categories:
-  - Blazor
-albums:
-  - 一起学Blazor系列
-tags:
-  - .NET
-  - C#
-  - ASP.NET Core
-  - Blazor
----
-
 假如我们想增加的按钮用来清除`form`（表单）的数据，最快的方式是增加一个`type=”reset”`的按钮，这时候就用到两个按钮了，可以用到 Blazor 的核心概念：组件封装。
 
 我们先在 Shared 文件夹新增一个 Razor 组件名为`MyButton`，定义 3 个变量分别代表按钮类型、按钮样式、按钮名称，注意要在属性上面加上`[Parameter]`，这是告诉 Blazor 这些属性的值来自调用这个组件的父组件。

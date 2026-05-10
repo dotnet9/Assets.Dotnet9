@@ -1,21 +1,3 @@
----
-title: "【单片机入门】(一)应用层软件开发的单片机学习之路-基础知识入门"
-slug: introduction-to-single-chip-microcomputer-introduction-to-basic-knowledge
-description: "硬件也有很多可玩之处，相比于软件，看得见摸得着的东西可能更容易令人接受，做出成品也更容易有成就感"
-date: 2022-10-13 08:05:36
-lastmod: 2022-10-13 08:05:36
-author: 陈显达
-originalTitle: "【单片机入门】(一)应用层软件开发的单片机学习之路-基础知识入门"
-originalLink: https://www.cnblogs.com/1996-Chinese-Chen/p/16786374.html
-copyright: Contributes
-draft: false
-cover: https://img1.dotnet9.com/2022/10/cover_microcontroller_intro.svg
-categories:
-  - 分享
-tags:
-  - 硬件相关
----
-
 > 本文由网友投稿，站长是一点都不懂硬件。
 >
 > 作者：陈显达

@@ -1,26 +1,3 @@
----
-title: .NET 9正式发布
-slug: announcing-dotnet-9
-description: ".NET 9正式发布了！这是.NET迄今为止生产力最高、最现代化、最安全、最智能且性能最强的版本。"
-date: 2024-11-13 01:14:36
-lastmod: 2024-11-13 02:47:19
-author: .NET Team
-originalTitle: Announcing .NET 9
-originalLink: https://devblogs.microsoft.com/dotnet/announcing-dotnet-9/
-copyright: Reprinted
-draft: false
-cover: https://img1.dotnet9.com/2024/11/0701.png
-banner: false
-categories:
-  - .NET
-tags:
-  - .NET
-  - C#
-  - 安全
-  - .NET 9
-  - 正式发布
----
-
 > 本文由AI助力翻译，站长校验。
 
 今日，我们满怀激动地宣布，.NET 9正式发布了！这是.NET迄今为止生产力最高、最现代化、最安全、最智能且性能最强的版本。它凝聚着全球数千名开发者又一年的心血，此次新版本包含了数千项性能、安全以及功能方面的改进。你会发现，从编程语言、开发工具到工作负载，整个.NET技术栈都有了全方位的增强，让你能够基于统一平台进行开发，并轻松地为应用注入人工智能元素。
@@ -240,4 +217,4 @@ NuGet为整个生态系统中的库创建者和使用者都带来了重大改进
 
 此外，在接下来的几个月里，我们还会发布关于.NET 9中涵盖语言、工作负载以及工具等各方面新特性的深度剖析博客文章，所以一定要订阅.NET博客，这样当新文章发布时你就能及时收到通知啦。
 
-我们迫不及待地想看看你使用.NET 9开发出什么样的成果呢。 
+我们迫不及待地想看看你使用.NET 9开发出什么样的成果呢。

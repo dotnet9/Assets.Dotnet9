@@ -1,22 +1,3 @@
----
-title: "码坊“文章标题URL别名生成器”上线"
-slug: code-world-workshop-article-title-url-alias-generator-launched
-description: "码坊是站长新开的一个提供网页在线工具、跨平台桌面和手机应用的开源项目。站长将终致力于为你带来更高效、更便捷的使用体验。今天，站长荣幸地推出“文章标题URL别名生成器”，帮助你轻松创建文章标题的URL别名，提升SEO效果和用户体验。快来码坊，探索更多实用工具吧！"
-date: 2024-01-06 22:42:19
-lastmod: 2024-01-07 00:12:17
-copyright: Original
-draft: false
-cover: https://img1.dotnet9.com/2024/01/cover_01.png
-categories:
-  - Blazor
-tags:
-  - .NET
-  - Blazor
-  - Avalonia UI
-  - 开源项目
-  - 开源
----
-
 大家好，我是沙漠尽头的狼。今天，我要向大家介绍一个非常实用的工具，码坊。
 
 码坊是站长新开发的一个开源项目，提供网页在线工具，同时提供跨平台桌面和手机 App 版本。我们的目标是为你带来更高效、更便捷的在线工具使用体验。今天，我非常荣幸地推出“文章标题 URL 别名生成器”，这个工具可以帮助你轻松创建文章标题的 URL 别名，提升 SEO 效果和用户体验。

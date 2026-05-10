@@ -1,21 +1,3 @@
----
-title: "干货满满！10 分钟看懂 Docker 和 K8S"
-slug: full-of-dry-goods-10-minutes-to-understand-docker-and-k8-s
-description: "2010 年，几个搞 IT 的年轻人，在美国旧金山成立了一家名叫 “dotCloud” 的公司。"
-date: 2023-08-15 21:49:17
-lastmod: 2023-08-15 21:49:17
-author: 多多宜睡
-originalTitle: "干货满满！10 分钟看懂 Docker 和 K8S"
-originalLink: https://my.oschina.net/jamesview/blog/2994112
-copyright: Reprinted
-draft: false
-cover: https://img1.dotnet9.com/2023/08/0401.png
-categories:
-  - Docker
-tags:
-  - Docker
----
-
 本文来源微信号：鲜枣课堂
 
 2010 年，几个搞 IT 的年轻人，在美国旧金山成立了一家名叫 “dotCloud” 的公司。

@@ -1,21 +1,3 @@
----
-title: 项目中常用的19条MySQL优化
-slug: 19-my-sql-optimizations-commonly-used-in-projects
-description: 声明一下优化方案都是基于 Mysql-索引-BTree类型 的
-date: 2022-05-02 17:33:12
-lastmod: 2022-05-02 17:33:12
-author: anchovy
-originalTitle: 项目中常用的19条MySQL优化
-originalLink: https://segmentfault.com/a/1190000012155267
-copyright: Reprinted
-draft: false
-cover: https://img1.dotnet9.com/2022/05/cover_02.png
-categories:
-  - MySQL
-tags:
-  - MySQL
----
-
 在写文章之前，首先感谢 [飞友科技](http://www.variflight.com/) 陆老师提供的文档。。
 
 **声明一下：下面的优化方案都是基于 “ Mysql-索引-[BTree 类型](https://blog.csdn.net/ty_hf/article/details/53526822) ” 的**

@@ -1,22 +1,3 @@
----
-title: "介绍这个库：C# Blazor中显示Markdown文件"
-slug: introducing-this-library-displaying-markdown-files-in-csharp-blazor
-description: "我的想法是，除了提供工具免费使用外，也能让大家了解这个工具是如果开发的，这样应该更方便"
-date: 2022-02-26 22:15:26
-lastmod: 2022-02-26 22:15:26
-originalTitle: "介绍这个库：C# Blazor中显示Markdown文件"
-copyright: Original
-draft: false
-cover: https://img1.dotnet9.com/2022/02/cover_14.jpg
-categories:
-  - Blazor
-tags:
-  - .NET
-  - C#
-  - Blazor
-  - Markdown
----
-
 ## 1 讲目的
 
 前几天上线了一个[在线 Icon 转换工具](https://tool.dotnet9.com/ico)，为了让大家使用放心，改了点代码，在转换下载 Icon 图标后立即删除临时文件，并在工具下面贴上了工具的开发步骤和代码，大家看这样改是否合适，见[Issue 1](https://github.com/dotnet9/dotnet9.com/issues/1)。

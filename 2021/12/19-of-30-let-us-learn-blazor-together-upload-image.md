@@ -1,26 +1,3 @@
----
-title: "(19/30)大家一起学Blazor：图片上传"
-slug: 19-of-30-let-us-learn-blazor-together-upload-image
-description: "在大部分的网站中，上传图片也是很重要的功能，今天我们就来操作下。"
-date: 2021-12-21 22:04:11
-lastmod: 2021-12-21 22:04:11
-author: StrayaWorker
-originalTitle: "(19/30)大家一起学Blazor：图片上传"
-originalLink: https://ithelp.ithome.com.tw/articles/10267909
-copyright: Reprinted
-draft: false
-cover: https://img1.dotnet9.com/2021/12/cover_05.png
-categories:
-  - Blazor
-albums:
-  - 一起学Blazor系列
-tags:
-  - .NET
-  - C#
-  - ASP.NET Core
-  - Blazor
----
-
 在大部分的网站中，上传图片也是很重要的功能，今天我们就来操作下。
 
 **(注：这是用 Blazor Server 的方式，但最好不要上传太多文件，所以限制上传 4 张照片的话就会提示，毕竟这些事都是在服务器上做，负担太大，微软也建议用.NET Core Web API 的方式操作)**

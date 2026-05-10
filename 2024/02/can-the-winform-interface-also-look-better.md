@@ -1,27 +1,3 @@
----
-title: "Winform的界面也可以变好看？"
-slug: can-the-winform-interface-also-look-better
-description: "前几天跟大家介绍了在winform中使用blazor hybrid，而且还说配上blazor的ui可以让我们的winform程序设计的更加好看，接下来我想以一个在winform blazor hybrid中绘图的例子来进行说明，希望对你有所帮助。"
-date: 2024-02-29 05:21:23
-lastmod: 2024-02-29 05:29:14
-author: DotNet学习交流
-originalTitle: "winform的界面也可以变好看？"
-originalLink: https://mp.weixin.qq.com/s/QCAlQNqDW-sicae2ybELkw
-copyright: Reprinted
-draft: false
-cover: https://img1.dotnet9.com/2024/02/0401.gif
-banner: false
-categories:
-  - Winform
-  - Blazor
-tags:
-  - .NET
-  - C#
-  - Blazor
-  - Winform
-  - 混合应用
----
-
 ## 在 winform blazor hybrid 中绘图
 
 前几天跟大家介绍了在 winform 中使用 blazor hybrid，而且还说配上 blazor 的 ui 可以让我们的 winform 程序设计的更加好看，接下来我想以一个在 winform blazor hybrid 中绘图的例子来进行说明，希望对你有所帮助。

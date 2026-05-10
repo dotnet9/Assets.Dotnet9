@@ -1,24 +1,3 @@
----
-title: VS 2022 设计 Winform 高DPI兼容程序
-slug: vs-2022-design-winform-high-dpi-compatible-program
-description: "高DPI下(缩放>100%), UI设计器一直提示缩放到100%, 如果不重启到100%,设计的控件会乱飞."
-date: 2022-05-14 12:02:43
-lastmod: 2022-05-14 12:02:43
-author: AlexChow
-originalTitle: VS 2022 设计 WinForm 高DPI兼容程序
-originalLink: https://www.cnblogs.com/densen2014/p/16142939.html
-copyright: Reprinted
-draft: false
-cover: https://img1.dotnet9.com/2022/05/4014.png
-categories:
-  - Winform
-tags:
-  - .NET
-  - Winform
-  - UI设计
-  - Visual Studio
----
-
 ## 本文主要解决两个问题
 
 - C# Winform 高 DPI 字体模糊.

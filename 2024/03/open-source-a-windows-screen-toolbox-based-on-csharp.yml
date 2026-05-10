@@ -1,0 +1,20 @@
+title: 基于 C# 开源一个 Windows 屏幕工具箱
+slug: open-source-a-windows-screen-toolbox-based-on-csharp
+description: "Windows屏幕工具，功能包括：屏幕截图、贴图、屏幕取色、截图文字、表格识别（需要申请百度OCR服务）、截图翻译、划词翻译。"
+date: 2024-03-08 04:47:41
+lastmod: 2024-03-08 04:58:17
+author: 半栈程序员
+originalTitle: 基于 C# 开源一个 Windows 屏幕工具箱
+originalLink: https://mp.weixin.qq.com/s/OZcpGBaDddsXFDBajosxEw
+copyright: Reprinted
+draft: false
+cover: https://img1.dotnet9.com/2024/03/0205.gif
+banner: false
+categories:
+  - .NET
+tags:
+  - .NET
+  - C#
+  - 开源
+  - 表格识别
+  - 工具箱

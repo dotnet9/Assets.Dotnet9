@@ -1,23 +1,3 @@
----
-title: "最近遇到的问题记录：UrlEncode、UrlDecode"
-slug: recent-problem-records-urlencode-and-urldecode
-description: 简单分享
-date: 2021-01-09 17:03:26
-lastmod: 2021-01-09 17:03:26
-originalTitle: "最近遇到的问题记录：UrlEncode、UrlDecode"
-copyright: Original
-draft: false
-cover: https://img1.dotnet9.com/2021/01/cover_01.jpeg
-categories:
-  - .NET
-tags:
-  - .NET
-  - C#
-  - Web API
-  - UrlDecode
-  - UrlEncode
----
-
 本文阅读前了解知识：[什么时候需要使用 UrlEncode 和 UrlDecode 函数](https://blog.csdn.net/l754539910/article/details/79640925)
 
 作者使用谷歌浏览器，通过按下 F12 对第三方网站 http 协议的接口抓包进行分析操作。

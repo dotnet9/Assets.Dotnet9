@@ -1,22 +1,3 @@
----
-title: 关于Dotnet9仓库迁移及网站Logo和名称变更的重要通知
-slug: important-notice-on-dotnet9-repository-migration-and-website-name-change
-description: "为了避免可能出现的误解和混淆（虽然当初报着碰瓷儿的想法），站长决定将原有的Dotnet9仓库进行归档处理。"
-date: 2024-01-14 05:12:49
-lastmod: 2024-01-14 05:37:27
-copyright: Original
-draft: false
-cover: https://img1.dotnet9.com/2024/01/cover_05.png
-categories:
-  - .NET
-tags:
-  - .NET
-  - C#
-  - Avalonia UI
-  - 码坊
-  - 在线工具
----
-
 **尊敬的各位关注者：**
 
 感谢您一直以来对我（沙漠尽头的狼）个人的公众号【Dotnet9】与[Dotnet9 网站](https://dotnet9.com)（[Dotnet9 仓库](https://github.com/dotnet9/dotnet9.com)）的关注和支持。随着微软技术的不断发展，我们即将迎来 Dotnet9 预览版 1 的发布。在这个重要的时刻，站长希望通过本次通知，与您共同分享个人最新的动态调整。

@@ -1,23 +1,3 @@
----
-title: .NET Core + Angular 项目 部署到CentOS
-slug: dotnet-core-angular-project-deployed-to-cent-os
-description: "最近公司需要开发项目能在Linux系统上运行，示例开发项目采用.NET Core + Angular开发；理论上完全支持跨平台。"
-date: 2022-05-11 06:35:47
-lastmod: 2022-05-11 06:35:47
-author: chaney1992
-originalTitle: .NET Core + Angular 项目 部署到CentOS
-originalLink: https://www.cnblogs.com/cwsheng/p/14129063.html
-copyright: Reprinted
-draft: false
-cover: https://img1.dotnet9.com/2022/05/3002.png
-categories:
-  - .NET
-tags:
-  - .NET
-  - C#
-  - Web API
----
-
 ## 前言
 
 最近公司需要开发项目能在 Linux 系统上运行，示例开发项目采用.NET Core + Angular 开发；理论上完全支持跨平台。

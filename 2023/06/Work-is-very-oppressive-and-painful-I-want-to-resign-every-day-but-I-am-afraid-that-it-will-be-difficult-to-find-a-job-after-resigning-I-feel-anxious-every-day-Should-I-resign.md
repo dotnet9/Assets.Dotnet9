@@ -1,21 +1,3 @@
----
-title: "工作很压抑痛苦，每天都想辞职，又怕辞职后难找到工作，每天都很焦虑，该不该辞职？"
-slug: work-is-very-oppressive-and-painful-i-want-to-resign-every-day-but-i-am-afraid-that-it-will-be-difficult-to-find-a-job-after-resigning-i-feel-anxious-every-day-should-i-resign
-description: "如果你也有类似的困扰，相信这篇回答能够有效的帮助到大家。"
-date: 2023-06-13 23:44:18
-lastmod: 2023-06-13 23:44:18
-author: 常乐士 乐说职场
-originalTitle: "工作很压抑痛苦，每天都想辞职，又怕辞职后难找到工作，每天都很焦虑，该不该辞职？"
-originalLink: https://mp.weixin.qq.com/s/c6SWiemFEHkg7HK2I78ECQ
-copyright: Reprinted
-draft: false
-cover: https://img1.dotnet9.com/2023/06/cover_09.png
-categories:
-  - 分享
-tags:
-  - 分享
----
-
 > 本文来自转载
 >
 > 原文作者：常乐士 乐说职场

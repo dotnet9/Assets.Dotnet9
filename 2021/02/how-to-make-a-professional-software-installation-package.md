@@ -1,23 +1,3 @@
----
-title: "怎么做一个专业的软件安装包？"
-slug: how-to-make-a-professional-software-installation-package
-description: "C/S客户端开发完成，需要将程序交付给用户，直接压缩发给用户是可以的（只是有点不专业），如果能有一个比较好看的安装界面，那档次就不一样了。"
-date: 2021-02-01 17:16:34
-lastmod: 2021-02-01 17:16:34
-originalTitle: "怎么做一个专业的软件安装包？"
-copyright: Original
-draft: false
-cover: https://img1.dotnet9.com/2021/02/cover_04.jpeg
-categories:
-  - 分享
-tags:
-  - .NET
-  - C#
-  - WPF
-  - Winform
-  - 安装包
----
-
 C/S 客户端开发完成，需要将程序交付给用户，直接压缩发给用户是可以的（只是有点不专业），如果能有一个比较好看的安装界面，那档次就不一样了。
 
 本文介绍怎么使用 Adanced Installer 17.9 制作专业的 Windows 客户端安装包，其他软件或者本软件其他版本制作步骤也是类似的，下面是软件安装包制作完成后的安装演示：

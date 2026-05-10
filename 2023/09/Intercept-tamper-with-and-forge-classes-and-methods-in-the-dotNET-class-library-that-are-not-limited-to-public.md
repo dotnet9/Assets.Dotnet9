@@ -1,19 +1,3 @@
----
-title: "拦截、篡改、伪造.NET类库中不限于public的类和方法"
-slug: intercept-tamper-with-and-forge-classes-and-methods-in-the-dotnet-class-library-that-are-not-limited-to-public
-description: "本文除了回顾拦截.NET类库中的方法，实现方法参数的篡改、方法返回结果的伪造，再着重介绍.NET类库中非public类及方法如何拦截。"
-date: 2023-09-22 20:49:57
-lastmod: 2023-09-23 12:31:32
-copyright: Original
-draft: false
-cover: https://img1.dotnet9.com/2023/09/cover_07.png
-categories:
-  - .NET
-tags:
-  - .NET
-  - C#
----
-
 大家好，我是沙漠尽头的狼。
 
 本文首发于[Dotnet9](https://dotnet9.com/2023/09/Intercept-tamper-with-and-forge-classes-and-methods-in-the-dotNET-class-library-that-are-not-limited-to-public)，介绍使用`Lib.Harmony`库拦截第三方`.NET`库方法，达到不修改其源码并能实现修改方法逻辑、预期行为的效果，并且不限于只拦截`public`访问修饰的类及方法，行文目录：

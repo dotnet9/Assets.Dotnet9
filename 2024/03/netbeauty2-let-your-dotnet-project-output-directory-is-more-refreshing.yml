@@ -1,0 +1,15 @@
+title: "NetBeauty2：让你的.NET项目输出目录更清爽"
+slug: netbeauty2-let-your-dotnet-project-output-directory-is-more-refreshing
+description: "在.NET项目开发中，随着项目复杂性的增加，依赖的dll文件也会逐渐增多。这往往导致输出目录混乱，不便于管理和部署。"
+date: 2024-03-11 21:24:16
+lastmod: 2024-03-12 05:14:49
+copyright: Original
+draft: false
+cover: https://img1.dotnet9.com/2024/03/cover_06.png
+categories:
+  - .NET
+tags:
+  - .NET
+  - C#
+  - 输出目录
+  - NetBeauty2

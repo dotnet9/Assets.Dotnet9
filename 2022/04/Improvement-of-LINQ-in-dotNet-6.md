@@ -1,23 +1,3 @@
----
-title: .NET 6 中 LINQ 的改进
-slug: improvement-of-linq-in-dotnet-6
-description: 如题
-date: 2022-04-23 14:29:14
-lastmod: 2022-04-23 14:29:14
-author: 一个小伙子
-originalTitle: .NET 6 中 LINQ 的改进
-originalLink: https://www.cnblogs.com/paopaotang/p/16133578.html
-copyright: Reprinted
-draft: false
-cover: https://img1.dotnet9.com/2022/04/cover_31.jpeg
-categories:
-  - .NET
-tags:
-  - .NET
-  - C#
-  - LINQ
----
-
 ## 1. OrDefault 方法的默认值
 
 `Enumerable.FirstOrDefault` 方法返回一个序列的第一个元素，如果没有找到，则返回一个默认值。在 .NET 6 中，你可以覆盖该方法的默认值。同样，你还可以覆盖 `SingleOrDefault` 和 `LastOrDefault` 方法的默认值。

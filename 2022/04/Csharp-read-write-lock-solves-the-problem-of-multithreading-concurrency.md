@@ -1,22 +1,3 @@
----
-title: C#使用读写锁三行代码简单解决多线程并发写入文件时线程同步的问题
-slug: csharp-read-write-lock-solves-the-problem-of-multithreading-concurrency
-description: "读写锁是以 ReaderWriterLockSlim 对象作为锁管理资源的，不同的 ReaderWriterLockSlim 对象中锁定同一个文件也会被视为不同的锁进行管理"
-date: 2022-04-25 20:41:27
-lastmod: 2022-04-25 20:41:27
-author: Walter_lee2008
-originalTitle: C#使用读写锁三行代码简单解决多线程并发写入文件时线程同步的问题
-originalLink: https://blog.csdn.net/zdhlwt2008/article/details/80702605
-copyright: Reprinted
-draft: false
-cover: https://img1.dotnet9.com/2022/04/cover_35.jpeg
-categories:
-  - .NET
-tags:
-  - .NET
-  - C#
----
-
 ## 1. 知识储备
 
 在开发程序的过程中，难免少不了写入错误日志这个关键功能。实现这个功能，可以选择使用第三方日志插件，也可以选择使用数据库，还可以自己写个简单的方法把错误信息记录到日志文件。

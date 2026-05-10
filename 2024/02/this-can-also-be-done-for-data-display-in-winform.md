@@ -1,27 +1,3 @@
----
-title: Winform中也可以这样做数据展示
-slug: this-can-also-be-done-for-data-display-in-winform
-description: "在做winform开发的过程中，经常需要做数据展示的功能，之前一直使用的是gridcontrol控件，今天想通过一个示例，跟大家介绍一下如何在winform blazor hybrid中使用ant design blazor中的table组件做数据展示。"
-date: 2024-02-29 05:29:42
-lastmod: 2024-02-29 05:42:29
-author: DotNet学习交流
-originalTitle: winform中也可以这样做数据展示
-originalLink: https://mp.weixin.qq.com/s/fmW8S-dP_3uZWROzl3q9WA
-copyright: Reprinted
-draft: false
-cover: https://img1.dotnet9.com/2024/02/0501.gif
-banner: false
-categories:
-  - Winform
-  - Blazor
-tags:
-  - .NET
-  - C#
-  - Blazor
-  - Winform
-  - 混合应用
----
-
 ## 1、前言 ✨
 
 在做 Winform 开发的过程中，经常需要做数据展示的功能，之前一直使用的是 GridControl 控件，今天想通过一个示例，跟大家介绍一下如何在 Winform Blazor Hybrid 中使用 Ant Design Blazor 中的 Table 组件做数据展示。

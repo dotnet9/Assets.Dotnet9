@@ -1,25 +1,3 @@
----
-title: ".NET Core程序瘦身器发布，压缩程序尺寸到1/3"
-slug: the-dotnet-core-program-slimmer-is-released-compressing-the-program-size-to-1-to-3
-description: ".NET Core具有【剪裁未使用的代码】的功能，但是由于它是使用静态分析来实现的，因此它的剪裁效果并不是最优的。"
-date: 2022-03-10 13:12:32
-lastmod: 2022-03-10 13:12:32
-author: 杨中科
-originalTitle: ".NET Core程序瘦身器发布，压缩程序尺寸到1/3"
-originalLink: https://mp.weixin.qq.com/s/U5mwB9Mxjkw1aRfcdO60uQ
-copyright: Reprinted
-draft: false
-cover: https://img1.dotnet9.com/2022/03/cover_08.jpg
-categories:
-  - .NET
-tags:
-  - .NET
-  - C#
-  - .NET Core
-  - 裁剪
-  - 瘦身
----
-
 .NET Core 具有【剪裁未使用的代码】的功能，但是由于它是使用静态分析来实现的，因此它的剪裁效果并不是最优的。它有如下两个缺点：
 
 1. 不支持 Windows Forms 和 WPF，而对于程序剪裁功能需求最强烈的其实反而是桌面程序的开发者。

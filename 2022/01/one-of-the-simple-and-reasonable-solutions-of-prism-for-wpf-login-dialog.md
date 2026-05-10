@@ -1,24 +1,3 @@
----
-title: Prism For WPF Login对话框又简单又合理的方案之一
-slug: one-of-the-simple-and-reasonable-solutions-of-prism-for-wpf-login-dialog
-description: "这是一篇极简的小短文。"
-date: 2022-01-10 20:08:13
-lastmod: 2022-01-10 20:08:13
-originalTitle: Prism For WPF Login对话框又简单又合理的方案之一
-copyright: Original
-draft: false
-cover: https://img1.dotnet9.com/2022/01/cover_01.jpeg
-categories:
-  - WPF
-albums:
-  - WPF MVVM框架 Prism系列
-tags:
-  - .NET
-  - C#
-  - WPF
-  - Prism
----
-
 ## 一、前言
 
 这是一篇极简的小短文。首先感谢站长和各位 WPF 大佬对我的指导，我学到了很多，还是关于利用 Prism 做 Login 对话框的事情，看到站长发过一篇[《WPF Prism 框架 Region 失效了？》](https://mp.weixin.qq.com/s/fEWHp6wGioa6SjJx_hXEvQ)，目前我有一个自认为更合适的解决方法，给大家汇报一下：

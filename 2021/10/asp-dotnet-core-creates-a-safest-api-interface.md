@@ -1,25 +1,3 @@
----
-title: "ASP.NET Core打造一个“最安全”的API接口"
-slug: asp-dotnet-core-creates-a-safest-api-interface
-description: "公司交给你一个任务让你写一个API接口,那么我们应该如何设计？"
-date: 2021-10-21 10:34:33
-lastmod: 2021-10-21 10:34:33
-author: 薛家明
-originalTitle: "ASP.NET Core打造一个“最安全”的API接口"
-originalLink: https://www.cnblogs.com/xuejiaming/p/15384015.html
-copyright: Reprinted
-draft: false
-cover: https://img1.dotnet9.com/2021/10/cover_01.jpeg
-categories:
-  - ASP.NET Core
-tags:
-  - .NET
-  - C#
-  - ASP.NET Core
-  - 安全
-  - API
----
-
 如果公司交给你一个任务让你写一个 api 接口,那么我们应该如何设计这个 api 接口来保证这个接口是对外看起来“高大上”，“羡慕崇拜”,并且使用起来和普通 api 接口无感，并且可以完美接入 aspnetcore 的认证授权体系呢，而不是自定义签名来进行自定义过滤器实现呢(虽然也可以但是并不是最完美的),如何让小白羡慕一眼就知道你是老鸟。
 
 接下来我将给大家分享你不知道的自定义认证授体系。

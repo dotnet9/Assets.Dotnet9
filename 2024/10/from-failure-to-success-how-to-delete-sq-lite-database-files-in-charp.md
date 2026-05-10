@@ -1,22 +1,3 @@
----
-title: "从失败到成功：如何在C#中删除SQLite数据库文件"
-slug: from-failure-to-success-how-to-delete-sq-lite-database-files-in-charp
-description: "SQLite，作为一个轻量级的嵌入式数据库，因其易于使用和部署而广受欢迎。然而，在尝试删除SQLite数据库文件时，开发者可能会遇到一些挑战。本文将分享一个从失败到成功的案例，展示如何在C#中成功删除SQLite数据库文件。"
-date: 2024-10-14 18:26:25
-lastmod: 2024-10-14 19:47:26
-copyright: Original
-draft: false
-cover: https://img1.dotnet9.com/2024/10/cover_01.png
-categories:
-  - .NET
-tags:
-  - .NET
-  - C#
-  - Dapper
-  - ORM
-  - SQLite
----
-
 ## 引言
 
 在开发过程中，有时我们需要动态地创建和删除数据库文件(SQLite文件举例)，特别是在进行单元测试或临时数据存储时。SQLite，作为一个轻量级的嵌入式数据库，因其易于使用和部署而广受欢迎。然而，在尝试删除SQLite数据库文件时，开发者可能会遇到一些挑战。本文将分享一个从失败到成功的案例，展示如何在C#中成功删除SQLite数据库文件。

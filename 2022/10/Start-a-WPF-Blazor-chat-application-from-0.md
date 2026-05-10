@@ -1,23 +1,3 @@
----
-title: "【炫丽】从0开始做一个WPF+Blazor对话小程序"
-slug: start-a-wpf-blazor-chat-application-from-0
-description: "从一个WPF Hello World程序开始，逐渐引入Blazor，做个免费能看的对话小程序耍耍。"
-date: 2022-10-28 22:06:32
-lastmod: 2022-11-07 23:11:28
-author: 沙漠尽头的狼
-copyright: Original
-draft: false
-cover: https://img1.dotnet9.com/2022/10/2-chat-window.png
-categories:
-  - WPF
-  - Blazor
-tags:
-  - .NET
-  - C#
-  - Blazor
-  - WPF
----
-
 大家好，我是沙漠尽头的狼。
 
 >.NET是免费，跨平台，开源，用于构建所有应用的开发人员平台。

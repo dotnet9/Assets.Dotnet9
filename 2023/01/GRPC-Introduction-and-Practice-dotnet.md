@@ -1,23 +1,3 @@
----
-title: "gRPC入门与实操(.NET篇)"
-slug: grpc-introduction-and-practice-dotnet
-description: "长久以来，我们在前后端交互时使用WebApi + JSON方式，后端服务之间调用同样如此"
-date: 2023-01-11 20:47:14
-lastmod: 2023-01-11 20:47:14
-author: 莱布尼茨
-originalTitle: "gRPC入门与实操(.NET篇)"
-originalLink: https://www.cnblogs.com/newton/archive/2023/01/10/17033789.html
-copyright: Reprinted
-draft: false
-cover: https://img1.dotnet9.com/2023/01/cover_02.png
-categories:
-  - .NET
-tags:
-  - .NET
-  - C#
-  - Web API
----
-
 ## 1. 为什么选择 gRPC
 
 ### 1.1. 历史

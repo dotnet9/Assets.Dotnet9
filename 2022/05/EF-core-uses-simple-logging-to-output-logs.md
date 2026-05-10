@@ -1,24 +1,3 @@
----
-title: EF Core使用Simple Logging输出日志
-slug: ef-core-uses-simple-logging-to-output-logs
-description: "在使用EF Core的时候，很多时候需要知道EF Core实际执行的SQL语句是什么。"
-date: 2022-05-04 15:56:21
-lastmod: 2022-05-04 15:56:21
-author: MyIO
-originalTitle: EF Core使用Simple Logging输出日志
-originalLink: https://mp.weixin.qq.com/s/QXBhG_ayoeCcE9dGsgbNKw
-copyright: Reprinted
-draft: false
-cover: https://img1.dotnet9.com/2022/05/cover_08.jpg
-categories:
-  - EF Core
-tags:
-  - .NET
-  - C#
-  - EF Core
-  - ORM
----
-
 在使用 EF Core 的时候，很多时候需要知道 EF Core 实际执行的 SQL 语句是什么。
 
 Simple Logging 是 EF Core 提供的一项功能，可用于在开发和调试应用程序时轻松获取日志。这种形式的日志记录需要最少的配置，而不需要其他 NuGet 包。

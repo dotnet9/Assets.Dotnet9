@@ -1,20 +1,3 @@
----
-title: 告诫之心-翻译转载.NET文章注意事项
-slug: warning-heart-notes-for-translating-and-reproducing-dotnet-articles
-description: "总结：翻译微软开发者博客文章需要申请，不能标原创"
-date: 2022-09-26 07:42:05
-lastmod: 2022-09-26 07:42:05
-author: 沙漠尽头的狼
-copyright: Original
-draft: false
-cover: https://img1.dotnet9.com/2022/09/cover_06.png
-categories:
-  - 分享
-tags:
-  - .NET
-  - C#
----
-
 ## 故事开头
 
 9月15日`Dotnet9网站`站长（沙漠尽头的狼）翻译了 .NET 7 RC1的三篇文章《.NET 7 RC1 发布》、《

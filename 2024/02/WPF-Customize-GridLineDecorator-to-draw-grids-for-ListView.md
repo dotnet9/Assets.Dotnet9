@@ -1,24 +1,3 @@
----
-title: "【WPF】自定义GridLineDecorator给ListView画网格"
-slug: wpf-customize-grid-line-decorator-to-draw-grids-for-list-view
-description: "经常看见有人问在使用WPF的ListView的时候，怎样能够有网格线的效果。"
-date: 2024-02-04 05:02:32
-lastmod: 2024-02-04 05:21:46
-author: 大佛脚下
-originalTitle: "【WPF】自定义GridLineDecorator给ListView画网格"
-originalLink: https://www.cnblogs.com/RMay/archive/2010/12/27/1918048.html
-copyright: Reprinted
-draft: false
-cover: https://img1.dotnet9.com/2024/02/cover_02.png
-banner: false
-categories:
-  - WPF
-tags:
-  - .NET
-  - WPF
-  - ListView
----
-
 感谢 [rgqancy](http://www.cnblogs.com/rgqancy/) 指出的 Bug，已经修正
 
 先给个效果图：

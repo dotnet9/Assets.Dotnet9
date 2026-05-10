@@ -1,22 +1,3 @@
----
-title: 图片转Icon工具开发实战 - 从需求分析到代码实现
-slug: image-to-icon-converter-development
-description: "本文介绍了如何使用C#和Avalonia开发一个图片转Icon的工具，包括需求分析、核心代码实现、UI设计和MVVM模式的应用。"
-date: 2025-03-06 21:35:14
-lastmod: 2025-03-10 06:14:21
-copyright: Original
-draft: false
-cover: https://img1.dotnet9.com/2025/03/0201.png
-categories:
-  - .NET
-tags:
-  - .NET
-  - C#
-  - Avalonia UI
-  - MVVM
-  - UI设计
----
-
 ## 一、需求分析与方案设计
 
 在开发工作中，我们经常需要将图片转换为不同尺寸的 Icon 文件。无论是为网站制作 favicon.ico，还是为应用程序设计图标，这都是一个常见的需求。市面上虽然有许多图片转 Icon 的工具，但它们通常存在功能单一、广告多或操作复杂等问题。

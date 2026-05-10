@@ -1,22 +1,3 @@
----
-title: AI重构Razor Pages网站完成
-slug: website-reconstruction-with-ai-razor-pages
-description: "从Blazor静态SSR回归Razor Pages，源码解读网站架构设计与核心实现"
-date: 2026-04-16 22:45:00
-lastmod: 2026-04-16 23:00:00
-cover: https://img1.dotnet9.com/2026/04/cover_01.svg
-banner: false
-categories:
-  - .NET
-  - 前端
-tags:
-  - .NET
-  - C#
-  - ASP.NET Core
-  - Blazor
-  - Razor Pages
----
-
 ![](https://img1.dotnet9.com/2026/04/cover_01.svg)
 
 网站又从Blazor回归Razor Pages，本文从源码角度解读网站当前的架构设计。

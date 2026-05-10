@@ -1,25 +1,3 @@
----
-title: "在MAUI Blazor里显示本地图片的最佳选择？-支持Windows\\macOS\\Android\\iOS"
-slug: is-this-the-best-choice-to-display-local-pictures-in-maui-blazor
-description: "在MAUI Blazor中无法直接读取外部文件显示 ，但是可以通过base64去显示，但是由于base64太长可能影响界面卡顿..."
-date: 2023-01-10 21:59:39
-lastmod: 2023-01-10 21:59:39
-author: dotnet-simple
-originalTitle: Maui 读取外部文件显示到Blazor中
-originalLink: https://www.cnblogs.com/hejiale010426/p/17040997.html
-copyright: Reprinted
-draft: false
-cover: https://img1.dotnet9.com/2023/01/cover_01.png
-categories:
-  - MAUI
-  - Blazor
-tags:
-  - .NET
-  - C#
-  - Blazor
-  - MAUI
----
-
 > 本文示例代码可用于动态加载本地图片，为了便于演示文中代码文件路径写死的。
 
 首先在 MAUI Blazor 中无法直接读取外部文件显示 ，但是可以通过 base64 去显示，但是由于 base64 太长可能影响界面卡顿...

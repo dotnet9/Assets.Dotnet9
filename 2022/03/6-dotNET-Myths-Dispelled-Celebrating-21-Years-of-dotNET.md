@@ -1,22 +1,3 @@
----
-title: ".NET 很好，你可能对它有一些误解"
-slug: 6-dotnet-myths-dispelled-celebrating-21-years-of-dotnet
-description: "本文章介绍的是NV显卡训练。CPU训练 仅供参考，部分不同的地方请前往官方网站获取信息。"
-date: 2022-03-30 11:11:24
-lastmod: 2022-03-30 11:11:24
-author: 全球技术精选
-originalTitle: ".NET 很好，你可能对它有一些误解"
-originalLink: https://mp.weixin.qq.com/s/Ri4RbyNKhb5z7IdUGetvPw
-copyright: Reprinted
-draft: false
-cover: https://img1.dotnet9.com/2022/03/cover_29.png
-categories:
-  - .NET
-tags:
-  - .NET
-  - C#
----
-
 在 20 年前的 2002 年, 微软公布了下一代的软件、服务的愿景和路线，2 月 13 日，Visual Studio .NET 推出，.NET 开发平台的第一个版本正式向世界发布。
 
 到现在为止，.NET 都已经 20 岁了, 它已经成长为一个成熟稳定的平台。

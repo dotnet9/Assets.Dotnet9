@@ -1,21 +1,3 @@
----
-title: "劳动仲裁回忆录（四）：仲裁庭开庭审理"
-slug: memoirs-of-labor-arbitration-4-hearing-of-the-arbitration-tribunal
-description: 个人全程劳动仲裁实录
-date: 2022-03-17 23:18:23
-lastmod: 2022-03-17 23:18:23
-author: 逃离沙漠
-originalTitle: "劳动仲裁回忆录（四）：仲裁庭开庭审理"
-originalLink: https://mp.weixin.qq.com/s/JLoj3bCrU3HJFZdyPHuMZQ
-copyright: Reprinted
-draft: false
-cover: https://img1.dotnet9.com/2022/03/cover_12.jpeg
-categories:
-  - 分享
-tags:
-  - 劳动仲裁
----
-
 > 本篇介绍了仲裁开庭的过程。
 
 在前面的篇幅中，我介绍了我劳动仲裁立案、调解不成、交换证据方面的内容。本篇将回顾一下我仲裁开庭审理的过程，在开始之前，我先回顾一下前面步骤的时间节点：

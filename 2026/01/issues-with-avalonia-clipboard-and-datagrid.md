@@ -1,22 +1,3 @@
----
-title: Avalonia剪贴板和DataGrid的问题
-slug: issues-with-avalonia-clipboard-and-datagrid
-description: "记录最近 Avalonia 桌面软件开发解决的两个问题：剪贴板复制崩溃、Tab 切换 DataGrid 卡顿，分析根因并给出解决方案"
-date: 2026-01-11 11:18:01
-lastmod: 2026-01-11 12:23:41
-cover: https://img1.dotnet9.com/2026/01/cover_03.png
-banner: false
-categories:
-  - .NET
-  - Avalonia UI
-tags:
-  - .NET
-  - C#
-  - Avalonia UI
-  - 桌面开发
-  - Avalonia
----
-
 ![](https://img1.dotnet9.com/2026/01/cover_03.png)
 
 记录下最近基于 Avalonia 开发桌面应用时遇到并解决的两个典型问题，希望能给遇到同类问题的开发者提供参考。
@@ -88,4 +69,3 @@ Semi提供的配套主题库对应版本为[11.1.1.1](https://www.nuget.org/pack
 3. Avalonia的老组件（如DataGrid）在老系统（Win7/Server）+AOT发布环境下易暴露性能问题，优先选择官方新组件可减少踩坑，切记：及时更新最新控件库。
 
 最后感谢Avalonia交流群的群友提供的解决方案，开源社区的交流总能快速定位这类“反直觉”的问题~
-

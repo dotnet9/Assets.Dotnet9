@@ -1,25 +1,3 @@
----
-title: "NuGet Next发布，全新版私有化NuGet管理"
-slug: nuget-next-release-new-version-of-privatized-nuget-management
-description: "NuGet Next是一款基于BaGet的一款私有化NuGet管理平台，我们对BaGet进行了扩展，并且提供了更多的功能。"
-date: 2024-11-04 20:26:26
-lastmod: 2024-11-04 20:33:14
-author: tokengo
-originalTitle: "NuGet Next发布，全新版私有化NuGet管理"
-originalLink: https://mp.weixin.qq.com/s/Lk4mQnRbGHyXUXfRFp25mQ
-copyright: Reprinted
-draft: false
-cover: https://img1.dotnet9.com/2024/11/cover_01.jpg
-banner: false
-categories:
-  - .NET
-tags:
-  - .NET
-  - C#
-  - NuGet
-  - 私有化
----
-
 NuGet Next是一款基于BaGet的一款私有化NuGet管理平台，我们对BaGet进行了扩展，并且提供了更多的功能。
 
 NuGet 最新版开源私有化包管理，我们基于BaGet的基础之上增加了更多的功能，并且对中国市场做更多兼容，比如国产化支持。

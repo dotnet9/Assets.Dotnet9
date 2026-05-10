@@ -22,7 +22,7 @@ This repository is not only for images. It acts as the file-based content source
 ## Repository Layout
 
 ```text
-2019/ ... 2026/      Year/month article trees and article images
+2019/ ... 2026/      Year/month article bodies, sidecar metadata, and article images
 site/
   about.md           About page
   Privacy.md         Privacy page content
@@ -56,7 +56,8 @@ That means this repository should be maintained with the same level of disciplin
 
 ## Maintenance Notes
 
-- Keep article markdown under `YYYY/MM/slug.md`.
+- Keep article bodies under `YYYY/MM/slug.md`.
+- Keep article metadata under matching `YYYY/MM/slug.yml` sidecar files.
 - Keep article media near the article or under a stable site folder.
 - Prefer descriptive filenames for covers and diagrams.
 - Update the matching `site/*.json` or `site/**/navigation.json` file when adding new navigation-level content.

@@ -1,0 +1,20 @@
+title: "微软开抢年收入上亿美元的 Redis 饭碗？开源性能遥遥领先的 Garnet：无需修改，Redis 客户端可直接接入"
+slug: microsoft-is-robbing-redis-jobs-with-annual-revenue-of-hundreds-of-millions-of-dollarsgarnet-which-is-far-ahead-of-open-source-performance-no-need-to-modify-redis-client-can-directly-access
+description: "近日，微软正式开源缓存存储系统 Garnet。据微软研究院数据库小组高级首席研究员 Badrish Chandramouli 介绍，Garnet 项目是从零开始构建而成，且以性能为核心考量（特别是吞吐量中的线程可扩展性与更高比例的低延迟水平）。"
+date: 2024-03-20 23:07:51
+lastmod: 2024-03-21 00:26:47
+author: 凌敏,核子可乐
+originalTitle: "微软开抢年收入上亿美元的 Redis 饭碗？开源性能遥遥领先的 Garnet：无需修改，Redis 客户端可直接接入"
+originalLink: https://www.infoq.cn/article/ppO8VZPtH59mqj8Np0HN
+copyright: Reprinted
+draft: false
+cover: https://img1.dotnet9.com/2024/03/cover_09.png
+banner: false
+categories:
+  - .NET
+tags:
+  - .NET
+  - C#
+  - 开源
+  - Redis
+  - Garnet

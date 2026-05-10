@@ -1,26 +1,3 @@
----
-title: "WPF|C# Lottie 动画播放【感觉好牛】"
-slug: wpf-csharp-lottie-animation-playback-feel-good
-description: "Lottie 动画是一种以 json 文件保存的动画文件。相比 gif 在文件体积和动画流畅度上有很大的优势，而且是图形是矢量的，放大不会糊。"
-date: 2022-05-19 06:58:14
-lastmod: 2022-05-19 06:58:14
-author: xiejiang
-originalTitle: "WPF|C# Lottie 动画播放【感觉好牛】"
-originalLink: https://www.cnblogs.com/8u7tgyjire7890/p/15881159.html
-copyright: Reprinted
-draft: false
-cover: https://img1.dotnet9.com/2022/05/cover_49.jpg
-categories:
-  - WPF
-albums:
-  - WPF UI设计
-tags:
-  - .NET
-  - C#
-  - WPF
-  - 动画
----
-
 [Lottie](https://lottiefiles.com/) 动画是一种以 json 文件保存的动画文件。 相比 gif 在文件体积和动画流畅度上有很大的优势，而且是图形是矢量的，放大不会糊。
 
 Lottie 的官方提供了 web,android,iOS 的实现, 微软提供了 UWP 的实现 [Lottie-Windows](https://github.com/CommunityToolkit/Lottie-Windows)。 WPF 则~~没有找到可用的实现~~。下有 [https://github.com/ascora/LottieSharp](https://github.com/ascora/LottieSharp) 不过我测试了几轮，发现其依赖的 sharpDx 经常报错，而且我完全不熟悉 sharpDx，不知道如何解决。

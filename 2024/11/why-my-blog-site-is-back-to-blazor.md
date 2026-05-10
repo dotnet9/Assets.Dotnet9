@@ -1,22 +1,3 @@
----
-title: 我的博客网站为什么又回归Blazor了
-slug: why-my-blog-site-is-back-to-blazor
-description: "博客网站开发历经艰辛，尝试过MVC、Vue、Go等近10个版本，如今回归Blazor并采用静态SSR，速度飞涨，已成功上线。"
-date: 2024-11-06 07:14:26
-lastmod: 2024-11-06 23:19:29
-copyright: Original
-draft: false
-cover: https://img1.dotnet9.com/2024/11/0201.png
-categories:
-  - Blazor
-tags:
-  - .NET
-  - C#
-  - Blazor
-  - Go
-  - Vue
----
-
 ## 引言
 
 在博客网站的开发征程中，站长可谓是一路披荆斩棘。从最初的构思到实践，先后涉足了多种开发技术，包括 [MVC](https://learn.microsoft.com/zh-cn/aspnet/core/mvc/overview?view=aspnetcore-9.0)、[Razor Pages](https://learn.microsoft.com/zh-cn/aspnet/core/razor-pages/?view=aspnetcore-9.0&tabs=visual-studio)、[Vue](https://cn.vuejs.org/)、[Go](https://golang.google.cn/)、[Blazor](https://learn.microsoft.com/zh-cn/aspnet/core/blazor/?view=aspnetcore-9.0) 等。在这漫长的过程中，网站版本更迭近 10 次，每一个版本都凝聚着站长的心血与探索，这段充满挑战的历程详细记录于 [分享我做 Dotnet9 博客网站时积累的一些资料 - 码坊](https://dotnet9.com/2022/03/Share-some-learning-materials-I-accumulated-when-I-was-a-blog-website)。

@@ -1,26 +1,3 @@
----
-title: .NET MAUI开源免费的UI工具包 - Uranium
-slug: dot-net-maui-open-source-free-ui-toolkit-uranium
-description: "一直有小伙伴在微信公众号后台留言让我分享一下.NET MAUI相关的UI框架，今天大姚分享一个.NET MAUI开源、免费的UI工具包：Uranium。"
-date: 2024-04-11 07:30:14
-lastmod: 2024-04-11 07:42:49
-author: 追逐时光者
-originalTitle: .NET MAUI开源免费的UI工具包 - Uranium
-originalLink: https://mp.weixin.qq.com/s/UNhXBQePRmiBBG31jEt2Kg
-copyright: Reprinted
-draft: false
-cover: https://img1.dotnet9.com/2024/04/cover_01.png
-banner: false
-categories:
-  - MAUI
-tags:
-  - .NET
-  - C#
-  - MAUI
-  - 开源
-  - Uranium
----
-
 ## **前言**
 
 一直有小伙伴在微信公众号后台留言让我分享一下.NET MAUI 相关的 UI 框架，今天大姚分享一个.NET MAUI 开源、免费的 UI 工具包：Uranium。

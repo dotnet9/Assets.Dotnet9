@@ -1,28 +1,3 @@
----
-title: "SharpIco：用纯C#打造零依赖的.ico图标生成器，支持.NET9与AOT编译"
-slug: sharpico-pure-csharp-ico-icon-generator-zero-dependency-supports-net9-and-aot-compilation
-description: "网上搜到的很多 ICO 制作工具都是针对 favicon 的，其他的要不太重，要不就是收费，于是我把目光重新放在了开源工具上"
-date: 2025-05-27 19:55:40
-lastmod: 2025-05-27 20:27:17
-author: 程序设计实验室
-originalTitle: "SharpIco：用纯C#打造零依赖的.ico图标生成器，支持.NET9与AOT编译"
-originalLink: https://mp.weixin.qq.com/s/nDPbEESRN215DzimV12Lgw
-copyright: Reprinted
-draft: false
-cover: https://img1.dotnet9.com/2025/05/cover_02.png
-banner: false
-categories:
-  - .NET
-albums:
-  - C# AOT
-tags:
-  - .NET
-  - C#
-  - 开源
-  - AOT
-  - ICO
----
-
 ## 前言
 
 最近一直在完善我今年的两款桌面软件：[视频剪辑工具 Clipify](https://blog.deali.cn/Blog/Post/6a903b1c6fb2487f) 和 [AI 文章创作工具 StarBlogPublisher](https://blog.deali.cn/p/starblog-extrapolation-4-publisher-major-upgrade)

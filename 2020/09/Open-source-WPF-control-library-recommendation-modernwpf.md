@@ -1,27 +1,3 @@
----
-title: "开源WPF控件库：ModernWpf"
-slug: open-source-wpf-control-library-recommendation-modernwpf
-description: "有十分漂亮的界面，整个都是 Win10 风，界面部分和默认 UWP 相近， 这个库支持了 .NET Framework 4.5 和以上的版本，以及 .NET Core 3.0 和以上的版本，可以在 Windows Vista SP2 和以上的系统运行。"
-date: 2020-09-16 13:45:56
-lastmod: 2020-09-16 13:45:56
-originalTitle: "开源WPF控件库：ModernWpf"
-copyright: Original
-draft: false
-cover: https://img1.dotnet9.com/2020/09/0103.png
-banner: false
-categories:
-  - .NET
-albums:
-  - WPF控件库
-  - WPF开源项目
-tags:
-  - .NET
-  - C#
-  - WPF
-  - 控件库
-  - WPF开源项目
----
-
 ![ModernWpf仓库信息](https://img1.dotnet9.com/2020/09/0101.png)
 
 站长从博客园 林德熙 处了解到此控件库，通过 clone、编译、运行，发现这库确实不错，正如 林德熙 所言：“有十分漂亮的界面，整个都是 Win10 风，界面部分和默认 UWP 相近， 这个库支持了 .NET Framework 4.5 和以上的版本，以及 .NET Core 3.0 和以上的版本，可以在 Windows Vista SP2 和以上的系统运行。” 本人遂从该仓库中将 readme 搬运过来，希望让更多人知道有这个库的存在，能给 WPF 开发者多一个 UI 库选择。

@@ -1,22 +1,3 @@
----
-title: WPF 借助自定义 XML 文件实现国际化
-slug: wpf-achieves-internationalization-with-custom-xml-files
-description: "本文详细介绍了在WPF程序中使用自定义XML文件实现国际化的方法，包括安装必备NuGet包、动态获取语言列表、动态切换语言、在代码和xaml界面中使用翻译字符串等内容，同时提供了源码链接，帮助开发者轻松实现WPF应用的国际化。"
-date: 2025-01-26 04:57:26
-lastmod: 2025-01-26 06:02:14
-copyright: Original
-draft: false
-cover: https://img1.dotnet9.com/2025/01/cover_02.png
-categories:
-  - WPF
-tags:
-  - .NET
-  - C#
-  - WPF
-  - NuGet
-  - 国际化
----
-
 在当今全球化的软件开发环境中，应用程序的国际化变得越来越重要。它可以让你的软件适应不同地区和语言的用户，提升用户体验。本文和 [《Avalonia使用XML文件实现国际化》](https://dotnet9.com/2024/12/avalonia-using-xml-files-for-internationalization) 类似，今天介绍的包只用于WPF程序，下面我们将简单介绍其用法。
 
 ## 安装必备 NuGet 包

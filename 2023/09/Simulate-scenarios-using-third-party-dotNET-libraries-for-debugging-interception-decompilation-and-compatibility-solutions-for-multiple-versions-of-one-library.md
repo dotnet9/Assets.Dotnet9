@@ -1,23 +1,3 @@
----
-title: ".NET反编译、第三方库调试（拦截、篡改、伪造）、一库多版本兼容"
-slug: simulate-scenarios-using-third-party-dotnet-libraries-for-debugging-interception-decompilation-and-compatibility-solutions-for-multiple-versions-of-one-library
-description: "模拟.NET实际应用场景，综合应用三个主要知识点：一是使用dnSpy反编译第三库及调试，二是使用Lib.Harmony库实现第三库拦截、伪造，三是实现同一个库支持多版本同时引用。"
-date: 2023-09-23 14:43:19
-lastmod: 2023-09-26 00:16:17
-copyright: Original
-draft: false
-cover: https://img1.dotnet9.com/2023/09/cover_08.png
-banner: true
-categories:
-  - .NET
-tags:
-  - .NET
-  - C#
-  - 反编译
-  - 拦截
-  - 强签名
----
-
 >**免责声明**
 
 > 使用者本人对于传播和利用本公众号提供的信息所造成的任何直接或间接的后果和损失负全部责任。公众号及作者对于这些后果不承担任何责任。如果造成后果，请自行承担责任。谢谢！

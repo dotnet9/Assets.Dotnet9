@@ -1,23 +1,3 @@
----
-title: ASP.NET CoreRateLimit - ASP.NET Core 速率限制中间件
-slug: asp-net-core-rate-limit-asp-dotnet-core-rate-limiting-middleware
-description: AspNetCoreRateLimit 是一种 ASP.NET Core 速率限制解决方案
-date: 2022-07-12 20:26:47
-lastmod: 2022-07-12 20:26:47
-author: 黑哥聊dotNet
-originalTitle: AspNetCoreRateLimit - ASP.NET Core 速率限制中间件
-originalLink: https://mp.weixin.qq.com/s/URLZCyrLWM-NEM8eMvnVhw
-copyright: Reprinted
-draft: false
-cover: https://img1.dotnet9.com/2022/07/cover_14.png
-categories:
-  - ASP.NET Core
-tags:
-  - .NET
-  - C#
-  - ASP.NET Core
----
-
 ## 介绍
 
 `AspNetCoreRateLimit` 是一种 ASP.NET Core 速率限制`解决方案`，旨在控制客户端可以根据 IP 地址或客户端 ID 向 Web API 或 MVC 应用程序发出请求的速率。`AspNetCoreRateLimit` 包包含一个 `IpRateLimitMiddleware` 和一个 `ClientRateLimitMiddleware`，对于每个中间件，您可以为不同的场景设置多个限制，例如允许 IP 或客户端在每秒、15 分钟等时间间隔内进行最大调用次数。您可以定义这些限制来解决对 API 发出的所有请求，或者您可以将限制范围限定为每个 API URL 或 HTTP 动词和路径。

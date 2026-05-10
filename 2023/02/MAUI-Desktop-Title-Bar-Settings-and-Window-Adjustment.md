@@ -1,22 +1,3 @@
----
-title: MAUI桌面端标题栏设置和窗口调整
-slug: maui-desktop-title-bar-settings-and-window-adjustment
-description: "如果你现在开始学习并使用MAUI开发桌面端，那么接下来的问题相信你都会遇到并且会想着尝试找方法解决它。"
-date: 2023-02-07 12:22:35
-lastmod: 2023-02-07 12:22:35
-author: 智州Ryan
-originalTitle: MAUI桌面端标题栏设置和窗口调整
-originalLink: https://blog.csdn.net/Sir_aligaduo/article/details/128880940
-copyright: Contributes
-draft: false
-cover: https://img1.dotnet9.com/2023/02/0302.png
-categories:
-  - MAUI
-tags:
-  - .NET
-  - MAUI
----
-
 > 本文由网友投稿。
 >
 > 作者：智州 Ryan

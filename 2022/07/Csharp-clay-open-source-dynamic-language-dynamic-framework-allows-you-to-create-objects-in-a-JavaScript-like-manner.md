@@ -1,23 +1,3 @@
----
-title: "C# Clay开源的动态语言dynamic框架，让您形如javascript的方式创建对象！"
-slug: csharp-clay-open-source-dynamic-language-dynamic-framework-allows-you-to-create-objects-in-a-java-script-like-manner
-description: "能够让我们在不需要定义类的情况下，就构建出我们想要的对象。"
-date: 2022-07-15 21:33:17
-lastmod: 2022-07-15 21:33:17
-author: 黑哥聊dotNet
-originalTitle: "C# Clay开源的动态语言dynamic框架，让您形如javascript的方式创建对象！"
-originalLink: https://mp.weixin.qq.com/s/CQj7lR_7c97KUq07BU0Jlg
-copyright: Reprinted
-draft: false
-cover: https://img1.dotnet9.com/2022/07/cover_16.jpeg
-categories:
-  - .NET
-tags:
-  - .NET
-  - C#
-  - 开源
----
-
 ## 简介
 
 Clay 非常类似于 ExpandoObject, 可以看做是 ExpandoObject 的加强版. 它们能够让我们在不需要定义类的情况下，就构建出我们想要的对象。Clay 和 ExpandoObject 相比，提供了更加灵活的语法支持，让我们像写 javascript 代码一样写 C#代码，同时还能够用于构建多层级的复杂对象。

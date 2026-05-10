@@ -1,22 +1,3 @@
----
-title: "EasyCaching：简单高效的.NET缓存包"
-slug: easy-caching-simple-and-efficient-net-cache-package
-description: "EasyCaching，这个名字就很大程度上解释了它是做什么的，easy和caching放在一起，其最终的目的就是为了让我们大家在操作缓存的时候更加的方便。"
-date: 2023-11-05 22:45:17
-lastmod: 2023-11-05 23:14:59
-author: Catcher Wong
-originalTitle: 一篇短文带您了解一下EasyCaching
-originalLink: https://www.cnblogs.com/catcher1994/p/10806607.html
-copyright: Reprinted
-draft: false
-cover: https://img1.dotnet9.com/2023/11/cover_01.png
-categories:
-  - .NET
-tags:
-  - .NET
-  - C#
----
-
 ## 前言
 
 从 2017 年 11 月 11 号在 GitHub 创建[EasyCaching](https://github.com/dotnetcore/EasyCaching)这个仓库，到现在也已经将近一年半的时间了，基本都是在下班之后和假期在完善这个项目。

@@ -1,0 +1,19 @@
+title: 推荐一款高性能状态机管理解决方案
+slug: recommend-a-high-performance-state-machine-management-solution
+description: "在实际软件开发中，尤其是工业软件，每一款设备都有复杂的状态以及状态之间的切换的功能需求，在这种情况下，如何管理状态以及状态之间切换，和对应状态下的功能控制，成为非常重要的一个问题。"
+date: 2025-08-13 08:05:09
+lastmod: 2025-08-13 08:25:14
+author: 老码识途呀
+originalTitle: 推荐一款高性能状态机管理解决方案
+originalLink: https://mp.weixin.qq.com/s/UEd4s6cy0VMpl8u2Scbz3w
+copyright: Reprinted
+cover: https://img1.dotnet9.com/2025/08/cover_03.png
+banner: false
+categories:
+  - 分享
+  - .NET
+tags:
+  - .NET
+  - C#
+  - 工业软件
+  - 状态机

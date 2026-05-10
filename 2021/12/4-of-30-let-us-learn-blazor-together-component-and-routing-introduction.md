@@ -1,26 +1,3 @@
----
-title: "(4/30)大家一起学Blazor：Component及路由介绍"
-slug: 4-of-30-let-us-learn-blazor-together-component-and-routing-introduction
-description: "由于笔者当初是用ASP.NET Core API + Blazor Server，所以会以Blazor Server示范，日后研究完Blazor WebAssembly会再将心得补上。"
-date: 2021-12-10 23:01:39
-lastmod: 2021-12-10 23:01:39
-author: StrayaWorker
-originalTitle: "(4/30)大家一起学Blazor：Component及路由介绍"
-originalLink: https://ithelp.ithome.com.tw/articles/10260047
-copyright: Reprinted
-draft: false
-cover: https://img1.dotnet9.com/2021/12/cover_05.png
-categories:
-  - Blazor
-albums:
-  - 一起学Blazor系列
-tags:
-  - .NET
-  - C#
-  - ASP.NET Core
-  - Blazor
----
-
 由于笔者当初是用 ASP.NET Core API + Blazor Server，所以会以 Blazor Server 示范，日后研究完 Blazor WebAssembly 会再将心得补上。
 
 首先既然 Component 是可以重复利用的，我们在 Index.razor 放上两个 Counter，启动项目(如果不想完整调试，可以按 ctrl+F5，就会启动不调试模式，启动速度比较快，而且每次储存文件，Blazor 都会监测到，网页重新加载就可以载入新程序了)，浏览器上两个 Counter 有各自的 Click me 按钮，分别点击后可以看到数字分别增加，代表是不同的 Component，那这些数字又定义在哪里呢？

@@ -1,25 +1,3 @@
----
-title: 如何在JPG文件中隐写数据
-slug: how-to-steganography-data-in-jpg-file
-description: "我们深入探讨了基于XAML的各种平台、跨平台战略以及为有效的项目架构设计所需的核心技术。"
-date: 2024-11-11 06:47:24
-lastmod: 2024-11-11 06:58:36
-author: zhaotianff
-originalTitle: 如何在JPG文件中隐写数据
-originalLink: https://www.cnblogs.com/zhaotianff/p/18194323
-copyright: Reprinted
-draft: false
-cover: https://img1.dotnet9.com/2024/11/0505.png
-banner: false
-categories:
-  - .NET
-tags:
-  - .NET
-  - C#
-  - 架构设计
-  - 隐写数据
----
-
 ## 概述
 
 最近在做资源管理器背景的一个功能时，需要将信息传递到DLL中去，

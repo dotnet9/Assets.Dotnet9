@@ -1,22 +1,3 @@
----
-title: PaddleOCR 训练模型参考
-slug: paddleocr-training-model-reference
-description: "本文章介绍的是NV显卡训练。CPU训练 仅供参考，部分不同的地方请前往官方网站获取信息。"
-date: 2022-03-30 11:00:13
-lastmod: 2022-03-30 11:00:13
-author: Dream.Machine
-originalTitle: PaddleOCR 训练模型参考
-copyright: Reprinted
-draft: false
-cover: https://img1.dotnet9.com/2022/03/cover_28.jpeg
-categories:
-  - .NET
-tags:
-  - .NET
-  - C#
-  - 模式训练
----
-
 本文章介绍的是 NV 显卡训练。CPU 训练 仅供参考，部分不同的地方请前往官方网站获取信息。
 
 ## 官方地址：

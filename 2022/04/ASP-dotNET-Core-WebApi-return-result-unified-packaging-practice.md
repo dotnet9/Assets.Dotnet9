@@ -1,24 +1,3 @@
----
-title: ASP.NET Core WebApi返回结果统一包装实践
-slug: asp-dotnet-core-web-api-return-result-unified-packaging-practice
-description: "关于WebApi统一结果返回的时候，让我也有了更一步的思考，首先是如何能更好的限制返回统一的格式，其次是关于结果的包装一定是更简单更强大。在不断的思考和完善中，终于有了初步的成果，便分享出来，学无止境思考便无止境，希望以此能与君共勉。"
-date: 2022-04-13 07:12:36
-lastmod: 2022-04-13 07:12:36
-author: yi念之间
-originalTitle: ASP.NET Core WebApi返回结果统一包装实践
-originalLink: https://www.cnblogs.com/wucy/p/16124449.html
-copyright: Reprinted
-draft: false
-cover: https://img1.dotnet9.com/2022/04/cover_12.jpg
-categories:
-  - ASP.NET Core
-tags:
-  - .NET
-  - C#
-  - ASP.NET Core
-  - Web API
----
-
 ## 前言
 
 近期在重新搭建一套基于 ASP.NET Core WebAPI 的框架，这其中确实带来了不少的收获，毕竟当你想搭建一套框架的时候，你总会不自觉的去想，如何让这套框架变得更完善一点更好用一点。其中在关于 WebApi 统一结果返回的时候，让我也有了更一步的思考，首先是如何能更好的限制返回统一的格式，其次是关于结果的包装一定是更简单更强大。在不断的思考和完善中，终于有了初步的成果，便分享出来，学无止境思考便无止境，希望以此能与君共勉。

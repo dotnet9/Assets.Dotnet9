@@ -1,22 +1,3 @@
----
-title: "meta 标签到底有什么用？终于有人说出了真相"
-slug: what-is-the-use-of-meta-tags-finally-someone-told-the-truth
-description: "最近部门在推微前端，需要按功能拆分多个子应用，主应用在加载的过程中经常出现加载失败的问题。"
-date: 2021-12-23 21:02:21
-lastmod: 2021-12-23 21:02:21
-author: 隐冬
-originalTitle: "meta 标签到底有什么用？终于有人说出了真相"
-originalLink: https://juejin.cn/post/6987919006468407309
-copyright: Reprinted
-draft: false
-cover: https://img1.dotnet9.com/2021/12/cover_34.png
-categories:
-  - 前端
-tags:
-  - HTML
-  - Meta
----
-
 ## 1. 起因
 
 最近部门在推微前端，需要按功能拆分多个子应用，主应用在加载的过程中经常出现加载失败的问题。因为 https 地址中，如果加载了 http 资源，浏览器将认为这是不安全的资源，将会默认阻止。后来在文档中添加了`<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">`完美解决。

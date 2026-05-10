@@ -1,22 +1,3 @@
----
-title: "多图分享：我的十年与.NET的二十年"
-slug: share-more-pictures-my-ten-years-and-net-twenty-years
-description: "弹指一挥间，十年已经过去了，从第一次接触.net到今天，正好十年"
-date: 2022-02-08 07:47:04
-lastmod: 2022-02-08 07:47:04
-author: 老张的哲学 MVP
-originalTitle: "多图分享：我的十年与.NET的二十年"
-originalLink: https://mp.weixin.qq.com/s/bKIyQnOQFQsqbN8y6bgTFA
-copyright: Reprinted
-draft: false
-cover: https://img1.dotnet9.com/2022/02/cover_06.jpg
-categories:
-  - .NET
-tags:
-  - .NET
-  - C#
----
-
 ![大学琴湖](https://img1.dotnet9.com/2022/02/cover_06.jpg)
 
 弹指一挥间，十年已经过去了，从第一次接触.net 到今天，正好十年，有时候就在想如果回到当初，回到母校的琴湖，是否真的还会学习并一直坚持.net 十年，我想答案应该是肯定的，当然，需要考虑很多情况，无论是初学者的友好程度，还是当时手中的设备，抑或是环境使然，我想我应该还是会学习它的，就像微软这二十年的坚持一样，从来没放弃，一直把.net 作为事业版图中很重要的一部分。

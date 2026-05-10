@@ -1,26 +1,3 @@
----
-title: "(6/30)大家一起学Blazor：抽离C#代码"
-slug: 6-of-30-let-us-learn-blazor-together-extract-csharp-code
-description: "昨天看到`FetchData.razor`的代码太长了，为求方便，我们把`@code`的部分抽取出来另成一个文件。"
-date: 2021-12-12 21:59:24
-lastmod: 2021-12-12 21:59:24
-author: StrayaWorker
-originalTitle: "(6/30)大家一起学Blazor：抽离C#代码"
-originalLink: https://ithelp.ithome.com.tw/articles/10260867
-copyright: Reprinted
-draft: false
-cover: https://img1.dotnet9.com/2021/12/cover_05.png
-categories:
-  - Blazor
-albums:
-  - 一起学Blazor系列
-tags:
-  - .NET
-  - C#
-  - ASP.NET Core
-  - Blazor
----
-
 昨天看到`FetchData.razor`的代码太长了，为求方便，我们把`@code`的部分抽取出来另成一个文件。
 
 Blazor 提供了两个方法：`partial class`跟`ComponentBase`，同样两者各有优缺点，笔者偏好`ComponentBase`，看个人使用习惯。

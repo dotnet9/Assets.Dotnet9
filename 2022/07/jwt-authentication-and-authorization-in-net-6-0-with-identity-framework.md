@@ -1,25 +1,3 @@
----
-title: .NET 6.0中使用Identity框架实现JWT身份认证与授权
-slug: jwt-authentication-and-authorization-in-net-6-0-with-identity-framework
-description: "通过一个简单的过程介绍使用 ASP.NET Core 6.0 Web API 上传和下载多个文件。"
-date: 2022-07-25 20:43:14
-lastmod: 2022-07-25 20:43:14
-author: Sarathlal Saseendran
-originalTitle: .NET 6.0中使用Identity框架实现JWT身份认证与授权
-originalLink: https://www.c-sharpcorner.com/article/jwt-authentication-and-authorization-in-net-6-0-with-identity-framework/
-copyright: Reprinted
-draft: false
-cover: https://img1.dotnet9.com/2022/07/cover_22.jpg
-categories:
-  - .NET
-tags:
-  - .NET
-  - C#
-  - ASP.NET Core
-  - Web API
-  - 鉴权
----
-
 > 原文作者：Sarathlal Saseendran
 >
 > 原文链接：https://www.c-sharpcorner.com/article/jwt-authentication-and-authorization-in-net-6-0-with-identity-framework/

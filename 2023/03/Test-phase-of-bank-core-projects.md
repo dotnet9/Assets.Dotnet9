@@ -1,21 +1,3 @@
----
-title: 银行核心项目之测试阶段
-slug: test-phase-of-bank-core-projects
-description: "想了解核心系统建设中，冒烟、SIT、UAT、回归测试的重点，如何设计测试案例，或相关的资料推荐等"
-date: 2023-03-01 23:16:25
-lastmod: 2023-03-01 23:16:25
-author: 代堂鸣 小代嘚吧嘚
-originalTitle: 银行核心项目之测试阶段
-originalLink: https://mp.weixin.qq.com/s/kwfJXT9IjIOM-cKOxyNNuw
-copyright: Reprinted
-draft: false
-cover: https://img1.dotnet9.com/2023/03/cover_02.jpg
-categories:
-  - 分享
-tags:
-  - 银行
----
-
 ![云南 · 大理 · 洱海](https://img1.dotnet9.com/2023/03/cover_02.jpg)
 
 > 最近有小伙伴留言说「想了解核心系统建设中，冒烟、SIT、UAT、回归测试的重点，如何设计测试案例，或相关的资料推荐等」。

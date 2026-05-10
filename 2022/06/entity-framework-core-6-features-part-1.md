@@ -1,24 +1,3 @@
----
-title: "EF Core 6 新功能汇总（一）"
-slug: entity-framework-core-6-features-part-1
-description: "在这篇文章中，你将看到 EF Core 6 中的十个新功能，包括新的特性标注，对时态表、稀疏列的支持，以及其他新功能。"
-date: 2022-06-02 21:41:47
-lastmod: 2022-06-02 21:41:47
-author: liamwang 精致码农
-originalTitle: "EF Core 6 新功能汇总（一）"
-originalLink: https://mp.weixin.qq.com/s/VpqEWQPdEJUw_HHNeqBPdg
-copyright: Reprinted
-draft: false
-cover: https://img1.dotnet9.com/2022/06/cover_04.jpg
-categories:
-  - EF Core
-tags:
-  - .NET
-  - C#
-  - EF Core
-  - ORM
----
-
 在这篇文章中，你将看到 EF Core 6 中的十个新功能，包括新的特性标注，对时态表、稀疏列的支持，以及其他新功能。
 
 ## 1 Unicode 特性

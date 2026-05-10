@@ -1,26 +1,3 @@
----
-title: "(16/30)大家一起学Blazor：建立数据库"
-slug: 16-of-30-let-us-learn-blazor-together-create-database
-description: "我们现在有了基本的日志，但是每次输入完重新加载页面数据都会重置，因为这些数据都只存在于浏览器，没有真正储存到数据库，为了保存下来，我们要跟数据库连接。"
-date: 2021-12-18 23:34:26
-lastmod: 2021-12-18 23:34:26
-author: StrayaWorker
-originalTitle: "(16/30)大家一起学Blazor：建立数据库"
-originalLink: https://ithelp.ithome.com.tw/articles/10265408
-copyright: Reprinted
-draft: false
-cover: https://img1.dotnet9.com/2021/12/cover_05.png
-categories:
-  - Blazor
-albums:
-  - 一起学Blazor系列
-tags:
-  - .NET
-  - C#
-  - ASP.NET Core
-  - Blazor
----
-
 我们现在有了基本的日志，但是每次输入完重新加载页面数据都会重置，因为这些数据都只存在于浏览器，没有真正储存到数据库，为了保存下来，我们要跟数据库连接。
 (注：Blazor WebAssembly 没有直接跟数据库交互的能力，不过微软有提供`ASP.NET Core hosted` 选项，可以在建立 Blazor WebAssembly 时一并建立 ASP.NET Core Web API 工程)
 

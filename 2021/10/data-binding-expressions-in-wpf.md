@@ -1,23 +1,3 @@
----
-title: WPF中的数据绑定表达式
-slug: data-binding-expressions-in-wpf
-description: "数据绑定是一种强大的技术，它允许数据在UI元素和业务模型之间流动。当业务模型中的数据发生变化时，它会自动将更改反映到UI元素上。"
-date: 2021-10-18 16:53:35
-lastmod: 2021-10-18 16:53:35
-author: Swati Gupta
-originalTitle: WPF中的数据绑定表达式
-originalLink: https://www.c-sharpcorner.com/article/data-binding-expression-in-wpf/
-copyright: Reprinted
-draft: false
-cover: https://img1.dotnet9.com/2021/10/cover_03.png
-categories:
-  - WPF
-tags:
-  - .NET
-  - WPF
-  - Binding
----
-
 有很多文章讨论绑定的概念，并讲解如何使用 StaticResources 和 DynamicResources 绑定属性。这些概念使用 WPF 提供的数据绑定表达式。在本文中，让我们研究 WPF 提供的不同类型的数据绑定表达式。
 
 ## 介绍

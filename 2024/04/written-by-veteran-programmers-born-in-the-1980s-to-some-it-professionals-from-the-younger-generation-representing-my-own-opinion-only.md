@@ -1,22 +1,3 @@
----
-title: "80后的程序员老鸟写给一些后起IT人的（仅代表本人看法）"
-slug: written-by-veteran-programmers-born-in-the-1980s-to-some-it-professionals-from-the-younger-generation-representing-my-own-opinion-only
-description: "82年的，老鸟。算是第二代搞程序的吧，C++Builder delphi起家（也许很多人都没听过吧）。DOS ucdos  pctools玩过一年以上。"
-date: 2024-04-18 22:28:49
-lastmod: 2024-04-18 23:04:52
-author: 种瓜的
-originalTitle: "80后的程序员老鸟写给一些后起IT人的（仅代表本人看法）"
-originalLink: https://blog.csdn.net/xtgmd168/article/details/107144401
-copyright: Reprinted
-draft: false
-cover: https://img1.dotnet9.com/2024/04/cover_03.png
-banner: false
-categories:
-  - 分享
-tags:
-  - IT人生
----
-
 ## 1. 自我简介
 
 82 年的，老鸟，算是第二代搞程序的吧，C++Builder Delphi 起家（也许很多人都没听过吧）。DOS UCDOS Pctools 玩过一年以上，我感觉自己应该算是老鸟了吧。

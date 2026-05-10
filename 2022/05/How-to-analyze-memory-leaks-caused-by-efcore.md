@@ -1,24 +1,3 @@
----
-title: 如何分析EFCore引发的内存泄漏
-slug: how-to-analyze-memory-leaks-caused-by-efcore
-description: "术语“内存泄漏”和“ .NET应用程序”不是经常一起使用。"
-date: 2022-05-04 16:47:46
-lastmod: 2022-05-04 16:47:46
-author: Richard Brown DotNET技术圈
-originalTitle: 如何分析EFCore引发的内存泄漏
-originalLink: https://mp.weixin.qq.com/s/nntus3fGCvx3FT_uZYERUQ
-copyright: Reprinted
-draft: false
-cover: https://img1.dotnet9.com/2022/05/cover_12.jpg
-categories:
-  - EF Core
-tags:
-  - .NET
-  - C#
-  - EF Core
-  - ORM
----
-
 ![不要让内存泄漏成为洪水](https://img1.dotnet9.com/2022/05/cover_12.jpg)
 
 术语“内存泄漏”和“ .NET 应用程序”不是经常一起使用。但是，我们最近在一个.NET Core Web 应用程序中出现了一系列内存不足异常。事实证明，此问题是由 Entity Framework Core 中的行为更改引起的，尽管最终的解决方案非常简单，但实现该目标的过程既充满挑战又有趣。

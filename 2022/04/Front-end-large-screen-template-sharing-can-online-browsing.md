@@ -1,22 +1,3 @@
----
-title: 前端大屏模板分享-可在线浏览
-slug: front-end-large-screen-template-sharing-can-online-browsing
-description: "几十套大屏模板，可在线浏览，也可下载"
-date: 2022-04-21 07:41:42
-lastmod: 2022-04-21 07:41:42
-originalTitle: 前端大屏模板分享-可在线浏览
-copyright: Original
-draft: false
-cover: https://img1.dotnet9.com/2022/04/2602.png
-categories:
-  - 前端
-albums:
-  - Web开源项目
-tags:
-  - 大屏模板
-  - 在线浏览
----
-
 ## 1. 前言
 
 站长以前介绍过这个开源项目，最近又有人在问，索性挂在[Dotnet9](https://dotnet9.com)网站上，方便大家在线浏览，先声明，模板来自下面的仓库：

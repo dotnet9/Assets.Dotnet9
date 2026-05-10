@@ -1,22 +1,3 @@
----
-title: "【微信自动化】使用c#实现微信自动化"
-slug: we-chat-automation-using-csharp-to-realize-we-chat-automation
-description: "模拟鼠标来操作UI，实现UI自动化"
-date: 2023-08-29 22:12:14
-lastmod: 2023-08-29 22:12:14
-author: 四处观察
-originalTitle: "【微信自动化】使用c#实现微信自动化"
-originalLink: https://www.cnblogs.com/1996-Chinese-Chen/p/17663064.html
-copyright: Contributes
-draft: false
-cover: https://img1.dotnet9.com/2023/08/cover_06.png
-categories:
-  - .NET
-tags:
-  - .NET
-  - C#
----
-
 > 本文由网友投稿
 >
 > 作者：陈显达

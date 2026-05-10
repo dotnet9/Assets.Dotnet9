@@ -1,24 +1,3 @@
----
-title: WPF完成一个危险提醒效果
-slug: wpf-completes-a-danger-alert-effect
-description: "当我们写的程序发放出去后，用户是在进行一些危险操作，我们的软件应该给一些提醒效果，比如边框边缘有红色，类似与高德地图那样子的报警提醒效果"
-date: 2025-05-27 21:27:17
-lastmod: 2025-05-27 21:41:23
-author: 就叫我啊禾斗吧 禾斗学编程
-originalTitle: WPF完成一个危险提醒效果
-originalLink: https://mp.weixin.qq.com/s/OpjR9c82tvcgMaIgriLdpA
-copyright: Reprinted
-draft: false
-cover: https://img1.dotnet9.com/2025/05/cover_03.png
-banner: false
-categories:
-  - .NET
-tags:
-  - .NET
-  - C#
-  - WPF
----
-
 ## 需求背景
 
 当我们写的程序发放出去后，用户是在进行一些危险操作，我们的软件应该给一些提醒效果，比如边框边缘有红色，类似与高德地图那样子的报警提醒效果
@@ -222,4 +201,3 @@ tags:
     </Grid>
 </u:UrsaWindow>
 ```
-

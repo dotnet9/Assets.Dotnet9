@@ -1,21 +1,3 @@
----
-title: "劳动仲裁回忆录（九）：二审线上开庭"
-slug: memoir-of-labor-arbitration-9-second-instance-online-hearing
-description: "在前面的篇幅中，我讲述了我从申请劳动总裁，到一审，然而二审。一路下来，其实二审是最简单的，本文讲述二审线上开庭过程。"
-date: 2022-07-04 20:33:17
-lastmod: 2022-07-04 20:33:17
-author: 逃离沙漠
-originalTitle: "劳动仲裁回忆录（九）：二审线上开庭"
-originalLink: https://mp.weixin.qq.com/s/dKLdTcxj9LcbIkfSlI_NrA
-copyright: Reprinted
-draft: false
-cover: https://img1.dotnet9.com/2022/03/cover_12.jpeg
-categories:
-  - 分享
-tags:
-  - 劳动仲裁
----
-
 > 在前面的篇幅中，我讲述了我从申请劳动总裁，到一审，然而二审。一路下来，其实二审是最简单的，本文讲述二审线上开庭过程。
 
 ## 前情回顾

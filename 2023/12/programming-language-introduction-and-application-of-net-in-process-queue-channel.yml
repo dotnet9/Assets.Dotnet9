@@ -1,0 +1,17 @@
+title: 编程语言.NET 进程内队列 Channel 的入门与应用
+slug: programming-language-introduction-and-application-of-net-in-process-queue-channel
+description: "Channel 是微软在 .NET Core 3.0 以后推出的新的集合类型，该类型位于 System.Threading.Channels 命名空间下，具有异步 API 、高性能、线程安全等等的特点。"
+date: 2023-12-23 19:14:17
+lastmod: 2023-12-23 20:12:41
+author: 素履独行
+originalTitle: .NET 进程内队列 Channel 的入门与应用
+originalLink: https://blog.yuanpei.me/posts/getting-started-with-the-.net-in-process-queue-channel/
+copyright: Reprinted
+draft: false
+cover: https://img1.dotnet9.com/2023/12/cover_04.jpg
+categories:
+  - .NET
+tags:
+  - .NET
+  - C#
+  - 安全

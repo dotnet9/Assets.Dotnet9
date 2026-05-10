@@ -1,21 +1,3 @@
----
-title: "2023了还不会调试吗？"
-slug: can-not-you-debug-it-after-2023
-description: "本文结合自身实战经验，梳理日常开发中神一般的调试技巧。"
-date: 2023-07-22 07:06:19
-lastmod: 2023-07-22 07:06:19
-author: 河畔一角
-originalTitle: "2022了还不会调试吗？"
-originalLink: https://juejin.cn/post/7124104703884918798
-copyright: Reprinted
-draft: false
-cover: https://img1.dotnet9.com/2023/07/cover_10.png
-categories:
-  - 前端
-tags:
-  - 前端
----
-
 ![](https://img1.dotnet9.com/2023/07/1001.png)
 
 作为一名程序员，就算你拥有大圣的 72 变，依然逃脱不了观音的紧箍咒；程序出 `Bug` 已是家常便饭，但解决问题的能力更加凸现你在公司的地位。本文结合自身实战经验，梳理日常开发中神一般的调试技巧。希望对各位大佬有所参考和借鉴，如有错误的地方，还请指正。

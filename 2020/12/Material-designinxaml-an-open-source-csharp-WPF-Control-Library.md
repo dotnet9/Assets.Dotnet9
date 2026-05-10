@@ -1,28 +1,3 @@
----
-title: 开源C# WPF控件库 - MaterialDesignInXAML
-slug: material-designinxaml-an-open-source-csharp-wpf-control-library
-description: "今天介绍一个开源的C# WPF开源控件库，非常漂亮，重点是开源哦"
-date: 2020-12-03 13:21:25
-lastmod: 2020-12-03 13:21:25
-originalTitle: "开源C# WPF控件库《MaterialDesignInXAML》"
-copyright: Original
-draft: false
-cover: https://img1.dotnet9.com/2020/12/0502.jpg
-banner: false
-categories:
-  - WPF
-albums:
-  - WPF控件库
-  - WPF开源项目
-  - C#开源项目
-tags:
-  - .NET
-  - C#
-  - WPF
-  - 控件库
-  - WPF控件库
----
-
 今天介绍一个开源的 C# WPF 开源控件库，非常漂亮，重点是开源哦
 
 WPF 做桌面开发是很有优势的，除了微软自带的控件外，还有很多第三方的控件库，比如收费的 Dev Express For WPF、Telerik For WPF 等，及 GitHub 上开源免费的控件库如 MaterialDesignInXAML 等。

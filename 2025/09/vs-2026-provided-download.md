@@ -1,17 +1,3 @@
----
-title: VS 2026提供下载了
-slug: vs-2026-provided-downloadvs-2026-provided-download
-description: 如题
-date: 2025-09-10 08:16:21
-lastmod: 2025-09-10 08:26:14
-cover: https://img1.dotnet9.com/2025/09/cover_01.png
-categories:
-  - 分享
-tags:
-  - Visual Studio
-  - VS2026
----
-
 ![](https://img1.dotnet9.com/2025/09/cover_01.png)
 
 最佳体验配置看截图：

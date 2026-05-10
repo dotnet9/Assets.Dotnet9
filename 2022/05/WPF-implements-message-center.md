@@ -1,22 +1,3 @@
----
-title: WPF实现消息中心
-slug: wpf-implements-message-center
-description: "本文将讲解基于WPF实现一个消息中心的功能，比如常见的软件当中会经常收到服务端推送的“新闻”、“公告”等消息。"
-date: 2022-05-11 07:31:17
-lastmod: 2022-05-11 07:31:17
-author: juster.zhu
-originalTitle: WPF实现消息中心
-originalLink: https://mp.weixin.qq.com/s/seSaQkhkE7dpWqoiQ96fzQ
-copyright: Reprinted
-draft: false
-cover: https://img1.dotnet9.com/2022/05/cover_33.png
-categories:
-  - WPF
-tags:
-  - .NET
-  - WPF
----
-
 ## 一、概要
 
 本文将讲解基于 WPF 实现一个消息中心的功能，比如常见的软件当中会经常收到服务端推送的“新闻”、“公告”等消息。这个时候就需要对这个需求进行分析了。

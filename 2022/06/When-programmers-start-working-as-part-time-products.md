@@ -1,21 +1,3 @@
----
-title: 当程序员开始兼任产品
-slug: when-programmers-start-working-as-part-time-products
-description: 产品负责人在内部群发消息说招人
-date: 2022-06-23 22:14:48
-lastmod: 2022-06-23 22:14:48
-author: 长空X
-originalTitle: 当程序员开始兼任产品
-originalLink: https://www.cnblogs.com/gtxck/articles/16404913.html
-copyright: Reprinted
-draft: false
-cover: https://img1.dotnet9.com/2022/06/cover_16.jpeg
-categories:
-  - 分享
-tags:
-  - 职场生活
----
-
 ## 起因
 
 5 月 31 日,我们公司的产品负责人在内部群发消息说招人,经过一翻友好的磋商后达成一致，我开始兼任一部分产品，转岗了又没完全转。记录一篇感想给迷茫的朋友也当个日志。嫌长的可以直接拉到最后看重点~

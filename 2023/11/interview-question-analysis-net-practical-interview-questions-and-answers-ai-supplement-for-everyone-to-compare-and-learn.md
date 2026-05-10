@@ -1,24 +1,3 @@
----
-title: "【面试题解析】.NET实战面试题及答案AI补充，大家对比学习"
-slug: interview-question-analysis-net-practical-interview-questions-and-answers-ai-supplement-for-everyone-to-compare-and-learn
-description: "这些面试题涵盖了.NET开发中的各个方面，包括.NET框架、C#语言、ASP.NET、ADO.NET、数据库等。通过对比学习，我们可以更好地理解和掌握这些知识点。"
-date: 2023-11-09 14:44:26
-lastmod: 2023-11-09 18:46:16
-author: DotNet开发跳槽
-originalTitle: 热心网友收集的.NET实战面试题1和2
-originalLink: https://mp.weixin.qq.com/s/M5U5JhDs-k6bnV6yckYzqw
-copyright: Reprinted
-draft: false
-cover: https://img1.dotnet9.com/2023/11/cover_03.png
-categories:
-  - .NET
-tags:
-  - .NET
-  - C#
-  - AI
-  - 面试题
----
-
 在[DotNet 开发跳槽]公众号中，号主为大家准备了一批.NET 实战面试题：
 
 - [热心网友收集的一批.NET 实战面试题](https://mp.weixin.qq.com/s/M5U5JhDs-k6bnV6yckYzqw)

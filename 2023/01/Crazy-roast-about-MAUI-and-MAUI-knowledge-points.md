@@ -1,22 +1,3 @@
----
-title: 疯狂吐槽 MAUI 以及 MAUI 入坑知识点
-slug: crazy-roast-about-maui-and-maui-knowledge-points
-description: "这里是笔者在开发 MAUI 应用时踩的坑，以及一些笔记的汇总。"
-date: 2023-01-18 22:02:29
-lastmod: 2023-01-18 22:02:29
-author: 痴者工良
-originalTitle: 疯狂吐槽 MAUI 以及 MAUI 入坑知识点
-originalLink: https://www.cnblogs.com/whuanle/p/17060473.html
-copyright: Reprinted
-draft: false
-cover: https://img1.dotnet9.com/2023/01/cover_06.jpg
-categories:
-  - MAUI
-tags:
-  - .NET
-  - MAUI
----
-
 ![](https://img1.dotnet9.com/2023/01/cover_06.jpg)
 
 这里是笔者在开发 MAUI 应用时踩的坑，以及一些笔记的汇总。

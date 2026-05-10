@@ -1,22 +1,3 @@
----
-title: "大胆推测：未来的王者，或属于C#"
-slug: bold-speculation-the-future-king-or-belong-to-csharp
-description: "这个世界，自古是用户驱动资本，资本驱动变革，变革造就生态。"
-date: 2022-04-16 22:33:45
-lastmod: 2022-04-16 22:33:45
-author: 邪恶的二进制
-originalTitle: "大胆推测：未来的王者，或属于C#"
-originalLink: https://zhuanlan.zhihu.com/p/499713602
-copyright: Reprinted
-draft: false
-cover: https://img1.dotnet9.com/2022/04/cover_19.jpeg
-categories:
-  - .NET
-tags:
-  - .NET
-  - C#
----
-
 **这个世界，自古是用户驱动资本，资本驱动变革，变革造就生态。**
 
 遥想当年，DOS 程序员疯狂的鄙视拖鼠标操作计算机的行为，仿佛可视化操作， 那就是在离间了程序猿与机器之间关系，所有的程序员都在以了解多少中断指令为荣，觉得这就是未来的密码，但是后来都知道，可视化的 Window 系统风靡世界，老百姓没人愿意麻烦，选择了它，然后程序猿不得不改行，学习 Window 下的编程，改为背诵 Window 下消息类型。

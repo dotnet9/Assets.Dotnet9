@@ -1,23 +1,3 @@
----
-title: "您用过这个牛逼的WPF拖拽库吗？"
-slug: have-you-ever-used-this-awesome-wpf-drag-library
-description: 一个使您能在WPF里更方便的使用拖拽功能的框架
-date: 2022-04-19 21:56:32
-lastmod: 2022-04-19 21:56:32
-originalTitle: "您用过这个牛逼的WPF拖拽库吗？"
-copyright: Original
-draft: false
-cover: https://img1.dotnet9.com/2022/04/2201.png
-categories:
-  - WPF
-albums:
-  - WPF开源项目
-tags:
-  - .NET
-  - WPF
-  - 拖拽
----
-
 <div align="center">
   <br />
   <a href="https://github.com/punker76/gong-wpf-dragdrop">

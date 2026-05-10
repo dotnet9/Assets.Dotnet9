@@ -1,24 +1,3 @@
----
-title: "【OpenXml】Pptx的边框虚线转为WPF的边框虚线"
-slug: openxml-the-border-dotted-line-of-pptx-is-changed-to-the-border-dotted-line-of-wpf
-description: 如题
-date: 2022-05-02 20:59:47
-lastmod: 2022-05-02 20:59:47
-author: RyzenAdorer
-originalTitle: "【OpenXml】Pptx的边框虚线转为WPF的边框虚线"
-originalLink: https://www.cnblogs.com/ryzen/p/15740488.html
-copyright: Reprinted
-draft: false
-cover: https://img1.dotnet9.com/2022/05/cover_04.jpeg
-categories:
-  - .NET
-tags:
-  - .NET
-  - C#
-  - WPF
-  - OpenXML
----
-
 ## 1. 安装 Openxml sdk
 
 首先，我们先安装 nuget 的需要的有关的 Openxml sdk，我们开源了解析 pptx 的[Openxml 拍平层](https://github.com/dotnet-campus/DocumentFormat.OpenXml.Extensions)，下面两种方式都可以安装：

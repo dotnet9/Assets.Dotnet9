@@ -1,20 +1,3 @@
----
-title: .NET 8 SDK安装包可以下载了
-slug: dotnet8-sdk-available-for-release-download
-description: ".NET 8已经有了安装包提供下载，这是一个好消息，微软给.NET添砖加瓦的动作一直在路上。"
-date: 2022-08-24 09:17:26
-lastmod: 2022-08-24 09:17:26
-author: 沙漠尽头的狼
-copyright: Original
-draft: false
-cover: https://img1.dotnet9.com/2022/08/cover_02.png
-categories:
-  - .NET
-tags:
-  - .NET
-  - C#
----
-
 今早在一个技术交流群看到有`.NET 8`的安装交流，站长下载了，把安装过程记录了，总结是：
 
 >目前还无法 **正常使用** `.NET 8` SDK，虽然可以正常下载、安装，但宇宙第一IDE `VS`还尚未支持，也许站长打开方式不对，欢迎有体验的朋友留言解惑。

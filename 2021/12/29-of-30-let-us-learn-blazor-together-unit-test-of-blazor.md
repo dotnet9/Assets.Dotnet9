@@ -1,26 +1,3 @@
----
-title: "(29/30)大家一起学Blazor：Blazor单元测试"
-slug: 29-of-30-let-us-learn-blazor-together-unit-test-of-blazor
-description: "开发一个系统最无聊的过程大概就是解决BUG了，尤其是那种尝试对null 对象取值的错误(`Object reference not set to an instance of an object.`)，这应该是大部分人刚踏入编程领域最常碰到的问题，为了从枯燥的解决BUG过程解脱，这篇就来介绍`单元测试`。"
-date: 2021-12-25 20:39:11
-lastmod: 2021-12-25 20:39:11
-author: StrayaWorker
-originalTitle: "(29/30)大家一起学Blazor：Blazor单元测试"
-originalLink: https://ithelp.ithome.com.tw/articles/10274629
-copyright: Reprinted
-draft: false
-cover: https://img1.dotnet9.com/2021/12/cover_05.png
-categories:
-  - Blazor
-albums:
-  - 一起学Blazor系列
-tags:
-  - .NET
-  - C#
-  - ASP.NET Core
-  - Blazor
----
-
 开发一个系统最无聊的过程大概就是解决 BUG 了，尤其是那种尝试对 null 对象取值的错误(`Object reference not set to an instance of an object.`)，这应该是大部分人刚踏入编程领域最常碰到的问题，为了从枯燥的解决 BUG 过程解脱，这篇就来介绍`单元测试`。
 
 `Blazor 的单元测试`跟一般 C# 编程不太一样，主要是`检查Component 的页面呈现逻辑`、`预期产生的HTML 标签跟实际页面有无差异`，毕竟 Blazor 是以后端语言编写而渲染的前端框架，如果要验证数据有无错误，就是一般 C# 的单元测试了。

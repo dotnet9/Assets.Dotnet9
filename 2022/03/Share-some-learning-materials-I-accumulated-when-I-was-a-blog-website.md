@@ -1,23 +1,3 @@
----
-title: 分享我做Dotnet9博客网站时积累的一些资料
-slug: share-some-learning-materials-i-accumulated-when-i-was-a-blog-website
-description: "Dotnet9网站用WordPress搭建了两年，去年开始自学ASP.NET Core MVC，开始了独立开发网站之路，现在网站前台算是有模有样了，后台正在开发中"
-date: 2022-03-02 07:57:36
-lastmod: 2024-10-26 10:12:05
-originalTitle: 分享我做Dotnet9博客网站时积累的一些资料
-copyright: Original
-draft: false
-cover: https://img1.dotnet9.com/2022/03/cover_01.png
-categories:
-  - 课程
-tags:
-  - .NET
-  - C#
-  - ASP.NET Core
-  - 开源
-  - 开源博客
----
-
 从 2019 年使用[WordPress](https://wordpress.com/zh-cn/)搭建[Dotnet9 网站](https://dotnet9.com/)，到现在手撸代码开发，介绍中间使用的一些资源，绝无保留，希望对大家有用。
 
 ## 1. 申请域名、搭建 WordPress 网站

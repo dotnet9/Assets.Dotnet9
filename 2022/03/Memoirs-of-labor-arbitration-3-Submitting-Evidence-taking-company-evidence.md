@@ -1,21 +1,3 @@
----
-title: "劳动仲裁回忆录（三）：提交证据&取公司证据"
-slug: memoirs-of-labor-arbitration-3-submitting-evidence-taking-company-evidence
-description: 个人全程劳动仲裁实录
-date: 2022-03-17 23:18:23
-lastmod: 2022-03-17 23:18:23
-author: 逃离沙漠
-originalTitle: "劳动仲裁回忆录（三）：提交证据&取公司证据"
-originalLink: https://mp.weixin.qq.com/s/w2uKoK1ROBg3spB3Ul5CdA
-copyright: Reprinted
-draft: false
-cover: https://img1.dotnet9.com/2022/03/cover_12.jpeg
-categories:
-  - 分享
-tags:
-  - 劳动仲裁
----
-
 > 本篇介绍了提交劳动仲裁证据，以及取回公司提交的证据的过程。同时说明了提交证据时可以补充申请事项以及证据时工作人员所说的关键信息。
 
 在之前的篇幅中，我介绍了仲裁申请，以及因为一些小插曲又撤销重新立案的事情。并摘抄了一些劳动法条文辅佐说明，又贴出了相关文件的下载，有需要的可以回头看看前面的两篇文章。

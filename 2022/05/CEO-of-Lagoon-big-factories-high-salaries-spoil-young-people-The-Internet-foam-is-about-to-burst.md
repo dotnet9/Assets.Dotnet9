@@ -1,22 +1,3 @@
----
-title: "拉勾网CEO：大厂高薪惯坏了年轻人 互联网泡沫要被挤破"
-slug: ceo-of-lagoon-big-factories-high-salaries-spoil-young-people-the-internet-foam-is-about-to-burst
-description: "Markdown作为一种非常容易掌握的文档格式，正在被越来越多的人用来写文档，简历，博客等。"
-date: 2022-05-09 06:12:32
-lastmod: 2022-05-09 06:12:32
-author: 博客园
-originalTitle: "拉勾网CEO：大厂高薪惯坏了年轻人 互联网泡沫要被挤破"
-originalLink: https://news.cnblogs.com/n/720119/
-copyright: Reprinted
-draft: false
-cover: https://img1.dotnet9.com/2022/05/cover_26.jpg
-categories:
-  - 分享
-tags:
-  - Markdown
-  - 职场生活
----
-
 近日，拉勾网 CEO 许单单在社交账号上称大厂被裁员工找工作时要求涨薪 30%，简直是被行业惯坏了。
 
 ![](https://img1.dotnet9.com/2022/05/2601.png)

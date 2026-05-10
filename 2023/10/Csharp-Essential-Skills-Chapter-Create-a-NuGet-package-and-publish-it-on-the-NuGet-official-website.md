@@ -1,23 +1,3 @@
----
-title: "C#【必备技能篇】制作NuGet程序包，并发布到NuGet官网"
-slug: csharp-essential-skills-chapter-create-a-nu-get-package-and-publish-it-on-the-nu-get-official-website
-description: 非常详细的教程
-date: 2023-10-10 12:45:06
-lastmod: 2023-10-10 13:28:23
-author: 明如正午
-originalTitle: "C#【必备技能篇】制作NuGet程序包，并发布到NuGet官网"
-originalLink: https://blog.csdn.net/sinat_40003796/article/details/130407108
-copyright: Reprinted
-draft: false
-cover: https://img1.dotnet9.com/2023/10/cover_01.jpg
-categories:
-  - .NET
-tags:
-  - .NET
-  - C#
-  - NuGet
----
-
 ## 1. 准备工作：在 NuGet 上创建并获取 API Keys
 
 网址：https://www.nuget.org/

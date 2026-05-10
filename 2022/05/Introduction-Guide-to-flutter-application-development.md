@@ -1,21 +1,3 @@
----
-title: Flutter应用开发入门指南
-slug: introduction-guide-to-flutter-application-development
-description: "随着跨平台开发在软件交付市场上的迅速流行，全球顶尖的移动应用开发公司也聚焦到了该领域。"
-date: 2022-05-06 06:12:41
-lastmod: 2022-05-06 06:12:41
-author: 51CTO
-originalTitle: Flutter应用开发入门指南
-originalLink: https://baijiahao.baidu.com/s?id=1727350760917736118&wfr=spider&for=pc
-copyright: Reprinted
-draft: false
-cover: https://img1.dotnet9.com/2022/05/cover_18.jpeg
-categories:
-  - Flutter
-tags:
-  - Flutter
----
-
 > 译者：陈峻
 
 随着跨平台开发在软件交付市场上的迅速流行，全球顶尖的移动应用开发公司也聚焦到了该领域。近年来，各种简化了跨平台开发的工具也如雨后春笋般层出不穷。其中，最知名的工具之一当属 Flutter。它不但可以让您通过简单的数行代码，快速地开发出适用于 Android 和 iOS 平台的原生应用程序，而且可以减少专业开发人员的工作量与用时，以便加快交付可扩展的移动应用。

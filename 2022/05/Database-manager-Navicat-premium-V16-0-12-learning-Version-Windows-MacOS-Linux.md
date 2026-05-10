@@ -1,22 +1,3 @@
----
-title: "数据库管理利器——Navicat Premium v16.0.12学习版(Windows+MacOS+Linux)"
-slug: database-manager-navicat-premium-v16-0-12-learning-version-windows-mac-os-linux
-description: "Navicat Premium 是一套数据库管理工具，让你以单一程序同時连接到 MySQL、MariaDB、SQL Server、SQLite、Oracle 和 PostgreSQL 数据库。"
-date: 2022-05-06 07:12:11
-lastmod: 2022-05-06 07:12:11
-author: 懒得勤快
-originalTitle: "数据库管理利器——Navicat Premium v16.0.12学习版(Windows+MacOS+Linux)"
-originalLink: https://ldqk.xyz/37?t=uptjw5h2j0n4
-copyright: Reprinted
-draft: false
-cover: https://img1.dotnet9.com/2022/05/cover_22.png
-categories:
-  - 分享
-tags:
-  - MySQL
-  - SQLite
----
-
 ![](https://img1.dotnet9.com/2022/05/cover_22.png)
 
 Navicat Premium 是一套数据库管理工具，让你以单一程序同時连接到 MySQL、MariaDB、SQL Server、SQLite、Oracle 和 PostgreSQL 数据库。 此外，它与 Drizzle、OurDelta 和 Percona Server 兼容，并支持 Amazon RDS、Amazon Aurora、Amazon Redshift、SQL Azure、Oracle Cloud 和 Google Cloud 等云数据库。

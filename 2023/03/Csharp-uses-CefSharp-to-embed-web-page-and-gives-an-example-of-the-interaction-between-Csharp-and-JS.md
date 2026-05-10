@@ -1,19 +1,3 @@
----
-title: C#使用CefSharp内嵌网页-并给出C#与JS的交互示例
-slug: csharp-uses-cef-sharp-to-embed-web-page-and-gives-an-example-of-the-interaction-between-csharp-and-js
-description: "有在客户端内嵌网页的需求吗？CefSharp可能是个不错的选择！"
-date: 2023-03-27 22:43:17
-lastmod: 2023-03-27 22:43:17
-copyright: Original
-cover: https://img1.dotnet9.com/2023/03/cover_14.png
-categories:
-  - .NET
-tags:
-  - .NET
-  - C#
-  - CefSharp
----
-
 大家好，我是沙漠尽头的狼。
 
 本文介绍C# WPF里怎么使用CefSharp嵌入一个网页，并给出一个简单示例演示C#和网页（JS）的交互实现。

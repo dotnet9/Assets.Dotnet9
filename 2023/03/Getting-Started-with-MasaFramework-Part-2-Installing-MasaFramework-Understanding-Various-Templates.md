@@ -1,23 +1,3 @@
----
-title: "（2）MasaFramework入门第二篇，安装MasaFramework了解各个模板"
-slug: getting-started-with-masa-framework-part-2-installing-masa-framework-understanding-various-templates
-description: 安装MasaFramework了解各个模板
-date: 2023-03-25 19:43:47
-lastmod: 2023-03-25 19:43:47
-author: token的技术分享
-originalTitle: "（2）MasaFramework入门第二篇，安装MasaFramework了解各个模板"
-originalLink: https://www.cnblogs.com/hejiale010426/p/17223279.html
-copyright: Reprinted
-draft: false
-cover: https://img1.dotnet9.com/2023/03/cover_09.png
-categories:
-  - .NET
-tags:
-  - .NET
-  - C#
-  - MASA Framework
----
-
 ## 安装 MasaFramework 模板
 
 执行以下命令安装最新 Masa 的模板

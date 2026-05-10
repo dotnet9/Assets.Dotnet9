@@ -1,21 +1,3 @@
----
-title: "劳动仲裁回忆录（二）：接到调解通知及重新立案"
-slug: memoir-of-labor-arbitration-2-receiving-the-mediation-notice-and-re-filing-the-case
-description: 个人全程劳动仲裁实录
-date: 2022-03-17 23:09:13
-lastmod: 2022-03-17 23:09:13
-author: 逃离沙漠
-originalTitle: "劳动仲裁回忆录（二）：接到调解通知及重新立案"
-originalLink: https://mp.weixin.qq.com/s/XIfN6M3abqdwdlq1A0ZYAQ
-copyright: Reprinted
-draft: false
-cover: https://img1.dotnet9.com/2022/03/cover_12.jpeg
-categories:
-  - 分享
-tags:
-  - 劳动仲裁
----
-
 > 本文介绍了劳动仲裁调解及因为一字之差需要撤销立案又重新立案的小插曲，并摘抄了一下与之相关的法律条文供参考。
 
 在上一篇中，我介绍我于 2021 年 2 月 18 日去朝阳区劳动仲裁争议院立案了，当时我被告知必须走“调解”这一步，于是立案之后的下一步就是等调解通知。其实调解就是：调解员通过与双方沟通，企图让双方达成一致，如果达成一致了，双方需要到争议院签订相关协议。如果一部分人经过调解能达成一致，那么就意味着进入后续步骤的案子少了，大家都省事。

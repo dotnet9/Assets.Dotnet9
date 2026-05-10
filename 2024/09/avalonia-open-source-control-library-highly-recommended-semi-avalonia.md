@@ -1,25 +1,3 @@
----
-title: Avalonia开源控件库强力推荐-Semi.Avalonia
-slug: avalonia-open-source-control-library-highly-recommended-semi-avalonia
-description: "Semi.Avalonia是以MIT协议开源的Avalonia UI框架下的Semi Design主题风格实现，搭配Ursa.Avalonia自定义控件库，为开发者带来全新视觉与功能体验。"
-date: 2024-09-25 22:26:25
-lastmod: 2024-10-14 23:17:26
-copyright: Original
-draft: false
-cover: https://img1.dotnet9.com/2024/09/0101.jpg
-banner: false
-categories:
-  - Avalonia UI
-albums:
-  - Avalonia UI控件库
-tags:
-  - .NET
-  - C#
-  - Avalonia UI
-  - 控件库
-  - 开源
----
-
 ## Avalonia是什么？
 
 Avalonia是一个强大的框架，使开发人员能够使用.NET创建跨平台应用程序。它使用自己的渲染引擎绘制UI控件，确保在Windows、macOS、Linux、Android、iOS和WebAssembly等不同平台上具有一致的外观和行为。这意味着开发人员可以共享他们的UI代码，并在不同的目标平台上保持统一的外观和感觉。

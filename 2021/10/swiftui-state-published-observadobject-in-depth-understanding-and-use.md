@@ -1,23 +1,3 @@
----
-title: SwiftUI @State @Published @ObservedObject 深入理解和使用
-slug: swiftui-state-published-observadobject-in-depth-understanding-and-use
-description: "SwiftUI 是Apple 新出面向未来、跨多端解决方案、声明式编程"
-date: 2021-10-18 16:51:27
-lastmod: 2021-10-18 16:51:27
-author: Renew全栈工程师
-originalTitle: SwiftUI @State @Published @ObservedObject 深入理解和使用
-originalLink: https://www.jianshu.com/p/e589181b14db
-copyright: Reprinted
-draft: false
-cover: https://img1.dotnet9.com/2021/10/cover_04.jpeg
-categories:
-  - Swift UI
-tags:
-  - ObservedObject
-  - Published
-  - State
----
-
 > 1.SwiftUI 是 Apple 新出面向未来、跨多端解决方案、声明式编程
 >
 > SwiftUI 最新版本 2.0 但是需要 IOS 14 支持，多数现在还用的是 IOS 13 所以很多不完善的东西都用 SwiftUIX 以及各种库代替，bug 也是层出不穷

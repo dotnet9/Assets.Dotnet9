@@ -1,26 +1,3 @@
----
-title: "(8/30)大家一起学Blazor：CSS样式修改和数据绑定详述"
-slug: 8-of-30-let-us-learn-blazor-together-css-style-modification-and-data-binding-details
-description: "现在每次启动项目，预设路径都会是`/`，但我们目前没有Component套用这个路由，要自己切换到`Post`实在有些麻烦，另外Menu的图案也跟名称不符，我们来调整一下。"
-date: 2021-12-13 22:36:21
-lastmod: 2021-12-13 22:36:21
-author: StrayaWorker
-originalTitle: "(8/30)大家一起学Blazor：CSS样式修改和数据绑定详述"
-originalLink: https://ithelp.ithome.com.tw/articles/10261579
-copyright: Reprinted
-draft: false
-cover: https://img1.dotnet9.com/2021/12/cover_05.png
-categories:
-  - Blazor
-albums:
-  - 一起学Blazor系列
-tags:
-  - .NET
-  - C#
-  - ASP.NET Core
-  - Blazor
----
-
 现在每次启动项目，预设路径都会是`/`，但我们目前没有 Component 套用这个路由，要自己切换到`Post`实在有些麻烦，另外 Menu 的图案也跟名称不符，我们来调整一下。
 
 我们先来改 icon，由于`font-awesome`目前已用会员制，必须登录才能产生一套免费的 icon 集合，因此笔者使用`bootstrap`的`icon`。首先去`bootstrap`的[`icon`](https://icons.getbootstrap.com/)页面下载`zip`文件(不想下载文件的人可以直接引用 CDN)，将文件解压存放在`wwwroot`，在`_Layout.cshtml`引用`bootstrap-icons.css`，在官网搜寻自己喜欢的 icon 套用即可，笔者这边还做了些样式调整。

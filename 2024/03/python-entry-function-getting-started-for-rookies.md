@@ -1,25 +1,3 @@
----
-title: "Python 入口函数（菜鸟入门）"
-slug: python-entry-function-getting-started-for-rookies
-description: "本人 C# 出生，写过少许 C/C++，所以一直想着有个类似 Main() 函数的东西是整个程序的入口。然而，查遍了整个目录，没有找到任何线索，接下来就开始各种捣鼓。"
-date: 2024-03-12 05:18:47
-lastmod: 2024-03-12 05:24:49
-author: Ironyho
-originalTitle: "Python 入口函数（菜鸟入门）"
-originalLink: https://blog.csdn.net/Iron_Ye/article/details/80044242
-copyright: Reprinted
-draft: false
-cover: https://img1.dotnet9.com/2024/03/cover_07.png
-categories:
-  - Python
-tags:
-  - .NET
-  - C#
-  - Python
-  - 菜鸟
-  - 入口函数
----
-
 ## 前言
 
 最近在组内研究专项项目，其中的一个现有工具是用 Python 开发的，我的目标是对这款工具的流程进行优化。虽然可以找到对应的开发者了解现有流程，然后结合我的研究提出优化方案，最后让 TA 去编码实现。但是程序员心理使然，什么东西都想自己琢磨明白，于是开启了摸索历程。

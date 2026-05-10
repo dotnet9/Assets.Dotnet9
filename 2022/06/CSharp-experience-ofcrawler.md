@@ -1,24 +1,3 @@
----
-title: C#基于.Net-HtmlAgilityPack库的爬虫初体验
-slug: csharp-experience-ofcrawler
-description: "在github上看一些.Net的开源库，看到了关于爬虫相关的库"
-date: 2022-06-09 22:54:17
-lastmod: 2022-06-09 22:54:17
-author: 黑哥聊dotNet
-originalTitle: C#基于.Net-HtmlAgilityPack库的爬虫初体验
-originalLink: https://mp.weixin.qq.com/s/o4YQVRtCKbckf0lmq7oT9w
-copyright: Reprinted
-draft: false
-cover: https://img1.dotnet9.com/2022/06/cover_09.jpeg
-categories:
-  - .NET
-tags:
-  - .NET
-  - C#
-  - 开源
-  - GitHub
----
-
 ## 讲故事
 
 前几天有点空闲时间，在 github 上看一些.Net 的开源库，看到了关于爬虫相关的库，于是加入了一个 QQ 群，看到里面各位大佬讨论的是**爬的越好，进去越快**，于是我自己也想做一个爬虫相关的东西，但是爬虫是个危险的东西，自己也不敢随便爬别人的网页，于是找到了一个朋友，拿他的网站来进行练习！

@@ -1,22 +1,3 @@
----
-title: C#中缓存的使用
-slug: use-of-cache-in-csharp
-description: "缓存是指可以进行高速数据交换的存储器，它先于内存与CPU交换数据，因此速率很快。"
-date: 2022-07-11 21:53:13
-lastmod: 2022-07-11 21:53:13
-author: 黑哥聊dotNet
-originalTitle: C#中缓存的使用
-originalLink: https://mp.weixin.qq.com/s/0Nc9wXjDYPIa_ZrIOqOdNQ
-copyright: Reprinted
-draft: false
-cover: https://img1.dotnet9.com/2022/07/cover_12.png
-categories:
-  - .NET
-tags:
-  - .NET
-  - C#
----
-
 ## 简介
 
 缓存是指可以进行高速数据交换的存储器，它先于内存与 CPU 交换数据，因此速率很快。由于 CPU 从内存中读取数据的速度比从磁盘读取快几个数量级，并且存在内存中，减小了数据库访问的压力， 所以缓存几乎每个项目都会用到。一般常用的有 MemoryCache、Redis, 今天就给大家带来 MemoryCache 的使用介绍！

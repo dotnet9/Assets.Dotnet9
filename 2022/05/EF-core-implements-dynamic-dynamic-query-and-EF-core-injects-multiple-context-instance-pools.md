@@ -1,24 +1,3 @@
----
-title: EF Core实现dynamic动态查询和EF Core注入多个上下文实例池
-slug: ef-core-implements-dynamic-dynamic-query-and-ef-core-injects-multiple-context-instance-pools
-description: 无论是在EF 6.x还是EF Core中对于原始查询的APi都比较鸡肋
-date: 2022-05-04 16:43:26
-lastmod: 2022-05-04 16:43:26
-author: Jeffcky
-originalTitle: EF Core实现dynamic动态查询和EF Core注入多个上下文实例池
-originalLink: https://www.cnblogs.com/CreateMyself/p/8921881.html
-copyright: Reprinted
-draft: false
-cover: https://img1.dotnet9.com/2022/05/cover_11.jpg
-categories:
-  - EF Core
-tags:
-  - .NET
-  - C#
-  - EF Core
-  - ORM
----
-
 ## 前言
 
 很长一段时间没有写博客了，今天补上一篇吧，偶尔发现不太愿意写博客了，太耗费时间，不过还是在坚持当中，毕竟或许写出来的东西能帮到一些童鞋吧，接下来我们直奔主题。无论是在 EF 6.x 还是 EF Core 中对于原始查询的 APi 都比较鸡肋，比如我们只想查询单个值，它们是不支持的，比如我们只想有些列，它们也是不支持的，太多太多不支持，唯一支持的是只能返回表中所有列即类中所有字段。所以大部分情况下我都是写原生 SQL，原始查询都没怎么用到过，最近有对热爱 EF 的同行问到怎么利用 SqlQuery 实现动态查询，我没有答案，压根没想过用这个方法，私下看了看，还是给出一点点思考吧。若对您有帮助就好，没有用就当是我补上了一篇博客吧。

@@ -1,26 +1,3 @@
----
-title: "(30/30)大家一起学Blazor：.NET 6 <ErrorBoundary>"
-slug: 30-of-30-let-us-learn-blazor-together-dotnet6-errorboundary
-description: "昨天说到单元测试，但有些时候可能由于时间关系没办法完整测试"
-date: 2021-12-25 21:50:23
-lastmod: 2021-12-25 21:50:23
-author: StrayaWorker
-originalTitle: "(30/30)大家一起学Blazor：.NET 6 <ErrorBoundary>"
-originalLink: https://ithelp.ithome.com.tw/articles/10275330
-copyright: Reprinted
-draft: false
-cover: https://img1.dotnet9.com/2021/12/cover_05.png
-categories:
-  - Blazor
-albums:
-  - 一起学Blazor系列
-tags:
-  - .NET
-  - C#
-  - ASP.NET Core
-  - Blazor
----
-
 昨天说到单元测试，但有些时候可能由于时间关系没办法完整测试，就可能因为`某个Component 出错`导致`整个系统崩溃`(如下图)，因为`Blazor Server` 是在 Server 建立一个`circuit(流程)`，一旦有未处理的错误 Server 就会将 circuit 终止以避免安全问题。
 
 ![](https://img1.dotnet9.com/2021/12/4201.png)

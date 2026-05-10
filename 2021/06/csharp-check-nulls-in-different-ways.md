@@ -1,20 +1,3 @@
----
-title: C# 不同的方式检查Null
-slug: csharp-check-nulls-in-different-ways
-description: 多了解点没错的
-date: 2021-06-19 14:24:28
-lastmod: 2021-06-19 14:24:28
-originalTitle: C# 不同的方式检查Null
-copyright: Original
-draft: false
-cover: https://img1.dotnet9.com/2021/06/cover_03.jpg
-categories:
-  - .NET
-tags:
-  - .NET
-  - C#
----
-
 > - 原文链接：https://www.thomasclaudiushuber.com/2020/03/12/c-different-ways-to-check-for-null/
 > - 原文作者：Thomas
 > - 翻译：沙漠尽头的狼

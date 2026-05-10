@@ -1,21 +1,3 @@
----
-title: "博客系统知多少：揭秘那些不为人知的学问（二）"
-slug: how-many-do-you-know-about-the-blog-system-revealing-those-unknown-knowledge-2
-description: 大佬说博客
-date: 2022-03-08 21:55:33
-lastmod: 2022-03-08 21:55:33
-author: 汪宇杰博客
-originalTitle: "博客系统知多少：揭秘那些不为人知的学问（二）"
-originalLink: https://mp.weixin.qq.com/s/FX3t75q0BMtb3hOsfM1-VQ
-copyright: Reprinted
-draft: false
-cover: https://img1.dotnet9.com/2022/03/cover_03.png
-categories:
-  - 分享
-tags:
-  - 分享
----
-
 上篇[《博客系统知多少：揭秘那些不为人知的学问（一）》](https://mp.weixin.qq.com/s/TVFS98aMuXViBNiCWtQ9Aw)介绍了博客的历史、我的博客故事及博客的受众来源。本篇精彩继续，介绍博客基本功能设计要点。
 
 ## 目录

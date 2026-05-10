@@ -1,23 +1,3 @@
----
-title: "像JAVA一样流畅调试C#源代码？"
-slug: how-to-debug-csharp-source-code-as-smoothly-as-java
-description: "有没有一种可能, C#也能像JAVA那样非常顺畅的调试源代码呢？"
-date: 2022-06-29 21:03:38
-lastmod: 2022-06-29 21:03:38
-author: 长空X
-originalTitle: "像JAVA一样流畅调试C#源代码？"
-originalLink: https://www.cnblogs.com/gtxck/articles/16423094.html
-copyright: Reprinted
-draft: false
-cover: https://img1.dotnet9.com/2022/06/cover_21.png
-categories:
-  - .NET
-tags:
-  - .NET
-  - C#
-  - Java
----
-
 ## 起因
 
 最近在研究`ServiceScope`的内一些内在运行逻辑,发现相关资料非常少，只有讲`IOC`相关的文章有说`Core时代`的官方`依赖注入`怎么使用。。遂决定还是要去看源代码。这部分源代码在`Microsoft.Extensions.DependencyInjection`库中，源代码位置在[src/libraries](https://github.com/dotnet/runtime/tree/release/6.0/src/libraries/Microsoft.Extensions.DependencyInjection)下。阅读了一点，发现内部解析服务的时候会来回倒腾,那看代码的方式去梳理就非常难受了。。

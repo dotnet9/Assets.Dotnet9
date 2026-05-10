@@ -1,25 +1,3 @@
----
-title: "【知乎】特斯拉为何使用.NET Core技术框架？为何不用Java/Go等？"
-slug: zhihu-why-does-tesla-use-the-dotnet-core-technology-framework-why-not-use-java-or-go-etc
-description: "很简单，用是因为好用，性能和语法表现力/开发速度都比java/go强，干嘛不用呢。"
-date: 2021-11-10 14:58:50
-lastmod: 2021-11-10 14:58:50
-author: AlseinX
-originalTitle: "【知乎】特斯拉为何使用.NET Core技术框架？为何不用Java/Go等？"
-originalLink: https://www.zhihu.com/question/496204534/answer/2213155471
-copyright: Reprinted
-draft: false
-cover: https://img1.dotnet9.com/2021/11/cover_01.jpeg
-categories:
-  - 分享
-tags:
-  - .NET
-  - C#
-  - Java
-  - Go
-  - .NET Core
----
-
 ![](https://img1.dotnet9.com/2021/11/cover_01.jpeg)
 
 选自【知乎】一个问答，原帖子问题：**特斯拉为何使用.net core 技术框架？为何不用 java/go 等？**

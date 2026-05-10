@@ -1,24 +1,3 @@
----
-title: "WPF|黑暗模式的钱包支付仪表盘界面设计"
-slug: wpf-design-of-wallet-payment-dashboard-interface-in-dark-mode
-description: 黑暗模式的钱包支付仪表盘界面设计
-date: 2022-05-14 21:15:26
-lastmod: 2022-05-14 21:15:26
-originalTitle: "WPF|黑暗模式的钱包支付仪表盘界面设计"
-copyright: Original
-draft: false
-cover: https://img1.dotnet9.com/2022/05/cover_41.png
-categories:
-  - WPF
-albums:
-  - WPF UI设计
-tags:
-  - .NET
-  - WPF
-  - UI设计
-  - WPF UI设计
----
-
 **阅读目录**
 
 1. 效果展示

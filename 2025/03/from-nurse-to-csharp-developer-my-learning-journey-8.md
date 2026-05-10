@@ -1,27 +1,3 @@
----
-title: "(8)从护士到C#开发者--数据类型与继承"
-slug: from-nurse-to-csharp-developer-my-learning-journey-8
-description: "本文将结合医护工作场景，详细讲解C#中的命名空间、数据类型、字符串处理、继承以及集合等重要概念，帮助医护人员更好地理解编程知识。"
-date: 2025-03-20 09:12:26
-lastmod: 2025-03-24 21:47:14
-author: 勇敢的天使
-copyright: Contributes
-draft: false
-cover: https://img1.dotnet9.com/2025/02/cover_02.png
-categories:
-  - 分享
-  - 课程
-  - .NET
-albums:
-  - 从护士到C#开发者
-tags:
-  - .NET
-  - C#
-  - 转行开发
-  - 编程
-  - 集合
----
-
 作为一名从护理行业转行到编程领域的学习者，我发现很多编程概念都可以通过医护工作经验来理解。本文将结合医院信息系统的实际场景，详细讲解 C#中的几个重要概念。
 
 ## 1. 命名空间

@@ -1,23 +1,3 @@
----
-title: .NET 10 Preview 1发布
-slug: dotnet-10-preview-1-release
-description: "今天.NET 10 Preview 1发布了，我第一时间下载，升级了Avalonia UI项目和博客网站，前者功能测试及AOT发布正常，后者调试正常，Docker暂时未成功"
-date: 2025-02-25 05:01:14
-lastmod: 2025-02-25 06:21:12
-copyright: Original
-draft: false
-cover: https://img1.dotnet9.com/2025/02/cover_06.jpg
-categories:
-  - 分享
-  - .NET
-tags:
-  - .NET
-  - C#
-  - Avalonia UI
-  - Docker
-  - AOT
----
-
 今天，微软发布了 .NET 10 的首个预览版本。作为一名 .NET 开发者，我第一时间下载并进行了测试。让我们一起来看看这个版本带来了哪些更新，以及我的实际测试情况。
 
 ## 一、 .NET 10 Preview 1 主要更新
@@ -75,4 +55,3 @@ tags:
 更多详细信息可以查看[官方博客公告](https://devblogs.microsoft.com/dotnet/dotnet-10-preview-1/)。
 
 后续我会持续关注 .NET 10 的开发进展，并分享更多实践经验。
-

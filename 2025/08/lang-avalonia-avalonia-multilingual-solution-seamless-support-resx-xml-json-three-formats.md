@@ -1,20 +1,3 @@
----
-title: "Lang.Avalonia：Avalonia多语言解决方案，无缝支持Resx/XML/JSON三种格式"
-slug: lang-avalonia-avalonia-multilingual-solution-seamless-support-resx-xml-json-three-formats
-description: "这是一款专为Avalonia框架设计的多语言管理库，通过插件化架构重构了多语言支持逻辑，不仅兼容传统Resx资源文件，还新增XML和JSON格式支持，同时提供类型安全的资源引用、动态语言切换等能力，让多语言开发更简单、更高效。"
-date: 2025-08-09 12:15:17
-lastmod: 2025-08-09 19:58:31
-cover: https://img1.dotnet9.com/2025/08/cover_02.png
-categories:
-  - Avalonia UI
-tags:
-  - .NET
-  - C#
-  - Avalonia UI
-  - 架构设计
-  - 安全
----
-
 ![](https://img1.dotnet9.com/2025/08/cover_02.png)
 
 ## 引言：为什么需要Lang.Avalonia？

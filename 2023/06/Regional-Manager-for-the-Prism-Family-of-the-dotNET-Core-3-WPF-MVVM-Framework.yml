@@ -1,0 +1,21 @@
+title: "(5/7).NET Core 3 WPF MVVM框架 Prism系列之区域管理器"
+slug: regional-manager-for-the-prism-family-of-the-dotnet-core-3-wpf-mvvm-framework
+description: 如何在.NET Core3环境下使用MVVM框架Prism的使用区域管理器对于View的管理
+date: 2023-06-11 00:21:17
+lastmod: 2023-06-11 00:21:17
+author: RyzenAdorer
+originalTitle: .NET Core 3 WPF MVVM框架 Prism系列之区域管理器
+originalLink: https://www.cnblogs.com/ryzen/p/12605347.html
+copyright: Reprinted
+draft: false
+cover: https://img1.dotnet9.com/2023/06/cover_15.png
+categories:
+  - WPF
+albums:
+  - WPF MVVM框架 Prism系列
+tags:
+  - .NET
+  - C#
+  - WPF
+  - Prism
+  - MVVM

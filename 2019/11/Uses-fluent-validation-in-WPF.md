@@ -1,23 +1,3 @@
----
-title: FluentValidation在C# WPF中的应用
-slug: uses-fluent-validation-in-wpf
-description: "本文将深入探讨如何在C# WPF项目中运用FluentValidation进行属性验证，并展示如何通过MVVM模式实现这一功能。"
-date: 2019-11-19 03:43:13
-lastmod: 2024-01-25 05:17:26
-author: 沙漠尽头的狼
-copyright: Original
-draft: false
-cover: https://img1.dotnet9.com/2019/11/cover_01.png
-categories:
-  - WPF
-tags:
-  - .NET
-  - C#
-  - WPF
-  - MVVM
-  - FluentValidation
----
-
 ## 1. 引言
 
 在.NET开发领域，`FluentValidation`以其优雅、易扩展的特性成为开发者进行属性验证的首选工具。它不仅适用于Web开发，如MVC、Web API和ASP.NET CORE，同样也能完美集成在WPF应用程序中，提供强大的数据验证功能。本文将深入探讨如何在C# WPF项目中运用FluentValidation进行属性验证，并展示如何通过MVVM模式实现这一功能。
@@ -761,4 +741,4 @@ private void Validate(object sender, PropertyChangedEventArgs e)
 
 参考：
 
-- FluentValidation官网： https://fluentvalidation.net/ 
+- FluentValidation官网： https://fluentvalidation.net/

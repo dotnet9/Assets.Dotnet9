@@ -1,21 +1,3 @@
----
-title: Vue3.2 setup语法糖总结
-slug: vue3-to-2-summary-of-setup-syntax
-description: "在 Vue3.2 中只需要在 script 标签上加上 setup 属性，无需 return，template 便可直接使用，非常的香啊！"
-date: 2022-05-19 06:47:26
-lastmod: 2022-05-19 06:47:26
-author: 玲小叮当
-originalTitle: Vue3.2 setup语法糖总结
-originalLink: https://segmentfault.com/a/1190000041849882
-copyright: Reprinted
-draft: false
-cover: https://img1.dotnet9.com/2022/05/cover_48.jpg
-categories:
-  - 前端
-tags:
-  - Vue
----
-
 ## 前言
 
 `提示：Vue3.2 版本开始才能使用语法糖！`

@@ -1,29 +1,3 @@
----
-title: "WPF开源项目：WPF-ControlBase"
-slug: wpf-open-source-project-wpf-controlbase
-description: "仓库README很素，但看作者README贴的几篇博文介绍，你会喜欢上它的"
-date: 2021-11-30 16:57:37
-lastmod: 2021-11-30 16:57:37
-author: He BianGu
-originalTitle: "WPF开源项目：WPF-ControlBase"
-originalLink: https://github.com/HeBianGu/WPF-ControlBase
-copyright: Reprinted
-draft: false
-cover: https://img1.dotnet9.com/2021/11/cover_09.png
-banner: false
-categories:
-  - WPF
-albums:
-  - WPF控件库
-  - WPF开源项目
-tags:
-  - .NET
-  - WPF
-  - WPF开源项目
-  - 开源项目
-  - 开源
----
-
 ![仓库截图](https://img1.dotnet9.com/2021/11/0901.png)
 
 仓库 README 很素，但看作者 README 贴的几篇博文介绍，你会喜欢上它的，废话不多说，上介绍目录：

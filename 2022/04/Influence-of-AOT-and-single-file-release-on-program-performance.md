@@ -1,25 +1,3 @@
----
-title: AOT和单文件发布对程序性能的影响
-slug: influence-of-aot-and-single-file-release-on-program-performance
-description: "以前的.NET框架原生并不支持最终编译结果的单文件发布（需要依赖第三方工具）"
-date: 2022-04-20 07:31:25
-lastmod: 2022-04-20 07:31:25
-author: InCerry
-originalTitle: AOT和单文件发布对程序性能的影响
-originalLink: https://www.cnblogs.com/InCerry/p/Single-File-And-AOT-Publish.html
-copyright: Reprinted
-draft: false
-cover: https://img1.dotnet9.com/2022/04/cover_24.jpg
-categories:
-  - .NET
-albums:
-  - C# AOT
-tags:
-  - .NET
-  - C#
-  - AOT
----
-
 ## 1. 前言
 
 这里先和大家介绍一下.NET 一些发布的历史，以前的.NET 框架原生并不支持最终编译结果的单文件发布（需要依赖第三方工具），我这里新建了一个简单的 ASP.NET Core 项目，发布以后的目录就会像下图这样，里面包含很多`*.dll`文件和其他各类的文件。

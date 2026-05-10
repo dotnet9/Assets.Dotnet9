@@ -1,21 +1,3 @@
----
-title: 疫情下的北京失业中年
-slug: unemployed-middle-aged-people-in-beijing-under-the-epidemic
-description: "最近身边的一个朋友突然间就被辞退了，而且是一线互联网大厂，周末跟我聚了下。喝了点小酒，聊了很多，他说我可以把他的经历发出来，因为他已经看淡了"
-date: 2022-03-29 08:33:33
-lastmod: 2022-03-29 08:33:33
-author: 九边
-originalTitle: 疫情下的北京失业中年
-originalLink: https://mp.weixin.qq.com/s/qpgd8jwpucbFx0e_u8nztQ
-copyright: Reprinted
-draft: false
-cover: https://img1.dotnet9.com/2022/03/cover_27.jpeg
-categories:
-  - 分享
-tags:
-  - 分享
----
-
 最近身边的一个朋友突然间就被辞退了，而且是一线互联网大厂，周末跟我聚了下。喝了点小酒，聊了很多，他说我可以把他的经历发出来，因为他已经看淡了，只要不提他名字就行，如果有人打赏，就把打赏给他。
 
 我本来不擅长写这种文章，让他把心路历程写了一遍，写完发现简直没法看，这两天被我一顿猛改，感觉更没法看了，大家凑合着看吧。

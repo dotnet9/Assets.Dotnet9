@@ -1,21 +1,3 @@
----
-title: "WPF|如何在 WPF 中设计漂亮的社交媒体信息仪表板"
-slug: how-to-design-beautiful-social-media-information-dashboards-in-wpf
-description: 设计一个漂亮的WPF社交媒体信息仪表板
-date: 2022-05-12 22:03:17
-lastmod: 2022-05-12 22:03:17
-originalTitle: "WPF|如何在 WPF 中设计漂亮的社交媒体信息仪表板"
-copyright: Original
-draft: false
-cover: https://img1.dotnet9.com/2022/05/cover_38.png
-categories:
-  - WPF
-tags:
-  - .NET
-  - WPF
-  - WPF UI设计
----
-
 ## 1. 效果展示
 
 先来直接欣赏效果：

@@ -1,25 +1,3 @@
----
-title: "正确姿势？EF Core 中这样使用枚举类型？"
-slug: correct-posture-use-enumeration-types-like-this-in-ef-core
-description: "在EntityFramework Core中的实体是不直接支持枚举类型的操作，这让我们在开发过程中带来不少的麻烦"
-date: 2021-11-09 10:06:30
-lastmod: 2021-11-09 10:06:30
-author: waitaction
-originalTitle: "正确姿势？EF Core 中这样使用枚举类型？"
-originalLink: https://blog.csdn.net/waitaction/article/details/88639152
-copyright: Reprinted
-draft: false
-cover: https://img1.dotnet9.com/2021/11/cover_03.jpeg
-categories:
-  - EF Core
-tags:
-  - .NET
-  - C#
-  - EF Core
-  - ORM
-  - .NET Core
----
-
 ![](https://img1.dotnet9.com/2021/11/cover_03.jpeg)
 
 在 EntityFramework Core 中的实体是不直接支持枚举类型的操作，这让我们在开发过程中带来不少的麻烦，下面总结一下在 ef core 中使用枚举的方法.

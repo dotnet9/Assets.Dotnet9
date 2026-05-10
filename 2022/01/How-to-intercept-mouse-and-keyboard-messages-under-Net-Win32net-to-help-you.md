@@ -1,24 +1,3 @@
----
-title: ".NET下如何拦截鼠标、键盘消息？Win32NET来帮你"
-slug: how-to-intercept-mouse-and-keyboard-messages-under-net-win32net-to-help-you
-description: Win32NET是一个Win32API的.NET下封装的类库
-date: 2022-01-20 14:12:04
-lastmod: 2022-01-20 14:12:04
-author: 明月心技术学堂
-originalTitle: ".NET下如何拦截鼠标、键盘消息？Win32NET来帮你"
-originalLink: https://mp.weixin.qq.com/s/_c4T7R_HeVLVg6sqvLoABw
-copyright: Reprinted
-draft: false
-cover: https://img1.dotnet9.com/2022/01/cover_04.jpeg
-categories:
-  - .NET
-tags:
-  - .NET
-  - C#
-  - 拦截键盘
-  - 拦截鼠标
----
-
 Win32NET 是一个 Win32API 的.NET 下封装的类库，包含：
 
 1. 常用 win32 的 API 的 net 封装

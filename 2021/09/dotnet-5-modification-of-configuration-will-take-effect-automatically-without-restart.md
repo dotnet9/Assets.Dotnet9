@@ -1,24 +1,3 @@
----
-title: .NET 5 修改配置不重启自动生效
-slug: dotnet-5-modification-of-configuration-will-take-effect-automatically-without-restart
-description: ".NET Core，.NET5默认配置都是只加载一次，修改配置时都需要重启才能生效，如何能修改即时生效呢？"
-date: 2021-09-18 11:35:57
-lastmod: 2021-09-18 11:35:57
-author: 包子wxl
-originalTitle: .NET 5 修改配置不重启自动生效
-originalLink: https://www.cnblogs.com/wei325/p/15277177.html
-copyright: Reprinted
-draft: false
-cover: https://img1.dotnet9.com/2021/09/cover_03.png
-categories:
-  - ASP.NET Core
-tags:
-  - .NET
-  - C#
-  - ASP.NET Core
-  - 配置文件
----
-
 ## 一、设置配置文件实时生效
 
 ### 1.1 配置

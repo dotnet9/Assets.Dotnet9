@@ -1,24 +1,3 @@
----
-title: AOT使用经验总结
-slug: summary-of-aot-usage-experience
-description: "从项目创建伊始，就应养成良好的习惯，即只要添加了新功能或使用了较新的语法，就及时进行 AOT 发布测试。"
-date: 2024-10-14 17:04:18
-lastmod: 2026-02-07 14:26:27
-copyright: Original
-draft: false
-cover: https://img1.dotnet9.com/2024/10/cover_02.png
-categories:
-  - .NET
-albums:
-  - C# AOT
-tags:
-  - .NET
-  - C#
-  - Dapper
-  - Prism
-  - AOT
----
-
 ## 一、引言
 
 站长接触 AOT 已有 3 个月之久，此前在《[好消息：NET 9 X86 AOT 的突破 - 支持老旧 Win7 与 XP 环境](https://mp.weixin.qq.com/s/k3xV7DmSzMcwdYzeonQXAQ)》一文中就有所提及。在这段时间里，站长使用 Avalonia 开发的项目也成功完成了 AOT 发布测试。然而，这一过程并非一帆风顺。站长在项目功能完成大半部分才开始进行 AOT 测试，期间遭遇了不少问题，可谓是 “踩坑无数”。为了方便日后回顾，也为了给广大读者提供参考，在此将这段经历进行总结。

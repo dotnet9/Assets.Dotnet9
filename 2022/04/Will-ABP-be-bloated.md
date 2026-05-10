@@ -1,25 +1,3 @@
----
-title: ABP会臃肿吗
-slug: will-abp-be-bloated
-description: "我有时候在想在JAVA领域，Spring基本一统天下，新手也好，高手也罢都在学习、研究和项目实战。"
-date: 2022-04-24 20:44:57
-lastmod: 2022-04-24 20:44:57
-author: "张飞洪[厦门]"
-originalTitle: ABP会臃肿吗
-originalLink: https://www.cnblogs.com/jackyfei/p/16063572.html
-copyright: Reprinted
-draft: false
-cover: https://img1.dotnet9.com/2022/04/cover_34.jpg
-categories:
-  - ASP.NET Core
-tags:
-  - .NET
-  - C#
-  - ASP.NET Core
-  - Java
-  - ABP
----
-
 ## 1. 有了 ABP，还要学其他的框架？
 
 我有时候在想在 JAVA 领域，Spring 基本一统天下，新手也好，高手也罢都在学习、研究和项目实战。也就是说其实对与应用开发，Spring 已经是绕不开的框架，不管是单体还是微服务都可以轻松胜任，学了 Spring 在 JAVA 开发层面，其实你可以完全不需要去学习其他的任何知识点，也能参加工作（当然不包括数据库和前端，我这里指的是 JAVA 语言本身）。

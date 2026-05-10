@@ -1,25 +1,3 @@
----
-title: .NET Core使用FluentEmail发送邮件
-slug: uses-fluent-email-to-send-mail-in-dotnet-core
-description: "在实际的项目开发中，我们会遇到许多需要通过程序发送邮件的场景，比如异常报警、消息、进度通知等等。"
-date: 2020-11-28 09:18:07
-lastmod: 2020-11-28 09:18:07
-author: yi念之间
-originalTitle: .NET Core使用FluentEmail发送邮件
-originalLink: https://www.cnblogs.com/wucy/p/13797578.html
-copyright: Reprinted
-draft: false
-cover: https://img1.dotnet9.com/2020/11/cover_03.jpeg
-categories:
-  - .NET
-tags:
-  - .NET
-  - C#
-  - Web API
-  - 邮件发送
-  - FluentEmail
----
-
 ## 前言
 
 在实际的项目开发中，我们会遇到许多需要通过程序发送邮件的场景，比如异常报警、消息、进度通知等等。一般情况下我们使用原生的 SmtpClient 类库居多，它能满足我们绝大多数场景。但是使用起来不够简洁，许多场景需要我们自行封装方法去实现，而且代码量非常可观。庆幸的是，我们有一款非常棒的组件，能满足我们绝大多数应用场景，而且使用简单功能强大，就是我们今天要说的 FluentEmail，这也是我们实际在项目中正在使用的邮件发送组件。如果你们在.NET Core 中有发送邮件的需求，也推荐去尝试一下。

@@ -1,24 +1,3 @@
----
-title: Flurl使用Polly实现重试Policy
-slug: flurl-uses-policy-to-implement-retry-policy
-description: "在使用Flurl作为HttpClient向Server请求时，由于网络或者其他一些原因导致请求会有失败的情况"
-date: 2021-03-15 11:57:53
-lastmod: 2021-03-15 11:57:53
-author: 非法关键字
-originalTitle: Flurl使用Polly实现重试Policy
-originalLink: https://www.cnblogs.com/linxmouse/p/14533151.html
-copyright: Reprinted
-draft: false
-cover: https://img1.dotnet9.com/2021/03/cover_03.jpg
-categories:
-  - .NET
-tags:
-  - .NET
-  - C#
-  - Flurl
-  - Policy
----
-
 > 在使用 Flurl 作为 HttpClient 向 Server 请求时，由于网络或者其他一些原因导致请求会有失败的情况，比如`HttpStatusCode.NotFound`、`HttpStatusCode.ServiceUnavailable`、HttpStatusCode.RequestTimeout 等；网络上有比较多的 HttpClientFactory 使用 Polly 来实现重试的内容，奈何已经习惯使用 Flurl 的人，要全部换回到 IHttpClient 的确有不方便的地方，因为本文使用 Flurl 的 Polly 来实现重试机制做一个整理；
 
 ## 不使用 Polly 来测试

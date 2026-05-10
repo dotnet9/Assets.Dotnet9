@@ -1,0 +1,15 @@
+title: "浅谈UDP(数据包长度，收包能力，丢包及进程结构选择)"
+slug: on-udp-packet-length-packet-receiving-ability-packet-loss-and-process-structure-selection
+description: "udp数据包的理论长度是多少，合适的udp数据包应该是多少呢？"
+date: 2023-12-08 05:31:24
+lastmod: 2023-12-08 05:52:34
+author: 不朽的传奇
+originalTitle: "浅谈UDP(数据包长度，收包能力，丢包及进程结构选择)"
+originalLink: https://zhuanlan.zhihu.com/p/301276548
+copyright: Reprinted
+draft: false
+cover: https://img1.dotnet9.com/2023/12/cover_02.png
+categories:
+  - 分享
+tags:
+  - 技术更新

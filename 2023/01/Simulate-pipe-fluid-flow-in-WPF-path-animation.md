@@ -1,26 +1,3 @@
----
-title: 在WPF中模拟管道流体流向-路径动画
-slug: simulate-pipe-fluid-flow-in-wpf-path-animation
-description: "WPF的一大特性就的动画系统，使用动画能够实现很多在WinForm很难实现的效果。"
-date: 2023-01-15 12:46:26
-lastmod: 2023-01-15 12:46:26
-author: ludewig
-originalTitle: "WPF随笔（九）--使用路径动画模拟管道流体流向"
-originalLink: https://blog.csdn.net/lordwish/article/details/85007867
-copyright: Reprinted
-draft: false
-cover: https://img1.dotnet9.com/2023/01/0403.gif
-categories:
-  - WPF
-albums:
-  - WPF UI设计
-tags:
-  - .NET
-  - C#
-  - WPF
-  - Winform
----
-
 WPF 的一大特性就的动画系统，使用动画能够实现很多在 WinForm 很难实现的效果。最近在网上偶然看到大神用 WPF 动画实现对象沿特定路径正向或反向移动的效果，就想参考着自己试一试。
 
 ## 1. 简单路径动画

@@ -1,26 +1,3 @@
----
-title: "(12/30)大家一起学Blazor：Cascading values and parameters"
-slug: 12-of-30-let-us-learn-blazor-together-cascading-values-and-parameters
-description: "昨天不小心把Reset按钮的type改成button，今天改回reset。"
-date: 2021-12-15 23:38:24
-lastmod: 2021-12-15 23:38:24
-author: StrayaWorker
-originalTitle: "(12/30)大家一起学Blazor：Cascading values and parameters"
-originalLink: https://ithelp.ithome.com.tw/articles/10262797
-copyright: Reprinted
-draft: false
-cover: https://img1.dotnet9.com/2021/12/cover_05.png
-categories:
-  - Blazor
-albums:
-  - 一起学Blazor系列
-tags:
-  - .NET
-  - C#
-  - ASP.NET Core
-  - Blazor
----
-
 **(注：昨天不小心把 Reset 按钮的 type 改成 button，今天改回 reset。)**
 
 我们目前建立了 3 个组件，`Blog`、`Post`及`MyButton`，如果想让 3 个组件的字体颜色或是尺寸都一样，似乎得先在`MyButton`定义一个带有`[Parameter]` attribute 的变量，`Post`调用时再填入值，`Post`同样定义变量，`Blog`调用时再填入，每个环节都要这样做。

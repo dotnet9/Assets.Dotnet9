@@ -1,26 +1,3 @@
----
-title: "(24/30)大家一起学Blazor：<AuthorizeRouteView>运用"
-slug: 24-of-30-let-us-learn-blazor-together-authorizetouteview
-description: "前天有在`Blog.razor`加入通过验证及未通过的显示内容，但如果系统要呈现的未通过验证内容都一样，在每个Component 都这样写就太浪费时间了，可以利用`App.razor`帮我们做统一呈现的事。"
-date: 2021-12-23 22:51:24
-lastmod: 2021-12-23 22:51:24
-author: StrayaWorker
-originalTitle: "(24/30)大家一起学Blazor：<AuthorizeRouteView>运用"
-originalLink: https://ithelp.ithome.com.tw/articles/10271129
-copyright: Reprinted
-draft: false
-cover: https://img1.dotnet9.com/2021/12/cover_05.png
-categories:
-  - Blazor
-albums:
-  - 一起学Blazor系列
-tags:
-  - .NET
-  - C#
-  - ASP.NET Core
-  - Blazor
----
-
 前天有在`Blog.razor`加入通过验证及未通过的显示内容，但如果系统要呈现的未通过验证内容都一样，在每个 Component 都这样写就太浪费时间了，可以利用`App.razor`帮我们做统一呈现的事。
 
 先把`Blog.razor`原本包覆内容的`<AuthorizeView>`删除，剪切`<NotAuthorized>`的部分，再加上`@attribute [Authorize]`这行，告知`Blazor` 这个 Component 需要验证。

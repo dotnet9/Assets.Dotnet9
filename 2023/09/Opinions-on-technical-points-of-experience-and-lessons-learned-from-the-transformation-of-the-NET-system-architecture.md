@@ -1,23 +1,3 @@
----
-title: "【对.NET系统架构改造的一点经验和教训】的技术要点的看法"
-slug: opinions-on-technical-points-of-experience-and-lessons-learned-from-the-transformation-of-the-net-system-architecture
-description: 如题
-date: 2023-09-03 21:45:47
-lastmod: 2023-09-03 21:45:47
-author: 张巍
-originalTitle: "【对.NET系统架构改造的一点经验和教训】的技术要点的看法"
-originalLink: https://www.cnblogs.com/ac1985482/archive/2013/05/14/3077473.html
-copyright: Reprinted
-draft: false
-cover: https://img1.dotnet9.com/2023/09/cover_01.png
-categories:
-  - .NET
-tags:
-  - .NET
-  - C#
-  - 架构设计
----
-
 > 也 10 年前的一篇文章，针对《[对.NET 系统架构改造的一点经验和教训](https://news.cnblogs.com/n/177636/)》一文的技术要点看法。
 
 【[对.NET 系统架构改造的一点经验和教训](https://news.cnblogs.com/n/177636/)】里面的几条对 CSDN 的改造的技术要点如下：

@@ -1,21 +1,3 @@
----
-title: "RBAC权限系统分析、设计与实现"
-slug: analysis-design-and-implementation-of-rbac-authority-system
-description: "最近，因为项目上需要设计实现一个权限管理模块，所以专门整理总结了RBAC的一些知识。"
-date: 2021-02-18 16:16:23
-lastmod: 2021-02-18 16:16:23
-author: shuwoom.com
-originalTitle: "RBAC权限系统分析、设计与实现"
-originalLink: https://shuwoom.com/?p=3041
-copyright: Reprinted
-draft: false
-cover: https://img1.dotnet9.com/2021/02/cover_01.jpeg
-categories:
-  - 架构设计
-tags:
-  - 架构设计
----
-
 最近，因为项目上需要设计实现一个权限管理模块，所以专门整理总结了 RBAC 的一些知识。
 
 目前，使用最普遍的权限管理模型正是 RBAC（Role-Based Access Control）模型，这篇文章也主要是介绍基于 RBAC 的权限管理系统，我会从 RBAC 是什么、如何设计 RBAC 两部分来介绍。

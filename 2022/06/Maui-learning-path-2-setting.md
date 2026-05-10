@@ -1,22 +1,3 @@
----
-title: "Maui的学习之路（二）--设置"
-slug: maui-learning-path-2-setting
-description: "不只是MAUI，本篇非常实用"
-date: 2022-06-23 23:29:17
-lastmod: 2022-06-23 23:29:17
-author: 轩研 Maui开发者
-originalTitle: "Maui的学习之路（二）--设置"
-originalLink: https://mp.weixin.qq.com/s/kX-dZFW64331A47i3G0IoQ
-copyright: Reprinted
-draft: false
-cover: https://img1.dotnet9.com/2022/06/1701.png
-categories:
-  - MAUI
-tags:
-  - .NET
-  - MAUI
----
-
 上一篇我们做了 Maui 的基本介绍，理论上这一篇应该会创建第一个 Maui 的应用，以便对此进行详细的评估，并逐步深入。
 
 如果你需要进行 Maui 首个应用的创建，那么欢迎访问[.NET MAUI 创建移动应用—Get Start](https://www.cnblogs.com/jackyfei/p/16349599.html)，以及[MAUI 与 Blazor 共享一套 UI，媲美 Flutter，实现 Windows、macOS、Android、iOS、Web 通用 UI](https://dotnet9.com/2022/06/Share-razor-library-between-maui-and-blazor-server-or-client)，本文的重点不是创建 Maui 的应用而是如何更好的配置 Maui 的工程。

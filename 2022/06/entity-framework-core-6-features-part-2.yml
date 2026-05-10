@@ -1,0 +1,18 @@
+title: "EF Core 6 新功能汇总（二）"
+slug: entity-framework-core-6-features-part-2
+description: "继上一篇之后，这一篇将给大家带来另外十个 EF Core 6 中的新功能特性，包括值转换器、脚手架和 DbContext 的改进等。"
+date: 2022-06-02 21:51:47
+lastmod: 2022-06-02 21:51:47
+author: liamwang 精致码农
+originalTitle: "EF Core 6 新功能汇总（二）"
+originalLink: https://mp.weixin.qq.com/s/IJd0pwvQhCIohGR0dfekew
+copyright: Reprinted
+draft: false
+cover: https://img1.dotnet9.com/2022/06/cover_04.jpg
+categories:
+  - EF Core
+tags:
+  - .NET
+  - C#
+  - EF Core
+  - ORM

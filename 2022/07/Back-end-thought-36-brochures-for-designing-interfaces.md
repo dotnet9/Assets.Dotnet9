@@ -1,23 +1,3 @@
----
-title: "后端思想篇：设计好接口的36个锦囊！"
-slug: back-end-thought-36-brochures-for-designing-interfaces
-description: "作为后端开发，不管是什么语言，Java、Go还是C++，其背后的后端思想都是类似的。"
-date: 2022-07-17 19:51:17
-lastmod: 2022-07-17 19:51:17
-author: 捡田螺的小男孩
-originalTitle: "后端思想篇：设计好接口的36个锦囊！"
-originalLink: https://mp.weixin.qq.com/s/RqsJ_1Ubqpgfv6FCwJmIsA
-copyright: Reprinted
-draft: false
-cover: https://img1.dotnet9.com/2022/07/cover_20.jpeg
-categories:
-  - 分享
-tags:
-  - Java
-  - Go
-  - 架构设计
----
-
 ## 前言
 
 大家好，我是捡田螺的小男孩。作为后端开发，不管是什么语言，`Java`、`Go`还是`C++`，其背后的后端思想都是类似的。后面打算出一个后端思想的技术专栏，主要包括后端的一些设计、或者后端规范相关的，希望对大家日常工作有帮助哈。

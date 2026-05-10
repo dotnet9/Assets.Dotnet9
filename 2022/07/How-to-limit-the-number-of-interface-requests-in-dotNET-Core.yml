@@ -1,0 +1,17 @@
+title: .NET Core中如何限制接口请求次数
+slug: how-to-limit-the-number-of-interface-requests-in-dotnet-core
+description: "像AspNetCoreRateLimit这种轮子我前面有给大家介绍过，今天就不说了，我们来聊聊背后的原理。"
+date: 2022-07-08 06:54:14
+lastmod: 2022-07-08 06:54:14
+author: 黑哥聊dotNet
+originalTitle: .NET Core中如何限制接口请求次数
+originalLink: https://mp.weixin.qq.com/s/bNbdqfP4W8Xx7PfWaeNTpA
+copyright: Reprinted
+draft: false
+cover: https://img1.dotnet9.com/2022/07/cover_08.png
+categories:
+  - ASP.NET Core
+tags:
+  - .NET
+  - C#
+  - ASP.NET Core

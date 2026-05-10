@@ -1,23 +1,4 @@
----
-title: Avalonia UI 中的 Markdown 渲染
-slug: avalonia-ui-markdown-rendering
-description: "本文将详细介绍如何在 Avalonia UI 中使用 Markdown.AIRender 进行 Markdown 渲染，包括安装、样式引用、示例展示及多种特性（如支持黑白主题、主题色等）。同时，深入探讨了其正在完善的国际化功能，旨在帮助开发者更好地将 Markdown 内容整合到 Avalonia 应用中，提供更好的用户体验，并增强应用的全球化适配能力。此外，还对比了相关的 Markdown 渲染库，为用户选择合适的工具提供参考。"
-date: 2025-01-17 05:14:24
-lastmod: 2025-01-17 05:57:12
-copyright: Original
-draft: false
-cover: https://img1.dotnet9.com/2025/01/cover_01.png
-categories:
-  - Avalonia UI
-tags:
-  - .NET
-  - C#
-  - Avalonia UI
-  - Markdown
-  - 国际化
----
-
- 在Avalonia UI里使用Markdown渲染，可用于一般文章展示，比如AI响应的内容就是Markdown格式，我们可以使用[Markdown.Avalonia](https://github.com/whistyun/Markdown.Avalonia)或[Markdown.AIRender](https://github.com/AIDotNet/Markdown.AIRender)，本文介绍使用后者，前者可以点击链接了解用法。
+在Avalonia UI里使用Markdown渲染，可用于一般文章展示，比如AI响应的内容就是Markdown格式，我们可以使用[Markdown.Avalonia](https://github.com/whistyun/Markdown.Avalonia)或[Markdown.AIRender](https://github.com/AIDotNet/Markdown.AIRender)，本文介绍使用后者，前者可以点击链接了解用法。
 
 ## 安装
 

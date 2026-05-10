@@ -1,21 +1,3 @@
----
-title: "博客系统知多少：揭秘那些不为人知的学问（一）"
-slug: how-many-do-you-know-about-the-blog-system-revealing-those-unknown-knowledge-1
-description: 大佬说博客
-date: 2022-03-08 21:09:23
-lastmod: 2022-03-08 21:09:23
-author: 汪宇杰博客
-originalTitle: "博客系统知多少：揭秘那些不为人知的学问（一）"
-originalLink: https://mp.weixin.qq.com/s/TVFS98aMuXViBNiCWtQ9Aw
-copyright: Reprinted
-draft: false
-cover: https://img1.dotnet9.com/2022/03/cover_03.png
-categories:
-  - 分享
-tags:
-  - 分享
----
-
 > 导语
 >
 > 在我们生活的年代，博客并不稀奇，甚至可以说是随处可见。从最早的搜狐、新浪博客，再到每个人都曾记录青春的 QQ 空间，再到现在的 Vlog 与 Plog，似乎拥有一个自己的博客并不是什么难事。然而想要自己从零开始搭建一个出色的博客系统，则并非那么简单。可能有些懂技术的小伙伴会说，看上去只是简单的对文章 CRUD 就行了，也没有那么复杂啊。然而，真的是这样吗，这背后可能隐藏着更多玄机等待着我们去挖掘。掐指一算，我建设自己的博客已有 11 年，也见过许多程序员自己编写博客系统，但真正按规范和标准设计的功能完备的博客少之又少。本文我将分享自己在博客系统设计中积累的经验，介绍一些鲜为人知的博客技术，帮助想要搭建博客的小伙伴们进一步了解如何设计一个优秀的博客系统。

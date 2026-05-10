@@ -1,0 +1,18 @@
+title: "WPF显示数据图表(LiveCharts2)"
+slug: wpf-display-data-chart-live-charts2
+description: "LiveCharts是一个适用于.Net的数据可视化库，可以跨多个设备和框架运行"
+date: 2023-11-15 08:20:13
+lastmod: 2023-11-15 09:58:46
+author: 奔跑的皮卡峰
+originalTitle: "WPF显示数据图表(LiveCharts2)"
+originalLink: https://mp.weixin.qq.com/s/l3fmYcPlEryS6idnd9urXA
+copyright: Reprinted
+draft: false
+cover: https://img1.dotnet9.com/2023/11/0618.gif
+categories:
+  - WPF
+tags:
+  - .NET
+  - C#
+  - WPF
+  - LiveChart

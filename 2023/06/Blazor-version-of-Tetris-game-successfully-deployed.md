@@ -1,22 +1,3 @@
----
-title: Blazor版俄罗斯方块游戏部署成功
-slug: blazor-version-of-tetris-game-successfully-deployed
-description: "上线了Blazor版俄罗斯方块游戏，并且把在线工具和在线游戏组件提取到Razor共享库，可以被Dotnet9网站和Dotnet工具箱网站复用。"
-date: 2023-06-27 20:58:14
-lastmod: 2023-06-27 23:40:59
-copyright: Original
-draft: false
-cover: https://img1.dotnet9.com/2023/06/cover_14.png
-categories:
-  - Blazor
-tags:
-  - .NET
-  - C#
-  - Blazor
-  - Blazor WebAssembly
-  - Client
----
-
 大家好，我是沙漠尽头的狼。
 
 抄了国外大佬的一个俄罗斯方块游戏，也将在线工具和在线游戏组件提取到Razor共享库，可以被 [Dotnet9](https://dotnet9.com) 网站和 [Dotnet工具箱](https://dotnetools.com) 网站复用，这篇分享游戏的搬运及Razor共享库的迁移过程，和这几天开发、部署遇到的一些问题与解决方案记录分享下。

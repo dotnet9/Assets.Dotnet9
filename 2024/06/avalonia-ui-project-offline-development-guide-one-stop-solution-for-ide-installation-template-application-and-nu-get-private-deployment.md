@@ -1,21 +1,3 @@
----
-title: "AvaloniaUI项目离线开发全攻略：IDE安装、模板应用与NuGet私有化部署一站式解决"
-slug: avalonia-ui-project-offline-development-guide-one-stop-solution-for-ide-installation-template-application-and-nu-get-private-deployment
-description: "本文将指导您如何在本地网络环境中成功安装并配置AvaloniaUI所需的工具和模板。"
-date: 2024-06-27 21:13:32
-lastmod: 2024-06-28 22:26:47
-copyright: Original
-draft: false
-cover: https://img1.dotnet9.com/2024/06/cover_02.png
-categories:
-  - Avalonia UI
-tags:
-  - .NET
-  - C#
-  - Avalonia UI
-  - NuGet
----
-
 ## 1. 引言
 
 在网络受限或完全离线的环境中开发.NET项目（本文示例为Avalonia UI项目），可能会遇到一些挑战。本文将为您提供一套完整的离线开发解决方案，包括IDE的安装、Avalonia UI模板的配置、私有化NuGet服务的部署以及NuGet包的制作和上传等。

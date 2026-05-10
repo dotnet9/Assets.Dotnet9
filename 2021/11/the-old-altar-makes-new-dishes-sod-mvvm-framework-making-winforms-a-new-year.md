@@ -1,28 +1,3 @@
----
-title: "“老坛泡新菜”:SOD MVVM框架，让Winforms焕发新春"
-slug: the-old-altar-makes-new-dishes-sod-mvvm-framework-making-winforms-a-new-year
-description: "WinForms上MVVM技术的必要性，发现要实现MVVM框架其实并不难，关键在于模型（Model）和视图（View）的双向绑定，即模型的改变引起视图内容的改变，而视图的改变也能够引起模型的改变。"
-date: 2021-11-23 21:13:07
-lastmod: 2021-11-23 21:13:07
-author: 用户1177503
-originalTitle: "“老坛泡新菜”:SOD MVVM框架，让WinForms焕发新春"
-originalLink: https://cloud.tencent.com/developer/article/1045710
-copyright: Reprinted
-draft: false
-cover: https://img1.dotnet9.com/2021/11/cover_08.png
-banner: false
-categories:
-  - Winform
-albums:
-  - Winform控件库
-tags:
-  - .NET
-  - Winform
-  - MVVM
-  - Winform开源项目
-  - 开源
----
-
 ## 1. 火热的 MVVM 框架
 
 最近几年最热门的技术之一就是前端技术了，各种前端框架，前端标准和前端设计风格层出不穷，而在众多前端框架中具有 MVC，MVVM 功能的框架成为耀眼新星，比如 GitHub 关注度很高的 Vue.js ,由于是国人作品，其设计风格和文档友好度对国人而言更胜一筹，因此我也将它推荐到公司采用，其中我推荐都理由就是它非常优秀的 MVVM 功能，面向数据而不是面向 DOM 细节相比 jQuery 等更加节省代码，更符合后端程序员的胃口，也更有利于 UI 设计人员跟程序员都分工配合。

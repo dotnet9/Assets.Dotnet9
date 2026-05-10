@@ -1,25 +1,3 @@
----
-title: 你好 .NET run file, 再见 csproj
-slug: hello-dotnet-run-file-goodbye-csproj
-description: "这篇文章介绍了.NET CLI的文件式程序新特性，它允许开发者直接运行C#源文件而无需创建项目文件。该特性通过在内存中生成虚拟项目文件，并支持NuGet依赖包和项目属性设置，为开发脚本和简单应用提供了便捷。文章还展望了该特性的未来发展方向，包括目标路径扩展、统一命令行参数、性能提升和更多文件式程序命令支持等。"
-date: 2025-05-24 21:02:39
-lastmod: 2025-05-24 21:34:53
-author: WeihanLi amazingdotnet
-originalTitle: 你好 dotnet run file, 再见 csproj
-originalLink: https://mp.weixin.qq.com/s/rL2F19XV1Gusc0JE6C1Lrg
-copyright: Reprinted
-draft: false
-cover: https://img1.dotnet9.com/2025/05/0501.png
-banner: false
-categories:
-  - .NET
-tags:
-  - .NET
-  - C#
-  - NuGet
-  - 脚本
----
-
 ## Intro
 
 .NET 正在不断进化，致力于让开发体验更加简单高效。最近，.NET CLI（命令行工具）提出了一项令人期待的新特性：可以直接运行 C# 源文件，无需创建项目文件。这个特性被称为**文件式程序**(File-based Programs), 在 .NET 10 中将引入 `dotnet run file` 的支持，支持 dotnet sdk 直接运行，目前在 .NET 10 Preview 4 中已经可用，大家可以下载最新的 .NET 10 SDK 来尝试下，之前自己动手写的 dotnet-exec 部分功能可以使用原生的 SDK 支持了

@@ -1,21 +1,3 @@
----
-title: "mysql 8.0.28 x64 for Windows超级精简便携版，仅16MB"
-slug: my-sql-8-0-28-x64-for-windows-super-compact-portable-version-only-16-mb
-description: "MySQL是一个关系型数据库管理系统，由瑞典MySQL AB 公司开发，目前属于 Oracle 旗下产品。"
-date: 2022-05-06 07:31:24
-lastmod: 2022-05-06 07:31:24
-author: 懒得勤快
-originalTitle: "mysql 8.0.28 x64 for Windows超级精简便携版，仅16MB"
-originalLink: https://ldqk.xyz/1567?kw=mysql&t=uptl3b9wq874
-copyright: Reprinted
-draft: false
-cover: https://img1.dotnet9.com/2022/05/cover_23.png
-categories:
-  - MySQL
-tags:
-  - MySQL
----
-
 ![](https://img1.dotnet9.com/2022/05/cover_23.png)
 
 MySQL 是一个关系型数据库管理系统，由瑞典 MySQL AB 公司开发，目前属于 Oracle 旗下产品。MySQL 是最流行的关系型数据库管理系统之一，在 WEB 应用方面，MySQL 是最好的 RDBMS 应用软件。MySQL 是一种关系数据库管理系统，关系数据库将数据保存在不同的表中，而不是将所有数据放在一个大仓库内，这样就增加了速度并提高了灵活性。MySQL 所使用的 SQL 语言是用于访问数据库的最常用标准化语言。MySQL 软件采用了双授权政策，分为社区版和商业版，由于其体积小、速度快、总体拥有成本低，尤其是开放源码这一特点，一般中小型网站的开发都选择 MySQL 作为网站数据库。由于其社区版的性能卓越，搭配 PHP 和 Apache 可组成良好的开发环境。

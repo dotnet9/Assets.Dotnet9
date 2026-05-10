@@ -1,23 +1,3 @@
----
-title: ".NET 8.0 中有哪些新的变化？"
-slug: what-are-the-new-changes-in-dotnet-8
-description: .NET 8在整个堆栈中带来了数千项性能改进
-date: 2023-11-17 17:42:17
-lastmod: 2023-11-17 16:03:17
-author: 葡萄城技术团队
-originalTitle: ".NET 8.0 中有哪些新的变化？"
-originalLink: https://www.cnblogs.com/powertoolsteam/p/17833417.html
-copyright: Reprinted
-draft: false
-cover: https://img1.dotnet9.com/2023/11/0801.png
-categories:
-  - .NET
-tags:
-  - .NET
-  - C#
-  - 技术更新
----
-
 ## **1. 性能提升**
 
 [.NET 8 在整个](https://devblogs.microsoft.com/dotnet/performance-improvements-in-aspnet-core-8/)[堆栈](https://devblogs.microsoft.com/dotnet/dotnet-8-performance-improvements-in-dotnet-maui/)[中](https://devblogs.microsoft.com/dotnet/this-arm64-performance-in-dotnet-8/)带来了数千项性能[改进](https://devblogs.microsoft.com/dotnet/performance-improvements-in-net-8/) 。默认情况下会启用一种名为动态配置文件引导优化 (PGO) 的新代码生成器，它可以根据实际使用情况优化代码，并且可以将应用程序的性能提高高达 20%。现在支持的 AVX-512 指令集能够对 512 位数据向量执行并行操作，这意味着可以在更短的时间内处理更多的数据。原始类型（数字及其他类型）现在实现了新的可格式化和可解析接口，这使它们能够直接格式化和解析为 UTF-8，而无需任何转码开销。

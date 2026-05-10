@@ -1,27 +1,3 @@
----
-title: "(28/30)大家一起学Blazor：Policy-based authorization"
-slug: 28-of-30-let-us-learn-blazor-together-policy-based-authorization
-description: "之前有说到`ASP.NET Core Identity` 使用的是基于`Claim` 的验证，其实`ASP.NET Core Identity` 有不同类型的授权方式，最简单的`登录授权`、`角色授权`、`Claim 授权`，但上述几种都是以一种方式实现：原则授权(`Policy-based authorization`)。"
-date: 2021-12-25 17:51:34
-lastmod: 2021-12-25 17:51:34
-author: StrayaWorker
-originalTitle: "(28/30)大家一起学Blazor：Policy-based authorization"
-originalLink: https://ithelp.ithome.com.tw/articles/10273858
-copyright: Reprinted
-draft: false
-cover: https://img1.dotnet9.com/2021/12/cover_05.png
-categories:
-  - Blazor
-albums:
-  - 一起学Blazor系列
-tags:
-  - .NET
-  - C#
-  - ASP.NET Core
-  - Blazor
-  - 鉴权
----
-
 之前有说到`ASP.NET Core Identity` 使用的是基于`Claim` 的验证，其实`ASP.NET Core Identity` 有不同类型的授权方式，最简单的`登录授权`、`角色授权`、`Claim 授权`，但上述几种都是以一种方式实现：原则授权(`Policy-based authorization`)。
 
 所谓的原则授权就是`自定义一种Policy`，只要满足 Policy 定义的条件就能得到授权，不论条件是登录者是哪个 User、必须有`某个Role`、`某个Claim`、还是`同时有Role 跟Claim`等等。

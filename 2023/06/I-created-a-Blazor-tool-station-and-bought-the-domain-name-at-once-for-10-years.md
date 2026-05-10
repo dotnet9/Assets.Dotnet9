@@ -1,22 +1,3 @@
----
-title: "搞了个Blazor工具站，域名一次性买了10年！"
-slug: i-created-a-blazor-tool-station-and-bought-the-domain-name-at-once-for-10-years
-description: "网站使用Blazor Wasm开发，网站内容包括在线工具和在线小游戏两个种类，主要是体验Web Assembly到底好不好。"
-date: 2023-06-24 22:44:29
-lastmod: 2023-06-25 13:54:47
-copyright: Original
-draft: false
-cover: https://img1.dotnet9.com/2023/06/cover_12.png
-categories:
-  - Blazor
-tags:
-  - .NET
-  - C#
-  - Blazor
-  - Blazor WebAssembly
-  - Client
----
-
 大家好，我是沙漠尽头的狼。
 
 在 [Dotnet9](https://dotnet9.com) 上线在线小工具和小游戏后，服务器的压力感觉挺大的，打开25个页面，内存占用170MB左右，CPU保持在60~70%，看来Server真不适合搞这类交互较多的程序（服务器配置：2核4G内存），所以站长加急上线 [Blazor Wasm](https://dotnetools.com) 版本网站，便于大家直观对比了解两种模式的区别，下面请看我细说。

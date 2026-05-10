@@ -1,0 +1,18 @@
+title: 推荐一款进程间高速交换数据的解决方案
+slug: recommend-a-high-speed-inter-process-data-exchange-solution
+description: "在实际开发中，一款应用可能有多个应用程序组成，那这款应用各个组成部分之间的数据交互就成了关键，如何才能快速高效的进行数据交互呢？"
+date: 2025-08-03 15:50:09
+lastmod: 2025-08-03 16:23:24
+author: 老码识途呀
+originalTitle: 推荐一款进程间高速交换数据的解决方案
+originalLink: https://www.cnblogs.com/hsiang/p/19017840
+copyright: Reprinted
+cover: https://img1.dotnet9.com/2025/08/cover_01.png
+banner: false
+categories:
+  - 分享
+tags:
+  - .NET
+  - C#
+  - 共享内存
+  - 进程通信

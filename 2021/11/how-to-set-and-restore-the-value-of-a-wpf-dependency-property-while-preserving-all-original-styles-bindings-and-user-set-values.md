@@ -1,22 +1,3 @@
----
-title: "如何在保留原本所有样式/绑定和用户设置值的情况下，设置和还原 WPF 依赖项属性的值"
-slug: how-to-set-and-restore-the-value-of-a-wpf-dependency-property-while-preserving-all-original-styles-bindings-and-user-set-values
-description: "WPF 备份某控件的一些属性，做一些神奇的操作，然后再还原这些属性。"
-date: 2021-11-09 10:08:39
-lastmod: 2021-11-09 10:08:39
-author: 吕毅
-originalTitle: "如何在保留原本所有样式/绑定和用户设置值的情况下，设置和还原 WPF 依赖项属性的值"
-originalLink: https://blog.walterlv.com/post/change-and-restore-wpf-dependency-value-without-disabling-the-declared-use-of-the-property.html
-copyright: Reprinted
-draft: false
-cover: https://img1.dotnet9.com/2021/11/cover_02.jpeg
-categories:
-  - WPF
-tags:
-  - .NET
-  - WPF
----
-
 ![](https://img1.dotnet9.com/2021/11/cover_02.jpeg)
 
 WPF 备份某控件的一些属性，做一些神奇的操作，然后再还原这些属性。多么司空见惯的操作呀！然而怎么备份却是值得研究的问题。直接赋值？那一定是因为你没踩到一些坑。

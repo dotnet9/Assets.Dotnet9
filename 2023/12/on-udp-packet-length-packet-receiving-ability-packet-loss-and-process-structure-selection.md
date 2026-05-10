@@ -1,21 +1,3 @@
----
-title: "浅谈UDP(数据包长度，收包能力，丢包及进程结构选择)"
-slug: on-udp-packet-length-packet-receiving-ability-packet-loss-and-process-structure-selection
-description: "udp数据包的理论长度是多少，合适的udp数据包应该是多少呢？"
-date: 2023-12-08 05:31:24
-lastmod: 2023-12-08 05:52:34
-author: 不朽的传奇
-originalTitle: "浅谈UDP(数据包长度，收包能力，丢包及进程结构选择)"
-originalLink: https://zhuanlan.zhihu.com/p/301276548
-copyright: Reprinted
-draft: false
-cover: https://img1.dotnet9.com/2023/12/cover_02.png
-categories:
-  - 分享
-tags:
-  - 技术更新
----
-
 ### UDP 数据包长度，UDP 数据包的理论长度
 
 udp 数据包的理论长度是多少，合适的 udp 数据包应该是多少呢？从 TCP-IP 详解卷一第 11 章的 udp 数据包的包头可以看出，udp 的最大包长度是 2^16-1 的个字节。由于 udp 包头占 8 个字节，而在 ip 层进行封装后的 ip 包头占去 20 字节，所以这个是 udp 数据包的最大理论长度是 2^16-1-8-20=65507。

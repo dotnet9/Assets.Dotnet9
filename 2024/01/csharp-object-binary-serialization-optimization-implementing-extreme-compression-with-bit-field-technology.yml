@@ -1,0 +1,14 @@
+title: "C#对象二进制序列化优化：位域技术实现极限压缩"
+slug: csharp-object-binary-serialization-optimization-implementing-extreme-compression-with-bit-field-technology
+description: "展示如何将C#对象转换为二进制形式，并进行优化以减少网络传输中的数据包大小。"
+date: 2024-01-21 21:43:19
+lastmod: 2024-01-22 00:33:28
+copyright: Original
+draft: false
+cover: https://img1.dotnet9.com/2024/01/cover_10.png
+categories:
+  - .NET
+tags:
+  - .NET
+  - C#
+  - 二进制

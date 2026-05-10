@@ -1,24 +1,3 @@
----
-title: 推荐一款进程间高速交换数据的解决方案
-slug: recommend-a-high-speed-inter-process-data-exchange-solution
-description: "在实际开发中，一款应用可能有多个应用程序组成，那这款应用各个组成部分之间的数据交互就成了关键，如何才能快速高效的进行数据交互呢？"
-date: 2025-08-03 15:50:09
-lastmod: 2025-08-03 16:23:24
-author: 老码识途呀
-originalTitle: 推荐一款进程间高速交换数据的解决方案
-originalLink: https://www.cnblogs.com/hsiang/p/19017840
-copyright: Reprinted
-cover: https://img1.dotnet9.com/2025/08/cover_01.png
-banner: false
-categories:
-  - 分享
-tags:
-  - .NET
-  - C#
-  - 共享内存
-  - 进程通信
----
-
 在实际开发中，一款应用可能有多个应用程序组成，那这款应用各个组成部分之间的数据交互就成了关键，如何才能快速高效的进行数据交互呢？如果是跨服务器的进程交互，可以采用Remoting，WCF，GRPC等远程过程调用技术（RPC），这种方式会经过网卡进行网络传输，存在一定的数据转换及网络传输等性能消耗。如果是同一台服务器的进程间数据交互，也采用这种远程过程调用技术，则不是最优方案。那如何才能绕过网络来进行跨进程数据交互呢？答案就是“共享内存”，今天我们就以一个简单的小例子，简述进程间如何通过共享内存进行数据交互的应用，仅供学习分享使用，如有不足之处，还请指正。
 
 ![](https://img1.dotnet9.com/2025/08/cover_01.png)

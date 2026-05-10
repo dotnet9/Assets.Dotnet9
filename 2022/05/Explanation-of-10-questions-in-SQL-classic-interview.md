@@ -1,21 +1,3 @@
----
-title: SQL经典面试10题讲解
-slug: explanation-of-10-questions-in-sql-classic-interview
-description: "以下题目均来与笔者经历&网上分享的中高难度SQL题。"
-date: 2022-05-02 18:23:23
-lastmod: 2022-05-02 18:23:23
-author: 俊欣 关于数据分析与可视化
-originalTitle: SQL经典面试10题讲解
-originalLink: https://mp.weixin.qq.com/s/xMTMlsetqIv5lj2wH2SPlA
-copyright: Reprinted
-draft: false
-cover: https://img1.dotnet9.com/2022/05/cover_03.png
-categories:
-  - 数据库
-tags:
-  - 数据库
----
-
 ## 一、提要
 
 作为一名数据工作人员，SQL 是日常工作中最常用的数据提取&简单预处理语言。因为其使用的广泛性和易学程度也被其他岗位比如产品经理、研发广泛学习使用，本篇文章主要结合经典面试题，给出通过数据开发面试的 SQL 方法与实战。以下题目均来于笔者经历&网上分享的中高难度 SQL 题。

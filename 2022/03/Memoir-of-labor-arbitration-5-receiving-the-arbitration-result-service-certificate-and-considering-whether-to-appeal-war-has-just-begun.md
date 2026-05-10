@@ -1,21 +1,3 @@
----
-title: "劳动仲裁回忆录（五）：领取仲裁结果、送达证明及考虑是否上诉，“战争”才刚刚开始"
-slug: memoir-of-labor-arbitration-5-receiving-the-arbitration-result-service-certificate-and-considering-whether-to-appeal-war-has-just-begun
-description: 个人全程劳动仲裁实录
-date: 2022-03-17 23:27:23
-lastmod: 2022-03-17 23:27:23
-author: 逃离沙漠
-originalTitle: "劳动仲裁回忆录（五）：领取仲裁结果、送达证明及考虑是否上诉，“战争”才刚刚开始"
-originalLink: https://mp.weixin.qq.com/s/PCL9kiuDgBYOmxk--A517w
-copyright: Reprinted
-draft: false
-cover: https://img1.dotnet9.com/2022/03/cover_12.jpeg
-categories:
-  - 分享
-tags:
-  - 劳动仲裁
----
-
 > 本篇介绍仲裁之后，领取裁决书及送达证明的过程，对裁决结果的思考，考虑是否上诉，以及得知事情并没完，而是刚刚开始。
 
 前面的篇幅中，我介绍了我于 2021 年 3 月 2 日立案，5 月 21 提交证据，5 月 24 日开庭等相关事情，然后便开始了漫长的等待裁决书的过程。
