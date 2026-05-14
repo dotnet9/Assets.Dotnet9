@@ -1,13 +1,18 @@
 ﻿[
   {
     "Query": "dotnet",
-    "Count": 1129,
-    "LastSearchedAt": "2026-05-09T09:11:13.8577072+00:00"
+    "Count": 1385,
+    "LastSearchedAt": "2026-05-14T07:51:16.0428441+00:00"
   },
   {
     "Query": "WINUI入门",
     "Count": 8,
     "LastSearchedAt": "2026-05-09T02:31:16.5472287+00:00"
+  },
+  {
+    "Query": "多语言",
+    "Count": 2,
+    "LastSearchedAt": "2026-05-12T08:39:39.8335637+00:00"
   },
   {
     "Query": "4K Video Downloader Plus",
@@ -23,6 +28,26 @@
     "Query": "大数据",
     "Count": 2,
     "LastSearchedAt": "2026-04-30T04:36:16.188368+00:00"
+  },
+  {
+    "Query": "dapper.aot",
+    "Count": 1,
+    "LastSearchedAt": "2026-05-13T03:45:32.1554673+00:00"
+  },
+  {
+    "Query": "handy",
+    "Count": 1,
+    "LastSearchedAt": "2026-05-12T13:45:29.5266705+00:00"
+  },
+  {
+    "Query": "WPF开源控件库 - HandyControl",
+    "Count": 1,
+    "LastSearchedAt": "2026-05-11T06:30:16.799713+00:00"
+  },
+  {
+    "Query": "解压缩",
+    "Count": 1,
+    "LastSearchedAt": "2026-05-11T02:23:10.2234787+00:00"
   },
   {
     "Query": "aot",
