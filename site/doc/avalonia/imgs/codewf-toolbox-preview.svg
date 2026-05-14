@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="800" viewBox="0 0 1280 800" role="img" aria-labelledby="title desc">
+  <title id="title">CodeWF.Toolbox preview</title>
+  <desc id="desc">Screenshot-style preview for the CodeWF.Toolbox desktop UI.</desc>
+  <defs>
+    <linearGradient id="shell" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#111827"/>
+      <stop offset="1" stop-color="#0b2b3d"/>
+    </linearGradient>
+    <linearGradient id="surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f8fafc"/>
+      <stop offset="1" stop-color="#e2e8f0"/>
+    </linearGradient>
+    <linearGradient id="sidebar" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#10253a"/>
+      <stop offset="1" stop-color="#0b1726"/>
+    </linearGradient>
+    <linearGradient id="button" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#2dd4bf"/>
+      <stop offset="1" stop-color="#38bdf8"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1280" height="800" fill="#d9e7f2"/>
+  <rect x="58" y="36" width="1164" height="728" rx="24" fill="url(#shell)"/>
+  <rect x="74" y="68" width="1132" height="680" rx="18" fill="url(#surface)"/>
+  <rect x="74" y="68" width="1132" height="56" rx="18" fill="#0f172a"/>
+  <rect x="74" y="106" width="1132" height="18" fill="#0f172a"/>
+  <circle cx="108" cy="96" r="7" fill="#ef4444"/>
+  <circle cx="132" cy="96" r="7" fill="#f59e0b"/>
+  <circle cx="156" cy="96" r="7" fill="#22c55e"/>
+  <text x="192" y="101" fill="#f8fafc" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="600">CodeWF.Toolbox</text>
+  <rect x="896" y="84" width="282" height="28" rx="14" fill="#1f2937"/>
+  <text x="920" y="103" fill="#94a3b8" font-family="Segoe UI, Arial, sans-serif" font-size="15">Search tools</text>
+
+  <rect x="74" y="124" width="258" height="624" fill="url(#sidebar)"/>
+  <rect x="94" y="150" width="218" height="76" rx="16" fill="#13293d"/>
+  <rect x="94" y="242" width="218" height="54" rx="14" fill="#0f1f32"/>
+  <rect x="94" y="304" width="218" height="54" rx="14" fill="#0f1f32"/>
+  <rect x="94" y="366" width="218" height="54" rx="14" fill="#0f1f32"/>
+  <rect x="94" y="428" width="218" height="54" rx="14" fill="#0f1f32"/>
+  <rect x="94" y="490" width="218" height="54" rx="14" fill="#0f1f32"/>
+  <rect x="94" y="552" width="218" height="54" rx="14" fill="#0f1f32"/>
+  <rect x="94" y="242" width="12" height="54" rx="6" fill="#2dd4bf"/>
+  <rect x="94" y="304" width="12" height="54" rx="6" fill="#38bdf8"/>
+  <rect x="94" y="366" width="12" height="54" rx="6" fill="#a78bfa"/>
+  <rect x="94" y="428" width="12" height="54" rx="6" fill="#f59e0b"/>
+  <rect x="94" y="490" width="12" height="54" rx="6" fill="#fb7185"/>
+  <rect x="94" y="552" width="12" height="54" rx="6" fill="#22c55e"/>
+  <text x="126" y="197" fill="#f8fafc" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="700">Dashboard</text>
+  <text x="126" y="276" fill="#e2e8f0" font-family="Segoe UI, Arial, sans-serif" font-size="18">AI</text>
+  <text x="126" y="338" fill="#e2e8f0" font-family="Segoe UI, Arial, sans-serif" font-size="18">Converter</text>
+  <text x="126" y="400" fill="#e2e8f0" font-family="Segoe UI, Arial, sans-serif" font-size="18">Development</text>
+  <text x="126" y="462" fill="#e2e8f0" font-family="Segoe UI, Arial, sans-serif" font-size="18">XML Manager</text>
+  <text x="126" y="524" fill="#e2e8f0" font-family="Segoe UI, Arial, sans-serif" font-size="18">Settings</text>
+  <text x="126" y="586" fill="#e2e8f0" font-family="Segoe UI, Arial, sans-serif" font-size="18">About</text>
+
+  <rect x="348" y="124" width="838" height="624" fill="#f8fafc"/>
+  <rect x="372" y="150" width="790" height="120" rx="18" fill="#0f172a"/>
+  <text x="404" y="198" fill="#f8fafc" font-family="Segoe UI, Arial, sans-serif" font-size="30" font-weight="700">Toolbox Dashboard</text>
+  <text x="404" y="232" fill="#cbd5e1" font-family="Segoe UI, Arial, sans-serif" font-size="18">Prism navigation, module catalog, and utility pages</text>
+  <rect x="942" y="178" width="184" height="52" rx="16" fill="url(#button)"/>
+  <text x="986" y="210" fill="#081120" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700">Open Tool</text>
+
+  <g>
+    <rect x="372" y="296" width="244" height="160" rx="18" fill="#ffffff" stroke="#cbd5e1"/>
+    <rect x="396" y="322" width="92" height="12" rx="6" fill="#38bdf8"/>
+    <rect x="396" y="348" width="164" height="10" rx="5" fill="#94a3b8"/>
+    <rect x="396" y="368" width="138" height="10" rx="5" fill="#94a3b8"/>
+    <rect x="396" y="400" width="168" height="30" rx="10" fill="#e2e8f0"/>
+    <text x="414" y="421" fill="#0f172a" font-family="Segoe UI, Arial, sans-serif" font-size="15">AI</text>
+  </g>
+
+  <g>
+    <rect x="636" y="296" width="244" height="160" rx="18" fill="#ffffff" stroke="#cbd5e1"/>
+    <rect x="660" y="322" width="116" height="12" rx="6" fill="#2dd4bf"/>
+    <rect x="660" y="348" width="166" height="10" rx="5" fill="#94a3b8"/>
+    <rect x="660" y="368" width="146" height="10" rx="5" fill="#94a3b8"/>
+    <rect x="660" y="400" width="168" height="30" rx="10" fill="#e2e8f0"/>
+    <text x="678" y="421" fill="#0f172a" font-family="Segoe UI, Arial, sans-serif" font-size="15">Converter</text>
+  </g>
+
+  <g>
+    <rect x="900" y="296" width="218" height="160" rx="18" fill="#ffffff" stroke="#cbd5e1"/>
+    <rect x="924" y="322" width="116" height="12" rx="6" fill="#f59e0b"/>
+    <rect x="924" y="348" width="154" height="10" rx="5" fill="#94a3b8"/>
+    <rect x="924" y="368" width="122" height="10" rx="5" fill="#94a3b8"/>
+    <rect x="924" y="400" width="150" height="30" rx="10" fill="#e2e8f0"/>
+    <text x="942" y="421" fill="#0f172a" font-family="Segoe UI, Arial, sans-serif" font-size="15">XML</text>
+  </g>
+
+  <g>
+    <rect x="372" y="478" width="746" height="238" rx="18" fill="#ffffff" stroke="#cbd5e1"/>
+    <rect x="396" y="502" width="140" height="14" rx="7" fill="#0f172a"/>
+    <rect x="396" y="534" width="328" height="12" rx="6" fill="#cbd5e1"/>
+    <rect x="396" y="558" width="280" height="12" rx="6" fill="#cbd5e1"/>
+    <rect x="396" y="594" width="682" height="24" rx="12" fill="#e2e8f0"/>
+    <rect x="396" y="630" width="682" height="24" rx="12" fill="#e2e8f0"/>
+    <rect x="396" y="666" width="502" height="24" rx="12" fill="#e2e8f0"/>
+    <rect x="990" y="500" width="104" height="36" rx="12" fill="url(#button)"/>
+    <text x="1016" y="524" fill="#081120" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700">Run</text>
+  </g>
+</svg>
