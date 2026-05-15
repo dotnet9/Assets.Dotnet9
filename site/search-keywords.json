@@ -1,8 +1,8 @@
 ﻿[
   {
     "Query": "dotnet",
-    "Count": 1405,
-    "LastSearchedAt": "2026-05-14T14:17:19.0968128+00:00"
+    "Count": 1421,
+    "LastSearchedAt": "2026-05-15T06:55:46.023131+00:00"
   },
   {
     "Query": "WINUI入门",
@@ -28,6 +28,31 @@
     "Query": "大数据",
     "Count": 2,
     "LastSearchedAt": "2026-04-30T04:36:16.188368+00:00"
+  },
+  {
+    "Query": "Winform的界面也可以变好看？",
+    "Count": 1,
+    "LastSearchedAt": "2026-05-14T15:07:09.8323692+00:00"
+  },
+  {
+    "Query": "winform",
+    "Count": 1,
+    "LastSearchedAt": "2026-05-14T15:06:55.3679061+00:00"
+  },
+  {
+    "Query": "hybrid",
+    "Count": 1,
+    "LastSearchedAt": "2026-05-14T14:57:27.1358006+00:00"
+  },
+  {
+    "Query": "wpf hybrid",
+    "Count": 1,
+    "LastSearchedAt": "2026-05-14T14:57:20.0199849+00:00"
+  },
+  {
+    "Query": "wpf blazor hybrid",
+    "Count": 1,
+    "LastSearchedAt": "2026-05-14T14:57:13.7526031+00:00"
   },
   {
     "Query": "(1/7).NET Core 3 WPF MVVM框架 Prism系列之数据绑定",
