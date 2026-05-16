@@ -1,0 +1,22 @@
+title: CodeWF.Markdown：一个基于 Avalonia 12 的 Markdown 渲染控件
+slug: codewf-markdown-avalonia-markdown-viewer
+description: 这篇文章介绍 CodeWF.Markdown 的仓库地址、NuGet 安装方式、完整包线、Lite 包线、实时编辑预览、排版主题、代码高亮、图片预览、数学公式、多 Viewer 覆盖和增量渲染能力。
+date: 2026-05-16 17:30:00
+lastmod: 2026-05-16 17:33:32
+cover: https://img1.dotnet9.com/2026/05/codewf-markdown-avalonia-cover.svg
+banner: false
+categories:
+  - .NET
+  - Avalonia
+  - 桌面开发
+albums:
+  - Avalonia
+tags:
+  - C#
+  - Avalonia
+  - Markdown
+  - MarkdownViewer
+  - 控件
+  - CodeWF
+author: dotnet9
+draft: false
