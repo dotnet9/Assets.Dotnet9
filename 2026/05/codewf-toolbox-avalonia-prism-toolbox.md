@@ -6,6 +6,8 @@
 
 项目使用 **C# + Avalonia + Prism + Semi.Avalonia + Ursa**，目标很直接：把开发者日常会反复打开的转换、编码、格式化、校验、生成、查询类工具集中到一个本地桌面应用里。
 
+项目仓库已经放在 GitHub：[https://github.com/dotnet9/CodeWF.Toolbox](https://github.com/dotnet9/CodeWF.Toolbox)。如果你想看完整源码、模块组织方式、发布配置或者后续更新，可以直接从这个仓库开始。
+
 这次我重点不讲空泛的“跨平台 UI 能力”，而是按 CodeWF Toolbox 现在实际能做什么来拆。界面截图也重新做了一版，主窗口尺寸调小了一些，首页加入了常用与推荐工具入口；整体用我个人更喜欢的 **沙漠主题** 展示。
 
 先看一段功能巡览 GIF。
