@@ -1,0 +1,22 @@
+title: 用 C# + Avalonia 写一个跨平台桌面工具箱，CodeWF Toolbox 项目拆给你看
+slug: codewf-toolbox-avalonia-prism-toolbox
+description: 这篇文章介绍 CodeWF Toolbox，一个基于 C#、Avalonia、Prism、Semi/Ursa 控件构建的模块化桌面工具箱，讲清楚项目结构、模块扩展、主题多语言、Linux 支持和桌面工具开发思路。
+date: 2026-05-16 13:40:00
+lastmod: 2026-05-16 13:40:00
+cover: https://img1.dotnet9.com/2026/05/codewf-toolbox-avalonia-cover.svg
+banner: false
+categories:
+  - .NET
+  - Avalonia
+  - 桌面开发
+albums:
+  - Avalonia
+tags:
+  - C#
+  - Avalonia
+  - Prism
+  - 跨平台桌面
+  - 工具箱
+  - CodeWF
+author: dotnet9
+draft: false
