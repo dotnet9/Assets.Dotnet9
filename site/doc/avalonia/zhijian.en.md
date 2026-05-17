@@ -68,6 +68,16 @@ A new Avalonia app can reference `CodeWF.MindView` and `CodeWF.MindView.Themes`,
 
 The host ViewModel provides `ObservableCollection<MindMapNode>` and implements `IMindMapEditorController` for level lookup, node creation, deletion, promotion, and drag/drop moves. The `src/Zhijian` app is a complete AtomUI desktop shell reference around the reusable control.
 
+## Open Source Thanks
+
+Zhijian is built on excellent open source platforms and libraries:
+
+- [Dotnet](https://dotnet.microsoft.com/zh-cn/)
+- [Avalonia UI](https://avaloniaui.net/)
+- [Semi.Avalonia](https://github.com/irihitech/Semi.Avalonia)
+- [Ursa.Avalonia](https://github.com/irihitech/Ursa.Avalonia)
+- [AtomUI](https://github.com/AtomUI/AtomUI)
+
 ## Quick Start
 
 Requirements:

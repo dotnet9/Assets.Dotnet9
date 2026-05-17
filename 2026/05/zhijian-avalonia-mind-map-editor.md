@@ -6,7 +6,7 @@
 
 项目仓库在 GitHub：[https://github.com/dotnet9/Zhijian](https://github.com/dotnet9/Zhijian)。
 
-先看一张当前主界面。本文里的新增截图和 GIF，均来自本轮实际运行枝见桌面程序，并通过模拟用户操作截取，不是手工拼出来的示意图。
+先看一张当前主界面。
 
 ![](https://img1.dotnet9.com/2026/05/zhijian-dual-view.png)
 
@@ -242,6 +242,16 @@ public sealed class MindMapPageViewModel : IMindMapEditorController
 如果你的应用也想要类似枝见的大纲视图、文件菜单、AtomUI 标题栏和 Markdown 面板，可以直接参考 `src/Zhijian`。其中 `OutlineEditor` 是应用层代码，因为它使用了 AtomUI 的菜单、文本框和 AntDesign 图标；`CodeWF.MindView` 则保持 Avalonia-only，方便复用。
 
 仓库地址仍然放在这里：[https://github.com/dotnet9/Zhijian](https://github.com/dotnet9/Zhijian)。
+
+## 开源项目感谢
+
+枝见的开发离不开这些优秀开源平台和项目，软件里的“关于 -> 感谢”窗口也放了这些链接：
+
+- [Dotnet](https://dotnet.microsoft.com/zh-cn/)
+- [Avalonia UI](https://avaloniaui.net/)
+- [Semi.Avalonia](https://github.com/irihitech/Semi.Avalonia)
+- [Ursa.Avalonia](https://github.com/irihitech/Ursa.Avalonia)
+- [AtomUI](https://github.com/AtomUI/AtomUI)
 
 ## 本轮验证
 

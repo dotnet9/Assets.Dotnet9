@@ -64,6 +64,16 @@ docs/
 
 宿主 ViewModel 提供 `ObservableCollection<MindMapNode>`，並實作 `IMindMapEditorController`，接管節點層級、建立、刪除、升級和拖拽移動邏輯。`src/Zhijian` 是一個完整的 AtomUI 桌面應用接入示例。
 
+## 開源項目感謝
+
+枝見的開發離不開這些優秀開源平台和項目：
+
+- [Dotnet](https://dotnet.microsoft.com/zh-cn/)
+- [Avalonia UI](https://avaloniaui.net/)
+- [Semi.Avalonia](https://github.com/irihitech/Semi.Avalonia)
+- [Ursa.Avalonia](https://github.com/irihitech/Ursa.Avalonia)
+- [AtomUI](https://github.com/AtomUI/AtomUI)
+
 ## 快速開始
 
 ```powershell

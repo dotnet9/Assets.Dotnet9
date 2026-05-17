@@ -64,6 +64,16 @@ docs/
 
 ホスト ViewModel は `ObservableCollection<MindMapNode>` を提供し、`IMindMapEditorController` を実装して、階層判定、作成、削除、昇格、ドラッグ移動を処理します。`src/Zhijian` は AtomUI デスクトップシェルに組み込むための完全な参考実装です。
 
+## Open Source Thanks
+
+Zhijian は次の優れたオープンソースプラットフォームとライブラリを利用しています。
+
+- [Dotnet](https://dotnet.microsoft.com/zh-cn/)
+- [Avalonia UI](https://avaloniaui.net/)
+- [Semi.Avalonia](https://github.com/irihitech/Semi.Avalonia)
+- [Ursa.Avalonia](https://github.com/irihitech/Ursa.Avalonia)
+- [AtomUI](https://github.com/AtomUI/AtomUI)
+
 ## クイックスタート
 
 ```powershell
