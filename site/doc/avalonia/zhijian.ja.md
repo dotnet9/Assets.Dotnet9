@@ -2,58 +2,44 @@
 
 ![Zhijian](https://img1.dotnet9.com/site/doc/avalonia/imgs/zhijian.svg)
 
-`Zhijian` は C#、Avalonia、AtomUI で構築したローカル向けマインドマップエディターです。同じツリーモデルを、アウトライン、Markdown、グラフィカルなマインドマップの 3 つの視点で編集できます。記事の構成作成、機能設計、Markdown ベースのマインドマップ文書の管理に向いています。
+`Zhijian` は C#、Avalonia、AtomUI で作られたローカル向け Markdown-first マインドマップエディターです。アウトライン、Markdown、グラフィカルなマインドマップを同じツリーモデルで同期し、記事の構成、機能設計、Markdown ベースのマインドマップ文書を扱いやすくします。
 
 リポジトリ：[https://github.com/dotnet9/Zhijian](https://github.com/dotnet9/Zhijian)
 
-![Zhijian dual view](https://img1.dotnet9.com/site/doc/avalonia/imgs/zhijian-dual-view.png)
+![Zhijian main window](https://img1.dotnet9.com/site/doc/avalonia/imgs/zhijian-main-window.png)
 
-ここで追加したスクリーンショットと GIF は、実際に起動した Zhijian デスクトップアプリを操作して取得したものです。
-
-## 位置づけ
-
-- Markdown-first の文書モデル。
-- `MindMapNode` を共有するアウトライン、Markdown、マインドマップ表示。
-- AtomUI によるデスクトップシェルとテーマ。
-- Avalonia のみを UI 依存にした再利用可能な `CodeWF.MindView`。
-- Markdown、OPML、XMind のインポートとエクスポート。
+このページのスクリーンショットと GIF は、実際に起動した Zhijian デスクトップアプリを操作して取得したものです。
 
 ## 主な機能
 
-| 機能 | 説明 |
-| --- | --- |
-| アウトライン編集 | キーボードでの作成、削除、昇格、降格、ノートメニュー、ドラッグによる構造調整。 |
-| リサイズ可能なペイン | 表示されるスプリッターでアウトラインとマインドマップの幅を調整できます。 |
-| マインドマップ編集 | インライン編集、ノート、削除、ズーム、パン、中心トピック移動、ノードドラッグ。 |
-| ノート同期 | ノートはアウトラインとマインドマップに同期表示され、空のノート入力欄は自動で閉じます。 |
-| ドロッププレビュー | 子ノード化または同階層挿入を破線プレビューで確認できます。 |
-| ミニマップ | 現在のノード座標とビューポートを元に全体像を描画します。 |
-| Markdown ビュー | 左ペインを Markdown 編集に切り替えられます。 |
+- 起動時は空のマインドマップで、編集可能な中心トピックだけを表示します。
+- File メニューは New、New Window、Open、Open Folder、Recent Files、Save、Save As、Open File Location、Close を提供します。
+- フォルダーを開くと、左側で `Files` と `Outline` タブを切り替えられます。
+- アウトライン、Markdown、マインドマップは同じ `MindMapNode` を共有します。
+- アウトラインとマインドマップのメニューは、兄弟追加、子追加、昇格、降格、上下移動、ノート、削除を提供します。
+- `CodeWF.MindView` は Avalonia のみへ依存し、他の Avalonia アプリから再利用できます。
 
-![Zhijian notes](https://img1.dotnet9.com/site/doc/avalonia/imgs/zhijian-note-sync.gif)
+## 実行プレビュー
 
-![Zhijian splitter resize](https://img1.dotnet9.com/site/doc/avalonia/imgs/zhijian-splitter-resize.gif)
+![File menu](https://img1.dotnet9.com/site/doc/avalonia/imgs/zhijian-file-menu.png)
 
-![Zhijian mind-map menu](https://img1.dotnet9.com/site/doc/avalonia/imgs/zhijian-mind-menu.png)
+![Open folder workflow](https://img1.dotnet9.com/site/doc/avalonia/imgs/zhijian-open-folder.gif)
 
-![Zhijian mini map](https://img1.dotnet9.com/site/doc/avalonia/imgs/zhijian-minimap-overview.png)
+![Node menus](https://img1.dotnet9.com/site/doc/avalonia/imgs/zhijian-node-menus.gif)
 
-![Zhijian Markdown and dark theme](https://img1.dotnet9.com/site/doc/avalonia/imgs/zhijian-markdown-theme.gif)
+![Note synchronization](https://img1.dotnet9.com/site/doc/avalonia/imgs/zhijian-note-sync.gif)
 
-## 構成
+![Mini-map navigation](https://img1.dotnet9.com/site/doc/avalonia/imgs/zhijian-minimap.gif)
 
-```text
-src/
-  CodeWF.MindView/          再利用可能なマインドマップコントロール、モデル、ミニマップ、コーデック
-  CodeWF.MindView.Themes/   デフォルト Avalonia リソース
-  Zhijian/                  AtomUI デスクトップアプリ、アウトラインビュー、シェル、ViewModel
-docs/
-  アーキテクチャ、ソース設計ドキュメント、スクリーンショット
-```
+![Zoom](https://img1.dotnet9.com/site/doc/avalonia/imgs/zhijian-zoom.gif)
+
+![Canvas panning](https://img1.dotnet9.com/site/doc/avalonia/imgs/zhijian-canvas-pan.gif)
+
+![About menu](https://img1.dotnet9.com/site/doc/avalonia/imgs/zhijian-about-menu.png)
 
 ## CodeWF.MindView の再利用
 
-新しい Avalonia アプリでは `CodeWF.MindView` と `CodeWF.MindView.Themes` を参照し、`App.axaml` に `<mindThemes:MindViewThemes />` を登録してから、ビューで `MindMapEditor` を使えます。
+新しい Avalonia アプリでは `CodeWF.MindView` と `CodeWF.MindView.Themes` を参照し、`App.axaml` に `<mindThemes:MindViewThemes />` を登録してから、ビューに `MindMapEditor` を配置できます。
 
 ```xml
 <mind:MindMapEditor
@@ -62,11 +48,9 @@ docs/
     Controller="{Binding}" />
 ```
 
-ホスト ViewModel は `ObservableCollection<MindMapNode>` を提供し、`IMindMapEditorController` を実装して、階層判定、作成、削除、昇格、ドラッグ移動を処理します。`src/Zhijian` は AtomUI デスクトップシェルに組み込むための完全な参考実装です。
+ホスト ViewModel は `ObservableCollection<MindMapNode>` を提供し、`IMindMapEditorController` を実装して、階層判定、作成、削除、昇格、降格、ドラッグ移動を処理します。ファイルの open/save、recent files、未保存確認は `IMindMapFileService` と `src/Zhijian` の実装を参考にできます。
 
 ## Open Source Thanks
-
-Zhijian は次の優れたオープンソースプラットフォームとライブラリを利用しています。
 
 - [Dotnet](https://dotnet.microsoft.com/zh-cn/)
 - [Avalonia UI](https://avaloniaui.net/)
@@ -74,7 +58,7 @@ Zhijian は次の優れたオープンソースプラットフォームとライ
 - [Ursa.Avalonia](https://github.com/irihitech/Ursa.Avalonia)
 - [AtomUI](https://github.com/AtomUI/AtomUI)
 
-## クイックスタート
+## Quick Start
 
 ```powershell
 dotnet restore Zhijian.slnx
@@ -82,6 +66,6 @@ dotnet build Zhijian.slnx
 dotnet run --project src/Zhijian/Zhijian.csproj
 ```
 
-## リポジトリ
+## Repository
 
 - GitHub：[https://github.com/dotnet9/Zhijian](https://github.com/dotnet9/Zhijian)

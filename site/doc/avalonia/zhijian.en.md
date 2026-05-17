@@ -2,71 +2,102 @@
 
 ![Zhijian](https://img1.dotnet9.com/site/doc/avalonia/imgs/zhijian.svg)
 
-`Zhijian` is a local mind-map editor built with C#, Avalonia, and AtomUI. It provides outline, Markdown, and graphical mind-map views over the same tree model, making it useful for writing outlines, planning features, and keeping readable Markdown-based mind-map documents.
+`Zhijian` is a local Markdown-first mind-map editor built with C#, Avalonia, and AtomUI. It keeps the outline, Markdown text, and graphical mind map synchronized over the same tree model, so users can write structure quickly and inspect it visually.
 
 Repository: [https://github.com/dotnet9/Zhijian](https://github.com/dotnet9/Zhijian)
 
-![Zhijian dual view](https://img1.dotnet9.com/site/doc/avalonia/imgs/zhijian-dual-view.png)
+![Zhijian main window](https://img1.dotnet9.com/site/doc/avalonia/imgs/zhijian-main-window.png)
 
-The screenshots and GIFs added here were captured from a real running Zhijian desktop session with simulated user operations.
+The screenshots and GIFs on this page were captured from a real running Zhijian desktop session with simulated user operations.
 
 ## Positioning
 
-- Markdown-first document model for topics and notes.
-- Synchronized outline, Markdown, and mind-map views backed by `MindMapNode`.
-- AtomUI-based desktop shell and theme.
-- Reusable `CodeWF.MindView` control library with only Avalonia as a UI dependency.
-- Import and export support for Markdown, OPML, and XMind.
+- Starts with a blank mind map: one editable center topic.
+- Outline, Markdown, and mind-map views share the same `MindMapNode` model.
+- File menu for New, New Window, Open, Open Folder, Recent Files, Save, Save As, Open File Location, and Close.
+- Folder mode with `Files` and `Outline` tabs, so users can browse supported files before loading one into the editor.
+- AtomUI-based desktop shell, menus, buttons, lists, text inputs, tooltips, dialogs, and dark theme.
+- Reusable `CodeWF.MindView` library with Avalonia-only controls, a mini map, node model, and file codecs.
 
 ## Highlights
 
 | Feature | Description |
 | --- | --- |
-| Outline editing | Keyboard creation, deletion, promotion, demotion, note menu, and drag/drop structure editing. |
-| Resizable panes | A visible splitter lets users resize the outline and mind-map panes. |
-| Mind-map editing | Inline title editing, notes, delete action, zoom, panning, centering, and node drag/drop. |
-| Notes | Notes are synchronized between outline and mind-map views and empty note editors collapse automatically. |
-| Drop preview | Dashed previews show whether a node will become a child or be inserted as a sibling. |
-| Mini map | The mini map renders the real current mind-map coordinates and viewport. |
-| Markdown view | The left pane can switch to Markdown for text-first editing. |
+| Outline editing | Keyboard creation, deletion, promotion, demotion, and node menus for siblings, children, move up/down, notes, and delete. |
+| File workflow | New documents, single-file open, folder open, recent files, save, save as, open file location, and unsaved-close prompts. |
+| Mind-map editing | Inline title editing, notes, delete, zoom, panning, center-topic navigation, and drag/drop structure changes. |
+| Notes | Notes sync between outline and mind-map views and use muted text instead of a separate background block. |
+| Mini map | The mini map renders real node coordinates and the current viewport. |
+| Formats | Markdown, OPML, and XMind import/export. |
 
-![Zhijian notes](https://img1.dotnet9.com/site/doc/avalonia/imgs/zhijian-note-sync.gif)
+## Runtime Preview
 
-![Zhijian splitter resize](https://img1.dotnet9.com/site/doc/avalonia/imgs/zhijian-splitter-resize.gif)
+![File menu](https://img1.dotnet9.com/site/doc/avalonia/imgs/zhijian-file-menu.png)
 
-![Zhijian mind-map menu](https://img1.dotnet9.com/site/doc/avalonia/imgs/zhijian-mind-menu.png)
+![Open folder workflow](https://img1.dotnet9.com/site/doc/avalonia/imgs/zhijian-open-folder.gif)
 
-![Zhijian mini map](https://img1.dotnet9.com/site/doc/avalonia/imgs/zhijian-minimap-overview.png)
+![Node menus](https://img1.dotnet9.com/site/doc/avalonia/imgs/zhijian-node-menus.gif)
 
-![Zhijian Markdown and dark theme](https://img1.dotnet9.com/site/doc/avalonia/imgs/zhijian-markdown-theme.gif)
+![Note synchronization](https://img1.dotnet9.com/site/doc/avalonia/imgs/zhijian-note-sync.gif)
 
-![Zhijian File menu](https://img1.dotnet9.com/site/doc/avalonia/imgs/zhijian-file-menu.png)
+![Mini-map navigation](https://img1.dotnet9.com/site/doc/avalonia/imgs/zhijian-minimap.gif)
 
-![Zhijian changelog window](https://img1.dotnet9.com/site/doc/avalonia/imgs/zhijian-changelog-window.png)
+![Zoom](https://img1.dotnet9.com/site/doc/avalonia/imgs/zhijian-zoom.gif)
+
+![Canvas panning](https://img1.dotnet9.com/site/doc/avalonia/imgs/zhijian-canvas-pan.gif)
+
+![About menu](https://img1.dotnet9.com/site/doc/avalonia/imgs/zhijian-about-menu.png)
 
 ## Structure
 
 ```text
 src/
-  CodeWF.MindView/          Reusable mind-map controls, model, mini map, and codecs
-  CodeWF.MindView.Themes/   Default Avalonia resources
-  Zhijian/                  AtomUI desktop app, outline view, shell, and ViewModel
+  CodeWF.MindView/          Reusable mind-map controls, node model, mini map, and codecs
+  CodeWF.MindView.Themes/   Default Avalonia resources for the mind-map controls
+  Zhijian/                  AtomUI desktop app, outline view, file services, shell, and ViewModels
 docs/
-  Architecture notes, source-design document, and screenshots
+  Architecture notes, source-design docs, and runtime screenshots/GIFs
 ```
+
+`CodeWF.MindView` intentionally has no AtomUI dependency. Zhijian owns the AtomUI shell, title-bar menus, dialogs, file workflow, and outline view.
 
 ## Reusing CodeWF.MindView
 
-A new Avalonia app can reference `CodeWF.MindView` and `CodeWF.MindView.Themes`, register `<mindThemes:MindViewThemes />` in `App.axaml`, and place `MindMapEditor` in a view:
+A new Avalonia app can reference `CodeWF.MindView` and `CodeWF.MindView.Themes`:
 
 ```xml
-<mind:MindMapEditor
-    Roots="{Binding Roots}"
-    SelectedNode="{Binding SelectedNode, Mode=TwoWay}"
-    Controller="{Binding}" />
+<ItemGroup>
+  <ProjectReference Include="..\CodeWF.MindView\CodeWF.MindView.csproj" />
+  <ProjectReference Include="..\CodeWF.MindView.Themes\CodeWF.MindView.Themes.csproj" />
+</ItemGroup>
 ```
 
-The host ViewModel provides `ObservableCollection<MindMapNode>` and implements `IMindMapEditorController` for level lookup, node creation, deletion, promotion, and drag/drop moves. The `src/Zhijian` app is a complete AtomUI desktop shell reference around the reusable control.
+Register the resources in `App.axaml`:
+
+```xml
+<Application
+    xmlns="https://github.com/avaloniaui"
+    xmlns:mindThemes="using:CodeWF.MindView.Themes">
+    <Application.Styles>
+        <mindThemes:MindViewThemes />
+    </Application.Styles>
+</Application>
+```
+
+Use `MindMapEditor` in a view:
+
+```xml
+<UserControl
+    xmlns="https://github.com/avaloniaui"
+    xmlns:mind="https://codewf.com">
+    <mind:MindMapEditor
+        Roots="{Binding Roots}"
+        SelectedNode="{Binding SelectedNode, Mode=TwoWay}"
+        Controller="{Binding}" />
+</UserControl>
+```
+
+The host ViewModel provides `ObservableCollection<MindMapNode>` and implements `IMindMapEditorController` for level lookup, node creation, deletion, promotion, demotion, and drag/drop moves. File open/save, recent files, and unsaved-change prompts can follow `IMindMapFileService` and the `src/Zhijian` app implementation.
 
 ## Open Source Thanks
 
