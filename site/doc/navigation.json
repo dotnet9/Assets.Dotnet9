@@ -88,6 +88,12 @@
         "Memo": "基于 Avalonia + Prism 的模块化跨平台桌面工具箱",
         "Slug": "codewf-toolbox",
         "Repository": "https://github.com/dotnet9/CodeWF.Toolbox"
+      },
+      {
+        "Name": "枝见 Zhijian",
+        "Memo": "基于 Avalonia + AtomUI 的 Markdown 脑图编辑器",
+        "Slug": "zhijian",
+        "Repository": "https://github.com/dotnet9/Zhijian"
       }
     ]
   }

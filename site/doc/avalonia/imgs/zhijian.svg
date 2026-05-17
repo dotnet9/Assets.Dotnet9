@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540" role="img" aria-labelledby="title desc">
+  <title id="title">Zhijian project cover</title>
+  <desc id="desc">Cover card for Zhijian, an Avalonia and AtomUI mind map editor.</desc>
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0ea5e9"/>
+      <stop offset="1" stop-color="#2563eb"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="540" rx="34" fill="url(#g)"/>
+  <rect x="76" y="78" width="808" height="384" rx="22" fill="#f8fafc" opacity="0.96"/>
+  <text x="112" y="148" fill="#0f172a" font-family="Segoe UI, Microsoft YaHei UI, sans-serif" font-size="54" font-weight="800" letter-spacing="0">枝见 Zhijian</text>
+  <text x="116" y="198" fill="#334155" font-family="Segoe UI, Microsoft YaHei UI, sans-serif" font-size="24" letter-spacing="0">Outline, Markdown and mind map editing for Avalonia</text>
+  <circle cx="160" cy="322" r="28" fill="#148bff"/>
+  <text x="160" y="331" text-anchor="middle" fill="#fff" font-family="Segoe UI, Microsoft YaHei UI, sans-serif" font-size="20" font-weight="800">枝</text>
+  <path d="M188 322 C250 322 256 250 320 250" stroke="#148bff" stroke-width="5" fill="none"/>
+  <path d="M188 322 C250 322 256 394 320 394" stroke="#148bff" stroke-width="5" fill="none"/>
+  <rect x="320" y="216" width="150" height="68" rx="14" fill="#eef2f7"/>
+  <rect x="320" y="360" width="150" height="68" rx="14" fill="#eef2f7"/>
+  <text x="395" y="258" text-anchor="middle" fill="#0f172a" font-family="Segoe UI, Microsoft YaHei UI, sans-serif" font-size="24">大纲</text>
+  <text x="395" y="402" text-anchor="middle" fill="#0f172a" font-family="Segoe UI, Microsoft YaHei UI, sans-serif" font-size="24">脑图</text>
+  <path d="M470 250 C540 250 548 218 620 218" stroke="#148bff" stroke-width="5" fill="none"/>
+  <path d="M470 394 C540 394 548 426 620 426" stroke="#148bff" stroke-width="5" fill="none"/>
+  <text x="640" y="226" fill="#0f172a" font-family="Segoe UI, Microsoft YaHei UI, sans-serif" font-size="24">Markdown 存储</text>
+  <text x="640" y="434" fill="#0f172a" font-family="Segoe UI, Microsoft YaHei UI, sans-serif" font-size="24">备注、拖拽、小图</text>
+</svg>

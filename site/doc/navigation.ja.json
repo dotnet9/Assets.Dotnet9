@@ -88,6 +88,12 @@
         "Memo": "Avalonia + Prism ベースのモジュール型クロスプラットフォームデスクトップツールボックス",
         "Slug": "codewf-toolbox",
         "Repository": "https://github.com/dotnet9/CodeWF.Toolbox"
+      },
+      {
+        "Name": "Zhijian",
+        "Memo": "Avalonia + AtomUI で構築した Markdown-first マインドマップエディター",
+        "Slug": "zhijian",
+        "Repository": "https://github.com/dotnet9/Zhijian"
       }
     ]
   }
