@@ -2,13 +2,13 @@
 
 ![枝见 Zhijian](https://img1.dotnet9.com/site/doc/avalonia/imgs/zhijian.svg)
 
-`Zhijian` 是一个基于 C#、Avalonia 和 AtomUI 的本地 Markdown-first 脑图编辑器。它围绕同一份树结构提供大纲、Markdown 和脑图三种编辑视角，适合写文章提纲、整理功能设计、梳理项目结构和维护可读的 Markdown 脑图文档。
+`Zhijian` 是一个基于 C# 和 Avalonia 的本地 Markdown-first 脑图编辑器。它围绕同一份树结构提供大纲、Markdown 和脑图三种编辑视角，适合写文章提纲、整理功能设计、梳理项目结构和维护可读的 Markdown 脑图文档。
 
 项目仓库：[https://github.com/dotnet9/Zhijian](https://github.com/dotnet9/Zhijian)
 
 ![枝见主窗口](https://img1.dotnet9.com/site/doc/avalonia/imgs/zhijian-main-window.png)
 
-本页截图和 GIF 均来自实际运行的枝见桌面程序，并通过模拟用户操作截取。
+本页截图和 GIF 已按当前界面重新制作，并使用 4 个二级节点、10 个以上三级节点的完整示例数据，便于观察小图、缩放、画布拖拽和层级调整。
 
 ## 项目定位
 
@@ -19,10 +19,10 @@
 - 主题、语言、帮助和关于菜单放在标题栏，常用操作带图标和快捷键。
 - macOS 下标题栏菜单、窗口快捷键和脑图缩放使用 `⌘`，Windows/Linux 使用 `Ctrl`。
 - 语言切换使用 `Lang.Avalonia.Json`，支持中文简体、中文繁体、英语和日语。
-- 首次启动使用 AtomUI Tour 引导新用户认识关键操作，并提供“跳过”按钮。
+- 首次启动引导会精准高亮标题栏文件菜单、大纲编辑区、Markdown 切换、脑图画布和底部导航，并提供“跳过”按钮。
 - `src/Zhijian/App.config` 集中管理新手引导、默认语言、最近文件数、历史步数和运行状态文件名。
 - 打开文件夹后，左侧通过“文件 / 大纲”两个 Tab 切换，先选文件再编辑大纲。
-- 应用层使用 AtomUI 窗口、菜单、按钮、列表、输入控件、ToolTip、Tour、全局消息和深色主题。
+- 应用层提供窗口、菜单、按钮、列表、输入控件、ToolTip、全局消息和深色主题。
 - `CodeWF.MindView` 只依赖 Avalonia，提供可复用的脑图编辑器、小图、节点模型和文档编解码。
 
 ## 主要功能
@@ -35,7 +35,7 @@
 | 备注同步 | 节点备注在大纲和脑图中同步显示，使用灰色文字与标题区分；空备注失焦后自动隐藏。 |
 | 小图概览 | 小图按真实节点坐标绘制脑图全局结构，点击小图可以定位到对应区域。 |
 | 多语言 | 通过 `Lang.Avalonia.Json` 提供中文简体、中文繁体、英语和日语界面。 |
-| 新手引导 | 使用 AtomUI Tour 首次启动引导，覆盖文件/大纲 Tab、Markdown 切换、脑图画布、小图和状态栏，并提供“跳过”。 |
+| 新手引导 | 首次启动高亮真实文件菜单、大纲编辑区、Markdown 切换、脑图画布、小图和状态栏，并提供“跳过”。 |
 | 配置管理 | 通过 `App.config` 管理新手引导、默认语言、最近文件数、历史步数和运行状态文件名。 |
 | 文件格式 | 支持 Markdown、OPML 和 XMind 文件交换。 |
 
@@ -49,7 +49,7 @@
 
 ![标题栏菜单](https://img1.dotnet9.com/site/doc/avalonia/imgs/zhijian-title-menus.gif)
 
-首次启动 Tour 会引导用户认识关键入口。
+首次启动引导会对准真实控件，文件步骤直接高亮标题栏文件菜单。
 
 ![新手引导](https://img1.dotnet9.com/site/doc/avalonia/imgs/zhijian-onboarding.gif)
 
@@ -57,7 +57,7 @@
 
 ![主题和语言切换](https://img1.dotnet9.com/site/doc/avalonia/imgs/zhijian-theme-language.gif)
 
-复制为 Markdown 会写入剪贴板并显示 AtomUI 全局消息。
+复制为 Markdown 会写入剪贴板并显示桌面全局消息。
 
 ![复制 Markdown 提示](https://img1.dotnet9.com/site/doc/avalonia/imgs/zhijian-copy-markdown.gif)
 
@@ -109,12 +109,12 @@
 src/
   CodeWF.MindView/          可复用脑图控件、节点模型、小图和文件编解码
   CodeWF.MindView.Themes/   脑图控件默认 Avalonia 资源
-  Zhijian/                  AtomUI 桌面应用、大纲视图、文件服务、主窗口和 ViewModel
+  Zhijian/                  桌面应用、大纲视图、文件服务、主窗口和 ViewModel
 docs/
-  架构说明、源码设计文档和真实运行截图/GIF
+  架构说明、源码设计文档和更新后的截图/GIF
 ```
 
-`CodeWF.MindView` 不引用 AtomUI，方便其他 Avalonia 项目复用；`Zhijian` 应用层负责 AtomUI 主题、标题栏菜单、对话框、文件工作流和大纲视图。
+`CodeWF.MindView` 不引用桌面外壳库，方便其他 Avalonia 项目复用；`Zhijian` 应用层负责标题栏菜单、对话框、文件工作流和大纲视图。
 
 ## 复用 CodeWF.MindView
 
@@ -139,7 +139,7 @@ docs/
 </Application>
 ```
 
-页面中使用 `MindMapEditor`：
+页面中使用 `MindMapEditor`。普通接入只需要绑定节点集合和当前选择：
 
 ```xml
 <UserControl
@@ -147,12 +147,11 @@ docs/
     xmlns:mind="https://codewf.com">
     <mind:MindMapEditor
         Roots="{Binding Roots}"
-        SelectedNode="{Binding SelectedNode, Mode=TwoWay}"
-        Controller="{Binding}" />
+        SelectedNode="{Binding SelectedNode, Mode=TwoWay}" />
 </UserControl>
 ```
 
-宿主 ViewModel 提供 `ObservableCollection<MindMapNode>`，并实现 `IMindMapEditorController`，用于接管节点层级、创建、删除、升降级和拖拽移动逻辑。文件打开、保存、最近文件和未保存提示可以参考 `IMindMapFileService` 及 `src/Zhijian` 的应用层实现。
+`MindMapEditor` 内置基础节点创建、删除、升降级、同级移动、拖拽移动和自动布局。只有当应用需要撤销历史、未保存状态或业务限制时，才需要额外实现 `IMindMapEditorController` 并绑定 `Controller`。文件打开、保存、最近文件和未保存提示可以参考 `IMindMapFileService` 及 `src/Zhijian` 的应用层实现。
 
 ## 开源项目感谢
 

@@ -2,11 +2,11 @@
 
 今天继续打磨本地桌面脑图编辑器 **枝见 Zhijian**。
 
-枝见是一个基于 **C# + Avalonia + AtomUI** 的 Markdown-first 脑图编辑器。它不是一个复杂项目管理系统，而是围绕写提纲、梳理功能设计、整理文章结构这些高频场景，把大纲、Markdown 和脑图三种视角绑定到同一棵树上。
+枝见是一个基于 **C# + Avalonia** 的 Markdown-first 脑图编辑器。它不是一个复杂项目管理系统，而是围绕写提纲、梳理功能设计、整理文章结构这些高频场景，把大纲、Markdown 和脑图三种视角绑定到同一棵树上。
 
 项目仓库：[https://github.com/dotnet9/Zhijian](https://github.com/dotnet9/Zhijian)。
 
-本轮截图和 GIF 都来自实际运行的枝见桌面程序，并通过模拟用户操作截取，不是静态拼图。
+本轮截图和 GIF 已按当前界面重新制作，并使用 4 个二级节点、10 个以上三级节点的完整示例数据，重点展示小图、缩放、画布拖拽和层级调整。
 
 ![](https://img1.dotnet9.com/2026/05/zhijian-main-window.png)
 
@@ -31,11 +31,11 @@
 
 ## 标题栏菜单继续按真实工作流整理
 
-菜单现在不再只放“文件”和“关于”。标题栏已经整理为文件、编辑、主题、语言、帮助、关于几组入口，并统一使用 AtomUI `Menu/MenuItem`，菜单项带图标，常用操作显示快捷键。
+菜单现在不再只放“文件”和“关于”。标题栏已经整理为文件、编辑、主题、语言、帮助、关于几组入口，菜单项带图标，常用操作显示快捷键。
 
 ![](https://img1.dotnet9.com/2026/05/zhijian-title-menus.gif)
 
-“编辑”菜单放撤销、重做、添加同级、添加子级、提升、降级、上移、下移、删除，以及“复制为 Markdown”。复制后会写入系统剪贴板，并使用 AtomUI 全局消息提示。
+“编辑”菜单放撤销、重做、添加同级、添加子级、提升、降级、上移、下移、删除，以及“复制为 Markdown”。复制后会写入系统剪贴板，并使用桌面全局消息提示。
 
 ![](https://img1.dotnet9.com/2026/05/zhijian-copy-markdown.gif)
 
@@ -45,7 +45,7 @@
 
 “帮助”菜单提供问题反馈、提交需求、提交 PR 和 GitHub 仓库入口；“关于”菜单继续提供网站、更新日志、感谢和关于窗口。
 
-首次启动还增加了 AtomUI Tour 新手引导，会把标题栏菜单、文件 / 大纲 Tab、Markdown 切换、脑图画布、小图预览、缩放和状态栏导航依次介绍给新用户。引导里提供“跳过”按钮，刚打开软件的人可以随时结束引导。
+首次启动新手引导这次重新梳理过：文件步骤直接高亮标题栏文件菜单，不再笼统罩住左侧面板；后续步骤再依次指向大纲编辑区、Markdown 切换、脑图画布、小图预览、缩放和状态栏导航。引导里提供“跳过”按钮，刚打开软件的人可以随时结束引导。
 
 是否显示引导、默认语言、最近文件数量、历史步数，以及 `recent-files.json`、`new-user-tour.seen` 这些运行状态文件名，都集中放在 `src/Zhijian/App.config`。运行时由 `ApplicationSettings` 读取 .NET 编译后的 `Zhijian.dll.config`，配置损坏时回退到默认值，不影响启动。
 
@@ -111,7 +111,7 @@
 标题栏“关于”菜单包含：
 
 - 打开网站：[https://codewf.com](https://codewf.com)
-- 更新日志：独立 AtomUI 窗口展示随程序复制的更新日志文件，并使用 `CodeWF.Markdown.Lite.Themes` 渲染。
+- 更新日志：独立桌面窗口展示随程序复制的更新日志文件，并使用 `CodeWF.Markdown.Lite.Themes` 渲染。
 - 关于：展示软件名称、简介、版本号、更新时间、作者、联系方式、仓库地址和 NuGet 包地址。
 - 感谢：列出本项目使用和受益的开源项目，链接可直接跳转。
 
@@ -132,10 +132,10 @@
 `CodeWF.MindView` 当前包含：
 
 - `MindMapNode`：共享节点模型，包含标题、备注、颜色、坐标和子节点。
-- `MindMapEditor`：脑图主编辑控件。
+- `MindMapEditor`：脑图主编辑控件，内置基础节点创建、删除、升降级、同级移动、拖拽移动和自动布局。
 - `MindMapMiniMap`：基于真实节点坐标的小图控件。
 - `MindMapDocumentCodec`：Markdown、OPML、XMind 编解码。
-- `IMindMapEditorController`：由宿主应用实现，用来接管节点创建、删除、升降级和拖拽移动等行为。
+- `IMindMapEditorController`：可选宿主接口，需要接入撤销历史、未保存状态或业务限制时再实现。
 - `IMindMapFileService`：文件打开、保存、最近文件、文件夹加载和未保存提示等应用级文件服务契约。
 
 新应用可以引用控件库和主题库：
@@ -159,7 +159,7 @@
 </Application>
 ```
 
-页面里直接放脑图控件：
+页面里直接放脑图控件。普通接入只需要绑定节点集合和当前选择：
 
 ```xml
 <UserControl
@@ -167,28 +167,27 @@
     xmlns:mind="https://codewf.com">
     <mind:MindMapEditor
         Roots="{Binding Roots}"
-        SelectedNode="{Binding SelectedNode, Mode=TwoWay}"
-        Controller="{Binding}" />
+        SelectedNode="{Binding SelectedNode, Mode=TwoWay}" />
 </UserControl>
 ```
 
-宿主 ViewModel 提供 `ObservableCollection<MindMapNode>`，并实现 `IMindMapEditorController`。这样控件库负责显示、编辑、拖拽预览、小图和基础交互，应用负责自己的文档状态、文件菜单和业务规则。
+宿主 ViewModel 提供 `ObservableCollection<MindMapNode>` 就能跑起来。控件库负责显示、编辑、拖拽预览、小图和基础节点操作；应用如果要管理自己的文档状态、撤销历史、文件菜单和业务规则，再实现 `IMindMapEditorController` 并绑定 `Controller`。
 
-如果你的应用也需要类似枝见的大纲视图、文件菜单、AtomUI 标题栏和 Markdown 面板，可以参考 `src/Zhijian`。其中 `OutlineEditor` 和桌面窗口属于应用层代码，因为它们使用了 AtomUI 菜单、输入控件和图标；`CodeWF.MindView` 则保持 Avalonia-only，方便其他项目复用。
+如果你的应用也需要类似枝见的大纲视图、文件菜单、标题栏和 Markdown 面板，可以参考 `src/Zhijian`。其中 `OutlineEditor` 和桌面窗口属于应用层代码；`CodeWF.MindView` 则保持 Avalonia-only，方便其他项目复用。
 
 仓库地址仍然是：[https://github.com/dotnet9/Zhijian](https://github.com/dotnet9/Zhijian)。
 
 ## 本轮验证
 
-这轮不只是改完代码看一眼编译。我实际运行了桌面程序，并用截图/GIF验证了这些操作：
+这轮不只是改完代码看一眼编译。我重新生成了文档截图/GIF，并用更完整的示例数据覆盖这些操作：
 
 - 新建空白脑图。
 - 打开文件菜单和关于菜单，确认标题栏菜单可点击且右侧没有突兀箭头。
-- 打开编辑、主题、语言、帮助菜单，确认 AtomUI 菜单、图标、快捷键和分类都正常。
+- 打开编辑、主题、语言、帮助菜单，确认菜单、图标、快捷键和分类都正常。
 - 切换深色/浅色主题，确认文字和菜单在不同主题下可读。
 - 切换英语语言，确认标题栏菜单、Tab 和状态栏文本能更新。
-- 使用复制为 Markdown，确认剪贴板命令执行并出现 AtomUI 全局消息。
-- 重置首次启动标记，确认 AtomUI Tour 能按真实窗口显示。
+- 使用复制为 Markdown，确认剪贴板命令执行并出现桌面全局消息。
+- 重置首次启动标记，确认新手引导能按真实窗口显示。
 - 点击引导“跳过”，确认能立即关闭引导并写入已看过状态。
 - 打开文件夹，确认“文件 / 大纲”Tab 能切换并加载文件。
 - 在大纲和脑图中打开节点菜单，确认常用结构操作齐全。
