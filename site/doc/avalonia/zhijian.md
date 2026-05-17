@@ -17,8 +17,10 @@
 - 文件菜单覆盖新建、新窗口、打开、打开文件夹、最近文件、保存、另存为、打开文件位置和关闭。
 - 编辑菜单覆盖撤销、重做、结构调整、删除节点和复制为 Markdown。
 - 主题、语言、帮助和关于菜单放在标题栏，常用操作带图标和快捷键。
+- macOS 下标题栏菜单、窗口快捷键和脑图缩放使用 `⌘`，Windows/Linux 使用 `Ctrl`。
 - 语言切换使用 `Lang.Avalonia.Json`，支持中文简体、中文繁体、英语和日语。
-- 首次启动使用 AtomUI Tour 引导新用户认识关键操作。
+- 首次启动使用 AtomUI Tour 引导新用户认识关键操作，并提供“跳过”按钮。
+- `src/Zhijian/App.config` 集中管理新手引导、默认语言、最近文件数、历史步数和运行状态文件名。
 - 打开文件夹后，左侧通过“文件 / 大纲”两个 Tab 切换，先选文件再编辑大纲。
 - 应用层使用 AtomUI 窗口、菜单、按钮、列表、输入控件、ToolTip、Tour、全局消息和深色主题。
 - `CodeWF.MindView` 只依赖 Avalonia，提供可复用的脑图编辑器、小图、节点模型和文档编解码。
@@ -33,7 +35,8 @@
 | 备注同步 | 节点备注在大纲和脑图中同步显示，使用灰色文字与标题区分；空备注失焦后自动隐藏。 |
 | 小图概览 | 小图按真实节点坐标绘制脑图全局结构，点击小图可以定位到对应区域。 |
 | 多语言 | 通过 `Lang.Avalonia.Json` 提供中文简体、中文繁体、英语和日语界面。 |
-| 新手引导 | 使用 AtomUI Tour 首次启动引导，配置项位于 `src/Zhijian/App.config`。 |
+| 新手引导 | 使用 AtomUI Tour 首次启动引导，覆盖文件/大纲 Tab、Markdown 切换、脑图画布、小图和状态栏，并提供“跳过”。 |
+| 配置管理 | 通过 `App.config` 管理新手引导、默认语言、最近文件数、历史步数和运行状态文件名。 |
 | 文件格式 | 支持 Markdown、OPML 和 XMind 文件交换。 |
 
 ## 运行演示
@@ -66,13 +69,31 @@
 
 ![节点菜单](https://img1.dotnet9.com/site/doc/avalonia/imgs/zhijian-node-menus.gif)
 
+节点创建、快捷键和焦点回落也可以从键盘完成。
+
+![创建节点](https://img1.dotnet9.com/site/doc/avalonia/imgs/zhijian-create-node.gif)
+
+大纲圆点菜单支持点击和右键打开，也可拖拽调整结构。
+
+![大纲菜单](https://img1.dotnet9.com/site/doc/avalonia/imgs/zhijian-outline-menu.gif)
+
 备注与标题使用文字大小和前景色区分，不再额外加背景块。
 
 ![备注同步](https://img1.dotnet9.com/site/doc/avalonia/imgs/zhijian-note-sync.gif)
 
+脑图节点工具条提供备注和删除等高频入口。
+
+![脑图节点工具条](https://img1.dotnet9.com/site/doc/avalonia/imgs/zhijian-node-toolbar.png)
+
+脑图侧可以拖拽调整父子层级或同级顺序。
+
+![脑图拖拽](https://img1.dotnet9.com/site/doc/avalonia/imgs/zhijian-mind-drag.gif)
+
 小图、缩放和画布拖拽用于处理更大的脑图。
 
 ![小图导航](https://img1.dotnet9.com/site/doc/avalonia/imgs/zhijian-minimap.gif)
+
+![小图概览](https://img1.dotnet9.com/site/doc/avalonia/imgs/zhijian-minimap-overview.png)
 
 ![缩放](https://img1.dotnet9.com/site/doc/avalonia/imgs/zhijian-zoom.gif)
 
