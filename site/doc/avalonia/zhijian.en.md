@@ -15,8 +15,12 @@ The screenshots and GIFs on this page were captured from a real running Zhijian 
 - Starts with a blank mind map: one editable center topic.
 - Outline, Markdown, and mind-map views share the same `MindMapNode` model.
 - File menu for New, New Window, Open, Open Folder, Recent Files, Save, Save As, Open File Location, and Close.
+- Edit menu for Undo, Redo, structural changes, node deletion, and Copy as Markdown.
+- Theme, Language, Help, and About menus live in the title bar with icons and shortcuts where useful.
+- Language switching uses `Lang.Avalonia.Json` resources for Simplified Chinese, Traditional Chinese, English, and Japanese.
+- First-run onboarding uses AtomUI Tour to introduce the key operations.
 - Folder mode with `Files` and `Outline` tabs, so users can browse supported files before loading one into the editor.
-- AtomUI-based desktop shell, menus, buttons, lists, text inputs, tooltips, dialogs, and dark theme.
+- AtomUI-based desktop shell, menus, buttons, lists, text inputs, tooltips, Tour, global messages, dialogs, and dark theme.
 - Reusable `CodeWF.MindView` library with Avalonia-only controls, a mini map, node model, and file codecs.
 
 ## Highlights
@@ -28,11 +32,21 @@ The screenshots and GIFs on this page were captured from a real running Zhijian 
 | Mind-map editing | Inline title editing, notes, delete, zoom, panning, center-topic navigation, and drag/drop structure changes. |
 | Notes | Notes sync between outline and mind-map views and use muted text instead of a separate background block. |
 | Mini map | The mini map renders real node coordinates and the current viewport. |
+| Localization | `Lang.Avalonia.Json` resources provide Simplified Chinese, Traditional Chinese, English, and Japanese UI text. |
+| Onboarding | AtomUI Tour introduces the first-run workflow and is configured from `src/Zhijian/App.config`. |
 | Formats | Markdown, OPML, and XMind import/export. |
 
 ## Runtime Preview
 
 ![File menu](https://img1.dotnet9.com/site/doc/avalonia/imgs/zhijian-file-menu.png)
+
+![Title-bar menus](https://img1.dotnet9.com/site/doc/avalonia/imgs/zhijian-title-menus.gif)
+
+![First-run onboarding](https://img1.dotnet9.com/site/doc/avalonia/imgs/zhijian-onboarding.gif)
+
+![Theme and language switching](https://img1.dotnet9.com/site/doc/avalonia/imgs/zhijian-theme-language.gif)
+
+![Copy Markdown feedback](https://img1.dotnet9.com/site/doc/avalonia/imgs/zhijian-copy-markdown.gif)
 
 ![Open folder workflow](https://img1.dotnet9.com/site/doc/avalonia/imgs/zhijian-open-folder.gif)
 

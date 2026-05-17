@@ -14,6 +14,10 @@
 
 - 啟動後是空白腦圖，只保留一個可輸入的中心主題。
 - 文件選單支援新建、新窗口、開啟、開啟資料夾、最近文件、儲存、另存新檔、開啟文件位置和關閉。
+- 編輯選單支援復原、重做、結構調整、刪除節點和複製為 Markdown。
+- 主題、語言、幫助和關於選單都放在標題列，常用操作帶有圖示和快捷鍵。
+- 語言切換使用 `Lang.Avalonia.Json`，支援中文簡體、中文繁體、英語和日語。
+- 首次啟動使用 AtomUI Tour 引導新使用者認識關鍵操作。
 - 開啟資料夾後可在「文件 / 大綱」兩個 Tab 間切換。
 - 大綱、Markdown 和腦圖共用 `MindMapNode`，任一視圖修改都會同步。
 - 大綱和腦圖選單都支援新增同級、新增子級、升級、降級、上移、下移、備註和刪除。
@@ -22,6 +26,14 @@
 ## 執行預覽
 
 ![文件選單](https://img1.dotnet9.com/site/doc/avalonia/imgs/zhijian-file-menu.png)
+
+![標題列選單](https://img1.dotnet9.com/site/doc/avalonia/imgs/zhijian-title-menus.gif)
+
+![首次啟動引導](https://img1.dotnet9.com/site/doc/avalonia/imgs/zhijian-onboarding.gif)
+
+![主題和語言切換](https://img1.dotnet9.com/site/doc/avalonia/imgs/zhijian-theme-language.gif)
+
+![複製 Markdown 提示](https://img1.dotnet9.com/site/doc/avalonia/imgs/zhijian-copy-markdown.gif)
 
 ![開啟資料夾流程](https://img1.dotnet9.com/site/doc/avalonia/imgs/zhijian-open-folder.gif)
 

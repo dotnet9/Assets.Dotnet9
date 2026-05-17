@@ -14,6 +14,10 @@
 
 - 起動時は空のマインドマップで、編集可能な中心トピックだけを表示します。
 - File メニューは New、New Window、Open、Open Folder、Recent Files、Save、Save As、Open File Location、Close を提供します。
+- Edit メニューは Undo、Redo、構造変更、ノード削除、Copy as Markdown を提供します。
+- Theme、Language、Help、About はタイトルバーのメニューにまとめ、主要操作にはアイコンとショートカットを表示します。
+- 言語切り替えは `Lang.Avalonia.Json` を使い、簡体字中国語、繁体字中国語、英語、日本語を提供します。
+- 初回起動時は AtomUI Tour で主要操作を案内します。
 - フォルダーを開くと、左側で `Files` と `Outline` タブを切り替えられます。
 - アウトライン、Markdown、マインドマップは同じ `MindMapNode` を共有します。
 - アウトラインとマインドマップのメニューは、兄弟追加、子追加、昇格、降格、上下移動、ノート、削除を提供します。
@@ -22,6 +26,14 @@
 ## 実行プレビュー
 
 ![File menu](https://img1.dotnet9.com/site/doc/avalonia/imgs/zhijian-file-menu.png)
+
+![Title-bar menus](https://img1.dotnet9.com/site/doc/avalonia/imgs/zhijian-title-menus.gif)
+
+![First-run onboarding](https://img1.dotnet9.com/site/doc/avalonia/imgs/zhijian-onboarding.gif)
+
+![Theme and language switching](https://img1.dotnet9.com/site/doc/avalonia/imgs/zhijian-theme-language.gif)
+
+![Copy Markdown feedback](https://img1.dotnet9.com/site/doc/avalonia/imgs/zhijian-copy-markdown.gif)
 
 ![Open folder workflow](https://img1.dotnet9.com/site/doc/avalonia/imgs/zhijian-open-folder.gif)
 

@@ -29,6 +29,26 @@
 
 ![](https://img1.dotnet9.com/2026/05/zhijian-file-menu.png)
 
+## 标题栏菜单继续按真实工作流整理
+
+菜单现在不再只放“文件”和“关于”。标题栏已经整理为文件、编辑、主题、语言、帮助、关于几组入口，并统一使用 AtomUI `Menu/MenuItem`，菜单项带图标，常用操作显示快捷键。
+
+![](https://img1.dotnet9.com/2026/05/zhijian-title-menus.gif)
+
+“编辑”菜单放撤销、重做、添加同级、添加子级、提升、降级、上移、下移、删除，以及“复制为 Markdown”。复制后会写入系统剪贴板，并使用 AtomUI 全局消息提示。
+
+![](https://img1.dotnet9.com/2026/05/zhijian-copy-markdown.gif)
+
+主题不再使用标题栏 ToggleSwitch，而是单独放到“主题”菜单里，后续扩展更多主题会更自然。语言菜单使用 `Lang.Avalonia.Json`，当前提供中文简体、中文繁体、英语和日语资源。
+
+![](https://img1.dotnet9.com/2026/05/zhijian-theme-language.gif)
+
+“帮助”菜单提供问题反馈、提交需求、提交 PR 和 GitHub 仓库入口；“关于”菜单继续提供网站、更新日志、感谢和关于窗口。
+
+首次启动还增加了 AtomUI Tour 新手引导，会把标题栏菜单、左侧输入区、Markdown 切换、脑图画布和状态栏导航依次介绍给新用户。是否显示由 `src/Zhijian/App.config` 控制。
+
+![](https://img1.dotnet9.com/2026/05/zhijian-onboarding.gif)
+
 打开文件夹后，左侧从单一大纲变成“文件 / 大纲”两个 Tab。先在“文件”里选择要编辑的文档，再自动切回“大纲”展示当前脑图结构。
 
 ![](https://img1.dotnet9.com/2026/05/zhijian-open-folder.gif)
@@ -144,6 +164,11 @@
 
 - 新建空白脑图。
 - 打开文件菜单和关于菜单，确认标题栏菜单可点击且右侧没有突兀箭头。
+- 打开编辑、主题、语言、帮助菜单，确认 AtomUI 菜单、图标、快捷键和分类都正常。
+- 切换深色/浅色主题，确认文字和菜单在不同主题下可读。
+- 切换英语语言，确认标题栏菜单、Tab 和状态栏文本能更新。
+- 使用复制为 Markdown，确认剪贴板命令执行并出现 AtomUI 全局消息。
+- 重置首次启动标记，确认 AtomUI Tour 能按真实窗口显示。
 - 打开文件夹，确认“文件 / 大纲”Tab 能切换并加载文件。
 - 在大纲和脑图中打开节点菜单，确认常用结构操作齐全。
 - 编辑短文本节点和备注，确认可以重新获得焦点且标题/备注对齐。
