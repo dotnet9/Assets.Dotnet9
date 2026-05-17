@@ -2,7 +2,7 @@ title: 枝见 Zhijian：一个用 Avalonia + AtomUI 做的 Markdown 脑图编辑
 slug: zhijian-avalonia-mind-map-editor
 description: 这篇文章介绍枝见 Zhijian，一个基于 Avalonia 和 AtomUI 的本地脑图编辑器，支持大纲、Markdown、脑图双向同步、节点备注、拖拽调整、小图概览、Markdown/OPML/XMind 导入导出和深色主题。
 date: 2026-05-17 08:20:00
-lastmod: 2026-05-17 08:20:00
+lastmod: 2026-05-17 17:30:00
 cover: https://img1.dotnet9.com/2026/05/zhijian-avalonia-cover.svg
 banner: false
 categories:
