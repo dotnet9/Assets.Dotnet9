@@ -175,6 +175,8 @@ dotnet build Zhijian.slnx
 dotnet run --project src/Zhijian/Zhijian.csproj
 ```
 
-## 仓库
+## 仓库与发布
 
-- GitHub：[https://github.com/dotnet9/Zhijian](https://github.com/dotnet9/Zhijian)
+- 仓库地址：[https://github.com/dotnet9/Zhijian](https://github.com/dotnet9/Zhijian)
+- `win-x64` 发布地址：`TBD`
+- `linux-x64` 发布地址：`TBD`

@@ -175,7 +175,11 @@
 
 如果你的应用也需要类似枝见的大纲视图、文件菜单、标题栏和 Markdown 面板，可以参考 `src/Zhijian`。其中 `OutlineEditor` 和桌面窗口属于应用层代码；`CodeWF.MindView` 则保持 Avalonia-only，方便其他项目复用。
 
-仓库地址仍然是：[https://github.com/dotnet9/Zhijian](https://github.com/dotnet9/Zhijian)。
+## 仓库与发布
+
+- 仓库地址：[https://github.com/dotnet9/Zhijian](https://github.com/dotnet9/Zhijian)
+- `win-x64` 发布地址：`TBD`
+- `linux-x64` 发布地址：`TBD`
 
 ## 本轮验证
 
