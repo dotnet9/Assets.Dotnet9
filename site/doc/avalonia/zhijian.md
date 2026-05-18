@@ -6,7 +6,7 @@
 
 项目仓库：[https://github.com/dotnet9/Zhijian](https://github.com/dotnet9/Zhijian)
 
-![枝见主窗口](https://img1.dotnet9.com/site/doc/avalonia/imgs/zhijian-main-window.png)
+![枝见主窗口](https://img1.dotnet9.com/site/doc/avalonia/imgs/zhijian-main-window.gif)
 
 本页截图和 GIF 已按当前界面重新制作，并使用程序启动时默认加载的使用手册，便于观察文件列表、小图、缩放、画布拖拽和层级调整。
 

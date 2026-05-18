@@ -6,7 +6,7 @@
 
 專案倉庫：[https://github.com/dotnet9/Zhijian](https://github.com/dotnet9/Zhijian)
 
-![枝見主窗口](https://img1.dotnet9.com/site/doc/avalonia/imgs/zhijian-main-window.png)
+![枝見主窗口](https://img1.dotnet9.com/site/doc/avalonia/imgs/zhijian-main-window.gif)
 
 本頁截圖和 GIF 均來自實際執行的枝見桌面程式，並透過模擬使用者操作截取。
 

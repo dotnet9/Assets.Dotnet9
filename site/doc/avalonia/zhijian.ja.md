@@ -6,7 +6,7 @@
 
 リポジトリ：[https://github.com/dotnet9/Zhijian](https://github.com/dotnet9/Zhijian)
 
-![Zhijian main window](https://img1.dotnet9.com/site/doc/avalonia/imgs/zhijian-main-window.png)
+![Zhijian main window](https://img1.dotnet9.com/site/doc/avalonia/imgs/zhijian-main-window.gif)
 
 このページのスクリーンショットと GIF は、実際に起動した Zhijian デスクトップアプリを操作して取得したものです。
 
