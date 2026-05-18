@@ -96,13 +96,9 @@
 
 ![](https://img1.dotnet9.com/2026/05/zhijian-minimap.gif)
 
-![](https://img1.dotnet9.com/2026/05/zhijian-minimap-overview.png)
-
 缩放、中心主题定位、画布拖拽也都在实际窗口里重新验证过。
 
 ![](https://img1.dotnet9.com/2026/05/zhijian-zoom.gif)
-
-![](https://img1.dotnet9.com/2026/05/zhijian-canvas-pan.gif)
 
 中间分隔条的拖拽调整宽度也已经改为明确的 `GridSplitter` 行为并通过截图验证，只是这类动图对阅读帮助不大，文档里不再把它作为重点演示。
 
