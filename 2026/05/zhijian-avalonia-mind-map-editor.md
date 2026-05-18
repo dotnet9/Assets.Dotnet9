@@ -174,8 +174,7 @@
 ## 仓库与发布
 
 - 仓库地址：[https://github.com/dotnet9/Zhijian](https://github.com/dotnet9/Zhijian)
-- `win-x64` 发布地址：`TBD`
-- `linux-x64` 发布地址：`TBD`
+- 发布地址：https://github.com/dotnet9/Zhijian/releases/tag/V12.0.3
 
 ## 本轮验证
 
