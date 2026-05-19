@@ -1,8 +1,8 @@
 ﻿[
   {
     "Query": "dotnet",
-    "Count": 1530,
-    "LastSearchedAt": "2026-05-18T08:53:12.0850466+00:00"
+    "Count": 1544,
+    "LastSearchedAt": "2026-05-19T00:19:54.3015289+00:00"
   },
   {
     "Query": "WINUI入门",
@@ -38,6 +38,11 @@
     "Query": "大数据",
     "Count": 2,
     "LastSearchedAt": "2026-04-30T04:36:16.188368+00:00"
+  },
+  {
+    "Query": "avalonia",
+    "Count": 1,
+    "LastSearchedAt": "2026-05-19T02:40:54.5582189+00:00"
   },
   {
     "Query": "Winform的界面也可以变好看？",
