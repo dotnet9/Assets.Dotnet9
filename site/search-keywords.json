@@ -1,8 +1,8 @@
 ﻿[
   {
     "Query": "dotnet",
-    "Count": 1544,
-    "LastSearchedAt": "2026-05-19T00:19:54.3015289+00:00"
+    "Count": 1622,
+    "LastSearchedAt": "2026-05-22T05:27:38.037811+00:00"
   },
   {
     "Query": "WINUI入门",
@@ -11,8 +11,8 @@
   },
   {
     "Query": "wpf",
-    "Count": 2,
-    "LastSearchedAt": "2026-05-18T03:10:30.4088621+00:00"
+    "Count": 3,
+    "LastSearchedAt": "2026-05-20T02:56:05.5718137+00:00"
   },
   {
     "Query": "(1/7).NET Core 3 WPF MVVM框架 Prism系列之数据绑定",
@@ -38,6 +38,11 @@
     "Query": "大数据",
     "Count": 2,
     "LastSearchedAt": "2026-04-30T04:36:16.188368+00:00"
+  },
+  {
+    "Query": "md5",
+    "Count": 1,
+    "LastSearchedAt": "2026-05-22T04:55:45.9984479+00:00"
   },
   {
     "Query": "avalonia",
