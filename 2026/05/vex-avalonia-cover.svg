@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
   <title id="title">Vex 1.0.0 Avalonia Markdown editor</title>
-  <desc id="desc">Cover image for an article introducing Vex 1.0.0, a cross-platform Markdown editor built with .NET 10 and Avalonia 12.</desc>
+  <desc id="desc">Cover image for an article introducing Vex 1.0.0, a free open-source cross-platform Markdown editor built with .NET 10 and Avalonia 12.</desc>
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0" stop-color="#f8fafc"/>
@@ -29,7 +29,7 @@
 
   <text x="78" y="78" font-family="Segoe UI, Microsoft YaHei UI, sans-serif" font-size="24" font-weight="800" fill="#0f172a">Vex 1.0.0</text>
   <text x="78" y="128" font-family="Segoe UI, Microsoft YaHei UI, sans-serif" font-size="48" font-weight="850" fill="#0f172a">跨平台 Markdown 编辑器</text>
-  <text x="80" y="166" font-family="Segoe UI, Microsoft YaHei UI, sans-serif" font-size="21" fill="#475569">.NET 10 + Avalonia 12 · 实时预览 · 文件工作流 · 多主题导出</text>
+  <text x="80" y="166" font-family="Segoe UI, Microsoft YaHei UI, sans-serif" font-size="21" fill="#475569">.NET 10 + Avalonia 12 · 编辑预览 · 公众号复制 · 免费开源</text>
 
   <g filter="url(#shadow)">
     <rect x="74" y="204" width="1052" height="368" rx="24" fill="#ffffff" stroke="#cbd8e6"/>
@@ -65,7 +65,7 @@
 
     <text x="360" y="302" font-family="Cascadia Mono, Consolas, monospace" font-size="18" font-weight="700" fill="#991b1b"># Vex 1.0.0</text>
     <text x="360" y="344" font-family="Cascadia Mono, Consolas, monospace" font-size="17" fill="#0f172a">极简之力，妙笔成章。</text>
-    <text x="360" y="386" font-family="Cascadia Mono, Consolas, monospace" font-size="17" fill="#0f172a">- 实时预览与源码模式</text>
+    <text x="360" y="386" font-family="Cascadia Mono, Consolas, monospace" font-size="17" fill="#0f172a">- 源码编辑与预览区</text>
     <text x="360" y="418" font-family="Cascadia Mono, Consolas, monospace" font-size="17" fill="#0f172a">- 大纲导航与文档统计</text>
     <text x="360" y="450" font-family="Cascadia Mono, Consolas, monospace" font-size="17" fill="#0f172a">- HTML / PNG / PDF 导出</text>
     <rect x="360" y="486" width="318" height="14" rx="7" fill="#e2e8f0"/>
@@ -77,7 +77,7 @@
     <line x1="786" y1="404" x2="1062" y2="404" stroke="#334155" stroke-width="2"/>
     <text x="786" y="444" font-family="Segoe UI, Microsoft YaHei UI, sans-serif" font-size="23" font-weight="800" fill="#334155">主要能力</text>
     <circle cx="802" cy="482" r="4" fill="#0f766e"/>
-    <text x="820" y="488" font-family="Segoe UI, Microsoft YaHei UI, sans-serif" font-size="17" fill="#334155">编辑、预览、导出</text>
+    <text x="820" y="488" font-family="Segoe UI, Microsoft YaHei UI, sans-serif" font-size="17" fill="#334155">编辑、预览、复制</text>
     <circle cx="802" cy="520" r="4" fill="#2563eb"/>
     <text x="820" y="526" font-family="Segoe UI, Microsoft YaHei UI, sans-serif" font-size="17" fill="#334155">主题、语言、引导</text>
   </g>
