@@ -28,3 +28,4 @@
 | [Lang.Avalonia](https://github.com/dotnet9/Lang.Avalonia) | Avalonia UI 插件化多语言库，支持 JSON、XML、RESX 和强类型 Key 生成。 |
 | [CodeWF.Markdown](https://github.com/dotnet9/CodeWF.Markdown) | Avalonia Markdown 渲染控件、排版主题和示例工程。 |
 | [CodeWF.Toolbox](https://github.com/dotnet9/CodeWF.Toolbox) | 基于 Avalonia + Prism 的模块化跨平台桌面工具箱。 |
+| [Vex 维刻](https://github.com/dotnet9/Vex) | 基于 Avalonia + Prism 的跨平台 Markdown 桌面编辑器，覆盖源码编辑、实时预览、导出和发布复制工作流。 |

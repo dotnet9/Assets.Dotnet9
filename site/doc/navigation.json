@@ -90,6 +90,12 @@
         "Repository": "https://github.com/dotnet9/CodeWF.Toolbox"
       },
       {
+        "Name": "Vex 维刻",
+        "Memo": "基于 Avalonia + Prism 的跨平台 Markdown 桌面编辑器",
+        "Slug": "vex",
+        "Repository": "https://github.com/dotnet9/Vex"
+      },
+      {
         "Name": "枝见 Zhijian",
         "Memo": "基于 Avalonia + AtomUI 的 Markdown 脑图编辑器",
         "Slug": "zhijian",

@@ -90,6 +90,12 @@
         "Repository": "https://github.com/dotnet9/CodeWF.Toolbox"
       },
       {
+        "Name": "Vex",
+        "Memo": "Avalonia + Prism で構築したクロスプラットフォーム Markdown デスクトップエディター",
+        "Slug": "vex",
+        "Repository": "https://github.com/dotnet9/Vex"
+      },
+      {
         "Name": "Zhijian",
         "Memo": "Avalonia + AtomUI で構築した Markdown-first マインドマップエディター",
         "Slug": "zhijian",

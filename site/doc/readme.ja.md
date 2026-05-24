@@ -28,3 +28,4 @@
 | [Lang.Avalonia](https://github.com/dotnet9/Lang.Avalonia) | Avalonia UI プラグイン方式の多言語ライブラリ。JSON、XML、RESX と強タイプキー生成をサポート。 |
 | [CodeWF.Markdown](https://github.com/dotnet9/CodeWF.Markdown) | Avalonia Markdown レンダリングコントロール、組版テーマ、サンプルプロジェクト。 |
 | [CodeWF.Toolbox](https://github.com/dotnet9/CodeWF.Toolbox) | Avalonia + Prism ベースのモジュール式クロスプラットフォームデスクトップツールボックス。 |
+| [Vex](https://github.com/dotnet9/Vex) | Avalonia + Prism ベースのクロスプラットフォーム Markdown デスクトップエディター。ソース編集、ライブプレビュー、エクスポート、公開向けコピーを扱います。 |

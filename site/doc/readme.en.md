@@ -28,3 +28,4 @@ More open-source projects can be found at: [https://github.com/dotnet9/](https:/
 | [Lang.Avalonia](https://github.com/dotnet9/Lang.Avalonia) | Plugin-based multilingual library for Avalonia UI, supporting JSON, XML, RESX and strongly-typed key generation. |
 | [CodeWF.Markdown](https://github.com/dotnet9/CodeWF.Markdown) | Avalonia Markdown rendering control, typography theme, and sample project. |
 | [CodeWF.Toolbox](https://github.com/dotnet9/CodeWF.Toolbox) | Modular cross-platform desktop toolbox based on Avalonia + Prism. |
+| [Vex](https://github.com/dotnet9/Vex) | Cross-platform Markdown desktop editor built with Avalonia + Prism, covering source editing, live preview, export, and publishing-copy workflows. |

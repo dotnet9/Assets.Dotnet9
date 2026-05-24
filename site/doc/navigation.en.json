@@ -90,6 +90,12 @@
         "Repository": "https://github.com/dotnet9/CodeWF.Toolbox"
       },
       {
+        "Name": "Vex",
+        "Memo": "Cross-platform Markdown desktop editor built with Avalonia + Prism",
+        "Slug": "vex",
+        "Repository": "https://github.com/dotnet9/Vex"
+      },
+      {
         "Name": "Zhijian",
         "Memo": "Markdown-first mind-map editor built with Avalonia + AtomUI",
         "Slug": "zhijian",
