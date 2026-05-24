@@ -61,7 +61,7 @@
     "Children": [
       {
         "Name": "CodeWF.AvaloniaControls",
-        "Memo": "General controls and theme package for Avalonia 12",
+        "Memo": "General controls, Guide onboarding control, and theme package for Avalonia 12",
         "Slug": "codewf-avalonia-controls",
         "Repository": "https://github.com/dotnet9/CodeWF.AvaloniaControls"
       },

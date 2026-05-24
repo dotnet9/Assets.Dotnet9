@@ -23,7 +23,7 @@ More open-source projects can be found at: [https://github.com/dotnet9/](https:/
 
 | Project | Description |
 | --- | --- |
-| [CodeWF.AvaloniaControls](https://github.com/dotnet9/CodeWF.AvaloniaControls) | General-purpose controls and theme package for Avalonia 12. |
+| [CodeWF.AvaloniaControls](https://github.com/dotnet9/CodeWF.AvaloniaControls) | General-purpose controls, Guide onboarding control, and theme package for Avalonia 12. |
 | [CodeWF.LogViewer](https://github.com/dotnet9/CodeWF.LogViewer) | Lightweight logging core library and Avalonia log viewer control. |
 | [Lang.Avalonia](https://github.com/dotnet9/Lang.Avalonia) | Plugin-based multilingual library for Avalonia UI, supporting JSON, XML, RESX and strongly-typed key generation. |
 | [CodeWF.Markdown](https://github.com/dotnet9/CodeWF.Markdown) | Avalonia Markdown rendering control, typography theme, and sample project. |

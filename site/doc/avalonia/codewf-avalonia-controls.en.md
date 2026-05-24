@@ -35,8 +35,19 @@ publish/                                Sample publish directory
 
 - How to separate Avalonia controls and theme resources into independent NuGet packages.
 - How to maintain a runnable Showcase to visualize control behavior, styles, and theme switching.
+- How to use `Guide` to build onboarding, feature tours, and contextual hints in desktop apps.
 - How to organize class libraries, demo applications, packaging scripts, and publishing scripts in a single repository.
 - How to avoid commercial package dependencies in a control library and maintain the distributability of an open-source project.
+
+## Guide Control
+
+`Guide` is used for first-run onboarding, feature tours, and contextual hints in Avalonia desktop applications. It goes beyond highlighting static buttons and targets the dynamic entry points common in desktop software: menus, nested menus, `Popup`, `Flyout`, scroll regions, `TabItem` switching, delayed target creation, and window size changes.
+
+- `GuideStep` can bind each step to a different target control, and can also show centered content without a target.
+- `GuideOverlay` handles mask cutouts, highlight corner radius, target spacing, and card placement.
+- `TargetResolveDelay` and `StepOpening` let an app open menus or switch tabs before resolving the target.
+- It supports `DefaultGuideIndicator`, `TextGuideIndicator`, non-modal hints, and refreshed positioning after layout changes.
+- The Showcase includes basic multi-step tours, cover content, custom buttons, text progress, and non-mask hint examples.
 
 ## Sample Projects
 

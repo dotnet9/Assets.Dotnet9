@@ -61,7 +61,7 @@
     "Children": [
       {
         "Name": "CodeWF.AvaloniaControls",
-        "Memo": "Avalonia 12 向けの汎用コントロールとテーマパッケージ",
+        "Memo": "Avalonia 12 向けの汎用コントロール、Guide 案内コントロール、テーマパッケージ",
         "Slug": "codewf-avalonia-controls",
         "Repository": "https://github.com/dotnet9/CodeWF.AvaloniaControls"
       },

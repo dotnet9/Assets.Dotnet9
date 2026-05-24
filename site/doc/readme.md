@@ -23,7 +23,7 @@
 
 | 项目 | 定位 |
 | --- | --- |
-| [CodeWF.AvaloniaControls](https://github.com/dotnet9/CodeWF.AvaloniaControls) | 面向 Avalonia 12 的通用控件与主题包。 |
+| [CodeWF.AvaloniaControls](https://github.com/dotnet9/CodeWF.AvaloniaControls) | 面向 Avalonia 12 的通用控件、Guide 引导控件与主题包。 |
 | [CodeWF.LogViewer](https://github.com/dotnet9/CodeWF.LogViewer) | 轻量日志核心库与 Avalonia 日志查看控件。 |
 | [Lang.Avalonia](https://github.com/dotnet9/Lang.Avalonia) | Avalonia UI 插件化多语言库，支持 JSON、XML、RESX 和强类型 Key 生成。 |
 | [CodeWF.Markdown](https://github.com/dotnet9/CodeWF.Markdown) | Avalonia Markdown 渲染控件、排版主题和示例工程。 |

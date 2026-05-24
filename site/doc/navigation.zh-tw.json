@@ -61,7 +61,7 @@
     "Children": [
       {
         "Name": "CodeWF.AvaloniaControls",
-        "Memo": "面向 Avalonia 12 的通用控件与主题包",
+        "Memo": "面向 Avalonia 12 的通用控制項、Guide 引導控制項與主題包",
         "Slug": "codewf-avalonia-controls",
         "Repository": "https://github.com/dotnet9/CodeWF.AvaloniaControls"
       },
