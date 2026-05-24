@@ -103,7 +103,7 @@ Vex 的工作区是三栏结构：
 
 外观入口放在帮助菜单下，当前包含主题色、排版主题、紧凑布局和语言设置。
 
-![](https://img1.dotnet9.com/2026/05/vex-theme-language-menu.png)
+![](https://img1.dotnet9.com/2026/05/vex-theme-language-menu.gif)
 
 主题色控制应用外壳，排版主题控制 Markdown 正文。两者分开后，可以组合出不同工作环境：浅色外壳配简洁排版，或暗色外壳配更适合代码阅读的排版主题。
 
