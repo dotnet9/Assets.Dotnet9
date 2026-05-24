@@ -511,6 +511,6 @@ private void BeginOnboardingGuide()
 
 感谢 AtomUI 项目提供 `Tour` 漫游式引导控件作为重要参考：
 
-- AtomUI 控件仓库：[https://github.com/AtomUI/AtomUI](https://github.com/AtomUI/AtomUI)
-- 本文控件仓库 CodeWF.AvaloniaControls：[https://github.com/dotnet9/CodeWF.AvaloniaControls](https://github.com/dotnet9/CodeWF.AvaloniaControls)
-- Vex 项目仓库：[https://github.com/dotnet9/Vex](https://github.com/dotnet9/Vex)
+- 控件库 GitHub 地址：[dotnet9/CodeWF.AvaloniaControls](https://github.com/dotnet9/CodeWF.AvaloniaControls)
+- AtomUI 地址：[AtomUI/AtomUI](https://github.com/AtomUI/AtomUI)
+- Vex 地址：[dotnet9/Vex](https://github.com/dotnet9/Vex)
