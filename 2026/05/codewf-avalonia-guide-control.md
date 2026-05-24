@@ -466,7 +466,13 @@ private void BeginOnboardingGuide()
 
 这个问题本质上和“菜单弹层目标”“引导卡片按钮”“窗口激活状态”三者有关。当前实现已经对上一步、下一步、完成按钮做了 `PointerPressed` 优先导航处理，但窗口真正失焦时，菜单弹层仍然可能先关闭。后续可以考虑在 `Guide` 内部增加更明确的焦点恢复、弹层目标保持策略，或者在业务侧把动态菜单步骤和普通页面步骤拆得更清晰。
 
-这次文章先不改控件代码，只把这个限制写出来，后续再单独优化。
+我现在更倾向于另一个方案：动态菜单弹出并完成布局后，先把菜单区域截图，贴回到引导遮罩层上，再按截图位置做挖洞和卡片定位。这样即使程序临时失去焦点，真实菜单弹层被 Avalonia 收起，用户看到的引导画面也不会突然消失或错位。
+
+这个方向也有取舍：截图内容是静态的，窗口缩放、DPI 变化、主题切换、菜单内容变化时都要重新捕获；另外截图层不能响应真实菜单项交互，只适合引导说明，不适合把菜单操作和引导操作混在一起。后续如果实现，需要把“捕获弹层快照”“坐标换算”“遮罩挖洞”“失焦恢复”几个边界处理清楚。
+
+如果你对动态菜单项引导有更好的实现思路，欢迎提交 PR：[https://github.com/dotnet9/CodeWF.AvaloniaControls/pulls](https://github.com/dotnet9/CodeWF.AvaloniaControls/pulls)。如果在使用 `Guide` 时遇到问题，也可以直接提 Issue：[https://github.com/dotnet9/CodeWF.AvaloniaControls/issues](https://github.com/dotnet9/CodeWF.AvaloniaControls/issues)。
+
+这次文章先不改控件代码，只把这个限制和可能的优化方向写出来，后续再单独优化。
 
 ## 实现里几个容易忽略的点
 
