@@ -1,8 +1,8 @@
 title: Vex 1.0.0：免费开源的 .NET + Avalonia 跨平台 Markdown 编辑器
 slug: vex-avalonia-markdown-editor
-description: 这篇文章介绍 Vex 1.0.0，一个免费开源的 .NET + Avalonia 跨平台 Markdown 编辑器，并用本文作为演示材料展示 Markdown 动态编辑、右侧实时预览、大纲跳转、源码模式、刷新预览、查找替换、主题排版切换、复制到微信公众号编辑器和新手引导等功能。
+description: 介绍 Vex 1.0.0，一个免费开源的 .NET + Avalonia 跨平台 Markdown 编辑器，重点展示动态编辑、实时预览、大纲跳转、源码模式、刷新预览、查找替换、主题排版、复制到公众号和新手引导。
 date: 2026-05-24 10:55:00
-lastmod: 2026-05-24 15:23:00
+lastmod: 2026-05-24 15:39:11
 cover: https://img1.dotnet9.com/2026/05/vex-avalonia-cover.svg
 banner: false
 categories:

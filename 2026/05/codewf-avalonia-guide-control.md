@@ -1,94 +1,64 @@
 ![](https://img1.dotnet9.com/2026/05/codewf-avalonia-guide-cover.svg)
 
-这篇记录一下 **CodeWF.AvaloniaControls** 新增的 `Guide` 引导控件，以及它在 Vex 里的实际落地。
+**CodeWF.AvaloniaControls** 新增了 `Guide` 引导控件，用来在 Avalonia 桌面应用里做新手引导、功能漫游和局部提示。
 
-新手引导这种控件，如果只讲属性和实现会比较抽象。它本质上是一个强交互控件：遮罩、高亮、卡片定位、菜单展开、TabItem 切换、目标控件延迟出现、弹层里继续定位目标，这些都需要先看画面，再看代码才容易理解。
+它参考了 [AtomUI](https://github.com/AtomUI/AtomUI) 的 `Tour` 思路，但落地重点更偏桌面软件：菜单、二级菜单、弹层、TabItem、目标延迟出现、窗口尺寸变化，这些都要能稳定定位。
 
-先看 Vex 中的菜单类引导流程。完整的新手引导覆盖欢迎页、文件菜单、段落菜单、格式菜单、视图菜单、主题菜单、侧边栏、编辑区、预览区、状态栏和帮助菜单。下面这段 GIF 重点截取菜单和二级菜单步骤，能看到 `Guide` 会在步骤切换时主动打开菜单，再高亮菜单里的 `MenuItem`。
+先看 Vex 中的完整落地。首次启动会自动出现引导，之后也可以从帮助菜单再次打开：
 
 ![](https://img1.dotnet9.com/2026/05/codewf-guide-vex-onboarding-flow.gif)
 
-这段 GIF 已按当前 Vex 重新录制。文件菜单现在会按内容完整展开，导出入口和关闭入口可以一次看到，不再出现旧版下拉高度限制带来的菜单内滚动。
-
-控件库 Demo 里也补了两个更小的例子，分别演示基础多步骤引导、封面内容、自定义操作按钮，以及非模态提示和文本进度指示器。
+控件库 Demo 里也补了两个更小的例子：基础多步骤引导、封面内容、自定义按钮，以及非模态提示和文本进度。
 
 ![](https://img1.dotnet9.com/2026/05/codewf-guide-demo-basic.gif)
 
 ![](https://img1.dotnet9.com/2026/05/codewf-guide-demo-nonmask.gif)
 
-`Guide` 的源码在这里：
+## Guide 解决什么
+
+普通页面按钮的高亮不难，真正麻烦的是桌面应用里的动态入口。
+
+`Guide` 当前覆盖这些场景：
+
+- 多步骤引导：上一页、下一页、完成、关闭。
+- 每一步绑定不同目标控件，也支持无目标居中说明。
+- 遮罩挖洞、高亮圆角、目标间距和卡片方向控制。
+- 目标在滚动区域内时自动滚动到可见位置。
+- 目标晚一点出现时延迟解析并重试。
+- 目标位于 `Menu`、`Popup`、`Flyout` 等弹层里时仍可定位。
+- 进入步骤前执行命令或事件，适合主动展开菜单、切换页签。
+- 布局变化、窗口大小变化后刷新高亮位置。
+
+源码位置：
 
 ```text
 https://github.com/dotnet9/CodeWF.AvaloniaControls/tree/main/src/CodeWF.AvaloniaControls/Controls/Guide
-```
-
-Vex 的落地代码主要在这里：
-
-```text
-https://github.com/dotnet9/Vex/tree/main/src/Vex/Modules/Shell/Views/MainWindow.axaml
-https://github.com/dotnet9/Vex/tree/main/src/Vex/Modules/Shell/Views/MainWindow.axaml.cs
-https://github.com/dotnet9/Vex/tree/main/src/Vex/Modules/Shell/Views/ShellTitleMenuView.axaml
-https://github.com/dotnet9/Vex/tree/main/src/Vex/Modules/Shell/Views/ShellTitleMenuView.axaml.cs
-```
-
-## 为什么要做 Guide
-
-Avalonia 里有 `Popup`、`MenuItem`、`TabControl`、`Flyout` 这些基础控件，但它们不会直接组合成一个完整的新手引导流程。
-
-一个真正能用在桌面软件里的引导控件，至少要处理这些问题：
-
-- 多步骤流程：上一页、下一页、完成、关闭。
-- 每一步绑定不同目标控件。
-- 没有目标控件时居中显示说明。
-- 有目标控件时绘制遮罩，并在目标周围挖出高亮区域。
-- 引导卡片根据目标位置显示在上、下、左、右等方向。
-- 目标在滚动区域内时自动滚动到可见位置。
-- 目标控件晚一点才出现时，等待并重新定位。
-- 目标在 `Menu`、`Popup`、`Flyout` 这种弹层里时，也能正确高亮。
-- 布局变化、窗口大小变化后，重新计算高亮区域。
-
-我参考的是 [**AtomUI**](https://github.com/AtomUI/AtomUI) 里的 `Tour` 漫游式引导控件。AtomUI 的 `Tour` 把主控件做成 `TemplatedControl`，步骤抽象为 `ITourStepOption`，再用弹层和遮罩层组合出引导效果。这个方向很适合 Avalonia。
-
-CodeWF 的 `Guide` 沿用了这个思路，但实现上更贴近桌面软件里的真实入口：
-
-- 使用 `GuideOverlay` 自绘遮罩和高亮区域。
-- 使用 `Popup` 显示引导卡片。
-- 通过 `GuideStep` 声明每一步，也支持 `StepsSource` 数据源。
-- 通过 `StepOpening` 和 `OpeningCommand` 支持动态业务动作。
-- 通过 `TargetResolveDelay` 等待菜单、TabItem、Popup 内容完成布局。
-- 对弹层里的 `MenuItem` 做额外处理，避免菜单 light-dismiss 影响“下一步”按钮。
-
-## 控件结构
-
-`Guide` 相关类型比较清晰：
-
-- `Guide`：主控件，管理打开关闭、当前步骤、遮罩、弹层和目标解析。
-- `GuideStep`：声明式步骤，用在 XAML 里。
-- `GuideStepOption`：代码创建步骤时使用。
-- `IGuideStepOption`：步骤统一接口。
-- `GuideOverlay`：负责绘制遮罩和目标高亮洞。
-- `DefaultGuideIndicator`：默认圆点进度指示器。
-- `TextGuideIndicator`：文本进度指示器，例如 `1 / 6`。
-- `GuidePlacementMode`：卡片位置枚举。
-- `GuideMissingTargetBehavior`：目标缺失时居中、跳过或关闭。
-
-主题文件在：
-
-```text
 https://github.com/dotnet9/CodeWF.AvaloniaControls/tree/main/src/CodeWF.AvaloniaControls.Themes/Themes/Controls/Guide.axaml
 ```
 
+## 控件结构
+
+核心类型不多：
+
+- `Guide`：主控件，管理打开、关闭、当前步骤、弹层和目标解析。
+- `GuideStep`：XAML 声明式步骤。
+- `GuideStepOption` / `IGuideStepOption`：代码创建步骤时使用。
+- `GuideOverlay`：绘制遮罩和高亮洞。
+- `DefaultGuideIndicator` / `TextGuideIndicator`：圆点或文本进度。
+- `GuidePlacementMode`：卡片位置。
+- `GuideMissingTargetBehavior`：目标缺失时居中、跳过或关闭。
+
 模板里有三个关键弹层：
 
-- `PART_MaskPopup`：当前窗口上的遮罩。
-- `PART_TargetMaskPopup`：目标在其他弹层或 `TopLevel` 里时使用。
-- `PART_Popup`：引导卡片本身。
+- `PART_MaskPopup`：主窗口遮罩。
+- `PART_TargetMaskPopup`：目标在其他弹层宿主里时使用。
+- `PART_Popup`：引导卡片。
 
-这个结构让业务侧只关心“要引导哪几个目标”，控件内部负责遮罩、定位、按钮、指示器和清理。
+这个结构让业务侧只声明“引导哪几个控件”，遮罩、定位、按钮、指示器和清理都交给控件内部。
 
 ## 基础用法
 
-最简单的用法是把 `Guide` 放到页面根布局里，给每个 `GuideStep` 绑定目标控件：
+把 `Guide` 放在页面根布局里，为每个 `GuideStep` 指定目标控件即可：
 
 ```xml
 <Grid>
@@ -107,12 +77,12 @@ https://github.com/dotnet9/CodeWF.AvaloniaControls/tree/main/src/CodeWF.Avalonia
             Target="{Binding ElementName=SaveButton}"
             Placement="Right"
             Title="保存变更"
-            Description="保存当前工作区的配置和数据。" />
+            Description="保存当前工作区。" />
         <codewf:GuideStep
             Target="{Binding ElementName=MoreButton}"
             Placement="Top"
             Title="更多操作"
-            Description="更多操作可以继续展开为导出、复制或批处理。" />
+            Description="继续展开导出、复制或批处理。" />
     </codewf:Guide>
 </Grid>
 ```
@@ -124,7 +94,7 @@ BasicGuide.GoTo(0);
 BasicGuide.Show();
 ```
 
-如果要做非模态提示，可以关闭遮罩，并把进度指示器换成文本：
+非模态提示只需要关闭遮罩，也可以换成文本指示器：
 
 ```xml
 <codewf:Guide
@@ -138,7 +108,7 @@ BasicGuide.Show();
 </codewf:Guide>
 ```
 
-每一步也可以单独调整高亮区域：
+单个步骤也能调整高亮范围：
 
 ```xml
 <codewf:GuideStep
@@ -148,22 +118,14 @@ BasicGuide.Show();
     GapOffsetY="16"
     GapRadius="14"
     Title="自定义高亮区域"
-    Description="扩大圈选间距和圆角，适合突出整块区域。" />
+    Description="扩大圈选间距和圆角，突出整块区域。" />
 ```
 
-## 遮罩怎么画
+## 遮罩与定位
 
-`GuideOverlay` 的核心是用 EvenOdd 几何规则挖洞。
+`GuideOverlay` 用 EvenOdd 几何规则挖洞：先画整屏矩形，再把目标区域作为第二个矩形加入同一个 `GeometryGroup`，设置 `FillRule.EvenOdd` 后，目标区域就会保持透明。
 
-它先画一个覆盖整个窗口的矩形，再把目标控件区域作为第二个矩形加入同一个 `GeometryGroup`，并设置：
-
-```csharp
-geometry.FillRule = FillRule.EvenOdd;
-```
-
-最终效果就是：整屏变暗，目标控件区域保持透明。
-
-目标区域通过屏幕坐标换算出来：
+目标坐标没有直接依赖 `TranslatePoint`，而是先取屏幕坐标，再转回对应 `TopLevel` 的客户区坐标：
 
 ```csharp
 var targetTopLeft = target.PointToScreen(new Point(0, 0));
@@ -172,21 +134,17 @@ var rect = new Rect(origin, target.Bounds.Size);
 var result = rect.Inflate(new Thickness(gapX, gapY));
 ```
 
-这里没有直接用 `TranslatePoint`，是因为菜单、Popup、Flyout 里的目标可能已经在另一个弹层宿主里。先拿屏幕坐标，再转回对应 `TopLevel` 的客户区坐标，会更稳。
+这样处理是为了兼容菜单、Popup、Flyout 这类可能挂在其他弹层宿主下的目标。
 
 ## 动态菜单引导
 
-动态菜单是这次 `Guide` 最重要的增强之一。
+菜单项引导是这次最重要的增强。下面这段 GIF 只保留菜单步骤：文件菜单、打开文件夹、导出子菜单、段落菜单、格式菜单、视图菜单和主题二级菜单。
 
 ![](https://img1.dotnet9.com/2026/05/codewf-guide-vex-menuitem-guide.gif)
 
-这段短 GIF 只保留菜单类步骤：文件菜单、打开文件夹、导出子菜单、段落菜单、格式菜单、视图菜单和主题二级菜单。它比完整流程更适合看 `MenuItem` 弹层目标的定位效果。
+菜单项的问题在于：子级 `MenuItem` 只有父菜单打开以后才会进入视觉树。做法是进入步骤前打开父菜单，再让 `Guide` 延迟解析目标。
 
-普通引导的目标控件本来就在页面上，直接高亮就行。菜单项不一样：子级 `MenuItem` 只有父菜单打开以后才会出现在视觉树里。
-
-例如 Vex 里文件菜单、段落菜单、格式菜单、视图菜单、主题菜单和帮助菜单都是这样。引导到某个菜单项之前，需要先打开对应菜单，再等待菜单项完成布局。
-
-控件库 Demo 里的简化写法是：
+Demo 里的简化写法：
 
 ```xml
 <Menu>
@@ -203,51 +161,31 @@ var result = rect.Inflate(new Thickness(gapX, gapY));
     StepOpening="DynamicGuide_OnStepOpening">
     <codewf:GuideStep
         Target="{Binding ElementName=GuideThemeMenu}"
-        Title="主题色菜单"
-        Description="先说明菜单入口本身。" />
+        Title="主题色菜单" />
     <codewf:GuideStep
         Target="{Binding ElementName=GuideThemeBlueItem}"
         Placement="RightBottom"
-        Title="蓝色主题"
-        Description="打开菜单后再圈选下拉 MenuItem。" />
+        Title="蓝色主题" />
 </codewf:Guide>
 ```
 
-进入步骤时打开菜单：
+进入菜单项步骤时打开父菜单：
 
 ```csharp
 private void DynamicGuide_OnStepOpening(object? sender, GuideStepEventArgs e)
 {
     GuideThemeMenu.IsSubMenuOpen = e.Index is >= 1 and <= 3;
+    Dispatcher.UIThread.Post(
+        () => GuideThemeMenu.IsSubMenuOpen = true,
+        DispatcherPriority.Background);
 }
 ```
 
-实际项目里我通常还会再投递一次到 UI 线程后台队列：
+这里的关键是 `TargetResolveDelay`。菜单弹层创建和布局不是完全同步的，延迟一点再解析目标，定位会稳定很多。
 
-```csharp
-Dispatcher.UIThread.Post(
-    () => GuideThemeMenu.IsSubMenuOpen = true,
-    DispatcherPriority.Background);
-```
+## Vex 中的落地
 
-原因是菜单弹层创建和布局不是完全同步完成的。`Guide` 的 `TargetResolveDelay` 会给菜单弹层一点时间，再去解析目标 `MenuItem`。
-
-## Vex 中的菜单项落地
-
-Vex 的标题栏菜单在 `ShellTitleMenuView.axaml` 里，关键项都给了名字：
-
-```xml
-<MenuItem x:Name="FileMenuItem" Header="{i18n:I18n {x:Static l:VexL.MenuFile}}">
-    <MenuItem x:Name="OpenFolderMenuItem" Header="{i18n:I18n {x:Static l:VexL.OpenFolder}}" />
-    <MenuItem x:Name="ExportMenuItem" Header="{i18n:I18n {x:Static l:VexL.Export}}">
-        <MenuItem Header="HTML" />
-        <MenuItem Header="PDF" />
-        <MenuItem Header="PNG" />
-    </MenuItem>
-</MenuItem>
-```
-
-`ShellTitleMenuView.axaml.cs` 把这些控件暴露给主窗口：
+Vex 的标题栏菜单在 `ShellTitleMenuView.axaml`，关键菜单项都给了名字，并在 code-behind 里暴露给主窗口：
 
 ```csharp
 public MenuItem FileMenuTarget => FileMenuItem;
@@ -261,7 +199,7 @@ public MenuItem ThemeDarkMenuTarget => ThemeDarkMenuItem;
 public MenuItem BeginGuideMenuTarget => BeginGuideMenuItem;
 ```
 
-主窗口再把这些目标赋给对应的 `GuideStep`：
+主窗口启动引导前，把这些控件赋给对应步骤：
 
 ```csharp
 private void ConfigureOnboardingGuideTargets()
@@ -278,33 +216,7 @@ private void ConfigureOnboardingGuideTargets()
 }
 ```
 
-进入步骤时，主窗口判断当前步骤属于哪个菜单：
-
-```csharp
-private void OnboardingGuide_OnStepOpening(object? sender, GuideStepEventArgs e)
-{
-    PrepareOnboardingGuideStep(e.Step);
-    TitleMenuView.SetGuideMenuOpen(GetGuideMenuKey(e.Step));
-}
-```
-
-`SetGuideMenuOpen` 的职责是先关闭所有菜单，再打开当前步骤需要的菜单：
-
-```csharp
-public void SetGuideMenuOpen(string? menuKey)
-{
-    CloseGuideMenus();
-    if (string.IsNullOrWhiteSpace(menuKey))
-    {
-        return;
-    }
-
-    ApplyGuideMenuOpen(menuKey);
-    Dispatcher.UIThread.Post(() => ApplyGuideMenuOpen(menuKey), DispatcherPriority.Background);
-}
-```
-
-主题菜单还有二级菜单，处理时要连续打开：
+每次步骤切换时，先关闭所有菜单，再打开当前步骤需要的菜单。主题色这种二级菜单则连续打开父级和子级：
 
 ```csharp
 case ThemeColorGuideMenu:
@@ -313,33 +225,21 @@ case ThemeColorGuideMenu:
     break;
 ```
 
-这就是菜单项引导的完整链路：
+整个链路可以压成五步：
 
 1. `GuideStep.Target` 指向具体 `MenuItem`。
 2. `StepOpening` 打开父菜单。
-3. `TargetResolveDelay` 等待弹层完成布局。
+3. `TargetResolveDelay` 等待弹层布局。
 4. `Guide` 解析目标、绘制遮罩、显示卡片。
 5. 步骤结束或引导关闭时收起菜单。
 
-## TabItem 切换后再显示引导
+## TabItem 切换
 
-Vex 左侧侧边栏是一个 `TabControl`，里面有“文件”和“大纲”两个页签。新手引导里复用同一个侧边栏目标：先切到文件页签说明文档列表，再切到大纲页签说明导航区域。
+Vex 左侧侧边栏是 `TabControl`，引导要分别说明“文件”和“大纲”。两个步骤复用同一个侧栏目标，但进入步骤前会先切换页签。
 
 ![](https://img1.dotnet9.com/2026/05/codewf-guide-vex-tabitem-guide.gif)
 
-主窗口里，侧边栏目标是同一个 `Border`：
-
-```xml
-<Border
-    x:Name="SidebarGuideTarget"
-    IsVisible="{Binding Layout.IsSidebarVisible}">
-    <TabControl
-        prism:RegionManager.RegionName="{x:Static regions:RegionNames.ShellSidebarRegion}"
-        SelectedIndex="{Binding Navigation.SelectedSideTabIndex, Mode=TwoWay}" />
-</Border>
-```
-
-两个步骤都指向 `SidebarGuideTarget`：
+步骤目标仍然是同一个 `SidebarGuideTarget`：
 
 ```xml
 <codewf:GuideStep
@@ -353,7 +253,7 @@ Vex 左侧侧边栏是一个 `TabControl`，里面有“文件”和“大纲”
     Title="{i18n:I18n {x:Static l:VexL.GuideSidebarOutlineTitle}}" />
 ```
 
-区别在于进入步骤前先切换 TabItem：
+进入步骤时切换业务状态，然后把刷新投递到 UI 后台队列：
 
 ```csharp
 private void PrepareOnboardingGuideStep(IGuideStepOption step)
@@ -376,59 +276,24 @@ private void PrepareOnboardingGuideStep(IGuideStepOption step)
         QueueOnboardingGuideRefresh();
     }
 }
-```
 
-`ShowFiles()` 和 `ShowOutline()` 会确保侧边栏可见，并切换 `SelectedSideTabIndex`：
-
-```csharp
-public void ShowOutline()
-{
-    IsSidebarVisible = true;
-    SelectSidebarTab(1);
-}
-
-public void ShowFiles()
-{
-    IsSidebarVisible = true;
-    SelectSidebarTab(0);
-}
-```
-
-最后重新刷新引导位置：
-
-```csharp
 private void QueueOnboardingGuideRefresh()
 {
     Dispatcher.UIThread.Post(OnboardingGuide.Refresh, DispatcherPriority.Background);
 }
 ```
 
-这一步很重要。TabItem 切换后，新内容需要等布局系统刷新才能得到正确尺寸。先切换业务状态，再把 `Guide.Refresh()` 投递到后台队列，能避免高亮区域还停在旧布局上。
+这一步很关键。页签内容需要等布局刷新后才能拿到正确尺寸，否则高亮区域容易停在旧位置。
 
-编辑区、预览区和状态栏则直接在 XAML 里绑定现有目标：
+## 首次启动
 
-```xml
-<workspace:MarkdownEditorView x:Name="EditorGuideTarget" Grid.Column="2" />
-
-<Border
-    x:Name="PreviewGuideTarget"
-    Grid.Column="4"
-    IsVisible="{Binding Layout.IsPreviewVisible}" />
-
-<shell:ShellStatusBarView x:Name="StatusBarGuideTarget" Grid.Row="2" />
-```
-
-这些步骤不需要打开菜单，只需要按普通控件重新定位即可。
-
-## 首次启动只显示一次
-
-Vex 里新手引导不是每次启动都弹出。配置里增加了：
+Vex 不会每次启动都弹引导。配置里有一个状态：
 
 ```xml
 <add key="HasSeenOnboardingGuide" value="false" />
 ```
 
-窗口打开后检查这个状态：
+窗口打开后，如果用户还没看过，就标记为已看并投递一次引导：
 
 ```csharp
 private void QueueFirstRunOnboardingGuide()
@@ -443,16 +308,7 @@ private void QueueFirstRunOnboardingGuide()
 }
 ```
 
-第一次启动自动展示一次，并立即写回状态。之后用户可以从帮助菜单再次打开：
-
-```xml
-<MenuItem
-    x:Name="BeginGuideMenuItem"
-    Header="{i18n:I18n {x:Static l:VexL.OnboardingGuide}}"
-    Click="BeginGuideMenuItem_OnClick" />
-```
-
-重新打开时从第一步开始：
+之后用户可以从帮助菜单再次打开。重新打开时回到第一步：
 
 ```csharp
 private void BeginOnboardingGuide()
@@ -464,63 +320,26 @@ private void BeginOnboardingGuide()
 }
 ```
 
-## 目前的已知限制
+## 已知限制
 
-动态菜单引导现在还有一个待优化点：如果引导过程中软件失去焦点，菜单弹层会先按 Avalonia 的 light-dismiss 规则收起，后续引导也可能跟着消失。
+动态菜单引导还有一个边界：如果引导过程中应用失去焦点，Avalonia 的 light-dismiss 可能先收起菜单弹层，后续引导也可能跟着消失。
 
-这个问题本质上和“菜单弹层目标”“引导卡片按钮”“窗口激活状态”三者有关。当前实现已经对上一步、下一步、完成按钮做了 `PointerPressed` 优先导航处理，但窗口真正失焦时，菜单弹层仍然可能先关闭。后续可以考虑在 `Guide` 内部增加更明确的焦点恢复、弹层目标保持策略，或者在业务侧把动态菜单步骤和普通页面步骤拆得更清晰。
+当前实现已经对上一步、下一步、完成按钮做了 `PointerPressed` 优先导航处理，避免点击引导按钮时被菜单关闭抢先打断。但真正窗口失焦时，菜单弹层仍可能按平台规则关闭。
 
-我现在更倾向于另一个方案：动态菜单弹出并完成布局后，先把菜单区域截图，贴回到引导遮罩层上，再按截图位置做挖洞和卡片定位。这样即使程序临时失去焦点，真实菜单弹层被 Avalonia 收起，用户看到的引导画面也不会突然消失或错位。
+后续可以考虑两条路：
 
-这个方向也有取舍：截图内容是静态的，窗口缩放、DPI 变化、主题切换、菜单内容变化时都要重新捕获；另外截图层不能响应真实菜单项交互，只适合引导说明，不适合把菜单操作和引导操作混在一起。后续如果实现，需要把“捕获弹层快照”“坐标换算”“遮罩挖洞”“失焦恢复”几个边界处理清楚。
-
-如果你对动态菜单项引导有更好的实现思路，欢迎提交 PR：[https://github.com/dotnet9/CodeWF.AvaloniaControls/pulls](https://github.com/dotnet9/CodeWF.AvaloniaControls/pulls)。如果在使用 `Guide` 时遇到问题，也可以直接提 Issue：[https://github.com/dotnet9/CodeWF.AvaloniaControls/issues](https://github.com/dotnet9/CodeWF.AvaloniaControls/issues)。
-
-这次文章先不改控件代码，只把这个限制和可能的优化方向写出来，后续再单独优化。
-
-## 实现里几个容易忽略的点
-
-**1. 目标延迟出现**
-
-菜单项、Popup 内容、TabItem 内容都可能不是马上可见。`Guide` 里有 `TargetResolveDelay`，并且会在目标暂时不可见时重试几次。
-
-**2. 弹层目标**
-
-菜单项通常挂在 `PopupRoot` 或 `OverlayPopupHost` 下，不一定和主窗口内容在同一棵视觉树里。`Guide` 会判断目标是否来自弹层宿主，并用屏幕坐标换算高亮区域。
-
-**3. 菜单 light-dismiss**
-
-如果目标在菜单弹层里，用户点击引导卡片的“下一步”时，菜单可能先收到 light-dismiss 导致普通 `Button.Click` 丢失。`Guide` 对上一步、下一步、完成按钮额外处理了 `PointerPressed`，确保引导导航优先完成。
-
-**4. 布局刷新**
-
-目标控件 `LayoutUpdated`、窗口 `ClientSize` 变化时，都要重新计算高亮区域。否则窗口调整大小、侧栏展开收起以后，高亮框就会错位。
-
-**5. 清理**
-
-关闭引导时要停止定时器、关闭所有 Popup、解绑目标和窗口事件，并把焦点尽量还给引导打开前的控件。这类控件横跨页面和弹层，如果清理不完整，很容易留下残余遮罩。
+- 在 `Guide` 内部继续加强弹层目标保持和焦点恢复。
+- 菜单弹出完成后捕获一张静态快照，贴回遮罩层，再按快照位置引导。这个方案更稳，但不能响应真实菜单项交互。
 
 ## 小结
 
-`Guide` 现在已经能覆盖桌面应用里常见的新手引导场景：
+`Guide` 现在已经覆盖桌面应用里常见的新手引导场景：基础多步骤、居中说明、封面内容、自定义按钮、非模态提示、菜单项引导、二级菜单、TabItem 切换、目标延迟出现和首次启动只展示一次。
 
-- 基础多步骤引导。
-- 居中欢迎和结束步骤。
-- 封面内容、自定义操作按钮。
-- 默认圆点进度和文本进度。
-- 遮罩、非模态、高亮间距和圆角。
-- 菜单展开后引导 `MenuItem`。
-- 二级菜单项引导。
-- 切换 TabItem 后刷新并继续引导。
-- 目标延迟出现后的等待和重试。
-- 首次启动自动显示一次，帮助菜单再次打开。
+这次在 Vex 里落地后，最明确的结论是：桌面应用的新手引导不能只做静态按钮高亮。真实入口经常藏在菜单、弹层和页签后面，引导控件必须能跟业务状态一起变化。
 
-这次在 Vex 里落地后，我更确定新手引导控件不能只做“静态按钮高亮”。桌面应用的真实入口经常藏在菜单、弹层和页签后面，`Guide` 要能跟业务状态一起走，才算真正可用。
+相关地址：
 
-## 仓库地址与感谢
-
-感谢 AtomUI 项目提供 `Tour` 漫游式引导控件作为重要参考：
-
-- 控件库 GitHub 地址：[dotnet9/CodeWF.AvaloniaControls](https://github.com/dotnet9/CodeWF.AvaloniaControls)
-- AtomUI 地址：[AtomUI/AtomUI](https://github.com/AtomUI/AtomUI)
-- Vex 地址：[dotnet9/Vex](https://github.com/dotnet9/Vex)
+- CodeWF.AvaloniaControls：[https://github.com/dotnet9/CodeWF.AvaloniaControls](https://github.com/dotnet9/CodeWF.AvaloniaControls)
+- Vex：[https://github.com/dotnet9/Vex](https://github.com/dotnet9/Vex)
+- AtomUI：[https://github.com/AtomUI/AtomUI](https://github.com/AtomUI/AtomUI)
+- Issues：[https://github.com/dotnet9/CodeWF.AvaloniaControls/issues](https://github.com/dotnet9/CodeWF.AvaloniaControls/issues)
