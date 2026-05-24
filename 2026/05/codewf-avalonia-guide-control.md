@@ -8,6 +8,8 @@
 
 ![](https://img1.dotnet9.com/2026/05/codewf-guide-vex-onboarding-flow.gif)
 
+这段 GIF 已按当前 Vex 重新录制。文件菜单现在会按内容完整展开，导出入口和关闭入口可以一次看到，不再出现旧版下拉高度限制带来的菜单内滚动。
+
 控件库 Demo 里也补了两个更小的例子，分别演示基础多步骤引导、封面内容、自定义操作按钮，以及非模态提示和文本进度指示器。
 
 ![](https://img1.dotnet9.com/2026/05/codewf-guide-demo-basic.gif)
@@ -177,6 +179,8 @@ var result = rect.Inflate(new Thickness(gapX, gapY));
 动态菜单是这次 `Guide` 最重要的增强之一。
 
 ![](https://img1.dotnet9.com/2026/05/codewf-guide-vex-menuitem-guide.gif)
+
+这段短 GIF 只保留菜单类步骤：文件菜单、打开文件夹、导出子菜单、段落菜单、格式菜单、视图菜单和主题二级菜单。它比完整流程更适合看 `MenuItem` 弹层目标的定位效果。
 
 普通引导的目标控件本来就在页面上，直接高亮就行。菜单项不一样：子级 `MenuItem` 只有父菜单打开以后才会出现在视觉树里。
 

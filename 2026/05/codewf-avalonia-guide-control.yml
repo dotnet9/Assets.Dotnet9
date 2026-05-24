@@ -1,8 +1,8 @@
 title: CodeWF.AvaloniaControls 新增 Guide 引导控件：从 AtomUI Tour 到 Vex 落地
 slug: codewf-avalonia-guide-control
-description: 这篇文章介绍 CodeWF.AvaloniaControls 新增的 Guide 引导控件，说明它参考 AtomUI Tour 的开发思路，如何实现遮罩、高亮、弹层定位、动态菜单 MenuItem 引导、非模态提示、文本指示器，以及在 Vex 项目中首次启动、帮助菜单再次打开、切换 TabItem 后显示引导等实际落地。
+description: 这篇文章介绍 CodeWF.AvaloniaControls 新增的 Guide 引导控件，说明它参考 AtomUI Tour 的开发思路，如何实现遮罩、高亮、弹层定位、动态菜单 MenuItem 引导、非模态提示、文本指示器，以及在 Vex 项目中首次启动、帮助菜单再次打开、完整文件菜单和切换 TabItem 后显示引导等实际落地。
 date: 2026-05-23 15:25:52
-lastmod: 2026-05-24 11:55:00
+lastmod: 2026-05-24 15:23:00
 cover: https://img1.dotnet9.com/2026/05/codewf-avalonia-guide-cover.svg
 banner: false
 categories:
