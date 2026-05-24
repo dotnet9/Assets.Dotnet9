@@ -1,70 +1,119 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
-  <title id="title">CodeWF Avalonia Guide Control</title>
-  <desc id="desc">A desktop onboarding guide card highlighting menu items and workspace panels.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">CodeWF Avalonia Guide control</title>
+  <desc id="desc">Cover image for an article introducing the CodeWF Avalonia Guide onboarding control with menu item highlighting, overlay masks, popups, and TabItem switching in Vex.</desc>
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#102033"/>
-      <stop offset="0.55" stop-color="#163B48"/>
-      <stop offset="1" stop-color="#234336"/>
+      <stop offset="0" stop-color="#f8fbff"/>
+      <stop offset="0.55" stop-color="#eff7ff"/>
+      <stop offset="1" stop-color="#f6fbf8"/>
     </linearGradient>
     <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#39D0B4"/>
-      <stop offset="1" stop-color="#72A7FF"/>
+      <stop offset="0" stop-color="#2563eb"/>
+      <stop offset="1" stop-color="#10b981"/>
     </linearGradient>
-    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%">
-      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#000000" flood-opacity="0.28"/>
+    <linearGradient id="menuPanel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#172033"/>
+      <stop offset="1" stop-color="#111827"/>
+    </linearGradient>
+    <filter id="softShadow" x="-12%" y="-18%" width="124%" height="136%">
+      <feDropShadow dx="0" dy="18" stdDeviation="22" flood-color="#0f172a" flood-opacity="0.15"/>
+    </filter>
+    <filter id="cardShadow" x="-20%" y="-25%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#0f172a" flood-opacity="0.22"/>
+    </filter>
+    <filter id="glow" x="-40%" y="-60%" width="180%" height="220%">
+      <feDropShadow dx="0" dy="0" stdDeviation="7" flood-color="#60a5fa" flood-opacity="0.65"/>
     </filter>
   </defs>
-  <rect width="1200" height="630" fill="url(#bg)"/>
-  <g opacity="0.22">
-    <path d="M104 120H1096" stroke="#FFFFFF" stroke-width="1"/>
-    <path d="M104 230H1096" stroke="#FFFFFF" stroke-width="1"/>
-    <path d="M104 340H1096" stroke="#FFFFFF" stroke-width="1"/>
-    <path d="M104 450H1096" stroke="#FFFFFF" stroke-width="1"/>
-    <path d="M210 76V554" stroke="#FFFFFF" stroke-width="1"/>
-    <path d="M476 76V554" stroke="#FFFFFF" stroke-width="1"/>
-    <path d="M742 76V554" stroke="#FFFFFF" stroke-width="1"/>
-    <path d="M1008 76V554" stroke="#FFFFFF" stroke-width="1"/>
+
+  <rect width="1200" height="675" fill="url(#bg)"/>
+  <path d="M0 546 C150 512 256 600 420 566 C584 532 650 456 804 480 C966 506 1042 594 1200 544 L1200 675 L0 675 Z" fill="#dbeafe"/>
+  <path d="M0 594 C164 564 300 628 452 604 C612 580 738 520 898 548 C1030 572 1100 620 1200 590 L1200 675 L0 675 Z" fill="#d1fae5" opacity="0.72"/>
+
+  <text x="78" y="74" font-family="Segoe UI, Microsoft YaHei UI, sans-serif" font-size="23" font-weight="800" fill="#0f172a">CodeWF.AvaloniaControls</text>
+  <text x="78" y="116" font-family="Segoe UI, Microsoft YaHei UI, sans-serif" font-size="46" font-weight="800" fill="#0f172a">Guide 引导控件</text>
+  <text x="80" y="152" font-family="Segoe UI, Microsoft YaHei UI, sans-serif" font-size="21" fill="#475569">菜单弹层、高亮遮罩、Tab 切换与 Vex 新手引导落地</text>
+
+  <g filter="url(#softShadow)">
+    <rect x="70" y="184" width="1060" height="398" rx="26" fill="#ffffff" stroke="#cbd8e6"/>
+    <rect x="70" y="184" width="1060" height="54" rx="26" fill="#f8fafc"/>
+    <rect x="70" y="216" width="1060" height="22" fill="#f8fafc"/>
+    <circle cx="104" cy="211" r="7" fill="#ef4444"/>
+    <circle cx="128" cy="211" r="7" fill="#f59e0b"/>
+    <circle cx="152" cy="211" r="7" fill="#22c55e"/>
+    <text x="184" y="219" font-family="Segoe UI, Microsoft YaHei UI, sans-serif" font-size="18" font-weight="700" fill="#111827">Vex</text>
+
+    <text x="250" y="219" font-family="Segoe UI, Microsoft YaHei UI, sans-serif" font-size="15" font-weight="700" fill="#111827">文件(F)</text>
+    <text x="330" y="219" font-family="Segoe UI, Microsoft YaHei UI, sans-serif" font-size="15" font-weight="700" fill="#111827">编辑(E)</text>
+    <text x="412" y="219" font-family="Segoe UI, Microsoft YaHei UI, sans-serif" font-size="15" font-weight="700" fill="#111827">段落(P)</text>
+    <rect x="492" y="198" width="76" height="28" rx="8" fill="#dbeafe"/>
+    <text x="510" y="219" font-family="Segoe UI, Microsoft YaHei UI, sans-serif" font-size="15" font-weight="800" fill="#1d4ed8">格式(O)</text>
+    <text x="592" y="219" font-family="Segoe UI, Microsoft YaHei UI, sans-serif" font-size="15" font-weight="700" fill="#111827">视图(V)</text>
+    <text x="672" y="219" font-family="Segoe UI, Microsoft YaHei UI, sans-serif" font-size="15" font-weight="700" fill="#111827">帮助(H)</text>
+    <text x="1010" y="219" font-family="Segoe UI, Microsoft YaHei UI, sans-serif" font-size="15" fill="#64748b">Untitled.md</text>
+
+    <rect x="70" y="238" width="274" height="344" fill="#f8fafc"/>
+    <line x1="344" y1="238" x2="344" y2="582" stroke="#d8e3ef"/>
+    <line x1="730" y1="238" x2="730" y2="582" stroke="#d8e3ef"/>
+    <rect x="94" y="258" width="48" height="28" rx="7" fill="#ffffff" stroke="#d8e3ef"/>
+    <text x="107" y="277" font-family="Segoe UI, Microsoft YaHei UI, sans-serif" font-size="14" font-weight="800" fill="#1d4ed8">文件</text>
+    <text x="158" y="277" font-family="Segoe UI, Microsoft YaHei UI, sans-serif" font-size="14" fill="#64748b">大纲</text>
+    <text x="166" y="332" text-anchor="middle" font-family="Segoe UI, Microsoft YaHei UI, sans-serif" font-size="16" fill="#64748b">暂无文件</text>
+
+    <text x="382" y="282" font-family="Segoe UI, Microsoft YaHei UI, sans-serif" font-size="17" font-weight="800" fill="#ef4444"># 未命名</text>
+    <text x="382" y="326" font-family="Segoe UI, Microsoft YaHei UI, sans-serif" font-size="18" fill="#111827">极简之力，妙笔成章。</text>
+    <rect x="382" y="362" width="286" height="12" rx="6" fill="#e2e8f0"/>
+    <rect x="382" y="394" width="236" height="12" rx="6" fill="#e2e8f0"/>
+    <rect x="382" y="426" width="304" height="12" rx="6" fill="#e2e8f0"/>
+
+    <text x="872" y="296" text-anchor="middle" font-family="Segoe UI, Microsoft YaHei UI, sans-serif" font-size="40" font-weight="800" fill="#334155">未命名</text>
+    <text x="872" y="342" text-anchor="middle" font-family="Segoe UI, Microsoft YaHei UI, sans-serif" font-size="19" fill="#334155">极简之力，妙笔成章。</text>
+    <rect x="776" y="386" width="190" height="12" rx="6" fill="#e2e8f0"/>
+    <rect x="776" y="418" width="246" height="12" rx="6" fill="#e2e8f0"/>
+    <rect x="776" y="450" width="210" height="12" rx="6" fill="#e2e8f0"/>
   </g>
-  <g filter="url(#shadow)">
-    <rect x="142" y="124" width="916" height="420" rx="18" fill="#F8FAFC"/>
-    <rect x="142" y="124" width="916" height="46" rx="18" fill="#E5E7EB"/>
-    <rect x="142" y="150" width="916" height="20" fill="#E5E7EB"/>
-    <circle cx="174" cy="147" r="7" fill="#EF4444"/>
-    <circle cx="198" cy="147" r="7" fill="#F59E0B"/>
-    <circle cx="222" cy="147" r="7" fill="#22C55E"/>
-    <rect x="258" y="137" width="68" height="20" rx="5" fill="#CBD5E1"/>
-    <rect x="342" y="137" width="72" height="20" rx="5" fill="#CBD5E1"/>
-    <rect x="430" y="137" width="70" height="20" rx="5" fill="#CBD5E1"/>
-    <rect x="166" y="194" width="202" height="326" rx="10" fill="#E2E8F0"/>
-    <rect x="392" y="194" width="388" height="326" rx="10" fill="#FFFFFF" stroke="#D7DEE8"/>
-    <rect x="804" y="194" width="230" height="326" rx="10" fill="#F1F5F9"/>
-    <rect x="190" y="222" width="126" height="18" rx="4" fill="#94A3B8"/>
-    <rect x="190" y="263" width="142" height="14" rx="4" fill="#CBD5E1"/>
-    <rect x="190" y="292" width="116" height="14" rx="4" fill="#CBD5E1"/>
-    <rect x="190" y="321" width="132" height="14" rx="4" fill="#CBD5E1"/>
-    <rect x="422" y="230" width="210" height="18" rx="4" fill="#475569"/>
-    <rect x="422" y="273" width="300" height="12" rx="4" fill="#CBD5E1"/>
-    <rect x="422" y="300" width="260" height="12" rx="4" fill="#CBD5E1"/>
-    <rect x="422" y="327" width="318" height="12" rx="4" fill="#CBD5E1"/>
-    <rect x="836" y="230" width="154" height="16" rx="4" fill="#94A3B8"/>
-    <rect x="836" y="272" width="132" height="12" rx="4" fill="#CBD5E1"/>
-    <rect x="836" y="299" width="108" height="12" rx="4" fill="#CBD5E1"/>
+
+  <rect x="70" y="238" width="1060" height="344" fill="#0f172a" opacity="0.54"/>
+
+  <g filter="url(#cardShadow)">
+    <rect x="494" y="226" width="128" height="202" rx="12" fill="url(#menuPanel)"/>
+    <text x="522" y="260" font-family="Segoe UI, Microsoft YaHei UI, sans-serif" font-size="15" fill="#cbd5e1">加粗</text>
+    <text x="522" y="296" font-family="Segoe UI, Microsoft YaHei UI, sans-serif" font-size="15" fill="#cbd5e1">斜体</text>
+    <text x="522" y="332" font-family="Segoe UI, Microsoft YaHei UI, sans-serif" font-size="15" fill="#cbd5e1">行内代码</text>
+    <rect x="504" y="348" width="108" height="38" rx="8" fill="#ffffff"/>
+    <text x="522" y="373" font-family="Segoe UI, Microsoft YaHei UI, sans-serif" font-size="15" font-weight="800" fill="#0f172a">链接</text>
+    <text x="522" y="410" font-family="Segoe UI, Microsoft YaHei UI, sans-serif" font-size="15" fill="#cbd5e1">图片</text>
   </g>
-  <rect x="318" y="132" width="110" height="30" rx="8" fill="none" stroke="url(#accent)" stroke-width="4"/>
-  <rect x="304" y="118" width="138" height="58" rx="13" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-opacity="0.9"/>
-  <g filter="url(#shadow)">
-    <path d="M447 188L474 166L478 199Z" fill="#FFFFFF"/>
-    <rect x="455" y="178" width="346" height="188" rx="14" fill="#FFFFFF"/>
-    <rect x="455" y="178" width="346" height="188" rx="14" fill="none" stroke="#D7DEE8"/>
-    <text x="485" y="225" fill="#0F172A" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="700">Guide 引导控件</text>
-    <text x="485" y="264" fill="#475569" font-family="Segoe UI, Arial, sans-serif" font-size="18">动态菜单 · TabItem 切换 · MenuItem 高亮</text>
-    <rect x="485" y="304" width="44" height="8" rx="4" fill="#39D0B4"/>
-    <rect x="539" y="304" width="44" height="8" rx="4" fill="#CBD5E1"/>
-    <rect x="593" y="304" width="44" height="8" rx="4" fill="#CBD5E1"/>
-    <rect x="665" y="286" width="88" height="38" rx="8" fill="url(#accent)"/>
-    <text x="694" y="311" fill="#FFFFFF" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="700">下一步</text>
+
+  <rect x="501" y="344" width="116" height="46" rx="10" fill="none" stroke="#ffffff" stroke-width="3"/>
+  <rect x="501" y="344" width="116" height="46" rx="10" fill="none" stroke="#60a5fa" stroke-width="5" opacity="0.92" filter="url(#glow)"/>
+
+  <g filter="url(#cardShadow)">
+    <path d="M628 368 L656 350 L656 386 Z" fill="#ffffff"/>
+    <rect x="650" y="286" width="378" height="176" rx="18" fill="#ffffff" stroke="#dbe5ef"/>
+    <text x="684" y="334" font-family="Segoe UI, Microsoft YaHei UI, sans-serif" font-size="26" font-weight="800" fill="#0f172a">文本格式</text>
+    <text x="684" y="374" font-family="Segoe UI, Microsoft YaHei UI, sans-serif" font-size="18" fill="#475569">打开菜单后继续圈选 MenuItem，</text>
+    <text x="684" y="402" font-family="Segoe UI, Microsoft YaHei UI, sans-serif" font-size="18" fill="#475569">弹层目标也能稳定定位。</text>
+    <circle cx="690" cy="431" r="4" fill="#93c5fd"/>
+    <circle cx="708" cy="431" r="4" fill="#93c5fd"/>
+    <circle cx="726" cy="431" r="4" fill="#2563eb"/>
+    <circle cx="744" cy="431" r="4" fill="#cbd5e1"/>
+    <circle cx="762" cy="431" r="4" fill="#cbd5e1"/>
+    <rect x="858" y="410" width="70" height="34" rx="8" fill="#eff6ff"/>
+    <text x="879" y="432" font-family="Segoe UI, Microsoft YaHei UI, sans-serif" font-size="15" font-weight="800" fill="#2563eb">上一步</text>
+    <rect x="934" y="410" width="70" height="34" rx="8" fill="url(#accent)"/>
+    <text x="950" y="432" font-family="Segoe UI, Microsoft YaHei UI, sans-serif" font-size="15" font-weight="800" fill="#ffffff">下一步</text>
   </g>
-  <text x="120" y="588" fill="#B7F4E8" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="700">CodeWF.AvaloniaControls</text>
-  <text x="860" y="588" fill="#D8E7FF" font-family="Segoe UI, Arial, sans-serif" font-size="20">Avalonia / C# / Vex</text>
+
+  <g>
+    <rect x="78" y="608" width="144" height="34" rx="17" fill="#ffffff" stroke="#bfdbfe"/>
+    <text x="104" y="631" font-family="Segoe UI, Microsoft YaHei UI, sans-serif" font-size="16" font-weight="800" fill="#1d4ed8">Avalonia</text>
+    <rect x="236" y="608" width="136" height="34" rx="17" fill="#ffffff" stroke="#bbf7d0"/>
+    <text x="262" y="631" font-family="Segoe UI, Microsoft YaHei UI, sans-serif" font-size="16" font-weight="800" fill="#047857">Popup</text>
+    <rect x="386" y="608" width="152" height="34" rx="17" fill="#ffffff" stroke="#fed7aa"/>
+    <text x="412" y="631" font-family="Segoe UI, Microsoft YaHei UI, sans-serif" font-size="16" font-weight="800" fill="#c2410c">MenuItem</text>
+    <rect x="552" y="608" width="142" height="34" rx="17" fill="#ffffff" stroke="#ddd6fe"/>
+    <text x="602" y="631" font-family="Segoe UI, Microsoft YaHei UI, sans-serif" font-size="16" font-weight="800" fill="#6d28d9">Tab</text>
+    <text x="858" y="634" font-family="Segoe UI, Microsoft YaHei UI, sans-serif" font-size="25" font-weight="800" fill="#0f172a">Vex 新手引导实战</text>
+  </g>
 </svg>
