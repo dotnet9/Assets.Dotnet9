@@ -6,7 +6,7 @@
 
 项目仓库：[https://github.com/dotnet9/Vex](https://github.com/dotnet9/Vex)
 
-Release v1.0.0：[https://github.com/dotnet9/Vex/releases/tag/v1.0.0](https://github.com/dotnet9/Vex/releases/tag/v1.0.0)
+Release v1.1.0：[https://github.com/dotnet9/Vex/releases/tag/v1.1.0](https://github.com/dotnet9/Vex/releases/tag/v1.1.0)
 
 ![Vex 主窗口](https://img1.dotnet9.com/2026/05/vex-main-window.png)
 
@@ -121,4 +121,4 @@ dotnet run --project src/Vex/Vex.csproj
 ## 仓库与发布
 
 - 仓库地址：[https://github.com/dotnet9/Vex](https://github.com/dotnet9/Vex)
-- 发布地址：[https://github.com/dotnet9/Vex/releases/tag/v1.0.0](https://github.com/dotnet9/Vex/releases/tag/v1.0.0)
+- 发布地址：[https://github.com/dotnet9/Vex/releases/tag/v1.1.0](https://github.com/dotnet9/Vex/releases/tag/v1.1.0)

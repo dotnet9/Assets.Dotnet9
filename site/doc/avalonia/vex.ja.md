@@ -6,7 +6,7 @@
 
 リポジトリ：[https://github.com/dotnet9/Vex](https://github.com/dotnet9/Vex)
 
-Release v1.0.0：[https://github.com/dotnet9/Vex/releases/tag/v1.0.0](https://github.com/dotnet9/Vex/releases/tag/v1.0.0)
+Release v1.1.0：[https://github.com/dotnet9/Vex/releases/tag/v1.1.0](https://github.com/dotnet9/Vex/releases/tag/v1.1.0)
 
 ![Vex メインウィンドウ](https://img1.dotnet9.com/2026/05/vex-main-window.png)
 
@@ -90,4 +90,4 @@ dotnet run --project src/Vex/Vex.csproj
 ## リポジトリとリリース
 
 - リポジトリ：[https://github.com/dotnet9/Vex](https://github.com/dotnet9/Vex)
-- リリース：[https://github.com/dotnet9/Vex/releases/tag/v1.0.0](https://github.com/dotnet9/Vex/releases/tag/v1.0.0)
+- リリース：[https://github.com/dotnet9/Vex/releases/tag/v1.1.0](https://github.com/dotnet9/Vex/releases/tag/v1.1.0)
