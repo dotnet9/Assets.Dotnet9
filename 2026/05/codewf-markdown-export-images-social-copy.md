@@ -152,6 +152,8 @@ var pngBytes = MarkdownImageRasterizer.RenderToPngBytes(imageSource);
 - 代码块有背景
 - 表格有边框
 
+![微信公众号编辑器](https://img1.dotnet9.com/2026/05/codewf-markdown-copy-wechat.png)
+
 但如果剪贴板只写普通文本，哪怕文本内容是：
 
 ```html
@@ -522,6 +524,8 @@ Vex 侧也确认了本地包引用方式：先在 `CodeWF.Markdown` 本地打包
 
 ![](https://img1.dotnet9.com/2026/05/vex-copy-to-wechat-editor.gif)
 
+![微信公众号编辑器](https://img1.dotnet9.com/2026/05/codewf-markdown-copy-wechat.png)
+
 ## 7. 小结
 
 Markdown 编辑器的很多体验问题，都藏在“最后一公里”。
@@ -536,3 +540,6 @@ Markdown 编辑器的很多体验问题，都藏在“最后一公里”。
 - 自媒体复制继续按公众号、知乎、掘金的真实编辑器行为补兼容细节。
 
 但这次最核心的坑已经填上了：图片不该只活在本机路径里，HTML 也不该只作为明文躺在剪贴板里。
+
+- Markdown控件仓库：https://github.com/dotnet9/CodeWF.Markdown
+- Vex应用仓库：https://github.com/dotnet9/Vex
