@@ -35,8 +35,8 @@ Typora 的所见即所得编辑体验非常成熟，而把 Markdown 源码和最
 - 新建、打开、保存、另存为、打开文件夹、最近文档、拖拽打开、启动参数打开。
 - 文件重命名、删除、打开所在位置、外部变更检测与重载。
 - 查找替换、大小写/整词/正则匹配、命中计数和大文档防抖扫描。
-- HTML、PNG、图像型 PDF、Word `.docx`、打印预览和复制到内容平台。
-- 本地相对图、`data:image`、HTTP(S)、SVG/GIF/WebP 转 PNG、任务列表、排版主题化导出、PDF 页眉页脚；PNG/PDF/Word 复用 `CodeWF.Markdown.MarkdownDocumentExporter`，PDF 和 Word 会嵌入图片资源，离线分享后仍可查看。
+- HTML、PNG、可选择文本 PDF、Word `.docx`、打印预览和复制到内容平台。
+- 本地相对图、`data:image`、HTTP(S)、SVG/GIF/WebP 转 PNG、任务列表、排版主题化导出、PDF 页眉页脚；PNG/PDF/Word 复用 `CodeWF.Markdown.MarkdownDocumentExporter`，PDF 正文可选择复制，PDF 和 Word 会嵌入图片资源，离线分享后仍可查看。
 - 多主题、多排版主题、紧凑布局、暗色模式细节优化。
 - 简体中文、繁体中文、英语、日语四套 UI 和帮助文档。
 - 多 RID 发布、压缩包、SHA256、release manifest，以及可选 Windows MSIX 打包。
@@ -83,7 +83,7 @@ Vex 的工作区是三栏结构：
 - 最近文档减少重复定位文件的成本。
 - 重新按编码打开保留 UTF-8、UTF-8 BOM、GB18030、Big5 等入口。
 - 复制到公众号、知乎、稀土掘金把“发布到哪里”也放进编辑流程；Vex 会把当前 Markdown、排版主题和目标平台交给 `CodeWF.Markdown.MarkdownHtmlClipboardExtensions`，剪贴板会写入 `text/html`、macOS `public.html` 和 Windows 原生 `HTML Format`，并把当前排版主题转换为 inline style。
-- 导出菜单支持 HTML、PNG、图像型 PDF 和 Word `.docx`；PNG/PDF/Word 复用 `CodeWF.Markdown.MarkdownDocumentExporter`，本地相对图、`data:image`、HTTP(S)、SVG/GIF/WebP 转 PNG 等边界会随导出一起处理，PDF 和 Word 会嵌入图片资源。
+- 导出菜单支持 HTML、PNG、可选择文本 PDF 和 Word `.docx`；PNG/PDF/Word 复用 `CodeWF.Markdown.MarkdownDocumentExporter`，本地相对图、`data:image`、HTTP(S)、SVG/GIF/WebP 转 PNG 等边界会随导出一起处理，PDF 正文可选择复制，PDF 和 Word 会嵌入图片资源。
 
 对公众号、知乎、掘金作者来说，真正高频的不是“保存一个 HTML 文件”，而是写完后直接粘贴到网页编辑器，并尽量保留标题、段落、引用、列表、代码块、表格和链接样式。Vex 当前复用 `CodeWF.Markdown` 的自媒体复制公共 API 生成目标平台 inline HTML 和 UTF-8 CF_HTML 字节载荷，避免编辑器把 HTML 片段当明文显示。
 

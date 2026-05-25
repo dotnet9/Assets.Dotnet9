@@ -1,8 +1,8 @@
-title: CodeWF.Markdown：导出 PDF/Word 嵌入图片，复制到公众号/知乎/掘金不再显示 HTML 源码
+title: CodeWF.Markdown：PDF 文本可复制、图片可嵌入，复制到公众号/知乎/掘金不再显示 HTML 源码
 slug: codewf-markdown-export-images-social-copy
-description: 分享 CodeWF.Markdown 12.0.3.11 和 Vex 中关于 Markdown 导出与发布复制的技术实现：MarkdownDocumentExporter、ExportKind、共享图片加载、SVG/GIF/WebP 栅格化、Word 嵌入 media 资源、图像型 PDF 页面渲染、Windows CF_HTML 富 HTML 剪贴板，以及可扩展排版主题。
+description: 分享 CodeWF.Markdown 12.0.3.13 和 Vex 中关于 Markdown 导出与发布复制的技术实现：MarkdownDocumentExporter、ExportKind、共享图片加载、SVG/GIF/WebP 栅格化、Word 嵌入 media 资源、可选择文本 PDF、Windows CF_HTML 富 HTML 剪贴板，以及可扩展排版主题。
 date: 2026-05-25 11:19:16
-lastmod: 2026-05-25 12:20:00
+lastmod: 2026-05-25 16:31:47
 cover: https://img1.dotnet9.com/2026/05/codewf-markdown-avalonia-cover.svg
 banner: false
 categories:

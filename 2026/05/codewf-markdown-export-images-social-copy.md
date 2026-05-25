@@ -126,21 +126,18 @@ ImageParts.Add(new DocxImagePart(relationshipId, target, bytes));
 
 这样导出的 `.docx` 发给别人以后，不需要原 Markdown 目录、不需要本地图片文件、不需要网络图片还能访问。图片已经在 Word 文件内部。
 
-## 1.4 PDF 导出：先把图片放进渲染结果
+## 1.4 PDF 导出：文本可选择，图片仍跟着文件走
 
-`CodeWF.Markdown` 当前提供的是图像型 PDF 导出。也就是说，它不是逐个写 PDF 文本对象和图片对象，而是先把 Markdown 内容渲染成页面位图，再把页面切片写入 PDF。
+`CodeWF.Markdown` 12.0.3.13 已经把 PDF 导出从整页位图切片推进到可选择文本输出。正文段落、标题、列表等内容会按页面布局写入 PDF 文本，并带上 Unicode 文本映射；别人打开 PDF 时，可以像普通 PDF 一样选择、复制正文。
 
-这条路线有一个特点：只要 Markdown 渲染阶段能把图片正确画出来，PDF 里就能看到完整页面。
-
-所以图片问题的关键仍然是导出前的 Markdown HTML / 渲染输入要处理好：
+图片链路仍然复用前面的公共加载和栅格化能力。导出前先把本地、相对、`data:image`、HTTP(S)、SVG/GIF/WebP 这些来源解析成稳定字节，需要时转成 PNG，再把图片作为 PDF 图片内容嵌入：
 
 ```csharp
-EmbedLocalImages(parsed, document.FilePath);
+var imageSource = MarkdownImageSourceLoader.Load(image.Url, documentPath);
+var pngBytes = MarkdownImageRasterizer.RenderToPngBytes(imageSource);
 ```
 
-这一步会把能内联的本地、相对、`data:image` 图片处理进导出内容，SVG/GIF/WebP 也会通过公共栅格化能力转为 PNG。最终 PDF 页面里看到的是已经包含图片的页面位图。
-
-严格说，图像型 PDF 里不是把每一张 Markdown 图片都作为独立 PDF image object 保留；它把整页结果画进 PDF。但对“把文件发给别人离线看”这个目标来说，效果是一样的：图片不会因为离开本机目录或网络不可用而丢失。
+这样导出的 PDF 不再只是整页截图。正文能复制，图片也不会因为离开原 Markdown 目录或网络不可用而丢失。
 
 ## 2. 问题二：复制到公众号为什么会显示 HTML 源码
 
@@ -507,9 +504,9 @@ Vex
 - 本地图片在自媒体复制 HTML 中嵌入。
 - 自定义排版主题注册后可生成 `MarkdownExportStyle`。
 
-目前 `CodeWF.Markdown.Tests` 里 41 个测试通过。
+目前 `CodeWF.Markdown.Tests` 里 42 个测试通过。
 
-Vex 侧也确认了本地包引用方式：先在 `CodeWF.Markdown` 本地打包 `12.0.3.12`，再让 Vex 通过本地 NuGet 包源引用，而不是跨仓库 `ProjectReference`。这样更接近真实发布包的使用方式，也能提前发现 NuGet content files、版本号、依赖还原这类问题。
+Vex 侧也确认了本地包引用方式：先在 `CodeWF.Markdown` 本地打包 `12.0.3.13`，再让 Vex 通过本地 NuGet 包源引用，而不是跨仓库 `ProjectReference`。这样更接近真实发布包的使用方式，也能提前发现 NuGet content files、版本号、依赖还原这类问题。
 
 ## 6. 实际效果
 
@@ -517,7 +514,7 @@ Vex 侧也确认了本地包引用方式：先在 `CodeWF.Markdown` 本地打包
 
 第一，导出更安心。
 
-本地相对图片、`data:image`、HTTP(S) 图片、SVG、GIF、WebP 这些常见来源，导出 PDF 和 Word 时会尽量被处理进结果里。尤其是 Word `.docx`，图片会进入 `word/media/`，离开原始 Markdown 目录后仍然能看。
+本地相对图片、`data:image`、HTTP(S) 图片、SVG、GIF、WebP 这些常见来源，导出 PDF 和 Word 时会尽量被处理进结果里。PDF 正文可以选择复制，图片会进入 PDF 文件；Word `.docx` 里的图片会进入 `word/media/`，离开原始 Markdown 目录后仍然能看。
 
 第二，复制更像发布工具。
 
@@ -535,7 +532,7 @@ Markdown 编辑器的很多体验问题，都藏在“最后一公里”。
 
 后面还会继续打磨两块：
 
-- PDF 从图像型继续向可选择文本 PDF 演进。
+- PDF 继续补齐复杂块级元素、分页断点和排版主题细节。
 - 自媒体复制继续按公众号、知乎、掘金的真实编辑器行为补兼容细节。
 
 但这次最核心的坑已经填上了：图片不该只活在本机路径里，HTML 也不该只作为明文躺在剪贴板里。

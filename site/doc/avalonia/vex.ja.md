@@ -16,7 +16,7 @@ Release v1.1.0：[https://github.com/dotnet9/Vex/releases/tag/v1.1.0](https://gi
 - 左側にファイル一覧とアウトライン、中央に AvaloniaEdit の Markdown エディター、右側に CodeWF.Markdown のプレビューを配置します。
 - 表示メニューではサイドバー、アウトライン、文書一覧、ソースモード、行番号、ステータスバー、全画面、常に手前を制御できます。
 - ファイルメニューは新規、開く、フォルダーを開く、最近使った文書、エンコードを指定して開き直す、WeChat Official Account/知乎/稀土掘金へのコピー、保存、エクスポート、印刷、プロパティ、削除、閉じるを扱います。
-- HTML、PNG、画像型 PDF、Word `.docx` のエクスポートに対応します。PNG/PDF/Word は `CodeWF.Markdown` の `MarkdownDocumentExporter` を再利用し、相対ローカル画像、`data:image`、HTTP(S)、SVG/GIF/WebP 変換も処理します。PDF と Word は画像リソースを埋め込むため、オフライン共有後も表示できます。
+- HTML、PNG、選択可能なテキスト PDF、Word `.docx` のエクスポートに対応します。PNG/PDF/Word は `CodeWF.Markdown` の `MarkdownDocumentExporter` を再利用し、相対ローカル画像、`data:image`、HTTP(S)、SVG/GIF/WebP 変換も処理します。PDF 本文は選択・コピーでき、PDF と Word は画像リソースを埋め込むため、オフライン共有後も表示できます。
 - WeChat Official Account、知乎、稀土掘金へのコピーは、現在の Markdown、組版テーマ、対象プラットフォームを `CodeWF.Markdown` の `MarkdownHtmlClipboardExtensions` に渡し、現在の組版テーマを反映したリッチ HTML クリップボード形式を書き込みます。
 - 検索/置換は大文字小文字、単語単位、正規表現、件数表示、長文書向けのデバウンススキャンをサポートします。
 - テーマ色、Markdown 組版テーマ、コンパクトレイアウト、言語切り替えはヘルプメニューにまとまっています。
@@ -31,7 +31,7 @@ Release v1.1.0：[https://github.com/dotnet9/Vex/releases/tag/v1.1.0](https://gi
 | ファイルワークフロー | 新規、単一ファイルを開く、フォルダーを開く、最近使った文書、ドラッグ&ドロップ、保存、名前を付けて保存、外部変更検出、再読み込み。 |
 | アウトライン | Markdown 見出しからアウトラインを生成し、選択した位置へ移動できます。 |
 | 検索/置換 | 大文字小文字、単語単位、正規表現、件数表示、次を置換、すべて置換。 |
-| エクスポート | HTML、PNG、画像型 PDF、Word `.docx`、印刷プレビュー。PNG/PDF/Word は `CodeWF.Markdown` の共通エクスポート API を再利用し、PDF/Word はローカル、`data:image`、HTTP(S)、SVG/GIF/WebP 画像を埋め込みます。 |
+| エクスポート | HTML、PNG、選択可能なテキスト PDF、Word `.docx`、印刷プレビュー。PNG/PDF/Word は `CodeWF.Markdown` の共通エクスポート API を再利用し、PDF 本文は選択・コピーでき、PDF/Word はローカル、`data:image`、HTTP(S)、SVG/GIF/WebP 画像を埋め込みます。 |
 | 公開向けコピー | `CodeWF.Markdown` の共通リッチ HTML クリップボード API を使って WeChat Official Account、知乎、稀土掘金向けに書き込みます。Windows `HTML Format` は UTF-8 CF_HTML バイトを使い、現在の組版テーマを適用します。 |
 | 多言語 | Lang.Avalonia.Json により簡体字中国語、繁体字中国語、英語、日本語を提供。 |
 | オンボーディング | Guide ステップがメニュー項目、TabItem、エディター、プレビュー領域を指せます。 |

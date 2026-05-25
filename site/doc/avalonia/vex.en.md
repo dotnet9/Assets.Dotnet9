@@ -16,7 +16,7 @@ Release v1.1.0: [https://github.com/dotnet9/Vex/releases/tag/v1.1.0](https://git
 - The workspace combines a file/outline sidebar, an AvaloniaEdit Markdown editor, and a CodeWF.Markdown native preview.
 - The View menu controls sidebar, outline, document list, source mode, line numbers, status bar, fullscreen, and always-on-top behavior.
 - The File menu covers new/open/open folder/recent files/reopen with encoding/copy to WeChat Official Account, Zhihu, and Juejin/save/export/print/properties/delete/close.
-- Export supports HTML, PNG, image-based PDF, and Word `.docx`; PNG/PDF/Word reuse `CodeWF.Markdown` `MarkdownDocumentExporter`, including relative local images, `data:image`, HTTP(S), SVG/GIF/WebP conversion, and save-location reveal. PDF and Word embed image assets so shared files remain viewable offline.
+- Export supports HTML, PNG, selectable-text PDF, and Word `.docx`; PNG/PDF/Word reuse `CodeWF.Markdown` `MarkdownDocumentExporter`, including relative local images, `data:image`, HTTP(S), SVG/GIF/WebP conversion, and save-location reveal. PDF body text remains selectable and copyable, and PDF/Word embed image assets so shared files remain viewable offline.
 - Copy to WeChat Official Account, Zhihu, and Juejin passes the current Markdown, active typography theme, and target platform to `CodeWF.Markdown` `MarkdownHtmlClipboardExtensions`, writing rich HTML clipboard formats with the active typography theme applied.
 - Find/replace supports case matching, whole-word matching, regex, match counts, and debounced scans for long documents.
 - Theme color, Markdown typography theme, compact layout, and language switching are grouped under the Help menu.
@@ -33,7 +33,7 @@ Release v1.1.0: [https://github.com/dotnet9/Vex/releases/tag/v1.1.0](https://git
 | File workflow | New documents, single-file open, folder open, recent files, drag-and-drop open, save, save as, external change detection, and reload. |
 | Outline navigation | Builds an outline from Markdown headings and jumps to the selected section. |
 | Find/replace | Case, whole-word, regex, match count, replace next, and replace all. |
-| Export | HTML, PNG, image-based PDF, Word `.docx`, and print preview; PNG/PDF/Word reuse the shared `CodeWF.Markdown` export API, and PDF/Word embed local, `data:image`, HTTP(S), SVG/GIF/WebP images. |
+| Export | HTML, PNG, selectable-text PDF, Word `.docx`, and print preview; PNG/PDF/Word reuse the shared `CodeWF.Markdown` export API, PDF body text remains selectable and copyable, and PDF/Word embed local, `data:image`, HTTP(S), SVG/GIF/WebP images. |
 | Publishing copy | Shared `CodeWF.Markdown` rich HTML clipboard output for WeChat Official Account, Zhihu, and Juejin. Windows `HTML Format` uses UTF-8 CF_HTML bytes and applies the active typography theme. |
 | Localization | Simplified Chinese, Traditional Chinese, English, and Japanese through Lang.Avalonia.Json. |
 | Onboarding | CodeWF.AvaloniaControls Guide steps can target menus, TabItems, editor, and preview areas. |

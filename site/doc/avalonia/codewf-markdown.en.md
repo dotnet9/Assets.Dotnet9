@@ -13,7 +13,7 @@
 
 ## Host Application Helpers
 
-- `MarkdownDocumentExporter` and `ExportKind` provide one-stop PNG, image-based PDF, and Word `.docx` export APIs from Markdown strings, Markdown files, or `MarkdownExportDocument`, reusing image loading and rasterization to embed relative local, `data:image`, HTTP(S), SVG/GIF/WebP images.
+- `MarkdownDocumentExporter` and `ExportKind` provide one-stop PNG, selectable-text PDF, and Word `.docx` export APIs from Markdown strings, Markdown files, or `MarkdownExportDocument`. PDF body text remains selectable and copyable, while shared image loading and rasterization embed relative local, `data:image`, HTTP(S), SVG/GIF/WebP images.
 - `MarkdownHtmlClipboardExtensions`, `CopyKind`, and `MarkdownSocialCopyProfiles` provide rich HTML copy for WeChat Official Account, Zhihu, and Juejin. Host applications pass the Markdown text, active typography theme, and target platform; the library renders inline HTML and writes `text/html`, macOS `public.html`, and native Windows `HTML Format`.
 - New platforms can be added through `MarkdownSocialCopyProfile`; custom typography can be supplied with `MarkdownExportStyle` or application-registered theme resources.
 

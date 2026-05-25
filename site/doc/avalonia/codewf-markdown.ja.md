@@ -13,7 +13,7 @@
 
 ## ホストアプリ向けヘルパー
 
-- `MarkdownDocumentExporter` と `ExportKind` は Markdown 文字列、Markdown ファイル、`MarkdownExportDocument` から PNG、画像ベース PDF、Word `.docx` へ出力する共通 API です。画像読み込みとラスタライズを再利用し、相対ローカル画像、`data:image`、HTTP(S)、SVG/GIF/WebP を埋め込みます。
+- `MarkdownDocumentExporter` と `ExportKind` は Markdown 文字列、Markdown ファイル、`MarkdownExportDocument` から PNG、選択可能なテキスト PDF、Word `.docx` へ出力する共通 API です。PDF 本文は選択・コピーでき、画像読み込みとラスタライズを再利用して相対ローカル画像、`data:image`、HTTP(S)、SVG/GIF/WebP を埋め込みます。
 - `MarkdownHtmlClipboardExtensions`、`CopyKind`、`MarkdownSocialCopyProfiles` は WeChat Official Account、知乎、稀土掘金向けのリッチ HTML コピーを提供します。ホストアプリは Markdown、現在の組版テーマ、対象プラットフォームだけを渡し、共通ライブラリが inline HTML と `text/html`、macOS `public.html`、Windows `HTML Format` を生成します。
 - 新しい公開先は `MarkdownSocialCopyProfile` で拡張できます。カスタム組版は `MarkdownExportStyle` またはアプリ登録済みテーマリソースから渡せます。
 

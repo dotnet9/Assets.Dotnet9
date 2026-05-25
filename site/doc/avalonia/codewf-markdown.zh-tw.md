@@ -13,7 +13,7 @@
 
 ## 宿主應用輔助能力
 
-- `MarkdownDocumentExporter` 和 `ExportKind` 提供 PNG、圖像型 PDF、Word `.docx` 一站式匯出 API，可從 Markdown 字串、Markdown 檔案或 `MarkdownExportDocument` 匯出，並複用圖片載入與柵格化能力嵌入本機、`data:image`、HTTP(S)、SVG/GIF/WebP 圖片。
+- `MarkdownDocumentExporter` 和 `ExportKind` 提供 PNG、可選取文字 PDF、Word `.docx` 一站式匯出 API，可從 Markdown 字串、Markdown 檔案或 `MarkdownExportDocument` 匯出；PDF 正文可選取複製，並複用圖片載入與柵格化能力嵌入本機、`data:image`、HTTP(S)、SVG/GIF/WebP 圖片。
 - `MarkdownHtmlClipboardExtensions`、`CopyKind` 和 `MarkdownSocialCopyProfiles` 提供微信公眾號、知乎、稀土掘金的富 HTML 複製能力；宿主應用只需傳 Markdown、目前排版主題和目標平台，公共庫會生成 inline HTML 並寫入 `text/html`、macOS `public.html` 和 Windows 原生 `HTML Format`。
 - 需要支援新平台時，可以擴展 `MarkdownSocialCopyProfile`；需要自訂排版主題時，可以傳 `MarkdownExportStyle` 或複用應用註冊的主題資源。
 
