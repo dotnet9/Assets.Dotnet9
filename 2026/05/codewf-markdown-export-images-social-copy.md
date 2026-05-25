@@ -170,12 +170,16 @@ EmbedLocalImages(parsed, document.FilePath);
 
 ## 富 HTML 剪贴板：不能只写字符串
 
-这轮 `CodeWF.Markdown` 新增了 `MarkdownHtmlClipboard`，专门给宿主应用写富 HTML 剪贴板。
+这轮 `CodeWF.Markdown` 新增了 `MarkdownHtmlClipboard`、`MarkdownHtmlClipboardExtensions` 和自媒体复制 profile，专门给宿主应用写富 HTML 剪贴板。
 
 Vex 现在复制到公众号、知乎、稀土掘金时调用的是：
 
 ```csharp
-await MarkdownHtmlClipboard.SetHtmlAsync(clipboard, copyHtml.Html, copyHtml.Text);
+await clipboard.TrySetMarkdownHtmlAsync(
+    markdown,
+    typographyTheme,
+    "wechat",
+    typographySize);
 ```
 
 内部会同时写入几种格式：
@@ -271,12 +275,12 @@ public static readonly DataFormat<byte[]> WindowsHtmlFormat =
 
 粘贴后大概率样式就没了。
 
-所以 Vex 的自媒体复制路径会把当前排版主题转换成 inline style：
+所以 `CodeWF.Markdown` 的自媒体复制渲染器会把当前排版主题转换成 inline style：
 
 ```html
 <section
   id="vex"
-  data-tool="markdown编辑器"
+  data-tool="{localized tool name}"
   data-website="https://codewf.com"
   style="font-size: 15px; color: #333333; line-height: 1.75;">
   <h2 style="font-size: 26px; color: #333333; border-bottom: 2px solid #dfe2e5;">
@@ -288,19 +292,21 @@ public static readonly DataFormat<byte[]> WindowsHtmlFormat =
 </section>
 ```
 
-这部分仍然由 Vex 负责，因为不同发布平台的 HTML 结构、尾注和兼容习惯不同；但 PNG/PDF/Word 导出和富 HTML 剪贴板本身已经下沉到 `CodeWF.Markdown`，以后其他宿主应用也可以复用。
+这部分现在也下沉到了 `CodeWF.Markdown`：微信公众号、知乎、稀土掘金由内置 `CopyKind` 和 `MarkdownSocialCopyProfile` 描述，Vex 只负责选择目标平台并传入当前 Markdown、排版主题和紧凑布局。后续如果要支持新的发布平台，可以继续扩展 profile，而不需要每个应用重写 CF_HTML 和基础渲染。
 
 ## 三个平台不是三套固定颜色
 
 之前最容易偷懒的做法，是给公众号、知乎、掘金各放一套固定模板色。
 
-这次顺手把这点也修掉了。Vex 自媒体复制现在会读取当前 `MarkdownExportStyle`。这份样式不再只靠一份硬编码 palette，而是优先通过 `CodeWF.Markdown.Themes` 的排版资源生成：
+这次顺手把这点也修掉了。自媒体复制现在会读取当前 `MarkdownExportStyle`。简单调用路径会用 `MarkdownExportStyle.Resolve(themeName, typographySize)` 解析内置主题名和紧凑布局：
 
 ```csharp
-var exportStyle = MarkdownThemes.CreateExportStyle(
+var exportStyle = MarkdownExportStyle.Resolve(
     currentTypographyTheme,
     currentTypographySize);
 ```
+
+如果应用注册了自己的 XAML 排版资源，也可以自行创建 `MarkdownExportStyle`，例如继续用 `MarkdownThemes.CreateExportStyle("MyCompanyBlue")`，再传给导出或复制 API。
 
 这样当前预览主题、导出主题、自媒体复制主题会尽量来自同一套资源：
 
@@ -351,7 +357,7 @@ MarkdownDocumentExporter.ExportMarkdown(
 MarkdownDocumentExporter.ExportFile(
     @"C:\docs\article.md",
     ExportKind.Word,
-    MarkdownThemes.CreateExportStyle(MarkdownTypographyThemes.Simple),
+    MarkdownTypographyThemes.Simple,
     "article.docx");
 
 var document = new MarkdownExportDocument(markdown, filePath, fileName);
@@ -359,6 +365,36 @@ MarkdownDocumentExporter.Export(document, ExportKind.Png, "article.png");
 ```
 
 这里没有把 Markdown 字符串和 Markdown 文件路径都做成同名 `Export(string, ...)`，因为 C# 无法只靠参数名区分这两种 `string`。所以 API 明确拆成 `ExportMarkdown` 和 `ExportFile`，完整上下文仍然用 `MarkdownExportDocument`。
+
+自媒体复制也收成了类似的一层。平台目标先用 enum 表达内置能力：
+
+```csharp
+public enum CopyKind
+{
+    Wechat,
+    Zhihu,
+    Juejin
+}
+```
+
+宿主应用最常用的是 Avalonia 剪贴板扩展方法：
+
+```csharp
+await clipboard.TrySetMarkdownHtmlAsync(
+    markdown,
+    MarkdownTypographyThemes.Simple,
+    "wechat",
+    MarkdownTypographySizes.Small);
+
+await clipboard.SetMarkdownHtmlAsync(
+    markdown,
+    exportStyle,
+    CopyKind.Juejin);
+```
+
+这样 Vex 端不用再维护一堆平台 HTML 生成代码。它能拿到 Markdown 字符串、当前排版主题和菜单目标，就可以完成复制。
+
+如果传入的是 Markdown 字符串，自媒体复制里的相对图片会按当前工作目录解析；如果用文件路径创建复制内容，图片则可以按 Markdown 文件所在目录解析。这样 API 保持简单，同时仍然覆盖常见的本地图片场景。
 
 ## 应用如何扩展个性化排版主题
 
@@ -406,6 +442,7 @@ MarkdownDocumentExporter.ExportMarkdown(
     ExportKind.Pdf,
     style,
     "article.pdf");
+await clipboard.SetMarkdownHtmlAsync(markdown, style, CopyKind.Wechat);
 ```
 
 如果应用已有 XAML 资源字典，也可以注册工厂：
@@ -426,7 +463,7 @@ MarkdownTypographyThemeRegistry.Register(
 
 CF_HTML 也不是 Vex 独有的。任何项目只要想把 HTML 粘贴到 Chromium 系网页编辑器，都可能踩到同一个坑。所以 `MarkdownHtmlClipboard` 也应该是公共能力。
 
-但公众号、知乎、掘金要生成什么结构、要不要附加掘金尾注、标题样式如何取舍，这些是 Vex 的发布体验问题，仍然留在 Vex 的导出服务里。
+公众号、知乎、掘金的 HTML 结构、尾注和兼容习惯也属于可复用的发布 profile，这次已经下沉到 `CodeWF.Markdown`。Vex 仍然保留的是应用体验层：读取当前文档、当前主题、当前菜单目标，然后调用公共 API。
 
 现在的边界大概是：
 
@@ -436,6 +473,10 @@ CodeWF.Markdown
   - MarkdownImageSourceLoader
   - MarkdownImageRasterizer
   - MarkdownHtmlClipboard
+  - MarkdownHtmlClipboardExtensions
+  - CopyKind
+  - MarkdownSocialCopyRenderer
+  - MarkdownSocialCopyProfiles
   - MarkdownDocumentExporter
   - MarkdownExportDocument
   - MarkdownExportStyle
@@ -443,7 +484,7 @@ CodeWF.Markdown
 
 Vex
   - 读取当前文档和当前排版主题
-  - 生成平台相关 HTML
+  - 选择发布目标
   - 调用公共剪贴板能力
   - 调用公共 PNG / PDF / Word 导出能力
 ```
@@ -462,11 +503,13 @@ Vex
 - CF_HTML 的 UTF-8 字节偏移。
 - Windows `HTML Format` 使用字节格式。
 - `ExportKind` 统一导出入口。
+- `CopyKind`/profile 自媒体复制渲染。
+- 本地图片在自媒体复制 HTML 中嵌入。
 - 自定义排版主题注册后可生成 `MarkdownExportStyle`。
 
-目前 `CodeWF.Markdown.Tests` 里 28 个测试通过。
+目前 `CodeWF.Markdown.Tests` 里 41 个测试通过。
 
-Vex 侧也确认了本地包引用方式：先在 `CodeWF.Markdown` 本地打包 `12.0.3.11`，再让 Vex 通过本地 NuGet 包源引用，而不是跨仓库 `ProjectReference`。这样更接近真实发布包的使用方式，也能提前发现 NuGet content files、版本号、依赖还原这类问题。
+Vex 侧也确认了本地包引用方式：先在 `CodeWF.Markdown` 本地打包 `12.0.3.12`，再让 Vex 通过本地 NuGet 包源引用，而不是跨仓库 `ProjectReference`。这样更接近真实发布包的使用方式，也能提前发现 NuGet content files、版本号、依赖还原这类问题。
 
 ## 实际效果
 

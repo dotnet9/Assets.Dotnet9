@@ -13,8 +13,9 @@
 
 ## ホストアプリ向けヘルパー
 
-- `MarkdownImageSourceLoader` と `MarkdownImageRasterizer` は PDF、PNG、Word などのエクスポート処理で再利用できます。相対ローカル画像、`data:image`、HTTP(S)、SVG/GIF/WebP の PNG 正規化に対応し、ホストアプリが画像をエクスポートファイルへ埋め込みやすくします。
-- `MarkdownHtmlClipboard` は `text/html`、macOS `public.html`、Windows ネイティブ `HTML Format` を書き込みます。Windows ペイロードは UTF-8 CF_HTML バイトオフセットを使うため、WeChat Official Account、知乎、稀土掘金などの Web エディターへリッチ HTML として貼り付けやすく、HTML がそのままテキスト表示される問題を避けられます。
+- `MarkdownDocumentExporter` と `ExportKind` は Markdown 文字列、Markdown ファイル、`MarkdownExportDocument` から PNG、画像ベース PDF、Word `.docx` へ出力する共通 API です。画像読み込みとラスタライズを再利用し、相対ローカル画像、`data:image`、HTTP(S)、SVG/GIF/WebP を埋め込みます。
+- `MarkdownHtmlClipboardExtensions`、`CopyKind`、`MarkdownSocialCopyProfiles` は WeChat Official Account、知乎、稀土掘金向けのリッチ HTML コピーを提供します。ホストアプリは Markdown、現在の組版テーマ、対象プラットフォームだけを渡し、共通ライブラリが inline HTML と `text/html`、macOS `public.html`、Windows `HTML Format` を生成します。
+- 新しい公開先は `MarkdownSocialCopyProfile` で拡張できます。カスタム組版は `MarkdownExportStyle` またはアプリ登録済みテーマリソースから渡せます。
 
 ## インストール
 

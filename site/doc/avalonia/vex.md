@@ -16,8 +16,8 @@ Release v1.0.0：[https://github.com/dotnet9/Vex/releases/tag/v1.0.0](https://gi
 - 左侧提供文件列表和大纲，中央使用 AvaloniaEdit 编辑 Markdown，右侧使用 CodeWF.Markdown 渲染预览。
 - 视图菜单支持侧栏、大纲、文档列表、源码模式、行号、状态栏、全屏和置顶等工作区控制。
 - 文件菜单覆盖新建、打开、打开文件夹、最近文档、按编码重开、复制到公众号/知乎/稀土掘金、保存、另存为、导出、打印、属性、删除和关闭。
-- 导出支持 HTML、PNG、图像型 PDF 和 Word `.docx`，本地相对图、`data:image`、HTTP(S)、SVG/GIF/WebP 等图片边界会随导出结果一起处理；PDF 和 Word 会嵌入图片资源，离线发送后仍可查看。
-- 复制到公众号、知乎、稀土掘金会写入富 HTML 剪贴板格式，包括 `text/html`、macOS `public.html` 和 Windows 原生 `HTML Format`，并把当前排版主题与紧凑布局转换为 inline style。
+- 导出支持 HTML、PNG、图像型 PDF 和 Word `.docx`；PNG/PDF/Word 复用 `CodeWF.Markdown` 的 `MarkdownDocumentExporter`，本地相对图、`data:image`、HTTP(S)、SVG/GIF/WebP 等图片边界会随导出结果一起处理，PDF 和 Word 会嵌入图片资源，离线发送后仍可查看。
+- 复制到公众号、知乎、稀土掘金会把当前 Markdown、排版主题和目标平台交给 `CodeWF.Markdown` 的 `MarkdownHtmlClipboardExtensions`，写入富 HTML 剪贴板格式并应用当前排版主题。
 - 查找替换支持大小写、整词、正则、命中计数和长文档防抖扫描。
 - 主题色、Markdown 排版主题、紧凑布局和语言切换都集中在帮助菜单下。
 - 简体中文、繁体中文、英语和日语界面与帮助文档已覆盖主要入口。
@@ -33,8 +33,8 @@ Release v1.0.0：[https://github.com/dotnet9/Vex/releases/tag/v1.0.0](https://gi
 | 文件工作流 | 支持新建、打开单文件、打开文件夹、最近文档、拖拽打开、保存、另存为、外部变更检测和重载。 |
 | 大纲导航 | 从 Markdown 标题生成大纲，点击即可跳转到对应位置。 |
 | 查找替换 | 支持大小写、整词、正则、命中计数、替换下一个和全部替换。 |
-| 导出交付 | 支持 HTML、PNG、图像型 PDF、Word `.docx` 和打印预览，PDF/Word 会嵌入本地、`data:image`、HTTP(S)、SVG/GIF/WebP 图片，导出成功后可定位文件。 |
-| 发布复制 | 复制到公众号、知乎、稀土掘金时写入富 HTML 剪贴板载荷，Windows `HTML Format` 使用 UTF-8 CF_HTML 字节数据，并应用当前排版主题。 |
+| 导出交付 | 支持 HTML、PNG、图像型 PDF、Word `.docx` 和打印预览，PNG/PDF/Word 复用 `CodeWF.Markdown` 公共导出 API，PDF/Word 会嵌入本地、`data:image`、HTTP(S)、SVG/GIF/WebP 图片，导出成功后可定位文件。 |
+| 发布复制 | 复制到公众号、知乎、稀土掘金时调用 `CodeWF.Markdown` 公共富 HTML 剪贴板 API，Windows `HTML Format` 使用 UTF-8 CF_HTML 字节数据，并应用当前排版主题。 |
 | 多语言 | 通过 Lang.Avalonia.Json 提供中文简体、中文繁体、英语和日语界面。 |
 | 新手引导 | 基于 CodeWF.AvaloniaControls Guide 控件，可以定位菜单项、TabItem、编辑区和预览区。 |
 | 发布打包 | 支持 Windows、Linux、macOS 多 RID 发布，并提供压缩包和可选 MSIX 打包脚本。 |

@@ -13,8 +13,9 @@
 
 ## Host Application Helpers
 
-- `MarkdownImageSourceLoader` and `MarkdownImageRasterizer` can be reused by PDF, PNG, Word, and similar export pipelines. They support relative local images, `data:image`, HTTP(S), and SVG/GIF/WebP to PNG normalization, making it easier for host applications to embed images in exported files.
-- `MarkdownHtmlClipboard` writes `text/html`, macOS `public.html`, and native Windows `HTML Format`. The Windows payload uses UTF-8 CF_HTML byte offsets, which fits rich HTML paste targets such as WeChat Official Account, Zhihu, and Juejin instead of showing raw HTML as plain text.
+- `MarkdownDocumentExporter` and `ExportKind` provide one-stop PNG, image-based PDF, and Word `.docx` export APIs from Markdown strings, Markdown files, or `MarkdownExportDocument`, reusing image loading and rasterization to embed relative local, `data:image`, HTTP(S), SVG/GIF/WebP images.
+- `MarkdownHtmlClipboardExtensions`, `CopyKind`, and `MarkdownSocialCopyProfiles` provide rich HTML copy for WeChat Official Account, Zhihu, and Juejin. Host applications pass the Markdown text, active typography theme, and target platform; the library renders inline HTML and writes `text/html`, macOS `public.html`, and native Windows `HTML Format`.
+- New platforms can be added through `MarkdownSocialCopyProfile`; custom typography can be supplied with `MarkdownExportStyle` or application-registered theme resources.
 
 ## Installation
 

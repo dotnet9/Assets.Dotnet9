@@ -13,8 +13,9 @@
 
 ## 宿主应用辅助能力
 
-- `MarkdownImageSourceLoader` 和 `MarkdownImageRasterizer` 可复用到 PDF、PNG、Word 等导出链路，支持本地相对图、`data:image`、HTTP(S)、SVG/GIF/WebP 转 PNG，方便宿主应用把图片嵌入导出文件。
-- `MarkdownHtmlClipboard` 可写入 `text/html`、macOS `public.html` 和 Windows 原生 `HTML Format`。Windows 载荷使用 UTF-8 CF_HTML 字节偏移，适合微信公众号、知乎、稀土掘金等网页编辑器粘贴富 HTML，避免显示原始 HTML 文本。
+- `MarkdownDocumentExporter` 和 `ExportKind` 提供 PNG、图像型 PDF、Word `.docx` 一站式导出 API，可从 Markdown 字符串、Markdown 文件或 `MarkdownExportDocument` 导出，并复用图片加载与栅格化能力嵌入本地、`data:image`、HTTP(S)、SVG/GIF/WebP 图片。
+- `MarkdownHtmlClipboardExtensions`、`CopyKind` 和 `MarkdownSocialCopyProfiles` 提供微信公众号、知乎、稀土掘金的富 HTML 复制能力；宿主应用只需传 Markdown、当前排版主题和目标平台，公共库会生成 inline HTML 并写入 `text/html`、macOS `public.html` 和 Windows 原生 `HTML Format`。
+- 需要支持新平台时，可以扩展 `MarkdownSocialCopyProfile`；需要自定义排版主题时，可以传 `MarkdownExportStyle` 或复用应用注册的主题资源。
 
 ## 安装
 
