@@ -12,7 +12,7 @@
 - CodeWF.Markdown：[https://github.com/dotnet9/CodeWF.Markdown](https://github.com/dotnet9/CodeWF.Markdown)
 - Vex：[https://github.com/dotnet9/Vex](https://github.com/dotnet9/Vex)
 
-## 问题一：Markdown 图片不是文件里的图片
+## 1. 问题一：Markdown 图片不是文件里的图片
 
 Markdown 里的图片写法很轻：
 
@@ -34,7 +34,7 @@ Markdown 里的图片写法很轻：
 
 所以这轮把图片处理能力下沉到了 `CodeWF.Markdown`，让预览控件和宿主应用导出链路可以共用。
 
-## 图片加载：先把来源统一成字节
+## 1.1 图片加载：先把来源统一成字节
 
 `CodeWF.Markdown` 新增了一个公共加载入口：`MarkdownImageSourceLoader`。
 
@@ -79,7 +79,7 @@ var imageSource = MarkdownImageSourceLoader.Load(image.Url, documentPath);
 
 后续 PDF、PNG、Word 都不需要重新猜一遍图片路径。
 
-## 图片栅格化：导出目标更喜欢 PNG
+## 1.2 图片栅格化：导出目标更喜欢 PNG
 
 加载到字节以后，还有一个问题：不同格式不能原样塞给所有导出目标。
 
@@ -99,7 +99,7 @@ var pngBytes = MarkdownImageRasterizer.RenderToPngBytes(imageSource);
 
 对 Vex 和其他宿主应用来说，收益很直接：PDF、PNG、Word 导出不再各自写一套“如果是 SVG 怎么办、如果是 GIF 怎么办”的分支，而是复用公共能力。
 
-## Word 导出：写进 docx 的 media 目录
+## 1.3 Word 导出：写进 docx 的 media 目录
 
 Word `.docx` 本质上是一个 OpenXML 压缩包。图片不能只写一个路径字符串，需要放进包里的 `word/media/`，再在文档关系里建立引用。
 
@@ -126,7 +126,7 @@ ImageParts.Add(new DocxImagePart(relationshipId, target, bytes));
 
 这样导出的 `.docx` 发给别人以后，不需要原 Markdown 目录、不需要本地图片文件、不需要网络图片还能访问。图片已经在 Word 文件内部。
 
-## PDF 导出：先把图片放进渲染结果
+## 1.4 PDF 导出：先把图片放进渲染结果
 
 `CodeWF.Markdown` 当前提供的是图像型 PDF 导出。也就是说，它不是逐个写 PDF 文本对象和图片对象，而是先把 Markdown 内容渲染成页面位图，再把页面切片写入 PDF。
 
@@ -142,7 +142,7 @@ EmbedLocalImages(parsed, document.FilePath);
 
 严格说，图像型 PDF 里不是把每一张 Markdown 图片都作为独立 PDF image object 保留；它把整页结果画进 PDF。但对“把文件发给别人离线看”这个目标来说，效果是一样的：图片不会因为离开本机目录或网络不可用而丢失。
 
-## 问题二：复制到公众号为什么会显示 HTML 源码
+## 2. 问题二：复制到公众号为什么会显示 HTML 源码
 
 另一个问题出在剪贴板。
 
@@ -168,7 +168,7 @@ EmbedLocalImages(parsed, document.FilePath);
 
 这不是 HTML 生成的问题，而是剪贴板格式的问题。
 
-## 富 HTML 剪贴板：不能只写字符串
+## 2.1 富 HTML 剪贴板：不能只写字符串
 
 这轮 `CodeWF.Markdown` 新增了 `MarkdownHtmlClipboard`、`MarkdownHtmlClipboardExtensions` 和自媒体复制 profile，专门给宿主应用写富 HTML 剪贴板。
 
@@ -191,7 +191,7 @@ await clipboard.TrySetMarkdownHtmlAsync(
 
 真正关键的是 Windows 的 `HTML Format`。微信公众号、知乎、稀土掘金这些编辑器大多跑在 Chromium 系浏览器里，Windows 下它们更认 CF_HTML。
 
-## CF_HTML：偏移必须按 UTF-8 字节算
+## 2.2 CF_HTML：偏移必须按 UTF-8 字节算
 
 CF_HTML 的内容不是简单的 HTML 字符串，而是一个带头部的载荷：
 
@@ -235,7 +235,7 @@ public static readonly DataFormat<byte[]> WindowsHtmlFormat =
 
 这一点也很重要。它不是 UTF-16 字符串格式，而是原生剪贴板字节载荷。
 
-## Fragment 标记：告诉编辑器粘哪一段
+## 2.3 Fragment 标记：告诉编辑器粘哪一段
 
 网页编辑器不一定需要整份 HTML 文档，它更关心要粘贴的片段。
 
@@ -257,7 +257,7 @@ public static readonly DataFormat<byte[]> WindowsHtmlFormat =
 
 这样宿主应用可以只关心生成内容，不必每个项目都重新实现一遍 CF_HTML 规范。
 
-## 样式为什么要 inline
+## 2.4 样式为什么要 inline
 
 剪贴板格式正确以后，还有一个现实问题：公众号、知乎、掘金不会帮你加载外部 CSS。
 
@@ -294,7 +294,7 @@ public static readonly DataFormat<byte[]> WindowsHtmlFormat =
 
 这部分现在也下沉到了 `CodeWF.Markdown`：微信公众号、知乎、稀土掘金由内置 `CopyKind` 和 `MarkdownSocialCopyProfile` 描述，Vex 只负责选择目标平台并传入当前 Markdown、排版主题和紧凑布局。后续如果要支持新的发布平台，可以继续扩展 profile，而不需要每个应用重写 CF_HTML 和基础渲染。
 
-## 三个平台不是三套固定颜色
+## 2.5 三个平台不是三套固定颜色
 
 之前最容易偷懒的做法，是给公众号、知乎、掘金各放一套固定模板色。
 
@@ -322,7 +322,7 @@ var exportStyle = MarkdownExportStyle.Resolve(
 
 也就是说，用户在 Vex 里切换排版主题后，不只是预览区变了，HTML/打印导出、PNG/PDF/Word 导出，以及“复制到公众号 / 知乎 / 稀土掘金”也应该尽量保持同一套视觉映射。
 
-## 导出 API 再收一层
+## 3. API 与扩展：导出 API 再收一层
 
 最开始迁移导出能力时，`CodeWF.Markdown` 已经提供了：
 
@@ -396,7 +396,7 @@ await clipboard.SetMarkdownHtmlAsync(
 
 如果传入的是 Markdown 字符串，自媒体复制里的相对图片会按当前工作目录解析；如果用文件路径创建复制内容，图片则可以按 Markdown 文件所在目录解析。这样 API 保持简单，同时仍然覆盖常见的本地图片场景。
 
-## 应用如何扩展个性化排版主题
+## 3.1 应用如何扩展个性化排版主题
 
 这次也顺手整理了排版主题扩展方式。
 
@@ -455,7 +455,7 @@ MarkdownTypographyThemeRegistry.Register(
 
 这样应用侧只维护一套排版资源，预览、PNG/PDF/Word 导出、自媒体复制 inline style 都能尽量从同一套资源里取值。对个性化主题比较多的产品来说，这比在应用端再维护一份 `MarkdownExportStyle` 映射更稳。
 
-## 为什么放在 CodeWF.Markdown，而不是只写在 Vex 里
+## 4. 架构边界：为什么放在 CodeWF.Markdown，而不是只写在 Vex 里
 
 这轮有一个原则：公共问题进公共库，业务差异留在应用层。
 
@@ -491,7 +491,7 @@ Vex
 
 这个边界会比“Vex 里全写死一遍”更稳。
 
-## 测试补了哪些
+## 5. 测试补了哪些
 
 这轮 CodeWF.Markdown 补了几类测试：
 
@@ -511,7 +511,7 @@ Vex
 
 Vex 侧也确认了本地包引用方式：先在 `CodeWF.Markdown` 本地打包 `12.0.3.12`，再让 Vex 通过本地 NuGet 包源引用，而不是跨仓库 `ProjectReference`。这样更接近真实发布包的使用方式，也能提前发现 NuGet content files、版本号、依赖还原这类问题。
 
-## 实际效果
+## 6. 实际效果
 
 对用户来说，这轮改动最后应该只体现成两件事：
 
@@ -525,7 +525,7 @@ Vex 侧也确认了本地包引用方式：先在 `CodeWF.Markdown` 本地打包
 
 ![](https://img1.dotnet9.com/2026/05/vex-copy-to-wechat-editor.gif)
 
-## 小结
+## 7. 小结
 
 Markdown 编辑器的很多体验问题，都藏在“最后一公里”。
 
