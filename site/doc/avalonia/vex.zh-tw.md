@@ -15,8 +15,9 @@ Release v1.0.0：[https://github.com/dotnet9/Vex/releases/tag/v1.0.0](https://gi
 - 免費開源的 Markdown 桌面寫作工具，先把原始碼編輯與原生預覽鏈路做穩。
 - 左側提供檔案列表和大綱，中央使用 AvaloniaEdit 編輯 Markdown，右側使用 CodeWF.Markdown 渲染預覽。
 - 檢視選單支援側欄、大綱、文件列表、原始碼模式、行號、狀態列、全螢幕和置頂。
-- 檔案選單覆蓋新建、開啟、開啟資料夾、最近文件、按編碼重開、儲存、匯出、列印、屬性、刪除和關閉。
-- 匯出支援 HTML、PNG、圖像型 PDF 和 Word `.docx`，並處理本機圖片、`data:image`、SVG/WebP 等圖片邊界。
+- 檔案選單覆蓋新建、開啟、開啟資料夾、最近文件、按編碼重開、複製到公眾號/知乎/稀土掘金、儲存、匯出、列印、屬性、刪除和關閉。
+- 匯出支援 HTML、PNG、圖像型 PDF 和 Word `.docx`，並處理本機相對圖片、`data:image`、HTTP(S)、SVG/GIF/WebP 等圖片邊界；PDF 和 Word 會嵌入圖片資源，離線分享後仍可查看。
+- 複製到公眾號、知乎與稀土掘金會寫入富 HTML 剪貼簿格式，包括 `text/html`、macOS `public.html` 和 Windows 原生 `HTML Format`，並把目前排版主題與緊湊版面轉為 inline style。
 - 查找替換支援大小寫、整詞、正則、命中計數和長文件防抖掃描。
 - 主題色、Markdown 排版主題、緊湊布局和語言切換集中在幫助選單下。
 - 簡體中文、繁體中文、英文和日文介面與幫助文件已覆蓋主要入口。
@@ -30,7 +31,8 @@ Release v1.0.0：[https://github.com/dotnet9/Vex/releases/tag/v1.0.0](https://gi
 | 檔案工作流 | 支援新建、開啟單檔、開啟資料夾、最近文件、拖放開啟、儲存、另存為、外部變更偵測和重載。 |
 | 大綱導航 | 從 Markdown 標題生成大綱，點擊即可跳轉到對應位置。 |
 | 查找替換 | 支援大小寫、整詞、正則、命中計數、替換下一個和全部替換。 |
-| 匯出交付 | 支援 HTML、PNG、圖像型 PDF、Word `.docx` 和列印預覽。 |
+| 匯出交付 | 支援 HTML、PNG、圖像型 PDF、Word `.docx` 和列印預覽；PDF/Word 會嵌入本機、`data:image`、HTTP(S)、SVG/GIF/WebP 圖片。 |
+| 發布複製 | 複製到公眾號、知乎、稀土掘金時寫入富 HTML 剪貼簿載荷，Windows `HTML Format` 使用 UTF-8 CF_HTML 位元組資料，並套用目前排版主題。 |
 | 多語言 | 透過 Lang.Avalonia.Json 提供簡體中文、繁體中文、英文和日文介面。 |
 | 新手引導 | Guide 步驟可以定位選單項、TabItem、編輯區和預覽區。 |
 | 發布打包 | 支援 Windows、Linux、macOS 多 RID 發布，並提供壓縮包與可選 MSIX 打包腳本。 |

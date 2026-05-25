@@ -8,8 +8,13 @@
 
 | パッケージ | 説明 |
 | --- | --- |
-| `CodeWF.Markdown` | 完全な MarkdownViewer。一般的な Markdown 要素、コードハイライト、画像プレビュー、SVG/画像、数式レンダリング拡張、多言語リソース、インクリメンタルレンダリングをサポート。 |
+| `CodeWF.Markdown` | 完全な MarkdownViewer。一般的な Markdown 要素、コードハイライト、画像プレビュー、SVG/画像、数式レンダリング拡張、多言語リソース、インクリメンタルレンダリング、エクスポート画像ヘルパー、リッチ HTML クリップボードヘルパーをサポート。 |
 | `CodeWF.Markdown.Themes` | デフォルトコントロールテンプレートと複数のタイポグラフィテーマ。 |
+
+## ホストアプリ向けヘルパー
+
+- `MarkdownImageSourceLoader` と `MarkdownImageRasterizer` は PDF、PNG、Word などのエクスポート処理で再利用できます。相対ローカル画像、`data:image`、HTTP(S)、SVG/GIF/WebP の PNG 正規化に対応し、ホストアプリが画像をエクスポートファイルへ埋め込みやすくします。
+- `MarkdownHtmlClipboard` は `text/html`、macOS `public.html`、Windows ネイティブ `HTML Format` を書き込みます。Windows ペイロードは UTF-8 CF_HTML バイトオフセットを使うため、WeChat Official Account、知乎、稀土掘金などの Web エディターへリッチ HTML として貼り付けやすく、HTML がそのままテキスト表示される問題を避けられます。
 
 ## インストール
 
@@ -60,7 +65,7 @@ tests/CodeWF.Markdown.Tests  レンダリングおよび差分サービステス
 
 - Avalonia アプリケーションで Markdown コンテンツを直接レンダリングしたい場合。
 - ドキュメント、変更履歴、AI 応答、ヘルプセンター向けに統一されたタイポグラフィテーマが必要な場合。
-- 画像、SVG、コードハイライト、多言語リソース、インクリメンタルレンダリングをサポートしたい場合。
+- 画像、SVG、コードハイライト、多言語リソース、インクリメンタルレンダリング、エクスポート画像埋め込み、Web エディターへのリッチ HTML 貼り付けをサポートしたい場合。
 - デスクトップ上でさまざまな Markdown コンテンツの表示をサンプルプロジェクトで確認したい場合。
 
 ## ビルド

@@ -8,8 +8,13 @@
 
 | 套件 | 說明 |
 | --- | --- |
-| `CodeWF.Markdown` | 完整 MarkdownViewer，支援常見 Markdown 元素、程式碼高亮、圖片預覽、SVG/圖片、數學渲染擴充、多語言資源和增量渲染。 |
+| `CodeWF.Markdown` | 完整 MarkdownViewer，支援常見 Markdown 元素、程式碼高亮、圖片預覽、SVG/圖片、數學渲染擴充、多語言資源、增量渲染、匯出圖片載入與富 HTML 剪貼簿輔助能力。 |
 | `CodeWF.Markdown.Themes` | 預設控制項範本和多套排版主題。 |
+
+## 宿主應用輔助能力
+
+- `MarkdownImageSourceLoader` 和 `MarkdownImageRasterizer` 可重用到 PDF、PNG、Word 等匯出鏈路，支援本機相對圖、`data:image`、HTTP(S)、SVG/GIF/WebP 轉 PNG，方便宿主應用把圖片嵌入匯出檔案。
+- `MarkdownHtmlClipboard` 可寫入 `text/html`、macOS `public.html` 和 Windows 原生 `HTML Format`。Windows 載荷使用 UTF-8 CF_HTML 位元組偏移，適合微信公眾號、知乎、稀土掘金等網頁編輯器貼上富 HTML，避免顯示原始 HTML 文字。
 
 ## 安裝
 
@@ -60,7 +65,7 @@ tests/CodeWF.Markdown.Tests  渲染和差異服務測試
 
 - Avalonia 應用需要直接渲染 Markdown 內容。
 - 需要為文件、更新日誌、AI 回覆或幫助中心提供統一排版主題。
-- 需要支援圖片、SVG、程式碼高亮、多語言資源和增量渲染。
+- 需要支援圖片、SVG、程式碼高亮、多語言資源、增量渲染、匯出圖片嵌入和網頁編輯器富 HTML 貼上。
 - 希望用範例專案驗證不同 Markdown 內容在桌面端的表現。
 
 ## 建置

@@ -8,8 +8,13 @@
 
 | Package | Description |
 | --- | --- |
-| `CodeWF.Markdown` | Full MarkdownViewer, supports common Markdown elements, code highlighting, image preview, SVG/images, math rendering extensions, multilingual resources, and incremental rendering. |
+| `CodeWF.Markdown` | Full MarkdownViewer, supports common Markdown elements, code highlighting, image preview, SVG/images, math rendering extensions, multilingual resources, incremental rendering, export image helpers, and rich HTML clipboard helpers. |
 | `CodeWF.Markdown.Themes` | Default control templates and multiple typography themes. |
+
+## Host Application Helpers
+
+- `MarkdownImageSourceLoader` and `MarkdownImageRasterizer` can be reused by PDF, PNG, Word, and similar export pipelines. They support relative local images, `data:image`, HTTP(S), and SVG/GIF/WebP to PNG normalization, making it easier for host applications to embed images in exported files.
+- `MarkdownHtmlClipboard` writes `text/html`, macOS `public.html`, and native Windows `HTML Format`. The Windows payload uses UTF-8 CF_HTML byte offsets, which fits rich HTML paste targets such as WeChat Official Account, Zhihu, and Juejin instead of showing raw HTML as plain text.
 
 ## Installation
 
@@ -60,7 +65,7 @@ tests/CodeWF.Markdown.Tests  Rendering and diff service tests
 
 - Avalonia applications that need to render Markdown content directly.
 - Need unified typography themes for documentation, changelogs, AI responses, or help centers.
-- Need support for images, SVG, code highlighting, multilingual resources, and incremental rendering.
+- Need support for images, SVG, code highlighting, multilingual resources, incremental rendering, embedded export images, and rich HTML paste into web editors.
 - Want to use sample projects to verify the rendering of different Markdown content on the desktop.
 
 ## Build
