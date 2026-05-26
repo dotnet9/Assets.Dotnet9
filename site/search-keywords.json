@@ -1,8 +1,8 @@
 ﻿[
   {
     "Query": "dotnet",
-    "Count": 1622,
-    "LastSearchedAt": "2026-05-22T05:27:38.037811+00:00"
+    "Count": 1728,
+    "LastSearchedAt": "2026-05-26T07:37:25.4782852+00:00"
   },
   {
     "Query": "WINUI入门",
@@ -13,6 +13,16 @@
     "Query": "wpf",
     "Count": 3,
     "LastSearchedAt": "2026-05-20T02:56:05.5718137+00:00"
+  },
+  {
+    "Query": "handy",
+    "Count": 2,
+    "LastSearchedAt": "2026-05-26T03:41:24.2215503+00:00"
+  },
+  {
+    "Query": "学习",
+    "Count": 2,
+    "LastSearchedAt": "2026-05-25T02:29:43.6625421+00:00"
   },
   {
     "Query": "(1/7).NET Core 3 WPF MVVM框架 Prism系列之数据绑定",
@@ -38,6 +48,26 @@
     "Query": "大数据",
     "Count": 2,
     "LastSearchedAt": "2026-04-30T04:36:16.188368+00:00"
+  },
+  {
+    "Query": "为什么",
+    "Count": 1,
+    "LastSearchedAt": "2026-05-25T02:32:53.5587113+00:00"
+  },
+  {
+    "Query": "【链接很多】.NET 7 的 ASP.NET Core 路线图",
+    "Count": 1,
+    "LastSearchedAt": "2026-05-25T02:32:38.7794765+00:00"
+  },
+  {
+    "Query": "学习路线",
+    "Count": 1,
+    "LastSearchedAt": "2026-05-25T02:32:31.1455952+00:00"
+  },
+  {
+    "Query": "'",
+    "Count": 1,
+    "LastSearchedAt": "2026-05-23T17:08:22.4786178+00:00"
   },
   {
     "Query": "md5",
@@ -88,11 +118,6 @@
     "Query": "dapper.aot",
     "Count": 1,
     "LastSearchedAt": "2026-05-13T03:45:32.1554673+00:00"
-  },
-  {
-    "Query": "handy",
-    "Count": 1,
-    "LastSearchedAt": "2026-05-12T13:45:29.5266705+00:00"
   },
   {
     "Query": "WPF开源控件库 - HandyControl",
