@@ -18,6 +18,7 @@ Release v1.1.0：[https://github.com/dotnet9/Vex/releases/tag/v1.1.0](https://gi
 - 文件菜单覆盖新建、打开、打开文件夹、最近文档、按编码重开、复制到公众号/知乎/稀土掘金、保存、另存为、导出、打印、属性、删除和关闭。
 - 导出支持 HTML、PNG、可选择文本 PDF 和 Word `.docx`；PNG/PDF/Word 复用 `CodeWF.Markdown` 的 `MarkdownDocumentExporter`，本地相对图、`data:image`、HTTP(S)、SVG/GIF/WebP 等图片边界会随导出结果一起处理，PDF 正文可选择复制，PDF 和 Word 会嵌入图片资源，离线发送后仍可查看。
 - 复制到公众号、知乎、稀土掘金会把当前 Markdown、排版主题和目标平台交给 `CodeWF.Markdown` 的 `MarkdownHtmlClipboardExtensions`，写入富 HTML 剪贴板格式并应用当前排版主题。
+- 从网页复制内容后粘贴到中间编辑器时，Vex 会优先读取剪贴板 HTML，并通过 `MarkdownHtmlClipboard.Html2Markdown(htmlContent)` 自动转为 Markdown；没有 HTML 或转换失败时回落到普通粘贴。
 - 查找替换支持大小写、整词、正则、命中计数和长文档防抖扫描。
 - 主题色、Markdown 排版主题、紧凑布局和语言切换都集中在帮助菜单下。
 - 简体中文、繁体中文、英语和日语界面与帮助文档已覆盖主要入口。
@@ -33,6 +34,7 @@ Release v1.1.0：[https://github.com/dotnet9/Vex/releases/tag/v1.1.0](https://gi
 | 文件工作流 | 支持新建、打开单文件、打开文件夹、最近文档、拖拽打开、保存、另存为、外部变更检测和重载。 |
 | 大纲导航 | 从 Markdown 标题生成大纲，点击即可跳转到对应位置。 |
 | 查找替换 | 支持大小写、整词、正则、命中计数、替换下一个和全部替换。 |
+| 网页粘贴 | 从浏览器复制内容到中间 Markdown 编辑器时，优先把剪贴板 HTML 转成 Markdown 后插入，并保留普通文本粘贴兜底。 |
 | 导出交付 | 支持 HTML、PNG、可选择文本 PDF、Word `.docx` 和打印预览，PNG/PDF/Word 复用 `CodeWF.Markdown` 公共导出 API，PDF 正文可选择复制，PDF/Word 会嵌入本地、`data:image`、HTTP(S)、SVG/GIF/WebP 图片，导出成功后可定位文件。 |
 | 发布复制 | 复制到公众号、知乎、稀土掘金时调用 `CodeWF.Markdown` 公共富 HTML 剪贴板 API，Windows `HTML Format` 使用 UTF-8 CF_HTML 字节数据，并应用当前排版主题。 |
 | 多语言 | 通过 Lang.Avalonia.Json 提供中文简体、中文繁体、英语和日语界面。 |
@@ -82,7 +84,7 @@ scripts/
   压测、发布打包和 MSIX 打包脚本
 ```
 
-应用层使用 Prism 做模块组合，跨模块业务消息通过 CodeWF.EventBus 传递；Markdown 预览、导出图片加载和自媒体富 HTML 剪贴板复用 CodeWF.Markdown，避免把核心写作流程绑定到 WebView。
+应用层使用 Prism 做模块组合，跨模块业务消息通过 CodeWF.EventBus 传递；Markdown 预览、导出图片加载、自媒体富 HTML 剪贴板和网页 HTML 粘贴转 Markdown 复用 CodeWF.Markdown，避免把核心写作流程绑定到 WebView。
 
 ## 技术栈
 

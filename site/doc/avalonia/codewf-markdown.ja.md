@@ -8,13 +8,14 @@
 
 | パッケージ | 説明 |
 | --- | --- |
-| `CodeWF.Markdown` | 完全な MarkdownViewer。一般的な Markdown 要素、コードハイライト、画像プレビュー、SVG/画像、数式レンダリング拡張、多言語リソース、インクリメンタルレンダリング、エクスポート画像ヘルパー、リッチ HTML クリップボードヘルパーをサポート。 |
+| `CodeWF.Markdown` | 完全な MarkdownViewer。一般的な Markdown 要素、コードハイライト、画像プレビュー、SVG/画像、数式レンダリング拡張、多言語リソース、インクリメンタルレンダリング、エクスポート画像ヘルパー、リッチ HTML クリップボードヘルパー、HTML から Markdown への変換ヘルパーをサポート。 |
 | `CodeWF.Markdown.Themes` | デフォルトコントロールテンプレートと複数のタイポグラフィテーマ。 |
 
 ## ホストアプリ向けヘルパー
 
 - `MarkdownDocumentExporter` と `ExportKind` は Markdown 文字列、Markdown ファイル、`MarkdownExportDocument` から PNG、選択可能なテキスト PDF、Word `.docx` へ出力する共通 API です。PDF 本文は選択・コピーでき、画像読み込みとラスタライズを再利用して相対ローカル画像、`data:image`、HTTP(S)、SVG/GIF/WebP を埋め込みます。
 - `MarkdownHtmlClipboardExtensions`、`CopyKind`、`MarkdownSocialCopyProfiles` は WeChat Official Account、知乎、稀土掘金向けのリッチ HTML コピーを提供します。ホストアプリは Markdown、現在の組版テーマ、対象プラットフォームだけを渡し、共通ライブラリが inline HTML と `text/html`、macOS `public.html`、Windows `HTML Format` を生成します。
+- `MarkdownHtmlClipboard.Html2Markdown(htmlContent)` は逆方向の貼り付け変換を提供します。Web ページからコピーした HTML を、ホストエディターが挿入する前に Markdown へ変換し、見出し、段落、リンク、画像、リスト、引用、コードブロック、表を扱います。
 - 新しい公開先は `MarkdownSocialCopyProfile` で拡張できます。カスタム組版は `MarkdownExportStyle` またはアプリ登録済みテーマリソースから渡せます。
 
 ## インストール
@@ -66,7 +67,7 @@ tests/CodeWF.Markdown.Tests  レンダリングおよび差分サービステス
 
 - Avalonia アプリケーションで Markdown コンテンツを直接レンダリングしたい場合。
 - ドキュメント、変更履歴、AI 応答、ヘルプセンター向けに統一されたタイポグラフィテーマが必要な場合。
-- 画像、SVG、コードハイライト、多言語リソース、インクリメンタルレンダリング、エクスポート画像埋め込み、Web エディターへのリッチ HTML 貼り付けをサポートしたい場合。
+- 画像、SVG、コードハイライト、多言語リソース、インクリメンタルレンダリング、エクスポート画像埋め込み、Web エディターへのリッチ HTML 貼り付け、Web HTML 貼り付けから Markdown への変換をサポートしたい場合。
 - デスクトップ上でさまざまな Markdown コンテンツの表示をサンプルプロジェクトで確認したい場合。
 
 ## ビルド

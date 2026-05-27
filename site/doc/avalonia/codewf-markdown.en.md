@@ -8,13 +8,14 @@
 
 | Package | Description |
 | --- | --- |
-| `CodeWF.Markdown` | Full MarkdownViewer, supports common Markdown elements, code highlighting, image preview, SVG/images, math rendering extensions, multilingual resources, incremental rendering, export image helpers, and rich HTML clipboard helpers. |
+| `CodeWF.Markdown` | Full MarkdownViewer, supports common Markdown elements, code highlighting, image preview, SVG/images, math rendering extensions, multilingual resources, incremental rendering, export image helpers, rich HTML clipboard helpers, and HTML-to-Markdown helpers. |
 | `CodeWF.Markdown.Themes` | Default control templates and multiple typography themes. |
 
 ## Host Application Helpers
 
 - `MarkdownDocumentExporter` and `ExportKind` provide one-stop PNG, selectable-text PDF, and Word `.docx` export APIs from Markdown strings, Markdown files, or `MarkdownExportDocument`. PDF body text remains selectable and copyable, while shared image loading and rasterization embed relative local, `data:image`, HTTP(S), SVG/GIF/WebP images.
 - `MarkdownHtmlClipboardExtensions`, `CopyKind`, and `MarkdownSocialCopyProfiles` provide rich HTML copy for WeChat Official Account, Zhihu, and Juejin. Host applications pass the Markdown text, active typography theme, and target platform; the library renders inline HTML and writes `text/html`, macOS `public.html`, and native Windows `HTML Format`.
+- `MarkdownHtmlClipboard.Html2Markdown(htmlContent)` provides the reverse paste path, converting HTML copied from web pages into Markdown before a host editor inserts it, including headings, paragraphs, links, images, lists, block quotes, code blocks, and tables.
 - New platforms can be added through `MarkdownSocialCopyProfile`; custom typography can be supplied with `MarkdownExportStyle` or application-registered theme resources.
 
 ## Installation
@@ -66,7 +67,7 @@ tests/CodeWF.Markdown.Tests  Rendering and diff service tests
 
 - Avalonia applications that need to render Markdown content directly.
 - Need unified typography themes for documentation, changelogs, AI responses, or help centers.
-- Need support for images, SVG, code highlighting, multilingual resources, incremental rendering, embedded export images, and rich HTML paste into web editors.
+- Need support for images, SVG, code highlighting, multilingual resources, incremental rendering, embedded export images, rich HTML paste into web editors, and web HTML paste converted back to Markdown.
 - Want to use sample projects to verify the rendering of different Markdown content on the desktop.
 
 ## Build

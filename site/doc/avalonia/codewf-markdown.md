@@ -8,13 +8,14 @@
 
 | 包 | 说明 |
 | --- | --- |
-| `CodeWF.Markdown` | 完整 MarkdownViewer，支持常见 Markdown 元素、代码高亮、图片预览、SVG/图片、数学渲染扩展、多语言资源、增量渲染、导出图片加载与富 HTML 剪贴板辅助能力。 |
+| `CodeWF.Markdown` | 完整 MarkdownViewer，支持常见 Markdown 元素、代码高亮、图片预览、SVG/图片、数学渲染扩展、多语言资源、增量渲染、导出图片加载、富 HTML 剪贴板与 HTML 转 Markdown 辅助能力。 |
 | `CodeWF.Markdown.Themes` | 默认控件模板和多套排版主题。 |
 
 ## 宿主应用辅助能力
 
 - `MarkdownDocumentExporter` 和 `ExportKind` 提供 PNG、可选择文本 PDF、Word `.docx` 一站式导出 API，可从 Markdown 字符串、Markdown 文件或 `MarkdownExportDocument` 导出；PDF 正文可选择复制，并复用图片加载与栅格化能力嵌入本地、`data:image`、HTTP(S)、SVG/GIF/WebP 图片。
 - `MarkdownHtmlClipboardExtensions`、`CopyKind` 和 `MarkdownSocialCopyProfiles` 提供微信公众号、知乎、稀土掘金的富 HTML 复制能力；宿主应用只需传 Markdown、当前排版主题和目标平台，公共库会生成 inline HTML 并写入 `text/html`、macOS `public.html` 和 Windows 原生 `HTML Format`。
+- `MarkdownHtmlClipboard.Html2Markdown(htmlContent)` 提供反向粘贴转换能力，可把从网页复制得到的 HTML 转为 Markdown，方便宿主编辑器在粘贴前自动处理标题、段落、链接、图片、列表、引用、代码块和表格等常见结构。
 - 需要支持新平台时，可以扩展 `MarkdownSocialCopyProfile`；需要自定义排版主题时，可以传 `MarkdownExportStyle` 或复用应用注册的主题资源。
 
 ## 安装
@@ -66,7 +67,7 @@ tests/CodeWF.Markdown.Tests  渲染和差异服务测试
 
 - Avalonia 应用需要直接渲染 Markdown 内容。
 - 需要为文档、更新日志、AI 回复或帮助中心提供统一排版主题。
-- 需要支持图片、SVG、代码高亮、多语言资源、增量渲染、导出图片嵌入和网页编辑器富 HTML 粘贴。
+- 需要支持图片、SVG、代码高亮、多语言资源、增量渲染、导出图片嵌入、网页编辑器富 HTML 粘贴，以及网页 HTML 粘贴转 Markdown。
 - 希望用示例工程验证不同 Markdown 内容在桌面端的表现。
 
 ## 构建

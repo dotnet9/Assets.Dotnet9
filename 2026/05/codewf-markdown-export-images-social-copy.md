@@ -1,9 +1,10 @@
 ![](https://img1.dotnet9.com/2026/05/codewf-markdown-avalonia-cover.svg)
 
-这两天继续打磨 **CodeWF.Markdown** 和 **Vex** 的 Markdown 发布链路，集中解决了两个看起来很小、实际很影响写作体验的问题：
+这两天继续打磨 **CodeWF.Markdown** 和 **Vex** 的 Markdown 发布链路，集中解决了三个看起来很小、实际很影响写作体验的问题：
 
 1. Markdown 导出 PDF / Word 后，图片要能跟着文件走，发给别人离线打开也能看。
 2. 从 Vex 复制到微信公众号、知乎、稀土掘金时，粘贴出来应该是带排版样式的富文本，而不是一段明晃晃的 HTML 源码。
+3. 从网页复制资料回到 Vex 中间编辑器时，应该自动把剪贴板 HTML 转成 Markdown，而不是丢掉标题、链接、列表和表格结构。
 
 这篇文章不做完整产品介绍，专门聊这轮背后的技术实现。
 
@@ -128,7 +129,7 @@ ImageParts.Add(new DocxImagePart(relationshipId, target, bytes));
 
 ## 1.4 PDF 导出：文本可选择，图片仍跟着文件走
 
-`CodeWF.Markdown` 12.0.3.13 已经把 PDF 导出从整页位图切片推进到可选择文本输出。正文段落、标题、列表等内容会按页面布局写入 PDF 文本，并带上 Unicode 文本映射；别人打开 PDF 时，可以像普通 PDF 一样选择、复制正文。
+`CodeWF.Markdown` 12.0.3.14 已经把 PDF 导出从整页位图切片推进到可选择文本输出。正文段落、标题、列表等内容会按页面布局写入 PDF 文本，并带上 Unicode 文本映射；别人打开 PDF 时，可以像普通 PDF 一样选择、复制正文。
 
 图片链路仍然复用前面的公共加载和栅格化能力。导出前先把本地、相对、`data:image`、HTTP(S)、SVG/GIF/WebP 这些来源解析成稳定字节，需要时转成 PNG，再把图片作为 PDF 图片内容嵌入：
 
@@ -395,6 +396,14 @@ await clipboard.SetMarkdownHtmlAsync(
 
 如果传入的是 Markdown 字符串，自媒体复制里的相对图片会按当前工作目录解析；如果用文件路径创建复制内容，图片则可以按 Markdown 文件所在目录解析。这样 API 保持简单，同时仍然覆盖常见的本地图片场景。
 
+这次还补了反向粘贴 API：
+
+```csharp
+var markdown = MarkdownHtmlClipboard.Html2Markdown(htmlContent);
+```
+
+宿主编辑器可以先读取剪贴板里的 `text/html`、macOS `public.html` 或 Windows `HTML Format`，再把 HTML 交给 `Html2Markdown(htmlContent)` 转成 Markdown 后插入编辑区。这个转换覆盖常见文章结构：标题、段落、链接、图片、列表、引用、代码块和表格。Vex 中间编辑器现在的粘贴路径就是这样处理网页复制内容；没有 HTML 或转换失败时，再回落到普通文本粘贴。
+
 ## 3.1 应用如何扩展个性化排版主题
 
 这次也顺手整理了排版主题扩展方式。
@@ -462,6 +471,8 @@ MarkdownTypographyThemeRegistry.Register(
 
 CF_HTML 也不是 Vex 独有的。任何项目只要想把 HTML 粘贴到 Chromium 系网页编辑器，都可能踩到同一个坑。所以 `MarkdownHtmlClipboard` 也应该是公共能力。
 
+网页复制回 Markdown 编辑器同样不是 Vex 独有的。浏览器通常会同时提供纯文本和 HTML，如果只取纯文本，标题层级、链接 URL、图片、表格、引用和代码块很容易丢结构。`MarkdownHtmlClipboard.Html2Markdown(htmlContent)` 把这条反向转换也放进公共库，宿主应用只负责决定粘贴优先级和失败兜底。
+
 公众号、知乎、掘金的 HTML 结构、尾注和兼容习惯也属于可复用的发布 profile，这次已经下沉到 `CodeWF.Markdown`。Vex 仍然保留的是应用体验层：读取当前文档、当前主题、当前菜单目标，然后调用公共 API。
 
 现在的边界大概是：
@@ -473,6 +484,7 @@ CodeWF.Markdown
   - MarkdownImageRasterizer
   - MarkdownHtmlClipboard
   - MarkdownHtmlClipboardExtensions
+  - MarkdownHtmlConverter
   - CopyKind
   - MarkdownSocialCopyRenderer
   - MarkdownSocialCopyProfiles
@@ -484,7 +496,9 @@ CodeWF.Markdown
 Vex
   - 读取当前文档和当前排版主题
   - 选择发布目标
+  - 读取剪贴板 HTML 并决定粘贴兜底
   - 调用公共剪贴板能力
+  - 调用公共 HTML 转 Markdown 能力
   - 调用公共 PNG / PDF / Word 导出能力
 ```
 
@@ -505,14 +519,15 @@ Vex
 - `CopyKind`/profile 自媒体复制渲染。
 - 本地图片在自媒体复制 HTML 中嵌入。
 - 自定义排版主题注册后可生成 `MarkdownExportStyle`。
+- 普通 HTML、表格/图片、CF_HTML 片段标记和 Windows 剪贴板 UTF-8 偏移的 HTML 转 Markdown 回归测试。
 
-目前 `CodeWF.Markdown.Tests` 里 42 个测试通过。
+目前 `CodeWF.Markdown.Tests` 里 48 个测试通过。
 
-Vex 侧也确认了本地包引用方式：先在 `CodeWF.Markdown` 本地打包 `12.0.3.13`，再让 Vex 通过本地 NuGet 包源引用，而不是跨仓库 `ProjectReference`。这样更接近真实发布包的使用方式，也能提前发现 NuGet content files、版本号、依赖还原这类问题。
+Vex 侧也确认了本地包引用方式：先在 `CodeWF.Markdown` 本地打包 `12.0.3.14`，再让 Vex 通过本地 NuGet 包源引用，而不是跨仓库 `ProjectReference`。这样更接近真实发布包的使用方式，也能提前发现 NuGet content files、版本号、依赖还原这类问题。
 
 ## 6. 实际效果
 
-对用户来说，这轮改动最后应该只体现成两件事：
+对用户来说，这轮改动最后应该体现成三件事：
 
 第一，导出更安心。
 
@@ -522,6 +537,10 @@ Vex 侧也确认了本地包引用方式：先在 `CodeWF.Markdown` 本地打包
 
 点击“复制到公众号 / 知乎 / 稀土掘金”，剪贴板里不再只是普通文本，而是网页编辑器能识别的富 HTML。粘贴后应该直接显示排版结果，而不是 `<section>...</section>` 这种源码文本。
 
+第三，网页资料回到 Markdown 编辑器时少一步整理。
+
+从浏览器复制一段文章、表格或链接列表后，直接粘贴到 Vex 中间编辑器，会优先读取剪贴板 HTML 并转成 Markdown。粘贴出来保留 Markdown 标题、链接、图片、列表、引用、代码块和表格结构，后续继续编辑会自然很多。
+
 ![](https://img1.dotnet9.com/2026/05/vex-copy-to-wechat-editor.gif)
 
 ![微信公众号编辑器](https://img1.dotnet9.com/2026/05/codewf-markdown-copy-wechat.png)
@@ -530,16 +549,17 @@ Vex 侧也确认了本地包引用方式：先在 `CodeWF.Markdown` 本地打包
 
 Markdown 编辑器的很多体验问题，都藏在“最后一公里”。
 
-预览时能看到图片，不代表导出后图片还在；能生成 HTML，不代表粘贴到公众号就是富文本；主题能在应用里切换，不代表复制出去还能保留样式。
+预览时能看到图片，不代表导出后图片还在；能生成 HTML，不代表粘贴到公众号就是富文本；浏览器能复制网页内容，不代表粘进 Markdown 编辑器后结构还在；主题能在应用里切换，不代表复制出去还能保留样式。
 
-这轮把图片加载、图片栅格化、文档导出、富 HTML 剪贴板和排版主题扩展这几块公共能力补到 `CodeWF.Markdown`，再让 Vex 的 PDF、Word、自媒体复制链路复用它们。结果不是新增一个特别显眼的大按钮，而是让写完文章以后“导出去、粘出去、发出去”这几步少掉一些奇怪的断点。
+这轮把图片加载、图片栅格化、文档导出、富 HTML 剪贴板、HTML 转 Markdown 和排版主题扩展这几块公共能力补到 `CodeWF.Markdown`，再让 Vex 的 PDF、Word、自媒体复制和网页粘贴链路复用它们。结果不是新增一个特别显眼的大按钮，而是让写完文章以后“导出去、粘出去、发出去”，以及整理外部资料这几步少掉一些奇怪的断点。
 
 后面还会继续打磨两块：
 
 - PDF 继续补齐复杂块级元素、分页断点和排版主题细节。
 - 自媒体复制继续按公众号、知乎、掘金的真实编辑器行为补兼容细节。
+- 网页 HTML 转 Markdown 继续补更多真实页面里的边界标签和样式降级规则。
 
-但这次最核心的坑已经填上了：图片不该只活在本机路径里，HTML 也不该只作为明文躺在剪贴板里。
+但这次最核心的坑已经填上了：图片不该只活在本机路径里，HTML 也不该只作为明文躺在剪贴板里，更不该在从网页回到 Markdown 编辑器时把结构全部丢掉。
 
 - Markdown控件仓库：https://github.com/dotnet9/CodeWF.Markdown
 - Vex应用仓库：https://github.com/dotnet9/Vex

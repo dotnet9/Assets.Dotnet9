@@ -18,6 +18,7 @@ Release v1.1.0: [https://github.com/dotnet9/Vex/releases/tag/v1.1.0](https://git
 - The File menu covers new/open/open folder/recent files/reopen with encoding/copy to WeChat Official Account, Zhihu, and Juejin/save/export/print/properties/delete/close.
 - Export supports HTML, PNG, selectable-text PDF, and Word `.docx`; PNG/PDF/Word reuse `CodeWF.Markdown` `MarkdownDocumentExporter`, including relative local images, `data:image`, HTTP(S), SVG/GIF/WebP conversion, and save-location reveal. PDF body text remains selectable and copyable, and PDF/Word embed image assets so shared files remain viewable offline.
 - Copy to WeChat Official Account, Zhihu, and Juejin passes the current Markdown, active typography theme, and target platform to `CodeWF.Markdown` `MarkdownHtmlClipboardExtensions`, writing rich HTML clipboard formats with the active typography theme applied.
+- When content copied from a web page is pasted into the middle editor, Vex reads clipboard HTML first and uses `MarkdownHtmlClipboard.Html2Markdown(htmlContent)` to insert Markdown. Plain paste remains the fallback when HTML is unavailable or conversion fails.
 - Find/replace supports case matching, whole-word matching, regex, match counts, and debounced scans for long documents.
 - Theme color, Markdown typography theme, compact layout, and language switching are grouped under the Help menu.
 - Simplified Chinese, Traditional Chinese, English, and Japanese UI/help documents are included.
@@ -33,6 +34,7 @@ Release v1.1.0: [https://github.com/dotnet9/Vex/releases/tag/v1.1.0](https://git
 | File workflow | New documents, single-file open, folder open, recent files, drag-and-drop open, save, save as, external change detection, and reload. |
 | Outline navigation | Builds an outline from Markdown headings and jumps to the selected section. |
 | Find/replace | Case, whole-word, regex, match count, replace next, and replace all. |
+| Web paste | Browser-copied content pasted into the middle Markdown editor is converted from clipboard HTML to Markdown first, with plain text paste as the fallback. |
 | Export | HTML, PNG, selectable-text PDF, Word `.docx`, and print preview; PNG/PDF/Word reuse the shared `CodeWF.Markdown` export API, PDF body text remains selectable and copyable, and PDF/Word embed local, `data:image`, HTTP(S), SVG/GIF/WebP images. |
 | Publishing copy | Shared `CodeWF.Markdown` rich HTML clipboard output for WeChat Official Account, Zhihu, and Juejin. Windows `HTML Format` uses UTF-8 CF_HTML bytes and applies the active typography theme. |
 | Localization | Simplified Chinese, Traditional Chinese, English, and Japanese through Lang.Avalonia.Json. |
@@ -82,7 +84,7 @@ scripts/
   Stress, release packaging, and MSIX packaging scripts
 ```
 
-The application uses Prism for module composition and CodeWF.EventBus for cross-module messages. Markdown preview, export image loading, and rich social-editor clipboard output reuse CodeWF.Markdown, keeping the writing flow inside native Avalonia controls.
+The application uses Prism for module composition and CodeWF.EventBus for cross-module messages. Markdown preview, export image loading, rich social-editor clipboard output, and web HTML paste-to-Markdown conversion reuse CodeWF.Markdown, keeping the writing flow inside native Avalonia controls.
 
 ## Tech Stack
 
