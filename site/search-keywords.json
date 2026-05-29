@@ -1,8 +1,8 @@
 ﻿[
   {
     "Query": "dotnet",
-    "Count": 1728,
-    "LastSearchedAt": "2026-05-26T07:37:25.4782852+00:00"
+    "Count": 1820,
+    "LastSearchedAt": "2026-05-29T06:06:16.2158658+00:00"
   },
   {
     "Query": "WINUI入门",
@@ -48,6 +48,16 @@
     "Query": "大数据",
     "Count": 2,
     "LastSearchedAt": "2026-04-30T04:36:16.188368+00:00"
+  },
+  {
+    "Query": "Vex 维刻",
+    "Count": 1,
+    "LastSearchedAt": "2026-05-27T12:41:30.0647712+00:00"
+  },
+  {
+    "Query": "Vex",
+    "Count": 1,
+    "LastSearchedAt": "2026-05-27T08:01:32.8461674+00:00"
   },
   {
     "Query": "为什么",
