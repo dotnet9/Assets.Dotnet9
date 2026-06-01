@@ -1,8 +1,8 @@
 ﻿[
   {
     "Query": "dotnet",
-    "Count": 1820,
-    "LastSearchedAt": "2026-05-29T06:06:16.2158658+00:00"
+    "Count": 1871,
+    "LastSearchedAt": "2026-06-01T05:14:17.2316134+00:00"
   },
   {
     "Query": "WINUI入门",
@@ -13,6 +13,11 @@
     "Query": "wpf",
     "Count": 3,
     "LastSearchedAt": "2026-05-20T02:56:05.5718137+00:00"
+  },
+  {
+    "Query": "文本哈希计算",
+    "Count": 2,
+    "LastSearchedAt": "2026-05-29T13:36:47.9856354+00:00"
   },
   {
     "Query": "handy",
@@ -183,11 +188,6 @@
     "Query": "it-tool",
     "Count": 1,
     "LastSearchedAt": "2026-05-05T10:46:22.3092019+00:00"
-  },
-  {
-    "Query": "文本哈希计算",
-    "Count": 1,
-    "LastSearchedAt": "2026-05-05T01:10:57.7969769+00:00"
   },
   {
     "Query": "SHA",
