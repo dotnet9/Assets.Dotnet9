@@ -1,5 +1,3 @@
-![](https://img1.dotnet9.com/2022/05/cover44.gif)
-
 ## 一、前言
 
 当下主流的 Waf 或 Windows Defender 等终端杀软、EDR 大多都是从特征码查杀，在.Net 和 VBS 下一句话木马中最常见的特征是 eval，对于攻击者来说需要避开这个系统关键字，可从反序列化方式避开 eval，但公开已久相信很多安全产品已经能够很好检测和阻断这类攻击请求。笔者从.NET 内置的 CodeDomProvider 类下手实现动态编译.NET 代码，指明 JScrip 或者 C#作为编译语言，编译的 WebShell 目前`Windows Defender不会查杀`。而防御者从流量或终端识别 "CodeDomProvider.CreateProvider、CreateInstance"等特征码。

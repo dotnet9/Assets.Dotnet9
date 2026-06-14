@@ -1,5 +1,3 @@
-![](https://img1.dotnet9.com/2023/01/cover_06.jpg)
-
 这里是笔者在开发 MAUI 应用时踩的坑，以及一些笔记的汇总。
 
 不得不说 MAUI 挺垃圾的。

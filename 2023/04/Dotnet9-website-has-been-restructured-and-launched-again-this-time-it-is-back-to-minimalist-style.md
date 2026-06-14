@@ -1,5 +1,3 @@
-![](https://img1.dotnet9.com/2023/04/cover_03.jpg)
-
 大家好，我是沙漠尽头的狼。
 
 我的网站Dotnet9 (https://dotnet9.com) 进行了新一轮的重构：前台由Vue 3换回[ASP.NET Core Razor Pages](https://learn.microsoft.com/zh-cn/aspnet/core/razor-pages/?view=aspnetcore-8.0&tabs=visual-studio)，风格以简约为主，主打内容为王，放弃花哨，网友称风格类似早期博客园，站长其实买的杨青青个人博客（https://www.yangqq.com/）的静态模板；后端采用MASA Framework搭建，框架地址是 https://www.masastack.com/framework，后端依然以DDD设计为开发指导，这次加入了CQRS。开发总体规划是：后端框架采用MASA Framework应该是不变了，并且前后台现在全面拥抱了 .NET 8。

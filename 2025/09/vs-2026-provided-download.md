@@ -1,5 +1,3 @@
-![](https://img1.dotnet9.com/2025/09/cover_01.png)
-
 最佳体验配置看截图：
 
 ![](https://img1.dotnet9.com/2025/09/0101.png)

@@ -1,5 +1,3 @@
-![](https://img1.dotnet9.com/2026/05/codewf-toolbox-avalonia-cover.svg)
-
 今天这篇文章，站长来聊聊我自己开发的 **CodeWF Toolbox，CodeWF 工具箱**。
 
 熟悉我的朋友一般都叫我“站长”，因为我还有一个网站：[CodeWF](https://codewf.com)。这个工具箱也是围绕我平时写代码、维护网站、整理资料、排查问题时反复遇到的需求做出来的。它不是一个只摆几个按钮的 Avalonia Demo，而是一个已经有 100 多个工具入口的本地桌面工具箱。

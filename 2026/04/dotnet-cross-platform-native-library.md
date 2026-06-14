@@ -1,5 +1,3 @@
-![](https://img1.dotnet9.com/2026/04/cross-platform-library-cover.svg)
-
 做 .NET 开发时，偶尔需要调用第三方提供的本地库（Native Library），比如硬件SDK、加密库或底层通信组件。这篇文章通过一个实际的Demo项目，分享我在引入跨平台本地库时的两大方案和避坑经验。
 
 ## 1. 项目准备

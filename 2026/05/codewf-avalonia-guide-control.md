@@ -1,5 +1,3 @@
-![](https://img1.dotnet9.com/2026/05/codewf-avalonia-guide-cover.svg)
-
 **CodeWF.AvaloniaControls** 新增了 `Guide` 引导控件，用来在 Avalonia 桌面应用里做新手引导、功能漫游和局部提示。
 
 它参考了 [AtomUI](https://github.com/AtomUI/AtomUI) 的 `Tour` 思路，但落地重点更偏桌面软件：菜单、二级菜单、弹层、TabItem、目标延迟出现、窗口尺寸变化，这些都要能稳定定位。

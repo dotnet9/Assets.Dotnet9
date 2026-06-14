@@ -1,5 +1,3 @@
-![横幅](https://img1.dotnet9.com/2024/01/1101.png)
-
 ## 项目信息
 
 [![AntDesign](https://img.shields.io/badge/AntDesign%20-5.0-1677ff?style=for-the-badge&logo=antdesign)](https://ant-design.antgroup.com/components/overview-cn)

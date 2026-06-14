@@ -1,5 +1,3 @@
-![](https://img1.dotnet9.com/2021/11/cover_01.jpeg)
-
 选自【知乎】一个问答，原帖子问题：**特斯拉为何使用.net core 技术框架？为何不用 java/go 等？**
 
 下面来自【AlseinX】大佬的一个回答，站长觉得比较在理：

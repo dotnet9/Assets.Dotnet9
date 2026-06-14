@@ -1,5 +1,3 @@
-![](https://img1.dotnet9.com/2022/04/cover_25.jpeg)
-
 ## 1. 前言
 
 去年 10 月，IdentityServer 的两位创建者和维护者 Dominick Baier 和 Brock Allen 宣布，他们当前的商业模式本质上是不可持续的，因此他们将使用互惠公共许可（Reciprocal Public License，RPL）的付费许可模式，并在一家新公司 Duende Software 下提供 IdentityServer5。

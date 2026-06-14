@@ -1,5 +1,3 @@
-![](https://img1.dotnet9.com/2026/01/cover_02.png)
-
 TIOBE原文链接：https://www.tiobe.com/tiobe-index/
 
 ![](https://img1.dotnet9.com/2026/01/0201.png)

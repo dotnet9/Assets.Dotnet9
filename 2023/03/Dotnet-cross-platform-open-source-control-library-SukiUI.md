@@ -1,12 +1,3 @@
-<div id="header" align="center">
- <kbd>
-<img src="https://img1.dotnet9.com/2023/03/suki_photo.jpg" width="200" height="200"></img> 
-  </kbd>
-<br/>
-Suki是控件库作者宠物狗的名字
-</div>
-<br/>
-
 ## ✨ SukiUI
 
 ### UI主题, AvaloniaUI的一款桌面端和移动端控件库 ! 

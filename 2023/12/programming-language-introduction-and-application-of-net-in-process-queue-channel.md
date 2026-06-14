@@ -1,5 +1,3 @@
-![](https://img1.dotnet9.com/2023/12/cover_04.jpg)
-
 最近，博主为 [FakeRPC](https://github.com/qinyuanpei/FakeRpc) 增加了 [WebSocket](https://developer.mozilla.org/zh-CN/docs/Web/API/WebSocket) 协议的支持。这意味着，我们可以借助其全双工通信的特性，在一个连接请求内发送多条数据。FakeRPC 目前最大的遗憾是，建立在 HTTP 协议上而不是 TCP/IP 协议上。因此，考虑 WebSocket 协议，更多的是为了验证 [JSON-RPC](https://www.jsonrpc.org/specification) 的可行性，以及为接下来的要支持的 TCP/IP 协议铺路。也许，你从未意识到这些概念间千丝万缕的联系，可如果我们把每一次 RPC 调用都理解为一组消息，你是不是就能更加深刻地理解 RPC 这个稍显古老的事物了呢？在编写 FakeRPC 的过程中，我使用了 `.NET` 中的全新数据结构 `Channel` 来实现消息的转发。以服务端为例，每一个 RPC 请求经过 CallInvoker 处理以后，作为 RPC 响应的结果其实并不是立即发回给客户端，而是通过一个后台线程从 `Channel` 取出消息再发回客户端。 那么，博主为什么要舍近求远呢？我希望，这篇文章可以告诉你答案。
 
 # Channel 入门

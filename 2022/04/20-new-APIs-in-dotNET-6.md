@@ -1,5 +1,3 @@
-![](https://img1.dotnet9.com/2022/04/cover_32.png)
-
 ## 1. DateOnly & TimeOnly
 
 .NET 6 引入了两种期待已久的类型 - DateOnly 和 TimeOnly, 它们分别代表 DateTime 的日期和时间部分。

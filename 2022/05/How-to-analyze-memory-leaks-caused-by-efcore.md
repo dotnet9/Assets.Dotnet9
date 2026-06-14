@@ -1,5 +1,3 @@
-![不要让内存泄漏成为洪水](https://img1.dotnet9.com/2022/05/cover_12.jpg)
-
 术语“内存泄漏”和“ .NET 应用程序”不是经常一起使用。但是，我们最近在一个.NET Core Web 应用程序中出现了一系列内存不足异常。事实证明，此问题是由 Entity Framework Core 中的行为更改引起的，尽管最终的解决方案非常简单，但实现该目标的过程既充满挑战又有趣。
 
 该系统本身托管在 Azure 中，由 Angular SPA 前端和后端的.NET Core API 组成，使用 Entity Framework Core 与 Azure SQL 数据库进行通信。作为专门从事.NET 开发的软件咨询公司，我们之前已经编写了许多类似的应用程序。因此，[内存不足崩溃](https://dzone.com/articles/what-causes-outofmemoryerror)是无法预料的，因此我们立即知道这是需要认真对待的事情。使用 Azure 门户中的指标，我们可以看到内存使用率稳步上升，然后突然下降：此下降是应用程序崩溃。

@@ -1,5 +1,3 @@
-![](https://img1.dotnet9.com/2026/05/codewf-ai-rebuilt-cover.svg)
-
 我宣布一下。
 
 这个网站，终于被我用 AI 重构成了。

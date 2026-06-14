@@ -1,5 +1,3 @@
-![](https://img1.dotnet9.com/2026/05/codewf-markdown-avalonia-cover.svg)
-
 今天这篇文章，站长来聊聊我最近基本开发完成的 **CodeWF.Markdown**。
 
 这是一个基于 **C# + Avalonia 12 + Markdig** 做的 Markdown 渲染控件。它最早来自 `CodeWF.AvaloniaControls`，后来我把 Markdown 相关代码单独拆成了一个仓库和一组 NuGet 包：渲染控件、主题资源、示例程序、测试都围绕 Markdown 预览这件事来组织。

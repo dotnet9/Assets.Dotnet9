@@ -1,5 +1,3 @@
-![](https://img1.dotnet9.com/2024/01/0301.png)
-
 **开源地址**：
 
 Yi.Admin : (https://gitee.com/ccnetcore/yi)

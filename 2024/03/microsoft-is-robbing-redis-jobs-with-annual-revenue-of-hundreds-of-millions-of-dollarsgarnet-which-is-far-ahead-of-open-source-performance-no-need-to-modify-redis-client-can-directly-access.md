@@ -1,5 +1,3 @@
-![微软开抢年收入上亿美元的 Redis 饭碗？开源性能遥遥领先的 Garnet：无需修改，Redis 客户端可直接接入](https://img1.dotnet9.com/2024/03/cover_09.png)
-
 > Redis 和 Dragonfly 该有危机感了！
 
 ## 微软开源全新缓存存储系统 Garnet

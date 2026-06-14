@@ -1,5 +1,3 @@
-![](https://img1.dotnet9.com/2022/03/cover_30.png)
-
 GitHub 上有很多优秀的 .NET 开源项目，它们很适合用来学习 .NET 、设计模式和架构。
 
 ## nopCommerce

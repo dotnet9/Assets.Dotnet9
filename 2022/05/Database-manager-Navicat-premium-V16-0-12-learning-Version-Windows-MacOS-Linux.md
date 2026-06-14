@@ -1,5 +1,3 @@
-![](https://img1.dotnet9.com/2022/05/cover_22.png)
-
 Navicat Premium 是一套数据库管理工具，让你以单一程序同時连接到 MySQL、MariaDB、SQL Server、SQLite、Oracle 和 PostgreSQL 数据库。 此外，它与 Drizzle、OurDelta 和 Percona Server 兼容，并支持 Amazon RDS、Amazon Aurora、Amazon Redshift、SQL Azure、Oracle Cloud 和 Google Cloud 等云数据库。
 
 结合了其他 Navicat 成员的功能，Navicat Premium 支持大部份在现今数据库管理系统中使用的功能，包括存储过程、事件、触发器、函数、视图等。

@@ -1,5 +1,3 @@
-![](https://img1.dotnet9.com/2023/07/cover_03.png)
-
 ## Ip2region 是什么？
 
 ip2region v2.0 - 是一个离线 IP 地址定位库和 IP 定位数据管理框架，10 微秒级别的查询效率，提供了众多主流编程语言的 xdb 数据生成和查询客户端实现。

@@ -1,5 +1,3 @@
-![](https://img1.dotnet9.com/2022/04/cover_30.png)
-
 ## 1. 关于 QuestPDF
 
 > QuestPDF 是一个开源的工具库，可以在.NET 或者.NET Core 中生成 pdf 文档

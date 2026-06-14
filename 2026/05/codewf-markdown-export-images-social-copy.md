@@ -1,5 +1,3 @@
-![](https://img1.dotnet9.com/2026/05/codewf-markdown-avalonia-cover.svg)
-
 这两天继续打磨 **CodeWF.Markdown** 和 **Vex** 的 Markdown 发布链路，集中解决了三个看起来很小、实际很影响写作体验的问题：
 
 1. Markdown 导出 PDF / Word 后，图片要能跟着文件走，发给别人离线打开也能看。

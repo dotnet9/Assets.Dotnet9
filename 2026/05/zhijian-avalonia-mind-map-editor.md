@@ -1,5 +1,3 @@
-![](https://img1.dotnet9.com/2026/05/zhijian-avalonia-cover.svg)
-
 今天继续打磨本地桌面脑图编辑器 **枝见 Zhijian**。
 
 枝见是一个基于 **C# + Avalonia** 的 Markdown-first 脑图编辑器。它不是一个复杂项目管理系统，而是围绕写提纲、梳理功能设计、整理文章结构这些高频场景，把大纲、Markdown 和脑图三种视角绑定到同一棵树上。

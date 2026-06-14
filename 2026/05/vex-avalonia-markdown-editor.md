@@ -1,5 +1,3 @@
-![](https://img1.dotnet9.com/2026/05/vex-avalonia-cover.svg)
-
 这次介绍一个新的桌面写作工具：**Vex（维刻）**。
 
 Vex 是基于 **.NET 10 + Avalonia 12** 构建的免费开源跨平台 Markdown 编辑器。它不做大而全的知识库，也不复刻成熟商业编辑器，当前主线很清楚：**Markdown 源码编辑、实时预览、文件管理、导出，以及复制到内容平台**。

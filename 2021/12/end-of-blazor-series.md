@@ -1,5 +1,3 @@
-![开心](https://img1.dotnet9.com/2021/12/cover_45.jpeg)
-
 ## 终于完结
 
 Blazor 系列转载`终结啦`，其实站长在 25 号时就已`完成转载`，并同步在`Dotnet9`网站（`https://dotnet9.com`）发布，并创建了一个专辑`《大家一起学Blazor》`，大家可随时在网站浏览。

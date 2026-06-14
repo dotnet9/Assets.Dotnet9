@@ -1,5 +1,3 @@
-![](https://img1.dotnet9.com/2026/04/cover_01.svg)
-
 网站又从Blazor回归Razor Pages，本文从源码角度解读网站当前的架构设计。
 
 ## 1. 为什么从Blazor回归Razor Pages

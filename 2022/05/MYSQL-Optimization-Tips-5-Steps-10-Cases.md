@@ -1,5 +1,3 @@
-![](https://img1.dotnet9.com/2022/05/cover_36.jpg)
-
 ## SQL 优化一般步骤
 
 ### 1 通过慢查日志等定位那些执行效率较低的 SQL 语句
