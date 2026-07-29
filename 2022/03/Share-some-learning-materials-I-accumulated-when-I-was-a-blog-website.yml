@@ -1,4 +1,4 @@
-title: 分享我做Dotnet9博客网站时积累的一些资料
+﻿title: 分享我做Dotnet9博客网站时积累的一些资料
 slug: share-some-learning-materials-i-accumulated-when-i-was-a-blog-website
 description: "Dotnet9网站用WordPress搭建了两年，去年开始自学ASP.NET Core MVC，开始了独立开发网站之路，现在网站前台算是有模有样了，后台正在开发中"
 date: 2022-03-02 07:57:36
@@ -11,7 +11,7 @@ categories:
   - 课程
 tags:
   - .NET
-  - C#
+  - "C#"
   - ASP.NET Core
   - 开源
   - 开源博客

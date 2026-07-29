@@ -1,128 +1,134 @@
 [
   {
     "Sort": 1,
-    "Name": "Blazor",
-    "Memo": "Blazor框架、组件开发与项目实践",
-    "Slug": "blazor"
+    "Name": ".NET",
+    "Memo": ".NET 生态、运行时、工程实践与工具链经验",
+    "Slug": "dotnet"
   },
   {
     "Sort": 2,
-    "Name": "ASP.NET Core",
-    "Memo": "ASP.NET Core后端开发与架构实践",
-    "Slug": "asp-net-core"
-  },
-  {
-    "Sort": 3,
-    "Name": "Avalonia UI",
-    "Memo": "Avalonia跨平台桌面开发与控件实践",
-    "Slug": "avalonia"
-  },
-  {
-    "Sort": 4,
     "Name": "WPF",
-    "Memo": "WPF桌面开发、界面设计与框架实践",
+    "Memo": "WPF 桌面开发、界面设计、控件与框架实践",
     "Slug": "wpf"
   },
   {
+    "Sort": 3,
+    "Name": "Blazor",
+    "Memo": "Blazor 框架、组件开发与项目实践",
+    "Slug": "blazor"
+  },
+  {
+    "Sort": 4,
+    "Name": "Avalonia UI",
+    "Memo": "Avalonia 跨平台桌面开发、控件与生态实践",
+    "Slug": "avalonia"
+  },
+  {
     "Sort": 5,
-    "Name": "Winform",
-    "Memo": "Winform桌面应用开发与控件使用",
-    "Slug": "winform"
+    "Name": "ASP.NET Core",
+    "Memo": "ASP.NET Core 后端开发、Web API 与架构实践",
+    "Slug": "asp-net-core"
   },
   {
     "Sort": 6,
     "Name": "MAUI",
-    "Memo": ".NET MAUI跨平台应用开发实践",
+    "Memo": ".NET MAUI 跨平台应用开发实践",
     "Slug": "maui"
   },
   {
     "Sort": 7,
-    "Name": "EF Core",
-    "Memo": "EF Core数据访问、迁移与性能优化",
-    "Slug": "ef-core"
+    "Name": "Winform",
+    "Memo": "Winform 桌面应用开发、控件使用与旧项目维护",
+    "Slug": "winform"
   },
   {
     "Sort": 8,
-    "Name": "Dapper",
-    "Memo": "Dapper轻量级数据访问与实战技巧",
-    "Slug": "dapper"
+    "Name": "EF Core",
+    "Memo": "EF Core 数据访问、迁移、建模与性能优化",
+    "Slug": "ef-core"
   },
   {
     "Sort": 9,
-    "Name": ".NET",
-    "Memo": ".NET生态、运行时与工程经验沉淀",
-    "Slug": "dotnet"
-  },
-  {
-    "Sort": 10,
-    "Name": "Python",
-    "Memo": "Python语言、工具脚本与项目实践",
-    "Slug": "python"
-  },
-  {
-    "Sort": 11,
     "Name": "前端",
-    "Memo": "前端开发、工程化与交互体验实践",
+    "Memo": "前端开发、工程化、交互体验与 Web 实践",
     "Slug": "frontend"
   },
   {
-    "Sort": 12,
-    "Name": "MySQL",
-    "Memo": "MySQL数据库设计、查询与运维经验",
-    "Slug": "mysql"
+    "Sort": 10,
+    "Name": "桌面开发",
+    "Memo": "桌面应用、跨平台 UI、编辑器与客户端工程实践",
+    "Slug": "desktop-development"
   },
   {
-    "Sort": 13,
-    "Name": "数据库",
-    "Memo": "数据库建模、性能优化与实践总结",
-    "Slug": "database"
-  },
-  {
-    "Sort": 14,
-    "Name": "Flutter",
-    "Memo": "Flutter跨平台应用开发与界面实践",
-    "Slug": "flutter"
-  },
-  {
-    "Sort": 15,
-    "Name": "Swift UI",
-    "Memo": "Swift UI界面开发与苹果生态实践",
-    "Slug": "swift-ui"
-  },
-  {
-    "Sort": 16,
-    "Name": "更多语言",
-    "Memo": "收录多语言开发经验与工具实践",
-    "Slug": "morelanguage"
-  },
-  {
-    "Sort": 17,
-    "Name": "Docker",
-    "Memo": "Docker容器化部署、镜像与运维实践",
-    "Slug": "docker"
-  },
-  {
-    "Sort": 18,
-    "Name": "课程",
-    "Memo": "精选技术课程、学习路线与成长资源",
-    "Slug": "course"
-  },
-  {
-    "Sort": 19,
-    "Name": "架构设计",
-    "Memo": "系统架构、工程治理与设计经验",
-    "Slug": "architecture-design"
-  },
-  {
-    "Sort": 20,
-    "Name": "数字化转型",
-    "Memo": "数字化转型案例、方法与落地实践",
-    "Slug": "digital-transformation"
-  },
-  {
-    "Sort": 21,
+    "Sort": 11,
     "Name": "分享",
     "Memo": "技术观察、经验复盘与实用资源分享",
     "Slug": "share"
+  },
+  {
+    "Sort": 12,
+    "Name": "课程",
+    "Memo": "技术课程、学习路线与成长资源",
+    "Slug": "course"
+  },
+  {
+    "Sort": 13,
+    "Name": "Flutter",
+    "Memo": "Flutter 跨平台应用开发与界面实践",
+    "Slug": "flutter"
+  },
+  {
+    "Sort": 14,
+    "Name": "MySQL",
+    "Memo": "MySQL 数据库设计、查询、优化与运维经验",
+    "Slug": "mysql"
+  },
+  {
+    "Sort": 15,
+    "Name": "Docker",
+    "Memo": "Docker 容器化部署、镜像与运维实践",
+    "Slug": "docker"
+  },
+  {
+    "Sort": 16,
+    "Name": "Swift UI",
+    "Memo": "Swift UI 界面开发与苹果生态实践",
+    "Slug": "swift-ui"
+  },
+  {
+    "Sort": 17,
+    "Name": "架构设计",
+    "Memo": "系统架构、工程治理、设计模式与方案复盘",
+    "Slug": "architecture-design"
+  },
+  {
+    "Sort": 18,
+    "Name": "数据库",
+    "Memo": "数据库建模、查询优化与工程实践",
+    "Slug": "database"
+  },
+  {
+    "Sort": 19,
+    "Name": "Dapper",
+    "Memo": "Dapper 轻量级数据访问与实战技巧",
+    "Slug": "dapper"
+  },
+  {
+    "Sort": 20,
+    "Name": "Python",
+    "Memo": "Python 语言、工具脚本与项目实践",
+    "Slug": "python"
+  },
+  {
+    "Sort": 21,
+    "Name": "更多语言",
+    "Memo": "多语言开发经验与跨生态工具实践",
+    "Slug": "morelanguage"
+  },
+  {
+    "Sort": 22,
+    "Name": "数字化转型",
+    "Memo": "数字化转型案例、方法与落地实践",
+    "Slug": "digital-transformation"
   }
 ]

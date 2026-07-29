@@ -1,4 +1,4 @@
-title: "MAUI 跨平台播客应用程序(Conf 2021)"
+﻿title: "MAUI 跨平台播客应用程序(Conf 2021)"
 slug: maui-cross-platform-podcasting-app-conf-2021
 description: "移动端和桌面：适用于 iOS、Android、macOS 和 Windows 的原生 .NET MAUI 应用程序"
 date: 2021-12-03 12:27:39
@@ -13,7 +13,7 @@ categories:
   - MAUI
 tags:
   - .NET
-  - C#
+  - "C#"
   - MAUI
   - 开源
   - 开源MAUI

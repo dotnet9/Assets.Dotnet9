@@ -1,4 +1,4 @@
-title: "如何提升.NET 控制台应用体验？"
+﻿title: "如何提升.NET 控制台应用体验？"
 slug: how-to-improve-net-console-application-experience
 description: "来，教你写出酷炫的控制台应用"
 date: 2022-04-04 11:21:39
@@ -15,6 +15,6 @@ albums:
   - C#开源项目
 tags:
   - .NET
-  - C#
+  - "C#"
   - 控制台
   - 酷炫的控制台

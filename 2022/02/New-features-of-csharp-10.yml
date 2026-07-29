@@ -1,4 +1,4 @@
-title: C# 10的新特性
+﻿title: C# 10的新特性
 slug: new-features-of-csharp-10
 description: "我们很高兴地宣布 C# 10 作为 .NET 6 和 Visual Studio 2022的一部分已经发布了。"
 date: 2022-02-12 10:14:31
@@ -13,7 +13,7 @@ categories:
   - .NET
 tags:
   - .NET
-  - C#
+  - "C#"
   - Visual Studio
   - .NET 6
   - C# 10

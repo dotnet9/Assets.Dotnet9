@@ -1,4 +1,4 @@
-title: C# Wpf 个人初学小案例-09设计一个优美的注册界面 Demo
+﻿title: C# Wpf 个人初学小案例-09设计一个优美的注册界面 Demo
 slug: design-a-beautiful-registration-interface-demo
 description: 设计一个优美的注册界面 Demo
 date: 2022-04-15 19:58:12
@@ -15,6 +15,6 @@ albums:
   - WPF UI设计
 tags:
   - .NET
-  - C#
+  - "C#"
   - WPF
   - WPF UI设计

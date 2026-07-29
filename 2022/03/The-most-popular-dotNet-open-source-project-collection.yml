@@ -1,4 +1,4 @@
-title: 最流行的 .NET 开源项目合集
+﻿title: 最流行的 .NET 开源项目合集
 slug: the-most-popular-dotnet-open-source-project-collection
 description: "GitHub 上有很多优秀的 .NET 开源项目，它们很适合用来学习 .NET 、设计模式和架构。"
 date: 2022-03-30 11:35:29
@@ -15,7 +15,7 @@ albums:
   - C#开源项目
 tags:
   - .NET
-  - C#
+  - "C#"
   - 开源项目
   - 开源
   - 架构设计

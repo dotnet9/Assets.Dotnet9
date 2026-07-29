@@ -1,4 +1,4 @@
-title: 初识MASA Blazor
+﻿title: 初识MASA Blazor
 slug: first-met-masa-blazor
 description: 一个Mateial风格的开源Blazor组件库
 date: 2022-01-12 22:12:04
@@ -15,6 +15,6 @@ albums:
   - Blazor组件库
 tags:
   - .NET
-  - C#
+  - "C#"
   - Blazor
   - 开源

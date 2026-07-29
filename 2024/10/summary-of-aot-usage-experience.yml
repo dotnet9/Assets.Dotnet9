@@ -12,7 +12,7 @@ albums:
   - C# AOT
 tags:
   - .NET
-  - C#
+  - "C#"
   - Dapper
   - Prism
   - AOT

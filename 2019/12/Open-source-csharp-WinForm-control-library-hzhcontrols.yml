@@ -1,4 +1,4 @@
-title: 开源Winform控件库 - HZHControls
+﻿title: 开源Winform控件库 - HZHControls
 slug: open-source-csharp-winform-control-library-hzhcontrols
 description: "一个基于.NET Framework 4.0，扁平化的、漂亮的、开源的C# Winform控件库。"
 date: 2019-12-15 13:45:56
@@ -14,7 +14,7 @@ albums:
   - Winform控件库
 tags:
   - .NET
-  - C#
+  - "C#"
   - Winform
   - 控件库
   - Winform开源项目

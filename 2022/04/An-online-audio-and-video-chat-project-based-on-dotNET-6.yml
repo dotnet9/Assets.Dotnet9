@@ -1,4 +1,4 @@
-title: 基于 .NET 6 开发的在线音视频聊天项目
+﻿title: 基于 .NET 6 开发的在线音视频聊天项目
 slug: an-online-audio-and-video-chat-project-based-on-dotnet-6
 description: "基于.NET 6开发的在线音视频聊天项目，客户端WPF，后端.NET API。"
 date: 2022-04-03 17:34:24
@@ -15,7 +15,7 @@ albums:
   - WPF开源项目
 tags:
   - .NET
-  - C#
+  - "C#"
   - WPF
   - WPF开源项目
   - 开源

@@ -1,4 +1,4 @@
-title: "【链接很多】.NET 7 的 ASP.NET Core 路线图"
+﻿title: "【链接很多】.NET 7 的 ASP.NET Core 路线图"
 slug: many-links-asp-net-core-of-net-core-roadmap
 description: 我们计划在 .NET 7 版本中添加到服务器的一些功能亮点
 date: 2022-02-19 18:05:34
@@ -13,5 +13,5 @@ categories:
   - ASP.NET Core
 tags:
   - .NET
-  - C#
+  - "C#"
   - ASP.NET Core

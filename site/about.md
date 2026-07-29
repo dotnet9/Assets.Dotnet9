@@ -7,11 +7,11 @@
 </p>
 <h1 align="center">码坊</h1>
 
-一个使用`Dotnet 9`开发的`博客`+`在线工具箱`系统，一直在开发中...
+一个以中文内容为主的技术站点，分享 .NET 技术文章、开源项目说明和常用在线工具，一直在开发和整理中...
 
 ![dotnet-version](https://img.shields.io/badge/.NET%209.0-blue) ![Visual Studio 2022](https://img.shields.io/badge/Visual%20Studio%20-2022-blueviolet) <a target="_blank" href="https://qm.qq.com/cgi-bin/qm/qr?k=iL6egdGSGCMPezcUyzMPEcs9qsllgwr-&jump_from=webapi"><img border="0" src="https://pub.idqqimg.com/wpa/images/group.png" alt="Dotnet9软件技术交流" title="Dotnet9软件技术交流"></a> [![码云](https://img.shields.io/badge/Gitee-%E7%A0%81%E4%BA%91-orange)](https://gitee.com/dotnet9/CodeWF) [![GitHub](https://img.shields.io/badge/%20-github-%2324292e)](https://github.com/dotnet9/CodeWF) [![GitHub stars](https://img.shields.io/github/stars/dotnet9/CodeWF)](https://github.com/dotnet9/CodeWF)
 
-建此站目的在于分享以 Dotnet 为主的技术类文章，希望以此平台与更多的程序员朋友交流技术，祝愿 Dotnet 社区发展越来越好。
+我希望把平时写文章、做项目和开发小工具的过程放在这里：文章用来记录经验，专题方便连续阅读，项目页介绍开源作品，工具页解决一些日常开发小任务。希望以此平台与更多程序员朋友交流技术，祝愿 Dotnet 社区发展越来越好。
 
 ## 1. 联系
 
@@ -49,7 +49,7 @@
 3. 邀请群成员加入，请主动艾特管理员，并说明原因，原则上非技术人员，不予批准。
 4. 不闲聊，不搭讪，不吹水。做一个安静的群。只分享技术。本群并不打算让大家把吹水群从 QQ 群迁移到微信群，这样的吹水毫无意义。
 5. 这个群是纯粹的技术交流群，期望大家更多的分享自己遇到的技术问题。请不要吹水，要做到言之有物。
-6. 本群的目的是为实现技能的长期沉淀！
+6. 本群希望大家多分享真实问题和解决过程，方便彼此学习和回看。
 7. 为了保护群主和其他管理员的安全。请在国家法律允许范围内聊天。违禁词包括色情、政治，宗教信仰，地方歧视，语言歧视，棋牌，和其他一切与现行法律法规不符的地方。
 
 ## 2. 站长其他平台链接：
