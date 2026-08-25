@@ -1,8 +1,8 @@
 ﻿[
   {
     "Query": "dotnet",
-    "Count": 1871,
-    "LastSearchedAt": "2026-06-01T05:14:17.2316134+00:00"
+    "Count": 1956,
+    "LastSearchedAt": "2026-06-05T01:17:58.3923746+00:00"
   },
   {
     "Query": "WINUI入门",
@@ -53,6 +53,11 @@
     "Query": "大数据",
     "Count": 2,
     "LastSearchedAt": "2026-04-30T04:36:16.188368+00:00"
+  },
+  {
+    "Query": "2027",
+    "Count": 1,
+    "LastSearchedAt": "2026-06-04T15:04:32.0993541+00:00"
   },
   {
     "Query": "Vex 维刻",
