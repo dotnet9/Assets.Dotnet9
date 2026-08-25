@@ -1,3 +1,11 @@
+> 转载声明：本文为转载内容，原作者为 **WeihanLi amazingdotnet**，版权归原作者所有。
+>
+> 原文链接：[阅读原文](https://mp.weixin.qq.com/s/rL2F19XV1Gusc0JE6C1Lrg)
+>
+> 本站依据现有来源信息进行 Markdown 排版与内容归档。
+
+---
+
 ## Intro
 
 .NET 正在不断进化，致力于让开发体验更加简单高效。最近，.NET CLI（命令行工具）提出了一项令人期待的新特性：可以直接运行 C# 源文件，无需创建项目文件。这个特性被称为**文件式程序**(File-based Programs), 在 .NET 10 中将引入 `dotnet run file` 的支持，支持 dotnet sdk 直接运行，目前在 .NET 10 Preview 4 中已经可用，大家可以下载最新的 .NET 10 SDK 来尝试下，之前自己动手写的 dotnet-exec 部分功能可以使用原生的 SDK 支持了

@@ -1,0 +1,22 @@
+title: "通信协议实战：Modbus与OPC UA怎么选"
+slug: dotnet-industrial-control-modbus-vs-opc-ua
+description: "通信协议是上位机和PLC沟通的语言，本文对比Modbus与OPC UA的特点、选择方法和常见问题。"
+date: 2026-07-31 08:30:00
+lastmod: 2026-08-25 09:11:01
+author: wackyxk
+originalTitle: "通信协议实战：Modbus与OPC UA怎么选"
+originalLink: https://mp.weixin.qq.com/s/FZ26r2ggcgrs3S1GDQvSKw
+copyright: Reprinted
+draft: false
+cover: https://img1.dotnet9.com/2026/08/dotnet-industrial-control-modbus-vs-opc-ua-cover.jpg
+banner: false
+categories:
+  - .NET
+albums:
+  - .NET工控入门与生态
+tags:
+  - .NET
+  - 工控
+  - Modbus
+  - OPC UA
+  - PLC

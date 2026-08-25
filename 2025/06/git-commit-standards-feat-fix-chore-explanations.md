@@ -1,3 +1,11 @@
+> 转载声明：本文为转载内容，原作者为 **JacksonChen\_**，版权归原作者所有。
+>
+> 原文链接：[阅读原文](https://blog.csdn.net/chenyajundd/article/details/139322838)
+>
+> 本站依据现有来源信息进行 Markdown 排版与内容归档。
+
+---
+
 ## 写到前面
 
 经常看到别人提交的代码记录里面包含一些feat、fix、chore等等，而我在提交时也不会区分什么，直接写下提交信息，今天就来看一下怎么个事，就拿 element-plus 举例来看一下。

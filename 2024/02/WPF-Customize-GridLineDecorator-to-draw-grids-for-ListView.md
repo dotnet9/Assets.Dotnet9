@@ -1,3 +1,11 @@
+> 转载声明：本文为转载内容，原作者为 **大佛脚下**，版权归原作者所有。
+>
+> 原文链接：[阅读原文](https://www.cnblogs.com/RMay/archive/2010/12/27/1918048.html)
+>
+> 本站依据现有来源信息进行 Markdown 排版与内容归档。
+
+---
+
 感谢 [rgqancy](http://www.cnblogs.com/rgqancy/) 指出的 Bug，已经修正
 
 先给个效果图：

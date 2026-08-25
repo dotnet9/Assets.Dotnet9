@@ -1,0 +1,22 @@
+title: ".NET工控概念科普——工控的\"实时\"和Web的\"实时\"不是一回事"
+slug: dotnet-industrial-control-real-time-vs-web-real-time
+description: "解释工控实时性与Web实时性的本质区别，以及硬实时、软实时和.NET上位机的设计边界。"
+date: 2026-08-07 08:30:00
+lastmod: 2026-08-25 09:11:01
+author: wackyxk
+originalTitle: ".NET工控概念科普——工控的\"实时\"和Web的\"实时\"不是一回事"
+originalLink: https://mp.weixin.qq.com/s/HY9XU0jmAFA55tE3CpxJgA
+copyright: Reprinted
+draft: false
+cover: https://img1.dotnet9.com/2026/08/dotnet-industrial-control-real-time-vs-web-real-time-cover.jpg
+banner: false
+categories:
+  - .NET
+albums:
+  - .NET工控入门与生态
+tags:
+  - .NET
+  - 工控
+  - 实时性
+  - PLC
+  - 上位机

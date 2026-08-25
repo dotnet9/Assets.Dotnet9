@@ -1,0 +1,22 @@
+title: ".NET工控生态总览：带你厘清工控项目的典型架构"
+slug: dotnet-industrial-control-architecture-overview
+description: "通过七层全景图串联设备、通信、采集、数据、业务、展示和企业系统，厘清.NET工控项目典型架构。"
+date: 2026-08-25 08:30:00
+lastmod: 2026-08-25 09:11:01
+author: wackyxk
+originalTitle: ".NET工控生态总览：带你厘清工控项目的典型架构"
+originalLink: https://mp.weixin.qq.com/s/6X8LHFAujLJQUU1bAh42XQ
+copyright: Reprinted
+draft: false
+cover: https://img1.dotnet9.com/2026/08/dotnet-industrial-control-architecture-overview-cover.jpg
+banner: false
+categories:
+  - .NET
+albums:
+  - .NET工控入门与生态
+tags:
+  - .NET
+  - 工控
+  - 上位机
+  - 工业架构
+  - PLC

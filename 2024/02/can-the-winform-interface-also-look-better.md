@@ -1,3 +1,11 @@
+> 转载声明：本文为转载内容，原作者为 **DotNet学习交流**，版权归原作者所有。
+>
+> 原文链接：[阅读原文](https://mp.weixin.qq.com/s/QCAlQNqDW-sicae2ybELkw)
+>
+> 本站依据现有来源信息进行 Markdown 排版与内容归档。
+
+---
+
 ## 在 winform blazor hybrid 中绘图
 
 前几天跟大家介绍了在 winform 中使用 blazor hybrid，而且还说配上 blazor 的 ui 可以让我们的 winform 程序设计的更加好看，接下来我想以一个在 winform blazor hybrid 中绘图的例子来进行说明，希望对你有所帮助。

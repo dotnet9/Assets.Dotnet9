@@ -1,3 +1,11 @@
+> 转载声明：本文为转载内容，原作者为 **tokengo**，版权归原作者所有。
+>
+> 原文链接：[阅读原文](https://mp.weixin.qq.com/s/PSG4HrJzhybfr2oZWgNuNg)
+>
+> 本站依据现有来源信息进行 Markdown 排版与内容归档。
+
+---
+
 ![大佬消息截图](https://img1.dotnet9.com/2024/01/0601.png)
 
 Azure 应用服务用 YARP 取代了 Nginx，获得了 80%以上的吞吐量。他们每天处理 160B 多个请求(1.9 m RPS)。这是微软的一项了不起的技术创新。

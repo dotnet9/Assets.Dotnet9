@@ -1,3 +1,11 @@
+> 转载声明：本文为转载内容，原作者为 **追逐时光者**，版权归原作者所有。
+>
+> 原文链接：[阅读原文](https://mp.weixin.qq.com/s/WTopCglS2ELPWaa5wAMyTQ)
+>
+> 本站依据现有来源信息进行 Markdown 排版与内容归档。
+
+---
+
 ## **前言**
 
 今天大姚给大家分享一款由 WPF 开源的、免费的（MIT License）、即开即用、即用即走的翻译、OCR 工具：STranslate。

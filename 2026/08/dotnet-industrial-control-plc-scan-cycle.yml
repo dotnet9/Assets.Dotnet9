@@ -1,0 +1,22 @@
+title: ".NET工控概念科普——PLC扫描周期：理解了它才算入了工控的门"
+slug: dotnet-industrial-control-plc-scan-cycle
+description: "从输入采样、程序执行到输出刷新，理解PLC扫描周期及其对上位机采集频率和架构的影响。"
+date: 2026-08-10 08:30:00
+lastmod: 2026-08-25 09:11:01
+author: wackyxk
+originalTitle: ".NET工控概念科普——PLC扫描周期：理解了它才算入了工控的门"
+originalLink: https://mp.weixin.qq.com/s/MzSt3eAMmD87_-FDkHamNQ
+copyright: Reprinted
+draft: false
+cover: https://img1.dotnet9.com/2026/08/dotnet-industrial-control-plc-scan-cycle-cover.jpg
+banner: false
+categories:
+  - .NET
+albums:
+  - .NET工控入门与生态
+tags:
+  - .NET
+  - 工控
+  - PLC
+  - 扫描周期
+  - 上位机

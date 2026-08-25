@@ -53,6 +53,9 @@ That means this repository should be maintained with the same level of disciplin
 
 - English: [CONTENT_GUIDE.md](./CONTENT_GUIDE.md)
 - 中文： [CONTENT_GUIDE-zh_CN.md](./CONTENT_GUIDE-zh_CN.md)
+- Content copyright notice: [NOTICE.md](./NOTICE.md)
+
+The repository-level MIT License does not automatically cover third-party reprinted articles or their media. Copyright remains with the original author or rightsholder, subject to each article's metadata, visible reprint notice, and any separate permission terms.
 
 ## Maintenance Notes
 

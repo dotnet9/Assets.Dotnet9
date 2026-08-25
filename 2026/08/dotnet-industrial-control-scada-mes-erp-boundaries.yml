@@ -1,0 +1,22 @@
+title: ".NET工控概念科普——SCADA、MES、ERP三种系统的边界"
+slug: dotnet-industrial-control-scada-mes-erp-boundaries
+description: "厘清SCADA、MES和ERP三类系统的职责边界，以及.NET工控程序在设备层与业务层之间的位置。"
+date: 2026-08-17 08:30:00
+lastmod: 2026-08-25 09:11:01
+author: wackyxk
+originalTitle: ".NET工控概念科普——SCADA、MES、ERP三种系统的边界"
+originalLink: https://mp.weixin.qq.com/s/AX_zXu0E6QgHDQvLwk15DQ
+copyright: Reprinted
+draft: false
+cover: https://img1.dotnet9.com/2026/08/dotnet-industrial-control-scada-mes-erp-boundaries-cover.jpg
+banner: false
+categories:
+  - .NET
+albums:
+  - .NET工控入门与生态
+tags:
+  - .NET
+  - 工控
+  - SCADA
+  - MES
+  - ERP

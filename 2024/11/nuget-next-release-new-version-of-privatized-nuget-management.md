@@ -1,3 +1,11 @@
+> 转载声明：本文为转载内容，原作者为 **tokengo**，版权归原作者所有。
+>
+> 原文链接：[阅读原文](https://mp.weixin.qq.com/s/Lk4mQnRbGHyXUXfRFp25mQ)
+>
+> 本站依据现有来源信息进行 Markdown 排版与内容归档。
+
+---
+
 NuGet Next是一款基于BaGet的一款私有化NuGet管理平台，我们对BaGet进行了扩展，并且提供了更多的功能。
 
 NuGet 最新版开源私有化包管理，我们基于BaGet的基础之上增加了更多的功能，并且对中国市场做更多兼容，比如国产化支持。

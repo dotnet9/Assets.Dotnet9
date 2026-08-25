@@ -82,5 +82,11 @@
     "Name": "Web开源项目",
     "Memo": "收录前端模板、Web工具与开源项目实践",
     "Slug": "web-open-source-projects"
+  },
+  {
+    "Sort": 15,
+    "Name": ".NET工控入门与生态",
+    "Memo": "从PLC通信、数据与业务到SCADA、MES和ERP，系统梳理.NET工控上位机开发",
+    "Slug": "dotnet-industrial-control"
   }
 ]

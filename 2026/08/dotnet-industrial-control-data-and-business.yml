@@ -1,0 +1,22 @@
+title: "工控生态之数据与业务：采集到的数据怎么存、怎么管、怎么用"
+slug: dotnet-industrial-control-data-and-business
+description: "讲完通信协议，再看工控数据如何存储、访问和管理，以及设备状态与业务流程如何设计。"
+date: 2026-08-03 08:30:00
+lastmod: 2026-08-25 09:11:01
+author: wackyxk
+originalTitle: "工控生态之数据与业务：采集到的数据怎么存、怎么管、怎么用"
+originalLink: https://mp.weixin.qq.com/s/btOyVo1NSUsz8nj0zAaILA
+copyright: Reprinted
+draft: false
+cover: https://img1.dotnet9.com/2026/08/dotnet-industrial-control-data-and-business-cover.jpg
+banner: false
+categories:
+  - .NET
+albums:
+  - .NET工控入门与生态
+tags:
+  - .NET
+  - 工控
+  - SQLite
+  - InfluxDB
+  - 状态机

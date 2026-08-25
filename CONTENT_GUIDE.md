@@ -117,3 +117,11 @@ Before merging content updates, verify:
 - cover works in list view
 - internal links and images resolve
 - timeline or site json is updated if needed
+
+## 8. Reprinted Content
+
+- When explicit permission exists, place a visible notice at the start of the article stating that it is republished with the original author's permission, and include the author, original platform, and source URL.
+- Do not add permission claims to historical reprints when the available metadata proves only attribution. State only that the content is reprinted and identify its author and source URL.
+- Sidecar metadata should include `author`, `originalTitle`, `originalLink`, and `copyright: Reprinted`.
+- Limit editorial changes to Markdown formatting, code-block repair, and media localization. Do not silently alter the author's claims or technical conclusions.
+- Third-party reprinted articles and media are not automatically covered by the repository-level MIT License. See [NOTICE.md](./NOTICE.md).

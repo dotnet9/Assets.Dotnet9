@@ -1,0 +1,22 @@
+title: "工控生态之展示与交互：怎么让工业软件不再\"丑\""
+slug: dotnet-industrial-control-display-and-interaction
+description: "从WinForm、WPF和Avalonia选型到图表与控件库，梳理工业软件展示与交互层的设计方法。"
+date: 2026-08-05 08:30:00
+lastmod: 2026-08-25 09:11:01
+author: wackyxk
+originalTitle: "工控生态之展示与交互：怎么让工业软件不再\"丑\""
+originalLink: https://mp.weixin.qq.com/s/39pXYt8j3bhTZQzThNLTVA
+copyright: Reprinted
+draft: false
+cover: https://img1.dotnet9.com/2026/08/dotnet-industrial-control-display-and-interaction-cover.jpg
+banner: false
+categories:
+  - .NET
+albums:
+  - .NET工控入门与生态
+tags:
+  - .NET
+  - 工控
+  - WPF
+  - Avalonia UI
+  - 工业软件

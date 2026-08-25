@@ -53,6 +53,9 @@ site/
 
 - 中文版：[CONTENT_GUIDE-zh_CN.md](./CONTENT_GUIDE-zh_CN.md)
 - English: [CONTENT_GUIDE.md](./CONTENT_GUIDE.md)
+- 内容版权说明：[NOTICE.md](./NOTICE.md)
+
+仓库根目录的 MIT 许可证不自动覆盖第三方转载文章及其配图。转载内容的版权归原作者或原权利人所有，具体以文章元数据、正文转载声明及独立授权约定为准。
 
 ## 维护建议
 

@@ -1,3 +1,11 @@
+> 转载声明：本文为转载内容，原作者为 **程序设计实验室**，版权归原作者所有。
+>
+> 原文链接：[阅读原文](https://mp.weixin.qq.com/s/nDPbEESRN215DzimV12Lgw)
+>
+> 本站依据现有来源信息进行 Markdown 排版与内容归档。
+
+---
+
 ## 前言
 
 最近一直在完善我今年的两款桌面软件：[视频剪辑工具 Clipify](https://blog.deali.cn/Blog/Post/6a903b1c6fb2487f) 和 [AI 文章创作工具 StarBlogPublisher](https://blog.deali.cn/p/starblog-extrapolation-4-publisher-major-upgrade)

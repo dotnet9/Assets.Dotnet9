@@ -1,3 +1,11 @@
+> 转载声明：本文为转载内容，原作者为 **凌敏,核子可乐**，版权归原作者所有。
+>
+> 原文链接：[阅读原文](https://www.infoq.cn/article/ppO8VZPtH59mqj8Np0HN)
+>
+> 本站依据现有来源信息进行 Markdown 排版与内容归档。
+
+---
+
 > Redis 和 Dragonfly 该有危机感了！
 
 ## 微软开源全新缓存存储系统 Garnet
