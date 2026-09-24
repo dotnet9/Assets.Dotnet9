@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 650">
+  <rect width="1400" height="650" fill="#f7fafb"/>
+  <g font-family="Microsoft YaHei, Segoe UI, sans-serif">
+    <text x="70" y="70" font-size="34" font-weight="700" fill="#173743">修复后的发布验证矩阵</text>
+    <text x="72" y="108" font-size="19" fill="#68818d">编译通过只是起点，验收看目标系统上的实际启动和持续运行</text>
+    <g transform="translate(70,165)">
+      <rect width="1260" height="70" rx="12" fill="#183746"/>
+      <text x="220" y="45" text-anchor="middle" font-size="22" fill="#ffffff">目标环境</text>
+      <text x="590" y="45" text-anchor="middle" font-size="22" fill="#ffffff">.NET 10</text>
+      <text x="850" y="45" text-anchor="middle" font-size="22" fill="#ffffff">.NET 11</text>
+      <text x="1110" y="45" text-anchor="middle" font-size="22" fill="#ffffff">关注点</text>
+      <rect y="70" width="1260" height="86" fill="#fff1dd"/>
+      <rect y="156" width="1260" height="86" fill="#ffffff"/>
+      <rect y="242" width="1260" height="86" fill="#e8f5f3"/>
+      <rect y="328" width="1260" height="86" fill="#ffffff"/>
+      <g stroke="#c4d2d6" stroke-width="2" fill="none">
+        <path d="M0 70 H1260 M0 156 H1260 M0 242 H1260 M0 328 H1260 M0 414 H1260"/>
+        <path d="M440 0 V414 M700 0 V414 M960 0 V414"/>
+      </g>
+      <g fill="#304f5b" font-size="21">
+        <text x="220" y="123" text-anchor="middle">Windows 7</text>
+        <text x="220" y="209" text-anchor="middle">Windows 10/11</text>
+        <text x="220" y="295" text-anchor="middle">麒麟 V10 Linux x64/arm64</text>
+        <text x="220" y="381" text-anchor="middle">发布产物</text>
+        <text x="505" y="123" text-anchor="start" fill="#2c806f">启动 / 运行</text>
+        <text x="765" y="123" text-anchor="start" fill="#2c806f">启动 / 运行</text>
+        <text x="505" y="209" text-anchor="start" fill="#2c806f">回归</text>
+        <text x="765" y="209" text-anchor="start" fill="#2c806f">回归</text>
+        <text x="505" y="295" text-anchor="start" fill="#2c806f">跨平台</text>
+        <text x="765" y="295" text-anchor="start" fill="#2c806f">跨平台</text>
+        <text x="505" y="381" text-anchor="start" fill="#2c806f">AOT</text>
+        <text x="765" y="381" text-anchor="start" fill="#2c806f">AOT</text>
+        <text x="1110" y="123" text-anchor="middle">原生加载</text>
+        <text x="1110" y="209" text-anchor="middle">现代系统回归</text>
+        <text x="1110" y="295" text-anchor="middle">x64/arm64 RID</text>
+        <text x="1110" y="381" text-anchor="middle">清理后重建</text>
+      </g>
+      <g fill="#2c9a86">
+        <circle cx="480" cy="115" r="10"/><circle cx="740" cy="115" r="10"/>
+        <circle cx="480" cy="201" r="10"/><circle cx="740" cy="201" r="10"/>
+        <circle cx="480" cy="287" r="10"/><circle cx="740" cy="287" r="10"/>
+        <circle cx="480" cy="373" r="10"/><circle cx="740" cy="373" r="10"/>
+      </g>
+    </g>
+    <circle cx="1010" cy="625" r="9" fill="#2c9a86"/>
+    <text x="1030" y="632" font-size="18" fill="#68818d">绿点表示该项测试通过</text>
+    <text x="70" y="625" font-size="19" fill="#68818d">固定运行时间、检查日志与进程状态，才能把“能编译”推进到“可交付”。</text>
+  </g>
+</svg>
