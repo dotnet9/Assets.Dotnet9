@@ -349,3 +349,11 @@ MigrationBackup/
 # Ionide (cross platform F# VS Code tools) working folder
 .ionide/
 site/sitemap.xml
+.user.ini
+.well-known/acme-challenge/obKbWrxCQXp5NME4Otw8rU-yrZNM0bbmddDvh-XMVqc
+404.html
+index.html
+.user.ini
+.well-known/acme-challenge/obKbWrxCQXp5NME4Otw8rU-yrZNM0bbmddDvh-XMVqc
+404.html
+index.html
