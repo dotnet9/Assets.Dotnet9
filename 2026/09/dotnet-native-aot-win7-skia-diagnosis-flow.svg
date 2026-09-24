@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 850">
+  <defs>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="8" flood-color="#0d1b2a" flood-opacity=".14"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10Z" fill="#477a86"/></marker>
+  </defs>
+  <rect width="1400" height="850" fill="#f5f9fa"/>
+  <g font-family="Microsoft YaHei, Segoe UI, sans-serif">
+    <text x="80" y="78" font-size="34" font-weight="700" fill="#173743">从现象到根因：先定位失败层</text>
+    <text x="82" y="116" font-size="19" fill="#68818d">启动崩溃不等于业务代码出错，先用差异缩小范围</text>
+    <g filter="url(#shadow)">
+      <rect x="80" y="175" width="270" height="110" rx="18" fill="#183746"/>
+      <text x="215" y="222" text-anchor="middle" font-size="25" fill="#ffffff">启动即崩溃</text>
+      <text x="215" y="258" text-anchor="middle" font-size="17" fill="#a9d4d6">窗口尚未显示</text>
+    </g>
+    <path d="M350 230 H455" stroke="#477a86" stroke-width="4" marker-end="url(#arrow)"/>
+    <g filter="url(#shadow)">
+      <rect x="465" y="175" width="270" height="110" rx="18" fill="#e8f5f3" stroke="#4bbcaf" stroke-width="3"/>
+      <text x="600" y="222" text-anchor="middle" font-size="24" fill="#16474b">跨系统对比</text>
+      <text x="600" y="258" text-anchor="middle" font-size="17" fill="#4a7074">Win10/11 / 麒麟 V10 正常</text>
+    </g>
+    <path d="M735 230 H840" stroke="#477a86" stroke-width="4" marker-end="url(#arrow)"/>
+    <g filter="url(#shadow)">
+      <rect x="850" y="175" width="270" height="110" rx="18" fill="#fff1dd" stroke="#e9a65b" stroke-width="3"/>
+      <text x="985" y="222" text-anchor="middle" font-size="24" fill="#70471c">排除表象</text>
+      <text x="985" y="258" text-anchor="middle" font-size="17" fill="#8b653c">换字体 / 换 .NET 无变化</text>
+    </g>
+    <path d="M1120 230 H1225" stroke="#477a86" stroke-width="4" marker-end="url(#arrow)"/>
+    <g filter="url(#shadow)">
+      <rect x="1235" y="175" width="100" height="110" rx="18" fill="#e9eef6" stroke="#7088a6" stroke-width="3"/>
+      <text x="1285" y="222" text-anchor="middle" font-size="21" fill="#314b68">原生</text>
+      <text x="1285" y="258" text-anchor="middle" font-size="21" fill="#314b68">边界</text>
+    </g>
+    <path d="M1285 285 V360" stroke="#477a86" stroke-width="4" marker-end="url(#arrow)"/>
+    <g filter="url(#shadow)">
+      <rect x="955" y="370" width="380" height="115" rx="18" fill="#ffffff" stroke="#b3c4c9" stroke-width="2"/>
+      <text x="1145" y="416" text-anchor="middle" font-size="24" fill="#173743">核对依赖闭包</text>
+      <text x="1145" y="453" text-anchor="middle" font-size="17" fill="#68818d">Avalonia · Skia · HarfBuzz · SVG</text>
+    </g>
+    <path d="M955 427 H790" stroke="#477a86" stroke-width="4" marker-end="url(#arrow)"/>
+    <g filter="url(#shadow)">
+      <rect x="355" y="370" width="425" height="115" rx="18" fill="#e8f5f3" stroke="#4bbcaf" stroke-width="3"/>
+      <text x="567" y="416" text-anchor="middle" font-size="24" fill="#16474b">恢复兼容版本集合</text>
+      <text x="567" y="453" text-anchor="middle" font-size="17" fill="#4a7074">托管绑定与各平台 native assets 对齐</text>
+    </g>
+    <path d="M355 427 H190 V565" stroke="#477a86" stroke-width="4" fill="none" marker-end="url(#arrow)"/>
+    <g filter="url(#shadow)">
+      <rect x="80" y="575" width="400" height="120" rx="18" fill="#183746"/>
+      <text x="280" y="622" text-anchor="middle" font-size="24" fill="#ffffff">清理后重新 AOT 发布</text>
+      <text x="280" y="660" text-anchor="middle" font-size="17" fill="#a9d4d6">避免旧 DLL 混入验证目录</text>
+    </g>
+    <path d="M480 635 H625" stroke="#477a86" stroke-width="4" marker-end="url(#arrow)"/>
+    <g filter="url(#shadow)">
+      <rect x="635" y="575" width="335" height="120" rx="18" fill="#fff1dd" stroke="#e9a65b" stroke-width="3"/>
+      <text x="802" y="622" text-anchor="middle" font-size="24" fill="#70471c">固定时间运行</text>
+      <text x="802" y="660" text-anchor="middle" font-size="17" fill="#8b653c">看窗口、日志、进程退出状态</text>
+    </g>
+    <path d="M970 635 H1115" stroke="#477a86" stroke-width="4" marker-end="url(#arrow)"/>
+    <g filter="url(#shadow)">
+      <rect x="1125" y="575" width="210" height="120" rx="18" fill="#4bbcaf"/>
+      <text x="1230" y="622" text-anchor="middle" font-size="24" fill="#ffffff">验收</text>
+      <text x="1230" y="660" text-anchor="middle" font-size="17" fill="#eafffb">跨系统可启动</text>
+    </g>
+  </g>
+</svg>
