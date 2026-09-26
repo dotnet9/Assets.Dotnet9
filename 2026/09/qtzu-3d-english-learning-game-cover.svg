@@ -1,0 +1,127 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" font-family="Microsoft YaHei, PingFang SC, Segoe UI, sans-serif">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFF2F7"/>
+      <stop offset=".5" stop-color="#FFFDF8"/>
+      <stop offset="1" stop-color="#E7F5FE"/>
+    </linearGradient>
+    <linearGradient id="eggBody" x1=".2" y1="0" x2=".85" y2="1">
+      <stop offset="0" stop-color="#FFF9EC"/>
+      <stop offset=".55" stop-color="#FFDC96"/>
+      <stop offset="1" stop-color="#EFAF57"/>
+    </linearGradient>
+    <linearGradient id="ground" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#DEF3E4"/>
+      <stop offset="1" stop-color="#C2E6D0"/>
+    </linearGradient>
+    <linearGradient id="pinkChip" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#FFE3EF"/>
+      <stop offset="1" stop-color="#FFD0E2"/>
+    </linearGradient>
+    <filter id="soft" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="16" stdDeviation="20" flood-color="#E8487F" flood-opacity=".16"/>
+    </filter>
+    <filter id="chip" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#5B5148" flood-opacity=".12"/>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#sky)"/>
+  <g fill="#FFFFFF" opacity=".9">
+    <ellipse cx="560" cy="132" rx="92" ry="32"/>
+    <ellipse cx="628" cy="116" rx="58" ry="28"/>
+    <ellipse cx="156" cy="300" rx="70" ry="26"/>
+  </g>
+
+  <!-- ===== 右侧：词宠蛋 ===== -->
+  <g filter="url(#soft)">
+    <ellipse cx="1152" cy="452" rx="102" ry="132" fill="url(#eggBody)"/>
+    <ellipse cx="1116" cy="392" rx="26" ry="38" fill="#FFFFFF" opacity=".45"/>
+  </g>
+
+  <!-- ===== 右上：浮起的词宠名牌 ===== -->
+  <g filter="url(#chip)" font-size="22">
+    <g transform="translate(1010, 176)">
+      <rect width="166" height="50" rx="15" fill="#FFFDF8" stroke="#FFD3E4" stroke-width="3"/>
+      <text x="17" y="33" fill="#5B5148">🐱 cat</text>
+      <text x="100" y="33" fill="#A99A8E" font-size="19">小猫</text>
+    </g>
+    <g transform="translate(1320, 232)">
+      <rect width="188" height="50" rx="15" fill="#FFFDF8" stroke="#DCEBF7" stroke-width="3"/>
+      <text x="17" y="33" fill="#5B5148">🌸 flower</text>
+      <text x="126" y="33" fill="#A99A8E" font-size="19">花</text>
+    </g>
+    <g transform="translate(1042, 320)">
+      <rect width="176" height="50" rx="15" fill="#FFFDF8" stroke="#DCEEDF" stroke-width="3"/>
+      <text x="17" y="33" fill="#5B5148">⛵ boat</text>
+      <text x="112" y="33" fill="#A99A8E" font-size="19">小船</text>
+    </g>
+  </g>
+
+  <!-- ===== 地面 ===== -->
+  <path d="M0 700 C 260 660 440 726 720 694 S 1250 646 1600 698 V900 H0 Z" fill="url(#ground)"/>
+  <path d="M0 780 C 320 748 520 806 830 780 S 1300 736 1600 784 V900 H0 Z" fill="#B5DEC5" opacity=".6"/>
+
+  <!-- ===== 一校一门剪影：牌楼 / 苏式主楼 / 火箭发射架 / 灯塔 / 药葫芦 ===== -->
+  <g transform="translate(0, 700)">
+    <!-- 中式牌楼（大门派） -->
+    <g transform="translate(744, 0)">
+      <rect x="0" y="-64" width="11" height="64" fill="#B0483A"/>
+      <rect x="86" y="-64" width="11" height="64" fill="#B0483A"/>
+      <rect x="-16" y="-84" width="129" height="21" rx="6" fill="#B0483A"/>
+      <rect x="-6" y="-108" width="109" height="17" rx="6" fill="#E8C86A"/>
+      <rect x="30" y="-130" width="49" height="19" rx="6" fill="#B0483A"/>
+    </g>
+    <!-- 苏式主楼（哈工大类） -->
+    <g transform="translate(892, 0)">
+      <rect x="0" y="-62" width="92" height="62" fill="#D8D2C4"/>
+      <rect x="32" y="-92" width="27" height="31" fill="#C24A50"/>
+      <rect x="41" y="-114" width="8" height="23" fill="#8A8378"/>
+      <g fill="#8A8378">
+        <rect x="12" y="-44" width="13" height="19"/><rect x="39" y="-44" width="13" height="19"/><rect x="66" y="-44" width="13" height="19"/>
+      </g>
+    </g>
+    <!-- 火箭发射架（航空航天） -->
+    <g transform="translate(1290, 0)">
+      <path d="M24 -104 L42 -104 L38 -42 L28 -42 Z" fill="#EAF6FE"/>
+      <path d="M24 -70 L10 -42 L28 -42 Z" fill="#57B8E8"/>
+      <path d="M42 -70 L56 -42 L38 -42 Z" fill="#57B8E8"/>
+      <rect x="22" y="-42" width="22" height="42" fill="#C9D6DF"/>
+      <rect x="11" y="-14" width="44" height="13" rx="4" fill="#A8B6C0"/>
+    </g>
+    <!-- 灯塔（海洋/海事） -->
+    <g transform="translate(1424, 0)">
+      <path d="M12 0 L28 -104 L44 0 Z" fill="#F5F1E8"/>
+      <rect x="9" y="-115" width="38" height="12" rx="4" fill="#D95F4B"/>
+      <rect x="11" y="-64" width="34" height="12" fill="#D95F4B"/>
+      <circle cx="28" cy="-128" r="11" fill="#FFD98A"/>
+    </g>
+    <!-- 麦穗风车（农林） -->
+    <g transform="translate(1010, 0)">
+      <rect x="26" y="-56" width="9" height="56" fill="#B08858"/>
+      <g stroke="#7CBB5E" stroke-width="7" stroke-linecap="round">
+        <path d="M30 -58 L2 -76"/><path d="M30 -58 L58 -76"/><path d="M30 -58 L30 -88"/><path d="M30 -58 L2 -40"/>
+      </g>
+      <circle cx="30" cy="-58" r="7" fill="#E8C86A"/>
+    </g>
+  </g>
+
+  <!-- ===== 左侧标题 ===== -->
+  <text x="96" y="182" font-size="25" font-weight="700" fill="#E8487F" letter-spacing="6">AI × 3D WEB GAME</text>
+  <text x="92" y="292" font-size="68" font-weight="700" fill="#5B5148">我用 AI 写了个</text>
+  <text x="92" y="378" font-size="68" font-weight="700" fill="#5B5148">3D 儿童英语游戏</text>
+  <text x="96" y="446" font-size="27" fill="#8C7F73">在 52 座中国城市里，把 900 多个单词读给词宠听</text>
+  <g transform="translate(96, 486)">
+    <rect x="0" y="0" width="188" height="46" rx="23" fill="url(#pinkChip)"/>
+    <text x="94" y="31" font-size="21" fill="#E8487F" text-anchor="middle">开发测试中</text>
+    <rect x="204" y="0" width="228" height="46" rx="23" fill="#E9F6FE"/>
+    <text x="318" y="31" font-size="21" fill="#3E8FBF" text-anchor="middle">欢迎体验 / 提 Issue</text>
+    <rect x="448" y="0" width="146" height="46" rx="23" fill="#EAF7EE"/>
+    <text x="521" y="31" font-size="21" fill="#3F8F55" text-anchor="middle">MIT 开源</text>
+  </g>
+  <text x="96" y="592" font-size="23" fill="#B3A79C">52 座城市 · 900+ 人教版小学英语词 · 程序化建模 · 语音三级降级</text>
+
+  <!-- ===== 页脚 ===== -->
+  <text x="96" y="856" font-size="24" fill="#8C7F73">qtzu.com · github.com/dotnet9/qtzu</text>
+  <text x="1504" y="856" font-size="22" fill="#B3A79C" text-anchor="end">AI 开发 3D Web 游戏的验证记录</text>
+</svg>

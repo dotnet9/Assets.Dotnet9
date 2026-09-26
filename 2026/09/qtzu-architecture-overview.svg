@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" font-family="Microsoft YaHei, PingFang SC, Segoe UI, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFFDF8"/>
+      <stop offset="1" stop-color="#F2F9FD"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FF6FA5"/>
+      <stop offset="1" stop-color="#57B8E8"/>
+    </linearGradient>
+    <filter id="card" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#5B5148" flood-opacity=".08"/>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect x="0" y="0" width="12" height="900" fill="url(#accent)"/>
+
+  <text x="72" y="96" font-size="42" font-weight="700" fill="#5B5148">Q淘族技术结构：一个 3D 游戏，零构建配置</text>
+  <text x="72" y="142" font-size="24" fill="#9A8D82">纯前端 ES Modules + Three.js 0.160（CDN importmap）· 程序化建模 · 内容全 JSON 驱动</text>
+
+  <!-- 六层 -->
+  <g filter="url(#card)">
+    <!-- 1 -->
+    <rect x="72" y="186" width="1120" height="100" rx="18" fill="#FFF6FA" stroke="#FFD3E4" stroke-width="2"/>
+    <text x="104" y="230" font-size="27" font-weight="700" fill="#5B5148">🌐 入口层</text>
+    <text x="104" y="266" font-size="22" fill="#8C7F73">index.html + js/ 35 个 ES Module：没有打包器、没有 node_modules，打开就跑</text>
+    <rect x="1236" y="186" width="292" height="100" rx="18" fill="#FFFFFF" stroke="#F3E5DC" stroke-width="2"/>
+    <text x="1268" y="228" font-size="21" fill="#A99A8E">game.js 315KB</text>
+    <text x="1268" y="258" font-size="21" fill="#A99A8E">world.js 135KB · ui.js 150KB</text>
+
+    <!-- 2 -->
+    <rect x="72" y="304" width="1120" height="100" rx="18" fill="#F3FAFF" stroke="#DCEBF7" stroke-width="2"/>
+    <text x="104" y="348" font-size="27" font-weight="700" fill="#5B5148">🧱 建模层</text>
+    <text x="104" y="384" font-size="22" fill="#8C7F73">js/models/ 程序化建模：几何工具箱 / 宠物形 / 参数化词宠 / 场景物，全库无外部模型文件</text>
+    <rect x="1236" y="304" width="292" height="100" rx="18" fill="#FFFFFF" stroke="#F3E5DC" stroke-width="2"/>
+    <text x="1268" y="346" font-size="21" fill="#A99A8E">一校一门：52 所定制</text>
+    <text x="1268" y="376" font-size="21" fill="#A99A8E">+ 20 条风格族规则</text>
+
+    <!-- 3 -->
+    <rect x="72" y="422" width="1120" height="100" rx="18" fill="#F4FBF5" stroke="#DCEEDF" stroke-width="2"/>
+    <text x="104" y="466" font-size="27" font-weight="700" fill="#5B5148">🗂️ 内容层</text>
+    <text x="104" y="502" font-size="22" fill="#8C7F73">data/cities/&lt;city&gt;/{city,universities,foods,scenes}.json + img/：加城市只加 JSON，缺图回退外链 → emoji</text>
+    <rect x="1236" y="422" width="292" height="100" rx="18" fill="#FFFFFF" stroke="#F3E5DC" stroke-width="2"/>
+    <text x="1268" y="464" font-size="21" fill="#A99A8E">52 座城市 · 近千张图</text>
+    <text x="1268" y="494" font-size="21" fill="#A99A8E">来源：教育部名单 / Wikimedia</text>
+
+    <!-- 4 -->
+    <rect x="72" y="540" width="1120" height="100" rx="18" fill="#FFFBF1" stroke="#FBE7C2" stroke-width="2"/>
+    <text x="104" y="584" font-size="27" font-weight="700" fill="#5B5148">📚 词库层</text>
+    <text x="104" y="620" font-size="22" fill="#8C7F73">curriculum.js 对齐人教版 PEP 3-6 年级 8 册；words.js 按 52 座海岛展开，每条词带参数化词宠配方</text>
+    <rect x="1236" y="540" width="292" height="100" rx="18" fill="#FFFFFF" stroke="#F3E5DC" stroke-width="2"/>
+    <text x="1268" y="582" font-size="21" fill="#A99A8E">按册切关，不揉在一起</text>
+    <text x="1268" y="612" font-size="21" fill="#A99A8E">900+ 词与短语</text>
+
+    <!-- 5 -->
+    <rect x="72" y="658" width="1120" height="100" rx="18" fill="#FBF6FF" stroke="#E7DBF7" stroke-width="2"/>
+    <text x="104" y="702" font-size="27" font-weight="700" fill="#5B5148">🎤 语音层</text>
+    <text x="104" y="738" font-size="22" fill="#8C7F73">Web Speech API → 本地 Whisper → 字母块拼词：三级降级，识别服务连不上也 100% 可玩</text>
+    <rect x="1236" y="658" width="292" height="100" rx="18" fill="#FFFFFF" stroke="#F3E5DC" stroke-width="2"/>
+    <text x="1268" y="700" font-size="21" fill="#A99A8E">发音：Wikimedia 真人录音</text>
+    <text x="1268" y="730" font-size="21" fill="#A99A8E">预生成 mp3，离线可播</text>
+
+    <!-- 6 -->
+    <rect x="72" y="776" width="1120" height="100" rx="18" fill="#F7F9FA" stroke="#E3E8EB" stroke-width="2"/>
+    <text x="104" y="820" font-size="27" font-weight="700" fill="#5B5148">💾 存档层</text>
+    <text x="104" y="856" font-size="22" fill="#8C7F73">localStorage（wordpet_save_v1）为主，可选 Node 后端提供排行榜 / 账号 / 跨设备存档，没有后端自动降级</text>
+    <rect x="1236" y="776" width="292" height="100" rx="18" fill="#FFFFFF" stroke="#F3E5DC" stroke-width="2"/>
+    <text x="1268" y="818" font-size="21" fill="#A99A8E">fork 换皮：只改</text>
+    <text x="1268" y="848" font-size="21" fill="#A99A8E">data/app.json</text>
+  </g>
+</svg>
