@@ -12,15 +12,15 @@
 
 - 进入【启用或关闭 Windows 功能】中启用 WSL，如下图
 
-![](2022/05/3001.png)
+![](3001.png)
 
 - 进入 Microsoft store 选择相应版本，本机安装的是 CentOS
 
-![](2022/05/3002.png)
+![](3002.png)
 
 - 安装完成后启动时（出现问题）
 
-![](2022/05/3003.png)
+![](3003.png)
 
 最终确定问题原因：[需要更新 Linux 内核包](https://github.com/microsoft/WSL/issues/5393)（更新包下载地址：[https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi](https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi)）
 
@@ -48,7 +48,7 @@ sudo yum install dotnet-sdk-3.1
 
 - 查看是安装成功，如图则表示已经安装成功
 
-![](2022/05/3004.png)
+![](3004.png)
 
 3. Nginx 环境安装：（部署 web 项目）
 
@@ -98,7 +98,7 @@ sudo yum install nginx
 
 1、将服务端项目文件拷贝到 CentOS 目录中：本次部署路径为：/home/www/publish
 
-![](2022/05/3005.png)
+![](3005.png)
 
 2、修改配置文件：需要使用 vim 命令（需要单独安装）
 
@@ -119,7 +119,7 @@ vim命令
 :e! 放弃所有修改，从上次保存文件开始再编辑命令历史
 ```
 
-![](2022/05/3006.png)
+![](3006.png)
 
 3、启动服务
 
@@ -130,7 +130,7 @@ vim命令
 [root@Coder publish]# dotnet ZLSoft.UnifiedDS.Web.Host.dll --urls http://*:8220
 ```
 
-![](2022/05/3007.png)
+![](3007.png)
 
 - 前端项目部署
 
@@ -175,11 +175,11 @@ server {
 
 服务端运行：
 
-![](2022/05/3008.png)
+![](3008.png)
 
 Web 项目运行效果：
 
-![](2022/05/3009.png)
+![](3009.png)
 
 到此项目已成功运行，但是当我把 CentOS 命令结束运行，则 web 服务端停止运行，那么需要把创建服务实现守护进程
 

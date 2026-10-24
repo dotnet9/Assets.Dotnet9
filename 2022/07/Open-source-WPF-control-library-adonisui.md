@@ -4,14 +4,14 @@
 
 用于 WPF 应用程序的轻量级 UI 工具包，提供经典和增强的 Windows 视觉效果:
 
-![](2022/07/1501.gif)
+![](1501.gif)
 
 ## 仓库信息
 
 - 仓库地址：[https://github.com/benruehl/adonis-ui](https://github.com/benruehl/adonis-ui)
 - Demo：[https://github.com/benruehl/adonis-ui#demo](https://github.com/benruehl/adonis-ui#demo)
 
-![](2022/07/1504.png)
+![](1504.png)
 
 ## 有哪些内容？
 
@@ -72,7 +72,7 @@ Adonis UI 带有浅色和深色配色方案。可以不受限制地添加自定�
 
 | 浅色方案                                                                  | 深色方案 Scheme                                                          |
 | ------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
-| ![Light color scheme overview](2022/07/1505.gif) | ![Dark color scheme overview](2022/07/1506.gif) |
+| ![Light color scheme overview](1505.gif) | ![Dark color scheme overview](1506.gif) |
 
 要在运行时切换配色方案，`ResourceDictionary`需要从应用程序资源中删除包含方案的所有颜色和画笔，以便可以添加不同的配色方案。这可以使用内置`ResourceLocator`类来完成，例如在单击事件处理程序中。
 
@@ -96,8 +96,8 @@ Adonis UI 带来了一个自定义窗口标题栏，默认情况下看起来与 
 
 |                                                                                       |                                                                                             |
 | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
-| ![Custom green title bar](2022/07/adonis-titlebar-green.png) | ![Custom yellow title bar](2022/07/adonis-titlebar-yellow.png)     |
-| ![Custom red title bar](2022/07/adonis-titlebar-red.png)     | ![Custom gradient title bar](2022/07/adonis-titlebar-gradient.png) |
+| ![Custom green title bar](adonis-titlebar-green.png) | ![Custom yellow title bar](adonis-titlebar-yellow.png)     |
+| ![Custom red title bar](adonis-titlebar-red.png)     | ![Custom gradient title bar](adonis-titlebar-gradient.png) |
 
 [阅读有关窗体的更多信息](https://benruehl.github.io/adonis-ui/docs/guides/window/)
 
@@ -107,7 +107,7 @@ Adonis UI 带来了一个自定义窗口标题栏，默认情况下看起来与 
 
 | 浅色方案                                                                  | 深色方案 Scheme                                                          |
 | ------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
-| ![Light color scheme overview](2022/07/1508.gif) | ![Dark color scheme overview](2022/07/1509.gif) |
+| ![Light color scheme overview](1508.gif) | ![Dark color scheme overview](1509.gif) |
 
 因为它与`OpacityMasks`一起作用不仅限于照亮 UI 控件。它可以用来隐藏几乎所有可以用 WPF 渲染的东西。
 
@@ -119,7 +119,7 @@ Adonis UI 带来了一个自定义窗口标题栏，默认情况下看起来与 
 
 | 浅色方案                                                                  | 深色方案 Scheme                                                          |
 | ------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
-| ![Light color scheme overview](2022/07/1510.gif) | ![Dark color scheme overview](2022/07/1511.gif) |
+| ![Light color scheme overview](1510.gif) | ![Dark color scheme overview](1511.gif) |
 
 [阅读有关涟漪效应的更多信息](https://benruehl.github.io/adonis-ui/docs/guides/ripple/)
 
@@ -131,7 +131,7 @@ Adonis UI 带来了一个自定义窗口标题栏，默认情况下看起来与 
 
 | 浅色方案                                                                  | 深色方案 Scheme                                                          |
 | ------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
-| ![Light color scheme overview](2022/07/1512.png) | ![Dark color scheme overview](2022/07/1502.png) |
+| ![Light color scheme overview](1512.png) | ![Dark color scheme overview](1502.png) |
 
 这些图像显示了一个由 Buttons 和 GroupBoxes 组成的简单布局。所有控件都使用它们的默认样式，除了它们的内容之外没有设置任何属性。分层系统负责稍微调整每层按钮的颜色和 GroupBoxes 的背景。它确保容器的背景和容器中控件的背景始终存在差异。如果没有系统，所有按钮都将具有完全相同的背景颜色。
 
@@ -145,7 +145,7 @@ WPF 的数据验证机制提供了验证属性值并在它们无效时分配错�
 
 | 浅色方案                                                                  | 深色方案 Scheme                                                          |
 | ------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
-| ![Light color scheme overview](2022/07/1503.png) | ![Dark color scheme overview](2022/07/1513.png) |
+| ![Light color scheme overview](1503.png) | ![Dark color scheme overview](1513.png) |
 
 默认情况下，错误消息弹出窗口显示在键盘焦点和鼠标悬停上。两者都可以单独禁用。
 

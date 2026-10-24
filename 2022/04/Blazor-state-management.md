@@ -20,7 +20,7 @@
 
 [从 Angular 到 Blazor：The Health App](https://blog.jeremylikness.com/blog/2019-01-03_from-angular-to-blazor-the-health-app/)
 
-![](2022/04/2101.png)
+![](2101.png)
 
 在 Blazor 中构建示例应用程序，Blazor 是基于.NET 的框架，用于构建可在浏览器中运行的 Web 应用程序，并利用 C＃和 Razor 模板生成跨平台的，兼容 HTML5 的 WebAssembly 代码。
 
@@ -54,7 +54,7 @@
 
 对于 UI 和用户体验逻辑，以及可共享资产（例如图像，样式表，JavaScript 代码甚至 Razor 视图组件），`Blazor.Shared`都利用`Razor类库`。该解决方案实现了 HealthModelBase 避免重复的 MVVM 代码的功能。它还将此处描述的所有状态管理解决方案实现为可轻松应用于 Blazor WebAssembly 和 Blazor Server 项目的服务和/或组件。由于“宿主”项目仅提供一些结构来引用共享组件和资源，因此这进一步使代码重用最大化。
 
-![](2022/04/2102.png)
+![](2102.png)
 
 现在，我已经解决了问题和解决方案的方法，让我们继续在 Blazor 应用程序中管理状态！
 
@@ -210,7 +210,7 @@ hasLoaded = true;
 
 通过包装路由器，状态管理无需编写其他代码即可处理应用程序中的所有页面和组件。您可以打开浏览器开发人员工具并导航到应用程序“本地存储”，以观察值在更新表单时的变化。
 
-![](2022/04/2103.png)
+![](2103.png)
 
 重要的是要注意，用户可以访问其本地缓存，因此，如果您要存储敏感值，则应对它们进行加密。[Microsoft.ASpNetCore.ProtectedBrowserStorage](https://www.nuget.org/packages/Microsoft.AspNetCore.ProtectedBrowserStorage)包提供了一个示例。
 
@@ -256,7 +256,7 @@ private async void Model_PropertyChanged(object sender,
 
 设置`BlazorState.WasmRemote.Server`为启动项目并运行它以查看实际效果。您可能需要更新在`.Client`项目中`IStateServiceConfig`的`Startup.cs`实现中的正确 URL（因为端口可能不同）。在运行解决方案的情况下，打开“网络”选项卡，并在更新表单时记下调用。
 
-![](2022/04/2104.png)
+![](2104.png)
 
 该服务已针对 Blazor WebAssembly 进行了演示，但与 Blazor Server 相同。
 

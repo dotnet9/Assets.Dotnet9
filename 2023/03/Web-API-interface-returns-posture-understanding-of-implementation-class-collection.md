@@ -134,4 +134,4 @@ public abstract class PersonBase
 - 微信技术交流群：添加微信（codewf）备注“入群”
 - QQ技术交流群：771992300。
 
-![](site/knowledgeplanet_youhui.png)
+![](../../site/knowledgeplanet_youhui.png)

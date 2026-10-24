@@ -18,22 +18,22 @@ Install-Package Prism.Unity -Version 7.2.0.1367
 
 2. 使用管理解决方案的 NuGet 包
 
-![](2023/06/0201.jpg)
+![](0201.jpg)
 
 在上面或许我们有个疑问？为啥安装 prism 会跟 Prism.Unity 有关系，我们知道 Unity 是个 IOC 容器, 而 Prism 本身就支持 IOC, 且目前官方支持几种 IOC 容器：
 
-![](2023/06/0202.jpg)
+![](0202.jpg)
 
 - 1. 且 unity 由于是微软官方的，且支持 prism 的组件化，由此我推荐使用 prism.unity，在官方文档中 prism7 不支持 prism.Mef，Prism 7.1 将不支持 prism.Autofac
 - 2. 安装完 prism.unity 就已经包含着所有 prism 的核心库了，架构如下：
 
-![](2023/06/0203.jpg)
+![](0203.jpg)
 
 ## 二. 实现数据绑定
 
 我们先创建 Views 文件夹和 ViewModels 文件夹，将 MainWindow 放在 Views 文件夹下，再在 ViewModels 文件夹下面创建 MainWindowViewModel 类，如下：
 
-![](2023/06/0204.jpg)
+![](0204.jpg)
 
 xaml 代码如下：
 
@@ -108,11 +108,11 @@ namespace PrismSample.ViewModels
 
 启动程序：
 
-![](2023/06/0205.jpg)
+![](0205.jpg)
 
 点击 click Me 按钮:
 
-![](2023/06/0206.jpg)
+![](0206.jpg)
 
 可以看到，我们已经成功的用 prism 实现数据绑定了，且 View 和 ViewModel 完美的前后端分离
 
@@ -122,7 +122,7 @@ namespace PrismSample.ViewModels
 
 如果，公司命名规则很变态，导致项目结构变成这样(这种公司辞职了算了)：
 
-![](2023/06/0207.jpg)
+![](0207.jpg)
 
 首先我们在 App 需要引入 prism，修改‘Application’为‘prism:PrismApplication’且删除 StartupUri
 
@@ -255,11 +255,11 @@ protected override void ConfigureViewModelLocator()
 
 运行：
 
-![](2023/06/0208.jpg)
+![](0208.jpg)
 
 点击按钮：
 
-![](2023/06/0209.jpg)
+![](0209.jpg)
 
 就算是不注释修改命名规则的代码，我们发现运行结果还是一样，因此我们可以得出结论，
 

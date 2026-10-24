@@ -36,11 +36,11 @@ NuGet链接: <https://www.nuget.org/packages/Net.Codecrete.QrCodeGenerator/2.0.3
 
 - 根据群里大佬给的方案, 采用 "**Graphics**" 结果失败
 
-![](2023/05/0301.png)
+![](0301.png)
 
 - 查阅微软资料发现从.NET 6开始只能在只能在windows上使用, 不过好在官方也给了几条解决方案:
 
-![](2023/05/0302.png)
+![](0302.png)
 
 - 我选择的是 **SkiaSharp v2.88.3**
 - 链接:
@@ -295,6 +295,6 @@ static void Main(string[] args)
 
 - 测试结果
 
-![](2023/05/0303.png)
+![](0303.png)
 
 **备注：图片是白底的，如果当前页面也是白底容易看不到图片的边缘建议自行下载图片观看**

@@ -4,7 +4,7 @@
 
 对话框选择文件
 
-![对话框选择文件](2020/11/0201.gif)
+![对话框选择文件](0201.gif)
 
 选择对话框代码如下：
 
@@ -28,7 +28,7 @@ string txtFile = openFileDialog.FileName;
 
 百度网盘拖拽上传文件
 
-![百度网盘拖拽上传文件](2020/11/0202.gif)
+![百度网盘拖拽上传文件](0202.gif)
 
 下面简单说说 WPF 中文件拖拽的实现方式。
 
@@ -40,7 +40,7 @@ string txtFile = openFileDialog.FileName;
 
 拖拽文件进 QuickApp 中
 
-![拖拽文件进QuickApp中](2020/11/0203.gif)
+![拖拽文件进QuickApp中](0203.gif)
 
 ### Xaml 中注册事件
 

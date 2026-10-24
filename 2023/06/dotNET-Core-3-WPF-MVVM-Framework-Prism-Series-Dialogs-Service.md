@@ -214,7 +214,7 @@ public CreateAccountViewModel(IRegionManager regionManager, IDialogService dialo
 
 效果如下：
 
-![](2023/06/0801.gif)
+![](0801.gif)
 
 我们是通过调用 IDialogService 接口的 ShowDialog 函数来调用，下面是该接口的定义：
 
@@ -300,7 +300,7 @@ AlertDialog.xaml:
 
 效果如下:
 
-![](2023/06/0802.png)
+![](0802.png)
 
 如何我们要将窗体样式全部去掉，改动 AlertDialog.xaml:
 
@@ -317,11 +317,11 @@ AlertDialog.xaml:
 
 那么就变成了下面这样：
 
-![](2023/06/0803.png)
+![](0803.png)
 
 最终，我们的最后效果为这样：
 
-![](2023/06/0804.gif)
+![](0804.gif)
 
 ## 3. 小结
 

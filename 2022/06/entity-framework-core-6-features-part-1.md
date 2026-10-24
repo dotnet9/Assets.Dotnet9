@@ -402,7 +402,7 @@ Package Manager Console:
 Bundle-Migration
 ```
 
-![](2022/06/0401.jpg)
+![](0401.jpg)
 
 更多介绍：[https://devblogs.microsoft.com/dotnet/introducing-devops-friendly-ef-core-migration-bundles/](https://devblogs.microsoft.com/dotnet/introducing-devops-friendly-ef-core-migration-bundles/)
 

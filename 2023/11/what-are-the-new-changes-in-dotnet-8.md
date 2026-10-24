@@ -1,26 +1,26 @@
 ## **1. 性能提升**
 
 [.NET 8 在整个](https://devblogs.microsoft.com/dotnet/performance-improvements-in-aspnet-core-8/)[堆栈](https://devblogs.microsoft.com/dotnet/dotnet-8-performance-improvements-in-dotnet-maui/)[中](https://devblogs.microsoft.com/dotnet/this-arm64-performance-in-dotnet-8/)带来了数千项性能[改进](https://devblogs.microsoft.com/dotnet/performance-improvements-in-net-8/) 。默认情况下会启用一种名为动态配置文件引导优化 (PGO) 的新代码生成器，它可以根据实际使用情况优化代码，并且可以将应用程序的性能提高高达 20%。现在支持的 AVX-512 指令集能够对 512 位数据向量执行并行操作，这意味着可以在更短的时间内处理更多的数据。原始类型（数字及其他类型）现在实现了新的可格式化和可解析接口，这使它们能够直接格式化和解析为 UTF-8，而无需任何转码开销。
-![img](2023/11/0801.png)
+![img](0801.png)
 
 ## **2. NET Aspire**
 
 .NET Aspire 是一个用于使用 .NET 构建弹性、可观察和可配置的云原生应用程序的堆栈。它包括一组针对云原生而增强的精选组件，默认情况下包括遥测、弹性、配置和运行状况检查。结合复杂而简单的本地开发人员体验，.NET Aspire 可以在第 1 天和第 100 天轻松发现、获取和配置云原生应用程序的基本依赖项。
 
 点击这里查看.NET Aspire 的预览版本。（站长注：这是没有链接，后面看怎么查找补充）
-![img](2023/11/0802.png)
+![img](0802.png)
 
 ## **3. NET 8 容器增强功能 – 更安全、更紧凑、更高效**
 
 [使用 .NET 比以往更轻松、更安全地使用容器](https://devblogs.microsoft.com/dotnet/securing-containers-with-rootless/)打包应用程序。每个 .NET 映像都包含一个非 root 用户，从而通过单行配置启用更安全的容器。.NET SDK 工具无需 Dockerfile 即可发布容器映像，并且默认情况下是非 root 的。由于 .NET 基础映像更小，因此可以更快地部署容器化应用程序 - 包括我们映像的新实验变体，这些变体可为本机 AOT 提供真正最小的应用程序大小。选择使用新的 Chiseled Ubuntu 映像变体进行更多安全强化，以进一步减少攻击面。使用 Dockerfile 或 SDK 工具，为任何架构构建应用程序和容器映像。
 
-![img](2023/11/0803.png)
+![img](0803.png)
 
 ## **4. 原生 AoT – 迈向更高密度可持续计算的旅程**
 
 无需等待 JIT（即时）编译器在运行时编译代码。无需部署 JIT 编译器和 IL 代码。AOT 应用程序仅部署应用程序所需的代码。应用程序现在可以在不允许使用 JIT 编译器的受限环境中运行。
 
-![img](2023/11/0804.png)
+![img](0804.png)
 
 ## **5. 人工智能 – 将 AI 融入您的 .NET 应用程序**
 
@@ -34,19 +34,19 @@
 - [检索增强生成](https://github.com/Azure-Samples/azure-search-openai-demo-csharp)
 - [使用 Azure AI 服务开发应用程序](https://devblogs.microsoft.com/dotnet/demystifying-retrieval-augmented-generation-with-dotnet/)
 
-![img](2023/11/0805.png)
+![img](0805.png)
 
 ## **6. Blazor – 使用 .NET 构建全栈 Web 应用程序**
 
 .NET 8 中的 Blazor 可以同时使用服务器和客户端来处理您的所有 Web UI 需求。这是全栈 Web UI！通过专注于优化页面加载时间、可扩展性和提升用户体验的多项新增强功能，开发人员现在可以在同一应用程序中使用 Blazor Server 和 Blazor WebAssembly，在运行时自动将用户从服务器转移到客户端。得益于新的基于“Jiterpreter”的运行时和新的内置组件，您的 .NET 代码在 WebAssembly 上的运行速度显著加快。作为增强.NET 8 中整体身份验证、授权和身份管理的一部分，Blazor 现在支持生成完整的基于 Blazor 的身份 UI。
 
-![img](2023/11/0806.png)
+![img](0806.png)
 
 ## **7. NET MAUI – 提升性能、可靠性和开发人员体验**
 
 .NET MAUI 提供单一项目系统和单一代码库来构建 WinUI、Mac Catalyst、iOS 和 Android 应用程序。本机 AOT（实验性）现在支持针对类似 iOS 的平台。适用于 .NET MAUI 的新 Visual Studio Code 扩展为您提供了开发跨平台 .NET 移动和桌面应用程序所需的工具。现在支持 Xcode 15 和 Android API 34，允许您瞄准最新版本的 iOS 和 Android。在性能、控件和 UI 元素以及特定于平台的行为方面进行了大量的质量改进，例如桌面交互添加了更好的点击处理、键盘侦听器等。
 
-![img](2023/11/0807.png)
+![img](0807.png)
 
 ## **8. C# 12 功能 – 简化语法以提高开发人员的工作效率**
 

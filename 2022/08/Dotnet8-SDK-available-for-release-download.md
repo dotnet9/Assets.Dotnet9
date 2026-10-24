@@ -10,30 +10,30 @@
 
 微软SDK文档没有提供下载，目前还是 `7.0.0-preview.7`:https://dotnet.microsoft.com/zh-cn/download/dotnet
 
-![](2022/08/0201.png)
+![](0201.png)
 
 `GitHub下载`
 
 - [https://github.com/dotnet/installer](https://github.com/dotnet/installer)
 
-![](2022/08/0202.png)
+![](0202.png)
 
 看下图，`.NET 8`大小与前面几版大小差不了多少：
 
-![](2022/08/0203.png)
+![](0203.png)
 
 ## 安装
 
 安装也没有不同，Windows上直接双击安装：
 
-![](2022/08/0204.png)
+![](0204.png)
 
-![](2022/08/0205.png)
+![](0205.png)
 
 站长使用的 `VS 2022- Preview Version 17.4.0 Preview 1.0`，新创建项目没有提供 `.NET 8` 版本选择，直接修改项目工程`.NET版本`也无法编译成功：
 
-![](2022/08/0206.png)
+![](0206.png)
 
-![](2022/08/0207.png)
+![](0207.png)
 
 可能还需要IDE更新加持吧，目前没有最新的VS更新提示，但 `.NET 8` 已经有了安装包提供下载，这是一个好消息，说明微软给 `.NET` 添砖加瓦的动作一直在路上。

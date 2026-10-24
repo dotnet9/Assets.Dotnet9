@@ -7,7 +7,7 @@
 - GitHub 地址：[https://github.com/QuestPDF/QuestPDF](https://github.com/QuestPDF/QuestPDF)
 - 官网：[https://www.questpdf.com/](https://www.questpdf.com/)
 
-![](2022/04/3001.png)
+![](3001.png)
 
 ## 2. 安装
 
@@ -15,7 +15,7 @@
 Install-Package QuestPDF
 ```
 
-![](2022/04/3002.png)
+![](3002.png)
 
 ## 3. 例子
 
@@ -61,7 +61,7 @@ Document.Create(container =>
 
 上面代码生成的 PDF 结果：
 
-![](2022/04/3003.png)
+![](3003.png)
 
 ### 3.2 模板生成
 
@@ -199,7 +199,7 @@ public static class InvoiceDocumentDataSource
 
 pdf 的 page 页面总是有三个元素:页眉,页脚，内容。查看一下我们生成的文档：
 
-![](2022/04/3004.png)
+![](3004.png)
 
 到目前为止，我们已经搭建了一个非常简单的页面，其中每个部分都有不同的颜色或大小。
 
@@ -252,7 +252,7 @@ void ComposeHeader(IContainer container)
 }
 ```
 
-![](2022/04/3005.png)
+![](3005.png)
 
 最后我们来实现内容：
 
@@ -358,7 +358,7 @@ var document = new InvoiceDocument(model);
 document.GeneratePdf(filePath);
 ```
 
-![](2022/04/3006.png)
+![](3006.png)
 
 ## 4. 总结
 

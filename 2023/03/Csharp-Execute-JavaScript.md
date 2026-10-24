@@ -10,7 +10,7 @@ Install-Package ClearScript
 
 安装完成后，还需要将ClearScript nuget包下的runtimes目录复制到运行目录，然后就可以在项目中使用 ClearScript 库。
 
-![](2023/03/0401.png)
+![](0401.png)
 
 ## 执行 JavaScript 脚本
 

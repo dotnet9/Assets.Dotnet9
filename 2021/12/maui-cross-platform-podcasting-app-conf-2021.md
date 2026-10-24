@@ -3,7 +3,7 @@
 在.NET Conf 2021 大会上，微软展示了基于.NET6 跨平台应用程序, 具有 ASP.NET Core、Blazor、.NET MAUI、微服务等功能。
 浏览由 ASP.NET Core 和 Blazor 提供支持的 .NET Podcasts 应用的实时运行版本：[https://dotnetpodcasts.azurewebsites.net/](https://dotnetpodcasts.azurewebsites.net/)。
 
-![](2021/12/0101.png)
+![](0101.png)
 
 ## 项目体系
 
@@ -13,13 +13,13 @@
 - API：ASP.NET Core Web API 、injestion worker 和 podcast update worker
 - Blazor 混合应用程序：.NET MAUI 与 Blazor 的混合应用程序示例。
 
-![](2021/12/0102.png)
+![](0102.png)
 
 ## MAUI 项目
 
 单个代码库的跨平台项目解决方案, 适用于 Android、iOS、macOS 以及 Windows 的原生.NET 应用程序, 解决方案如下:
 
-![](2021/12/0103.png)
+![](0103.png)
 
 ## 特征介绍
 
@@ -101,7 +101,7 @@ public static class ServicesProvider
 
 MAUI 中统一了资源的管理以及访问,例如: 字体、图标、样式、本地资源文件等。
 
-![](2021/12/0104.png)
+![](0104.png)
 
 访问字体
 

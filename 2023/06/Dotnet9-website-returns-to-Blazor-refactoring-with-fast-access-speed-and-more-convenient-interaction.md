@@ -2,7 +2,7 @@
 
 Dotnet9网站回归Blazor重构，访问速度确实飞快，同时用上Blazor的交互能力，站长也同步添加了几个在线工具，这篇文章分享下Blazor的重构过程，希望对大家网站开发时做技术选型有个参考。
 
-![](2023/06/1101.png)
+![](1101.png)
 
 ## 1. 先聊聊Razor Pages
 
@@ -49,8 +49,8 @@ Razor Pages（MVC）与Blazor都使用的Razor语法，所以理论上切换是�
         <td>Blazor Server版工程结构</td>
     </tr>
     <tr>
-        <td><img src="2023/06/1102.png"/></td>
-        <td><img src="2023/06/1103.png"/></td>
+        <td><img src="1102.png"/></td>
+        <td><img src="1103.png"/></td>
     </tr>
  </table>
 
@@ -58,7 +58,7 @@ Razor Pages（MVC）与Blazor都使用的Razor语法，所以理论上切换是�
 
  对于页面的事件处理，使用Blazor就方便了，下面是昨晚加的4个小工具：
 
- ![](2023/06/1104.png)
+ ![](1104.png)
 
  有兴趣的朋友可以点击体验：https://dotnet9.com/tools， 我们直接贴上4个小工具代码，你可能会喜欢上Blazor的代码风格。
 
@@ -66,7 +66,7 @@ Razor Pages（MVC）与Blazor都使用的Razor语法，所以理论上切换是�
 
  访问地址：https://dotnet9.com/tools/jsonformatter
 
- ![](2023/06/1105.png)
+ ![](1105.png)
 
 页面代码：
 
@@ -122,7 +122,7 @@ Razor Pages（MVC）与Blazor都使用的Razor语法，所以理论上切换是�
 
  访问地址：https://dotnet9.com/tools/string-encoder
 
- ![](2023/06/1107.png)
+ ![](1107.png)
 
 页面代码：
 
@@ -182,7 +182,7 @@ Razor Pages（MVC）与Blazor都使用的Razor语法，所以理论上切换是�
 
  访问地址：https://dotnet9.com/tools/countdown
 
- ![](2023/06/1106.gif)
+ ![](1106.gif)
 
 页面代码：
 

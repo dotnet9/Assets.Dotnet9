@@ -1,6 +1,6 @@
 # 为 WPF 播放 GIF 伤神不？
 
-![WpfAnimatedGif](2021/07/0401.gif)
+![WpfAnimatedGif](0401.gif)
 
 > 仓库地址：[https://github.com/XamlAnimatedGif/WpfAnimatedGif](https://github.com/XamlAnimatedGif/WpfAnimatedGif)
 
@@ -24,7 +24,7 @@ NuGet 包：[WpfAnimatedGif](https://nuget.org/packages/WpfAnimatedGif)。
 ></Window>
 ```
 
-![](2021/07/0402.gif)
+![](0402.gif)
 
 您还可以指定重复行为（默认为`0x`，这意味着它将使用来自 GIF 元数据的重复计数）：
 
@@ -35,7 +35,7 @@ NuGet 包：[WpfAnimatedGif](https://nuget.org/packages/WpfAnimatedGif)。
 />
 ```
 
-![](2021/07/0403.gif)
+![](0403.gif)
 
 当然，您也可以在代码中设置 gif 图片：
 
@@ -47,7 +47,7 @@ image.EndInit();
 ImageBehavior.SetAnimatedSource(img, image);
 ```
 
-![](2021/07/0404.gif)
+![](0404.gif)
 
 有关使用的更多详细信息，请参阅[wiki](https://github.com/XamlAnimatedGif/WpfAnimatedGif/wiki)。
 

@@ -22,7 +22,7 @@
 
 - [Abel Dutra UI](https://www.youtube.com/c/AbelDutraUI/videos)
 
-![](2022/04/4005.gif)
+![](4005.gif)
 
 ## 3. 搬运详情
 
@@ -34,7 +34,7 @@
 - Gitee：[https://gitee.com/dotnet9/TerminalMACS.ManagerForWPF](https://gitee.com/dotnet9/TerminalMACS.ManagerForWPF)
 - 公众号：Dotnet9，19 年底、20 年初发的一些文章
 
-![](2022/04/4006.gif)
+![](4006.gif)
 
 ## 4. 总结
 
@@ -44,19 +44,19 @@
 
 - B 站：[微软系列技术教程](https://space.bilibili.com/32497462)
 
-![](2022/04/4001.png)
+![](4001.png)
 
 ### 4.2 B 站是学习的天堂
 
 除了痕迹大佬的分享外，B 站关于 WPF 的分享不少，比如打开[B 站搜索 WPF](https://search.bilibili.com/all?keyword=wpf&from_source=webtop_search&spm_id_from=333.1007)，每页 36 个，共有 28 页搜索结果：
 
-![](2022/04/4002.gif)
+![](4002.gif)
 
 ### 4.3 去外面看看
 
 如果有条件的话，打开[油管](https://www.youtube.com/results?search_query=wpf)，除了我分享的那个大佬的系列视频([点击看看](https://www.youtube.com/c/AbelDutraUI/videos))外，你会觉得发现了新大陆，外面的世界很精彩：
 
-![](2022/04/4003.gif)
+![](4003.gif)
 
 ### 4.4 个人给 C/S 同学建议
 
@@ -64,4 +64,4 @@
 
 > .NET 多平台应用 UI (.NET MAUI) 是一个跨平台框架，用于使用 C# 和 XAML 创建本机移动和桌面应用。
 
-![](2022/04/4004.png)
+![](4004.png)

@@ -26,7 +26,7 @@
 
 - 快乐玩转技术博客网站：[https://dotnet9.com/](https://dotnet9.com/)
 
-![](2022/05/2902.png)
+![](2902.png)
 
 ## 3. 原来的公众号 Dotnet9 呢？
 
@@ -38,4 +38,4 @@
 
 - C# WPF UI Academy：[https://www.youtube.com/channel/UCtVawNW7C2t6AX1vex6a_vw](https://www.youtube.com/channel/UCtVawNW7C2t6AX1vex6a_vw)
 
-![](2022/05/2901.png)
+![](2901.png)

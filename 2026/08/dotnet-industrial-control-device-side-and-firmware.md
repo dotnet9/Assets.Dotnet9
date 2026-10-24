@@ -86,7 +86,7 @@
 
 1、我们在iFA Evolution中新建一个项目，并添加一个EVO 523系列的PLC
 
-![PLC软件与固件版本配置](2026/08/dotnet-industrial-control-firmware-version.png)
+![PLC软件与固件版本配置](dotnet-industrial-control-firmware-version.png)
 
 这里我们可以看到，它的右侧存在一个"版本"的概念，这个版本实际上就对应了不同的软件功能，以及不同的固件，二者缺一不可。
 

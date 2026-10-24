@@ -8,9 +8,9 @@ builder.Services.AddSingleton<WeatherForecastService>();
 
 把这段代码注释，重新加载网页，点击`Fetch data`菜单，可以在页面看到下面的异常警告信息（只在页脚显示了一个警告块），详细警告看终端输出，因为我们试图在 FetchData.razor 调用 WeatherForecastService，却没告诉 Blazor 我们要注册这个服务。
 
-![页面异常警告提示](2021/12/1001.png)
+![页面异常警告提示](1001.png)
 
-![终端异常打印](2021/12/1002.png)
+![终端异常打印](1002.png)
 
 复制提示看看，这个提示很明确：
 
@@ -35,17 +35,17 @@ public interface IWeatherForecastService
 
 也不用实现(虽然接口也能实现：`站长注：在C#8.0中，针对接口引入了一项新特性，就是可以指定默认实现，方便对已有实现进行扩展，也对面向Android和Swift的Api进行互操作提供了可能性。`)，接着让 WeatherForecastService 跟 NewWeatherForecastService 继承 IWeatherForecastService
 
-![服务实现接口](2021/12/1003.png)
+![服务实现接口](1003.png)
 
 Program.cs 改用 IWeatherForecastService 跟 NewWeatherForecastService 注册
 
-![接口注入服务](2021/12/1004.png)
+![接口注入服务](1004.png)
 
 看上面截图，在 FetchData.razor 中，也改为注入 IWeatherForecastService
 
 重整加载网页就能看到数据条数变为 10 条了
 
-![10条数据展示](2021/12/1005.png)
+![10条数据展示](1005.png)
 
 依赖注入的核心就是「对某个功能的依赖性是通过注入的方式」，不直接调用底层程序，而是调用底层程序的接口，即便底层程序修改也不会导致所有调用该程序的调用端都必须改动。
 

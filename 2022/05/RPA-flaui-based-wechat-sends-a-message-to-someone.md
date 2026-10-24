@@ -106,7 +106,7 @@ else
 
 图示效果如下:
 
-![](2022/05/5401.gif)
+![](5401.gif)
 
 ---
 
@@ -190,7 +190,7 @@ else
 
 图示效果如下:
 
-![](2022/05/5402.gif)
+![](5402.gif)
 
 录了好几次。。最后还有人把我把我删掉了，尴尬。
 
@@ -200,13 +200,13 @@ else
 
 [FlaUInspect](https://github.com/FlaUI/FlaUInspect)
 
-![](2022/05/5403.png)
+![](5403.png)
 
 可以通过 以下看到 XPath 地址
 
-![](2022/05/5404.png)
+![](5404.png)
 
-![](2022/05/5405.png)
+![](5405.png)
 
 这个 FlaUinspect 项目是一个 WPF 项目，想深入研究的可以查看源码，跟踪调试一波。
 
@@ -242,7 +242,7 @@ var infoData = automationElement.FindAllByXPath("/Pane/Pane[1]");
 
 如果是报这个错误。
 
-![](2022/05/5406.png)
+![](5406.png)
 
 可以通过，下载 [https://github.com/FlaUI/FlaUI](https://github.com/FlaUI/FlaUI) 源码，直接引用，不通过 nuget 解决这个问题。
 

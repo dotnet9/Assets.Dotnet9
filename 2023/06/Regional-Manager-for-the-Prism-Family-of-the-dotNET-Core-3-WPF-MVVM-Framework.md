@@ -12,7 +12,7 @@
 
 我们在之前的 Prism 系列构建了一个标准式 Prism 项目，这篇文章将会讲解之前项目中用到的利用区域管理器更好的对我们的 View 进行管理，同样的我们来看看官方给出的模型图：
 
-![](2023/06/0601.png)
+![](0601.png)
 
 现在我们可以知道的是，大致一个区域管理器 RegionMannager 对一个控件创建区域的要点：
 
@@ -21,13 +21,13 @@
 
 其实后来我去看了下官方的介绍和源码，默认 RegionAdapter 是有三个，且还支持自定义 RegionAdapter，因此在官方的模型图之间我做了点补充：
 
-![](2023/06/0602.png)
+![](0602.png)
 
 ## 2. 区域创建与视图的注入
 
 我们先来看看我们之前项目的区域的划分，以及如何创建区域并且把 View 注入到区域中：
 
-![](2023/06/0603.png)
+![](0603.png)
 
 我们把整个主窗体划分了四个区域：
 
@@ -282,7 +282,7 @@ MainWindowViewModel.cs：
 
 效果如下：
 
-![](2023/06/0604.gif)
+![](0604.gif)
 
 ### 3.2. 监控视图激活状态
 
@@ -317,7 +317,7 @@ public class MedicineMainContentViewModel : BindableBase,IActiveAware
   }
 ```
 
-![](2023/06/0605.gif)
+![](0605.gif)
 
 ### 3.3. Add 和 Remove
 
@@ -466,7 +466,7 @@ ShowSearchPatientViewModel.cs:
 
 效果如下：
 
-![](2023/06/0606.gif)
+![](0606.gif)
 
 这里的 WindowCommands 的继承链为：WindowCommands <-- ToolBar <-- HeaderedItemsControl <--ItemsControl，因此由于 Prism 默认的适配器有 ItemsControlRegionAdapter,因此其子类也继承了其行为
 
@@ -582,7 +582,7 @@ void ExecuteLoadingCommand()
 
 效果如图：
 
-![](2023/06/0607.png)
+![](0607.png)
 
 我们可以看到我们为 UniformGrid 创建区域适配器，并且注册后，也能够为 UniformGrid 控件创建区域，并且注入视图显示，如果没有该区域适配器，则是会报错，下一篇我们将会讲解基于区域 Region 的 prism 导航系统。
 

@@ -86,11 +86,11 @@ Blazor：
 
 > 更神奇的是，在 React 复用的 Blazor Component 居然也支持 Hot Reload。先不说 Hot Reload 到底如何，单是这个方向其实还是值得期待一下 Hot Reload 的未来吧。
 
-![](2021/12/1901.png)
+![](1901.png)
 
 不止可以给 React 提供复用的组件，还可以给 WPF
 
-![](2021/12/1902.png)
+![](1902.png)
 
 ### 第三方库
 
@@ -120,17 +120,17 @@ Blazor：
 
 数据不直观，先从.Net Conf 2021 上的演示截图看一下：
 
-![](2021/12/1903.png)
+![](1903.png)
 
 有量化数据吗？有：
 
-![](2021/12/1904.png)
+![](1904.png)
 
 > 视频地址：[https://sec.ch9.ms/ch9/daba/468d5211-982b-4c86-8b51-e1c8824edaba/dotNETConfNewBlazorWebAssembly_high.mp4](https://sec.ch9.ms/ch9/daba/468d5211-982b-4c86-8b51-e1c8824edaba/dotNETConfNewBlazorWebAssembly_high.mp4)
 
 那 AOT 可以解千愁吗？也不是。起码应用大小上来说的确也大了不少，但这并不妨碍 AOT 可以解决特定场景的问题。技术总要选择在适合的场景使用它，而不是盲目的。
 
-![](2021/12/1905.png)
+![](1905.png)
 
 ### 完了吗
 
@@ -171,7 +171,7 @@ Blazor：
 
 看一下.Net Conf 2021 大会上的一张图：
 
-![](2021/12/1906.png)
+![](1906.png)
 
 总结一下：
 
@@ -190,7 +190,7 @@ Blazor：
 
 先看一下大概思路：
 
-![架构图](2021/12/1907.png)
+![架构图](1907.png)
 
 简单的剖析一下：
 
@@ -212,7 +212,7 @@ Blazor：
 
 > 惭愧，蹭了一波字节的热度
 
-![](2021/12/1908.jpg)
+![](1908.jpg)
 
 ### MASA Blazor
 
@@ -231,23 +231,23 @@ Blazor：
 
 基于 MASA Blazor 提供的 Admin 模板，先放几张设计稿吧，源码会跟 MASA Blazor 一起放出。
 
-![](2021/12/1909.png)
+![](1909.png)
 
-![](2021/12/1910.png)
+![](1910.png)
 
-![](2021/12/1911.png)
+![](1911.png)
 
-![](2021/12/1912.png)
+![](1912.png)
 
-![](2021/12/1913.png)
+![](1913.png)
 
-![](2021/12/1914.png)
+![](1914.png)
 
 ### MASA EShop
 
 基于 MASA Framework 搭建的 EShopOnDapr，将会使用 MASA Blazor Pro 提供完整的前后端示例
 
-![eshop](2021/12/1915.png)
+![eshop](1915.png)
 
 开源地址：[https://github.com/masalabs/MASA.EShop](https://github.com/masalabs/MASA.EShop)
 
@@ -261,7 +261,7 @@ Blazor：
 
 **MASA Blazor 即将发布**，敬请期待，如果你对我们的组件库感兴趣，无论是代码贡献、使用、提 Issue，欢迎联系我们
 
-![](2021/12/1916.png)
+![](1916.png)
 
 ## 参考
 

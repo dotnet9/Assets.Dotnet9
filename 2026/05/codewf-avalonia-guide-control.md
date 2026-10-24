@@ -4,13 +4,13 @@
 
 先看 Vex 中的完整落地。首次启动会自动出现引导，之后也可以从帮助菜单再次打开：
 
-![](2026/05/codewf-guide-vex-onboarding-flow.gif)
+![](codewf-guide-vex-onboarding-flow.gif)
 
 控件库 Demo 里也补了两个更小的例子：基础多步骤引导、封面内容、自定义按钮，以及非模态提示和文本进度。
 
-![](2026/05/codewf-guide-demo-basic.gif)
+![](codewf-guide-demo-basic.gif)
 
-![](2026/05/codewf-guide-demo-nonmask.gif)
+![](codewf-guide-demo-nonmask.gif)
 
 ## Guide 解决什么
 
@@ -138,7 +138,7 @@ var result = rect.Inflate(new Thickness(gapX, gapY));
 
 菜单项引导是这次最重要的增强。下面这段 GIF 只保留菜单步骤：文件菜单、打开文件夹、导出子菜单、段落菜单、格式菜单、视图菜单和主题二级菜单。
 
-![](2026/05/codewf-guide-vex-menuitem-guide.gif)
+![](codewf-guide-vex-menuitem-guide.gif)
 
 菜单项的问题在于：子级 `MenuItem` 只有父菜单打开以后才会进入视觉树。做法是进入步骤前打开父菜单，再让 `Guide` 延迟解析目标。
 
@@ -235,7 +235,7 @@ case ThemeColorGuideMenu:
 
 Vex 左侧侧边栏是 `TabControl`，引导要分别说明“文件”和“大纲”。两个步骤复用同一个侧栏目标，但进入步骤前会先切换页签。
 
-![](2026/05/codewf-guide-vex-tabitem-guide.gif)
+![](codewf-guide-vex-tabitem-guide.gif)
 
 步骤目标仍然是同一个 `SidebarGuideTarget`：
 

@@ -93,7 +93,7 @@ class Program
 
 返回的任务`WaitAsync`会`Completed`在收到信号后进入状态，重新进入监视器。如果在等待满足之前发出信号，则相同的任务将进入`Canceled`状态；`CancellationToken`在这种情况下，任务将等待进入`Canceled`状态，直到它重新进入监视器。请记住，从`WaitAsync`被调用到其返回任务完成的时间，调用任务已经离开了监视器。
 
-![](2022/07/1001.png)
+![](1001.png)
 
 - GitHub 地址：[https://github.com/StephenCleary/AsyncEx](https://github.com/StephenCleary/AsyncEx)
 

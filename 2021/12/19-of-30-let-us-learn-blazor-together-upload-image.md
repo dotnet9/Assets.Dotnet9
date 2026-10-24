@@ -224,7 +224,7 @@ public async ValueTask<bool> Confirm(string jsonString)
 
 可以看到图片上传成功了
 
-![](2021/12/2901.gif)
+![](2901.gif)
 
 **引用：**
 

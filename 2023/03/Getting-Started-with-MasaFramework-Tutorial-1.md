@@ -14,7 +14,7 @@ dotnet new install Masa.Template
 
 这样就安装成功了：
 
-![](2023/03/0901.png)
+![](0901.png)
 
 2. 创建项目
 
@@ -26,11 +26,11 @@ dotnet new masafx --name mfDemo
 
 这样就创建完成了，打开解决方案
 
-![](2023/03/0902.png)
+![](0902.png)
 
 3. 项目结构解析
 
-![](2023/03/0903.png)
+![](0903.png)
 
 我们可以看到打开解决方案以后的项目结构。
 
@@ -42,17 +42,17 @@ dotnet new masafx --name mfDemo
 
 `src/Services`中就是包含了具体业务和实现，并且包含`Host`，在`Application`中包含业务处理或事件处理：
 
-![](2023/03/0904.png)
+![](0904.png)
 
 如果你并未使用 MiniApi 的话应该出现的就是 Controllers：
 
-![](2023/03/0905.png)
+![](0905.png)
 
 其实建议使用 MiniApi，因为两个实现方式不一样，导致 MiniApi 在性能上对比 Controllers 更好。
 
 Infrastructure 中就是项目的基础设施了，看图我们发现 Entity 和 Middleware，Repository，DbContext 都在基础设施中：
 
-![](2023/03/0906.png)
+![](0906.png)
 
 MasaFramework 的设计就是简化项目复杂，将其揉合在一个项目中，如果你刚刚使用 MasaFramework，千万千万不要拆分，你拆分了和 MasaFramework 本身设计就不太相符合，但是如果你是熟练的大佬，当我没说，刚刚入门 MasaFramework 请务必使用本身框架的设计。
 

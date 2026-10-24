@@ -1,6 +1,6 @@
 可视化日志组件：LogDashboard：
 
-![可视化日志组件：LogDashboard](2021/04/0301.png)
+![可视化日志组件：LogDashboard](0301.png)
 
 ## 前言
 
@@ -107,7 +107,7 @@ public void ConfigureServices(IServiceCollection services)
 
 控制台输出：
 
-![控制台日志输出](2021/04/0302.png)
+![控制台日志输出](0302.png)
 
 好了，日志组件已经添加成功，进入下一步。
 
@@ -144,5 +144,5 @@ public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
 运行项目，浏览器地址栏输入：`http://localhost:5000/logdashboard`就是日志管理面板，直接录一个小视频演示下吧：
 
 <video id="video" controls="" preload="none" poster="2021/04/0301.png">
-  <source id="mp4" src="2021/04/0303.mp4" type="video/mp4">
+  <source id="mp4" src="0303.mp4" type="video/mp4">
 </video>

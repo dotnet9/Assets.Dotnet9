@@ -13,7 +13,7 @@
 
 `PasswordBox` 实现下面的效果
 
-![](2022/05/1401.png)
+![](1401.png)
 
 ## 01 — 代码如下
 
@@ -214,4 +214,4 @@ public class PasswordBoxHelper : DependencyObject
 
 ## 02 — 效果预览
 
-![](2022/05/1402.gif)
+![](1402.gif)

@@ -270,7 +270,7 @@ Blazor 提供了自己的基于 IJSRuntime 接口的 JavaScript 互操作机制�
 
 下面的屏幕截图比较了在 Edge 的开发工具网络选项卡中上传 108 MB 所需的时间：
 
-![](2022/09/http2-window-size-screenshot-300x91.png)
+![](http2-window-size-screenshot-300x91.png)
 
 - 之前：26.9 秒
 - 之后：4.3 秒
@@ -351,7 +351,7 @@ app.Run();
 
 要确认 Swashbuckle 正在为 RESTful gRPC 服务生成 Swagger，请启动应用程序并导航到 Swagger UI 页面：
 
-![](2022/09/swaggerui.png)
+![](swaggerui.png)
 
 ## 限流中间件改进
 
@@ -430,7 +430,7 @@ builder.Services.AddRateLimiter(options =>
 
 - 视频地址：[https://www.youtube.com/watch?v=-ZSscIhQaRk&feature=emb_imp_woyt](https://www.youtube.com/watch?v=-ZSscIhQaRk&feature=emb_imp_woyt)
 
-![](2022/09/0401.png)
+![](0401.png)
 
 ## 给予反馈
 

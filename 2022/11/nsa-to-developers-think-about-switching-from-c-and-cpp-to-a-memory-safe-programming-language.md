@@ -1,6 +1,6 @@
 先丢出美国国家安全局的一篇文章：[NSA Releases Guidance on How to Protect Against Software Memory Safety Issues](https://www.nsa.gov/Press-Room/News-Highlights/Article/Article/3215760/nsa-releases-guidance-on-how-to-protect-against-software-memory-safety-issues/)：
 
-![](2022/11/0301.png)
+![](0301.png)
 
 本文翻译自两篇文章，第一篇是对美国国家安全局在“软件内存安全”网络安全信息表的解读，第二篇是普及什么是内存安全，为什么它很重要？
 
@@ -15,7 +15,7 @@
 >
 > 原文链接：https://www.zdnet.com/article/nsa-to-developers-think-about-switching-from-c-and-cpp-to-a-memory-safe-programming-language/
 
-![Image: Getty Images/iStockphoto](2022/11/cover_03.png)
+![Image: Getty Images/iStockphoto](cover_03.png)
 
 >对于许多开发人员来说，这可能意味着转向 C#、Go、Java、Ruby、Rust 和 Swift。
 

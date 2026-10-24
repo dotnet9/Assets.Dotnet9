@@ -18,7 +18,7 @@ Console.WriteLine("console in pink", Color.Pink);
 Console.WriteLine("console in default");
 ```
 
-![](2022/04/0202.png)
+![](0202.png)
 
 除此之外，`Colorful.Console`还允许我们使用`FIGlet`字体编写带颜色的 ASCII 码输出
 
@@ -35,7 +35,7 @@ Console.WriteLine(figlet.ToAscii("cream."), ColorTranslator.FromHtml("#B8DBFF"))
 
 这个输出的结果完全就是黑客的梦想。
 
-![](2022/04/0203.png)
+![](0203.png)
 
 我建议你访问一下`Colorful.Console`的官方站点，了解这个库能实现的所有效果，以便更好的改善控制台程序的体验。
 
@@ -99,7 +99,7 @@ FORMAT: Alternative:
 
 和需要其他应用程序一样，控制台程序也可以执行长时任务。`ShellProgressBar`是一个非常棒的库，使用它，你可以在控制台输出一些非常惊艳的进度条。而且，`ShellProgressBar`是可以实现进度条的嵌套使用。例如，如下 GIF 动画中展示的效果。
 
-![](2022/04/0204.gif)
+![](0204.gif)
 
 `ShellProgressBar`使用起来相当的直接。
 
@@ -124,7 +124,7 @@ using (var pbar = new ProgressBar(totalTicks, "Initial message", options))
 
 `GUI.CS`是一个非常棒的控制台 UI 工具包。它提供了一个功能完善的工具箱，开发人员可以使用它构建早期控制台常见的一种用户界面。
 
-![](2022/04/0205.png)
+![](0205.png)
 
 这个 UI 工具箱提供了如下控件：
 

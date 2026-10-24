@@ -1,6 +1,6 @@
 ## Part1 介绍
 
-![](2022/07/2403.png)
+![](2403.png)
 
 `EasyNetQ` 是用于[RabbitMQ](http://www.rabbitmq.com/)的简单易用 .NET API 。
 
@@ -26,7 +26,7 @@ public class MyMessage
 
 ## Part2 API 设计
 
-![](2022/07/2401.png)
+![](2401.png)
 
 `EasyNetQ` 是在 `RabbitMQ.Client` 库之上提供服务的组件集合。它们执行序列化、错误处理、线程编组、连接管理等操作。它们由 `mini-IoC` 容器组成。您可以很容易地用您自己的实现替换任何组件。因此，如果您想要 `XML 序列化`而不是内置 `JSON`，只需编写 `ISerializer` 的实现并将其注册到容器中。
 
@@ -99,4 +99,4 @@ await bus.Rpc.RespondAsync<TestRequestMessage, TestResponseMessage>(request =>
 - 原文链接：https://github.com/EasyNetQ/EasyNetQ/wiki/Introduction
 - 仓库链接：https://github.com/EasyNetQ/EasyNetQ
 
-![](2022/07/2402.png)
+![](2402.png)

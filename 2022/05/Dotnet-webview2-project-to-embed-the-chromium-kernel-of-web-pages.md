@@ -6,7 +6,7 @@ WebView2 项目得天独厚，有微软操作系统 win10 以及 win11 的加持
 
 - WebView2 - Microsoft Edge Developer：[https://developer.microsoft.com/en-us/microsoft-edge/webview2/#download-section](https://developer.microsoft.com/en-us/microsoft-edge/webview2/#download-section)
 
-![](2022/05/4501.png)
+![](4501.png)
 
 通过控制面板，我们也能看到已经安装了这个运行时了。
 
@@ -28,11 +28,11 @@ Microsoft.Web.WebView2
 
 新建项目 (winfrom 作为参考)
 
-![](2022/05/4502.png)
+![](4502.png)
 
 如果没有出现 WebView2 可以重启一下项目就会有了
 
-![](2022/05/4503.png)
+![](4503.png)
 
 同时，为了方便看，我们把 Dock 属性选为 Fill 全填充就好了
 
@@ -73,7 +73,7 @@ public partial class Form1 : Form
 }
 ```
 
-![](2022/05/4504.png)
+![](4504.png)
 
 这个页面可以自由的拉伸，十分的方便。
 
@@ -113,7 +113,7 @@ private async void button1_Click(object sender, EventArgs e)
 
 这个是实现的效果
 
-![](2022/05/4505.png)
+![](4505.png)
 
 至此，我们已经实现了一个完成的 WebView2 的 项目案例。
 

@@ -80,7 +80,7 @@ private void AnimationByPath(Canvas cvs, Path path,double targetWidth, int durat
 
 其中的关键点在于动态创建一个`Rectangle`正方体作为动画对象，正方体的宽高设为跟路径宽度一致，并设置正方体的变换原点为中心点（`RenderTransformOrigin ="0.5,0.5"`），确保正方体随路径移动时也能随着路径旋转。最终效果如下：
 
-![](2023/01/0401.gif)
+![](0401.gif)
 
 ## 2. 反向路径动画
 
@@ -249,7 +249,7 @@ private void AnimationByPath(Canvas cvs, Path path, double targetWidth, bool isI
 
 效果就变成下面的样子了，是不是有点意思了:
 
-![](2023/01/0402.gif)
+![](0402.gif)
 
 ## 3. 模拟管道流体动画
 
@@ -382,7 +382,7 @@ new PropertyPath("RenderTransform.Angle"));//给动画指定依赖的属性
 
 来看看最终的效果：
 
-![](2023/01/0403.gif)
+![](0403.gif)
 
 还挺像那么回事的。
 

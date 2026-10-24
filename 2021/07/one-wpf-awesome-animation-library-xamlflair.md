@@ -2,19 +2,19 @@
 >
 > 翻译：沙漠尽头的狼,Linluz(本文未全文翻译，建议阅读原文了解更多)
 
-![](2021/07/0501.png)
+![](0501.png)
 
 # XamlFlair
 
 XamlFlair 库的目标是简化常见动画的实现，并允许开发人员使用几行 Xaml`轻松`地添加单个或组合的动画集。
 
-![案例程序](2021/07/0502.gif)
+![案例程序](0502.gif)
 
 # 展示
 
 [Sekuence 益智游戏](https://sekuence.fun)|
 :-------------------------------------------:
-![Sekuence](2021/07/0503.gif) |
+![Sekuence](0503.gif) |
 
 ## 支持作者
 
@@ -132,11 +132,11 @@ XamlFlair 的基本概念是基于 From 和 To 的动画。由 From 动画组成
 
 From 动画的示例（一个移动到 Translation(0)的 UI 元素）：
 
-![From动画](2021/07/0504.gif)
+![From动画](0504.gif)
 
 To 动画示例（从当前状态滑出的 UI 元素）：
 
-![To动画](2021/07/0505.gif)
+![To动画](0505.gif)
 
 > **注意**：需要注意的是，对于彩色动画，此规则有一个例外，这在“基本动画类型”部分中进行了说明。
 
@@ -170,43 +170,43 @@ xmlns:xf="clr-namespace:XamlFlair;assembly=XamlFlair.WPF"
 
 #### 淡入淡出（Fade）
 
-![淡入淡出动画](2021/07/0506.gif)
+![淡入淡出动画](0506.gif)
 
 > **警告**：设置`FadeTo`动画时要小心，因为如果`Visibility`是`Visible`，元素将保留在可视树中。在某些情况下，您可能需要手动管理`IsHitTestVisible`，以允许用户点击元素。
 
 #### 移动（Translate）
 
-![移动动画](2021/07/0507.gif)
+![移动动画](0507.gif)
 
 #### 缩放（Scale）
 
-![缩放动画](2021/07/0508.gif)
+![缩放动画](0508.gif)
 
 #### 旋转（Rotate）
 
-![旋转动画](2021/07/0509.gif)
+![旋转动画](0509.gif)
 
 #### 模糊 (Blur，只支持 UWP 和 WPF)
 
-![模糊动画](2021/07/0510.gif)
+![模糊动画](0510.gif)
 
 #### 饱和度 (Saturate，只支持 UWP)
 
-![饱和度动画](2021/07/0511.gif)
+![饱和度动画](0511.gif)
 
 #### 色调（Tint）(只支持 UWP)
 
-![色调动画](2021/07/0512.gif)
+![色调动画](0512.gif)
 
 #### 色彩 (Color，只支持 WPF 和 Uno)
 
-![色彩动画](2021/07/0513.gif)
+![色彩动画](0513.gif)
 
 > **注意**：重要的是要注意，当使用`From`动画设置色彩动画时，颜色将从指定值设置为其**当前状态**，而不是默认值。
 
 #### 旋轴 (Swivel，只支持 UWP)
 
-![旋轴动画](2021/07/0514.gif)
+![旋轴动画](0514.gif)
 
 > **注意**：请阅读[Perspective Rotations (_UWP Only_)](#perspective-rotations-uwp-only)一节了解更多详细信息。
 
@@ -367,10 +367,10 @@ xmlns:xf="clr-namespace:XamlFlair;assembly=XamlFlair.WPF"
 
 `RenderTransform`可使用`TransformOn`属性应用动画。可用选项为`Render`和`Layout`。未指定任何内容时，默认为`Render`。以下是关于两个选项的示例：
 
-![TransformOn动画](2021/07/0515.gif)
+![TransformOn动画](0515.gif)
 
 > **注意**：非常重要的是要注意 WPF 的`LayoutTransform`不支持任何`TranslateTransform`，因此 translate 动画永远不会生效。您可以在[这里](https://docs.microsoft.com/en-us/dotnet/api/system.windows.frameworkelement.layouttransform?redirectedfrom=MSDN&view=net-5.0#remarks)的备注部分了解更多信息。
 
 原文 readme.md 太长了，翻译累了，大家有兴趣看原文吧，最后上一图：
 
-![](2021/07/0516.gif)
+![](0516.gif)

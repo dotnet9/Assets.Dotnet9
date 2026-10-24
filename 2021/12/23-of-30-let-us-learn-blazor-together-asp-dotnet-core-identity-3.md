@@ -50,15 +50,15 @@ builder.Services.AddAuthentication()
 
 可以看到下图，`ApiAuthenticationStateProvider`继承了`AuthenticationStateProvider`，并重写了`Task<AuthenticationState>`，这个 Property 可以取得当前的验证状态，`MarkUserAsAuthenticated()`跟`MarkUserAsLoggedOut()`则是笔者自己写的方法用以标示使用者通过验证及注销系统，`NotifyAuthenticationStateChanged()`顾名思义会通知各个 Component 当前验证状态，这就是自己继承并重写的案例。
 
-![](2021/12/3501.png)
+![](3501.png)
 
 下图则是在 Component 取得当前`request` 的`HttpContext.User` 及`Claims` 的作法，不过这里是先利用服务取得`User` 再取得其下`Claims`，其实是多此一举了。
 
-![](2021/12/3502.png)
+![](3502.png)
 
 如果只是要取得`HttpContext.User`，只要如下图般就可以了，因为 `Task<AuthenticationState>`会以`[CascadingParameter]`的方式层层传递下去。
 
-![](2021/12/3503.png)
+![](3503.png)
 
 **引用：**
 

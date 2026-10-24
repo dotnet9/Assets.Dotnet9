@@ -1,14 +1,14 @@
 首先我们需要创建一个 MasaFramework 模板的项目，项目名称 TokenDemo，项目类型如图所示：
 
-![](2023/03/1501.png)
+![](1501.png)
 
 删除 Web/TokenDemo.Admin 项目，新建 Masa Blazor Pro 项目模板项目，项目位置在 src/Web 项目：
 
-![](2023/03/1502.png)
+![](1502.png)
 
 项目类型选择 ServerAndWasm，为了让我们支持俩种模式：
 
-![](2023/03/1503.png)
+![](1503.png)
 
 创建完成以后的目录，然后在 TokenDemo.Admin 中添加项目引用 TokenDemo.Caller。
 
@@ -275,7 +275,7 @@ public class OrderService : ServiceBase
 
 然后在通过命令行启动`TokenDemo.Service.Order`项目：
 
-![](2023/03/1504.png)
+![](1504.png)
 
 打开`TokenDemo\Admin`项目的`Pages\Home\Index.razor`文件并且修改代码：
 
@@ -305,7 +305,7 @@ builder.Services.AddCaller(typeof(TokenDemo.Caller.Callers.OrderCaller).Assembly
 
 然后启动 TokenDemo.Admin.Server 项目，进入断点:
 
-![](2023/03/1505.png)
+![](1505.png)
 
 得到结果。
 

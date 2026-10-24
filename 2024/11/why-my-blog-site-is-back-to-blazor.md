@@ -6,7 +6,7 @@
 
 - 网址：https://dotnet9.com
 
-![](2024/11/0207.gif)
+![](0207.gif)
 
 ## 开源的力量
 
@@ -30,7 +30,7 @@
 
 因为站长的网站只是一个博客文章展示、在线工具使用，平时文章编辑也是使用 Typora 及 VS Code 搭配使用，网站核心数据文件存储于 [Assets.Dotnet9](https://github.com/dotnet9/Assets.Dotnet9) 仓库，所以站长去除了暂时不使用的后台管理相关功能，项目源码只有 3 个工程：
 
-![](2024/11/0209.png)
+![](0209.png)
 
 - AntBlazor：站长基本没有改过该工程，基本是由 Known 提供的 Ant Design 风格 Blazor 静态组件封装，比如表单、标签、按钮之类的基本组件等。
 - CodeWF：Razor 类库，主要实现网站文档、博文页面封装，目前有工具还未上线，后面会按此库架构另开一个库写在线工具；
@@ -43,9 +43,9 @@
         <td>WebSite</td>
     </tr>
     <tr>
-        <td><img src="2024/11/0210.png" alt="AntBlazor" style="max-height: 350px;"></td>
-        <td><img src="2024/11/0211.png" alt="CodeWF" style="max-height: 350px;"></td>
-        <td><img src="2024/11/0212.png" alt="WebSite" style="max-height: 350px;"></td>
+        <td><img src="0210.png" alt="AntBlazor" style="max-height: 350px;"></td>
+        <td><img src="0211.png" alt="CodeWF" style="max-height: 350px;"></td>
+        <td><img src="0212.png" alt="WebSite" style="max-height: 350px;"></td>
     </tr>
 </table>
 
@@ -90,7 +90,7 @@
 
 效果如下：
 
-![](2024/11/0208.png)
+![](0208.png)
 
 ## 网站功能说明
 
@@ -100,7 +100,7 @@
 
 和大多数网站一样，先展示网站宣传语 **”码坊：使用.NET 9 Web API + Blazor 开发。有技术文章、开源项目介绍和在线工具，助力高效编程。“**，然后展示特色文章块，后面会加上特色工具块（正在开发中），最后是友情链接、页尾等：
 
-![](2024/11/0202.gif)
+![](0202.gif)
 
 ### 文档
 
@@ -108,7 +108,7 @@
 
 - 网址：https://dotnet9.com/project
 
-![](2024/11/0203.gif)
+![](0203.gif)
 
 下面是部分项目简介
 
@@ -146,21 +146,21 @@ CodeWF Toolbox 使用 Avalonia 开发的跨平台工具箱，使用了 Prism 作
 
 博客页面是标准的技术博客风格样式，分为左、中、右三栏。左边栏是文章分类列表，点击可在中间分页浏览文章列表，右侧则是网站统计、站长推荐等内容：
 
-![](2024/11/0204.png)
+![](0204.png)
 
 点击列表中的文章可浏览文章详细内容，在此要感谢 [VleaStwo (Lee)](https://github.com/VleaStwo) 大佬提供的 TOC 功能：这个功能使用户能够快速定位文章的重点内容，提高阅读效率。
 
-![](2024/11/0205.gif)
+![](0205.gif)
 
 **所有文章您都可以修改**
 
 如果文章有错别字、语病，或有误导的地方，或您有什么补充，可点击页头右上角“我要编辑、留言”进行 PR，十分感谢！
 
-![](2024/11/0208.png)
+![](0208.png)
 
 最新一个对文章 [. NET 跨平台客户端框架 - Avalonia UI](https://dotnet9.com/2022/11/one-of-the-best-choices-for-dotnet-cross-platform-frameworks-avalonia-ui) 的 [PR#4](https://github.com/dotnet9/Assets.Dotnet9/pull/4)：
 
-![](2024/11/0213.png)
+![](0213.png)
 
 感谢网友 [hjkl950217 (长空 X)](https://github.com/hjkl950217)
 
@@ -170,7 +170,7 @@ CodeWF Toolbox 使用 Avalonia 开发的跨平台工具箱，使用了 Prism 作
 
 另外，[VleaStwo](https://github.com/VleaStwo)大佬开了一个 [Masa Blazor 分支](https://github.com/VleaStwo/CodeWF)，欢迎有兴趣的朋友前来 PR 或交流：
 
-![](2024/11/0206.png)
+![](0206.png)
 
 最后，贴上相关链接，大家可以了解、交流：
 

@@ -5,9 +5,9 @@
 
 **支持 .NET Framework（4.5.2、4.6.2 及更高版本）、.NET Core (3.1) 和 .NET 5（在 Windows 上）**
 
-![](2021/06/0401.png)
+![](0401.png)
 
-![](2021/06/0402.png)
+![](0402.png)
 
 ## Let's get started
 
@@ -44,7 +44,7 @@
 - https://blindmeis.wordpress.com/2015/01/20/wpf-textbox-input-behavior/
 - https://blindmeis.wordpress.com/2010/06/01/wpf-masked-textbox-behavior/
 
-![](2021/06/0403.png)
+![](0403.png)
 
 ## KeyboardNavigationEx
 
@@ -75,7 +75,7 @@ public partial class MainWindow : Window
 </button>
 ```
 
-![](2021/06/0404.gif)
+![](0404.gif)
 
 ## 自动移动 ToolTip
 
@@ -116,9 +116,9 @@ public partial class MainWindow : Window
 </button>
 ```
 
-![](2021/06/0405.gif)
+![](0405.gif)
 
-![](2021/06/0406.png)
+![](0406.png)
 
 ## GlowWindowBehavior
 
@@ -149,7 +149,7 @@ http://blogs.msdn.com/b/wpfsdk/archive/2008/09/08/custom-window-chrome-in-wpf.as
 - 如果主机窗口最大化，则重新定位，反之亦然
 - 如果主机窗口被激活，它只能是最顶层
 
-![](2021/06/0407.png)
+![](0407.png)
 
 ## TabControlEx
 

@@ -9,17 +9,17 @@
 
 欣赏效果：
 
-![](2022/05/4701.gif)
+![](4701.gif)
 
 ## 2. 准备
 
 创建一个 WPF 工程，比如站长使用 [.NET 7](https://dotnet.microsoft.com/zh-cn/) 创建名为 **Login5** 的 WPF 项目。
 
-![](2022/05/4702.png)
+![](4702.png)
 
 找一张图片作为装饰，放登录表单左侧：
 
-![](2022/05/4703.png)
+![](4703.png)
 
 添加 NuGet 包 [MaterialDesignThemes](https://dotnet9.com/2020/12/Material-designinxaml-an-open-source-csharp-WPF-Control-Library)：
 

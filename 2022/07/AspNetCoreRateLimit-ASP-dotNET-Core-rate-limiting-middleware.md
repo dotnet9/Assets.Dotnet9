@@ -4,7 +4,7 @@
 
 地址: [https://github.com/stefanprodan/AspNetCoreRateLimit](https://github.com/stefanprodan/AspNetCoreRateLimit)
 
-![](2022/07/1401.png)
+![](1401.png)
 
 ## 功能
 

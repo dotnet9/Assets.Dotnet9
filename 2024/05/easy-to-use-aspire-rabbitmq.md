@@ -37,18 +37,18 @@
 ### 3.1. 创建 Aspire 项目
 
 在 aspire.host 中安装`Aspire.Hosting.RabbitMQ` 包，在`program.cs`中创建`RabbitMQ`容器，并且在你要使用 RabbitMQ 的项目后 `WithReference` `RabbitMQ`容器：
-![img](2024/05/0101.png)
+![img](0101.png)
 
 ### 3.2. 注册服务
 
 在你要使用`RabbitMQ`项目的 program.cs 中分别加入`builder.EventConfiguration("rabbitmq", "myexchange");`（第一个参数是`RabbitMQ`容器名称，第二是交换机名称)，`app.RegisterRabbitmqEvent();`来注册服务：
-![img](2024/05/0102.png)
+![img](0102.png)
 
 ### 3.3. 测试发送消息
 
 使用`IEventBus`发送消息，目前仅支持 string/泛型数据（都会转换成 json，后面在反序列化），publish 第一个参数是队列名称：
 
-![img](2024/05/0103.png)
+![img](0103.png)
 
 ### 3.4. 定义处理类
 
@@ -56,13 +56,13 @@
 
 一定要在处理类上贴 `[event("XXX")]`， 这个 attribute 用来指示接收哪个队列信息：
 
-![img](2024/05/0104.png)
+![img](0104.png)
 
-![img](2024/05/0105.png)
+![img](0105.png)
 
 ### 3.5. 完美接收消息
 
-![img](2024/05/0106.png)
+![img](0106.png)
 
 ## 4. 总结
 

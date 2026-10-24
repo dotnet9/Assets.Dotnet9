@@ -10,7 +10,7 @@
 >
 > 仓库地址：https://gitee.com/lvyeyou/DaShuJuZhiDaPingZhanShi
 
-![](2022/04/2601.png)
+![](2601.png)
 
 目前此项目处于`暂停状态`，不过已有的模板也够惊艳了，够使用了，不管你是用于 MVC 还是 Vue，直接拿去套吧，下面逐一介绍已有的模板。
 
@@ -20,7 +20,7 @@
 
 #### 2.1.1 大数据视频监控
 
-![](2022/04/2602.png)
+![](2602.png)
 
 > 仓库地址：https://gitee.com/lvyeyou/DaShuJuZhiDaPingZhanShi/tree/master/智慧交通/大数据视频监控
 >
@@ -28,7 +28,7 @@
 
 #### 2.1.2 旅游大数据
 
-![](2022/04/2603.png)
+![](2603.png)
 
 > 仓库地址：https://gitee.com/lvyeyou/DaShuJuZhiDaPingZhanShi/tree/master/智慧交通/旅游大数据
 >
@@ -36,7 +36,7 @@
 
 #### 2.1.3 高速交通大数据分析平台
 
-![](2022/04/2604.png)
+![](2604.png)
 
 > 仓库地址：https://gitee.com/lvyeyou/DaShuJuZhiDaPingZhanShi/tree/master/智慧交通/高速交通大数据分析平台
 >
@@ -46,7 +46,7 @@
 
 ### 2.2.1 大数据医疗
 
-![](2022/04/2605.png)
+![](2605.png)
 
 > 仓库地址：https://gitee.com/lvyeyou/DaShuJuZhiDaPingZhanShi/tree/master/智慧医疗/大数据医疗
 >
@@ -56,7 +56,7 @@
 
 #### 2.3.1 大数据可视化展板通用模板
 
-![](2022/04/2606.png)
+![](2606.png)
 
 > 仓库地址：https://gitee.com/lvyeyou/DaShuJuZhiDaPingZhanShi/tree/master/智慧城市/大数据可视化展板通用模板
 >
@@ -64,7 +64,7 @@
 
 #### 2.3.2 智慧工地
 
-![](2022/04/2607.png)
+![](2607.png)
 
 > 仓库地址：https://gitee.com/lvyeyou/DaShuJuZhiDaPingZhanShi/tree/master/智慧城市/智慧工地
 >
@@ -74,7 +74,7 @@
 
 #### 2.4.1 土地交易大数据可视化平台
 
-![](2022/04/2608.png)
+![](2608.png)
 
 > 仓库地址：https://gitee.com/lvyeyou/DaShuJuZhiDaPingZhanShi/tree/master/智慧政务/土地交易大数据可视化平台
 >
@@ -82,7 +82,7 @@
 
 #### 2.4.2 工商办税大数据监控平台
 
-![](2022/04/2609.png)
+![](2609.png)
 
 > 仓库地址：https://gitee.com/lvyeyou/DaShuJuZhiDaPingZhanShi/tree/master/智慧政务/工商办税大数据监控平台
 >
@@ -90,7 +90,7 @@
 
 #### 2.4.3 智慧社区
 
-![](2022/04/2610.png)
+![](2610.png)
 
 > 仓库地址：https://gitee.com/lvyeyou/DaShuJuZhiDaPingZhanShi/tree/master/智慧政务/智慧社区
 >
@@ -98,7 +98,7 @@
 
 #### 2.4.4 综合分析平台
 
-![](2022/04/2611.png)
+![](2611.png)
 
 > 仓库地址：https://gitee.com/lvyeyou/DaShuJuZhiDaPingZhanShi/tree/master/智慧政务/综合分析平台
 >
@@ -106,7 +106,7 @@
 
 #### 2.4.5 舆情分析
 
-![](2022/04/2612.png)
+![](2612.png)
 
 > 仓库地址：https://gitee.com/lvyeyou/DaShuJuZhiDaPingZhanShi/tree/master/智慧政务/舆情分析
 
@@ -122,7 +122,7 @@
 
 #### 2.5.1 气象预报大数据平台
 
-![](2022/04/2613.png)
+![](2613.png)
 
 > 仓库地址：https://gitee.com/lvyeyou/DaShuJuZhiDaPingZhanShi/tree/master/智慧气象/气象预报大数据平台
 
@@ -135,7 +135,7 @@
 
 #### 2.6.1 智慧物流
 
-![](2022/04/2614.png)
+![](2614.png)
 
 > 仓库地址：https://gitee.com/lvyeyou/DaShuJuZhiDaPingZhanShi/tree/master/智慧物流/智慧物流
 >
@@ -143,7 +143,7 @@
 
 #### 2.6.2 物流大数据服务平台
 
-![](2022/04/2615.png)
+![](2615.png)
 
 > 仓库地址：https://gitee.com/lvyeyou/DaShuJuZhiDaPingZhanShi/tree/master/智慧物流/物流大数据服务平台
 >
@@ -153,7 +153,7 @@
 
 #### 2.7.1 新能源车联网综合大数据平台
 
-![](2022/04/2616.png)
+![](2616.png)
 
 > 仓库地址：https://gitee.com/lvyeyou/DaShuJuZhiDaPingZhanShi/tree/master/智慧物联/新能源车联网综合大数据平台
 >
@@ -161,7 +161,7 @@
 
 #### 2.7.2 物联网平台数据统计
 
-![](2022/04/2617.png)
+![](2617.png)
 
 > 仓库地址：https://gitee.com/lvyeyou/DaShuJuZhiDaPingZhanShi/tree/master/智慧物联/物联网平台数据统计
 >
@@ -171,7 +171,7 @@
 
 #### 2.8.1 电子商务公共服务平台大数据中心
 
-![](2022/04/2618.png)
+![](2618.png)
 
 > 仓库地址：https://gitee.com/lvyeyou/DaShuJuZhiDaPingZhanShi/tree/master/智慧电商/电子商务公共服务平台大数据中心
 >
@@ -179,7 +179,7 @@
 
 #### 2.8.2 运营大数据
 
-![](2022/04/2619.png)
+![](2619.png)
 
 > 仓库地址：https://gitee.com/lvyeyou/DaShuJuZhiDaPingZhanShi/tree/master/智慧电商/运营大数据
 >
@@ -187,7 +187,7 @@
 
 #### 2.8.3 销售大数据页面模板
 
-![](2022/04/2620.png)
+![](2620.png)
 
 > 仓库地址：https://gitee.com/lvyeyou/DaShuJuZhiDaPingZhanShi/tree/master/智慧电商/销售大数据页面模板
 >
@@ -197,7 +197,7 @@
 
 #### 2.9.1 可视化监控管理
 
-![](2022/04/2621.png)
+![](2621.png)
 
 > 仓库地址：https://gitee.com/lvyeyou/DaShuJuZhiDaPingZhanShi/tree/master/智慧运维/可视化监控管理
 >
@@ -205,7 +205,7 @@
 
 #### 2.9.2 大数据统计展示大屏
 
-![](2022/04/2622.png)
+![](2622.png)
 
 > 仓库地址：https://gitee.com/lvyeyou/DaShuJuZhiDaPingZhanShi/tree/master/智慧运维/大数据统计展示大屏
 >
@@ -213,7 +213,7 @@
 
 #### 2.9.3 大数据运维总览图
 
-![](2022/04/2623.png)
+![](2623.png)
 
 > 仓库地址：https://gitee.com/lvyeyou/DaShuJuZhiDaPingZhanShi/tree/master/智慧运维/大数据运维总览图
 >
@@ -221,7 +221,7 @@
 
 #### 2.9.4 设备环境监测平台
 
-![](2022/04/2624.png)
+![](2624.png)
 
 > 仓库地址：https://gitee.com/lvyeyou/DaShuJuZhiDaPingZhanShi/tree/master/智慧运维/设备环境监测平台
 >
@@ -231,7 +231,7 @@
 
 #### 2.10.1 厅店效能大屏监控看板
 
-![](2022/04/2625.png)
+![](2625.png)
 
 > 仓库地址：https://gitee.com/lvyeyou/DaShuJuZhiDaPingZhanShi/tree/master/智慧运营/厅店效能大屏监控看板
 >
@@ -241,7 +241,7 @@
 
 ### 2.11.1 银行企业信用风险实时监测
 
-![](2022/04/2626.png)
+![](2626.png)
 
 > 仓库地址：https://gitee.com/lvyeyou/DaShuJuZhiDaPingZhanShi/tree/master/智慧金融/银行企业信用风险实时监测
 >

@@ -9,7 +9,7 @@
 
 </div>
 
-![](2022/04/1001.png)
+![](1001.png)
 
 > .NET Core 项目或 .NET Framework 4.6 项目均可使用
 
@@ -457,4 +457,4 @@ public class WechatOAuth : OAuthLoginBase<WechatAccessTokenModel, WechatUserInfo
 - 作者：mrhuo
 - GitHub：[https://github.com/mrhuo/MrHuo.OAuth](https://github.com/mrhuo/MrHuo.OAuth)
 
-![MrHuo.OAuth](2022/04/1002.png)
+![MrHuo.OAuth](1002.png)

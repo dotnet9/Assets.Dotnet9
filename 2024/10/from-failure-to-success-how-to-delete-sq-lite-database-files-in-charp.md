@@ -20,7 +20,7 @@ using (var connection = new SqliteConnection(connectionString))
  System.IO.File.Delete("CodeWF.Toolbox.db");
 ```
 
-![](2024/10/0101.png)
+![](0101.png)
 
 ## 查找资料与尝试
 

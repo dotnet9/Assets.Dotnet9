@@ -16,7 +16,7 @@
 
 站长分享过 [眾尋](https://www.cnblogs.com/ZXdeveloper/) 大佬的一篇 [WPF 简易新手引导](https://www.cnblogs.com/ZXdeveloper/p/8391864.html) 一文，新手引导的效果挺不错的，如下图：
 
-![](2022/05/5001.gif)
+![](5001.gif)
 
 该文给出的代码未使用 [MVVM](https://docs.microsoft.com/zh-cn/archive/msdn-magazine/2009/february/patterns-wpf-apps-with-the-model-view-viewmodel-design-pattern) 的开发方式，提示框使用的用户控件、蒙版窗体样式与后台代码未分离，但给大家分享了开发新手引导功能的一个参考。
 
@@ -24,7 +24,7 @@
 
 开源项目 [AIStudio.Wpf.Controls](https://gitee.com/akwkevin/aistudio.-wpf.-controls)，它的新手引导效果如下：
 
-![](2022/05/5202.gif)
+![](5202.gif)
 
 此开源项目也有参考上文（[WPF 简易新手引导](https://www.cnblogs.com/ZXdeveloper/p/8391864.html)），并且重构为 [MVVM](https://docs.microsoft.com/zh-cn/archive/msdn-magazine/2009/february/patterns-wpf-apps-with-the-model-view-viewmodel-design-pattern) 版本，方便绑定使用。
 
@@ -32,13 +32,13 @@
 
 > 当目标控件右侧空间足够显示引导提示框时，引导提示框就显示在目标控件右侧；在右侧空间不足时，则将引导提示框显示在目标控件左侧：
 
-![](2022/05/5203.png)
+![](5203.png)
 
 ### 案例三（本文介绍的方式）
 
 站长根据上面的开源项目 [AIStudio.Wpf.Controls](https://gitee.com/akwkevin/aistudio.-wpf.-controls) 做了一个自己的版本 [Dotnet9WPFControls](https://github.com/dotnet9/Dotnet9WPFControls)，去掉了上一步按钮、增加标题绑定、下一步按钮内容绑定、提示框样式修改等，效果如下：
 
-![](2022/05/5201.gif)
+![](5201.gif)
 
 后面段落就介绍 怎么使用 [Dotnet9WPFControls](https://github.com/dotnet9/Dotnet9WPFControls) 添加新手引导功能，并简单提及这个自定义控件的开发细节，主要原理还是看上文 [WPF 简易新手引导](https://www.cnblogs.com/ZXdeveloper/p/8391864.html) 哈。
 
@@ -50,7 +50,7 @@
 
 使用 .NET 6|7 创建一个名为 "NewbieGuideDemo" 的 WPF 解决方案：
 
-![](2022/05/5204.png)
+![](5204.png)
 
 ### 2.2 引入 nuget 包
 
@@ -58,7 +58,7 @@
 
 该包提供引导控件及其样式，记得勾选“包括预发行版”，然后点击安装。
 
-![](2022/05/5205.png)
+![](5205.png)
 
 - 添加 NuGet 包 2：**Prism.DryIoc**
 
@@ -153,7 +153,7 @@ namespace NewbieGuideDemo
 
 在上面的 ViewModel 中，定义了一个引导属性 `Guide`，这个属性是与提示框绑定展示：
 
-![](2022/05/5206.png)
+![](5206.png)
 
 - 第一个参数定义了引导提示框的标题 `“快速添加新手引导”`
 - 第二个参数定义了引导提示框的提示内容 `“这样添加新手引导，或许比较优雅”`
@@ -311,7 +311,7 @@ public class BindControlToGuideConverter : IMultiValueConverter
 
 Demo 代码完毕，直接运行项目，效果如下，源码在这 [NewbieGuideDemo](https://github.com/dotnet9/TerminalMACS.ManagerForWPF/tree/master/src/NewbieGuideDemo)：
 
-![](2022/05/5207.gif)
+![](5207.gif)
 
 ## 3. 控件如何开发的？
 
@@ -321,7 +321,7 @@ Demo 代码完毕，直接运行项目，效果如下，源码在这 [NewbieGuid
 
 代码组织结构如下：
 
-![](2022/05/5208.png)
+![](5208.png)
 
 - GuideInfo：定义引导信息类，如标题、内容、下一步按钮显示内容。
 - GuideHintControl：引导提示框控件，显示引导标题、引导内容、下一步按钮，即 `GuideInfo` 绑定的控件。
@@ -352,13 +352,13 @@ Demo 代码完毕，直接运行项目，效果如下，源码在这 [NewbieGuid
 
 GuideControl 方式，站长推荐，即以控件的方式显示新手引导，[点击看代码](https://github.com/dotnet9/Dotnet9WPFControls/blob/main/src/Dotnet9WPFControls.Demo/Views/GuideControlView.xaml)：
 
-![](2022/05/5209.gif)
+![](5209.gif)
 
 **新手引导 Demo 二**
 
 GuideWindow 方式，即以子窗体的方式显示新手引导，[点击看代码](https://github.com/dotnet9/Dotnet9WPFControls/blob/main/src/Dotnet9WPFControls.Demo/Views/GuideWindowView.xaml)：
 
-![](2022/05/5210.gif)
+![](5210.gif)
 
 详细开发不展开说了，一切都在代码中。
 

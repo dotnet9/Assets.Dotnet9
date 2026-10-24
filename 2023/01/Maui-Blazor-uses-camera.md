@@ -220,7 +220,7 @@ builder.ConfigureMauiHandlers(handlers =>
 
 然后可以运行程序就可以看到我们的效果了。
 
-![](2023/01/0301.jpg)
+![](0301.jpg)
 
 示例代码：
 

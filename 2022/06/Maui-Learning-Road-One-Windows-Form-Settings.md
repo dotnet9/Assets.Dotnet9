@@ -23,19 +23,19 @@ OK，程序运行完美，Mac 上也很完美，而且一套代码在 `Window` �
 
 - 注册`生命周期函数`
 
-![](2022/06/0101.png)
+![](0101.png)
 
 - 重写 `OnCreate` 方法
 
-![](2022/06/0102.png)
+![](0102.png)
 
-![](2022/06/0103.png)
+![](0103.png)
 
 5. 你一定要将 `Maui Windows` 下自带的 `ExtendsContentIntoTitleBar` 设置为 `false`（这很重要，另外 `Maui Window` 类下有一个 `SetTitleBar`，对不起这不是你想的那样，怎么修改他都无效，可能是我太水没找到方法）
 
 6. 使用 Maui 窗口句柄（`Windows` 平台），获取 `AppWindow`，修改 `AppWindow` 下的 `TitleBar` 的相关属性，[参考文档：标题栏自定义 - Windows apps | Microsoft Docs ](https://docs.microsoft.com/zh-cn/windows/apps/develop/title-bar?tabs=wasdk)
 
-![](2022/06/0104.png)
+![](0104.png)
 
 7. 完成以上步骤，那么恭喜你，你可以拥有一个无标题栏的窗口了（实际标题栏还在，只不过和下面的正式内容合并在一起了）；
 
@@ -43,15 +43,15 @@ OK，程序运行完美，Mac 上也很完美，而且一套代码在 `Window` �
 
 a) 窗体最大化需要调用 `Win32Api`,给窗体发送最大化事件（我做了简单的封装有需要的小伙伴可以找我要，也许还有别的方案只是我太笨）
 
-![](2022/06/0105.png)
+![](0105.png)
 
 b) 改变窗体大小需要调用 `AppWindow` 的 `MoveAndResize` 注意这个函数内部并没有考虑过 Dpi 缩放的问题，需要你自己解决
 
-![](2022/06/0106.png)
+![](0106.png)
 
 c) 启用全屏，需要使用 `AppWindowPresenter`，[参考文档：AppWindowPresenter Class (Microsoft.UI.Windowing) - Windows App SDK | Microsoft Docs](https://docs.microsoft.com/zh-CN/windows/windows-app-sdk/api/winrt/microsoft.ui.windowing.appwindowpresenter?view=windows-app-sdk-1.0)
 
-![](2022/06/0107.png)
+![](0107.png)
 
 终于一个简单的窗体指定窗体大小、最大化窗体、无边框的窗体终于完成了，这确实很简单，满满的都是泪（现在还有一些问题就是标题栏拖动会影响按钮没法点击）。
 

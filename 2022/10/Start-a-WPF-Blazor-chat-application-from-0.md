@@ -6,7 +6,7 @@
 
 **注** 要使WPF支持Blazor，[.NET](https://dotnet.microsoft.com/zh-cn/)版本必须是 6.0 或更高版本，本文所有示例使用的.NET 7.0，版本要求见[链接](https://learn.microsoft.com/zh-cn/aspnet/core/blazor/hybrid/tutorials/wpf?view=aspnetcore-7.0)，截图看如下文字：
 
-![.NET版本要求](2022/10/1003.png)
+![.NET版本要求](1003.png)
 
 ## 1. WPF默认程序
 
@@ -14,11 +14,11 @@
 
 使用WPF模板创建一个默认程序，取名【WPFBlazorChat】，项目组织结构如下：
 
-![空白WPF项目](2022/10/1001.png)
+![空白WPF项目](1001.png)
 
 运行项目，一个空白窗口：
 
-![WPF项目空白窗口](2022/10/1002.png)
+![WPF项目空白窗口](1002.png)
 
 接着往下看，我们添加Blazor支持，本小节代码在这[WPF默认程序源码](https://github.com/dotnet9/WPFBlazorChat/tree/main/1WPF%E9%BB%98%E8%AE%A4%E7%A8%8B%E5%BA%8F/WPFBlazorChat)。
 
@@ -30,7 +30,7 @@
 
 双击工程文件`WPFBlazorChat.csproj`，修改处如下：
 
-![工程文件修改对比](2022/10/1004.png)
+![工程文件修改对比](1004.png)
 
 1. 在项目文件的顶部，将 SDK 更改为 `Microsoft.NET.Sdk.Razor`。
 2. 添加节点`<RootNameSpace>WPFBlazorChat</RootNameSpace>`，将项目命名空间 `WPFBlazorChat` 设置为应用的根命名空间。
@@ -163,7 +163,7 @@ a, .btn-link {
 
 这是两者产生关系的关键一步，打开窗体`MainWindow.xaml`，修改如下：
 
-![窗体Xaml修改](2022/10/1005.png)
+![窗体Xaml修改](1005.png)
 
 如上代码，要点如下：
 
@@ -173,15 +173,15 @@ a, .btn-link {
 
 打开`MainWindow.xaml.cs`，修改如下：
 
-![注入Ioc容器](2022/10/1006.png)
+![注入Ioc容器](1006.png)
 
 在WPF里可以使用[Prism](https://prismlibrary.com/)等框架提供的`Unity`、`DryIoc`等`Ioc`容器实现视图与服务的注入；`Razor`组件这里，默认使用`ASP.NET Core`的`IServiceCollection`容器；如果WPF窗体与Razor组件需要共享数据，可以通过后面要说的`Messager`发送消息，也可以通过`Ioc`容器注入的方式实现，比如从WPF窗体中注入的数据（通过`MainWindow`构造函数注入），通过`IServiceCollection`容器再注入`Razor`组件使用，这里后面也有提到。
 
-![WPF与Razor组件之间通过Ioc数据传输](2022/10/1008.png)
+![WPF与Razor组件之间通过Ioc数据传输](1008.png)
 
 上面步骤做完后，运行程序：
 
-![WPF集成Blazor的默认程序](2022/10/1007.gif)
+![WPF集成Blazor的默认程序](1007.gif)
 
 OK，`WPF`与`Blazor`集成成功，打完收工？
 
@@ -189,7 +189,7 @@ OK，`WPF`与`Blazor`集成成功，打完收工？
 
 ## 3. 自定义窗体
 
-![WPF默认窗体](2022/10/1009.png)
+![WPF默认窗体](1009.png)
 
 看上图，窗体边框是WPF默认的样式，有时会感觉比较丑，或者不丑，设计师有其他的窗体风格设计，往往我们要自定义窗体，本节分享部分WPF与Blazor的自定义窗体实现，更多定制化功能可能需要您自行研究。
 
@@ -226,7 +226,7 @@ OK，`WPF`与`Blazor`集成成功，打完收工？
 
 上面的代码只是隐藏了WPF默认窗体的边框，运行程序如下：
 
-![隐藏WPF默认窗体边框](2022/10/1010.gif)
+![隐藏WPF默认窗体边框](1010.gif)
 
 看上图，点击窗体中的按钮（其实是Razor组件的按钮），但未执行按钮点击事件，且窗体消失了，这是怎么回事？您可以尝试研究下为什么，我没有研究个所以然来，暂时加个背景处理`BlazorWebView`穿透的问题。
 
@@ -234,7 +234,7 @@ OK，`WPF`与`Blazor`集成成功，打完收工？
 
 我们加上自定义窗体的基本样式看看：
 
-![带基本样式的WPF自定义窗体](2022/10/1011.gif)
+![带基本样式的WPF自定义窗体](1011.gif)
 
 `MainWindow.xaml`代码如下：
 
@@ -344,7 +344,7 @@ public partial class MainWindow : Window
 - 当您尝试最大化后，窗体铺满了整个操作系统桌面（连任务栏区域也占用了）；
 - 窗体任务栏两个圆角未生效（红色矩形框选的部分），即窗体下面的两个圆角，站长未找到让`BlazorWebView`出现圆角的属性或其他方法；标题栏区域（绿色矩形框选的部分）是WPF控件，所以圆角显示正常。
 
-![窗体圆角](2022/10/1012.png)
+![窗体圆角](1012.png)
 
 在后面的`3.4`小节，站长使用一个第三库实现了窗体圆角问题，更多比较好的WPF自定义窗体实现可看这篇文章：[WPF三种自定义窗体的实现](https://www.cnblogs.com/pumbaa/p/13306486.html),本小节中示例源码在这[WPF自定义窗体](https://github.com/dotnet9/WPFBlazorChat/tree/main/3WPF%E4%B8%8EBlazor%E7%9A%84%E8%87%AA%E5%AE%9A%E4%B9%89%E7%AA%97%E4%BD%93/WPFBlazorChat_1WPF%E8%87%AA%E5%AE%9A%E4%B9%89%E7%AA%97%E4%BD%93)。
 
@@ -352,7 +352,7 @@ public partial class MainWindow : Window
 
 异形窗体的需求，使用WPF实现是比较方便的，本来打算写写的，感觉偏离主题太远了，给篇文章自行看看吧：[WPF异形窗体演示](https://baijiahao.baidu.com/s?id=1666945620509938748)，文中异形窗体效果如下：
 
-![WPF异形窗体](2022/10/1013.jpeg)
+![WPF异形窗体](1013.jpeg)
 
 下面介绍将窗体的标题栏也放`Razor`组件中实现的方式。
 
@@ -364,7 +364,7 @@ public partial class MainWindow : Window
 
 `MainWindow.xaml`恢复代码，只设置隐藏WPF默认窗体边框，并给`BlazorWebView`套一层背景：
 
-![WPF透明窗体](2022/10/1014.png)
+![WPF透明窗体](1014.png)
 
 后面的代码有参考 [BlazorDesktopWPF-CustomTitleBar](https://github.com/James231/BlazorDesktopWPF-CustomTitleBar) 开源项目实现。
 
@@ -431,11 +431,11 @@ public partial class MainWindow : Window
 2. 在第一个`div`里，其中有3个按钮，即窗体的控制按钮，调用窗体最小化、最大化（还原）、关闭方法调用；
 3. 另有两个按钮，演示单击调用`JavaScript`的`alert`方法弹出消息。
 
-![WPF透明窗体](2022/10/1015.png)
+![WPF透明窗体](1015.png)
 
 运行效果如下：
 
-![WPF透明窗体](2022/10/1016.gif)
+![WPF透明窗体](1016.gif)
 
 实现这个效果，还有一些代码：
 
@@ -747,25 +747,25 @@ public class WindowService
 
 就上面三处修改，我们运行看看：
 
-![WPF与Blazor自定义窗体比较完美的解决](2022/10/1017.gif)
+![WPF与Blazor自定义窗体比较完美的解决](1017.gif)
 
 是不是和`3.3`效果一样？其实仔细看，窗体下面的圆角也有了：
 
-![窗体圆角](2022/10/1018.png)
+![窗体圆角](1018.png)
 
 最终还是WPF解决了所有问题...
 
-![我笑了](2022/10/1032.gif)
+![我笑了](1032.gif)
 
 具体怎么实现的窗体最大化未占操作系统的任务栏，以及窗体圆角问题的解决（竟然能让`BlazorWebView`部分透明了）可以查看该组件相关代码，本文不过多深究。
 
 另外，WPF熟手可能比较清楚，前面的代码还不能正常的拖动改变窗体大小（不知道你发现没，我当你没发现。），使用该库后也解决了：
 
-![窗体手动改变大小](2022/10/1027.gif)
+![窗体手动改变大小](1027.gif)
 
 本小节源码在这[解决圆角和最大化问题](https://github.com/dotnet9/WPFBlazorChat/tree/main/3WPF%E4%B8%8EBlazor%E7%9A%84%E8%87%AA%E5%AE%9A%E4%B9%89%E7%AA%97%E4%BD%93/WPFBlazorChat_4Blazor%E4%B8%8EWPF%E6%AF%94%E8%BE%83%E5%AE%8C%E7%BE%8E%E7%9A%84%E5%AE%9E%E7%8E%B0%E6%95%88%E6%9E%9C)，下面开始本文的下半部分了，好累，终于到这了。
 
-![我累了](2022/10/1033.gif)
+![我累了](1033.gif)
 
 ## 4. 添加第三方Blazor组件
 
@@ -773,11 +773,11 @@ public class WindowService
 
 鉴于大部分同学前端基础可能不是太好，即使使用[Blazor](https://learn.microsoft.com/zh-cn/aspnet/core/blazor/?view=aspnetcore-7.0)可以少用或者不用[JavaScript](https://baike.baidu.com/item/JavaScript/321142?fr=aladdin)，但有那么一款漂亮、便捷的`Blazor`组件库，这不是如虎添翼吗？本文使用[Masa Blazor](https://www.masastack.com/blazor)做示例展示，如今`Blazor`组件库众多，选择自己喜欢的、顺手的就成：
 
-![Masa Blazor](2022/10/1019.png)
+![Masa Blazor](1019.png)
 
 站长前些日子介绍过[MAUI使用Masa blazor组件库](https://dotnet9.com/2022/06/Use-masa-blazor-in-maui-blazor)一文，本小节思路也是类似，且看我表演。
 
-![看我表演](2022/10/1034.png)
+![看我表演](1034.png)
 
 打开Masa Blazor文档站点：https://blazor.masastack.com/getting-started/installation，一起来往WPF中引入这款Blazor组件库吧。
 
@@ -854,7 +854,7 @@ public class WindowService
 
 打开`MainWindow.xaml.cs`，添加一行代码 `serviceCollection.AddMasaBlazor();`
 
-![Ioc中添加Masa Blazor](2022/10/1020.png)
+![Ioc中添加Masa Blazor](1020.png)
 
 ### 4.5 尝试Masa.Blazor案例
 
@@ -862,7 +862,7 @@ public class WindowService
 
 打开Tab组件链接：https://blazor.masastack.com/components/tabs，尝试这个Demo：
 
-![Masa Blazor的Tab组件案例](2022/10/1021.gif)
+![Masa Blazor的Tab组件案例](1021.gif)
 
 Demo的代码我几乎不变的引入，打开`RazorViews\Counter.razor`文件，保留`3.4`节的标题栏，替换了客户区域内容，代码如下：
 
@@ -973,11 +973,11 @@ Demo的代码我几乎不变的引入，打开`RazorViews\Counter.razor`文件�
 
 运行效果如下：
 
-![Masa Blazor的Tab组件案例集成](2022/10/1022.gif)
+![Masa Blazor的Tab组件案例集成](1022.gif)
 
 是不是有那味儿了？再尝试把Tab移到标题栏，前面有提过的效果：
 
-![Tab放标题栏](2022/10/1023.gif)
+![Tab放标题栏](1023.gif)
 
 上面的效果，代码修改如下，删除了原标题栏代码，将窗体操作按钮放到了`MToolbar`里面，并使用`MToolbar`添加了双击事件、鼠标按下、释放事件实现窗体拖动：
 
@@ -1037,15 +1037,15 @@ Demo的代码我几乎不变的引入，打开`RazorViews\Counter.razor`文件�
 
 窗体操作按钮的背景色也做部分修改：
 
-![样式部分修改](2022/10/1024.png)
+![样式部分修改](1024.png)
 
 其实上面的窗体效果还是有点瑕疵，注意到窗体右侧的竖直滚动条了吗？在没引入`Masa.Blazor`之前，右侧正常显示，引入后多了一个竖直滚动条：
 
-![引入Masa.Blazor后多了竖直滚动条](2022/10/1025.png)
+![引入Masa.Blazor后多了竖直滚动条](1025.png)
 
 这个想去掉也简单，在`wwwroot\css\app.css`追加样式（当时也是折腾了好一会儿，最后在`Masa.Blazor`群里群友给出了解决方案，十分感谢）：
 
-![问题解决过程](2022/10/1035.jpg)
+![问题解决过程](1035.jpg)
 
 问题解决`css`代码：
 
@@ -1057,7 +1057,7 @@ Demo的代码我几乎不变的引入，打开`RazorViews\Counter.razor`文件�
 
 因为`Razor`组件是在`BlazorWebView`里渲染的，即`BlazorWebView`就是个小型的浏览器呀，上面的样式即把浏览器的滚动条宽度设置为0，它不就没有了吗？现在效果如下，是不是舒服了？
 
-![根据后界面](2022/10/1026.png)
+![根据后界面](1026.png)
 
 添加Masa.Blazor就介绍到这里，本小节示例代码在这里[WPF中使用Masa.Blazor](https://github.com/dotnet9/WPFBlazorChat/tree/main/4%E4%BD%BF%E7%94%A8MasaBlazor),下面讲解WPF与Blazor混合开发后多窗体消息通知问题。
 
@@ -1276,7 +1276,7 @@ public class WeakActionAndToken
 
 第 5 节涉及到多窗体及多`Razor`组件了，需要创建一些目录存放这些文件，方便分类管理。
 
-![整理后代码](2022/10/1028.png)
+![整理后代码](1028.png)
 
 1. A：放`Message`，即一些消息通知类；
 
@@ -1290,7 +1290,7 @@ public class WeakActionAndToken
 
 先看本示例效果，再给出相关代码说明：
 
-![消息通知示例](2022/10/1029.gif)
+![消息通知示例](1029.gif)
 
 图中有三个操作：
 
@@ -1501,26 +1501,26 @@ void SendNumber()
 
 本来想写完整Demo说明的，发现上面把基本要点都拉了一遍，再粘贴一些重复代码有点没完没了了，有兴趣的拉源码[WPF与Blazor混合开发Demo](https://github.com/dotnet9/WPFBlazorChat/tree/main/src)查看、运行，下面是项目代码结构：
 
-![Demo代码结构](2022/10/1030.png)
+![Demo代码结构](1030.png)
 
 下面是最后的示例效果图，前面部分文章已经发过，再发一次，哈哈：
 
 **用户列表窗口**
 
-![用户列表](2022/10/1-main-window.gif)
+![用户列表](1-main-window.gif)
 
 **打开子窗口**
 
-![打开窗口](2022/10/3-open-child-window.gif)
+![打开窗口](3-open-child-window.gif)
 
 **聊天窗口**
 
-![聊天窗口](2022/10/2-chat-window.gif)
+![聊天窗口](2-chat-window.gif)
 
 **演示发送消息**
 
 <video id="video" controls="" preload="none" poster="2022/10//4-send-message.png">
-  <source id="mp4" src="2022/10//4-send-message.mp4" type="video/mp4">
+  <source id="mp4" src="4-send-message.mp4" type="video/mp4">
 </video>
 
 ## 7. Click Once发布尝试
@@ -1541,7 +1541,7 @@ void SendNumber()
 
 `Blazor混合开发`的话，除了WPF，还有MAUI（跨平台框架，支持平台包括`Windows\Mac\Linux\Android\iOS`等）、`Winform`（同`WPF`，只能在`Windows平台`运行）等，建议阅读[微软文档](https://learn.microsoft.com/zh-cn/aspnet/core/blazor/hybrid/?view=aspnetcore-7.0)继续学习，本文只是个引子：
 
-![微软文档学习Blazor](2022/10/1031.png)
+![微软文档学习Blazor](1031.png)
 
 ### 8.4 Blazor组件库除了Masa.Blazor还有哪些？
 

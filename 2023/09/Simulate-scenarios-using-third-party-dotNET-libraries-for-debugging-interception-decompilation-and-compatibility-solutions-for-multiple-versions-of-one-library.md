@@ -37,7 +37,7 @@
 
 我已经将制作好的（虚构的）游戏发布在[NuGet](https://www.nuget.org/packages/Dotnet9Games/)上作为第三方包使用。为了模拟一个比较真实的场景，直接安装最新版本【本文基于1.0.3版本编写】即可：
 
-![](2023/09/0801.png)
+![](0801.png)
 
 ### 2.2. 添加目标游戏
 
@@ -140,7 +140,7 @@ public partial class MainWindow : Window
 
 准备操作完成，运行程序：
 
-![](2023/09/0802.gif)
+![](0802.gif)
 
 这个游戏比较简单，主要包含以下几个步骤：
 
@@ -151,7 +151,7 @@ public partial class MainWindow : Window
 
 气球生成8个可能太少了，让我们来生成80个气球吧：
 
-![](2023/09/0803.gif)
+![](0803.gif)
 
 **怎么弹出一个红色的大圆，气球都消失了？这就是陷阱！**
 
@@ -161,7 +161,7 @@ public partial class MainWindow : Window
 
 输入`80`个气球后，我们点击`开始游戏`是调用了游戏的方法`StartGame()`, 我们打开[dnSpy](https://github.com/dnSpyEx/dnSpy/releases)（这个链接提供32位和64位下载链接），拖入`Dotnet9Games.dll`,找到该方法代码：
 
-![](2023/09/0804.png)
+![](0804.png)
 
 ```csharp
 // Token: 0x06000022 RID: 34 RVA: 0x000022AC File Offset: 0x000004AC
@@ -181,7 +181,7 @@ public void StartGame()
 
 原来是当气球个数多于9个时调用了`PlayBrokenHeartAnimation()`方法，这个方法干啥的呢？看代码：
 
-![](2023/09/0805.png)
+![](0805.png)
 
 大致看出来了吗？首先是清空气球控件，然后又添加了一个红色的圆动画，我们调试试试呢？
 
@@ -196,7 +196,7 @@ public void StartGame()
 5. 点击“开始游戏”按钮；
 6. 进入断点了，调试看看，真的进入`PlayBrokenHeartAnimation()`方法
 
-![](2023/09/0806.gif)
+![](0806.gif)
 
 ## 4. 使用Lib.Harmony拦截
 
@@ -206,7 +206,7 @@ public void StartGame()
 
 我们安装最低版本`1.2.0.1`：
 
-![](2023/09/0807.png)
+![](0807.png)
 
 **为啥是安装最低版本？**
 
@@ -302,17 +302,17 @@ public partial class App : Application
 
 现在再运行WPF程序，我们把气球个数改为80个，正常生成了：
 
-![](2023/09/0808.gif)
+![](0808.gif)
 
 ### 4.3. 就这样？No，再来一陷阱
 
 看着气球在动，我们缩放下窗体大小（这里建议Debug下尝试，因为程序会崩溃，导致操作系统会卡那么一小会儿）：
 
-![](2023/09/0809.gif)
+![](0809.gif)
 
 程序异常了，再截图看看：
 
-![](2023/09/0810.png)
+![](0810.png)
 
 贴上异常代码：
 
@@ -351,7 +351,7 @@ protected override Size MeasureOverride(Size constraint)
   3. `remainWidth`在做减法操作，那么气球个数足够多，以致于游戏控件宽度小于这些气球宽之和时，就会为负数；
   4. 我们再看看`Size`构造函数代码（如果你用的VS，这里推荐大家安装ReSharper，十分方便的查看引用库方法 ），如下截图：
 
-![](2023/09/0811.png)
+![](0811.png)
 
 代码复制过来看：
 
@@ -446,15 +446,15 @@ namespace Dotnet9Playground
 
 再运行程序：
 
-![](2023/09/0812.png)
+![](0812.png)
 
 拦截方法进入了断点，但无法获取`BallGame`的实例，提示`无法读取内存`，拦截方法返回False（不执行原方法）有下面的异常：
 
-![](2023/09/0813.png)
+![](0813.png)
 
 这时程序异常退出，我们将拦截方法返回True（继续执行原方法），又有提示：
 
-![](2023/09/0814.png)
+![](0814.png)
 
 因为继续执行原方法，取最后一个气球方法又报错`var lastChild = _balloons.LastOrDefault();`，好无奈呀，心酸。
 
@@ -474,7 +474,7 @@ namespace Dotnet9Playground
 
 添加新类库“Dotnet9HookHigh”，并使用`NuGet`安装`2.2.2`稳定最新版`Lib.Harmony`库：
 
-![](2023/09/0815.png)
+![](0815.png)
 
 同时也添加`Dotnet9Games`的`NuGet`包，将前面添加的`HookBallgameMeasureOverride`类剪切到该库，`Lib.Harmony`高版本用法与低版本有所区别，在代码中有注释，注意对比，升级后的`HookBallgameMeasureOverride`类定义：
 
@@ -519,7 +519,7 @@ public class HookBallgameMeasureOverride
 
 区别如下图，`Harmony`实例获取代码有变化，其他不变：
 
-![](2023/09/0816.png)
+![](0816.png)
 
 主工程`Dotnet9Playground`添加`Dotnet9HookHigh`工程的引用，`App.xaml.cs`中添加引用`HookBallgameMeasureOverride`命名空间：`using Dotnet9HookHigh;`，代码如下：
 
@@ -551,7 +551,7 @@ namespace Dotnet9Playground
 
 这就完了？运行试试：
 
-![](2023/09/0817.png)
+![](0817.png)
 
 这提示是指我的新工程`Dotnet9HookHigh`未成功应用高版本`Lib.Harmony`(2.2.2)，亦指主工程`Dotnet9Playground`未成功识别加载高版本`Lib.Harmony`，怎么办？看我接下来的表演！
 
@@ -559,7 +559,7 @@ namespace Dotnet9Playground
 
 #### 5.2.1. 分析程序输出目录
 
-![](2023/09/0818.png)
+![](0818.png)
 
 程序输出目录只有一个`0Harmony.dll`，高低2个版本应该是两个库才对，怎么办？
 
@@ -567,12 +567,12 @@ namespace Dotnet9Playground
 
 低版本不变（存储位置依然放输出目录的根目录），为了兼容，我们把高版本改目录存放，比如：`Lib/Lib.Harmony/2.2.2/0Harmony.dll`，将库按目录结构存放在工程`Dotnet9HookHigh`中：
 
-![](2023/09/0819.png)
+![](0819.png)
 
 - 并将`0Harmony.dll`的属性【复制到输出目录】设置为【如果较新则复制】
 - 删除`Dotnet9HookHigh`对`Lib.Harmony`库的`NuGet`引用，改为本地引用（原来的配方，浏览本地路径的方式）；
 
-![](2023/09/0820.png)
+![](0820.png)
 
 **这就完了吗？咋还是报那个错？**
 
@@ -623,7 +623,7 @@ namespace Dotnet9Playground
 
 **注意：暂时不要用最新预览版`2.3.0-prerelease.2`，站长做这个示例签名用这个版本花了2个晚上没成功，换成`2.2.2`就可以，下面的图也重新录了，可能该版本有其他依赖的缘故，只是猜测：**
 
-![](2023/09/0827.png)
+![](0827.png)
 
 1. 创建一个新的随机密钥对`0Harmony.snk`
 
@@ -633,7 +633,7 @@ namespace Dotnet9Playground
 "C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.6.1 Tools\sn.exe" -k "F:\github_gitee\TerminalMACS.ManagerForWPF\src\Demo\MultiVersionLibrary\Dotnet9HookHigh\Lib\Lib.Harmony\2.2.2\0Harmony.snk"
 ```
 
-![](2023/09/0821.png)
+![](0821.png)
 
 2. 反编译`0Harmony.dll`
 
@@ -643,7 +643,7 @@ namespace Dotnet9Playground
 "C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.6.1 Tools\ildasm.exe" "F:\github_gitee\TerminalMACS.ManagerForWPF\src\Demo\MultiVersionLibrary\Dotnet9HookHigh\Lib\Lib.Harmony\2.2.2\0Harmony.dll" /out="F:\github_gitee\TerminalMACS.ManagerForWPF\src\Demo\MultiVersionLibrary\Dotnet9HookHigh\Lib\Lib.Harmony\2.2.2\0Harmony.il"
 ```
 
-![](2023/09/0822.png)
+![](0822.png)
 
 3. 重新编译，附带强命名参数
 
@@ -653,7 +653,7 @@ namespace Dotnet9Playground
 "C:\Windows\Microsoft.NET\Framework64\v2.0.50727\ilasm.exe" "F:\github_gitee\TerminalMACS.ManagerForWPF\src\Demo\MultiVersionLibrary\Dotnet9HookHigh\Lib\Lib.Harmony\2.2.2\0Harmony.il" /dll /resource="F:\github_gitee\TerminalMACS.ManagerForWPF\src\Demo\MultiVersionLibrary\Dotnet9HookHigh\Lib\Lib.Harmony\2.2.2\0Harmony.res" /key="F:\github_gitee\TerminalMACS.ManagerForWPF\src\Demo\MultiVersionLibrary\Dotnet9HookHigh\Lib\Lib.Harmony\2.2.2\0Harmony.snk" /optimize
 ```
 
-![](2023/09/0823.png)
+![](0823.png)
 
 4. 验证签名信息
 
@@ -661,25 +661,25 @@ namespace Dotnet9Playground
 "C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.6.1 Tools\sn.exe" -v "F:\github_gitee\TerminalMACS.ManagerForWPF\src\Demo\MultiVersionLibrary\Dotnet9HookHigh\Lib\Lib.Harmony\2.2.2\0Harmony.dll" 
 ```
 
-![](2023/09/0824.png)
+![](0824.png)
 
 也可将生成的`dll`拖入`dnSpy`查看：
 
-![](2023/09/0826.png)
+![](0826.png)
 
 作为对比，查看NuGet下载的`Lib.Harmony`是没做签名的：
 
-![](2023/09/0825.png)
+![](0825.png)
 
 我们将签名补充进`App.Config`文件。
 
-![](2023/09/0828.png)
+![](0828.png)
 
 **注意**：因为我们使用的随机密钥对，所以您生成的签名和我的肯定不一样：
 
 再调试，能正常拦截`MeasureOverride`方法了，传入的实例也能正常显示`BallGame`（就这？对，我搞了2个晚上。。。。）：
 
-![](2023/09/0829.png)
+![](0829.png)
 
 ### 5.4. 一切就绪，完善最后一个拦截
 
@@ -805,11 +805,11 @@ if (remainWidth > 0)
 
 其他代码就是反射的使用，不再细说，我们运行程序，现在随便缩放窗体了：
 
-![](2023/09/0830.gif)
+![](0830.gif)
 
 当剩余宽度小于0时跳过计算最后一个子项大小
 
-![](2023/09/0831.gif)
+![](0831.gif)
 
 ### 5.4. 小优化
 
@@ -821,7 +821,7 @@ Git一般是配置成不能上传可执行程序或`dll`文件的，但多版本
 copy "$(ProjectDir)Lib\Lib.Harmony\2.2.2\0Harmony.ref" "$(ProjectDir)Lib\Lib.Harmony\2.2.2\0Harmony.dll"
 ```
 
-![](2023/09/0832.png)
+![](0832.png)
 
 ## 6. 总结
 

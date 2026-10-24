@@ -7,7 +7,7 @@
 
 - AOT发布运行程序直接崩溃，查看应用程序事件：
 
-![](2026/01/0301.png)
+![](0301.png)
 
 - Debug调试模式下，未捕获全局异常，`Program`的`Main`函数会抛出明确的COM异常：
 
@@ -19,11 +19,11 @@ System.Runtime.InteropServices.COMException:“尚未调用 CoInitialize。 (0x8
 
 排查代码后发现核心问题出在`Program.cs`的`Main`函数定义上——将入口函数声明为`async Task`类型，而非Avalonia要求的同步：
 
-![](2026/01/0302.png)
+![](0302.png)
 
 将**async Task**改为**void**修复，[Avalonia 文档：Application Lifetimes](https://docs.avaloniaui.net/docs/concepts/application-lifetimes) 其实有说明：
 
-![](2026/01/0303.png)
+![](0303.png)
 
 ### 原理分析
 Avalonia作为桌面UI框架，对主线程的`SynchronizationContext`（同步上下文）有强依赖，剪贴板、窗口消息循环等系统级操作均需基于稳定的主线程上下文执行。
@@ -49,15 +49,15 @@ Avalonia作为桌面UI框架，对主线程的`SynchronizationContext`（同步�
 
 `DataGrid`是早期移植的WPF（链接指Silverlight）风格组件，“Cell级控件+被动虚拟化”的设计在小数据量+Tab切换重建时，控件实例化/布局开销被Win7/AOT环境放大；而`TreeDataGrid`是Avalonia团队重构的新组件，“行级渲染+强制虚拟化”的设计从根源上降低了切换开销，且官方已明确推荐使用`TreeDataGrid`替代`DataGrid`,讨论请点击[链接](https://github.com/AvaloniaUI/Avalonia/discussions/18388)。
 
-![](2026/01/0304.png)
+![](0304.png)
 
 这里要明确，**TreeDataGrid**已被Avalonia放入[商用套件](https://docs.avaloniaui.net/zh-Hans/docs/reference/controls/treedatagrid/treedatagrid-column-types)中
 
-![](2026/01/0305.png)
+![](0305.png)
 
 使用免费版，必然会有新发现Bug得不到修复的情况（官方把旧版维护推给了开源社区分支），**Avalonia.Controls.TreeDataGrid**免费版可使用[11.1.1](https://www.nuget.org/packages/Avalonia.Controls.TreeDataGrid/11.1.1)及以前版本：
 
-![](2026/01/0306.png)
+![](0306.png)
 
 Semi提供的配套主题库对应版本为[11.1.1.1](https://www.nuget.org/packages/Semi.Avalonia.TreeDataGrid/11.1.1.1)
 

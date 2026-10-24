@@ -8,13 +8,13 @@ dotnet new install Masa.Template
 
 安装完成将出现四个模板
 
-![](2023/03/1401.png)
+![](1401.png)
 
 ### Masa Blazor App
 
 Masa Blazor App 的模板创建的是一个没有携带解决方案的项目模板，默认项目结构如图：
 
-![](2023/03/1402.png)
+![](1402.png)
 
 一个简单的 Masa Blazor Server 项目。
 
@@ -22,7 +22,7 @@ Masa Blazor App 的模板创建的是一个没有携带解决方案的项目模�
 
 Masa Blazor Pro Web 的模板创建类型有多种：
 
-![](2023/03/1403.png)
+![](1403.png)
 
 - Wasm 就是单纯的 Wasm 模式。
 - Wasm-Host 就是启动一个 Server 托管 Wasm。
@@ -32,7 +32,7 @@ Masa Blazor Pro Web 的模板创建类型有多种：
 
 对于上面五种模式更推荐第五种模式，这样就可以在部署的时候部署 Blazor Server 和 Blazor Wasm 两种模式，可让用户自行切换，剖析以下 Masa Blazor Pro Web 的项目结构：
 
-![](2023/03/1404.png)
+![](1404.png)
 
 MasaWebPro1 项目就是 Razor 类库，提供界面逻辑和实际业务。
 
@@ -42,7 +42,7 @@ MasaWebPro1.WebAssembly 项目就只是以 Blazor WebAssembly 模式托管 MasaW
 
 运行项目将得到一个精美的项目模板：
 
-![](2023/03/1405.png)
+![](1405.png)
 
 可对其修改进行二次开发，也可以将 Pro 和 MasaFramework 结合一块使用。
 
@@ -50,7 +50,7 @@ MasaWebPro1.WebAssembly 项目就只是以 Blazor WebAssembly 模式托管 MasaW
 
 Masa Blazor Website 项目结构：
 
-![](2023/03/1406.png)
+![](1406.png)
 
 Masa Blazor Website 算是老版本的文档站点的模板，简单描述一下，默认使用了全球化。
 
@@ -62,7 +62,7 @@ Masa Framework Project 就是我们的主角了。
 
 当我们创建 MasaFramework 的时候存在多个选项：
 
-![](2023/03/1407.png)
+![](1407.png)
 
 - Use Controllers：使用控制器启用以后不使用 MiniApis（更推荐使用 MiniApis）
 - Enable OpenAPI Support： 其实是否默认使用 Swagger
@@ -75,13 +75,13 @@ Masa Framework Project 就是我们的主角了。
 
 #### Basic：
 
-![](2023/03/1408.png)
+![](1408.png)
 
 一个最基本的 MasaFramework 的项目结构。
 
 #### Cqrs：
 
-![](2023/03/1409.png)
+![](1409.png)
 
 MasaFramework 的 Cqrs 结构，对比基本的 MasaFramework 项目来说有些差异的。
 
@@ -89,7 +89,7 @@ MasaFramework 的 Cqrs 结构，对比基本的 MasaFramework 项目来说有些
 
 #### Ddd：
 
-![](2023/03/1410.png)
+![](1410.png)
 
 MasaFramework 的 Ddd 项目和基本模板的差异也很明显。
 
@@ -97,7 +97,7 @@ MasaFramework 的 Ddd 项目和基本模板的差异也很明显。
 
 #### Cqrs&Ddd：
 
-![](2023/03/1411.png)
+![](1411.png)
 
 Cqrs&Ddd 集成了 Cqrs 和 Ddd 俩个项目模板的特性，是一个稍微复杂的框架。
 
@@ -109,7 +109,7 @@ Cqrs&Ddd 集成了 Cqrs 和 Ddd 俩个项目模板的特性，是一个稍微复
 
 如果你想使用 MasaFramework 的话，可以将 Masa Pro 的模板和 MasaFramework 的模板结合起来一块使用：
 
-![](2023/03/1412.png)
+![](1412.png)
 
 这个是我目前使用到 MasaFramework 的项目，Web 是将 Pro 的模板嵌入进来，并进行修改，当前项目还在完善，这也是我第一个接触 MasaFramework 实践的项目，因为符合我需要的，体积小，依赖少。
 

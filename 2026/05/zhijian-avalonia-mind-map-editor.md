@@ -6,7 +6,7 @@
 
 本轮截图和 GIF 已按当前界面重新制作。程序启动时默认进入空白脑图；需要展示文件列表、小图、缩放、画布拖拽和层级调整时，可以手动打开随程序输出的使用手册。
 
-![](2026/05/zhijian-main-window.gif)
+![](zhijian-main-window.gif)
 
 ## 启动默认空白，手册可主动打开
 
@@ -25,21 +25,21 @@
 - 打开最近文件：记录最近操作过的文件。
 - 保存、另存为、打开文件位置、关闭：补齐日常编辑需要的闭环。
 
-![](2026/05/zhijian-file-menu.png)
+![](zhijian-file-menu.png)
 
 ## 标题栏菜单继续按真实工作流整理
 
 菜单现在不再只放“文件”和“关于”。标题栏已经整理为文件、编辑、主题、语言、帮助、关于几组入口，菜单项带图标，常用操作显示快捷键。
 
-![](2026/05/zhijian-title-menus.gif)
+![](zhijian-title-menus.gif)
 
 “编辑”菜单放撤销、重做、添加同级、添加子级、提升、降级、上移、下移、删除，以及“复制为 Markdown”。复制后会写入系统剪贴板，并使用桌面全局消息提示。
 
-![](2026/05/zhijian-copy-markdown.gif)
+![](zhijian-copy-markdown.gif)
 
 主题不再使用标题栏 ToggleSwitch，而是单独放到“主题”菜单里，后续扩展更多主题会更自然。语言菜单使用 `Lang.Avalonia.Json`，当前提供中文简体、中文繁体、英语和日语资源。
 
-![](2026/05/zhijian-theme-language.gif)
+![](zhijian-theme-language.gif)
 
 “帮助”菜单提供问题反馈、提交需求、提交 PR 和 GitHub 仓库入口；“关于”菜单继续提供网站、更新日志、感谢和关于窗口。
 
@@ -47,11 +47,11 @@
 
 是否显示引导、默认语言、最近文件数量、历史步数，以及 `recent-files.json`、`new-user-tour.seen` 这些运行状态文件名，都集中放在 `src/Zhijian/App.config`。运行时由 `ApplicationSettings` 读取 .NET 编译后的 `Zhijian.dll.config`，配置损坏时回退到默认值，不影响启动。
 
-![](2026/05/zhijian-onboarding.gif)
+![](zhijian-onboarding.gif)
 
 打开单个文件后，左侧“文件”Tab 会列出这个文件，方便后续切换；打开文件夹后则列出目录里的 Markdown、OPML、XMind 文档。选择文件后会自动切回“大纲”，展示当前脑图结构。
 
-![](2026/05/zhijian-open-folder.gif)
+![](zhijian-open-folder.gif)
 
 关闭或切换文件前如果存在未保存修改，会弹出保存提示。最近文件记录保存在程序目录，避免每次重新定位常用文档。
 
@@ -66,37 +66,37 @@
 - 上移、下移。
 - 备注、删除。
 
-![](2026/05/zhijian-node-menus.gif)
+![](zhijian-node-menus.gif)
 
 键盘创建节点的路径也重新走了一遍：`Enter` 添加同级，`Tab` 或 `Shift+Tab` 调整层级，焦点会落回新节点输入框。
 
-![](2026/05/zhijian-create-node.gif)
+![](zhijian-create-node.gif)
 
 大纲圆点菜单和拖拽共用同一个入口，短按打开菜单，移动超过阈值后才进入拖拽，这样菜单和拖拽不会互相抢事件。
 
-![](2026/05/zhijian-outline-menu.gif)
+![](zhijian-outline-menu.gif)
 
 备注输入也做了细节处理：只有节点已有备注，或者用户明确选择“备注”时才显示备注输入框；空备注失焦后会自动收起。脑图节点里备注与标题已经按同一文本对齐方式绘制，短文本节点也能重新点回去继续输入。
 
-![](2026/05/zhijian-note-sync.gif)
+![](zhijian-note-sync.gif)
 
 脑图节点获得焦点后会显示悬浮工具条，可以直接添加备注或删除节点。
 
-![](2026/05/zhijian-node-toolbar.png)
+![](zhijian-node-toolbar.png)
 
 脑图侧也支持拖拽调整父子层级，拖到节点中部成为子节点，拖到上下边缘调整同级顺序。
 
-![](2026/05/zhijian-mind-drag.gif)
+![](zhijian-mind-drag.gif)
 
 ## 小图、缩放和画布拖拽
 
 脑图面积变大后，用户最需要的是“我现在看的是整张图的哪一块”。小图现在基于真实节点坐标和当前视口绘制，不是固定示意图；点击小图可以定位到对应区域。
 
-![](2026/05/zhijian-minimap.gif)
+![](zhijian-minimap.gif)
 
 缩放、中心主题定位、画布拖拽也都在实际窗口里重新验证过。
 
-![](2026/05/zhijian-zoom.gif)
+![](zhijian-zoom.gif)
 
 中间分隔条的拖拽调整宽度也已经改为明确的 `GridSplitter` 行为并通过截图验证，只是这类动图对阅读帮助不大，文档里不再把它作为重点演示。
 
@@ -109,7 +109,7 @@
 - 关于：展示软件名称、简介、版本号、更新时间、作者、联系方式、仓库地址和 NuGet 包地址。
 - 感谢：列出本项目使用和受益的开源项目，链接可直接跳转。
 
-![](2026/05/zhijian-about-menu.png)
+![](zhijian-about-menu.png)
 
 枝见感谢这些优秀的开源平台和项目：
 

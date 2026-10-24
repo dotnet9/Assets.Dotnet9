@@ -36,11 +36,11 @@ Install-Package Hashids.net
 
 在项目中右键单击**依赖项**，如图：
 
-![](2023/09/0501.png)
+![](0501.png)
 
 然后，在打开的 NuGet 程序包管理界面输入关键字**Hashids.net**，在搜索到的结果中选中`Hashids.net`类库组件并安装，如图：
 
-![](2023/09/0502.png)
+![](0502.png)
 
 ## Hashids.net 的使用
 

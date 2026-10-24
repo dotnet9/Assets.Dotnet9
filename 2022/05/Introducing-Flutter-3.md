@@ -12,13 +12,13 @@
 
 我们很高兴地宣布，作为 Google I/O 主题演讲的一部分推出 Flutter 3。Flutter 3 完成了我们从以移动为中心到多平台框架的路线图，提供了对 macOS 和 Linux 桌面应用的支持，以及对 Firebase 集成的改进、新的生产力和性能特性以及对 Apple Silicon 的支持。
 
-![](2022/05/3501.png)
+![](3501.png)
 
 ## Flutter 3 之旅
 
 我们创建 Flutter 是为了彻底改变应用程序开发：将 Web 的迭代开发模式与硬件加速的图形渲染和像素级控制相结合，这些都是以前游戏的专利。自 Flutter 1.0 beta 发布以来的过去四年里，我们逐渐在这些基础上构建，添加了新的框架功能和新的小部件，与底层平台更深入的集成，丰富的包(库）以及许多性能和工具改进。
 
-![](2022/05/3502.png)
+![](3502.png)
 
 随着产品的成熟，越来越多的人开始使用它构建应用程序。 如今，有超过 500,000 个使用 Flutter 构建的应用程序。 来自 [data.ai](https://www.data.ai/en/) 等研究公司的分析以及公开推荐表明，Flutter 被[许多细分市场的广泛客户](https://flutter.dev/showcase)使用：从[微信](https://play.google.com/store/apps/details?id=com.tencent.mm&hl=en_US&gl=US)等社交应用程序到 [Betterment](https://apps.apple.com/us/app/betterment-investing-saving/id393156562) 和 [Nubank](https://play.google.com/store/apps/details?id=com.nu.production&hl=en_US&gl=US) 等金融和银行应用程序； 从 [SHEIN](https://play.google.com/store/apps/details?id=com.zzkko&hl=en_US&gl=US) 和 [trip.com](https://apps.apple.com/us/app/trip-com-hotels-flights-trains/id681752345) 等商务应用到 [Fastic](https://fastic.com/) 和 [Tabcorp](https://auspreneur.com.au/tabcorp-adopts-googles-flutter-platform/) 等生活方式应用； 从 [My BMW](https://www.press.bmwgroup.com/global/article/detail/T0328610EN/the-my-bmw-app:-new-features-and-tech-insights-for-march-2021?language=en) 等配套应用程序到[巴西政府](https://apps.apple.com/app/id1506827551)等公共机构。
 
@@ -26,7 +26,7 @@
 
 **站长注：这里有个视频 https://youtu.be/8RmsstcNE1Y**
 
-![](2022/05/3503.png)
+![](3503.png)
 
 开发人员告诉我们，Flutter 有助于更快地为更多平台构建漂亮的应用程序。 在我们最近的用户研究中：
 
@@ -50,7 +50,7 @@
 
 **站长注：这里有个视频 https://youtu.be/YRuQj7mlH2I**
 
-![](2022/05/3504.png)
+![](3504.png)
 
 Flutter 3 还对许多基本要素进行了改进，提高了性能，支持 Material You，并更新了生产力。
 
@@ -58,7 +58,7 @@ Flutter 3 还对许多基本要素进行了改进，提高了性能，支持 Mat
 
 我们对 [Material Design 3](https://m3.material.io/) 的工作在此版本中基本完成，使开发者能够利用一个适应性强、跨平台的设计系统，提供动态的色彩方案和更新的视觉组件。
 
-![](2022/05/3505.png)
+![](3505.png)
 
 我们详细的技术博客文章扩展了 Flutter 3 中的这些以及许多其他新功能。
 
@@ -78,11 +78,11 @@ Google 提供的应用服务是 Firebase，[SlashData 的开发者基准测试�
 
 对于大多数开发者来说，Flutter 是一个应用程序框架。 但是，围绕休闲游戏开发的社区也在不断壮大，利用 Flutter 提供的硬件加速图形支持以及 [Flame](https://flame-engine.org/) 等开源游戏引擎。 我们希望让休闲游戏开发者更容易上手，因此在今天的 I/O 大会上，我们宣布推出[休闲游戏工具包](https://flutter.dev/games)，它提供了模板和最佳实践的入门工具包以及广告和云服务的良好体验。
 
-![](2022/05/3506.png)
+![](3506.png)
 
 尽管 Flutter 并非专为高强度 3D 动作游戏而设计，但即使其中一些游戏已经转向 Flutter 的非游戏 UI，包括拥有数亿用户的热门游戏，如 [PUBG Mobile](https://play.google.com/store/apps/details?id=com.tencent.ig)。 对于 I/O，我们想看看我们可以将我们的技术推到多远，所以我们创建了一个有趣的弹球游戏，由 Firebase 和 Flutter web 提供支持。 I/O Pinball 提供了一个围绕 Google 最喜欢的四个吉祥物设计的自定义桌子：Flutter 的 Dash、Firebase 的 Sparky、Android 机器人和 Chrome 恐龙，并让您与其他人竞争高分。 我们认为这是展示 Flutter 多功能性的一种有趣方式。
 
-![](2022/05/3507.png)
+![](3507.png)
 
 ## 由 Google 赞助，由社区提供支持
 
@@ -92,7 +92,7 @@ Google 提供的应用服务是 Firebase，[SlashData 的开发者基准测试�
 
 **站长注：这里有个视频 https://youtu.be/l6hw4o6_Wcs**
 
-![](2022/05/3508.png)
+![](3508.png)
 
 谢谢您对 Flutter 的支持，欢迎来到 Flutter 3!
 
@@ -102,4 +102,4 @@ Google 提供的应用服务是 Firebase，[SlashData 的开发者基准测试�
 
 - [《Flutter 实战·第二版》](https://book.flutterchina.club/)
 
-![](2022/05/3509.gif)
+![](3509.gif)

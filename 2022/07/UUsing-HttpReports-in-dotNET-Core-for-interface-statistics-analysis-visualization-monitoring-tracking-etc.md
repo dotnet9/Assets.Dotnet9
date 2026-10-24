@@ -22,7 +22,7 @@
 
 使用`NuGet`安装`MHttpReports.Dashboard`包和`HttpReports.SqlServer`
 
-![](2022/07/0701.png)
+![](0701.png)
 
 ## 第三步
 
@@ -85,7 +85,7 @@ public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
 
 把 Dashboard 程序启动起来，如果没有问题的话，会跳转到 Dashboard 的登录页面
 
-![](2022/07/0702.png)
+![](0702.png)
 
 ```shell
 默认账号：admin
@@ -98,7 +98,7 @@ public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
 
 我新建一个 WebAPI 项目 `UserService` ，来充当用户服务，然后安装 `HttpReports`，`HttpReports.Transport.Http  `
 
-![](2022/07/0703.png)
+![](0703.png)
 
 ## 第六步
 
@@ -180,7 +180,7 @@ public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
 
 刷新下 UserService 的接口，再回到`Dashboard`的页面上面，已经可以看到数据了
 
-![](2022/07/0704.png)
+![](0704.png)
 
 ## 总结
 

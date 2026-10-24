@@ -10,29 +10,29 @@
 - 开源协议：[Apache-2.0](https://gitee.com/dotnetchina/SmartSQL/blob/master/LICENSE)
 - 项目目标：一款方便、快捷的数据库文档查询、生成工具，致力于成为帮助企业快速实现数字化转型的元数据管理工具。
 
-![项目仓库](2023/02/0401.png)
+![项目仓库](0401.png)
 
 ## 2. 源码简单分析
 
-![项目解决方案](2023/02/0402.png)
+![项目解决方案](0402.png)
 
 源码包含三个工程：SmartSQL、SmartSQL.DocUtils和SmartSQL.Framework，我们简单拉一遍，对源码感兴趣的朋友可以拉源码查看哦。
 
 ### 2.1. SmartSQL
 
-![主工程](2023/02/0403.png)
+![主工程](0403.png)
 
 这是主工程，是一个WPF项目，里面使用了[AduSkin](https://dotnet9.com/2020/02/Open-source-Csharp-WPF-control-library-AduSkin-UI)、[AvalonEdit](https://github.com/icsharpcode/AvalonEdit)、[HandyControl](https://dotnet9.com/2019/12/Open-source-WPF-control-library-handycontrol)、[FontAwesome.WPF](https://github.com/charri/Font-Awesome-WPF)等第三方库，通过该工程可以学习怎么使用第三方控件库、字体库等，后面通过看工具截图可看控件库的实用效果。
 
-![项目工具代码截图](2023/02/0406.png)
+![项目工具代码截图](0406.png)
 
 另外如上图代码文件截图，每个工具具体的实现也是在这个工程中，平时工作中如果有相关的功能需求可以直接参考该项目，工具一览如下。
 
-![项目工具一览](2023/02/0411.png)
+![项目工具一览](0411.png)
 
 ### 2.2. SmartSQL.DocUtils
 
-![SmartSQL.DocUtils工程](2023/02/0404.png)
+![SmartSQL.DocUtils工程](0404.png)
 
 该工程是一个类库，封装了各种数据文件的导入与导出，通过仓库介绍你就知道支持的文件有多丰富了：
 
@@ -40,7 +40,7 @@
 
 ### 2.3. SmartSQL.Framework
 
-![SmartSQL.Framework工程](2023/02/0405.png)
+![SmartSQL.Framework工程](0405.png)
 
 从名字可知，该类库是此项目的核心工程，即数据库文档查询、导出的实现核心代码库，对数据库操作的实现感兴趣的同志可以查看。
 
@@ -48,51 +48,51 @@
 
 设置`SmartSQL`工程为启动项目，点击运行（也可[下载安装包](https://gitee.com/dotnetchina/SmartSQL/releases)运行）：
 
-![运行项目源码](2023/02/0407.gif)
+![运行项目源码](0407.gif)
 
 下面列出部分功能截图(基本来自仓库readme)，详细功能请看[仓库](https://gitee.com/dotnetchina/SmartSQL)实时更新。
 
 ### 3.1. 功能架构
 
-![功能架构](2023/02/0408.jpg)
+![功能架构](0408.jpg)
 
 ### 3.2. Dashboard
 
-![Dashboard](2023/02/0409.png)
+![Dashboard](0409.png)
 
 ### 3.3. 快捷查询
 
-![快捷查询](2023/02/0412.png)
+![快捷查询](0412.png)
 
 ### 3.4. 导入导出
 
-![导入导出](2023/02/0413.png)
+![导入导出](0413.png)
 
 ### 3.5. 文档截图
 
 **CHM文档**
 
-![CHM文档](2023/02/0414.png)
+![CHM文档](0414.png)
 
 **Html文档**
 
-![Html文档](2023/02/0415.png)
+![Html文档](0415.png)
 
 **Word文档**
 
-![Word文档](2023/02/0416.png)
+![Word文档](0416.png)
 
 **Excel文档**
 
-![Excel文档](2023/02/0417.png)
+![Excel文档](0417.png)
 
 **PDF文档**
 
-![PDF文档](2023/02/0418.png)
+![PDF文档](0418.png)
 
 ### 3.6. 工具箱列表
 
-![工具箱列表](2023/02/0410.png)
+![工具箱列表](0410.png)
 
 录了3个工具的使用：
 
@@ -100,15 +100,15 @@
 
 可扫码试试哟。
 
-![二维码生成](2023/02/0419.gif)
+![二维码生成](0419.gif)
 
 **Json格式化**
 
-![Json格式化](2023/02/0420.gif)
+![Json格式化](0420.gif)
 
 **汉字转拼音**
 
-![汉字转拼音](2023/02/0421.gif)
+![汉字转拼音](0421.gif)
 
 更多工具请编译[源码](https://gitee.com/dotnetchina/SmartSQ)或[下载](https://gitee.com/dotnetchina/SmartSQL/releases)体验。
 

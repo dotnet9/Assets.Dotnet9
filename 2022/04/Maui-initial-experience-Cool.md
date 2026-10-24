@@ -6,21 +6,21 @@
 
 ### 1.1 MAUI Windows 上
 
-![MAUI Windows](2022/04/1803.png)
+![MAUI Windows](1803.png)
 
 ### 1.2 MAUI Android 上
 
-![MAUI Android](2022/04/1804.png)
+![MAUI Android](1804.png)
 
 ## 2. 今早看到一个群聊推送
 
 点击链接可以看推送：[爱奇艺 Preview 上架微软 Win11 应用商店：全新 WinUI 3 版本，软件界面大变（附下载地址）](https://www.ithome.com/0/613/321.htm)
 
-![新闻截图](2022/04/1801.png)
+![新闻截图](1801.png)
 
 爱奇艺使用的 WinUI 3 可能和 MAUI Windows 开发使用的 WinUI 不同？请知道的留言解惑：
 
-![MAUI WinUI](2022/04/1802.png)
+![MAUI WinUI](1802.png)
 
 ## 3. MAUI 环境安装前介绍
 
@@ -28,11 +28,11 @@ MAUI-Check：这是安装 MAUI 的检测工具，在安装的过程中可能会�
 
 这是安装过程：
 
-![MAUI-Check](2022/04/1805.png)
+![MAUI-Check](1805.png)
 
 可能会出现如下异常：
 
-![MAUI-Check](2022/04/1806.png)
+![MAUI-Check](1806.png)
 
 不要担心，下面是安装介绍文章（不翻译了，累），只要你有科学上网工具，多来几次，有可能会成功的，哈哈
 
@@ -44,7 +44,7 @@ MAUI-Check：这是安装 MAUI 的检测工具，在安装的过程中可能会�
 
 站长卡在工作负载安装失败，多次都没成功，mac 暂时放弃了，后面再研究
 
-![MAUI-Check](2022/04/1807.jpg)
+![MAUI-Check](1807.jpg)
 
 有兴趣的看看这些视频学习下：
 

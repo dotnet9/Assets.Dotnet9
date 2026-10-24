@@ -8,15 +8,15 @@ NetBeauty2是一个开源的.NET依赖库整理工具，它的主要作用是在
 
 下图为优化后输出目录（.NET运行时及引用依赖库移到`libraries`目录，目录名可配置）：
 
-![](2024/03/after_beauty.png)
+![](after_beauty.png)
 
 下图为极限优化后输出目录（查看 [`--hiddens`](https://github.com/nulastudio/NetBeauty2#use-the-binary-application-if-your-project-has-already-been-published) 选项使用）
 
-![](2024/03/after_beauty_with_hiddens.png)
+![](after_beauty_with_hiddens.png)
 
 再来对比下未使用前输出目录（震撼吧！.NET运行时及相关依赖库全放在了根输出目录，.NET Framework可以配置`privatePath`，.NET Core可没那么方便）：
 
-![](2024/03/before_beauty.png)
+![](before_beauty.png)
 
 ## 2. 支持情况
 
@@ -123,7 +123,7 @@ dotnet tool install --global nulastudio.nbeauty
 
 克隆仓库（[https://github.com/nulastudio/NetBeauty2](https://github.com/nulastudio/NetBeauty2)），里面有各种模版项目使用示例：
 
-![](2024/03/0601.png)
+![](0601.png)
 
 | 测试工程名   | 说明                                            |
 | ------------ | ----------------------------------------------- |

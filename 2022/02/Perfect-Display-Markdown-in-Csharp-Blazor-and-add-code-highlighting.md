@@ -1,6 +1,6 @@
 昨天发了一篇[介绍这个库：C# Blazor 中显示 Markdown 文件](https://mp.weixin.qq.com/s/CGSJ4qkVdaSg738nSyXhLg)，介绍怎么在 Blazor 中显示 Markdown 内容的文章，文章内的代码是没有高亮的，思来相去，还是要做好，于是百度到这篇文章[.NET C# Blazor 服务端渲染 Markdown](https://blog.csdn.net/qq_37214567/article/details/122949945)，现在渲染效果如下：
 
-![](2022/02/1601.gif)
+![](1601.gif)
 
 自认为应该是比较完美了，下面说说怎么做的。
 

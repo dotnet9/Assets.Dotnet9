@@ -4,7 +4,7 @@
 
 网站发布地址：https://go.dotnet9.com
 
-![网站首页截图](2022/10/go-blog-cover.png)
+![网站首页截图](go-blog-cover.png)
 
 ## 源码
 
@@ -12,7 +12,7 @@
 
 仓库地址：https://github.com/dotnet9/Dotnet9/tree/develop/src/Dotnet9.Web.Go
 
-![仓库截图](2022/10/repository-of-go-web.png)
+![仓库截图](repository-of-go-web.png)
 
 ## 功能介绍
 
@@ -20,19 +20,19 @@
 
 **网站首页**
 
-![网站首页截图](2022/10/go-blog-cover.png)
+![网站首页截图](go-blog-cover.png)
 
 **分类文章列表**
 
-![分类文章列表](2022/10/go-web-category.png)
+![分类文章列表](go-web-category.png)
 
 **文章详情**
 
-![文章详情](2022/10/go-web-detail.png)
+![文章详情](go-web-detail.png)
 
 **文章评论**
 
-![文章评论](2022/10/go-web-comment.png)
+![文章评论](go-web-comment.png)
 
 ## 学习资源
 

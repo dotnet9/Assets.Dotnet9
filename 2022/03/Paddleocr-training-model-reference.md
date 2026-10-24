@@ -31,7 +31,7 @@
 
 - PaddleOCR
 
-![](2022/03/2801.png)
+![](2801.png)
 
 [https://github.com/PaddlePaddle/PaddleOCR](https://github.com/PaddlePaddle/PaddleOCR)
 
@@ -39,7 +39,7 @@
 
 - cd PaddleOCR
 
-![](2022/03/2802.png)
+![](2802.png)
 
 ```shell
 pip3 install -r requirements.txt
@@ -49,7 +49,7 @@ pip3 install -r requirements.txt
 
 - PPOCRLabel
 
-![](2022/03/2803.png)
+![](2803.png)
 
 这是创建学习数据的，标注工具，不是必要的，但是很方便。
 
@@ -72,7 +72,7 @@ python PPOCRLabel.py --lang ch # 启动工具，如果启动没反应那么就�
 
 本地配置文件路径: `PaddleOCR-release-2.4\configs\rec\ch_ppocr_v2.0\rec_chinese_lite_train_v2.0.yml`
 
-![](2022/03/2804.png)
+![](2804.png)
 
 - 修改的值:
 
@@ -83,7 +83,7 @@ label_file_list: ["./train_data/train_list.txt"] #训练数据的比对文本
 batch_size_per_card: 128 #使用的数量（太大启动不起来，可以自行修改）
 ```
 
-![](2022/03/2805.png)
+![](2805.png)
 
 - 训练目录解释
 
@@ -94,7 +94,7 @@ PaddleOCR-release-2.4\train_data\train_list.txt #训练的文本信息
 PaddleOCR-release-2.4\train_data\val_list.txt   #验证文本信息 （目前作者使用的和训练文本一样的内容）内容如下
 ```
 
-![](2022/03/2806.png)
+![](2806.png)
 
 ```shell
 PaddleOCR-release-2.4\pretrain_models  #从官网下载的预训练模型放到这里

@@ -18,7 +18,7 @@
 
 ### 首页
 
-![](2026/05/codewf-homepage.png)
+![](codewf-homepage.png)
 
 首页这次不再只是“把内容堆上去”。
 
@@ -31,7 +31,7 @@
 
 ### 搜索
 
-![](2026/05/codewf-search.png)
+![](codewf-search.png)
 
 搜索是我这次很看重的一块。
 
@@ -59,7 +59,7 @@
 
 ### 项目中心
 
-![](2026/05/codewf-project-center.png)
+![](codewf-project-center.png)
 
 项目中心这块，我也重新整理过。
 
@@ -80,7 +80,7 @@
 
 ### 文章详情页
 
-![](2026/05/codewf-article-detail.png)
+![](codewf-article-detail.png)
 
 文章页这次我盯得最细。
 

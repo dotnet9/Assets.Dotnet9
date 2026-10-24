@@ -14,13 +14,13 @@
 
 如今，.NET 6（最新的 .NET）可以在 Windows、Linux 和 macOS 上运行，并支持 x86、x64、Arm32 和 Arm64。
 
-![](2022/03/2901.png)
+![](2901.png)
 
 Microsoft 为多个平台提供 SDK 和运行时。
 
 这意味着，您可以在最新的 M1 MacBook 上构建 .NET 应用程序：
 
-![在 2021 MacBook Pro M1 上使用命令行构建一个简单的控制台应用程序。](2022/03/2902.gif)
+![在 2021 MacBook Pro M1 上使用命令行构建一个简单的控制台应用程序。](2902.gif)
 
 ## 误解 2：.NET 比 Node/Python/Go/Rust 慢？
 
@@ -32,19 +32,19 @@ Microsoft 为多个平台提供 SDK 和运行时。
 
 根据 TechEmpower Benchmarks 提供的 Web 框架测试报告, 在 Round 15 from February 14, 2018 中，您可以看到 ASP.NET 实际上落后于 Node.js：
 
-![](2022/03/2903.png)
+![](2903.png)
 
 2018 年：Node.js 第 8 位， ASP.NET Core 13 位 ，Express 在 28 位，Flask 57 位， Django 61 位。
 
 在 Round 20 in February 8, 2021 中，仅仅三年后，.NET 绝对压倒了 Node 和 Python，并且仅次于基于 Rust 的服务。
 
-![](2022/03/2904.png)
+![](2904.png)
 
 2021 年: .NET Core 在第 8 位, Node.js 56 位, Express 94 位, Flask 111 位, Django 118 位.
 
 在 gRPC 基准测试中，.NET 的表现也非常出色。
 
-![](2022/03/2905.png)
+![](2905.png)
 
 如果您正在使用 gRPC，请不要考虑 Node 或 Python。
 
@@ -54,11 +54,11 @@ Microsoft 为多个平台提供 SDK 和运行时。
 
 借助于强大的 LINQ，C# 看起来非常像 JavaScript：
 
-![](2022/03/2906.png)
+![](2906.png)
 
 根据 GitHub 的 2021 年 Octoverse 状态报告，C# 在过去几年中略有复苏：
 
-![](2022/03/2907.png)
+![](2907.png)
 
 ## 误解 4：开发工具很贵？
 
@@ -72,7 +72,7 @@ Microsoft 为多个平台提供 SDK 和运行时。
 
 最近，我在 MacBook Pro M1 上使用 VS Code 完成了我的大部分 C#/.NET 开发：
 
-![](2022/03/2908.gif)
+![](2908.gif)
 
 ## 误解 5：.NET 对开源不友好 ？
 

@@ -1,198 +1,198 @@
-![GitHub仓库详情](2022/02/0401.png)
+![GitHub仓库详情](0401.png)
 
 这是一个 WPF 自定义控件开源项目，里面的一些控件很有意思，下面的效果展示直接抄的作者 GitHub Read，文末有仓库地址，我们先看看部分自定义控件效果：
 
 ### DrawPrize（WPF 实现大转盘抽奖）
 
-![DrawPrize](2022/02/DrawPrize.gif)
+![DrawPrize](DrawPrize.gif)
 
 ### DesktopPlayVideo（WPF 实现动态 Windows 桌面壁纸）
 
-![DesktopPlayVideo](2022/02/DesktopPlayVideo.gif)
+![DesktopPlayVideo](DesktopPlayVideo.gif)
 
 ### CropControl（WPF 实现图片切成九宫格控件）
 
-![CropControl](2022/02/CropControl.gif)
+![CropControl](CropControl.gif)
 
 ### NumberCard（WPF 实现 3D 翻转倒计时控件）
 
-![NumberCard](2022/02/NumberCard.gif)
+![NumberCard](NumberCard.gif)
 
 ### CountdownTimer（倒计时动画）
 
-![CountdownTimer](2022/02/CountdownTimer.gif)
+![CountdownTimer](CountdownTimer.gif)
 
-![CountdownTimerMultiColor](2022/02/CountdownTimerMultiColor.gif)
+![CountdownTimerMultiColor](CountdownTimerMultiColor.gif)
 
 ### SpeedRockets（WPF 实现加速火箭）
 
-![SpeedRockets](2022/02/SpeedRockets.gif)
+![SpeedRockets](SpeedRockets.gif)
 
 ### SnowCanvas（WPF 实现圣诞树雪花）
 
-![SnowCanvas](2022/02/SnowCanvas.gif)
+![SnowCanvas](SnowCanvas.gif)
 
 ### WPFBreatheLight（WPF 实现呼吸灯）
 
-![BreatheLight](2022/02/BreatheLight.gif)
+![BreatheLight](BreatheLight.gif)
 
 ### Thermometer（温度计）
 
-![Thermometer](2022/02/Thermometer.gif)
+![Thermometer](Thermometer.gif)
 
 ### RingLoading（酷酷的等待）
 
-![RingLoading](2022/02/RingLoading.gif)
+![RingLoading](RingLoading.gif)
 
 ### RoundPicker（圆选择器）
 
-![RoundPicker](2022/02/RoundPicker.gif)
+![RoundPicker](RoundPicker.gif)
 
 ### LogoAnimation（登录动画）
 
-![LogoAnimation](2022/02/LogoAnimation.gif)
+![LogoAnimation](LogoAnimation.gif)
 
 ### LineChart（折线图）
 
-![LineChart](2022/02/LineChart.gif)
+![LineChart](LineChart.gif)
 
 ### MetroWindow（窗体）
 
-![MetroWindow](2022/02/MetroWindow.gif)
+![MetroWindow](MetroWindow.gif)
 
 ### RainbowButtons（彩虹按钮）
 
-![RainbowButtons](2022/02/RainbowButtons.gif)
+![RainbowButtons](RainbowButtons.gif)
 
 ### Ruler（刻度尺）
 
-![Ruler](2022/02/Ruler.gif)
+![Ruler](Ruler.gif)
 
 ### ZooSemy（拟物旋转按钮）
 
-![ZooSemy](2022/02/ZooSemy.gif)
+![ZooSemy](ZooSemy.gif)
 
 ### BasicBarChart（统计图）
 
-![BasicBarChart](2022/02/BasicBarChart.gif)
+![BasicBarChart](BasicBarChart.gif)
 
 ### RadarChart（雷达图）
 
-![RadarCha](2022/02/RadarCha.gif)
+![RadarCha](RadarCha.gif)
 
 ### Win10Menu（Win10 菜单）
 
-![Win10Menu](2022/02/Win10Menu.gif)
+![Win10Menu](Win10Menu.gif)
 
 ### SpotLight（聚光灯）
 
-![SpotLight](2022/02/SpotLight.gif)
+![SpotLight](SpotLight.gif)
 
 ### TransitionPanel（过渡面板）
 
-![TransitionPanel](2022/02/TransitionPanel.gif)
+![TransitionPanel](TransitionPanel.gif)
 
 ### ScreenCut （截屏）
 
-![ScreenCut](2022/02/ScreenCut.gif)
+![ScreenCut](ScreenCut.gif)
 
 ### OtherControl （火炬）
 
-![TorchControl](2022/02/TorchControl.gif)
+![TorchControl](TorchControl.gif)
 
 ### EmphasizerCarousel （轮播图二）
 
-![EmphasizerCarousel](2022/02/EmphasizerCarousel.gif)
+![EmphasizerCarousel](EmphasizerCarousel.gif)
 
 ### Carousel （轮播图）
 
-![Carousel](2022/02/Carousel.gif)
+![Carousel](Carousel.gif)
 
 ### ScrollViewerAnimation （滚动条带动画）
 
-![ScrollViewer](2022/02/ScrollViewer.gif)
+![ScrollViewer](ScrollViewer.gif)
 
 ### RollLoading （等待动画）
 
-![RollLoading](2022/02/RollLoading.gif)
+![RollLoading](RollLoading.gif)
 
 ### CycleLoading （等待动画）
 
-![CycleLoading](2022/02/CycleLoading.gif)
+![CycleLoading](CycleLoading.gif)
 
 ### Pagination （分页）
 
-![Pagination](2022/02/Pagination.gif)
+![Pagination](Pagination.gif)
 
 ### TaskbarItemInfo （窗体任务栏角徽）
 
-![TaskbarItemInfo](2022/02/TaskbarItemInfo.gif)
+![TaskbarItemInfo](TaskbarItemInfo.gif)
 
 ### BallLoading （等待动画）
 
-![BallLoading](2022/02/BallLoading.gif)
+![BallLoading](BallLoading.gif)
 
 ### WpfPieControl（WPF 实现统计图（饼图仿 LiveCharts））
 
-![PieControl](2022/02/PieControl.gif)
+![PieControl](PieControl.gif)
 
 ### WpfDashboard（WPF 实现仪表盘（刻度跟随进度））
 
-![Dashboard](2022/02/Dashboard.gif)
+![Dashboard](Dashboard.gif)
 
 ### WpfTimeLineControl（WPF 实现时间轴（仿 Gitee））
 
-![TimeLine](2022/02/TimeLine.gif)
+![TimeLine](TimeLine.gif)
 
 ### WpfCircularProgressBar（WPF 实现环（圆）形进度条）
 
-![CircularProgressBar](2022/02/CircularProgressBar.gif)
+![CircularProgressBar](CircularProgressBar.gif)
 
 ### WpfCircularMenu（WPF 实现环（圆）形菜单）
 
-![CircularMenu](2022/02/CircularMenu.gif)
+![CircularMenu](CircularMenu.gif)
 
 ### WpfPasswrod（WPF 实现密文与密文切换）
 
-![Passwrod](2022/02/Passwrod.gif)
+![Passwrod](Passwrod.gif)
 
 ### WpfChatEmojiText（WPF 实现聊天 Emoji+文本）
 
-![ChatEmojiText](2022/02/ChatEmojiText.gif)
+![ChatEmojiText](ChatEmojiText.gif)
 
 ### WPFSongWords（WPF 实现歌词动画）
 
-![SongWords](2022/02/SongWords.gif)
+![SongWords](SongWords.gif)
 
 ### WpfCanvasAdorner（WPF 实现旋转控件并修改宽高）
 
-![ElementAdorner](2022/02/ElementAdorner.gif)
+![ElementAdorner](ElementAdorner.gif)
 
 ### WpfBingMap（WPF 使用 MapControl 加载高德地图）
 
-![BingAMap](2022/02/BingAMap.gif)
+![BingAMap](BingAMap.gif)
 
 ### 3DAnimationNavigationBar（WPF 实现 3D 菜单动画）
 
-![AnimationNavigationBar3D](2022/02/AnimationNavigationBar3D.gif)
+![AnimationNavigationBar3D](AnimationNavigationBar3D.gif)
 
 ### WpfRoundMenu（WPF 实现圆形菜单）
 
-![RoundMenu](2022/02/RoundMenu.gif)
+![RoundMenu](RoundMenu.gif)
 
 ### WPFCheckCode（WPF 使用 DrawingVisual 绘制验证码）
 
-![CheckCode](2022/02/CheckCode.gif)
+![CheckCode](CheckCode.gif)
 
 ### CutImageSolution（WPF 实现用户头像裁剪）
 
-![CutImage](2022/02/CutImage.gif)
+![CutImage](CutImage.gif)
 
-![CutImage1](2022/02/CutImage1.gif)
+![CutImage1](CutImage1.gif)
 
 ### WpfAnimationWeChat（WPF 使用图片实现微信语音播放动画）
 
-![AnimationWeChat](2022/02/AnimationWeChat.gif)
+![AnimationWeChat](AnimationWeChat.gif)
 
 ### 结束
 
@@ -206,4 +206,4 @@
 >
 > 运行环境 Visual Studio 2019，dotNet Framework 4.0 SDK
 
-![](2022/02/0402.jpg)
+![](0402.jpg)

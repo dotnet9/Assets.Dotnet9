@@ -81,19 +81,19 @@ public class BlogBase : ComponentBase
 
 接着点击 Add 按钮，就可以看到日志条数增加了。
 
-![](2021/12/2101.gif)
+![](2101.gif)
 
 接着来做 Delete 功能，在`Post.razor`加入 Delete 按钮。
 
-![](2021/12/2102.png)
+![](2102.png)
 
 但问题来了，当我点击 Delete 按钮，`<Blog>`怎么知道我删除的是哪一条 Post？这时候就需要`Id`可以识别，于是加入一个私有变量`_postId`，每次点击`Add()`都+1，正常来说 PostId 会跟着 Post 而不是由 Blog 产生，不过因为还没接触到数据库，所以先这样将就，后面连接数据库后就会改变。
 
-![](2021/12/2103.png)
+![](2103.png)
 
 为了验证是否正确，删除原来`Post.razor`注释的 Post.Id，加入新样式的 Post.Id，可以看到没有问题。
 
-![](2021/12/2104.png)
+![](2104.png)
 
 现在有了识别 Id，又产生了新问题，要怎么让`<Blog>`收到`Id`？目前 Id 由`<Blog>`产生，所以没这问题，等后面 Id 由数据库产生后，`<Blog>`就不会知道 Id 了。前面说的都是从父组件传递数据到子组件的方法，我们现在要从子组件传数据到父组件，有办法做到反向传回去吗？
 
@@ -101,45 +101,45 @@ public class BlogBase : ComponentBase
 
 先把 Delete 按钮改成`<input>`，加入`@onclick="ReturnPostId"`。
 
-![](2021/12/2105.png)
+![](2105.png)
 
 接着在`PostBase.razor.cs`定义类型为`EventCallback<int>`的属性 `GetPostId`，记住一定要加上`[Parameter]`特性，因为这要被`<Blog>`调用。然后完整定义`ReturnPostId()`方法，里面做的就是`GetPostId.InvokeAsync(Post!.PostId);`，当外部传来的`GetPostId`被触发时，就将`Post.PostId`传给父组件也就是`<Blog>`。
 
-![](2021/12/2106.png)
+![](2106.png)
 
 再在`BlogBase.razor.cs`定义同名方法`GetPostId(int id)`，名字不需要一样，这边只是为了方便取同名，里面做的事情就是移除跟收到的 Id 有相同值的 Post。
 
-![](2021/12/2107.png)
+![](2107.png)
 
 最后在`Blog.razor`的`<Post>`的`GetPostId`放入刚刚定义的方法就可以了。
 
-![](2021/12/2108.png)
+![](2108.png)
 
 我们来验证看看，先新增 4 条日志，再删除第 2 条，可以看到 Id 等于 2 的那条成功被删除了。
 
-![](2021/12/2109.gif)
+![](2109.gif)
 
 除了 EventCallback，还有 Delegate 可以使用，不过局限性较大，我们也来试试看。
 
 先在`PostBase.razor.cs`定义类型为`Action<int>`的属性 `GetPostIdForDelegate`，`ReturnPostId()`改用`GetPostIdForDelegate`。
 
-![](2021/12/2110.png)
+![](2110.png)
 
 接着在`Blog.razor`的`<Post>`改用`GetPostIdForDelegate`。
 
-![](2021/12/2111.png)
+![](2111.png)
 
 但是实际点击后会发现不会删除日志，这是因为 EventCallback 会监控 Component，一旦有变化就会重新渲染，委托则不会，委托必须在父组件也就是`BlogBase.razor.cs`调用`StateHasChanged();`方法，让父组件知道状态改变了。
 
-![](2021/12/2112.png)
+![](2112.png)
 
 另外委托一旦在子组件中定义了，父组件就必须要调用，否则会发生错误，EventCallback 则没这问题。
 
-![](2021/12/2113.png)
+![](2113.png)
 
 **站长注：当然，善于使用 nullable 也可以避免这种异常：**
 
-![](2021/12/2114.png)
+![](2114.png)
 
 **引用：**
 

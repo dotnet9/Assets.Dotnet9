@@ -6,15 +6,15 @@
 
 使用**FigmaSharp.Maui.Graphics**将 Figma 设计转换为 .NET MAUI Graphics 代码。基于 MIT 协议，免费开源，关于 MIT 协议给出一张图自行理解。
 
-![](2022/09/0501.jpg)
+![](0501.jpg)
 
 **继续介绍：**
 
 两张缩略图看效果：
 
-![](2022/09/figma-to-maui-graphics-01.png)
+![](figma-to-maui-graphics-01.png)
 
-![](2022/09/figma-to-maui-graphics-02.png)
+![](figma-to-maui-graphics-02.png)
 
 Windows 和 macOS 上可用的工具执行以下步骤：
 

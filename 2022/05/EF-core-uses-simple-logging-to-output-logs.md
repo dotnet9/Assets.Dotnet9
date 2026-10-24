@@ -38,4 +38,4 @@ options.LogTo(Console.WriteLine,
 var users = context.User.TagWith("查询所有用户").ToList();
 ```
 
-![](2022/05/0801.jpg)
+![](0801.jpg)

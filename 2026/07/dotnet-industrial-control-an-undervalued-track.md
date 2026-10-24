@@ -18,7 +18,7 @@
 
 工控，即工业控制，本质上是让计算机来指挥和监控工业设备。一个完整的工控系统通常包含四层，自下而上依次是：
 
-![工控系统的四层结构](2026/08/dotnet-industrial-control-system-layers.jpg)
+![工控系统的四层结构](../08/dotnet-industrial-control-system-layers.jpg)
 
 最底层是现场设备层——传感器、执行器、电机、仪表。它们是系统的"手和眼"，负责采集物理量（温度、压力、位置）和执行动作（开关阀门、启停电机）。
 
@@ -56,7 +56,7 @@ MQTT —— IoT时代的"轻骑兵"。轻量发布-订阅模式，适合云边�
 
 很多人对.NET的印象停留在"做Web的"或者"做企业信息系统的"。但实际上，.NET在工控上位机开发领域一直占有一席之地，而且生态比大多数人想象的要完整得多。
 
-![.NET工控生态](2026/08/dotnet-industrial-control-ecosystem.jpg)
+![.NET工控生态](../08/dotnet-industrial-control-ecosystem.jpg)
 
 具体来说，.NET在工控的三个层面都有成熟的生态支撑：
 

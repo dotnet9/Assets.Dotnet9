@@ -59,7 +59,7 @@ Console.WriteLine($"映射到新对象，Name: {userDto.Name}");
 
 运行控制台程序验证转换成功:
 
-![映射到新对象](2022/07/0501.png)
+![映射到新对象](0501.png)
 
 ### 数据类型
 
@@ -77,7 +77,7 @@ Console.WriteLine($"结果为：{i == int.Parse(res)}");
 
 运行控制台程序:
 
-![基本类型转换](2022/07/0502.png)
+![基本类型转换](0502.png)
 
 **枚举类型**
 
@@ -90,7 +90,7 @@ Console.WriteLine($"枚举类型转换的结果为：{fileMode == (FileMode.Crea
 
 运行控制台程序验证转换成功:
 
-![枚举类型转换](2022/07/0503.png)
+![枚举类型转换](0503.png)
 
 ### Queryable 扩展
 
@@ -160,7 +160,7 @@ using (var dbContext = new UserDbContext())
 
 运行控制台程序验证转换成功:
 
-![Queryable扩展](2022/07/0504.png)
+![Queryable扩展](0504.png)
 
 除此之外，`Mapster`还提供了映射前/后处理，拷贝与合并以及映射配置嵌套支持，详细可查看[文档](https://www.cnblogs.com/staneee/p/14912794.html)，既然`Mapster`已经如此强大，那我直接使用它就可以了，为什么还要使用`Masa`提供的 Mapper 呢？
 
@@ -263,7 +263,7 @@ Console.ReadKey();
 
 如果转换成功，TotalPrice 的值应该是 49.9，那么我们运行控制台程序来验证转换是否成功：
 
-![Mapping.Mapster](2022/07/0505.png)
+![Mapping.Mapster](0505.png)
 
 ### 如何实现
 
@@ -297,4 +297,4 @@ MASA.Blazor：[https://github.com/BlazorComponent/MASA.Blazor](https://github.co
 
 如果你对我们的 MASA Framework 感兴趣，无论是代码贡献、使用、提 Issue，欢迎联系我们
 
-![](2021/12/1916.png)
+![](../../2021/12/1916.png)

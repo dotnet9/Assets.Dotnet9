@@ -1,6 +1,6 @@
 大家好，我是沙漠尽头的狼。
 
-![本文写作由来](2022/10/blog-post-write-reason.png)
+![本文写作由来](blog-post-write-reason.png)
 
 站长用Go写的这版[博客](https://go.dotnet9.com)前台[代码](https://github.com/dotnet9/Dotnet9/tree/develop/src/Dotnet9.Web.Go)比较原生，既没用什么框架，本来想着后面重构后再详细写写分享的，今天群友提了，就简单写写吧。
 
@@ -8,7 +8,7 @@
 
 首页截图：
 
-![](2022/10/go-blog-new-cover.png)
+![](go-blog-new-cover.png)
 
 本文写的很简单，还是来个目录：
 
@@ -24,7 +24,7 @@
 
 上面的网址和pdf，适合打基础、巩固Go的基础语法。其中PDF文件应该不是京东售卖的《Go Web编程》（[新加坡] 郑兆雄）一书，但也非常不错，讲解了不少web基础知识，应该是网上一位大佬的总结，值得一读，下面是该pdf目录：
 
-![Go web PDF](2022/10/go-web-pdf.gif)
+![Go web PDF](go-web-pdf.gif)
 
 上面的基础资料建议未接触Go的同学阅读，基础很重要。
 
@@ -39,13 +39,13 @@
 
 视频目录如下：
 
-![码神之路B站视频教程目录](2022/10/blog-bilibili-catalogue.gif)
+![码神之路B站视频教程目录](blog-bilibili-catalogue.gif)
 
 - 博文链接：[https://www.mszlu.com/goblog/01.html#_1-%E6%90%AD%E5%BB%BA%E9%A1%B9%E7%9B%AE](https://www.mszlu.com/goblog/01.html#_1-%E6%90%AD%E5%BB%BA%E9%A1%B9%E7%9B%AE)
 
 视频配套的博文截图：
 
-![码神之路个人博客](2022/10/go-blog-of-mszlu.png)
+![码神之路个人博客](go-blog-of-mszlu.png)
 
 视频适合学习、动手实践，Up主配套的博文则适合辅助检查代码是否正确，博客配套的前端模板在Up主群里有分享（群号【718840650】），站长代码仓库也有上传，但是有部分与Up主改动不同，部分个性化修改如下：
 
@@ -262,11 +262,11 @@ func (*HTMLApi) Index(w http.ResponseWriter, r *http.Request) {
 
 网站使用截图：
 
-![](2022/10/blog-comment-valine.png)
+![](blog-comment-valine.png)
 
 Valine留言后台管理：
 
-![](2022/10/admin-of-valine.png)
+![](admin-of-valine.png)
 
 ## 4. 后面计划
 
@@ -278,7 +278,7 @@ Valine留言后台管理：
 
 GoFrame官方文档：https://goframe.org/pages/viewpage.action?pageId=1114119
 
-![](2022/10/goframe-cover.png)
+![](goframe-cover.png)
 
 后面就用goframe重构这版go博客吧，当然前提是先把`Razor Pages`版本博客开发完善了，包括后台...
 

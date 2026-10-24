@@ -10,7 +10,7 @@ var data3 = dbContext.T_UserInfor.Where(u => u.userName.Contains("p")).ToList();
 
 用的是 charindex
 
-![](2022/05/0701.png)
+![](0701.png)
 
 B. EF.Functions.Like 语句生成的 sql 为：（Like 搭配 SQL 查询的通配符使用）
 
@@ -24,7 +24,7 @@ var data2 = (from p in dbContext.T_UserInfor
 
 用的是 Like
 
-![](2022/05/0702.png)
+![](0702.png)
 
 **PS**：在传统的.Net 中，还有种用法 SqlMethods，详见：[https://www.cnblogs.com/yaopengfei/p/11805980.html](https://www.cnblogs.com/yaopengfei/p/11805980.html)
 

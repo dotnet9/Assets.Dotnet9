@@ -30,17 +30,17 @@ Lottie 的官方提供了 web,android,iOS 的实现, 微软提供了 UWP 的实�
 
 [https://lottiefiles.com/93494-step-loader](https://lottiefiles.com/93494-step-loader)
 
-![](2022/05/4901.gif)
+![](4901.gif)
 
 [https://lottiefiles.com/87474-duo-cubes-loader-2](https://lottiefiles.com/87474-duo-cubes-loader-2)
 
-![](2022/05/4902.gif)
+![](4902.gif)
 
 混合模式
 
 [https://lottiefiles.com/89023-loading-circles](https://lottiefiles.com/89023-loading-circles)
 
-![](2022/05/4903.gif)
+![](4903.gif)
 
 2022-02-12 稍微复杂一点的例子:
 
@@ -48,19 +48,19 @@ Lottie 的官方提供了 web,android,iOS 的实现, 微软提供了 UWP 的实�
 
 Lottie-Windows 没有实现 PolyStar 的数据解析,所以缺少黄色的星星,只能等待 Lottie-Windows 继续实现
 
-![](2022/05/4904.gif)
+![](4904.gif)
 
 路径动画.
 
 [https://lottiefiles.com/88348-blob](https://lottiefiles.com/88348-blob)
 
-![](2022/05/4905.gif)
+![](4905.gif)
 
 路径偏移
 
 [https://lottiefiles.com/86095-frequencies-fork](https://lottiefiles.com/86095-frequencies-fork)
 
-![](2022/05/4906.gif)
+![](4906.gif)
 
 2022-02-16:
 
@@ -68,7 +68,7 @@ Lottie-Windows 没有实现 PolyStar 的数据解析,所以缺少黄色的星星
 
 [https://lottiefiles.com/85410-wifi](https://lottiefiles.com/85410-wifi)
 
-![](2022/05/4907.gif)
+![](4907.gif)
 
 2022-02-18
 
@@ -76,47 +76,47 @@ Lottie-Windows 没有实现 PolyStar 的数据解析,所以缺少黄色的星星
 
 [https://lottiefiles.com/88964-snowman](https://lottiefiles.com/88964-snowman)
 
-![](2022/05/4908.gif)
+![](4908.gif)
 
 更复杂的路径动画. 对比 Lottie Viewer 提示需要 UAP11,我已经升级到 Windows10 21H2 了 依然无法播放,不清楚具体原因.
 
 [https://lottiefiles.com/87491-liquid-blobby-loader-green](https://lottiefiles.com/87491-liquid-blobby-loader-green)
 
-![](2022/05/4909.gif)
+![](4909.gif)
 
 2022-02-19
 
 [https://lottiefiles.com/93748-camera-roll](https://lottiefiles.com/93748-camera-roll)
 
-![](2022/05/4910.gif)
+![](4910.gif)
 
 ImageAsset 和 ImageLayer
 
 [https://lottiefiles.com/93795-dog-car-ride](https://lottiefiles.com/93795-dog-car-ride)
 
-![](2022/05/4911.gif)
+![](4911.gif)
 
 Opacity
 
 [https://lottiefiles.com/94910-greenish-arrow-down](https://lottiefiles.com/94910-greenish-arrow-down)
 
-![](2022/05/4912.gif)
+![](4912.gif)
 
 2022-02-26
 
 [https://lottiefiles.com/87670-satisfied-bear](https://lottiefiles.com/87670-satisfied-bear)
 
-![](2022/05/4913.gif)
+![](4913.gif)
 
 [https://lottiefiles.com/96051-tta-certificate](https://lottiefiles.com/96051-tta-certificate)
 
-![](2022/05/4914.gif)
+![](4914.gif)
 
 更复杂的例子
 
 [https://lottiefiles.com/96388-tiger](https://lottiefiles.com/96388-tiger)
 
-![](2022/05/4915.gif)
+![](4915.gif)
 
 2022-02-27
 
@@ -124,64 +124,64 @@ Opacity
 
 [https://lottiefiles.com/96511-listening-animation](https://lottiefiles.com/96511-listening-animation)
 
-![](2022/05/4916.gif)
+![](4916.gif)
 
 2022-03-02
 
 [https://lottiefiles.com/97409-404-page-animation](https://lottiefiles.com/97409-404-page-animation)
 
-![](2022/05/4917.gif)
+![](4917.gif)
 
 蒙版 (+模式)
 
 [https://lottiefiles.com/88967-food-delivery-service](https://lottiefiles.com/88967-food-delivery-service)
 
-![](2022/05/4918.gif)
+![](4918.gif)
 
 蒙版(-模式)
 
 [https://lottiefiles.com/83667-arty-chat](https://lottiefiles.com/83667-arty-chat)
 
-![](2022/05/4919.gif)
+![](4919.gif)
 
 [https://lottiefiles.com/99804-backend-blue](https://lottiefiles.com/99804-backend-blue)
 
-![](2022/05/4920.gif)
+![](4920.gif)
 
 遮罩(+模式)
 
 [https://lottiefiles.com/96957-lock](https://lottiefiles.com/96957-lock)
 
-![](2022/05/4921.gif)
+![](4921.gif)
 
 [https://lottiefiles.com/89881-smiling-star](https://lottiefiles.com/89881-smiling-star)
 
-![](2022/05/4922.gif)
+![](4922.gif)
 
 2020-04-01
 
 [https://lottiefiles.com/83395-addland-heatfav-v2](https://lottiefiles.com/83395-addland-heatfav-v2)
 
-![](2022/05/4923.gif)
+![](4923.gif)
 
 [https://lottiefiles.com/96939-files](https://lottiefiles.com/96939-files)
 
-![](2022/05/4924.gif)
+![](4924.gif)
 
 2022-04-17
 
 [https://lottiefiles.com/96245-success](https://lottiefiles.com/96245-success)
 
-![](2022/05/4925.gif)
+![](4925.gif)
 
 [https://lottiefiles.com/88282-rocket](https://lottiefiles.com/88282-rocket)
 
-![](2022/05/4926.gif)
+![](4926.gif)
 
 [https://github.com/CommunityToolkit/Lottie-Windows/files/8182417/Lottie.Animation.zip](https://github.com/CommunityToolkit/Lottie-Windows/files/8182417/Lottie.Animation.zip)
 
-![](2022/05/4927.gif)
+![](4927.gif)
 
 [https://lottiefiles.com/102516-growth](https://lottiefiles.com/102516-growth)
 
-![](2022/05/4928.gif)
+![](4928.gif)

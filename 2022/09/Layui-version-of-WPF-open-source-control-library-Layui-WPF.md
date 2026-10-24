@@ -6,7 +6,7 @@
 
 仓库截图：
 
-![Layui-WPF](2022/09/repository-layui-wpf.png)
+![Layui-WPF](repository-layui-wpf.png)
 
 关于Layui请点击此[链接](https://layuion.com/)了解，本文不做介绍，下面我们从控件源码及已有的控件截图进行欣赏。
 
@@ -20,13 +20,13 @@ git clone https://github.com/Layui-WPF-Team/Layui-WPF.git
 
 使用VS打开，控件解决方案如下：
 
-![控件源码结构](2022/09/layui-wpf-in-vs.png)
+![控件源码结构](layui-wpf-in-vs.png)
 
 看了几个工程目标框架默认是 .NET Framework 4.5.2，兼容大部分平台了，有其他.NET版本需求的可以自己编译尝试。
 
 另解决方案中引用了log4net库作为日志记录组件，Prism作为MVVM框架，解决方案直接编译没有错误：
 
-![成功编译](2022/09/layui-wpf-compile-success.png)
+![成功编译](layui-wpf-compile-success.png)
 
 
 将`LayuiApp`工程作为启动项目，成功运行，下面对部分控件进行截图预览。
@@ -37,83 +37,83 @@ git clone https://github.com/Layui-WPF-Team/Layui-WPF.git
 
 - 按钮
 
-![按钮](2022/09/button-of-layui-wpf.png)
+![按钮](button-of-layui-wpf.png)
 
 - 表单
 
-![按钮](2022/09/form-of-layui-wpf.png)
+![按钮](form-of-layui-wpf.png)
 
 - 选项卡
 
-![选项卡](2022/09/tab-of-layui-wpf.gif)
+![选项卡](tab-of-layui-wpf.gif)
 
 - 进度条
 
-![进度条](2022/09/progress-of-layui-wpf.gif)
+![进度条](progress-of-layui-wpf.gif)
 
 - 面板
 
-![面板](2022/09/card-of-layui-wpf.gif)
+![面板](card-of-layui-wpf.gif)
 
 - 折叠面板
 
-![面板](2022/09/folding-board-of-layui-wpf.gif)
+![面板](folding-board-of-layui-wpf.gif)
 
 - 过渡动画
 
-![过渡动画](2022/09/Transition-animation-of-layui-wpf.gif)
+![过渡动画](Transition-animation-of-layui-wpf.gif)
 
 - 加载动画
 
-![加载动画](2022/09/loading-animation-of-layui-wpf.gif)
+![加载动画](loading-animation-of-layui-wpf.gif)
 
 - Gif动画
 
 支持网络gif文件和本地gif文件
 
-![gif动画](2022/09/gif-animation-of-layui-wpf.gif)
+![gif动画](gif-animation-of-layui-wpf.gif)
 
 - 时间线
 
-![时间线](2022/09/timeline-of-layui-wpf.png)
+![时间线](timeline-of-layui-wpf.png)
 
 - 辅助线
 
-![辅助线](2022/09/help-line-of-layui-wpf.png)
+![辅助线](help-line-of-layui-wpf.png)
 
 ### 组件示例
 
 - ToolTip
 
-![ToolTip](2022/09/tooltip-of-layui-wpf.gif)
+![ToolTip](tooltip-of-layui-wpf.gif)
 
 - 标记
 
-![标记](2022/09/tip-button-of-layui-wpf.png)
+![标记](tip-button-of-layui-wpf.png)
 
 - 弹出框
 
-![弹出框](2022/09/popup-of-layui-wpf.gif)
+![弹出框](popup-of-layui-wpf.gif)
 
 - 抽屉
 
-![抽屉](2022/09/drawer-of-layui-wpf.gif)
+![抽屉](drawer-of-layui-wpf.gif)
 
 - 表格
 
 展示有表头合并效果：
 
-![表格](2022/09/table-of-layui-wpf.gif)
+![表格](table-of-layui-wpf.gif)
 
 - 键盘
 
 有几种配色风格
 
-![键盘](2022/09/keyboard-of-layui-wpf.gif)
+![键盘](keyboard-of-layui-wpf.gif)
 
 最后来个控件菜单切换结束控件预览：
 
-![菜单切换](2022/09/menu-change-of-layui-wpf.gif)
+![菜单切换](menu-change-of-layui-wpf.gif)
 
 ## 结束
 

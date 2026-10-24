@@ -14,15 +14,15 @@
 
 **获取好友列表，发送消息**
 
-![](2023/08/0604.gif)
+![](0604.gif)
 
 **获取聊天记录**
 
-![](2023/08/0605.gif)
+![](0605.gif)
 
 **刷朋友圈**
 
-![](2023/08/0606.gif)
+![](0606.gif)
 
 ## 正文
 
@@ -30,7 +30,7 @@
 
 首先需要在 NuGet 下载两个包，FlaUI.Core 和 FlaUI.UIA3，用这两个包，来实现鼠标模拟，UI 自动化的，接下来，咱们看代码。
 
-![](2023/08/0601.png)
+![](0601.png)
 
 上面就是一整个界面的截图，接下来，咱们讲讲代码，在界面被创建的时候，去获取微信的进程 ID，然后，给获取好友列表，聊天列表，朋友圈的 CancelTokenSource 赋值以及所关联的 CancelToken，以此来实现中断取消的功能，同时在上面的 List 是用来存储朋友圈信息的，下面的 Content 存储聊天列表的内容的，Key 是聊天的用户昵称，Value 是最后一次的聊天内容，在往下的 SendInput 是我们用来模拟鼠标滚动的这样我们才可以滚动获取聊天列表，朋友圈内容，好友列表，在下面的 FindWindow，GetWindowThreadProcessID 是用来根据界面名称找到对应的进程 Id 的，因为如果双击了朋友圈在弹出界面中，使用 Process 找不太方便，直接就引用这个来查找朋友圈的弹出界面。
 
@@ -158,7 +158,7 @@ private void button4_Click(object sender, EventArgs e)
 }
 ```
 
-![](2023/08/0602.png)
+![](0602.png)
 
 接下来是获取朋友圈的事件，找到了进程 ID 实际上和之前 Process 获取的一样，此处应该可以是不需要调用 Finwindow 也可以，找到之后获取 Window 的具体操作对象，即点击朋友圈弹出的朋友圈界面，然后找到第一个项目模拟点击一下，本意在将鼠标移动过去，不然后面不可以实现自动滚动，在循环里，获取这个界面的所有子元素，同时找到父类属于朋友圈，列表这个的 ListItem，找到之后，开始遍历找到的集合，由于找到的朋友圈的昵称还有媒体类型，以及时间，还有具体的朋友圈文字内容都包含在了 Name 里面，所以就需要我们根据他的格式去进行拆分，获取对应的时间，昵称，还有朋友圈内容，媒体类型等，最后添加到 DataGridView 里面。
 
@@ -393,7 +393,7 @@ private async void button7_Click(object sender, EventArgs e)
 
 下图是我获取的好友列表，朋友圈列表，以及聊天列表的信息。
 
-![](2023/08/0603.png)
+![](0603.png)
 
 下面是使用 c#调用 win api 模拟鼠标滚动的代码。有关 SendInput 的讲解，详情请看官网 [SendInput function (winuser.h)](https://learn.microsoft.com/en-us/windows/win32/api/winuser/nf-winuser-sendinput)。
 

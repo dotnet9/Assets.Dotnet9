@@ -26,7 +26,7 @@
 
 地址：http://toolwa.com/github/
 
-![](2022/04/1601.png)
+![](1601.png)
 
 ## 4. 加速你的 GitHub
 
@@ -36,9 +36,9 @@ https://github.zhlh6.cn
 
 ## 5. 谷歌浏览器 GitHub 加速插件(推荐)
 
-![](2022/04/1602.png)
+![](1602.png)
 
-![](2022/04/1603.png)
+![](1603.png)
 
 ## 6. GitHub raw 加速
 
@@ -58,15 +58,15 @@ jsdelivr 唯一美中不足的就是它不能获取 exe 文件以及 Release 处
 
 访问 gitee 网站：https://gitee.com/ 并登录，在顶部选择“从 GitHub/GitLab 导入仓库” 如下：
 
-![](2022/04/1604.png)
+![](1604.png)
 
 在导入页面中粘贴你的 GitHub 仓库地址，点击导入即可：
 
-![](2022/04/1605.png)
+![](1605.png)
 
 等待导入操作完成，然后在导入的仓库中下载浏览对应的该 GitHub 仓库代码，你也可以点击仓库顶部的“刷新”按钮进行 GitHub 代码仓库的同步。
 
-![](2022/04/1606.png)
+![](1606.png)
 
 ## 9. 通过修改 HOSTS 文件进行加速
 
@@ -74,7 +74,7 @@ jsdelivr 唯一美中不足的就是它不能获取 exe 文件以及 Release 处
 
 第一步：获取 github 的 global.ssl.fastly 地址访问：http://github.global.ssl.fastly.net.ipaddress.com/#ipinfo 获取 cdn 和 ip 域名：
 
-![](2022/04/1607.png)
+![](1607.png)
 
 得到：199.232.69.194 https://github.global.ssl.fastly.net
 
@@ -82,7 +82,7 @@ jsdelivr 唯一美中不足的就是它不能获取 exe 文件以及 Release 处
 
 访问：https://github.com.ipaddress.com/#ipinfo 获取 cdn 和 ip：
 
-![](2022/04/1608.png)
+![](1608.png)
 
 得到：140.82.114.4 http://github.com
 
@@ -92,7 +92,7 @@ windows 系统：
 
 1、修改 C:\Windows\System32\drivers\etc\hosts 文件的权限，指定可写入：右击->hosts->属性->安全->编辑->点击 Users->在 Users 的权限“写入”后面打勾。如下：
 
-![](2022/04/1609.png)
+![](1609.png)
 
 然后点击确定。
 

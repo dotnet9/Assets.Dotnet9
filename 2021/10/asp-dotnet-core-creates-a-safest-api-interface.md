@@ -24,13 +24,13 @@
 
 首先我们系统 A 调用系统 B 的 Api1 接口假设我们传递一个 hello，然后系统 B 会回复一个 world。那么我们如何设计才可以保证安全呢。首先系统 A 发送消息如何让系统 B 知道是系统 A 发过来的而不是别的中间人共计呢。这里我们需要用到签名，就是说系统 A 用 APriKey 进行对 hello 的加密后那么如果发过去的数据如果签名是 x 内容是 hello，系统 B 收到了就会对 hello 进行签名的校验，如果校验出来的结果是用私钥加密的那么你用哪个公钥进行的前面校验就可以保证系统是由哪个系统发送的。用 APriKey 进行签名的数据只有用 APubKey 进行签名校验才能通过，所以系统 B 就可以确保是有系统 A 发送的而不是别的系统，那么我们到现在还是传送的明文信息，所以我们还需要将数据进行加密，加密一般我们选择的是接收方的公钥,因为只有用接收方的公钥加密后才能由接收方的私钥解密出来。
 
-![](2021/10/0101.png)
+![](0101.png)
 
 ## 项目创建
 
 首先我们创建一个简单的 aspnetcore 的 webapi 项目
 
-![](2021/10/0102.png)
+![](0102.png)
 
 创建一个配置选项用来存储私钥公钥
 
@@ -450,11 +450,11 @@ public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
 
 下载地址[openssl](https://slproweb.com/products/Win32OpenSSL.html)
 
-![](2021/10/0103.png)
+![](0103.png)
 
 双击
 
-![](2021/10/0104.png)
+![](0104.png)
 
 输入创建命令
 
@@ -470,7 +470,7 @@ openssl>rsa -in rsa_private_key.pem -pubout -out rsa_public_key.pem
 openssl>pkcs8 -topk8 -inform PEM -in rsa_private_key.pem -outform PEM -nocrypt -out rsa_pkcs8_private_key.pem
 ```
 
-![](2021/10/0105.png)
+![](0105.png)
 
 公钥和私钥不是 xml 格式的 C#使用 rsa 需要 xml 格式的秘钥，所以先转换对应的秘钥
 
@@ -562,9 +562,9 @@ public class RsaKeyConvert
 
 ## 编写好 client 后开始调用
 
-![](2021/10/0106.png)
+![](0106.png)
 
-![](2021/10/0107.png)
+![](0107.png)
 
 依次启动两个项目就可以看到我们调用成功了，
 

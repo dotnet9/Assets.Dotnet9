@@ -32,7 +32,7 @@ C:\Program Files (x86)\Power Automate Desktop\custom-modules
 
 大致目录如下:
 
-![](2022/05/6201.png)
+![](6201.png)
 
 ## 最简单的 Demo
 
@@ -42,7 +42,7 @@ C:\Program Files (x86)\Power Automate Desktop\custom-modules
 
 默认新增一个解决方案（空的解决方案）
 
-![](2022/05/6202.png)
+![](6202.png)
 
 ### 新增组件库
 
@@ -63,7 +63,7 @@ Microsoft.Flow.RPA.Desktop.Modules.System.Actions.dll
 
 就叫 `YZG.Modules.HelloWorld.Actions`（**注：需要注意的是，像 demo,test 等名字，可能会导致识别不出来的问题，所以，建议起一些特殊的名字。**）
 
-![](2022/05/6203.png)
+![](6203.png)
 
 ## 打招呼组件项目
 
@@ -84,7 +84,7 @@ Microsoft.Flow.RPA.Desktop.Modules.SDK.dll
 
 引入完，效果如下：
 
-![](2022/05/6204.png)
+![](6204.png)
 
 ### 增加打招呼逻辑
 
@@ -121,13 +121,13 @@ public class SayHello : ActionBase
 
 首先，我们增加一个中文的资源文件(另外可以参考官网路径下的语言包来看内部结构分析)
 
-![](2022/05/6205.gif)
+![](6205.gif)
 
 #### 组件显示大致规则
 
 组件的名字从哪里来
 
-![](2022/05/6206.png)
+![](6206.png)
 
 是从程序集信息里的 AssemblyTitle 来的，这个名字默认是英文，但是，也可以汉化的。
 
@@ -204,7 +204,7 @@ SqlConnectionHandle_FriendlyNamePlural = "SQL 连接"
 
 我这边增加了这些内容
 
-![](2022/05/6207.png)
+![](6207.png)
 
 ### 增加组件项目签名
 
@@ -212,15 +212,15 @@ SqlConnectionHandle_FriendlyNamePlural = "SQL 连接"
 
 ### 创建临时证书
 
-![](2022/05/6208.png)
+![](6208.png)
 
 来创建一个新的签名(记得 VS 要管理员模式，就是以管理员方式启动)
 
-![](2022/05/6209.png)
+![](6209.png)
 
 然后，就创建了一个签名 pfx 文件
 
-![](2022/05/6210.png)
+![](6210.png)
 
 #### 给组件 DLL 签名
 
@@ -230,23 +230,23 @@ SqlConnectionHandle_FriendlyNamePlural = "SQL 连接"
 
 一个签名的 bat 脚本（默认签名密码为 `123456`）
 
-![](2022/05/6211.png)
+![](6211.png)
 
-![](2022/05/6212.png)
+![](6212.png)
 
 基本只需要这两个程序集进行签名，其他的，引用的 nuget 库是不需要的。
 
 主要是`YZG.Modules.HelloWorld.Actions.dll`和`zh-Hans\YZG.Modules.HelloWorld.Actions.resources.dll`放到签名的地方
 
-![](2022/05/6213.png)
+![](6213.png)
 
 双击 bat 进行签名
 
-![](2022/05/6214.png)
+![](6214.png)
 
 这样就签名成功了。另外在 DLL 上右键，是能看到签名信息的。
 
-![](2022/05/6215.png)
+![](6215.png)
 
 #### 目标机器上安装证书
 
@@ -254,21 +254,21 @@ SqlConnectionHandle_FriendlyNamePlural = "SQL 连接"
 
 安装证书，非常的简单，直接双击，输入密码，然后，选择指定的位置即可。
 
-![](2022/05/6216.png)
+![](6216.png)
 
 直接下一步
 
-![](2022/05/6217.png)
+![](6217.png)
 
 下一步
 
-![](2022/05/6218.png)
+![](6218.png)
 
 选择受信任的根证书颁发机构
 
-![](2022/05/6219.png)
+![](6219.png)
 
-![](2022/05/6220.png)
+![](6220.png)
 
 然后，完成，是否导入，是，确定，即可。
 
@@ -280,7 +280,7 @@ SqlConnectionHandle_FriendlyNamePlural = "SQL 连接"
 
 前提，应用服务要退出，
 
-![](2022/05/6221.png)
+![](6221.png)
 
 要不然，DLL 会被占用。
 
@@ -288,31 +288,31 @@ SqlConnectionHandle_FriendlyNamePlural = "SQL 连接"
 
 另外，我这个是 C 盘，**还有一个权限的问题。需要注意，能安装到其他盘最好**。
 
-![](2022/05/6222.png)
+![](6222.png)
 
 然后，运行 PAD 应用，新建一个任务流，或者编辑任意一个任务流。
 
 如果出现以下问题，那就是证书没有安装到目标机器，安装一下就好。
 
-![](2022/05/6223.png)
+![](6223.png)
 
 然后，正常情况下，打开 PAD 的设计视图，会如下所示：
 
-![](2022/05/6224.png)
+![](6224.png)
 
 已经新增了一个功能 测试案例 -> 打招呼 并新增了一个功能。
 
 我们试一下
 
-![](2022/05/6225.png)
+![](6225.png)
 
 保存后如下所示
 
-![](2022/05/6226.png)
+![](6226.png)
 
 最后，可以看下实际的动作，效果很不错的说。
 
-![](2022/05/6227.gif)
+![](6227.gif)
 
 ### 问题处理
 
@@ -326,13 +326,13 @@ SqlConnectionHandle_FriendlyNamePlural = "SQL 连接"
 
 ActionBase 需要的相关参数
 
-![](2022/05/6228.png)
+![](6228.png)
 
-![](2022/05/6229.png)
+![](6229.png)
 
 以及内置的相关类型
 
-![](2022/05/6230.png)
+![](6230.png)
 
 这里也感谢潘淳大佬的总结
 

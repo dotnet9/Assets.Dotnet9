@@ -8,7 +8,7 @@
 
 nuget 搜索`ObjectsComparer`：
 
-![](2022/07/1701.png)
+![](1701.png)
 
 ## 使用
 
@@ -40,7 +40,7 @@ var isEqual1 = comparer1.Compare(userInfomationOld, userInfomationNew, out diffe
 
 查看输出 能够知道实例化的两个对象是 age 属性的值不一样:
 
-![](2022/07/1702.png)
+![](1702.png)
 
 那我们再试试`List<T>`类型的:
 
@@ -74,7 +74,7 @@ Console.WriteLine(differencesMsg);
 
 查看输出能够看出是数量不一致的问题:
 
-![](2022/07/1703.png)
+![](1703.png)
 
 ## 应用场景
 

@@ -9,7 +9,7 @@
 
 - 源码：[GitHub](https://github.com/dotnet9/Dotnet9/tree/develop/src/Dotnet9.Web.RazorPages)
 
-![](2022/10/dotnet-blog-repository.png)
+![](dotnet-blog-repository.png)
 
 - Razor Pages学习资料：[微软文档是最好的老师](https://learn.microsoft.com/zh-cn/aspnet/core/razor-pages/?WT.mc_id=dotnet-35129-website&view=aspnetcore-7.0&tabs=visual-studio)
 
@@ -17,6 +17,6 @@
 
 欢迎体验：[https://dotnet9.com](https://dotnet9.com)。
 
-![网站首页](2022/10/razor-pages-blog-cover.png)
+![网站首页](razor-pages-blog-cover.png)
 
 一个字，整！！！

@@ -6,7 +6,7 @@
 
 新建一个控制台项目，并使用 nuget 工具安装：`System.Speech`，也可以在本地类库添加安装，如下图 nuget 安装
 
-![](2022/07/2301.png)
+![](2301.png)
 
 2、输入如下代码，并添加引用`using System.Speech.Synthesis;`
 
@@ -113,7 +113,7 @@ public async Task OnGetAsync()
 
 这样就可以用文本框输入内容，然后读取音频了，大家可以拿这个代码封装一下，改造成新闻语音朗读。效果如下：
 
-![](2022/07/2302.png)
+![](2302.png)
 
 示例代码链接：
 
@@ -168,5 +168,5 @@ https://pan.baidu.com/s/1IJadMleVEM3ePHE_KHqRqA?pwd=soiq
 ```
 
 <video id="video" controls="" preload="none" poster="2022/07/cover_23.jpg">
-  <source id="mp4" src="2022/07/2303.mp4" type="video/mp4">
+  <source id="mp4" src="2303.mp4" type="video/mp4">
 </video>
