@@ -17,7 +17,7 @@ Dotnet和Avalonia都是MIT协议，相关的代码地址是：
 
 Semi.Avalonia，这是以 MIT 协议开源的 Avalonia UI 框架下的 Semi Design 主题风格的精妙呈现。它为应用程序带来独特的视觉风格，如同一幅精美的画卷，为用户界面增添了丰富的色彩和质感。
 
-![](https://img1.dotnet9.com/2024/09/0101.jpg)
+![](2024/09/0101.jpg)
 
 其仓库地址为：https://github.com/irihitech/Semi.Avalonia
 
@@ -25,7 +25,7 @@ Semi.Avalonia，这是以 MIT 协议开源的 Avalonia UI 框架下的 Semi Desi
 
 搭配同样遵循 MIT 协议的Ursa.Avalonia自定义控件库，更是如虎添翼。它们携手为开发者缔造全新的视觉与功能体验，仿佛为开发之旅开启了一扇通往无限可能的大门。
 
-![](https://img1.dotnet9.com/2024/09/0102.png)
+![](2024/09/0102.png)
 
 仓库地址：https://github.com/irihitech/Ursa.Avalonia
 
@@ -37,7 +37,7 @@ Semi.Avalonia，这是以 MIT 协议开源的 Avalonia UI 框架下的 Semi Desi
 
 > 大熊Ursa和Semi两大Avalonia控件集已经完成与龙芯3A6000和龙架构（LoongArch™）的兼容互认证。这一重要的里程碑标志着我们在推进自主可控和国产化技术方面取得了新的进展。
 
-![](https://img1.dotnet9.com/2024/09/0113.jpeg)
+![](2024/09/0113.jpeg)
 
 ## 控件部分截图
 
@@ -45,11 +45,11 @@ Semi.Avalonia，这是以 MIT 协议开源的 Avalonia UI 框架下的 Semi Desi
 
 Semi.Avalonia主题库一览：
 
-![Semi.Avalonia截图](https://img1.dotnet9.com/2024/09/0103.gif)
+![Semi.Avalonia截图](2024/09/0103.gif)
 
 Ursa.Avalonia自定义控件库一览：
 
-![Ursa.Avalonia](https://img1.dotnet9.com/2024/09/0104.gif)
+![Ursa.Avalonia](2024/09/0104.gif)
 
 ## 实际案例分享
 
@@ -59,30 +59,30 @@ Ursa.Avalonia自定义控件库一览：
 
 该小工具使用Avalonia+Prism 8模块化开发，AOT 发布后的文件组织结构：
 
-![](https://img1.dotnet9.com/2024/09/0105.png)
+![](2024/09/0105.png)
 
 其具备黑白主题，营造出不同的视觉氛围：
 
 <table>
     <tr>
-    	<td><img src="https://img1.dotnet9.com/2024/09/0106.png" ></td>
-    	<td><img src="https://img1.dotnet9.com/2024/09/0107.png" ></td>
+    	<td><img src="2024/09/0106.png" ></td>
+    	<td><img src="2024/09/0107.png" ></td>
     </tr>
 </table>
 
 还实现了国际化功能，为全球用户提供便捷体验：
 
-![国际化](https://img1.dotnet9.com/2024/09/0110.gif)
+![国际化](2024/09/0110.gif)
 
 同时，包含实用的 Json 美化工具和 YAML 转 Json 工具，分别如下图所示：
 
 **Json 美化工具**
 
-![](https://img1.dotnet9.com/2024/09/0108.png)
+![](2024/09/0108.png)
 
 **YAML转Json工具**
 
-![](https://img1.dotnet9.com/2024/09/0109.png)
+![](2024/09/0109.png)
 
 ## 使用经验分享
 
@@ -95,11 +95,11 @@ Ursa.Avalonia自定义控件库一览：
 
 首先，克隆控件仓库（上面给出了地址），依据 Readme 及 Demo 运行效果进行查找。例如，若觉得 Button 的 Warning 效果出色：
 
-![](https://img1.dotnet9.com/2024/09/0111.png)
+![](2024/09/0111.png)
 
 可使用 VS Code 或 VS 打开仓库：
 
-![](https://img1.dotnet9.com/2024/09/0112.png)
+![](2024/09/0112.png)
 
 1. 展开Semi.Avalonia.Demo
 2. 找到Pages目录，打开ButtonDemo.axaml

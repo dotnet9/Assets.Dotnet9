@@ -1,6 +1,6 @@
 > 虽然 8 又带来了很多方面的增强，比如：人工智能、云原生、性能、native AOT 等，但我还是最关注 C# 语言和一些框架层面的变化，下面介绍下 C# 12 和框架中的我认为比较实用的新增功能。
 
-![img](https://img1.dotnet9.com/2023/11/cover_07.jpg)
+![img](2023/11/cover_07.jpg)
 
 在 .NET Conf 2023 大会上，.NET 8 正式发布了，.NET 8 是一个长期支持（LTS）版本，这意味着可以获得三年的支持和补丁。我们也计划将框架从 .NET Core3.1 升级到 8 ，关于如何升级等升级完成后再来分享。
 
@@ -60,7 +60,7 @@ public class DerivedImplement : IDerived
 
 下图是 8 中序列化时对命名策略的支持：
 
-![img](https://img1.dotnet9.com/2023/11/0701.jpg)
+![img](2023/11/0701.jpg)
 
 在之前的版本：3.1、6、7 中都只支持 CamelCase 。在 8 中新增的策略如下：
 
@@ -99,13 +99,13 @@ public class UserInfo
 
 结果如下：
 
-![img](https://img1.dotnet9.com/2023/11/0702.jpg)
+![img](2023/11/0702.jpg)
 
 ### 调用 API 直接获取到对象
 
 现在有一个接口返回如下图中的数据：
 
-![img](https://img1.dotnet9.com/2023/11/0703.jpg)
+![img](2023/11/0703.jpg)
 
 如果是在 8 以前的版本中获取该接口的数据，需要先获取到接口内容，然后进行反序列化，代码如下：
 
@@ -142,7 +142,7 @@ public record UserInfo(string userName);
 
 上面两种代码的结果一样，如下图：
 
-![img](https://img1.dotnet9.com/2023/11/0704.jpg)
+![img](2023/11/0704.jpg)
 
 ## 随机数增强
 
@@ -213,7 +213,7 @@ public class FrozenDicTest
 
 从测试结果看，效果还是很明显的：
 
-![img](https://img1.dotnet9.com/2023/11/0705.jpg)
+![img](2023/11/0705.jpg)
 
 2. 新增的 `System.Buffers.SearchValues`类，可以用来进行字符串的查找和匹配，相比较 string 类型的操作，性能有大幅提升，下面还是用 BenchmarkDotNet 进行测试：
 
@@ -249,7 +249,7 @@ public class SearchValuesTest
 
 从运行结果看，有大约 5 倍的的提升：
 
-![img](https://img1.dotnet9.com/2023/11/0706.jpg)
+![img](2023/11/0706.jpg)
 
 ## 依赖注入增强
 

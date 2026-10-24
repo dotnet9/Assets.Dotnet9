@@ -7,19 +7,19 @@
 
 **头条：章子怡和汪峰离婚**
 
-![章子怡和汪峰离婚](https://img1.dotnet9.com/2023/10/0308.jpg)
+![章子怡和汪峰离婚](2023/10/0308.jpg)
 
 **次条：蚂蚁集团旗下的在线文档平台语雀突然崩溃**
 
-![蚂蚁集团旗下的在线文档平台语雀突然崩溃](https://img1.dotnet9.com/2023/10/0301.png)
+![蚂蚁集团旗下的在线文档平台语雀突然崩溃](2023/10/0301.png)
 
 下面这张图来自知乎：https://www.zhihu.com/question/627397548
 
-![](https://img1.dotnet9.com/2023/10/0309.png)
+![](2023/10/0309.png)
 
 **昨晚语雀已经恢复正常**
 
-![昨晚语雀已经恢复正常](https://img1.dotnet9.com/2023/10/0310.png)
+![昨晚语雀已经恢复正常](2023/10/0310.png)
 
 面对语雀突然崩溃这一突发情况，站长建议读者们自己开发一个属于自己的博客网站，以免在类似事件发生时陷入惊慌。
 
@@ -27,7 +27,7 @@
 
 这是站长自己的网站[Dotnet9](https://dotnet9.com/):
 
-![Dotnet9网站首页](https://img1.dotnet9.com/2023/10/0302.png)
+![Dotnet9网站首页](2023/10/0302.png)
 
 目前只做了前台展示([Razor Pages](https://learn.microsoft.com/zh-cn/aspnet/core/razor-pages/?view=aspnetcore-8.0&tabs=visual-studio))和后端[Web API](https://learn.microsoft.com/zh-cn/aspnet/core/web-api/?view=aspnetcore-8.0)接口，一直在持续优化中，打算参考一个成熟的博客网站再次重构。
 
@@ -39,35 +39,35 @@
 
 **首页**
 
-![首页](https://img1.dotnet9.com/2023/10/0303.png)
+![首页](2023/10/0303.png)
 
 **首页文章列表**
 
-![首页文章列表](https://img1.dotnet9.com/2023/10/0304.png)
+![首页文章列表](2023/10/0304.png)
 
 **文章分类**
 
-![文章分类](https://img1.dotnet9.com/2023/10/0314.png)
+![文章分类](2023/10/0314.png)
 
 **文章详情**
 
-![文章详情](https://img1.dotnet9.com/2023/10/0305.png)
+![文章详情](2023/10/0305.png)
 
 **文章评论**
 
-![文章评论](https://img1.dotnet9.com/2023/10/0306.png)
+![文章评论](2023/10/0306.png)
 
 **留言**
 
-![留言](https://img1.dotnet9.com/2023/10/0307.png)
+![留言](2023/10/0307.png)
 
 ### 3.2. 参考网站后台效果图
 
-![登录](https://img1.dotnet9.com/2023/10/0311.png)
+![登录](2023/10/0311.png)
 
-![面板](https://img1.dotnet9.com/2023/10/0312.png)
+![面板](2023/10/0312.png)
 
-![文章列表](https://img1.dotnet9.com/2023/10/0313.png)
+![文章列表](2023/10/0313.png)
 
 ### 3.3. 站长重构想法
 
@@ -120,19 +120,19 @@
 
 文章列表：
 
-![Dotnet9文章列表](https://img1.dotnet9.com/2023/10/0315.png)
+![Dotnet9文章列表](2023/10/0315.png)
 
 文章详情页：
 
-![Dotnet9文章详情页](https://img1.dotnet9.com/2023/10/0316.png)
+![Dotnet9文章详情页](2023/10/0316.png)
 
 文章章节导航目录：
 
-![Dotnet9文章章节导航目录](https://img1.dotnet9.com/2023/10/0318.png)
+![Dotnet9文章章节导航目录](2023/10/0318.png)
 
 文章留言：
 
-![Dotnet9文章留言](https://img1.dotnet9.com/2023/10/0317.png)
+![Dotnet9文章留言](2023/10/0317.png)
 
 依然是原来的配方，原来的文章URL访问格式不变，文章仍然采用`[https://dotnet9.com]/[发布年份]/[发布月份]/[别名]`的格式：
 

@@ -22,21 +22,21 @@ WPF 是用于替代 Windows Form 来创建 Windows 客户端的应用程序，�
 
 上述包含 Window 元素以及 Grid 元素，Window 元素代表整个窗口，Grid 可以放置所有的控件。总体结构其实是一个窗体对象内嵌套一个 Grid 对象。x:Class 代表后端的命名空间和类名，这样的好处在于将 WPF 里的前端 XAML 和后端实现代码分开维护，xmlns 全拼是：XML namespace，即 XML 命名空间，xmlns 后面可以跟一个可选映射前缀 x，两者之间用冒号分割，另外还声明了两个 xmlns 名称空间，如下表
 
-![](https://img1.dotnet9.com/2022/05/5901.png)
+![](2022/05/5901.png)
 
 上面列表的网址分别是什么意思呢？这里是 XAML 解析器的硬性约定，`http://schemas.microsoft.com/winfx/2006/xaml/presentation` 表示引入 WPF 核心程序集 `PresentationFramework`，例如常见的 `System.Windows.Data` 命名空间，`http://schemas.microsoft.com/winfx/2006/xaml` 表示引入另外核心程序集 `System.Xaml`，例如常用的 `Windows.Markup`, 反编译后可见 如图
 
-![](https://img1.dotnet9.com/2022/05/5902.png)
+![](2022/05/5902.png)
 
 另外还有`xmlns:sys="clr-namespace:System;assembly=mscorlib"` 表示将 `sys` 前缀 映射到.NET 基类库`System.String`名称空间，后续用`<sys:String>`获取字符串类型，类似若想引入其他.NET 程序集支持的基类，参考如下语法 `xmlns:Prefix="clr-namespace:Namespace;assembly=AssemblyName"`，例如反序列化攻击载荷常用的`Diagnostics.Process`类所在的程序集：`xmlns:c="clr-namespace:System.Diagnostics;assembly=system"`
 
-![](https://img1.dotnet9.com/2022/05/5903.png)
+![](2022/05/5903.png)
 
 ## 0x03 X:指令
 
 笔者创建的项目名`ObjectDataProvider`有一定迷惑性，这里说明下和反序列化用到的 ObjectDataProvider 类毫无关联，下表是常见的几种 x: 空间指令含义
 
-![](https://img1.dotnet9.com/2022/05/5904.png)
+![](2022/05/5904.png)
 
 `x:Class` 前面已说过不再赘述，而 `x:Key` 表示检索资源文件中所需元素的键名，`x:Type` 表示 CLR 提供的数据类型，在 XAML 里可以认为是引用某个命名空间下的类，`x:Static` 引用后端类里定义的静态字段，`x:Code` 可在 XAML 里执行 C#代码弹出计算器，例如在窗体`Loaded`事件指定触发的方法名为: `Window_Loaded`
 
@@ -53,7 +53,7 @@ WPF 是用于替代 Windows Form 来创建 Windows 客户端的应用程序，�
 
 借用下图笔者把很多概念都画到了图里面，希望帮助读者有更加直观的了解，下图中 `x:Type` 简单的理解就是在 XAML 中想使用某种数据类型时就得用它，比如从自定义的命名空间`xmlns:process`里调用`Process`类，另外 `xmlns:local="clr-namespace:ObjectDataProvider"` 将本地项目空间名`ObjectDataProvider` 映射到前缀 `xmlns:local`
 
-![](https://img1.dotnet9.com/2022/05/5905.png)
+![](2022/05/5905.png)
 
 上图中 `x:Type` 简单的理解就是在 XAML 中想使用某种数据类型时就得用它，比如从自定义的命名空间`xmlns:process`里调用`Process`类，另外 `xmlns:local="clr-namespace:ObjectDataProvider"` 将本地项目空间名`ObjectDataProvider` 映射到前缀 `xmlns:local`
 
@@ -61,7 +61,7 @@ WPF 是用于替代 Windows Form 来创建 Windows 客户端的应用程序，�
 
 在第 12 课里已经详细的介绍过资源字典（ResourceDictionary）功能上以键值对的形式存储资源，并且可存储任意类型的对象。默认窗口设计器会创建 Window.Resources 标签，笔者添加两个资源项，一个是 String 类型、一个是 Double 类型，最后以静态方式读取资源绑定到 TextBlock 控件
 
-![](https://img1.dotnet9.com/2022/05/5906.png)
+![](2022/05/5906.png)
 
 当资源太多需要集中存储时就用到 ResourceDictionary，可以单独将各个资源保存在每个文件中，用 ResourceDictionary.MergeDictionaries 合并到一起使用
 
@@ -111,7 +111,7 @@ ysoserial 在 XmlSerializer 反序列化链中使用 XamlReader.Parse 解析 XAM
 
 > Reads the XAML input in the specified text string and returns an object that corresponds to the root of the specified markup.
 
-![](https://img1.dotnet9.com/2022/05/5907.png)
+![](2022/05/5907.png)
 
 笔者创建测试用例存储于 Dictionary2.xaml 如下代码，`ObjectType="{x:Type TypeName=local:Process }` 可省略 TypeName，另外资源检索键名 ResourceKey 也可以省略，`Source={StaticResource ResourceKey=obj}`
 
@@ -142,7 +142,7 @@ XamlReader.Parse(xml);
 
 上述代码运行后跟踪调用栈，发现调用了多个 Load 方法，注意到调用了 WpfXamlLoader 类的 Load 方法，发现是一个内部实现的类，不能直接在外部所用，只能通过 XamlReader.Loader 方法去实现调用
 
-![](https://img1.dotnet9.com/2022/05/5908.png)
+![](2022/05/5908.png)
 
 ### XamlReader.LoadAsync
 
@@ -160,7 +160,7 @@ XamlReader xamlReader = new XamlReader();
 xamlReader.LoadAsync(ms0);
 ```
 
-![](https://img1.dotnet9.com/2022/05/5909.png)
+![](2022/05/5909.png)
 
 ## 0x06 WebShell
 
@@ -186,7 +186,7 @@ public static void CodeInject(string input)
 }
 ```
 
-![](https://img1.dotnet9.com/2022/05/5910.png)
+![](2022/05/5910.png)
 
 ## 0x07 结语
 

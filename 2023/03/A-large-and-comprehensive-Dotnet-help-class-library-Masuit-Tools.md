@@ -1,6 +1,6 @@
 - 仓库地址：https://github.com/ldqk/Masuit.Tools
 
-![](https://img1.dotnet9.com/2023/03/0304.png)
+![](2023/03/0304.png)
 
 [![LICENSE](https://img.shields.io/badge/license-Anti%20996-blue.svg)](https://github.com/996icu/996.ICU/blob/master/LICENSE) [![nuget](https://img.shields.io/nuget/v/Masuit.Tools.Core.svg)](https://www.nuget.org/packages/Masuit.Tools.Core) [![nuget](https://img.shields.io/nuget/dt/Masuit.Tools.Core.svg)](https://www.nuget.org/packages/Masuit.Tools.Core) ![codeSize](https://img.shields.io/github/languages/code-size/ldqk/Masuit.Tools.svg) ![language](https://img.shields.io/github/languages/top/ldqk/Masuit.Tools.svg) <a href="https://gitee.com/masuit/Masuit.Tools"><img src="https://gitee.com/static/images/logo-black.svg" height="24"></a> <a href="https://github.com/ldqk/Masuit.Tools"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Font_Awesome_5_brands_github.svg/54px-Font_Awesome_5_brands_github.svg.png" height="24"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/GitHub_logo_2013.svg/128px-GitHub_logo_2013.svg.png" height="24"></a>
 
@@ -8,7 +8,7 @@
 
 [官网教程](https://masuit.com/55)
 
-![Masuit Tools](https://img1.dotnet9.com/2023/03/0301.png)
+![Masuit Tools](2023/03/0301.png)
 
 项目开发模式：日常代码积累+网络搜集  
 ⭐⭐⭐ 喜欢这个项目的话就 Star、Fork、Follow 素质三连关 ♂ 注一下吧 ⭐⭐⭐  
@@ -16,11 +16,11 @@
 
 ## 本项目已得到[JetBrains](https://www.jetbrains.com/shop/eform/opensource)的支持！
 
-<img src="https://img1.dotnet9.com/2023/03/0302.png" height="100">
+<img src="2023/03/0302.png" height="100">
 
 ## Star 趋势
 
-<img src="https://img1.dotnet9.com/2023/03/0303.png">
+<img src="2023/03/0303.png">
 
 ## 请注意：
 

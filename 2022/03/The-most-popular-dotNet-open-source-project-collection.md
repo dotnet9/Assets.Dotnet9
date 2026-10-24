@@ -6,7 +6,7 @@ GitHub 上有很多优秀的 .NET 开源项目，它们很适合用来学习 .NE
 
 star: 7k ⭐
 
-![](https://img1.dotnet9.com/2022/03/3001.png)
+![](2022/03/3001.png)
 
 `nopCommerce` 是最受欢迎最好的开源电子商务购物车解决方案之一，它基于 ASP.NET Core，项目包含了前端和管理后台。
 
@@ -38,7 +38,7 @@ Virto Commerce 架构的设计原则是：微服务、API-First、云原生、�
 
 架构图
 
-![](https://img1.dotnet9.com/2022/03/3002.png)
+![](2022/03/3002.png)
 
 ## Miniblog.Core
 
@@ -96,7 +96,7 @@ ABP 基于领域驱动设计提供了一个 完整的、模块化、分层的架
 
 架构图
 
-![](https://img1.dotnet9.com/2022/03/3003.png)
+![](2022/03/3003.png)
 
 ## University-Microservices
 
@@ -110,7 +110,7 @@ star: 207 ⭐
 
 架构图
 
-![](https://img1.dotnet9.com/2022/03/3004.png)
+![](2022/03/3004.png)
 
 > 原文: https://medium.com/dotnet-hub/top-dotnet-asp-net-core-open-source-projects-most-popular-aspnetcore-best-github-repos-6261569bdb06
 >

@@ -16,9 +16,9 @@ Apk 本质上也是一种压缩包，所以，通过 zipinfo 指令并进行 gre
 
 我们来看下，我都下载了多少 App。
 
-![](https://img1.dotnet9.com/2022/05/1301.png)
+![](2022/05/1301.png)
 
-![](https://img1.dotnet9.com/2022/05/1302.png)
+![](2022/05/1302.png)
 
 这些 App 基本上已经覆盖了应用商店各个排行榜里的 Top 软件，所以应该还是比较具有代表性和说服力的。
 
@@ -26,13 +26,13 @@ Apk 本质上也是一种压缩包，所以，通过 zipinfo 指令并进行 gre
 
 ## 统计结果
 
-![](https://img1.dotnet9.com/2022/05/1303.png)
+![](2022/05/1303.png)
 
-![](https://img1.dotnet9.com/2022/05/1304.png)
+![](2022/05/1304.png)
 
-![](https://img1.dotnet9.com/2022/05/1305.png)
+![](2022/05/1305.png)
 
-![](https://img1.dotnet9.com/2022/05/1306.png)
+![](2022/05/1306.png)
 
 已经使用 Flutter 的 App 共 52 个，占全体样本的 19.2%，作为参考，统计了下 RN 相关的 App，共有 45 个，占全体样本的 16.6%，可以说，Flutter 已经超过 RN 成为跨平台方案的首选。
 
@@ -63,4 +63,4 @@ Apk 本质上也是一种压缩包，所以，通过 zipinfo 指令并进行 gre
 
 向大家推荐下我的网站 https://xuyisheng.top/ 专注 Android-Kotlin-Flutter 欢迎大家访问
 
-![](https://img1.dotnet9.com/2022/05/1307.png)
+![](2022/05/1307.png)

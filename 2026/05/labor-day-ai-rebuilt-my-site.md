@@ -18,7 +18,7 @@
 
 ### 首页
 
-![](https://img1.dotnet9.com/2026/05/codewf-homepage.png)
+![](2026/05/codewf-homepage.png)
 
 首页这次不再只是“把内容堆上去”。
 
@@ -31,7 +31,7 @@
 
 ### 搜索
 
-![](https://img1.dotnet9.com/2026/05/codewf-search.png)
+![](2026/05/codewf-search.png)
 
 搜索是我这次很看重的一块。
 
@@ -59,7 +59,7 @@
 
 ### 项目中心
 
-![](https://img1.dotnet9.com/2026/05/codewf-project-center.png)
+![](2026/05/codewf-project-center.png)
 
 项目中心这块，我也重新整理过。
 
@@ -80,7 +80,7 @@
 
 ### 文章详情页
 
-![](https://img1.dotnet9.com/2026/05/codewf-article-detail.png)
+![](2026/05/codewf-article-detail.png)
 
 文章页这次我盯得最细。
 
@@ -163,7 +163,7 @@ Assets.Dotnet9/   # 资源仓库
 所以你会看到本文里的图片引用，都是这种绝对地址：
 
 ```text
-https://img1.dotnet9.com/2026/05/codewf-homepage.png
+2026/05/codewf-homepage.png
 ```
 
 这不是为了“显得专业”，而是为了后面少折腾。

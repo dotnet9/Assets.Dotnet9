@@ -12,7 +12,7 @@
 
 先看实现效果图：
 
-![](https://img1.dotnet9.com/2019/11/0101.png)
+![](2019/11/0101.png)
 
 ## 3. 解决问题与探索
 
@@ -726,7 +726,7 @@ private void Validate(object sender, PropertyChangedEventArgs e)
 
 通过上述步骤的实现，我们得到了一个功能完善的WPF应用程序。它能够根据用户输入实时进行验证，并提供直观的错误提示。当所有属性都验证通过时，提交按钮将变为可用状态。
 
-![](https://img1.dotnet9.com/2019/11/0103.gif)
+![](2019/11/0103.gif)
 
 ## 6. 源码分享
 

@@ -37,7 +37,7 @@ i18n/Resources.zh-CN.resx    // 简体中文
 i18n/Resources.zh-Hant.resx  // 繁体中文
 i18n/Resources.ja-JP.resx    // 日语
 ```
-![](https://img1.dotnet9.com/2025/08/0201.png)
+![](2025/08/0201.png)
 
 #### XML格式
 
@@ -48,7 +48,7 @@ i18n/zh-CN.xml    // 简体中文
 i18n/zh-Hant.xml  // 繁体中文
 i18n/ja-JP.xml    // 日语
 ```
-![](https://img1.dotnet9.com/2025/08/0203.png)
+![](2025/08/0203.png)
 
 #### JSON格式示例
 JSON文件同样以文化标识命名，采用键值对结构存储资源：
@@ -58,7 +58,7 @@ i18n/zh-CN.json    // 简体中文
 i18n/zh-Hant.json  // 繁体中文
 i18n/ja-JP.json    // 日语
 ```
-![](https://img1.dotnet9.com/2025/08/0202.png)
+![](2025/08/0202.png)
 
 
 ### 第三步：生成类型安全的资源常量（T4模板）
@@ -69,7 +69,7 @@ i18n/ja-JP.json    // 日语
 2. 模板会自动扫描`i18n`文件夹的语言文件，生成语言资源的常量类
 3. 当语言文件新增/修改Key后，打开T4模板按Ctrl + S可重新生成。
 
-![](https://img1.dotnet9.com/2025/08/0204.png)
+![](2025/08/0204.png)
 
 
 ## 实战使用：前后台集成指南

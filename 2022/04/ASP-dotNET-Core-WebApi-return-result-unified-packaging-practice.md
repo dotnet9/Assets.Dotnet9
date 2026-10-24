@@ -507,4 +507,4 @@ public static IApplicationBuilder UseException(this IApplicationBuilder app)
 
 👇 欢迎扫码关注我的公众号 👇
 
-![](https://img1.dotnet9.com/2022/04/1201.png)
+![](2022/04/1201.png)

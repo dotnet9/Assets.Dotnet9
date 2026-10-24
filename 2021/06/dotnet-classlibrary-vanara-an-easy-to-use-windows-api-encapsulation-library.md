@@ -2,7 +2,7 @@
 >
 > 翻译：沙漠尽头的浪(水平有限，如有条件请尽量查看仓库地址翻阅)
 
-![](https://img1.dotnet9.com/2021/06/0101.png)
+![](2021/06/0101.png)
 
 > 一系列非常简单易用，对 Windows API 做了极好封装的.NET 类库，几乎不用再写繁琐的 Windows API 转换函数了。
 
@@ -51,19 +51,19 @@ var bret = GetComputerName(sb, ref sbSz);
 
 ## 支持的库
 
-![](https://img1.dotnet9.com/2021/06/0102.png)
+![](2021/06/0102.png)
 
-![](https://img1.dotnet9.com/2021/06/0103.png)
+![](2021/06/0103.png)
 
-![](https://img1.dotnet9.com/2021/06/0104.png)
+![](2021/06/0104.png)
 
-![](https://img1.dotnet9.com/2021/06/0105.png)
+![](2021/06/0105.png)
 
-![](https://img1.dotnet9.com/2021/06/0106.png)
+![](2021/06/0106.png)
 
 ## 支持的程序集
 
-![](https://img1.dotnet9.com/2021/06/0107.png)
+![](2021/06/0107.png)
 
 ## 链接
 

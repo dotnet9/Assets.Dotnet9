@@ -10,11 +10,11 @@
 
 我们在用 vscode 写代码时候经常需要选中文本，比如下图
 
-![图片](https://img1.dotnet9.com/2024/04/0201.gif)
+![图片](2024/04/0201.gif)
 
 但绝大多数情况下我们想选中的是整个类名，如下图
 
-![图片](https://img1.dotnet9.com/2024/04/0202.gif)
+![图片](2024/04/0202.gif)
 
 其实这个就牵扯到了 vscode 的分词机制，它认为`-`应该截断文本
 
@@ -54,11 +54,11 @@
 
 有些字符串里的文件路径支持 cmd+点击跳转。如大多数的导入语句，见下图
 
-![图片](https://img1.dotnet9.com/2024/04/0203.gif)
+![图片](2024/04/0203.gif)
 
 但其他位置的字符串里的文件路径大多不支持跳转，如下图
 
-![图片](https://img1.dotnet9.com/2024/04/0204.png)
+![图片](2024/04/0204.png)
 
 安装插件
 
@@ -72,7 +72,7 @@ https://marketplace.visualstudio.com/items?itemName=duXing.quick-go-to-selected-
 
 如果这个快捷键不符合你的要求，可以自行修改
 
-![图片](https://img1.dotnet9.com/2024/04/0205.gif)
+![图片](2024/04/0205.gif)
 
 ### 更快捷清晰的打印调试
 
@@ -89,11 +89,11 @@ https://marketplace.visualstudio.com/items?itemName=duXing.quick-go-to-selected-
 },
 ```
 
-![图片](https://img1.dotnet9.com/2024/04/0206.gif)
+![图片](2024/04/0206.gif)
 
 其实可以通过设置宏一步完成
 
-![图片](https://img1.dotnet9.com/2024/04/0207.gif)
+![图片](2024/04/0207.gif)
 
 也可以安装插件实现,类似的插件有很多
 
@@ -107,7 +107,7 @@ https://snippet-generator.app/?description=&tabtrigger=&snippet=&mode=vscode
 
 举个例子，把自己常用的代码片段或 webstorm 里好用的代码片段转移过来
 
-![图片](https://img1.dotnet9.com/2024/04/0208.jpg)
+![图片](2024/04/0208.jpg)
 
 ### 清晰的代码高亮
 
@@ -119,7 +119,7 @@ https://snippet-generator.app/?description=&tabtrigger=&snippet=&mode=vscode
 
 看到黄色下划线我就知道它是被 async 修饰的方法，我下意识就会考虑到要不要加 await 调用，虽然 eslint 之类的也能检测到，但它只会一刀切的全部警告。实际上并不一定要加 await 修饰，所有都警告一定是好的吗？无用的警告，甚至错误的警告只会影响写代码的心情。它应该表达一种语义，用我喜欢的不同于变量，属性之类的其他颜色就很好
 
-![图片](https://img1.dotnet9.com/2024/04/0209.gif)
+![图片](2024/04/0209.gif)
 
 ### 更快捷的功能入口
 
@@ -129,7 +129,7 @@ https://snippet-generator.app/?description=&tabtrigger=&snippet=&mode=vscode
 
 也可以把一些常用的 gitlens 的 tab 拖出来，让 git 视图空间更大,更清晰
 
-![图片](https://img1.dotnet9.com/2024/04/0210.gif)
+![图片](2024/04/0210.gif)
 
 ### 让文件夹层级更清晰
 
@@ -139,7 +139,7 @@ https://snippet-generator.app/?description=&tabtrigger=&snippet=&mode=vscode
 
 不，其实是 css，这种不统一的展示至少会让我有些困惑
 
-![图片](https://img1.dotnet9.com/2024/04/0211.png)
+![图片](2024/04/0211.png)
 
 更改如下配置即可展示为下图样子
 
@@ -147,17 +147,17 @@ https://snippet-generator.app/?description=&tabtrigger=&snippet=&mode=vscode
 "explorer.compactFolders": false
 ```
 
-![图片](https://img1.dotnet9.com/2024/04/0212.png)
+![图片](2024/04/0212.png)
 
 ### 快速打开并利用 vscode 自身强大的功能修改非项目文件
 
 有时候我们安装使用一些工具时需要修改配置文件或是 host 文件啥的，那些文章一般都会说使用 vim 之类的命令，说实话真的很难用，不仅看着不清晰，修改更是不方便。如下图
 
-![图片](https://img1.dotnet9.com/2024/04/0213.gif)
+![图片](2024/04/0213.gif)
 
 其实 vscode 提供了一个 code 命令，可以很方便的打开文件或文件夹，同样是修改上述文件
 
-![图片](https://img1.dotnet9.com/2024/04/0214.gif)
+![图片](2024/04/0214.gif)
 
 ### 自动复制终端中选择的文本
 
@@ -173,7 +173,7 @@ https://snippet-generator.app/?description=&tabtrigger=&snippet=&mode=vscode
 
 有时候选中了一些文本，但因为误触不小心把代码移到了别处，如下
 
-![图片](https://img1.dotnet9.com/2024/04/0215.gif)
+![图片](2024/04/0215.gif)
 
 这个因人而异，我是不需要这个功能，反而有时候因为误触让我很困惑，配置如下
 
@@ -192,29 +192,29 @@ https://snippet-generator.app/?description=&tabtrigger=&snippet=&mode=vscode
 
 通过下图我们可以知道当前安装的版本，最新版本，也可以直接进入查看细节
 
-![图片](https://img1.dotnet9.com/2024/04/0216.gif)
+![图片](2024/04/0216.gif)
 
 我们知道有些包是间接依赖的，并没有列在 package.json 里，我想知道 node_moduels 里到底有没有，可以直接搜索，以 lodash 为例，如下图
 
-![图片](https://img1.dotnet9.com/2024/04/0217.gif)
+![图片](2024/04/0217.gif)
 
 ### Vue
 
 #### 属性与方法等提示和跳转
 
-![图片](https://img1.dotnet9.com/2024/04/0218.gif)
+![图片](2024/04/0218.gif)
 
 #### css 类名提示和跳转
 
-![图片](https://img1.dotnet9.com/2024/04/0219.gif)
+![图片](2024/04/0219.gif)
 
 #### vuex 跳转
 
-![图片](https://img1.dotnet9.com/2024/04/0220.gif)
+![图片](2024/04/0220.gif)
 
 #### 文件路径提示与跳转
 
-![图片](https://img1.dotnet9.com/2024/04/0221.gif)
+![图片](2024/04/0221.gif)
 
 ### React
 
@@ -222,7 +222,7 @@ https://snippet-generator.app/?description=&tabtrigger=&snippet=&mode=vscode
 
 这里简单再举个 css 的例子
 
-![图片](https://img1.dotnet9.com/2024/04/0222.gif)
+![图片](2024/04/0222.gif)
 
 顺便就此说一个相关的，属性的值，如 className 到底是字符串还是 jsx 表达式，vscode 默认是自动推断的，也就是说 className 默认是字符串。
 
@@ -233,17 +233,17 @@ https://snippet-generator.app/?description=&tabtrigger=&snippet=&mode=vscode
 "typescript.preferences.jsxAttributeCompletionStyle": "braces"
 ```
 
-![图片](https://img1.dotnet9.com/2024/04/0223.gif)
+![图片](2024/04/0223.gif)
 
 话说 webstorm，你连大小写都不认识了吗，这样会生效吗，你还\***\*跳转？？？真是**！
 
 这里就不得不说 webstorm 的一大缺点，总是喜欢强行提示，给人一种仿佛很智能的感觉。所以很吃性能，容易卡顿
 
-![图片](https://img1.dotnet9.com/2024/04/0224.gif)
+![图片](2024/04/0224.gif)
 
 vscode 不仅可以正确提示，对于错误也有很清晰的解释，并且提供了解决方案
 
-![图片](https://img1.dotnet9.com/2024/04/0225.gif)
+![图片](2024/04/0225.gif)
 
 ## 结语
 

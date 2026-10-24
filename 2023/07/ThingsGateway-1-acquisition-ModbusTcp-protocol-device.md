@@ -40,7 +40,7 @@ GitHub源代码仓库：https://github.com/kimdiego2098/ThingsGateway
 
 ### 3.1. 建立采集设备
 
-![](https://img1.dotnet9.com/2023/07/0402.gif)
+![](2023/07/0402.gif)
 
 建立采集设备，选择ModbusTcp插件，查看设备扩展属性，可以看到ModbusTcp的可配置项。
 
@@ -48,7 +48,7 @@ GitHub源代码仓库：https://github.com/kimdiego2098/ThingsGateway
 
 ### 3.2 建立变量
 
-![](https://img1.dotnet9.com/2023/07/0403.gif)
+![](2023/07/0403.gif)
 
 建立变量，填写变量名称与变量地址、数据类型。
 
@@ -56,7 +56,7 @@ GitHub源代码仓库：https://github.com/kimdiego2098/ThingsGateway
 
 ### 3.3. 重启采集线程
 
-![](https://img1.dotnet9.com/2023/07/0404.gif)
+![](2023/07/0404.gif)
 
 通过运行状态-右上角的浮标，重启全部线程，重启完成后可以看到设备信息。
 
@@ -64,7 +64,7 @@ GitHub源代码仓库：https://github.com/kimdiego2098/ThingsGateway
 
 ### 3.4. 启动Modbus服务端
 
-![](https://img1.dotnet9.com/2023/07/0405.gif)
+![](2023/07/0405.gif)
 
 启动ModbusSlave，选择ModbusTcp协议、端口502。
 
@@ -72,7 +72,7 @@ GitHub源代码仓库：https://github.com/kimdiego2098/ThingsGateway
 
 ### 3.5. 查看实时数据
 
-![](https://img1.dotnet9.com/2023/07/0406.gif)
+![](2023/07/0406.gif)
 
 通过运行状态-采集设备-相关变量跳转，或者直接点菜单的实时数据页面，可以看到相关的变量实时数据。
 
@@ -86,7 +86,7 @@ GitHub源代码仓库：https://github.com/kimdiego2098/ThingsGateway
 
 试想一下应用场景，当气体仪表通讯值规定是 实际值*100 或者其他的复杂转换，通过网关将完美解决复杂的表达式转换。
 
-![](https://img1.dotnet9.com/2023/07/0407.gif)
+![](2023/07/0407.gif)
 
 编辑变量的读取表达式为 raw/100.0 ，重启线程后可以看到实时值和原始值的区别。
 
@@ -94,7 +94,7 @@ GitHub源代码仓库：https://github.com/kimdiego2098/ThingsGateway
 
 当一个ModbusTcp有几万个变量时，如果是逐个读取的效率实在是太低，通过网关的分包限制将非常简单得解决问题。
 
-![](https://img1.dotnet9.com/2023/07/0408.gif)
+![](2023/07/0408.gif)
 
 
 比如现测试的ModbusTcp插件，只需要修改最大打包长度(默认100)，或者直接默认。
@@ -103,7 +103,7 @@ GitHub源代码仓库：https://github.com/kimdiego2098/ThingsGateway
 
 ### 4.3. 采集冗余
 
-![](https://img1.dotnet9.com/2023/07/0409.gif)
+![](2023/07/0409.gif)
 
 冗余的概念大伙应该熟悉，网关的采集冗余也是如此。
 
@@ -113,7 +113,7 @@ GitHub源代码仓库：https://github.com/kimdiego2098/ThingsGateway
 
 下图截自.NET官网：https://dotnet.microsoft.com/zh-cn/，核心思想：.NET免费、开源、快速和跨平台、新式和高效：
 
-![](https://img1.dotnet9.com/2023/07/0401.png)
+![](2023/07/0401.png)
 
 ### 5.1. .NET免费、开源
 

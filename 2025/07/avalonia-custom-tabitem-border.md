@@ -2,21 +2,21 @@
 
 感谢微信【Avalonia开发交流群】的 @kankankan 大佬提供的代码示例：
 
-![](https://img1.dotnet9.com/2025/07/0201.jpg)
+![](2025/07/0201.jpg)
 
-![](https://img1.dotnet9.com/2025/07/0202.jpg)
+![](2025/07/0202.jpg)
 
 下图是按个性化要求修改效果：
 
-![](https://img1.dotnet9.com/2025/07/0209.gif)
+![](2025/07/0209.gif)
 
 为了兼容[Semi.Avalonia](https://github.com/irihitech/Semi.Avalonia)主题风格，我们的TabControl控件主题从参考Semi的Card风格控件主题开始，Semi的效果如下：
 
-![](https://img1.dotnet9.com/2025/07/0203.gif)
+![](2025/07/0203.gif)
 
 我们修改后，在各主题切换时，展示效果如下：
 
-![](https://img1.dotnet9.com/2025/07/0204.gif)
+![](2025/07/0204.gif)
 
 ## 使用
 
@@ -119,15 +119,15 @@ Install-Package CodeWF.AvaloniaControls -Version 0.1.1.6
 
 这是Semi的TabControl的ControlTheme代码：
 
-![](https://img1.dotnet9.com/2025/07/0205.png)
+![](2025/07/0205.png)
 
 我们主要是修改TabItem的边框风格，所以将Semi的这段代码直接复制粘贴，给ControlTheme换个Key，再把图中框选部分ItemContainerTheme的Value指向另一个TabItem的控件主题，其他部分代码按需修改，我这没动其他代码，下图是修改后代码截图：
 
-![](https://img1.dotnet9.com/2025/07/0206.png)
+![](2025/07/0206.png)
 
 TabItem的控件主题代码如下，关键代码是自定义的边框代码位置：
 
-![](https://img1.dotnet9.com/2025/07/0207.png)
+![](2025/07/0207.png)
 
 其中TrapezoidShapedTabItemBorder继承自Control，主要是重写它的Render方法：
 
@@ -234,7 +234,7 @@ public partial class TrapezoidShapedTabItemBorder : Control
 
 Render中，根据当前TabItem是TabControl的第一个、最后一个、中间部分，调用不同的方法绘制边框，比如绘制第一个TabItem，效果图如下：
 
-![](https://img1.dotnet9.com/2025/07/0210.png)
+![](2025/07/0210.png)
 
 先分析：
 
@@ -328,7 +328,7 @@ private static void DrawTopFirstTabItemBorder(StreamGeometryContext ctx, Rect ad
 
 Edge的TabItem效果好实现了吧？
 
-![](https://img1.dotnet9.com/2025/07/0208.png)
+![](2025/07/0208.png)
 
 ## 总结
 

@@ -4,7 +4,7 @@
 
 下面是 Vue.js 实现 MVVM 功能的原理图：
 
-![](https://img1.dotnet9.com/2021/11/0801.png)
+![](2021/11/0801.png)
 
 前面说的 Vue.js 框架这些优点的是否很眼熟？没错，这就是早些年流行于 WPF 的 MVVM 技术，相比 WinForms 技术，WPF 可以提供给 UI 设计人员更加强大的设计能力，做出更炫更好看的界面。只不过 MS 的很多技术总是很超前技术更新很快，WPF 新推出的时候 WinForms 还占据桌面开发主要领域，随后还没有火起来移动开发时代已经来临，基于 Web 的前端技术大大发展，从而风头盖过了 WPF，但是 WPF 引入的 MVVM 思想却在 Web 前端得到了发扬光大，现在各种基于 MVVM 的前端框架犹如雨后春笋。
 
@@ -160,9 +160,9 @@ private void Form1_Load(object sender, EventArgs e)
 
 上面的代码中，首先定义了一个视图模型对象 DataContext,在方法 BindDataControls 里面作为绑定到视图控件上的对象，它里面的 CurrentUser 属性的 Name 属性绑定到了文本框控件上，所以 CurrentUser.Name 是作为复合属性来绑定的，对于标签控件和列表框控件，也是类似的过程，如下图:
 
-![](https://img1.dotnet9.com/2021/11/0802.png)
+![](2021/11/0802.png)
 
-![](https://img1.dotnet9.com/2021/11/0803.png)
+![](2021/11/0803.png)
 
 这样，在视图上做简单的数据属性设置和写少量的 code behind 绑定代码，一个具有双向绑定功能的程序就好了。
 
@@ -178,7 +178,7 @@ private void Form1_Load(object sender, EventArgs e)
 
 搭建好的解决方案图如下：
 
-![](https://img1.dotnet9.com/2021/11/0804.png)
+![](2021/11/0804.png)
 
 **注意：此解决方案是使用 SOD Ver 5.5.5.1019 做的，因为这是目前 nuget 上 SOD 的版本，最新的 SOD 框架已经把 WinFormMvvm 项目的 MvvmForm.cs 文件纳入到框架之内了。**
 
@@ -220,11 +220,11 @@ http://pwmis.codeplex.com/
 
 这是一个简单的 WinForm 窗体，有三个 SOD“数据控件”，包括：一个标签控件显示用户的 ID，文本框控件显示用户名，一个列表框控件显示已经有用户列表，三个按钮分别用来向列表添加，修改和删除数据。
 
-![](https://img1.dotnet9.com/2021/11/0805.png)
+![](2021/11/0805.png)
 
 对于数据控件，可以在此窗体设计器界面，打开“工具箱”，在“常规”选项卡里面，选择上下文菜单“选择项”，浏览到 packages\PDF.NET.SOD.WinForm.Extensions.5.5.5.1020\lib 目录，选择“Pwmis.Windows.dll” ，即可看到 SOD 的数据控件，然后拖拽到窗体上即可。
 
-![](https://img1.dotnet9.com/2021/11/0806.png)
+![](2021/11/0806.png)
 
 **注意我们不会给这三个按钮控件直接设置单击事件，而是通过命令绑定的形式。例如对应添加按钮，我们如下绑定命令（视图模型的一个方法）：**
 
@@ -244,7 +244,7 @@ base.BindDataControls(this.Controls);
 
 单击属性浏览器中数据控件的 LinkProperty 属性旁边的“…”按钮，会弹出下面的“数据控件属性选择器”窗体：
 
-![](https://img1.dotnet9.com/2021/11/0807.png)
+![](2021/11/0807.png)
 
 由于这里我们要绑定的对象是当前窗体的 DataContext 对象，所以需要浏览选择到主程序集，这样在属性名称一栏，会显示此对象所有的属性和子属性。注意如果 DataContext 对象没有出现在列表里面，需要检查 Form 窗体是否声明了 DataContext 对象，并且需要首先编译一次程序集。最后，单击确定，我们就设置好了数据控件要绑定的信息。
 
@@ -471,13 +471,13 @@ public class SubmitedUsersViewModel
 
 对于整个解决方案，我们都需要添加 PDF.NET Core 包，但是对于我们的 WinForms 主程序，需要额外添加 2 个相关的包，一个 SOD WinForm 扩展和一个 SOD Access 扩展，下面是解决方案安装的全部包示意图：
 
-![](https://img1.dotnet9.com/2021/11/0808.png)
+![](2021/11/0808.png)
 
 ### 4.6 运行解决方案
 
 经过上面的过程，我们添加了视图元素，设置好了视图元素的数据绑定，创建了模型和视图模型对象，一个简单的 MVVM 示例程序就好了，下面是运行效果图：
 
-![](https://img1.dotnet9.com/2021/11/0809.png)
+![](2021/11/0809.png)
 
 ## 5. MVVM 模式总结
 
@@ -516,4 +516,4 @@ SOD 开发团队
 
 - SOD 库仓库地址：[https://github.com/znlgis/sod](https://github.com/znlgis/sod)
 
-![](https://img1.dotnet9.com/2021/11/0810.png)
+![](2021/11/0810.png)

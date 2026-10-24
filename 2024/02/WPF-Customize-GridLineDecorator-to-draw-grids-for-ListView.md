@@ -10,7 +10,7 @@
 
 先给个效果图：
 
-![img](https://img1.dotnet9.com/2024/02/cover_02.png)
+![img](2024/02/cover_02.png)
 
 使用时的代码：
 
@@ -45,7 +45,7 @@
 
 但是，很快你会发现，Border 不能随着列宽的变化而变化，就像这样：
 
-![img](https://img1.dotnet9.com/2024/02/0201.png)
+![img](2024/02/0201.png)
 
 而且，即使将 ListView 的 HorizontalContentAlignment 置为 Stretch，也不能起到作用。必须在 ListViewItem 上设置 HorizontalContentAlignment="True"。因此，必须添加一个 ListViewItem 的样式，统一指定：
 
@@ -57,7 +57,7 @@
 
 但问题还是没有解决，因为 Border 不能填满整个 Cell，就像这样：
 
-![img](https://img1.dotnet9.com/2024/02/0202.png)
+![img](2024/02/0202.png)
 
 于是，你得小心的设置各个 Border 的 Margin，来让它们“恰好”都连在一起，看上去就像是连续的线条。也许调整 Margin 还不够，还得修改 ListViewItem 的模板；模板修改好了，发现创建这么多的 Border 性能又跟不上；最头大的是，每个 Column 都要指定一次 CellTemplate，万一哪天边线的颜色要统一调整一下……
 
@@ -382,7 +382,7 @@ public GridLineDecorator()
 </ListView.ItemContainerStyle>
 ```
 
-![img](https://img1.dotnet9.com/2024/02/0203.gif)
+![img](2024/02/0203.gif)
 
 - 原文标题：【WPF】自定义 GridLineDecorator 给 ListView 画网格
 - 原文作者：大佛脚下

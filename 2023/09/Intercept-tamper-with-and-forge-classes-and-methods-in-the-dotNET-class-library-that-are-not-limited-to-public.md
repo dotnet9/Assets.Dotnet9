@@ -71,9 +71,9 @@ public class TestTool
 
 下面是写的一个`AvaloniaUI`程序测试界面，UI不是本文重点，这里就直接贴动图和代码截图了，文末也有源码链接：
 
-![](https://img1.dotnet9.com/2023/09/0701.gif)
+![](2023/09/0701.gif)
 
-![](https://img1.dotnet9.com/2023/09/0702.png)
+![](2023/09/0702.png)
 
 ### 2.2. 为什么个位数字为6时，总是显示数字1的段落呢？
 
@@ -167,7 +167,7 @@ harmony.PatchAll(Assembly.GetExecutingAssembly());
 
 重新运行主程序，输入数字6时正常显示数字6对应的段落了：
 
-![](https://img1.dotnet9.com/2023/09/0703.gif)
+![](2023/09/0703.gif)
 
 这样就达到不修改第三库源码的情况实现结果篡改了，站长使用`.NET 8`拦截会有异常，后改为 `.NET 6` 得以正常运行，异常信息如下，可能是`Lib.Harmony`还不支持`.NET 8`吧：
 
@@ -246,7 +246,7 @@ public string? Number
 
 输入6时又返回1的段落了：
 
-![](https://img1.dotnet9.com/2023/09/0701.gif)
+![](2023/09/0701.gif)
 
 **问题来了：internal方法怎么拦截？**
 
@@ -256,7 +256,7 @@ public string? Number
 
 新增拦截类`HookGetValidNumber`，现在不能再在类上添加特性了（`[HarmonyPatch(typeof(CalNumber))]`），因为`CalNumber`不是public访问修饰，跨工程无法直接使用，语法不支持：
 
-![](https://img1.dotnet9.com/2023/09/0704.png)
+![](2023/09/0704.png)
 
 特性用不上，那就手工注册需要拦截的方法，这是本文的重点，代码在下面，简单提一下：
 
@@ -322,7 +322,7 @@ HookGetValidNumber.StartHook();
 
 运行效果如下，输入6显示数字8段落：
 
-![](https://img1.dotnet9.com/2023/09/0705.gif)
+![](2023/09/0705.gif)
 
 ## 4. 总结
 

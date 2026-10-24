@@ -8,7 +8,7 @@ Entity Framework 7 包括一些已被要求的流行功能，其中之一是批�
 
 推文地址：[https://twitter.com/julielerman/status/1557743067691569156](https://twitter.com/julielerman/status/1557743067691569156)
 
-![https://twitter.com/julielerman/status/1557743067691569156](https://img1.dotnet9.com/2022/09/0101.png)
+![https://twitter.com/julielerman/status/1557743067691569156](2022/09/0101.png)
 
 ## 为什么?
 

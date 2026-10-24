@@ -8,7 +8,7 @@
 
 大家好，我是沙漠尽头的狼。在朋友圈看到桂素伟大佬发的喜讯截图，站长赶紧翻译向大家报喜，确定了-C#是 2023 年度的编程语言！
 
-![.NET与C#](https://img1.dotnet9.com/2024/01/cover_02.png)
+![.NET与C#](2024/01/cover_02.png)
 
 在 TIOBE 指数的历史上，C#首次获得了年度编程语言的奖项。祝贺！二十多年来，C#一直是前 10 名的选手，现在它正在追赶四大语言，它以一年内最大的涨幅（+1.43%）赢得了这一当之无愧的奖项。紧随其后的是 Scratch（+0.83%）和 Fortran（+0.64%）。C#正在蚕食 Java 的市场份额，并且在诸如 Web 应用程序后端和游戏（感谢 Unity）等领域中越来越受欢迎。C#可以免费使用（站长注：.NET 是 MIT 协议开源，免费跨平台，信创没问题），并以稳定的速度发展，使该语言在每个新版本中都更具表现力。C#将继续存在，甚至可能很快超越 Java。
 
@@ -41,7 +41,7 @@ TIOBE 编程社区指数是编程语言受欢迎程度的指标。该指数每�
 | 19           | 18           | ![change](https://www.tiobe.com/wp-content/themes/tiobe/tpci/images/down.png)     | ![Rust page](https://www.tiobe.com/wp-content/themes/tiobe/tiobe-index/images/Rust.png)                                 | Rust                 | 0.79%  | +0.18% |
 | 20           | 31           | ![change](https://www.tiobe.com/wp-content/themes/tiobe/tpci/images/upup.png)     | ![COBOL page](https://www.tiobe.com/wp-content/themes/tiobe/tiobe-index/images/COBOL.png)                               | COBOL                | 0.78%  | +0.45% |
 
-![TIOBE编程语言索引](https://img1.dotnet9.com/2024/01/0201.png)
+![TIOBE编程语言索引](2024/01/0201.png)
 
 ---
 

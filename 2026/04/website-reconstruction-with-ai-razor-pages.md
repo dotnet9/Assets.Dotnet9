@@ -22,7 +22,7 @@ CodeWF/src/
     └── Extensions/       # 扩展方法
 ```
 
-![CodeWF架构图](https://img1.dotnet9.com/2026/04/codewf-architecture.svg)
+![CodeWF架构图](2026/04/codewf-architecture.svg)
 
 ## 3. Razor Pages核心实现
 
@@ -235,7 +235,7 @@ public class BlogPost : BlogPostBrief
 
 ## 5. 页面请求处理流程
 
-![页面请求处理流程](https://img1.dotnet9.com/2026/04/razor-pages-request-flow.svg)
+![页面请求处理流程](2026/04/razor-pages-request-flow.svg)
 
 1. 用户请求 `/timestamp`
 2. 路由系统匹配到 `@page "/timestamp"`

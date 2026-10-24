@@ -4,7 +4,7 @@ Vue 是当前流行的 web 框架， 简单来说是一套模板引擎，利用�
 
 例如我在某医疗行业项目中，已经用这个混合开发的方式生成应用，Vue 代码不需要做什么改动，就能跨平台运行：
 
-![](https://img1.dotnet9.com/2022/01/cover_05.png)
+![](2022/01/cover_05.png)
 
 如果你有一套 Vue 开发的网站，可以根据这篇文章，尝试移值进你的 iPhone，Android 以及平板电脑等移动设备。
 
@@ -23,25 +23,25 @@ Vue 是当前流行的 web 框架， 简单来说是一套模板引擎，利用�
 
 创建 Maui App 项目：
 
-![](https://img1.dotnet9.com/2022/01/0501.png)
+![](2022/01/0501.png)
 
 你也可以创建 Maui Blazor App 项目，命名为 MatoProject，但是这个模板主要围绕 Blazor 开发，有的功能我们并不需要，得删很多文件。
 
 创建完成后编辑 MatoProject.csproj，在 Sdk 最末尾加上.Razor，VS 会自动安装 Microsoft.AspNetCore.Components.WebView.Maui 依赖包（注意不要手动 NuGet 添加这个包，否则程序无法运行）
 
-![](https://img1.dotnet9.com/2022/01/0502.png)
+![](2022/01/0502.png)
 
-![](https://img1.dotnet9.com/2022/01/0503.png)
+![](2022/01/0503.png)
 
 安装完成后在项目目录中创建一个 wwwroot 文件夹
 
-![](https://img1.dotnet9.com/2022/01/0504.png)
+![](2022/01/0504.png)
 
 这个文件夹将是混合开发 Web 部分的根目录，这个名称不能随便定义，我们看看为什么：
 
 打开 Microsoft.AspNetCore.Components.WebView.Maui.targets 这个文件：
 
-![](https://img1.dotnet9.com/2022/01/0505.png)
+![](2022/01/0505.png)
 
 我们可以看到构建项目时，这个库会将 wwwroot 文件夹里的内容作为 Maui 资源（MauiAsset）类型设置标签，编译器则会根据 MauiAsset 标签将这些内容打包进各个平台的资源文件夹，具体的 Maui 资源类型可以参考这个文章[.NET MAUI – Manage App Resources – Developer Thoughts (egvijayanand.in)](https://egvijayanand.in/2021/08/20/net-maui-manage-app-resources/) ，
 
@@ -113,7 +113,7 @@ Microsoft.AspNetCore.Components.Web.Virtualization @using Microsoft.JSInterop
 
 cd 到项目目录，使用 vue-cli 创建一个空白 Vue 项目：
 
-![](https://img1.dotnet9.com/2022/01/0506.png)
+![](2022/01/0506.png)
 
 这里可以按照 Vue 的编程喜好建立，比如我选择了 2.0 项目，支持 Typescript，es6 的 class 命名方式等，最终都要通过 webpack 打包成静态资源，所以无所谓。
 
@@ -342,15 +342,15 @@ namespace MatoProject
 
 至此，所有的代码工作已经完成，在 PC 上可以选择 Windows 或者 Android 模拟器来运行程序
 
-![](https://img1.dotnet9.com/2022/01/0507.png)
+![](2022/01/0507.png)
 
 运行效果：
 
-![](https://img1.dotnet9.com/2022/01/0508.png)
+![](2022/01/0508.png)
 
 若在 windows 平台上运行，原生控件使用 Edge WebView2 呈现器加载页面， 按 f12 会调用原生的调试工具，在这里看到打印
 
-![](https://img1.dotnet9.com/2022/01/0509.png)
+![](2022/01/0509.png)
 
 现在，可能有人会问为什么要使用这样的技术架构？明明可能有更好用的混合开发技术 Ionic，React Native，Uni-app。首先不可否认这些技术都有他们的特点与优势，但当你拥有一个成熟的 Xamarin 框架，你可以轻松迁移到 MAUI，利用 EFCore 实现数据持久化或者集成 Abp 框架来配置依赖注入，全局事件，本地化等移动开发常用的功能（另一篇文章将会教大家如何将 Abp 移值进 MAUI）。Xamarin 是一个设备抽象层，提供的 WebView 也有较好的 H5 兼容性。
 

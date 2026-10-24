@@ -2,7 +2,7 @@
 
 Wpf 客户端，AIStudio.Wpf.AClient
 
-![](https://img1.dotnet9.com/2021/07/0101.png)
+![](2021/07/0101.png)
 
 ## 软件架构
 
@@ -63,43 +63,43 @@ Wpf 客户端下载可以直接运行，默认配置文件 AIStudio.Wpf.Client.e
 
 - 登录界面
 
-![登录界面](https://img1.dotnet9.com/2021/07/0102.png)
+![登录界面](2021/07/0102.png)
 
 - 主窗口
 
-![主窗口](https://img1.dotnet9.com/2021/07/0103.png)
+![主窗口](2021/07/0103.png)
 
 - 用户管理
 
-![用户管理](https://img1.dotnet9.com/2021/07/0104.gif)
+![用户管理](2021/07/0104.gif)
 
 - 角色管理
 
-![角色管理](https://img1.dotnet9.com/2021/07/0105.gif)
+![角色管理](2021/07/0105.gif)
 
 - 权限管理
 
-![权限管理](https://img1.dotnet9.com/2021/07/0106.gif)
+![权限管理](2021/07/0106.gif)
 
 **消息中心**
 
 - 站内消息
 
-![站内消息](https://img1.dotnet9.com/2021/07/0107.gif)
+![站内消息](2021/07/0107.gif)
 
 **特色功能：流程管理**
 
 - 流程管理
 
-![流程管理](https://img1.dotnet9.com/2021/07/0108.gif)
+![流程管理](2021/07/0108.gif)
 
 - 发起流程
 
-![发起流程](https://img1.dotnet9.com/2021/07/0109.gif)
+![发起流程](2021/07/0109.gif)
 
 - 表单管理
 
-![表单管理](https://img1.dotnet9.com/2021/07/0110.gif)
+![表单管理](2021/07/0110.gif)
 
 ## 与作者技术交流
 
@@ -123,12 +123,12 @@ https://gitee.com/akwkevin/aistudio.-wpf.-diagram
 
 - 画板编辑
 
-![画板编辑](https://img1.dotnet9.com/2021/07/0111.png)
+![画板编辑](2021/07/0111.png)
 
 - 流程图
 
-![流程图](https://img1.dotnet9.com/2021/07/0112.png)
+![流程图](2021/07/0112.png)
 
 - 逻辑图
 
-![逻辑图](https://img1.dotnet9.com/2021/07/0113.png)
+![逻辑图](2021/07/0113.png)

@@ -2,7 +2,7 @@ FluentFTP 是一个适用于 .NET 和 .NET Standard 的 FTP 和 FTPS 客户端�
 
 并且针对速度进行了优化，没有外部依赖， 完全用 C# 编写。
 
-![](https://img1.dotnet9.com/2023/07/0501.png)
+![](2023/07/0501.png)
 
 ## 功能特性
 

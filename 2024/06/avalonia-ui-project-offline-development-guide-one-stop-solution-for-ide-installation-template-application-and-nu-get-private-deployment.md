@@ -11,19 +11,19 @@ Visual Studio 2022是微软推出的最新IDE，支持Avalonia UI项目的开发
 - **离线安装包制作**：首先，根据网友 [VS2022离线安装包](https://www.cnblogs.com/sailJs/p/16864697.html) 的指南，制作Visual Studio 2022的离线安装包。
 - **Avalonia UI扩展安装**：安装Visual Studio后，通过 [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=AvaloniaTeam.AvaloniaVS) 下载并安装Avalonia for Visual Studio 2022扩展。
 
-![](https://img1.dotnet9.com/2024/06/0201.jpg)
+![](2024/06/0201.jpg)
 
 - 安装过程中遇到失败
 
-![](https://img1.dotnet9.com/2024/06/0202.png)
+![](2024/06/0202.png)
 
 根据微信群内@rabbitism的解答（感谢@daidai_cn的帮助），我们可以通过解压该扩展文件，删除下图框选的`Extension.vsext`文件后再进行安装：
 
-![](https://img1.dotnet9.com/2024/06/0203.png)
+![](2024/06/0203.png)
 
 正常安装了：
 
-![](https://img1.dotnet9.com/2024/06/0204.png)
+![](2024/06/0204.png)
 
 ### JetBrains Rider安装
 
@@ -35,7 +35,7 @@ Visual Studio 2022是微软推出的最新IDE，支持Avalonia UI项目的开发
 
 在线安装请参考文档 [Avalonia Docs](https://docs.avaloniaui.net/zh-Hans/docs/get-started/install)，离线安装请点击 [Avalonia.Templates](https://www.nuget.org/packages/Avalonia.Templates) 下载：
 
-![](https://img1.dotnet9.com/2024/06/0205.png)
+![](2024/06/0205.png)
 
 安装方式同上图`.NET CLI`命令脚本：
 
@@ -43,17 +43,17 @@ Visual Studio 2022是微软推出的最新IDE，支持Avalonia UI项目的开发
 dotnet new install avalonia.templates.11.0.10.1.nupkg
 ```
 
-![](https://img1.dotnet9.com/2024/06/0206.png)
+![](2024/06/0206.png)
 
 现在，无论是在Visual Studio还是JetBrains Rider中，您都可以使用Avalonia UI模板来创建新项目了。
 
 VS 2022中Avalonia UI模板：
 
-![](https://img1.dotnet9.com/2024/06/0207.png)
+![](2024/06/0207.png)
 
 Rider中使用模板：
 
-![](https://img1.dotnet9.com/2024/06/0208.png)
+![](2024/06/0208.png)
 
 ## 4. 私有化部署NuGet服务
 
@@ -66,7 +66,7 @@ Rider中使用模板：
 3. 运行服务`dotnet BaGet.dll`
 4. 浏览器打开`http://localhost:5000`访问：
 
-![](https://img1.dotnet9.com/2024/06/0209.png)
+![](2024/06/0209.png)
 
 OK，这就算部署完成了。
 
@@ -113,17 +113,17 @@ OK，这就算部署完成了。
 
 我们打开自己部署的NuGet首页`http://localhost:5000`:
 
-![](https://img1.dotnet9.com/2024/06/0211.png)
+![](2024/06/0211.png)
 
 点击`Upload a package`，切换到NuGet包上传命令说明:
 
-![](https://img1.dotnet9.com/2024/06/0212.png)
+![](2024/06/0212.png)
 
 我们以`.NET CLI`上传NuGet包举例，首先准备NuGet文件，比如从[NuGet官网搜索](https://www.nuget.org/packages?q=avalonia)下载Avalonia UI的基础包：
 
-![](https://img1.dotnet9.com/2024/06/0213.png)
+![](2024/06/0213.png)
 
-![](https://img1.dotnet9.com/2024/06/0214.png)
+![](2024/06/0214.png)
 
 下载好以后，在当前下载目录打开CMD命令行输入：
 
@@ -131,25 +131,25 @@ OK，这就算部署完成了。
 dotnet nuget push -s http://localhost:5000/v3/index.json avalonia.11.1.0-rc1.nupkg
 ```
 
-![](https://img1.dotnet9.com/2024/06/0215.png)
+![](2024/06/0215.png)
 
 上面提示NuGet服务配置了密钥，我们为了简单，先停止NuGet服务，打开它的配置文件`appsettings.json`，清空`ApiKey`节点值，再运行NuGet服务：
 
-![](https://img1.dotnet9.com/2024/06/0216.png)
+![](2024/06/0216.png)
 
 再执行上传命令，现在成功了：
 
-![](https://img1.dotnet9.com/2024/06/0217.png)
+![](2024/06/0217.png)
 
 NuGet首页也能搜索到了：
 
-![](https://img1.dotnet9.com/2024/06/0218.png)
+![](2024/06/0218.png)
 
 ## 7. IDE配置NuGet源
 
 复制前面NuGet上传页面图中红色字体的URL地址：`http://localhost:5000/v3/index.json`, 在VS中配置NuGet搜索地址：
 
-![](https://img1.dotnet9.com/2024/06/0210.png)
+![](2024/06/0210.png)
 
 剩下的就和平时安装包一致了。
 

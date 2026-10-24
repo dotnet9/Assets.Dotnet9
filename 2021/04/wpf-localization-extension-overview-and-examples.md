@@ -75,19 +75,19 @@ WPF 中有两种类型的 WPF 本地化。
 
 然后安装最新版本的 WPF 本地化扩展包：`WPFLocalizeExtension`。
 
-![WPF本地化扩展包：WPFLocalizeExtension](https://img1.dotnet9.com/2021/04/0701.jpg)
+![WPF本地化扩展包：WPFLocalizeExtension](2021/04/0701.jpg)
 
 **第 3 步**
 
 添加资源文件
 
-![添加资源文件](https://img1.dotnet9.com/2021/04/0702.png)
+![添加资源文件](2021/04/0702.png)
 
 安装后，添加资源文件（如上图），打开 Resources.resx 文件。
 
 新增加的资源文件：
 
-![新增加的资源文件](https://img1.dotnet9.com/2021/04/0703.jpg)
+![新增加的资源文件](2021/04/0703.jpg)
 
 **第 4 步**
 
@@ -109,11 +109,11 @@ WPF 中有两种类型的 WPF 本地化。
 
 文件名：下面的 Resources.resx 文件，
 
-![Resources.resx](https://img1.dotnet9.com/2021/04/0704.jpg)
+![Resources.resx](2021/04/0704.jpg)
 
 文件名：下面的 Resources.fr-FR.resx 文件。
 
-![Resources.fr-FR.resx](https://img1.dotnet9.com/2021/04/0705.jpg)
+![Resources.fr-FR.resx](2021/04/0705.jpg)
 
 **第 7 步**
 
@@ -150,7 +150,7 @@ namespace WpfApp1Localization {
 
 输出
 
-![](https://img1.dotnet9.com/2021/04/0706.jpg)
+![](2021/04/0706.jpg)
 
 **_WPF 本地化示例项目_**
 
@@ -160,11 +160,11 @@ namespace WpfApp1Localization {
 
 Resources.en.resx
 
-![Resources.en.resx](https://img1.dotnet9.com/2021/04/0707.jpg)
+![Resources.en.resx](2021/04/0707.jpg)
 
 Resources.gr-Gr.resx
 
-![Resources.gr-Gr.resx](https://img1.dotnet9.com/2021/04/0708.jpg)
+![Resources.gr-Gr.resx](2021/04/0708.jpg)
 
 **资源文件中表数据的说明**
 
@@ -293,11 +293,11 @@ namespace WpfApp1Localization {
 
 英文登录表单如下：
 
-![英文登录表单](https://img1.dotnet9.com/2021/04/0709.jpg)
+![英文登录表单](2021/04/0709.jpg)
 
 以下为德语登录表单：
 
-![德语登录表单](https://img1.dotnet9.com/2021/04/0710.jpg)
+![德语登录表单](2021/04/0710.jpg)
 
 ## 结论
 

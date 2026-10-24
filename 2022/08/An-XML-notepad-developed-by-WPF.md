@@ -8,13 +8,13 @@
 
 这里站长推荐大家尝试 ClickOnce 安装：
 
-![](https://img1.dotnet9.com/2022/08/0102.png)
+![](2022/08/0102.png)
 
 2. [独立下载安装](https://lovettsoftwarestorage.blob.core.windows.net/downloads/XmlNotepad/XmlNotepadSetup.zip)：如果您需要离线使用，可以下载独立安装程序。只需下载 zip 文件，将其复制到要安装它的机器上，在该机器上解压缩文件并运行`XmlNotepadSetup.msi`。
 3. [Windows MSIX 安装程序](https://lovettsoftwarestorage.blob.core.windows.net/downloads/XmlNotepad.Net/index.html)：如果您需要受信任的 Windows 安装程序。
 4. 您还可以按如下方式使用[WinGet](https://winget.run/pkg/Microsoft/XMLNotepad) ：`winget install XmlNotepad`
 
-![](https://img1.dotnet9.com/2022/08/cover_01.png)
+![](2022/08/cover_01.png)
 
 [XML Notepad](http://microsoft.github.io/XmlNotepad)提供了以下有用的功能：
 
@@ -43,6 +43,6 @@
 
 ## 仓库地址
 
-![](https://img1.dotnet9.com/2022/08/0101.png)
+![](2022/08/0101.png)
 
 仓库地址：[https://github.com/microsoft/XmlNotepad](https://github.com/microsoft/XmlNotepad)

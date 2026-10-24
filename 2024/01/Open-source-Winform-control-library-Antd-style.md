@@ -13,11 +13,11 @@
 
 一款基于Ant Design 5.0风格开源的Winfrom控件库，作者15小时之前刚更新代码，更新很及时：
 
-![仓库截图](https://img1.dotnet9.com/2024/01/1102.png)
+![仓库截图](2024/01/1102.png)
 
 项目克隆后，项目解决方案截图如下：
 
-![项目解决方案](https://img1.dotnet9.com/2024/01/1126.png)
+![项目解决方案](2024/01/1126.png)
 
 - AntdUI：控件工程
 - Demo：控件Demo演示
@@ -29,21 +29,21 @@
 
 运行Demo工程：
 
-![DEMO](https://img1.dotnet9.com/2024/01/1103.png)
+![DEMO](2024/01/1103.png)
 
 ## 控件概览
 
 运行Overview工程，这是所有控件的演示，点击可以查看具体控件的使用效果：
 
-![OverView](https://img1.dotnet9.com/2024/01/1127.gif)
+![OverView](2024/01/1127.gif)
 
 黑色主题风格：
 
-![OverView](https://img1.dotnet9.com/2024/01/1104.png)
+![OverView](2024/01/1104.png)
 
 白色主题风格：
 
-![Scale150](https://img1.dotnet9.com/2024/01/1105.png)
+![Scale150](2024/01/1105.png)
 
 ## ✨特性
 
@@ -133,24 +133,24 @@
 
 |                     **Button** 按钮                      |                     **Badge** 徽标数                     |
 | :------------------------------------------------------: | :------------------------------------------------------: |
-|    ![按钮](https://img1.dotnet9.com/2024/01/1106.gif)    |   ![徽标数](https://img1.dotnet9.com/2024/01/1107.gif)   |
+|    ![按钮](2024/01/1106.gif)    |   ![徽标数](2024/01/1107.gif)   |
 |                   **Carousel** 走马灯                    |                     **Input** 输入框                     |
-|   ![走马灯](https://img1.dotnet9.com/2024/01/1108.gif)   |   ![输入框](https://img1.dotnet9.com/2024/01/1109.gif)   |
+|   ![走马灯](2024/01/1108.gif)   |   ![输入框](2024/01/1109.gif)   |
 |                   **Progress** 进度条                    |                     **Avatar** 头像                      |
-|   ![进度条](https://img1.dotnet9.com/2024/01/1110.gif)   |    ![头像](https://img1.dotnet9.com/2024/01/1111.gif)    |
+|   ![进度条](2024/01/1110.gif)   |    ![头像](2024/01/1111.gif)    |
 |                   **Checkbox** 多选框                    |                     **Radio** 单选框                     |
-|   ![多选框](https://img1.dotnet9.com/2024/01/1112.gif)   |   ![单选框](https://img1.dotnet9.com/2024/01/1113.gif)   |
+|   ![多选框](2024/01/1112.gif)   |   ![单选框](2024/01/1113.gif)   |
 |                     **Tooltip** 提示                     |                      **Panel** 面板                      |
-|    ![提示](https://img1.dotnet9.com/2024/01/1114.gif)    |    ![面板](https://img1.dotnet9.com/2024/01/1115.gif)    |
+|    ![提示](2024/01/1114.gif)    |    ![面板](2024/01/1115.gif)    |
 |                     **Tabs** 标签页                      |                    **Alert** 警告提示                    |
-|   ![标签页](https://img1.dotnet9.com/2024/01/1116.gif)   |  ![警告提示](https://img1.dotnet9.com/2024/01/1117.gif)  |
+|   ![标签页](2024/01/1116.gif)   |  ![警告提示](2024/01/1117.gif)  |
 |                 **Segmented** 分段控制器                 |                    **Menu** 导航菜单                     |
-| ![分段控制器](https://img1.dotnet9.com/2024/01/1118.gif) |  ![导航菜单](https://img1.dotnet9.com/2024/01/1119.gif)  |
+| ![分段控制器](2024/01/1118.gif) |  ![导航菜单](2024/01/1119.gif)  |
 |                    **Divider** 分割线                    |                    **Slider** 滑动条                     |
-|   ![分割线](https://img1.dotnet9.com/2024/01/1120.gif)   |   ![滑动条](https://img1.dotnet9.com/2024/01/1121.gif)   |
+|   ![分割线](2024/01/1120.gif)   |   ![滑动条](2024/01/1121.gif)   |
 |                   **Message** 全局提示                   |               **Notification** 通知提醒框                |
-|  ![全局提示](https://img1.dotnet9.com/2024/01/1122.gif)  | ![通知提醒框](https://img1.dotnet9.com/2024/01/1123.gif) |
+|  ![全局提示](2024/01/1122.gif)  | ![通知提醒框](2024/01/1123.gif) |
 |                     **Switch** 开关                      |                      **Table** 表格                      |
-|    ![开关](https://img1.dotnet9.com/2024/01/1124.gif)    |    ![表格](https://img1.dotnet9.com/2024/01/1120.gif)    |
+|    ![开关](2024/01/1124.gif)    |    ![表格](2024/01/1120.gif)    |
 
 项目仓库地址：https://gitee.com/antdui/AntdUI

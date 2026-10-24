@@ -10,11 +10,11 @@ NodeNetwork的代码托管在GitHub上，是由荷兰的一位开发者Wouterdek
 
 仓库截图：
 
-![仓库截图](https://img1.dotnet9.com/2023/03/1201.png)
+![仓库截图](2023/03/1201.png)
 
 仓库源码结构：
 
-![仓库源码结构](https://img1.dotnet9.com/2023/03/1209.png)
+![仓库源码结构](2023/03/1209.png)
 
 ## 二、示例
 
@@ -24,7 +24,7 @@ NodeNetwork的代码托管在GitHub上，是由荷兰的一位开发者Wouterdek
 
 下面是[计算器示例](https://github.com/Wouterdek/NodeNetwork/tree/master/ExampleCalculatorApp)应用程序的演示：
 
-![计算器示例应用程序的演示](https://img1.dotnet9.com/2023/03/1202.gif)
+![计算器示例应用程序的演示](2023/03/1202.gif)
 
 ### 2. 代码生成器示例
 
@@ -32,7 +32,7 @@ NodeNetwork的代码托管在GitHub上，是由荷兰的一位开发者Wouterdek
 
 下面是[代码生成器](https://github.com/Wouterdek/NodeNetwork/tree/master/ExampleCodeGenApp)应用程序的截图：
 
-![代码生成器应用程序的截图](https://img1.dotnet9.com/2023/03/1204.gif)
+![代码生成器应用程序的截图](2023/03/1204.gif)
 
 ### 3. 着色器编辑器示例
 
@@ -40,7 +40,7 @@ NodeNetwork的代码托管在GitHub上，是由荷兰的一位开发者Wouterdek
 
 下面是使用 NodeNetwork 制作的[着色器编辑器](https://github.com/Wouterdek/NodeNetwork/tree/master/ExampleShaderEditorApp)示例的演示：
 
-![着色器编辑器示例的演示](https://img1.dotnet9.com/2023/03/1203.gif)
+![着色器编辑器示例的演示](2023/03/1203.gif)
 
 这些示例应用程序可在此处[下载](https://github.com/Wouterdek/NodeNetwork/releases)，其源代码包含在存储库中，库的二进制版本在 NuGet 上可用。
 
@@ -65,13 +65,13 @@ NodeNetwork的代码托管在GitHub上，是由荷兰的一位开发者Wouterdek
 
 节点是NodeNetwork中的最基本元素，可以表示任何一个数据源或处理单元。每个节点可以包含一个或多个输入端口和输出端口，分别表示节点接收和输出的数据。NodeNetwork中内置了几种常用的节点类型，如常量节点、计算节点、输入输出节点等，同时也支持自定义节点类型。
 
-![](https://img1.dotnet9.com/2023/03/1205.png)
+![](2023/03/1205.png)
 
 ### 2. 连接（Connection）
 
 连接是NodeNetwork中的一个核心概念，用于表示节点之间的数据传输关系。每个连接都有一个源端口和目标端口，源端口表示数据的来源，目标端口表示数据的目标。连接还可以携带一些元数据（metadata），用于描述连接的一些附加信息，如颜色、线宽等。
 
-![](https://img1.dotnet9.com/2023/03/1206.png)
+![](2023/03/1206.png)
 
 ### 3. 端口（Port）
 
@@ -253,7 +253,7 @@ public partial class MainWindow : Window
 
 运行程序看效果：
 
-![](https://img1.dotnet9.com/2023/03/1207.gif)
+![](2023/03/1207.gif)
 
 示例代码已经全部给了，你也可以[戳这](https://github.com/dotnet9/TerminalMACS.ManagerForWPF/tree/master/src/Demo/NodeNetworkTest)克隆。
 
@@ -276,7 +276,7 @@ var config = new Configuration
 layouter.Layout(config, 10000);
 ```
 
-![](https://img1.dotnet9.com/2023/03/1208.gif)
+![](2023/03/1208.gif)
 
 ### 6. 序列化和反序列化
 

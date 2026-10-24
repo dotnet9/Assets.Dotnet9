@@ -10,15 +10,15 @@
 
 注册生命周期函数（你也可以在重写窗口的 OnCreate 函数）
 
-![](https://img1.dotnet9.com/2022/06/0201.png)
+![](2022/06/0201.png)
 
-![](https://img1.dotnet9.com/2022/06/0202.png)
+![](2022/06/0202.png)
 
 ### 第一步
 
 需要解决`Mac`上`TitleBar`隐藏的问题，在`Mac`系统上微软选择了`UIKit`框架进行实现，这不同于`Windows`，所以我熟练的打开`Apple`官方文档，在`Apple`开发者指南首页立马就能定位到目标对象，真的是超级简单，[参考文档：从用 Mac Catalyst 构建的 Mac App 中移除标题栏 - 简体中文文档 - Apple Developer](链接：https://developer.apple.com/cn/documentation/uikit/mac_catalyst/removing_the_title_bar_in_your_mac_app_built_with_mac_catalyst/)
 
-![](https://img1.dotnet9.com/2022/06/0203.png)
+![](2022/06/0203.png)
 
 - 实现步骤：
 
@@ -26,7 +26,7 @@
 
 2. 隐藏`TitleBar`
 
-![](https://img1.dotnet9.com/2022/06/0204.png)
+![](2022/06/0204.png)
 
 - 代码实现：
 
@@ -53,19 +53,19 @@ builder.AddiOS(app =>
 
 - 效果如下：
 
-![](https://img1.dotnet9.com/2022/06/0205.png)
+![](2022/06/0205.png)
 
 ### 第二步
 
 需要修改`Mac`应用窗体的默认大小，这真是个老大难问题，我翻遍了`UIKit`相关的所有资料（也许没翻全），都没看到但凡一点有关窗体大小的介绍，唯一的介绍是跟`View`相关（修改`Frame`），这对我没有鸟用(这是`AppKit`框架下的实现)，还好我的优点就是眼睛比较好，在文档中看到了这样的信息：
 
-![](https://img1.dotnet9.com/2022/06/0206.png)
+![](2022/06/0206.png)
 
 [参考资料：UISceneSizeRestrictions | Apple Developer Documentation](https://developer.apple.com/documentation/uikit/uiscenesizerestrictions)
 
 或许修改`MinimumSize`和`MaximumSize`可以变相实现窗口尺寸变化，于是，我尝试着修改了一下，发现当我修改`MinimumSize`时窗体确实发生了变化，不过这里发生一个很诡异的事情，窗体的长宽并不符合我设置的值（发现这个问题是因为我获取到屏幕的`size`后直接设置进去，窗体并未最大化显示），于是我查了一些资料，发现好像这里要乘以`1.3`才是实际值，为什么是`1.3`我不太清楚（有知道的小伙伴可以滴滴），因为他也不是`dpi`的值，总之经过这一番折腾是能解决问题了，最大化窗口就是将屏幕尺寸直接给进去即可。
 
-![](https://img1.dotnet9.com/2022/06/0207.png)
+![](2022/06/0207.png)
 
 - 代码如下：
 
@@ -106,7 +106,7 @@ builder.AddiOS(app =>
 
 - 效果如下（窗口最大化的演示）：
 
-![](https://img1.dotnet9.com/2022/06/0208.png)
+![](2022/06/0208.png)
 
 _注意：_`Apple`_的程序每次运行后会记住上一次启动窗口的大小，所以 当你首次将界面改大后使用上述的方式并不能将他改小，此时你需要将_`MaximumSize`_改小才能让窗口变小_。
 

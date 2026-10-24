@@ -12,7 +12,7 @@
 
 在上一篇 [].NET Core 3 WPF MVVM 框架 Prism 系列之模块化](https://dotnet9.com/2023/06/Modularization-of-the-Prism-family-of-the-dotNET-Core-3-WPF-MVVM-framework) 我们留下了一些问题，就是如何处理同模块不同窗体之间的通信和不同模块之间不同窗体的通信，Prism 提供了一种事件机制，可以在应用程序中低耦合的模块之间进行通信，该机制基于事件聚合器服务，允许发布者和订阅者之间通过事件进行通讯，且彼此之间没有之间引用，这就实现了模块之间低耦合的通信方式，下面引用官方的一个事件聚合器模型图：
 
-![](https://img1.dotnet9.com/2023/06/0501.png)
+![](2023/06/0501.png)
 
 ## 2. 创建和发布事件
 
@@ -132,7 +132,7 @@ public class PatientListViewModel : BindableBase
 
 效果如下：
 
-![](https://img1.dotnet9.com/2023/06/0502.gif)
+![](2023/06/0502.gif)
 
 ### 2.4. 实现多订阅多发布
 
@@ -229,11 +229,11 @@ public SearchMedicineViewModel(IMedicineSerivce medicineSerivce, IEventAggregato
 
 效果如下：
 
-![](https://img1.dotnet9.com/2023/06/0503.gif)
+![](2023/06/0503.gif)
 
 然后我们看看现在 Demo 项目的事件模型和程序集引用情况，如下图：
 
-![](https://img1.dotnet9.com/2023/06/0504.jpg)
+![](2023/06/0504.jpg)
 
 我们发现 PatientModule 和 MedicineModule 两个模块之间做到了通讯，但却不相互引用，依靠引用 PrismMetroSample.Infrastructure 程序集来实现间接依赖关系，实现了不同模块之间通讯且低耦合的情况
 
@@ -256,7 +256,7 @@ PatientDetailViewModel.cs:
 
 效果如下：
 
-![](https://img1.dotnet9.com/2023/06/0505.gif)
+![](2023/06/0505.gif)
 
 ## 4. 几种订阅方式设置
 
@@ -324,7 +324,7 @@ ThreadOption.PublisherThread,false,medicine=>medicine.Name=="当归"|| medicine.
 
 效果如下：
 
-![](https://img1.dotnet9.com/2023/06/0506.gif)
+![](2023/06/0506.gif)
 
 ## 五. 源码
 

@@ -18,7 +18,7 @@ Markdown 里的图片写法很轻：
 ```markdown
 ![封面](./images/cover.svg)
 ![截图](data:image/png;base64,...)
-![远程图](https://img1.dotnet9.com/2026/05/demo.png)
+![远程图](2026/05/demo.png)
 ```
 
 但导出 PDF、Word 时，这些字符串本身还不是“文件里的图片”。它们只是图片来源。
@@ -151,7 +151,7 @@ var pngBytes = MarkdownImageRasterizer.RenderToPngBytes(imageSource);
 - 代码块有背景
 - 表格有边框
 
-![微信公众号编辑器](https://img1.dotnet9.com/2026/05/codewf-markdown-copy-wechat.png)
+![微信公众号编辑器](2026/05/codewf-markdown-copy-wechat.png)
 
 但如果剪贴板只写普通文本，哪怕文本内容是：
 
@@ -539,9 +539,9 @@ Vex 侧也确认了本地包引用方式：先在 `CodeWF.Markdown` 本地打包
 
 从浏览器复制一段文章、表格或链接列表后，直接粘贴到 Vex 中间编辑器，会优先读取剪贴板 HTML 并转成 Markdown。粘贴出来保留 Markdown 标题、链接、图片、列表、引用、代码块和表格结构，后续继续编辑会自然很多。
 
-![](https://img1.dotnet9.com/2026/05/vex-copy-to-wechat-editor.gif)
+![](2026/05/vex-copy-to-wechat-editor.gif)
 
-![微信公众号编辑器](https://img1.dotnet9.com/2026/05/codewf-markdown-copy-wechat.png)
+![微信公众号编辑器](2026/05/codewf-markdown-copy-wechat.png)
 
 ## 7. 小结
 

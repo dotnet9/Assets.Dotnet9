@@ -12,7 +12,7 @@ TypeScript 非常优秀。它完美地结合了强类型和快速开发，因此
 
 对于这些情况，TypeScript 开发人员最好还是选用其他语言。C#、Go 和 Java 都是非常好的选择。它们的速度远超 TypeScript，每种语言都有自己的长处。C#能与 TypeScript 配合得很好，我来解释一下为什么。
 
-![图源：CSDN 付费下载自东方 IC](https://img1.dotnet9.com/2021/12/cover_44.jpg)
+![图源：CSDN 付费下载自东方 IC](2021/12/cover_44.jpg)
 
 ## 1. TypeScript 就是添加了 C# 的 JavaScript
 

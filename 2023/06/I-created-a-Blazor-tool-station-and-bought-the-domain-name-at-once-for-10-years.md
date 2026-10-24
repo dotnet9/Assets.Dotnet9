@@ -6,13 +6,13 @@
 
 为了后面工具和游戏的扩展，站长把去年买的域名 [dotnetools.com](https://dotnetools.com) 用上了，该域名一次性买了10年（不用担心网站过几年消失，当然不排除意外，比如站长没钱续费服务器。。。），并赶紧在1天之内开发并部署了一个 [Blazor Wasm](https://dotnetools.com) 版本网站，把在 [Dotnet9](https://dotnet9.com) 已经上线的在线小工具和游戏同步搬过来了，大家可以体验下：https://dotnetools.com：
 
-![](https://img1.dotnet9.com/2023/06/cover_12.png)
+![](2023/06/cover_12.png)
 
 ## 2. Dotnet工具箱网站开源的
 
 网站源码组织结构如下，只有一个工程，为了快速上线，代码也比较清晰明了：
 
-![](https://img1.dotnet9.com/2023/06/1301.png)
+![](2023/06/1301.png)
 
 网站源码链接在文末，别再问我源码地址了。。。。
 
@@ -54,15 +54,15 @@ Blazor Server 不适合开发在线工具或游戏之类的网站应用，主要
 
 [Dotnet9](https://dotnet9.com) 页面的 [扫雷游戏](https://dotnet9.com/games/minesweeper)，点击工具栏可以跳转到 [Dotnet工具箱](https://dotnetools.com) 的 [扫雷游戏](https://dotnetools.com/games/minesweeper) 页面：
 
-![](https://img1.dotnet9.com/2023/06/1302.png)
+![](2023/06/1302.png)
 
 [Dotnet9](https://dotnet9.com) 页面的 [扫雷游戏](https://dotnet9.com/games/minesweeper)页面，看网络请求，几乎一直在请求，简直令人发指，丧心病狂：
 
-![](https://img1.dotnet9.com/2023/06/1304.png)
+![](2023/06/1304.png)
 
 [Dotnet工具箱](https://dotnetools.com) 的 [扫雷游戏](https://dotnetools.com/games/minesweeper) 页面，看网络请求，只有网页的图片请求，其他请求就没有，这就是客户端的魅力（WebAssembly）：
 
-![](https://img1.dotnet9.com/2023/06/1303.png)
+![](2023/06/1303.png)
 
 关于Blazor，或Blazor Server与Blazor Wasm，相信很多人只是听说过，对相关的概念了解不多，这里通过询问GPT，回答的和前面段落类似，这里再对比列出给大家做个普及吧：
 

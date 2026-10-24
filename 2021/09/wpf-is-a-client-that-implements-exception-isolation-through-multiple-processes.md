@@ -124,7 +124,7 @@ static void Main(string[] args)
 
 ## 5 效果
 
-![](https://img1.dotnet9.com/2021/09/0101.gif)
+![](2021/09/0101.gif)
 
 参考资料和备注
 

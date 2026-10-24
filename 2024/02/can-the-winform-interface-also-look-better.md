@@ -14,9 +14,9 @@
 
 在开始之前，先给大家演示一下效果，如下所示：
 
-![绘图效果](https://img1.dotnet9.com/2024/02/0401.gif)
+![绘图效果](2024/02/0401.gif)
 
-![图片](https://img1.dotnet9.com/2024/02/0402.png)
+![图片](2024/02/0402.png)
 
 ## 具体实现
 
@@ -30,7 +30,7 @@
 
 安装 NuGet 包引用，如下所示：
 
-![图片](https://img1.dotnet9.com/2024/02/0403.png)
+![图片](2024/02/0403.png)
 
 如果需要画图的话，还需要引用 AntDesign.Charts 包引用。
 
@@ -42,7 +42,7 @@ services.AddAntDesign();
 
 如下所示：
 
-![图片](https://img1.dotnet9.com/2024/02/0404.png)
+![图片](2024/02/0404.png)
 
 引入静态样式和脚本文件：
 
@@ -53,7 +53,7 @@ services.AddAntDesign();
 
 winform blazor hybrid 项目在 wwwroot/index.html 中引入，如下所示：
 
-![图片](https://img1.dotnet9.com/2024/02/0405.png)
+![图片](2024/02/0405.png)
 
 这里我也把 AntDesign.Charts 的引入了。
 
@@ -67,7 +67,7 @@ winform blazor hybrid 项目在 wwwroot/index.html 中引入，如下所示：
 
 这是官网的说法，在 winform blazor hybrid 中可以在当做主页面的 razor 中添加，我这里是 Index.razor 如下所示：
 
-![图片](https://img1.dotnet9.com/2024/02/0406.png)
+![图片](2024/02/0406.png)
 
 现在就可以使用 ant design blazor 的组件了。
 
@@ -75,17 +75,17 @@ winform blazor hybrid 项目在 wwwroot/index.html 中引入，如下所示：
 
 绘图页面的设计如下所示：
 
-![图片](https://img1.dotnet9.com/2024/02/0407.png)
+![图片](2024/02/0407.png)
 
 第一步选择喜欢的布局，我选的是官网中的这一款，如下所示：
 
-![图片](https://img1.dotnet9.com/2024/02/0408.png)
+![图片](2024/02/0408.png)
 
 自己修改一下图标与名字，那么现在摆在面前的第一个问题就是，如何实现点击切换页面呢？
 
 每一个 MenuItem 都有一个 Key 属性，如下所示：
 
-![图片](https://img1.dotnet9.com/2024/02/0409.png)
+![图片](2024/02/0409.png)
 
 在这里每一个 Key 都是唯一的。点击不同的 MenuItem 都会触发点击事件，而点击事件使用了 lambda 表达式调用了同一个方法，但是参数不同。
 
@@ -194,7 +194,7 @@ winform blazor hybrid 项目在 wwwroot/index.html 中引入，如下所示：
 
 当我们一打开这个组件，就有不同的站名了，如下所示：
 
-![图片](https://img1.dotnet9.com/2024/02/0410.png)
+![图片](2024/02/0410.png)
 
 这是怎么实现的呢？
 
@@ -399,7 +399,7 @@ async void Painting_Clicked()
 
 在 AntDesign.Charts 中画多条折线图，官网位置如下所示：
 
-![图片](https://img1.dotnet9.com/2024/02/0411.png)
+![图片](2024/02/0411.png)
 
 创建一个自定义的画图数据类：
 

@@ -58,11 +58,11 @@ MASA 是真的用心在做生态，吸引了很多开发者和粉丝活跃参与
 
 首先，创建项目后， APP.cs 中，有个 `Microsoft.Maui.Controls.Window`。
 
-![](https://img1.dotnet9.com/2023/01/0601.png)
+![](2023/01/0601.png)
 
 MauiProgram.cs 中，有个 `Microsoft.UI.Xaml.Window` ,然后在 Windows 下 `Microsoft.UI.Xaml.Window` 是 ` Microsoft.Maui.MauiWinUIWindow`， `Microsoft.UI.Xaml.Window` 多种平台统一的抽象。
 
-![](https://img1.dotnet9.com/2023/01/0602.png)
+![](2023/01/0602.png)
 
 然后 `Microsoft.UI.Xaml.Window` 可以获取一个 AppWindow。
 
@@ -536,7 +536,7 @@ internal static class ProcessManager
 
 然后在程序启动时使用。
 
-![](https://img1.dotnet9.com/2023/01/0603.png)
+![](2023/01/0603.png)
 
 ### MAUI 程序安装模式
 
@@ -591,7 +591,7 @@ navigator.language
 'en-US'
 ```
 
-![](https://img1.dotnet9.com/2023/01/0604.png)
+![](2023/01/0604.png)
 
 或者使用 API：
 
@@ -600,7 +600,7 @@ navigator.language
 var langs = ApplicationLanguages.Languages.ToList<string>();
 ```
 
-![](https://img1.dotnet9.com/2023/01/0605.png)
+![](2023/01/0605.png)
 
 #### 坑 ①
 
@@ -612,11 +612,11 @@ ApplicationLanguages.PrimaryLanguageOverride = "zh-CN";
 
 然后重新启动程序，发现：
 
-![](https://img1.dotnet9.com/2023/01/0606.png)
+![](2023/01/0606.png)
 
 但是浏览器语言环境依然没有变化：
 
-![](https://img1.dotnet9.com/2023/01/0607.png)
+![](2023/01/0607.png)
 
 > 原因是 `Preferences` 文件需要重新生成才能起效，后面会提到。
 
@@ -630,13 +630,13 @@ ApplicationLanguages.PrimaryLanguageOverride = "zh-CN";
 var path = Windows.Storage.ApplicationData.Current.LocalFolder.Path;
 ```
 
-![](https://img1.dotnet9.com/2023/01/0608.png)
+![](2023/01/0608.png)
 
 因此，可以通过手动的方式修改文件，让 WebView2 使用中文环境。
 
-![](https://img1.dotnet9.com/2023/01/0609.png)
+![](2023/01/0609.png)
 
-![](https://img1.dotnet9.com/2023/01/0610.png)
+![](2023/01/0610.png)
 
 ```csharp
 var langs = ApplicationLanguages.Languages.ToList<string>();
@@ -666,9 +666,9 @@ if (File.Exists(preferences))
 
 最后我发现， ① 的思路是对的，不起效的原因是 `Preferences` 文件需要删除等重新创建才行，只要在程序启动时（WebView 尚未启动），设置中文即可。
 
-![](https://img1.dotnet9.com/2023/01/0611.png)
+![](2023/01/0611.png)
 
-![](https://img1.dotnet9.com/2023/01/0612.png)
+![](2023/01/0612.png)
 
 检查代码：
 
@@ -702,7 +702,7 @@ public static class MauiProgram
 
 在 `public static MauiApp CreateMauiApp()` 中使用：
 
-![](https://img1.dotnet9.com/2023/01/0613.png)
+![](2023/01/0613.png)
 
 ### 配置 MAUI 项目使用管理员权限启动
 
@@ -712,7 +712,7 @@ public static class MauiProgram
 
 效果如下：
 
-![](https://img1.dotnet9.com/2023/01/0614.png)
+![](2023/01/0614.png)
 
 正常情况下，在 `app.manifest` 加上以下配置即可：
 
@@ -728,7 +728,7 @@ public static class MauiProgram
 </trustInfo>
 ```
 
-![](https://img1.dotnet9.com/2023/01/0615.png)
+![](2023/01/0615.png)
 
 但是在 MAUI 应用中，是加不上去的，如果加上去，就会出现报错。
 
@@ -740,9 +740,9 @@ Platforms\Windows\app.manifest : manifest authoring error c1010001: Values of at
 
 如果项目中开启了 `<WindowsAppSDKSelfConatined>true</WindowsAppSDKSelfConatined>`，那么应该查看 `Microsoft.WindowsAppSDK.SelfContained.targets` 文件：
 
-![](https://img1.dotnet9.com/2023/01/0616.png)
+![](2023/01/0616.png)
 
-![](https://img1.dotnet9.com/2023/01/0617.png)
+![](2023/01/0617.png)
 
 所以如果要自定义 `app.manifest` ，要么就是把 Microsoft.WindowsAppSDK.SelfContained.targets 改了，但是这样不太好。
 
@@ -750,7 +750,7 @@ Platforms\Windows\app.manifest : manifest authoring error c1010001: Values of at
 
 如果观察编译过程，会发现 `manifest` 文件会生成到 `obj` 目录。
 
-![](https://img1.dotnet9.com/2023/01/0618.png)
+![](2023/01/0618.png)
 
 其中 `mergeapp.manifest` 便是项目中的 `app.manifest` ，.NET 编译的时候将开发者的文件改名字了。
 
@@ -768,7 +768,7 @@ Platforms\Windows\app.manifest : manifest authoring error c1010001: Values of at
 powershell -Command ";(gc app.manifest) -replace 'level=''asInvoker''', 'level=''requireAdministrator''' | Out-File -encoding ASCII app.manifest";
 ```
 
-![](https://img1.dotnet9.com/2023/01/0619.png)
+![](2023/01/0619.png)
 
 MSBuild 编译使用到的步骤可以参考官方文档：https://learn.microsoft.com/en-us/visualstudio/msbuild/msbuild-targets?view=vs-2022
 
@@ -859,13 +859,13 @@ $(_DeploymentBaseManifest);
 
 可以使用 VS 创建前端项目，将其放到解决方案中，也可以单独创建一个目录，将前端代码放到里面。
 
-![](https://img1.dotnet9.com/2023/01/0620.png)
+![](2023/01/0620.png)
 
 #### 创建 MAUI Blazor 项目
 
 创建 MAUI Blazor 项目，然后解决方案如下所示：
 
-![](https://img1.dotnet9.com/2023/01/0621.png)
+![](2023/01/0621.png)
 
 首先将 `wwwroot/css/app.css` 文件移出来，放到 `wwwroot`中，然后新建一个 `app.js` 也是放到 `wwwroot` 中。
 
@@ -937,7 +937,7 @@ function InitializeCss(name) {
 
 剩下的文件如图所示：
 
-![](https://img1.dotnet9.com/2023/01/0622.png)
+![](2023/01/0622.png)
 
 然后修改 `index.html`，内容如下：
 
@@ -1060,13 +1060,13 @@ function InitializeCss(name) {
 </Target>
 ```
 
-![](https://img1.dotnet9.com/2023/01/0623.png)
+![](2023/01/0623.png)
 
 这样当启动 Maui 项目时，会编译前端项目，然后将生成的文件(不包括 index.html) 复制到 wwwroot 目录中。
 
 启动后：
 
-![](https://img1.dotnet9.com/2023/01/0624.png)
+![](2023/01/0624.png)
 
 ### C# 自动化生成证书、本地安装证书、解决信任证书问题
 
@@ -1075,7 +1075,7 @@ function InitializeCss(name) {
 因为开发 Blazor 时 环境是 `https://0.0.0.0/` ，也就是 MAUI Blazor 中只能发出 https 请求，既不能发出 http 请求，也不能发出不安全的 https 请求，但是内网的 https 是不安全的 https。
 于是，只能再本地实现一个代理服务，然后让应用通过 https 访问，为了让 https 安全，需要安装自动化证书。
 
-![](https://img1.dotnet9.com/2023/01/0625.png)
+![](2023/01/0625.png)
 
 会导致 js 发不出请求。
 

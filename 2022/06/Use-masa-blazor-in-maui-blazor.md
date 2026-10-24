@@ -1,6 +1,6 @@
 上一篇([点击阅读](https://dotnet9.com/2022/06/Share-razor-library-between-maui-and-blazor-server-or-client))我们实现了 UI 在 Web 端(Blazor Server/Wasm)和客户端(Windows/macOS/Android/iOS)共享，这篇我加上 [Masa Blazor](https://masa-blazor-docs-dev.lonsid.cn/)组件库的引用，并把前几个月写的[时间戳转换](https://dotnet9.com/2022/02/Use-Blazor-to-be-a-simple-online-timestamp-conversion-tool)工具加上。
 
-![](https://img1.dotnet9.com/2022/06/1401.gif)
+![](2022/06/1401.gif)
 
 ## 1. 前置知识
 
@@ -22,7 +22,7 @@
 Install-Package Masa.Blazor -Version 0.5.0-preview.3
 ```
 
-![](https://img1.dotnet9.com/2022/06/1402.png)
+![](2022/06/1402.png)
 
 2. 封装`Maas.Blazor`组件引用
 
@@ -195,7 +195,7 @@ rel="stylesheet">
 
 **注意**：MAUI Blazor 和 Blazor WebAssembly 两个项目引入 Masa Blazor 资源文件的代码一样，Blazor Server 和前两者主要区别是`materialdesignicons.min.css`文件：
 
-![](https://img1.dotnet9.com/2022/06/1403.png)
+![](2022/06/1403.png)
 
 这里关于`Masa.Blazor`的引入就介绍完了，总结下关键三步：
 

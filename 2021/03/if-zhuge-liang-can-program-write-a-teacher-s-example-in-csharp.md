@@ -430,7 +430,7 @@ static void Main(string[] args)
 
 ## 代码输出《出师表》
 
-![出师表部分输出](https://img1.dotnet9.com/2021/03/0201.jpeg)
+![出师表部分输出](2021/03/0201.jpeg)
 
 ```shell
 先帝创业未半而中道崩殂！

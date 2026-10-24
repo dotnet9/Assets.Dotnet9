@@ -5,23 +5,23 @@
 > 仓库地址：https://gitee.com/diego2098/ThingsGateway
 
 
-![](https://img1.dotnet9.com/2023/05/0201.png)
+![](2023/05/0201.png)
 
  <table>
     <tr>
-        <td><img src="https://img1.dotnet9.com/2023/05/0202.png"/></td>
-        <td><img src="https://img1.dotnet9.com/2023/05/0203.png"/></td>
-        <td><img src="https://img1.dotnet9.com/2023/05/0204.png"/></td>
+        <td><img src="2023/05/0202.png"/></td>
+        <td><img src="2023/05/0203.png"/></td>
+        <td><img src="2023/05/0204.png"/></td>
     </tr>
     <tr>
-        <td><img src="https://img1.dotnet9.com/2023/05/0205.png"/></td>
-        <td><img src="https://img1.dotnet9.com/2023/05/0206.png"/></td>
-        <td><img src="https://img1.dotnet9.com/2023/05/0207.png"/></td>
+        <td><img src="2023/05/0205.png"/></td>
+        <td><img src="2023/05/0206.png"/></td>
+        <td><img src="2023/05/0207.png"/></td>
     </tr>
         <tr>
-        <td><img src="https://img1.dotnet9.com/2023/05/0208.png"/></td>
-        <td><img src="https://img1.dotnet9.com/2023/05/0209.png"/></td>
-        <td><img src="https://img1.dotnet9.com/2023/05/0210.png"/></td>
+        <td><img src="2023/05/0208.png"/></td>
+        <td><img src="2023/05/0209.png"/></td>
+        <td><img src="2023/05/0210.png"/></td>
     </tr>
  </table>
 
@@ -102,23 +102,23 @@ dotnet add package ThingsGateway.Foundation.Adapter.Siemens
 
 ##  效果图
 
- ![](https://img1.dotnet9.com/2023/05/0202.png)
+ ![](2023/05/0202.png)
 
- ![](https://img1.dotnet9.com/2023/05/0203.png)
+ ![](2023/05/0203.png)
 
- ![](https://img1.dotnet9.com/2023/05/0204.png)
+ ![](2023/05/0204.png)
 
- ![](https://img1.dotnet9.com/2023/05/0205.png)
+ ![](2023/05/0205.png)
 
- ![](https://img1.dotnet9.com/2023/05/0206.png)
+ ![](2023/05/0206.png)
 
- ![](https://img1.dotnet9.com/2023/05/0207.png)
+ ![](2023/05/0207.png)
 
- ![](https://img1.dotnet9.com/2023/05/0208.png)
+ ![](2023/05/0208.png)
 
- ![](https://img1.dotnet9.com/2023/05/0209.png)
+ ![](2023/05/0209.png)
 
- ![](https://img1.dotnet9.com/2023/05/0210.png)
+ ![](2023/05/0210.png)
 
  ## 例子
 

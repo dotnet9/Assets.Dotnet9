@@ -10,11 +10,11 @@
 
 **获取微信好友列表**
 
-![](https://img1.dotnet9.com/2023/08/0701.png)
+![](2023/08/0701.png)
 
 **自动问答效果**
 
-![](https://img1.dotnet9.com/2023/08/0702.png)
+![](2023/08/0702.png)
 
 ## 2. 本文实现功能
 
@@ -457,10 +457,10 @@ public interface IChat
 }
 ```
 
-作者懒，不愿意将代码放仓库，源码直接丢站长了，大家需要直接点击下载：https://img1.dotnet9.com/2023/08/WeChat.Automation.zip
+作者懒，不愿意将代码放仓库，源码直接丢站长了，大家需要直接点击下载：2023/08/WeChat.Automation.zip
 
 技术交流添加 QQ 群：771992300
 
 或扫站长微信(codewf，备注“加群”)加入微信技术交流群：
 
-![](https://img1.dotnet9.com/site/wechatowner.jpg)
+![](site/wechatowner.jpg)

@@ -6,7 +6,7 @@
 
 这次文章不只放几张界面图，我把示例程序也跑起来重新截了一轮素材，包括静态截图和 GIF 动图。先看一段功能巡览。
 
-![](https://img1.dotnet9.com/2026/05/codewf-markdown-feature-tour.gif)
+![](2026/05/codewf-markdown-feature-tour.gif)
 
 ## 为什么单独拆一个 Markdown 控件
 
@@ -49,7 +49,7 @@ dotnet test CodeWF.Markdown.slnx --no-restore
 
 先看主示例程序。界面分成两部分：左侧是 Markdown 输入，右侧是渲染预览。
 
-![](https://img1.dotnet9.com/2026/05/codewf-markdown-editor-preview.png)
+![](2026/05/codewf-markdown-editor-preview.png)
 
 上方工具栏有几个关键设置：
 
@@ -81,7 +81,7 @@ dotnet test CodeWF.Markdown.slnx --no-restore
 
 代码块是 Markdown 预览里很容易被忽略、但实际体验很关键的部分。
 
-![](https://img1.dotnet9.com/2026/05/codewf-markdown-code-table.png)
+![](2026/05/codewf-markdown-code-table.png)
 
 当前代码块会显示语言标签和复制按钮，并使用 TextMateSharp 做语法高亮。截图里可以看到 JSON、C#、TypeScript、Shell 等代码块的展示效果。
 
@@ -91,13 +91,13 @@ dotnet test CodeWF.Markdown.slnx --no-restore
 
 ## 表格和长内容
 
-![](https://img1.dotnet9.com/2026/05/codewf-markdown-table.png)
+![](2026/05/codewf-markdown-table.png)
 
 表格不是简单地拼字符串，而是按行、列、单元格渲染。表头背景、边框、文字颜色都从主题资源读取。
 
 这个点看起来不起眼，但对中文文档很重要。很多 Markdown 文档里会有较长的中文说明、英文标识符、链接、版本号和路径。如果表格不能自然换行，预览区域就会很容易出现横向撑爆。
 
-![](https://img1.dotnet9.com/2026/05/codewf-markdown-table-incode.png)
+![](2026/05/codewf-markdown-table-incode.png)
 
 示例里专门放了对齐表格和复杂单元格内容，用来观察：
 
@@ -110,19 +110,19 @@ dotnet test CodeWF.Markdown.slnx --no-restore
 
 Markdown 里的图片也是一个独立控件 `MarkdownImage`，不是简单地把图片塞到文档里就结束。
 
-![](https://img1.dotnet9.com/2026/05/codewf-markdown-images-longtext.png)
+![](2026/05/codewf-markdown-images-longtext.png)
 
 它支持本地图片、URL 图片、Data URI，以及 SVG 图片。最近这部分也抽成了宿主应用可复用的图片加载能力：`MarkdownImageSourceLoader` 负责加载 `data:image`、本地路径、`file://`、HTTP(S) 和相对图片；`MarkdownImageRasterizer` 负责把 SVG、GIF 首帧、WebP 等内容规范化成 PNG 字节。这样 Vex 这类宿主应用在导出 PDF、PNG、Word 时，可以复用同一条图片链路，把图片真正嵌入导出文件，发给别人后离线打开也不会丢图。
 
-![](https://img1.dotnet9.com/2026/05/codewf-markdown-svg.gif)
+![](2026/05/codewf-markdown-svg.gif)
 
 图片加载失败时，会显示 fallback 文本，不会让整个 Markdown 文档渲染中断。
 
-![](https://img1.dotnet9.com/2026/05/codewf-markdown-image-not-exist.png)
+![](2026/05/codewf-markdown-image-not-exist.png)
 
 点击图片后会打开预览窗口：
 
-![](https://img1.dotnet9.com/2026/05/codewf-markdown-image-viewer.gif)
+![](2026/05/codewf-markdown-image-viewer.gif)
 
 预览窗口支持：
 
@@ -136,17 +136,17 @@ SVG 图片在预览时会额外转成位图作为预览输入，避免原始 Vie
 
 ## 数学公式和化学表达式
 
-![](https://img1.dotnet9.com/2026/05/codewf-markdown-math.png)
+![](2026/05/codewf-markdown-math.png)
 
 完整版里接入了 `Sylinko.CSharpMath.Avalonia`，用于数学公式渲染。最近新增的内部 `MarkdownMathView`，主要是为了让公式前景色能跟随当前 Markdown 主题。
 
-![](https://img1.dotnet9.com/2026/05/codewf-markdown-math-dark.gif)
+![](2026/05/codewf-markdown-math-dark.gif)
 
 这类细节在浅色主题里不明显，一切换到深色主题就会暴露出来：普通文字已经变成浅色，但公式如果仍然使用固定黑色，就会看不清。把公式也纳入 Markdown 主题体系，才能保证整篇文档的阅读体验一致。
 
 示例文档里还包含化学表达式处理，用于把部分 LaTeX 化学命令转成更适合复制和纯文本提取的内容。它不是要替代专业公式编辑器，而是让常见技术文章里的公式段落在桌面预览里能正常显示。
 
-![](https://img1.dotnet9.com/2026/05/codewf-markdown-hxgs.gif)
+![](2026/05/codewf-markdown-hxgs.gif)
 
 ## 排版主题：不是只换一个颜色
 
@@ -154,7 +154,7 @@ SVG 图片在预览时会额外转成位图作为预览输入，避免原始 Vie
 
 主题切换效果可以看这张 GIF：
 
-![](https://img1.dotnet9.com/2026/05/codewf-markdown-theme-switch.gif)
+![](2026/05/codewf-markdown-theme-switch.gif)
 
 当前主题资源里包含这些方向：
 
@@ -175,11 +175,11 @@ SVG 图片在预览时会额外转成位图作为预览输入，避免原始 Vie
 
 下面是科技蓝主题下的效果：
 
-![](https://img1.dotnet9.com/2026/05/codewf-markdown-typography-theme.png)
+![](2026/05/codewf-markdown-typography-theme.png)
 
 深色应用主题加极客黑排版主题，则更适合代码和技术笔记：
 
-![](https://img1.dotnet9.com/2026/05/codewf-markdown-dark-geek.png)
+![](2026/05/codewf-markdown-dark-geek.png)
 
 主题资源统一使用固定 Key，例如：
 
@@ -209,7 +209,7 @@ SVG 图片在预览时会额外转成位图作为预览输入，避免原始 Vie
 
 多 Viewer 示例就是为了验证这个场景：
 
-![](https://img1.dotnet9.com/2026/05/codewf-markdown-multi-viewer.png)
+![](2026/05/codewf-markdown-multi-viewer.png)
 
 Viewer A 可以跟随上方统一设置，Viewer B 可以自己使用“简洁 + 紧凑”。局部设置会写入当前 Viewer 的资源范围，不会污染同级 Viewer。
 
@@ -229,7 +229,7 @@ CodeWF.Markdown 里做了一个增量渲染路径：控件会保留已经渲染�
 
 效果如下：
 
-![](https://img1.dotnet9.com/2026/05/codewf-markdown-incremental-rendering.gif)
+![](2026/05/codewf-markdown-incremental-rendering.gif)
 
 这套逻辑不是为了炫技，而是为了贴近真实编辑场景。中文文档里经常不是只改一个英文单词，而是改一整句话、插入一段说明、追加一个表格或代码块。增量渲染要处理的是这些连续文本变更。
 

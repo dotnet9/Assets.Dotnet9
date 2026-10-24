@@ -23,13 +23,13 @@
 
 快捷查找应用并启动
 
-![快捷查找应用并启动](https://img1.dotnet9.com/2020/11/0101.gif)
+![快捷查找应用并启动](2020/11/0101.gif)
 
 市面上有很多类似的软件小工具，做得功能可能更强大，但谁叫我们是程序员，不搞点自己开发的小玩意儿，那还有面出去说道说道？哈哈哈，下面是站长参考作者的开源项目，提取其中的一种风格做出来的（vs 2019 + .net 5，最近交流才知道，作者暂时去掉了水平菜单，笑哭了，希望作者后面加上）：
 
 水平菜单
 
-![水平菜单](https://img1.dotnet9.com/2020/11/0102.gif)
+![水平菜单](2020/11/0102.gif)
 
 ## 2.正文
 
@@ -125,13 +125,13 @@ Win32Api.SetWindowLong(wndHelper.Handle, (int)Win32Api.GetWindowLongFields.GWL_E
 
 Tab + Alt 隐藏当前窗体
 
-![Tab + Alt隐藏当前窗体](https://img1.dotnet9.com/2020/11/0103.png)
+![Tab + Alt隐藏当前窗体](2020/11/0103.png)
 
 5. 在窗体加载完成去注册表读取安装的应用（还有系统桌面），获取应用路径后提取.ICO 转换为.PNG 保存。
 
 读取安装应用
 
-![读取安装应用](https://img1.dotnet9.com/2020/11/0104.png)
+![读取安装应用](2020/11/0104.png)
 
 6. 剩下的代码都是 wpf 中的动画和自动定义控件的代码。
 
@@ -139,7 +139,7 @@ Tab + Alt 隐藏当前窗体
 
 竖直菜单
 
-![竖直菜单](https://img1.dotnet9.com/2020/11/0105.png)
+![竖直菜单](2020/11/0105.png)
 
 ### 2020/11/09
 
@@ -151,19 +151,19 @@ Tab + Alt 隐藏当前窗体
 
 竖直滚动动画
 
-![竖直滚动动画](https://img1.dotnet9.com/2020/11/0106.gif)
+![竖直滚动动画](2020/11/0106.gif)
 
 竖直菜单隐藏
 
-![竖直菜单隐藏](https://img1.dotnet9.com/2020/11/0107.gif)
+![竖直菜单隐藏](2020/11/0107.gif)
 
 竖直菜单折叠
 
-![竖直菜单折叠](https://img1.dotnet9.com/2020/11/0108.gif)
+![竖直菜单折叠](2020/11/0108.gif)
 
 竖直菜单切换
 
-![竖直菜单切换](https://img1.dotnet9.com/2020/11/0109.gif)
+![竖直菜单切换](2020/11/0109.gif)
 
 ### 2020/11/19
 
@@ -177,7 +177,7 @@ Tab + Alt 隐藏当前窗体
 
 #### 【效果图预览】
 
-![修改bug](https://img1.dotnet9.com/2020/11/0110.png)
+![修改bug](2020/11/0110.png)
 
 ### 2020/11/20
 
@@ -189,13 +189,13 @@ Tab + Alt 隐藏当前窗体
 
 #### 【效果图预览】
 
-![可删除](https://img1.dotnet9.com/2020/11/0111.png)
+![可删除](2020/11/0111.png)
 
 ## 3. 源码获取及应用下载体验
 
 源码下载地址：[SoftWareHelper](https://github.com/yanjinhuagood/SoftWareHelper)
 
-![SoftWareHelper](https://img1.dotnet9.com/2020/11/0112.png)
+![SoftWareHelper](2020/11/0112.png)
 
 下载解压后体验：[点击下载](https://github.com/yanjinhuagood/SoftWareHelper/releases)
 
@@ -209,7 +209,7 @@ Tab + Alt 隐藏当前窗体
 
 作者也是凭着一股热情，一直在更新该项目，大家有需要可以通过上面的链接进行下载、使用，觉得不错，不要忘了给个 star 哦：[SoftWareHelper](https://github.com/yanjinhuagood/SoftWareHelper)。
 
-![SoftWareHelper仓库](https://img1.dotnet9.com/2020/11/0113.png)
+![SoftWareHelper仓库](2020/11/0113.png)
 
 站长在接到作者投搞之前，也在博客园关注到了作者发布的第一篇文章，并下载项目进行了体验，觉得其中水平的快捷菜单不错，于是提取出来进行了修改（小部分想法已经实现，其余待抽空完成）：
 
@@ -225,7 +225,7 @@ Tab + Alt 隐藏当前窗体
 
 站长先不要脸的奉上基于作者开源项目的修改版，很简陋的一个版本：[QuickApp](https://github.com/dotnet9/TerminalMACS.ManagerForWPF/tree/master/src/Tools/QuickApp)
 
-![QuickApp](https://img1.dotnet9.com/2020/11/0114.png)
+![QuickApp](2020/11/0114.png)
 
 除了上面站长自己的魔改版想法外，还有下面的小建议，希望作者在原项目上能考虑：
 

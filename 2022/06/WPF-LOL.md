@@ -9,14 +9,14 @@
 - `C# 10.0`;
 - `Visual Studio 2022`;
 
-![](https://img1.dotnet9.com/2022/06/1001.png)
+![](2022/06/1001.png)
 
 - 您可以了解如何正确实施 `WPF` 项目。
 - 描述了如何在不依赖商业组件的情况下，直接实现英雄联盟等顶级设计领域的表达。
 - 您可以通过自己实现 `MVVM` 模式来详细学习和理解 `WPF`。
 - 更多效果可以通过[GitHub](https://github.com/devncore/leagueoflegends)下载代码,使用`Visual Studio 2022`打开解决方案`Leagueoflegends.sln`将`Leagueoflegends`项目设为启动项；
 
-![](https://img1.dotnet9.com/2022/06/1002.png)
+![](2022/06/1002.png)
 
 ### 预览原文
 
@@ -24,7 +24,7 @@
 
 WPF 기반으로 만든 **리그오브레전드**입니다.
 
-![](https://img1.dotnet9.com/2022/06/1003.png)
+![](2022/06/1003.png)
 
 ## 컨텐츠
 
@@ -75,54 +75,54 @@ WPF 기반으로 만든 **리그오브레전드**입니다.
 
 ### `Home`
 
-![](https://img1.dotnet9.com/2022/06/1004.png)
+![](2022/06/1004.png)
 
 ### `TFT`
 
-![](https://img1.dotnet9.com/2022/06/1005.png)
+![](2022/06/1005.png)
 
 ### `Clash`
 
-![](https://img1.dotnet9.com/2022/06/1006.png)
+![](2022/06/1006.png)
 
-![](https://img1.dotnet9.com/2022/06/1007.png)
+![](2022/06/1007.png)
 
 ### `Setting`
 
-![](https://img1.dotnet9.com/2022/06/1008.png)
+![](2022/06/1008.png)
 
 ### `Profile`
 
-![](https://img1.dotnet9.com/2022/06/1009.png)
+![](2022/06/1009.png)
 
 ### `Collection`
 
-![](https://img1.dotnet9.com/2022/06/1010.png)
+![](2022/06/1010.png)
 
-![](https://img1.dotnet9.com/2022/06/1011.png)
+![](2022/06/1011.png)
 
-![](https://img1.dotnet9.com/2022/06/1012.png)
+![](2022/06/1012.png)
 
-![](https://img1.dotnet9.com/2022/06/1013.png)
+![](2022/06/1013.png)
 
 ### `Loot`
 
-![](https://img1.dotnet9.com/2022/06/1014.png)
+![](2022/06/1014.png)
 
 ### `My Shop`
 
-![](https://img1.dotnet9.com/2022/06/1015.png)
+![](2022/06/1015.png)
 
 ### `Store`
 
-![](https://img1.dotnet9.com/2022/06/1016.png)
+![](2022/06/1016.png)
 
-![](https://img1.dotnet9.com/2022/06/1017.png)
+![](2022/06/1017.png)
 
-![](https://img1.dotnet9.com/2022/06/1018.png)
+![](2022/06/1018.png)
 
 ### `Game`
 
-![](https://img1.dotnet9.com/2022/06/1019.png)
+![](2022/06/1019.png)
 
-![](https://img1.dotnet9.com/2022/06/1020.png)
+![](2022/06/1020.png)

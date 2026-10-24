@@ -77,7 +77,7 @@ public void ProcessRequest(HttpContext context)
 }
 ```
 
-![](https://img1.dotnet9.com/2022/05/4401.png)
+![](2022/05/4401.png)
 
 ## 四、其他方法
 

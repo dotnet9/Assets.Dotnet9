@@ -2,11 +2,11 @@
 
 今日一同事给我说你获取到的 pdf 文件有点不符合我们现有软件流程,你能不能将我们 pdf 文件转成图片啊！说干就干，由于以前研究过一段时间 pdf 文件的相关组件，所以我在 github 上找到我以前 star 的仓库，PdfiumViewer 开源地址: [https://github.com/pvginkel/PdfiumViewer](https://github.com/pvginkel/PdfiumViewer)：
 
-![](https://img1.dotnet9.com/2022/07/1801.png)
+![](2022/07/1801.png)
 
 首先我们打开 NuGet 安装`PdfiumViewer`和`ImageResizer.Plugins.PdfiumRenderer.Pdfium.Dll`。
 
-![](https://img1.dotnet9.com/2022/07/1802.jpg)
+![](2022/07/1802.jpg)
 
 对于一个需求，我们应该明白我们所操作的对象具有哪些属性？
 

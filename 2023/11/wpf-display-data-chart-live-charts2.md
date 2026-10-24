@@ -1,24 +1,24 @@
 最近接手一个小项目，需要做一个数据显示大屏，要能显示曲线，显示进出量，重点是要好看，我哪知道什么是好看，就随便做做呗。
 
-![作者实际项目](https://img1.dotnet9.com/2023/11/0601.png)
+![作者实际项目](2023/11/0601.png)
 
 数据都是假的，只是做出一个效果。显示这种数据图，使用的是[LiveCharts2](https://github.com/beto-rodriguez/LiveCharts2)。这是一个非常漂亮的 Charts 模块。官网如下：
 
 - https://www.lvcharts.com/
 
-![官方首页](https://img1.dotnet9.com/2023/11/0602.gif)
+![官方首页](2023/11/0602.gif)
 
-![支持平台](https://img1.dotnet9.com/2023/11/0603.gif)
+![支持平台](2023/11/0603.gif)
 
 [LiveCharts2](https://github.com/beto-rodriguez/LiveCharts2)支持的还挺多，我们在这里选择`WPF`。
 
 如果我们直接通过`NuGet`进行搜索，会发现找到的`LiveCharts`版本较旧。
 
-![旧版本NuGet搜索结果](https://img1.dotnet9.com/2023/11/0604.png)
+![旧版本NuGet搜索结果](2023/11/0604.png)
 
 [LiveCharts2](https://github.com/beto-rodriguez/LiveCharts2)相对`V0`版本做了很多改进和修复，通过`NuGet`安装`LiveChartsCore.SkiaSharpView.WPF`。
 
-![新版本NuGet搜索结果](https://img1.dotnet9.com/2023/11/0614.png)
+![新版本NuGet搜索结果](2023/11/0614.png)
 
 或者打开程序包管理器控制台，输入：
 
@@ -26,11 +26,11 @@
 Install-Package LiveChartsCore.SkiaSharpView.WPF -Version 2.0.0-rc2
 ```
 
-![控制台安装截图](https://img1.dotnet9.com/2023/11/0606.png)
+![控制台安装截图](2023/11/0606.png)
 
 等待安装完成，就可以找到了。
 
-![项目安装截图](https://img1.dotnet9.com/2023/11/0605.png)
+![项目安装截图](2023/11/0605.png)
 
 顺便安装一下[CommunityToolkit.Mvvm](https://learn.microsoft.com/zh-cn/dotnet/communitytoolkit/mvvm/)，这个可以通过`NuGet`找到，这个包是因为[GalaSoft.MVVMLight](https://www.nuget.org/packages/MvvmLight)已经不再维护，所以官方做的新模型，可以很好的迁移进来。
 
@@ -84,7 +84,7 @@ xmlns:lvc="clr-namespace:LiveChartsCore.SkiaSharpView.WPF;assembly=LiveChartsCor
 </Grid>
 ```
 
-![图片](https://img1.dotnet9.com/2023/11/0607.png)
+![图片](2023/11/0607.png)
 
 `LineSeries`为设置的线形图，当然还能有柱状图。
 
@@ -104,7 +104,7 @@ public ISeries[] Series { get; set; }
             };
 ```
 
-![图片](https://img1.dotnet9.com/2023/11/0608.png)
+![图片](2023/11/0608.png)
 
 还可以增加 Title，用于说明图标的作用。
 
@@ -122,7 +122,7 @@ public LabelVisual Title { get; set; }
 <lvc:CartesianChart Series="{Binding Series}" Title="{Binding Title}"/>
 ```
 
-![图片](https://img1.dotnet9.com/2023/11/0609.png)
+![图片](2023/11/0609.png)
 
 这里就有个问题，如果你的 Title 设置为中文，
 
@@ -138,7 +138,7 @@ public LabelVisual Title { get; set; }
 
 就显示不出来了
 
-![图片](https://img1.dotnet9.com/2023/11/0610.png)
+![图片](2023/11/0610.png)
 
 我们需要修改一下设定，以便支持中文显示。
 
@@ -155,7 +155,7 @@ public LabelVisual Title { get; set; }
             };
 ```
 
-![图片](https://img1.dotnet9.com/2023/11/0611.png)
+![图片](2023/11/0611.png)
 
 官方文档非常丰富，也有对应的示例，做出来的结果还是非常不错的。
 
@@ -163,26 +163,26 @@ public LabelVisual Title { get; set; }
 
 **部分效果 1：**
 
-![图片](https://img1.dotnet9.com/2023/11/0612.gif)
+![图片](2023/11/0612.gif)
 
 **部分效果 2：**
 
-![图片](https://img1.dotnet9.com/2023/11/0615.gif)
+![图片](2023/11/0615.gif)
 
 **部分效果 3：**
 
-![图片](https://img1.dotnet9.com/2023/11/0616.gif)
+![图片](2023/11/0616.gif)
 
 **部分效果 4：**
 
-![图片](https://img1.dotnet9.com/2023/11/0617.gif)
+![图片](2023/11/0617.gif)
 
 **部分效果 5：**
 
-![图片](https://img1.dotnet9.com/2023/11/0613.gif)
+![图片](2023/11/0613.gif)
 
 **部分效果 6：**
 
-![图片](https://img1.dotnet9.com/2023/11/0618.gif)
+![图片](2023/11/0618.gif)
 
 据说免费的`LiveCharts`在数据量超过 10000 渲染效果会不好，需要使用付费版。这个我还没有验证，读者可以自行尝试一下。

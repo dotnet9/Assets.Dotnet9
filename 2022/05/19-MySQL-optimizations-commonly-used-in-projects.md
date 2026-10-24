@@ -8,7 +8,7 @@
 
 下面来个简单的示例，标注(1,2,3,4,5)我们要重点关注的数据
 
-![](https://img1.dotnet9.com/2022/05/0201.png)
+![](2022/05/0201.png)
 
 1. type 列，连接类型。一个好的 sql 语句至少要达到 range 级别。杜绝出现 all 级别
 2. key 列，使用到的索引名。如果没有选择索引，值是 NULL。可以采取强制索引方式
@@ -80,7 +80,7 @@ select colname …  from A表 Left join B表 on where a.id = b.id where b.id is 
 
 取出的结果集如下图表示，A 表不在 B 表中的数据
 
-![](https://img1.dotnet9.com/2022/05/0202.png)
+![](2022/05/0202.png)
 
 ## 十、使用合理的分页方式以提高分页的效率
 
@@ -102,7 +102,7 @@ select id,name from table_name where id> 866612 limit 20
 
 如下图这个 sql 语句，扫描的行数成百万级以上的时候就可以使用分段查询
 
-![](https://img1.dotnet9.com/2022/05/0203.png)
+![](2022/05/0203.png)
 
 ## 十二、避免在 where 子句中对字段进行 null 值判断
 
@@ -116,7 +116,7 @@ select id,name from table_name where id> 866612 limit 20
 
 如下图所示，虽然给 secret 字段添加了索引，但在 explain 结果果并没有使用
 
-![](https://img1.dotnet9.com/2022/05/0204.png)
+![](2022/05/0204.png)
 
 那么如何解决这个问题呢，答案：`使用全文索引`
 
@@ -154,7 +154,7 @@ select user_id,user_project from table_name where age=36/2;
 
 where 子句中出现 column 字段的类型和传入的参数类型不一致的时候发生的类型转换，建议先确定 where 中的参数类型
 
-![](https://img1.dotnet9.com/2022/05/0205.png)
+![](2022/05/0205.png)
 
 ## 十六、对于联合索引来说，要遵守最左前缀法则
 
@@ -170,7 +170,7 @@ where 子句中出现 column 字段的类型和传入的参数类型不一致的
 
 ## 十九、关于 JOIN 优化
 
-![](https://img1.dotnet9.com/2022/05/0206.png)
+![](2022/05/0206.png)
 
 - LEFT JOIN A 表为驱动表
 - INNER JOIN MySQL 会自动找出那个数据少的表作用驱动表
@@ -195,7 +195,7 @@ select * from B;
 
 **利用小表去驱动大表**
 
-![](https://img1.dotnet9.com/2022/05/0207.png)
+![](2022/05/0207.png)
 
 从原理图能够直观的看出如果能够减少驱动表的话，减少嵌套循环中的循环次数，以减少 IO 总量及 CPU 运算的次数。
 
@@ -203,7 +203,7 @@ select * from B;
 
 inner join 是由 mysql 选择驱动表，但是有些特殊情况需要选择另个表作为驱动表，比如有 group by、order by 等「Using filesort」、「Using temporary」时。STRAIGHT_JOIN 来强制连接顺序，在 STRAIGHT_JOIN 左边的表名就是驱动表，右边则是被驱动表。在使用 STRAIGHT_JOIN 有个前提条件是该查询是内连接，也就是 inner join。其他链接不推荐使用 STRAIGHT_JOIN，否则可能造成查询结果不准确。
 
-![](https://img1.dotnet9.com/2022/05/0208.png)
+![](2022/05/0208.png)
 
 这个方式有时可能减少 3 倍的时间。
 
@@ -211,4 +211,4 @@ inner join 是由 mysql 选择驱动表，但是有些特殊情况需要选择�
 
 写到最后，欢迎关注：[http://fenxianglu.cn/](http://fenxianglu.cn/)
 
-![](https://img1.dotnet9.com/2022/05/0209.png)
+![](2022/05/0209.png)

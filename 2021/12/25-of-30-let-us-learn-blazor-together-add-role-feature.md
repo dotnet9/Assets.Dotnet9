@@ -40,7 +40,7 @@ public interface IRolesRepository
 
 实现`RolesRepository.cs`，这边注入的`RoleManager`跟`UserManager`是`ASP.NET Core Identity` 预置处理角色跟用户的`Service`，之前在`Program.cs`写的`builder.Services.AddIdentity<IdentityUser, IdentityRole>()…`就注册了该功能，底下有各种`Role`、`User` 相关`API`可以调用。
 
-![](https://img1.dotnet9.com/2021/12/3701.png)
+![](2021/12/3701.png)
 
 ```csharp
 using BlazorServer.Models;
@@ -322,7 +322,7 @@ foreach (var role in Roles) {
 
 这时打开网站可以看到这样的页面，我们来加上新增角色的页面并新增一个角色 Admin。
 
-![](https://img1.dotnet9.com/2021/12/3702.gif)
+![](2021/12/3702.gif)
 
 `CreateRole.razor.cs`
 
@@ -377,7 +377,7 @@ public partial class CreateRole
 
 有了添加功能就要有编辑功能，编辑完成或取消都直接跳转回角色列表。
 
-![](https://img1.dotnet9.com/2021/12/3703.png)
+![](2021/12/3703.png)
 
 `EditRole.razor.cs`
 

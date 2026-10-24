@@ -54,13 +54,13 @@ WPF 是一个强大的桌面应用程序框架，用于构建具有丰富用户�
 
 设置`STranslate`为启动项目运行：
 
-![](https://img1.dotnet9.com/2024/03/0401.png)
+![](2024/03/0401.png)
 
-![](https://img1.dotnet9.com/2024/03/0402.png)
+![](2024/03/0402.png)
 
-![](https://img1.dotnet9.com/2024/03/0403.png)
+![](2024/03/0403.png)
 
-![](https://img1.dotnet9.com/2024/03/0404.png)
+![](2024/03/0404.png)
 
 ## **工具下载**
 
@@ -68,29 +68,29 @@ WPF 是一个强大的桌面应用程序框架，用于构建具有丰富用户�
 
 - https://github.com/ZGGSONG/STranslate/releases
 
-![](https://img1.dotnet9.com/2024/03/0405.png)
+![](2024/03/0405.png)
 
 ### **Gitee 下载**
 
 - https://gitee.com/zggsong/STranslate/releases/tag/1.0.6.201
 
-![](https://img1.dotnet9.com/2024/03/0406.png)
+![](2024/03/0406.png)
 
 ## **工具部分功能截图**
 
-![](https://img1.dotnet9.com/2024/03/0407.png)
+![](2024/03/0407.png)
 
-![](https://img1.dotnet9.com/2024/03/0408.png)
+![](2024/03/0408.png)
 
-![](https://img1.dotnet9.com/2024/03/0409.png)
+![](2024/03/0409.png)
 
-![](https://img1.dotnet9.com/2024/03/0410.gif)
+![](2024/03/0410.gif)
 
-![](https://img1.dotnet9.com/2024/03/0411.gif)
+![](2024/03/0411.gif)
 
-![](https://img1.dotnet9.com/2024/03/0412.gif)
+![](2024/03/0412.gif)
 
-![](https://img1.dotnet9.com/2024/03/0413.gif)
+![](2024/03/0413.gif)
 
 ## 项目源码地址
 

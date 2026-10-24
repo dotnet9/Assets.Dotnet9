@@ -2,7 +2,7 @@
 
 前几天有点空闲时间，在 github 上看一些.Net 的开源库，看到了关于爬虫相关的库，于是加入了一个 QQ 群，看到里面各位大佬讨论的是**爬的越好，进去越快**，于是我自己也想做一个爬虫相关的东西，但是爬虫是个危险的东西，自己也不敢随便爬别人的网页，于是找到了一个朋友，拿他的网站来进行练习！
 
-![](https://img1.dotnet9.com/2022/06/0901.png)
+![](2022/06/0901.png)
 
 ## 练习
 
@@ -40,11 +40,11 @@ var htmlDoc = web.Load(html);
 
 打开网站，找到我们想要爬取的网站，今天我们就来爬该网站的特色专辑下的所有文章。
 
-![](https://img1.dotnet9.com/2022/06/0902.png)
+![](2022/06/0902.png)
 
 打开调试模式，我们可以看到**特色专辑**是一个`a标签`，我们再来查看该标签的上一级元素是`li`，`li`上一级元素是`ul`，那我们就可以来获取该节点
 
-![](https://img1.dotnet9.com/2022/06/0903.png)
+![](2022/06/0903.png)
 
 ```csharp
 var allNodes = htmlDoc.DocumentNode.SelectNodes("//ul[@id='starlist']//li[@class='menu']");
@@ -58,7 +58,7 @@ var singNodes = htmlDoc.DocumentNode.SelectSingleNode("/html[1]/body[1]/header[1
 
 然后我们再来获取该特色专辑下的子菜单的的网址，经发现，`a标签`的`href 属性`规定链接的目标地址，那我们第一步肯定是要获取该子菜单下的所有链接！
 
-![](https://img1.dotnet9.com/2022/06/0904.png)
+![](2022/06/0904.png)
 
 ```csharp
 var singNodes = htmlDoc.DocumentNode.SelectSingleNode("/html[1]/body[1]/header[1]/div[3]/nav[1]/ul[1]/li[3]//ul[1]")
@@ -75,7 +75,7 @@ foreach (var item in singNodes)
 
 随意打开一个子菜单，可以看到相关的文章标题描述以及图片等！这就是我们想要的内容了！分析方法还是和刚才一样！代码如下:
 
-![](https://img1.dotnet9.com/2022/06/0905.png)
+![](2022/06/0905.png)
 
 ```csharp
 foreach (var item in lstUrl)
@@ -98,7 +98,7 @@ foreach (var item in lstUrl)
 
 这样我们就能够获取到我们想要的东西了！运行一下代码，我们的第一个爬虫就成功了。
 
-![](https://img1.dotnet9.com/2022/06/0906.png)
+![](2022/06/0906.png)
 
 ## 总结
 

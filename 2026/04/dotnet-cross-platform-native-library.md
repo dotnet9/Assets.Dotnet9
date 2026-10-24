@@ -28,7 +28,7 @@ static const char* TIME_MEANINGS[] = {
 
 第三方库通常会提供针对不同平台的版本，目录结构如下：
 
-![](https://img1.dotnet9.com/2026/04/timemeaning-structure.svg)
+![](2026/04/timemeaning-structure.svg)
 
 ```text
 Lib/
@@ -95,7 +95,7 @@ var platform = "Unknown";
 1. **动态加载**：使用 `NativeLibrary` API 运行时手动加载
 2. **静态加载**：使用 `DllImport` 特性声明（做了3种情况测试）
 
-![](https://img1.dotnet9.com/2026/04/four-solutions-architecture.svg)
+![](2026/04/four-solutions-architecture.svg)
 
 ### VC-LTL 和 YY-Thunks（所有示例通用）
 
@@ -454,7 +454,7 @@ public static class TimeMeaningApi
 
 ### 方案对比总结
 
-![](https://img1.dotnet9.com/2026/04/solution-comparison.svg)
+![](2026/04/solution-comparison.svg)
 
 | 类别     | 方案                        | 做法                                             | 结果                        | 适用场景                                 |
 | -------- | --------------------------- | ------------------------------------------------ | --------------------------- | ---------------------------------------- |

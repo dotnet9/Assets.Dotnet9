@@ -16,17 +16,17 @@
 
 我们先来看下一个小 Demo
 
-![](https://img1.dotnet9.com/2023/06/0401.gif)
+![](2023/06/0401.gif)
 
 再来看看解决方案的项目：
 
-![](https://img1.dotnet9.com/2023/06/0402.png)
+![](2023/06/0402.png)
 
 我将该小 demo，分为四个项目，其中 Shell 为主窗体项目，然后 MedicineModule 和 PatientModule 为我们分割开的业务模块，最后 Infrastructure 则为我们的公共共享项目，我们将一步步讲解该 demo 如何进行模块化的.
 
 首先，我们引用官方的一个图，大致讲解了创建加载模块的流程：
 
-![](https://img1.dotnet9.com/2023/06/0403.png)
+![](2023/06/0403.png)
 
 - 注册/发现模块
 - 加载模块
@@ -239,7 +239,7 @@ private void _moduleManager_LoadModuleCompleted(object sender, LoadModuleComplet
 
 效果如下:
 
-![](https://img1.dotnet9.com/2023/06/0404.gif)
+![](2023/06/0404.gif)
 
 ## 4. 初始化模块
 

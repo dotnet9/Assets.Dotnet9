@@ -12,7 +12,7 @@
 
 大家好,我们中韩Microsoft MVP夫妇Vicky&James。我们从WPF开始就对包括Uno Platform在内的基于XAML的框架和项目架构设计有着深入的兴趣和经验。大家可以在我们的GitHub仓库中查看和下载各种项目的源代码:[GitHub - jamesnetgroup](https://github.com/jamesnetgroup "GitHub - jamesnetgroup")
 
-![](https://img1.dotnet9.com/2024/11/cover_03.png)
+![](2024/11/cover_03.png)
 
 ### 目录
 
@@ -384,7 +384,7 @@ public abstract class AppBootstrapper
 
 #### 7.1 实现可在所有平台上运行的框架
 
-![](https://img1.dotnet9.com/2024/11/0301.png)
+![](2024/11/0301.png)
 
 Jamesnet.Core是基于`.NET Standard 2.0`的框架，允许在WPF、Uno Platform和WinUI 3中实现相同的项目设计。该框架具有以下特点：
 
@@ -404,13 +404,13 @@ Jamesnet.Core是基于`.NET Standard 2.0`的框架，允许在WPF、Uno Platform
 
 **英雄联盟客户端重构项目**利用Jamesnet.Core框架，在WPF、Uno Platform和WinUI 3等不同平台上使用相同的代码库和架构实现。
 
-![](https://img1.dotnet9.com/2024/11/cover_03.png)
+![](2024/11/cover_03.png)
 
-![](https://img1.dotnet9.com/2024/11/0302.png)
+![](2024/11/0302.png)
 
-![](https://img1.dotnet9.com/2024/11/0303.png)
+![](2024/11/0303.png)
 
-![](https://img1.dotnet9.com/2024/11/0304.png)
+![](2024/11/0304.png)
 
 - **WPF版本**: [GitHub - leagueoflegends-wpf](https://github.com/JamesnetGroup/leagueoflegends-wpf "GitHub - leagueoflegends-wpf")
 - **Uno Platform版本**: [GitHub - leagueoflegends-uno](https://github.com/JamesnetGroup/leagueoflegends-uno "GitHub - leagueoflegends-uno")
@@ -460,4 +460,4 @@ WPF技术和模式仍然强大，将其应用于跨平台开发可以提高开�
 - [实现智能日期](https://www.bilibili.com/video/BV1pE421L7c2 "实现智能日期")
 - [实现Cupertino TreeView](https://www.bilibili.com/video/BV1xz42187wV "实现Cupertino TreeView")
 
-![](https://img1.dotnet9.com/2024/11/0305.png)
+![](2024/11/0305.png)

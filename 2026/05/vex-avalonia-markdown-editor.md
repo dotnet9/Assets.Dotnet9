@@ -10,11 +10,11 @@ Vex 的 Slogan 是：**极简之力，妙笔成章。**
 
 先看编辑体验。下面这段 GIF 用 Vex 打开本文副本，左侧继续写 Markdown，右侧实时预览；标题、引用、列表、代码块和状态栏统计都会跟着变化。
 
-![](https://img1.dotnet9.com/2026/05/vex-edit-vex-article-live.gif)
+![](2026/05/vex-edit-vex-article-live.gif)
 
 写完以后，Vex 可以把 Markdown 复制成适合微信公众号、知乎、稀土掘金编辑器粘贴的富 HTML。下面是从文件菜单选择“复制到公众号”，再粘贴到公众号图文编辑器的过程。浏览器地址栏做了遮挡处理。
 
-![](https://img1.dotnet9.com/2026/05/vex-copy-to-wechat-editor.gif)
+![](2026/05/vex-copy-to-wechat-editor.gif)
 
 ## 不是 Typora
 
@@ -42,7 +42,7 @@ Typora 的所见即所得编辑体验非常成熟，而把 Markdown 源码和最
 
 当前主界面如下：左侧是文件列表和大纲，中央是 Markdown 源码编辑区，右侧是 Avalonia 原生渲染的预览区，底部状态栏显示保存状态、编码、行列号、词数和字符数。
 
-![](https://img1.dotnet9.com/2026/05/vex-main-window.png)
+![](2026/05/vex-main-window.png)
 
 ## 写作与预览
 
@@ -56,25 +56,25 @@ Vex 的工作区是三栏结构：
 
 长文档最需要的是大纲。Vex 会从标题结构里提取导航入口，切到“大纲”后可以直接跳转到对应段落。
 
-![](https://img1.dotnet9.com/2026/05/vex-outline-vex-article.gif)
+![](2026/05/vex-outline-vex-article.gif)
 
 只想专注源码时，可以从视图菜单切换“源码模式”。它会临时收起侧栏和预览区，退出时恢复原来的布局。
 
-![](https://img1.dotnet9.com/2026/05/vex-source-mode-vex-article.gif)
+![](2026/05/vex-source-mode-vex-article.gif)
 
 视图菜单还补了“刷新预览”，快捷键是 `F5`。它会强制刷新预览绑定，并给远程图片 URL 加版本查询参数，适合封面或远程配图刚更新但预览仍命中旧缓存的情况。
 
-![](https://img1.dotnet9.com/2026/05/vex-refresh-preview.gif)
+![](2026/05/vex-refresh-preview.gif)
 
 ## 文件与发布
 
 文件菜单放的是写作工具最常用的动作：新建、打开、打开文件夹、快速打开、最近文档、按编码重开、复制到内容平台、保存、另存为、属性、导出、打印和关闭。
 
-![](https://img1.dotnet9.com/2026/05/vex-file-menu.png)
+![](2026/05/vex-file-menu.png)
 
 动态看更直观。文件菜单现在会按内容完整展开，不再需要在菜单里二次滚动；打开、保存、最近文件、编码重开、复制到内容平台、导出 HTML/PNG/PDF、打印都在同一条工作流里。
 
-![](https://img1.dotnet9.com/2026/05/vex-file-export-menu.gif)
+![](2026/05/vex-file-export-menu.gif)
 
 几个细节比较实用：
 
@@ -93,11 +93,11 @@ Vex 的工作区是三栏结构：
 
 长文档不能只靠眼睛扫。Vex 的查找栏支持查找、替换、下一个、替换、全部替换、关闭，以及大小写、整词和正则匹配。
 
-![](https://img1.dotnet9.com/2026/05/vex-find-replace.png)
+![](2026/05/vex-find-replace.png)
 
 下面继续用本文演示：搜索 `Markdown`，再打开替换栏准备替换成更具体的词。查找栏会显示当前命中位置和总命中数。
 
-![](https://img1.dotnet9.com/2026/05/vex-find-replace-vex-article.gif)
+![](2026/05/vex-find-replace-vex-article.gif)
 
 大文档扫描做了防抖处理，替换路径也尽量使用 AvaloniaEdit 文档级 `Replace`，避免每次替换都重建整篇文本。
 
@@ -105,11 +105,11 @@ Vex 的工作区是三栏结构：
 
 外观入口放在帮助菜单下，当前包含主题色、排版主题、紧凑布局和语言设置。
 
-![](https://img1.dotnet9.com/2026/05/vex-theme-language-menu.gif)
+![](2026/05/vex-theme-language-menu.gif)
 
 主题色控制应用外壳，排版主题控制 Markdown 正文。两者分开后，可以组合出不同工作环境：浅色外壳配简洁排版，或暗色外壳配更适合代码阅读的排版主题。
 
-![](https://img1.dotnet9.com/2026/05/vex-theme-typography-language.gif)
+![](2026/05/vex-theme-typography-language.gif)
 
 多语言当前覆盖：
 
@@ -126,19 +126,19 @@ Vex 也是 CodeWF.AvaloniaControls 新增 `Guide` 引导控件的落地项目。
 
 引导覆盖文件菜单、导出菜单、段落/格式/视图菜单、主题菜单、左侧文件/大纲区域、编辑区、预览区和状态栏。
 
-![](https://img1.dotnet9.com/2026/05/codewf-guide-vex-onboarding-flow.gif)
+![](2026/05/codewf-guide-vex-onboarding-flow.gif)
 
 最有价值的是菜单项引导。很多桌面软件入口藏在菜单或二级菜单里，普通遮罩控件只能高亮页面上已经存在的按钮；Vex 会在步骤切换时主动展开菜单，再定位里面的 `MenuItem`。
 
-![](https://img1.dotnet9.com/2026/05/codewf-guide-vex-menuitem-guide.gif)
+![](2026/05/codewf-guide-vex-menuitem-guide.gif)
 
 左侧“文件/大纲”是 `TabControl`，引导到不同页签时需要先切换页签，再刷新高亮位置。
 
-![](https://img1.dotnet9.com/2026/05/codewf-guide-vex-tabitem-guide.gif)
+![](2026/05/codewf-guide-vex-tabitem-guide.gif)
 
 关于窗口展示软件名称、中文名、版本、编译时间、作者、网站和品牌信息。
 
-![](https://img1.dotnet9.com/2026/05/vex-about-window.png)
+![](2026/05/vex-about-window.png)
 
 ## 技术栈
 

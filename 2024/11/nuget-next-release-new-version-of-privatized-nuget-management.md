@@ -10,9 +10,9 @@ NuGet Next是一款基于BaGet的一款私有化NuGet管理平台，我们对BaG
 
 NuGet 最新版开源私有化包管理，我们基于BaGet的基础之上增加了更多的功能，并且对中国市场做更多兼容，比如国产化支持。
 
-![图片](https://img1.dotnet9.com/2024/11/0101.png)
+![图片](2024/11/0101.png)
 
-![图片](https://img1.dotnet9.com/2024/11/0102.png)
+![图片](2024/11/0102.png)
 
 ## **功能介绍**
 
@@ -166,4 +166,4 @@ Gitee： https://gitee.com/aidotnet/NuGet.Next
 
 示例网站： https://nuget.token-ai.cn/
 
-![图片](https://img1.dotnet9.com/2024/11/0103.png)
+![图片](2024/11/0103.png)

@@ -27,17 +27,17 @@
 
 ## 4. 部分操作截图
 
-![gif01](https://img1.dotnet9.com/2022/04/2202.gif)
+![gif01](2022/04/2202.gif)
 
-![screenshot01](https://img1.dotnet9.com/2022/04/2203.png)
+![screenshot01](2022/04/2203.png)
 
-![screenshot02](https://img1.dotnet9.com/2022/04/2204.png)
+![screenshot02](2022/04/2204.png)
 
-![screenshot03](https://img1.dotnet9.com/2022/04/2205.png)
+![screenshot03](2022/04/2205.png)
 
-![screenshot04](https://img1.dotnet9.com/2022/04/2206.png)
+![screenshot04](2022/04/2206.png)
 
-![gif02](https://img1.dotnet9.com/2022/04/2207.gif)
+![gif02](2022/04/2207.gif)
 
 ## 5. 仓库
 
@@ -47,4 +47,4 @@
 >
 > 仓库地址：[https://github.com/punker76/gong-wpf-dragdrop](https://github.com/punker76/gong-wpf-dragdrop)
 
-![screenshot04](https://img1.dotnet9.com/2022/04/2208.png)
+![screenshot04](2022/04/2208.png)

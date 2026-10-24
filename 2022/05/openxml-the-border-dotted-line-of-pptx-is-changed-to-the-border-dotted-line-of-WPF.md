@@ -18,7 +18,7 @@ Install-Package dotnetCampus.DocumentFormat.OpenXml.Flatten -Version 2.0.0
 
 我这里用 PPTX 的 7 种直线，分别设置 7 种能够设置的虚线类型,PPTX 的显示效果是这样的：
 
-![](https://img1.dotnet9.com/2022/05/0401.jpg)
+![](2022/05/0401.jpg)
 
 然后解析代码如下,解析主要逻辑部分：
 
@@ -117,7 +117,7 @@ private Line ConverterToGeometry(double width, double height, DoubleCollection d
 
 最终的效果：
 
-![](https://img1.dotnet9.com/2022/05/0402.jpg)
+![](2022/05/0402.jpg)
 
 我们可以看到几乎是接近的效果了，当然你也可以根据我的代码去微调更精确的值，只需要稍微改下`GetDashArrayByPresetLineDashValues`方法内相对应的值即可
 
@@ -125,7 +125,7 @@ private Line ConverterToGeometry(double width, double height, DoubleCollection d
 
 实际上，openxml 文档是给出了 PresetDash 的值的,大致如下:
 
-![](https://img1.dotnet9.com/2022/05/0403.jpg)
+![](2022/05/0403.jpg)
 
 但是其值跟 WPF 的设置 Dash 的 DoubleCollection 不对应，因此以上的映射值都是我自己微调的
 

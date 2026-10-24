@@ -8,17 +8,17 @@
 
 我们先看看官网上对`default-checked-keys`的定义：（看完依旧觉得没问题）
 
-![](https://img1.dotnet9.com/2023/02/0101.png)
+![](2023/02/0101.png)
 
 于是我就去探寻了一下原因是啥：监听到`defaultCheckedKeys`的变化后遍历数组，添加选中状态，但是当`defaultCheckedKeys`数组减少时，前面设置的选中的`key`不会取消。
 
 原因是：`tree.vue`中使用`watch`监听`default-checked-keys`值得变化，调用了以下方法：
 
-![](https://img1.dotnet9.com/2023/02/0102.png)
+![](2023/02/0102.png)
 
 在 tree-store.js 中又使用了此方法
 
-![](https://img1.dotnet9.com/2023/02/0103.png)
+![](2023/02/0103.png)
 
 终于知道原因了，只有监听到`default-checked-keys`值变化时才会遍历`default-checked-keys`数组设置给里面的值设置选中状态，但是没有取消选中状态的操作，所以当在`default-checked-keys`原有的数组里面增加需要选中的数据，新增的节点会被选中，反之则不会！！！
 
@@ -32,7 +32,7 @@
 
 2. 再仔细看看文档找思路，找到了：就是调用`setCheckedKeys`方法，将需要选中的`key`值数组传进去，他会重新设置选中状态：
 
-![](https://img1.dotnet9.com/2023/02/0104.png)
+![](2023/02/0104.png)
 
 **使用该方法的时候注意了：**
 

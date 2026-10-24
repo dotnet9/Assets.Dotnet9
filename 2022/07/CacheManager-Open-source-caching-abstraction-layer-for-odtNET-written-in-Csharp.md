@@ -54,4 +54,4 @@ private static void EventsExample()
 
 最后大家如果喜欢我的文章，还麻烦给个关注并点个赞, 希望 net 生态圈越来越好！
 
-![](https://img1.dotnet9.com/2022/07/0901.png)
+![](2022/07/0901.png)

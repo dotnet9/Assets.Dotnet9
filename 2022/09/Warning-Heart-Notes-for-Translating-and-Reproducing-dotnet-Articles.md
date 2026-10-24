@@ -3,15 +3,15 @@
 9月15日`Dotnet9网站`站长（沙漠尽头的狼）翻译了 .NET 7 RC1的三篇文章《.NET 7 RC1 发布》、《
 ASP.NET Core在.NET 7 RC1中的更新》、《EF CORE 7 RC1 发布》，来源 [微软开发者博客](https://devblogs.microsoft.com/)：
 
-![微信公众号发布文章列表](https://img1.dotnet9.com/2022/09/delete-three-dotnet-article.png)
+![微信公众号发布文章列表](2022/09/delete-three-dotnet-article.png)
 
-![.NET 7 RC1 markdown格式](https://img1.dotnet9.com/2022/09/0508.png)
+![.NET 7 RC1 markdown格式](2022/09/0508.png)
 
 今天收到微信公众号【微软开发者MSDN】运营美女和其他工作人员通知后，已对上面三篇文章进行了删除：
 
-![](https://img1.dotnet9.com/2022/09/0502.png)
+![](2022/09/0502.png)
 
-![](https://img1.dotnet9.com/2022/09/0503.png)
+![](2022/09/0503.png)
 
 总结就是：
 
@@ -22,15 +22,15 @@ ASP.NET Core在.NET 7 RC1中的更新》、《EF CORE 7 RC1 发布》，来源 [
 
 站长当时在气头上，说了些气话，Dotnet号主们不要学习，一定要注意版权：
 
-![](https://img1.dotnet9.com/2022/09/0504.png)
+![](2022/09/0504.png)
 
 今天说了些话没有格局了，让大家笑话了...
 
-![](https://img1.dotnet9.com/2022/09/0506.jpg)
+![](2022/09/0506.jpg)
 
 以下为全部聊天记录，Dotnet号主们引以为戒吧：
 
-![](https://img1.dotnet9.com/2022/09/0505.jpg)
+![](2022/09/0505.jpg)
 
 ## 今天得到的教训
 
@@ -59,6 +59,6 @@ Ant Design Pro框架搭建，快完了。
 
 **版权！版权！版权！**
 
-![图片来自小红书](https://img1.dotnet9.com/2022/09/0507.png)
+![图片来自小红书](2022/09/0507.png)
 
 对了，这篇随笔我要标**原创！**

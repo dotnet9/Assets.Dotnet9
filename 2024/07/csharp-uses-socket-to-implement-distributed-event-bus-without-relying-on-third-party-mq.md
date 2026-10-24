@@ -4,11 +4,11 @@
 
 **Command**
 
-![Command](https://img1.dotnet9.com/2024/07/cover_02.png)
+![Command](2024/07/cover_02.png)
 
 **Query**
 
-![Query](https://img1.dotnet9.com/2024/07/0202.png)
+![Query](2024/07/0202.png)
 
 ## 特性
 
@@ -24,7 +24,7 @@
 
 通过` TCP` 协议进行数据交互，协议包结构如下：
 
-![0.0.8@2x](https://img1.dotnet9.com/2024/07/0201.png)
+![0.0.8@2x](2024/07/0201.png)
 
 ## 安装
 

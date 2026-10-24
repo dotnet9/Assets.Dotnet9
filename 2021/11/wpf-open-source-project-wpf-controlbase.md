@@ -1,4 +1,4 @@
-![仓库截图](https://img1.dotnet9.com/2021/11/0901.png)
+![仓库截图](2021/11/0901.png)
 
 仓库 README 很素，但看作者 README 贴的几篇博文介绍，你会喜欢上它的，废话不多说，上介绍目录：
 
@@ -45,7 +45,7 @@ https://blog.csdn.net/u010975589/article/details/103083605
 
 ### 1.2 示例
 
-![](https://img1.dotnet9.com/2021/11/0902.gif)
+![](2021/11/0902.gif)
 
 说明：渐隐藏是 WPF 中比较常用的动画，上图是通过 StoryBoarService 封装后的效果，在代码中只要执行如下代码即可：
 
@@ -264,7 +264,7 @@ public static DoubleStoryboardEngine Create(double from, double to, int second, 
 
 ### 2.3 示例
 
-![](https://img1.dotnet9.com/2021/11/0903.gif)
+![](2021/11/0903.gif)
 
 实体定义如下：
 
@@ -972,7 +972,7 @@ public class StringPropertyItem : ObjectPropertyItem<string>
 
 ### 3.3 示例
 
-![](https://img1.dotnet9.com/2021/11/0904.gif)
+![](2021/11/0904.gif)
 
 说明：
 
@@ -1096,7 +1096,7 @@ class LoyoutViewModel : MvcViewModelBase
 
 ### 4.2 项目结构
 
-![](https://img1.dotnet9.com/2021/11/0905.png)
+![](2021/11/0905.png)
 
 主要有三部分组成：`Controller`、`View`、`ViewModel`
 
@@ -1327,7 +1327,7 @@ class LoyoutController : Controller
 
 如下,其中红色部分对应 Controller 里面的要跳转的 Route
 
-![](https://img1.dotnet9.com/2021/11/0906.png)
+![](2021/11/0906.png)
 
 如：选择了红色部分的 Button，首先会调用`Button()`方法，跳转到当前 Controller 对应的 View 文件加下的`Button`Control.xaml 页面
 
@@ -1348,7 +1348,7 @@ public async Task<IActionResult> Button()
 
 #### 4.3.3 示例
 
-![](https://img1.dotnet9.com/2021/11/0907.gif)
+![](2021/11/0907.gif)
 
 #### 4.3.4 左侧的 Xaml 列表可以定义成如下形式
 
@@ -1643,7 +1643,7 @@ public abstract class ControllerBase : IController
 
 其中 View 在项目中的定义就是根据 Controller 中的方法对应，在 MVC 中要严格按照结构定义[View/Loyout]，好处是可以减少代码量，同时使格式统一代码整齐，结构如下：
 
-![](https://img1.dotnet9.com/2021/11/0908.png)
+![](2021/11/0908.png)
 
 其中红色 ButtonControl.xaml 即是 Controller 中 Button()方法要跳转的页面，其他页面同理
 
@@ -1651,11 +1651,11 @@ public abstract class ControllerBase : IController
 
 其中 LoyoutViewModel 即是 LoyoutController 和整个 View/Loyout 下所有页面对应的 ViewModel
 
-![](https://img1.dotnet9.com/2021/11/0909.png)
+![](2021/11/0909.png)
 
 ### 4.6 整体 MVC 结构实现的效果如下
 
-![](https://img1.dotnet9.com/2021/11/0910.gif)
+![](2021/11/0910.gif)
 
 以上就是 MVC 应用在 WPF 中的简要示例，具体内容和示例可从如下链接中下载代码查看
 
@@ -1683,17 +1683,17 @@ public abstract class ControllerBase : IController
 
 ### 5.3 整体概况
 
-![](https://img1.dotnet9.com/2021/11/0911.gif)
+![](2021/11/0911.gif)
 
 #### 5.3.1 登录页面
 
-![](https://img1.dotnet9.com/2021/11/0912.png)
+![](2021/11/0912.png)
 
 登录页面只需要继承 LoginWindowBase 基类，并且设置样式 Style="{StaticResource S.Window.Login.Default}"即可
 
 #### 5.3.2 主页面
 
-![](https://img1.dotnet9.com/2021/11/0913.png)
+![](2021/11/0913.png)
 
 主页面只需继承 LinkWindowBase 基类，并且设置样式 Style="{DynamicResource S.Window.Link.Default}"即可
 
@@ -1701,7 +1701,7 @@ public abstract class ControllerBase : IController
 
 #### 5.3.3 主题配置信息保存
 
-![](https://img1.dotnet9.com/2021/11/0914.jpg)
+![](2021/11/0914.jpg)
 
 主题配置信息已经封装在 ApplicationBase 中，会自动在退出时保存设置好的配置信息(如：主题颜色、字体大小等)
 
@@ -1709,15 +1709,15 @@ public abstract class ControllerBase : IController
 
 ### 5.4 主题设置
 
-![](https://img1.dotnet9.com/2021/11/0915.gif)
+![](2021/11/0915.gif)
 
 浅色主题示例如下：
 
-![](https://img1.dotnet9.com/2021/11/0916.png)
+![](2021/11/0916.png)
 
 深色主题示例如下图：
 
-![](https://img1.dotnet9.com/2021/11/0917.png)
+![](2021/11/0917.png)
 
 主题设置功能主要包括：
 
@@ -1743,7 +1743,7 @@ public abstract class ControllerBase : IController
 
 #### 5.5.1 数据表格
 
-![](https://img1.dotnet9.com/2021/11/0918.gif)
+![](2021/11/0918.gif)
 
 - a 兼容主题字体和主题设置，后面将要提到的所有控件均已应用主题设置，不做再说明
 - b 每页显示条数
@@ -1768,7 +1768,7 @@ public abstract class ControllerBase : IController
 
 #### 5.5.2 树形列表
 
-![](https://img1.dotnet9.com/2021/11/0919.gif)
+![](2021/11/0919.gif)
 
 - a 支持按类别筛选
 
@@ -1782,9 +1782,9 @@ public abstract class ControllerBase : IController
 
 #### 5.5.3 其他常用控件
 
-![](https://img1.dotnet9.com/2021/11/0920.gif)
+![](2021/11/0920.gif)
 
-![](https://img1.dotnet9.com/2021/11/0921.gif)
+![](2021/11/0921.gif)
 
 - a 对话框
 
@@ -1798,15 +1798,15 @@ public abstract class ControllerBase : IController
 
 目前有两种模式，分别是在窗口内显示和 Window 系统中显示，可以根据需求自定义显示方式，示例如下
 
-![](https://img1.dotnet9.com/2021/11/0922.png)
+![](2021/11/0922.png)
 
 - d 在线升级示例如下
 
-![](https://img1.dotnet9.com/2021/11/0923.png)
+![](2021/11/0923.png)
 
 - e 导航菜单示例如下
 
-![](https://img1.dotnet9.com/2021/11/0924.png)
+![](2021/11/0924.png)
 
 - f 其他功能包括
 
@@ -1822,7 +1822,7 @@ public abstract class ControllerBase : IController
 
 nuget 包添加如下图
 
-![](https://img1.dotnet9.com/2021/11/0925.png)
+![](2021/11/0925.png)
 
 说明：此示例部分功能部分代码参考第三方框架，开源只应用于学习和参考，不做商用目的。
 

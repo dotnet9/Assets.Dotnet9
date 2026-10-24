@@ -39,7 +39,7 @@ ISBN:9787115322470
 
 看书时做笔记，比较重要的点使用有道云笔记记录：
 
-![学习笔记](https://img1.dotnet9.com/2022/10/note-of-go-web.png)
+![学习笔记](2022/10/note-of-go-web.png)
 
 当然更重要的是怀着目的看书，学Go是为了什么，站长是为了重构网站前台，正好本书案例是网络论坛，没有目的的学习是没有效果的，共勉。
 
@@ -47,7 +47,7 @@ ISBN:9787115322470
 
 - https://go.p2hp.com/doc/
 
-![Go中文文档](https://img1.dotnet9.com/2022/10/chinese-document-of-go.png)
+![Go中文文档](2022/10/chinese-document-of-go.png)
 
 看这个网址也是同样的建议，别只是看，动手做。
 
@@ -67,7 +67,7 @@ ISBN:9787115322470
 
 如若百度网盘链接失效，可联系站长更新，也可在QQ群群文件下载，QQ群号：771992300
 
-![Dotnet9技术交流QQ群](https://img1.dotnet9.com/site/qqgoup1.png)
+![Dotnet9技术交流QQ群](site/qqgoup1.png)
 
 **各大在线商城**
 

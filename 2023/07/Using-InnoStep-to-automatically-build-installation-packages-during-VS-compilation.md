@@ -8,7 +8,7 @@
 
 欢迎网友们投稿技术类文章，题材不限，没有稿费...
 
-![](https://img1.dotnet9.com/2022/11/0502.gif)
+![](2022/11/0502.gif)
 
 ## 1. 摘要
 
@@ -22,35 +22,35 @@ Tips：如果是想自动化构建，建议先从文章尾部开始看起，前�
 
 点击 [Inno Setup Downloads](https://jrsoftware.org/isdl.php) 下载：
 
-![](https://img1.dotnet9.com/2023/07/0901.png)
+![](2023/07/0901.png)
 
 如果有中文需求，则需下载中文包，下载地址：[Inno Setup Translations](https://jrsoftware.org/files/istrans/)
 
-![](https://img1.dotnet9.com/2023/07/0902.png)
+![](2023/07/0902.png)
 
 下载完手动放进 Inno Setup 安装目录下的 Languages 目录下即可
 
-![](https://img1.dotnet9.com/2023/07/0903.png)
+![](2023/07/0903.png)
 
 ### 2.2. 创建打包项目
 
-![](https://img1.dotnet9.com/2023/07/0904.png)
+![](2023/07/0904.png)
 
 ### 2.3. 填写应用基本信息
 
-![](https://img1.dotnet9.com/2023/07/0905.png)
+![](2023/07/0905.png)
 
 ### 2.4. 填写应用安装目录
 
-![](https://img1.dotnet9.com/2023/07/0906.png)
+![](2023/07/0906.png)
 
 ### 2.5. 在 VS 中右键项目属性，更改项目输出路径，有多个项目则都改为同一个
 
-![](https://img1.dotnet9.com/2023/07/0907.png)
+![](2023/07/0907.png)
 
 ### 2.6. 选择应用需要打包的文件
 
-![](https://img1.dotnet9.com/2023/07/0908.png)
+![](2023/07/0908.png)
 
 - Application main executable file: 应用程序主程序
 
@@ -58,43 +58,43 @@ Tips：如果是想自动化构建，建议先从文章尾部开始看起，前�
 
 ### 2.7. 应用文件类型关联
 
-![](https://img1.dotnet9.com/2023/07/0909.png)
+![](2023/07/0909.png)
 
 若你程序用不上这个功能一般不用勾选。
 
 ### 2.8. 应用程序快捷方式创建
 
-![](https://img1.dotnet9.com/2023/07/0910.png)
+![](2023/07/0910.png)
 
 ### 2.9. 应用协议许可文件
 
-![](https://img1.dotnet9.com/2023/07/0911.png)
+![](2023/07/0911.png)
 
 ### 2.10. 安装模式选择
 
-![](https://img1.dotnet9.com/2023/07/0912.png)
+![](2023/07/0912.png)
 
 ### 2.11. 安装包语言选择
 
-![](https://img1.dotnet9.com/2023/07/0913.png)
+![](2023/07/0913.png)
 
 官方默认是不提供中文语言包的，但官网上有第三方用户提供和维护了中文包，有需要的可以在 [Inno Setup Translations](https://jrsoftware.org/files/istrans/)下载，然后手动放进 Inno Setup 安装目录下的 Languages 下即可，链接前面也提到过。
 
 ### 2.12. 安装包设置
 
-![](https://img1.dotnet9.com/2023/07/0914.png)
+![](2023/07/0914.png)
 
 ### 2.13. 设置完了就会生成一个脚本
 
-![](https://img1.dotnet9.com/2023/07/0915.png)
+![](2023/07/0915.png)
 
 ### 2.14. 编译完成，则会在目录生成一个 exe 文件，双击就可以进行安装
 
-![](https://img1.dotnet9.com/2023/07/0916.png)
+![](2023/07/0916.png)
 
 ### 2.15. 安装效果
 
-![](https://img1.dotnet9.com/2023/07/0917.png)
+![](2023/07/0917.png)
 
 至此，一个简易的安装包制作完成。
 
@@ -159,11 +159,11 @@ Filename: "{app}\{#MyAppExeName}"; Description: "{cm:LaunchProgram,{#StringChang
 
 里面有些无用的可以删掉，减小体积，可以参考以下
 
-![](https://img1.dotnet9.com/2023/07/0918.png)
+![](2023/07/0918.png)
 
 ### 3.3. 设置项目主程序生成后事件
 
-![](https://img1.dotnet9.com/2023/07/0919.png)
+![](2023/07/0919.png)
 
 参考命令：
 
@@ -178,7 +178,7 @@ IF "$(ConfigurationName)" == "Release" (
 
 ## 4. 效果演示
 
-![](https://img1.dotnet9.com/2023/07/0920.gif)
+![](2023/07/0920.gif)
 
 每次需要发布新版本时，将解决方案切换为 Release 模式编译，F6 Build 一下，安装包就自动生成出来了，这里只是抛砖引玉给个思路，可以多阅读下官方文档实现出更为完美的安装包。
 

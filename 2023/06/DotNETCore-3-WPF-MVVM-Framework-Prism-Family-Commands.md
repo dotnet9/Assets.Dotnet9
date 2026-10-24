@@ -12,7 +12,7 @@
 
 我们在上一篇[.NET Core 3 WPF MVVM 框架 Prism 系列之数据绑定](https://dotnet9.com/2023/06/Data-Binding-for-the-Prism-Series-of-the-dotNETCore-3-WPF-MVVM-Framework)中知道 prism 实现数据绑定的方式，我们按照标准的写法来实现，我们分别创建 Views 文件夹和 ViewModels 文件夹，将 MainWindow 放在 Views 文件夹下，再在 ViewModels 文件夹下面创建 MainWindowViewModel 类，如下：
 
-![](https://img1.dotnet9.com/2023/06/0301.jpg)
+![](2023/06/0301.jpg)
 
 xaml 代码如下：
 
@@ -104,7 +104,7 @@ namespace CommandSample.ViewModels
 
 运行效果如下：
 
-![](https://img1.dotnet9.com/2023/06/0302.gif)
+![](2023/06/0302.gif)
 
 在代码中，我们通过 using Prism.Mvvm 引入继承 BindableBase，因为我们要用到属性改变通知方法 SetProperty，这在我们上一篇就知道了，再来我们 using Prism.Commands，我们所定义的 DelegateCommand 类型就在该命名空间下，我们知道，ICommand 接口是有三个函数成员的，事件 CanExecuteChanged，一个返回值 bool 的，且带一个参数为 object 的 CanExecute 方法，一个无返回值且带一个参数为 object 的 Execute 方法，很明显我们实现的 GetCurrentTimeCommand 命令就是一个不带参数的命令
 
@@ -173,7 +173,7 @@ private bool _isCanExcute;
 
 在创建带参的命令之前，我们可以来看看 DelegateCommand 的继承链和暴露出来的公共方法，详细的实现可以去看下源码
 
-![](https://img1.dotnet9.com/2023/06/0303.jpg)
+![](2023/06/0303.jpg)
 
 那么，其实已经很明显了，我们之前创建 DelegateCommand 不是泛型版本，当创建一个泛型版本的`DelegateCommand<T>`,那么 T 就是我们要传入的命令参数的类型，那么，我们现在可以把触发命令的 Button 本身作为命令参数传入
 
@@ -206,7 +206,7 @@ public DelegateCommand<object> GetCurrentTimeCommand =>
 
 我们来看看执行效果：
 
-![](https://img1.dotnet9.com/2023/06/0304.gif)
+![](2023/06/0304.gif)
 
 ## 三. 事件转命令
 
@@ -261,7 +261,7 @@ void ExecuteTextChangedCommand(object parameter)
 
 执行效果如下：
 
-![](https://img1.dotnet9.com/2023/06/0305.gif)
+![](2023/06/0305.gif)
 
 上面我们在 xaml 代码就是添加了对 TextBox 的 TextChanged 事件的 Blend EventTrigger 的侦听，每当触发该事件，InvokeCommandAction 就会去调用 TextChangedCommand 命令
 
@@ -301,7 +301,7 @@ void ExecuteTextChangedCommand(object parameter)
 
 实现效果：
 
-![](https://img1.dotnet9.com/2023/06/0306.gif)
+![](2023/06/0306.gif)
 
 还有一个很有趣的现象，假如上述 xaml 代码将 TriggerParameterPath 去掉，我们其实拿到的是 TextChangedEventArgs
 
@@ -363,7 +363,7 @@ private DelegateCommand _asyncCommand;
 
 直接看效果：
 
-![](https://img1.dotnet9.com/2023/06/0307.gif)
+![](2023/06/0307.gif)
 
 ## 五. 创建复合命令
 
@@ -441,7 +441,7 @@ namespace CompositeCommandsSample
 
 我们在之前的 CommandSample 解决方案下面的 Views 文件夹下新增两个 UserControl，分别用来显示月日和时分秒，在其 ViewModels 文件夹下面新增两个 UserControl 的 ViewModel，并且将之前的 MainWindow 也改为 UserControl，大致结构如下图：
 
-![](https://img1.dotnet9.com/2023/06/0308.jpg)
+![](2023/06/0308.jpg)
 
 关键部分代码：
 
@@ -617,6 +617,6 @@ namespace CompositeCommandsSample.ViewModels
 
 最后看看实际的效果如何：
 
-![](https://img1.dotnet9.com/2023/06/0309.gif)
+![](2023/06/0309.gif)
 
 最后，其中复合命令也验证我们一开始说的关系，复合命令依赖于子命令，但子命令不依赖于复合命令，因此，只有当三个子命令的都为可执行的时候才能执行复合命令，其中用到的 prism 模块化的知识，我们下一篇会仔细探讨

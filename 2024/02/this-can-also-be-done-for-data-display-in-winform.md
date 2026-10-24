@@ -14,9 +14,9 @@
 
 先来看看实现的效果：
 
-![数据展现效果](https://img1.dotnet9.com/2024/02/0501.gif)
+![数据展现效果](2024/02/0501.gif)
 
-![](https://img1.dotnet9.com/2024/02/0502.png)
+![](2024/02/0502.png)
 
 ## 3、具体实现 ✨
 
@@ -80,7 +80,7 @@ public interface IData
 
 `DataSource`表示表格的数据源，类型为`IEnumerable`：
 
-![](https://img1.dotnet9.com/2024/02/0503.png)
+![](2024/02/0503.png)
 
 这里`DataSource="@datas" `表示我将一个名为 `datas` 的数据源分配给 Table 组件的 `DataSource` 属性。
 
@@ -152,7 +152,7 @@ The bird is flying.
 
 `DataSource`也是一样，虽然官方文档上写的类型是`IEnumerable`，但是我们这里确是`WeatherData[]`这样也可以，也是因为`Array`实现了`IEnumerable`接口，如下所示：
 
-![](https://img1.dotnet9.com/2024/02/0504.png)
+![](2024/02/0504.png)
 
 `OnRowClick`表示行点击事件，类型为`EventCallback<RowData>`，本例中实际上没有用到。
 
@@ -174,11 +174,11 @@ Table<IData>? antTableRef;
 
 拆开来看，`Expression<T>` 是一个表示 lambda 表达式的树状结构的类，其中 `T` 是委托类型。详细学习，可以查看官方文档：
 
-![](https://img1.dotnet9.com/2024/02/0505.png)
+![](2024/02/0505.png)
 
 `Func<TItem, TProp>` 是一个泛型委托类型，表示一个带有一个输入参数和一个输出参数的方法，详细学习，也可以查看官方文档：
 
-![](https://img1.dotnet9.com/2024/02/0506.png)
+![](2024/02/0506.png)
 
 这里也通过一个简单的例子进行说明：
 
@@ -198,7 +198,7 @@ Expression<Func<Person, string>> getNameExpression = person => person.Name;
 
 理解了以上之后，我们看看这部分的代码：
 
-![](https://img1.dotnet9.com/2024/02/0507.png)
+![](2024/02/0507.png)
 
 代码如下：
 

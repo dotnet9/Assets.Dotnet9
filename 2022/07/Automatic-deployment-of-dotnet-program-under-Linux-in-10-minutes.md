@@ -11,7 +11,7 @@
 dotnet new web -o aspnetcoredemo
 ```
 
-![](https://img1.dotnet9.com/2022/07/0201.png)
+![](2022/07/0201.png)
 
 ## 服务器环境
 
@@ -29,17 +29,17 @@ sudo yum install aspnetcore-runtime-6.0
 
 安装完成：
 
-![](https://img1.dotnet9.com/2022/07/0202.png)
+![](2022/07/0202.png)
 
 ## 自动部署
 
 进入云效平台流水线
 
-![](https://img1.dotnet9.com/2022/07/0203.png)
+![](2022/07/0203.png)
 
 选择 .NET Core 流水线模板，创建
 
-![](https://img1.dotnet9.com/2022/07/0204.png)
+![](2022/07/0204.png)
 
 ### 配置流水线
 
@@ -49,13 +49,13 @@ sudo yum install aspnetcore-runtime-6.0
 
 授权一下，然后选择你的代码仓库，默认分支名。下面的工作目录随便写一个，比如：demo
 
-![](https://img1.dotnet9.com/2022/07/0205.png)
+![](2022/07/0205.png)
 
 - 第二步配置构建
 
-![](https://img1.dotnet9.com/2022/07/0206.png)
+![](2022/07/0206.png)
 
-![](https://img1.dotnet9.com/2022/07/0207.png)
+![](2022/07/0207.png)
 
 主要是执行命令，和打包路径 注意下，其他的选项默认就行
 
@@ -73,19 +73,19 @@ dotnet publish -c Release -o out
 
 主机组我这里选 阿里云 ecs （你也可以选其他非阿里云的主机，要装插件）
 
-![](https://img1.dotnet9.com/2022/07/0208.png)
+![](2022/07/0208.png)
 
 添加服务器连接，授权创建即可
 
-![](https://img1.dotnet9.com/2022/07/0209.png)
+![](2022/07/0209.png)
 
 选择主机，下一步，保存（我这里就一台机器，也可以多台机器部署）
 
-![](https://img1.dotnet9.com/2022/07/0210.png)
+![](2022/07/0210.png)
 
 部署脚本：
 
-![](https://img1.dotnet9.com/2022/07/0211.png)
+![](2022/07/0211.png)
 
 ```shell
 ## 创建目录
@@ -216,25 +216,25 @@ case "$ACTION" in
 esac
 ```
 
-![](https://img1.dotnet9.com/2022/07/0212.png)
+![](2022/07/0212.png)
 
 记得复制到输出目录：
 
-![](https://img1.dotnet9.com/2022/07/0213.png)
+![](2022/07/0213.png)
 
 增加一个 HealthChecks 接口用于部署脚本的健康检查：
 
-![](https://img1.dotnet9.com/2022/07/0214.png)
+![](2022/07/0214.png)
 
 ### 手动构建
 
 流水线 点击运行，如果前面配置没有问题的话，可以看到构建部署成功。
 
-![](https://img1.dotnet9.com/2022/07/0215.png)
+![](2022/07/0215.png)
 
 访问一下，ok：
 
-![](https://img1.dotnet9.com/2022/07/0216.png)
+![](2022/07/0216.png)
 
 ### 自动构建
 
@@ -242,23 +242,23 @@ esac
 
 流水线，选择触发配置，打开 webhook 触发：
 
-![](https://img1.dotnet9.com/2022/07/0217.png)
+![](2022/07/0217.png)
 
 将这个 webhook 地址复制，配置到你的 gitee 仓库中，保存：
 
-![](https://img1.dotnet9.com/2022/07/0218.png)
+![](2022/07/0218.png)
 
 接下来随便修改下代码，测试下：
 
-![](https://img1.dotnet9.com/2022/07/0219.png)
+![](2022/07/0219.png)
 
 提交代码后自动触发了流水线构建部署：
 
-![](https://img1.dotnet9.com/2022/07/0220.png)
+![](2022/07/0220.png)
 
 ok：
 
-![](https://img1.dotnet9.com/2022/07/0221.png)
+![](2022/07/0221.png)
 
 ## 结束
 
@@ -270,4 +270,4 @@ Happy coding ...
 
 如果本文对您有所帮助，您可以点击右下方的【推荐】按钮支持一下；文中如有不妥之处，还望指正，非常感谢！！！
 
-![](https://img1.dotnet9.com/2022/07/0222.png)
+![](2022/07/0222.png)

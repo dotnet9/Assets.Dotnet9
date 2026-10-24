@@ -10,7 +10,7 @@
 
 ## 什么是 EasyCaching
 
-![img](https://img1.dotnet9.com/2023/11/0101.png)
+![img](2023/11/0101.png)
 
 EasyCaching，这个名字就很大程度上解释了它是做什么的，easy 和 caching 放在一起，其最终的目的就是为了让我们大家在操作缓存的时候更加的方便。
 
@@ -394,7 +394,7 @@ EasyCachingEvict 有两个特殊的配置。
 
 下图是我司接入 Jaeger 的一个案例。
 
-![img](https://img1.dotnet9.com/2023/11/0102.png)
+![img](2023/11/0102.png)
 
 ### 二级缓存
 
@@ -404,7 +404,7 @@ EasyCachingEvict 有两个特殊的配置。
 
 在 EasyCaching 中，二级缓存的实现逻辑大致就是下面的这张图。
 
-![img](https://img1.dotnet9.com/2023/11/0103.png)
+![img](2023/11/0103.png)
 
 如果某个服务器上面的本地缓存被修改了，就会通过缓存总线去通知其他服务器把对应的本地缓存**移除掉**。
 
@@ -529,9 +529,9 @@ public class MultiRedisController : Controller
 
 前段时间开了一个[Issue](https://github.com/dotnetcore/EasyCaching/issues/108)用来记录正在使用 EasyCaching 的相关用户和案例，如果您正在使用 EasyCaching，并且不介意透露您的相关信息，可以在这个 Issue 上面回复。
 
-![img](https://img1.dotnet9.com/2023/11/0104.png)
+![img](2023/11/0104.png)
 
-![img](https://img1.dotnet9.com/2023/11/0105.jpg)
+![img](2023/11/0105.jpg)
 
 如果您认为这篇文章还不错或者有所收获，可以点击右下角的**【推荐】**按钮，因为你的支持是我继续写作，分享的最大动力！
 

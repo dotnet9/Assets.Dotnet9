@@ -340,7 +340,7 @@ public partial class MainWindow : Window
 
 运行结果如下：
 
-![](https://img1.dotnet9.com/2023/02/0501.gif)
+![](2023/02/0501.gif)
 
 上面效果即完成了提示框内容的验证，如果内容含有“垃圾”关键字，就换成好听的话（这是一个不错的网站哟）。
 

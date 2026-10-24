@@ -1,6 +1,6 @@
 TIOBE原文链接：https://www.tiobe.com/tiobe-index/
 
-![](https://img1.dotnet9.com/2026/01/0201.png)
+![](2026/01/0201.png)
 
 2026年1月的TIOBE编程语言指数总结：
 
@@ -14,14 +14,14 @@ C#是三年里第二次获此称号，排名年度涨幅最大；它跟进新趋
 
 年度涨幅：
 
-![](https://img1.dotnet9.com/2026/01/0202.png)
+![](2026/01/0202.png)
 
 语言历年排名：
 
-![](https://img1.dotnet9.com/2026/01/0203.png)
+![](2026/01/0203.png)
 
 年度语言一览：
 
-![](https://img1.dotnet9.com/2026/01/0204.png)
+![](2026/01/0204.png)
 
 TIOBE原文链接：https://www.tiobe.com/tiobe-index/

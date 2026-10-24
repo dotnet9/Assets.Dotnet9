@@ -32,7 +32,7 @@ h1 {
 }
 ```
 
-![](https://img1.dotnet9.com/2022/04/cover_42.png)
+![](2022/04/cover_42.png)
 
 ## 3. 修改 media defaults
 
@@ -60,7 +60,7 @@ p {
 }
 ```
 
-![](https://img1.dotnet9.com/2022/04/4201.png)
+![](2022/04/4201.png)
 
 ## 5. 使用 position 居中元素
 
@@ -81,7 +81,7 @@ li:not(:last-child)::after {
 }
 ```
 
-![](https://img1.dotnet9.com/2022/04/4202.png)
+![](2022/04/4202.png)
 
 ## 7. 平滑的滚动
 
@@ -91,13 +91,13 @@ html {
 }
 ```
 
-![](https://img1.dotnet9.com/2022/04/4203.gif)
+![](2022/04/4203.gif)
 
 ## 8. hyphens
 
 hyphens 告知浏览器在换行时如何使用连字符连接单词。可以完全阻止使用连字符，也可以控制浏览器什么时候使用，或者让浏览器决定什么时候使用。
 
-![](https://img1.dotnet9.com/2022/04/4204.gif)
+![](2022/04/4204.gif)
 
 ## 9. first letter
 
@@ -109,13 +109,13 @@ h1::first-letter {
 }
 ```
 
-![](https://img1.dotnet9.com/2022/04/4205.png)
+![](2022/04/4205.png)
 
 ## 10. accent-color
 
 `accent-color` 属性能够使用自定义颜色值重新着色浏览器默认样式提供的表单控件的强调颜色。
 
-![](https://img1.dotnet9.com/2022/04/4206.gif)
+![](2022/04/4206.gif)
 
 ## 11. Image filled text
 
@@ -127,7 +127,7 @@ h1 {
 }
 ```
 
-![](https://img1.dotnet9.com/2022/04/4206.png)
+![](2022/04/4206.png)
 
 ## 12. placeholder 伪元素
 
@@ -142,7 +142,7 @@ input::placeholder {
 }
 ```
 
-![](https://img1.dotnet9.com/2022/04/4207.png)
+![](2022/04/4207.png)
 
 ## 13. colors 动画
 
@@ -163,7 +163,7 @@ button {
 }
 ```
 
-![](https://img1.dotnet9.com/2022/04/4208.gif)
+![](2022/04/4208.gif)
 
 ## 14. 使用 margin 居中
 
@@ -187,7 +187,7 @@ h1 {
 }
 ```
 
-![](https://img1.dotnet9.com/2022/04/4209.gif)
+![](2022/04/4209.gif)
 
 ## 16. selection 伪类
 
@@ -199,7 +199,7 @@ h1 {
 }
 ```
 
-![](https://img1.dotnet9.com/2022/04/4210.gif)
+![](2022/04/4210.gif)
 
 ## 17. decimal leading zero
 
@@ -211,7 +211,7 @@ li {
 }
 ```
 
-![](https://img1.dotnet9.com/2022/04/4211.png)
+![](2022/04/4211.png)
 
 ## 18. 使用 Flex 居中
 
@@ -231,13 +231,13 @@ html {
 }
 ```
 
-![](https://img1.dotnet9.com/2022/04/4212.gif)
+![](2022/04/4212.gif)
 
 ## 20. caret-color
 
 `caret-color` 属性用来定义插入光标（caret）的颜色，这里说的插入光标，就是那个在网页的可编辑器区域内，用来指示用户的输入具体会插入到哪里的那个一闪一闪的形似竖杠 `|` 的东西。
 
-![](https://img1.dotnet9.com/2022/04/4213.gif)
+![](2022/04/4213.gif)
 
 ## 22. resize 属性
 
@@ -253,7 +253,7 @@ textarea {
 
 CSS 伪类 `:only-child` 匹配没有任何兄弟元素的元素。等效的选择器还可以写成 `:first-child:last-child` 或者 `:nth-child(1):nth-last-child(1)` ,当然,前者的权重会低一点.
 
-![](https://img1.dotnet9.com/2022/04/4214.png)
+![](2022/04/4214.png)
 
 ## 24. 使用 grid 居中元素
 
@@ -274,7 +274,7 @@ p {
 }
 ```
 
-![](https://img1.dotnet9.com/2022/04/4215.png)
+![](2022/04/4215.png)
 
 ## 26. list style type
 
@@ -286,4 +286,4 @@ li {
 }
 ```
 
-![](https://img1.dotnet9.com/2022/04/4216.png)
+![](2022/04/4216.png)

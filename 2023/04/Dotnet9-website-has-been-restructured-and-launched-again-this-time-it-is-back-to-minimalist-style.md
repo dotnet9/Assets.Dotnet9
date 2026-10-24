@@ -35,15 +35,15 @@ Dotnet9网站的重构，不仅提高了网站的性能和用户体验，还采�
 
 首页：
 
-![首页](https://img1.dotnet9.com/2023/04/0301.png)
+![首页](2023/04/0301.png)
 
 文章专辑：
 
-![文章专辑](https://img1.dotnet9.com/2023/04/0303.png)
+![文章专辑](2023/04/0303.png)
 
 文章详情：
 
-![文章详情](https://img1.dotnet9.com/2023/04/0302.png)
+![文章详情](2023/04/0302.png)
 
 ## 源码
 
@@ -53,15 +53,15 @@ Dotnet9网站的重构，不仅提高了网站的性能和用户体验，还采�
 
 解决方案结构如下：
 
-![解决方案结构](https://img1.dotnet9.com/2023/04/0304.png)
+![解决方案结构](2023/04/0304.png)
 
 前台主工程：Dotnet9.RazorPages
 
-![Dotnet9.RazorPages](https://img1.dotnet9.com/2023/04/0306.png)
+![Dotnet9.RazorPages](2023/04/0306.png)
 
 后端主工程：Dotnet9.Service
 
-![Dotnet9.Service](https://img1.dotnet9.com/2023/04/0305.png)
+![Dotnet9.Service](2023/04/0305.png)
 
 1. Dotnet9.Commons：工具库
 2. Dotnet9.Contracts：暂时放Dto类
@@ -79,4 +79,4 @@ Dotnet9网站的重构，不仅提高了网站的性能和用户体验，还采�
 - 微信技术交流群：添加微信（codewf）备注“入群”
 - QQ技术交流群：771992300。
 
-![](https://img1.dotnet9.com/site/knowledgeplanet.jpg)
+![](site/knowledgeplanet.jpg)

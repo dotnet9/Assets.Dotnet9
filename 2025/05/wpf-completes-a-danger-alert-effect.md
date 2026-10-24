@@ -10,7 +10,7 @@
 
 当我们写的程序发放出去后，用户是在进行一些危险操作，我们的软件应该给一些提醒效果，比如边框边缘有红色，类似与高德地图那样子的报警提醒效果
 
-![图片](https://img1.dotnet9.com/2025/05/0302.png)
+![图片](2025/05/0302.png)
 
 ## 实现逻辑
 
@@ -24,7 +24,7 @@
 
 我们对边框线颜色设置任意一款颜色，最好是纯色的，然后我们用Grid的ClipToBounds属性将Border多余的颜色裁剪掉，这个时候你会看到Border的边框线很粗，这不是理想的效果，这个时候我们可以逆向思维，将Border的Margin设置为负数，比如BorderThickness为10，那么Margin设置为-10，这个时候我们就可以看到我们想要的效果了
 
-![图片](https://img1.dotnet9.com/2025/05/0301.png)
+![图片](2025/05/0301.png)
 
 ```xml
 <Grid CacheMode="BitmapCache" ClipToBounds="True">    
@@ -66,7 +66,7 @@
 
 站长根据原文作者代码实现了Avalonia版本，效果如下：
 
-![](https://img1.dotnet9.com/2025/05/cover_03.png)
+![](2025/05/cover_03.png)
 
 代码如下：
 

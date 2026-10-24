@@ -249,12 +249,12 @@ public class TypeModel
 
 ## 最终效果
 
-![](https://img1.dotnet9.com/2022/11/0101.png)
+![](2022/11/0101.png)
 
-![](https://img1.dotnet9.com/2022/11/0102.png)
+![](2022/11/0102.png)
 
 ## 站长尝试以上代码
 
 站长尝试过上面代码，能正常运行，完整代码托管[GitHub](https://github.com/dotnet9/TerminalMACS.ManagerForWPF/blob/master/src/Demo/WpfAppForZoomInAndZoomOut/Views/TestComboBoxWithDataGridView.xaml)
 
-![](https://img1.dotnet9.com/2022/11/0103.gif)
+![](2022/11/0103.gif)

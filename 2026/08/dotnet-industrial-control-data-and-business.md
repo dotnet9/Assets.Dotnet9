@@ -236,7 +236,7 @@ Stateless适合单设备的状态管理。但有些工控场景的流程更复�
 
 把前面聊的串起来，一个典型的.NET工控上位机数据与业务层架构是这样的：
 
-![工控数据与业务层架构](https://img1.dotnet9.com/2026/08/dotnet-industrial-control-data-business-architecture.png)
+![工控数据与业务层架构](2026/08/dotnet-industrial-control-data-business-architecture.png)
 
 最底层是数据访问层——EF Core管配置数据和业务数据的CRUD，Dapper管高频写入和复杂查询，InfluxDB管时序数据。三个各司其职，互不越界。
 

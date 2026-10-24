@@ -16,15 +16,15 @@
 
 使用 LINQPad 可以解决上面的问题。LINQPad 的软件包很小只有二十兆左右，启动速度很快。使用时只需输入想要执行的 C# 语句，并按下 F5 即可：
 
-![](https://img1.dotnet9.com/2024/12/0301.png)
+![](2024/12/0301.png)
 
 快捷键 F4 可以打开“查询属性”窗口，在这个窗口中，你可以引用所有在运行时需要的东西，包括：dll、配置文件、json和文本文件等，这些引用的文件将会被复制到输出目录。
 
-![](https://img1.dotnet9.com/2024/12/0302.png)
+![](2024/12/0302.png)
 
 同时，LINQPad 也支持直接将 NuGet 包引用到查询中：
 
-![](https://img1.dotnet9.com/2024/12/0303.png)
+![](2024/12/0303.png)
 
 也可以将查询保存为一个扩展名为 .linq 的文件，以便复用代码。
 
@@ -49,19 +49,19 @@ LINQPad 会根据我们键入的代码自动选择正确的查询类型，大部
 
 使用 `Console.WriteLine` 等方法输出的控制台内容会直接在 Result 标签页显示：
 
-![](https://img1.dotnet9.com/2024/12/0304.png)
+![](2024/12/0304.png)
 
 LINQPad 内置了名为 `Dump` 的扩展方法用于将对象的值展示出来。该方法对 Object 类型进行了扩展，并提供了多个重载，让我们可以对展示结果进行标记：
 
-![](https://img1.dotnet9.com/2024/12/0305.png)
+![](2024/12/0305.png)
 
 除了简单类型，`Dump` 方法对复杂类型的支持也值得称赞。我们完全可以仅依赖 `Dump` 方法就能了解到某个对象的全部取值：
 
-![](https://img1.dotnet9.com/2024/12/0306.png)
+![](2024/12/0306.png)
 
 甚至可以直接将一个 WinForm 或 WPF 控件 `Dump` 出来，且支持交互：
 
-![](https://img1.dotnet9.com/2024/12/0307.png)
+![](2024/12/0307.png)
 
 查询结果也可以进行导出，目前支持：Word、Excel 和 HTML 三种格式。
 
@@ -71,31 +71,31 @@ LINQPad 内置了名为 `Dump` 的扩展方法用于将对象的值展示出来�
 
 LINQPad 可以通过 Entity Framework 或者 Entity framework Core 及对应的数据库驱动链接至数据库，比如常见的 SQL Server , MySQL , Oracle 甚至 SQLite 。可以通过程序右上角的“Add connection”完成链接工作：
 
-![](https://img1.dotnet9.com/2024/12/0308.png)
+![](2024/12/0308.png)
 
 在配置好数据库链接后，我们就可以选定这个链接，编写 C# 代码来访问数据库：
 
-![](https://img1.dotnet9.com/2024/12/0309.png)
+![](2024/12/0309.png)
 
 除了可以通过执行 `Dump` 方法看到运行结果以外，也可以切换至 `SQL` 标签页查看执行的 SQL 语句：
 
-![](https://img1.dotnet9.com/2024/12/0310.png)
+![](2024/12/0310.png)
 
 如果需要直接在 LINQPad 中执行 SQL 语句，只需将语言（Language）设置为 SQL 即可：
 
-![](https://img1.dotnet9.com/2024/12/0311.png)
+![](2024/12/0311.png)
 
 ## 图表支持
 
 除了将结果集以表格的形式呈现，LINQPad 也支持直接根据结果集生成统计图。柱状图、折线图、饼状图等均不再话下，且无需很多的额外代码：
 
-![](https://img1.dotnet9.com/2024/12/0312.png)
+![](2024/12/0312.png)
 
 ## LINQPad 的 Visual Studio 扩展 LINQBridgeVs 
 
 LINQBridgeVs 把 LINQPad 强大的 Dump 能力链接到了 Visual Studio 上，支持 2012 到 2019 版本：
 
-![](https://img1.dotnet9.com/2024/12/0313.gif)
+![](2024/12/0313.gif)
 
 ## 了解更多
 
@@ -103,7 +103,7 @@ LINQBridgeVs 把 LINQPad 强大的 Dump 能力链接到了 Visual Studio 上，�
 
 LINQPad 本身也携带了大量的示例代码，切换左下角的选项卡到 “ Samples ”标签即可看到：
 
-![](https://img1.dotnet9.com/2024/12/0314.png)
+![](2024/12/0314.png)
 
 ## 总结
 

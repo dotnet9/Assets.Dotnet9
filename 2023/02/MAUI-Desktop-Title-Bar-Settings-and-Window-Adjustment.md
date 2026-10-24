@@ -16,7 +16,7 @@
 
 maui 自带的 windows 下的窗口是这样的(完全不在我审美上)：
 
-![](https://img1.dotnet9.com/2023/02/0301.png)
+![](2023/02/0301.png)
 
 ## 解决方法
 
@@ -75,7 +75,7 @@ builder.UseMauiApp<App>()
 
 效果图如下, 完美去掉了:
 
-![](https://img1.dotnet9.com/2023/02/0302.png)
+![](2023/02/0302.png)
 
 2. 直接在 MainPage 里写 Loaded 方法，这也是一开始我用的方法，代码如下:
 

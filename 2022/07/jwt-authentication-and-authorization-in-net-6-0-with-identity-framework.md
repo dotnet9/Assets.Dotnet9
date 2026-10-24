@@ -32,11 +32,11 @@ xxxx.yyyy.zzzz
 
 我们需要 `Visual Studio 2022` 来创建 `.NET 6.0` 应用程序。我们可以从 `Visual Studio 2022` 中选择 `ASP.NET Core Web API` 模板。
 
-![](https://img1.dotnet9.com/2022/07/2201.png)
+![](2022/07/2201.png)
 
 我们可以为我们的项目起一个合适的名称并选择 `.NET 6.0` 框架。
 
-![](https://img1.dotnet9.com/2022/07/2202.png)
+![](2022/07/2202.png)
 
 我们的新项目将在随后创建。
 
@@ -399,17 +399,17 @@ app.Run();
 
 _add-migration Initial_
 
-![](https://img1.dotnet9.com/2022/07/2203.png)
+![](2022/07/2203.png)
 
 使用以下命令创建数据库和表：
 
 _update-database_
 
-![](https://img1.dotnet9.com/2022/07/2204.png)
+![](2022/07/2204.png)
 
 如果您使用 `SQL Server 对象资源管理器`检查数据库，您可以看到在数据库内部创建了以下数据库表：
 
-![](https://img1.dotnet9.com/2022/07/2205.png)
+![](2022/07/2205.png)
 
 在数据库迁移过程中，为 `User`、`Role` 和 `Claims` 创建了 7 张表。这是用于 `Identity`框架。
 
@@ -419,59 +419,59 @@ _update-database_
 
 我们可以在 `WeatherForecast` 控制器中添加 `Authorize` 属性。
 
-![](https://img1.dotnet9.com/2022/07/2206.png)
+![](2022/07/2206.png)
 
 我们可以运行应用程序并尝试从 `Postman` 工具访问`WeatherForecastController`中的 `get` 方法。
 
-![](https://img1.dotnet9.com/2022/07/2207.png)
+![](2022/07/2207.png)
 
 我们收到了 `401` 未经授权的错误。因为，我们已经为整个控制器添加了 `Authorize` 属性。我们必须通过请求头提供一个有效的`token`来访问这个控制器和控制器内的方法。
 
 我们可以在`AuthenticateController`中使用注册方法创建一个新用户。
 
-![](https://img1.dotnet9.com/2022/07/2208.png)
+![](2022/07/2208.png)
 
 我们以原始 `JSON` 格式提供了输入数据。
 
 我们可以使用上述用户凭据登录并获取有效的 `JWT token`。
 
-![](https://img1.dotnet9.com/2022/07/2209.png)
+![](2022/07/2209.png)
 
 使用上述凭据成功登录后，我们收到了一个`token`。
 
 我们可以使用[https://jwt.io](https://jwt.io)站点 解码`token`并查看声明和其他信息。
 
-![](https://img1.dotnet9.com/2022/07/2210.png)
+![](2022/07/2210.png)
 
 我们可以在授权选项卡中将上述`token`值作为`Bearer token`传递，并再次调用`WeatherForecastController`的 `get` 方法。
 
-![](https://img1.dotnet9.com/2022/07/2211.png)
+![](2022/07/2211.png)
 
 这一次，我们成功地接收到了来自控制器的值。
 
 我们可以使用基于角色的授权来更改`WeatherForecastController`。
 
-![](https://img1.dotnet9.com/2022/07/2212.png)
+![](2022/07/2212.png)
 
 现在，只有具有管理员(Admin)角色的用户才能访问此控制器和方法。
 
 我们可以尝试在 `Postman` 工具中再次使用相同的`token`访问 WeatherForecastController。
 
-![](https://img1.dotnet9.com/2022/07/2213.png)
+![](2022/07/2213.png)
 
 我们现在收到了 `403` 拒绝错误而不是 `401`。即使我们传递了一个有效的`token`，我们也没有足够的权限来访问控制器。要访问此控制器，用户必须具有`Admin`角色权限。当前用户是普通用户，没有任何`Admin`角色权限。
 
 我们可以创建一个具有`Admin`角色权限的新用户。我们已经在`AuthenticateController`中有一个方法`register-admin`用于相同的目的。
 
-![](https://img1.dotnet9.com/2022/07/2214.png)
+![](2022/07/2214.png)
 
 我们可以使用这些新的用户凭据登录并获得一个新的`token`。如果您对`token`进行解码，您可以看到角色已添加到`token`中。
 
-![](https://img1.dotnet9.com/2022/07/2215.png)
+![](2022/07/2215.png)
 
 我们可以使用这个`token`而不是旧`token`来访问`WeatherForecastController`。
 
-![](https://img1.dotnet9.com/2022/07/2216.png)
+![](2022/07/2216.png)
 
 现在我们已经成功地从`WeatherForecastController`中获取了数据。
 

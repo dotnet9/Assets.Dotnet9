@@ -10,13 +10,13 @@
 
 先看一段功能巡览 GIF。
 
-![](https://img1.dotnet9.com/2026/05/codewf-toolbox-feature-tour.gif)
+![](2026/05/codewf-toolbox-feature-tour.gif)
 
 ## 首页：不再只是空白欢迎页
 
 新版首页是我这次重点调整的地方之一。以前它更像一个普通欢迎页，现在则更适合作为工具箱入口。
 
-![](https://img1.dotnet9.com/2026/05/codewf-toolbox-home-desert-zh-cn.png)
+![](2026/05/codewf-toolbox-home-desert-zh-cn.png)
 
 首页上方展示三个核心信息：
 
@@ -32,7 +32,7 @@
 
 转换工具是 CodeWF Toolbox 里最基础、也最常用的一类能力。
 
-![](https://img1.dotnet9.com/2026/05/codewf-toolbox-converter-desert-zh-cn.png)
+![](2026/05/codewf-toolbox-converter-desert-zh-cn.png)
 
 当前转换模块里包含这些独立页面和数据驱动工具：
 
@@ -53,7 +53,7 @@
 
 比如 Base64 编解码页面，输入文本后直接得到编码结果。
 
-![](https://img1.dotnet9.com/2026/05/codewf-toolbox-base64-desert-zh-cn.png)
+![](2026/05/codewf-toolbox-base64-desert-zh-cn.png)
 
 这类功能很小，但它们正是开发者一天里最容易反复打开网页搜索的东西。我把它们做成本地工具箱以后，优点很明显：响应快、离线可用、没有广告，也不需要把临时文本贴到外部站点。
 
@@ -61,7 +61,7 @@
 
 开发模块更偏“写代码过程中的辅助工具”。这些工具很多都是我自己日常会用到的，所以放进工具箱时优先级比较高。
 
-![](https://img1.dotnet9.com/2026/05/codewf-toolbox-json-format-desert-zh-cn.png)
+![](2026/05/codewf-toolbox-json-format-desert-zh-cn.png)
 
 现有开发类工具覆盖面很宽：
 
@@ -92,7 +92,7 @@
 
 安全模块里放的是开发中经常需要临时计算或生成的安全相关内容。
 
-![](https://img1.dotnet9.com/2026/05/codewf-toolbox-hash-desert-zh-cn.png)
+![](2026/05/codewf-toolbox-hash-desert-zh-cn.png)
 
 当前已有功能包括：
 
@@ -139,7 +139,7 @@ Web 模块主要面向前后端联调、接口排查和 Web 元数据处理。�
 
 媒体模块目前不是剪辑软件那类“大媒体工具”，而是偏开发者日常需要的小型生成工具。
 
-![](https://img1.dotnet9.com/2026/05/codewf-toolbox-qrcode-desert-zh-cn.png)
+![](2026/05/codewf-toolbox-qrcode-desert-zh-cn.png)
 
 现在已有：
 
@@ -199,7 +199,7 @@ CodeWF Toolbox 不是只做编码转换，它还把一些小计算和文本处�
 
 日志阅读器是我比较喜欢的一个模块方向。
 
-![](https://img1.dotnet9.com/2026/05/codewf-toolbox-logviewer-desert-zh-cn.png)
+![](2026/05/codewf-toolbox-logviewer-desert-zh-cn.png)
 
 它不是简单地把日志文件 `ReadAllText()` 后塞进文本框，而是按可见窗口渲染，面向大日志文件和实时 tail 场景设计。界面上能看到：
 
@@ -232,7 +232,7 @@ CodeWF Toolbox 不是只做编码转换，它还把一些小计算和文本处�
 
 主题切换效果可以看这个 GIF：
 
-![](https://img1.dotnet9.com/2026/05/codewf-toolbox-theme-language.gif)
+![](2026/05/codewf-toolbox-theme-language.gif)
 
 当前主题列表包括：
 

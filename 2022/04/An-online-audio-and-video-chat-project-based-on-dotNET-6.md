@@ -8,11 +8,11 @@
 
 仓库截图：
 
-![](https://img1.dotnet9.com/2022/04/0113.png)
+![](2022/04/0113.png)
 
 项目代码结构：
 
-![](https://img1.dotnet9.com/2022/04/0114.png)
+![](2022/04/0114.png)
 
 ## 二. 使用第三方依赖介绍
 
@@ -51,7 +51,7 @@
 
 修改`DimensionService.Common`命名空间下 `ClassHelper`类
 
-![](https://img1.dotnet9.com/2022/04/0101.png)
+![](2022/04/0101.png)
 
 请填写红框内付费服务内容，本程序使用`阿里的短信服务`和`腾讯的TRTC服务`，填写内容请见官方说明。
 
@@ -65,7 +65,7 @@
 Update-Database InitialCreate
 ```
 
-![](https://img1.dotnet9.com/2022/04/0102.png)
+![](2022/04/0102.png)
 
 该项目提供线上测试服务地址，[http://47.96.133.119:5000](http://47.96.133.119:5000) (**站长注：目前无法访问此地址**)
 
@@ -73,7 +73,7 @@ Update-Database InitialCreate
 
 客户端使用 WPF 开发，如下图：
 
-![](https://img1.dotnet9.com/2022/04/0103.png)
+![](2022/04/0103.png)
 
 红框内容需与服务端保持一致
 
@@ -89,25 +89,25 @@ Update-Database InitialCreate
 
 站长没有条件，录制一个登录动画（哈哈）：
 
-![](https://img1.dotnet9.com/2022/04/0115.gif)
+![](2022/04/0115.gif)
 
 下面是作者 readmd 和博客园的图片：
 
-![](https://img1.dotnet9.com/2022/04/0104.png)
+![](2022/04/0104.png)
 
-![](https://img1.dotnet9.com/2022/04/0105.png)
+![](2022/04/0105.png)
 
-![](https://img1.dotnet9.com/2022/04/0106.png)
+![](2022/04/0106.png)
 
-![](https://img1.dotnet9.com/2022/04/0107.png)
+![](2022/04/0107.png)
 
-![](https://img1.dotnet9.com/2022/04/0108.png)
+![](2022/04/0108.png)
 
-![](https://img1.dotnet9.com/2022/04/0109.png)
+![](2022/04/0109.png)
 
-![](https://img1.dotnet9.com/2022/04/0110.png)
+![](2022/04/0110.png)
 
-![](https://img1.dotnet9.com/2022/04/0111.png)
+![](2022/04/0111.png)
 
 ## 四. 功能演示
 
@@ -125,7 +125,7 @@ Update-Database InitialCreate
 
 所有用户登录信息我都放在程序包里啦，并且都添加了我作为好友。😄
 
-![](https://img1.dotnet9.com/2022/04/0112.png)
+![](2022/04/0112.png)
 
 ## 五. 程序包
 

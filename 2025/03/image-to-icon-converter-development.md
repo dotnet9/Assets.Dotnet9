@@ -138,7 +138,7 @@ public static class ImageHelper
 
 实现效果如下：
 
-![界面截图](https://img1.dotnet9.com/2025/03/0201.png)
+![界面截图](2025/03/0201.png)
 
 ### 2. 拖拽功能实现
 
@@ -186,7 +186,7 @@ public partial class ImageToIconView : UserControl
 
 通过以上代码，实现了将文件拖拽到文本框时自动获取文件路径的功能：
 
-![拖拽功能演示](https://img1.dotnet9.com/2025/03/0202.gif)
+![拖拽功能演示](2025/03/0202.gif)
 
 ## 四、视图模型实现
 
@@ -332,9 +332,9 @@ public class ImageToIconViewModel : ReactiveObject
 
 两种转换模式的效果如下：
 
-![多尺寸合并转换](https://img1.dotnet9.com/2025/03/0203.gif)
+![多尺寸合并转换](2025/03/0203.gif)
 
-![转换成多个尺寸](https://img1.dotnet9.com/2025/03/0204.gif)
+![转换成多个尺寸](2025/03/0204.gif)
 
 ## 五、数据模型设计
 
@@ -388,7 +388,7 @@ public class IconSizeItem(IconSize size) : ReactiveObject
 3. **临时文件存储**：转换后的文件会在服务器上临时保存，用户需要及时下载
 4. **简化界面**：针对网页使用体验优化，操作更加简洁
 
-![在线转换界面](https://img1.dotnet9.com/2025/03/0205.png)
+![在线转换界面](2025/03/0205.png)
 
 ### 2. 转换流程
 

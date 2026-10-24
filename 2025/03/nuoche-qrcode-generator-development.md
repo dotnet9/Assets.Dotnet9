@@ -24,8 +24,8 @@
 
  <table>
     <tr>
-        <td><img src="https://img1.dotnet9.com/2025/03/cover_04.png"/></td>
-        <td><img src="https://img1.dotnet9.com/2025/03/0404.jpg"/></td>
+        <td><img src="2025/03/cover_04.png"/></td>
+        <td><img src="2025/03/0404.jpg"/></td>
     </tr>
  </table>
 
@@ -34,9 +34,9 @@
 
  <table>
     <tr>
-        <td><img src="https://img1.dotnet9.com/2025/03/0404.jpg"/></td>
-        <td><img src="https://img1.dotnet9.com/2025/03/0405.jpg"/></td>
-        <td><img src="https://img1.dotnet9.com/2025/03/0406.jpg"/></td>
+        <td><img src="2025/03/0404.jpg"/></td>
+        <td><img src="2025/03/0405.jpg"/></td>
+        <td><img src="2025/03/0406.jpg"/></td>
     </tr>
  </table>
 
@@ -125,7 +125,7 @@ public static class QrCodeGenerator
 
 这种设计让最终生成的挪车二维码既美观又实用。
 
-![挪车二维码](https://img1.dotnet9.com/2025/03/cover_04.png)
+![挪车二维码](2025/03/cover_04.png)
 
 ## 三、离线桌面版实现
 
@@ -191,7 +191,7 @@ public static class QrCodeGenerator
 
 实现效果如下：
 
-![离线版界面截图](https://img1.dotnet9.com/2025/03/0401.png)
+![离线版界面截图](2025/03/0401.png)
 
 ### 2. 视图模型实现
 
@@ -379,7 +379,7 @@ public class NuoCheViewModel : ReactiveObject
 
 拖拽保存挪车二维码效果：
 
-![拖拽保存挪车二维码](https://img1.dotnet9.com/2025/03/0407.gif)
+![拖拽保存挪车二维码](2025/03/0407.gif)
 
 ## 四、在线网页版实现
 
@@ -389,11 +389,11 @@ public class NuoCheViewModel : ReactiveObject
 
 PC端创建挪车码：
 
-![在线PC端创建挪车码](https://img1.dotnet9.com/2025/03/0408.png)
+![在线PC端创建挪车码](2025/03/0408.png)
 
 手机端创建挪车码：
 
-![在线手机端创建挪车码](https://img1.dotnet9.com/2025/03/0402.png)
+![在线手机端创建挪车码](2025/03/0402.png)
 
 ### 1. 在线生成挪车码特点
 
@@ -503,7 +503,7 @@ PC端创建挪车码：
 
 前面截图扫码后显示详细信息页面：
 
-![扫码后显示截图](https://img1.dotnet9.com/2025/03/0403.png)
+![扫码后显示截图](2025/03/0403.png)
 
 ### 3. 在线版本核心JavaScript交互
 

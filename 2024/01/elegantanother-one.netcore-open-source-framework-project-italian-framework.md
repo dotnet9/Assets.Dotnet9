@@ -60,31 +60,31 @@ Yi.Admin : (https://gitee.com/ccnetcore/yi)
 
 以下是功能的截图效果：
 
-![](https://img1.dotnet9.com/2024/01/0302.png)
+![](2024/01/0302.png)
 
-![](https://img1.dotnet9.com/2024/01/0303.png)
+![](2024/01/0303.png)
 
-![](https://img1.dotnet9.com/2024/01/0304.png)
+![](2024/01/0304.png)
 
-![](https://img1.dotnet9.com/2024/01/0305.png)
+![](2024/01/0305.png)
 
-![](https://img1.dotnet9.com/2024/01/0306.png)
+![](2024/01/0306.png)
 
-![](https://img1.dotnet9.com/2024/01/0307.png)
+![](2024/01/0307.png)
 
-![](https://img1.dotnet9.com/2024/01/0308.png)
+![](2024/01/0308.png)
 
-![](https://img1.dotnet9.com/2024/01/0309.png)
+![](2024/01/0309.png)
 
-![](https://img1.dotnet9.com/2024/01/0310.png)
+![](2024/01/0310.png)
 
-![](https://img1.dotnet9.com/2024/01/0311.png)
+![](2024/01/0311.png)
 
-![](https://img1.dotnet9.com/2024/01/0312.png)
+![](2024/01/0312.png)
 
-![](https://img1.dotnet9.com/2024/01/0313.png)
+![](2024/01/0313.png)
 
-![](https://img1.dotnet9.com/2024/01/0314.png)
+![](2024/01/0314.png)
 
 本框架，不仅仅是 DDD 的入门者最佳选择之一，更是 Abp.vNext 的入门者最佳选择之一。学习 Sqlsugar、项目二开，不二之选！强烈推荐！
 

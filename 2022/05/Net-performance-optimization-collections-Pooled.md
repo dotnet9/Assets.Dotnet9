@@ -125,31 +125,31 @@ namespace Collections.Pooled
 
 在 Benchmark 中循环向集合添加 2048 个元素，.NET 原生的`List<T>`需要 110us(根据实际跑分结果，图中的毫秒应该是笔误)和 263KB 内存，而`PooledList<T>`只需要 36us 和 0KB 内存。
 
-![](https://img1.dotnet9.com/2022/05/5801.jpg)
+![](2022/05/5801.jpg)
 
 `PooledDictionary<TKey, TValue>`
 
 在 Benchmark 中循环向字典添加 10_0000 个元素，.NET 原生的`Dictionary<TKey, TValue>`需要 11ms 和 13MB 内存，而`PooledDictionary<TKey, TValue>`只需要 7ms 和 0MB 内存。
 
-![](https://img1.dotnet9.com/2022/05/5802.jpg)
+![](2022/05/5802.jpg)
 
 `PooledSet<T>`
 
 在 Benchmark 中循环向哈希集合添加 10_0000 个元素，.NET 原生的`HashSet<T>`需要 5348ms 和 2MB，而`PooledSet<T>`只需要 4723ms 和 0MB 内存。
 
-![](https://img1.dotnet9.com/2022/05/5803.jpg)
+![](2022/05/5803.jpg)
 
 `PooledStack<T>`
 
 在 Benchmark 中循环向栈添加 10_0000 个元素，.NET 原生的`PooledStack<T>`需要 1079ms 和 2MB，而`PooledStack<T>`只需要 633ms 和 0MB 内存。
 
-![](https://img1.dotnet9.com/2022/05/5804.jpg)
+![](2022/05/5804.jpg)
 
 `PooledQueue<T>`
 
 在 Benchmark 中循环向队列添加 10_0000 个元素，.NET 原生的`PooledQueue<T>`需要 681ms 和 1MB，而`PooledQueue<T>`只需要 408ms 和 0MB 内存。
 
-![](https://img1.dotnet9.com/2022/05/5805.jpg)
+![](2022/05/5805.jpg)
 
 ## 未手动释放场景
 
@@ -198,7 +198,7 @@ public int UsePooledWithOutUsing()
 
 Benchmark 结果如下：
 
-![](https://img1.dotnet9.com/2022/05/5806.png)
+![](2022/05/5806.png)
 
 可以从上面的 Benchmark 结果可以得出结论。
 
@@ -317,7 +317,7 @@ private void ReturnArray()
 
 另外作者使用了 Span 优化了`Add`、`Insert`等等 API，让它们有更好的随机访问性能；另外还加入了`TryXXX`系列 API，可以更方便的方式的使用它。比如`List<T>`类相比`PooledList<T>`就有多达 170 个修改。
 
-![](https://img1.dotnet9.com/2022/05/5807.png)
+![](2022/05/5807.png)
 
 ## 总结
 

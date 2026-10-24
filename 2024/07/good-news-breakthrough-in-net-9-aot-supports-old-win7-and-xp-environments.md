@@ -1,6 +1,6 @@
-![](https://img1.dotnet9.com/2024/07/0701.png)
+![](2024/07/0701.png)
 
-![](https://img1.dotnet9.com/2024/07/0709.png)
+![](2024/07/0709.png)
 
 ## 引言
 
@@ -34,13 +34,13 @@
 
 下图是网友编译的 Avalonia UI 跨平台项目在 Win 7 非 SP1 环境运行效果截图：
 
-![](https://img1.dotnet9.com/2024/07/0702.png)
+![](2024/07/0702.png)
 
 如上图，左侧是程序运行界面，右侧是操作系统版本。
 
-![](https://img1.dotnet9.com/2024/07/0705.png)
+![](2024/07/0705.png)
 
-![](https://img1.dotnet9.com/2024/07/0706.png)
+![](2024/07/0706.png)
 
 为了便于读者代码拷贝，参考配置贴出如下：
 
@@ -109,11 +109,11 @@ Win7及以上版本，可能AOT就能正常运行（不需要安装.NET运行时
 
 经测试，Winform 可以.NET 9 x86 AOT发布后运行，效果截图如下：
 
-![](https://img1.dotnet9.com/2024/07/0707.png)
+![](2024/07/0707.png)
 
 Winform 工程配置如下：
 
-![](https://img1.dotnet9.com/2024/07/0710.png)
+![](2024/07/0710.png)
 
 可拷贝配置如下：
 
@@ -171,23 +171,23 @@ internal static class Program
 
 目前测试可运行控制台程序：
 
-![](https://img1.dotnet9.com/2024/07/0703.png)
+![](2024/07/0703.png)
 
 网友得出结论：
 
-![](https://img1.dotnet9.com/2024/07/0711.png)
+![](2024/07/0711.png)
 
 XP 需要链接 YY-Thunks，参考链接：https://github.com/Chuyu-Team/YY-Thunks（前面有提及，Win7如果失败也可以添加该包引用尝试）
 
-![](https://img1.dotnet9.com/2024/07/0704.png)
+![](2024/07/0704.png)
 
 大家可关注 YY-Thunks 这个 ISSUE：https://github.com/Chuyu-Team/YY-Thunks/issues/66
 
-![](https://img1.dotnet9.com/2024/07/0708.png)
+![](2024/07/0708.png)
 
 控制台支持 XP 的工程配置如下：
 
-![](https://img1.dotnet9.com/2024/07/0712.jpg)
+![](2024/07/0712.jpg)
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -211,17 +211,17 @@ XP 需要链接 YY-Thunks，参考链接：https://github.com/Chuyu-Team/YY-Thun
 
 网友心得：
 
-![](https://img1.dotnet9.com/2024/07/0713.png)
+![](2024/07/0713.png)
 
 ## 有待加强的部分
 
 经测试Prism框架使用会报错：
 
-![](https://img1.dotnet9.com/2024/07/0714.png)
+![](2024/07/0714.png)
 
 使用HttpClient也会出错：
 
-![](https://img1.dotnet9.com/2024/07/0715.jpg)
+![](2024/07/0715.jpg)
 
 > **2024-08-02**
 >
@@ -267,4 +267,4 @@ XP 需要链接 YY-Thunks，参考链接：https://github.com/Chuyu-Team/YY-Thun
 
 或扫站长微信(`codewf`，备注`加群`)加入微信技术交流群：
 
-![](https://img1.dotnet9.com/site/wechatowner.jpg)
+![](site/wechatowner.jpg)

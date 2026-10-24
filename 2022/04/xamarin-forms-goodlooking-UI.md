@@ -20,7 +20,7 @@ _Would you like to see more goodlooking UI samples?. Do you know **[Snppts](http
 
 Todo App is a simple to do app developed with Xamarin and Firebase. The app allows you to create an account and login to create tasks and organize them into lists. You can see the tasks for the selected date in realtime mode, edit and delete them with swipe action, reorder them using drag and drop action and filter them by list from More screen. From Profile screen you can hide completed tasks on the main screen and see the total number of tasks, of completed tasks and lists that you created for your account. The app is available in both light and dark mode.
 
-<img src="https://img1.dotnet9.com/2022/04/images/xamarin-todoapp.png" Width="800" />
+<img src="2022/04/images/xamarin-todoapp.png" Width="800" />
 
 ### Platforms
 
@@ -51,7 +51,7 @@ Features:
 - Centered images on the Carousel.
 - Display the amount of trophies per game through using a Badge.
 
-<img src="https://img1.dotnet9.com/2022/04/images/gamingstore.gif" Width="200" />
+<img src="2022/04/images/gamingstore.gif" Width="200" />
 
 ### Platforms
 
@@ -72,7 +72,7 @@ Android, iOS.
 
 Cool transition animations with Shapes in Xamarin.Forms.
 
-<img src="https://img1.dotnet9.com/2022/04/images/shapeanimatedtransitions01.gif" Width="200" /> <img src="https://img1.dotnet9.com/2022/04/images/shapeanimatedtransitions02.gif" Width="200" />
+<img src="2022/04/images/shapeanimatedtransitions01.gif" Width="200" /> <img src="2022/04/images/shapeanimatedtransitions02.gif" Width="200" />
 
 ### Platforms
 
@@ -92,7 +92,7 @@ Android, iOS.
 
 A Xamarin.Forms UI Challenge
 
-<img src="https://img1.dotnet9.com/2022/04/images/fishing.webp" Width="600" />
+<img src="2022/04/images/fishing.webp" Width="600" />
 
 Original Design: https://dribbble.com/shots/15278108-Fisherman-s-Fishing-Mobile-Apps
 
@@ -116,7 +116,7 @@ Android, iOS.
 
 Clone of Facebook Login UI Design in Xamarin Forms
 
-<img src="https://img1.dotnet9.com/2022/04/images/fb-login-clone.png" Width="220" />
+<img src="2022/04/images/fb-login-clone.png" Width="220" />
 
 ### Platforms
 
@@ -135,7 +135,7 @@ Android, iOS.
 
 Replicating this [Dribbble](https://dribbble.com/shots/9519342-UVENTO-App-Event-app-Exploration) design in Xamarin.Forms.
 
-<img src="https://img1.dotnet9.com/2022/04/images/uvento.gif" Width="220" />
+<img src="2022/04/images/uvento.gif" Width="220" />
 
 ### Platforms
 
@@ -158,7 +158,7 @@ Android, iOS.
 
 Apple Watch launcher recreated with pure Xamarin.Forms.
 
-<img src="https://img1.dotnet9.com/2022/04/images/minilauncher.gif" Width="200" />
+<img src="2022/04/images/minilauncher.gif" Width="200" />
 
 ### Platforms
 
@@ -180,7 +180,7 @@ UI replicated in Xamarin Forms.
 
 ⚠ Design obtained from Dribble. -> https://dribbble.com/shots/14814593-Chirstmas-Shopping-App
 
-<img src="https://img1.dotnet9.com/2022/04/images/christmasshopping.png" Width="600" />
+<img src="2022/04/images/christmasshopping.png" Width="600" />
 
 ### Platforms
 
@@ -203,7 +203,7 @@ UI replicated in Xamarin Forms.
 
 ⚠ Design obtained from Dribble. -> https://dribbble.com/shots/14274577/attachments/5925600?mode=media
 
-<img src="https://img1.dotnet9.com/2022/04/images/billdetail.png" Width="600" />
+<img src="2022/04/images/billdetail.png" Width="600" />
 
 ### Platforms
 
@@ -227,7 +227,7 @@ Border Gradient Animation in Xamarin Forms.
 
 You can watch the video here 👉 https://youtu.be/bS0N6U-Ei78
 
-<img src="https://img1.dotnet9.com/2022/04/images/bordergradientanimation.gif" Width="600" />
+<img src="2022/04/images/bordergradientanimation.gif" Width="600" />
 
 ### Platforms
 
@@ -249,7 +249,7 @@ Building this beautiful Restaurant App in Xamarin Forms and spicing it up with s
 
 You can watch the video here 👉 https://youtu.be/6gb_iRj_BYU
 
-<img src="https://img1.dotnet9.com/2022/04/images/restaurantapp.gif" Width="600" />
+<img src="2022/04/images/restaurantapp.gif" Width="600" />
 
 ### Platforms
 
@@ -273,7 +273,7 @@ UI challenge in Xamarin.Forms. Original design from [Ghulam Rasool](https://drib
 
 https://youtu.be/Lq7-2PzsSpY
 
-<img src="https://img1.dotnet9.com/2022/04/images/cakesmobileapp.gif" Width="220" />
+<img src="2022/04/images/cakesmobileapp.gif" Width="220" />
 
 ### Platforms
 
@@ -294,7 +294,7 @@ Android, iOS.
 
 Open Source Xamarin.Forms application with the company lastest news, social networks, team members, etc.
 
-<img src="https://img1.dotnet9.com/2022/04/images/devsdna01.jpg" Width="220" /> <img src="https://img1.dotnet9.com/2022/04/images/devsdna02.jpg" Width="220" />
+<img src="2022/04/images/devsdna01.jpg" Width="220" /> <img src="2022/04/images/devsdna02.jpg" Width="220" />
 
 ### Platforms
 
@@ -321,7 +321,7 @@ The application has been developed with [**Xamarin Forms**](https://dotnet.micro
 
 Replicate a Sneaker UI App obtained from Dribble. You can check the design [here](https://dribbble.com/shots/13980919-Candy-Sneakers).
 
-<img src="https://img1.dotnet9.com/2022/04/images/sneakersui.png" Width="600" />
+<img src="2022/04/images/sneakersui.png" Width="600" />
 
 ### Platforms
 
@@ -344,7 +344,7 @@ Android, iOS.
 
 Replicate a Streaming UI App obtained from Dribble. You can check the design [here](https://dribbble.com/shots/7015497-Streaming-App/attachments/18404?mode=media).
 
-<img src="https://img1.dotnet9.com/2022/04/images/streamingui.jpg" Width="600" />
+<img src="2022/04/images/streamingui.jpg" Width="600" />
 
 ### Platforms
 
@@ -366,7 +366,7 @@ Android, iOS.
 
 Replicate a Real Estate UI obtained from Dribble. You can check the design [here](https://dribbble.com/shots/12997401-Real-Estate-app).
 
-<img src="https://img1.dotnet9.com/2022/04/images/realestateui.png" Width="600" />
+<img src="2022/04/images/realestateui.png" Width="600" />
 
 ### Platforms
 
@@ -388,7 +388,7 @@ Android, iOS.
 
 The "Raw Rows" is a sliding puzzle that consists of a frame of numbered square tiles in random order with one tile missing. The object of the puzzle is to place the tiles in order by making sliding moves that use the empty space.
 
-<img src="https://img1.dotnet9.com/2022/04/images/rawrows.gif" Width="240" />
+<img src="2022/04/images/rawrows.gif" Width="240" />
 
 Download:
 
@@ -417,7 +417,7 @@ Seemless transition is an essential part of user experience design and this proj
 
 You can watch the video here ➤ https://youtu.be/768kDDR-0BY
 
-<img src="https://img1.dotnet9.com/2022/04/images/menutransition.gif" Width="600" />
+<img src="2022/04/images/menutransition.gif" Width="600" />
 
 ### Platforms
 
@@ -439,7 +439,7 @@ Animations can add visual cues about what’s going on in your app and are espec
 
 You can watch the video here ➤ https://youtu.be/ModuAWkv5K8
 
-<img src="https://img1.dotnet9.com/2022/04/images/animatedtext.gif" Width="600" />
+<img src="2022/04/images/animatedtext.gif" Width="600" />
 
 ### Platforms
 
@@ -461,7 +461,7 @@ Gradients have positive influence in modern designs. Xamarin.Forms 4.8 introduce
 
 You can watch the video here ➤ https://youtu.be/ejDwwc1Iq1s
 
-<img src="https://img1.dotnet9.com/2022/04/images/animatedgradient.gif" Width="600" />
+<img src="2022/04/images/animatedgradient.gif" Width="600" />
 
 ### Platforms
 
@@ -482,7 +482,7 @@ Ever wondered how to replicate the cinema seats arrangements in Xamarin.Forms?
 
 You can watch the video here ➤ https://youtu.be/j_nVou7lNz0
 
-<img src="https://img1.dotnet9.com/2022/04/images/cinemaapp.gif" Width="600" />
+<img src="2022/04/images/cinemaapp.gif" Width="600" />
 
 ### Platforms
 
@@ -502,7 +502,7 @@ Android, iOS.
 
 App concept developed with Xamarin.Forms.
 
-<img src="https://img1.dotnet9.com/2022/04/images/furnitureapp.gif" Width="240" />
+<img src="2022/04/images/furnitureapp.gif" Width="240" />
 
 ### Platforms
 
@@ -527,7 +527,7 @@ The Clip property of controls in Xamarin.Forms allows you to change the shape of
 
 You can watch the video here ➤ https://youtu.be/pb-2bXWhuMo
 
-<img src="https://img1.dotnet9.com/2022/04/images/watchshop.gif" Width="600" />
+<img src="2022/04/images/watchshop.gif" Width="600" />
 
 ### Platforms
 
@@ -547,7 +547,7 @@ Android, iOS.
 
 Xamarin Forms Dark Store UI Design.
 
-<img src="https://img1.dotnet9.com/2022/04/images/darkstore.png" Width="600" />
+<img src="2022/04/images/darkstore.png" Width="600" />
 
 ### Platforms
 
@@ -569,7 +569,7 @@ Android, iOS.
 
 Xamarin.Forms App.
 
-<img src="https://img1.dotnet9.com/2022/04/images/delivery.gif" Width="240" />
+<img src="2022/04/images/delivery.gif" Width="240" />
 
 ### Platforms
 
@@ -592,7 +592,7 @@ Android, iOS.
 
 Xamarin.Forms App.
 
-<img src="https://img1.dotnet9.com/2022/04/images/kidzeegames.gif" Width="240" />
+<img src="2022/04/images/kidzeegames.gif" Width="240" />
 
 ### Platforms
 
@@ -614,7 +614,7 @@ Android, iOS.
 
 Xamarin.Forms App.
 
-<img src="https://img1.dotnet9.com/2022/04/images/artstore.gif" Width="220" />
+<img src="2022/04/images/artstore.gif" Width="220" />
 
 ### Platforms
 
@@ -637,7 +637,7 @@ Android, iOS.
 
 Xamarin.Forms App.
 
-<img src="https://img1.dotnet9.com/2022/04/images/liquors01.jpg" Width="220" /> <img src="https://img1.dotnet9.com/2022/04/images/liquors02.jpg" Width="220" />
+<img src="2022/04/images/liquors01.jpg" Width="220" /> <img src="2022/04/images/liquors02.jpg" Width="220" />
 
 ### Platforms
 
@@ -660,7 +660,7 @@ Android, iOS.
 
 Replicate a Calendar / Schedule UI obtained from Dribble. You can check the design [here](https://dribbble.com/shots/12082951-FODMAP/attachments/3714005?mode=media)!
 
-<img src="https://img1.dotnet9.com/2022/04/images/calendarui.png" Width="600" />
+<img src="2022/04/images/calendarui.png" Width="600" />
 
 ### Platforms
 
@@ -683,7 +683,7 @@ Making use of the Xamarin.Forms Shapes and Xamarin.Forms MediaElement to create 
 
 You can watch the video here ➤ https://youtu.be/X3ZND30zI_A
 
-<img src="https://img1.dotnet9.com/2022/04/images/loginpage.gif" Width="600" />
+<img src="2022/04/images/loginpage.gif" Width="600" />
 
 ### Platforms
 
@@ -705,7 +705,7 @@ Let's make use of the Xamarin.Forms Expander to create an animated expandable li
 
 You can watch the video here ➤ https://youtu.be/ndF5we5_Ijw
 
-<img src="https://img1.dotnet9.com/2022/04/images/eventtracker.gif" Width="600" />
+<img src="2022/04/images/eventtracker.gif" Width="600" />
 
 ### Platforms
 
@@ -725,7 +725,7 @@ Android, iOS.
 
 App concept developed with Xamarin.Forms. Design: https://www.uplabs.com/posts/ecommerce-app-ui-concept
 
-<img src="https://img1.dotnet9.com/2022/04/images/ecommerce-headphones.gif" Width="240" />
+<img src="2022/04/images/ecommerce-headphones.gif" Width="240" />
 
 ### Platforms
 
@@ -746,7 +746,7 @@ Android, iOS.
 
 A fancy UI sample for an app providing pancake recipes, based on: https://dribbble.com/shots/4476011-Cook-Book-App-Design.
 
-<img src="https://img1.dotnet9.com/2022/04/images/ibakepancakes.jpg" Width="600" />
+<img src="2022/04/images/ibakepancakes.jpg" Width="600" />
 
 ### Platforms
 
@@ -769,7 +769,7 @@ Creating a custom side menu in Xamarin.Forms using Swipe View.
 
 You can watch the video here ➤ https://www.youtube.com/watch?v=1Vs4T6pEi_
 
-<img src="https://img1.dotnet9.com/2022/04/images/swipemenu.gif" Width="600" />
+<img src="2022/04/images/swipemenu.gif" Width="600" />
 
 ### Platforms
 
@@ -789,7 +789,7 @@ Android, iOS.
 
 Replicate [Uplabs Nike App design](https://dribbble.com/shots/9009192-Uplabs-Nike-app-redesign-free-UI-kit) in Xamarin.Forms.
 
-<img src="https://img1.dotnet9.com/2022/04/images/xamnike.png" Width="240" />
+<img src="2022/04/images/xamnike.png" Width="240" />
 
 ### Platforms
 
@@ -812,7 +812,7 @@ Implement a Flip Animation in Xamarin.Forms.
 
 You can watch the video here ➤ https://youtu.be/VSNFLBGJEXs
 
-<img src="https://img1.dotnet9.com/2022/04/images/travelapp-flipview.png" Width="600" />
+<img src="2022/04/images/travelapp-flipview.png" Width="600" />
 
 ### Platforms
 
@@ -835,7 +835,7 @@ Creating an expandable list in Xamarin Forms use to be tricky but now with the n
 
 You can watch the video here ➤ https://youtu.be/rT3LwzSsMmo
 
-<img src="https://img1.dotnet9.com/2022/04/images/forms-expander.gif" Width="600" />
+<img src="2022/04/images/forms-expander.gif" Width="600" />
 
 ### Platforms
 
@@ -855,7 +855,7 @@ Android, iOS.
 
 Replicate a Flight UI obtained from Dribbble ([Gleb Kuznetsov](https://dribbble.com/glebich)✈) using Xamarin.Forms.
 
-<img src="https://img1.dotnet9.com/2022/04/images/flightuisample.gif" Width="600" />
+<img src="2022/04/images/flightuisample.gif" Width="600" />
 
 ### Platforms
 
@@ -876,7 +876,7 @@ Android, iOS.
 
 Implementation of a [coffee shopping UI](https://dribbble.com/shots/11246934-Product-Page-Ui-Exploration/attachments/2854822?mode=media) using Xamarin.Forms.
 
-<img src="https://img1.dotnet9.com/2022/04/images/coffeeffee.png" Width="600" />
+<img src="2022/04/images/coffeeffee.png" Width="600" />
 
 ### Platforms
 
@@ -899,7 +899,7 @@ Learn how to design a COMPLETE Video Player in Xamarin Forms.
 
 You can watch the video here ➤ https://youtu.be/mLJe5yxq_7o
 
-<img src="https://img1.dotnet9.com/2022/04/images/playvideoxamarinforms.jpg" Width="600" />
+<img src="2022/04/images/playvideoxamarinforms.jpg" Width="600" />
 
 ### Platforms
 
@@ -921,7 +921,7 @@ Learn how to design a COMPLETE Music Player in Xamarin Forms. In this video, we 
 
 You can watch the video here ➤ https://youtu.be/7plenjrcloM
 
-<img src="https://img1.dotnet9.com/2022/04/images/playaudioxamarinforms.png" Width="600" />
+<img src="2022/04/images/playaudioxamarinforms.png" Width="600" />
 
 ### Platforms
 
@@ -941,7 +941,7 @@ Android, iOS.
 
 Xamarin.Forms Wallet CreditCard.
 
-<img src="https://img1.dotnet9.com/2022/04/images/walletcreditcard01.jpg" Width="240" /> <img src="https://img1.dotnet9.com/2022/04/images/walletcreditcard02.jpg" Width="240" />
+<img src="2022/04/images/walletcreditcard01.jpg" Width="240" /> <img src="2022/04/images/walletcreditcard02.jpg" Width="240" />
 
 ### Platforms
 
@@ -965,7 +965,7 @@ Android, iOS.
 
 [Microsoft News](https://play.google.com/store/apps/details?id=com.microsoft.amp.apps.bingnews&hl=en) is built with Xamarin. I wondered… can I build the same 🤔? So I set out on this journey, I called it Nomadic.
 
-<img src="https://img1.dotnet9.com/2022/04/images/nomadic.gif" Width="240" />
+<img src="2022/04/images/nomadic.gif" Width="240" />
 
 ### Platforms
 
@@ -1013,7 +1013,7 @@ In this Xamarin Forms Tutorial we will be looking at creating Clock Animation in
 
 You can watch the video here ➤ https://youtu.be/JbpDyRfaOqM
 
-<img src="https://img1.dotnet9.com/2022/04/images/alarmapp.gif" Width="600" />
+<img src="2022/04/images/alarmapp.gif" Width="600" />
 
 ### Platforms
 
@@ -1038,7 +1038,7 @@ This is the source code of a video, where you will learn the process of creating
 
 You can watch the video here ➤ https://youtu.be/mbqzKf7HVcQ
 
-<img src="https://img1.dotnet9.com/2022/04/images/burguershopapp.png" Width="600" />
+<img src="2022/04/images/burguershopapp.png" Width="600" />
 
 ### Platforms
 
@@ -1060,7 +1060,7 @@ The concept of animation in Xamarin Forms will be explained by designing a Real-
 
 You can watch the video here ➤ https://youtu.be/WDw9R8seqMo
 
-<img src="https://img1.dotnet9.com/2022/04/images/propertyapp.gif" Width="600" />
+<img src="2022/04/images/propertyapp.gif" Width="600" />
 
 ### Platforms
 
@@ -1082,7 +1082,7 @@ Android, iOS.
 
 This is a sample Xamarin.Forms application demonstrating how to build a user interface for a chat app. Inspired by https://dribbble.com/shots/10446738-Direct-messaging-mobile-app-design.
 
-<img src="https://img1.dotnet9.com/2022/04/images/freechat.gif" Width="240" />
+<img src="2022/04/images/freechat.gif" Width="240" />
 
 ### Platforms
 
@@ -1106,7 +1106,7 @@ Android, iOS.
 
 Ecommerce design with Xamarin Forms. Design based on https://www.uistore.design/items/shopping-ui-kit-for-adobe-xd/.
 
-<img src="https://img1.dotnet9.com/2022/04/images/ecommercexf.gif" Width="240" />
+<img src="2022/04/images/ecommercexf.gif" Width="240" />
 
 ### Platforms
 
@@ -1126,7 +1126,7 @@ Android, iOS.
 
 Mbongo means Money translating into Portuguese. Developed with the intention of practice and increasing productivity creating screens with Xamarin.Forms.
 
-<img src="https://img1.dotnet9.com/2022/04/images/mbongouiapp.jpg" Width="600" />
+<img src="2022/04/images/mbongouiapp.jpg" Width="600" />
 
 ### Platforms
 
@@ -1148,7 +1148,7 @@ Android, iOS.
 
 Smart Home App UI by Amit kumar using Xamarin.Forms.NeoControls.
 
-<img src="https://img1.dotnet9.com/2022/04/images/neomorphismsmarthomeapp01.gif" Width="220" /> <img src="https://img1.dotnet9.com/2022/04/images/neomorphismsmarthomeapp02.gif" Width="220" />
+<img src="2022/04/images/neomorphismsmarthomeapp01.gif" Width="220" /> <img src="2022/04/images/neomorphismsmarthomeapp02.gif" Width="220" />
 
 ### Platforms
 
@@ -1167,7 +1167,7 @@ Android, iOS.
 
 Xamarin.Forms goodlooking UI sample using the new Expander Control. Based on [Shopping List design](https://dribbble.com/shots/2340386-Shopping-List) by Hila Peleg.
 
-<img src="https://img1.dotnet9.com/2022/04/images/shopinglist.gif" Width="600" />
+<img src="2022/04/images/shopinglist.gif" Width="600" />
 
 ### Platforms
 
@@ -1188,7 +1188,7 @@ Android, iOS.
 
 Developed with the aim of tracking Covid-19 cases with data from affected countries.
 
-<img src="https://img1.dotnet9.com/2022/04/images/covid19-altevir01.png" Width="220" /> <img src="https://img1.dotnet9.com/2022/04/images/covid19-altevir02.png" Width="220" />
+<img src="2022/04/images/covid19-altevir01.png" Width="220" /> <img src="2022/04/images/covid19-altevir02.png" Width="220" />
 
 ### Platforms
 
@@ -1214,7 +1214,7 @@ Android, iOS.
 
 Xamarin.Forms PhotoStock UI design.
 
-<img src="https://img1.dotnet9.com/2022/04/images/photostock.png" Width="600" />
+<img src="2022/04/images/photostock.png" Width="600" />
 
 ### Platforms
 
@@ -1236,7 +1236,7 @@ Android, iOS.
 
 Animal Crossing Turnip Tracking Mobile App.
 
-<img src="https://img1.dotnet9.com/2022/04/images/turniptracker.gif" Width="220" />
+<img src="2022/04/images/turniptracker.gif" Width="220" />
 
 ### Platforms
 
@@ -1258,7 +1258,7 @@ Android, iOS.
 
 Xamarin.Forms Covid19 Tracker App
 
-<img src="https://img1.dotnet9.com/2022/04/images/covid1901.jpg" Width="220" /> <img src="https://img1.dotnet9.com/2022/04/images/covid1902.jpg" Width="220" />
+<img src="2022/04/images/covid1901.jpg" Width="220" /> <img src="2022/04/images/covid1902.jpg" Width="220" />
 
 ### Platforms
 
@@ -1282,7 +1282,7 @@ Android, iOS.
 
 Xamarin.Forms [fresh e-commerce](https://dribbble.com/shots/6861763-Fresh-e-commerce-App) app.
 
-<img src="https://img1.dotnet9.com/2022/04/images/freshapp.gif" Width="220" />
+<img src="2022/04/images/freshapp.gif" Width="220" />
 
 ### Platforms
 
@@ -1304,7 +1304,7 @@ Android, iOS.
 
 Replicating Exotic Fruits App in Xamarin Forms.
 
-<img src="https://img1.dotnet9.com/2022/04/images/exotic-fruits.png" Width="600" />
+<img src="2022/04/images/exotic-fruits.png" Width="600" />
 
 ### Platforms
 
@@ -1326,7 +1326,7 @@ Android, iOS.
 
 Xamarin.Forms Profile Page.
 
-<img src="https://img1.dotnet9.com/2022/04/images/xamarinformsprofilepage.gif" Width="220" />
+<img src="2022/04/images/xamarinformsprofilepage.gif" Width="220" />
 
 ### Platforms
 
@@ -1347,7 +1347,7 @@ Android, iOS.
 
 Xamarin.Forms travel app UI.
 
-<img src="https://img1.dotnet9.com/2022/04/images/placesapp.gif" Width="220" />
+<img src="2022/04/images/placesapp.gif" Width="220" />
 
 ### Platforms
 
@@ -1369,7 +1369,7 @@ Android, iOS.
 
 Modern UI using Xamarin Forms.
 
-<img src="https://img1.dotnet9.com/2022/04/images/moderndesignxf.jpeg" Width="220" />
+<img src="2022/04/images/moderndesignxf.jpeg" Width="220" />
 
 ### Platforms
 
@@ -1390,7 +1390,7 @@ Android, iOS.
 
 Xamarin.Forms Fashion Store UI.
 
-<img src="https://img1.dotnet9.com/2022/04/images/fashionstore.gif" Width="220" />
+<img src="2022/04/images/fashionstore.gif" Width="220" />
 
 ### Platforms
 
@@ -1413,7 +1413,7 @@ Android, iOS.
 
 UI exercise using C# UI, Xplat Images and Fonts, and LiveSharp.
 
-<img src="https://img1.dotnet9.com/2022/04/images/yogaui.png" Width="220" />
+<img src="2022/04/images/yogaui.png" Width="220" />
 
 ### Platforms
 
@@ -1434,7 +1434,7 @@ Android, iOS and UWP.
 
 Xamarin.Forms goodlooking UI sample.
 
-<img src="https://img1.dotnet9.com/2022/04/images/chased-home-ui-design.png" Width="220" />
+<img src="2022/04/images/chased-home-ui-design.png" Width="220" />
 
 ### Platforms
 
@@ -1454,7 +1454,7 @@ Android, iOS.
 
 Xamarin.Forms goodlooking UI sample using SwipeView to create a custom Pull to Refresh effect.
 
-<img src="https://img1.dotnet9.com/2022/04/images/swipe-lottie.gif" Width="220" />
+<img src="2022/04/images/swipe-lottie.gif" Width="220" />
 
 ### Platforms
 
@@ -1476,7 +1476,7 @@ Android, iOS.
 UI replicated in Xamarin Forms.
 ⚠ Design obteined from Dribble. -> https://dribbble.com/shots/9061096-Travel-App
 
-<img src="https://img1.dotnet9.com/2022/04/images/travelui.png" Width="600" />
+<img src="2022/04/images/travelui.png" Width="600" />
 
 ### Platforms
 
@@ -1497,7 +1497,7 @@ Android, iOS.
 
 Xamarin.Forms app demonstrating the dual-screen device capability for neo and duo devices .
 
-<img src="https://img1.dotnet9.com/2022/04/images/xamarintv.png" Width="600" />
+<img src="2022/04/images/xamarintv.png" Width="600" />
 
 ### Platforms
 
@@ -1519,7 +1519,7 @@ Android, UWP.
 
 UI replicated in Xamarin Forms. Design obteined from Dribble: https://dribbble.com/shots/9033707-Daily-UI-006-User-Profile
 
-<img src="https://img1.dotnet9.com/2022/04/images/userprofileprincipal.png" Width="600" />
+<img src="2022/04/images/userprofileprincipal.png" Width="600" />
 
 ### Platforms
 
@@ -1540,7 +1540,7 @@ Android, iOS.
 
 Xamarin.Forms good looking UI sample for Surface Duo.
 
-<img src="https://img1.dotnet9.com/2022/04/images/fooddeliveryduoapp.gif" Width="600" />
+<img src="2022/04/images/fooddeliveryduoapp.gif" Width="600" />
 
 ### Platforms
 
@@ -1562,7 +1562,7 @@ Android.
 
 A Xamarin.Forms sample based on the [dribble designs by Rajat](https://dribbble.com/shots/8970618-Food-App).
 
-<img src="https://img1.dotnet9.com/2022/04/images/replicatingfoodimage.png" Width="600" />
+<img src="2022/04/images/replicatingfoodimage.png" Width="600" />
 
 ### Platforms
 
@@ -1584,7 +1584,7 @@ Android, iOS.
 
 Xamarin.Forms Call Screen UI.
 
-<img src="https://img1.dotnet9.com/2022/04/images/xamcall.gif" Width="240" />
+<img src="2022/04/images/xamcall.gif" Width="240" />
 
 ### Platforms
 
@@ -1604,7 +1604,7 @@ Android, iOS.
 
 Xamarin.Forms Login Screen UI.
 
-<img src="https://img1.dotnet9.com/2022/04/images/xamuilogin.png" Width="600" />
+<img src="2022/04/images/xamuilogin.png" Width="600" />
 
 ### Platforms
 
@@ -1626,7 +1626,7 @@ Android, iOS.
 
 A Xamarin.Forms UI Challenge based on the fantastic [dribble designs by Tamo Miqeladze](https://www.behance.net/tamo13).
 
-<img src="https://img1.dotnet9.com/2022/04/images/cruisemobileui-list.png" Width="220" /> <img src="https://img1.dotnet9.com/2022/04/images/cruisemobileui-detail.png" Width="220" />
+<img src="2022/04/images/cruisemobileui-list.png" Width="220" /> <img src="2022/04/images/cruisemobileui-detail.png" Width="220" />
 
 ### Features:
 
@@ -1643,7 +1643,7 @@ A Xamarin.Forms UI Challenge based on the fantastic [dribble designs by Tamo Miq
 
 A Xamarin.Forms UI Challenge based on the fantastic [dribble designs by UXIS](https://dribbble.com/shots/7126187-IKEA-Store-App).
 
-<img src="https://img1.dotnet9.com/2022/04/images/furniturestore.png" Width="600" />
+<img src="2022/04/images/furniturestore.png" Width="600" />
 
 ### Features:
 
@@ -1659,7 +1659,7 @@ A Xamarin.Forms UI Challenge based on the fantastic [dribble designs by UXIS](ht
 
 Super nice UI inspired by [Mountain Trip Design](https://dribbble.com/shots/8142497-Mountain-trip-time-iOS-app-design).
 
-<img src="https://img1.dotnet9.com/2022/04/images/mountaintripsample.gif" Width="800" />
+<img src="2022/04/images/mountaintripsample.gif" Width="800" />
 
 ### Platforms
 
@@ -1681,7 +1681,7 @@ Android, iOS.
 
 Xamarin.Forms goodlooking UI sample using the new SwipeView.
 
-<img src="https://img1.dotnet9.com/2022/04/images/favfighters.gif" Width="260" />
+<img src="2022/04/images/favfighters.gif" Width="260" />
 
 ### Platforms
 
@@ -1701,7 +1701,7 @@ Android, iOS.
 
 Replicate the Facebook profile page with Xamarin.Forms.
 
-<img src="https://img1.dotnet9.com/2022/04/images/facebookuisample02.png" Width="220" /> <img src="https://img1.dotnet9.com/2022/04/images/facebookuisample01.png" Width="220" />
+<img src="2022/04/images/facebookuisample02.png" Width="220" /> <img src="2022/04/images/facebookuisample01.png" Width="220" />
 
 ### Platforms
 
@@ -1724,7 +1724,7 @@ Android, iOS.
 This is a Xamarin.Forms sample app showcasing the use of Material Design and CollectionView within the new Shell container.
 Demo presented at Microsoft Ignite 2019.
 
-<img src="https://img1.dotnet9.com/2022/04/images/book_tabs_droid.png" Width="220" /> <img src="https://img1.dotnet9.com/2022/04/images/myflights_tabs_droid.png" Width="220" /> <img src="https://img1.dotnet9.com/2022/04/images/results_tabs_grid_droid.png" Width="220" />
+<img src="2022/04/images/book_tabs_droid.png" Width="220" /> <img src="2022/04/images/myflights_tabs_droid.png" Width="220" /> <img src="2022/04/images/results_tabs_grid_droid.png" Width="220" />
 
 ### Platforms
 
@@ -1745,7 +1745,7 @@ Android, iOS and UWP.
 
 A Xamarin.Forms UI Challenge.
 
-<img src="https://img1.dotnet9.com/2022/04/images/icelandmoss.png" Width="250" />
+<img src="2022/04/images/icelandmoss.png" Width="250" />
 
 ### Platforms
 
@@ -1764,7 +1764,7 @@ Android, iOS.
 
 This UI Challenge is based on the fantastic dribble designs by [Antra Sharma](https://dribbble.com/antra03).
 
-![CreditCardCheckout](https://img1.dotnet9.com/2022/04/images/creditcardcheckout.png)
+![CreditCardCheckout](2022/04/images/creditcardcheckout.png)
 
 ### Platforms
 
@@ -1785,7 +1785,7 @@ Android, iOS.
 
 Xamarin.Forms goodlooking UI sample using the new CarouselView (Parallax).
 
-<img src="https://img1.dotnet9.com/2022/04/images/drinkgalleryapp.gif" Width="250" />
+<img src="2022/04/images/drinkgalleryapp.gif" Width="250" />
 
 ### Platforms
 
@@ -1807,7 +1807,7 @@ Android, iOS.
 
 A very pretty weather application built with Xamarin.Forms.
 
-![Pretty Weather](https://img1.dotnet9.com/2022/04/images/prettyweather.gif)
+![Pretty Weather](2022/04/images/prettyweather.gif)
 
 ### Platforms
 
@@ -1827,7 +1827,7 @@ Android, iOS.
 
 Xamarin.Forms goodlooking UI sample using the new **CarouselView**.
 
-<img src="https://img1.dotnet9.com/2022/04/images/travellingapp.gif" Width="250" />
+<img src="2022/04/images/travellingapp.gif" Width="250" />
 
 ### Platforms
 
@@ -1851,7 +1851,7 @@ Android, iOS.
 
 Beautiful WeatherApp UI in Xamarin.Forms.
 
-<img src="https://img1.dotnet9.com/2022/04/images/weatherapp.png" Width="250" />
+<img src="2022/04/images/weatherapp.png" Width="250" />
 
 ### Platforms
 
@@ -1874,7 +1874,7 @@ This UI Challenge is based on the fantastic dribble designs by Rick Waalders.
 
 https://dribbble.com/shots/1551934-Unzone-Details-popup-animation
 
-![UnZone](https://img1.dotnet9.com/2022/04/images/unzone.gif)
+![UnZone](2022/04/images/unzone.gif)
 
 ### Platforms
 
@@ -1894,7 +1894,7 @@ Android, iOS.
 
 This UI Challenge is based on the fantastic dribble designs by [Tubik](https://dribbble.com/Tubik).
 
-![BookSwap](https://img1.dotnet9.com/2022/04/images/bookswap.gif)
+![BookSwap](2022/04/images/bookswap.gif)
 
 ### Platforms
 
@@ -1916,7 +1916,7 @@ Android, iOS.
 
 Beautiful Fashion App Design Using Xamarin.Forms.
 
-<img src="https://img1.dotnet9.com/2022/04/images/fashionapp.png" Width="250" />
+<img src="2022/04/images/fashionapp.png" Width="250" />
 
 ### Platforms
 
@@ -1936,7 +1936,7 @@ Android, iOS.
 
 A Xamarin.Forms UI Challenge based on https://dribbble.com/shots/5935613-Marvel-Movies-Interaction.
 
-![MarvelCards](https://img1.dotnet9.com/2022/04/images/marvel-movies.gif)
+![MarvelCards](2022/04/images/marvel-movies.gif)
 
 ### Platforms
 
@@ -1956,7 +1956,7 @@ Android, iOS.
 
 Elegantly designed XAML templates for Xamarin.Forms apps. These templates follow the MVVM design pattern to provide hassle-free integration and are compatible with Android, iOS, and UWP platforms.
 
-![SyncFusion Essential UI Kit for Xamarin.Forms](https://img1.dotnet9.com/2022/04/images/xamarin-forms-ui-template.png)
+![SyncFusion Essential UI Kit for Xamarin.Forms](2022/04/images/xamarin-forms-ui-template.png)
 
 ### Platforms
 
@@ -1981,7 +1981,7 @@ Android, iOS and UWP.
 
 Air NZ app clone using Xamarin.Forms.
 
-<img src="https://img1.dotnet9.com/2022/04/images/airnzclone.gif" Width="250" />
+<img src="2022/04/images/airnzclone.gif" Width="250" />
 
 ### Platforms
 
@@ -2001,7 +2001,7 @@ Android, iOS.
 
 Xamarin Forms UI Challenge based on [Ballon Slider Control design](https://dribbble.com/shots/6549207-Balloon-Slider-Control).
 
-<img src="https://img1.dotnet9.com/2022/04/images/balloony.gif" Width="250" />
+<img src="2022/04/images/balloony.gif" Width="250" />
 
 ### Platforms
 
@@ -2022,7 +2022,7 @@ Android, iOS.
 
 Google Play Music app clone using Xamarin.Forms Shell.
 
-<img src="https://img1.dotnet9.com/2022/04/images/playmusicclone01.png" Width="220" /> <img src="https://img1.dotnet9.com/2022/04/images/playmusicclone02.png" Width="220" />
+<img src="2022/04/images/playmusicclone01.png" Width="220" /> <img src="2022/04/images/playmusicclone02.png" Width="220" />
 
 ### Platforms
 
@@ -2044,7 +2044,7 @@ Android, iOS.
 
 A beautiful Xamarin Forms sample using Atomic Design, F# and Fabulous.
 
-<img src="https://img1.dotnet9.com/2022/04/images/fabuloustravel.png" Width="500" />
+<img src="2022/04/images/fabuloustravel.png" Width="500" />
 
 ### Platforms
 
@@ -2065,7 +2065,7 @@ Android, iOS.
 
 Xamarin.Forms UI Challenge Ficus IoT App.
 
-<img src="https://img1.dotnet9.com/2022/04/images/ficusuichallengepujolsluis.gif" Width="500" />
+<img src="2022/04/images/ficusuichallengepujolsluis.gif" Width="500" />
 
 ### Platforms
 
@@ -2086,7 +2086,7 @@ Android, iOS.
 
 Xamarin.Forms UI challenge from the [design](https://dribbble.com/shots/6603461-Library-App) by Victoria Sgarro.
 
-<img src="https://img1.dotnet9.com/2022/04/images/xambooklibrary.gif" Width="250" />
+<img src="2022/04/images/xambooklibrary.gif" Width="250" />
 
 ### Platforms
 
@@ -2107,7 +2107,7 @@ Android, iOS.
 
 A Xamarin.Forms UI challenge from the [design](https://dribbble.com/shots/6612746-Art-Plant-Mall) by [JIANGGM](https://dribbble.com/JIANGGM).
 
-<img src="https://img1.dotnet9.com/2022/04/images/artplantmall01.gif" Width="250" /> <img src="https://img1.dotnet9.com/2022/04/images/artplantmall02.gif" Width="250" />
+<img src="2022/04/images/artplantmall01.gif" Width="250" /> <img src="2022/04/images/artplantmall02.gif" Width="250" />
 
 ### Platforms
 
@@ -2131,7 +2131,7 @@ Android, iOS.
 
 The Run Away! app: Drawing gradient lines on top of Maps with SkiaSharp.
 
-<img src="https://img1.dotnet9.com/2022/04/images/runaway01.jpg" Width="250" /> <img src="https://img1.dotnet9.com/2022/04/images/runaway02.jpg" Width="250" />
+<img src="2022/04/images/runaway01.jpg" Width="250" /> <img src="2022/04/images/runaway02.jpg" Width="250" />
 
 ### Platforms
 
@@ -2152,7 +2152,7 @@ Android, iOS.
 
 A Xamarin.Forms UI Challenge.
 
-<img src="https://img1.dotnet9.com/2022/04/images/rottenui.png" Width="250" />
+<img src="2022/04/images/rottenui.png" Width="250" />
 
 ### Platforms
 
@@ -2173,7 +2173,7 @@ Android, iOS.
 
 A Xamarin.Forms UI Challenge playing with SkiaSharp and animations.
 
-<img src="https://img1.dotnet9.com/2022/04/images/mountainmobile.gif" Width="250" />
+<img src="2022/04/images/mountainmobile.gif" Width="250" />
 
 ### Platforms
 
@@ -2193,7 +2193,7 @@ Android, iOS.
 
 A beautiful credit card payment UI, inspired by the following UI from [CVTemplates](https://cvtemplates.club/002-credit-card-checkout-screen-2x/).
 
-<img src="https://img1.dotnet9.com/2022/04/images/paymentuisample.gif" Width="250" />
+<img src="2022/04/images/paymentuisample.gif" Width="250" />
 
 ### Platforms
 
@@ -2214,7 +2214,7 @@ Android, iOS.
 
 Uber Clone using Xamarin.Forms.
 
-<img src="https://img1.dotnet9.com/2022/04/images/xuber.png" Width="800" />
+<img src="2022/04/images/xuber.png" Width="800" />
 
 ### Platforms
 
@@ -2236,7 +2236,7 @@ Android, iOS.
 
 A Xamarin.Forms version of a banking app concept, showing off how to use a base page.
 
-<img src="https://img1.dotnet9.com/2022/04/images/banking.jpg" Width="800" />
+<img src="2022/04/images/banking.jpg" Width="800" />
 
 ### Platforms
 
@@ -2258,7 +2258,7 @@ Android, iOS.
 
 A Yellow App clone made with Xamarin.Forms.
 
-<img src="https://img1.dotnet9.com/2022/04/images/yellowclone01.png" Width="180" /> <img src="https://img1.dotnet9.com/2022/04/images/yellowclone02.png" Width="180" /> <img src="https://img1.dotnet9.com/2022/04/images/yellowclone03.png" Width="180" />
+<img src="2022/04/images/yellowclone01.png" Width="180" /> <img src="2022/04/images/yellowclone02.png" Width="180" /> <img src="2022/04/images/yellowclone03.png" Width="180" />
 
 ### Platforms
 
@@ -2278,7 +2278,7 @@ Android, iOS.
 
 A Xamarin.Forms version of the NeteaseCloudMusic app.
 
-<img src="https://img1.dotnet9.com/2022/04/images/cloudmusic.gif" Width="250" />
+<img src="2022/04/images/cloudmusic.gif" Width="250" />
 
 ### Platforms
 
@@ -2303,7 +2303,7 @@ Android, iOS.
 
 A Xamarin.Forms UI Challenge.
 
-<img src="https://img1.dotnet9.com/2022/04/images/dayvsnight.png" Width="250" />
+<img src="2022/04/images/dayvsnight.png" Width="250" />
 
 ### Platforms
 
@@ -2323,7 +2323,7 @@ Android, iOS.
 
 WhatsApp UI in Xamarin.Forms.
 
-![WhatsApp](https://img1.dotnet9.com/2022/04/images/whatsapp.png)
+![WhatsApp](2022/04/images/whatsapp.png)
 
 ### Platforms
 
@@ -2344,7 +2344,7 @@ Android, iOS.
 
 The EMI (Equated Monthly Instalment) Calculator is an application developed using Xamarin.Forms and Syncfusion controls to calculate the EMI with the given details of principal amount, tenure, and interest.
 
-![Xamarin.Forms EMI Calculator](https://img1.dotnet9.com/2022/04/images/xamarin-forms-emi-calculator.png)
+![Xamarin.Forms EMI Calculator](2022/04/images/xamarin-forms-emi-calculator.png)
 
 ### Platform
 
@@ -2381,7 +2381,7 @@ This project uses the following Syncfusion controls:
 
 Awesome UI: Timeline with images in Xamarin.Forms.
 
-![Timeline](https://img1.dotnet9.com/2022/04/images/timeline-with-images.png)
+![Timeline](2022/04/images/timeline-with-images.png)
 
 ### Platforms
 
@@ -2401,7 +2401,7 @@ Android, iOS.
 
 Xamarin.Forms good looking UI sample. This sample is based on [Art News App](https://dribbble.com/shots/6282441-Art-News-App) designed by [Shirley Yao](https://dribbble.com/shirleyyao).
 
-<img src="https://img1.dotnet9.com/2022/04/images/artnews.gif" Width="320" />
+<img src="2022/04/images/artnews.gif" Width="320" />
 
 ### Platforms
 
@@ -2424,7 +2424,7 @@ Android, iOS.
 
 A Xamarin.Forms Layout challenge. From the design found at: https://dribbble.com/shots/6177235-Valuable-Auction-Product-Page by [Alex Pesenka](https://dribbble.com/alex_pesenka).
 
-<img src="https://img1.dotnet9.com/2022/04/images/artauction.gif" Width="320" />
+<img src="2022/04/images/artauction.gif" Width="320" />
 
 ### Platforms
 
@@ -2445,7 +2445,7 @@ Android, iOS, UWP.
 
 Xamarin.Forms good looking UI sample. This sample is based on [Timeline Profile Screen](https://dribbble.com/shots/1980532-Timeline-Profile) designed by [Anton Aheichanka](https://dribbble.com/madebyanton).
 
-<img src="https://img1.dotnet9.com/2022/04/images/timeline-pulse.gif" Width="320" />
+<img src="2022/04/images/timeline-pulse.gif" Width="320" />
 
 ### Platforms
 
@@ -2464,7 +2464,7 @@ Android, iOS.
 
 A Xamarin.Forms version of the Traveler app to prove you can create good-looking UI with Xamarin.Forms.
 
-<img src="https://img1.dotnet9.com/2022/04/images/traveler.png" Width="600" />
+<img src="2022/04/images/traveler.png" Width="600" />
 
 ### Platforms
 
@@ -2485,7 +2485,7 @@ Android, iOS.
 
 A Xamarin.Forms application with form highlight animation using SkiaSharp and Xamarin.Forms built-in animations.
 
-<img src="https://img1.dotnet9.com/2022/04/images/animatedhighlightapp.gif" Width="320" />
+<img src="2022/04/images/animatedhighlightapp.gif" Width="320" />
 
 ### Platforms
 
@@ -2505,7 +2505,7 @@ Android, iOS.
 
 A Xamarin.Forms version of the [Filter Menu](https://dribbble.com/shots/1956586-Filter-Menu) design by Anton Aheichanka to prove you can create **goodlooking UI** with Xamarin.Forms.
 
-<img src="https://img1.dotnet9.com/2022/04/images/forms-tasks.gif" Width="320" />
+<img src="2022/04/images/forms-tasks.gif" Width="320" />
 
 ### Platforms
 
@@ -2526,7 +2526,7 @@ Android, iOS.
 
 A Xamarin.Forms version of the Chameleon app to prove you can create goodlooking UI with Xamarin.Forms.
 
-<img src="https://img1.dotnet9.com/2022/04/images/chameleon.png" Width="320" />
+<img src="2022/04/images/chameleon.png" Width="320" />
 
 ### Platforms
 
@@ -2547,7 +2547,7 @@ Android, iOS.
 
 A Xamarin.Forms sample to show how to use Bindable Layout. This sample is based on [User Profile Screen](https://dribbble.com/shots/4148230-User-Profile-Screen-Weather-App) designed by [Hernan Vionnet](https://dribbble.com/hernanvionnet).
 
-<img src="https://img1.dotnet9.com/2022/04/images/BindableLayoutPlayground.gif" Width="320" />
+<img src="2022/04/images/BindableLayoutPlayground.gif" Width="320" />
 
 ### Platforms
 
@@ -2567,7 +2567,7 @@ Android, iOS & UWP.
 
 A fictitious retail company showcasing the future of intelligent mobile application experiences.
 
-<img src="https://img1.dotnet9.com/2022/04/images/tailwindtraders.png" Width="800" />
+<img src="2022/04/images/tailwindtraders.png" Width="800" />
 
 ### Platforms
 
@@ -2586,7 +2586,7 @@ Android & iOS.
 
 A simple but good looking Xamarin.Forms UI screen.
 
-<img src="https://img1.dotnet9.com/2022/04/images/posy.gif" Width="320" />
+<img src="2022/04/images/posy.gif" Width="320" />
 
 ### Platforms
 
@@ -2610,7 +2610,7 @@ Android & iOS.
 
 A Xamarin.Forms Carousel using a nice parallax effect.
 
-<img src="https://img1.dotnet9.com/2022/04/images/parallaxcarousel.gif" Width="320" />
+<img src="2022/04/images/parallaxcarousel.gif" Width="320" />
 
 ### Platforms
 
@@ -2632,7 +2632,7 @@ Android & iOS.
 
 A Xamarin.Forms music player sample.
 
-<img src="https://img1.dotnet9.com/2022/04/images/pulsemusic.gif" Width="320" />
+<img src="2022/04/images/pulsemusic.gif" Width="320" />
 
 ### Platforms
 
@@ -2655,7 +2655,7 @@ Android & iOS.
 
 Restaurant App is a sample open source application, powered by ASP.NET Core 2.1 and Xamarin.Forms 3.0. It incorporates material design and provides us with an overview of how to build mobile and web applications with a clean architecture and write testable and clean code.
 
-<img src="https://img1.dotnet9.com/2022/04/images/restaurantapp01.png" width="320" /> <img src="https://img1.dotnet9.com/2022/04/images/restaurantapp02.png" width="320" />
+<img src="2022/04/images/restaurantapp01.png" width="320" /> <img src="2022/04/images/restaurantapp02.png" width="320" />
 
 ### Platforms
 
@@ -2675,7 +2675,7 @@ ASP.NET Core 2.1 for server API.
 
 A Xamarin.Forms timer until your next vacation.
 
-<img src="https://img1.dotnet9.com/2022/04/images/mytripcountdown.png" Width="800" />
+<img src="2022/04/images/mytripcountdown.png" Width="800" />
 
 ### Platforms
 
@@ -2695,7 +2695,7 @@ Android & iOS.
 
 Sample Xamarin.Forms 3.0 Phone App showed in Microsoft Build 2018. Use your camera during a conference to capture your experience. Let Vision do the heavy lifting of identifying known products and scan your images to text for easier searching.
 
-<img src="https://img1.dotnet9.com/2022/04/images/conferencevision.png" Width="800" />
+<img src="2022/04/images/conferencevision.png" Width="800" />
 
 ### Platforms
 
@@ -2718,7 +2718,7 @@ Android, iOS & UWP.
 
 Travelers are always on the go, so SmartHotel360 offers a beautiful fully-native cross-device mobile app for guests and business travelers built with Xamarin.
 
-<img src="https://img1.dotnet9.com/2022/04/images/smarthotel-home.png" Width="210" /> <img src="https://img1.dotnet9.com/2022/04/images/smarthotel-menu.png" Width="210" /> <img src="https://img1.dotnet9.com/2022/04/images/smarthotel-suggestions.png" Width="210" /> <img src="https://img1.dotnet9.com/2022/04/images/smarthotel-myroom.png" Width="210" />
+<img src="2022/04/images/smarthotel-home.png" Width="210" /> <img src="2022/04/images/smarthotel-menu.png" Width="210" /> <img src="2022/04/images/smarthotel-suggestions.png" Width="210" /> <img src="2022/04/images/smarthotel-myroom.png" Width="210" />
 
 ### Platforms
 
@@ -2741,7 +2741,7 @@ Android, iOS & UWP.
 
 BikeSharing360 is a fictitious example of a smart bike sharing system with 10,000 bikes distributed in 650 stations located throughout New York City and Seattle. Their vision is to provide a modern and personalized experience to riders and to run their business with intelligence. Was a demo in the Connect(); 2016.
 
-<img src="https://img1.dotnet9.com/2022/04/images/bikesharing-sign-up.png" Width="210" /> <img src="https://img1.dotnet9.com/2022/04/images/bikesharing-home.png" Width="210" /> <img src="https://img1.dotnet9.com/2022/04/images/bikesharing-menu.png" Width="210" /> <img src="https://img1.dotnet9.com/2022/04/images/bikesharing-new-ride.png" Width="210" />
+<img src="2022/04/images/bikesharing-sign-up.png" Width="210" /> <img src="2022/04/images/bikesharing-home.png" Width="210" /> <img src="2022/04/images/bikesharing-menu.png" Width="210" /> <img src="2022/04/images/bikesharing-new-ride.png" Width="210" />
 
 ### Platforms
 
@@ -2760,7 +2760,7 @@ Android, iOS & UWP.
 
 A bike activity App. Sample to show Microcharts usage.
 
-<img src="https://img1.dotnet9.com/2022/04/images/bikr.png" Width="600" />
+<img src="2022/04/images/bikr.png" Width="600" />
 
 ### Platforms
 
@@ -2779,7 +2779,7 @@ Android, iOS & UWP.
 
 Xamarin Evolve 2016 Mobile App.
 
-<img src="https://img1.dotnet9.com/2022/04/images/evolve.png" Width="800" />
+<img src="2022/04/images/evolve.png" Width="800" />
 
 This app is around 15,000 lines of code. The iOS version contains 93% shared code, the Android version contains 90% shared code, the UWP has 99% shared code, and our Azure backend contains 23% shared code with the clients!
 
@@ -2807,7 +2807,7 @@ Android, iOS & UWP.
 
 ListView with transparent background and a purple gradient behind.
 
-<img src="https://img1.dotnet9.com/2022/04/images/greatplaces.gif" Width="210" />
+<img src="2022/04/images/greatplaces.gif" Width="210" />
 
 ### Platforms
 
@@ -2827,7 +2827,7 @@ Android, iOS & UWP.
 
 Samples to show that Xamarin.Forms is capable of creating something that looks really good.
 
-<img src="https://img1.dotnet9.com/2022/04/images/inanger.png" Width="600" />
+<img src="2022/04/images/inanger.png" Width="600" />
 
 ### Platforms
 
@@ -2851,7 +2851,7 @@ Android & iOS.
 
 ## [Instagram](https://github.com/adamped/Instagram)
 
-<img src="https://img1.dotnet9.com/2022/04/images/instagram-login.png" Width="210" /> <img src="https://img1.dotnet9.com/2022/04/images/instagram-feed.png" Width="210" /> <img src="https://img1.dotnet9.com/2022/04/images/instagram-feed-ios.png" Width="210" /> <img src="https://img1.dotnet9.com/2022/04/images/instagram-feed-droid.png" Width="210" />
+<img src="2022/04/images/instagram-login.png" Width="210" /> <img src="2022/04/images/instagram-feed.png" Width="210" /> <img src="2022/04/images/instagram-feed-ios.png" Width="210" /> <img src="2022/04/images/instagram-feed-droid.png" Width="210" />
 
 ### Platforms
 
@@ -2872,7 +2872,7 @@ Android, iOS & UWP.
 
 This sample show how to recreate a beautifull Social Network profile type page in Xamarin.Forms.
 
-<img src="https://img1.dotnet9.com/2022/04/images/social-media.png" Width="210" />
+<img src="2022/04/images/social-media.png" Width="210" />
 
 ### Features:
 
@@ -2889,7 +2889,7 @@ This sample show how to recreate a beautifull Social Network profile type page i
 
 A simple (but beautiful) Xamarin.Forms tutorial screen.
 
-<img src="https://img1.dotnet9.com/2022/04/images/simpletutorial.jpg" Width="600" />
+<img src="2022/04/images/simpletutorial.jpg" Width="600" />
 
 ### Platforms
 
@@ -2909,7 +2909,7 @@ Android & iOS.
 
 A Xamarin.Forms version of the Runkeeper App.
 
-<img src="https://img1.dotnet9.com/2022/04/images/comparison-runkeeper-droid.jpg" Width="600" />
+<img src="2022/04/images/comparison-runkeeper-droid.jpg" Width="600" />
 
 ### Platforms
 
@@ -2933,8 +2933,8 @@ Android & iOS.
 
 A Xamarin.Forms version of the Spotify App.
 
-<img src="https://img1.dotnet9.com/2022/04/images/spotify-ios1.jpg" Width="500" />
-<img src="https://img1.dotnet9.com/2022/04/images/spotify-ios2.jpg" Width="500" />
+<img src="2022/04/images/spotify-ios1.jpg" Width="500" />
+<img src="2022/04/images/spotify-ios2.jpg" Width="500" />
 
 ### Platforms
 
@@ -2956,7 +2956,7 @@ Android & iOS.
 
 A Xamarin.Forms version of the Twitter App.
 
-<img src="https://img1.dotnet9.com/2022/04/images/comparison-twitter-droid.png" Width="420" />
+<img src="2022/04/images/comparison-twitter-droid.png" Width="420" />
 
 ### Platforms
 
@@ -2978,7 +2978,7 @@ Android & iOS.
 
 A timeline of activities. This is useful for things like transportation schedules or class times.
 
-<img src="https://img1.dotnet9.com/2022/04/images/timeline-android.png" Width="210" /> <img src="https://img1.dotnet9.com/2022/04/images/timeline-ios.png" Width="210" />
+<img src="2022/04/images/timeline-android.png" Width="210" /> <img src="2022/04/images/timeline-ios.png" Width="210" />
 
 ### Platforms
 
@@ -2999,7 +2999,7 @@ Android, iOS & UWP.
 
 A Xamarin.Forms version of the Netflix App.
 
-<img src="https://img1.dotnet9.com/2022/04/images/netflix-profile-ios.png" alt="Choose Profile" Width="210" /> <img src="https://img1.dotnet9.com/2022/04/images/netflix-home-ios.png" alt="Home" Width="210" /> <img src="https://img1.dotnet9.com/2022/04/images/netflix-menu-ios.png" alt="Main Menu" Width="210" /> <img src="https://img1.dotnet9.com/2022/04/images/netflix-movie-ios.png" alt="Movie Detail" Width="210" />
+<img src="2022/04/images/netflix-profile-ios.png" alt="Choose Profile" Width="210" /> <img src="2022/04/images/netflix-home-ios.png" alt="Home" Width="210" /> <img src="2022/04/images/netflix-menu-ios.png" alt="Main Menu" Width="210" /> <img src="2022/04/images/netflix-movie-ios.png" alt="Movie Detail" Width="210" />
 
 ### Platforms
 
@@ -3022,7 +3022,7 @@ Android & iOS.
 
 A Xamarin.Forms version of the Facebook App.
 
-<img src="https://img1.dotnet9.com/2022/04/images/facebook-sidebar.gif" Width="210" /> <img src="https://img1.dotnet9.com/2022/04/images/facebook-like.gif" Width="210" /> <img src="https://img1.dotnet9.com/2022/04/images/facebook-navigationbar.gif" Width="210" />
+<img src="2022/04/images/facebook-sidebar.gif" Width="210" /> <img src="2022/04/images/facebook-like.gif" Width="210" /> <img src="2022/04/images/facebook-navigationbar.gif" Width="210" />
 
 ### Platforms
 
@@ -3044,7 +3044,7 @@ Android, iOS & UWP.
 
 Movies is a Xamarin.Forms GTK backend application that makes use of The Movie Database (TMDb) API to demonstrate the possibilities of the new backend making use of a great variety of functionality.
 
-<img src="https://img1.dotnet9.com/2022/04/images/movies-linux.png" Width="420" /> <img src="https://img1.dotnet9.com/2022/04/images/menu-linux.png" Width="420" /> <img src="https://img1.dotnet9.com/2022/04/images/movie-detail-linux.png" Width="420" /> <img src="https://img1.dotnet9.com/2022/04/images/casting02-linux.png" Width="420" />
+<img src="2022/04/images/movies-linux.png" Width="420" /> <img src="2022/04/images/menu-linux.png" Width="420" /> <img src="2022/04/images/movie-detail-linux.png" Width="420" /> <img src="2022/04/images/casting02-linux.png" Width="420" />
 
 ### Platforms
 
@@ -3066,7 +3066,7 @@ Android, iOS, Linux (GTK), macOS, UWP and Windows (WPF).
 
 WalkthroughApp is a Xamarin.Forms application that makes use of CarouselView and Lottie, to demonstrate the possibilities of creating a fluid and powerful Walkthrough without requiring Custom Renderers.
 
-<img src="https://img1.dotnet9.com/2022/04/images/walkthrough.gif" Width="250" />
+<img src="2022/04/images/walkthrough.gif" Width="250" />
 
 ### Platforms
 
@@ -3087,7 +3087,7 @@ Android, iOS.
 
 Weather App is a simple weather app developed using Xamarin Forms. The app allows you to see the weather from your current location or another location around the globe using OpenWeather Api. Using One Call API the app displays the current weather, 24 hours and 6 days forecast. You can add new locations and switch between them from the Locations screen. From Settings screen you can change the unit system from metric to imperial. The app is available in light mode and dark mode.
 
-<img src="https://img1.dotnet9.com/2022/04/images/light_weather.png" Width="250" /> <img src="https://img1.dotnet9.com/2022/04/images/dark_weather.png" Width="250" /> <img src="https://img1.dotnet9.com/2022/04/images/dark_locations.png" Width="250" />
+<img src="2022/04/images/light_weather.png" Width="250" /> <img src="2022/04/images/dark_weather.png" Width="250" /> <img src="2022/04/images/dark_locations.png" Width="250" />
 
 ### Platforms
 

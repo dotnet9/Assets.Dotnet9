@@ -55,7 +55,7 @@ VisualStudioSetup.exe --layout D:\2022 --useLatestInstaller
 
 期间可能会遇到部分包下载失败：
 
-![](https://img1.dotnet9.com/2025/02/0701.png)
+![](2025/02/0701.png)
 
 上面的Unity3d因为签名问题就下载失败了，但我不做相关开发，所以可以忽略，最后制作的安装包也能正常安装，如果需要对应的包可再研究。
 

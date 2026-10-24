@@ -53,7 +53,7 @@ Startup 类的 Configure 方法添加如下代码：
 
 Ctrl+F5 进入浏览，按上述配置修改路径为：http://localhost:\*\*\*/api/index.html，即可看到 Swagger 页面：
 
-![](https://img1.dotnet9.com/2022/05/0501.jpg)
+![](2022/05/0501.jpg)
 
 然而到这里还没完，相关接口的注释说明我们看不到，通过配置 XML 文件的方式继续调整代码如下，新增代码见加粗部分：
 
@@ -88,7 +88,7 @@ services.AddSwaggerGen(c =>
 
 然后右键 Web API 项目、属性、生成，配置 XML 文档的输出路径，以及取消不必要的 XML 注释警告提醒（增加 1591）：
 
-![](https://img1.dotnet9.com/2022/05/0502.png)
+![](2022/05/0502.png)
 
 这样，我们以三斜杠（///）方式给类方法属性等相关代码添加注释后，刷新 Swagger 页面，即可看到注释说明。
 

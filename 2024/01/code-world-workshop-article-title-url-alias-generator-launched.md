@@ -14,7 +14,7 @@
 
 特别适合文章取好中文标题后，需要在网站发布取文章访问链接生成使用。比如将本文标题《`码坊“文章标题URL别名生成器”上线`》在工具中转换为`code-world-workshop-article-title-url-alias-generator-launched`，转换效果如下：
 
-![标题别名转换演示](https://img1.dotnet9.com/2024/01/0101.gif)
+![标题别名转换演示](2024/01/0101.gif)
 
 使用该工具在[Dotnet9](https://dotnet9.com)网站发布后，在网站上的访问地址是`https://dotnet9.com/2024/01/code-world-workshop-article-title-url-alias-generator-launched`。
 
@@ -164,9 +164,9 @@ public class TranslationServiceUnitTest
 
 文中截图是跨平台桌面版本，采用[Avalonia UI](https://avaloniaui.net/)和控件库[Neumorphism.Avalonia](https://github.com/flarive/Neumorphism.Avalonia)开发，待功能开发到一定程度，站长会介绍工具框架的搭建，下面是工具效果图：
 
-![工具效果图](https://img1.dotnet9.com/2024/01/0103.png)
+![工具效果图](2024/01/0103.png)
 
-![工具效果图](https://img1.dotnet9.com/2024/01/0102.gif)
+![工具效果图](2024/01/0102.gif)
 
 如果你对这个工具感兴趣，可以访问码坊官网https://codewf.com，查看更多实用工具。码坊的源码也在[GitHub](https://github.com/dotnet9/CodeWF)开源，欢迎大家关注和贡献。
 

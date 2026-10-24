@@ -8,7 +8,7 @@
 
 仓库信息截图如下：
 
-![](https://img1.dotnet9.com/2023/03/SukiUI-respository.png)
+![](2023/03/SukiUI-respository.png)
 
 >小知识-MIT
 >
@@ -27,26 +27,26 @@
 
 ## 🖥️📱 控件效果预览
 
-<img src="https://img1.dotnet9.com/2023/03/overall.gif"></img>
+<img src="2023/03/overall.gif"></img>
 <kbd>
-<img src="https://img1.dotnet9.com/2023/03/MobileOverview.gif" style="float:left" ></img>
+<img src="2023/03/MobileOverview.gif" style="float:left" ></img>
 </kbd>
 
 ## 👐 特色控件
 
 ### 桌面端控件
 
-<img src="https://img1.dotnet9.com/2023/03/overall.gif"></img>
+<img src="2023/03/overall.gif"></img>
 
 [桌面控件文档](https://github.com/kikipoulet/SukiUI/wiki/3.-Controls)
 
 ### 移动端控件
 
 <kbd>
-<img src="https://img1.dotnet9.com/2023/03/MobileOverview.gif" style="float:left" ></img>
+<img src="2023/03/MobileOverview.gif" style="float:left" ></img>
 </kbd>
 <kbd>
-<img src="https://img1.dotnet9.com/2023/03/dashboard.gif" ></img> 
+<img src="2023/03/dashboard.gif" ></img> 
 </kbd>
 
 
@@ -58,26 +58,26 @@
 
 - 黑夜模式主题
 
-<img src="https://img1.dotnet9.com/2023/03/DarkTheme.gif"></img>
+<img src="2023/03/DarkTheme.gif"></img>
 <kbd>
-<img src="https://img1.dotnet9.com/2023/03/MobileDarkMode.gif" ></img> 
+<img src="2023/03/MobileDarkMode.gif" ></img> 
 </kbd>
 
 - 自定义主色调
 
-<img src="https://img1.dotnet9.com/2023/03/PCGreen.png"></img>
+<img src="2023/03/PCGreen.png"></img>
 
 - 全局自定义CornerRadius
 
-<img src="https://img1.dotnet9.com/2023/03/cubic.png"></img>
+<img src="2023/03/cubic.png"></img>
 
 ### 交互 
 
 InteractiveContainer控件允许您轻松在应用程序中使用Dialog和Toast添加交互。
 
-<img  src="https://img1.dotnet9.com/2023/03/MobileDialog.gif"></img>
+<img  src="2023/03/MobileDialog.gif"></img>
 
-<img  src="https://img1.dotnet9.com/2023/03/Toast.gif"></img>
+<img  src="2023/03/Toast.gif"></img>
 
 
 ## 📦 用法

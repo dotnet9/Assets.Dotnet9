@@ -59,7 +59,7 @@ xmlns:md="https://github.com/AIDotNet/Markdown.AIRender"
 
 通过上述配置，你可以得到一个美观的 Markdown 渲染效果，如下所示：
 
-![](https://img1.dotnet9.com/2025/01/0101.png)
+![](2025/01/0101.png)
 
 这个渲染效果展示了 `Markdown.AIRender` 的基本能力，将 Markdown 内容转换为可视化的 UI 元素，为用户提供了清晰、易读的信息展示。
 
@@ -69,7 +69,7 @@ xmlns:md="https://github.com/AIDotNet/Markdown.AIRender"
 
 除了基本的渲染功能，`Markdown.AIRender` 还支持黑白主题，这为不同的用户需求和设计风格提供了更多的选择。
 
-![](https://img1.dotnet9.com/2025/01/0102.gif)
+![](2025/01/0102.gif)
 
 这个 GIF 展示了在黑白主题下的切换效果，让你可以直观地看到应用程序的界面如何根据不同的主题进行变化，满足不同用户对于视觉效果的偏好。
 
@@ -77,7 +77,7 @@ xmlns:md="https://github.com/AIDotNet/Markdown.AIRender"
 
 参考[在线markdown编辑器](https://markdown.com.cn/editor/)编写，目前不全，正在完善：
 
-![](https://img1.dotnet9.com/2025/01/0103.gif)
+![](2025/01/0103.gif)
 
 对于主题色的支持，可以让你根据自己的应用程序的整体色调和风格，对 Markdown 的渲染效果进行进一步的定制。通过调整主题色，你可以使 Markdown 内容更好地融入整个应用程序的设计语言中，提供更加协调和个性化的用户体验。
 

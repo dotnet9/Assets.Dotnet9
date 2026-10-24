@@ -16,7 +16,7 @@
 
 这种风格挺适合技术类网站，内容比较紧凑，一眼展示内容较多。
 
-![Just News经典风格](https://img1.dotnet9.com/2022/03/0101.gif)
+![Just News经典风格](2022/03/0101.gif)
 
 ### 1.2 风格二
 
@@ -24,7 +24,7 @@
 
 这种风格是站长去年之前一直选用的风格，用了将近 2 年，看着比较大气，貌似没有保留网站最后的截图，还是上演示截图吧。
 
-![Just News风格二](https://img1.dotnet9.com/2022/03/0102.gif)
+![Just News风格二](2022/03/0102.gif)
 
 ## 2. 开始调研网站开发技术栈
 
@@ -56,25 +56,25 @@
 
 怀着找有现成博客代码的教学视频目标，在百度、谷歌找了个遍，终于找到了一个视频网址：[udemy.com](https://www.udemy.com/)，这个网址有不少同学在上面学习过吧，全球的教学视频都有，中文、英文、其他语言：
 
-![udemy学习网站](https://img1.dotnet9.com/2022/03/0103.png)
+![udemy学习网站](2022/03/0103.png)
 
 我找到了一个土耳其老师的视频，正好是使用`ASP.NET Core MVC 5`教授博客网站开发，正好对我路子，当时花了 19.9$来着，还是有点小贵，不过学到了真东西，他基本使用的三层架构开发的，建议初学 MVC 的同学可以看看，这里发截图和链接不是推荐买哈，后面我接着讲。
 
 - 视频链接：https://www.udemy.com/course/kurumsal-mimaride-mvc5-ile-blog-projesi-gelistirelim/
 
-![博客开发视频教程](https://img1.dotnet9.com/2022/03/0104.png)
+![博客开发视频教程](2022/03/0104.png)
 
 当然站长不全是按他的教学视频做，有些代码也参考了老张的[Blog.Core](https://github.com/anjoy8/Blog.Core)开发的，建议收藏老张的博客园，有兴趣的同学可以看看他的博客，站长 18 年底开始看的老张博客入门的 B/S 开发，这应该是全网最全的 B/S 入门系列教程了：.NET CORE Web API + Vue：
 
 - 博客园 [老张的哲学]: https://www.cnblogs.com/laozhang-is-phi/
 
-![老张的哲学](https://img1.dotnet9.com/2022/03/0105.png)
+![老张的哲学](2022/03/0105.png)
 
 站长在看土耳其老师的视频和参考老张的[Blog.Core](https://github.com/anjoy8/Blog.Core)做了一个版本的博客前台展示后，在油管发现了土耳其老师的账号，他新开了一个视频系列，也是讲解 ASP.NET CORE MVC 5.0 开发博客系统，只是主题不同，使用的技术可能更新了，有 150 集，站长追了 80 几集，后面没看了，和前面收费的类似，有需求的朋友可不用买收费视频（当然支持是可以的），直接看他最新的博客开发视频学习吧。
 
 - 视频地址：https://www.youtube.com/watch?v=HXKnDUb06iw&list=PLKnjBHu2xXNNkinaVhPqPZG0ubaLN63ci
 
-![油管免费博客开发视频教程](https://img1.dotnet9.com/2022/03/0114.gif)
+![油管免费博客开发视频教程](2022/03/0114.gif)
 
 语言不是障碍哈，油管可以做语言翻译，站长有时是 2 倍速观看，边看边敲代码学习，食用效果更佳。
 
@@ -99,19 +99,19 @@ EasyAbp Team](https://github.com/EasyAbp)
 
 - EasyAbp Team：https://github.com/EasyAbp
 
-![EasyAbp Team](https://img1.dotnet9.com/2022/03/0109.png)
+![EasyAbp Team](2022/03/0109.png)
 
 ## 5. 纯用 Blazor Server 开发网站
 
 时间点：1 月~2 月
 
-![纯用Blazor Server开发的网站](https://img1.dotnet9.com/2022/01/0209.png)
+![纯用Blazor Server开发的网站](2022/01/0209.png)
 
 上面未再用 Abp vNext 做个人项目的原因已经提了个人观点，所以从 Blazor Server Hello Word 开始又重新搭建网站了。
 
 Blazor 组件库使用的 Masa Blazor： https://masa-blazor-docs-dev.lonsid.cn/
 
-![Masa Blazor](https://img1.dotnet9.com/2022/03/0115.png)
+![Masa Blazor](2022/03/0115.png)
 
 与第 4 版 Abp vNext 集成的 Blazor Server 相比，当时是工作需要练手选择的。这次选原生的 Blazor Server，对做.NET 的我来说，应该是仅次于 MVC 的选择吧。
 
@@ -119,11 +119,11 @@ Blazor 组件库使用的 Masa Blazor： https://masa-blazor-docs-dev.lonsid.cn/
 
 - [免费开源 Blazor 在线 Ico 转换工具](https://dotnet9.com/2022/02/Free-Open-Source-Blazor-Online-Ico-Conversion-Tool)
 
-![Blazor在线Ico转换工具](https://img1.dotnet9.com/2022/02/1301.gif)
+![Blazor在线Ico转换工具](2022/02/1301.gif)
 
 - [使用 Blazor 做个简单的时间戳在线转换工具](https://dotnet9.com/2022/02/Use-Blazor-to-be-a-simple-online-timestamp-conversion-tool)
 
-![Blazor时间戳在线转换工具](https://img1.dotnet9.com/2022/02/1701.jpg)
+![Blazor时间戳在线转换工具](2022/02/1701.jpg)
 
 后面也没有继续坚持选择 Blazor Server 开发个人网站，站长主要有这个考量：Blazor 使用的 signalR 做长连接，实时性较好，但对客户端网络要求较高，网络稍差，可能就与服务器断开了连接，对用户使用体验影响较大，站长也不想继续折腾下去，所以后面又选择了 MVC 开发个人网站。
 
@@ -137,25 +137,25 @@ Blazor 组件库使用的 Masa Blazor： https://masa-blazor-docs-dev.lonsid.cn/
 
 源码：https://github.com/dotnet9/Dotnet9
 
-![Dotnet9网站源码仓库](https://img1.dotnet9.com/2022/03/0107.png)
+![Dotnet9网站源码仓库](2022/03/0107.png)
 
 折腾回 MVC 做网站，现在网站前台基本成型了，前台前端在网上扒的一个主题，后面考虑在淘宝付费找个设计师美化一下：
 
 首页：
 
-![Dotnet9网站首页](https://img1.dotnet9.com/2022/03/0110.gif)
+![Dotnet9网站首页](2022/03/0110.gif)
 
 专辑之一：[开源 WPF](https://dotnet9.com/album/open-source-wpf)
 
-![Dotnet9网站专辑](https://img1.dotnet9.com/2022/03/0111.gif)
+![Dotnet9网站专辑](2022/03/0111.gif)
 
 分类之一：[Blazor](https://dotnet9.com/cat/dotnet-web-blazor)
 
-![Dotnet9网站分类](https://img1.dotnet9.com/2022/03/0112.png)
+![Dotnet9网站分类](2022/03/0112.png)
 
 文章之一：[ASP.NET Core 可视化日志组件使用](https://dotnet9.com/2021/04/asp-dotnet-core-visual-log-component)
 
-![Dotnet9网站文章详情页](https://img1.dotnet9.com/2022/03/0113.gif)
+![Dotnet9网站文章详情页](2022/03/0113.gif)
 
 前台使用的[ASP.NET Core MVC](https://docs.microsoft.com/zh-cn/aspnet/core/mvc/overview?view=aspnetcore-6.0)开发，ORM 使用的 EF Core，MVC 可以得到完美的 SEO 支持，再也不用担心百度、谷歌的收录问题了。
 
@@ -163,11 +163,11 @@ Blazor 组件库使用的 Masa Blazor： https://masa-blazor-docs-dev.lonsid.cn/
 
 - Panda：https://github.com/coolqingcheng/Panda
 
-![开源项目Panda仓库](https://img1.dotnet9.com/2022/03/0108.png)
+![开源项目Panda仓库](2022/03/0108.png)
 
 最后来个后台前端动图结束本文：
 
-![开源项目Panda后台前端](https://img1.dotnet9.com/2022/03/0106.gif)
+![开源项目Panda后台前端](2022/03/0106.gif)
 
 ## 7. 2023 年 3 月 11 号更新
 
@@ -175,11 +175,11 @@ Blazor 组件库使用的 Masa Blazor： https://masa-blazor-docs-dev.lonsid.cn/
 
 首页：
 
-![首页](https://img1.dotnet9.com/2022/03/0116.png)
+![首页](2022/03/0116.png)
 
 详情页：
 
-![详情页](https://img1.dotnet9.com/2022/03/0117.png)
+![详情页](2022/03/0117.png)
 
 参考项目：
 
@@ -227,15 +227,15 @@ Dotnet9 网站的重构，不仅提高了网站的性能和用户体验，还采
 
 首页：
 
-![首页](https://img1.dotnet9.com/2023/04/0301.png)
+![首页](2023/04/0301.png)
 
 文章专辑：
 
-![文章专辑](https://img1.dotnet9.com/2023/04/0303.png)
+![文章专辑](2023/04/0303.png)
 
 文章详情：
 
-![文章详情](https://img1.dotnet9.com/2023/04/0302.png)
+![文章详情](2023/04/0302.png)
 
 ### 源码
 
@@ -245,15 +245,15 @@ Dotnet9 网站的重构，不仅提高了网站的性能和用户体验，还采
 
 解决方案结构如下：
 
-![解决方案结构](https://img1.dotnet9.com/2023/04/0304.png)
+![解决方案结构](2023/04/0304.png)
 
 前台主工程：Dotnet9.RazorPages
 
-![Dotnet9.RazorPages](https://img1.dotnet9.com/2023/04/0306.png)
+![Dotnet9.RazorPages](2023/04/0306.png)
 
 后端主工程：Dotnet9.Service
 
-![Dotnet9.Service](https://img1.dotnet9.com/2023/04/0305.png)
+![Dotnet9.Service](2023/04/0305.png)
 
 1. Dotnet9.Commons：工具库
 2. Dotnet9.Contracts：暂时放 Dto 类
@@ -274,6 +274,6 @@ Ant Design风格重构，源码地址：htts://github.com/dotnet9/CodeWF：
 
 访问速度有没有飞一般的感觉：
 
-![](https://img1.dotnet9.com/2024/11/0207.gif)
+![](2024/11/0207.gif)
 
 本文持续更新，欢迎关注。

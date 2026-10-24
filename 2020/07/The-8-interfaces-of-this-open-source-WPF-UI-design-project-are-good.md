@@ -1,6 +1,6 @@
 GitHub 仓库信息
 
-![](https://img1.dotnet9.com/2020/07/0101.png)
+![](2020/07/0101.png)
 
 - github 仓库地址：https://github.com/HenJigg/WPF-UI-Design
 - bilibili 视频地址：https://space.bilibili.com/32497462
@@ -11,18 +11,18 @@ GitHub 仓库信息
 
 下面是 8 个界面设计截图，希望有你喜欢的一款：
 
-![](https://img1.dotnet9.com/2020/07/0102.png)
+![](2020/07/0102.png)
 
-![](https://img1.dotnet9.com/2020/07/0103.png)
+![](2020/07/0103.png)
 
-![](https://img1.dotnet9.com/2020/07/0104.png)
+![](2020/07/0104.png)
 
-![](https://img1.dotnet9.com/2020/07/0105.png)
+![](2020/07/0105.png)
 
-![](https://img1.dotnet9.com/2020/07/0106.gif)
+![](2020/07/0106.gif)
 
-![](https://img1.dotnet9.com/2020/07/0107.gif)
+![](2020/07/0107.gif)
 
-![](https://img1.dotnet9.com/2020/07/0108.png)
+![](2020/07/0108.png)
 
-![](https://img1.dotnet9.com/2020/07/0109.png)
+![](2020/07/0109.png)

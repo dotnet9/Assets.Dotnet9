@@ -24,25 +24,25 @@ UI使用了[Masa Blazor](https://blazor.masastack.com/)，效果个人感觉不�
 
 
 
-![用户列表](https://img1.dotnet9.com/2022/10/1-main-window.png)
+![用户列表](2022/10/1-main-window.png)
 
 **聊天窗口**
 
 这个简单，左侧是一个列表，同上面的用户列表类似，只是去掉了上方蓝色的`MToolbar`和用户的详细描述信息，右侧则是多行文本框显示聊天记录、单行文本框输入即时聊天信息、一个发送按钮（简单描述，不贴代码，后面有仓库链接）。
 
-![聊天窗口](https://img1.dotnet9.com/2022/10/2-chat-window.png)
+![聊天窗口](2022/10/2-chat-window.png)
 
 **打开子窗口**
 
 列表的点击事件，使用`IEventAggregator`发送打开子窗体事件 `OpenUserDialogEvent`，事件订阅方法执行弹出子窗体操作：
 
-![打开窗口](https://img1.dotnet9.com/2022/10/3-open-child-window.gif)
+![打开窗口](2022/10/3-open-child-window.gif)
 
 **演示发送消息**
 
 发送消息按钮点击，使用`IEventAggregator` 发送发送消息事件`SendMessageEvent`，事件订阅方法接收消息，并追加到各自历史聊天多行文本框展示：
 
-![演示发送消息](https://img1.dotnet9.com/2022/10/4-send-message.gif)
+![演示发送消息](2022/10/4-send-message.gif)
 
 ## 源码
 

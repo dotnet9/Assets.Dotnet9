@@ -166,7 +166,7 @@ public IActionResult GetToken(string UserCode)
 
 使用 Postman 请求生成 token，如图所示
 
-![](https://img1.dotnet9.com/2022/07/1101.jpg)
+![](2022/07/1101.jpg)
 
 然后我们在新增一个需要应用授权的接口,由于我们注册了全局的应用授权特性就不需要在带上该特性了
 
@@ -180,11 +180,11 @@ public IActionResult GetUserInformation()
 
 不带 token 使用 postman 请求该接口，如图所示
 
-![](https://img1.dotnet9.com/2022/07/1102.jpg)
+![](2022/07/1102.jpg)
 
 带上 token 使用 postman 请求该接口，如图所示
 
-![](https://img1.dotnet9.com/2022/07/1103.jpg)
+![](2022/07/1103.jpg)
 
 通过刚才的例子我们清楚了解了权限认证的过程，今天的介绍就到此结束了！
 

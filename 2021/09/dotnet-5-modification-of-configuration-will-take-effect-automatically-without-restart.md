@@ -59,7 +59,7 @@ public class HomeController : Controller
 
 界面显示：
 
-![](https://img1.dotnet9.com/2021/09/0301.png)
+![](2021/09/0301.png)
 
 把配置文件修改为：
 
@@ -74,7 +74,7 @@ public class HomeController : Controller
 
 刷新页面，已经发生变化：
 
-![](https://img1.dotnet9.com/2021/09/0302.png)
+![](2021/09/0302.png)
 
 ### 1.3 IOptions 方式实时生效
 
@@ -195,7 +195,7 @@ public void ConfigureServices(IServiceCollection services)
 
 增加多一个 db 配置文件
 
-![](https://img1.dotnet9.com/2021/09/0303.png)
+![](2021/09/0303.png)
 
 修改 Program.cs 处 CreateHostBuilder()，也是加载时加上 reloadOnChange:true 就可以了。
 

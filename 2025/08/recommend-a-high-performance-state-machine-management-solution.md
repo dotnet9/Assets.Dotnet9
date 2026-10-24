@@ -28,7 +28,7 @@ Stateless是一个轻量级、高性能的状态机库，它基于.Net Standard�
 
 - github：https://github.com/dotnet-state-machine/stateless
 
-![](https://img1.dotnet9.com/2025/08/0301.png)
+![](2025/08/0301.png)
 
 ## 实例场景说明
 
@@ -48,19 +48,19 @@ Stateless是一个轻量级、高性能的状态机库，它基于.Net Standard�
 
 上述状态（State）和触发动作（Trigger）以及之间的流转，如下图所示：
 
-![](https://img1.dotnet9.com/2025/08/0302.png)
+![](2025/08/0302.png)
 
 ## 创建项目
 
 为了演示状态变化，我们创建一个WinForm应用程序“Okcoder.Stateless.WinTool”和一个公共库“Okcoder.Stateless.Common”，如下所示：
 
-![](https://img1.dotnet9.com/2025/08/0303.png)
+![](2025/08/0303.png)
 
 ## 安装Stateless组件
 
 在Visual Studio 2022开发工具中，可以通过NuGet包管理器进行安装。在解决方案右键，打开右键菜单，然后点击“管理解决方案的NuGet程序包”在打开的NuGet包解决方案，搜索Stateless，然后安装即可。当前最新版本为v5.18.0，如下所示：
 
-![](https://img1.dotnet9.com/2025/08/0304.png)
+![](2025/08/0304.png)
 
 ## 定义状态和触发器
 
@@ -676,11 +676,11 @@ namespace Okcoder.Stateless.WinTool
 
 经过上述步骤，运行程序，然后点击Work按钮，默认无故障时如下所示：
 
-![](https://img1.dotnet9.com/2025/08/0305.gif)
+![](2025/08/0305.gif)
 
 当勾选故障，模拟出现故障时，如下所示：
 
-![](https://img1.dotnet9.com/2025/08/0306.gif)
+![](2025/08/0306.gif)
 
 以上就是《推荐一款高性能状态机管理解决方案》的全部内容，关于更多详细内容，可参考官方文档。希望能够一起学习，共同进步。
 

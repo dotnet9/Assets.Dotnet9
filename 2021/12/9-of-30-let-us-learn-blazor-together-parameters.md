@@ -2,49 +2,49 @@
 
 我们先在 Shared 文件夹新增一个 Razor 组件名为`MyButton`，定义 3 个变量分别代表按钮类型、按钮样式、按钮名称，注意要在属性上面加上`[Parameter]`，这是告诉 Blazor 这些属性的值来自调用这个组件的父组件。
 
-![](https://img1.dotnet9.com/2021/12/1501.png)
+![](2021/12/1501.png)
 
 接着移除标题的单向绑定，再将更新时间的 div 移到`<EditForm>`外面，因为 reset 按钮会清除整个 form，我们不希望更新时间也被清除。最后在最下面使用两个`<MyButton>`组件，再输入我们要的按钮类型、按钮样式、按钮名称，这边 Blazor 会告诉你还有哪些 Parameter 没有被使用，如果有重复的 Parameter 也会有提示，所以不用担心。
 
-![](https://img1.dotnet9.com/2021/12/1502.png)
+![](2021/12/1502.png)
 
 按下 Reset 按钮，可以看到标题跟内容都被清除了。
 
-![](https://img1.dotnet9.com/2021/12/1503.gif)
+![](2021/12/1503.gif)
 
 要注意的是 Parameter 不支援混合 razor 及 html 字符串的写法，如果想这么做建议用`field`、`property`或是`string`方法回调组合好的字符串。
 
-![](https://img1.dotnet9.com/2021/12/1504.png)
+![](2021/12/1504.png)
 
-![](https://img1.dotnet9.com/2021/12/1505.png)
+![](2021/12/1505.png)
 
 Parameter 还有一点要避免，当父组件传值到子组件时，父组件若有`StateHasChanged`相关动作，会将父组件及子组件重新渲染，除非在子组件用一个变量保存父组件传来的值。
 
 上面的文字说明似乎没看懂，我们来看微软给的例子，先建立一个扩展组件，里面做的事情很简单，只要点击`<div>`就会收缩或是展开内容。还有一个类型为`RenderFragment`的`ChildContent`，这是让使用该组件的外部组件决定内容模板。
 
-![](https://img1.dotnet9.com/2021/12/1506.png)
+![](2021/12/1506.png)
 
 接着在 Post.razor 调用两个`Expander`，第一个有用到`ChildContent`并放入`<p>`元素，最后看到一个 button 带有`@onclick="StateHasChanged"`的事件，模拟父组件的`StateHasChanged`事件。
 
-![](https://img1.dotnet9.com/2021/12/1507.png)
+![](2021/12/1507.png)
 
 打开网页可以看到两个`Expander`的`Expanded`皆为 True
 
-![](https://img1.dotnet9.com/2021/12/1508.png)
+![](2021/12/1508.png)
 
 接着两个 Expander 都点一下，可以看到`Expanded`都变 False 了
 
-![](https://img1.dotnet9.com/2021/12/1509.gif)
+![](2021/12/1509.gif)
 
 不过如果这时候点底下的 button，会发现只有上面的 Expanded 变成 True，这是为什么？
 
-![](https://img1.dotnet9.com/2021/12/1510.gif)
+![](2021/12/1510.gif)
 
 原因就在于父组件的状态（state）跟`ChildContent`这个属性，因为父组件的 state 改变了会重新渲染（render）并将新数据传给第一个 Child，所以`Expanded`被重置为 true，第二个 Child 因为没有接收`ChildContent`所以不会重新渲染。
 
 为了避免这问题，可以定义一个私有字段（field）名为`_expanded`，当组件初始化时保存父组件传来的`Expanded`，之后的逻辑都根据`_expanded`处理。
 
-![](https://img1.dotnet9.com/2021/12/1511.png)
+![](2021/12/1511.png)
 
 **引用：**
 

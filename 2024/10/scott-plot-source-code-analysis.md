@@ -30,7 +30,7 @@
 - [.NET Notebook](https://scottplot.net/quickstart/notebook/)
 - [IronPython](https://scottplot.net/quickstart/ironpython/)
 
-![动图封面](https://img1.dotnet9.com/2024/10/0401.gif)
+![动图封面](2024/10/0401.gif)
 
 ------
 
@@ -118,7 +118,7 @@ Renderable/IRenderable.cs  ----> 可以渲染的组件
 
 来一张图总结：
 
-![img](https://img1.dotnet9.com/2024/10/0402.jpg)
+![img](2024/10/0402.jpg)
 
 ### 源码分析入口点
 

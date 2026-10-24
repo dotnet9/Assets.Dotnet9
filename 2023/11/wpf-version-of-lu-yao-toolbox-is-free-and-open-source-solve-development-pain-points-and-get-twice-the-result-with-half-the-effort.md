@@ -5,7 +5,7 @@
 
 工具箱功能列表：
 
-![](https://img1.dotnet9.com/2023/11/0502.gif)
+![](2023/11/0502.gif)
 
 ## 一、工具箱功能一览
 
@@ -80,11 +80,11 @@
 
 这一节只简单介绍如何查看工具箱源码，[源码](https://github.com/landv/LuYao.Toolkit)仓库截图：
 
-![](https://img1.dotnet9.com/2023/11/0501.png)
+![](2023/11/0501.png)
 
 路遥工具箱的源码组织结构清晰，易于理解和维护。以下是项目组织结构：
 
-![](https://img1.dotnet9.com/2023/11/0503.png)
+![](2023/11/0503.png)
 
 **如何查看工具箱代码？**
 
@@ -94,17 +94,17 @@
 
 点击左侧边栏第2个小图菜单，点击【生成 GUID】：
 
-![](https://img1.dotnet9.com/2023/11/0504.png)
+![](2023/11/0504.png)
 
 2. 调试状态，点击工具按钮定位视图
 
 标题栏选择【选择元素】，再点击【重新生成】按钮，在VS的实时可视化树可定位到【重新生成】按钮的xaml代码：
 
-![](https://img1.dotnet9.com/2023/11/0505.gif)
+![](2023/11/0505.gif)
 
 既而可以定位到视图代码文件：**`LuYao.Toolkit/Channels/Gens/GenGuid.xml`**
 
-![](https://img1.dotnet9.com/2023/11/0506.png)
+![](2023/11/0506.png)
 
 【重新生成】按钮绑定的命令是`GenCommand`，接下来查询`ViewModel`功能逻辑代码。
 
@@ -112,7 +112,7 @@
 
 你可以全局搜索`GenCommand`（但你可能搜索不到。。。），但更方便的还是直接查询视图对应的`ViewModel`，功能代码在`LuYao.Toolkit.ViewModels`工程相应的组织（与`GenGuid.xml`文件所在目录相同）目录下`LuYao.Toolkit.ViewModels/Channels/Gens/GenGuidViewModel.cs`
 
-![](https://img1.dotnet9.com/2023/11/0507.png)
+![](2023/11/0507.png)
 
 命令`GenCommand`和命令处理方法`Gen()`是怎么关联的？
 

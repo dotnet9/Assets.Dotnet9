@@ -24,7 +24,7 @@ dotnet run hello.cs
 
 无需项目文件，无需复杂配置，像写脚本一样用 C#！
 
-![dotnet run hello.cs](https://img1.dotnet9.com/2025/05/0501.png)
+![dotnet run hello.cs](2025/05/0501.png)
 
 ## How it works
 
@@ -33,7 +33,7 @@ dotnet run hello.cs
 - 相关的构建文件（如 `Directory.Build.props`）同样会被自动应用。
 - 如果你运行的文件没有入口方法，会有错误提示，避免误操作，示例如下:
 
-![dotnet run file error](https://img1.dotnet9.com/2025/05/0502.png)
+![dotnet run file error](2025/05/0502.png)
 
 ## More Usage
 
@@ -59,11 +59,11 @@ dotnet run hello.cs
 
   通过 `dotnet run webapi.cs` 运行我们的单文件 webapi
 
-  ![dotnet run webapi.cs](https://img1.dotnet9.com/2025/05/0503.png)
+  ![dotnet run webapi.cs](2025/05/0503.png)
 
   访问我们的 api
 
-  ![webapi test](https://img1.dotnet9.com/2025/05/0504.png)
+  ![webapi test](2025/05/0504.png)
 
   我们也可以引用 nuget package 和配置 property，示例如下：
 
@@ -82,7 +82,7 @@ dotnet run hello.cs
   
   同样地，运行 `dotnet run webapi.cs`
   
-  ![webapi runtime-info sample](https://img1.dotnet9.com/2025/05/0505.png)
+  ![webapi runtime-info sample](2025/05/0505.png)
 
 -  当你的脚本变复杂，需要更多自定义时不想使用文件程序时，只需一条命令即可将其转换为标准项目，CLI 会自动生成 `.csproj` 文件，并迁移相关配置，代码行为不会改变：
 
@@ -92,7 +92,7 @@ dotnet project convert webapi.cs
 
   转换之后的项目如下，也可以直接使用 `dotnet run` 运行
 
-  ![converted project info](https://img1.dotnet9.com/2025/05/0506.png)
+  ![converted project info](2025/05/0506.png)
 
 
 支持 Linux/Unix 下的 shebang（`#!`），我们可以让 C# 脚本像 Bash/Python 一样直接运行，可以执行 `./hello.cs`
@@ -102,7 +102,7 @@ dotnet project convert webapi.cs
 Console.WriteLine("Hello, .NET!");
 ```
 
-![shebang setting](https://img1.dotnet9.com/2025/05/0507.png)
+![shebang setting](2025/05/0507.png)
 
 ## Future Features
 

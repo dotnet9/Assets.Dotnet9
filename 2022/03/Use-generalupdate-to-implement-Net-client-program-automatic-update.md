@@ -8,15 +8,15 @@
 
 GitHub：[https://github.com/WELL-E/AutoUpdater](https://github.com/WELL-E/AutoUpdater)
 
-![](https://img1.dotnet9.com/2022/03/2504.png)
+![](2022/03/2504.png)
 
 Gitee：[https://gitee.com/Juster-zhu/GeneralUpdate](https://gitee.com/Juster-zhu/GeneralUpdate)
 
-![](https://img1.dotnet9.com/2022/03/2503.png)
+![](2022/03/2503.png)
 
 ## 自动更新流程图
 
-![](https://img1.dotnet9.com/2022/03/2501.png)
+![](2022/03/2501.png)
 
 鉴于原图的说明不够明确，笔者在上图中使用红色字体新增了说明。上图中看上去是 3 个组件或服务的交互，但准确说是 4 个：
 
@@ -27,7 +27,7 @@ Gitee：[https://gitee.com/Juster-zhu/GeneralUpdate](https://gitee.com/Juster-zh
 
 ## 代码结构剖析
 
-![](https://img1.dotnet9.com/2022/03/2502.png)
+![](2022/03/2502.png)
 
 上图中以`GeneralUpdate`开头的工程是自动更新功能的核心代码，在 nuget 服务器上能看到各个工程的包。具体使用哪个包取决于你是想实现更新组件自更新还是更新客户端程序还是编写版本校验服务，可参考框架 README.md 中的介绍。
 

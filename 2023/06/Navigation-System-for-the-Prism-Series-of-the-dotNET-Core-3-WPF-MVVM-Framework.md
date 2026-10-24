@@ -10,7 +10,7 @@
 
 在讲解 Prism 导航系统之前，我们先来看看一个例子,我在之前的 demo 项目创建一个登录界面：
 
-![](https://img1.dotnet9.com/2023/06/0701.gif)
+![](2023/06/0701.gif)
 
 我们看到这里是不是一开始想象到使用 WPF 带有的导航系统，通过 Frame 和 Page 进行页面跳转，然后通过导航日志的 GoBack 和 GoForward 实现后退和前进，其实这是通过使用 Prism 的导航框架实现的,下面我们来看看如何在 Prism 的 MVVM 模式下实现该功能
 
@@ -142,7 +142,7 @@ public class LoginMainContentViewModel : BindableBase
 
 效果如下：
 
-![](https://img1.dotnet9.com/2023/06/0702.gif)
+![](2023/06/0702.gif)
 
 这里我们可以看到我们调用 RegionMannager 的 RequestNavigate 方法，其实这样看不能很好的说明是基于区域的做法，如果将换成下面的写法可能更好理解一点：
 
@@ -198,7 +198,7 @@ public interface INavigateAsync
 
 效果如下：
 
-![](https://img1.dotnet9.com/2023/06/0703.gif)
+![](2023/06/0703.gif)
 
 ## 2. View 和 ViewModel 参与导航过程
 
@@ -312,7 +312,7 @@ public class CreateAccountViewModel : BindableBase,INavigationAware
 
 效果如下：
 
-![](https://img1.dotnet9.com/2023/06/0704.gif)
+![](2023/06/0704.gif)
 
 修改 IsNavigationTarget 为 false：
 
@@ -336,7 +336,7 @@ public class CreateAccountViewModel : BindableBase,INavigationAware
 
 效果如下:
 
-![](https://img1.dotnet9.com/2023/06/0705.gif)
+![](2023/06/0705.gif)
 
 我们会发现 LoginMainContent 和 CreateAccount 页面的数据不见了，这是因为第二次导航到页面的时候当 IsNavigationTarget 为 false 时，View 将会重新实例化，导致 ViewModel 也重新加载,因此所有数据都清空了
 
@@ -395,7 +395,7 @@ public class LoginMainContentViewModel : BindableBase, INavigationAware，IRegio
 
 效果如下：
 
-![](https://img1.dotnet9.com/2023/06/0706.gif)
+![](2023/06/0706.gif)
 
 我们会发现跟没实现 IRegionMemberLifetime 接口和 IsNavigationTarget 设置为 false 情况一样，当 KeepAlive 为 false 时，通过断点知道，重新导航回 LoginMainContent 页面时不会触发 IsNavigationTarget 方法，因此可以知道判断顺序是：KeepAlive -->IsNavigationTarget
 
@@ -473,7 +473,7 @@ public class CreateAccountViewModel : BindableBase, INavigationAware，IConfirmN
 
 效果如下：
 
-![](https://img1.dotnet9.com/2023/06/0707.gif)
+![](2023/06/0707.gif)
 
 ## 3. 导航期间传递参数
 
@@ -540,7 +540,7 @@ public void OnNavigatedTo(NavigationContext navigationContext)
 
 效果如下：
 
-![](https://img1.dotnet9.com/2023/06/0708.gif)
+![](2023/06/0708.gif)
 
 ## 4. 导航日志
 
@@ -680,7 +680,7 @@ void ExecuteGoBackCommand()
 
 效果如下：
 
-![](https://img1.dotnet9.com/2023/06/0709.gif)
+![](2023/06/0709.gif)
 
 ### 4.1 选择退出导航日志
 

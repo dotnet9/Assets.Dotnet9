@@ -1,6 +1,6 @@
 本文阅读目录
 
-![](https://img1.dotnet9.com/2022/11/0408.png)
+![](2022/11/0408.png)
 
 ## 1. Avalonia UI简介
 
@@ -89,15 +89,15 @@ Web支持，即WebAssembly，这是国际标准。
 
 发布选项：
 
-![](https://img1.dotnet9.com/2022/11/publish-avalonia-ui.png)
+![](2022/11/publish-avalonia-ui.png)
 
 发布至测试环境（统信UOS、AMD处理器，所以选择linux-x64）如下：
 
-![](https://img1.dotnet9.com/2022/11/0401.png)
+![](2022/11/0401.png)
 
 运行效果如下:
 
-![](https://img1.dotnet9.com/2022/11/0402.gif)
+![](2022/11/0402.gif)
 
 附.国产CPU指令集路线
 
@@ -116,7 +116,7 @@ Web支持，即WebAssembly，这是国际标准。
 
 示例来自仓库[Avalonia](https://github.com/AvaloniaUI/Avalonia)。
 
-![](https://img1.dotnet9.com/2022/11/0403.png)
+![](2022/11/0403.png)
 
 基于Avalonia搭建的项目部分如下：
 
@@ -126,7 +126,7 @@ Web支持，即WebAssembly，这是国际标准。
 
 项目网站：https://icons8.com/lunacy
 
-![](https://img1.dotnet9.com/2022/11/0404.png)
+![](2022/11/0404.png)
 
 <iframe src="//player.bilibili.com/player.html?aid=945309982&bvid=BV1wW4y1W7u3&cid=897148751&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 
@@ -142,7 +142,7 @@ Unity Plastic SCM是一个版本控制和源代码管理工具，旨在提高团
 
 项目网站：https://www.plasticscm.com/
 
-![](https://img1.dotnet9.com/2022/11/0406.png)
+![](2022/11/0406.png)
 
 #### 3.2.3 WasabiWallet
 
@@ -150,7 +150,7 @@ Unity Plastic SCM是一个版本控制和源代码管理工具，旨在提高团
 
 项目网站：https://www.wasabiwallet.io/
 
-![](https://img1.dotnet9.com/2022/11/0407.png)
+![](2022/11/0407.png)
 
 ## 4. Avalonia UI与WPF
 

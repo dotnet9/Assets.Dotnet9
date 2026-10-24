@@ -16,7 +16,7 @@ GZY.Quartz.MUI 是在 github 上开源的 ASP.NET Core 项目, 它旨在帮助�
 
 第二步：使用 NuGet 安装 `GZY.Quartz.MUI` 包：
 
-![](https://img1.dotnet9.com/2022/05/5501.png)
+![](2022/05/5501.png)
 
 第三步：在 StartUp.cs 中的 ConfigureServices 添加 GZY.Quartz.MUI 服务
 
@@ -54,7 +54,7 @@ public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
 	}
 ```
 
-![](https://img1.dotnet9.com/2022/05/5502.png)
+![](2022/05/5502.png)
 
 最后运行项目，在浏览器中导航到 `[您的域名]/QuartzUI` 就可以看到该项目已经搭建成功了。
 
@@ -70,7 +70,7 @@ public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
 
 通过调用本地 dll 的方式，新建的类继承`IJobService`即可
 
-![](https://img1.dotnet9.com/2022/05/5503.png)
+![](2022/05/5503.png)
 
 ## 总结
 

@@ -26,7 +26,7 @@ workflow core 的 GitHub 主页：https://github.com/danielgerlag/workflow-core
 
 可能由于版本的关系，还需要另外安装两个包：`Microsoft.Extensions.Logging` 和 `Microsoft.Extensions.Logging.Debug`。这样就可以按照 Sample 01 开始编写代码了。
 
-![](https://img1.dotnet9.com/2023/02/0201.png)
+![](2023/02/0201.png)
 
 Sample01 是一个 helloworld，包含了几部分内容：
 

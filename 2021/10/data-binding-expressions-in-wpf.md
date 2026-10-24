@@ -99,7 +99,7 @@ public partial class DataContextBinding: Window
 
 输出
 
-![](https://img1.dotnet9.com/2021/10/0301.png)
+![](2021/10/0301.png)
 
 2. 使用{Binding Property}表达式
 
@@ -118,7 +118,7 @@ this.DataContext = book;
 
 现在，让我们看看输出。
 
-![](https://img1.dotnet9.com/2021/10/0302.png)
+![](2021/10/0302.png)
 
 由于绑定表达式{Binding}用于绑定 Book 类型的 DataContext 对象，因此调用 ToString（）方法，并将数据显示为字符串。为了以正确的格式显示数据，我们必须将数据对象的属性与 TextBlock 绑定，如下所示：
 
@@ -133,7 +133,7 @@ this.DataContext = book;
 
 输出
 
-![](https://img1.dotnet9.com/2021/10/0303.png)
+![](2021/10/0303.png)
 
 ## 2、RelativeSource 绑定
 
@@ -169,7 +169,7 @@ Self 用于绑定源和绑定目标相同的场景中。对象的一个属性与
 
 输出
 
-![](https://img1.dotnet9.com/2021/10/0304.png)
+![](2021/10/0304.png)
 
 如果改变椭圆的高度，宽度也会相对变化。
 
@@ -183,7 +183,7 @@ Self 用于绑定源和绑定目标相同的场景中。对象的一个属性与
 
 创建 XAML，它表示下面给出的元素的逻辑树。
 
-![](https://img1.dotnet9.com/2021/10/0305.png)
+![](2021/10/0305.png)
 
 ```html
 <Grid Name="Parent_3">
@@ -223,7 +223,7 @@ AncestorLevel=2},Path=Name}"
 
 输出
 
-![](https://img1.dotnet9.com/2021/10/0306.png)
+![](2021/10/0306.png)
 
 AncestorType 为“StackPanel”与 AcestorLevel 为“2”组合，将 button 的 content 属性与 StackPanel 的 Name 属性（Parent_2）绑定在一起。
 
@@ -276,7 +276,7 @@ TemplatedParent 是一个属性，它使您能够创建一个包含少量未知�
 
 输出
 
-![](https://img1.dotnet9.com/2021/10/0307.png)
+![](2021/10/0307.png)
 
 ### 2.4 PreviousData
 
@@ -377,7 +377,7 @@ public RelativeSourcePreviousData()
 
 输出
 
-![](https://img1.dotnet9.com/2021/10/0308.png)
+![](2021/10/0308.png)
 
 蓝色框的高度是列表中项目的值，旧数据显示在右侧。该项的第一个值为“60”。因此，第一项没有旧值。
 
@@ -450,7 +450,7 @@ public CurrentItemCollection()
 
 输出
 
-![](https://img1.dotnet9.com/2021/10/0309.png)
+![](2021/10/0309.png)
 
 一旦列表项被选中，它将在右侧显示所选国家/地区。
 
@@ -499,7 +499,7 @@ public List <RegionInfo> CountriesList
 
 下面是 CountriesList 集合中的值的截图。
 
-![](https://img1.dotnet9.com/2021/10/0310.png)
+![](2021/10/0310.png)
 
 3. 将类 Countries 指定为 DataContext，并将 Listbox 与 DataContext 的 CountriesList 属性绑定。
 
@@ -531,7 +531,7 @@ public List <RegionInfo> CountriesList
 
 输出
 
-![](https://img1.dotnet9.com/2021/10/0311.png)
+![](2021/10/0311.png)
 
 右侧显示 DataContext（CountriesList）中集合的当前项（CountriesList）。
 
@@ -543,7 +543,7 @@ public List <RegionInfo> CountriesList
 
 在这个例子中，我想显示属性“EnglishName”的值。
 
-![](https://img1.dotnet9.com/2021/10/0312.png)
+![](2021/10/0312.png)
 
 为此，绑定 TextBlock 的 Text 属性，如下所示。
 
@@ -553,7 +553,7 @@ public List <RegionInfo> CountriesList
 
 输出
 
-![](https://img1.dotnet9.com/2021/10/0313.png)
+![](2021/10/0313.png)
 
 现在，当列表中的项被选中时，它显示属性“EnglishName”的值。
 

@@ -2,19 +2,19 @@
 
 基于`tauri+vue3+pinia2+veplus`跨平台、桌面端通用后台管理系统应用模板**TauriAdmin**。
 
-![](https://img1.dotnet9.com/2023/07/cover_11.png)
+![](2023/07/cover_11.png)
 
-![](https://img1.dotnet9.com/2023/07/1101.png)
+![](2023/07/1101.png)
 
-![](https://img1.dotnet9.com/2023/07/1102.png)
+![](2023/07/1102.png)
 
 tauri-admin 采用跨端技术 Tauri Rust 整合 vite4.x 构建电脑端后台系统程序 exe 模板。
 
-![](https://img1.dotnet9.com/2023/07/1103.png)
+![](2023/07/1103.png)
 
 支持多开窗体管理、国际化多语言、路由鉴权验证/路由缓存、常用业务功能模块。
 
-![](https://img1.dotnet9.com/2023/07/1104.gif)
+![](2023/07/1104.gif)
 
 ## 技术栈
 
@@ -27,13 +27,13 @@ tauri-admin 采用跨端技术 Tauri Rust 整合 vite4.x 构建电脑端后台�
 - 编辑器组件：wangeditor^4.7.15
 - 本地缓存：pinia-plugin-persistedstate^3.1.0
 
-![](https://img1.dotnet9.com/2023/07/1105.gif)
+![](2023/07/1105.gif)
 
 项目内置了三种常用的布局模板样式，根据喜欢随意切换即可，也可以定制喜欢的模板。
 
 ## 项目搭建目录
 
-![](https://img1.dotnet9.com/2023/07/1106.png)
+![](2023/07/1106.png)
 
 整个项目基于 tauri-cli 脚手架搭建 vue3 项目，如果大家对创建项目模板及多开窗口感兴趣，可以去看看之前的分享文章。
 
@@ -41,19 +41,19 @@ tauri-admin 采用跨端技术 Tauri Rust 整合 vite4.x 构建电脑端后台�
 https://www.cnblogs.com/xiaoyan2017/p/16812092.html
 ```
 
-![](https://img1.dotnet9.com/2023/07/1107.gif)
+![](2023/07/1107.gif)
 
-![](https://img1.dotnet9.com/2023/07/1108.png)
+![](2023/07/1108.png)
 
-![](https://img1.dotnet9.com/2023/07/1109.png)
+![](2023/07/1109.png)
 
-![](https://img1.dotnet9.com/2023/07/1110.png)
+![](2023/07/1110.png)
 
 ## tauri vue3 封装多开窗体
 
 在 multiwins 目录下新建一个 index.js 文件，用于 tauri 多窗口封装管理。
 
-![](https://img1.dotnet9.com/2023/07/1111.png)
+![](2023/07/1111.png)
 
 ```javascript
 // 创建窗口配置
@@ -206,23 +206,23 @@ class Windows {
 }
 ```
 
-![](https://img1.dotnet9.com/2023/07/1112.png)
+![](2023/07/1112.png)
 
-![](https://img1.dotnet9.com/2023/07/1113.png)
+![](2023/07/1113.png)
 
-![](https://img1.dotnet9.com/2023/07/1114.png)
+![](2023/07/1114.png)
 
-![](https://img1.dotnet9.com/2023/07/1115.png)
+![](2023/07/1115.png)
 
-![](https://img1.dotnet9.com/2023/07/1116.png)
+![](2023/07/1116.png)
 
 ## 主模板布局
 
 项目中内置了三种常用的模板布局样式。分别为传统分栏、菜单式、水平菜单式。
 
-![](https://img1.dotnet9.com/2023/07/1117.png)
+![](2023/07/1117.png)
 
-![](https://img1.dotnet9.com/2023/07/1118.png)
+![](2023/07/1118.png)
 
 ```javascript
 <script setup>
@@ -251,19 +251,19 @@ class Windows {
 </template>
 ```
 
-![](https://img1.dotnet9.com/2023/07/1119.png)
+![](2023/07/1119.png)
 
-![](https://img1.dotnet9.com/2023/07/1120.png)
+![](2023/07/1120.png)
 
-![](https://img1.dotnet9.com/2023/07/1121.png)
+![](2023/07/1121.png)
 
-![](https://img1.dotnet9.com/2023/07/1122.png)
+![](2023/07/1122.png)
 
 ## 路由配置
 
 tauri 项目中使用 vue-router 进行路由跳转管理。
 
-![](https://img1.dotnet9.com/2023/07/1123.png)
+![](2023/07/1123.png)
 
 ```javascript
 /**
@@ -369,7 +369,7 @@ export default router;
 
 目前 vue3 项目推荐使用 pinia 进行状态管理，当然 vuex 依然可以使用。
 
-![](https://img1.dotnet9.com/2023/07/1124.png)
+![](2023/07/1124.png)
 
 ```javascript
 /**
@@ -389,21 +389,21 @@ export default pinia;
 
 本地持久化存储则是使用 pinia 插件 pinia-plugin-persistedstate 进行实现功能。
 
-![](https://img1.dotnet9.com/2023/07/1125.png)
+![](2023/07/1125.png)
 
-![](https://img1.dotnet9.com/2023/07/1126.png)
+![](2023/07/1126.png)
 
-![](https://img1.dotnet9.com/2023/07/1127.png)
+![](2023/07/1127.png)
 
-![](https://img1.dotnet9.com/2023/07/1128.png)
+![](2023/07/1128.png)
 
-![](https://img1.dotnet9.com/2023/07/1129.png)
+![](2023/07/1129.png)
 
 ## vue-i18n 国际化解决方案
 
 tauri-admin 支持中英文/繁体三种语言配置。
 
-![](https://img1.dotnet9.com/2023/07/1130.png)
+![](2023/07/1130.png)
 
 ```javascript
 /**
@@ -502,4 +502,4 @@ tauri.conf.json 配置
 
 OK，以上就是 tauri+vue3+pinia 实现客户端后台管理系统模板实例的一些分享。
 
-![](https://img1.dotnet9.com/2023/07/1131.gif)
+![](2023/07/1131.gif)

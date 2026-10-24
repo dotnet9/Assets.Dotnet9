@@ -6,7 +6,7 @@ Flutter 是由谷歌开发的开源移动 UI 框架，可快速在不同平台�
 
 2 月 4 日，Flutter 稳定版 2.10 重磅推出，该版本在春节期间发布，距离上次的发布还不到两个月。但即使在这么短的时间内，我们已经关闭了 1843 个 issues 以及来自全球 115 名贡献者的 1525 个 PR。此次版本更新包括 Flutter 对 Windows 的重大支持更新、部分性能改进、不同平台的新增功能以及一些工具的改进。
 
-![图源自Flutter](https://img1.dotnet9.com/2022/02/0701.png)
+![图源自Flutter](2022/02/0701.png)
 
 ## Flutter 2.10 新特性一览
 
@@ -37,7 +37,7 @@ Flutter 2.10 是向 Material 3 过渡的开始，其中包括从单一颜色生�
 开发者可以使用任意颜色创建新的 ColorScheme 类型。ThemeData 的构造函数还包含一个新的 colorSchemeSeed 参数，可以直接从颜色生成主题。此外，该版本包括了 ThemeData.useMaterial3 的参数，可将 Widget 切换到新的 Material 3 外观。
 Flutter 还增加了 1028 个新 Material 图标。
 
-![图源自Flutter](https://img1.dotnet9.com/2022/02/0702.png)
+![图源自Flutter](2022/02/0702.png)
 
 除上述功能以外，Flutter 2.10 还在集成测试、DevTools 以及 VSCode 等进行了改进，并彻底移除了 Dev 渠道以及对 iOS 9.3.6 支持。
 
@@ -45,7 +45,7 @@ Flutter 还增加了 1028 个新 Material 图标。
 
 ## 已为 Windows 做好准备的 Flutter
 
-![图源自Flutter官网](https://img1.dotnet9.com/2022/02/0703.png)
+![图源自Flutter官网](2022/02/0703.png)
 
 Flutter 旨在创建高效跨平台软件框架，在过去几年取得了长足发展。Flutter 可为 Android、iOS、Linux、Windows、macOS 以及网页开发应用，并兼容现有的所有代码。受到了全球各地区开发者的支持信赖。
 
@@ -57,21 +57,21 @@ Flutter 旨在创建高效跨平台软件框架，在过去几年取得了长足
 
 正如 Flutter 对 Android 和 iOS 的支持一样，Flutter 的 Windows 结合了 Dart 框架以及 C++ 引擎。Windows 和 Flutter 通过嵌入层进行通信，该嵌入层承载 Flutter 引擎并负责翻译和分发 Windows 信息。Flutter 与 Windows 可将 UI 绘制到屏幕上，并与现有的 Windows 模式相配合。
 
-![图源来自Flutter和Dart产品经理博客](https://img1.dotnet9.com/2022/02/0704.png)
+![图源来自Flutter和Dart产品经理博客](2022/02/0704.png)
 
 开发者可在 Windows 上使用 Flutter 框架的所有功能，并通过 Dart 或 C++ 编写的平台插件与 Win32、COM 和 Windows Runtime API 进行通信，同时 Flutter 团队还对许多常用插件进行调整以支持 Windows，其中包括 camera、file_picker 以及 shared_preferences 。更重要的是，Flutter 社区中还添加了大量对其他包的 Windows 支持，其中涵盖了从 Windows 任务栏集成到串行端口访问的所有内容 。
 
 已有数百个包支持为 Windows 构建的 Flutter 应用程序
 
-![图源来自Flutter](https://img1.dotnet9.com/2022/02/0704.png)
+![图源来自Flutter](2022/02/0704.png)
 
 对于完全定制的 Windows UI，您还可以使用包 fluent_ui 来 flutter_acrylic 创建一个可以精美地表达 Microsoft Fluent 设计系统的应用程序。使用该 msix 工具，您可以将您的应用程序包装在一个安装程序中，该安装程序可以上传到 Windows 上的 Microsoft Store。
 
 总的来说，Flutter 2.10 的推出实现了在 Windows 上的快速运行，并且可以传输到其他桌面或移动设备以及 Web。以下是早期示例：
 
-![图源来自Flutter](https://img1.dotnet9.com/2022/02/0706.png)
+![图源来自Flutter](2022/02/0706.png)
 
-![图源来自Flutter](https://img1.dotnet9.com/2022/02/0707.png)
+![图源来自Flutter](2022/02/0707.png)
 
 该版本推出后，微软 Windows 开发者平台公司副总裁 Kevin Gallo 表示：”我们很高兴看到 Flutter 实现对创建 Windows 应用程序的支持。作为一个开放平台，Windows 欢迎所有开发人员的加入。Flutter 能实现 Windows 应用支持并在 Microsoft Store 上架，表明其对我们的信任，期待 Flutter 在 Windows 上的发展！”
 

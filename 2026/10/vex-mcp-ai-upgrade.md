@@ -6,7 +6,7 @@ AI 能读到你在编辑器里写的每一个字，能改你的文档、存你�
 
 这篇文章就讲清楚三件事：这个功能怎么用、它是怎么来的、路上踩了什么坑。
 
-![Vex 主界面：左侧大纲，右侧预览，状态栏右下角就是 MCP 指示器](https://img1.dotnet9.com/2026/10/vex-mcp-ai-upgrade-main.png)
+![Vex 主界面：左侧大纲，右侧预览，状态栏右下角就是 MCP 指示器](2026/10/vex-mcp-ai-upgrade-main.png)
 
 ## 一、先花 30 秒认识 Vex
 
@@ -21,7 +21,7 @@ MCP（Model Context Protocol）一句话：**给 AI 装一双手。** 没有它�
 
 这个 PR 给 Vex 内置了一个本机 MCP 服务：只监听回环地址、Bearer Token 鉴权、三档访问范围（当前文档/当前文件夹/自定义目录），默认关闭，设置里一键打开。
 
-![MCP 设置：启用开关、Token、端点、访问范围三档、确认策略](https://img1.dotnet9.com/2026/10/vex-mcp-ai-upgrade-settings.png)
+![MCP 设置：启用开关、Token、端点、访问范围三档、确认策略](2026/10/vex-mcp-ai-upgrade-settings.png)
 
 工具一共 29 个，挑几个感受下：
 
@@ -35,11 +35,11 @@ MCP（Model Context Protocol）一句话：**给 AI 装一双手。** 没有它�
 
 **第 1 步：握手。** AI 客户端连上 Vex，协商协议版本、拿到能力清单：
 
-![MCP 握手：protocolVersion 2025-06-18，serverInfo Vex](https://img1.dotnet9.com/2026/10/vex-mcp-ai-upgrade-handshake.png)
+![MCP 握手：protocolVersion 2025-06-18，serverInfo Vex](2026/10/vex-mcp-ai-upgrade-handshake.png)
 
 **第 2 步：AI 问"你能干什么"。** Vex 报出 29 个工具和参数说明，AI 自己决定用哪个：
 
-![tools/list：29 个工具及描述（随界面语言本地化）](https://img1.dotnet9.com/2026/10/vex-mcp-ai-upgrade-tools.png)
+![tools/list：29 个工具及描述（随界面语言本地化）](2026/10/vex-mcp-ai-upgrade-tools.png)
 
 **第 3 步：AI 读状态。** `vex_get_app_status` 返回版本 1.3.0 和当前打开的文档路径——它知道自己在跟谁合作。
 
@@ -55,11 +55,11 @@ MCP（Model Context Protocol）一句话：**给 AI 装一双手。** 没有它�
 
 - **人工把关默认开启**：凡是写操作——改文档、存文档、打开外部路径——Vex 都会弹窗，写明工具名、目标文件、要干什么。你点"执行"才动，点"取消"AI 收到的是明确拒绝：
 
-![确认弹窗：工具、目标文件、操作摘要，还能勾选"本次运行内记住此选择"](https://img1.dotnet9.com/2026/10/vex-mcp-ai-upgrade-confirm.png)
+![确认弹窗：工具、目标文件、操作摘要，还能勾选"本次运行内记住此选择"](2026/10/vex-mcp-ai-upgrade-confirm.png)
 
 - **每一步都留痕**：所有 MCP 操作写入审计日志（`%LOCALAPPDATA%\Vex\mcp-audit.jsonl`），帮助菜单里有审计窗口，AI 什么时候干了什么、成没成功，随时可查：
 
-![审计日志：时间、工具、类型、成败一目了然](https://img1.dotnet9.com/2026/10/vex-mcp-ai-upgrade-audit-file.png)
+![审计日志：时间、工具、类型、成败一目了然](2026/10/vex-mcp-ai-upgrade-audit-file.png)
 
 - **越权直接拒绝**：访问范围设在"当前文档"，AI 就碰不了别的路径；我们实测传 `C:\Windows\win.ini`，直接被打回。
 

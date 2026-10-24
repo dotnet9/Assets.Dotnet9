@@ -128,7 +128,7 @@ HandyControl的优势是风格更灵活，中式开发文档更全，工控场�
 
 把前面聊的串起来，一个典型的.NET工控上位机展示层架构是这样的：
 
-![工控展示层架构](https://img1.dotnet9.com/2026/08/dotnet-industrial-control-display-architecture.png)
+![工控展示层架构](2026/08/dotnet-industrial-control-display-architecture.png)
 
 界面层用WPF + MVVM模式。Views负责界面布局，ViewModels负责数据绑定和交互逻辑，Models对接服务层的数据接口。HandyControl提供控件样式，ScottPlot画实时曲线，OxyPlot画历史趋势图。
 

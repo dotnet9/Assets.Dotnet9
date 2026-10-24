@@ -83,7 +83,7 @@ public class LanguageRouteConstraint : IRouteConstraint
 
 添加区域资源文件
 
-![](https://img1.dotnet9.com/2022/06/1501.png)
+![](2022/06/1501.png)
 
 ```csharp
 [Route("{culture:culture}/[controller]")]
@@ -102,6 +102,6 @@ public class HomeController : ControllerBase
 }
 ```
 
-![](https://img1.dotnet9.com/2022/06/1502.png)
+![](2022/06/1502.png)
 
 Reference：[https://github.com/hueifeng/BlogSample/tree/master/src/LocalizationSingleResx](https://github.com/hueifeng/BlogSample/tree/master/src/LocalizationSingleResx)

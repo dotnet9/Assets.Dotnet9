@@ -6,7 +6,7 @@ AvaloniaUI是一个强大的跨平台.NET客户端开发框架，让开发者能
 
 本文将详细介绍如何在Avalonia项目中使用MediatR和Microsoft的依赖注入（MS.DI）库来实现事件驱动的通信。
 
-![](https://img1.dotnet9.com/2024/03/0103.png)
+![](2024/03/0103.png)
 
 ## 0. 基础知识准备-MediatR的基本用法
 
@@ -36,7 +36,7 @@ AvaloniaUI是一个强大的跨平台.NET客户端开发框架，让开发者能
 
 `Notification` 就是通知，调用者发出一次，然后可以有多个处理者参与处理。
 
-![](https://img1.dotnet9.com/2024/03/0105.png)
+![](2024/03/0105.png)
 
 ## 1. 准备工作
 
@@ -152,7 +152,7 @@ public class TestNotification : INotification
 
 示例工程结构如下，因为该开源项目（文末链接）写在站长的AvaloniaUI桌面工具工程，本文只关注如下图3个工程即可：
 
-![程序结构](https://img1.dotnet9.com/2024/03/0106.png)
+![程序结构](2024/03/0106.png)
 
 在AvaloniaUI主工程(CodeWF.Tools.Desktop)添加请求响应处理程序：
 
@@ -253,13 +253,13 @@ public class SlugifyViewModel : ViewModelBase
 
 请求效果：
 
-![](https://img1.dotnet9.com/2024/03/0101.gif)
+![](2024/03/0101.gif)
 
 看上面的请求效果：虽然在主工程和模块工程都注册了一个响应，但只有主工程被触发。
 
 通知效果：
 
-![](https://img1.dotnet9.com/2024/03/0102.gif)
+![](2024/03/0102.gif)
 
 在主工程和模块工程都注册了一个通知响应，所以两个处理程序都弹出了提示。
 
@@ -279,7 +279,7 @@ public class SlugifyViewModel : ViewModelBase
 
 `CQRS` 的全称是："Command and Query Responsibility Segregation"，直译过来就是命令与查询责任分离，可以通俗的理解为 `读写分离`。
 
-![](https://img1.dotnet9.com/2024/03/0107.png)
+![](2024/03/0107.png)
 
 微软的官方文档中对此做过如下陈述：
 
@@ -293,7 +293,7 @@ public class SlugifyViewModel : ViewModelBase
 > - 命令可以放置在队列中进行异步处理，而不是同步处理。
 > - 查询从不修改数据库。 查询返回的 DTO 不封装任何域知识。
 
-![](https://img1.dotnet9.com/2024/03/0108.png)
+![](2024/03/0108.png)
 
 CQRS 的好处包括：
 
@@ -312,7 +312,7 @@ CQRS 的好处包括：
 
 `MediatR` 是一个简单的中介者实现，可以极大降低我们的应用复杂度，也能够使得我们一路从 `CRUD` 到 `CQRS` 到 `DDD` 进行逐级演进。毕竟我们是生活在现实中的人，不能罔顾商业现实，纯粹一味追求技术。
 
-![](https://img1.dotnet9.com/2024/03/0109.png)
+![](2024/03/0109.png)
 
 商业技术的演进，应该是一路持续的改革而不是来一场革命。疫情总有反复，但是我们得活着，相对轻松的活着！
 

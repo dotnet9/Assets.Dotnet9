@@ -1,11 +1,11 @@
 > 有网友提出需求，在 Prism 的 Module 中如何弹出对话框？像主界面弹出关于对话框一样？
 
-![网友需求](https://img1.dotnet9.com/2021/04/0401.png)
+![网友需求](2021/04/0401.png)
 
 关于窗口弹出效果：
 
-<video id="video" controls="" preload="none" poster="https://img1.dotnet9.com/2021/04/0403.png">
-  <source id="mp4" src="https://img1.dotnet9.com/2021/04/0402.mp4" type="video/mp4">
+<video id="video" controls="" preload="none" poster="2021/04/0403.png">
+  <source id="mp4" src="2021/04/0402.mp4" type="video/mp4">
 </video>
 
 效果一般，如果有设计师可以做的很漂亮。
@@ -132,8 +132,8 @@ public void RegisterTypes(IContainerRegistry containerRegistry)
 
 效果如下，只是演示模块中如何弹出对话框，未加实际业务：
 
-<video id="video" controls="" preload="none" poster="https://img1.dotnet9.com/2021/04/0404.png">
-  <source id="mp4" src="https://img1.dotnet9.com/2021/04/0405.mp4" type="video/mp4">
+<video id="video" controls="" preload="none" poster="2021/04/0404.png">
+  <source id="mp4" src="2021/04/0405.mp4" type="video/mp4">
 </video>
 
 ## 3 关于项目怎么运行？
@@ -144,8 +144,8 @@ public void RegisterTypes(IContainerRegistry containerRegistry)
 
 如果需要运行查看客户端效果，请先编译服务端`src\LQClass.Admin`，至于怎么编译，不会的自行百度哦，编译成功后，调试运行服务端项目，或者双击运行服务端 Exe：`src\LQClass.Admin\LQClass.Admin\bin\Debug\net5.0\LQClass.Admin.exe`，服务端默认开启 5000 端口。
 
-<video id="video" controls="" preload="none" poster="https://img1.dotnet9.com/2021/04/0406.png">
-  <source id="mp4" src="https://img1.dotnet9.com/2021/04/0407.mp4" type="video/mp4">
+<video id="video" controls="" preload="none" poster="2021/04/0406.png">
+  <source id="mp4" src="2021/04/0407.mp4" type="video/mp4">
 </video>
 
 ### 3.2 运行 WPF 客户端
@@ -176,8 +176,8 @@ admin
 
 最后来个完整演示：
 
-<video id="video" controls="" preload="none" poster="https://img1.dotnet9.com/2021/04/0408.png">
-  <source id="mp4" src="https://img1.dotnet9.com/2021/04/0409.mp4" type="video/mp4">
+<video id="video" controls="" preload="none" poster="2021/04/0408.png">
+  <source id="mp4" src="2021/04/0409.mp4" type="video/mp4">
 </video>
 
 仓库（欢迎提 issue）：https://github.com/dotnet9/lqclass.com

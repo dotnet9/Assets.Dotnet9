@@ -196,15 +196,15 @@ namespace WpfWithCefSharpDemo
 
 JS调用C#的方法：黄色方框内显示的网页内容，点击HTML按钮`调用C#方法`测试。
 
-![](https://img1.dotnet9.com/2023/03/1601.gif)
+![](2023/03/1601.gif)
 
 C#调用JS的普通方法：蓝色方框内显示的WPF控件，点击WPF按钮`调用JS方法`测试。
 
-![](https://img1.dotnet9.com/2023/03/1602.gif)
+![](2023/03/1602.gif)
 
 C#传递Json对象给JS的方法：蓝色方框内，点击WPF按钮`C#传递Json对象到网页`测试。
 
-![](https://img1.dotnet9.com/2023/03/1603.gif)
+![](2023/03/1603.gif)
 
 ## 二、总结
 
@@ -248,4 +248,4 @@ C#传递Json对象给JS的方法：蓝色方框内，点击WPF按钮`C#传递Jso
 - 微信技术交流群：添加微信（codewf）备注“入群”
 - QQ技术交流群：771992300。
 
-![](https://img1.dotnet9.com/site/knowledgeplanet.jpg)
+![](site/knowledgeplanet.jpg)

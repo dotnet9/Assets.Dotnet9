@@ -22,11 +22,11 @@
 
 **Windows 桌面、Blazor Server(在线）、Blazor Wasm(在线）、Android 效果**
 
-![](https://img1.dotnet9.com/2022/06/1301.gif)
+![](2022/06/1301.gif)
 
 **iPad Air、iOS、macOS 桌面效果**
 
-![](https://img1.dotnet9.com/2022/06/1309.png)
+![](2022/06/1309.png)
 
 MAUI 各端未做发布文件体验（需要做相应平台的发布签名等操作），大家可以按下面介绍的方法创建项目编译体验一下。
 
@@ -34,15 +34,15 @@ MAUI 各端未做发布文件体验（需要做相应平台的发布签名等操
 
 **macOS 版本和 xCode 版本**
 
-![](https://img1.dotnet9.com/2022/06/1306.png)
+![](2022/06/1306.png)
 
 **xCode 为不可用状态**
 
-![](https://img1.dotnet9.com/2022/06/1312.jpg)
+![](2022/06/1312.jpg)
 
 **VS 编译出错，后面再解决**
 
-![](https://img1.dotnet9.com/2022/06/1313.jpg)
+![](2022/06/1313.jpg)
 
 用 mbp 的同学建议不要安装预览版操作系统，不要当勇士....
 
@@ -52,21 +52,21 @@ MAUI 各端未做发布文件体验（需要做相应平台的发布签名等操
 
 ### 3.1 创建 Blazor Server 项目：Dotnet9.Server
 
-![](https://img1.dotnet9.com/2022/06/1302.png)
+![](2022/06/1302.png)
 
 ### 3.2 创建 Blazor WebAssembly 项目：Dotnet9.Wasm
 
-![](https://img1.dotnet9.com/2022/06/1303.png)
+![](2022/06/1303.png)
 
 ### 3.3 创建 MAUI Blazor 项目：Dotnet9.MAUI
 
-![](https://img1.dotnet9.com/2022/06/1304.png)
+![](2022/06/1304.png)
 
 ### 3.4 查找共同点
 
 在 3 个项目的上一层目录，打开 PowerShell，输入`tree /f`查看详细的目录文件组织结构：
 
-![](https://img1.dotnet9.com/2022/06/1305.gif)
+![](2022/06/1305.gif)
 
 仔细查看三个模板项目文件结构，我们找出共同的文件查看：
 
@@ -151,11 +151,11 @@ C:.
 
 创建 Razor 类库：Dotnet9.WebApp
 
-![](https://img1.dotnet9.com/2022/06/1307.png)
+![](2022/06/1307.png)
 
 **下面开始 UI 的提取**
 
-![](https://img1.dotnet9.com/2022/06/1308.png)
+![](2022/06/1308.png)
 
 如上图，将`Dotnet9.MAUI`项目的`Data`、`Pages`、`Shared`三个目录外加`Main.razor`文件剪切到`Dotnet9.WebApp`项目中，然后修改剪切后相应文件的命名空间`Dotnet9.MAUI[xxx]`为`Dotnet9.WebApp[xxx]`，打开`Dotnet9.WebApp`项目的`_Import.razor`文件，参考`Dotnet9.MAUI`项目的`_Import.razor`文件部分命名空间，修改如下：
 
@@ -288,13 +288,13 @@ builder.RootComponents.Add<Main>("#app");
 
 修改完毕，编译运行`Dotnet9.Wasm`项目，至此三种项目模板已经修改完成，最终解决方案如下图：
 
-![](https://img1.dotnet9.com/2022/06/1311.png)
+![](2022/06/1311.png)
 
 ## 6 总结
 
 总结就是下图：
 
-![](https://img1.dotnet9.com/2022/06/1310.png)
+![](2022/06/1310.png)
 
 - Dotnet9.WebApp：blazor 组件相关的代码、路由组件等放在这个工程，供其他项目引用
 - Dotnet9.Server：Blazor Server 模板项目

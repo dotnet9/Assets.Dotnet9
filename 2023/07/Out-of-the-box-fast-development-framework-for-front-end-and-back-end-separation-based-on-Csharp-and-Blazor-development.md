@@ -12,7 +12,7 @@ Known 是基于 C#和 Blazor 开发的前后端分离快速开发框架，开箱
 
 项目结构
 
-![](https://img1.dotnet9.com/2023/07/0201.png)
+![](2023/07/0201.png)
 
 ## 主要功能
 
@@ -29,17 +29,17 @@ Known 是基于 C#和 Blazor 开发的前后端分离快速开发框架，开箱
 
 ## 截图预览
 
-![](https://img1.dotnet9.com/2023/07/0202.png)
+![](2023/07/0202.png)
 
-![](https://img1.dotnet9.com/2023/07/0203.png)
+![](2023/07/0203.png)
 
-![](https://img1.dotnet9.com/2023/07/0204.png)
+![](2023/07/0204.png)
 
-![](https://img1.dotnet9.com/2023/07/0205.png)
+![](2023/07/0205.png)
 
-![](https://img1.dotnet9.com/2023/07/0206.png)
+![](2023/07/0206.png)
 
-![](https://img1.dotnet9.com/2023/07/0207.png)
+![](2023/07/0207.png)
 
 ## 项目地址
 

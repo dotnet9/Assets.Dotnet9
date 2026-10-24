@@ -4,27 +4,27 @@
 - 在 XAML 中声明托盘菜单，就像给控件添加 ContextMenu 一样
 - 封装了常用命令，比如：打开主窗体、退出应用程序等
 
-![](https://img1.dotnet9.com/2020/04/0102.jpg)
+![](2020/04/0102.jpg)
 
 我在 TerminalMACS 中添加了托盘菜单，最终实现的托盘菜单效果：
 
-![](https://img1.dotnet9.com/2020/04/0103.jpg)
+![](2020/04/0103.jpg)
 
-![](https://img1.dotnet9.com/2020/04/0104.gif)
+![](2020/04/0104.gif)
 
 ## 2 如何做？
 
 【Step 1】在已创建的 WPF 项目中，添加 HandyControl 库，并安装：
 
-![](https://img1.dotnet9.com/2020/04/0105.jpg)
+![](2020/04/0105.jpg)
 
 你问我为什么要使用 HC 控件库？先看 Demo 效果：
 
-![](https://img1.dotnet9.com/2020/04/0106.jpg)
+![](2020/04/0106.jpg)
 
-![](https://img1.dotnet9.com/2020/04/0107.jpg)
+![](2020/04/0107.jpg)
 
-![](https://img1.dotnet9.com/2020/04/0108.gif)
+![](2020/04/0108.gif)
 
 常用的托盘效果应该都能满足了吧？而实现这些效果，我们自己要码的代码真的不多，因为 HC 已经封装了，我们直接使用即可。
 
@@ -59,7 +59,7 @@ xmlns:hc="https://handyorg.github.io/handycontrol"
 
 - NotifyIcon 为托盘菜单控件，Text 显示托盘菜单名称，将鼠标放在托盘图标上，ToolTip 显示该字符串，一般显示应用程序名称，如下图：
 
-![](https://img1.dotnet9.com/2020/04/0109.gif)
+![](2020/04/0109.gif)
 
 - hc:NotifyIcon.ContextMenu 用于声明菜单项，本项目目前加了打开主窗体、退出应用程序两个菜单，而这两个菜单对应的命令 HC 已经封装，方便使用。 - 另外，单击托盘菜单，也可弹出应用程序主窗口
 

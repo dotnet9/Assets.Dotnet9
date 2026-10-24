@@ -14,7 +14,7 @@ MASA Blazor 是一个 Blazor 的 UI 组件库。就像大家写前端熟知的 B
 
 Blazor 是一个使用 .NET 生成交互式客户端 Web UI 的框架，使用 Blazor，开发人员可以使用 C#语言在服务器和客户端进行编码，构建丰富 Web 应用程序。听起来是不是很不错，不熟悉前端开发语言的后端小伙伴，也可以使用 Blazor 进行 Web 应用开发了。简单看一下官方的描述。
 
-![](https://img1.dotnet9.com/2022/01/0701.png)
+![](2022/01/0701.png)
 
 如果想深入了解 Blazor 的小伙伴可以翻一下[这篇文章](https://blogs.masastack.com/2021/10/25/masa/framework/masa-blazor/0/)，里面非常详细的介绍了什么是 Blazor 和 Blazor 与其他前端技术的对比。或者可以直接去翻[官方文档](https://docs.microsoft.com/zh-cn/aspnet/core/blazor/?view=aspnetcore-6.0)，这里我就不过多的阐述了。
 
@@ -64,7 +64,7 @@ dotnet new blazorserver -o BlazorServerApp
 dotnet add package MASA.Blazor
 ```
 
-![](https://img1.dotnet9.com/2022/01/0702.png)
+![](2022/01/0702.png)
 
 - 在 Program.cs 里添加 Masa Blazor 相关服务。
 
@@ -100,7 +100,7 @@ rel="stylesheet">
 <script src="_content/BlazorComponent/js/blazor-component.js"></script>
 ```
 
-![](https://img1.dotnet9.com/2022/01/0703.png)
+![](2022/01/0703.png)
 
 > 如果是.net6.0 之前的版本，这些代码是在 Pages/\_Host.cshtml(Server) 中
 
@@ -110,7 +110,7 @@ rel="stylesheet">
 @using MASA.Blazor @using BlazorComponent
 ```
 
-![](https://img1.dotnet9.com/2022/01/0704.png)
+![](2022/01/0704.png)
 
 替换 Shared/MainLayout.razor 里面的内容
 
@@ -118,7 +118,7 @@ rel="stylesheet">
 <MApp> @Body </MApp>
 ```
 
-![](https://img1.dotnet9.com/2022/01/0705.png)
+![](2022/01/0705.png)
 
 ### 使用模板快速创建 Blazor 项目
 
@@ -144,31 +144,31 @@ dotnet new masab -o BlazorServerApp
 
 > 使用到了 MNavigationDrawer 和 MAppBar 两个组件。
 
-![](https://img1.dotnet9.com/2022/01/0706.png)
+![](2022/01/0706.png)
 
 效果图如下：
 
-![](https://img1.dotnet9.com/2022/01/0707.png)
+![](2022/01/0707.png)
 
 还有很多漂亮有趣的组件官网上都有示例和代码，比如这个 AppBar：
 
-![](https://img1.dotnet9.com/2022/01/0708.png)
+![](2022/01/0708.png)
 
 点击查看源代码，然后把代码复制过来，一个组件就完成了。
 
-![](https://img1.dotnet9.com/2022/01/0709.png)
+![](2022/01/0709.png)
 
 看下效果：
 
-![](https://img1.dotnet9.com/2022/01/0710.png)
+![](2022/01/0710.png)
 
 就是这么简单。
 
 我们再来看一下官方给的 Admin 模板（MASA Blazor Pro）效果如何：
 
-![](https://img1.dotnet9.com/2022/01/0711.png)
+![](2022/01/0711.png)
 
-![](https://img1.dotnet9.com/2022/01/0712.png)
+![](2022/01/0712.png)
 
 MASA Blazor Pro 演示了大多数 MASA Blazor 组件的使用。而且是一个开箱即用的后台前端管理模板。都是开源免费的。 感兴趣的小伙伴可以去解一下。
 
@@ -210,7 +210,7 @@ MASA Blazor Pro 演示了大多数 MASA Blazor 组件的使用。而且是一个
 - QQ 群：[7424099](http://wpa.qq.com/msgrd?v=3&uin=7424099&site=qq&menu=yes)
 - 微信群：加技术运营微信（MasaStackTechOps），备注来意，邀请进群
 
-![](https://img1.dotnet9.com/2022/01/0713.png)
+![](2022/01/0713.png)
 
 ​ ------ END ------
 

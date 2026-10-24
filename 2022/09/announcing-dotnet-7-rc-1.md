@@ -86,7 +86,7 @@ ARM 提供了小尺寸、卓越性能和高功率效率。
 
 向我们所有的社区成员致以巨大的“谢谢”。我们非常感谢您的周到贡献。我们请贡献者[@filipnavara](https://github.com/filipnavara)分享他的想法。
 
-![filipnavara](https://img1.dotnet9.com/2022/09/filip_navara.jpeg)
+![filipnavara](2022/09/filip_navara.jpeg)
 
 用菲利普自己的话说：
 

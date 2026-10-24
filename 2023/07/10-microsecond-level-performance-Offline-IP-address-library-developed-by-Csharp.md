@@ -51,7 +51,7 @@ services.AddSingleton<ISearcher,Searcher>();
 
 **性能**
 
-![](https://img1.dotnet9.com/2023/07/0301.png)
+![](2023/07/0301.png)
 
 ## 项目地址
 

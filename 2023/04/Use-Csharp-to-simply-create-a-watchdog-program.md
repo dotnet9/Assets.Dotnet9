@@ -8,71 +8,71 @@
 
 先上一张简易效果图，本次更新主要仿照百度脑图。
 
-![](https://img1.dotnet9.com/2023/04/0101.png)
+![](2023/04/0101.png)
 
 同样老规矩，先上源码地址：[https://gitee.com/akwkevin/aistudio.-wpf.-diagram](https://gitee.com/akwkevin/aistudio.-wpf.-diagram)
 
-![](https://img1.dotnet9.com/2023/04/0121.png)
+![](2023/04/0121.png)
 
 本次扩展主要内容：
 
 ### 1. 思维导图、目录组织图、鱼骨头图、逻辑结构图、组织结构图，入口在文件新建下。
 
-![](https://img1.dotnet9.com/2023/04/0102.png)
+![](2023/04/0102.png)
 
 ### 2. 思维导图工具栏（只有思维导图模式下可见）
 
-![](https://img1.dotnet9.com/2023/04/0103.png)
+![](2023/04/0103.png)
 
 #### 2.1. 插入链接
 
-![](https://img1.dotnet9.com/2023/04/0104.png)
+![](2023/04/0104.png)
 
 #### 2.2. 插入图片
 
-![](https://img1.dotnet9.com/2023/04/0105.png)
+![](2023/04/0105.png)
 
 #### 2.3. 插入备注
 
-![](https://img1.dotnet9.com/2023/04/0106.png)
+![](2023/04/0106.png)
 
 #### 2.4. 插入优先级
 
-![](https://img1.dotnet9.com/2023/04/0107.png)
+![](2023/04/0107.png)
 
 #### 2.5. 插入进度
 
-![](https://img1.dotnet9.com/2023/04/0108.png)
+![](2023/04/0108.png)
 
 #### 2.6.切换类型
 
-![](https://img1.dotnet9.com/2023/04/0109.png)
+![](2023/04/0109.png)
 
-![](https://img1.dotnet9.com/2023/04/0110.png)
+![](2023/04/0110.png)
 
-![](https://img1.dotnet9.com/2023/04/0111.png)
+![](2023/04/0111.png)
 
-![](https://img1.dotnet9.com/2023/04/0112.png)
+![](2023/04/0112.png)
 
 #### 2.7. 切换主题
 
-![](https://img1.dotnet9.com/2023/04/0113.png)
+![](2023/04/0113.png)
 
-![](https://img1.dotnet9.com/2023/04/0114.png)
+![](2023/04/0114.png)
 
-![](https://img1.dotnet9.com/2023/04/0115.png)
+![](2023/04/0115.png)
 
-![](https://img1.dotnet9.com/2023/04/0116.png)
+![](2023/04/0116.png)
 
-![](https://img1.dotnet9.com/2023/04/0117.png)
+![](2023/04/0117.png)
 
-![](https://img1.dotnet9.com/2023/04/0118.png)
+![](2023/04/0118.png)
 
 #### 2.8. 还要展开节点，全选，居中，适应窗体大小等功能，不再介绍。
 
 ### 3. 添加搜索功能（不仅仅思维导图可以使用）
 
-![](https://img1.dotnet9.com/2023/04/0119.png)
+![](2023/04/0119.png)
 
 ### 4. 接下来介绍下核心源代码（布局设置）
 
@@ -248,6 +248,6 @@ public void ArrangeOverride(MindNode mindNode)
 
 ### 5. 最后为了方便大家使用，我封装了一个思维脑图的控件 MindEditor，可以直接绑定 json 格式的数据，数据改变，可以直接加载应用。（见[AIStudio.Wpf.DiagramDesigner.Demo](https://gitee.com/akwkevin/aistudio.-wpf.-diagram/tree/master/AIStudio.Wpf.DiagramDesigner.Demo)）
 
-![](https://img1.dotnet9.com/2023/04/0120.png)
+![](2023/04/0120.png)
 
 近期会持续更新，欢迎大家光临[艾竹 (akwkevin) - Gitee.com](https://gitee.com/akwkevin)，支持的朋友们，点个小星星，你们的支持能燃烧我开源的力量。

@@ -13,7 +13,7 @@
 
 ## 一、关于 Ant Design Blazor
 
-![](https://img1.dotnet9.com/2020/06/0101.png)
+![](2020/06/0101.png)
 
 项目名称：Ant Design Blazor
 
@@ -59,7 +59,7 @@
 
 该库是国内目前社区宣传度做的最好的一款 Blazor UI 组件库，对于 Blazor 的社区推广起到很大的作用，Dotnet9 是通过该库作者的一篇文章[《如何用 Blazor 实现 Ant Design 组件库？》](https://mp.weixin.qq.com/s/Bhvp4EKgKh-lMyh6v3_Ayg)开始关注 Blazor 的，关于该库作者的心路历程，大家可点击原文了解。
 
-![](https://img1.dotnet9.com/2020/06/0102.jpg)
+![](2020/06/0102.jpg)
 
 距离作者发文已有 3 月之久，文中作者的部分期望应该说是实现了一个个小目标了，也体现在了对社区的贡献上（对 Blazor 推广作用）：
 
@@ -69,15 +69,15 @@
 
 库作者发文时 star 统计（2020 年 03 月 21 日）
 
-![](https://img1.dotnet9.com/2020/06/0103.jpg)
+![](2020/06/0103.jpg)
 
 3 个月后的今天 star 统计（2020 年 06 月 20 日）
 
-![](https://img1.dotnet9.com/2020/06/0104.jpg)
+![](2020/06/0104.jpg)
 
 【更新】站长整理文章时再统计，已经到了 2022 年 2 月 20 号晚 23：49，隔了 1 年半之久，star 从 1.3K 到了 4k，牛逼哟，赶紧关注该库吧。
 
-![](https://img1.dotnet9.com/2020/06/0105.png)
+![](2020/06/0105.png)
 
 ### 2.2 Ant Design 官方认可
 
@@ -87,7 +87,7 @@
 
 Ant Design 官方前端实现介绍[链接](https://ant.design/docs/spec/introduce-cn%23%25E5%2589%258D%25E7%25AB%25AF%25E5%25AE%259E%25E7%258E%25B0)
 
-![](https://img1.dotnet9.com/2020/06/0106.jpg)
+![](2020/06/0106.jpg)
 
 ### 2.3 微软官方认可
 
@@ -95,7 +95,7 @@ Ant Design 官方前端实现介绍[链接](https://ant.design/docs/spec/introdu
 
 一图胜千言，得到微软认可是对作者最大的奖励，也是对社区的最好宣传。
 
-![](https://img1.dotnet9.com/2020/06/0107.jpg)
+![](2020/06/0107.jpg)
 
 ## 三、Ant Design Blazor UI 库组件介绍
 
@@ -109,13 +109,13 @@ Ant Design Blazor 的开发初衷是尽量与 Ant Design 组件库一致，可�
 
 网站风格和 Ant Design 官网高度一致，更方便熟悉 Ant Design 组件的朋友使用。
 
-![](https://img1.dotnet9.com/2020/06/0108.jpg)
+![](2020/06/0108.jpg)
 
 ### 3.2 组件概览
 
 组件整体印象，这只是其中一部分，丰富的组件需要点击[Ant Design Blazor](https://ant-design-blazor.github.io/)了解更多哟。
 
-![](https://img1.dotnet9.com/2020/06/0109.jpg)
+![](2020/06/0109.jpg)
 
 ## 四、Ant Design Blazor 后续计划
 
@@ -131,7 +131,7 @@ Ant Design Blazor 的开发初衷是尽量与 Ant Design 组件库一致，可�
 - 微信群 可添加作者微信号拉你入群：JamesYeungMVP
 - 钉钉群
 
-![](https://img1.dotnet9.com/2020/06/0110.png)
+![](2020/06/0110.png)
 
 **站长更新（2022 年 02 月 20 号 23：55）**
 

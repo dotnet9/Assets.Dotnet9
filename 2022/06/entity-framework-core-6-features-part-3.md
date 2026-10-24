@@ -547,7 +547,7 @@ class ExampleContext : DbContext
 
 警告日志：
 
-![](https://img1.dotnet9.com/2022/06/0601.png)
+![](2022/06/0601.png)
 
 当你有嵌套自有可选从属关系时，EF Core 将不允许创建模型。
 

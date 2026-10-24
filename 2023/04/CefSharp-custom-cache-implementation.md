@@ -14,7 +14,7 @@
 
 断网情况下，演示加载已经缓存的[百度](www.baidu.com)、[百度翻译](https://fanyi.baidu.com/)、[Dotnet9首页](https://dotnet9.com/)、[Dotnet9关于](ttps://dotnet9.com/about)4个页面：
 
-![](https://img1.dotnet9.com/2023/04/0401.gif)
+![](2023/04/0401.gif)
 
 接下来讲解缓存的实现方式。
 
@@ -57,7 +57,7 @@ public partial class App : Application
 
 缓存目录结构如下：
 
-![](https://img1.dotnet9.com/2023/04/0402.png)
+![](2023/04/0402.png)
 
 其中，CachePath属性指定了磁盘缓存的路径（绝对路径）。如果不设置该属性，Chromium会将缓存数据存储在默认路径下（通常是用户目录下的AppData\\Local\\CefSharp目录）。
 
@@ -516,11 +516,11 @@ internal static class CacheFileHelper
 
 自定义缓存的子目录以资源的域名(Host)为目录名称创建：
 
-![](https://img1.dotnet9.com/2023/04/0403.png)
+![](2023/04/0403.png)
 
 打开缓存的[dotnet9.com](https://dotnet9.com)目录，通过查看目录结构和程序发布目录基本一致，这更适合人看了，是不？
 
-![](https://img1.dotnet9.com/2023/04/0404.png)
+![](2023/04/0404.png)
 
 ### 2.2. 可能存在的问题
 
@@ -557,4 +557,4 @@ internal static class CacheFileHelper
 - 微信技术交流群：添加微信（codewf）备注“入群”
 - QQ技术交流群：771992300。
 
-![](https://img1.dotnet9.com/site/knowledgeplanet.jpg)
+![](site/knowledgeplanet.jpg)

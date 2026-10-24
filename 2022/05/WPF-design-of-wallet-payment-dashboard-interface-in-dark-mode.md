@@ -9,13 +9,13 @@
 
 欣赏效果：
 
-![](https://img1.dotnet9.com/2022/05/4101.gif)
+![](2022/05/4101.gif)
 
 ## 2. 准备
 
 创建一个 WPF 工程，比如站长使用 [.NET 7](https://dotnet.microsoft.com/zh-cn/) 创建名为 **WalletPayment** 的 WPF 项目。
 
-![](https://img1.dotnet9.com/2022/05/4102.png)
+![](2022/05/4102.png)
 
 这次我们不添加任何图片，只添加了一个 NuGet 包 [MaterialDesignThemes](https://dotnet9.com/2020/12/Material-designinxaml-an-open-source-csharp-WPF-Control-Library)：
 
@@ -35,11 +35,11 @@ _已使用“.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFra
 
 **左侧菜单**
 
-![](https://img1.dotnet9.com/2022/05/4103.gif)
+![](2022/05/4103.gif)
 
 **按钮切换**
 
-![](https://img1.dotnet9.com/2022/05/4104.gif)
+![](2022/05/4104.gif)
 
 **MainWindow.xaml**
 
