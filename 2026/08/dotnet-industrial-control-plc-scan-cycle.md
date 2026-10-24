@@ -13,8 +13,6 @@ cover: https://img1.dotnet9.com/2026/08/dotnet-industrial-control-plc-scan-cycle
 banner: false
 categories:
   - .NET
-albums:
-  - .NET工控入门与生态
 tags:
   - .NET
   - 工控

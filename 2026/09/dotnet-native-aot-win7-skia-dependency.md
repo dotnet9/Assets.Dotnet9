@@ -10,8 +10,6 @@ categories:
   - .NET
   - Avalonia UI
   - 桌面开发
-albums:
-  - C# AOT
 tags:
   - Native AOT
   - Avalonia

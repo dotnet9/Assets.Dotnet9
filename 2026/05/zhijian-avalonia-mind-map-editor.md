@@ -10,8 +10,6 @@ categories:
   - .NET
   - Avalonia
   - 桌面开发
-albums:
-  - Avalonia
 tags:
   - "C#"
   - Avalonia

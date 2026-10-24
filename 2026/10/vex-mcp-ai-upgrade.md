@@ -10,9 +10,6 @@ categories:
   - .NET
   - Avalonia UI
   - 开源项目
-albums:
-  - C# AOT
-  - Web开源项目
 tags:
   - MCP
   - AI编程

@@ -9,8 +9,6 @@ draft: false
 cover: https://img1.dotnet9.com/2023/03/cover_12.png
 categories:
   - WPF
-albums:
-  - WPF开源项目
 tags:
   - .NET
   - "C#"

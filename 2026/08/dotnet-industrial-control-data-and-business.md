@@ -13,8 +13,6 @@ cover: https://img1.dotnet9.com/2026/08/dotnet-industrial-control-data-and-busin
 banner: false
 categories:
   - .NET
-albums:
-  - .NET工控入门与生态
 tags:
   - .NET
   - 工控

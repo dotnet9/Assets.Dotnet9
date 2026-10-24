@@ -12,8 +12,6 @@ categories:
   - Avalonia UI
   - Winform
   - .NET
-albums:
-  - C# AOT
 tags:
   - .NET
   - "C#"

@@ -9,8 +9,6 @@ banner: false
 categories:
   - 前端
   - 分享
-albums:
-  - Web开源项目
 tags:
   - Three.js
   - 开源项目

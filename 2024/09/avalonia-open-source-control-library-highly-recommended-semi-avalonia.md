@@ -10,8 +10,6 @@ cover: https://img1.dotnet9.com/2024/09/0101.jpg
 banner: false
 categories:
   - Avalonia UI
-albums:
-  - Avalonia UI控件库
 tags:
   - .NET
   - "C#"

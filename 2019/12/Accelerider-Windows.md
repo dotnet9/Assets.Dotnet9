@@ -11,8 +11,6 @@ cover: https://img1.dotnet9.com/2019/12/0304.png
 banner: false
 categories:
   - WPF
-albums:
-  - WPF开源项目
 tags:
   - .NET
   - WPF

@@ -9,8 +9,6 @@ draft: false
 cover: https://img1.dotnet9.com/2024/10/cover_02.png
 categories:
   - .NET
-albums:
-  - C# AOT
 tags:
   - .NET
   - "C#"
