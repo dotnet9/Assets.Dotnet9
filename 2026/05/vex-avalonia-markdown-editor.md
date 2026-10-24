@@ -1,3 +1,27 @@
+---
+title: Vex 1.1.0：免费开源的 .NET + Avalonia 跨平台 Markdown 编辑器
+slug: vex-avalonia-markdown-editor
+description: 介绍 Vex 1.1.0，一个免费开源的 .NET + Avalonia 跨平台 Markdown 编辑器，重点展示动态编辑、实时预览、大纲跳转、源码模式、刷新预览、查找替换、主题排版、可选择文本 PDF/PNG/Word 导出、复制到公众号和新手引导。
+date: 2026-05-24 10:55:00
+lastmod: 2026-05-25 16:31:47
+cover: https://img1.dotnet9.com/2026/05/vex-avalonia-cover.svg
+banner: false
+categories:
+  - .NET
+  - Avalonia
+  - 桌面开发
+albums:
+  - Avalonia
+tags:
+  - "C#"
+  - Avalonia
+  - Markdown
+  - Vex
+  - 桌面应用
+author: dotnet9
+draft: false
+---
+
 这次介绍一个新的桌面写作工具：**Vex（维刻）**。
 
 Vex 是基于 **.NET 10 + Avalonia 12** 构建的免费开源跨平台 Markdown 编辑器。它不做大而全的知识库，也不复刻成熟商业编辑器，当前主线很清楚：**Markdown 源码编辑、实时预览、文件管理、导出，以及复制到内容平台**。

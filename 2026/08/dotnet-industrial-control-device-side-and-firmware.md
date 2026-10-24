@@ -1,3 +1,28 @@
+---
+title: ".NET工控概念科普——下位机和固件，上位机开发者必须搞懂的\"另一半\""
+slug: dotnet-industrial-control-device-side-and-firmware
+description: "解释下位机、固件与上位机之间的分工，以及固件版本变化对通信和现场调试的影响。"
+date: 2026-08-12 08:30:00
+lastmod: 2026-08-25 09:11:01
+author: wackyxk
+originalTitle: ".NET工控概念科普——下位机和固件，上位机开发者必须搞懂的\"另一半\""
+originalLink: https://mp.weixin.qq.com/s/erYvHnipHofrf-hPQNa68g
+copyright: Reprinted
+draft: false
+cover: https://img1.dotnet9.com/2026/08/dotnet-industrial-control-device-side-and-firmware-cover.jpg
+banner: false
+categories:
+  - .NET
+albums:
+  - .NET工控入门与生态
+tags:
+  - .NET
+  - 工控
+  - 下位机
+  - 固件
+  - PLC
+---
+
 > 转载声明：本文经原作者 **wackyxk** 授权，由 CodeWF 转载发布。
 >
 > 原文首发于微信公众号「wacky的碎碎念」，版权归原作者所有。
