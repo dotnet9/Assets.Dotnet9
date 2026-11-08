@@ -22,7 +22,7 @@ This repository is not only for images. It acts as the file-based content source
 ## Repository Layout
 
 ```text
-2019/ ... 2026/      Year/month article bodies, sidecar metadata, and article images
+2019/ ... 2026/      Year/month Markdown articles with inline YAML, and article images
 site/
   about.md           About page
   Privacy.md         Privacy page content
@@ -51,8 +51,7 @@ That means this repository should be maintained with the same level of disciplin
 
 ## Content Standards
 
-- English: [CONTENT_GUIDE.md](./CONTENT_GUIDE.md)
-- 中文： [CONTENT_GUIDE-zh_CN.md](./CONTENT_GUIDE-zh_CN.md)
+- Content guide (Chinese): [CONTENT_GUIDE-zh_CN.md](./CONTENT_GUIDE-zh_CN.md)
 - Content copyright notice: [NOTICE.md](./NOTICE.md)
 
 The repository-level MIT License does not automatically cover third-party reprinted articles or their media. Copyright remains with the original author or rightsholder, subject to each article's metadata, visible reprint notice, and any separate permission terms.
@@ -60,7 +59,8 @@ The repository-level MIT License does not automatically cover third-party reprin
 ## Maintenance Notes
 
 - Keep article bodies under `YYYY/MM/slug.md`.
-- Keep article metadata under matching `YYYY/MM/slug.yml` sidecar files.
+- Keep article metadata in YAML front matter at the beginning of each `YYYY/MM/slug.md`; do not create a matching `.yml` sidecar.
+- Keep new articles as `draft: true` until reviewed and ready to publish.
 - Keep article media near the article or under a stable site folder.
 - Prefer descriptive filenames for covers and diagrams.
 - Update the matching `site/*.json` or `site/**/navigation.json` file when adding new navigation-level content.

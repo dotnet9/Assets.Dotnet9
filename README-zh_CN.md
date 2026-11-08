@@ -24,7 +24,7 @@ English version: [README.md](./README.md)
 ## 目录说明
 
 ```text
-2019/ ... 2026/      按年份、月份组织的文章正文、sidecar 元数据与配图
+2019/ ... 2026/      按年份、月份组织的 Markdown 文章（内嵌 YAML）与配图
 site/
   about.md           关于页内容
   Privacy.md         隐私页内容
@@ -52,7 +52,6 @@ site/
 ## 内容规范
 
 - 中文版：[CONTENT_GUIDE-zh_CN.md](./CONTENT_GUIDE-zh_CN.md)
-- English: [CONTENT_GUIDE.md](./CONTENT_GUIDE.md)
 - 内容版权说明：[NOTICE.md](./NOTICE.md)
 
 仓库根目录的 MIT 许可证不自动覆盖第三方转载文章及其配图。转载内容的版权归原作者或原权利人所有，具体以文章元数据、正文转载声明及独立授权约定为准。
@@ -60,7 +59,8 @@ site/
 ## 维护建议
 
 - 文章正文统一放在 `YYYY/MM/slug.md`
-- 文章元数据统一放在同名 `YYYY/MM/slug.yml`
+- 文章元数据统一放在 `YYYY/MM/slug.md` 开头的内嵌 YAML 中，不另建同名 `.yml`
+- 新稿验收前保持 `draft: true`，准备正式发布时再修改
 - 封面、配图尽量使用有语义的文件名
 - 新增分类、专题、文档、工具时同步维护对应的 `site/*.json` 或 `site/**/navigation.json`
 - 分类负责粗粒度方向，专题负责连续阅读路线，标签负责细粒度关键词
