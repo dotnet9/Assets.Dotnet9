@@ -4,7 +4,7 @@ slug: dotnet-11-released-whats-new
 description: "微软 11 月 10 日发布 .NET 11 正式版：C# 15 的联合类型和封闭继承、运行时级异步、MCP 服务器模板、Blazor AI 组件、EF Core 11 向量检索，用大白话把这次更新捋一遍。"
 date: 2026-11-10 20:20:23
 lastmod: 2026-11-11 18:30:00
-cover: 2026/11/dotnet-11-released-cover.svg
+cover: 2026/11/dotnet-11-released-cover.png
 banner: false
 categories:
   - .NET
@@ -20,7 +20,7 @@ draft: false
 
 昨晚（11 月 10 日），微软在官方博客放出了 .NET 11 正式版。这篇文章原文很长，我把它啃下来，挑对我们写代码真正有影响的部分，按自己的理解重新讲一遍。除发布博文外，还对照了 Microsoft Learn 的官方清单和几篇开发者评述，引用处均标了出处。建议对照着看。
 
-![.NET 11 正式发布](dotnet-11-released-cover.svg)
+![.NET 11 正式发布](dotnet-11-released-cover.png)
 
 ## 1. 升级前必须知道的三件事
 
@@ -119,19 +119,11 @@ at MyApp.Program.Main()
 
 排查生产问题的体验完全不同——以前要在 `MoveNext` 脚手架里对照行号猜原始方法，现在栈帧即源码。
 
-两者的差异用一张流程对比图看更直白（上：现状编译器状态机；下：Runtime Async）：
+两者的差异用一张流程对比图看更直白（左：现状编译器状态机；右：Runtime Async）：
 
-```mermaid
-flowchart TD
-    A1[HandleRequestAsync] --> M1[编译器改写为 MoveNext 状态机]
-    M1 --> A2[await 挂起 走脚手架]
-    A2 --> E1[异常栈满屏 MoveNext 业务方法名消失]
-    B1[HandleRequestAsync] --> B2[await 挂起 由运行时接管]
-    B2 --> B3[暂停当前栈帧 不生成状态机]
-    B3 --> E2[异常栈即业务源码 栈帧名等于方法名]
-```
+![Runtime Async 对比：编译器状态机 vs 运行时接管（Vex 实渲染）](dotnet-11-runtime-async-flow.png)
 
-对比要点：上排所有业务方法都要经过「编译器改写 → 状态机脚手架」这一步，栈帧名随之丢失；下排挂起由运行时直接接管，方法栈原样保留。
+对比要点：左列所有业务方法都要经过「编译器改写 → 状态机脚手架」这一步，栈帧名随之丢失；右列挂起由运行时直接接管，方法栈原样保留。
 
 面向 `net11.0` 的项目需要显式打开（不再要求 `EnablePreviewFeatures`）：
 
