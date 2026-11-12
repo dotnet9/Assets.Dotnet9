@@ -2,8 +2,8 @@
 title: "Vex 又更新了：这次，我想把 Markdown 写作这件事做顺手"
 slug: vex-markdown-writing-workspace
 description: "从上次介绍 MCP 的 Vex 1.3.0，到如今的 1.23.1.0：即时编辑、源码、阅读和章节导图如何围绕同一份 Markdown 协作？这次聊聊文章结构、长文导航、图表编辑，以及写完之后的排版与发布准备。"
-date: 2026-11-08 17:20:00
-lastmod: 2026-11-12 11:50:00
+date: 2026-11-08 19:20:00
+lastmod: 2026-11-12 21:50:00
 cover: 2026/11/vex-writing-workspace-cover.png
 banner: false
 categories:
