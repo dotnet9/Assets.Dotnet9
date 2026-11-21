@@ -1,9 +1,9 @@
----
+﻿---
 title: "Windows 7 上的 .NET Native AOT 启动崩溃：别先怪字体，先对齐渲染依赖"
 slug: dotnet-native-aot-win7-skia-dependency
 description: "一次 Avalonia 桌面应用 Win7 启动崩溃的排查复盘：从字体和 .NET 版本误判，到 SkiaSharp、HarfBuzzSharp、Svg.Skia 与 Native AOT 原生资产的依赖对齐。"
 date: 2026-09-23 19:59:14
-lastmod: 2026-09-24 05:48:27
+lastmod: 2026-11-21 16:00:00
 cover: https://img1.dotnet9.com/2026/09/dotnet-native-aot-win7-skia-dependency-cover.svg
 banner: false
 categories:
@@ -139,7 +139,24 @@ SVG 相关组件还会继续依赖同一套 Skia 生态。只升级其中一个�
 
 > UI 框架、托管绑定、原生资产和绘制 API 必须作为一个版本集合升级。
 
-如果只看中央包管理文件中的“最高版本”，很容易把一条渲染链拆成几个互相不认识的版本分支。
+如果只看中央包管理文件中的”最高版本”，很容易把一条渲染链拆成几个互相不认识的版本分支。
+
+### 3.1 版本对齐解决了 Skia，但运行时本体还需要额外处理
+
+版本对齐后 Skia 原生库的加载问题解决了，但主程序 exe 的导入表里仍有 `api-ms-win-core-synch-l1-2-0.dll`——这不是来自 Skia，而是 .NET AOT 运行时 PAL 编译进来的。需要两个链接期工具配合：
+
+- **VC-LTL**：把 CRT 从 UCRT api-set（`api-ms-win-crt-*`，Win7 没有这些前向器）换为 `msvcrt.dll`（Win7 自带）——主程序导入表的 `api-ms-win-crt-*` 全部消失
+- **YY-Thunks**：链接期注入 Win8+ API 的 thunk——`WaitOnAddress` 等通过 thunk 在 Win7 上可用
+
+这两个 NuGet 包在 NativeAOT 项目中不是”可选加分项”，而是 Win7 启动的必需品。
+
+### 1.1 遗漏的一半：运行时本体也在导入 Win8+ API
+
+用 PE 导入表逐模块扫描发布目录后发现，除了渲染链上的原生库，**主程序 exe 自身也静态引入了 `api-ms-win-core-synch-l1-2-0.dll`**——导入了 `WaitOnAddress` 和 `WakeByAddressSingle` 两个函数。
+
+这两个函数是 Windows 8+ 才有的内核同步原语（基于地址的等待/唤醒），Win7 的 kernel32 里没有，api-set 文件也不存在。导入来自 .NET AOT 运行时的 PAL（线程等待子系统：Monitor/锁基于 Win8+ 的 futex 原语），不是任何 NuGet 原生库——应用代码里也没有直接 P/Invoke 这两个函数。
+
+这意味着即使把 SkiaSharp 版本对齐了，主程序 exe 的导入表仍会让 Win7 加载器在第一行就失败。**渲染依赖对齐是必要条件，但不是充分条件**——还需要运行时层的兼容处理。
 
 把版本关系写成一个最小化的中央配置，思路会更直观：
 
@@ -200,13 +217,17 @@ dotnet publish DemoApp.csproj -c Release -f net10.0-windows -r win-x64 `
 
 跨系统差异是线索，不是噪声；升级依赖要看完整关系图，不要只追单个包的最高版本；AOT 发布必须验证干净产物。启动阶段的 `NullReferenceException` 也不一定是根因，还要结合首次失败位置、原生资产和不同系统的差异一起判断。
 
-还有两个容易被忽略的 Windows 发布依赖：`VC-LTL` 和 `YY-Thunks`。在需要兼容旧 Windows 的 Native AOT 项目中，可以安装并引用这两个 NuGet 包：
+还有两个容易被忽略的 Windows 发布依赖：`VC-LTL` 和 `YY-Thunks`。在需要兼容旧 Windows 的 Native AOT 项目中，**不是”有帮助”，而是必需品**——它们分别解决 CRT 依赖和 API 兼容两层问题，缺一层 Win7 就启动不了：
 
 ```xml
-<PackageReference Include="VC-LTL" />
-<PackageReference Include="YY-Thunks" />
+<PackageReference Include=”VC-LTL” />
+<PackageReference Include=”YY-Thunks” />
 ```
 
-`VC-LTL` 主要用于解决 VC++ 运行库依赖，`YY-Thunks` 主要用于补齐旧 Windows API 兼容层。它们不是 Avalonia 渲染库，但对 Windows Native AOT 产物兼容旧系统很有帮助。
+此外，如果发布目录里还有第三方预编译 DLL（比如 SkiaSharp 的 `libSkiaSharp.dll`）也引入了 Win8+ API Set，VC-LTL/YY-Thunks 管不到它们——需要额外提供一个同名垫片 DLL 放在 exe 旁边，用旧系统已有的 API 模拟缺失的函数。
 
-小结一下：遇到“新系统正常、旧系统崩溃”，先确认失败发生在哪一层，再核对托管绑定、native assets、RID 和发布目录，通常比先换字体更接近答案。
+小结一下：遇到”新系统正常、旧系统崩溃”，先确认失败发生在哪一层，再核对托管绑定、native assets、RID 和发布目录，通常比先换字体更接近答案。多查一层 PE 导入表——有些问题藏在运行时本体里，光换库版本看不出来。
+
+## 6. 后续进展
+
+这篇文章的 SkiaSharp/HarfBuzzSharp 版本对齐解决了渲染链的加载问题，但后来的分析发现，.NET AOT 运行时 PAL 自身也静态引入了 Win8+ 的 `WaitOnAddress`/`WakeByAddressSingle`。完整的三层方案（VC-LTL + YY-Thunks + 垫片 DLL）和实测数据见：[Vex 2.2.0.0：让 .NET 11 NativeAOT 跑在 Windows 7 x64 上](/2026/11/vex-win7-nativeaot-compat)。
