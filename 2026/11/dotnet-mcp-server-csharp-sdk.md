@@ -336,7 +336,3 @@ private static string ExtractJson(string body)
 2. [Model Context Protocol 官网](https://modelcontextprotocol.io)——Streamable HTTP 传输、会话与 Accept 头的规范依据
 3. [Announcing .NET 11（微软官方发布博文）](https://devblogs.microsoft.com/dotnet/announcing-dotnet-11/)——`dotnet new mcpserver` 模板进 SDK 的出处
 4. [Vex 仓库](https://github.com/dotnet9/Vex)——本文所有服务端/桥接代码的真实来源（`McpServerHost`、`mcp_stdio_bridge.py`、`Vex.Mcp.Tests`）
-
----
-
-> 本文在 Vox（基于 .NET 与 Avalonia 的开源内容仓库工具）中写作完成，Vex 与 Vox 的 MCP 服务均已在生产中使用文中方案。

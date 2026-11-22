@@ -263,7 +263,3 @@ dotnet run --project HelloDotnet11
 3. [.NET 11 破坏性变更清单（Microsoft Learn）](https://learn.microsoft.com/dotnet/core/compatibility/11)——升级须知三条的出处
 4. [What's new in C# 15（Microsoft Learn）](https://learn.microsoft.com/dotnet/csharp/whats-new/csharp-15)与[Explore union types in C# 15（.NET 官方博客）](https://devblogs.microsoft.com/dotnet/csharp-15-union-types)——第 2 节语言特性与代码示例的出处
 5. [The Best 11 New Features in .NET 11 and C# 15（Ed Andersen）](https://www.edandersen.com/p/the-best-11-new-features-in-net-11)——`with(capacity:)`、`[ShortCircuit]`、封闭枚举等细节与 10 vs 11 对照示例的参考来源
-
----
-
-> 本文在 Vox（基于 .NET 与 Avalonia 的开源 Markdown 编辑器）中写作完成。
