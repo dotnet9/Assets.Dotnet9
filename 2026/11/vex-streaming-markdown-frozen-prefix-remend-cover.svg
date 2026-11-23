@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#081522"/>
+      <stop offset=".55" stop-color="#0D2030"/>
+      <stop offset="1" stop-color="#102B38"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#62E6C5"/>
+      <stop offset="1" stop-color="#29B7A2"/>
+    </linearGradient>
+    <linearGradient id="metric" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#8AF5D7"/>
+      <stop offset="1" stop-color="#39CBB4"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#142D3D"/>
+      <stop offset="1" stop-color="#102635"/>
+    </linearGradient>
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M48 0H0V48" fill="none" stroke="#8CB4C5" stroke-opacity=".07" stroke-width="1"/>
+    </pattern>
+    <filter id="glow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="18"/>
+    </filter>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="18" stdDeviation="22" flood-color="#000814" flood-opacity=".35"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1600" height="900" fill="url(#background)"/>
+  <rect width="1600" height="900" fill="url(#grid)"/>
+  <circle cx="1330" cy="160" r="250" fill="#35CBB0" opacity=".08" filter="url(#glow)"/>
+  <circle cx="360" cy="780" r="260" fill="#1C8D91" opacity=".07" filter="url(#glow)"/>
+  <path d="M0 690C260 620 420 820 700 730S1180 600 1600 700V900H0Z" fill="#06121D" opacity=".38"/>
+
+  <!-- Header -->
+  <g font-family="Inter, 'Microsoft YaHei', 'PingFang SC', sans-serif">
+    <rect x="104" y="94" width="8" height="34" rx="4" fill="url(#accent)"/>
+    <text x="132" y="119" fill="#9DB8C6" font-size="21" font-weight="600" letter-spacing="3">AVALONIA  /  MARKDOWN ENGINEERING</text>
+    <rect x="1290" y="91" width="206" height="42" rx="21" fill="#163746" stroke="#2B5A64" stroke-width="1"/>
+    <circle cx="1315" cy="112" r="5" fill="#62E6C5"/>
+    <text x="1332" y="119" fill="#B8D9D8" font-size="16" font-weight="600" letter-spacing="1.4">性能优化实践</text>
+  </g>
+
+  <!-- Main title -->
+  <g font-family="'Microsoft YaHei', 'PingFang SC', sans-serif">
+    <text x="104" y="270" fill="#F3F8FA" font-size="76" font-weight="800" letter-spacing="1">让 Markdown 流式渲染</text>
+    <text x="104" y="365" fill="#F3F8FA" font-size="76" font-weight="800" letter-spacing="1">快起来</text>
+    <rect x="107" y="405" width="72" height="6" rx="3" fill="url(#accent)"/>
+    <text x="104" y="470" fill="#A9C0CB" font-size="30" font-weight="400">冻结前缀 · 尾部容错 · 增量解析</text>
+    <text x="104" y="526" fill="#6F929F" font-size="21" letter-spacing=".5">逐 Token 追加，只解析变化部分</text>
+  </g>
+
+  <!-- Right technical illustration panel -->
+  <g filter="url(#shadow)">
+    <rect x="825" y="190" width="650" height="470" rx="24" fill="url(#panel)" stroke="#315363" stroke-opacity=".8"/>
+  </g>
+  <g font-family="Inter, 'Consolas', monospace">
+    <circle cx="865" cy="230" r="6" fill="#F18D82"/>
+    <circle cx="887" cy="230" r="6" fill="#E8C477"/>
+    <circle cx="909" cy="230" r="6" fill="#63D6B7"/>
+    <text x="945" y="237" fill="#7FA0AD" font-size="16" letter-spacing="1.5">STREAMING PIPELINE</text>
+    <path d="M850 260H1450" stroke="#345363" stroke-width="1"/>
+
+    <!-- Incoming stream -->
+    <text x="866" y="302" fill="#81A5B2" font-size="15" letter-spacing="1.4">INCOMING TOKENS</text>
+    <g>
+      <rect x="866" y="320" width="88" height="42" rx="8" fill="#1B4C50" stroke="#347F78"/>
+      <rect x="963" y="320" width="88" height="42" rx="8" fill="#1B4C50" stroke="#347F78"/>
+      <rect x="1060" y="320" width="88" height="42" rx="8" fill="#1B4C50" stroke="#347F78"/>
+      <rect x="1157" y="320" width="88" height="42" rx="8" fill="#183947" stroke="#3D6572" stroke-dasharray="5 4"/>
+      <text x="910" y="347" fill="#A9F0DE" font-size="16" text-anchor="middle">#</text>
+      <text x="1007" y="347" fill="#A9F0DE" font-size="16" text-anchor="middle">Title</text>
+      <text x="1104" y="347" fill="#A9F0DE" font-size="16" text-anchor="middle">Text</text>
+      <text x="1201" y="347" fill="#A9C4CF" font-size="16" text-anchor="middle">...</text>
+      <path d="M1260 341H1310" stroke="#5DD9BC" stroke-width="2.5" stroke-linecap="round"/>
+      <path d="M1301 333L1311 341L1301 349" fill="none" stroke="#5DD9BC" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="1340" y="347" fill="#73DCC2" font-size="14">append</text>
+    </g>
+
+    <!-- Frozen prefix and mutable tail -->
+    <text x="866" y="414" fill="#81A5B2" font-size="15" letter-spacing="1.4">INCREMENTAL PARSE</text>
+    <rect x="866" y="434" width="382" height="92" rx="12" fill="#153D42" stroke="#3D9D88" stroke-width="1.5"/>
+    <rect x="1260" y="434" width="176" height="92" rx="12" fill="#263B48" stroke="#7897A4" stroke-width="1.5" stroke-dasharray="7 5"/>
+    <text x="890" y="467" fill="#70E0C2" font-size="16" font-weight="700">FROZEN PREFIX</text>
+    <text x="890" y="497" fill="#B6DAD5" font-size="20">已解析 · 直接复用</text>
+    <text x="1284" y="467" fill="#A9C4CF" font-size="16" font-weight="700">LIVE TAIL</text>
+    <text x="1284" y="497" fill="#D2E1E6" font-size="20">持续更新</text>
+
+    <!-- Connector -->
+    <path d="M1057 540V568H1150" fill="none" stroke="#4BC9AD" stroke-width="2" stroke-linecap="round"/>
+    <path d="M1142 560L1151 568L1142 576" fill="none" stroke="#4BC9AD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="866" y="578" width="570" height="48" rx="10" fill="#10212C" stroke="#2B4C59"/>
+    <circle cx="890" cy="602" r="5" fill="#61E0BF"/>
+    <text x="908" y="609" fill="#C1D5DC" font-size="18">稳定内容不重复解析，尾部保持容错</text>
+  </g>
+
+  <!-- Performance metric -->
+  <g>
+    <rect x="104" y="610" width="610" height="174" rx="22" fill="#102A37" stroke="#2C5360" stroke-width="1.2"/>
+    <text x="138" y="653" fill="#8EABB7" font-family="Inter, 'Microsoft YaHei', sans-serif" font-size="16" font-weight="600" letter-spacing="2">MEASURED PERFORMANCE</text>
+    <text x="136" y="748" fill="url(#metric)" font-family="Inter, sans-serif" font-size="94" font-weight="800" letter-spacing="-4">177×</text>
+    <path d="M430 684V752" stroke="#315260" stroke-width="1"/>
+    <text x="464" y="705" fill="#DDE9ED" font-family="'Microsoft YaHei', sans-serif" font-size="22" font-weight="600">20 KB 内容流完</text>
+    <text x="464" y="744" fill="#8EAAB5" font-family="Inter, 'Microsoft YaHei', sans-serif" font-size="20">4.6 s</text>
+    <path d="M527 736L557 736" stroke="#5AD9B8" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M550 729L558 736L550 743" fill="none" stroke="#5AD9B8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="578" y="744" fill="#74E5C7" font-family="Inter, sans-serif" font-size="23" font-weight="700">26 ms</text>
+  </g>
+
+  <!-- Footer -->
+  <g font-family="Inter, 'Microsoft YaHei', sans-serif">
+    <text x="104" y="842" fill="#6F8D99" font-size="16" letter-spacing="1.4">ENGINEERING NOTE</text>
+    <path d="M300 836H1496" stroke="#294653" stroke-width="1"/>
+    <text x="1496" y="842" fill="#6F8D99" font-size="15" text-anchor="end">AVALONIA MARKDOWN EDITOR</text>
+  </g>
+</svg>
