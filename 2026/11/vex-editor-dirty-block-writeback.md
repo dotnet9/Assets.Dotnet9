@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Markdown 编辑器每键 22× 提速：脏块回写替代全文序列化"
 slug: vex-editor-dirty-block-writeback
 description: "长文档打字卡的根因不在解析端，在回写端——每键把整篇 Markdown 从块模型序列化两遍。改成只重算被编辑的脏块片段拼回缓存全文，229KB 文档每键 1.76ms 降到 0.08ms，内存分配降 14×"

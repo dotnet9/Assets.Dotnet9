@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Vex 2.2.0.0：让 .NET 11 NativeAOT 跑在 Windows 7 x64 上"
 slug: vex-win7-nativeaot-compat
 description: ".NET 11 NativeAOT 在 Win7 上启动报丢失 api-ms-win-core-synch-l1-2-0.dll——用 PE 导入表定位根因，VC-LTL + YY-Thunks + 105KB 垫片三层方案解决"
