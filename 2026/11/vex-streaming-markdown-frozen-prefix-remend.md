@@ -2,8 +2,8 @@
 title: "流式 Markdown 渲染 177× 提速：冻结前缀 + 尾部容错"
 slug: vex-streaming-markdown-frozen-prefix-remend
 description: "AI 逐 token 吐 Markdown，朴素实现每次追加都整篇重新解析：20KB 文档流完一遍 4.6 秒、4.8GB 内存分配。改成冻结边界之前的内容只解析一次、尾部容错补全后单独解析（借鉴 vercel/streamdown 的 remend 思路），实测 177× 提速、分配降 47×。附冻结边界规则表、等价性测试设计，以及自测抓出的 front matter 冻结缺陷。"
-date: 2026-11-23 21:30:00
-lastmod: 2026-11-23 21:30:00
+date: 2026-11-23 05:47:00
+lastmod: 2026-11-23 06:12:00
 cover: 2026/11/vex-streaming-markdown-frozen-prefix-remend-cover.svg
 categories:
   - .NET
@@ -13,7 +13,6 @@ tags:
   - Markdown
   - 性能优化
   - C#
-draft: true
 ---
 
 上一篇[《Markdown 编辑器每键 22× 提速：脏块回写替代全文序列化》](https://codewf.com/2026/11/vex-editor-dirty-block-writeback)砍的是编辑器的回写端，这一篇补上解析端的另一半：AI 逐 token 输出 Markdown 时的流式渲染。

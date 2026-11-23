@@ -15,7 +15,6 @@ tags:
   - VC-LTL
   - YY-Thunks
   - Avalonia
-draft: true
 ---
 
 Vex 主分支用 .NET 11 NativeAOT 发布 win-x64——单文件、启动快、用户机器上不用装任何运行时。代价是老系统跟不上：Windows 7 x64 用户双击 Vex.exe，弹出来的不是主界面，而是一个系统对话框——**丢失 api-ms-win-core-synch-l1-2-0.dll**。静态导入由加载器在进程第一行代码运行前解析，找不到就直接终止，主界面长什么样，用户没机会见。
