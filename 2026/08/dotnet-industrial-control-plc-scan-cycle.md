@@ -9,7 +9,7 @@ originalTitle: ".NET工控概念科普——PLC扫描周期：理解了它才算
 originalLink: https://mp.weixin.qq.com/s/MzSt3eAMmD87_-FDkHamNQ
 copyright: Reprinted
 draft: false
-cover: https://img1.dotnet9.com/2026/08/dotnet-industrial-control-plc-scan-cycle-cover.jpg
+cover: 2026/08/dotnet-industrial-control-plc-scan-cycle-cover.jpg
 banner: false
 categories:
   - .NET

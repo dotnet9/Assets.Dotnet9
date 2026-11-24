@@ -9,7 +9,7 @@ originalTitle: ".NET工控生态总览：带你厘清工控项目的典型架构
 originalLink: https://mp.weixin.qq.com/s/6X8LHFAujLJQUU1bAh42XQ
 copyright: Reprinted
 draft: false
-cover: https://img1.dotnet9.com/2026/08/dotnet-industrial-control-architecture-overview-cover.jpg
+cover: 2026/08/dotnet-industrial-control-architecture-overview-cover.jpg
 banner: false
 categories:
   - .NET

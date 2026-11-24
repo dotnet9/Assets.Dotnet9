@@ -9,7 +9,7 @@ originalTitle: TIOBE Index for January 2024
 originalLink: https://www.tiobe.com/tiobe-index/
 copyright: Reprinted
 draft: false
-cover: https://img1.dotnet9.com/2024/01/cover_02.png
+cover: 2024/01/cover_02.png
 banner: false
 categories:
   - .NET

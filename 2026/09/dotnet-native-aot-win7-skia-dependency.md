@@ -4,7 +4,7 @@ slug: dotnet-native-aot-win7-skia-dependency
 description: "一次 Avalonia 桌面应用 Win7 启动崩溃的排查复盘：从字体和 .NET 版本误判，到 SkiaSharp、HarfBuzzSharp、Svg.Skia 与 Native AOT 原生资产的依赖对齐。"
 date: 2026-09-23 19:59:14
 lastmod: 2026-11-21 16:00:00
-cover: https://img1.dotnet9.com/2026/09/dotnet-native-aot-win7-skia-dependency-cover.svg
+cover: 2026/09/dotnet-native-aot-win7-skia-dependency-cover.svg
 banner: false
 outdated: true
 outdatedMessage: "本文“对齐 SkiaSharp 等渲染依赖版本即可解决 Win7 崩溃”的结论已过时：.NET 11 NativeAOT 可通过 VC-LTL + YY-Thunks + 垫片 DLL 跑在 Win7 x64 上，无需冻结 NuGet 包版本。"

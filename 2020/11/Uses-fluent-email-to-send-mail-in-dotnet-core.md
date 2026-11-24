@@ -9,7 +9,7 @@ originalTitle: .NET Core使用FluentEmail发送邮件
 originalLink: https://www.cnblogs.com/wucy/p/13797578.html
 copyright: Reprinted
 draft: false
-cover: https://img1.dotnet9.com/2020/11/cover_03.jpeg
+cover: 2020/11/cover_03.jpeg
 categories:
   - .NET
 tags:

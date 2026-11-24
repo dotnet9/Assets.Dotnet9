@@ -7,7 +7,7 @@ lastmod: 2022-11-07 23:11:28
 author: 沙漠尽头的狼
 copyright: Original
 draft: false
-cover: https://img1.dotnet9.com/2022/10/2-chat-window.png
+cover: 2022/10/2-chat-window.png
 categories:
   - WPF
   - Blazor

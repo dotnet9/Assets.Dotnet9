@@ -7,7 +7,7 @@ lastmod: 2019-12-05 13:45:56
 author: 沙漠尽头的狼
 copyright: Original
 draft: false
-cover: https://img1.dotnet9.com/2019/12/0304.png
+cover: 2019/12/0304.png
 banner: false
 categories:
   - WPF

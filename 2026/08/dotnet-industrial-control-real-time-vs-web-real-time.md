@@ -9,7 +9,7 @@ originalTitle: ".NET工控概念科普——工控的\"实时\"和Web的\"实时
 originalLink: https://mp.weixin.qq.com/s/HY9XU0jmAFA55tE3CpxJgA
 copyright: Reprinted
 draft: false
-cover: https://img1.dotnet9.com/2026/08/dotnet-industrial-control-real-time-vs-web-real-time-cover.jpg
+cover: 2026/08/dotnet-industrial-control-real-time-vs-web-real-time-cover.jpg
 banner: false
 categories:
   - .NET

@@ -9,7 +9,7 @@ originalTitle: ".NET工控概念科普——下位机和固件，上位机开发
 originalLink: https://mp.weixin.qq.com/s/erYvHnipHofrf-hPQNa68g
 copyright: Reprinted
 draft: false
-cover: https://img1.dotnet9.com/2026/08/dotnet-industrial-control-device-side-and-firmware-cover.jpg
+cover: 2026/08/dotnet-industrial-control-device-side-and-firmware-cover.jpg
 banner: false
 categories:
   - .NET

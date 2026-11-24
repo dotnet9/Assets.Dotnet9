@@ -7,7 +7,7 @@ lastmod: 2023-03-07 09:06:35
 author: 机器人
 copyright: Original
 draft: false
-cover: https://img1.dotnet9.com/2023/03/cover_03.jpg
+cover: 2023/03/cover_03.jpg
 categories:
   - .NET
 tags:

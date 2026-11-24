@@ -6,7 +6,7 @@ date: 2023-09-22 20:49:57
 lastmod: 2023-09-23 12:31:32
 copyright: Original
 draft: false
-cover: https://img1.dotnet9.com/2023/09/cover_07.png
+cover: 2023/09/cover_07.png
 categories:
   - .NET
 tags:

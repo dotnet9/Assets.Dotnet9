@@ -9,7 +9,7 @@ originalTitle: "工控生态之数据与业务：采集到的数据怎么存、�
 originalLink: https://mp.weixin.qq.com/s/btOyVo1NSUsz8nj0zAaILA
 copyright: Reprinted
 draft: false
-cover: https://img1.dotnet9.com/2026/08/dotnet-industrial-control-data-and-business-cover.jpg
+cover: 2026/08/dotnet-industrial-control-data-and-business-cover.jpg
 banner: false
 categories:
   - .NET

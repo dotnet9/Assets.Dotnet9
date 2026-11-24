@@ -4,7 +4,7 @@ slug: qtzu-3d-english-learning-game
 description: "一次用 AI 从零写 3D Web 游戏的验证记录：52 座中国城市巡游、900+ 人教版小学英语词、程序化建模、JSON 驱动内容、语音三级降级，以及它离「能用」还差什么。项目开发测试中，欢迎体验、提 Issue 与 PR。"
 date: 2026-09-26 20:00:00
 lastmod: 2026-09-26 20:00:00
-cover: https://img1.dotnet9.com/2026/09/qtzu-3d-english-learning-game-cover.jpg
+cover: 2026/09/qtzu-3d-english-learning-game-cover.jpg
 banner: false
 categories:
   - 前端

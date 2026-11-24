@@ -4,7 +4,7 @@ slug: vex-mcp-ai-upgrade
 description: "从三个月前一个「看不懂但很心动」的 PR 说起：Vex 内置本机 MCP 服务，AI 可以直接读写你的 Markdown 文档、遥控界面——弹窗确认、操作审计、访问范围三重把关。29 个工具、stdio 桥接接入 Claude Desktop/Cursor，附踩坑实录（NativeAOT 反射绑定、LLM 算不准偏移）。"
 date: 2026-10-03 09:00:00
 lastmod: 2026-10-03 09:00:00
-cover: https://img1.dotnet9.com/2026/10/vex-mcp-ai-upgrade-cover.png
+cover: 2026/10/vex-mcp-ai-upgrade-cover.png
 banner: false
 categories:
   - .NET

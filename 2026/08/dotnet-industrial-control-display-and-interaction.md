@@ -9,7 +9,7 @@ originalTitle: "工控生态之展示与交互：怎么让工业软件不再\"�
 originalLink: https://mp.weixin.qq.com/s/39pXYt8j3bhTZQzThNLTVA
 copyright: Reprinted
 draft: false
-cover: https://img1.dotnet9.com/2026/08/dotnet-industrial-control-display-and-interaction-cover.jpg
+cover: 2026/08/dotnet-industrial-control-display-and-interaction-cover.jpg
 banner: false
 categories:
   - .NET

@@ -9,7 +9,7 @@ originalTitle: ".NET工控概念科普——SCADA、MES、ERP三种系统的边�
 originalLink: https://mp.weixin.qq.com/s/AX_zXu0E6QgHDQvLwk15DQ
 copyright: Reprinted
 draft: false
-cover: https://img1.dotnet9.com/2026/08/dotnet-industrial-control-scada-mes-erp-boundaries-cover.jpg
+cover: 2026/08/dotnet-industrial-control-scada-mes-erp-boundaries-cover.jpg
 banner: false
 categories:
   - .NET

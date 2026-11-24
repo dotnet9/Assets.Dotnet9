@@ -6,7 +6,7 @@ date: 2024-12-05 21:47:17
 lastmod: 2024-12-23 12:34:21
 copyright: Original
 draft: false
-cover: https://img1.dotnet9.com/2024/12/cover_01.png
+cover: 2024/12/cover_01.png
 categories:
   - Avalonia UI
 tags:

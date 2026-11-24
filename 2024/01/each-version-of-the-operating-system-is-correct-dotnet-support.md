@@ -9,7 +9,7 @@ originalTitle: "各版本操作系统对.NET支持情况（250707更新）"
 originalLink: https://newlifex.com/tech/os_net
 copyright: Reprinted
 draft: false
-cover: https://img1.dotnet9.com/2024/01/cover_02.png
+cover: 2024/01/cover_02.png
 banner: true
 categories:
   - .NET

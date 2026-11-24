@@ -6,7 +6,7 @@ date: 2024-09-25 22:26:25
 lastmod: 2024-10-14 23:17:26
 copyright: Original
 draft: false
-cover: https://img1.dotnet9.com/2024/09/0101.jpg
+cover: 2024/09/0101.jpg
 banner: false
 categories:
   - Avalonia UI

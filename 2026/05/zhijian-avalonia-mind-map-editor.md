@@ -4,7 +4,7 @@ slug: zhijian-avalonia-mind-map-editor
 description: 这篇文章介绍枝见 Zhijian，一个基于 Avalonia 的本地脑图编辑器，支持空白新建、文件夹加载、精准新手引导、macOS 快捷键适配、大纲/Markdown/脑图同步、节点备注、小图、缩放、画布拖拽和 Markdown/OPML/XMind 文件交换。
 date: 2026-05-17 08:20:00
 lastmod: 2026-05-18 18:00:00
-cover: https://img1.dotnet9.com/2026/05/zhijian-avalonia-cover.svg
+cover: 2026/05/zhijian-avalonia-cover.svg
 banner: false
 categories:
   - .NET
