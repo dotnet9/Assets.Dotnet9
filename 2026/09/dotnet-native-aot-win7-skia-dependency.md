@@ -6,6 +6,10 @@ date: 2026-09-23 19:59:14
 lastmod: 2026-11-21 16:00:00
 cover: https://img1.dotnet9.com/2026/09/dotnet-native-aot-win7-skia-dependency-cover.svg
 banner: false
+outdated: true
+outdatedMessage: "本文“对齐 SkiaSharp 等渲染依赖版本即可解决 Win7 崩溃”的结论已过时：.NET 11 NativeAOT 可通过 VC-LTL + YY-Thunks + 垫片 DLL 跑在 Win7 x64 上，无需冻结 NuGet 包版本。"
+outdatedLink: /2026/11/vex-win7-nativeaot-compat
+outdatedLinkText: "查看最新解读：Vex 2.2.0.0：让 .NET 11 NativeAOT 跑在 Windows 7 x64 上"
 categories:
   - .NET
   - Avalonia UI

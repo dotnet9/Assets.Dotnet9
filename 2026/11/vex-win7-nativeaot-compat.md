@@ -114,6 +114,8 @@ win7-archive 分支随后正式删除，文档口径同步更新——主线已�
 
 一条主线，从 Win7 跑到 Win11，维护成本回到一份代码。
 
+延伸阅读：此前《[Windows 7 上的 .NET Native AOT 启动崩溃：别先怪字体，先对齐渲染依赖](/2026/09/dotnet-native-aot-win7-skia-dependency)》靠对齐 SkiaSharp 等渲染依赖版本解决了当时的崩溃。本文的三层方案（VC-LTL + YY-Thunks + 垫片 DLL）替代了那条“冻结 NuGet 包版本”的路线——.NET 11 NativeAOT 无需降级依赖即可兼容 Win7。
+
 ---
 
 > 本文在 Vex（基于 .NET 与 Avalonia 的开源 Markdown 编辑器）中写作完成。
